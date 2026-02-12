@@ -1,5 +1,6 @@
 import os
 from pathlib import Path
+from urllib.parse import urlparse
 from dotenv import load_dotenv
 from exa_py import Exa
 
@@ -12,27 +13,51 @@ exa = Exa(EXA_KEY)
 
 POLICY_QUERIES = [
     "{uni} generative AI policy",
-    "{uni} AI policy academic integrity",
-    "{uni} ChatGPT policy students",
-    "{uni} provost generative AI guidance",
-    "{uni} teaching and learning generative AI guidance",
+    #"{uni} AI policy academic integrity",
+    #"{uni} ChatGPT policy students",
+    #"{uni} provost generative AI guidance",
+    #"{uni} teaching and learning generative AI guidance",
 ]
 
-def search_policy_pages(university: str, num_results: int = 5):
+def _extract_domain(website: str) -> str:
+    if not website or not isinstance(website, str):
+        return ""
+    w = website.strip()
+    if not w:
+        return ""
+    if not w.startswith(("http://", "https://")):
+        w = "https://" + w
+    try:
+        host = urlparse(w).netloc.lower()
+        return host.replace("www.", "")
+    except Exception:
+        return ""
+
+def search_policy_pages(university: str, website: str, num_results: int = 100, restrict_domain: bool = True):
+    """
+    If restrict_domain=True, prepend `site:{domain}` to each query to keep results on the official domain.
+    """
+    domain = _extract_domain(website)
+    site_prefix = f"site:{domain} " if (restrict_domain and domain) else ""
+
     hits = []
     for template in POLICY_QUERIES:
-        q = template.format(uni=university)
+        q = site_prefix + template.format(uni=university)
         res = exa.search(
             query=q,
             num_results=num_results,
-            contents={"text": True},  # 본문 텍스트 가져오기
+            contents={"text": True},
         )
         for r in res.results:
             hits.append({
                 "query": q,
                 "title": r.title,
                 "url": r.url,
-                "text": (r.text or "")[:7000],
+                "text": r.text or "", 
+                "length": len(r.text or ""),
+                "domain_restricted": bool(site_prefix),
+                "university": university,
+                "domain": domain,
             })
 
     # URL dedupe
@@ -42,4 +67,5 @@ def search_policy_pages(university: str, num_results: int = 5):
         if h["url"] not in seen:
             seen.add(h["url"])
             deduped.append(h)
+
     return deduped
