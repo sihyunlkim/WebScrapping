@@ -122,6 +122,36 @@ def main():
     out_long = pd.DataFrame(long_rows)
     out_long.to_csv("data/compare/nyu_uw_links_long.csv", index=False)
 
+   # ---- Non-overlap links (overall per university) ----
+    diff_rows = []
+
+    for uni in ["NYU", "UW"]:
+        g = out_long[out_long["university"] == uni].copy()
+
+        urls_100 = set(g[g["condition"] == "max_100"]["url"].dropna().tolist())
+        urls_nm  = set(g[g["condition"] == "no_max_specified"]["url"].dropna().tolist())
+        urls_100.discard("")
+        urls_nm.discard("")
+
+        only_max = sorted(urls_100 - urls_nm)
+        only_nm  = sorted(urls_nm - urls_100)
+
+        for u in only_max:
+            diff_rows.append({
+                "university": uni,
+                "diff_side": "only_in_max_100",
+                "url": u,
+            })
+        for u in only_nm:
+            diff_rows.append({
+                "university": uni,
+                "diff_side": "only_in_no_max",
+                "url": u,
+            })
+
+    pd.DataFrame(diff_rows).to_csv("data/compare/nyu_uw_nonoverlap_links.csv", index=False)
+    print(" - data/compare/nyu_uw_nonoverlap_links.csv")
+
     # per-query summary (대학+query 단위)
     per_query = []
     if not out_long.empty:
