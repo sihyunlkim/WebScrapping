@@ -1,0 +1,874 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+	<head>
+		<meta content="text/html; charset=UTF-8" http-equiv="Content-Type"/>
+		<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+		<meta content="width=device-width, initial-scale=1" name="viewport"/>
+		<title>
+			Course Creation Reimagined - Leveraging GenAI for Streamlined Learning
+		</title>
+			<link href="https://fonts.googleapis.com/css?family=Montserrat:400,700%7CMuli:400,700" rel="stylesheet"/>
+    <link crossorigin="anonymous" href="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" rel="stylesheet"/>
+    <link href="../../_files/css/all.css" rel="stylesheet"/>
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.min.css" rel="stylesheet" type="text/css"/>
+	<link href="../../_files/css/hh-global.css" rel="stylesheet"/>
+	<link href="../../_files/css/hh-module.css" rel="stylesheet"/>
+	<link href="../../_files/css/hh-events.css" rel="stylesheet"/>
+    <link href="https://www.scranton.edu/global/css/global-styles-v3.css" rel="stylesheet" type="text/css"/>
+    <link href="../../_files/css/hh-custom.css" rel="stylesheet"/>
+    <script async="true" crossorigin="anonymous" src="https://kit.fontawesome.com/5f9e61a9f3.js"></script>
+		
+	</head>
+	<body>
+	    <header id="header-style-1">
+    	    
+                <header id="header-style-1">
+    <div class="container-NONE">
+    	<div class="navbar yamm navbar-default">
+    		<div class="navbar-header">
+    			<button aria-label="Toggle Navigation" class="navbar-toggle" data-target="#navbar-collapse-1" data-toggle="collapse" type="button">
+    				<span class="icon-bar"></span>
+    				<span class="icon-bar"></span>
+    				<span class="icon-bar"></span>
+    			</button>
+    			<a class="navbar-brand" href="/">
+    				<img alt="The University of Scranton (white text)" height="65" src="https://www.scranton.edu/global/images/wordmark-white.svg" width="250"/>
+    			</a>
+    		</div>
+    		<!-- end navbar-header -->
+    		<div class="navbar-collapse collapse navbar-right" id="navbar-collapse-1">
+    			<div class="toolbar hide-toolbar-xs">
+    				<span>Apply</span>
+    				<a class="yellow_button" data-label="Undergraduate" href="https://admissions.scranton.edu/apply/index.shtml">
+    					<span class="show-collapse">Apply:</span> Undergraduate
+    				
+    				
+    				</a>
+    				<a class="orange_button" data-label="Graduate" href="https://gradadmissions.scranton.edu/how-to-apply.shtml">
+    					<span class="show-collapse">Apply:</span> Graduate
+    				
+    				
+    				</a>
+    				<a data-label="Give to Scranton" href="https://www.scranton.edu/advancement/form/index.shtml">Give to Scranton</a>
+    				<a data-label="Campus Contact" href="https://www.scranton.edu/about/campus-contacts.shtml">Contact</a>
+    				<a data-label="My.Scranton" href="https://my.scranton.edu/">My.Scranton</a>
+    				<!--<a href="#">Search<img src="images/search-m.png" /></a>-->
+    				<div class="search-wrapper">
+    					<form action="https://www.scranton.edu/search.shtml" class="search-form" id="search-desktop">
+    						<div class="form-group has-feedback">
+    							<label class="sr-only" for="searchBoxDesktop" name="cx" type="hidden" value="005991389174410019054:di5cu7vwkoc">Search desktop</label>
+    							<input aria-labelledby="searchDesktop" class="form-control search-text" id="searchBoxDesktop" name="q" placeholder="Search" type="text" value=""/>
+    							<span class="glyphicon glyphicon-search glyphicon-light form-control-feedback"></span>
+    						</div>
+    						<input name="siteurl" type="hidden" value="www.google.com/cse/home?cx=005991389174410019054:di5cu7vwkoc"/>
+    					</form>
+    				</div>
+    				<div class="social-icons show-collapse">
+    					<span>
+    						<a aria-label="Facebook" data-label="Facebook" data-placement="bottom" data-toggle="tooltip" href="https://www.facebook.com/universityofscranton/" target="_blank">
+    							<em aria-hidden="true" class="fa fa-facebook"></em>
+    						</a>
+    					</span>
+    					<span>
+    						<a aria-label="Twitter" data-label="Twitter" data-placement="bottom" data-toggle="tooltip" href="https://twitter.com/univofscranton" target="_blank">
+    							<em aria-hidden="true" class="fa fa-twitter"></em>
+    						</a>
+    					</span>
+    					<span>
+    						<a aria-label="Instagram" data-label="Instagram" data-placement="bottom" data-toggle="tooltip" href="https://www.instagram.com/universityofscranton/" target="_blank">
+    							<em aria-hidden="true" class="fa fa-instagram"></em>
+    						</a>
+    					</span>
+    				
+    					<span>
+    						<a aria-label="YouTube" data-label="Youtube" data-placement="bottom" data-toggle="tooltip" href="https://www.youtube.com/user/universityofscranton" target="_blank">
+    							<em aria-hidden="true" class="fa fa-youtube"></em>
+    						</a>
+    					</span>
+    				</div>
+    				<!-- end social icons -->
+    			</div>
+    			<!-- end toolbar -->
+    			
+    			<ul aria-label="Primary Navigation" class="nav navbar-nav">
+    				<li class="dropdown yamm-fw">
+    					<a class="dropdown-toggle" data-toggle="dropdown" href="#" id="dropdown-about-us" role="button">About Us
+    					<div class="arrow-up show-collapse"></div>
+    					</a>
+    					<ul class="dropdown-menu" id="about-us">
+    						<li>
+    							<div class="yamm-content">
+    								<div class="row row-flex no-margins" style="margin-bottom: 0;">
+    									<ul aria-hidden="true" class="col-sm-3 col-xs-12 ltyellow-bg">
+    									</ul>
+    									<div class="col-sm-3 col-xs-12 ltyellow-bg hidden-xs">
+    										<div class="menu_image" style="margin: 2em 0;">
+    											<img alt="Group of students smiling on the Dionne Green" class="img-thumbnail" src="https://www.scranton.edu/homeimages/2021/images/about-us-nav.jpg"/>
+    											<p class="text-thumbnail">Scranton is a private Catholic and Jesuit institution that delivers a transformative education, grounded in the liberal arts.</p>
+    										</div>
+    									</div>
+    									<!-- end col -->
+    									<!-- end col -->
+    									<ul class="col-lg-2 col-md-2 col-sm-3 col-xs-12 grey-border">
+    										<li>
+    										      											<a class="active " data-label="About Us - Overview" href="https://www.scranton.edu/about/index.shtml">About Us - Overview</a>
+    										</li>
+    										<li>
+    											<a data-label="Office of the President" href="https://www.scranton.edu/about/presidents-office/index.shtml">Office of the President</a>
+    										</li>
+    										
+    										<li>
+    											<a data-label="Facts About Scranton" href="https://www.scranton.edu/about/facts-about-us.shtml">Facts About Scranton</a>
+    										</li>
+    										
+    										<li>
+    											<a data-label="Outcomes &amp; National Recognition" href="https://www.scranton.edu/about/pointsofpride/index.shtml">Outcomes &amp; National Recognition</a>
+    										</li>
+    										<li>
+    											<a data-label="Our Location" href="https://www.scranton.edu/about/location.shtml">Our Location</a>
+    										</li>
+    										<li>
+    											<a data-label="Value of a Scranton Education" href="https://www.scranton.edu/about/value-of-scranton/index.shtml">Value of a Scranton Education</a>
+    										</li>
+    									</ul>
+    									<!-- end col -->
+    									<ul class="col-lg-2 col-md-2 col-sm-3 col-xs-12">
+    										<li aria-hidden="true" class="hidden-xs" style="padding: 10px 15px;"> </li>    									
+    										<li>
+    											<a data-label="Mission" href="https://www.scranton.edu/about/jesuit-tradition/index.shtml">Mission</a>
+    										</li>
+    									
+    										
+    										<li>
+    											<a data-label="Strategic Plan" href="https://www.scranton.edu/strategic-plan/2020/index.shtml">Strategic Plan</a>
+    										</li>
+    										<li>
+    										    <a data-label="Community Relations" href="https://www.scranton.edu/about/community-relations/index.shtml">Community Relations</a>
+    										</li>
+
+<li>
+    											<a data-label="Mission" href="https://www.scranton.edu/royals-safe-together/index.shtml">Campus Health and Safety</a>
+    										</li>
+
+    									</ul>
+    									<div class="col-sm-3 col-xs-12 ltyellow-bg visible-xs">
+    										<div class="menu_image" style="margin: 2em 0;">
+    											<img alt="Group of students smiling on the Dionne Green" class="img-thumbnail" src="https://www.scranton.edu/homeimages/2021/images/about-us-nav.jpg"/>
+    											<p class="text-thumbnail">Scranton is a private Catholic and Jesuit institution that delivers a transformative education, grounded in the liberal arts.</p>
+    										</div>
+    									</div>
+    									<!-- end col -->
+    								</div>
+    								<!-- end row -->
+    							</div>
+    							<!-- end yamm-content -->
+    						</li>
+    					</ul>
+    					<!-- end drop down menu -->
+    				</li>
+    				<!-- end drop down -->
+    				<li class="dropdown yamm-fw">
+    					<a class="dropdown-toggle" data-toggle="dropdown" href="#" id="dropdown-academics" role="button">Academics
+    					<div class="arrow-up show-collapse"></div>
+    					</a>
+    					<ul class="dropdown-menu" id="academics">
+    						<li>
+    							<div class="yamm-content">
+    								<div class="row row-flex no-margins" style="margin-bottom: 0;">
+    									<ul aria-hidden="true" class="col-sm-3 col-xs-12 ltyellow-bg">
+    									</ul>
+    									
+    									<div class="col-sm-3 col-xs-12 ltyellow-bg hidden-xs">
+    										<div class="menu_image" style="margin: 2em 0;">
+    											<img alt="Four students in a group study area in the science center" class="img-thumbnail" src="https://www.scranton.edu/global/images/navigation/academics-nav.jpg"/>
+    											<p class="text-thumbnail">At The University of Scranton, our rigorous, in-depth education provides the field-specific knowledge and competencies needed for professional success.</p>
+    										</div>
+    									</div>
+    									<!-- end col -->
+    									<ul class="col-lg-2 col-md-2 col-sm-3 col-xs-12 grey-border">
+    										<li>
+    											<a class="active " data-label="Academics - Overview" href="https://www.scranton.edu/academics/index.shtml">Academics - Overview</a>
+    										</li>
+    										<li>
+    											<a data-label="Undergraduate Programs" href="https://www.scranton.edu/academics/undergrad-programs.shtml">Undergraduate Programs</a>
+    										</li>
+    										
+    											<li>
+    											<a href="/#" style="pointer-events: none; ">Graduate Programs:</a>
+    											<ul style="margin-left: 0; padding-left: 0;">
+    											    <li><a data-label="All Graduate Programs" href="https://gradapply.scranton.edu/portal/graduate-programs" style="padding-left: 40px;">All Graduate Programs</a></li>
+    											    <li><a data-label="Online Graduate Programs" href="https://gradapply.scranton.edu/portal/graduate-programs" style="padding-left: 40px;">Online Graduate Programs</a></li>
+    											    
+    											</ul>
+    										</li>
+    										
+    										<li>
+    											<a data-label="Colleges &amp; Departments" href="https://www.scranton.edu/academics/colleges-departments.shtml">Colleges &amp; Departments</a>
+    										</li>
+    										<li>
+    											<a data-label="Graduate Education" href="https://gradadmissions.scranton.edu/index.shtml">Graduate Education</a>
+    										</li>
+    										<li>
+    										    <a data-label="Academic Calendars" href="https://www.scranton.edu/academics/registrar/academic-calendar.shtml">Academic Calendars</a>
+    										</li>
+    									</ul>
+    									<!-- end col -->
+    									<ul class="col-lg-2 col-md-2 col-sm-3 col-xs-12">
+    											<li aria-hidden="true" class="hidden-xs" style="padding: 10px 15px;"> </li>    									    
+    										<li>
+    										
+    										<li>
+    											<a data-label="Catalogs" href="https://www.scranton.edu/academics/registrar/university-catalogs.shtml">Catalogs</a>
+    										</li>
+    										<li>
+    											<a data-label="Registrar" href="https://www.scranton.edu/academics/registrar/index.shtml">Registrar</a>
+    										</li>
+    										<li>
+    											<a data-label="OSSS" href="https://www.scranton.edu/academics/osss/index.shtml">OSSS</a>
+    										</li>
+    										
+    										<li>
+    											<a data-label="Provost/VP Academic Affairs" href="https://www.scranton.edu/academics/provost/index.shtml">Office of the Provost</a>
+    										</li>
+    									
+    											<a data-label="Weinberg Memorial Library" href="https://www.scranton.edu/academics/wml/index.shtml">Weinberg Memorial Library</a>
+    										</li>
+    										<li>
+    											<a data-label="Pre-Med / Pre-Health" href="https://www.scranton.edu/academics/pre-med/index.shtml">Pre-Med / Pre-Health</a>
+    										</li>
+    										
+    									
+    										
+    										
+    									</ul>
+    									<!-- end col -->
+    									<div class="col-lg-5 col-md-5 col-sm-3 col-xs-12 ltyellow-bg visible-xs">
+    										<div class="menu_image" style="margin: 2em 0;">
+    											<img alt="Four students in a group study area in the science center" class="img-thumbnail" src="https://www.scranton.edu/global/images/navigation/academics-nav.jpg"/>
+    											<p class="text-thumbnail">At The University of Scranton, our rigorous, in-depth education provides the field-specific knowledge and competencies needed for professional success.</p>
+    										</div>
+    									</div>
+    									<!-- end col -->
+    								</div>
+    								<!-- end row -->
+    							</div>
+    							<!-- end yamm-content -->
+    						</li>
+    					</ul>
+    					<!-- end drop down menu -->
+    				</li>
+    				<!-- end drop down -->
+    				<!-- <li class="dropdown"><a href="#" data-toggle="dropdown" class="dropdown-toggle">Academics <div class="arrow-up show-collapse"></div></a><ul class="dropdown-menu" role="menu"><li><a href="#">Menu Item #1</a></li><li><a href="#">Menu Item #3</a></li><li><a href="#">Menu Item #4</a></li><li><a href="#">Menu Item #5</a></li></ul>
+    				<!== end dropdown-menu -->
+    				<!-- end standard drop down -->
+    				
+    				
+    				<li class="dropdown yamm-fw">
+    					<a class="dropdown-toggle" data-toggle="dropdown" href="#" id="dropdown-admissions" role="button">Admissions
+    					<div class="arrow-up show-collapse"></div>
+    					</a>
+    					<ul class="dropdown-menu" id="admissions">
+    						<li>
+    							<div class="yamm-content">
+    								<div class="row row-flex no-margins" style="margin-bottom: 0;">
+    									<ul aria-hidden="true" class="col-sm-3 col-xs-12 ltyellow-bg">
+    									</ul>
+    									
+    									<div class="col-sm-3 col-xs-12 ltyellow-bg hidden-xs">
+    										<div class="menu_image" style="margin: 2em 0;">
+    											<img alt="Several students posing on the commons" class="img-thumbnail" src="https://www.scranton.edu/global/images/navigation/admissions-nav.jpg"/>
+    											<p class="text-thumbnail">Become a Royal! Scranton offers the perfect combination of academic environment, social experience, and personal support our students need to build successful lives and careers. </p>
+    										</div>
+    									</div>
+    									<!-- end col -->
+    									<ul class="col-lg-2 col-md-2 col-sm-3 col-xs-12 grey-border">
+    										<li>
+    											<a class="active " data-label="Undergraduate Admissions" href="https://admissions.scranton.edu/index.shtml" target="_blank">Undergraduate Admissions</a>
+    										</li>
+    										<li>
+    								                											<a data-label="Transfer Students_UG" href="https://admissions.scranton.edu/apply/transfer/index.shtml" target="_blank">Transfer Students</a>
+    										</li>
+    										<li>
+    											<a aria-label="International Students Undergradute" data-label="International Students_UG" href="https://admissions.scranton.edu/apply/international/index.shtml" target="_blank">International Students</a>
+    										</li>
+    										
+    										<li>
+    											<a aria-label="Financial Aid Undergraduate" data-label="Financial Aid_UG" href="https://admissions.scranton.edu/financial-aid/index.shtml" target="_blank">Financial Aid</a>
+    										</li>
+    										<li>
+    								                											<a data-label="Join Our Contact List_UG" href="https://apply.scranton.edu/register/request-information" target="_blank">Connect With Us</a>
+    										</li>
+    									    <li>
+    									        <a aria-label="Schedule a Visit - Undergraduate student focused." data-label="Schedule a Visit_UG" href="https://admissions.scranton.edu/visit/index.shtml" target="_blank">Schedule a Visit</a>
+    									    </li>
+    									    <li>
+    									        <a aria-label="Apply to Scranton as an Undergraduate student" data-label="Apply to Scranton_UG" href="https://admissions.scranton.edu/apply/index.shtml" target="_blank">Apply to Scranton</a>
+    									    </li>
+									    
+    									</ul>
+    									
+    									<ul class="col-lg-2 col-md-2 col-sm-3 col-xs-12 grey-border">
+    										<li>
+    											<a class="active " data-label="Graduate Admissions" href="https://gradadmissions.scranton.edu/index.shtml">Graduate Admissions</a>
+    										</li>
+    										<li>
+
+    											<a aria-label="International Students Graduate" data-label="International Students_grad" href="https://www.scranton.edu/admissions/_archive/international-students-admissions/index.shtml">International Students</a>
+    										</li>
+    										<li>
+    											<a aria-label="Financial Aid Graduate" data-label="Financial Aid_grad" href="https://gradadmissions.scranton.edu/tuition-and-financial-aid.shtml">Financial Aid</a>
+    										</li>
+    										<li>
+    											<a data-label="Request Information_grad" href="https://gradadmissions.scranton.edu/request-information.shtml">Request Information</a>
+    										</li>
+    										
+    										<li>
+    											<a aria-label="Schedule a Visit - graduate student focused." data-label="Schedule a Visit_grad" href="https://gradadmissions.scranton.edu/visit.shtml">Schedule a Visit</a>
+    										</li>
+    										<li>
+    											<a aria-label="Apply to Scranton as a graduate student." data-label="Apply to Scranton_grad" href="https://gradadmissions.scranton.edu/how-to-apply.shtml">Apply to Scranton</a>
+    										</li>
+    									</ul>
+    									
+    									
+    									<ul aria-hidden="true" class="col-lg-2 col-md-2 col-sm-3 col-xs-12"></ul>
+    									<!-- end col -->
+    									
+    									<!-- end col -->
+    									<div class="col-xs-12 ltyellow-bg visible-xs">
+    										<div class="menu_image" style="margin: 2em 0;">
+    											<img alt="Several students posing on the commons" class="img-thumbnail" src="https://www.scranton.edu/global/images/navigation/admissions-nav.jpg"/>
+    											<p class="text-thumbnail">Become a Royal! Scranton offers the perfect combination of academic environment, social experience, and personal support our students need to build successful lives and careers. </p>
+    										</div>
+    									</div>
+    									<!-- end col -->
+    								</div>
+    								<!-- end row -->
+    							</div>
+    							<!-- end yamm-content -->
+    						</li>
+    					</ul>
+    					
+    					<!-- end drop down menu -->
+    				</li>
+    				
+    				<li class="dropdown yamm-fw">
+    					<a class="dropdown-toggle" data-toggle="dropdown" href="#" id="dropdown-student-life" role="button">Student Life
+    					<div class="arrow-up show-collapse"></div>
+    					</a>
+    					<ul class="dropdown-menu" id="student-life">
+    						<li>
+    							<div class="yamm-content">
+    								<div class="row row-flex no-margins" style="margin-bottom: 0;">
+    								    								    									<ul aria-hidden="true" class="col-lg-4 col-md-4 col-sm-3 col-xs-12 ltyellow-bg hidden-sm hidden-md">
+    									    </ul>
+    									<div class="col-sm-3 col-xs-12 ltyellow-bg hidden-xs">
+    										<div class="menu_image" style="margin: 2em 0;">
+    											<img alt="Large group shot of various Alumni on the balcony of the library" class="img-thumbnail" src="https://www.scranton.edu/global/images/navigation/student-life-nav.jpg"/>
+    											<p class="text-thumbnail"> Student Life is vibrant and varied, from ministries-based programs and leadership initiatives to student-run activities, clubs and organizations.</p>
+    										</div>
+    									</div>
+    									<!-- end col -->
+    									<ul class="col-lg-2 col-md-2 col-sm-3 col-xs-12 grey-border">
+    										<li>
+    											<a class="active " data-label="Student Life - Overview" href="https://www.scranton.edu/studentlife/index.shtml">Student Life - Overview</a>
+    										</li>
+    										<li>
+    											<a data-label="Residence Life" href="https://www.scranton.edu/studentlife/studentaffairs/residence-life/index.shtml">Residence Life</a>
+    										</li>
+    										<li>
+    											<a data-label="Clubs &amp; Organizations" href="https://www.scranton.edu/studentlife/studentaffairs/student-activities/index.shtml">Clubs &amp; Organizations</a>
+    										</li>
+    										<li>
+    											<a aria-label="Career Development for current students" data-label="Career Development" href="https://www.scranton.edu/studentlife/studentaffairs/careers/index.shtml">Career Development</a>
+    										</li>
+    										<li>
+    											<a data-label="Campus Ministry" href="https://www.scranton.edu/ministries/campus-ministry/index.shtml">Campus Ministry</a>
+    										</li>
+    										<li>
+    											<a data-label="Center for Service &amp; Social Justice" href="https://www.scranton.edu/ministries/center-service-social-justice/index.shtml">Center for Service &amp; Social Justice</a>
+    										</li>
+    									</ul>
+    									<!-- end col -->
+    									<ul aria-hidden="true" class="col-lg-2 col-md-2 col-sm-3 col-xs-12"></ul>
+    									<!-- end col -->
+    									<div class="col-lg-5 col-md-5 col-sm-3 col-xs-12 ltyellow-bg visible-xs">
+    										<div class="menu_image" style="margin: 2em 0;">
+    											<img alt="Large group shot of various Alumni on the balcony of the library" class="img-thumbnail" src="https://www.scranton.edu/global/images/navigation/student-life-nav.jpg"/>
+    											<p class="text-thumbnail"> Student Life is vibrant and varied, from ministries-based programs and leadership initiatives to student-run activities, clubs and organizations.</p>
+    										</div>
+    									</div>
+    									<!-- end col -->
+    								</div>
+    								<!-- end row -->
+    							</div>
+    							<!-- end yamm-content -->
+    						</li>
+    					</ul>
+    					<!-- end drop down menu -->
+    				</li>
+    				<li class="">
+    					<a class="" href="https://www.scranton.edu/current-students.shtml" id="current-students" role="button" target="_self">Current Students</a>
+    				</li>
+    				<li class="dropdown yamm-fw">
+    					<a class="dropdown-toggle" data-toggle="dropdown" href="#" id="dropdown-alumni" role="button">Alumni
+    					<div class="arrow-up show-collapse"></div>
+    					</a>
+    					<ul class="dropdown-menu" id="alumni">
+    						<li>
+    							<div class="yamm-content">
+    								<div class="row row-flex no-margins" style="margin-bottom: 0;">
+    									<ul aria-hidden="true" class="col-sm-3 col-xs-12 ltyellow-bg">
+    									</ul>
+    								    								    									<div class="col-sm-3 col-xs-12 ltyellow-bg hidden-xs">
+    										<div class="menu_image" style="margin: 2em 0;">
+    											<img alt="Shot of the DeNaples center" class="img-thumbnail" src="https://www.scranton.edu/global/images/navigation/alumni-nav.jpeg"/>
+    											<p class="text-thumbnail">With more than 51,000 Scranton graduates out there, connecting with fellow alumni couldn't be easier, and we're here to help!</p>
+    										</div>
+    									</div>
+    									
+    									<!-- end col -->
+    									<ul class="col-lg-2 col-md-2 col-sm-3 col-xs-12 grey-border">
+    										<li>
+    											<a class="active " data-label="Alumni - Overview" href="https://www.scranton.edu/alumni/index.shtml">Alumni - Overview</a>
+    										</li>
+    										<li>
+    											<a data-label="University Advancement" href="https://www.scranton.edu/advancement/index.shtml">University Advancement</a>
+    										</li>
+    										<li>
+    											<a data-label="Make a Gift" href="https://www.scranton.edu/advancement/form/index.shtml">Make a Gift</a>
+    										</li>
+    										<li>
+    											<a data-label="Calendar of Events" href="https://www.scranton.edu/alumni/AlumniEvents/alumni-events.shtml">Calendar of Events</a>
+    										</li>
+    										<li>
+    											<a data-label="Alumni Board" href="https://www.scranton.edu/alumni/AlumniSociety/DirBoard.shtml">Alumni Board</a>
+    										</li>
+    									
+    									</ul>
+    									<!-- end col -->
+    									<ul class="col-lg-2 col-md-2 col-sm-3 col-xs-12">
+    										<li aria-hidden="true" class="hidden-xs" style="padding: 10px 15px;"> </li>    										<li>
+    											<a data-label="Networking Opportunities" href="https://www.scranton.edu/alumni/networking-opportunities/index.shtml">Networking Opportunities</a>
+    										</li>
+    										<li>
+    											<a aria-label="Career Development for Alumni" data-label="Career Development" href="https://www.scranton.edu/alumni/AlumniEvents/career-development-webinars/career-development-alumni-resources.shtml">Career Development</a>
+    										</li>
+    								
+    										<li>
+    											<a data-label="Reunion Weekend" href="https://www.scranton.edu/alumni/AlumniEvents/reunion-weekend/index.shtml">Reunion Weekend</a>
+    										</li>
+    										<li>
+    											<a data-label="Scranton Journal" href="https://journal.scranton.edu/" target="_blank">Scranton Journal</a>
+    										</li>
+    										
+    									    
+    									    
+    									</ul>
+    									<!-- end col -->
+    									<div class="col-lg-5 col-md-5 col-sm-3 col-xs-12 ltyellow-bg visible-xs">
+    										<div class="menu_image" style="margin: 2em 0;">
+    											<img alt="Shot of the DeNaples center" class="img-thumbnail" src="https://www.scranton.edu/global/images/navigation/alumni-nav.jpeg"/>
+    											<p class="text-thumbnail">With more than 51,000 Scranton graduates out there, connecting with fellow alumni couldn't be easier, and we're here to help!</p>
+    										</div>
+    									</div>
+    									<!-- end col -->
+    								</div>
+    								<!-- end row -->
+    							</div>
+    							<!-- end yamm-content -->
+    						</li>
+    					</ul>
+    					<!-- end drop down menu -->
+    				</li>
+    				<li class="dropdown">
+    				    <a aria-label="Athletics menu" class="dropdown-toggle" data-toggle="dropdown" href="#" id="dropdown-athletics" role="button">Athletics 
+    				        <div class="arrow-up show-collapse"></div>
+    				    </a>
+    				    <ul class="dropdown-menu" id="athletics" role="menu">
+    				        <li><a aria-label="Athletics Homepage" data-label="Athletics" href="https://athletics.scranton.edu/landing/index" target="_blank">Athletics <i aria-hidden="true" class="fa fa-external-link"></i></a></li>
+    				        <li><a data-label="Recreation and Intramurals" href="https://athletics.scranton.edu/sports/2023/5/1/Recreational-Sports-General-Information.aspx">Recreation and Intramurals <i aria-hidden="true" class="fa fa-external-link"></i></a></li>
+    				    </ul>
+    				</li>
+    			</ul>
+    			<!-- end navbar-nav -->
+    			<div class="toolbar show-toolbar-xs">
+    				    				    				<a class="yellow_button" data-label="Undergraduate" href="https://admissions.scranton.edu/apply/index.shtml">
+    					 Undergraduate
+    				</a>
+    				    				<a class="orange_button" data-label="Graduate" href="https://gradadmissions.scranton.edu/how-to-apply.shtml">
+    					 Graduate
+    				
+    				
+    				</a>
+    				<a data-label="Give to Scranton" href="https://www.scranton.edu/advancement/form/index.shtml">Give to Scranton</a>
+    				<a data-label="Campus Contact" href="https://www.scranton.edu/about/campus-contacts.shtml">Contacts</a>
+    				<a data-label="My.Scranton" href="https://my.scranton.edu/">My.Scranton</a>
+    				<!--<a href="#">Search<img src="images/search-m.png" /></a>-->
+    				<div class="search-wrapper">
+    					<form action="https://www.scranton.edu/search.shtml" class="search-form" id="search-mobile">
+    						<div class="form-group has-feedback">
+    							<label class="sr-only" for="searchBoxMobile" name="cx" type="hidden" value="005991389174410019054:di5cu7vwkoc">Search</label>
+    							<input aria-labelledby="searchMobile" class="form-control search-text search" id="searchBoxMobile" name="q" placeholder="Search" type="text" value=""/>
+    							<span class="glyphicon glyphicon-search glyphicon-light form-control-feedback"></span>
+    						</div>
+    						<input name="siteurl" type="hidden" value="www.google.com/cse/home?cx=005991389174410019054:di5cu7vwkoc"/>
+    					</form>
+    				</div>
+    				<div class="social-icons show-collapse">
+    					<span>
+    						<a aria-label="Facebook" data-label="Facebook" data-placement="bottom" data-toggle="tooltip" href="https://www.facebook.com/universityofscranton/" target="_blank">
+    							<em aria-hidden="true" class="fa fa-facebook"></em>
+    						</a>
+    					</span>
+    					<span>
+    						<a aria-label="Twitter" data-label="Twitter" data-placement="bottom" data-toggle="tooltip" href="https://twitter.com/univofscranton" target="_blank">
+    							<em aria-hidden="true" class="fa fa-twitter"></em>
+    						</a>
+    					</span>
+    					<span>
+    						<a aria-label="Instagram" data-label="Instagram" data-placement="bottom" data-toggle="tooltip" href="https://www.instagram.com/universityofscranton/" target="_blank">
+    							<em aria-hidden="true" class="fa fa-instagram"></em>
+    						</a>
+    					</span>
+    				
+    					<span>
+    						<a aria-label="Youtube" data-label="Youtube" data-placement="bottom" data-toggle="tooltip" href="https://www.youtube.com/user/universityofscranton" target="_blank">
+    							<em aria-hidden="true" class="fa fa-youtube"></em>
+    						</a>
+    					</span>
+    				</div>
+    				<!-- end social icons -->
+    			</div>
+    			<!-- end toolbar -->
+    		</div>
+    		<!-- #navbar-collapse-1 -->
+    	</div>
+    	<!-- end navbar yamm navbar-default -->
+    </div>
+    <!-- end container -->
+</header>
+            
+             
+        </header>
+		
+    <nav aria-label="breadcrumb" class="hh-events breadcrumbs">
+        <ol class="container">
+                        <li><a href="../../index.shtml" target="_parent">Events</a></li>
+                                                                                                                                    
+                                <li><a href="../../index.shtml#v=01/01/2025-12/31/2025" target="_parent">2025</a></li>
+                                                                                                                                                                                                                            
+                                <li><a href="../../index.shtml#v=11/01/2025-11/30/2025" target="_parent">November</a></li>
+                                                                                                                                                                <li aria-current="page" class="active">Course Creation Reimagined - Leveraging GenAI for Streamlined Learning</li>
+                                                        </ol>
+    </nav>
+
+
+
+    
+        
+            <div class="hh-module hh-events events-detail" id="main">
+    <div class="container">
+	    <div class="row">
+		<div class="col-xs-12 col-sm-8 content-detail">
+		    
+    			<figure>
+    				<img alt="University of Scranton" src="../../_files/images/locations/university-of-scranton.jpg"/>
+    			</figure>
+			
+			<h1>Course Creation Reimagined - Leveraging GenAI for Streamlined Learning</h1>
+			<p>In many ways, generative AI has made faculty members' work far more challenging. In this workshop, we will explore how it may assist you. Are you revising a course or working on a new one? Discover how generative AI can support and streamline your course design process, from planning to assessment. In this workshop, you&#8217;ll explore AI tools and strategies for creating syllabi, course maps, learning objectives, FAQ pages, and announcement or email templates. Learn how to generate or enhance lecture materials, develop case studies and custom scenarios, and design collaborative student activities. Explore AI-assisted approaches to rubric creation and quiz question development or revision. You&#8217;ll walk away with practical tools, templates, and ideas designed to help you put what you&#8217;ve learned into action right away.You are invited to join us for a virtual workshop on Course Creation Reimagined: Leveraging GenAI for Streamlined Learning.</p>
+<p>Online on Tuesday, November 4, 11:30 &#8211; 12:30 via Team&#8217;s Meeting Link. Please register for the workshop on the My Scranton site, using the Employee CTE Events Card. The event is listed under Brightspace (D2L) Workshops. Reimagine your course design process with the power of generative AI in this workshop focused on streamlining every step from planning to assessment.</p>
+<p>Workshop Highlights:</p>
+<p>&#8226; Streamline Course Design: Learn how to use GenAI to efficiently create syllabi, course maps, objectives, and communication templates.</p>
+<p>&#8226; Enhance Instructional Materials: Generate or refine lecture content, case studies, scenarios, and student engagement activities using AI tools.</p>
+<p>&#8226; Create Smarter Assessments: Explore AI-assisted strategies for developing rubrics and quiz questions that align with your learning goals.</p>
+			        <div class="mt-5 related-events  desktop">
+    <div class="section-title"><h2 class="title">Related Events</h2></div>
+    <div class="row events">
+        <div class="fa-3x text-center loading-spinner">
+            <i class="fas fa-spinner fa-pulse"></i>
+        </div>
+    </div>
+    </div>
+    		</div>
+		<div class="col-xs-12 col-sm-4 sidebar-detail">
+		        
+		    <div class="row">
+		        <div class="col-xs-12">
+                    <div class="section-title">
+                        <h2 class="title">Details</h2>
+                    </div>
+                                                        
+            <div class="info">
+    <div>
+    <div><span aria-hidden="true" class="icon fas fa-calendar-alt" title="Calendar Date"></span></div>
+        <div>November 4, 2025</div>
+        </div>
+    <div>
+    <div><span aria-hidden="true" class="icon fas fa-clock" title="Time"></span></div>
+    <div class="sTime"></div>
+        </div>
+        </div>
+                            <div class="info">
+            <div>
+    <div><span aria-hidden="true" class="icon fas fa-ticket-alt" title="Address"></span></div>
+    <div>
+        <a href="https://ssbprd.scranton.edu/appprd/ycaevnt.event" rel="noopner noreferrer" target="_blank">
+        Get Your Tickets Here!
+        <span aria-hidden="true" class="fas fa-external-link-alt" title="External Link"></span></a>
+        </div>
+    </div>
+        </div>
+                            <div class="filters">
+                <div class="filter ">
+    <h3 class="filter-label">Categories</h3>
+            <div><a href="../../index.shtml#f1=ossscte">OSSS/CTE</a></div>
+            </div>
+                                <div class="filter ">
+    <h3 class="filter-label">Location</h3>
+            <div><a href="../../index.shtml#f1=other">Other</a></div>
+            </div>
+                                                                        </div>
+                </div>
+            </div>
+                                	<div class="row">
+        		<div class="col-xs-12">
+        			<div class="section-title">
+        				<h2 class="title">Contact</h2>
+        			</div>
+        			<div class="info">
+        			                				<div>
+            					<div><span aria-hidden="true" class="icon fas fa-user" title="Contact Person"></span></div>
+            					<div>Mary Jane Murphy-Bowne</div>
+            				</div>
+        				        				            				<div>
+            					<div><span aria-hidden="true" class="icon fas fa-phone" title="Phone Number"></span></div>
+            					<div><a href="tel:">5709414040</a></div>
+            				</div>
+        				        				            				<div>
+            					<div><span aria-hidden="true" class="icon fas fa-envelope" title="Email"></span></div>
+            					<div><a href="mailto:mary.murphy-bowne@scranton.edu">mary.murphy-bowne@scranton.edu</a></div>
+            				</div>
+        				        			</div>
+        		</div>
+        	</div>
+                                                	<div class="row share-row">
+    		<div class="col-xs-12">
+    			<div class="section-title">
+    				<h2 class="title">Share</h2>
+    			</div>
+    			
+    			<div class="icon-list">
+    				<a href="https://www.facebook.com/sharer/sharer.php?u=https://events.scranton.edu/2025/11/course-creation-reimagined-leveraging-genai-for-streamlined-learning.html" target="_blank">
+    				    <span class="fab fa-facebook-f"></span>
+    				    <span class="sr-only">Post to Facebook</span>
+    				</a>
+    				<a href="https://twitter.com/intent/tweet?text=Course Creation Reimagined - Leveraging GenAI for Streamlined Learning&amp;url=https://events.scranton.edu/2025/11/course-creation-reimagined-leveraging-genai-for-streamlined-learning.html" target="_blank">
+    				    <span class="fab fa-twitter"></span>
+    				    <span class="sr-only">Tweet to Twitter</span>
+    				</a>
+    				<a href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https://events.scranton.edu/2025/11/course-creation-reimagined-leveraging-genai-for-streamlined-learning.html&amp;title=Course Creation Reimagined - Leveraging GenAI for Streamlined Learning&amp;summary=In many ways, generative AI has made faculty..." target="_blank">
+    				    <span class="fab fa-linkedin-in"></span>
+    				    <span class="sr-only">Share to LinkedIn</span>
+    				</a>
+    				    				<a href="https://pinterest.com/pin/create/button/?url=https://events.scranton.edu/2025/11/course-creation-reimagined-leveraging-genai-for-streamlined-learning.html&amp;media=https://events.scranton.edu/_files/images/locations/university-of-scranton.jpg&amp;description=Course Creation Reimagined - Leveraging GenAI for Streamlined Learning" target="_blank">
+    				    				    <span class="fab fa-pinterest-p"></span>
+    				    <span class="sr-only">Pin to Pinterest</span>
+    				</a>
+    				<a href="mailto:?subject=Check%20out%20this%20event%20-%20Course Creation Reimagined - Leveraging GenAI for Streamlined Learning&amp;body=In many ways, generative AI has made faculty...%20-%20Read%20more%20at%20https://events.scranton.edu/2025/11/course-creation-reimagined-leveraging-genai-for-streamlined-learning.html" target="_blank">
+    				    <span class="fa fa-envelope"></span>
+    				    <span class="sr-only">Send to Email</span>
+    				</a>
+    			</div>
+    			
+    		</div>
+    	</div>
+                        	            	<div class="row save-row">
+    		<div class="col-xs-12">
+    			<div class="section-title">
+    				<h2 class="title">Save</h2>
+    			</div>
+    			        			<div class="feeds">
+        			    
+        				<a href="https://calendar.google.com/calendar/r/eventedit?text=Course%20Creation%20Reimagined%20-%20Leveraging%20GenAI%20for%20Streamlined%20Learning
+&amp;dates=20251104T1130-0500/20251104T1230-0500&amp;details=In%20many%20ways,%20generative%20AI%20has%20made%20faculty...
+" target="_blank">
+        				    <span class="fab fa-google" aria-hidden="true"></span> 
+        				    <span class="sr-only">Add to</span>
+        				    Google
+        				</a>
+        				<a href="https://outlook.live.com/owa/?path=/calendar/action/compose&amp;rru=addevent&amp;startdt=2025-11-04T11:30:00-0500&amp;enddt=2025-11-04T12:30:00-0500&amp;subject=Course%20Creation%20Reimagined%20-%20Leveraging%20GenAI%20for%20Streamlined%20Learning
+&amp;body=In%20many%20ways,%20generative%20AI%20has%20made%20faculty...
+&amp;allday=false" target="_blank">
+        				    <span class="fab fa-windows" aria-hidden="true"></span> 
+        				    <span class="sr-only">Add to</span>
+        				    Outlook
+        				</a>
+        				<a href="https://calendar.yahoo.com/?v=60&amp;title=Course%20Creation%20Reimagined%20-%20Leveraging%20GenAI%20for%20Streamlined%20Learning
+&amp;st=20251104T1130-0500&amp;et=20251104T1230-0500&amp;desc=In%20many%20ways,%20generative%20AI%20has%20made%20faculty...
+" target="_blank">
+        				    <span class="fab fa-yahoo" aria-hidden="true"></span> 
+        				    <span class="sr-only">Add to</span>
+        				    Yahoo
+        				</a>
+        				<a href="course-creation-reimagined-leveraging-genai-for-streamlined-learning.ics" target="_blank">
+        				    <span class="far fa-calendar-plus" aria-hidden="true"></span> 
+        				    <span class="sr-only">Download as</span>
+        				    iCal
+        				</a>
+        				
+        			</div>
+    			    		</div>
+    	</div>
+	            <div class="row">
+                <div class="col-xs-12">
+                    <a class="secondary-button" href="../../index.shtml">Back to Events</a>
+                </div>
+            </div>
+        </div>
+    </div>
+            <div class="mt-5 related-events  mobile">
+    <div class="section-title"><h2 class="title">Related Events</h2></div>
+    <div class="row events">
+        <div class="fa-3x text-center loading-spinner">
+            <i class="fas fa-spinner fa-pulse"></i>
+        </div>
+    </div>
+    </div>
+        </div>
+</div>
+
+		 
+            <meta name="description">
+</meta>
+<footer id="footer-style-1">
+	<div class="container">
+		<div class="row centered-wrapper">
+			<div class="col-lg-12 col-md-12 col-sm-12 no-gutters">
+				<div class="row row-flex no-margins footer-menu-list">
+					<div class="col-lg-3 col-md-3 col-sm-3 col-xs-3 centered-wrapper footer-col-1">
+						<img alt="The University of Scranton" height="56" width="220" loading="lazy" class="img-responsive footer-logo" src="https://www.scranton.edu/homeimages/2021/images/university-of-scranton-logo-purple.png"/>
+					</div>
+					
+					<div class="col-lg-2 col-md-2 col-sm-2 col-xs-2 orange-divider-left footer-col-2">
+						<div class="centered-block">
+							<p>800 Linden Street
+								<br/>Scranton, PA 18510-4699
+							<br/>(570) 941-7400
+							</p>
+						</div>
+					</div>
+					
+					<div class="col-lg-2 col-md-2 col-sm-2 col-xs-2 orange-divider-left remove-mobile-margin footer-col-3">
+						<div class="centered-block">
+							<ul>
+								<li>
+									<a href="https://www.scranton.edu/about/campus-contacts.shtml" data-label="Campus Contact">Campus Contacts</a>
+																</li>
+								<li>
+									<a href="https://www.scranton.edu/pir/institutional-research/HEOA/index.shtml" data-label="Consumer Information">Consumer Information</a>
+																	</li>
+								<li>
+									<a href="https://www.scranton.edu/disclaimer.shtml" data-label="Disclaimer">Disclaimer</a>
+								</li>
+								<li>
+									<a href="https://www.scranton.edu/hr/employment/employmentopportunities.shtml" data-label="Jobs">Jobs</a>
+								</li>
+								
+							</ul>
+						</div>
+					</div>
+					
+					<div class="col-lg-2 col-md-2 col-sm-2 col-xs-2 orange-divider-left footer-col-4">
+						<div class="centered-block">
+							<ul>
+								<li>
+									<a href="https://www.scranton.edu/compliance-titleix/index.shtml" data-label="Non-discrimination Statement">Non-Discrimination Statement</a>
+								</li>
+								<li>
+									<a href="https://www.scranton.edu/information-technology/documents/policies/privacy-policy.pdf" data-label="Privacy Policy">Privacy Policy</a>
+								</li>
+								<li>
+									<a href="https://www.scranton.edu/sitemap.shtml" data-label="Site Map">Site Map</a>
+								</li>
+								<li>
+									<a href="https://www.scranton.edu/compliance-titleix/index.shtml#University%20of%20Scranton%20Title%20IX%20Coordinators" data-label="Title IX Coordinator">Title IX Coordinator</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+					
+					<div class="col-lg-3 col-md-3 col-sm-3 col-xs-3 centered-wrapper footer-col-5">
+						<div class="mobile-dividers">
+							<div class="centered-block">
+								<p class="left-padding">CONNECT WITH US</p>
+								<p class="footer-highlight left-padding">1-888-SCRANTON</p>
+								<div class="social-icons">
+									<span>
+										<a target="_blank" rel="noopener" data-placement="bottom" aria-label="Facebook"  data-toggle="tooltip" href="https://www.facebook.com/universityofscranton/" data-label="Facebook">
+											<em class="fa fa-facebook" data-testid="footer-facebook-icon"></em>
+										</a>
+									</span>
+									<span>
+										<a target="_blank" rel="noopener" data-placement="bottom" aria-label="Twitter" data-toggle="tooltip" href="https://twitter.com/univofscranton"   data-label="Twitter">
+											<em class="fa-brands fa-x-twitter" data-testid="footer-x-icon"></em>
+										</a>
+									</span>
+									<span>
+										<a target="_blank" rel="noopener" data-placement="bottom" aria-label="instagram" data-toggle="tooltip" href="https://www.instagram.com/universityofscranton/"   data-label="Instagram">
+											<em class="fa fa-instagram" data-testid="footer-instagram-icon"></em>
+										</a>
+									</span>
+																																																	<span>
+										<a target="_blank" rel="noopener" data-placement="bottom" aria-label="Youtube" data-toggle="tooltip" href="https://www.youtube.com/user/universityofscranton"  data-label="Youtube">
+											<em class="fa fa-youtube" data-testid="footer-youtube-icon"></em>
+										</a>
+									</span>
+								</div>
+								
+							</div>
+							
+						
+							
+						</div>
+					</div>
+					
+				</div>
+				
+			</div>
+	
+		</div>
+	
+	</div>
+	
+</footer>
+		
+<div id="copyrights">
+	<div class="container">
+		<div class="col-lg-12 col-md-12 col-sm-12">
+			<div class="copyright-text">
+				<p>© 2026 University of Scranton</p>
+			</div>
+
+		</div>
+
+	</div>
+
+</div>
+
+         
+         
+		    <script src="https://cdn.polyfill.io/v2/polyfill.min.js"></script>
+    <script crossorigin="anonymous" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script crossorigin="anonymous" integrity="sha512-/bOVV1DV1AQXcypckRwsR9ThoCj7FqTV2/0Bm79bL3YSyLkVideFLE3MIZkq1u5t28ke1c0n31WYCOrO01dsUg==" referrerpolicy="no-referrer" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.matchHeight/0.7.2/jquery.matchHeight-min.js"></script>
+    <script crossorigin="anonymous" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" src="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/js/bootstrap.min.js"></script>
+    <script crossorigin="anonymous" integrity="sha256-qXBd/EfAdjOA2FGrGAG+b3YBn2tn5A6bhz+LSgYD96k=" src="https://cdn.jsdelivr.net/npm/lodash@4.17.21/lodash.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/moment@2.30.1/moment.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment-timezone/0.5.32/moment-timezone-with-data.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js"></script>
+    <script src="../../_files/js/hh-menu.js"></script>
+                <script>var relatedEventsFilterLogic = "Or"; var currentEventID = "ed4f26f10a00006f01bf4eb87a2c6247"; var currentEventStartDate = "1762273800000"; var debugMode = true; var defaultView = "upcoming events.replace(/[^A-Za-z0-9]/g, "-")"; var currentDataURL = "../../_data/current-live.json"; var filter1Text = [ "ossscte" ]; var filter3Text = [ "other" ]; var thisCurrentEvent = [{ "title":"Course Creation Reimagined - Leveraging GenAI for Streamlined Learning", "description":"In many ways, generative AI has made faculty...", "allDay":"false", "startDate": "2025-11-04T11:30-0500", "endDate": "2025-11-04T12:30-0500", "originalStart":"2025-11-04T11:30-0500", "originalEnd":"2025-11-04T12:30-0500", "timezone":"America/New_York", "ics":"course-creation-reimagined-leveraging-genai-for-streamlined-learning.ics", "recurringEvent":"false" }]; var filterTexts = [ filter1Text,false,filter3Text,false,false,false,false,false,false,false ]; var relatedEvents = []; var filter1 = true; var filter2 = false; var filter3 = true; var filter4 = false; var filter5 = false; var filter6 = false; var filter7 = false; var filter8 = false; var filter9 = false; var filter10 = false; var filterTextsAll = _.flatMap(_.compact(filterTexts)); function afterHHRelatedEventsLoad(){ $('.hh-events .related-events .event .title').matchHeight(); }</script>                    <script src="../../_files/js/hh-events.js"></script>
+
+	</body>
+</html>

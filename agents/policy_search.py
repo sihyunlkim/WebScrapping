@@ -33,7 +33,7 @@ def _extract_domain(website: str) -> str:
     except Exception:
         return ""
 
-def search_policy_pages(university: str, website: str, num_results: int| None = None, restrict_domain: bool = True, search_type: str = "deep", ):
+def search_policy_pages(university: str, website: str, num_results: int=100, restrict_domain: bool = True, search_type: str = "deep", ):
     """
     If restrict_domain=True, prepend `site:{domain}` to each query to keep results on the official domain.
     """
@@ -59,7 +59,6 @@ def search_policy_pages(university: str, website: str, num_results: int| None = 
                 "query": q,
                 "title": r.title,
                 "url": r.url,
-                "text": r.text or "", 
                 "length": len(r.text or ""),
                 "domain_restricted": bool(site_prefix),
                 "university": university,
