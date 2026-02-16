@@ -13,10 +13,10 @@ exa = Exa(EXA_KEY)
 
 POLICY_QUERIES = [
     "{uni} generative AI policy",
-    #"{uni} AI policy academic integrity",
-    #"{uni} ChatGPT policy students",
-    #"{uni} provost generative AI guidance",
-    #"{uni} teaching and learning generative AI guidance",
+    "{uni} AI policy academic integrity",
+    "{uni} ChatGPT policy students",
+    "{uni} provost generative AI guidance",
+    "{uni} teaching and learning generative AI guidance",
 ]
 
 def _extract_domain(website: str) -> str:
@@ -33,7 +33,7 @@ def _extract_domain(website: str) -> str:
     except Exception:
         return ""
 
-def search_policy_pages(university: str, website: str, num_results: int = 100, restrict_domain: bool = True):
+def search_policy_pages(university: str, website: str, num_results: int| None = None, restrict_domain: bool = True, search_type: str = "deep", ):
     """
     If restrict_domain=True, prepend `site:{domain}` to each query to keep results on the official domain.
     """
@@ -43,11 +43,17 @@ def search_policy_pages(university: str, website: str, num_results: int = 100, r
     hits = []
     for template in POLICY_QUERIES:
         q = site_prefix + template.format(uni=university)
-        res = exa.search(
-            query=q,
-            num_results=num_results,
-            contents={"text": True},
-        )
+        kwargs = {
+            "query": q,
+            #"contents": {"text": True},
+            "type": search_type,      # ✅ search type 고정
+        }
+
+        if num_results is not None:
+            kwargs["num_results"] = num_results
+
+        res = exa.search(**kwargs)
+        
         for r in res.results:
             hits.append({
                 "query": q,
