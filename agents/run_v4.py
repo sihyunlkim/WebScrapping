@@ -1,5 +1,3 @@
-#!/usr/bin/env python3
-
 from __future__ import annotations
 
 import argparse
@@ -216,11 +214,8 @@ def build_selected_500(
     sc_matched_all, sc_unmatched_all = match_scimago_to_ipeds(sc, ipeds)
 
     # Top N by rank, then match
-    sc_bottom = sc.sort_values("Rank", ascending=False).head(top_n).copy()
-    sc_matched_top, sc_unmatched_top = match_scimago_to_ipeds(sc_bottom, ipeds)
-
-    #sc_top = sc.sort_values("Rank").head(top_n).copy()
-    #sc_matched_top, sc_unmatched_top = match_scimago_to_ipeds(sc_top, ipeds)
+    sc_top = sc.sort_values("Rank").head(top_n).copy()
+    sc_matched_top, sc_unmatched_top = match_scimago_to_ipeds(sc_top, ipeds)
 
     if len(sc_matched_top) < top_n:
         print(f"[WARN] Only matched {len(sc_matched_top)}/{top_n} SciMAGO top rows to IPEDS by simple name match.")
@@ -232,7 +227,7 @@ def build_selected_500(
         "UNITID": sc_matched_top["UNITID"].astype(int),
         "INSTNM": sc_matched_top["INSTNM_IPEDS"].astype(str),
         "WEBADDR": sc_matched_top["WEBADDR"].astype(str),
-        "group": "scimago_bottom_test",
+        "group": "scimago_top",
         "scimago_rank": sc_matched_top["Rank"].astype(int),
         "scimago_institution": sc_matched_top["Institution"].astype(str),
     })
@@ -265,8 +260,8 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--ipeds", type=str, default="hd2024_data_stata 2.csv", help="Path to IPEDS CSV (must include UNITID, INSTNM, WEBADDR).")
     ap.add_argument("--scimago", type=str, default="ScimagoIR 2025 - Overall Rank - Universities - USA.csv", help="Path to SciMAGO CSV.")
-    ap.add_argument("--top-n", type=int, default=5)
-    ap.add_argument("--random-n", type=int, default=0)
+    ap.add_argument("--top-n", type=int, default=250)
+    ap.add_argument("--random-n", type=int, default=250)
     ap.add_argument("--seed", type=int, default=42)
 
     ap.add_argument("--num-results", type=int, default=100, help="num_results per Exa query template (None not supported via CLI; set a number).")
@@ -276,7 +271,7 @@ def main():
 
     ap.add_argument("--outdir", type=str, default="data/v4", help="Base output directory.")
     ap.add_argument("--skip-html", action="store_true", help="Collect links but do not download HTML.")
-    ap.add_argument("--max-urls-per-uni", type=int, default=10, help="Limit HTML downloads per university (after dedupe).")
+    ap.add_argument("--max-urls-per-uni", type=int, default=60, help="Limit HTML downloads per university (after dedupe).")
     ap.add_argument("--sleep-between-unis", type=float, default=0.7, help="Seconds to sleep between universities (politeness).")
 
     args = ap.parse_args()
