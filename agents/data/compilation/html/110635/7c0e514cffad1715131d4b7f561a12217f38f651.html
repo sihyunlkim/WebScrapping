@@ -1,0 +1,988 @@
+<!doctype html>
+<html lang="en-US">
+<script async src=”https://siteimproveanalytics.com/js/siteanalyze_6294756.js”></script>
+<head>
+	<meta charset="UTF-8"><script type="text/javascript">(window.NREUM||(NREUM={})).init={privacy:{cookies_enabled:true},ajax:{deny_list:["bam.nr-data.net"]},feature_flags:["soft_nav"],distributed_tracing:{enabled:true}};(window.NREUM||(NREUM={})).loader_config={agentID:"1588659843",accountID:"3468660",trustKey:"66686",xpid:"VwIBWVBVCBABUFJRAwcGXlwF",licenseKey:"NRJS-0664320260e6ab10472",applicationID:"1433461884",browserID:"1588659843"};;/*! For license information please see nr-loader-spa-1.309.0.min.js.LICENSE.txt */
+(()=>{var e,t,r={384:(e,t,r)=>{"use strict";r.d(t,{NT:()=>o,US:()=>l,Zm:()=>c,bQ:()=>u,dV:()=>d,pV:()=>h});var n=r(6154),i=r(1863),s=r(944),a=r(1910);const o={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net"};function c(){return n.gm.NREUM||(n.gm.NREUM={}),void 0===n.gm.newrelic&&(n.gm.newrelic=n.gm.NREUM),n.gm.NREUM}function d(){let e=c();return e.o||(e.o={ST:n.gm.setTimeout,SI:n.gm.setImmediate||n.gm.setInterval,CT:n.gm.clearTimeout,XHR:n.gm.XMLHttpRequest,REQ:n.gm.Request,EV:n.gm.Event,PR:n.gm.Promise,MO:n.gm.MutationObserver,FETCH:n.gm.fetch,WS:n.gm.WebSocket},(0,a.i)(...Object.values(e.o))),e}function u(e,t){let r=c();r.initializedAgents??={},t.initializedAt={ms:(0,i.t)(),date:new Date},r.initializedAgents[e]=t,2===Object.keys(r.initializedAgents).length&&(0,s.R)(69)}function l(e,t){c()[e]=t}function h(){return function(){let e=c();const t=e.info||{};e.info={beacon:o.beacon,errorBeacon:o.errorBeacon,...t}}(),function(){let e=c();const t=e.init||{};e.init={...t}}(),d(),function(){let e=c();const t=e.loader_config||{};e.loader_config={...t}}(),c()}},782:(e,t,r)=>{"use strict";r.d(t,{T:()=>n});const n=r(860).K7.pageViewTiming},860:(e,t,r)=>{"use strict";r.d(t,{$J:()=>u,K7:()=>c,P3:()=>d,XX:()=>i,Yy:()=>o,df:()=>s,qY:()=>n,v4:()=>a});const n="events",i="jserrors",s="browser/blobs",a="rum",o="browser/logs",c={ajax:"ajax",genericEvents:"generic_events",jserrors:i,logging:"logging",metrics:"metrics",pageAction:"page_action",pageViewEvent:"page_view_event",pageViewTiming:"page_view_timing",sessionReplay:"session_replay",sessionTrace:"session_trace",softNav:"soft_navigations",spa:"spa"},d={[c.pageViewEvent]:1,[c.pageViewTiming]:2,[c.metrics]:3,[c.jserrors]:4,[c.spa]:5,[c.ajax]:6,[c.sessionTrace]:7,[c.softNav]:8,[c.sessionReplay]:9,[c.logging]:10,[c.genericEvents]:11},u={[c.pageViewEvent]:a,[c.pageViewTiming]:n,[c.ajax]:n,[c.spa]:n,[c.softNav]:n,[c.metrics]:i,[c.jserrors]:i,[c.sessionTrace]:s,[c.sessionReplay]:s,[c.logging]:o,[c.genericEvents]:"ins"}},944:(e,t,r)=>{"use strict";r.d(t,{R:()=>i});var n=r(3241);function i(e,t){"function"==typeof console.debug&&(console.debug("New Relic Warning: https://github.com/newrelic/newrelic-browser-agent/blob/main/docs/warning-codes.md#".concat(e),t),(0,n.W)({agentIdentifier:null,drained:null,type:"data",name:"warn",feature:"warn",data:{code:e,secondary:t}}))}},993:(e,t,r)=>{"use strict";r.d(t,{A$:()=>s,ET:()=>a,TZ:()=>o,p_:()=>i});var n=r(860);const i={ERROR:"ERROR",WARN:"WARN",INFO:"INFO",DEBUG:"DEBUG",TRACE:"TRACE"},s={OFF:0,ERROR:1,WARN:2,INFO:3,DEBUG:4,TRACE:5},a="log",o=n.K7.logging},1541:(e,t,r)=>{"use strict";r.d(t,{U:()=>i,f:()=>n});const n={MFE:"MFE",BA:"BA"};function i(e,t){if(2!==t?.harvestEndpointVersion)return{};const r=t.agentRef.runtime.appMetadata.agents[0].entityGuid;return e?{"source.id":e.id,"source.name":e.name,"source.type":e.type,"parent.id":e.parent?.id||r,"parent.type":e.parent?.type||n.BA}:{"entity.guid":r,appId:t.agentRef.info.applicationID}}},1687:(e,t,r)=>{"use strict";r.d(t,{Ak:()=>d,Ze:()=>h,x3:()=>u});var n=r(3241),i=r(7836),s=r(3606),a=r(860),o=r(2646);const c={};function d(e,t){const r={staged:!1,priority:a.P3[t]||0};l(e),c[e].get(t)||c[e].set(t,r)}function u(e,t){e&&c[e]&&(c[e].get(t)&&c[e].delete(t),p(e,t,!1),c[e].size&&f(e))}function l(e){if(!e)throw new Error("agentIdentifier required");c[e]||(c[e]=new Map)}function h(e="",t="feature",r=!1){if(l(e),!e||!c[e].get(t)||r)return p(e,t);c[e].get(t).staged=!0,f(e)}function f(e){const t=Array.from(c[e]);t.every(([e,t])=>t.staged)&&(t.sort((e,t)=>e[1].priority-t[1].priority),t.forEach(([t])=>{c[e].delete(t),p(e,t)}))}function p(e,t,r=!0){const a=e?i.ee.get(e):i.ee,c=s.i.handlers;if(!a.aborted&&a.backlog&&c){if((0,n.W)({agentIdentifier:e,type:"lifecycle",name:"drain",feature:t}),r){const e=a.backlog[t],r=c[t];if(r){for(let t=0;e&&t<e.length;++t)g(e[t],r);Object.entries(r).forEach(([e,t])=>{Object.values(t||{}).forEach(t=>{t[0]?.on&&t[0].context()instanceof o.y&&!t[0].listeners(e).includes(t[1])&&t[0].on(e,t[1])})})}}a.isolatedBacklog||delete c[t],a.backlog[t]=null,a.emit("drain-"+t,[])}}function g(e,t){var r=e[1];Object.values(t[r]||{}).forEach(t=>{var r=e[0];if(t[0]===r){var n=t[1],i=e[3],s=e[2];n.apply(i,s)}})}},1738:(e,t,r)=>{"use strict";r.d(t,{U:()=>f,Y:()=>h});var n=r(3241),i=r(9908),s=r(1863),a=r(944),o=r(5701),c=r(3969),d=r(8362),u=r(860),l=r(4261);function h(e,t,r,s){const h=s||r;!h||h[e]&&h[e]!==d.d.prototype[e]||(h[e]=function(){(0,i.p)(c.xV,["API/"+e+"/called"],void 0,u.K7.metrics,r.ee),(0,n.W)({agentIdentifier:r.agentIdentifier,drained:!!o.B?.[r.agentIdentifier],type:"data",name:"api",feature:l.Pl+e,data:{}});try{return t.apply(this,arguments)}catch(e){(0,a.R)(23,e)}})}function f(e,t,r,n,a){const o=e.info;null===r?delete o.jsAttributes[t]:o.jsAttributes[t]=r,(a||null===r)&&(0,i.p)(l.Pl+n,[(0,s.t)(),t,r],void 0,"session",e.ee)}},1741:(e,t,r)=>{"use strict";r.d(t,{W:()=>s});var n=r(944),i=r(4261);class s{#e(e,...t){if(this[e]!==s.prototype[e])return this[e](...t);(0,n.R)(35,e)}addPageAction(e,t){return this.#e(i.hG,e,t)}register(e){return this.#e(i.eY,e)}recordCustomEvent(e,t){return this.#e(i.fF,e,t)}setPageViewName(e,t){return this.#e(i.Fw,e,t)}setCustomAttribute(e,t,r){return this.#e(i.cD,e,t,r)}noticeError(e,t){return this.#e(i.o5,e,t)}setUserId(e,t=!1){return this.#e(i.Dl,e,t)}setApplicationVersion(e){return this.#e(i.nb,e)}setErrorHandler(e){return this.#e(i.bt,e)}addRelease(e,t){return this.#e(i.k6,e,t)}log(e,t){return this.#e(i.$9,e,t)}start(){return this.#e(i.d3)}finished(e){return this.#e(i.BL,e)}recordReplay(){return this.#e(i.CH)}pauseReplay(){return this.#e(i.Tb)}addToTrace(e){return this.#e(i.U2,e)}setCurrentRouteName(e){return this.#e(i.PA,e)}interaction(e){return this.#e(i.dT,e)}wrapLogger(e,t,r){return this.#e(i.Wb,e,t,r)}measure(e,t){return this.#e(i.V1,e,t)}consent(e){return this.#e(i.Pv,e)}}},1863:(e,t,r)=>{"use strict";function n(){return Math.floor(performance.now())}r.d(t,{t:()=>n})},1910:(e,t,r)=>{"use strict";r.d(t,{i:()=>s});var n=r(944);const i=new Map;function s(...e){return e.every(e=>{if(i.has(e))return i.get(e);const t="function"==typeof e?e.toString():"",r=t.includes("[native code]"),s=t.includes("nrWrapper");return r||s||(0,n.R)(64,e?.name||t),i.set(e,r),r})}},2555:(e,t,r)=>{"use strict";r.d(t,{D:()=>o,f:()=>a});var n=r(384),i=r(8122);const s={beacon:n.NT.beacon,errorBeacon:n.NT.errorBeacon,licenseKey:void 0,applicationID:void 0,sa:void 0,queueTime:void 0,applicationTime:void 0,ttGuid:void 0,user:void 0,account:void 0,product:void 0,extra:void 0,jsAttributes:{},userAttributes:void 0,atts:void 0,transactionName:void 0,tNamePlain:void 0};function a(e){try{return!!e.licenseKey&&!!e.errorBeacon&&!!e.applicationID}catch(e){return!1}}const o=e=>(0,i.a)(e,s)},2614:(e,t,r)=>{"use strict";r.d(t,{BB:()=>a,H3:()=>n,g:()=>d,iL:()=>c,tS:()=>o,uh:()=>i,wk:()=>s});const n="NRBA",i="SESSION",s=144e5,a=18e5,o={STARTED:"session-started",PAUSE:"session-pause",RESET:"session-reset",RESUME:"session-resume",UPDATE:"session-update"},c={SAME_TAB:"same-tab",CROSS_TAB:"cross-tab"},d={OFF:0,FULL:1,ERROR:2}},2646:(e,t,r)=>{"use strict";r.d(t,{y:()=>n});class n{constructor(e){this.contextId=e}}},2843:(e,t,r)=>{"use strict";r.d(t,{G:()=>s,u:()=>i});var n=r(3878);function i(e,t=!1,r,i){(0,n.DD)("visibilitychange",function(){if(t)return void("hidden"===document.visibilityState&&e());e(document.visibilityState)},r,i)}function s(e,t,r){(0,n.sp)("pagehide",e,t,r)}},3241:(e,t,r)=>{"use strict";r.d(t,{W:()=>s});var n=r(6154);const i="newrelic";function s(e={}){try{n.gm.dispatchEvent(new CustomEvent(i,{detail:e}))}catch(e){}}},3304:(e,t,r)=>{"use strict";r.d(t,{A:()=>s});var n=r(7836);const i=()=>{const e=new WeakSet;return(t,r)=>{if("object"==typeof r&&null!==r){if(e.has(r))return;e.add(r)}return r}};function s(e){try{return JSON.stringify(e,i())??""}catch(e){try{n.ee.emit("internal-error",[e])}catch(e){}return""}}},3333:(e,t,r)=>{"use strict";r.d(t,{$v:()=>u,TZ:()=>n,Xh:()=>c,Zp:()=>i,kd:()=>d,mq:()=>o,nf:()=>a,qN:()=>s});const n=r(860).K7.genericEvents,i=["auxclick","click","copy","keydown","paste","scrollend"],s=["focus","blur"],a=4,o=1e3,c=2e3,d=["PageAction","UserAction","BrowserPerformance"],u={RESOURCES:"experimental.resources",REGISTER:"register"}},3434:(e,t,r)=>{"use strict";r.d(t,{Jt:()=>s,YM:()=>d});var n=r(7836),i=r(5607);const s="nr@original:".concat(i.W),a=50;var o=Object.prototype.hasOwnProperty,c=!1;function d(e,t){return e||(e=n.ee),r.inPlace=function(e,t,n,i,s){n||(n="");const a="-"===n.charAt(0);for(let o=0;o<t.length;o++){const c=t[o],d=e[c];l(d)||(e[c]=r(d,a?c+n:n,i,c,s))}},r.flag=s,r;function r(t,r,n,c,d){return l(t)?t:(r||(r=""),nrWrapper[s]=t,function(e,t,r){if(Object.defineProperty&&Object.keys)try{return Object.keys(e).forEach(function(r){Object.defineProperty(t,r,{get:function(){return e[r]},set:function(t){return e[r]=t,t}})}),t}catch(e){u([e],r)}for(var n in e)o.call(e,n)&&(t[n]=e[n])}(t,nrWrapper,e),nrWrapper);function nrWrapper(){var s,o,l,h;let f;try{o=this,s=[...arguments],l="function"==typeof n?n(s,o):n||{}}catch(t){u([t,"",[s,o,c],l],e)}i(r+"start",[s,o,c],l,d);const p=performance.now();let g;try{return h=t.apply(o,s),g=performance.now(),h}catch(e){throw g=performance.now(),i(r+"err",[s,o,e],l,d),f=e,f}finally{const e=g-p,t={start:p,end:g,duration:e,isLongTask:e>=a,methodName:c,thrownError:f};t.isLongTask&&i("long-task",[t,o],l,d),i(r+"end",[s,o,h],l,d)}}}function i(r,n,i,s){if(!c||t){var a=c;c=!0;try{e.emit(r,n,i,t,s)}catch(t){u([t,r,n,i],e)}c=a}}}function u(e,t){t||(t=n.ee);try{t.emit("internal-error",e)}catch(e){}}function l(e){return!(e&&"function"==typeof e&&e.apply&&!e[s])}},3606:(e,t,r)=>{"use strict";r.d(t,{i:()=>s});var n=r(9908);s.on=a;var i=s.handlers={};function s(e,t,r,s){a(s||n.d,i,e,t,r)}function a(e,t,r,i,s){s||(s="feature"),e||(e=n.d);var a=t[s]=t[s]||{};(a[r]=a[r]||[]).push([e,i])}},3738:(e,t,r)=>{"use strict";r.d(t,{He:()=>i,Kp:()=>o,Lc:()=>d,Rz:()=>u,TZ:()=>n,bD:()=>s,d3:()=>a,jx:()=>l,sl:()=>h,uP:()=>c});const n=r(860).K7.sessionTrace,i="bstResource",s="resource",a="-start",o="-end",c="fn"+a,d="fn"+o,u="pushState",l=1e3,h=3e4},3785:(e,t,r)=>{"use strict";r.d(t,{R:()=>c,b:()=>d});var n=r(9908),i=r(1863),s=r(860),a=r(3969),o=r(993);function c(e,t,r={},c=o.p_.INFO,d=!0,u,l=(0,i.t)()){(0,n.p)(a.xV,["API/logging/".concat(c.toLowerCase(),"/called")],void 0,s.K7.metrics,e),(0,n.p)(o.ET,[l,t,r,c,d,u],void 0,s.K7.logging,e)}function d(e){return"string"==typeof e&&Object.values(o.p_).some(t=>t===e.toUpperCase().trim())}},3878:(e,t,r)=>{"use strict";function n(e,t){return{capture:e,passive:!1,signal:t}}function i(e,t,r=!1,i){window.addEventListener(e,t,n(r,i))}function s(e,t,r=!1,i){document.addEventListener(e,t,n(r,i))}r.d(t,{DD:()=>s,jT:()=>n,sp:()=>i})},3962:(e,t,r)=>{"use strict";r.d(t,{AM:()=>a,O2:()=>l,OV:()=>s,Qu:()=>h,TZ:()=>c,ih:()=>f,pP:()=>o,t1:()=>u,tC:()=>i,wD:()=>d});var n=r(860);const i=["click","keydown","submit"],s="popstate",a="api",o="initialPageLoad",c=n.K7.softNav,d=5e3,u=500,l={INITIAL_PAGE_LOAD:"",ROUTE_CHANGE:1,UNSPECIFIED:2},h={INTERACTION:1,AJAX:2,CUSTOM_END:3,CUSTOM_TRACER:4},f={IP:"in progress",PF:"pending finish",FIN:"finished",CAN:"cancelled"}},3969:(e,t,r)=>{"use strict";r.d(t,{TZ:()=>n,XG:()=>o,rs:()=>i,xV:()=>a,z_:()=>s});const n=r(860).K7.metrics,i="sm",s="cm",a="storeSupportabilityMetrics",o="storeEventMetrics"},4234:(e,t,r)=>{"use strict";r.d(t,{W:()=>s});var n=r(7836),i=r(1687);class s{constructor(e,t){this.agentIdentifier=e,this.ee=n.ee.get(e),this.featureName=t,this.blocked=!1}deregisterDrain(){(0,i.x3)(this.agentIdentifier,this.featureName)}}},4261:(e,t,r)=>{"use strict";r.d(t,{$9:()=>u,BL:()=>c,CH:()=>p,Dl:()=>R,Fw:()=>w,PA:()=>v,Pl:()=>n,Pv:()=>A,Tb:()=>h,U2:()=>a,V1:()=>E,Wb:()=>T,bt:()=>y,cD:()=>b,d3:()=>x,dT:()=>d,eY:()=>g,fF:()=>f,hG:()=>s,hw:()=>i,k6:()=>o,nb:()=>m,o5:()=>l});const n="api-",i=n+"ixn-",s="addPageAction",a="addToTrace",o="addRelease",c="finished",d="interaction",u="log",l="noticeError",h="pauseReplay",f="recordCustomEvent",p="recordReplay",g="register",m="setApplicationVersion",v="setCurrentRouteName",b="setCustomAttribute",y="setErrorHandler",w="setPageViewName",R="setUserId",x="start",T="wrapLogger",E="measure",A="consent"},5205:(e,t,r)=>{"use strict";r.d(t,{j:()=>S});var n=r(384),i=r(1741);var s=r(2555),a=r(3333);const o=e=>{if(!e||"string"!=typeof e)return!1;try{document.createDocumentFragment().querySelector(e)}catch{return!1}return!0};var c=r(2614),d=r(944),u=r(8122);const l="[data-nr-mask]",h=e=>(0,u.a)(e,(()=>{const e={feature_flags:[],experimental:{allow_registered_children:!1,resources:!1},mask_selector:"*",block_selector:"[data-nr-block]",mask_input_options:{color:!1,date:!1,"datetime-local":!1,email:!1,month:!1,number:!1,range:!1,search:!1,tel:!1,text:!1,time:!1,url:!1,week:!1,textarea:!1,select:!1,password:!0}};return{ajax:{deny_list:void 0,block_internal:!0,enabled:!0,autoStart:!0},api:{get allow_registered_children(){return e.feature_flags.includes(a.$v.REGISTER)||e.experimental.allow_registered_children},set allow_registered_children(t){e.experimental.allow_registered_children=t},duplicate_registered_data:!1},browser_consent_mode:{enabled:!1},distributed_tracing:{enabled:void 0,exclude_newrelic_header:void 0,cors_use_newrelic_header:void 0,cors_use_tracecontext_headers:void 0,allowed_origins:void 0},get feature_flags(){return e.feature_flags},set feature_flags(t){e.feature_flags=t},generic_events:{enabled:!0,autoStart:!0},harvest:{interval:30},jserrors:{enabled:!0,autoStart:!0},logging:{enabled:!0,autoStart:!0},metrics:{enabled:!0,autoStart:!0},obfuscate:void 0,page_action:{enabled:!0},page_view_event:{enabled:!0,autoStart:!0},page_view_timing:{enabled:!0,autoStart:!0},performance:{capture_marks:!1,capture_measures:!1,capture_detail:!0,resources:{get enabled(){return e.feature_flags.includes(a.$v.RESOURCES)||e.experimental.resources},set enabled(t){e.experimental.resources=t},asset_types:[],first_party_domains:[],ignore_newrelic:!0}},privacy:{cookies_enabled:!0},proxy:{assets:void 0,beacon:void 0},session:{expiresMs:c.wk,inactiveMs:c.BB},session_replay:{autoStart:!0,enabled:!1,preload:!1,sampling_rate:10,error_sampling_rate:100,collect_fonts:!1,inline_images:!1,fix_stylesheets:!0,mask_all_inputs:!0,get mask_text_selector(){return e.mask_selector},set mask_text_selector(t){o(t)?e.mask_selector="".concat(t,",").concat(l):""===t||null===t?e.mask_selector=l:(0,d.R)(5,t)},get block_class(){return"nr-block"},get ignore_class(){return"nr-ignore"},get mask_text_class(){return"nr-mask"},get block_selector(){return e.block_selector},set block_selector(t){o(t)?e.block_selector+=",".concat(t):""!==t&&(0,d.R)(6,t)},get mask_input_options(){return e.mask_input_options},set mask_input_options(t){t&&"object"==typeof t?e.mask_input_options={...t,password:!0}:(0,d.R)(7,t)}},session_trace:{enabled:!0,autoStart:!0},soft_navigations:{enabled:!0,autoStart:!0},spa:{enabled:!0,autoStart:!0},ssl:void 0,user_actions:{enabled:!0,elementAttributes:["id","className","tagName","type"]}}})());var f=r(6154),p=r(9324);let g=0;const m={buildEnv:p.F3,distMethod:p.Xs,version:p.xv,originTime:f.WN},v={consented:!1},b={appMetadata:{},get consented(){return this.session?.state?.consent||v.consented},set consented(e){v.consented=e},customTransaction:void 0,denyList:void 0,disabled:!1,harvester:void 0,isolatedBacklog:!1,isRecording:!1,loaderType:void 0,maxBytes:3e4,obfuscator:void 0,onerror:void 0,ptid:void 0,releaseIds:{},session:void 0,timeKeeper:void 0,registeredEntities:[],jsAttributesMetadata:{bytes:0},get harvestCount(){return++g}},y=e=>{const t=(0,u.a)(e,b),r=Object.keys(m).reduce((e,t)=>(e[t]={value:m[t],writable:!1,configurable:!0,enumerable:!0},e),{});return Object.defineProperties(t,r)};var w=r(5701);const R=e=>{const t=e.startsWith("http");e+="/",r.p=t?e:"https://"+e};var x=r(7836),T=r(3241);const E={accountID:void 0,trustKey:void 0,agentID:void 0,licenseKey:void 0,applicationID:void 0,xpid:void 0},A=e=>(0,u.a)(e,E),_=new Set;function S(e,t={},r,a){let{init:o,info:c,loader_config:d,runtime:u={},exposed:l=!0}=t;if(!c){const e=(0,n.pV)();o=e.init,c=e.info,d=e.loader_config}e.init=h(o||{}),e.loader_config=A(d||{}),c.jsAttributes??={},f.bv&&(c.jsAttributes.isWorker=!0),e.info=(0,s.D)(c);const p=e.init,g=[c.beacon,c.errorBeacon];_.has(e.agentIdentifier)||(p.proxy.assets&&(R(p.proxy.assets),g.push(p.proxy.assets)),p.proxy.beacon&&g.push(p.proxy.beacon),e.beacons=[...g],function(e){const t=(0,n.pV)();Object.getOwnPropertyNames(i.W.prototype).forEach(r=>{const n=i.W.prototype[r];if("function"!=typeof n||"constructor"===n)return;let s=t[r];e[r]&&!1!==e.exposed&&"micro-agent"!==e.runtime?.loaderType&&(t[r]=(...t)=>{const n=e[r](...t);return s?s(...t):n})})}(e),(0,n.US)("activatedFeatures",w.B)),u.denyList=[...p.ajax.deny_list||[],...p.ajax.block_internal?g:[]],u.ptid=e.agentIdentifier,u.loaderType=r,e.runtime=y(u),_.has(e.agentIdentifier)||(e.ee=x.ee.get(e.agentIdentifier),e.exposed=l,(0,T.W)({agentIdentifier:e.agentIdentifier,drained:!!w.B?.[e.agentIdentifier],type:"lifecycle",name:"initialize",feature:void 0,data:e.config})),_.add(e.agentIdentifier)}},5270:(e,t,r)=>{"use strict";r.d(t,{Aw:()=>a,SR:()=>s,rF:()=>o});var n=r(384),i=r(7767);function s(e){return!!(0,n.dV)().o.MO&&(0,i.V)(e)&&!0===e?.session_trace.enabled}function a(e){return!0===e?.session_replay.preload&&s(e)}function o(e,t){try{if("string"==typeof t?.type){if("password"===t.type.toLowerCase())return"*".repeat(e?.length||0);if(void 0!==t?.dataset?.nrUnmask||t?.classList?.contains("nr-unmask"))return e}}catch(e){}return"string"==typeof e?e.replace(/[\S]/g,"*"):"*".repeat(e?.length||0)}},5289:(e,t,r)=>{"use strict";r.d(t,{GG:()=>a,Qr:()=>c,sB:()=>o});var n=r(3878),i=r(6389);function s(){return"undefined"==typeof document||"complete"===document.readyState}function a(e,t){if(s())return e();const r=(0,i.J)(e),a=setInterval(()=>{s()&&(clearInterval(a),r())},500);(0,n.sp)("load",r,t)}function o(e){if(s())return e();(0,n.DD)("DOMContentLoaded",e)}function c(e){if(s())return e();(0,n.sp)("popstate",e)}},5607:(e,t,r)=>{"use strict";r.d(t,{W:()=>n});const n=(0,r(9566).bz)()},5701:(e,t,r)=>{"use strict";r.d(t,{B:()=>s,t:()=>a});var n=r(3241);const i=new Set,s={};function a(e,t){const r=t.agentIdentifier;s[r]??={},e&&"object"==typeof e&&(i.has(r)||(t.ee.emit("rumresp",[e]),s[r]=e,i.add(r),(0,n.W)({agentIdentifier:r,loaded:!0,drained:!0,type:"lifecycle",name:"load",feature:void 0,data:e})))}},6154:(e,t,r)=>{"use strict";r.d(t,{OF:()=>d,RI:()=>i,WN:()=>h,bv:()=>s,eN:()=>f,gm:()=>a,lR:()=>l,m:()=>c,mw:()=>o,sb:()=>u});var n=r(1863);const i="undefined"!=typeof window&&!!window.document,s="undefined"!=typeof WorkerGlobalScope&&("undefined"!=typeof self&&self instanceof WorkerGlobalScope&&self.navigator instanceof WorkerNavigator||"undefined"!=typeof globalThis&&globalThis instanceof WorkerGlobalScope&&globalThis.navigator instanceof WorkerNavigator),a=i?window:"undefined"!=typeof WorkerGlobalScope&&("undefined"!=typeof self&&self instanceof WorkerGlobalScope&&self||"undefined"!=typeof globalThis&&globalThis instanceof WorkerGlobalScope&&globalThis),o=Boolean("hidden"===a?.document?.visibilityState),c=""+a?.location,d=/iPad|iPhone|iPod/.test(a.navigator?.userAgent),u=d&&"undefined"==typeof SharedWorker,l=(()=>{const e=a.navigator?.userAgent?.match(/Firefox[/\s](\d+\.\d+)/);return Array.isArray(e)&&e.length>=2?+e[1]:0})(),h=Date.now()-(0,n.t)(),f=()=>"undefined"!=typeof PerformanceNavigationTiming&&a?.performance?.getEntriesByType("navigation")?.[0]?.responseStart},6344:(e,t,r)=>{"use strict";r.d(t,{BB:()=>u,Qb:()=>l,TZ:()=>i,Ug:()=>a,Vh:()=>s,_s:()=>o,bc:()=>d,yP:()=>c});var n=r(2614);const i=r(860).K7.sessionReplay,s="errorDuringReplay",a=.12,o={DomContentLoaded:0,Load:1,FullSnapshot:2,IncrementalSnapshot:3,Meta:4,Custom:5},c={[n.g.ERROR]:15e3,[n.g.FULL]:3e5,[n.g.OFF]:0},d={RESET:{message:"Session was reset",sm:"Reset"},IMPORT:{message:"Recorder failed to import",sm:"Import"},TOO_MANY:{message:"429: Too Many Requests",sm:"Too-Many"},TOO_BIG:{message:"Payload was too large",sm:"Too-Big"},CROSS_TAB:{message:"Session Entity was set to OFF on another tab",sm:"Cross-Tab"},ENTITLEMENTS:{message:"Session Replay is not allowed and will not be started",sm:"Entitlement"}},u=5e3,l={API:"api",RESUME:"resume",SWITCH_TO_FULL:"switchToFull",INITIALIZE:"initialize",PRELOAD:"preload"}},6389:(e,t,r)=>{"use strict";function n(e,t=500,r={}){const n=r?.leading||!1;let i;return(...r)=>{n&&void 0===i&&(e.apply(this,r),i=setTimeout(()=>{i=clearTimeout(i)},t)),n||(clearTimeout(i),i=setTimeout(()=>{e.apply(this,r)},t))}}function i(e){let t=!1;return(...r)=>{t||(t=!0,e.apply(this,r))}}r.d(t,{J:()=>i,s:()=>n})},6630:(e,t,r)=>{"use strict";r.d(t,{T:()=>n});const n=r(860).K7.pageViewEvent},6774:(e,t,r)=>{"use strict";r.d(t,{T:()=>n});const n=r(860).K7.jserrors},7295:(e,t,r)=>{"use strict";r.d(t,{Xv:()=>a,gX:()=>i,iW:()=>s});var n=[];function i(e){if(!e||s(e))return!1;if(0===n.length)return!0;if("*"===n[0].hostname)return!1;for(var t=0;t<n.length;t++){var r=n[t];if(r.hostname.test(e.hostname)&&r.pathname.test(e.pathname))return!1}return!0}function s(e){return void 0===e.hostname}function a(e){if(n=[],e&&e.length)for(var t=0;t<e.length;t++){let r=e[t];if(!r)continue;if("*"===r)return void(n=[{hostname:"*"}]);0===r.indexOf("http://")?r=r.substring(7):0===r.indexOf("https://")&&(r=r.substring(8));const i=r.indexOf("/");let s,a;i>0?(s=r.substring(0,i),a=r.substring(i)):(s=r,a="*");let[c]=s.split(":");n.push({hostname:o(c),pathname:o(a,!0)})}}function o(e,t=!1){const r=e.replace(/[.+?^${}()|[\]\\]/g,e=>"\\"+e).replace(/\*/g,".*?");return new RegExp((t?"^":"")+r+"$")}},7485:(e,t,r)=>{"use strict";r.d(t,{D:()=>i});var n=r(6154);function i(e){if(0===(e||"").indexOf("data:"))return{protocol:"data"};try{const t=new URL(e,location.href),r={port:t.port,hostname:t.hostname,pathname:t.pathname,search:t.search,protocol:t.protocol.slice(0,t.protocol.indexOf(":")),sameOrigin:t.protocol===n.gm?.location?.protocol&&t.host===n.gm?.location?.host};return r.port&&""!==r.port||("http:"===t.protocol&&(r.port="80"),"https:"===t.protocol&&(r.port="443")),r.pathname&&""!==r.pathname?r.pathname.startsWith("/")||(r.pathname="/".concat(r.pathname)):r.pathname="/",r}catch(e){return{}}}},7699:(e,t,r)=>{"use strict";r.d(t,{It:()=>s,KC:()=>o,No:()=>i,qh:()=>a});var n=r(860);const i=16e3,s=1e6,a="SESSION_ERROR",o={[n.K7.logging]:!0,[n.K7.genericEvents]:!1,[n.K7.jserrors]:!1,[n.K7.ajax]:!1}},7767:(e,t,r)=>{"use strict";r.d(t,{V:()=>i});var n=r(6154);const i=e=>n.RI&&!0===e?.privacy.cookies_enabled},7836:(e,t,r)=>{"use strict";r.d(t,{P:()=>o,ee:()=>c});var n=r(384),i=r(8990),s=r(2646),a=r(5607);const o="nr@context:".concat(a.W),c=function e(t,r){var n={},a={},u={},l=!1;try{l=16===r.length&&d.initializedAgents?.[r]?.runtime.isolatedBacklog}catch(e){}var h={on:p,addEventListener:p,removeEventListener:function(e,t){var r=n[e];if(!r)return;for(var i=0;i<r.length;i++)r[i]===t&&r.splice(i,1)},emit:function(e,r,n,i,s){!1!==s&&(s=!0);if(c.aborted&&!i)return;t&&s&&t.emit(e,r,n);var o=f(n);g(e).forEach(e=>{e.apply(o,r)});var d=v()[a[e]];d&&d.push([h,e,r,o]);return o},get:m,listeners:g,context:f,buffer:function(e,t){const r=v();if(t=t||"feature",h.aborted)return;Object.entries(e||{}).forEach(([e,n])=>{a[n]=t,t in r||(r[t]=[])})},abort:function(){h._aborted=!0,Object.keys(h.backlog).forEach(e=>{delete h.backlog[e]})},isBuffering:function(e){return!!v()[a[e]]},debugId:r,backlog:l?{}:t&&"object"==typeof t.backlog?t.backlog:{},isolatedBacklog:l};return Object.defineProperty(h,"aborted",{get:()=>{let e=h._aborted||!1;return e||(t&&(e=t.aborted),e)}}),h;function f(e){return e&&e instanceof s.y?e:e?(0,i.I)(e,o,()=>new s.y(o)):new s.y(o)}function p(e,t){n[e]=g(e).concat(t)}function g(e){return n[e]||[]}function m(t){return u[t]=u[t]||e(h,t)}function v(){return h.backlog}}(void 0,"globalEE"),d=(0,n.Zm)();d.ee||(d.ee=c)},8122:(e,t,r)=>{"use strict";r.d(t,{a:()=>i});var n=r(944);function i(e,t){try{if(!e||"object"!=typeof e)return(0,n.R)(3);if(!t||"object"!=typeof t)return(0,n.R)(4);const r=Object.create(Object.getPrototypeOf(t),Object.getOwnPropertyDescriptors(t)),s=0===Object.keys(r).length?e:r;for(let a in s)if(void 0!==e[a])try{if(null===e[a]){r[a]=null;continue}Array.isArray(e[a])&&Array.isArray(t[a])?r[a]=Array.from(new Set([...e[a],...t[a]])):"object"==typeof e[a]&&"object"==typeof t[a]?r[a]=i(e[a],t[a]):r[a]=e[a]}catch(e){r[a]||(0,n.R)(1,e)}return r}catch(e){(0,n.R)(2,e)}}},8139:(e,t,r)=>{"use strict";r.d(t,{u:()=>h});var n=r(7836),i=r(3434),s=r(8990),a=r(6154);const o={},c=a.gm.XMLHttpRequest,d="addEventListener",u="removeEventListener",l="nr@wrapped:".concat(n.P);function h(e){var t=function(e){return(e||n.ee).get("events")}(e);if(o[t.debugId]++)return t;o[t.debugId]=1;var r=(0,i.YM)(t,!0);function h(e){r.inPlace(e,[d,u],"-",p)}function p(e,t){return e[1]}return"getPrototypeOf"in Object&&(a.RI&&f(document,h),c&&f(c.prototype,h),f(a.gm,h)),t.on(d+"-start",function(e,t){var n=e[1];if(null!==n&&("function"==typeof n||"object"==typeof n)&&"newrelic"!==e[0]){var i=(0,s.I)(n,l,function(){var e={object:function(){if("function"!=typeof n.handleEvent)return;return n.handleEvent.apply(n,arguments)},function:n}[typeof n];return e?r(e,"fn-",null,e.name||"anonymous"):n});this.wrapped=e[1]=i}}),t.on(u+"-start",function(e){e[1]=this.wrapped||e[1]}),t}function f(e,t,...r){let n=e;for(;"object"==typeof n&&!Object.prototype.hasOwnProperty.call(n,d);)n=Object.getPrototypeOf(n);n&&t(n,...r)}},8362:(e,t,r)=>{"use strict";r.d(t,{d:()=>s});var n=r(9566),i=r(1741);class s extends i.W{agentIdentifier=(0,n.LA)(16)}},8374:(e,t,r)=>{r.nc=(()=>{try{return document?.currentScript?.nonce}catch(e){}return""})()},8990:(e,t,r)=>{"use strict";r.d(t,{I:()=>i});var n=Object.prototype.hasOwnProperty;function i(e,t,r){if(n.call(e,t))return e[t];var i=r();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,t,{value:i,writable:!0,enumerable:!1}),i}catch(e){}return e[t]=i,i}},9119:(e,t,r)=>{"use strict";r.d(t,{L:()=>s});var n=/([^?#]*)[^#]*(#[^?]*|$).*/,i=/([^?#]*)().*/;function s(e,t){return e?e.replace(t?n:i,"$1$2"):e}},9300:(e,t,r)=>{"use strict";r.d(t,{T:()=>n});const n=r(860).K7.ajax},9324:(e,t,r)=>{"use strict";r.d(t,{AJ:()=>a,F3:()=>i,Xs:()=>s,Yq:()=>o,xv:()=>n});const n="1.309.0",i="PROD",s="CDN",a="@newrelic/rrweb",o="1.0.1"},9566:(e,t,r)=>{"use strict";r.d(t,{LA:()=>o,ZF:()=>c,bz:()=>a,el:()=>d});var n=r(6154);const i="xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx";function s(e,t){return e?15&e[t]:16*Math.random()|0}function a(){const e=n.gm?.crypto||n.gm?.msCrypto;let t,r=0;return e&&e.getRandomValues&&(t=e.getRandomValues(new Uint8Array(30))),i.split("").map(e=>"x"===e?s(t,r++).toString(16):"y"===e?(3&s()|8).toString(16):e).join("")}function o(e){const t=n.gm?.crypto||n.gm?.msCrypto;let r,i=0;t&&t.getRandomValues&&(r=t.getRandomValues(new Uint8Array(e)));const a=[];for(var o=0;o<e;o++)a.push(s(r,i++).toString(16));return a.join("")}function c(){return o(16)}function d(){return o(32)}},9908:(e,t,r)=>{"use strict";r.d(t,{d:()=>n,p:()=>i});var n=r(7836).ee.get("handle");function i(e,t,r,i,s){s?(s.buffer([e],i),s.emit(e,t,r)):(n.buffer([e],i),n.emit(e,t,r))}}},n={};function i(e){var t=n[e];if(void 0!==t)return t.exports;var s=n[e]={exports:{}};return r[e](s,s.exports,i),s.exports}i.m=r,i.d=(e,t)=>{for(var r in t)i.o(t,r)&&!i.o(e,r)&&Object.defineProperty(e,r,{enumerable:!0,get:t[r]})},i.f={},i.e=e=>Promise.all(Object.keys(i.f).reduce((t,r)=>(i.f[r](e,t),t),[])),i.u=e=>({212:"nr-spa-compressor",249:"nr-spa-recorder",478:"nr-spa"}[e]+"-1.309.0.min.js"),i.o=(e,t)=>Object.prototype.hasOwnProperty.call(e,t),e={},t="NRBA-1.309.0.PROD:",i.l=(r,n,s,a)=>{if(e[r])e[r].push(n);else{var o,c;if(void 0!==s)for(var d=document.getElementsByTagName("script"),u=0;u<d.length;u++){var l=d[u];if(l.getAttribute("src")==r||l.getAttribute("data-webpack")==t+s){o=l;break}}if(!o){c=!0;var h={478:"sha512-t+FHZOrUgx9rkcooc81PHyp8WYSuQSHeu6DbfA2qo7oVl3vV+SDc5UHYmQ3Y+ngsc+y6sVT3LlrYrBTbaWeXMQ==",249:"sha512-SfCYLPa8nAq9RImR3pAFU4+qiEzNQqH/yBjFxMh1akKZuGb/dRAcYlyEcCa5vGsGvW2S4bkq4ERRIvHQkR7yVg==",212:"sha512-g7KDPPY5ueQ7sFl33IoLOwV4aCwdj8Nk4vqVAfjXOZuY6gIppy4bYmzJeFrLWJ/WXK/oGTOTYgRqXrB9dsnf0w=="};(o=document.createElement("script")).charset="utf-8",i.nc&&o.setAttribute("nonce",i.nc),o.setAttribute("data-webpack",t+s),o.src=r,0!==o.src.indexOf(window.location.origin+"/")&&(o.crossOrigin="anonymous"),h[a]&&(o.integrity=h[a])}e[r]=[n];var f=(t,n)=>{o.onerror=o.onload=null,clearTimeout(p);var i=e[r];if(delete e[r],o.parentNode&&o.parentNode.removeChild(o),i&&i.forEach(e=>e(n)),t)return t(n)},p=setTimeout(f.bind(null,void 0,{type:"timeout",target:o}),12e4);o.onerror=f.bind(null,o.onerror),o.onload=f.bind(null,o.onload),c&&document.head.appendChild(o)}},i.r=e=>{"undefined"!=typeof Symbol&&Symbol.toStringTag&&Object.defineProperty(e,Symbol.toStringTag,{value:"Module"}),Object.defineProperty(e,"__esModule",{value:!0})},i.p="https://js-agent.newrelic.com/",(()=>{var e={38:0,788:0};i.f.j=(t,r)=>{var n=i.o(e,t)?e[t]:void 0;if(0!==n)if(n)r.push(n[2]);else{var s=new Promise((r,i)=>n=e[t]=[r,i]);r.push(n[2]=s);var a=i.p+i.u(t),o=new Error;i.l(a,r=>{if(i.o(e,t)&&(0!==(n=e[t])&&(e[t]=void 0),n)){var s=r&&("load"===r.type?"missing":r.type),a=r&&r.target&&r.target.src;o.message="Loading chunk "+t+" failed: ("+s+": "+a+")",o.name="ChunkLoadError",o.type=s,o.request=a,n[1](o)}},"chunk-"+t,t)}};var t=(t,r)=>{var n,s,[a,o,c]=r,d=0;if(a.some(t=>0!==e[t])){for(n in o)i.o(o,n)&&(i.m[n]=o[n]);if(c)c(i)}for(t&&t(r);d<a.length;d++)s=a[d],i.o(e,s)&&e[s]&&e[s][0](),e[s]=0},r=self["webpackChunk:NRBA-1.309.0.PROD"]=self["webpackChunk:NRBA-1.309.0.PROD"]||[];r.forEach(t.bind(null,0)),r.push=t.bind(null,r.push.bind(r))})(),(()=>{"use strict";i(8374);var e=i(8362),t=i(860);const r=Object.values(t.K7);var n=i(5205);var s=i(9908),a=i(1863),o=i(4261),c=i(1738);var d=i(1687),u=i(4234),l=i(5289),h=i(6154),f=i(944),p=i(5270),g=i(7767),m=i(6389),v=i(7699);class b extends u.W{constructor(e,t){super(e.agentIdentifier,t),this.agentRef=e,this.abortHandler=void 0,this.featAggregate=void 0,this.loadedSuccessfully=void 0,this.onAggregateImported=new Promise(e=>{this.loadedSuccessfully=e}),this.deferred=Promise.resolve(),!1===e.init[this.featureName].autoStart?this.deferred=new Promise((t,r)=>{this.ee.on("manual-start-all",(0,m.J)(()=>{(0,d.Ak)(e.agentIdentifier,this.featureName),t()}))}):(0,d.Ak)(e.agentIdentifier,t)}importAggregator(e,t,r={}){if(this.featAggregate)return;const n=async()=>{let n;await this.deferred;try{if((0,g.V)(e.init)){const{setupAgentSession:t}=await i.e(478).then(i.bind(i,8766));n=t(e)}}catch(e){(0,f.R)(20,e),this.ee.emit("internal-error",[e]),(0,s.p)(v.qh,[e],void 0,this.featureName,this.ee)}try{if(!this.#t(this.featureName,n,e.init))return(0,d.Ze)(this.agentIdentifier,this.featureName),void this.loadedSuccessfully(!1);const{Aggregate:i}=await t();this.featAggregate=new i(e,r),e.runtime.harvester.initializedAggregates.push(this.featAggregate),this.loadedSuccessfully(!0)}catch(e){(0,f.R)(34,e),this.abortHandler?.(),(0,d.Ze)(this.agentIdentifier,this.featureName,!0),this.loadedSuccessfully(!1),this.ee&&this.ee.abort()}};h.RI?(0,l.GG)(()=>n(),!0):n()}#t(e,r,n){if(this.blocked)return!1;switch(e){case t.K7.sessionReplay:return(0,p.SR)(n)&&!!r;case t.K7.sessionTrace:return!!r;default:return!0}}}var y=i(6630),w=i(2614),R=i(3241);class x extends b{static featureName=y.T;constructor(e){var t;super(e,y.T),this.setupInspectionEvents(e.agentIdentifier),t=e,(0,c.Y)(o.Fw,function(e,r){"string"==typeof e&&("/"!==e.charAt(0)&&(e="/"+e),t.runtime.customTransaction=(r||"http://custom.transaction")+e,(0,s.p)(o.Pl+o.Fw,[(0,a.t)()],void 0,void 0,t.ee))},t),this.importAggregator(e,()=>i.e(478).then(i.bind(i,2467)))}setupInspectionEvents(e){const t=(t,r)=>{t&&(0,R.W)({agentIdentifier:e,timeStamp:t.timeStamp,loaded:"complete"===t.target.readyState,type:"window",name:r,data:t.target.location+""})};(0,l.sB)(e=>{t(e,"DOMContentLoaded")}),(0,l.GG)(e=>{t(e,"load")}),(0,l.Qr)(e=>{t(e,"navigate")}),this.ee.on(w.tS.UPDATE,(t,r)=>{(0,R.W)({agentIdentifier:e,type:"lifecycle",name:"session",data:r})})}}var T=i(384);class E extends e.d{constructor(e){var t;(super(),h.gm)?(this.features={},(0,T.bQ)(this.agentIdentifier,this),this.desiredFeatures=new Set(e.features||[]),this.desiredFeatures.add(x),(0,n.j)(this,e,e.loaderType||"agent"),t=this,(0,c.Y)(o.cD,function(e,r,n=!1){if("string"==typeof e){if(["string","number","boolean"].includes(typeof r)||null===r)return(0,c.U)(t,e,r,o.cD,n);(0,f.R)(40,typeof r)}else(0,f.R)(39,typeof e)},t),function(e){(0,c.Y)(o.Dl,function(t,r=!1){if("string"!=typeof t&&null!==t)return void(0,f.R)(41,typeof t);const n=e.info.jsAttributes["enduser.id"];r&&null!=n&&n!==t?(0,s.p)(o.Pl+"setUserIdAndResetSession",[t],void 0,"session",e.ee):(0,c.U)(e,"enduser.id",t,o.Dl,!0)},e)}(this),function(e){(0,c.Y)(o.nb,function(t){if("string"==typeof t||null===t)return(0,c.U)(e,"application.version",t,o.nb,!1);(0,f.R)(42,typeof t)},e)}(this),function(e){(0,c.Y)(o.d3,function(){e.ee.emit("manual-start-all")},e)}(this),function(e){(0,c.Y)(o.Pv,function(t=!0){if("boolean"==typeof t){if((0,s.p)(o.Pl+o.Pv,[t],void 0,"session",e.ee),e.runtime.consented=t,t){const t=e.features.page_view_event;t.onAggregateImported.then(e=>{const r=t.featAggregate;e&&!r.sentRum&&r.sendRum()})}}else(0,f.R)(65,typeof t)},e)}(this),this.run()):(0,f.R)(21)}get config(){return{info:this.info,init:this.init,loader_config:this.loader_config,runtime:this.runtime}}get api(){return this}run(){try{const e=function(e){const t={};return r.forEach(r=>{t[r]=!!e[r]?.enabled}),t}(this.init),n=[...this.desiredFeatures];n.sort((e,r)=>t.P3[e.featureName]-t.P3[r.featureName]),n.forEach(r=>{if(!e[r.featureName]&&r.featureName!==t.K7.pageViewEvent)return;if(r.featureName===t.K7.spa)return void(0,f.R)(67);const n=function(e){switch(e){case t.K7.ajax:return[t.K7.jserrors];case t.K7.sessionTrace:return[t.K7.ajax,t.K7.pageViewEvent];case t.K7.sessionReplay:return[t.K7.sessionTrace];case t.K7.pageViewTiming:return[t.K7.pageViewEvent];default:return[]}}(r.featureName).filter(e=>!(e in this.features));n.length>0&&(0,f.R)(36,{targetFeature:r.featureName,missingDependencies:n}),this.features[r.featureName]=new r(this)})}catch(e){(0,f.R)(22,e);for(const e in this.features)this.features[e].abortHandler?.();const t=(0,T.Zm)();delete t.initializedAgents[this.agentIdentifier]?.features,delete this.sharedAggregator;return t.ee.get(this.agentIdentifier).abort(),!1}}}var A=i(2843),_=i(782);class S extends b{static featureName=_.T;constructor(e){super(e,_.T),h.RI&&((0,A.u)(()=>(0,s.p)("docHidden",[(0,a.t)()],void 0,_.T,this.ee),!0),(0,A.G)(()=>(0,s.p)("winPagehide",[(0,a.t)()],void 0,_.T,this.ee)),this.importAggregator(e,()=>i.e(478).then(i.bind(i,9917))))}}var O=i(3969);class I extends b{static featureName=O.TZ;constructor(e){super(e,O.TZ),h.RI&&document.addEventListener("securitypolicyviolation",e=>{(0,s.p)(O.xV,["Generic/CSPViolation/Detected"],void 0,this.featureName,this.ee)}),this.importAggregator(e,()=>i.e(478).then(i.bind(i,6555)))}}var N=i(6774),P=i(3878),k=i(3304);class D{constructor(e,t,r,n,i){this.name="UncaughtError",this.message="string"==typeof e?e:(0,k.A)(e),this.sourceURL=t,this.line=r,this.column=n,this.__newrelic=i}}function C(e){return M(e)?e:new D(void 0!==e?.message?e.message:e,e?.filename||e?.sourceURL,e?.lineno||e?.line,e?.colno||e?.col,e?.__newrelic,e?.cause)}function j(e){const t="Unhandled Promise Rejection: ";if(!e?.reason)return;if(M(e.reason)){try{e.reason.message.startsWith(t)||(e.reason.message=t+e.reason.message)}catch(e){}return C(e.reason)}const r=C(e.reason);return(r.message||"").startsWith(t)||(r.message=t+r.message),r}function L(e){if(e.error instanceof SyntaxError&&!/:\d+$/.test(e.error.stack?.trim())){const t=new D(e.message,e.filename,e.lineno,e.colno,e.error.__newrelic,e.cause);return t.name=SyntaxError.name,t}return M(e.error)?e.error:C(e)}function M(e){return e instanceof Error&&!!e.stack}function H(e,r,n,i,o=(0,a.t)()){"string"==typeof e&&(e=new Error(e)),(0,s.p)("err",[e,o,!1,r,n.runtime.isRecording,void 0,i],void 0,t.K7.jserrors,n.ee),(0,s.p)("uaErr",[],void 0,t.K7.genericEvents,n.ee)}var B=i(1541),K=i(993),W=i(3785);function U(e,{customAttributes:t={},level:r=K.p_.INFO}={},n,i,s=(0,a.t)()){(0,W.R)(n.ee,e,t,r,!1,i,s)}function F(e,r,n,i,c=(0,a.t)()){(0,s.p)(o.Pl+o.hG,[c,e,r,i],void 0,t.K7.genericEvents,n.ee)}function V(e,r,n,i,c=(0,a.t)()){const{start:d,end:u,customAttributes:l}=r||{},h={customAttributes:l||{}};if("object"!=typeof h.customAttributes||"string"!=typeof e||0===e.length)return void(0,f.R)(57);const p=(e,t)=>null==e?t:"number"==typeof e?e:e instanceof PerformanceMark?e.startTime:Number.NaN;if(h.start=p(d,0),h.end=p(u,c),Number.isNaN(h.start)||Number.isNaN(h.end))(0,f.R)(57);else{if(h.duration=h.end-h.start,!(h.duration<0))return(0,s.p)(o.Pl+o.V1,[h,e,i],void 0,t.K7.genericEvents,n.ee),h;(0,f.R)(58)}}function G(e,r={},n,i,c=(0,a.t)()){(0,s.p)(o.Pl+o.fF,[c,e,r,i],void 0,t.K7.genericEvents,n.ee)}const z=["name","id","type"];function Y(e){(0,c.Y)(o.eY,function(t){return Z(e,t)},e)}function Z(e,r,n){(0,f.R)(54,"newrelic.register"),r||={},r.type=B.f.MFE,r.licenseKey||=e.info.licenseKey,r.blocked=!1,r.parent=n||{},("object"!=typeof r.tags||null===r.tags||Array.isArray(r.tags))&&(r.tags={});const i={};Object.entries(r.tags).forEach(([e,t])=>{z.includes(e)||(i["source.".concat(e)]=t)}),r.isolated??=!0;let o=()=>{};const c=e.runtime.registeredEntities;if(!r.isolated){const e=c.find(({metadata:{target:{id:e}}})=>e===r.id&&!r.isolated);if(e)return e}const d=e=>{r.blocked=!0,o=e};function u(e){return"string"==typeof e&&!!e.trim()&&e.trim().length<501||"number"==typeof e}e.init.api.allow_registered_children||d((0,m.J)(()=>(0,f.R)(55))),u(r.id)&&u(r.name)||d((0,m.J)(()=>(0,f.R)(48,r)));const l={addPageAction:(t,n={})=>g(F,[t,{...i,...n},e],r),deregister:()=>{d((0,m.J)(()=>(0,f.R)(68)))},log:(t,n={})=>g(U,[t,{...n,customAttributes:{...i,...n.customAttributes||{}}},e],r),measure:(t,n={})=>g(V,[t,{...n,customAttributes:{...i,...n.customAttributes||{}}},e],r),noticeError:(t,n={})=>g(H,[t,{...i,...n},e],r),register:(t={})=>g(Z,[e,t],l.metadata.target),recordCustomEvent:(t,n={})=>g(G,[t,{...i,...n},e],r),setApplicationVersion:e=>p("application.version",e),setCustomAttribute:(e,t)=>p(e,t),setUserId:e=>p("enduser.id",e),metadata:{customAttributes:i,target:r}},h=()=>(r.blocked&&o(),r.blocked);h()||c.push(l);const p=(e,t)=>{h()||(i[e]=t)},g=(r,n,i)=>{if(h()&&r!==Z)return;const o=(0,a.t)();(0,s.p)(O.xV,["API/register/".concat(r.name,"/called")],void 0,t.K7.metrics,e.ee);try{if(e.init.api.duplicate_registered_data&&r!==Z){let e=n;if(n[1]instanceof Object){const t={"child.id":i.id,"child.type":i.type};e="customAttributes"in n[1]?[n[0],{...n[1],customAttributes:{...n[1].customAttributes,...t}},...n.slice(2)]:[n[0],{...n[1],...t},...n.slice(2)]}r(...e,void 0,o)}return r(...n,i,o)}catch(e){(0,f.R)(50,e)}};return l}class q extends b{static featureName=N.T;constructor(e){var t;super(e,N.T),t=e,(0,c.Y)(o.o5,(e,r)=>H(e,r,t),t),function(e){(0,c.Y)(o.bt,function(t){e.runtime.onerror=t},e)}(e),function(e){let t=0;(0,c.Y)(o.k6,function(e,r){++t>10||(this.runtime.releaseIds[e.slice(-200)]=(""+r).slice(-200))},e)}(e),Y(e);try{this.removeOnAbort=new AbortController}catch(e){}this.ee.on("internal-error",(t,r)=>{this.abortHandler&&(0,s.p)("ierr",[C(t),(0,a.t)(),!0,{},e.runtime.isRecording,r],void 0,this.featureName,this.ee)}),h.gm.addEventListener("unhandledrejection",t=>{this.abortHandler&&(0,s.p)("err",[j(t),(0,a.t)(),!1,{unhandledPromiseRejection:1},e.runtime.isRecording],void 0,this.featureName,this.ee)},(0,P.jT)(!1,this.removeOnAbort?.signal)),h.gm.addEventListener("error",t=>{this.abortHandler&&(0,s.p)("err",[L(t),(0,a.t)(),!1,{},e.runtime.isRecording],void 0,this.featureName,this.ee)},(0,P.jT)(!1,this.removeOnAbort?.signal)),this.abortHandler=this.#r,this.importAggregator(e,()=>i.e(478).then(i.bind(i,2176)))}#r(){this.removeOnAbort?.abort(),this.abortHandler=void 0}}var X=i(8990);let J=1;function Q(e){const t=typeof e;return!e||"object"!==t&&"function"!==t?-1:e===h.gm?0:(0,X.I)(e,"nr@id",function(){return J++})}function ee(e){if("string"==typeof e&&e.length)return e.length;if("object"==typeof e){if("undefined"!=typeof ArrayBuffer&&e instanceof ArrayBuffer&&e.byteLength)return e.byteLength;if("undefined"!=typeof Blob&&e instanceof Blob&&e.size)return e.size;if(!("undefined"!=typeof FormData&&e instanceof FormData))try{return(0,k.A)(e).length}catch(e){return}}}var te=i(8139),re=i(7836),ne=i(3434);const ie={},se=["open","send"];function ae(e){var t=e||re.ee;const r=function(e){return(e||re.ee).get("xhr")}(t);if(void 0===h.gm.XMLHttpRequest)return r;if(ie[r.debugId]++)return r;ie[r.debugId]=1,(0,te.u)(t);var n=(0,ne.YM)(r),i=h.gm.XMLHttpRequest,s=h.gm.MutationObserver,a=h.gm.Promise,o=h.gm.setInterval,c="readystatechange",d=["onload","onerror","onabort","onloadstart","onloadend","onprogress","ontimeout"],u=[],l=h.gm.XMLHttpRequest=function(e){const t=new i(e),s=r.context(t);try{r.emit("new-xhr",[t],s),t.addEventListener(c,(a=s,function(){var e=this;e.readyState>3&&!a.resolved&&(a.resolved=!0,r.emit("xhr-resolved",[],e)),n.inPlace(e,d,"fn-",y)}),(0,P.jT)(!1))}catch(e){(0,f.R)(15,e);try{r.emit("internal-error",[e])}catch(e){}}var a;return t};function p(e,t){n.inPlace(t,["onreadystatechange"],"fn-",y)}if(function(e,t){for(var r in e)t[r]=e[r]}(i,l),l.prototype=i.prototype,n.inPlace(l.prototype,se,"-xhr-",y),r.on("send-xhr-start",function(e,t){p(e,t),function(e){u.push(e),s&&(g?g.then(b):o?o(b):(m=-m,v.data=m))}(t)}),r.on("open-xhr-start",p),s){var g=a&&a.resolve();if(!o&&!a){var m=1,v=document.createTextNode(m);new s(b).observe(v,{characterData:!0})}}else t.on("fn-end",function(e){e[0]&&e[0].type===c||b()});function b(){for(var e=0;e<u.length;e++)p(0,u[e]);u.length&&(u=[])}function y(e,t){return t}return r}var oe="fetch-",ce=oe+"body-",de=["arrayBuffer","blob","json","text","formData"],ue=h.gm.Request,le=h.gm.Response,he="prototype";const fe={};function pe(e){const t=function(e){return(e||re.ee).get("fetch")}(e);if(!(ue&&le&&h.gm.fetch))return t;if(fe[t.debugId]++)return t;function r(e,r,n){var i=e[r];"function"==typeof i&&(e[r]=function(){var e,r=[...arguments],s={};t.emit(n+"before-start",[r],s),s[re.P]&&s[re.P].dt&&(e=s[re.P].dt);var a=i.apply(this,r);return t.emit(n+"start",[r,e],a),a.then(function(e){return t.emit(n+"end",[null,e],a),e},function(e){throw t.emit(n+"end",[e],a),e})})}return fe[t.debugId]=1,de.forEach(e=>{r(ue[he],e,ce),r(le[he],e,ce)}),r(h.gm,"fetch",oe),t.on(oe+"end",function(e,r){var n=this;if(r){var i=r.headers.get("content-length");null!==i&&(n.rxSize=i),t.emit(oe+"done",[null,r],n)}else t.emit(oe+"done",[e],n)}),t}var ge=i(7485),me=i(9566);class ve{constructor(e){this.agentRef=e}generateTracePayload(e){const t=this.agentRef.loader_config;if(!this.shouldGenerateTrace(e)||!t)return null;var r=(t.accountID||"").toString()||null,n=(t.agentID||"").toString()||null,i=(t.trustKey||"").toString()||null;if(!r||!n)return null;var s=(0,me.ZF)(),a=(0,me.el)(),o=Date.now(),c={spanId:s,traceId:a,timestamp:o};return(e.sameOrigin||this.isAllowedOrigin(e)&&this.useTraceContextHeadersForCors())&&(c.traceContextParentHeader=this.generateTraceContextParentHeader(s,a),c.traceContextStateHeader=this.generateTraceContextStateHeader(s,o,r,n,i)),(e.sameOrigin&&!this.excludeNewrelicHeader()||!e.sameOrigin&&this.isAllowedOrigin(e)&&this.useNewrelicHeaderForCors())&&(c.newrelicHeader=this.generateTraceHeader(s,a,o,r,n,i)),c}generateTraceContextParentHeader(e,t){return"00-"+t+"-"+e+"-01"}generateTraceContextStateHeader(e,t,r,n,i){return i+"@nr=0-1-"+r+"-"+n+"-"+e+"----"+t}generateTraceHeader(e,t,r,n,i,s){if(!("function"==typeof h.gm?.btoa))return null;var a={v:[0,1],d:{ty:"Browser",ac:n,ap:i,id:e,tr:t,ti:r}};return s&&n!==s&&(a.d.tk=s),btoa((0,k.A)(a))}shouldGenerateTrace(e){return this.agentRef.init?.distributed_tracing?.enabled&&this.isAllowedOrigin(e)}isAllowedOrigin(e){var t=!1;const r=this.agentRef.init?.distributed_tracing;if(e.sameOrigin)t=!0;else if(r?.allowed_origins instanceof Array)for(var n=0;n<r.allowed_origins.length;n++){var i=(0,ge.D)(r.allowed_origins[n]);if(e.hostname===i.hostname&&e.protocol===i.protocol&&e.port===i.port){t=!0;break}}return t}excludeNewrelicHeader(){var e=this.agentRef.init?.distributed_tracing;return!!e&&!!e.exclude_newrelic_header}useNewrelicHeaderForCors(){var e=this.agentRef.init?.distributed_tracing;return!!e&&!1!==e.cors_use_newrelic_header}useTraceContextHeadersForCors(){var e=this.agentRef.init?.distributed_tracing;return!!e&&!!e.cors_use_tracecontext_headers}}var be=i(9300),ye=i(7295);function we(e){return"string"==typeof e?e:e instanceof(0,T.dV)().o.REQ?e.url:h.gm?.URL&&e instanceof URL?e.href:void 0}var Re=["load","error","abort","timeout"],xe=Re.length,Te=(0,T.dV)().o.REQ,Ee=(0,T.dV)().o.XHR;const Ae="X-NewRelic-App-Data";class _e extends b{static featureName=be.T;constructor(e){super(e,be.T),this.dt=new ve(e),this.handler=(e,t,r,n)=>(0,s.p)(e,t,r,n,this.ee);try{const e={xmlhttprequest:"xhr",fetch:"fetch",beacon:"beacon"};h.gm?.performance?.getEntriesByType("resource").forEach(r=>{if(r.initiatorType in e&&0!==r.responseStatus){const n={status:r.responseStatus},i={rxSize:r.transferSize,duration:Math.floor(r.duration),cbTime:0};Se(n,r.name),this.handler("xhr",[n,i,r.startTime,r.responseEnd,e[r.initiatorType]],void 0,t.K7.ajax)}})}catch(e){}pe(this.ee),ae(this.ee),function(e,r,n,i){function o(e){var t=this;t.totalCbs=0,t.called=0,t.cbTime=0,t.end=T,t.ended=!1,t.xhrGuids={},t.lastSize=null,t.loadCaptureCalled=!1,t.params=this.params||{},t.metrics=this.metrics||{},t.latestLongtaskEnd=0,e.addEventListener("load",function(r){E(t,e)},(0,P.jT)(!1)),h.lR||e.addEventListener("progress",function(e){t.lastSize=e.loaded},(0,P.jT)(!1))}function c(e){this.params={method:e[0]},Se(this,e[1]),this.metrics={}}function d(t,r){e.loader_config.xpid&&this.sameOrigin&&r.setRequestHeader("X-NewRelic-ID",e.loader_config.xpid);var n=i.generateTracePayload(this.parsedOrigin);if(n){var s=!1;n.newrelicHeader&&(r.setRequestHeader("newrelic",n.newrelicHeader),s=!0),n.traceContextParentHeader&&(r.setRequestHeader("traceparent",n.traceContextParentHeader),n.traceContextStateHeader&&r.setRequestHeader("tracestate",n.traceContextStateHeader),s=!0),s&&(this.dt=n)}}function u(e,t){var n=this.metrics,i=e[0],s=this;if(n&&i){var o=ee(i);o&&(n.txSize=o)}this.startTime=(0,a.t)(),this.body=i,this.listener=function(e){try{"abort"!==e.type||s.loadCaptureCalled||(s.params.aborted=!0),("load"!==e.type||s.called===s.totalCbs&&(s.onloadCalled||"function"!=typeof t.onload)&&"function"==typeof s.end)&&s.end(t)}catch(e){try{r.emit("internal-error",[e])}catch(e){}}};for(var c=0;c<xe;c++)t.addEventListener(Re[c],this.listener,(0,P.jT)(!1))}function l(e,t,r){this.cbTime+=e,t?this.onloadCalled=!0:this.called+=1,this.called!==this.totalCbs||!this.onloadCalled&&"function"==typeof r.onload||"function"!=typeof this.end||this.end(r)}function f(e,t){var r=""+Q(e)+!!t;this.xhrGuids&&!this.xhrGuids[r]&&(this.xhrGuids[r]=!0,this.totalCbs+=1)}function p(e,t){var r=""+Q(e)+!!t;this.xhrGuids&&this.xhrGuids[r]&&(delete this.xhrGuids[r],this.totalCbs-=1)}function g(){this.endTime=(0,a.t)()}function m(e,t){t instanceof Ee&&"load"===e[0]&&r.emit("xhr-load-added",[e[1],e[2]],t)}function v(e,t){t instanceof Ee&&"load"===e[0]&&r.emit("xhr-load-removed",[e[1],e[2]],t)}function b(e,t,r){t instanceof Ee&&("onload"===r&&(this.onload=!0),("load"===(e[0]&&e[0].type)||this.onload)&&(this.xhrCbStart=(0,a.t)()))}function y(e,t){this.xhrCbStart&&r.emit("xhr-cb-time",[(0,a.t)()-this.xhrCbStart,this.onload,t],t)}function w(e){var t,r=e[1]||{};if("string"==typeof e[0]?0===(t=e[0]).length&&h.RI&&(t=""+h.gm.location.href):e[0]&&e[0].url?t=e[0].url:h.gm?.URL&&e[0]&&e[0]instanceof URL?t=e[0].href:"function"==typeof e[0].toString&&(t=e[0].toString()),"string"==typeof t&&0!==t.length){t&&(this.parsedOrigin=(0,ge.D)(t),this.sameOrigin=this.parsedOrigin.sameOrigin);var n=i.generateTracePayload(this.parsedOrigin);if(n&&(n.newrelicHeader||n.traceContextParentHeader))if(e[0]&&e[0].headers)o(e[0].headers,n)&&(this.dt=n);else{var s={};for(var a in r)s[a]=r[a];s.headers=new Headers(r.headers||{}),o(s.headers,n)&&(this.dt=n),e.length>1?e[1]=s:e.push(s)}}function o(e,t){var r=!1;return t.newrelicHeader&&(e.set("newrelic",t.newrelicHeader),r=!0),t.traceContextParentHeader&&(e.set("traceparent",t.traceContextParentHeader),t.traceContextStateHeader&&e.set("tracestate",t.traceContextStateHeader),r=!0),r}}function R(e,t){this.params={},this.metrics={},this.startTime=(0,a.t)(),this.dt=t,e.length>=1&&(this.target=e[0]),e.length>=2&&(this.opts=e[1]);var r=this.opts||{},n=this.target;Se(this,we(n));var i=(""+(n&&n instanceof Te&&n.method||r.method||"GET")).toUpperCase();this.params.method=i,this.body=r.body,this.txSize=ee(r.body)||0}function x(e,r){if(this.endTime=(0,a.t)(),this.params||(this.params={}),(0,ye.iW)(this.params))return;let i;this.params.status=r?r.status:0,"string"==typeof this.rxSize&&this.rxSize.length>0&&(i=+this.rxSize);const s={txSize:this.txSize,rxSize:i,duration:(0,a.t)()-this.startTime};n("xhr",[this.params,s,this.startTime,this.endTime,"fetch"],this,t.K7.ajax)}function T(e){const r=this.params,i=this.metrics;if(!this.ended){this.ended=!0;for(let t=0;t<xe;t++)e.removeEventListener(Re[t],this.listener,!1);r.aborted||(0,ye.iW)(r)||(i.duration=(0,a.t)()-this.startTime,this.loadCaptureCalled||4!==e.readyState?null==r.status&&(r.status=0):E(this,e),i.cbTime=this.cbTime,n("xhr",[r,i,this.startTime,this.endTime,"xhr"],this,t.K7.ajax))}}function E(e,n){e.params.status=n.status;var i=function(e,t){var r=e.responseType;return"json"===r&&null!==t?t:"arraybuffer"===r||"blob"===r||"json"===r?ee(e.response):"text"===r||""===r||void 0===r?ee(e.responseText):void 0}(n,e.lastSize);if(i&&(e.metrics.rxSize=i),e.sameOrigin&&n.getAllResponseHeaders().indexOf(Ae)>=0){var a=n.getResponseHeader(Ae);a&&((0,s.p)(O.rs,["Ajax/CrossApplicationTracing/Header/Seen"],void 0,t.K7.metrics,r),e.params.cat=a.split(", ").pop())}e.loadCaptureCalled=!0}r.on("new-xhr",o),r.on("open-xhr-start",c),r.on("open-xhr-end",d),r.on("send-xhr-start",u),r.on("xhr-cb-time",l),r.on("xhr-load-added",f),r.on("xhr-load-removed",p),r.on("xhr-resolved",g),r.on("addEventListener-end",m),r.on("removeEventListener-end",v),r.on("fn-end",y),r.on("fetch-before-start",w),r.on("fetch-start",R),r.on("fn-start",b),r.on("fetch-done",x)}(e,this.ee,this.handler,this.dt),this.importAggregator(e,()=>i.e(478).then(i.bind(i,3845)))}}function Se(e,t){var r=(0,ge.D)(t),n=e.params||e;n.hostname=r.hostname,n.port=r.port,n.protocol=r.protocol,n.host=r.hostname+":"+r.port,n.pathname=r.pathname,e.parsedOrigin=r,e.sameOrigin=r.sameOrigin}const Oe={},Ie=["pushState","replaceState"];function Ne(e){const t=function(e){return(e||re.ee).get("history")}(e);return!h.RI||Oe[t.debugId]++||(Oe[t.debugId]=1,(0,ne.YM)(t).inPlace(window.history,Ie,"-")),t}var Pe=i(3738);function ke(e){(0,c.Y)(o.BL,function(r=Date.now()){const n=r-h.WN;n<0&&(0,f.R)(62,r),(0,s.p)(O.XG,[o.BL,{time:n}],void 0,t.K7.metrics,e.ee),e.addToTrace({name:o.BL,start:r,origin:"nr"}),(0,s.p)(o.Pl+o.hG,[n,o.BL],void 0,t.K7.genericEvents,e.ee)},e)}const{He:De,bD:Ce,d3:je,Kp:Le,TZ:Me,Lc:He,uP:Be,Rz:Ke}=Pe;class We extends b{static featureName=Me;constructor(e){var r;super(e,Me),r=e,(0,c.Y)(o.U2,function(e){if(!(e&&"object"==typeof e&&e.name&&e.start))return;const n={n:e.name,s:e.start-h.WN,e:(e.end||e.start)-h.WN,o:e.origin||"",t:"api"};n.s<0||n.e<0||n.e<n.s?(0,f.R)(61,{start:n.s,end:n.e}):(0,s.p)("bstApi",[n],void 0,t.K7.sessionTrace,r.ee)},r),ke(e);if(!(0,g.V)(e.init))return void this.deregisterDrain();const n=this.ee;let d;Ne(n),this.eventsEE=(0,te.u)(n),this.eventsEE.on(Be,function(e,t){this.bstStart=(0,a.t)()}),this.eventsEE.on(He,function(e,r){(0,s.p)("bst",[e[0],r,this.bstStart,(0,a.t)()],void 0,t.K7.sessionTrace,n)}),n.on(Ke+je,function(e){this.time=(0,a.t)(),this.startPath=location.pathname+location.hash}),n.on(Ke+Le,function(e){(0,s.p)("bstHist",[location.pathname+location.hash,this.startPath,this.time],void 0,t.K7.sessionTrace,n)});try{d=new PerformanceObserver(e=>{const r=e.getEntries();(0,s.p)(De,[r],void 0,t.K7.sessionTrace,n)}),d.observe({type:Ce,buffered:!0})}catch(e){}this.importAggregator(e,()=>i.e(478).then(i.bind(i,6974)),{resourceObserver:d})}}var Ue=i(6344);class Fe extends b{static featureName=Ue.TZ;#n;recorder;constructor(e){var r;let n;super(e,Ue.TZ),r=e,(0,c.Y)(o.CH,function(){(0,s.p)(o.CH,[],void 0,t.K7.sessionReplay,r.ee)},r),function(e){(0,c.Y)(o.Tb,function(){(0,s.p)(o.Tb,[],void 0,t.K7.sessionReplay,e.ee)},e)}(e);try{n=JSON.parse(localStorage.getItem("".concat(w.H3,"_").concat(w.uh)))}catch(e){}(0,p.SR)(e.init)&&this.ee.on(o.CH,()=>this.#i()),this.#s(n)&&this.importRecorder().then(e=>{e.startRecording(Ue.Qb.PRELOAD,n?.sessionReplayMode)}),this.importAggregator(this.agentRef,()=>i.e(478).then(i.bind(i,6167)),this),this.ee.on("err",e=>{this.blocked||this.agentRef.runtime.isRecording&&(this.errorNoticed=!0,(0,s.p)(Ue.Vh,[e],void 0,this.featureName,this.ee))})}#s(e){return e&&(e.sessionReplayMode===w.g.FULL||e.sessionReplayMode===w.g.ERROR)||(0,p.Aw)(this.agentRef.init)}importRecorder(){return this.recorder?Promise.resolve(this.recorder):(this.#n??=Promise.all([i.e(478),i.e(249)]).then(i.bind(i,4866)).then(({Recorder:e})=>(this.recorder=new e(this),this.recorder)).catch(e=>{throw this.ee.emit("internal-error",[e]),this.blocked=!0,e}),this.#n)}#i(){this.blocked||(this.featAggregate?this.featAggregate.mode!==w.g.FULL&&this.featAggregate.initializeRecording(w.g.FULL,!0,Ue.Qb.API):this.importRecorder().then(()=>{this.recorder.startRecording(Ue.Qb.API,w.g.FULL)}))}}var Ve=i(3962);class Ge extends b{static featureName=Ve.TZ;constructor(e){if(super(e,Ve.TZ),function(e){const r=e.ee.get("tracer");function n(){}(0,c.Y)(o.dT,function(e){return(new n).get("object"==typeof e?e:{})},e);const i=n.prototype={createTracer:function(n,i){var o={},c=this,d="function"==typeof i;return(0,s.p)(O.xV,["API/createTracer/called"],void 0,t.K7.metrics,e.ee),function(){if(r.emit((d?"":"no-")+"fn-start",[(0,a.t)(),c,d],o),d)try{return i.apply(this,arguments)}catch(e){const t="string"==typeof e?new Error(e):e;throw r.emit("fn-err",[arguments,this,t],o),t}finally{r.emit("fn-end",[(0,a.t)()],o)}}}};["actionText","setName","setAttribute","save","ignore","onEnd","getContext","end","get"].forEach(r=>{c.Y.apply(this,[r,function(){return(0,s.p)(o.hw+r,[performance.now(),...arguments],this,t.K7.softNav,e.ee),this},e,i])}),(0,c.Y)(o.PA,function(){(0,s.p)(o.hw+"routeName",[performance.now(),...arguments],void 0,t.K7.softNav,e.ee)},e)}(e),!h.RI||!(0,T.dV)().o.MO)return;const r=Ne(this.ee);try{this.removeOnAbort=new AbortController}catch(e){}Ve.tC.forEach(e=>{(0,P.sp)(e,e=>{l(e)},!0,this.removeOnAbort?.signal)});const n=()=>(0,s.p)("newURL",[(0,a.t)(),""+window.location],void 0,this.featureName,this.ee);r.on("pushState-end",n),r.on("replaceState-end",n),(0,P.sp)(Ve.OV,e=>{l(e),(0,s.p)("newURL",[e.timeStamp,""+window.location],void 0,this.featureName,this.ee)},!0,this.removeOnAbort?.signal);let d=!1;const u=new((0,T.dV)().o.MO)((e,t)=>{d||(d=!0,requestAnimationFrame(()=>{(0,s.p)("newDom",[(0,a.t)()],void 0,this.featureName,this.ee),d=!1}))}),l=(0,m.s)(e=>{"loading"!==document.readyState&&((0,s.p)("newUIEvent",[e],void 0,this.featureName,this.ee),u.observe(document.body,{attributes:!0,childList:!0,subtree:!0,characterData:!0}))},100,{leading:!0});this.abortHandler=function(){this.removeOnAbort?.abort(),u.disconnect(),this.abortHandler=void 0},this.importAggregator(e,()=>i.e(478).then(i.bind(i,4393)),{domObserver:u})}}var ze=i(3333),Ye=i(9119);const Ze={},qe=new Set;function Xe(e){return"string"==typeof e?{type:"string",size:(new TextEncoder).encode(e).length}:e instanceof ArrayBuffer?{type:"ArrayBuffer",size:e.byteLength}:e instanceof Blob?{type:"Blob",size:e.size}:e instanceof DataView?{type:"DataView",size:e.byteLength}:ArrayBuffer.isView(e)?{type:"TypedArray",size:e.byteLength}:{type:"unknown",size:0}}class $e{constructor(e,t){this.timestamp=(0,a.t)(),this.currentUrl=(0,Ye.L)(window.location.href),this.socketId=(0,me.LA)(8),this.requestedUrl=(0,Ye.L)(e),this.requestedProtocols=Array.isArray(t)?t.join(","):t||"",this.openedAt=void 0,this.protocol=void 0,this.extensions=void 0,this.binaryType=void 0,this.messageOrigin=void 0,this.messageCount=0,this.messageBytes=0,this.messageBytesMin=0,this.messageBytesMax=0,this.messageTypes=void 0,this.sendCount=0,this.sendBytes=0,this.sendBytesMin=0,this.sendBytesMax=0,this.sendTypes=void 0,this.closedAt=void 0,this.closeCode=void 0,this.closeReason="unknown",this.closeWasClean=void 0,this.connectedDuration=0,this.hasErrors=void 0}}class Je extends b{static featureName=ze.TZ;constructor(e){super(e,ze.TZ);const r=e.init.feature_flags.includes("websockets"),n=[e.init.page_action.enabled,e.init.performance.capture_marks,e.init.performance.capture_measures,e.init.performance.resources.enabled,e.init.user_actions.enabled,r];var d;let u,l;if(d=e,(0,c.Y)(o.hG,(e,t)=>F(e,t,d),d),function(e){(0,c.Y)(o.fF,(t,r)=>G(t,r,e),e)}(e),ke(e),Y(e),function(e){(0,c.Y)(o.V1,(t,r)=>V(t,r,e),e)}(e),r&&(l=function(e){if(!(0,T.dV)().o.WS)return e;const t=e.get("websockets");if(Ze[t.debugId]++)return t;Ze[t.debugId]=1,(0,A.G)(()=>{const e=(0,a.t)();qe.forEach(r=>{r.nrData.closedAt=e,r.nrData.closeCode=1001,r.nrData.closeReason="Page navigating away",r.nrData.closeWasClean=!1,r.nrData.openedAt&&(r.nrData.connectedDuration=e-r.nrData.openedAt),t.emit("ws",[r.nrData],r)})});class r extends WebSocket{static name="WebSocket";static toString(){return"function WebSocket() { [native code] }"}toString(){return"[object WebSocket]"}get[Symbol.toStringTag](){return r.name}#a(e){(e.__newrelic??={}).socketId=this.nrData.socketId,this.nrData.hasErrors??=!0}constructor(...e){super(...e),this.nrData=new $e(e[0],e[1]),this.addEventListener("open",()=>{this.nrData.openedAt=(0,a.t)(),["protocol","extensions","binaryType"].forEach(e=>{this.nrData[e]=this[e]}),qe.add(this)}),this.addEventListener("message",e=>{const{type:t,size:r}=Xe(e.data);this.nrData.messageOrigin??=(0,Ye.L)(e.origin),this.nrData.messageCount++,this.nrData.messageBytes+=r,this.nrData.messageBytesMin=Math.min(this.nrData.messageBytesMin||1/0,r),this.nrData.messageBytesMax=Math.max(this.nrData.messageBytesMax,r),(this.nrData.messageTypes??"").includes(t)||(this.nrData.messageTypes=this.nrData.messageTypes?"".concat(this.nrData.messageTypes,",").concat(t):t)}),this.addEventListener("close",e=>{this.nrData.closedAt=(0,a.t)(),this.nrData.closeCode=e.code,e.reason&&(this.nrData.closeReason=e.reason),this.nrData.closeWasClean=e.wasClean,this.nrData.connectedDuration=this.nrData.closedAt-this.nrData.openedAt,qe.delete(this),t.emit("ws",[this.nrData],this)})}addEventListener(e,t,...r){const n=this,i="function"==typeof t?function(...e){try{return t.apply(this,e)}catch(e){throw n.#a(e),e}}:t?.handleEvent?{handleEvent:function(...e){try{return t.handleEvent.apply(t,e)}catch(e){throw n.#a(e),e}}}:t;return super.addEventListener(e,i,...r)}send(e){if(this.readyState===WebSocket.OPEN){const{type:t,size:r}=Xe(e);this.nrData.sendCount++,this.nrData.sendBytes+=r,this.nrData.sendBytesMin=Math.min(this.nrData.sendBytesMin||1/0,r),this.nrData.sendBytesMax=Math.max(this.nrData.sendBytesMax,r),(this.nrData.sendTypes??"").includes(t)||(this.nrData.sendTypes=this.nrData.sendTypes?"".concat(this.nrData.sendTypes,",").concat(t):t)}try{return super.send(e)}catch(e){throw this.#a(e),e}}close(...e){try{super.close(...e)}catch(e){throw this.#a(e),e}}}return h.gm.WebSocket=r,t}(this.ee)),h.RI){if(pe(this.ee),ae(this.ee),u=Ne(this.ee),e.init.user_actions.enabled){function f(t){const r=(0,ge.D)(t);return e.beacons.includes(r.hostname+":"+r.port)}function p(){u.emit("navChange")}ze.Zp.forEach(e=>(0,P.sp)(e,e=>(0,s.p)("ua",[e],void 0,this.featureName,this.ee),!0)),ze.qN.forEach(e=>{const t=(0,m.s)(e=>{(0,s.p)("ua",[e],void 0,this.featureName,this.ee)},500,{leading:!0});(0,P.sp)(e,t)}),h.gm.addEventListener("error",()=>{(0,s.p)("uaErr",[],void 0,t.K7.genericEvents,this.ee)},(0,P.jT)(!1,this.removeOnAbort?.signal)),this.ee.on("open-xhr-start",(e,r)=>{f(e[1])||r.addEventListener("readystatechange",()=>{2===r.readyState&&(0,s.p)("uaXhr",[],void 0,t.K7.genericEvents,this.ee)})}),this.ee.on("fetch-start",e=>{e.length>=1&&!f(we(e[0]))&&(0,s.p)("uaXhr",[],void 0,t.K7.genericEvents,this.ee)}),u.on("pushState-end",p),u.on("replaceState-end",p),window.addEventListener("hashchange",p,(0,P.jT)(!0,this.removeOnAbort?.signal)),window.addEventListener("popstate",p,(0,P.jT)(!0,this.removeOnAbort?.signal))}if(e.init.performance.resources.enabled&&h.gm.PerformanceObserver?.supportedEntryTypes.includes("resource")){new PerformanceObserver(e=>{e.getEntries().forEach(e=>{(0,s.p)("browserPerformance.resource",[e],void 0,this.featureName,this.ee)})}).observe({type:"resource",buffered:!0})}}r&&l.on("ws",e=>{(0,s.p)("ws-complete",[e],void 0,this.featureName,this.ee)});try{this.removeOnAbort=new AbortController}catch(g){}this.abortHandler=()=>{this.removeOnAbort?.abort(),this.abortHandler=void 0},n.some(e=>e)?this.importAggregator(e,()=>i.e(478).then(i.bind(i,8019))):this.deregisterDrain()}}var Qe=i(2646);const et=new Map;function tt(e,t,r,n,i=!0){if("object"!=typeof t||!t||"string"!=typeof r||!r||"function"!=typeof t[r])return(0,f.R)(29);const s=function(e){return(e||re.ee).get("logger")}(e),a=(0,ne.YM)(s),o=new Qe.y(re.P);o.level=n.level,o.customAttributes=n.customAttributes,o.autoCaptured=i;const c=t[r]?.[ne.Jt]||t[r];return et.set(c,o),a.inPlace(t,[r],"wrap-logger-",()=>et.get(c)),s}var rt=i(1910);class nt extends b{static featureName=K.TZ;constructor(e){var t;super(e,K.TZ),t=e,(0,c.Y)(o.$9,(e,r)=>U(e,r,t),t),function(e){(0,c.Y)(o.Wb,(t,r,{customAttributes:n={},level:i=K.p_.INFO}={})=>{tt(e.ee,t,r,{customAttributes:n,level:i},!1)},e)}(e),Y(e);const r=this.ee;["log","error","warn","info","debug","trace"].forEach(e=>{(0,rt.i)(h.gm.console[e]),tt(r,h.gm.console,e,{level:"log"===e?"info":e})}),this.ee.on("wrap-logger-end",function([e]){const{level:t,customAttributes:n,autoCaptured:i}=this;(0,W.R)(r,e,n,t,i)}),this.importAggregator(e,()=>i.e(478).then(i.bind(i,5288)))}}new E({features:[_e,x,S,We,Fe,I,q,Je,nt,Ge],loaderType:"spa"})})()})();</script>
+<script>
+var gform;gform||(document.addEventListener("gform_main_scripts_loaded",function(){gform.scriptsLoaded=!0}),document.addEventListener("gform/theme/scripts_loaded",function(){gform.themeScriptsLoaded=!0}),window.addEventListener("DOMContentLoaded",function(){gform.domLoaded=!0}),gform={domLoaded:!1,scriptsLoaded:!1,themeScriptsLoaded:!1,isFormEditor:()=>"function"==typeof InitializeEditor,callIfLoaded:function(o){return!(!gform.domLoaded||!gform.scriptsLoaded||!gform.themeScriptsLoaded&&!gform.isFormEditor()||(gform.isFormEditor()&&console.warn("The use of gform.initializeOnLoaded() is deprecated in the form editor context and will be removed in Gravity Forms 3.1."),o(),0))},initializeOnLoaded:function(o){gform.callIfLoaded(o)||(document.addEventListener("gform_main_scripts_loaded",()=>{gform.scriptsLoaded=!0,gform.callIfLoaded(o)}),document.addEventListener("gform/theme/scripts_loaded",()=>{gform.themeScriptsLoaded=!0,gform.callIfLoaded(o)}),window.addEventListener("DOMContentLoaded",()=>{gform.domLoaded=!0,gform.callIfLoaded(o)}))},hooks:{action:{},filter:{}},addAction:function(o,r,e,t){gform.addHook("action",o,r,e,t)},addFilter:function(o,r,e,t){gform.addHook("filter",o,r,e,t)},doAction:function(o){gform.doHook("action",o,arguments)},applyFilters:function(o){return gform.doHook("filter",o,arguments)},removeAction:function(o,r){gform.removeHook("action",o,r)},removeFilter:function(o,r,e){gform.removeHook("filter",o,r,e)},addHook:function(o,r,e,t,n){null==gform.hooks[o][r]&&(gform.hooks[o][r]=[]);var d=gform.hooks[o][r];null==n&&(n=r+"_"+d.length),gform.hooks[o][r].push({tag:n,callable:e,priority:t=null==t?10:t})},doHook:function(r,o,e){var t;if(e=Array.prototype.slice.call(e,1),null!=gform.hooks[r][o]&&((o=gform.hooks[r][o]).sort(function(o,r){return o.priority-r.priority}),o.forEach(function(o){"function"!=typeof(t=o.callable)&&(t=window[t]),"action"==r?t.apply(null,e):e[0]=t.apply(null,e)})),"filter"==r)return e[0]},removeHook:function(o,r,t,n){var e;null!=gform.hooks[o][r]&&(e=(e=gform.hooks[o][r]).filter(function(o,r,e){return!!(null!=n&&n!=o.tag||null!=t&&t!=o.priority)}),gform.hooks[o][r]=e)}});
+</script>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="profile" href="https://gmpg.org/xfn/11">
+
+	<!-- refine, and properly optimize and include (using enqueue_script) the following files before production launch -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+	<link rel="shortcut icon" type="image/x-icon" href="https://cltc.berkeley.edu/wp-content/themes/cltc/images/favicon.png">
+	<link rel="apple-touch-icon" href="https://cltc.berkeley.edu/wp-content/themes/cltc/images/favicon.png">
+
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<!-- Hotjar Tracking Code for https://cltc.berkeley.edu/ -->
+	<script>
+		(function(h,o,t,j,a,r){
+			h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+			h._hjSettings={hjid:1106747,hjsv:6};
+			a=o.getElementsByTagName('head')[0];
+			r=o.createElement('script');r.async=1;
+			r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+			a.appendChild(r);
+		})(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+	</script>
+	
+	<!-- Google tag (gtag.js) -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-Y5H2PF6M1N"></script>
+	<script>
+	  window.dataLayer = window.dataLayer || [];
+	  function gtag(){dataLayer.push(arguments);}
+	  gtag('js', new Date());
+
+	  gtag('config', 'G-Y5H2PF6M1N');
+	</script>
+
+	<meta name='robots' content='index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' />
+
+	<!-- This site is optimized with the Yoast SEO plugin v26.5 - https://yoast.com/wordpress/plugins/seo/ -->
+	<title>AI Policy Hub - CLTC</title>
+	<link rel="canonical" href="https://cltc.berkeley.edu/program/ai-policy-hub/" />
+	<meta property="og:locale" content="en_US" />
+	<meta property="og:type" content="article" />
+	<meta property="og:title" content="AI Policy Hub - CLTC" />
+	<meta property="og:description" content="Advancing interdisciplinary research to anticipate and address AI policy opportunities" />
+	<meta property="og:url" content="https://cltc.berkeley.edu/program/ai-policy-hub/" />
+	<meta property="og:site_name" content="CLTC" />
+	<meta property="article:publisher" content="https:///www.facebook.com/CLTCBerkeley/" />
+	<meta property="article:modified_time" content="2026-02-13T15:26:32+00:00" />
+	<meta property="og:image" content="https://cltc.berkeley.edu/wp-content/uploads/2023/03/AI-POLICY-HUB-1024x1024.png" />
+	<meta property="og:image:width" content="1024" />
+	<meta property="og:image:height" content="1024" />
+	<meta property="og:image:type" content="image/png" />
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:image" content="https://cltc.berkeley.edu/wp-content/uploads/2023/03/AI-POLICY-HUB.png" />
+	<meta name="twitter:site" content="@CLTCBerkeley" />
+	<meta name="twitter:label1" content="Est. reading time" />
+	<meta name="twitter:data1" content="2 minutes" />
+	<script type="application/ld+json" class="yoast-schema-graph">{"@context":"https://schema.org","@graph":[{"@type":"WebPage","@id":"https://cltc.berkeley.edu/program/ai-policy-hub/","url":"https://cltc.berkeley.edu/program/ai-policy-hub/","name":"AI Policy Hub - CLTC","isPartOf":{"@id":"https://cltc.berkeley.edu/#website"},"primaryImageOfPage":{"@id":"https://cltc.berkeley.edu/program/ai-policy-hub/#primaryimage"},"image":{"@id":"https://cltc.berkeley.edu/program/ai-policy-hub/#primaryimage"},"thumbnailUrl":"https://cltc.berkeley.edu/wp-content/uploads/2022/08/ai-policy-hub-banner.png","datePublished":"2022-08-01T23:10:31+00:00","dateModified":"2026-02-13T15:26:32+00:00","breadcrumb":{"@id":"https://cltc.berkeley.edu/program/ai-policy-hub/#breadcrumb"},"inLanguage":"en-US","potentialAction":[{"@type":"ReadAction","target":["https://cltc.berkeley.edu/program/ai-policy-hub/"]}]},{"@type":"ImageObject","inLanguage":"en-US","@id":"https://cltc.berkeley.edu/program/ai-policy-hub/#primaryimage","url":"https://cltc.berkeley.edu/wp-content/uploads/2022/08/ai-policy-hub-banner.png","contentUrl":"https://cltc.berkeley.edu/wp-content/uploads/2022/08/ai-policy-hub-banner.png","width":4688,"height":1563},{"@type":"BreadcrumbList","@id":"https://cltc.berkeley.edu/program/ai-policy-hub/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://cltc.berkeley.edu/"},{"@type":"ListItem","position":2,"name":"Research","item":"/research/"},{"@type":"ListItem","position":3,"name":"Programs &amp; Initiatives","item":"/programs/"}]},{"@type":"WebSite","@id":"https://cltc.berkeley.edu/#website","url":"https://cltc.berkeley.edu/","name":"CLTC","description":"UC Berkeley Center for Long-Term Cybersecurity","publisher":{"@id":"https://cltc.berkeley.edu/#organization"},"potentialAction":[{"@type":"SearchAction","target":{"@type":"EntryPoint","urlTemplate":"https://cltc.berkeley.edu/?s={search_term_string}"},"query-input":{"@type":"PropertyValueSpecification","valueRequired":true,"valueName":"search_term_string"}}],"inLanguage":"en-US"},{"@type":"Organization","@id":"https://cltc.berkeley.edu/#organization","name":"CLTC UC Berkeley Center for Long-Term Cybersecurity","url":"https://cltc.berkeley.edu/","logo":{"@type":"ImageObject","inLanguage":"en-US","@id":"https://cltc.berkeley.edu/#/schema/logo/image/","url":"https:///cltc.berkeley.edu/wp-content/uploads/2016/02/cltcs-logo2.png","contentUrl":"https:///cltc.berkeley.edu/wp-content/uploads/2016/02/cltcs-logo2.png","width":216,"height":114,"caption":"CLTC UC Berkeley Center for Long-Term Cybersecurity"},"image":{"@id":"https://cltc.berkeley.edu/#/schema/logo/image/"},"sameAs":["https:///www.facebook.com/CLTCBerkeley/","https://x.com/CLTCBerkeley","https:///www.linkedin.com/company/11150224"]}]}</script>
+	<!-- / Yoast SEO plugin. -->
+
+
+<link rel='dns-prefetch' href='//cltc.berkeley.edu' />
+<link rel="alternate" type="application/rss+xml" title="CLTC &raquo; Feed" href="https://cltc.berkeley.edu/feed/" />
+<link rel="alternate" type="application/rss+xml" title="CLTC &raquo; Comments Feed" href="https://cltc.berkeley.edu/comments/feed/" />
+<link rel="alternate" type="text/calendar" title="CLTC &raquo; iCal Feed" href="https://cltc.berkeley.edu/events/?ical=1" />
+<link rel="alternate" title="oEmbed (JSON)" type="application/json+oembed" href="https://cltc.berkeley.edu/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fcltc.berkeley.edu%2Fprogram%2Fai-policy-hub%2F" />
+<link rel="alternate" title="oEmbed (XML)" type="text/xml+oembed" href="https://cltc.berkeley.edu/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fcltc.berkeley.edu%2Fprogram%2Fai-policy-hub%2F&#038;format=xml" />
+<style id='wp-img-auto-sizes-contain-inline-css'>
+img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
+/*# sourceURL=wp-img-auto-sizes-contain-inline-css */
+</style>
+<style id='wp-emoji-styles-inline-css'>
+
+	img.wp-smiley, img.emoji {
+		display: inline !important;
+		border: none !important;
+		box-shadow: none !important;
+		height: 1em !important;
+		width: 1em !important;
+		margin: 0 0.07em !important;
+		vertical-align: -0.1em !important;
+		background: none !important;
+		padding: 0 !important;
+	}
+/*# sourceURL=wp-emoji-styles-inline-css */
+</style>
+<link rel='stylesheet' id='wp-block-library-css' href='https://cltc.berkeley.edu/wp-includes/css/dist/block-library/style.min.css?ver=6.9' media='all' />
+<style id='wp-block-button-inline-css'>
+.wp-block-button__link{align-content:center;box-sizing:border-box;cursor:pointer;display:inline-block;height:100%;text-align:center;word-break:break-word}.wp-block-button__link.aligncenter{text-align:center}.wp-block-button__link.alignright{text-align:right}:where(.wp-block-button__link){border-radius:9999px;box-shadow:none;padding:calc(.667em + 2px) calc(1.333em + 2px);text-decoration:none}.wp-block-button[style*=text-decoration] .wp-block-button__link{text-decoration:inherit}.wp-block-buttons>.wp-block-button.has-custom-width{max-width:none}.wp-block-buttons>.wp-block-button.has-custom-width .wp-block-button__link{width:100%}.wp-block-buttons>.wp-block-button.has-custom-font-size .wp-block-button__link{font-size:inherit}.wp-block-buttons>.wp-block-button.wp-block-button__width-25{width:calc(25% - var(--wp--style--block-gap, .5em)*.75)}.wp-block-buttons>.wp-block-button.wp-block-button__width-50{width:calc(50% - var(--wp--style--block-gap, .5em)*.5)}.wp-block-buttons>.wp-block-button.wp-block-button__width-75{width:calc(75% - var(--wp--style--block-gap, .5em)*.25)}.wp-block-buttons>.wp-block-button.wp-block-button__width-100{flex-basis:100%;width:100%}.wp-block-buttons.is-vertical>.wp-block-button.wp-block-button__width-25{width:25%}.wp-block-buttons.is-vertical>.wp-block-button.wp-block-button__width-50{width:50%}.wp-block-buttons.is-vertical>.wp-block-button.wp-block-button__width-75{width:75%}.wp-block-button.is-style-squared,.wp-block-button__link.wp-block-button.is-style-squared{border-radius:0}.wp-block-button.no-border-radius,.wp-block-button__link.no-border-radius{border-radius:0!important}:root :where(.wp-block-button .wp-block-button__link.is-style-outline),:root :where(.wp-block-button.is-style-outline>.wp-block-button__link){border:2px solid;padding:.667em 1.333em}:root :where(.wp-block-button .wp-block-button__link.is-style-outline:not(.has-text-color)),:root :where(.wp-block-button.is-style-outline>.wp-block-button__link:not(.has-text-color)){color:currentColor}:root :where(.wp-block-button .wp-block-button__link.is-style-outline:not(.has-background)),:root :where(.wp-block-button.is-style-outline>.wp-block-button__link:not(.has-background)){background-color:initial;background-image:none}
+/*# sourceURL=https://cltc.berkeley.edu/wp-includes/blocks/button/style.min.css */
+</style>
+<style id='wp-block-heading-inline-css'>
+h1:where(.wp-block-heading).has-background,h2:where(.wp-block-heading).has-background,h3:where(.wp-block-heading).has-background,h4:where(.wp-block-heading).has-background,h5:where(.wp-block-heading).has-background,h6:where(.wp-block-heading).has-background{padding:1.25em 2.375em}h1.has-text-align-left[style*=writing-mode]:where([style*=vertical-lr]),h1.has-text-align-right[style*=writing-mode]:where([style*=vertical-rl]),h2.has-text-align-left[style*=writing-mode]:where([style*=vertical-lr]),h2.has-text-align-right[style*=writing-mode]:where([style*=vertical-rl]),h3.has-text-align-left[style*=writing-mode]:where([style*=vertical-lr]),h3.has-text-align-right[style*=writing-mode]:where([style*=vertical-rl]),h4.has-text-align-left[style*=writing-mode]:where([style*=vertical-lr]),h4.has-text-align-right[style*=writing-mode]:where([style*=vertical-rl]),h5.has-text-align-left[style*=writing-mode]:where([style*=vertical-lr]),h5.has-text-align-right[style*=writing-mode]:where([style*=vertical-rl]),h6.has-text-align-left[style*=writing-mode]:where([style*=vertical-lr]),h6.has-text-align-right[style*=writing-mode]:where([style*=vertical-rl]){rotate:180deg}
+/*# sourceURL=https://cltc.berkeley.edu/wp-includes/blocks/heading/style.min.css */
+</style>
+<style id='wp-block-media-text-inline-css'>
+.wp-block-media-text{box-sizing:border-box;
+  /*!rtl:begin:ignore*/direction:ltr;
+  /*!rtl:end:ignore*/display:grid;grid-template-columns:50% 1fr;grid-template-rows:auto}.wp-block-media-text.has-media-on-the-right{grid-template-columns:1fr 50%}.wp-block-media-text.is-vertically-aligned-top>.wp-block-media-text__content,.wp-block-media-text.is-vertically-aligned-top>.wp-block-media-text__media{align-self:start}.wp-block-media-text.is-vertically-aligned-center>.wp-block-media-text__content,.wp-block-media-text.is-vertically-aligned-center>.wp-block-media-text__media,.wp-block-media-text>.wp-block-media-text__content,.wp-block-media-text>.wp-block-media-text__media{align-self:center}.wp-block-media-text.is-vertically-aligned-bottom>.wp-block-media-text__content,.wp-block-media-text.is-vertically-aligned-bottom>.wp-block-media-text__media{align-self:end}.wp-block-media-text>.wp-block-media-text__media{
+  /*!rtl:begin:ignore*/grid-column:1;grid-row:1;
+  /*!rtl:end:ignore*/margin:0}.wp-block-media-text>.wp-block-media-text__content{direction:ltr;
+  /*!rtl:begin:ignore*/grid-column:2;grid-row:1;
+  /*!rtl:end:ignore*/padding:0 8%;word-break:break-word}.wp-block-media-text.has-media-on-the-right>.wp-block-media-text__media{
+  /*!rtl:begin:ignore*/grid-column:2;grid-row:1
+  /*!rtl:end:ignore*/}.wp-block-media-text.has-media-on-the-right>.wp-block-media-text__content{
+  /*!rtl:begin:ignore*/grid-column:1;grid-row:1
+  /*!rtl:end:ignore*/}.wp-block-media-text__media a{display:block}.wp-block-media-text__media img,.wp-block-media-text__media video{height:auto;max-width:unset;vertical-align:middle;width:100%}.wp-block-media-text.is-image-fill>.wp-block-media-text__media{background-size:cover;height:100%;min-height:250px}.wp-block-media-text.is-image-fill>.wp-block-media-text__media>a{display:block;height:100%}.wp-block-media-text.is-image-fill>.wp-block-media-text__media img{height:1px;margin:-1px;overflow:hidden;padding:0;position:absolute;width:1px;clip:rect(0,0,0,0);border:0}.wp-block-media-text.is-image-fill-element>.wp-block-media-text__media{height:100%;min-height:250px}.wp-block-media-text.is-image-fill-element>.wp-block-media-text__media>a{display:block;height:100%}.wp-block-media-text.is-image-fill-element>.wp-block-media-text__media img{height:100%;object-fit:cover;width:100%}@media (max-width:600px){.wp-block-media-text.is-stacked-on-mobile{grid-template-columns:100%!important}.wp-block-media-text.is-stacked-on-mobile>.wp-block-media-text__media{grid-column:1;grid-row:1}.wp-block-media-text.is-stacked-on-mobile>.wp-block-media-text__content{grid-column:1;grid-row:2}}
+/*# sourceURL=https://cltc.berkeley.edu/wp-includes/blocks/media-text/style.min.css */
+</style>
+<style id='wp-block-buttons-inline-css'>
+.wp-block-buttons{box-sizing:border-box}.wp-block-buttons.is-vertical{flex-direction:column}.wp-block-buttons.is-vertical>.wp-block-button:last-child{margin-bottom:0}.wp-block-buttons>.wp-block-button{display:inline-block;margin:0}.wp-block-buttons.is-content-justification-left{justify-content:flex-start}.wp-block-buttons.is-content-justification-left.is-vertical{align-items:flex-start}.wp-block-buttons.is-content-justification-center{justify-content:center}.wp-block-buttons.is-content-justification-center.is-vertical{align-items:center}.wp-block-buttons.is-content-justification-right{justify-content:flex-end}.wp-block-buttons.is-content-justification-right.is-vertical{align-items:flex-end}.wp-block-buttons.is-content-justification-space-between{justify-content:space-between}.wp-block-buttons.aligncenter{text-align:center}.wp-block-buttons:not(.is-content-justification-space-between,.is-content-justification-right,.is-content-justification-left,.is-content-justification-center) .wp-block-button.aligncenter{margin-left:auto;margin-right:auto;width:100%}.wp-block-buttons[style*=text-decoration] .wp-block-button,.wp-block-buttons[style*=text-decoration] .wp-block-button__link{text-decoration:inherit}.wp-block-buttons.has-custom-font-size .wp-block-button__link{font-size:inherit}.wp-block-buttons .wp-block-button__link{width:100%}.wp-block-button.aligncenter{text-align:center}
+/*# sourceURL=https://cltc.berkeley.edu/wp-includes/blocks/buttons/style.min.css */
+</style>
+<style id='wp-block-columns-inline-css'>
+.wp-block-columns{box-sizing:border-box;display:flex;flex-wrap:wrap!important}@media (min-width:782px){.wp-block-columns{flex-wrap:nowrap!important}}.wp-block-columns{align-items:normal!important}.wp-block-columns.are-vertically-aligned-top{align-items:flex-start}.wp-block-columns.are-vertically-aligned-center{align-items:center}.wp-block-columns.are-vertically-aligned-bottom{align-items:flex-end}@media (max-width:781px){.wp-block-columns:not(.is-not-stacked-on-mobile)>.wp-block-column{flex-basis:100%!important}}@media (min-width:782px){.wp-block-columns:not(.is-not-stacked-on-mobile)>.wp-block-column{flex-basis:0;flex-grow:1}.wp-block-columns:not(.is-not-stacked-on-mobile)>.wp-block-column[style*=flex-basis]{flex-grow:0}}.wp-block-columns.is-not-stacked-on-mobile{flex-wrap:nowrap!important}.wp-block-columns.is-not-stacked-on-mobile>.wp-block-column{flex-basis:0;flex-grow:1}.wp-block-columns.is-not-stacked-on-mobile>.wp-block-column[style*=flex-basis]{flex-grow:0}:where(.wp-block-columns){margin-bottom:1.75em}:where(.wp-block-columns.has-background){padding:1.25em 2.375em}.wp-block-column{flex-grow:1;min-width:0;overflow-wrap:break-word;word-break:break-word}.wp-block-column.is-vertically-aligned-top{align-self:flex-start}.wp-block-column.is-vertically-aligned-center{align-self:center}.wp-block-column.is-vertically-aligned-bottom{align-self:flex-end}.wp-block-column.is-vertically-aligned-stretch{align-self:stretch}.wp-block-column.is-vertically-aligned-bottom,.wp-block-column.is-vertically-aligned-center,.wp-block-column.is-vertically-aligned-top{width:100%}
+/*# sourceURL=https://cltc.berkeley.edu/wp-includes/blocks/columns/style.min.css */
+</style>
+<style id='wp-block-group-inline-css'>
+.wp-block-group{box-sizing:border-box}:where(.wp-block-group.wp-block-group-is-layout-constrained){position:relative}
+/*# sourceURL=https://cltc.berkeley.edu/wp-includes/blocks/group/style.min.css */
+</style>
+<style id='wp-block-paragraph-inline-css'>
+.is-small-text{font-size:.875em}.is-regular-text{font-size:1em}.is-large-text{font-size:2.25em}.is-larger-text{font-size:3em}.has-drop-cap:not(:focus):first-letter{float:left;font-size:8.4em;font-style:normal;font-weight:100;line-height:.68;margin:.05em .1em 0 0;text-transform:uppercase}body.rtl .has-drop-cap:not(:focus):first-letter{float:none;margin-left:.1em}p.has-drop-cap.has-background{overflow:hidden}:root :where(p.has-background){padding:1.25em 2.375em}:where(p.has-text-color:not(.has-link-color)) a{color:inherit}p.has-text-align-left[style*="writing-mode:vertical-lr"],p.has-text-align-right[style*="writing-mode:vertical-rl"]{rotate:180deg}
+/*# sourceURL=https://cltc.berkeley.edu/wp-includes/blocks/paragraph/style.min.css */
+</style>
+<style id='wp-block-separator-inline-css'>
+@charset "UTF-8";.wp-block-separator{border:none;border-top:2px solid}:root :where(.wp-block-separator.is-style-dots){height:auto;line-height:1;text-align:center}:root :where(.wp-block-separator.is-style-dots):before{color:currentColor;content:"···";font-family:serif;font-size:1.5em;letter-spacing:2em;padding-left:2em}.wp-block-separator.is-style-dots{background:none!important;border:none!important}
+/*# sourceURL=https://cltc.berkeley.edu/wp-includes/blocks/separator/style.min.css */
+</style>
+<style id='wp-block-social-links-inline-css'>
+.wp-block-social-links{background:none;box-sizing:border-box;margin-left:0;padding-left:0;padding-right:0;text-indent:0}.wp-block-social-links .wp-social-link a,.wp-block-social-links .wp-social-link a:hover{border-bottom:0;box-shadow:none;text-decoration:none}.wp-block-social-links .wp-social-link svg{height:1em;width:1em}.wp-block-social-links .wp-social-link span:not(.screen-reader-text){font-size:.65em;margin-left:.5em;margin-right:.5em}.wp-block-social-links.has-small-icon-size{font-size:16px}.wp-block-social-links,.wp-block-social-links.has-normal-icon-size{font-size:24px}.wp-block-social-links.has-large-icon-size{font-size:36px}.wp-block-social-links.has-huge-icon-size{font-size:48px}.wp-block-social-links.aligncenter{display:flex;justify-content:center}.wp-block-social-links.alignright{justify-content:flex-end}.wp-block-social-link{border-radius:9999px;display:block}@media not (prefers-reduced-motion){.wp-block-social-link{transition:transform .1s ease}}.wp-block-social-link{height:auto}.wp-block-social-link a{align-items:center;display:flex;line-height:0}.wp-block-social-link:hover{transform:scale(1.1)}.wp-block-social-links .wp-block-social-link.wp-social-link{display:inline-block;margin:0;padding:0}.wp-block-social-links .wp-block-social-link.wp-social-link .wp-block-social-link-anchor,.wp-block-social-links .wp-block-social-link.wp-social-link .wp-block-social-link-anchor svg,.wp-block-social-links .wp-block-social-link.wp-social-link .wp-block-social-link-anchor:active,.wp-block-social-links .wp-block-social-link.wp-social-link .wp-block-social-link-anchor:hover,.wp-block-social-links .wp-block-social-link.wp-social-link .wp-block-social-link-anchor:visited{color:currentColor;fill:currentColor}:where(.wp-block-social-links:not(.is-style-logos-only)) .wp-social-link{background-color:#f0f0f0;color:#444}:where(.wp-block-social-links:not(.is-style-logos-only)) .wp-social-link-amazon{background-color:#f90;color:#fff}:where(.wp-block-social-links:not(.is-style-logos-only)) .wp-social-link-bandcamp{background-color:#1ea0c3;color:#fff}:where(.wp-block-social-links:not(.is-style-logos-only)) .wp-social-link-behance{background-color:#0757fe;color:#fff}:where(.wp-block-social-links:not(.is-style-logos-only)) .wp-social-link-bluesky{background-color:#0a7aff;color:#fff}:where(.wp-block-social-links:not(.is-style-logos-only)) .wp-social-link-codepen{background-color:#1e1f26;color:#fff}:where(.wp-block-social-links:not(.is-style-logos-only)) .wp-social-link-deviantart{background-color:#02e49b;color:#fff}:where(.wp-block-social-links:not(.is-style-logos-only)) .wp-social-link-discord{background-color:#5865f2;color:#fff}:where(.wp-block-social-links:not(.is-style-logos-only)) .wp-social-link-dribbble{background-color:#e94c89;color:#fff}:where(.wp-block-social-links:not(.is-style-logos-only)) .wp-social-link-dropbox{background-color:#4280ff;color:#fff}:where(.wp-block-social-links:not(.is-style-logos-only)) .wp-social-link-etsy{background-color:#f45800;color:#fff}:where(.wp-block-social-links:not(.is-style-logos-only)) .wp-social-link-facebook{background-color:#0866ff;color:#fff}:where(.wp-block-social-links:not(.is-style-logos-only)) .wp-social-link-fivehundredpx{background-color:#000;color:#fff}:where(.wp-block-social-links:not(.is-style-logos-only)) .wp-social-link-flickr{background-color:#0461dd;color:#fff}:where(.wp-block-social-links:not(.is-style-logos-only)) .wp-social-link-foursquare{background-color:#e65678;color:#fff}:where(.wp-block-social-links:not(.is-style-logos-only)) .wp-social-link-github{background-color:#24292d;color:#fff}:where(.wp-block-social-links:not(.is-style-logos-only)) .wp-social-link-goodreads{background-color:#eceadd;color:#382110}:where(.wp-block-social-links:not(.is-style-logos-only)) .wp-social-link-google{background-color:#ea4434;color:#fff}:where(.wp-block-social-links:not(.is-style-logos-only)) .wp-social-link-gravatar{background-color:#1d4fc4;color:#fff}:where(.wp-block-social-links:not(.is-style-logos-only)) .wp-social-link-instagram{background-color:#f00075;color:#fff}:where(.wp-block-social-links:not(.is-style-logos-only)) .wp-social-link-lastfm{background-color:#e21b24;color:#fff}:where(.wp-block-social-links:not(.is-style-logos-only)) .wp-social-link-linkedin{background-color:#0d66c2;color:#fff}:where(.wp-block-social-links:not(.is-style-logos-only)) .wp-social-link-mastodon{background-color:#3288d4;color:#fff}:where(.wp-block-social-links:not(.is-style-logos-only)) .wp-social-link-medium{background-color:#000;color:#fff}:where(.wp-block-social-links:not(.is-style-logos-only)) .wp-social-link-meetup{background-color:#f6405f;color:#fff}:where(.wp-block-social-links:not(.is-style-logos-only)) .wp-social-link-patreon{background-color:#000;color:#fff}:where(.wp-block-social-links:not(.is-style-logos-only)) .wp-social-link-pinterest{background-color:#e60122;color:#fff}:where(.wp-block-social-links:not(.is-style-logos-only)) .wp-social-link-pocket{background-color:#ef4155;color:#fff}:where(.wp-block-social-links:not(.is-style-logos-only)) .wp-social-link-reddit{background-color:#ff4500;color:#fff}:where(.wp-block-social-links:not(.is-style-logos-only)) .wp-social-link-skype{background-color:#0478d7;color:#fff}:where(.wp-block-social-links:not(.is-style-logos-only)) .wp-social-link-snapchat{background-color:#fefc00;color:#fff;stroke:#000}:where(.wp-block-social-links:not(.is-style-logos-only)) .wp-social-link-soundcloud{background-color:#ff5600;color:#fff}:where(.wp-block-social-links:not(.is-style-logos-only)) .wp-social-link-spotify{background-color:#1bd760;color:#fff}:where(.wp-block-social-links:not(.is-style-logos-only)) .wp-social-link-telegram{background-color:#2aabee;color:#fff}:where(.wp-block-social-links:not(.is-style-logos-only)) .wp-social-link-threads{background-color:#000;color:#fff}:where(.wp-block-social-links:not(.is-style-logos-only)) .wp-social-link-tiktok{background-color:#000;color:#fff}:where(.wp-block-social-links:not(.is-style-logos-only)) .wp-social-link-tumblr{background-color:#011835;color:#fff}:where(.wp-block-social-links:not(.is-style-logos-only)) .wp-social-link-twitch{background-color:#6440a4;color:#fff}:where(.wp-block-social-links:not(.is-style-logos-only)) .wp-social-link-twitter{background-color:#1da1f2;color:#fff}:where(.wp-block-social-links:not(.is-style-logos-only)) .wp-social-link-vimeo{background-color:#1eb7ea;color:#fff}:where(.wp-block-social-links:not(.is-style-logos-only)) .wp-social-link-vk{background-color:#4680c2;color:#fff}:where(.wp-block-social-links:not(.is-style-logos-only)) .wp-social-link-wordpress{background-color:#3499cd;color:#fff}:where(.wp-block-social-links:not(.is-style-logos-only)) .wp-social-link-whatsapp{background-color:#25d366;color:#fff}:where(.wp-block-social-links:not(.is-style-logos-only)) .wp-social-link-x{background-color:#000;color:#fff}:where(.wp-block-social-links:not(.is-style-logos-only)) .wp-social-link-yelp{background-color:#d32422;color:#fff}:where(.wp-block-social-links:not(.is-style-logos-only)) .wp-social-link-youtube{background-color:red;color:#fff}:where(.wp-block-social-links.is-style-logos-only) .wp-social-link{background:none}:where(.wp-block-social-links.is-style-logos-only) .wp-social-link svg{height:1.25em;width:1.25em}:where(.wp-block-social-links.is-style-logos-only) .wp-social-link-amazon{color:#f90}:where(.wp-block-social-links.is-style-logos-only) .wp-social-link-bandcamp{color:#1ea0c3}:where(.wp-block-social-links.is-style-logos-only) .wp-social-link-behance{color:#0757fe}:where(.wp-block-social-links.is-style-logos-only) .wp-social-link-bluesky{color:#0a7aff}:where(.wp-block-social-links.is-style-logos-only) .wp-social-link-codepen{color:#1e1f26}:where(.wp-block-social-links.is-style-logos-only) .wp-social-link-deviantart{color:#02e49b}:where(.wp-block-social-links.is-style-logos-only) .wp-social-link-discord{color:#5865f2}:where(.wp-block-social-links.is-style-logos-only) .wp-social-link-dribbble{color:#e94c89}:where(.wp-block-social-links.is-style-logos-only) .wp-social-link-dropbox{color:#4280ff}:where(.wp-block-social-links.is-style-logos-only) .wp-social-link-etsy{color:#f45800}:where(.wp-block-social-links.is-style-logos-only) .wp-social-link-facebook{color:#0866ff}:where(.wp-block-social-links.is-style-logos-only) .wp-social-link-fivehundredpx{color:#000}:where(.wp-block-social-links.is-style-logos-only) .wp-social-link-flickr{color:#0461dd}:where(.wp-block-social-links.is-style-logos-only) .wp-social-link-foursquare{color:#e65678}:where(.wp-block-social-links.is-style-logos-only) .wp-social-link-github{color:#24292d}:where(.wp-block-social-links.is-style-logos-only) .wp-social-link-goodreads{color:#382110}:where(.wp-block-social-links.is-style-logos-only) .wp-social-link-google{color:#ea4434}:where(.wp-block-social-links.is-style-logos-only) .wp-social-link-gravatar{color:#1d4fc4}:where(.wp-block-social-links.is-style-logos-only) .wp-social-link-instagram{color:#f00075}:where(.wp-block-social-links.is-style-logos-only) .wp-social-link-lastfm{color:#e21b24}:where(.wp-block-social-links.is-style-logos-only) .wp-social-link-linkedin{color:#0d66c2}:where(.wp-block-social-links.is-style-logos-only) .wp-social-link-mastodon{color:#3288d4}:where(.wp-block-social-links.is-style-logos-only) .wp-social-link-medium{color:#000}:where(.wp-block-social-links.is-style-logos-only) .wp-social-link-meetup{color:#f6405f}:where(.wp-block-social-links.is-style-logos-only) .wp-social-link-patreon{color:#000}:where(.wp-block-social-links.is-style-logos-only) .wp-social-link-pinterest{color:#e60122}:where(.wp-block-social-links.is-style-logos-only) .wp-social-link-pocket{color:#ef4155}:where(.wp-block-social-links.is-style-logos-only) .wp-social-link-reddit{color:#ff4500}:where(.wp-block-social-links.is-style-logos-only) .wp-social-link-skype{color:#0478d7}:where(.wp-block-social-links.is-style-logos-only) .wp-social-link-snapchat{color:#fff;stroke:#000}:where(.wp-block-social-links.is-style-logos-only) .wp-social-link-soundcloud{color:#ff5600}:where(.wp-block-social-links.is-style-logos-only) .wp-social-link-spotify{color:#1bd760}:where(.wp-block-social-links.is-style-logos-only) .wp-social-link-telegram{color:#2aabee}:where(.wp-block-social-links.is-style-logos-only) .wp-social-link-threads{color:#000}:where(.wp-block-social-links.is-style-logos-only) .wp-social-link-tiktok{color:#000}:where(.wp-block-social-links.is-style-logos-only) .wp-social-link-tumblr{color:#011835}:where(.wp-block-social-links.is-style-logos-only) .wp-social-link-twitch{color:#6440a4}:where(.wp-block-social-links.is-style-logos-only) .wp-social-link-twitter{color:#1da1f2}:where(.wp-block-social-links.is-style-logos-only) .wp-social-link-vimeo{color:#1eb7ea}:where(.wp-block-social-links.is-style-logos-only) .wp-social-link-vk{color:#4680c2}:where(.wp-block-social-links.is-style-logos-only) .wp-social-link-whatsapp{color:#25d366}:where(.wp-block-social-links.is-style-logos-only) .wp-social-link-wordpress{color:#3499cd}:where(.wp-block-social-links.is-style-logos-only) .wp-social-link-x{color:#000}:where(.wp-block-social-links.is-style-logos-only) .wp-social-link-yelp{color:#d32422}:where(.wp-block-social-links.is-style-logos-only) .wp-social-link-youtube{color:red}.wp-block-social-links.is-style-pill-shape .wp-social-link{width:auto}:root :where(.wp-block-social-links .wp-social-link a){padding:.25em}:root :where(.wp-block-social-links.is-style-logos-only .wp-social-link a){padding:0}:root :where(.wp-block-social-links.is-style-pill-shape .wp-social-link a){padding-left:.6666666667em;padding-right:.6666666667em}.wp-block-social-links:not(.has-icon-color):not(.has-icon-background-color) .wp-social-link-snapchat .wp-block-social-link-label{color:#000}
+/*# sourceURL=https://cltc.berkeley.edu/wp-includes/blocks/social-links/style.min.css */
+</style>
+<style id='global-styles-inline-css'>
+:root{--wp--preset--aspect-ratio--square: 1;--wp--preset--aspect-ratio--4-3: 4/3;--wp--preset--aspect-ratio--3-4: 3/4;--wp--preset--aspect-ratio--3-2: 3/2;--wp--preset--aspect-ratio--2-3: 2/3;--wp--preset--aspect-ratio--16-9: 16/9;--wp--preset--aspect-ratio--9-16: 9/16;--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--color--cltc-blue: #003262;--wp--preset--color--cltc-teal: #3B7DA0;--wp--preset--color--cltc-blue-grey: #46535E;--wp--preset--color--cltc-beige: #DDD5C7;--wp--preset--color--cltc-beige-light: #F9F5EF;--wp--preset--color--cltc-pink-aa: #CC1E54;--wp--preset--color--cltc-pink: #EE1F60;--wp--preset--color--cltc-light-green: #B9D3B6;--wp--preset--color--cltc-dark-navy: #1A2127;--wp--preset--color--cltc-dark-grey: #666666;--wp--preset--color--cltc-black: #333333;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgb(6,147,227) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgb(252,185,0) 0%,rgb(255,105,0) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgb(255,105,0) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--gradient--blue-to-transparent: linear-gradient(180deg, rgba(0, 50, 98, 0.8) 48.19%, rgba(70, 83, 94, 0.06) 106.81%);--wp--preset--gradient--blue-to-transparent-horizontal: linear-gradient(90deg, rgba(0, 50, 98, 0.8) 48.19%, rgba(70, 83, 94, 0.06) 106.81%);--wp--preset--font-size--small: 14px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 24px;--wp--preset--font-size--x-large: 28px;--wp--preset--font-size--base: 16px;--wp--preset--font-family--open-sans: "Open Sans", sans-serif;--wp--preset--spacing--20: 0.44rem;--wp--preset--spacing--30: 0.67rem;--wp--preset--spacing--40: 1rem;--wp--preset--spacing--50: 1.5rem;--wp--preset--spacing--60: 2.25rem;--wp--preset--spacing--70: 3.38rem;--wp--preset--spacing--80: 5.06rem;--wp--preset--spacing--x-small: 1.5rem;--wp--preset--spacing--small: clamp(2.5rem, 6vw, 3rem);--wp--preset--spacing--medium: clamp(3rem, 6vw, 4rem);--wp--preset--spacing--large: clamp(4rem, 6vw, 5rem );--wp--preset--shadow--natural: 6px 6px 9px rgba(0, 0, 0, 0.2);--wp--preset--shadow--deep: 12px 12px 50px rgba(0, 0, 0, 0.4);--wp--preset--shadow--sharp: 6px 6px 0px rgba(0, 0, 0, 0.2);--wp--preset--shadow--outlined: 6px 6px 0px -3px rgb(255, 255, 255), 6px 6px rgb(0, 0, 0);--wp--preset--shadow--crisp: 6px 6px 0px rgb(0, 0, 0);--wp--custom--spacing--small: max(1rem, 4vw);--wp--custom--spacing--medium: clamp(1rem, 8vw, calc(2 * var(--wp--style--block-gap)));--wp--custom--spacing--large: clamp(2rem, 10vw, 6rem);--wp--custom--spacing--outer: var(--wp--custom--spacing--small, 1rem);--wp--custom--typography--font-size--huge: clamp(2rem, 4vw, 2.25rem);--wp--custom--typography--font-size--gigantic: clamp(2.25rem, 6vw, 2.75rem);--wp--custom--typography--font-size--colossal: clamp(2.75rem, 10vw, 5rem);--wp--custom--button--border--color: var(--wp--custom--color--cltc-blue);--wp--custom--button--border--radius: 24px;--wp--custom--button--border--style: solid;--wp--custom--button--border--width: 3px;--wp--custom--button--color--background: var(--wp--custom--color--cltc-blue);--wp--custom--button--color--text: var(--wp--custom--color--background);--wp--custom--button--hover--color--text: var(--wp--custom--color--background);--wp--custom--button--hover--color--background: var(--wp--custom--color--secondary);--wp--custom--button--hover--border--color: var(--wp--custom--color--secondary);--wp--custom--button--spacing--padding--top: 0.667em;--wp--custom--button--spacing--padding--bottom: 0.667em;--wp--custom--button--spacing--padding--left: 1.333em;--wp--custom--button--spacing--padding--right: 1.333em;--wp--custom--button--typography--font-size: var(--wp--custom--font-sizes--normal);--wp--custom--button--typography--font-family: var(--wp--preset--font-family--open-sans);--wp--custom--button--typography--font-weight: normal;--wp--custom--button--typography--line-height: 2;}:root { --wp--style--global--content-size: 1352px;--wp--style--global--wide-size: 1352px; }:where(body) { margin: 0; }.wp-site-blocks > .alignleft { float: left; margin-right: 2em; }.wp-site-blocks > .alignright { float: right; margin-left: 2em; }.wp-site-blocks > .aligncenter { justify-content: center; margin-left: auto; margin-right: auto; }:where(.wp-site-blocks) > * { margin-block-start: 24px; margin-block-end: 0; }:where(.wp-site-blocks) > :first-child { margin-block-start: 0; }:where(.wp-site-blocks) > :last-child { margin-block-end: 0; }:root { --wp--style--block-gap: 24px; }:root :where(.is-layout-flow) > :first-child{margin-block-start: 0;}:root :where(.is-layout-flow) > :last-child{margin-block-end: 0;}:root :where(.is-layout-flow) > *{margin-block-start: 24px;margin-block-end: 0;}:root :where(.is-layout-constrained) > :first-child{margin-block-start: 0;}:root :where(.is-layout-constrained) > :last-child{margin-block-end: 0;}:root :where(.is-layout-constrained) > *{margin-block-start: 24px;margin-block-end: 0;}:root :where(.is-layout-flex){gap: 24px;}:root :where(.is-layout-grid){gap: 24px;}.is-layout-flow > .alignleft{float: left;margin-inline-start: 0;margin-inline-end: 2em;}.is-layout-flow > .alignright{float: right;margin-inline-start: 2em;margin-inline-end: 0;}.is-layout-flow > .aligncenter{margin-left: auto !important;margin-right: auto !important;}.is-layout-constrained > .alignleft{float: left;margin-inline-start: 0;margin-inline-end: 2em;}.is-layout-constrained > .alignright{float: right;margin-inline-start: 2em;margin-inline-end: 0;}.is-layout-constrained > .aligncenter{margin-left: auto !important;margin-right: auto !important;}.is-layout-constrained > :where(:not(.alignleft):not(.alignright):not(.alignfull)){max-width: var(--wp--style--global--content-size);margin-left: auto !important;margin-right: auto !important;}.is-layout-constrained > .alignwide{max-width: var(--wp--style--global--wide-size);}body .is-layout-flex{display: flex;}.is-layout-flex{flex-wrap: wrap;align-items: center;}.is-layout-flex > :is(*, div){margin: 0;}body .is-layout-grid{display: grid;}.is-layout-grid > :is(*, div){margin: 0;}body{font-family: var(--wp--preset--font-family--open-sans);padding-top: 0px;padding-right: 0px;padding-bottom: 0px;padding-left: 0px;}a:where(:not(.wp-element-button)){text-decoration: underline;}h1{font-family: var(--wp--preset--font-family--open-sans);font-weight: 800;}h2{font-family: var(--wp--preset--font-family--open-sans);font-weight: 400;}h3{font-family: var(--wp--preset--font-family--open-sans);font-weight: 500;}h4{font-family: var(--wp--preset--font-family--open-sans);font-weight: 700;}h5{font-family: var(--wp--preset--font-family--open-sans);font-weight: 700;}h6{font-family: var(--wp--preset--font-family--open-sans);font-weight: 700;}:root :where(.wp-element-button, .wp-block-button__link){background-color: #32373c;border-width: 0;color: #fff;font-family: inherit;font-size: inherit;font-style: inherit;font-weight: inherit;letter-spacing: inherit;line-height: inherit;padding-top: calc(0.667em + 2px);padding-right: calc(1.333em + 2px);padding-bottom: calc(0.667em + 2px);padding-left: calc(1.333em + 2px);text-decoration: none;text-transform: inherit;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-cltc-blue-color{color: var(--wp--preset--color--cltc-blue) !important;}.has-cltc-teal-color{color: var(--wp--preset--color--cltc-teal) !important;}.has-cltc-blue-grey-color{color: var(--wp--preset--color--cltc-blue-grey) !important;}.has-cltc-beige-color{color: var(--wp--preset--color--cltc-beige) !important;}.has-cltc-beige-light-color{color: var(--wp--preset--color--cltc-beige-light) !important;}.has-cltc-pink-aa-color{color: var(--wp--preset--color--cltc-pink-aa) !important;}.has-cltc-pink-color{color: var(--wp--preset--color--cltc-pink) !important;}.has-cltc-light-green-color{color: var(--wp--preset--color--cltc-light-green) !important;}.has-cltc-dark-navy-color{color: var(--wp--preset--color--cltc-dark-navy) !important;}.has-cltc-dark-grey-color{color: var(--wp--preset--color--cltc-dark-grey) !important;}.has-cltc-black-color{color: var(--wp--preset--color--cltc-black) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-cltc-blue-background-color{background-color: var(--wp--preset--color--cltc-blue) !important;}.has-cltc-teal-background-color{background-color: var(--wp--preset--color--cltc-teal) !important;}.has-cltc-blue-grey-background-color{background-color: var(--wp--preset--color--cltc-blue-grey) !important;}.has-cltc-beige-background-color{background-color: var(--wp--preset--color--cltc-beige) !important;}.has-cltc-beige-light-background-color{background-color: var(--wp--preset--color--cltc-beige-light) !important;}.has-cltc-pink-aa-background-color{background-color: var(--wp--preset--color--cltc-pink-aa) !important;}.has-cltc-pink-background-color{background-color: var(--wp--preset--color--cltc-pink) !important;}.has-cltc-light-green-background-color{background-color: var(--wp--preset--color--cltc-light-green) !important;}.has-cltc-dark-navy-background-color{background-color: var(--wp--preset--color--cltc-dark-navy) !important;}.has-cltc-dark-grey-background-color{background-color: var(--wp--preset--color--cltc-dark-grey) !important;}.has-cltc-black-background-color{background-color: var(--wp--preset--color--cltc-black) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-cltc-blue-border-color{border-color: var(--wp--preset--color--cltc-blue) !important;}.has-cltc-teal-border-color{border-color: var(--wp--preset--color--cltc-teal) !important;}.has-cltc-blue-grey-border-color{border-color: var(--wp--preset--color--cltc-blue-grey) !important;}.has-cltc-beige-border-color{border-color: var(--wp--preset--color--cltc-beige) !important;}.has-cltc-beige-light-border-color{border-color: var(--wp--preset--color--cltc-beige-light) !important;}.has-cltc-pink-aa-border-color{border-color: var(--wp--preset--color--cltc-pink-aa) !important;}.has-cltc-pink-border-color{border-color: var(--wp--preset--color--cltc-pink) !important;}.has-cltc-light-green-border-color{border-color: var(--wp--preset--color--cltc-light-green) !important;}.has-cltc-dark-navy-border-color{border-color: var(--wp--preset--color--cltc-dark-navy) !important;}.has-cltc-dark-grey-border-color{border-color: var(--wp--preset--color--cltc-dark-grey) !important;}.has-cltc-black-border-color{border-color: var(--wp--preset--color--cltc-black) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-blue-to-transparent-gradient-background{background: var(--wp--preset--gradient--blue-to-transparent) !important;}.has-blue-to-transparent-horizontal-gradient-background{background: var(--wp--preset--gradient--blue-to-transparent-horizontal) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}.has-base-font-size{font-size: var(--wp--preset--font-size--base) !important;}.has-open-sans-font-family{font-family: var(--wp--preset--font-family--open-sans) !important;}
+/*# sourceURL=global-styles-inline-css */
+</style>
+<style id='core-block-supports-inline-css'>
+.wp-container-core-group-is-layout-6c531013{flex-wrap:nowrap;}.wp-container-core-columns-is-layout-28f84493{flex-wrap:nowrap;}
+/*# sourceURL=core-block-supports-inline-css */
+</style>
+
+<link rel='stylesheet' id='wp-components-css' href='https://cltc.berkeley.edu/wp-includes/css/dist/components/style.min.css?ver=6.9' media='all' />
+<link rel='stylesheet' id='wp-preferences-css' href='https://cltc.berkeley.edu/wp-includes/css/dist/preferences/style.min.css?ver=6.9' media='all' />
+<link rel='stylesheet' id='wp-block-editor-css' href='https://cltc.berkeley.edu/wp-includes/css/dist/block-editor/style.min.css?ver=6.9' media='all' />
+<link rel='stylesheet' id='popup-maker-block-library-style-css' href='https://cltc.berkeley.edu/wp-content/plugins/popup-maker/dist/packages/block-library-style.css?ver=dbea705cfafe089d65f1' media='all' />
+<link rel='stylesheet' id='kalamunastarter-style-css' href='https://cltc.berkeley.edu/wp-content/themes/cltc/style.css?ver=1771257241' media='all' />
+<link rel='stylesheet' id='cltc-style-css' href='https://cltc.berkeley.edu/wp-content/themes/cltc/css/style.css?ver=1771257241' media='all' />
+<link rel='stylesheet' id='popup-maker-site-css' href='//cltc.berkeley.edu/wp-content/uploads/pum/pum-site-styles.css?generated=1757610949&#038;ver=1.21.5' media='all' />
+<script src="https://cltc.berkeley.edu/wp-includes/js/jquery/jquery.min.js?ver=3.7.1" id="jquery-core-js"></script>
+<script src="https://cltc.berkeley.edu/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.4.1" id="jquery-migrate-js"></script>
+<link rel="https://api.w.org/" href="https://cltc.berkeley.edu/wp-json/" /><link rel="alternate" title="JSON" type="application/json" href="https://cltc.berkeley.edu/wp-json/wp/v2/program/11549" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://cltc.berkeley.edu/xmlrpc.php?rsd" />
+<meta name="generator" content="WordPress 6.9" />
+<link rel='shortlink' href='https://cltc.berkeley.edu/?p=11549' />
+<meta name="tec-api-version" content="v1"><meta name="tec-api-origin" content="https://cltc.berkeley.edu"><link rel="alternate" href="https://cltc.berkeley.edu/wp-json/tribe/events/v1/" /><style class='wp-fonts-local'>
+@font-face{font-family:"Open Sans";font-style:normal;font-weight:400;font-display:fallback;src:url('https://cltc.berkeley.edu/wp-content/themes/cltc/fonts/OpenSans/OpenSans-Regular.ttf') format('truetype');}
+@font-face{font-family:"Open Sans";font-style:italic;font-weight:400;font-display:fallback;src:url('https://cltc.berkeley.edu/wp-content/themes/cltc/fonts/OpenSans/OpenSans-Italic.ttf') format('truetype');}
+@font-face{font-family:"Open Sans";font-style:normal;font-weight:700;font-display:fallback;src:url('https://cltc.berkeley.edu/wp-content/themes/cltc/fonts/OpenSans/OpenSans-Bold.ttf') format('truetype');}
+@font-face{font-family:"Open Sans";font-style:italic;font-weight:700;font-display:fallback;src:url('https://cltc.berkeley.edu/wp-content/themes/cltc/fonts/OpenSans/OpenSans-BoldItalic.ttf') format('truetype');}
+</style>
+		<style id="wp-custom-css">
+			avatar-staff img,
+img.attachment-cltc-people-small.size-cltc-people-small {
+	height: 122px;
+}
+
+a[target="_blank"]::after {
+    width: 0;
+}
+
+
+.card-image-clipped {
+  clip-path: polygon(100% 0, 100% 100%, 71% 94%, 0 100%, 0 0, 60% 0);
+  -webkit-clip-path: polygon(100% 0, 100% 100%, 71% 94%, 0 100%, 0 0, 60% 0);
+	margin: 0;
+	object-fit: cover;
+}
+
+.custom-card {
+  //max-width: 300px;
+	margin-top:  1rem;
+	margin-bottom: 1rem;
+}
+.custom-card > div {
+  padding: 1rem;
+}
+
+.custom-card > div > h3.wp-block-heading {
+    font-size: 1.5rem !important;
+	line-height: 2rem;
+}
+
+.custom-card:hover {
+  box-shadow: 0px 4px 20px 0px rgba(31, 31, 31, 0.4) !important;
+  cursor: pointer;
+}
+
+.custom-pad {
+  padding: 2rem !important;
+}		</style>
+		<link rel='stylesheet' id='gform_basic-css' href='https://cltc.berkeley.edu/wp-content/plugins/gravityforms/assets/css/dist/basic.min.css?ver=2.9.23.2' media='all' />
+<link rel='stylesheet' id='gform_theme_components-css' href='https://cltc.berkeley.edu/wp-content/plugins/gravityforms/assets/css/dist/theme-components.min.css?ver=2.9.23.2' media='all' />
+<link rel='stylesheet' id='gform_theme-css' href='https://cltc.berkeley.edu/wp-content/plugins/gravityforms/assets/css/dist/theme.min.css?ver=2.9.23.2' media='all' />
+</head>
+<body class="wp-singular program-template-default single single-program postid-11549 wp-theme-cltc mouse-input tribe-no-js metaslider-plugin no-sidebar">
+	<div id="page" class="site">
+		<div class="overlay"></div>
+		<a class="skip-link screen-reader-text" href="#primary">Skip to content</a>
+
+		<div id="site-header-container" class="site-header-container">
+			<header id="masthead" class="site-header">
+				<div class="site-header__content layout-container">
+				
+				<div class="site-header__left">
+					<a href="https://cltc.berkeley.edu/" class="site-header__logo-link">
+						<div class="site-header__logo">
+							<span class="screen-reader-text">CLTC</span>
+						</div>
+					</a>
+
+									</div>
+				<div class="site-header__right">
+						<nav id="main-drop-down-nav" class="site-header__menu-container site-header__menu-container--main" aria-label="Header Main Navigation">
+						
+							<ul class="site-header__menu--icons">
+								<li class="site-header__menu--utility-container hide-xm">
+									<ul id="menu-utility-menu" class="site-header__menu--utility"><li id="menu-item-12325" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-12325"><a href="https://cltc.berkeley.edu/give-to-cltc/">Give to CLTC</a></li>
+</ul>								</li>
+
+								<li class="site-header__menu--search-container hide-xm">
+									<button id="search-dropdown__trigger" class="search-dropdown__trigger" aria-expanded="false" aria-controls="mobile-search-nav" aria-haspopup="true">
+										<span class="screen-reader-text">Search</span>
+										<span class="close-menu-icon"></span>
+									</button>
+								</li>
+
+								<li class="site-header__menu--mega-menu-container">
+										<button id="mega-menu__trigger" class="mega-menu__trigger" aria-expanded="false" aria-controls="mega-menu-nav" aria-haspopup="true">										
+											<span class="mega-menu-icon"></span>
+											<span class="mega-menu-icon-text">Menu</span>
+										</button>
+								</li>
+							</ul>
+						</nav>
+				</div><!-- #site-navigation -->
+				</div>
+			</header><!-- #masthead -->
+
+
+		</div>
+
+		
+		<div id="mega-menu__container" class="mega-menu__container mega-menu-nav">
+
+    <div class="mega-menu__content layout-container">
+
+        <form action="/site-search/" role="search" class="mega-menu__section search-dropdown-form__wrap--mobile">
+            <label for="mega-menu__search-dropdown-form-input" class="search-dropdown-form__label screen-reader-text">Search Site</label>
+        
+            <div class="search-dropdown-form__inner-container">
+                <input type="text" placeholder="Search" name="_keyword" class="search-dropdown-form__input" id="mega-menu__search-dropdown-form-input" />
+                <button  class="search-dropdown-form__submit search-dropdown-form__button">Search</button>
+            </div>
+        </form>
+
+
+        <nav class="mega-menu__section" id="mega-menu__drop-down-nav" aria-label="Header Main Navigation">
+            <ul id="menu-main-menu" class="mega-menu__menu"><li id="menu-item-12269" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-12269"><a href="https://cltc.berkeley.edu/research/">Research</a>
+<ul class="sub-menu">
+	<li id="menu-item-21135" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-21135"><a href="https://cltc.berkeley.edu/research/programs-and-initiatives/">Programs and Initiatives</a></li>
+	<li id="menu-item-12271" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-12271"><a href="https://cltc.berkeley.edu/research/research-library/">Research Library</a></li>
+	<li id="menu-item-10992" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-10992"><a href="/research-topics">Research Topics</a></li>
+</ul>
+</li>
+<li id="menu-item-12285" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-12285"><a href="https://cltc.berkeley.edu/news-events/">News &#038; Events</a>
+<ul class="sub-menu">
+	<li id="menu-item-10985" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-10985"><a href="/news">News</a></li>
+	<li id="menu-item-10986" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-10986"><a href="/events">Events</a></li>
+	<li id="menu-item-12320" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-12320"><a href="https://cltc.berkeley.edu/media-resources/">Media Resources</a></li>
+	<li id="menu-item-10994" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-10994"><a target="_blank" href="https:///medium.com/cltc-bulletin">CLTC Blog</a></li>
+</ul>
+</li>
+<li id="menu-item-12300" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-12300"><a href="https://cltc.berkeley.edu/give-to-cltc/">Give to CLTC</a>
+<ul class="sub-menu">
+	<li id="menu-item-12304" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-12304"><a href="https://cltc.berkeley.edu/give-to-cltc/join-our-mailing-list/">Join Our Mailing List</a></li>
+	<li id="menu-item-16956" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-16956"><a href="https://cltc.berkeley.edu/cltc-industry-collaborators/">Join CLTC as an Industry Collaborator</a></li>
+	<li id="menu-item-13533" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-13533"><a href="https://cltc.berkeley.edu/give-to-cltc/">Give to CLTC</a></li>
+</ul>
+</li>
+<li id="menu-item-12288" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-12288"><a href="https://cltc.berkeley.edu/about-us/">About</a>
+<ul class="sub-menu">
+	<li id="menu-item-12289" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-12289"><a href="https://cltc.berkeley.edu/about-us/our-values/">Our Values</a></li>
+	<li id="menu-item-12290" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-12290"><a href="https://cltc.berkeley.edu/about-us/people/">People</a></li>
+	<li id="menu-item-12291" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-12291"><a href="https://cltc.berkeley.edu/about-us/jobs/">Jobs at CLTC</a></li>
+	<li id="menu-item-11000" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-11000"><a href="/contact-us/">Contact Us</a></li>
+</ul>
+</li>
+</ul>        </nav>
+
+        <div class="mega-menu__section mega-menu__widget-area">
+            <section id="block-3" class="widget widget_block">
+<div class="wp-block-group is-layout-flow wp-block-group-is-layout-flow">
+<p>Support the future of cybersecurity</p>
+
+
+
+<div class="wp-block-buttons is-layout-flex wp-block-buttons-is-layout-flex">
+<div class="wp-block-button"><a class="wp-block-button__link" href="https:///cltc.berkeley.edu/give-to-cltc/">Donate</a></div>
+</div>
+</div>
+</section>        </div>
+    </div>
+
+    <div class="mega-menu-navigation--bottom">
+        <div class="layout-container">
+
+            <section id="block-12" class="widget widget_block">
+<div class="wp-block-group is-nowrap is-layout-flex wp-container-core-group-is-layout-6c531013 wp-block-group-is-layout-flex">
+<p class="text-link"><a rel="noreferrer noopener" href="https:///www.ischool.berkeley.edu/" target="_blank">Berkeley School of Information</a></p>
+</div>
+</section>
+            <!-- <a href="https://www.ischool.berkeley.edu/" target="_blank" rel="noopener"><img src="https://cltc.berkeley.edu/wp-content/themes/cltc/images/logo-si.svg" alt="Berkley School of Information" /></a>
+
+            <a href="https://data.berkeley.edu/"  target="_blank" rel="noopener"><img src="https://cltc.berkeley.edu/wp-content/themes/cltc/images/logo-cdss.svg" alt="Berkley Computing, Data Science, & Technology" /></a> -->
+        </div>
+    </div>
+ 
+</div>		<div id="search-dropdown__container" class="search-dropdown__container mobile-search-nav ">
+    <div class="layout-container">
+
+        <form action="/site-search/" role="search" class="search-dropdown-form__wrap">
+            <label for="search-dropdown-form-input" class="search-dropdown-form__label screen-reader-text">Search Site</label>
+        
+            <div class="search-dropdown-form__inner-container">
+                <input type="text" placeholder="Search" name="_keywords" class="search-dropdown-form__input" id="search-dropdown-form-input" />
+                <button  class="search-dropdown-form__submit search-dropdown-form__button">Search</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+	<main>
+		
+<div class="layout-container">
+	<div class="breadcrumbs">
+    <span><span><a href="https://cltc.berkeley.edu/">Home</a></span> <span class="breadcrumbs__sep">/</span> <span><a href="/research/">Research</a></span> <span class="breadcrumbs__sep">/</span> <span><a href="/programs/">Programs &amp; Initiatives</a></span></span></div></div>
+
+<div class="wp-block-cover alignfull hero hero--research">
+	<span aria-hidden="true" class="wp-block-cover__background has-background-dim wp-block-cover__gradient-background has-background-gradient has-blue-to-transparent-horizontal-gradient-background"></span>
+	<img class="wp-block-cover__image-background wp-image-10706" alt="" src="https://cltc.berkeley.edu/wp-content/uploads/2022/08/ai-policy-hub-banner-1920x480.png" data-object-fit="cover"/>
+	
+	<div class="wp-block-cover__inner-container">
+		<h1 class="has-text-align-left">AI Policy Hub</h1>
+
+			</div>
+</div>
+		<div id="primary" class="site-main page-layout__container padding-top padding-top-m padding-bottom padding-bottom-m">
+		
+			<div class="page-layout__wide">
+
+			<p><center><img fetchpriority="high" decoding="async" class=" wp-image-12569 aligncenter" src="https:///cltc.berkeley.edu/wp-content/uploads/2022/09/ai-policy-hub-1024x576-1-e1664575765753-300x92.png" alt="AI Policy Hub" width="603" height="185" srcset="https://cltc.berkeley.edu/wp-content/uploads/2022/09/ai-policy-hub-1024x576-1-e1664575765753-300x92.png 300w, https://cltc.berkeley.edu/wp-content/uploads/2022/09/ai-policy-hub-1024x576-1-e1664575765753-768x236.png 768w, https://cltc.berkeley.edu/wp-content/uploads/2022/09/ai-policy-hub-1024x576-1-e1664575765753.png 1024w" sizes="(max-width: 603px) 100vw, 603px" /></center></p>
+<h4 class="has-text-align-center"><em><strong>Advancing interdisciplinary research to anticipate and address AI policy opportunities</strong></em></h4>
+
+
+<div class="wp-block-columns is-layout-flex wp-container-core-columns-is-layout-28f84493 wp-block-columns-is-layout-flex">
+<div class="wp-block-column is-layout-flow wp-block-column-is-layout-flow" style="padding-right:var(--wp--preset--spacing--x-small);padding-left:var(--wp--preset--spacing--x-small);flex-basis:66.66%">
+<h2 class="wp-block-heading">About</h2>
+
+
+
+<p>The AI Policy Hub is an interdisciplinary initiative training UC Berkeley researchers to develop effective governance and policy frameworks to guide artificial intelligence, today and into the future.</p>
+
+
+
+<p>We support innovative research and produce policy deliverables that help reduce the harmful effects and amplify the benefits of artificial intelligence.</p>
+
+
+
+<p>Our&nbsp;<strong>mission</strong>&nbsp;is to cultivate an interdisciplinary research community to anticipate and address policy opportunities for safe and beneficial AI.&nbsp;</p>
+
+
+
+<p>Our&nbsp;<strong>vision</strong>&nbsp;is a future in which AI technologies do not exacerbate division, harm, violence, and inequity, but instead foster human connection and societal well-being.</p>
+
+
+
+<p>We are housed at the&nbsp;<a href="https:///cltc.berkeley.edu/ai-security-initiative/">AI Security Initiative</a>, part of the University of California, Berkeley’s Center for Long-Term Cybersecurity.</p>
+
+
+
+<p>We also collaborate with other UC Berkeley departments and centers that are contributing work on AI governance and policy, including the University of California’s <a href="https://citris-uc.org/research/citris-tech-policy/">CITRIS Tech Policy Initiative</a> — part of the Center for Information Technology Research in the Interest of Society and the Banatao Institute (CITRIS), Berkeley’s Division of Computing, Data Science, and Society (CDSS) and its affiliated School of Information, the Center for Human-Compatible Artificial Intelligence (CHAI), the Berkeley Center for Law &amp; Technology (BCLT), the College of Engineering, and the Goldman School of Public Policy.</p>
+</div>
+
+
+
+<div class="wp-block-column is-layout-flow wp-block-column-is-layout-flow" style="flex-basis:33.33%">
+<div class="query-stacked__container">
+
+	<h2 class="has-cltc-black-color has-text-color has-large-font-size" style="font-style:normal;font-weight:600">Related News</h2>
+		
+		<div class="wp-block-query query-stacked">
+			<ul class="wp-block-post-template query-stacked__list">
+			<!--fwp-loop-->
+
+				<li class="wp-block-post post type-post query-stacked__list-item">
+					<article id="post-23019" class="card-horizontal card-horizontal--1-col">
+						<div class="is-nowrap wp-block-group card-horizontal__meta">
+														<div class="card-horizontal__categories has-text-align-left wp-block-post-terms has-small-font-size">
+								<a href="https://cltc.berkeley.edu/?research_topic=artificial-intelligence-ai" rel="tag">artificial intelligence (AI)</a>, <a href="https://cltc.berkeley.edu/?research_topic=censorship" rel="tag">censorship</a>, <a href="https://cltc.berkeley.edu/?research_topic=governance" rel="tag">governance</a>, <a href="https://cltc.berkeley.edu/?research_topic=privacy" rel="tag">privacy</a>							</div>
+							
+							<div class="wp-block-post-date has-small-font-size">
+							November 18, 2025							</div>
+						</div>
+
+						<h3 class="has-base-font-size"><a href="https://cltc.berkeley.edu/2025/11/18/cal-cybersecurity-research-fellows-announced/">Cal Cybersecurity Research Fellows Announced</a></h3>
+					</article>
+				</li>
+				
+				<li class="wp-block-post post type-post query-stacked__list-item">
+					<article id="post-22926" class="card-horizontal card-horizontal--1-col">
+						<div class="is-nowrap wp-block-group card-horizontal__meta">
+														<div class="card-horizontal__categories has-text-align-left wp-block-post-terms has-small-font-size">
+								<a href="https://cltc.berkeley.edu/?research_topic=cyber-civil-defense" rel="tag">cyber civil defense</a>, <a href="https://cltc.berkeley.edu/?research_topic=infrastructure" rel="tag">infrastructure</a>, <a href="https://cltc.berkeley.edu/?research_topic=insurance" rel="tag">insurance</a>, <a href="https://cltc.berkeley.edu/?research_topic=policy" rel="tag">policy</a>, <a href="https://cltc.berkeley.edu/?research_topic=public-interest-cybersecurity" rel="tag">public interest cybersecurity</a>							</div>
+							
+							<div class="wp-block-post-date has-small-font-size">
+							November 7, 2025							</div>
+						</div>
+
+						<h3 class="has-base-font-size"><a href="https://cltc.berkeley.edu/2025/11/07/cyber-volunteers-convene-in-madison-wisconsin/">Cyber Volunteers Convene in Madison, Wisconsin</a></h3>
+					</article>
+				</li>
+				
+				<li class="wp-block-post post type-post query-stacked__list-item">
+					<article id="post-22906" class="card-horizontal card-horizontal--1-col">
+						<div class="is-nowrap wp-block-group card-horizontal__meta">
+														<div class="card-horizontal__categories has-text-align-left wp-block-post-terms has-small-font-size">
+								<a href="https://cltc.berkeley.edu/?research_topic=artificial-intelligence-ai" rel="tag">artificial intelligence (AI)</a>, <a href="https://cltc.berkeley.edu/?research_topic=digital-harms" rel="tag">digital harms</a>, <a href="https://cltc.berkeley.edu/?research_topic=policy" rel="tag">policy</a>, <a href="https://cltc.berkeley.edu/?research_topic=risk" rel="tag">risk</a>, <a href="https://cltc.berkeley.edu/?research_topic=risk-communication" rel="tag">risk communication</a>							</div>
+							
+							<div class="wp-block-post-date has-small-font-size">
+							November 5, 2025							</div>
+						</div>
+
+						<h3 class="has-base-font-size"><a href="https://cltc.berkeley.edu/2025/11/05/event-recap-establishing-ai-risk-thresholds-and-red-lines-a-critical-global-policy-priority/">Event Recap &#8211; Establishing AI Risk Thresholds and Red Lines: A Critical Global Policy Priority</a></h3>
+					</article>
+				</li>
+				
+			</ul>
+		</div>
+		
+				<p><a href="https://cltc.berkeley.edu/news"  class="query-stacked__link">All News</a></p>
+</div>
+
+
+<div id="" class="query-stacked__container">
+
+	<h2 class="has-cltc-dark-grey-color has-text-color has-medium-font-size" style="font-style:normal;font-weight:500;text-transform:uppercase">Upcoming Events</h2>
+
+				
+		<p class="query-stacked__link">
+			<a href="https://cltc.berkeley.edu/events">All Events</a>
+		</p>
+
+</div></div>
+</div>
+
+
+
+<hr class="wp-block-separator has-alpha-channel-opacity is-style-dots"/>
+
+
+
+<p></p>
+
+
+
+<h3 class="wp-block-heading">Previous AI Policy Hub Fellows</h3>
+
+
+
+<div class="wp-block-columns is-layout-flex wp-container-core-columns-is-layout-28f84493 wp-block-columns-is-layout-flex">
+<div class="wp-block-column is-layout-flow wp-block-column-is-layout-flow">
+<div id="" class="card-featured__outer-container">
+    
+        
+                            <h3 class="has-cltc-dark-grey-color has-text-color has-medium-font-size" style="font-style:normal;font-weight:500;text-transform:uppercase">Fall 2024 &#8211; Spring 2025</h3>
+            
+            <div class="wp-block-cover has-custom-content-position is-position-top-left card-featured" style="min-height:468px">
+                <a href="https://cltc.berkeley.edu/?post_type=post&amp;p=22052" class="card-featured__main-link"><span class="screen-reader-text">View featured news: Berkeley AI Policy Symposium Showcases Next-Gen Research on Effective AI Governance</span></a>
+
+                <span class="has-background-dim-100 wp-block-cover__gradient-background has-blue-to-transparent-gradient-background has-background-dim has-background-gradient"
+                style="background:linear-gradient(180deg,rgba(0,50,98,0.8) 48.19%,rgba(70,83,94,0.06) 106.81%)"></span>
+
+                <img decoding="async" class="wp-block-cover__image-background" alt="" src="https://cltc.berkeley.edu/wp-content/uploads/2025/05/IMG_7515-1024x682.png" data-object-fit="cover">
+                    <div class="wp-block-cover__inner-container">
+
+                        <div class="is-nowrap wp-block-group card-featured__meta">
+                            <div class="card-featured__categories has-text-align-left wp-block-post-terms has-small-font-size">
+                                    <a href="https://cltc.berkeley.edu/category/event-recap/" alt="View all posts in Event Recap">Event Recap</a>                            </div>
+
+                            <div class="wp-block-post-date has-small-font-size">
+                            May 19, 2025
+                            </div>
+                        </div>
+
+                        <a href="https://cltc.berkeley.edu/?post_type=post&amp;p=22052">
+                            <h4>Berkeley AI Policy Symposium Showcases Next-Gen Research on Effective AI Governance</h4>
+                
+                                                    </a>
+                </div> 
+            </div>
+            
+        </div></div>
+
+
+
+<div class="wp-block-column is-layout-flow wp-block-column-is-layout-flow">
+<div id="" class="card-featured__outer-container">
+    
+        
+                            <h3 class="has-cltc-dark-grey-color has-text-color has-medium-font-size" style="font-style:normal;font-weight:500;text-transform:uppercase">Fall 2023 &#8211; Spring 2024</h3>
+            
+            <div class="wp-block-cover has-custom-content-position is-position-top-left card-featured" style="min-height:468px">
+                <a href="https://cltc.berkeley.edu/?post_type=post&amp;p=19386" class="card-featured__main-link"><span class="screen-reader-text">View featured news: UC Berkeley AI Policy Research Symposium 2024</span></a>
+
+                <span class="has-background-dim-100 wp-block-cover__gradient-background has-blue-to-transparent-gradient-background has-background-dim has-background-gradient"
+                style="background:linear-gradient(180deg,rgba(0,50,98,0.8) 48.19%,rgba(70,83,94,0.06) 106.81%)"></span>
+
+                <img decoding="async" class="wp-block-cover__image-background" alt="" src="https://cltc.berkeley.edu/wp-content/uploads/2024/06/IMG_9547-1-1024x682.jpg" data-object-fit="cover">
+                    <div class="wp-block-cover__inner-container">
+
+                        <div class="is-nowrap wp-block-group card-featured__meta">
+                            <div class="card-featured__categories has-text-align-left wp-block-post-terms has-small-font-size">
+                                    <a href="https://cltc.berkeley.edu/category/event-recap/" alt="View all posts in Event Recap">Event Recap</a>                            </div>
+
+                            <div class="wp-block-post-date has-small-font-size">
+                            June 11, 2024
+                            </div>
+                        </div>
+
+                        <a href="https://cltc.berkeley.edu/?post_type=post&amp;p=19386">
+                            <h4>UC Berkeley AI Policy Research Symposium 2024</h4>
+                
+                                                    </a>
+                </div> 
+            </div>
+            
+        </div></div>
+
+
+
+<div class="wp-block-column is-layout-flow wp-block-column-is-layout-flow">
+<div id="" class="card-featured__outer-container">
+    
+        
+                            <h3 class="has-cltc-dark-grey-color has-text-color has-medium-font-size" style="font-style:normal;font-weight:500;text-transform:uppercase">Fall 2022 &#8211; Spring 2023</h3>
+            
+            <div class="wp-block-cover has-custom-content-position is-position-top-left card-featured" style="min-height:468px">
+                <a href="https://cltc.berkeley.edu/?post_type=post&amp;p=15924" class="card-featured__main-link"><span class="screen-reader-text">View featured news: 2022-2023 AI Policy Hub Fellows</span></a>
+
+                <span class="has-background-dim-100 wp-block-cover__gradient-background has-blue-to-transparent-gradient-background has-background-dim has-background-gradient"
+                style="background:linear-gradient(180deg,rgba(0,50,98,0.8) 48.19%,rgba(70,83,94,0.06) 106.81%)"></span>
+
+                <img decoding="async" class="wp-block-cover__image-background" alt="" src="https://cltc.berkeley.edu/wp-content/uploads/2023/05/AI-Policy-Research-Symposium-Slide-Deck.png" data-object-fit="cover">
+                    <div class="wp-block-cover__inner-container">
+
+                        <div class="is-nowrap wp-block-group card-featured__meta">
+                            <div class="card-featured__categories has-text-align-left wp-block-post-terms has-small-font-size">
+                                    <a href="https://cltc.berkeley.edu/category/news/" alt="View all posts in News">News</a>                            </div>
+
+                            <div class="wp-block-post-date has-small-font-size">
+                            May 19, 2023
+                            </div>
+                        </div>
+
+                        <a href="https://cltc.berkeley.edu/?post_type=post&amp;p=15924">
+                            <h4>2022-2023 AI Policy Hub Fellows</h4>
+                
+                                                    </a>
+                </div> 
+            </div>
+            
+        </div></div>
+</div>
+
+
+
+<div class="wp-block-columns is-layout-flex wp-container-core-columns-is-layout-28f84493 wp-block-columns-is-layout-flex">
+<div class="wp-block-column is-layout-flow wp-block-column-is-layout-flow"></div>
+
+
+
+<div class="wp-block-column is-layout-flow wp-block-column-is-layout-flow"></div>
+</div>
+
+
+
+<p></p>
+
+
+
+<p></p>
+
+
+
+<h2 class="wp-block-heading">Contact</h2>
+
+
+
+<p>If you are a UC Berkeley student with inquiries about the application, or a faculty member or researcher in the field interested in collaboration or providing student mentorship, please contact Nada Madkour at <a href="mailto:nada.madkour@berkeley.edu">nada.madkour@berkeley.edu</a>. For media inquiries, please contact Charles Kapelke at <a href="mailto:ckapelke@berkeley.edu">ckapelke@berkeley.edu</a>. Interested in supporting our work philanthropically? Shanti Corrigan at <a href="mailto:shanti@berkeley.edu">shanti@berkeley.edu</a> can gladly facilitate introductions across our team of experts and clarify the impact gifts of all sizes can make to advance our mission.</p>
+
+
+
+<div id="people-attachment-block_0ca9a987a9fb96d7b9e9ea713e4ca0ca" class="people-attachment">
+	<div class="layout-container">
+
+         
+
+      <div class="people-attachment__columns">
+                              		
+            
+                          <!-- otherwise, link to their single post page. -->
+              <a class="people-attachment__column" href="https://cltc.berkeley.edu/people/nada-madkour/">
+                            <div class="people-attachment__image-content">
+                                        <figure class="wp-block-image aligncenter size-thumbnail is-style-rounded">
+                          <img decoding="async" width="246" height="300" src="https://cltc.berkeley.edu/wp-content/uploads/2024/04/Nada-Madkour-Headshot-1-e1736456367854-246x300.png" class="attachment-medium size-medium wp-post-image" alt="Nada Madkour" srcset="https://cltc.berkeley.edu/wp-content/uploads/2024/04/Nada-Madkour-Headshot-1-e1736456367854-246x300.png 246w, https://cltc.berkeley.edu/wp-content/uploads/2024/04/Nada-Madkour-Headshot-1-e1736456367854.png 678w" sizes="(max-width: 246px) 100vw, 246px" />                      </figure>
+                                  </div>
+                <div class="people-attachment__text-content wp-block-media-text__content">
+                  <h4>Nada Madkour</h4>
+                  <p class="has-medium-font-size has-black-color">
+                                                Director                                        </p>
+                </div>
+              </a>
+                      		
+            
+                          <!-- otherwise, link to their single post page. -->
+              <a class="people-attachment__column" href="https://cltc.berkeley.edu/people/hany-farid-2/">
+                            <div class="people-attachment__image-content">
+                                        <figure class="wp-block-image aligncenter size-thumbnail is-style-rounded">
+                          <img decoding="async" width="200" height="300" src="https://cltc.berkeley.edu/wp-content/uploads/2022/09/hany-farid-headshot-200x300.jpg" class="attachment-medium size-medium wp-post-image" alt="" srcset="https://cltc.berkeley.edu/wp-content/uploads/2022/09/hany-farid-headshot-200x300.jpg 200w, https://cltc.berkeley.edu/wp-content/uploads/2022/09/hany-farid-headshot-683x1024.jpg 683w, https://cltc.berkeley.edu/wp-content/uploads/2022/09/hany-farid-headshot-768x1152.jpg 768w, https://cltc.berkeley.edu/wp-content/uploads/2022/09/hany-farid-headshot.jpg 800w" sizes="(max-width: 200px) 100vw, 200px" />                      </figure>
+                                  </div>
+                <div class="people-attachment__text-content wp-block-media-text__content">
+                  <h4>Hany Farid</h4>
+                  <p class="has-medium-font-size has-black-color">
+                                                Faculty Advisor                                        </p>
+                </div>
+              </a>
+                      		
+            
+                          <!-- otherwise, link to their single post page. -->
+              <a class="people-attachment__column" href="https://cltc.berkeley.edu/people/ken-goldberg/">
+                            <div class="people-attachment__image-content">
+                                        <figure class="wp-block-image aligncenter size-thumbnail is-style-rounded">
+                          <img loading="lazy" decoding="async" width="240" height="300" src="https://cltc.berkeley.edu/wp-content/uploads/2022/03/ken-goldberg-240x300.jpg" class="attachment-medium size-medium wp-post-image" alt="" srcset="https://cltc.berkeley.edu/wp-content/uploads/2022/03/ken-goldberg-240x300.jpg 240w, https://cltc.berkeley.edu/wp-content/uploads/2022/03/ken-goldberg-819x1024.jpg 819w, https://cltc.berkeley.edu/wp-content/uploads/2022/03/ken-goldberg-768x960.jpg 768w, https://cltc.berkeley.edu/wp-content/uploads/2022/03/ken-goldberg.jpg 1200w" sizes="auto, (max-width: 240px) 100vw, 240px" />                      </figure>
+                                  </div>
+                <div class="people-attachment__text-content wp-block-media-text__content">
+                  <h4>Ken Goldberg</h4>
+                  <p class="has-medium-font-size has-black-color">
+                                                Faculty Advisor                                        </p>
+                </div>
+              </a>
+                      		
+            
+                          <!-- otherwise, link to their single post page. -->
+              <a class="people-attachment__column" href="https://cltc.berkeley.edu/people/sonia-katyal/">
+                            <div class="people-attachment__image-content">
+                                        <figure class="wp-block-image aligncenter size-thumbnail is-style-rounded">
+                          <img loading="lazy" decoding="async" width="236" height="300" src="https://cltc.berkeley.edu/wp-content/uploads/2022/03/katyal_sonia-e1646434689805-236x300.jpeg" class="attachment-medium size-medium wp-post-image" alt="" srcset="https://cltc.berkeley.edu/wp-content/uploads/2022/03/katyal_sonia-e1646434689805-236x300.jpeg 236w, https://cltc.berkeley.edu/wp-content/uploads/2022/03/katyal_sonia-e1646434689805.jpeg 598w" sizes="auto, (max-width: 236px) 100vw, 236px" />                      </figure>
+                                  </div>
+                <div class="people-attachment__text-content wp-block-media-text__content">
+                  <h4>Sonia Katyal</h4>
+                  <p class="has-medium-font-size has-black-color">
+                                                Faculty Advisor                                        </p>
+                </div>
+              </a>
+                      		
+            
+                          <!-- otherwise, link to their single post page. -->
+              <a class="people-attachment__column" href="https://cltc.berkeley.edu/people/deirdre-mulligan/">
+                            <div class="people-attachment__image-content">
+                                        <figure class="wp-block-image aligncenter size-thumbnail is-style-rounded">
+                          <img loading="lazy" decoding="async" width="200" height="300" src="https://cltc.berkeley.edu/wp-content/uploads/2022/03/deirdre-mulligan-200x300.jpg" class="attachment-medium size-medium wp-post-image" alt="" srcset="https://cltc.berkeley.edu/wp-content/uploads/2022/03/deirdre-mulligan-200x300.jpg 200w, https://cltc.berkeley.edu/wp-content/uploads/2022/03/deirdre-mulligan-683x1024.jpg 683w, https://cltc.berkeley.edu/wp-content/uploads/2022/03/deirdre-mulligan.jpg 700w" sizes="auto, (max-width: 200px) 100vw, 200px" />                      </figure>
+                                  </div>
+                <div class="people-attachment__text-content wp-block-media-text__content">
+                  <h4>Deirdre Mulligan</h4>
+                  <p class="has-medium-font-size has-black-color">
+                                                Faculty Advisor                                        </p>
+                </div>
+              </a>
+                      		
+            
+                          <!-- otherwise, link to their single post page. -->
+              <a class="people-attachment__column" href="https://cltc.berkeley.edu/people/ziad-obermeyer/">
+                            <div class="people-attachment__image-content">
+                                        <figure class="wp-block-image aligncenter size-thumbnail is-style-rounded">
+                          <img loading="lazy" decoding="async" width="225" height="300" src="https://cltc.berkeley.edu/wp-content/uploads/2023/10/Ziad-Obermeyer-225x300.jpg" class="attachment-medium size-medium wp-post-image" alt="" />                      </figure>
+                                  </div>
+                <div class="people-attachment__text-content wp-block-media-text__content">
+                  <h4>Ziad Obermeyer</h4>
+                  <p class="has-medium-font-size has-black-color">
+                                                Faculty Advisor                                        </p>
+                </div>
+              </a>
+                      		
+            
+                          <!-- otherwise, link to their single post page. -->
+              <a class="people-attachment__column" href="https://cltc.berkeley.edu/people/andrew-reddie/">
+                            <div class="people-attachment__image-content">
+                                        <figure class="wp-block-image aligncenter size-thumbnail is-style-rounded">
+                          <img loading="lazy" decoding="async" width="300" height="227" src="https://cltc.berkeley.edu/wp-content/uploads/2020/01/andrew_reddie-476x360-1-300x227.jpeg" class="attachment-medium size-medium wp-post-image" alt="" srcset="https://cltc.berkeley.edu/wp-content/uploads/2020/01/andrew_reddie-476x360-1-300x227.jpeg 300w, https://cltc.berkeley.edu/wp-content/uploads/2020/01/andrew_reddie-476x360-1.jpeg 476w" sizes="auto, (max-width: 300px) 100vw, 300px" />                      </figure>
+                                  </div>
+                <div class="people-attachment__text-content wp-block-media-text__content">
+                  <h4>Andrew Reddie</h4>
+                  <p class="has-medium-font-size has-black-color">
+                                                Faculty Advisor                                        </p>
+                </div>
+              </a>
+                      		
+            
+                          <!-- otherwise, link to their single post page. -->
+              <a class="people-attachment__column" href="https://cltc.berkeley.edu/people/stuart-russell/">
+                            <div class="people-attachment__image-content">
+                                        <figure class="wp-block-image aligncenter size-thumbnail is-style-rounded">
+                          <img loading="lazy" decoding="async" width="207" height="300" src="https://cltc.berkeley.edu/wp-content/uploads/2022/03/stuart-russell-207x300.jpg" class="attachment-medium size-medium wp-post-image" alt="" srcset="https://cltc.berkeley.edu/wp-content/uploads/2022/03/stuart-russell-207x300.jpg 207w, https://cltc.berkeley.edu/wp-content/uploads/2022/03/stuart-russell-707x1024.jpg 707w, https://cltc.berkeley.edu/wp-content/uploads/2022/03/stuart-russell-768x1113.jpg 768w, https://cltc.berkeley.edu/wp-content/uploads/2022/03/stuart-russell-1060x1536.jpg 1060w, https://cltc.berkeley.edu/wp-content/uploads/2022/03/stuart-russell-1413x2048.jpg 1413w, https://cltc.berkeley.edu/wp-content/uploads/2022/03/stuart-russell-scaled.jpg 1766w" sizes="auto, (max-width: 207px) 100vw, 207px" />                      </figure>
+                                  </div>
+                <div class="people-attachment__text-content wp-block-media-text__content">
+                  <h4>Stuart Russell</h4>
+                  <p class="has-medium-font-size has-black-color">
+                                                Faculty Advisor                                        </p>
+                </div>
+              </a>
+                      		
+            
+                          <!-- otherwise, link to their single post page. -->
+              <a class="people-attachment__column" href="https://cltc.berkeley.edu/people/niloufar-salehi/">
+                            <div class="people-attachment__image-content">
+                                        <figure class="wp-block-image aligncenter size-thumbnail is-style-rounded">
+                          <img loading="lazy" decoding="async" width="262" height="300" src="https://cltc.berkeley.edu/wp-content/uploads/2022/03/niloufar-salehi-e1646698286424-262x300.png" class="attachment-medium size-medium wp-post-image" alt="" srcset="https://cltc.berkeley.edu/wp-content/uploads/2022/03/niloufar-salehi-e1646698286424-262x300.png 262w, https://cltc.berkeley.edu/wp-content/uploads/2022/03/niloufar-salehi-e1646698286424-894x1024.png 894w, https://cltc.berkeley.edu/wp-content/uploads/2022/03/niloufar-salehi-e1646698286424-768x880.png 768w, https://cltc.berkeley.edu/wp-content/uploads/2022/03/niloufar-salehi-e1646698286424.png 1327w" sizes="auto, (max-width: 262px) 100vw, 262px" />                      </figure>
+                                  </div>
+                <div class="people-attachment__text-content wp-block-media-text__content">
+                  <h4>Niloufar Salehi</h4>
+                  <p class="has-medium-font-size has-black-color">
+                                                Faculty Advisor                                        </p>
+                </div>
+              </a>
+                      		
+            
+                          <!-- otherwise, link to their single post page. -->
+              <a class="people-attachment__column" href="https://cltc.berkeley.edu/people/pamela-samuelson/">
+                            <div class="people-attachment__image-content">
+                                        <figure class="wp-block-image aligncenter size-thumbnail is-style-rounded">
+                          <img loading="lazy" decoding="async" width="237" height="300" src="https://cltc.berkeley.edu/wp-content/uploads/2022/03/pamela-samuelson-237x300.jpg" class="attachment-medium size-medium wp-post-image" alt="" srcset="https://cltc.berkeley.edu/wp-content/uploads/2022/03/pamela-samuelson-237x300.jpg 237w, https://cltc.berkeley.edu/wp-content/uploads/2022/03/pamela-samuelson-810x1024.jpg 810w, https://cltc.berkeley.edu/wp-content/uploads/2022/03/pamela-samuelson-768x971.jpg 768w, https://cltc.berkeley.edu/wp-content/uploads/2022/03/pamela-samuelson.jpg 949w" sizes="auto, (max-width: 237px) 100vw, 237px" />                      </figure>
+                                  </div>
+                <div class="people-attachment__text-content wp-block-media-text__content">
+                  <h4>Pamela Samuelson</h4>
+                  <p class="has-medium-font-size has-black-color">
+                                                Faculty Advisor                                        </p>
+                </div>
+              </a>
+                      		
+            
+                          <!-- otherwise, link to their single post page. -->
+              <a class="people-attachment__column" href="https://cltc.berkeley.edu/people/bin-yu/">
+                            <div class="people-attachment__image-content">
+                                        <figure class="wp-block-image aligncenter size-thumbnail is-style-rounded">
+                          <img loading="lazy" decoding="async" width="300" height="288" src="https://cltc.berkeley.edu/wp-content/uploads/2022/03/bin-yu-2-300x288.jpg" class="attachment-medium size-medium wp-post-image" alt="" srcset="https://cltc.berkeley.edu/wp-content/uploads/2022/03/bin-yu-2-300x288.jpg 300w, https://cltc.berkeley.edu/wp-content/uploads/2022/03/bin-yu-2.jpg 400w" sizes="auto, (max-width: 300px) 100vw, 300px" />                      </figure>
+                                  </div>
+                <div class="people-attachment__text-content wp-block-media-text__content">
+                  <h4>Bin Yu</h4>
+                  <p class="has-medium-font-size has-black-color">
+                                                Faculty Advisor                                        </p>
+                </div>
+              </a>
+          
+                        
+      </div>
+	</div>
+</div>						</div>
+
+		</div>
+	</main><!-- #main -->
+
+
+<button class="scroll-to-top-button">
+	<span class="screen-reader-text">Scroll to the top of the page</span>
+</button>
+
+<div class="site-footer-cta">
+	<section id="block-8" class="widget widget_block">
+<div class="wp-block-media-text alignwide has-media-on-the-right is-stacked-on-mobile cta-footer has-white-color has-cltc-teal-background-color has-text-color has-background" style="grid-template-columns:auto 62%"><div class="wp-block-media-text__content">
+<h2 class="wp-block-heading">Help build and expand our future-focused research agenda</h2>
+
+
+
+<div class="wp-block-buttons is-layout-flex wp-block-buttons-is-layout-flex">
+<div class="wp-block-button"><a class="wp-block-button__link wp-element-button" href="https:///cltc.berkeley.edu/give-to-cltc/">Partner with CLTC</a></div>
+</div>
+</div><figure class="wp-block-media-text__media"><img loading="lazy" decoding="async" width="1024" height="564" src="https:///cltc.berkeley.edu/wp-content/uploads/2022/10/CyberSecFutures30-2022-107-1024x564.jpg" alt="" class="wp-image-13410 size-full" srcset="https://cltc.berkeley.edu/wp-content/uploads/2022/10/CyberSecFutures30-2022-107-1024x564.jpg 1024w, https://cltc.berkeley.edu/wp-content/uploads/2022/10/CyberSecFutures30-2022-107-300x165.jpg 300w, https://cltc.berkeley.edu/wp-content/uploads/2022/10/CyberSecFutures30-2022-107-768x423.jpg 768w" sizes="auto, (max-width: 1024px) 100vw, 1024px" /></figure></div>
+</section></div>
+
+
+<div id="site-footer-container" class="">
+	
+	<footer class="site-footer ">
+		<div class="site-footer__top-container ">
+			<div class="site-footer__top layout-container">
+					<div><section id="block-20" class="widget widget_block"><figure class="wp-block-image size-full is-resized"><img decoding="async" src="https://cltc.berkeley.edu/wp-content/uploads/2025/07/cltc-logo-footer-new.png" alt="CLTC Center for Long-Term Cybersecurity UC Berkeley" class="wp-image-21208" style="width:220px"/></figure></section></div>
+					<div><section id="nav_menu-4" class="widget widget_nav_menu"><div class="menu-footer-menu-1-container"><ul id="menu-footer-menu-1" class="menu"><li id="menu-item-12306" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-12306"><a href="https://cltc.berkeley.edu/research/">Research</a></li>
+<li id="menu-item-12307" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-12307"><a href="https://cltc.berkeley.edu/give-to-cltc/">Give to CLTC</a></li>
+<li id="menu-item-12308" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-12308"><a href="https://cltc.berkeley.edu/news-events/">News &#038; Events</a></li>
+<li id="menu-item-7114" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7114"><a href="https://cltc.berkeley.edu/about-us/">Amplifying the upside of the digital revolution</a></li>
+</ul></div></section></div>
+					<div><section id="nav_menu-5" class="widget widget_nav_menu"><div class="menu-footer-menu-2-container"><ul id="menu-footer-menu-2" class="menu"><li id="menu-item-12310" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-12310"><a href="https://cltc.berkeley.edu/research/research-library/">Research Library</a></li>
+<li id="menu-item-12311" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-12311"><a href="https://cltc.berkeley.edu/about-us/jobs/">Find a Job or Internship</a></li>
+<li id="menu-item-16542" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-16542"><a href="https://cltc.berkeley.edu/cltc-industry-collaborators/">Join CLTC as an Industry Collaborator</a></li>
+</ul></div></section></div>
+					<div><section id="block-19" class="widget widget_block">
+                <div class='gf_browser_unknown gform_wrapper gravity-theme gform-theme--no-framework' data-form-theme='gravity-theme' data-form-index='0' id='gform_wrapper_9' >
+                        <div class='gform_heading'>
+                            <h2 class="gform_title">Subscribe to our mailing list</h2>
+                        </div><form method='post' enctype='multipart/form-data'  id='gform_9'  action='/program/ai-policy-hub/' data-formid='9' novalidate> 
+ <input type='hidden' class='gforms-pum' value='{"closepopup":false,"closedelay":0,"openpopup":false,"openpopup_id":0}' />
+                        <div class='gform-body gform_body'><div id='gform_fields_9' class='gform_fields top_label form_sublabel_above description_above validation_below'><div id="field_9_2" class="gfield gfield--type-email gfield_contains_required field_sublabel_above gfield--no-description field_description_above field_validation_below gfield_visibility_visible"  ><label class='gfield_label gform-field-label' for='input_9_2'>Your Email Address<span class="gfield_required"><span class="gfield_required gfield_required_text">(Required)</span></span></label><div class='ginput_container ginput_container_email'>
+                            <input name='input_2' id='input_9_2' type='email' value='' class='large'    aria-required="true" aria-invalid="false"  />
+                        </div></div></div></div>
+        <div class='gform-footer gform_footer top_label'> <input type='submit' id='gform_submit_button_9' class='gform_button button' onclick='gform.submission.handleButtonClick(this);' data-submission-type='submit' value='Subscribe'  /> 
+            <input type='hidden' class='gform_hidden' name='gform_submission_method' data-js='gform_submission_method_9' value='postback' />
+            <input type='hidden' class='gform_hidden' name='gform_theme' data-js='gform_theme_9' id='gform_theme_9' value='gravity-theme' />
+            <input type='hidden' class='gform_hidden' name='gform_style_settings' data-js='gform_style_settings_9' id='gform_style_settings_9' value='{&quot;inputPrimaryColor&quot;:&quot;#204ce5&quot;}' />
+            <input type='hidden' class='gform_hidden' name='is_submit_9' value='1' />
+            <input type='hidden' class='gform_hidden' name='gform_submit' value='9' />
+            
+            <input type='hidden' class='gform_hidden' name='gform_unique_id' value='' />
+            <input type='hidden' class='gform_hidden' name='state_9' value='WyJbXSIsIjFhOWVkYmE4MDFjODI3MjNjN2YyYzc4ZjRkNDBiMTQzIl0=' />
+            <input type='hidden' autocomplete='off' class='gform_hidden' name='gform_target_page_number_9' id='gform_target_page_number_9' value='0' />
+            <input type='hidden' autocomplete='off' class='gform_hidden' name='gform_source_page_number_9' id='gform_source_page_number_9' value='1' />
+            <input type='hidden' name='gform_field_values' value='' />
+            
+        </div>
+                        </form>
+                        </div><script>
+gform.initializeOnLoaded( function() {gformInitSpinner( 9, 'https://cltc.berkeley.edu/wp-content/plugins/gravityforms/images/spinner.svg', true );jQuery('#gform_ajax_frame_9').on('load',function(){var contents = jQuery(this).contents().find('*').html();var is_postback = contents.indexOf('GF_AJAX_POSTBACK') >= 0;if(!is_postback){return;}var form_content = jQuery(this).contents().find('#gform_wrapper_9');var is_confirmation = jQuery(this).contents().find('#gform_confirmation_wrapper_9').length > 0;var is_redirect = contents.indexOf('gformRedirect(){') >= 0;var is_form = form_content.length > 0 && ! is_redirect && ! is_confirmation;var mt = parseInt(jQuery('html').css('margin-top'), 10) + parseInt(jQuery('body').css('margin-top'), 10) + 100;if(is_form){jQuery('#gform_wrapper_9').html(form_content.html());if(form_content.hasClass('gform_validation_error')){jQuery('#gform_wrapper_9').addClass('gform_validation_error');} else {jQuery('#gform_wrapper_9').removeClass('gform_validation_error');}setTimeout( function() { /* delay the scroll by 50 milliseconds to fix a bug in chrome */  }, 50 );if(window['gformInitDatepicker']) {gformInitDatepicker();}if(window['gformInitPriceFields']) {gformInitPriceFields();}var current_page = jQuery('#gform_source_page_number_9').val();gformInitSpinner( 9, 'https://cltc.berkeley.edu/wp-content/plugins/gravityforms/images/spinner.svg', true );jQuery(document).trigger('gform_page_loaded', [9, current_page]);window['gf_submitting_9'] = false;}else if(!is_redirect){var confirmation_content = jQuery(this).contents().find('.GF_AJAX_POSTBACK').html();if(!confirmation_content){confirmation_content = contents;}jQuery('#gform_wrapper_9').replaceWith(confirmation_content);jQuery(document).trigger('gform_confirmation_loaded', [9]);window['gf_submitting_9'] = false;wp.a11y.speak(jQuery('#gform_confirmation_message_9').text());}else{jQuery('#gform_9').append(contents);if(window['gformRedirect']) {gformRedirect();}}jQuery(document).trigger("gform_pre_post_render", [{ formId: "9", currentPage: "current_page", abort: function() { this.preventDefault(); } }]);        if (event && event.defaultPrevented) {                return;        }        const gformWrapperDiv = document.getElementById( "gform_wrapper_9" );        if ( gformWrapperDiv ) {            const visibilitySpan = document.createElement( "span" );            visibilitySpan.id = "gform_visibility_test_9";            gformWrapperDiv.insertAdjacentElement( "afterend", visibilitySpan );        }        const visibilityTestDiv = document.getElementById( "gform_visibility_test_9" );        let postRenderFired = false;        function triggerPostRender() {            if ( postRenderFired ) {                return;            }            postRenderFired = true;            gform.core.triggerPostRenderEvents( 9, current_page );            if ( visibilityTestDiv ) {                visibilityTestDiv.parentNode.removeChild( visibilityTestDiv );            }        }        function debounce( func, wait, immediate ) {            var timeout;            return function() {                var context = this, args = arguments;                var later = function() {                    timeout = null;                    if ( !immediate ) func.apply( context, args );                };                var callNow = immediate && !timeout;                clearTimeout( timeout );                timeout = setTimeout( later, wait );                if ( callNow ) func.apply( context, args );            };        }        const debouncedTriggerPostRender = debounce( function() {            triggerPostRender();        }, 200 );        if ( visibilityTestDiv && visibilityTestDiv.offsetParent === null ) {            const observer = new MutationObserver( ( mutations ) => {                mutations.forEach( ( mutation ) => {                    if ( mutation.type === 'attributes' && visibilityTestDiv.offsetParent !== null ) {                        debouncedTriggerPostRender();                        observer.disconnect();                    }                });            });            observer.observe( document.body, {                attributes: true,                childList: false,                subtree: true,                attributeFilter: [ 'style', 'class' ],            });        } else {            triggerPostRender();        }    } );} );
+</script>
+</section></div>
+				</section>
+			</div>
+		</div>
+
+		<div class="site-footer__bottom-container">
+			<div class="site-footer__bottom layout-container">
+				<div class="">
+					<ul class="site-footer__bottom-list">
+						<li>
+							<span class="site-footer__copyright site-footer__text">
+								2026 UC Berkeley Center for Long-Term Cybersecurity. All Rights Reserved.
+							</span>
+						</li>
+						<li>
+							<ul id="menu-bottom-footer" class="site-footer__bottom-list"><li id="menu-item-16340" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-privacy-policy menu-item-16340"><a rel="privacy-policy" href="https://cltc.berkeley.edu/privacy/">Privacy Policy</a></li>
+<li id="menu-item-16341" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-16341"><a href="https://cltc.berkeley.edu/our-funders/">Our Funders</a></li>
+<li id="menu-item-12317" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-12317"><a href="https://cltc.berkeley.edu/accessibility/">Accessibility</a></li>
+<li id="menu-item-16344" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-16344"><a href="https://ophd.berkeley.edu/policies-and-procedures/nondiscrimination-policy-statement">Nondiscrimination</a></li>
+</ul>						</li>
+					</ul>
+
+				</div>
+				<div class="site-footer__social-links">
+					<section id="block-10" class="widget widget_block">
+<ul class="wp-block-social-links has-large-icon-size has-icon-color is-style-logos-only is-layout-flex wp-block-social-links-is-layout-flex"><li style="color:#ffffff;" class="wp-social-link wp-social-link-facebook has-white-color wp-block-social-link"><a rel="noopener nofollow" target="_blank" href="https://www.facebook.com/CLTCBerkeley/" class="wp-block-social-link-anchor"><svg width="24" height="24" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false"><path d="M12 2C6.5 2 2 6.5 2 12c0 5 3.7 9.1 8.4 9.9v-7H7.9V12h2.5V9.8c0-2.5 1.5-3.9 3.8-3.9 1.1 0 2.2.2 2.2.2v2.5h-1.3c-1.2 0-1.6.8-1.6 1.6V12h2.8l-.4 2.9h-2.3v7C18.3 21.1 22 17 22 12c0-5.5-4.5-10-10-10z"></path></svg><span class="wp-block-social-link-label screen-reader-text">Facebook</span></a></li>
+
+<li style="color:#ffffff;" class="wp-social-link wp-social-link-twitter has-white-color wp-block-social-link"><a rel="noopener nofollow" target="_blank" href="https://twitter.com/CLTCBerkeley" class="wp-block-social-link-anchor"><svg width="24" height="24" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false"><path d="M22.23,5.924c-0.736,0.326-1.527,0.547-2.357,0.646c0.847-0.508,1.498-1.312,1.804-2.27 c-0.793,0.47-1.671,0.812-2.606,0.996C18.324,4.498,17.257,4,16.077,4c-2.266,0-4.103,1.837-4.103,4.103 c0,0.322,0.036,0.635,0.106,0.935C8.67,8.867,5.647,7.234,3.623,4.751C3.27,5.357,3.067,6.062,3.067,6.814 c0,1.424,0.724,2.679,1.825,3.415c-0.673-0.021-1.305-0.206-1.859-0.513c0,0.017,0,0.034,0,0.052c0,1.988,1.414,3.647,3.292,4.023 c-0.344,0.094-0.707,0.144-1.081,0.144c-0.264,0-0.521-0.026-0.772-0.074c0.522,1.63,2.038,2.816,3.833,2.85 c-1.404,1.1-3.174,1.756-5.096,1.756c-0.331,0-0.658-0.019-0.979-0.057c1.816,1.164,3.973,1.843,6.29,1.843 c7.547,0,11.675-6.252,11.675-11.675c0-0.178-0.004-0.355-0.012-0.531C20.985,7.47,21.68,6.747,22.23,5.924z"></path></svg><span class="wp-block-social-link-label screen-reader-text">Twitter</span></a></li>
+
+<li style="color:#ffffff;" class="wp-social-link wp-social-link-youtube has-white-color wp-block-social-link"><a rel="noopener nofollow" target="_blank" href="https://www.youtube.com/channel/UC3EsDrem24nYARGkC2XBv_A/" class="wp-block-social-link-anchor"><svg width="24" height="24" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false"><path d="M21.8,8.001c0,0-0.195-1.378-0.795-1.985c-0.76-0.797-1.613-0.801-2.004-0.847c-2.799-0.202-6.997-0.202-6.997-0.202 h-0.009c0,0-4.198,0-6.997,0.202C4.608,5.216,3.756,5.22,2.995,6.016C2.395,6.623,2.2,8.001,2.2,8.001S2,9.62,2,11.238v1.517 c0,1.618,0.2,3.237,0.2,3.237s0.195,1.378,0.795,1.985c0.761,0.797,1.76,0.771,2.205,0.855c1.6,0.153,6.8,0.201,6.8,0.201 s4.203-0.006,7.001-0.209c0.391-0.047,1.243-0.051,2.004-0.847c0.6-0.607,0.795-1.985,0.795-1.985s0.2-1.618,0.2-3.237v-1.517 C22,9.62,21.8,8.001,21.8,8.001z M9.935,14.594l-0.001-5.62l5.404,2.82L9.935,14.594z"></path></svg><span class="wp-block-social-link-label screen-reader-text">YouTube</span></a></li>
+
+<li style="color:#ffffff;" class="wp-social-link wp-social-link-linkedin has-white-color wp-block-social-link"><a rel="noopener nofollow" target="_blank" href="https://www.linkedin.com/company/cltcberkeley" class="wp-block-social-link-anchor"><svg width="24" height="24" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false"><path d="M19.7,3H4.3C3.582,3,3,3.582,3,4.3v15.4C3,20.418,3.582,21,4.3,21h15.4c0.718,0,1.3-0.582,1.3-1.3V4.3 C21,3.582,20.418,3,19.7,3z M8.339,18.338H5.667v-8.59h2.672V18.338z M7.004,8.574c-0.857,0-1.549-0.694-1.549-1.548 c0-0.855,0.691-1.548,1.549-1.548c0.854,0,1.547,0.694,1.547,1.548C8.551,7.881,7.858,8.574,7.004,8.574z M18.339,18.338h-2.669 v-4.177c0-0.996-0.017-2.278-1.387-2.278c-1.389,0-1.601,1.086-1.601,2.206v4.249h-2.667v-8.59h2.559v1.174h0.037 c0.356-0.675,1.227-1.387,2.526-1.387c2.703,0,3.203,1.779,3.203,4.092V18.338z"></path></svg><span class="wp-block-social-link-label screen-reader-text">LinkedIn</span></a></li></ul>
+</section>				</div>
+			</div>
+		</div>
+
+	</footer>
+</div>
+</div><!-- #page -->
+
+<script type="speculationrules">
+{"prefetch":[{"source":"document","where":{"and":[{"href_matches":"/*"},{"not":{"href_matches":["/wp-*.php","/wp-admin/*","/wp-content/uploads/*","/wp-content/*","/wp-content/plugins/*","/wp-content/themes/cltc/*","/*\\?(.+)"]}},{"not":{"selector_matches":"a[rel~=\"nofollow\"]"}},{"not":{"selector_matches":".no-prefetch, .no-prefetch a"}}]},"eagerness":"conservative"}]}
+</script>
+		<script>
+		( function ( body ) {
+			'use strict';
+			body.className = body.className.replace( /\btribe-no-js\b/, 'tribe-js' );
+		} )( document.body );
+		</script>
+		<div 
+	id="pum-21207" 
+	role="dialog" 
+	aria-modal="false"
+	aria-labelledby="pum_popup_title_21207"
+	class="pum pum-overlay pum-theme-21202 pum-theme-cltc popmake-overlay pum-click-to-close click_open" 
+	data-popmake="{&quot;id&quot;:21207,&quot;slug&quot;:&quot;video-lightbox&quot;,&quot;theme_id&quot;:21202,&quot;cookies&quot;:[],&quot;triggers&quot;:[{&quot;type&quot;:&quot;click_open&quot;,&quot;settings&quot;:{&quot;extra_selectors&quot;:&quot;&quot;,&quot;cookie_name&quot;:null}}],&quot;mobile_disabled&quot;:null,&quot;tablet_disabled&quot;:null,&quot;meta&quot;:{&quot;display&quot;:{&quot;stackable&quot;:false,&quot;overlay_disabled&quot;:false,&quot;scrollable_content&quot;:false,&quot;disable_reposition&quot;:false,&quot;size&quot;:&quot;medium&quot;,&quot;responsive_min_width&quot;:&quot;0%&quot;,&quot;responsive_min_width_unit&quot;:false,&quot;responsive_max_width&quot;:&quot;100%&quot;,&quot;responsive_max_width_unit&quot;:false,&quot;custom_width&quot;:&quot;640px&quot;,&quot;custom_width_unit&quot;:false,&quot;custom_height&quot;:&quot;380px&quot;,&quot;custom_height_unit&quot;:false,&quot;custom_height_auto&quot;:false,&quot;location&quot;:&quot;center top&quot;,&quot;position_from_trigger&quot;:false,&quot;position_top&quot;:&quot;100&quot;,&quot;position_left&quot;:&quot;0&quot;,&quot;position_bottom&quot;:&quot;0&quot;,&quot;position_right&quot;:&quot;0&quot;,&quot;position_fixed&quot;:false,&quot;animation_type&quot;:&quot;fade&quot;,&quot;animation_speed&quot;:&quot;350&quot;,&quot;animation_origin&quot;:&quot;center top&quot;,&quot;overlay_zindex&quot;:false,&quot;zindex&quot;:&quot;1999999999&quot;},&quot;close&quot;:{&quot;text&quot;:&quot;&quot;,&quot;button_delay&quot;:&quot;0&quot;,&quot;overlay_click&quot;:&quot;1&quot;,&quot;esc_press&quot;:&quot;1&quot;,&quot;f4_press&quot;:false},&quot;click_open&quot;:[]}}">
+
+	<div id="popmake-21207" class="pum-container popmake theme-21202 pum-responsive pum-responsive-medium responsive size-medium">
+
+				
+							<div id="pum_popup_title_21207" class="pum-title popmake-title">
+				UC Berkeley&#039;s Center for Long-Term Cybersecurity VIDEO			</div>
+		
+		
+				<div class="pum-content popmake-content" tabindex="0">
+			<div class="video">
+<div class="video__container"><iframe title="YouTube video player" src="https://www.youtube.com/embed/izdbsICOBuw?si=kTIjCAXl2BQpsHTY" width="560" height="315" frameborder="0" allowfullscreen="allowfullscreen"></iframe></div>
+</div>
+		</div>
+
+				
+							<button type="button" class="pum-close popmake-close" aria-label="Close">
+			×			</button>
+		
+	</div>
+
+</div>
+<script> /* <![CDATA[ */var tribe_l10n_datatables = {"aria":{"sort_ascending":": activate to sort column ascending","sort_descending":": activate to sort column descending"},"length_menu":"Show _MENU_ entries","empty_table":"No data available in table","info":"Showing _START_ to _END_ of _TOTAL_ entries","info_empty":"Showing 0 to 0 of 0 entries","info_filtered":"(filtered from _MAX_ total entries)","zero_records":"No matching records found","search":"Search:","all_selected_text":"All items on this page were selected. ","select_all_link":"Select all pages","clear_selection":"Clear Selection.","pagination":{"all":"All","next":"Next","previous":"Previous"},"select":{"rows":{"0":"","_":": Selected %d rows","1":": Selected 1 row"}},"datepicker":{"dayNames":["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],"dayNamesShort":["Sun","Mon","Tue","Wed","Thu","Fri","Sat"],"dayNamesMin":["S","M","T","W","T","F","S"],"monthNames":["January","February","March","April","May","June","July","August","September","October","November","December"],"monthNamesShort":["January","February","March","April","May","June","July","August","September","October","November","December"],"monthNamesMin":["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"nextText":"Next","prevText":"Prev","currentText":"Today","closeText":"Done","today":"Today","clear":"Clear"}};/* ]]> */ </script><script src="https://cltc.berkeley.edu/wp-content/plugins/the-events-calendar/common/build/js/user-agent.js?ver=da75d0bdea6dde3898df" id="tec-user-agent-js"></script>
+<script src="https://cltc.berkeley.edu/wp-content/plugins/simple-share-buttons-adder/js/ssba.js?ver=1771257240" id="simple-share-buttons-adder-ssba-js"></script>
+<script id="simple-share-buttons-adder-ssba-js-after">
+Main.boot( [] );
+//# sourceURL=simple-share-buttons-adder-ssba-js-after
+</script>
+<script src="https://cltc.berkeley.edu/wp-content/themes/cltc/js/accessibility.js?ver=1771257241" id="accessibility-js"></script>
+<script src="https://cltc.berkeley.edu/wp-content/themes/cltc/js/a11ydrops.min.js?ver=1771257241" id="a11ydrops.min.js-js"></script>
+<script src="https://cltc.berkeley.edu/wp-content/themes/cltc/js/mega-menu-dropdown.js?ver=1771257241" id="mega-menu-dropdown-js"></script>
+<script src="https://cltc.berkeley.edu/wp-content/themes/cltc/js/search-dropdown.js?ver=1771257241" id="search-dropdown-js"></script>
+<script src="https://cltc.berkeley.edu/wp-content/themes/cltc/js/scroll-to-top.js?ver=1771257241" id="scroll-to-top-js"></script>
+<script src="https://cltc.berkeley.edu/wp-includes/js/jquery/ui/core.min.js?ver=1.13.3" id="jquery-ui-core-js"></script>
+<script src="https://cltc.berkeley.edu/wp-includes/js/dist/hooks.min.js?ver=dd5603f07f9220ed27f1" id="wp-hooks-js"></script>
+<script id="popup-maker-site-js-extra">
+var pum_vars = {"version":"1.21.5","pm_dir_url":"https://cltc.berkeley.edu/wp-content/plugins/popup-maker/","ajaxurl":"https://cltc.berkeley.edu/wp-admin/admin-ajax.php","restapi":"https://cltc.berkeley.edu/wp-json/pum/v1","rest_nonce":null,"default_theme":"21175","debug_mode":"","disable_tracking":"","home_url":"/","message_position":"top","core_sub_forms_enabled":"1","popups":[],"cookie_domain":"","analytics_enabled":"1","analytics_route":"analytics","analytics_api":"https://cltc.berkeley.edu/wp-json/pum/v1"};
+var pum_sub_vars = {"ajaxurl":"https://cltc.berkeley.edu/wp-admin/admin-ajax.php","message_position":"top"};
+var pum_popups = {"pum-21207":{"triggers":[],"cookies":[],"disable_on_mobile":false,"disable_on_tablet":false,"atc_promotion":null,"explain":null,"type_section":null,"theme_id":"21202","size":"medium","responsive_min_width":"0%","responsive_max_width":"100%","custom_width":"640px","custom_height_auto":false,"custom_height":"380px","scrollable_content":false,"animation_type":"fade","animation_speed":"350","animation_origin":"center top","open_sound":"none","custom_sound":"","location":"center top","position_top":"100","position_bottom":"0","position_left":"0","position_right":"0","position_from_trigger":false,"position_fixed":false,"overlay_disabled":false,"stackable":false,"disable_reposition":false,"zindex":"1999999999","close_button_delay":"0","fi_promotion":null,"close_on_form_submission":false,"close_on_form_submission_delay":"0","close_on_overlay_click":true,"close_on_esc_press":true,"close_on_f4_press":false,"disable_form_reopen":false,"disable_accessibility":false,"theme_slug":"cltc","id":21207,"slug":"video-lightbox"}};
+//# sourceURL=popup-maker-site-js-extra
+</script>
+<script src="//cltc.berkeley.edu/wp-content/uploads/pum/pum-site-scripts.js?defer&amp;generated=1757610949&amp;ver=1.21.5" id="popup-maker-site-js"></script>
+<script src="https://cltc.berkeley.edu/wp-includes/js/dist/dom-ready.min.js?ver=f77871ff7694fffea381" id="wp-dom-ready-js"></script>
+<script src="https://cltc.berkeley.edu/wp-includes/js/dist/i18n.min.js?ver=c26c3dc7bed366793375" id="wp-i18n-js"></script>
+<script id="wp-i18n-js-after">
+wp.i18n.setLocaleData( { 'text direction\u0004ltr': [ 'ltr' ] } );
+//# sourceURL=wp-i18n-js-after
+</script>
+<script src="https://cltc.berkeley.edu/wp-includes/js/dist/a11y.min.js?ver=cb460b4676c94bd228ed" id="wp-a11y-js"></script>
+<script defer='defer' src="https://cltc.berkeley.edu/wp-content/plugins/gravityforms/js/jquery.json.min.js?ver=2.9.23.2" id="gform_json-js"></script>
+<script id="gform_gravityforms-js-extra">
+var gform_i18n = {"datepicker":{"days":{"monday":"Mo","tuesday":"Tu","wednesday":"We","thursday":"Th","friday":"Fr","saturday":"Sa","sunday":"Su"},"months":{"january":"January","february":"February","march":"March","april":"April","may":"May","june":"June","july":"July","august":"August","september":"September","october":"October","november":"November","december":"December"},"firstDay":1,"iconText":"Select date"}};
+var gf_legacy_multi = [];
+var gform_gravityforms = {"strings":{"invalid_file_extension":"This type of file is not allowed. Must be one of the following:","delete_file":"Delete this file","in_progress":"in progress","file_exceeds_limit":"File exceeds size limit","illegal_extension":"This type of file is not allowed.","max_reached":"Maximum number of files reached","unknown_error":"There was a problem while saving the file on the server","currently_uploading":"Please wait for the uploading to complete","cancel":"Cancel","cancel_upload":"Cancel this upload","cancelled":"Cancelled","error":"Error","message":"Message"},"vars":{"images_url":"https://cltc.berkeley.edu/wp-content/plugins/gravityforms/images"}};
+var gf_global = {"gf_currency_config":{"name":"U.S. Dollar","symbol_left":"$","symbol_right":"","symbol_padding":"","thousand_separator":",","decimal_separator":".","decimals":2,"code":"USD"},"base_url":"https://cltc.berkeley.edu/wp-content/plugins/gravityforms","number_formats":[],"spinnerUrl":"https://cltc.berkeley.edu/wp-content/plugins/gravityforms/images/spinner.svg","version_hash":"e3881f126b18b2ea944578dc56338c82","strings":{"newRowAdded":"New row added.","rowRemoved":"Row removed","formSaved":"The form has been saved.  The content contains the link to return and complete the form."}};
+//# sourceURL=gform_gravityforms-js-extra
+</script>
+<script defer='defer' src="https://cltc.berkeley.edu/wp-content/plugins/gravityforms/js/gravityforms.min.js?ver=2.9.23.2" id="gform_gravityforms-js"></script>
+<script defer='defer' src="https://cltc.berkeley.edu/wp-content/plugins/gravityforms/assets/js/dist/utils.min.js?ver=380b7a5ec0757c78876bc8a59488f2f3" id="gform_gravityforms_utils-js"></script>
+<script defer='defer' src="https://cltc.berkeley.edu/wp-content/plugins/gravityforms/assets/js/dist/vendor-theme.min.js?ver=8673c9a2ff188de55f9073009ba56f5e" id="gform_gravityforms_theme_vendors-js"></script>
+<script id="gform_gravityforms_theme-js-extra">
+var gform_theme_config = {"common":{"form":{"honeypot":{"version_hash":"e3881f126b18b2ea944578dc56338c82"},"ajax":{"ajaxurl":"https://cltc.berkeley.edu/wp-admin/admin-ajax.php","ajax_submission_nonce":"9bf1058277","i18n":{"step_announcement":"Step %1$s of %2$s, %3$s","unknown_error":"There was an unknown error processing your request. Please try again."}}}},"hmr_dev":"","public_path":"https://cltc.berkeley.edu/wp-content/plugins/gravityforms/assets/js/dist/","config_nonce":"f28c4d2fa7"};
+//# sourceURL=gform_gravityforms_theme-js-extra
+</script>
+<script defer='defer' src="https://cltc.berkeley.edu/wp-content/plugins/gravityforms/assets/js/dist/scripts-theme.min.js?ver=96b168b3a480baf99058dabf9338533b" id="gform_gravityforms_theme-js"></script>
+<script id="wp-emoji-settings" type="application/json">
+{"baseUrl":"https://s.w.org/images/core/emoji/17.0.2/72x72/","ext":".png","svgUrl":"https://s.w.org/images/core/emoji/17.0.2/svg/","svgExt":".svg","source":{"concatemoji":"https://cltc.berkeley.edu/wp-includes/js/wp-emoji-release.min.js?ver=6.9"}}
+</script>
+<script type="module">
+/*! This file is auto-generated */
+const a=JSON.parse(document.getElementById("wp-emoji-settings").textContent),o=(window._wpemojiSettings=a,"wpEmojiSettingsSupports"),s=["flag","emoji"];function i(e){try{var t={supportTests:e,timestamp:(new Date).valueOf()};sessionStorage.setItem(o,JSON.stringify(t))}catch(e){}}function c(e,t,n){e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(t,0,0);t=new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data);e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(n,0,0);const a=new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data);return t.every((e,t)=>e===a[t])}function p(e,t){e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(t,0,0);var n=e.getImageData(16,16,1,1);for(let e=0;e<n.data.length;e++)if(0!==n.data[e])return!1;return!0}function u(e,t,n,a){switch(t){case"flag":return n(e,"\ud83c\udff3\ufe0f\u200d\u26a7\ufe0f","\ud83c\udff3\ufe0f\u200b\u26a7\ufe0f")?!1:!n(e,"\ud83c\udde8\ud83c\uddf6","\ud83c\udde8\u200b\ud83c\uddf6")&&!n(e,"\ud83c\udff4\udb40\udc67\udb40\udc62\udb40\udc65\udb40\udc6e\udb40\udc67\udb40\udc7f","\ud83c\udff4\u200b\udb40\udc67\u200b\udb40\udc62\u200b\udb40\udc65\u200b\udb40\udc6e\u200b\udb40\udc67\u200b\udb40\udc7f");case"emoji":return!a(e,"\ud83e\u1fac8")}return!1}function f(e,t,n,a){let r;const o=(r="undefined"!=typeof WorkerGlobalScope&&self instanceof WorkerGlobalScope?new OffscreenCanvas(300,150):document.createElement("canvas")).getContext("2d",{willReadFrequently:!0}),s=(o.textBaseline="top",o.font="600 32px Arial",{});return e.forEach(e=>{s[e]=t(o,e,n,a)}),s}function r(e){var t=document.createElement("script");t.src=e,t.defer=!0,document.head.appendChild(t)}a.supports={everything:!0,everythingExceptFlag:!0},new Promise(t=>{let n=function(){try{var e=JSON.parse(sessionStorage.getItem(o));if("object"==typeof e&&"number"==typeof e.timestamp&&(new Date).valueOf()<e.timestamp+604800&&"object"==typeof e.supportTests)return e.supportTests}catch(e){}return null}();if(!n){if("undefined"!=typeof Worker&&"undefined"!=typeof OffscreenCanvas&&"undefined"!=typeof URL&&URL.createObjectURL&&"undefined"!=typeof Blob)try{var e="postMessage("+f.toString()+"("+[JSON.stringify(s),u.toString(),c.toString(),p.toString()].join(",")+"));",a=new Blob([e],{type:"text/javascript"});const r=new Worker(URL.createObjectURL(a),{name:"wpTestEmojiSupports"});return void(r.onmessage=e=>{i(n=e.data),r.terminate(),t(n)})}catch(e){}i(n=f(s,u,c,p))}t(n)}).then(e=>{for(const n in e)a.supports[n]=e[n],a.supports.everything=a.supports.everything&&a.supports[n],"flag"!==n&&(a.supports.everythingExceptFlag=a.supports.everythingExceptFlag&&a.supports[n]);var t;a.supports.everythingExceptFlag=a.supports.everythingExceptFlag&&!a.supports.flag,a.supports.everything||((t=a.source||{}).concatemoji?r(t.concatemoji):t.wpemoji&&t.twemoji&&(r(t.twemoji),r(t.wpemoji)))});
+//# sourceURL=https://cltc.berkeley.edu/wp-includes/js/wp-emoji-loader.min.js
+</script>
+<script>
+gform.initializeOnLoaded( function() { jQuery(document).on('gform_post_render', function(event, formId, currentPage){if(formId == 9) {} } );jQuery(document).on('gform_post_conditional_logic', function(event, formId, fields, isInit){} ) } );
+</script>
+<script>
+gform.initializeOnLoaded( function() {jQuery(document).trigger("gform_pre_post_render", [{ formId: "9", currentPage: "1", abort: function() { this.preventDefault(); } }]);        if (event && event.defaultPrevented) {                return;        }        const gformWrapperDiv = document.getElementById( "gform_wrapper_9" );        if ( gformWrapperDiv ) {            const visibilitySpan = document.createElement( "span" );            visibilitySpan.id = "gform_visibility_test_9";            gformWrapperDiv.insertAdjacentElement( "afterend", visibilitySpan );        }        const visibilityTestDiv = document.getElementById( "gform_visibility_test_9" );        let postRenderFired = false;        function triggerPostRender() {            if ( postRenderFired ) {                return;            }            postRenderFired = true;            gform.core.triggerPostRenderEvents( 9, 1 );            if ( visibilityTestDiv ) {                visibilityTestDiv.parentNode.removeChild( visibilityTestDiv );            }        }        function debounce( func, wait, immediate ) {            var timeout;            return function() {                var context = this, args = arguments;                var later = function() {                    timeout = null;                    if ( !immediate ) func.apply( context, args );                };                var callNow = immediate && !timeout;                clearTimeout( timeout );                timeout = setTimeout( later, wait );                if ( callNow ) func.apply( context, args );            };        }        const debouncedTriggerPostRender = debounce( function() {            triggerPostRender();        }, 200 );        if ( visibilityTestDiv && visibilityTestDiv.offsetParent === null ) {            const observer = new MutationObserver( ( mutations ) => {                mutations.forEach( ( mutation ) => {                    if ( mutation.type === 'attributes' && visibilityTestDiv.offsetParent !== null ) {                        debouncedTriggerPostRender();                        observer.disconnect();                    }                });            });            observer.observe( document.body, {                attributes: true,                childList: false,                subtree: true,                attributeFilter: [ 'style', 'class' ],            });        } else {            triggerPostRender();        }    } );
+</script>
+
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"NRJS-0664320260e6ab10472","applicationID":"1433461884","transactionName":"Y1UAZkNYDUEAABcLDlofI1FFUAxcThAKDAZYVU9CQ1YEQAAO","queueTime":0,"applicationTime":858,"atts":"TxIDEAtCHk8=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+
+</html>

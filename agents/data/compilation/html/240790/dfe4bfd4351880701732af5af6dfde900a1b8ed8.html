@@ -1,0 +1,144 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+
+<html lang="en-GB">
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+	<meta name="author" content="The CSS Ninja">
+	<meta name="keywords" content="CSS, Tree menu, checked pseudo-class, CSS Ninja">
+	<meta name="description" content="Create a pure CSS tree folder structure with collapsible folders utilising checkboxes along with the checked pseudo-class">
+	<meta name="robots" content="all">
+	<meta name="copyright" content="The CSS Ninja">
+  <title>NMC Procedures</title>
+	<!--[if gte IE 9 ]><link rel="stylesheet" type="text/css" href="_styles.css" media="screen"><![endif]-->
+	<!--[if !IE]>--><link rel="stylesheet" type="text/css" href="_styles.css" media="screen"><!--<![endif]-->
+	
+	<title>Pure CSS collapsible tree menu | The CSS Ninja</title>
+</head>
+
+<body>
+<h1>NMC Procedures</h1>
+<style>
+#myInput {
+  background-position: 10px 12px; /* Position the search icon */
+  background-repeat: no-repeat; /* Do not repeat the icon image */
+  width: 50%; /* Full-width */
+  font-size: 16px; /* Increase font-size */
+  padding: 12px 20px 12px 20px; /* Add some padding */
+  border: 1px solid #ddd; /* Add a grey border */
+  margin-bottom: 12px; /* Add some space below the input */
+}
+</style>
+<input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for documents..">
+<script>
+function myFunction() {
+  // Declare variables
+  var input, filter, ul, li, a, i, txtValue;
+  input = document.getElementById('myInput');
+  filter = input.value.toUpperCase();
+  ul = document.getElementById("myUL");
+  li = ul.getElementsByTagName('li');
+
+  // Loop through all list items, and hide those who don't match the search query
+  for (i = 0; i < li.length; i++) {
+    a = li[i].getElementsByTagName("a")[0];
+    txtValue = a.textContent || a.innerText;
+    if (txtValue.toUpperCase().indexOf(filter) > -1) {
+      li[i].style.display = "";
+    } else {
+      li[i].style.display = "none";
+    }
+  }
+}
+</script>
+<!--
+<p>All applets, scripts and plug-ins (including <a href="https://www.adobe.com/" target="_blank">PDF</a> and PowerPoint files, etc.) and the content within them are accessible to assistive technologies, or else an alternative means of accessing equivalent content is provided.</p>
+<p>A link is provided to a page where the plug-in can be downloaded.</p>
+-->
+
+<p style="font-family:'Courier New', Courier, monospace; font-size:small;">
+<ol class="tree" id="myUL">
+<li class="file"><a href="http://www.marianas.edu/NMCProcedures//3%2007%202011%20Procurement%20Policies%20and%20Procedure.pdf" target="_blank" alt="3 07 2011 Procurement Policies and Procedure.pdf">3 07 2011 Procurement Policies and Procedure.pdf</a></li>
+<li class="file"><a href="http://www.marianas.edu/NMCProcedures//Board%20Policy%20No.%201005%20-%20Standing%20Committees%20of%20the%20Board.pdf" target="_blank" alt="Board Policy No. 1005 - Standing Committees of the Board.pdf">Board Policy No. 1005 - Standing Committees of the Board.pdf</a></li>
+<li class="file"><a href="http://www.marianas.edu/NMCProcedures//College%20Procedure%20Template%20-%20MT%20approved%201%2017%202012.doc" target="_blank" alt="College Procedure Template - MT approved 1 17 2012.doc">College Procedure Template - MT approved 1 17 2012.doc</a></li>
+<li class="file"><a href="http://www.marianas.edu/NMCProcedures//NMC%20Comparative%20Salary%20Study%20-%205010.4.1..pdf" target="_blank" alt="NMC Comparative Salary Study - 5010.4.1..pdf">NMC Comparative Salary Study - 5010.4.1..pdf</a></li>
+<li class="file"><a href="http://www.marianas.edu/NMCProcedures//NMC%20Procedure%204013.3%20(Schedule%20Week%20Breakdown)%208.27.19.pdf" target="_blank" alt="NMC Procedure 4013.3 (Schedule Week Breakdown) 8.27.19.pdf">NMC Procedure 4013.3 (Schedule Week Breakdown) 8.27.19.pdf</a></li>
+<li class="file"><a href="http://www.marianas.edu/NMCProcedures//Policy%20and%20Procedures%20Index%20(5000%20Series).pdf" target="_blank" alt="Policy and Procedures Index (5000 Series).pdf">Policy and Procedures Index (5000 Series).pdf</a></li>
+<li class="file"><a href="http://www.marianas.edu/NMCProcedures//Procedure%20No.%204002.1%20-%20Admissions.pdf" target="_blank" alt="Procedure No. 4002.1 - Admissions.pdf">Procedure No. 4002.1 - Admissions.pdf</a></li>
+<li class="file"><a href="http://www.marianas.edu/NMCProcedures//Procedure%20No.%204003.3%20-%20Student%20Conduct%20Code.doc" target="_blank" alt="Procedure No. 4003.3 - Student Conduct Code.doc">Procedure No. 4003.3 - Student Conduct Code.doc</a></li>
+<li class="file"><a href="http://www.marianas.edu/NMCProcedures//Procedure%20No.%204004.1%20-%20Student%20Employment.pdf" target="_blank" alt="Procedure No. 4004.1 - Student Employment.pdf">Procedure No. 4004.1 - Student Employment.pdf</a></li>
+<li class="file"><a href="http://www.marianas.edu/NMCProcedures//Procedure%20No.%204004.3-%20Academic%20Advisement.pdf" target="_blank" alt="Procedure No. 4004.3- Academic Advisement.pdf">Procedure No. 4004.3- Academic Advisement.pdf</a></li>
+<li class="file"><a href="http://www.marianas.edu/NMCProcedures//Procedure%20No.%204008%20Student%20Grievance%20Procedure%20Form.pdf" target="_blank" alt="Procedure No. 4008 Student Grievance Procedure Form.pdf">Procedure No. 4008 Student Grievance Procedure Form.pdf</a></li>
+<li class="file"><a href="http://www.marianas.edu/NMCProcedures//Procedure%20No.%204009.1%20-%20Access%20to%20Student%20Records.doc" target="_blank" alt="Procedure No. 4009.1 - Access to Student Records.doc">Procedure No. 4009.1 - Access to Student Records.doc</a></li>
+<li class="file"><a href="http://www.marianas.edu/NMCProcedures//Procedure%20No.%204010.1%20-%20Student%20Educational%20Rights%20and%20Privacy.pdf" target="_blank" alt="Procedure No. 4010.1 - Student Educational Rights and Privacy.pdf">Procedure No. 4010.1 - Student Educational Rights and Privacy.pdf</a></li>
+<li class="file"><a href="http://www.marianas.edu/NMCProcedures//Procedure%20No.%204012.1%20-%20Academic%20Probation%20and%20Suspension.pdf" target="_blank" alt="Procedure No. 4012.1 - Academic Probation and Suspension.pdf">Procedure No. 4012.1 - Academic Probation and Suspension.pdf</a></li>
+<li class="file"><a href="http://www.marianas.edu/NMCProcedures//Procedure%20No.%204013.1%20-%20Financial%20Aid%20-%20Title%20IV.pdf" target="_blank" alt="Procedure No. 4013.1 - Financial Aid - Title IV.pdf">Procedure No. 4013.1 - Financial Aid - Title IV.pdf</a></li>
+<li class="file"><a href="http://www.marianas.edu/NMCProcedures//Procedure%20No.%204013.2%20-%20Financial%20Aid%20Consortium%20Agreement.pdf" target="_blank" alt="Procedure No. 4013.2 - Financial Aid Consortium Agreement.pdf">Procedure No. 4013.2 - Financial Aid Consortium Agreement.pdf</a></li>
+<li class="file"><a href="http://www.marianas.edu/NMCProcedures//Procedure%20No.%204013.2%20-%20Financial%20Aid%20Consortium%20Agreement%20Form.pdf" target="_blank" alt="Procedure No. 4013.2 - Financial Aid Consortium Agreement Form.pdf">Procedure No. 4013.2 - Financial Aid Consortium Agreement Form.pdf</a></li>
+<li class="file"><a href="http://www.marianas.edu/NMCProcedures//Procedure%20No.%204013.3%20-%20Military%20Tuition%20Assistance.pdf" target="_blank" alt="Procedure No. 4013.3 - Military Tuition Assistance.pdf">Procedure No. 4013.3 - Military Tuition Assistance.pdf</a></li>
+<li class="file"><a href="http://www.marianas.edu/NMCProcedures//Procedure%20No.%204020.1%20-%20Registration%20and%20Enrollment.doc" target="_blank" alt="Procedure No. 4020.1 - Registration and Enrollment.doc">Procedure No. 4020.1 - Registration and Enrollment.doc</a></li>
+<li class="file"><a href="http://www.marianas.edu/NMCProcedures//Procedure%20No.%204020.6%20-%20Minimum%20Academic%20Residency%20Requirement.pdf" target="_blank" alt="Procedure No. 4020.6 - Minimum Academic Residency Requirement.pdf">Procedure No. 4020.6 - Minimum Academic Residency Requirement.pdf</a></li>
+<li class="file"><a href="http://www.marianas.edu/NMCProcedures//Procedure%20No.%204020.7%20-%20Attendance%20Requirement.pdf" target="_blank" alt="Procedure No. 4020.7 - Attendance Requirement.pdf">Procedure No. 4020.7 - Attendance Requirement.pdf</a></li>
+<li class="file"><a href="http://www.marianas.edu/NMCProcedures//Procedure%20No.%204020.8%20-%20Auditing%20of%20Classes.doc" target="_blank" alt="Procedure No. 4020.8 - Auditing of Classes.doc">Procedure No. 4020.8 - Auditing of Classes.doc</a></li>
+<li class="file"><a href="http://www.marianas.edu/NMCProcedures//Procedure%20No.%204020.9%20-%20Commencement.doc" target="_blank" alt="Procedure No. 4020.9 - Commencement.doc">Procedure No. 4020.9 - Commencement.doc</a></li>
+<li class="file"><a href="http://www.marianas.edu/NMCProcedures//Procedure%20No.%204020.10%20-%20%20Recognition%20of%20Achievement.doc" target="_blank" alt="Procedure No. 4020.10 -  Recognition of Achievement.doc">Procedure No. 4020.10 -  Recognition of Achievement.doc</a></li>
+<li class="file"><a href="http://www.marianas.edu/NMCProcedures//Procedure%20No.%204020.11%20-Time%20Limit%20for%20Coursework.doc" target="_blank" alt="Procedure No. 4020.11 -Time Limit for Coursework.doc">Procedure No. 4020.11 -Time Limit for Coursework.doc</a></li>
+<li class="file"><a href="http://www.marianas.edu/NMCProcedures//Procedure%20No.%205000.2%20-%20Gratuities%20and%20Contributions.pdf" target="_blank" alt="Procedure No. 5000.2 - Gratuities and Contributions.pdf">Procedure No. 5000.2 - Gratuities and Contributions.pdf</a></li>
+<li class="file"><a href="http://www.marianas.edu/NMCProcedures//Procedure%20No.%205000.3%20-%20Outside%20Employment.pdf" target="_blank" alt="Procedure No. 5000.3 - Outside Employment.pdf">Procedure No. 5000.3 - Outside Employment.pdf</a></li>
+<li class="file"><a href="http://www.marianas.edu/NMCProcedures//Procedure%20No.%205000.4%20-%20Relationships%20with%20Students.pdf" target="_blank" alt="Procedure No. 5000.4 - Relationships with Students.pdf">Procedure No. 5000.4 - Relationships with Students.pdf</a></li>
+<li class="file"><a href="http://www.marianas.edu/NMCProcedures//Procedure%20No.%205000.5%20-%20Media%20Relations.pdf" target="_blank" alt="Procedure No. 5000.5 - Media Relations.pdf">Procedure No. 5000.5 - Media Relations.pdf</a></li>
+<li class="file"><a href="http://www.marianas.edu/NMCProcedures//Procedure%20No.%205001.1%20-%20Political%20Activities.pdf" target="_blank" alt="Procedure No. 5001.1 - Political Activities.pdf">Procedure No. 5001.1 - Political Activities.pdf</a></li>
+<li class="file"><a href="http://www.marianas.edu/NMCProcedures//Procedure%20No.%205002.1%20-%20Determining%20Eligibility%20for%20Employment.pdf" target="_blank" alt="Procedure No. 5002.1 - Determining Eligibility for Employment.pdf">Procedure No. 5002.1 - Determining Eligibility for Employment.pdf</a></li>
+<li class="file"><a href="http://www.marianas.edu/NMCProcedures//Procedure%20No.%205002.2%20-%20Recruitment.pdf" target="_blank" alt="Procedure No. 5002.2 - Recruitment.pdf">Procedure No. 5002.2 - Recruitment.pdf</a></li>
+<li class="file"><a href="http://www.marianas.edu/NMCProcedures//Procedure%20No.%205002.3%20-%20Vacancy%20Announcements.pdf" target="_blank" alt="Procedure No. 5002.3 - Vacancy Announcements.pdf">Procedure No. 5002.3 - Vacancy Announcements.pdf</a></li>
+<li class="file"><a href="http://www.marianas.edu/NMCProcedures//Procedure%20No.%205002.4%20-%20Relocation%20Allowance.pdf" target="_blank" alt="Procedure No. 5002.4 - Relocation Allowance.pdf">Procedure No. 5002.4 - Relocation Allowance.pdf</a></li>
+<li class="file"><a href="http://www.marianas.edu/NMCProcedures//Procedure%20No.%205002.5%20-%20Appointment%20of%20Faculty.pdf" target="_blank" alt="Procedure No. 5002.5 - Appointment of Faculty.pdf">Procedure No. 5002.5 - Appointment of Faculty.pdf</a></li>
+<li class="file"><a href="http://www.marianas.edu/NMCProcedures//Procedure%20No.%205004.1%20-%20Drugs%20Alcohol%20Tobacco%20and%20Betel%20Nut.pdf" target="_blank" alt="Procedure No. 5004.1 - Drugs Alcohol Tobacco and Betel Nut.pdf">Procedure No. 5004.1 - Drugs Alcohol Tobacco and Betel Nut.pdf</a></li>
+<li class="file"><a href="http://www.marianas.edu/NMCProcedures//Procedure%20No.%205005.1%20-%20Minimum%20Degree%20Requirements.pdf" target="_blank" alt="Procedure No. 5005.1 - Minimum Degree Requirements.pdf">Procedure No. 5005.1 - Minimum Degree Requirements.pdf</a></li>
+<li class="file"><a href="http://www.marianas.edu/NMCProcedures//Procedure%20No.%205005.1%20-%20Minimum%20Degree%20Requirements%20for%20Academic%20Instructional%20Faculty%20by%20Position.pdf" target="_blank" alt="Procedure No. 5005.1 - Minimum Degree Requirements for Academic Instructional Faculty by Position.pdf">Procedure No. 5005.1 - Minimum Degree Requirements for Academic Instructional Faculty by Position.pdf</a></li>
+<li class="file"><a href="http://www.marianas.edu/NMCProcedures//Procedure%20No.%205006.1%20-%20Employee%20Grievances.pdf" target="_blank" alt="Procedure No. 5006.1 - Employee Grievances.pdf">Procedure No. 5006.1 - Employee Grievances.pdf</a></li>
+<li class="file"><a href="http://www.marianas.edu/NMCProcedures//Procedure%20No.%205010.1%20-%20Employment%20Contracts.pdf" target="_blank" alt="Procedure No. 5010.1 - Employment Contracts.pdf">Procedure No. 5010.1 - Employment Contracts.pdf</a></li>
+<li class="file"><a href="http://www.marianas.edu/NMCProcedures//Procedure%20No.%205010.2%20-%20Personnel%20Files.pdf" target="_blank" alt="Procedure No. 5010.2 - Personnel Files.pdf">Procedure No. 5010.2 - Personnel Files.pdf</a></li>
+<li class="file"><a href="http://www.marianas.edu/NMCProcedures//Procedure%20No.%205010.3%20-%20Types%20of%20Appointment.pdf" target="_blank" alt="Procedure No. 5010.3 - Types of Appointment.pdf">Procedure No. 5010.3 - Types of Appointment.pdf</a></li>
+<li class="file"><a href="http://www.marianas.edu/NMCProcedures//Procedure%20No.%205010.4%20-%20Compensation%20and%20Classification.pdf" target="_blank" alt="Procedure No. 5010.4 - Compensation and Classification.pdf">Procedure No. 5010.4 - Compensation and Classification.pdf</a></li>
+<li class="file"><a href="http://www.marianas.edu/NMCProcedures//Procedure%20No.%205010.4.1%20-%20Interim%20Compensation%20and%20Classification.pdf" target="_blank" alt="Procedure No. 5010.4.1 - Interim Compensation and Classification.pdf">Procedure No. 5010.4.1 - Interim Compensation and Classification.pdf</a></li>
+<li class="file"><a href="http://www.marianas.edu/NMCProcedures//Procedure%20No.%205010.5%20-%20Employee%20Orientation.pdf" target="_blank" alt="Procedure No. 5010.5 - Employee Orientation.pdf">Procedure No. 5010.5 - Employee Orientation.pdf</a></li>
+<li class="file"><a href="http://www.marianas.edu/NMCProcedures//Procedure%20No.%205010.6%20-%20Work%20Schedule.pdf" target="_blank" alt="Procedure No. 5010.6 - Work Schedule.pdf">Procedure No. 5010.6 - Work Schedule.pdf</a></li>
+<li class="file"><a href="http://www.marianas.edu/NMCProcedures//Procedure%20No.%205010.7%20-%20Employee%20Evaluations.pdf" target="_blank" alt="Procedure No. 5010.7 - Employee Evaluations.pdf">Procedure No. 5010.7 - Employee Evaluations.pdf</a></li>
+<li class="file"><a href="http://www.marianas.edu/NMCProcedures//Procedure%20No.%205010.8%20-%20Employee%20Separation%20Clearances.pdf" target="_blank" alt="Procedure No. 5010.8 - Employee Separation Clearances.pdf">Procedure No. 5010.8 - Employee Separation Clearances.pdf</a></li>
+<li class="file"><a href="http://www.marianas.edu/NMCProcedures//Procedure%20No.%205010.9%20-%20Holiday%20Pay;%20Eligibility%20for%20Benefits.pdf" target="_blank" alt="Procedure No. 5010.9 - Holiday Pay; Eligibility for Benefits.pdf">Procedure No. 5010.9 - Holiday Pay; Eligibility for Benefits.pdf</a></li>
+<li class="file"><a href="http://www.marianas.edu/NMCProcedures//Procedure%20No.%205010.10%20-%20Insurance%20Benefits.pdf" target="_blank" alt="Procedure No. 5010.10 - Insurance Benefits.pdf">Procedure No. 5010.10 - Insurance Benefits.pdf</a></li>
+<li class="file"><a href="http://www.marianas.edu/NMCProcedures//Procedure%20No.%205010.11%20-%20Professional%20Development;%20Tuition%20Waiver%20and%20Course%20Scheduling.pdf" target="_blank" alt="Procedure No. 5010.11 - Professional Development; Tuition Waiver and Course Scheduling.pdf">Procedure No. 5010.11 - Professional Development; Tuition Waiver and Course Scheduling.pdf</a></li>
+<li class="file"><a href="http://www.marianas.edu/NMCProcedures//Procedure%20No.%205010.12%20-%20Annual%20Leave.pdf" target="_blank" alt="Procedure No. 5010.12 - Annual Leave.pdf">Procedure No. 5010.12 - Annual Leave.pdf</a></li>
+<li class="file"><a href="http://www.marianas.edu/NMCProcedures//Procedure%20No.%205010.13%20-%20Sick%20Leave.pdf" target="_blank" alt="Procedure No. 5010.13 - Sick Leave.pdf">Procedure No. 5010.13 - Sick Leave.pdf</a></li>
+<li class="file"><a href="http://www.marianas.edu/NMCProcedures//Procedure%20No.%205010.14%20-%20Administrative%20Leave.pdf" target="_blank" alt="Procedure No. 5010.14 - Administrative Leave.pdf">Procedure No. 5010.14 - Administrative Leave.pdf</a></li>
+<li class="file"><a href="http://www.marianas.edu/NMCProcedures//Procedure%20No.%205010.15%20-%20Leave%20Without%20Pay.pdf" target="_blank" alt="Procedure No. 5010.15 - Leave Without Pay.pdf">Procedure No. 5010.15 - Leave Without Pay.pdf</a></li>
+<li class="file"><a href="http://www.marianas.edu/NMCProcedures//Procedure%20No.%205010.16%20-%20Sick%20Leave%20Bank.pdf" target="_blank" alt="Procedure No. 5010.16 - Sick Leave Bank.pdf">Procedure No. 5010.16 - Sick Leave Bank.pdf</a></li>
+<li class="file"><a href="http://www.marianas.edu/NMCProcedures//Procedure%20No.%205010.17%20-%20Employee%20Discipline.pdf" target="_blank" alt="Procedure No. 5010.17 - Employee Discipline.pdf">Procedure No. 5010.17 - Employee Discipline.pdf</a></li>
+<li class="file"><a href="http://www.marianas.edu/NMCProcedures//Procedure%20No.%205010.18%20-%20Intellectual%20Property%20Rights.pdf" target="_blank" alt="Procedure No. 5010.18 - Intellectual Property Rights.pdf">Procedure No. 5010.18 - Intellectual Property Rights.pdf</a></li>
+<li class="file"><a href="http://www.marianas.edu/NMCProcedures//Procedure%20No.%205010.19%20-%20Workplace%20Behavior;%20Violence%20Prevention.pdf" target="_blank" alt="Procedure No. 5010.19 - Workplace Behavior; Violence Prevention.pdf">Procedure No. 5010.19 - Workplace Behavior; Violence Prevention.pdf</a></li>
+<li class="file"><a href="http://www.marianas.edu/NMCProcedures//Procedure%20No.%205010.20%20-%20Professional%20Dress.pdf" target="_blank" alt="Procedure No. 5010.20 - Professional Dress.pdf">Procedure No. 5010.20 - Professional Dress.pdf</a></li>
+<li class="file"><a href="http://www.marianas.edu/NMCProcedures//Procedure%20No.%205010.21%20-%20Program%20Review.pdf" target="_blank" alt="Procedure No. 5010.21 - Program Review.pdf">Procedure No. 5010.21 - Program Review.pdf</a></li>
+<li class="file"><a href="http://www.marianas.edu/NMCProcedures//Procedure%20No.%205010.22%20-%20Delegation%20of%20Authority.pdf" target="_blank" alt="Procedure No. 5010.22 - Delegation of Authority.pdf">Procedure No. 5010.22 - Delegation of Authority.pdf</a></li>
+<li class="file"><a href="http://www.marianas.edu/NMCProcedures//Procedure%20No.%205010.23%20-%20Responsibilities%20of%20Instructional%20Faculty.pdf" target="_blank" alt="Procedure No. 5010.23 - Responsibilities of Instructional Faculty.pdf">Procedure No. 5010.23 - Responsibilities of Instructional Faculty.pdf</a></li>
+<li class="file"><a href="http://www.marianas.edu/NMCProcedures//Procedure%20No.%205010.24%20-%20Duties%20and%20Responsibilities%20of%20Dept.%20Chair.pdf" target="_blank" alt="Procedure No. 5010.24 - Duties and Responsibilities of Dept. Chair.pdf">Procedure No. 5010.24 - Duties and Responsibilities of Dept. Chair.pdf</a></li>
+<li class="file"><a href="http://www.marianas.edu/NMCProcedures//Procedure%20No.%205010.25%20-Introductory%20Period.pdf" target="_blank" alt="Procedure No. 5010.25 -Introductory Period.pdf">Procedure No. 5010.25 -Introductory Period.pdf</a></li>
+<li class="file"><a href="http://www.marianas.edu/NMCProcedures//Procedure%20No.%205010.26%20-%20Telework%20Plan%20and%20Agreement.pdf" target="_blank" alt="Procedure No. 5010.26 - Telework Plan and Agreement.pdf">Procedure No. 5010.26 - Telework Plan and Agreement.pdf</a></li>
+<li class="file"><a href="http://www.marianas.edu/NMCProcedures//Procedure%20No.%205010.26%20-%20Telework%20procedure.pdf" target="_blank" alt="Procedure No. 5010.26 - Telework procedure.pdf">Procedure No. 5010.26 - Telework procedure.pdf</a></li>
+<li class="file"><a href="http://www.marianas.edu/NMCProcedures//Procedure%20No.%205011%20-%20Faculty%20Ranking.pdf" target="_blank" alt="Procedure No. 5011 - Faculty Ranking.pdf">Procedure No. 5011 - Faculty Ranking.pdf</a></li>
+<li class="file"><a href="http://www.marianas.edu/NMCProcedures//Procedure%20No.%207006.1%20-%20Travel%20Revised%202015%200930.pdf" target="_blank" alt="Procedure No. 7006.1 - Travel Revised 2015 0930.pdf">Procedure No. 7006.1 - Travel Revised 2015 0930.pdf</a></li>
+<li class="file"><a href="http://www.marianas.edu/NMCProcedures//Procedure%20No.%207006.2%20%20Travel%20(Revised%20May%2014,%202018).pdf" target="_blank" alt="Procedure No. 7006.2  Travel (Revised May 14, 2018).pdf">Procedure No. 7006.2  Travel (Revised May 14, 2018).pdf</a></li>
+<li class="file"><a href="http://www.marianas.edu/NMCProcedures//Procedure%20No.%207015.1%20-%20Tuition%20Waivers%20for%20Man'amko%20(Senior%20Citizens).pdf" target="_blank" alt="Procedure No. 7015.1 - Tuition Waivers for Man'amko (Senior Citizens).pdf">Procedure No. 7015.1 - Tuition Waivers for Man'amko (Senior Citizens).pdf</a></li>
+<li class="file"><a href="http://www.marianas.edu/NMCProcedures//Procedure%20No.%207015.2%20-%20Tuition%20Discount%20for%20CNMI%20Government%20Employees.pdf" target="_blank" alt="Procedure No. 7015.2 - Tuition Discount for CNMI Government Employees.pdf">Procedure No. 7015.2 - Tuition Discount for CNMI Government Employees.pdf</a></li>
+<li class="file"><a href="http://www.marianas.edu/NMCProcedures//Procedure%20No.%207015.3%20-%20Tuition%20Waivers%20for%20NMC%20Employees.pdf" target="_blank" alt="Procedure No. 7015.3 - Tuition Waivers for NMC Employees.pdf">Procedure No. 7015.3 - Tuition Waivers for NMC Employees.pdf</a></li>
+<li class="file"><a href="http://www.marianas.edu/NMCProcedures//Procedure%20No.%208001.1%20-%20Sex%20Offender%20Notification%20Procedure%20-%20Adopted%201.30.12.pdf" target="_blank" alt="Procedure No. 8001.1 - Sex Offender Notification Procedure - Adopted 1.30.12.pdf">Procedure No. 8001.1 - Sex Offender Notification Procedure - Adopted 1.30.12.pdf</a></li>
+<li class="file"><a href="http://www.marianas.edu/NMCProcedures//Procedure%20No.%208007.1%20-%20IT%20Asset%20Lifecycle.PDF" target="_blank" alt="Procedure No. 8007.1 - IT Asset Lifecycle.PDF">Procedure No. 8007.1 - IT Asset Lifecycle.PDF</a></li>
+<li class="file"><a href="http://www.marianas.edu/NMCProcedures//Procedure%20No.%209008.1%20Records%20Disposition%20Log.docx" target="_blank" alt="Procedure No. 9008.1 Records Disposition Log.docx">Procedure No. 9008.1 Records Disposition Log.docx</a></li>
+<li class="file"><a href="http://www.marianas.edu/NMCProcedures//Procedure%20No.%209008.1%20Records%20Management%20Procedure.pdf" target="_blank" alt="Procedure No. 9008.1 Records Management Procedure.pdf">Procedure No. 9008.1 Records Management Procedure.pdf</a></li>
+<li class="file"><a href="http://www.marianas.edu/NMCProcedures//Procedure%20No.%209009%201%20-%20Procedure%20Approval%20Process.pdf" target="_blank" alt="Procedure No. 9009 1 - Procedure Approval Process.pdf">Procedure No. 9009 1 - Procedure Approval Process.pdf</a></li>
+<li class="file"><a href="http://www.marianas.edu/NMCProcedures//Student%20Grievance%20Form.pdf" target="_blank" alt="Student Grievance Form.pdf">Student Grievance Form.pdf</a></li>
+</ol>
+</p>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9cfea686399de1fe',t:'MTc3MTQyOTUxNQ=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script><script defer src="https://static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015" integrity="sha512-ZpsOmlRQV6y907TI0dKBHq9Md29nnaEIPlkf84rnaERnq6zvWvPUqr2ft8M1aS28oN72PdrCzSjY4U6VaAw1EQ==" data-cf-beacon='{"version":"2024.11.0","token":"e28f837140c24802b0f2c56e870b8e85","r":1,"server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
+</body>
+
+</html>

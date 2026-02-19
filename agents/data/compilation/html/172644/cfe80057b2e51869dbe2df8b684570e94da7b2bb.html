@@ -1,0 +1,957 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>About-Wayne AI Research</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="Wayne State AI Research and Education Core Group" />
+    <script type="application/x-javascript">
+        addEventListener("load", function () {
+            setTimeout(hideURLbar, 0);
+        }, false);
+
+        function hideURLbar() {
+            window.scrollTo(0, 0);
+        }
+    </script>
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="image/icon" href="images/wsu-ico.png" />
+    <!-- bootstrap-css -->
+    <!-- <link href="css/bootstrap.css" rel='stylesheet' type='text/css' /> -->
+    <link href="css/bootstrap.min.css" rel='stylesheet' type='text/css' />
+    <!-- //bootstrap-css -->
+    <!-- css -->
+    <!-- <link rel="stylesheet" type="text/css" href="css/normalize.css" /> -->
+    <link href="css/style.css" rel='stylesheet' type='text/css' />
+    <link href="css/font-awesome.min.css" rel='stylesheet' type='text/css' />
+    <link rel="stylesheet" type="text/css" href="css/input-style.css">
+    <!-- //css -->
+    <!-- fonts -->
+    <link
+        href='http://fonts.useso.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic'
+        rel='stylesheet' type='text/css'>
+    <!-- //fonts -->
+    <!-- js -->
+    <script src="js/jquery-1.11.1.min.js"></script>
+    <script src="js/modernizr.custom.js"></script>
+    <!-- <script src="js/bootstrap.js"></script> -->
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/wow.min.js"></script>
+    <!-- //js -->
+    <!-- start-smoth-scrolling-->
+    <script type="text/javascript">
+        jQuery(document).ready(function ($) {
+            $(".scroll").click(function (event) {
+                event.preventDefault();
+
+                $('html,body').animate({
+                    scrollTop: $(this.hash).offset().top
+                }, 1000);
+            });
+        });
+    </script>
+    <!--//end-smoth-scrolling-->
+    <script>
+        // JavaScript for label effects only
+        $(window).load(function () {
+            $(".col-3 input").val("");
+
+            $(".input-effect input").focusout(function () {
+                if ($(this).val() != "") {
+                    $(this).addClass("has-content");
+                } else {
+                    $(this).removeClass("has-content");
+                }
+            })
+        });
+    </script>
+</head>
+
+<body>
+    <div class="top-nav">
+        <nav class="navbar navbar-default">
+            <div>
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                        data-target="#bs-example-navbar-collapse-1">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <div class="logo">
+                        <a href="index.html"><img src="images/AI.png" alt=""></a>
+                    </div>
+                </div>
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav navbar-center">
+                        <li><a href="index.html">HOME</a></li>
+                        <li><a href="about.html" class="active">ABOUT</a></li>
+                        <!-- <li><a href="members.html">MEMBERS</a></li> -->
+                        <li><a href="research.html">RESEARCH</a></li>
+                        <li><a href="education.html">EDUCATION</a></li>
+                        <li><a href="outreach.html">OUTREACH</a></li>
+                        <!-- <li><a href="https://bulletins.wayne.edu/graduate/college-engineering/computer-science/computer-science-ms/#requirementstext">EDUCATION</a></li> -->
+                        <!-- <li><a href="#" class="dropdown-toggle hvr-bounce-to-bottom" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">EDUCATION<span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a class="hvr-bounce-to-bottom" href="education.html">Education1</a></li>
+                                <li class="dropdown-submenu">
+                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown-submenu" role="button" aria-haspopup="true" aria-expanded="false">Education2<span class="caret"></span></a>
+                                    <ul class="dropdown-menu">
+                                        <li><a tabindex="-1" href="education.html">Education4</a></li>
+                                        <li><a href="education.html">Education5</a></li>
+                                        <li><a href="education.html">Education6</a></li>
+                                    </ul>
+                                </li>
+                                <li><a class="hvr-bounce-to-bottom" href="education.html">Education3</a></li>
+                            </ul>
+                        </li> -->
+                        <!-- <li><a href="events.html">EVENTS</a></li> -->
+                    </ul>
+                    <div class="clearfix"> </div>
+                </div>
+            </div>
+        </nav>
+    </div>
+    <!-- script-for sticky-nav -->
+    <script>
+        $(document).ready(function () {
+            var navoffeset = $(".top-nav").offset().top;
+            $(window).scroll(function () {
+                var scrollpos = $(window).scrollTop();
+                if (scrollpos > navoffeset) {
+                    $(".top-nav").addClass("fixed");
+                } else {
+                    $(".top-nav").removeClass("fixed");
+                }
+            });
+
+        });
+    </script>
+    <!-- /script-for sticky-nav -->
+    <!--navigation-->
+
+    <div class="about-top">
+        <div class="about-info">
+            <h2>About</h2>
+        </div>
+        <!-- banner-bottom -->
+        <div class="about-grid-top">
+            <!-- container -->
+            <div class="container">
+                <div class="col-md-6 about-left">
+                    <h3>About Wayne AI Group</h3>
+                    <h4>We perform cutting-edge AI research and offer world-class AI education. </h4>
+                    <p>
+                        The Wayne AI group was started by faculty members from<a
+                            href="https://engineering.wayne.edu/cs/"> the department of computer science</a> in year,
+                         with collaboration from other engineering departments, such as
+                        <a href="https://engineering.wayne.edu/ece/">electric and computer engineering,</a>
+                        <a href="https://engineering.wayne.edu/cee/">civil engineering,</a> and <a
+                            href="https://engineering.wayne.edu/ise/">industrial engineering,</a>
+                        <a href="https://clas.wayne.edu/">college of liberal arts and science,</a> and <a
+                            href="https://www.med.wayne.edu/"> college of medicine</a> across the campus.
+                    </p>
+                </div>
+                <div class="col-md-6 about-right">
+                    <img src="images/10.jpg" alt="" />
+                </div>
+                <div class="clearfix"> </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!--=============== Start Our Team =========================================== -->
+    <section id="our-team">
+        <div class="container">
+            <div class="title text-center wow fadeInUp" data-wow-duration="500ms">
+                <h3>Our Team</h3>
+            </div>
+
+            <!-- Dongxiao Zhu -->
+            <div class="row">
+                <div class="col-md-3 col-md-offset-4 col-sm-6 col-sm-offset-3 member" data-wow-duration="500ms">
+                    <article class="team-mate">
+                        <div class="member-photo">
+                            <img class="img-responsive" src="images/members/ZhuDongxiao.jpg" alt="Meghna">
+                            <div class="mask">
+                                <ul class="clearfix">
+                                    <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="member-title">
+                            <h3>Dongxiao Zhu</h3>
+                        </div>
+                        <div class="member-info">
+                            <p>Founding Director</p>
+                            <p>Professor, Computer Science</p>
+                            <p>Research Interest</p>
+                            <ul>
+                                <li>Trustworthy AI</li>
+                                <li>Adversarial Machine Learning</li>
+                                <li>AI4Science</li>
+                                <li>AI4Good</li>
+                                <li>Medical Imaging Analysis</li>
+                            </ul>
+                            <br><br>
+                        </div>
+                        <div class="member-bottom">
+                            <a href="https://engineering.wayne.edu/profile/ct4442">Visit more <i class="fa fa-id-card" aria-hidden="true"></i></a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+
+            <!-- Mohammed Alawad/ Suzan Arslanturk/ Ming Dong/ Zheng Dong -->
+            <div class="row">
+                <div class="col-md-3 col-sm-6 member" data-wow-duration="500ms">
+                    <article class="team-mate">
+                        <div class="member-photo">
+                            <!-- member photo -->
+                            <img class="img-responsive" src="images/members/AlawadMohammed.jpg" alt="Meghna">
+                            <!-- member social profile -->
+                            <div class="mask">
+                                <ul class="clearfix">
+                                    <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- member name & designation -->
+                        <div class="member-title">
+                            <h3>Mohammed Alawad</h3>
+                        </div>
+                        <!-- about member -->
+                        <div class="member-info">
+                            <p>Assistant Professor, Electrical and Computer Engineering</p>
+                            <p>&nbsp;</p>
+                            <p>Research Interest</p>
+                            <ul>
+                                <li>Emerging Computing Architectures</li>
+                                <li>AI Algorithms and Systems</li>
+                                <li>AI Hardware Accelerators</li>
+                                <li>Deep Learning for Natural Language Processing</li>
+                                <li>Privacy-Aware and Secure AI</li>
+                            </ul>
+                        </div>
+                        <div class="member-bottom">
+                            <a href="https://engineering.wayne.edu/profile/hf8940">Visit more <i class="fa fa-id-card"
+                                    aria-hidden="true"></i></a>
+                        </div>
+                    </article>
+                </div>
+
+                <div class="col-md-3 col-sm-6 member" data-wow-duration="500ms">
+                    <article class="team-mate">
+                        <div class="member-photo">
+                            <!-- member photo -->
+                            <img class="img-responsive" src="images/members/ArslanturkSuzan.jpg" alt="Meghna">
+                            <!-- member social profile -->
+                            <div class="mask">
+                                <ul class="clearfix">
+                                    <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- member name & designation -->
+                        <div class="member-title">
+                            <h3>Suzan Arslanturk</h3>
+                        </div>
+                        <!-- about member -->
+                        <div class="member-info">
+                            <p>Assistant Professor, Computer Science &nbsp;&nbsp;&nbsp;</p>
+                            <p>&nbsp;</p>
+                            <p>Research Interest</p>
+                            <ul>
+                                <li>Medical Informatics and Analytics</li>
+                                <li>Machine Learning and Pattern Recognition</li>
+                                <li>Descriptive and Predictive Modeling</li>
+                                <li>Probabilistic Graphical Models</li>
+                            </ul>
+                        </div>
+                        <div class="member-bottom">
+                            <a href="https://engineering.wayne.edu/profile/gl9815">Visit more <i class="fa fa-id-card"
+                                    aria-hidden="true"></i></a>
+                        </div>
+                    </article>
+                </div>
+
+                <div class="col-md-3 col-sm-6 member" data-wow-duration="500ms">
+                    <article class="team-mate">
+                        <div class="member-photo">
+                            <!-- member photo -->
+                            <img class="img-responsive" src="images/members/DongMing.jpg" alt="Meghna">
+                            <!-- member social profile -->
+                            <div class="mask">
+                                <ul class="clearfix">
+                                    <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- member name & designation -->
+                        <div class="member-title">
+                            <h3>Ming Dong</h3>
+                        </div>
+                        <!-- about member -->
+                        <div class="member-info">
+                            <p>Professor, Computer Science</p>
+                            <br>
+                            <p>&nbsp;</p>
+                            <p>Research Interest</p>
+                            <ul>
+                                <li>Data Mining</li>
+                                <li>Deep Learning</li>
+                                <li>Computer Vision</li>
+                            </ul>
+                            <br><br>
+                            <br><br>
+                            <br>
+                        </div>
+                        <div class="member-bottom">
+                            <a href="http://mdong.eng.wayne.edu/">Visit more <i class="fa fa-id-card"
+                                    aria-hidden="true"></i></a>
+                        </div>
+                    </article>
+                </div>
+
+                <div class="col-md-3 col-sm-6 member" data-wow-duration="500ms">
+                    <article class="team-mate">
+                        <div class="member-photo">
+                            <!-- member photo -->
+                            <img class="img-responsive" src="images/members/DongZheng.jpg" alt="Meghna">
+                            <!-- member social profile -->
+                            <div class="mask">
+                                <ul class="clearfix">
+                                    <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- member name & designation -->
+                        <div class="member-title">
+                            <h3>Zheng Dong</h3>
+                        </div>
+                        <!-- about member -->
+                        <div class="member-info">
+                            <p>Assistant Professor, Computer Science &nbsp;&nbsp;&nbsp;</p>
+                            <p>&nbsp;</p>
+                            <p>Research Interest</p>
+                            <ul>
+                                <li>Real-time Systems</li>
+                                <li>Safety-Critical Cyber-Physical System</li>
+                                <li>Mobile Edge Computing</li>
+                                <li>IoT</li>
+                            </ul>
+                            <br><br>
+                            <br>
+                        </div>
+                        <div class="member-bottom">
+                            <a href="https://engineering.wayne.edu/profile/gz4573">Visit more <i class="fa fa-id-card"
+                                    aria-hidden="true"></i></a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+
+            <!-- Jing Hua/ ZhiZhong Han/ RhongHo Jang/ Alexander Kotov -->
+            <div class="row">
+                <div class="col-md-3 col-sm-6 member" data-wow-duration="500ms">
+                    <article class="team-mate">
+                        <div class="member-photo">
+                            <!-- member photo -->
+                            <img class="img-responsive" src="images/members/HuaJing.jpg" alt="Meghna">
+                            <!-- member social profile -->
+                            <div class="mask">
+                                <ul class="clearfix">
+                                    <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- member name & designation -->
+                        <div class="member-title">
+                            <h3>Jing Hua</h3>
+                        </div>
+                        <!-- about member -->
+                        <div class="member-info">
+                            <p>Professor, Computer Science</p>
+                            <br>
+                            <p>&nbsp;</p>
+                            <p>Research Interest</p>
+                            <ul>
+                                <li>Computer Graphics</li>
+                                <li>Visualization</li>
+                                <li>Image Analysis</li>
+                                <li>Computer Vision</li>
+                            </ul>
+                            <br><br>
+                            <br>
+                        </div>
+                        <div class="member-bottom">
+                            <a href="https://engineering.wayne.edu/profile/av3840">Visit more <i class="fa fa-id-card"
+                                    aria-hidden="true"></i></a>
+                        </div>
+                    </article>
+                </div>
+
+                <div class="col-md-3 col-sm-6 member" data-wow-duration="500ms">
+                    <article class="team-mate">
+                        <div class="member-photo">
+                            <!-- member photo -->
+                            <img class="img-responsive" src="images/members/HanZhizhong.jpg" alt="Meghna">
+                            <!-- member social profile -->
+                            <div class="mask">
+                                <ul class="clearfix">
+                                    <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- member name & designation -->
+                        <div class="member-title">
+                            <h3>ZhiZhong Han</h3>
+                        </div>
+                        <!-- about member -->
+                        <div class="member-info">
+                            <p>Assistant Professor, Computer Science &nbsp;&nbsp;&nbsp;</p>
+                            <p>&nbsp;</p>
+                            <p>Research Interest</p>
+                            <ul>
+                                <li>3D computer vision</li>
+                                <li>Digital geometry processing</li>
+                                <li>Artificial intelligence</li>
+                            </ul>
+                            <br><br>
+                            <br>
+                        </div>
+                        <div class="member-bottom">
+                            <a href="https://engineering.wayne.edu/profile/hg0137">Visit more <i class="fa fa-id-card"
+                                    aria-hidden="true"></i></a>
+                        </div>
+                    </article>
+                </div>
+
+                <div class="col-md-3 col-sm-6 member" data-wow-duration="500ms">
+                    <article class="team-mate">
+                        <div class="member-photo">
+                            <!-- member photo -->
+                            <img class="img-responsive" src="images/members/JangRhongHo.jpg" alt="Meghna">
+                            <!-- member social profile -->
+                            <div class="mask">
+                                <ul class="clearfix">
+                                    <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- member name & designation -->
+                        <div class="member-title">
+                            <h3>RhongHo Jang</h3>
+                        </div>
+                        <!-- about member -->
+                        <div class="member-info">
+                            <p>Assistant Professor, Computer Science &nbsp;&nbsp;&nbsp;</p>
+                            <p>&nbsp;</p>
+                            <p>Research Interest</p>
+                            <ul>
+                                <li>Security & Privacy</li>
+                                <li>Network Measurement</li>
+                                <li>Software-defined Networking</li>
+                                <li>Counting Algorithm</li>
+                                <li>Applied Machine Learning</li>
+                                <br>
+                        </div>
+                        <div class="member-bottom">
+                            <a href="https://engineering.wayne.edu/profile/hf8512">Visit more <i class="fa fa-id-card"
+                                    aria-hidden="true"></i></a>
+                        </div>
+                    </article>
+                </div>
+
+                <div class="col-md-3 col-sm-6 member" data-wow-duration="500ms">
+                    <article class="team-mate">
+                        <div class="member-photo">
+                            <!-- member photo -->
+                            <img class="img-responsive" src="images/members/KotovAlex.jpg" alt="Meghna">
+                            <!-- member social profile -->
+                            <div class="mask">
+                                <ul class="clearfix">
+                                    <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- member name & designation -->
+                        <div class="member-title">
+                            <h3>Alexander Kotov</h3>
+                        </div>
+                        <!-- about member -->
+                        <div class="member-info">
+                            <p>Associate Professor, Computer Science</p>
+                            <p>&nbsp;</p>
+                            <p>Research Interest</p>
+                            <ul>
+                                <li>Large-scale textual information analysis</li>
+                                <li>Information retrieval</li>
+                                <li>Natural language processing</li>
+                                <li>Health informatics</li>
+                                <br>
+                            </ul>
+                        </div>
+                        <div class="member-bottom">
+                            <a href="https://engineering.wayne.edu/profile/fn6418">Visit more <i class="fa fa-id-card"
+                                    aria-hidden="true"></i></a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+
+            <!-- Prashant Khanduri/ Hengguang Li/ Shiyong Lu/ Robert Reynolds -->
+            <div class="row">
+                <div class="col-md-3 col-sm-6 member" data-wow-duration="500ms">
+                    <article class="team-mate">
+                        <div class="member-photo">
+                            <!-- member photo -->
+                            <img class="img-responsive" src="images/members/prashant.jpg" alt="Meghna">
+                            <!-- member social profile -->
+                            <div class="mask">
+                                <ul class="clearfix">
+                                    <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- member name & designation -->
+                        <div class="member-title">
+                            <p>&nbsp;</p>
+                            <p>&nbsp;</p>
+                            <h3>Prashant Khanduri</h3>
+                        </div>
+                        <!-- about member -->
+                        <div class="member-info">
+                            <p>Assistant Professor, Computer Science </p>
+                            <p>&nbsp;</p>
+                            <p>Research Interest</p>
+                            <ul>
+                                <li>Optimization for Machine Learning</li>
+                                <li>Federated Learning</li>
+                                <li>Robust Optimization</li>
+                                <li>Statistical Learning</li>
+                                <li>Statistical Signal Processing</li>
+                            </ul>
+                            <br><br>
+                        </div>
+                        <div class="member-bottom">
+                            <a href="https://engineering.wayne.edu/profile/hm8920">Visit more <i class="fa fa-id-card"
+                                    aria-hidden="true"></i></a>
+                        </div>
+                    </article>
+                </div>
+                
+                <div class="col-md-3 col-sm-6 member" data-wow-duration="500ms">
+                    <article class="team-mate">
+                        <div class="member-photo">
+                            <!-- member photo -->
+                            <img class="img-responsive" src="images/members/LiHengguang.jpg" alt="Meghna">
+                            <!-- member social profile -->
+                            <div class="mask">
+                                <ul class="clearfix">
+                                    <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- member name & designation -->
+                        <div class="member-title">
+                            <h3>Hengguang Li</h3>
+                        </div>
+                        <!-- about member -->
+                        <div class="member-info">
+                            <p>Professor and Chair, Mathematics &nbsp;&nbsp;&nbsp;</p>
+                            <p>&nbsp;</p>
+                            <p>Research Interest</p>
+                            <ul>
+                                <li>Numerical Analysis</li>
+                                <li>Theories and Numerical Methods for PDEs</li>
+                                <li>Fast Numerical Solvers for Large Systems of Equations</li>
+                                <li>Finite Element Methods</li>
+                                <li>High-performance Computing</li>
+                            </ul>
+                        </div>
+                        <div class="member-bottom">
+                            <a href="https://clasprofiles.wayne.edu/profile/eu1138">Visit more <i class="fa fa-id-card"
+                                    aria-hidden="true"></i></a>
+                        </div>
+                    </article>
+                </div>
+
+                <div class="col-md-3 col-sm-6 member" data-wow-duration="500ms">
+                    <article class="team-mate">
+                        <div class="member-photo">
+                            <!-- member photo -->
+                            <img class="img-responsive" src="images/members/LuShiyong.jpg" alt="Meghna">
+                            <!-- member social profile -->
+                            <div class="mask">
+                                <ul class="clearfix">
+                                    <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- member name & designation -->
+                        <div class="member-title">
+                            <h3>Shiyong Lu</h3>
+                        </div>
+                        <!-- about member -->
+                        <div class="member-info">
+                            <p>Professor, Computer Science</p>
+                            <br>
+                            <p>&nbsp;</p>
+                            <p>Research Interest</p>
+                            <ul>
+                                <li>Big Data Analytics</li>
+                                <li>Big Data Workflows</li>
+                                <br><br><br><br><br><br><br>
+                            </ul>
+                        </div>
+                        <div class="member-bottom">
+                            <a href="http://shiyong.eng.wayne.edu/">Visit more <i class="fa fa-id-card"
+                                    aria-hidden="true"></i></a>
+                        </div>
+                    </article>
+                </div>
+
+                <div class="col-md-3 col-sm-6 member" data-wow-duration="500ms">
+                    <article class="team-mate">
+                        <div class="member-photo">
+                            <!-- member photo -->
+                            <img class="img-responsive" src="images/members/ReynoldsRobert.jpg" alt="Meghna">
+                            <!-- member social profile -->
+                            <div class="mask">
+                                <ul class="clearfix">
+                                    <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- member name & designation -->
+                        <div class="member-title">
+                            <h3>Robert Reynolds</h3>
+                        </div>
+                        <!-- about member -->
+                        <div class="member-info">
+                            <p>Professor, Computer Science</p>
+                            <br>
+                            <p>&nbsp;</p>
+                            <p>Research Interest</p>
+                            <ul>
+                                <li>Artificial Intelligence</li>
+                                <li>Game Programming</li>
+                                <li>Artificial Intelligence in Games</li>
+                                <li>Machine Learning</li>
+                                <li>Evolutionary Computation</li>
+                                <br><br><br>
+                            </ul>
+                            <!-- Cultural Algorithms, Multi-agent systems, intelligent agents, and multi-objective problem solving -->
+                        </div>
+                        <div class="member-bottom">
+                            <a href="https://engineering.wayne.edu/profile/aa0057">Visit more <i class="fa fa-id-card"
+                                    aria-hidden="true"></i></a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+
+            <!-- Xiangmin Zhang/ XingYu Zhou/ Zichun Zhong  -->
+            <div class="row">
+                <div class="col-md-3 col-sm-6 member" data-wow-duration="500ms">
+                    <article class="team-mate">
+                        <div class="member-photo">
+                            <!-- member photo -->
+                            <img class="img-responsive" src="images/members/ZhangXiangmin.jpg" alt="Meghna">
+                            <!-- member social profile -->
+                            <div class="mask">
+                                <ul class="clearfix">
+                                    <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- member name & designation -->
+                        <div class="member-title">
+                            <h3>Xiangmin Zhang</h3>
+                        </div>
+                        <!-- about member -->
+                        <div class="member-info">
+                            <p>Associate Professor, Information Sciences</p>
+                            <p>&nbsp;</p>
+                            <p>Research Interest</p>
+                            <ul>
+                                <li>User experience research</li>
+                                <li>Human-computer information interactiong</li>
+                                <li>User domain knowledge modeling</li>
+                                <li>Personalization of information systems</li>
+                                <li>Informtion retrieval</li>
+                                <br><br>
+                                <!-- experimental design; quantitative research; data analytics -->
+                            </ul>
+                        </div>
+                        <div class="member-bottom">
+                            <a href="https://sis.wayne.edu/profile/ae9101">Visit more <i class="fa fa-id-card"
+                                    aria-hidden="true"></i></a>
+                        </div>
+                    </article>
+                </div>
+
+                <div class="col-md-3 col-sm-6 member" data-wow-duration="500ms">
+                    <article class="team-mate">
+                        <div class="member-photo">
+                            <!-- member photo -->
+                            <img class="img-responsive" src="images/members/xingyu.jpg" alt="xingyu">
+                            <!-- member social profile -->
+                            <div class="mask">
+                                <ul class="clearfix">
+                                    <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- member name & designation -->
+                        <div class="member-title">
+                            <p>&nbsp;</p>
+                            <p>&nbsp;</p>
+                            <h3>XingYu Zhou</h3>
+                        </div>
+                        <!-- about member -->
+                        <div class="member-info">
+                            <p>Assistant Professor, Computer Science</p>
+                            <br>
+                            
+                            <p>&nbsp;</p>
+                            <p>Research Interest</p>
+                            <ul>
+                                <li>Machine Learning</li>
+                                <li>Stochastic Systems</li>
+                                <li>Bayesian Optimization</li>
+                                <li>Bandits</li>
+                                <li>Reinforcement Learning</li>
+                                <br><br><br><br>
+                            </ul>
+                            <!-- Cultural Algorithms, Multi-agent systems, intelligent agents, and multi-objective problem solving -->
+                        </div>
+                        <div class="member-bottom">
+                            <a href="http://xingyuzhou.org/">Visit more <i class="fa fa-id-card"
+                                    aria-hidden="true"></i></a>
+                        </div>
+                    </article>
+                </div>
+
+                <div class="col-md-3 col-sm-6 member" data-wow-duration="500ms">
+                    <article class="team-mate">
+                        <div class="member-photo">
+                            <!-- member photo -->
+                            <img class="img-responsive" src="images/members/ZhongZichun.jpg" alt="Meghna">
+                            <!-- member social profile -->
+                            <div class="mask">
+                                <ul class="clearfix">
+                                    <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- member name & designation -->
+                        <div class="member-title">
+                            <h3>Zichun Zhong</h3>
+                        </div>
+                        <!-- about member -->
+                        <div class="member-info">
+                            <p>Associate Professor, Computer Science</p>
+                            <p>&nbsp;</p>
+                            <p>Research Interest</p>
+                            <ul>
+                                <li>Computer Graphics</li>
+                                <li>Geometric Modeling (specifically Surface and Volume Mesh Generations)</li>
+                                <li>Medical Image Processing (specifically Deformable Image Registration, 3D / 4D Image
+                                    Reconstruction)</li>
+                                <li>Visualization</li>
+                                <li>Computer Vision</li>
+                                <!-- Virtual Reality / Augmented Reality GPU Algorithms -->
+                            </ul>
+                        </div>
+                        <div class="member-bottom">
+                            <a href="https://engineering.wayne.edu/profile/fy7555">Visit more <i class="fa fa-id-card"
+                                    aria-hidden="true"></i></a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+
+            <!-- End row -->
+
+            <!-- <div class="row" style="margin-top:15px;"> -->
+            <!-- </div> -->
+            <!-- End row -->
+        </div>
+        <!-- End container -->
+    </section>
+    <!-- End section -->
+
+
+    <div class="subcribe">
+        <div class="subcribe-title">
+            <h3>STAY <span>INFORMED </span></h3>
+            <h4>
+                Subscribe to our newsletters to keep up on the latest updates.
+            </h4>
+        </div>
+        <div class="subcribe-form">
+            <div class="container">
+                <form target="_blank" action="https://formspree.io/f/xwkwznwe" method="post">
+                    <div class="row">
+                        <div class="subcribe-input">
+                            <input class="effect-7" type="text" placeholder="First Name" name="firstname">
+                            <span class="focus-border">
+                                <i></i>
+                            </span>
+                        </div>
+                        <div class="subcribe-input">
+                            <input class="effect-8" type="text" placeholder="Last Name" name="lastname">
+                            <span class="focus-border">
+                                <i></i>
+                            </span>
+                        </div>
+                        <div class="subcribe-input">
+                            <input class="effect-7" type="email" placeholder="E-mail" name="e-mail" required="required">
+                            <span class="focus-border">
+                                <i></i>
+                            </span>
+                        </div>
+                        <div class="subcribe-submit footer-grid-form">
+                            <input type="submit" value="Submit" id="submit" name="submit">
+                        </div>
+
+                    </div>
+                </form>
+            </div>
+
+        </div>
+        <div class="clearfix"></div>
+    </div>
+    <!-- footer -->
+    <div class="footer">
+        <!-- container -->
+
+        <div class="container">
+            <div class="footer-grids">
+                <div class="col-sm-4 footer-grid">
+                    <div class="footer-grid-info">
+                        <h3>Navigation</h3>
+                    </div>
+                    <div class="footer-grid-list">
+                        <ul>
+                            <li><a href="about.html">About</a></li>
+                            <li><a href="research.html">Research</a></li>
+                            <li><a href="education.html">Education</a></li>
+                            <li><a href="outreach.html">Outreach</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-sm-4 footer-grid">
+                    <div class="footer-grid-info">
+                        <h3>Research</h3>
+                    </div>
+                    <div class="footer-grid-list">
+                        <ul>
+                            <li><a href="research.html">Cyber Physical Systems</a></li>
+                            <li><a href="research.html">Health Engineering and Informatics</a></li>
+                            <li><a href="research.html">Transportation and Mobility</a></li>
+                            <li><a href="research.html">Smart and Connected Communities</a></li>
+                            <li><a href="research.html">Education and Workforce Training</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-sm-4 footer-grid">
+                    <div class="footer-grid-info">
+                        <h3>Contact Us</h3>
+                    </div>
+                    <div class="footer-grid-list">
+                        <h4>Address</h4>
+                        <p>5057 Woodward, Suite 3010
+                            <span>Detroit, MI, 48202</span>
+                        </p>
+                        <h4>Contact Us</h4>
+                        <p>Telephone : +1 313-577-2477
+                            <span>FAX : +1 313-577-6868</span> E-mail : <a
+                                href="mailto:ai.research@wayne.edu">ai.research@wayne.edu</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="clearfix"> </div>
+        </div>
+        <!-- container -->
+    </div>
+    <!-- //footer -->
+    <!-- copyright -->
+    <div class="copyright">
+        <!-- container -->
+        <div class="container">
+            <p>Copyright &copy; 2024.Wayne State University AI Group All rights reserved.</p>
+        </div>
+        <!-- /container -->
+    </div>
+    <!-- //copyright -->
+</body>
+
+</html>

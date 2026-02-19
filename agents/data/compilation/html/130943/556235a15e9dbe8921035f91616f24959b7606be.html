@@ -1,0 +1,933 @@
+
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head><meta name="viewport" content="width=device-width, initial-scale=1.0" /><!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-WR9V5K73');</script>
+<!-- End Google Tag Manager --><script>
+  window.TdxGtmContext = {"User":{"Id":0,"UID":"00000000-0000-0000-0000-000000000000","UserName":"","FullName":"Public User","AlertEmail":"publicuser@noreply.com","Role":"Experience User","HasTDNext":false,"StandardApplicationNames":null,"TicketApplicationNames":[],"AssetApplicationNames":[],"ClientPortalApplicationNames":[],"Type":"Technician","Analytics":{"Title":null,"Organization":null}},"Partition":{"Id":39,"Name":"University of Delaware Production"},"BillableEntity":{"Id":2,"Name":"University of Delaware","SalesForceIdentifier":"0013600000EM5DZAA1","GWMIID":"da8d35af-8e79-4c92-8ba6-96e448896764"},"Environment":{"ShortName":"PRD"}};
+</script><script src="/TDPortal/Content/Scripts/jquery/2.2.4/jquery.min.js?v=20260213000508"></script><script src="/TDPortal/Content/Scripts/jquery-migrate/1.4.1/jquery-migrate.min.js?v=20260213000508"></script><script src="/TDPortal/Content/Scripts/jquery-ui/1.13.2/jquery-ui-1.13.2.custom.timepicker.min.js?v=20260213000818"></script><link href="/TDPortal/Content/Styles/jquery-ui/1.13.2/jquery-ui.compiled.min.css?v=20260213000820" rel="stylesheet" type="text/css"  /><link href="/TDPortal/Content/bootstrap/3.4.1/dist/css/bootstrap.min.css?v=20260213000508" rel="stylesheet" type="text/css" id="lnkBootstrapCSS" /><script src="/TDPortal/Content/bootstrap/3.4.1/dist/js/bootstrap.min.js?v=20260213000508"></script><link href="/TDPortal/Content/FontAwesome/css/fontawesome.min.css?v=20260213000506" rel="stylesheet" type="text/css" id="lnkFontAwesome" /><link href="/TDPortal/Content/FontAwesome/css/solid.css?v=20260213000506" rel="stylesheet" type="text/css"  /><link href="/TDPortal/Content/FontAwesome/css/regular.css?v=20260213000506" rel="stylesheet" type="text/css"  /><link href="/TDPortal/Content/FontAwesome/css/brands.css?v=20260213000506" rel="stylesheet" type="text/css"  /><link href="/TDPortal/Content/FontAwesome/css/v4-shims.css?v=20260213000506" rel="stylesheet" type="text/css"  /><link href="/TDClient/Styles/bootstrap_custom.min.css?v=20260213000818" rel="stylesheet" type="text/css"  /><link href="/TDClient/Styles/TDStyles.min.css?v=20260213000820" rel="stylesheet" type="text/css"  /><link href="https://services.udel.edu/TDPortal/BE/Style/2/TDClient/32?v=20250402122353" rel="stylesheet" type="text/css" /><script src="/TDPortal/Content/Scripts/tdx/dist/TDJSFramework.compiled.min.js?v=20260213000818"></script><script src="/TDPortal/Content/Scripts/tdx/dist/modalFocusTrap.min.js?v=20260213000816"></script><script src="/TDPortal/Content/Scripts/underscore/1.12.1/underscore-min.js?v=20260213000508"></script>
+<script src="/TDClient/Scripts/clientOS.min.js?v=20260213000810"></script>
+<script src="/TDClient/Scripts/collapseMe.min.js?v=20260213000810"></script>
+<script src="/TDClient/Scripts/tdsearchfilter.min.js?v=20260213000810"></script>
+<script src="/TDClient/Scripts/SiteSearch.min.js?v=20260213000810"></script>
+<script src="/TDPortal/Content/Scripts/tdx/dist/elasticsearchAutocomplete.min.js?v=20260213000816"></script>
+<link id="ctl00_ctl00_lnkFavicon" rel="icon" href="https://services.udel.edu/TDPortal/BE/Icon/2/32?v=20210427131326" />
+
+    
+    <script async src="//www.googletagmanager.com/gtag/js?id=G-2HC93Y759P"></script>
+    <script>
+
+      $(function () {
+
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        // Be sure to set the proper cookie domain to the customer's full subdomain when sending the pageview hit.
+        gtag('config', 'G-2HC93Y759P', { 'cookie_domain': 'services.udel.edu' });
+
+        });
+
+    </script>
+
+  
+
+  <script>
+
+      $(function () {
+        var masterUi = MasterUI({
+          isPostback: false,
+          baseUrl: '/TDClient/',
+          isTdGoogleAnalyticsEnabled: true,
+          isAuthenticated: false
+          });
+
+        $('#collapseMe').collapseMe({
+          toggleVisibilitySelector: '.navbar-toggle'
+        });
+
+        TeamDynamix.addRequiredFieldHelp();
+      });
+
+      // The sub-nav menu uses padding-top to position itself below the header bar and main navigation sections. When the
+      // window is resized, there is a chance that the content of these header or nav sections wraps, causing the height
+      // to change, potentially covering the sub-nav menu, which is obviously a big usability problem. This function
+      // listens for when the window size or orientation is changing (and also when the window first loads), and adjusts
+      // the padding so that the sub-nav menu appears in the correct location.
+      $(window).bind('load ready resize orientationchange', function () {
+        var headerHeight = $('#divMstrHeader').height();
+        $('#navShim').css({
+          "padding-top": headerHeight
+        });
+
+        $('#content').css({
+          "padding-top": headerHeight,
+          "margin-top": headerHeight * -1
+        });
+      });
+  </script>
+
+  
+  
+  
+  <script src="/TDPortal/Content/select2/v3/select2.min.js?v=20260213002344"></script><link href="/TDPortal/Content/select2/v3/select2.compiled.min.css?v=20260213002344" rel="stylesheet" type="text/css" id="lnkSelect2" />
+  <script src="/TDClient/Scripts/attachmentHandler.min.js?v=20260213000818"></script>
+
+  <style type="text/css">
+    .honey-pot-div {
+      display: none;
+    }
+  </style>
+
+  <script>
+    
+
+    function shareArticle() {
+      if ($('#ctl00_ctl00_cpContent_cpContent_shareRecipients').val().trim() === "") {
+        alert('You must first enter a valid email.');
+        $('#btnShare').progressButton('reset');
+      }
+      else {
+        __doPostBack('ctl00$ctl00$cpContent$cpContent$btnSendShare', '');
+      }
+    }
+
+    function closeShareModal() {
+      $('#divShareModal').modal('hide');
+      $('#btnShare').progressButton('reset');
+    }
+
+    function toggleFeedback(isHelpful) {
+      $('#divHelpfulComments').show();
+      $('#divHelpfulYesNo').hide();
+      $('#ctl00_ctl00_cpContent_cpContent_hdnIsHelpful').val(isHelpful);
+      $('#ctl00_ctl00_cpContent_cpContent_txtComments').focus();
+    }
+
+    function toggleFeedbackResult() {
+      $('#divWasHelpful, #divFeedbackRecorded, #divHelpfulComments, #divHelpfulYesNo').toggle();
+    }
+
+    // The following two functions were added as a result of ticket ID: 1392522. We are generating these buttons dynamically to
+    // prevent bots from clicking them and posting feedback on an article. Additionally, we have an input that is hidden from
+    // the user. If a bot enters text in that input, which it likely will (bots love filling out forms), then we don't accept the
+    // form submission
+    function generateFeedbackButtons() {
+      var $btnHelpfulYes = $('<button id="btnHelpfulYes" type="button" class="btn btn-primary gutter-left" onclick="toggleFeedback(1);">Yes</button>');
+      var $btnHelpfulNo = $('<button id="btnHelpfulNo" type="button" class="btn btn-primary gutter-left-sm" onclick="toggleFeedback(0);">No</button>');
+
+      $('#divWasHelpful').append($btnHelpfulYes);
+      $('#divWasHelpful').append($btnHelpfulNo);
+    }
+    function attemptAddFeedback(e) {
+      if ($('#honeyPot').val() !== '') {
+        e.preventDefault();
+        window.location.reload();
+      }
+    }
+
+    function cancelFeedback() {
+      $('#ctl00_ctl00_cpContent_cpContent_txtComments').val('');
+      $('#divHelpfulComments, #divHelpfulYesNo').toggle();
+    }
+
+    function confirmDeleteFeedback(id) {
+      if (confirm('Are you sure you want to delete this feedback? This cannot be undone.')) {
+        $('#ctl00_ctl00_cpContent_cpContent_hdnFeedbackID').val(id);
+        __doPostBack('ctl00$ctl00$cpContent$cpContent$btnDeleteFeedback', '');
+      }
+    }
+
+    function toggleAddressed(id, isAddressed) {
+      $('#ctl00_ctl00_cpContent_cpContent_hdnFeedbackID').val(id);
+      $('#ctl00_ctl00_cpContent_cpContent_hdnIsAddressed').val(isAddressed);
+      __doPostBack('ctl00$ctl00$cpContent$cpContent$btnToggleAddressed', '');
+    }
+
+    $(function () {
+      
+
+      generateFeedbackButtons();
+      $('[data-toggle="popover"]').popover();
+
+      var attachmentHandler = new TeamDynamix.AttachmentHandler({
+        containerSelector: '.js-article-attachments',
+        resultLabelSelector: '#ctl00_ctl00_cpContent_cpContent_lblResults_lblResults-label',
+        baseControllerUrl: '/TDClient/32/Portal/Shared/Attachments',
+        antiForgeryToken: 'RUdgToz7Y_fXXCQPoUDgzzQnHcjmQNj5lTFM2KhEYtU-vAYbjm-qM2jcCxKypX-GolZlQmXebTK_co759MI3ZbuCV9w1:OQJKPdLdxu40zF7H-mon7l9gyHzSe_3E4ZV-dB3rzIpeY_vtC6X6K-fZ84DzHMiGBj6dwNHqh1XXnNby-wZ9csNYMeY1',
+        itemId: 1149,
+        componentId: 26,
+        feedId: 'articleFeed',
+        readOnly: false
+      });
+
+      $('#btnShare').on('click', function () {
+        shareArticle();
+      });
+
+      // Don't try and update the table styles if the user wanted to opt out.
+      $('#ctl00_ctl00_cpContent_cpContent_divBody table:not(.SkipTableFixup)').each(function () {
+        var padding = $(this).attr('cellpadding');
+        var spacing = $(this).attr('cellspacing');
+
+        $(this).css("border-collapse", "separate");
+
+        if (spacing) {
+          $(this).css("border-spacing", spacing + "px");
+        }
+
+        $(this).find('td').each(function () { $(this).css('padding', padding + 'px') });
+      });
+
+      
+    });
+
+    
+  </script>
+
+
+
+<meta property="og:title" content="Guidelines and FAQs for Use of Generative Artificial Intelligence Tools at the University of Delaware" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://services.udel.edu/TDClient/32/Portal/KB/ArticleDet?ID=1149" />
+<meta property="og:image" content="https://services.udel.edu/TDPortal/BE/Logo/2/32" />
+<meta property="og:description" content="This article provides basic information about generative AI tools and how they work so that users can better appreciate the inherent risks associated with them. The guidelines and FAQs also discuss important considerations for users of generative AI tools with the University’s systems, assets, an..." />
+  <meta property="og:site_name" content="University of Delaware - Knowledge Base" />
+  <meta property="article:section" content="Generative AI" />
+  <meta property="article:published_time" content="2024-09-30T03:48Z" />
+  <meta property="article:modified_time" content="2025-12-09T14:08Z" />
+    <meta property="article:tag" content="generative-ai" />
+    <meta property="article:tag" content="ai-faq" />
+    <meta property="article:tag" content="ai-tools" />
+    <meta property="article:tag" content="generative-ai-faq" />
+    <meta property="article:tag" content="ai" /><title>
+	Article - Guidelines and FAQs for Use...
+</title></head>
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WR9V5K73"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+<form method="post" action="/TDClient/32/Portal/KB/ArticleDet?ID=1149" onsubmit="javascript:return WebForm_OnSubmit();" id="aspnetForm">
+<div class="aspNetHidden">
+<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
+<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="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" />
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['aspnetForm'];
+if (!theForm) {
+    theForm = document.aspnetForm;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script>
+
+
+<script src="/TDClient/WebResource.axd?d=pynGkmcFUV13He1Qd6_TZMSMQxVWLi4fik2rw1_u_hZsCNzwv5c621ov6_ZX_wzTt5vh-g2&amp;t=638901392248157332" type="text/javascript"></script>
+
+
+<script src="/TDClient/ScriptResource.axd?d=nv7asgRUU0tRmHNR2D6t1NXOAgTb3J37FC1L2PfbYYFmSPm-ANa7n6FP0x7BAsbHeL4jfY3ptd1q7zKKVI7DbuXZcwEoKOwj9WxCI1VrQlbWE1Trg1t1GmJDN43kQMJsB7X8tw2&amp;t=ffffffff93d1c106" type="text/javascript"></script>
+<script src="/TDClient/ScriptResource.axd?d=NJmAwtEo3Ipnlaxl6CMhvmVxW3-Ljsg_2Hna32smxrg-6ogyYAN3UTPsJQ8m1uwzn_kuf2Wpne6NSFmYui3h0wCQhJN3ZUiLTNkvhiIgZpq74-lKmofUPQGJ8own8RI2_mwAcmvlSj2WBnqwm5Wj4cyNvv81&amp;t=5c0e0825" type="text/javascript"></script>
+<script src="/TDClient/ScriptResource.axd?d=dwY9oWetJoJoVpgL6Zq8OLdGoo5BVWQ_Eo60QZTEhEcHeiVfwgY9tLCgzdZ5TRwvrwYEnOvujbNccOVLUfWtUg4HivSIsewg6JABxkBGEqVVV64eiRyCAsPDqh6tUioISUQKB74sWMO4Er2mHrWEIWs_sBM1&amp;t=5c0e0825" type="text/javascript"></script>
+<script src="/TDClient/WebResource.axd?d=xtfVMqdF1exC2MBVkOJwMveStDR5kg3dbZWgIXMXZmB1xXom6CcIrWFgHa7jsp4qJuFW2L5XShudyzlBsIO3JhCfiU5HmL2BDz__mCv9dznmBlEMS7LvcYg6wTdPTrAXIXI2CvtjwlnpZd-j4Zpsx2wG_uA1&amp;t=639065204200000000" type="text/javascript"></script>
+<script src="/TDClient/WebResource.axd?d=sp7vCoAo-SSYfpsQ1sYBBeEDnwCGxDYEwZCM0ler88yoVZIPDXMk1C3XF2L2L0xrbB8Rvhli51TswRlmPIOCZgaY58lKhPr-Pv1jTFJ1oUAu7x6RDtNFZUxbtxs3KYQGLK6FpPD5bKuB0e0NmS9HkAqRVks1&amp;t=639065204200000000" type="text/javascript"></script>
+<script src="/TDClient/WebResource.axd?d=icMURy63hv40LPPfq4rTvmm-RfB_YkC6rEEF_2QOO68q3TseXYNBetRKKgBXJ8mn2e8UIgCPiV23HaQUZbjySMHqSgmYZgLcYltBqwD2_EK8aQ08zBuqc3ZBVZITQrbtn6w46dRxFLibMIQg0Aho73rn8Rpxrzg5YMG_JR0UOrUR0wlZ0&amp;t=639065204200000000" type="text/javascript"></script>
+<script src="/TDClient/WebResource.axd?d=1HpFfNpwNihNfEP1lyJHvdPVqbv8KRoFH4-_ZORUgPOP-bqmmtIJRvFQc7828Vf59O_-fdBXcnwdv-hYp5RptPuHmMR0kGQM0_3rS4Z7sKfC7jy9Cc_8fyfcUWa8psszacEQlAXHPXmNwyRymbGSywEmhrE1&amp;t=639065204200000000" type="text/javascript"></script>
+<script type="text/javascript">
+//<![CDATA[
+function WebForm_OnSubmit() {
+CKEditor_TextBoxEncode('ctl00_ctl00_cpContent_cpContent_shareBody_txtBody', 0); if (typeof(ValidatorOnSubmit) == "function" && ValidatorOnSubmit() == false) return false;
+return true;
+}
+//]]>
+</script>
+
+<div class="aspNetHidden">
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="784CA02E" />
+</div>
+<script type="text/javascript">
+//<![CDATA[
+Sys.WebForms.PageRequestManager._initialize('ctl00$ctl00$smMain', 'aspnetForm', ['tctl00$ctl00$cpContent$cpContent$UpdatePanel1','','tctl00$ctl00$cpContent$cpContent$upFeedbackGrid','','tctl00$ctl00$cpContent$cpContent$lblResults$ctl00',''], ['ctl00$ctl00$cpContent$cpContent$btnSubmitComments','','ctl00$ctl00$cpContent$cpContent$btnToggleSubscribe','','ctl00$ctl00$cpContent$cpContent$btnToggleFavorite','','ctl00$ctl00$cpContent$cpContent$btnSendShare',''], [], 90, 'ctl00$ctl00');
+//]]>
+</script>
+
+<div id="ctl00_ctl00_upMain" style="display:none;">
+	
+    <div id="ctl00_ctl00_pbMain" class="progress-box-container"><div class="progress-box-body"><div class="well shadow"><h2 class="h4 gutter-top-none">Updating...</h2><div class="progress" style="margin-bottom: 0;"><div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuemin="0" aria-valuemax="100" style="width: 100%"></div></div></div></div></div>
+  
+</div>
+
+<header id="ctl00_ctl00_navHeader" role="banner">
+
+  <div id="divMstrHeader" class="master-header NoPrint" style="background-color: #fff;">
+
+  
+
+  <div class="logo-header-full hidden-xs">
+
+    
+    <div class="pull-left">
+      <a href="#mainContent" class="sr-only sr-only-focusable">Skip to main content</a>
+    </div>
+
+
+    <div id="ctl00_ctl00_divPageHeader" class="container logo-header clearfix" style="padding: 5px;">
+
+      <div id="divLogo" class="pull-left logo-container">
+
+        <a href="https://www.udel.edu/"
+           target="_blank">
+          <img src="/TDPortal/BE/Logo/2/0" alt="University of Delaware Home Page" class="js-logo img-responsive" />
+          <span class="sr-only">(opens in a new tab)</span>
+        </a>
+
+      </div>
+
+      <div class="master-header-right pull-right padding-top padding-bottom">
+
+        
+
+          <div class="pull-left topLevelSearch input-group">
+            <div id="SiteSearch-9f02bc7647ed462bb6bb28c81458f136" class="gutter-bottom input-group site-search" style="max-width: 400px;">
+  <div id="SiteSearch-dropdown-9f02bc7647ed462bb6bb28c81458f136" class="input-group-btn">
+    <button type="button" id="SiteSearch-filter-9f02bc7647ed462bb6bb28c81458f136" class="btn btn-default dropdown-toggle" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false" title="Filter your search by category" data-component="all">
+      <span class="fa-solid fa-solid fa-earth-americas"></span><span class="fa-solid fa-fw fa-nopad fa-caret-down" aria-hidden="true"></span>
+      <span class="sr-only">
+        Filter your search by category. Current category:
+        <span class="js-current-component">All</span>
+      </span>
+    </button>
+    <ul tabindex="-1" aria-label="Filter your search by category" role="menu" class="dropdown-menu" >
+      <li>
+        <a role="menuitem" href="javascript:void(0);" data-component-text="All" data-component="all" data-component-icon="fa-solid fa-earth-americas" title="Search all areas">
+          <span class="fa-solid fa-fw fa-nopad fa-earth-americas" aria-hidden="true"></span>
+          All
+        </a>
+      </li>
+
+      <li aria-hidden="true" class="divider"></li>
+
+        <li role="presentation">
+          <a role="menuitem" href="javascript:void(0);" data-component-text="Knowledge Base" data-component="kb" data-component-icon="fa-lightbulb" title="Search Knowledge Base">
+            <span class="fa-regular fa-fw fa-nopad fa-lightbulb" aria-hidden="true"></span>
+            Knowledge Base
+          </a>
+        </li>
+
+        <li role="presentation">
+          <a role="menuitem" href="javascript:void(0);" data-component-text="Service Catalog" data-component="sc" data-component-icon="fa-compass" title="Search Service Catalog">
+            <span class="fa-solid fa-fw fa-nopad fa-compass" aria-hidden="true"></span>
+            Service Catalog
+          </a>
+        </li>
+
+    </ul>
+  </div>
+
+  <label class="sr-only" for="SiteSearch-text-9f02bc7647ed462bb6bb28c81458f136">Search the client portal</label>
+
+  <input id="SiteSearch-text-9f02bc7647ed462bb6bb28c81458f136" type="text" class="form-control" autocomplete="off" placeholder="Search the client portal" title="To search for items with a specific tag, enter the # symbol followed by the name of the tag.
+To search for items using exact match, place double quotes around your text." />
+
+  <span class="input-group-btn">
+    <button id="SiteSearch-button-9f02bc7647ed462bb6bb28c81458f136" class="btn btn-default" type="button" title="Search">
+      <span class="fa-solid fa-fw fa-nopad fa-search blue" aria-hidden="true"></span>
+      <span class="sr-only">Search</span>
+    </button>
+  </span>
+</div>
+
+<script>
+  $(function() {
+    var siteSearch = new TeamDynamix.SiteSearch({
+      searchUrl: "/TDClient/32/Portal/Shared/Search",
+      autocompleteSearchUrl: '/TDClient/32/Portal/Shared/AutocompleteSearch',
+      autocompleteResultsPosition: 'fixed',
+      autocompleteResultsZIndex: 1000,
+      searchTextBoxSelector: '#SiteSearch-text-9f02bc7647ed462bb6bb28c81458f136',
+      searchComponentFilterButtonSelector: '#SiteSearch-filter-9f02bc7647ed462bb6bb28c81458f136',
+      searchButtonSelector: '#SiteSearch-button-9f02bc7647ed462bb6bb28c81458f136',
+      searchFilterDropdownSelector: '#SiteSearch-dropdown-9f02bc7647ed462bb6bb28c81458f136',
+      showKnowledgeBaseOption: true,
+      showServicesOption: true,
+      showForumsOption: false,
+      autoFocusSearch: false
+    });
+  });
+</script>
+          </div>
+
+        
+          <div title="Sign In" class="pull-right gutter-top-sm">
+            <a href="/TDClient/32/Portal/Login.aspx?ReturnUrl=%2fTDClient%2f32%2fPortal%2fKB%2fArticleDet%3fID%3d1149">
+              Sign In
+            </a>
+          </div>
+        
+      </div>
+
+    </div>
+
+  </div>
+
+  <nav id="ctl00_ctl00_mainNav" class="navbar navbar-default themed tdbar" aria-label="Primary">
+    <div id="navContainer" class="container">
+
+      <div class="navbar-header">
+        <button type="button" class="pull-left navbar-toggle collapsed themed tdbar-button-anchored tdbar-toggle gutter-left" data-toggle="collapse" data-target=".navbar-collapse">
+          <span class="tdbar-button-anchored icon-bar"></span>
+          <span class="tdbar-button-anchored icon-bar"></span>
+          <span class="tdbar-button-anchored icon-bar"></span>
+          <span class="sr-only">Show Applications Menu</span>
+        </button>
+        <a class="navbar-brand hidden-sm hidden-md hidden-lg themed tdbar-button-anchored truncate-be" href="#">
+
+          Client Portal
+        </a>
+      </div>
+
+      <div id="td-navbar-collapse" class="collapse navbar-collapse">
+
+        <ul class="nav navbar-nav nav-collapsing" id="collapseMe">
+
+          
+            <li class="themed tdbar-button-anchored hidden-sm hidden-md hidden-lg">
+              <a href="/TDClient/32/Portal/Login.aspx?ReturnUrl=%2fTDClient%2f32%2fPortal%2fKB%2fArticleDet%3fID%3d1149">Sign In</a>
+            </li>
+          
+            <li id="divSearch" class="themed tdbar-button-anchored hidden-sm hidden-md hidden-lg">
+              <a href="/TDClient/32/Portal/Shared/Search" title="search">Search</a>
+            </li>
+          
+              <li id="divDesktop7c0a8e2f-6198-4325-89f7-e67a0a8deddd" class="themed tdbar-button-anchored">
+                <a href="/TDClient/32/Portal/Home/">Service Portal Home</a>
+              </li>
+            
+
+          
+            <li id="divTDRequests" class="themed tdbar-button-anchored sr-focusable">
+              <a href="/TDClient/32/Portal/Requests/ServiceCatalog">Services</a>
+            </li>
+          
+            <li id="divTDKnowledgeBase" class="themed tdbar-button-anchored sr-focusable">
+              <a href="/TDClient/32/Portal/KB/">Knowledge Base</a>
+            </li>
+          
+
+          <li class="themed tdbar-button-anchored hidden-xs more-items-button" id="moreMenu">
+            <a data-toggle="dropdown" title="More Applications" href="javascript:;">
+              <span class="sr-only">More Applications</span>
+              <span class="fa-solid fa-ellipsis-h" aria-hidden="true"></span>
+            </a>
+            <ul class="dropdown-menu dropdown-menu-right themed tdbar" id="collapsed"></ul>
+          </li>
+
+        </ul>
+      </div>
+
+    </div>
+
+  </nav>
+
+  </div>
+
+  </header>
+
+
+
+<div id="navShim" class="hidden-xs hidden-sm"></div>
+<main role="main">
+  <div id="content">
+    <div id="mainContent" tabindex="-1"></div>
+    
+
+  <nav id="ctl00_ctl00_cpContent_divTabHeader" class="tdbar-sub NoPrint hidden-xs navbar-subnav" aria-label="Knowledge Base">
+      <a href="#kbContent" class="sr-only sr-only-focusable">Skip to Knowledge Base content</a>
+      <div class="container clearfix">
+        <ul class="nav navbar-nav js-submenu" id="kbSubMenu" style="margin-left: -15px;">
+          
+          <li>
+            <a href="/TDClient/32/Portal/KB/Search">Search <span class="sr-only">Articles</span></a>
+          </li>
+
+          
+          
+        </ul>
+      </div>
+    </nav>
+  
+
+  <div id="kbContent" class="container gutter-top gutter-bottom" tabindex="-1" style="outline:none;">
+    
+
+<input type="hidden" name="ctl00$ctl00$cpContent$cpContent$hdnFeedbackID" id="ctl00_ctl00_cpContent_cpContent_hdnFeedbackID" />
+<input type="hidden" name="ctl00$ctl00$cpContent$cpContent$hdnIsAddressed" id="ctl00_ctl00_cpContent_cpContent_hdnIsAddressed" />
+
+<span id="ctl00_ctl00_cpContent_cpContent_lblResults_ctl00" aria-live="polite" aria-atomic="true"><span id="ctl00_ctl00_cpContent_cpContent_lblResults_lblResults-label" class="red tdx-error-text"></span></span>
+
+<a id="ctl00_ctl00_cpContent_cpContent_btnSendShare" tabindex="-1" class="hidden" aria-hidden="true" href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$ctl00$cpContent$cpContent$btnSendShare&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))">Blank</a>
+
+<div class="clearfix">
+  <nav aria-label="Breadcrumb">
+    <ol class="breadcrumb pull-left">
+      <li><a href="/TDClient/32/Portal/KB/">Knowledge Base</a></li><li class="active"><a href="/TDClient/32/Portal/KB/?CategoryID=198">Generative AI</a></li><li class="active">Guidelines and FAQs for Use of Generative Artificial Intelligence Tools at the University of Delaware</li>
+    </ol>
+  </nav>
+  <span class="js-open-monitor" style="display: none;"></span>
+</div>
+
+
+
+<div class="row gutter-top">
+
+<div id="divMainContent" class="col-md-8">
+
+<h1 class="gutter-top" style="-ms-word-wrap: break-word; word-wrap: break-word;">
+  Guidelines and FAQs for Use of Generative Artificial Intelligence Tools at the University of Delaware
+</h1>
+
+<div id="ctl00_ctl00_cpContent_cpContent_divTags">
+  <span class="sr-only">Tags</span>
+  <span class="fa-solid fa-tags gray gutter-right-sm" aria-hidden="true" title="Tags"></span>
+  
+      <a href="/TDClient/32/Portal/KB/Search?SearchText=%2523generative-ai" id="ctl00_ctl00_cpContent_cpContent_rptTags_ctl00_TagControl1_lnkDisplay" title="generative-ai">generative-ai</a>
+
+    
+      <span class="fa-solid fa-circle gray gutter-right-sm font-xs vert-middle" aria-hidden="true"></span>
+    
+      <a href="/TDClient/32/Portal/KB/Search?SearchText=%2523ai-faq" id="ctl00_ctl00_cpContent_cpContent_rptTags_ctl02_TagControl1_lnkDisplay" title="ai-faq">ai-faq</a>
+
+    
+      <span class="fa-solid fa-circle gray gutter-right-sm font-xs vert-middle" aria-hidden="true"></span>
+    
+      <a href="/TDClient/32/Portal/KB/Search?SearchText=%2523ai-tools" id="ctl00_ctl00_cpContent_cpContent_rptTags_ctl04_TagControl1_lnkDisplay" title="ai-tools">ai-tools</a>
+
+    
+      <span class="fa-solid fa-circle gray gutter-right-sm font-xs vert-middle" aria-hidden="true"></span>
+    
+      <a href="/TDClient/32/Portal/KB/Search?SearchText=%2523generative-ai-faq" id="ctl00_ctl00_cpContent_cpContent_rptTags_ctl06_TagControl1_lnkDisplay" title="generative-ai-faq">generative-ai-faq</a>
+
+    
+      <span class="fa-solid fa-circle gray gutter-right-sm font-xs vert-middle" aria-hidden="true"></span>
+    
+      <a href="/TDClient/32/Portal/KB/Search?SearchText=%2523ai" id="ctl00_ctl00_cpContent_cpContent_rptTags_ctl08_TagControl1_lnkDisplay" title="ai">ai</a>
+
+    
+</div>
+
+
+
+<div id="ctl00_ctl00_cpContent_cpContent_divBody" class="gutter-top break-word ckeShim clearfix"><p dir="ltr">The University of Delaware embraces the responsible use of generative artificial intelligence (AI) tools with University’s systems, assets, and information. Although these tools create many benefits for users, the tools also have limitations and create risks for the University. To enhance the benefits and mitigate the risks of these tools, the University has adopted the “<a href="https://services.udel.edu/TDClient/32/Portal/KB/ArticleDet?ID=1148" target="_blank">Directive for Appropriate Use of Generative AI Tools and Services</a>” (the “Directive”). The Directive explains what generative AI tools can be used with the University’s systems, assets, and information. All users of the University’s systems, assets, and information (faculty, staff, students, researchers, etc.) are expected to read, understand, and comply with the Directive when using generative AI tools. Visit the&nbsp;<a href="https://services.udel.edu/TDClient/32/Portal/KB/ArticleDet?ID=1148" target="_blank">Directive for Appropriate Use of Generative AI Tools and Services</a> to learn more.&nbsp;</p>
+
+<p dir="ltr">The FAQs below provide some basic information about these tools and how they work so that users better appreciate the inherent risks associated with them. The FAQs also discuss important considerations for users of generative AI tools with the University’s systems, assets, and information.</p>
+
+<h2 dir="ltr">Basic Information About Generative AI</h2>
+
+<p dir="ltr"><strong>What is Artificial Intelligence?</strong><br>
+Artificial intelligence, or AI, involves using computers and software to perform tasks traditionally requiring human intelligence.</p>
+
+<p dir="ltr"><strong>What is machine learning?</strong><br>
+Machine learning (ML) is a subset of AI that focuses on enabling computers to extract insights from data. This is done by using algorithms to make informed decisions or predictions. ML differs from traditional programming, where computers perform tasks based on established instructions.</p>
+
+<p dir="ltr"><strong>How is generative AI different from previous forms of artificial intelligence?</strong><br>
+Generative AI shows sophistication in the reasoning and computation behind replies to messages that are new&nbsp;to artificial intelligence. Generative AI has extensive computing capabilities and accessibility that produce a variety of sophisticated outputs. Generative AI can perform tasks like turning data from a given source into a set of visualizations, and inserting each visualization into a slide in a PowerPoint presentation it creates based on your instructions.</p>
+
+<p dir="ltr"><strong>How does generative AI work?</strong><br>
+Generative AI models are unique although there are some basic similarities in the way these tools are developed and trained. Current generative AI models are essentially sophisticated pattern recognition and imitation tools. They are typically trained on large amounts of sample data, which are often collected through web-scraping tools. Through various deep learning techniques, these tools are trained to recognize patterns in their datasets and use those patterns to create unique outputs. These outputs are often intended to realistically mimic elements of human communication like writing, music, art, or speech. As these models are trained, they typically receive human feedback on the plausibility and quality of their outputs. &nbsp; The training process is iterative, and these tools are often continuously updated and refined based on human feedback, but not necessarily on the accuracy of the output.&nbsp; So, for example, these models only know that 2+2=4 because so many people on the Internet said so, not because the models can calculate.</p>
+
+<p dir="ltr"><strong>What is a large language model?</strong><br>
+A large language model (LLM) is a subset of generative AI that uses algorithmic principles to understand the relationship between words and sentences. It can predict what words might come next in a sentence based on prior training data. Essentially, these large language models work by taking your input and trying to generate the next word or phrase. The tools then take that generated word and add it to your original input.</p>
+
+<p dir="ltr"><strong>What is prompt engineering, and how does it enable Generative AI?</strong><br>
+A prompt is the starting point for generating AI responses. Simply put, a prompt is a way of telling the AI what task you want it to perform, like asking a question or giving it an instruction. The more precise and specific you are with your prompt, the better the AI can understand what you need and give you a relevant or appropriate answer or result. The term “prompt engineering” is about creating clear and useful instructions – or prompts – so the generative AI knows what you want it to do.</p>
+
+<p dir="ltr"><strong>How secure are generative AI tools?</strong><br>
+Privacy concerns have been raised in relation to the data processing undertaken to train generative AI tools, as well as (mis)information that such tools provide about individuals or groups. For those working with certain kinds of data, using third-party generative AI tools to process the data may come with additional privacy and security risks. For example, users working with data from human research participants must not submit any personal or identifying information, or any information that could be used to re-identify an individual or group of participants to third-party generative AI tools because the data could become available to others, constituting a major breach of research participant privacy. Users working with other types of confidential information, such as information disclosed as part of an industry partnership, must not submit these data to third-party generative AI tools because it could be a breach of non-disclosure terms within the agreement.</p>
+
+<p dir="ltr"><strong>Are there other limitations associated with using generative AI tools?</strong><br>
+In addition to the privacy and security concerns discussed above, generative AI content may be:</p>
+
+<ul>
+	<li dir="ltr">
+	<p dir="ltr" role="presentation">Inaccurate, misleading, or entirely fabricated (sometimes called “hallucinations”);&nbsp;</p>
+	</li>
+	<li dir="ltr">
+	<p dir="ltr" role="presentation">Biased or discriminatory; or</p>
+	</li>
+	<li dir="ltr">
+	<p dir="ltr" role="presentation">In violation of the University’s student and faculty handbooks and policies or applicable laws, including laws governing intellectual property.</p>
+	</li>
+</ul>
+
+<p dir="ltr">Generative AI tools also make it easier for malicious actors to create sophisticated scams at a far greater scale.</p>
+
+<p dir="ltr">Users need to appreciate these limitations and risks when using generative AI tools.</p>
+
+<p dir="ltr">&nbsp;</p>
+
+<h2 dir="ltr">Using Generative AI at the University of Delaware</h2>
+
+<p><strong>Why is the Directive necessary?</strong><br>
+The Directive provides guidelines for responsible use of generative AI tools to minimize the risks and limitations inherent with them. The Directive specifies (i) what generative AI tools may be used with the University’s systems and assets, and (ii) what University information may be used with generative AI tools. Placing parameters around the tools and the information reduces privacy, security, and other risks.</p>
+
+<p dir="ltr"><strong>What generative AI tools can be used at the University?</strong><br>
+Only generative AI tools that University of Delaware Information Technologies&nbsp;(UDIT) has vetted for, among other things, security and privacy controls may be used with the University’s systems, assets, and information and regardless of whether the generative AI tool is free or no-charge. This restriction also applies regardless of whether the generative AI tools are standalone tools or generative AI features of other software products and services (e.g., Chatbot). Unless specified otherwise in these FAQs, the term “generative AI” includes both types of generative AI. A listing of approved standalone generative AI is available at the <strong><a href="https://services.udel.edu/TDClient/32/Portal/KB/ArticleDet?ID=1150">University Generative AI Services List</a>.</strong></p>
+
+<p dir="ltr"><strong>May generative AI tools be used in my course?</strong><br>
+Potentially. The University encourages the responsible use of generative AI for teaching and learning. In addition, the University hopes to foster open and exploratory investigation and research into generative AI. In addition to reviewing the Directive for Appropriate Use of Generative AI Tools and Services, the University recommends reviewing the <a href="https://www.udel.edu/content/dam/udelImages/artificial-intelligence/Considerations_for_Integrating_AI_Within_Teaching_and_Learning_FINAL.pdf">Guiding Considerations for Integrating AI within Teaching and Learning</a>.</p>
+
+<p dir="ltr"><strong>May generative AI tools be used for class assignments?</strong><br>
+The ultimate decision on whether students can use generative AI tools rests with the instructor. Instructors are cautioned to be clear to students about the expectations regarding the use of generative AI tools consistent with the guidelines in the Center for Teaching and Assessment of Learning Coursework and Assignments,” available at<a href="https://ctal.udel.edu/advanced-automated-tools/"> https://ctal.udel.edu/advanced-automated-tools/</a>.</p>
+
+<p dir="ltr"><strong>May generative AI tools be used for University operations?</strong><br>
+Potentially. Generative AI can certainly be used to augment or support multiple job responsibilities. The University supports creating efficiencies using AI and automation. The data that is used in conjunction with each task will often determine what service can be used, if any. The information in the Directive provides guidance on data privacy and security along with additional considerations to include bias and ethics.</p>
+
+<p dir="ltr"><strong>How do generative AI tools get on the approved list?</strong><br>
+Users who want to use a generative AI tool that has not not yet been vetted must submit a <a href="https://services.udel.edu/TDClient/32/Portal/Requests/ServiceDet?ID=232">Technology Request form</a>&nbsp;before acquiring or using the tool with the University’s systems, assets, or information<sup>1</sup>. UDIT will initiate a review process that includes other appropriate University departments and resources to validate the vendor’s product and to ensure the tools do not introduce undue risk to the University’s systems or assets or University information.</p>
+
+<p dir="ltr"><strong>What constitutes the University’s information?</strong><br>
+University information means any information within the University’s purview, including information that the University does not own but that is governed by laws and regulations to which the University is held accountable. University information includes all data that pertains to or supports the administration and missions, including research, of the University.</p>
+
+<p dir="ltr"><strong>What University information can be used with vetted generative AI tools?</strong><br>
+It depends on whether the generative AI tools are publicly available or UD-vetted.</p>
+
+<p dir="ltr"><strong>What are publicly available generative AI tools?</strong><br>
+Publicly available generative AI tools are those tools and services that generate output using publicly available information. Any data users provide or make accessible to the tools help train the tools further and become available to the public. For example, ChatGPT saves the information used to create an account, such as the user’s name, phone number, email, and (for accounts requiring a fee) the payment method. In addition, these tools may save a user’s entire conversation, including every prompt entered, to be used in the ongoing training of the tool. Users who enter sensitive, personal, or proprietary information are at risk of having this information being made publicly available.</p>
+
+<p dir="ltr"><strong>What University information can be used with publicly available generative AI tools?</strong><br>
+When using publicly available generative AI tools, you should assume that everything you do will be available to others. The Directive therefore limits the use of the University’s information with publicly available generative AI systems to only University information that is classified as Level I data. Level I data is approved for distribution to all individuals and entities external to the University community with no legal, regulatory, contractual, or funding agency restrictions on access or usage so there is minimal risk of inappropriately disclosing sensitive, personal, or proprietary information.</p>
+
+<p dir="ltr"><strong>Why can’t Level II or Level III data be used with publicly available generative AI?</strong><br>
+Level II and Level III data include personally identifiable information and other confidential information that may be subject to privacy laws (such as FERPA, HIPAA, etc.) or otherwise prohibited from being made available to the public by law or contract. It includes personally identifiable information in employment and personnel records as well as intellectual property not otherwise publicly available.</p>
+
+<p dir="ltr">Using Level II or Level III data on publicly available generative AI would expose the data and create privacy and security risks, including breaches reportable to regulatory authorities and the affected individuals. The Directive prohibits using Level II or Level III on publicly available generative AI tools regardless of whether those tools are approved for use with University systems or assets.</p>
+
+<p dir="ltr"><strong>Where can I find more information about the University’s classification of its information?</strong><br>
+The University’s Information Classification Policy is available at the <a href="https://www1.udel.edu/security/framework/classification.html">Data Classification Matrix</a>.</p>
+
+<p dir="ltr"><strong>Can I use my personal account with any version of the software for Level II or III data?</strong><br>
+No, you must be logged in to your UD Account to use approved versions of the software.</p>
+
+<p dir="ltr"><strong>When can Level II or Level III data be used with generative AI tools?</strong><br>
+University information classified as Level II or Level III data may be used with UD-vetted generative AI.</p>
+
+<p dir="ltr"><strong>What are UD-vetted generative AI tools?</strong><br>
+UD-vetted generative AI are tools that UDIT and other departments have vetted and approved for use with the University’s systems, assets, and information as a part of a Technology Request review. As a part of the review process, the controls for any additional use of the information are examined to ensure the information is not, among other things, used to train the tool further or otherwise made available to anyone who is unauthorized to see the information. The information is contained within the University. The University typically enters into agreements with the vendors offering these tools that obligates those vendors to safeguard the privacy of the information.&nbsp;&nbsp;</p>
+
+<p dir="ltr"><strong>Can the output of the generative AI tools be trusted?</strong><br>
+Generative AI tools are not perfect. As discussed in Section I, sometimes generative AI tools “hallucinate,” and the output is inaccurate, misleading, or incomplete. Generative AI may also perpetuate biases that are present in the data the tools are trained on, which may exacerbate existing inequities. The Directive requires users of generative AI tools to confirm the accuracy of the output using other sources and to check the output for bias by determining whether the data used produce decisions that may result in a disparate impact to individuals based on protected classifications under applicable law, such as race, ethnicity, national origin, sexual orientation, or disability status. Any output that is indicative of a potential bias should not be relied upon.</p>
+
+<p dir="ltr"><strong>Should the use of generative AI tools be disclosed?</strong><br>
+Users should be transparent in the use of generative AI tools and not present the output as their own.&nbsp; Users who paraphrase or borrow ideas from the output of generative AI tools must confirm its accuracy and that they are not plagiarizing another party’s existing work product or violating another party’s intellectual property rights. Acknowledging the use of generative AI may not always involve a formal citation. For example, users could write a description of the tool they used and how they used it. Some citation styles have been developed for generative AI output that can be linked and shared with others. Students should confer with faculty to determine whether a particular style of citation is preferred.</p>
+
+<p dir="ltr" role="presentation"><strong>What are the guidelines for student use of AI, particularly as it relates to faculty intellectual property?</strong><br>
+Students should not use University-approved AI tools to create, share, or distribute materials derived from course content without explicit permission from the instructor.</p>
+
+<p dir="ltr" role="presentation"><strong>What are the FERPA considerations or restrictions when using AI tools to prevent the disclosure of sensitive student data?</strong><br>
+Faculty, staff, and students should not upload regulated or protected data to University-approved AI tools, including educational records, HIPAA-protected information, HR/finance data, or sensitive research materials, unless proper controls are in place. If you have a use case that involves sensitive data, please submit a <a href="https://services.udel.edu/TDClient/32/Portal/Requests/ServiceDet?ID=232">technology request</a>.</p>
+
+<p dir="ltr" role="presentation"><strong>Should instructors include a syllabus statement and obtain student opt-in for the use of AI tools in their course?</strong><br>
+Instructors who plan to use University-approved AI tools should include a short syllabus statement on appropriate use and inform students how the AI tools will be used in the course.</p>
+
+<p dir="ltr" role="presentation"><strong>What are the guidelines regarding responsible student use of AI tools?</strong><br>
+Students should follow instructor guidance on when and how to use University-approved AI tools and should not distribute AI-generated content outside the context of the course.</p>
+
+<p dir="ltr"><strong>What are the guidelines regarding responsible faculty use of AI tools?</strong><br>
+Faculty should avoid uploading student work or protected data without appropriate&nbsp;consent and should also follow copyright and licensing requirements.</p>
+
+<p dir="ltr">&nbsp;</p>
+
+<p><sup>1</sup> A Technology Request can be submitted at <a href="https://services.udel.edu/TDClient/32/Portal/Requests/ServiceDet?ID=232">https://services.udel.edu/TDClient/32/Portal/Requests/ServiceDet?ID=232</a>.</p></div>
+
+<div id="ctl00_ctl00_cpContent_cpContent_divFeedback2" class="well gutter-top-lg">
+
+  <div class="row" id="divHelpfulYesNo">
+    <div class="col-sm-7">
+      
+        <div>
+          <a href="/TDClient/32/Portal/Login.aspx?ReturnUrl=%2fTDClient%2f32%2fPortal%2fKB%2fArticleDet%3fID%3d1149">Sign in to leave feedback</a>
+        </div>
+      
+    </div>
+    <div class="col-sm-5 text-right">
+      <div id="ctl00_ctl00_cpContent_cpContent_UpdatePanel1" aria-live="polite" aria-atomic="true">
+	
+          0 reviews
+        
+</div>
+    </div>
+  </div>
+
+  </div>
+
+
+
+<div class="tab-content gutter-top gutter-bottom">
+  
+  <div id="ctl00_ctl00_cpContent_cpContent_upFeedbackGrid">
+	
+        <a id="ctl00_ctl00_cpContent_cpContent_btnToggleAddressed" tabindex="-1" class="hidden" aria-hidden="true" href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$ctl00$cpContent$cpContent$btnToggleAddressed&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))">Blank</a>
+        <a id="ctl00_ctl00_cpContent_cpContent_btnDeleteFeedback" tabindex="-1" class="hidden" aria-hidden="true" href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$ctl00$cpContent$cpContent$btnDeleteFeedback&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))">Blank</a>
+        
+      
+</div>
+    
+    
+
+    
+</div>
+</div>
+
+<div class="col-md-4">
+
+
+
+    <a id="ctl00_ctl00_cpContent_cpContent_btnToggleSubscribe" tabindex="-1" class="hidden" aria-hidden="true" href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$ctl00$cpContent$cpContent$btnToggleSubscribe&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))">Blank</a>
+
+<a id="ctl00_ctl00_cpContent_cpContent_btnToggleFavorite" tabindex="-1" class="hidden" aria-hidden="true" href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$ctl00$cpContent$cpContent$btnToggleFavorite&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))">Blank</a>
+
+<a class="DetailAction print-article" href="/TDClient/32/Portal/KB/PrintArticle?ID=1149" rel="nofollow" target="_blank">  <span class="fa-solid fa-print fa-fw" aria-hidden="true"></span>
+Print Article</a>
+
+<div id="ctl00_ctl00_cpContent_cpContent_divKB" class="panel panel-default">
+
+  <div class="panel-heading">
+    <h2 class="h3 panel-title">Related Articles (2)</h2>
+  </div>
+
+  <div class="panel-body">
+    
+        <div id="ctl00_ctl00_cpContent_cpContent_rptArticles_ctl00_ctlArticle_divContainer" class="gutter-top-sm gutter-bottom-lg">
+  <div class="clearfix">
+    <div class="pull-left font-md">
+      <a target="_blank" href="https://services.udel.edu/TDClient/32/Portal/KB/ArticleDet?ID=1148">Directive for Appropriate Use of Generative Artificial Intelligence Tools and Services</a>
+    </div>
+  </div>
+  <div id="ctl00_ctl00_cpContent_cpContent_rptArticles_ctl00_ctlArticle_divSummary">
+    The University supports the responsible use of Generative Artificial Intelligence tools and services (collectively, “Generative AI”). However, these tools have notable limitations and present new risks that must be taken into consideration when using these technologies.
+  </div>
+  
+</div>
+      
+        <div id="ctl00_ctl00_cpContent_cpContent_rptArticles_ctl01_ctlArticle_divContainer" class="gutter-top-sm gutter-bottom-lg">
+  <div class="clearfix">
+    <div class="pull-left font-md">
+      <a target="_blank" href="https://services.udel.edu/TDClient/32/Portal/KB/ArticleDet?ID=1150">University Generative AI Services List</a>
+    </div>
+  </div>
+  <div id="ctl00_ctl00_cpContent_cpContent_rptArticles_ctl01_ctlArticle_divSummary">
+    This article includes a list of generative AI tools/services available at the University.
+  </div>
+  
+</div>
+      
+  </div>
+
+</div>
+
+
+
+<div id="divAttachments" class="js-article-attachments"></div>
+
+</div>
+
+</div>
+
+<div id="ctl00_ctl00_cpContent_cpContent_divProgress" style="display: none; z-index: 60;">
+  <div id="ctl00_ctl00_cpContent_cpContent_pbMain" class="progress-box-container"><div class="progress-box-body"><div class="well shadow"><h2 class="h4 gutter-top-none">Deleting...</h2><div class="progress" style="margin-bottom: 0;"><div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuemin="0" aria-valuemax="100" style="width: 100%"></div></div></div></div></div>
+</div>
+
+
+
+  </div>
+
+
+  </div>
+</main>
+
+
+
+<script type="text/javascript">
+//<![CDATA[
+setNavPosition('TDKnowledgeBase');window.CKEDITOR_BASEPATH = 'https://services.udel.edu/TDPortal/Content/ckeditor/';
+//]]>
+</script>
+<script src="https://services.udel.edu/TDPortal/Content/ckeditor/ckeditor.js?t=C6HH5UF" type="text/javascript"></script>
+<script type="text/javascript">
+//<![CDATA[
+var CKEditor_Controls=[],CKEditor_Init=[];function CKEditor_TextBoxEncode(d,e){var f;if(typeof CKEDITOR=='undefined'||typeof CKEDITOR.instances[d]=='undefined'){f=document.getElementById(d);if(f)f.value=f.value.replace(/</g,'&lt;').replace(/>/g,'&gt;');}else{var g=CKEDITOR.instances[d];if(e&&(typeof Page_BlockSubmit=='undefined'||!Page_BlockSubmit)){g.destroy();f=document.getElementById(d);if(f)f.style.visibility='hidden';}else g.updateElement();}};(function(){if(typeof CKEDITOR!='undefined'){var d=document.getElementById('ctl00_ctl00_cpContent_cpContent_shareBody_txtBody');if(d)d.style.visibility='hidden';}var e=function(){var f=CKEditor_Controls,g=CKEditor_Init,h=window.pageLoad,i=function(){for(var j=f.length;j--;){var k=document.getElementById(f[j]);if(k&&k.value&&(k.value.indexOf('<')==-1||k.value.indexOf('>')==-1))k.value=k.value.replace(/&lt;/g,'<').replace(/&gt;/g,'>').replace(/&amp;/g,'&');}if(typeof CKEDITOR!='undefined')for(var j=0;j<g.length;j++)g[j].call(this);};window.pageLoad=function(j,k){if(k.get_isPartialLoad())setTimeout(i,0);if(h&&typeof h=='function')h.call(this,j,k);};if(typeof Page_ClientValidate=='function'&&typeof CKEDITOR!='undefined')Page_ClientValidate=CKEDITOR.tools.override(Page_ClientValidate,function(j){return function(){for(var k in CKEDITOR.instances){if(document.getElementById(k))CKEDITOR.instances[k].updateElement();}return j.apply(this,arguments);};});setTimeout(i,0);};if(typeof Sys!='undefined'&&typeof Sys.Application!='undefined')Sys.Application.add_load(e);if(window.addEventListener)window.addEventListener('load',e,false);else if(window.attachEvent)window.attachEvent('onload',e);})();CKEditor_Controls.push('ctl00_ctl00_cpContent_cpContent_shareBody_txtBody');
+CKEditor_Init.push(function(){if(typeof CKEDITOR.instances['ctl00_ctl00_cpContent_cpContent_shareBody_txtBody']!='undefined' || !document.getElementById('ctl00_ctl00_cpContent_cpContent_shareBody_txtBody')) return;CKEDITOR.replace('ctl00_ctl00_cpContent_cpContent_shareBody_txtBody',{"autoGrow_maxHeight" : 175, "autoGrow_minHeight" : 175, "contentsCss" : ['https://services.udel.edu/TDPortal/Content/ckeditor/contents.css', '/TDPortal/Content/FontAwesome/css/fontawesome.min.css', '/TDPortal/Content/FontAwesome/css/brands.min.css', '/TDPortal/Content/FontAwesome/css/regular.min.css', '/TDPortal/Content/FontAwesome/css/solid.min.css', '/TDPortal/Content/FontAwesome/css/v4-shims.min.css'], "height" : "175", "htmlEncodeOutput" : true, "image_previewText" : " ", "removePlugins" : "magicline,devtools,templates,elementspath,fontawesome,youtube,uploadimage,simpleimage,remoteimageblocker", "title" : "Message", "toolbar" : "TDSimple"}); });
+
+var Page_ValidationActive = false;
+if (typeof(ValidatorOnLoad) == "function") {
+    ValidatorOnLoad();
+}
+
+function ValidatorOnSubmit() {
+    if (Page_ValidationActive) {
+        return ValidatorCommonOnSubmit();
+    }
+    else {
+        return true;
+    }
+}
+        Sys.Application.add_init(function() {
+    $create(Sys.UI._UpdateProgress, {"associatedUpdatePanelId":null,"displayAfter":500,"dynamicLayout":true}, null, null, $get("ctl00_ctl00_upMain"));
+});
+//]]>
+</script>
+</form>
+
+
+
+
+
+  <footer role="contentinfo">
+
+    <div class="master-footer">
+      <div style="width: 100%; margin-top: 40px; background-color: #FFFFFF; border-top: 3px solid #FFD300">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-2">
+                <a href="https://www.udel.edu"><img src="https://www.udel.edu/content/dam/udelImages/main/graphics/udelLogoImages/ud-monogram-2018.png" alt="You Dee" style="width: 129px; margin-top: -33px; margin-left: 5px"></a>
+            </div>    
+            
+            <div class="col-sm-10 hidden-xs">
+                <ul style="padding: 0; margin: 8px 5px 0 0; list-style: none; text-align: right">
+                    <li style="padding: 0; display: inline-block; margin: 0; width: 44px; height: 44px"><a href="https://www.instagram.com/udelaware" title="Instagram" target="_blank" rel="noopener noreferrer"><img src="https://www.udel.edu/content/dam/udelImages/main/graphics/socialIcons/instagram.png" alt="Instagram" style="height: 20px; margin: auto; display: block"></a></li>
+                    <li style="padding: 0; display: inline-block; margin: 0; width: 44px; height: 44px"><a href="https://www.facebook.com/udelaware" title="Facebook" target="_blank" rel="noopener noreferrer"><img src="https://www.udel.edu/content/dam/udelImages/main/graphics/socialIcons/facebook.png" alt="Facebook" style="height: 20px; margin: auto; display: block"></a></li>
+                    <li style="padding: 0; display: inline-block; margin: 0; width: 44px; height: 44px"><a href="https://www.linkedin.com/edu/school?id=18070" title="Linkedin" target="_blank" rel="noopener noreferrer"><img src="https://www.udel.edu/content/dam/udelImages/main/graphics/socialIcons/linkedin.png" alt="Linkedin" style="height: 20px; display: block"></a></li>
+                    <li style="padding: 0; display: inline-block; margin: 0; width: 44px; height: 44px"><a href="https://www.youtube.com/univdelaware" title="Youtube" target="_blank" rel="noopener noreferrer"><img src="https://www.udel.edu/content/dam/udelImages/main/graphics/socialIcons/youtube.png" alt="YouTube" style="height: 20px; margin: auto; display: block"></a></li>
+                    <li style="padding: 0; display: inline-block; margin: 0; width: 44px; height: 44px"><a href="https://twitter.com/UDelaware" title="Twitter" target="_blank" rel="noopener noreferrer"><img src="https://www.udel.edu/content/dam/udelImages/main/graphics/socialIcons/x.png" alt="Twitter" style="height: 20px; margin: auto; display: block"></a></li>
+                </ul>
+            </div> 
+
+        </div>
+    </div>
+    <div style="width: 100%; margin: 25px auto auto; background-color: #EEEEEE">
+        <div style="width: 80%; text-align: center; font-family: Arial; font-size: 10px; color: #000000; margin: auto; padding-right: 15px; padding-left: 15px">
+            <div style="padding: 8px 10px 10px 0; display: inline-block; margin: auto">©<span>2025</span> University of Delaware</div>
+            <div style="padding: 8px 10px 10px 0; display: inline-block; margin: auto"><a href="https://www.udel.edu/home/comments/">Comments</a></div>
+            <div style="padding: 8px 10px 10px 0; display: inline-block; margin: auto"><a href="https://www.udel.edu/home/legal-notices/">Legal Notices</a></div>
+            <div style="padding: 8px 10px 10px 0; display: inline-block; margin: auto"><a href="https://www.udel.edu/home/legal-notices/accessibility/">Accessibility Notice</a></div>
+        </div>
+    </div>
+</div>
+      
+    </div>
+
+  </footer>
+
+
+
+<script>
+
+    
+    
+
+      // Inject the Google Analytics isogram. This must happen here because it
+      // cannot be injected through an external javascript library.
+      (function (i, s, o, g, r, a, m) {
+        i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+          (i[r].q = i[r].q || []).push(arguments)
+        }, i[r].l = 1 * new Date(); a = s.createElement(o),
+          m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+      })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+    
+
+      // Per Incident #6707155. Need to focus on img. pseudo-class :focus-within is not supported in IE
+      (function ($) {
+        var $anchor = $('#divLogo a');
+        var $beLogo = $('#divLogo a img');
+
+        $anchor.focus(function () {
+          $beLogo.addClass('accessibility-focus-on-logo');
+        }).blur(function () {
+          $beLogo.removeClass('accessibility-focus-on-logo');
+        });
+
+        
+        
+          const queryParams = new URLSearchParams(window.location.search);
+          let showChatbot = true;
+          if (queryParams.has('nobot')) {
+            const nobotFlag = queryParams.get('nobot');
+            if (nobotFlag === '1' || nobotFlag === 'true') {
+              showChatbot = false;
+            }
+          }
+
+          if(showChatbot) {
+            $.ajax({
+              url: "/TDClient/32/Portal/Chatbots/GetScript",
+              type: "GET",
+              dataType: 'text',
+              success: function (data) {
+                
+                var jQueryAjaxSettingsCache = jQuery.ajaxSettings.cache;
+                jQuery.ajaxSettings.cache = true;
+                $(document.body).append(data);
+                jQuery.ajaxSettings.cache = jQueryAjaxSettingsCache;
+              }
+            });
+          }
+        
+
+        window.addEventListener("message", (event) => {
+
+          // Only accept events that come from the same origin
+          if (event.origin != window.location.origin) {
+            return;
+          }
+
+          switch (event.data.type) {
+
+            case "authenticate-using-popup":
+              handleAuthenticateUsingPopup(event.data.payload);
+              break;
+
+            case "authenticated-successfully":
+              handleAuthenticatedSuccessfully(event.data.payload);
+              break;
+
+            default:
+              break;
+          }
+
+        });
+
+        function handleAuthenticateUsingPopup(payload) {
+          let loginUrl = '/TDClient/32/Portal/Login.aspx';
+
+          if (payload.successCallbackUrl) {
+            loginUrl += '?SuccessCallbackUrl=' + payload.successCallbackUrl;
+          }
+
+          window.open(loginUrl, "_blank", "popup=1");
+        }
+
+        function handleAuthenticatedSuccessfully() {
+          event.source.close();
+          window.location.href = window.location.href;
+        }
+    })(jQuery);
+
+</script>
+
+</body>
+</html>

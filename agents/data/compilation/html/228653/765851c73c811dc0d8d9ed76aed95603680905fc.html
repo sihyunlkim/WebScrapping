@@ -1,0 +1,548 @@
+ <!DOCTYPE html> <!--[if lt IE 9]><html class="no-js lt-ie9 utmb-old-ie" lang="en"><![endif]--> <!--[if IE 9]><html class="no-js ie9 utmb-ie-9" lang="en"><![endif]--> <!--[if (gt IE 9)|!(IE)]><!--> <html class="no-js utmb-modern-web" lang="en"> <!--<![endif]--> <head> <meta charset="utf-8" /> <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" /> <link rel="dns-prefetch" href="//utmb-cdn.azureedge.net" /> <title>
+	FERPA
+</title> <link rel="shortcut icon" href="https://utmb-cdn.azureedge.net/web/favicon/favicon.ico" /> <link rel="apple-touch-icon" sizes="180x180" href="https://utmb-cdn.azureedge.net/web/favicon/apple-touch-icon.png" /> <link rel="apple-touch-icon" sizes="32x32" href="https://utmb-cdn.azureedge.net/web/favicon/favicon-32x32.png" /> <link rel="apple-touch-icon" sizes="16x16" href="https://utmb-cdn.azureedge.net/web/favicon/favicon-16x16.png" /> <meta name="HandheldFriendly" content="True" /> <meta name="MobileOptimized" content="320" /> <meta name="viewport" content="width=320, initial-scale=1, minimum-scale=1" /> <!-- FB Verfication: utmb.edu --> <meta name="facebook-domain-verification" content="sik7cfhd86nli8dphmdkzk3vwmo85j" />  <!-- Preloader - *keep in master for instant availability --> <style type="text/css">
+                [v-cloak] {
+                    display: none;
+                }
+
+                #sfPageContainer div [controltype^="Telerik.Sitefinity.Mvc"] .rdCenter .rdTitleBar > em::after {
+                    content: "MVC";
+                    background-color: #105CB6;
+                    color: #FFF;
+                    font-size: 10px;
+                    padding: 0 4px;
+                    margin-left: 5px;
+                }
+
+                body.utmb-page-preloader #pagewrapper, body.utmb-page-preloader #footer {
+                    opacity: 0;
+                }
+
+                body.utmb-page-preloader:before {
+                    content: '';
+                    background-image: url(https://utmb-cdn.azureedge.net/web/img/loadings/sfLoading.gif);
+                    background-repeat: no-repeat;
+                    background-position: center center;
+                    display: block;
+                    text-align: center;
+                    position: absolute;
+                    top: 0;
+                    bottom: 0;
+                    left: 0;
+                    right: 0;
+                    width: 100%;
+                    height: 100%;
+                }
+
+                html.no-js body.utmb-page-preloader #pagewrapper, html.no-js body.utmb-page-preloader #footer {
+                    opacity: 0;
+                }
+
+                html.no-js body.utmb-page-preloader:before {
+                    content: '';
+                    background-image: none;
+                    display: inline;
+                    text-align: inherit;
+                    position: static;
+                }
+            </style> <!-- UTMB Bootstrap 3x --> <link rel=preload href="https://utmb-cdn.azureedge.net/web/css/bootstrap.min.css" as="style"> <link href="https://utmb-cdn.azureedge.net/web/css/bootstrap.min.css" type="text/css" rel="stylesheet" /> <link rel=preload href="https://utmb-cdn.azureedge.net/web/4.2.2/js/utmb-head.js" as="script"> <link rel=preload href="https://utmb-cdn.azureedge.net/web/4.2.2/css/utmb-sitefinity.min.css" as="style"> <link rel=preload href="https://utmb-cdn.azureedge.net/web/4.2.2/js/utmb-sitefinity.min.js" as="script"> <!-- UTMB Foundation Icons --> <link rel=preload href="https://utmb-cdn.azureedge.net/web/fonts/foundation/foundation-icons.css" as="style"> <link href="https://utmb-cdn.azureedge.net/web/fonts/foundation/foundation-icons.css" type="text/css" rel="stylesheet" /> <!-- UTMB FontAwesome v4 --> <link rel=preload href="https://utmb-cdn.azureedge.net/web/fonts/fontawesome/fontawesome.min.css" as="style"> <link href="https://utmb-cdn.azureedge.net/web/fonts/fontawesome/fontawesome.min.css" type="text/css" rel="stylesheet" /> <!-- FontAwesome Pro 6.5.1 --> <link rel=preload href="https://utmb-cdn.azureedge.net/web/fonts/fontawesome-pro-6.5.1-web/css/utmb.min.css" as="style"> <link rel="stylesheet" href="https://utmb-cdn.azureedge.net/web/fonts/fontawesome-pro-6.5.1-web/css/utmb.min.css" type="text/css"> <!-- UTMB Web 4x for Sitefinity --> <link rel="stylesheet" href="https://utmb-cdn.azureedge.net/web/4.2.2/css/utmb-sitefinity.min.css" type="text/css"> <!-- UTMB Web 4x Head Libs --> <script src="https://utmb-cdn.azureedge.net/web/4.2.2/js/utmb-head.js" type="text/javascript"></script> <style>
+            body.sfPageEditor.modal-open input[type=radio],
+            body.sfPageEditor.modal-open input[type=checkbox] {
+                -webkit-appearance: auto !important;
+            }
+        </style> <style>
+            .splide__arrow {
+                position: absolute;
+                z-index: 1;
+                top: 50%;
+                transform: translateY(-50%);
+                border: none;
+                padding: 3px;
+                background: rgb(0 0 0 / 54%);
+            }
+        </style> <!-- Site Specific CSS --> <!--BE IXF: JavaScript begin--> <!--Access to and use of BrightEdge AutoPilot - Self Connecting Pages is governed by the
+                Infrastructure Product Terms located at: www.brightedge.com/infrastructure-product-terms.
+                Customer acknowledges and agrees it has read, understands and agrees to be bound by the
+                Infrastructure Product Terms. --> <script src="//cdn.bc0a.com/autopilot/f00000000290195/autopilot_sdk.js"></script> <!--BE IXF: JavaScript end--> <!-- UTMB Web 4x --> <meta property="og:title" content="FERPA" /><meta property="og:url" content="" /><meta property="og:type" content="website" /><meta property="og:site_name" content="Enrollment Services" /><style type="text/css" media="all">ul.diamond {
+   position: relative;
+   list-style: none;
+   margin-left: 10px;
+   padding-left: 1.6em;
+}
+ul.diamond li:before {
+   content: "◈";
+   position: absolute;
+   left: 0;
+}
+
+ul.diamond li {
+    margin: 15px 0px 15px;
+    line-height:1.3em;
+}
+
+ul.blankdiamond {
+   position: relative;
+   list-style: none;
+   margin-left: 0px;
+   padding-left: 1.6em;
+}
+ul.blankdiamond li:before {
+   content: "◇";
+   position: absolute;
+   left: 0;
+}
+
+ul.blankdiamond li {
+    margin: 10px 0px 10px;
+    line-height:1.3em;
+}
+
+body.utmb-light #main {
+webkit-box-shadow: none !important;
+box-shadow: none !important ; 
+}
+
+body.nav-main #navigate .nav li a.current {
+  background-color: #da1f12;
+}
+
+@media print {
+  #subcontent a[href]:after {
+    content: none !important;
+  }
+}
+
+@media print {
+  .nav-sidebar .collapse.tandem-nav .menu-container ul.nav li a[href]:after {
+    content: none !important;
+  }
+}
+
+.feature-box-carousel .carousel-inner .item .carousel-caption, .feature-box-carousel .carousel- inner-static .item .carousel-caption {
+    font-size: 30px;
+    font-weight: 500;
+} 
+
+hr {
+  height:.5px;
+  background:#999999;
+  border:1px solid #999999;
+  border-radius:25px;
+}
+
+p.pheader {
+  margin:0px 10px 10px;
+  color:black;
+  font-weight:bold;
+  text-decoration:underline;
+  line-height:1.5em;
+}
+
+p.pnormal {
+  margin:0px 10px 15px;
+  color:black;
+  font-weight:normal;
+  line-height:1.5em;
+}
+
+.feeheader {
+  display:table;
+  width:100%;
+  background-color:#457a82;
+  border:1px solid #c4e1de;
+  margin-bottom:0.5%;
+}
+
+.feeheader h3 {
+  display:table-cell;
+  vertical-align:middle;
+  text-align:center;
+  color:#FFFFFF;
+  height:3.5em;
+}
+
+.feeheader h4 {
+  display:table-cell;
+  vertical-align:middle;
+  text-align:center;
+  color:#FFFFFF;
+  height:3.5em;
+}
+
+.feeheader h5 {
+  display:table-cell;
+  vertical-align:middle;
+  text-align:center;
+  color:#FFFFFF;
+  height:1.8em;
+}
+
+.feefooter p {
+    margin:0em;
+    text-align: left;
+    line-height:1.6em;
+    font-size:0.7em;
+}
+img.padded {
+  
+ padding-right: 2.0em;
+ padding-left: 2.0em;
+  
+}
+/*Lists: Circle behind icon*/
+.bg-circle-onicon i.list-item-icon {
+    background: #ADD8E6;
+    border-radius: 50%;
+    padding: 10px 0 5px 7px;
+    width: 70px;
+    height: 70px;
+}
+ 
+.list-item-title.item-title.uk-card-title {
+    color: #457a82;
+}
+ 
+.title-bold .list-item-title.item-title.uk-card-title {
+    font-weight: 600;
+}</style><style type="text/css" media="all">/* Link card background colors */
+
+.list-item-teal-light-bg .list-link-card-container.uk-card.uk-card-body.uk-card-default {
+    background: #c4e1de;
+}
+
+.list-item-teal-bg .list-link-card-container.uk-card.uk-card-body.uk-card-default {
+    background: #457a82;
+}
+
+.list-item-teal-bg span.list-item-title.item-title.uk-card-title {
+    color: #ffffff;
+}
+
+.list-item-blue-bg .list-link-card-container.uk-card.uk-card-body.uk-card-default {
+    background: #1b5196;
+}
+
+.list-item-blue-bg span.list-item-title.item-title.uk-card-title {
+    color: #ffffff;
+}
+
+.list-item-blue-light-bg .list-link-card-container.uk-card.uk-card-body.uk-card-default {
+    background: #c0e1ed;
+}
+
+.list-item-orange-light-bg .list-link-card-container.uk-card.uk-card-body.uk-card-default {
+    background: #f5d7a5;
+}
+
+.list-item-gray-light-bg .list-link-card-container.uk-card.uk-card-body.uk-card-default {
+    background: #c9cac8;
+}
+
+.list-item-teal-dark-bg .list-link-card-container.uk-card.uk-card-body.uk-card-default {
+    background: #457a82;
+}
+
+.list-item-teal-dark-bg span.list-item-title.item-title.uk-card-title {
+    color: #005760;
+}</style><style type="text/css" media="all">@media only screen and (min-width: 992px){
+.service-title-overcolor h1 {
+    color: white;
+    font-size: 50px;
+    text-shadow: 3px 3px 4px #000000;
+    padding: 40px 0 20px 0;
+  }
+}
+
+
+@media only screen and (max-width: 991px){
+.service-title-overcolor h1 {
+    color: white;
+    font-size: 40px;
+    text-shadow: 3px 3px 4px #000000;
+    padding: 40px 0 20px 0;
+}
+}</style><meta name="Generator" content="Sitefinity 15.3.8522.0 DX" /><link href="/Telerik.Web.UI.WebResource.axd?d=PMrIT5dOWaVYIcpFWUE4nMh1ENyvK1yHIfVFg6e3Is8Nm89_rW1xKEbK8JGoEQx_o-H-LzN_5wf42BhOEQIS7VYylIwd1vkyj0M2c9-Vlx2UpSiPJTmcAfc8BNadGTKR0&amp;t=638840874637275692&amp;compress=0&amp;_TSM_CombinedScripts_=%3b%3bTelerik.Sitefinity.Resources%2c+Version%3d15.3.8522.0%2c+Culture%3dneutral%2c+PublicKeyToken%3db28c218413bdf563%3aen%3a3768ae42-d8f5-4fb3-bab3-68e873ac101a%3a7a90d6a" type="text/css" rel="stylesheet" /></head> <body id="appBody"
+      utmb-web="4x"
+      utmb-web-version="4.2.2"
+      
+      class="utmb-page-preloader"
+      rel="pg-ferpa"
+      utmb-web-asset-path="https://utmb-cdn.azureedge.net/web"
+      is-dev-mode="false"
+      is-internal="false"
+      is-intranet="false"
+      site-id="1677b1d7-6914-6b9b-a0c5-ff000070e114"
+      site-root="www.utmb.edu/enrollmentservices"
+      
+      page-title="FERPA"
+      page-url="~/enrollmentservices/future-students/ferpa"
+      page-url-name="ferpa"
+      
+      page-id="ce56ddd7-6914-6b9b-a0c5-ff0a0070e114"
+      
+      page-template-title="Enrollment Services Home"
+      
+      design-mode="modern"
+      theme="utmb-base"
+      
+      use-console-log="false"
+      
+      use-mobile-menu="true"
+      mobile-menu-theme="mobi-main"
+      use-explore-menu="true"
+      explore-menu-theme="exp-hide"
+      explore-menu-source="Institutional"
+      use-navigate-menu="true"
+      navigate-menu-theme="nav-main"
+      use-navigate-menu-sitefinity-api="false"
+      navigate-menu-use-accordion="true"
+      navigate-menu-levels="4"
+      use-search-menu="true"
+      search-menu-theme="search-main"
+      search-site-url="null"
+      use-breadcrumbs="false"
+      use-footer="true"
+      use-footer-sitefinity-login="true"
+      use-prod-login-urls="true"
+      
+      use-utmb-analytics="true"
+      use-utmb-alert-system="false"
+      utmb-alert-system-uri="/api/UtmbAlerts/Get"
+      ><form method="post" action="./ferpa" id="aspnetForm">
+<div class="aspNetHidden">
+<input type="hidden" name="ctl05_TSM" id="ctl05_TSM" value="" />
+<input type="hidden" name="ctl06_TSSM" id="ctl06_TSSM" value="" />
+<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
+<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="h1g903XC8eeY+osXB2spRLZyfazz2TYRefQsGPlRr37xYMqmgULhKIqZx53nNOsb98GfC+Ggpk1RnijcbeJsi+W3C0FpsAuawUPaNRzm8jI=" />
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['aspnetForm'];
+if (!theForm) {
+    theForm = document.aspnetForm;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script>
+
+
+<script src="/WebResource.axd?d=pynGkmcFUV13He1Qd6_TZDy0WA1p3MpJgWimqy0VwAaUOgHqOZUCFyyMXRH43UsRXHohuAOihrGeD-RggwfcSQ2&amp;t=638901356248157332" type="text/javascript"></script>
+
+
+<script type="text/javascript">
+//<![CDATA[
+var __cultureInfo = {"name":"en","numberFormat":{"CurrencyDecimalDigits":2,"CurrencyDecimalSeparator":".","IsReadOnly":true,"CurrencyGroupSizes":[3],"NumberGroupSizes":[3],"PercentGroupSizes":[3],"CurrencyGroupSeparator":",","CurrencySymbol":"$","NaNSymbol":"NaN","CurrencyNegativePattern":0,"NumberNegativePattern":1,"PercentPositivePattern":1,"PercentNegativePattern":1,"NegativeInfinitySymbol":"-∞","NegativeSign":"-","NumberDecimalDigits":2,"NumberDecimalSeparator":".","NumberGroupSeparator":",","CurrencyPositivePattern":0,"PositiveInfinitySymbol":"∞","PositiveSign":"+","PercentDecimalDigits":2,"PercentDecimalSeparator":".","PercentGroupSeparator":",","PercentSymbol":"%","PerMilleSymbol":"‰","NativeDigits":["0","1","2","3","4","5","6","7","8","9"],"DigitSubstitution":1},"dateTimeFormat":{"AMDesignator":"AM","Calendar":{"MinSupportedDateTime":"\/Date(-62135575200000)\/","MaxSupportedDateTime":"\/Date(253402300799999)\/","AlgorithmType":1,"CalendarType":1,"Eras":[1],"TwoDigitYearMax":2049,"IsReadOnly":true},"DateSeparator":"/","FirstDayOfWeek":0,"CalendarWeekRule":0,"FullDateTimePattern":"dddd, MMMM d, yyyy h:mm:ss tt","LongDatePattern":"dddd, MMMM d, yyyy","LongTimePattern":"h:mm:ss tt","MonthDayPattern":"MMMM d","PMDesignator":"PM","RFC1123Pattern":"ddd, dd MMM yyyy HH\u0027:\u0027mm\u0027:\u0027ss \u0027GMT\u0027","ShortDatePattern":"M/d/yyyy","ShortTimePattern":"h:mm tt","SortableDateTimePattern":"yyyy\u0027-\u0027MM\u0027-\u0027dd\u0027T\u0027HH\u0027:\u0027mm\u0027:\u0027ss","TimeSeparator":":","UniversalSortableDateTimePattern":"yyyy\u0027-\u0027MM\u0027-\u0027dd HH\u0027:\u0027mm\u0027:\u0027ss\u0027Z\u0027","YearMonthPattern":"MMMM yyyy","AbbreviatedDayNames":["Sun","Mon","Tue","Wed","Thu","Fri","Sat"],"ShortestDayNames":["Su","Mo","Tu","We","Th","Fr","Sa"],"DayNames":["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],"AbbreviatedMonthNames":["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec",""],"MonthNames":["January","February","March","April","May","June","July","August","September","October","November","December",""],"IsReadOnly":true,"NativeCalendarName":"Gregorian Calendar","AbbreviatedMonthGenitiveNames":["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec",""],"MonthGenitiveNames":["January","February","March","April","May","June","July","August","September","October","November","December",""]},"eras":[1,"A.D.",null,0]};//]]>
+</script>
+
+<script src="/Telerik.Web.UI.WebResource.axd?_TSM_HiddenField_=ctl05_TSM&amp;compress=0&amp;_TSM_CombinedScripts_=%3b%3bSystem.Web.Extensions%2c+Version%3d4.0.0.0%2c+Culture%3dneutral%2c+PublicKeyToken%3d31bf3856ad364e35%3aen%3aa8328cc8-0a99-4e41-8fe3-b58afac64e45%3aea597d4b%3ab25378d2" type="text/javascript"></script>
+<div class="aspNetHidden">
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="F03B2C1D" />
+</div><script type="text/javascript">
+//<![CDATA[
+Sys.WebForms.PageRequestManager._initialize('ctl00$ctl05', 'aspnetForm', [], [], [], 90, 'ctl00');
+//]]>
+</script>
+<input type="hidden" name="ctl00$ctl05" id="ctl05" />
+<script type="text/javascript">
+//<![CDATA[
+Sys.Application.setServerId("ctl05", "ctl00$ctl05");
+Sys.Application._enableHistoryInScriptManager();
+//]]>
+</script>
+ <!-- GA4 EDU - Google tag (gtag.js) --> <script async src="https://www.googletagmanager.com/gtag/js?id=G-TL4PD5HSE9"></script> <script>window.dataLayer = window.dataLayer || []; function gtag() { dataLayer.push(arguments); } gtag('js', new Date()); gtag('config', 'G-TL4PD5HSE9');</script> <a id="top" name="top"></a> <nav id="main-skip-links" role="region" aria-label="Skip Navigation" class="skip-links"> <div name="skip-wrap" class="skip-wrap"> <a class="hidden-skip-link sr-only sr-only-focusable" href="#main-content">Skip to main content<span aria-hidden="true">↵</span></a> <a class="hidden-skip-link sr-only sr-only-focusable" href="#navigate">Go to site menu<span aria-hidden="true">↵</span></a> <a class="hidden-skip-link sr-only sr-only-focusable" href="#footer">Jump to page footer<span aria-hidden="true">↵</span></a> </div> </nav> <script src="/ScriptResource.axd?d=6DQe8ARl7A9TiuWej5ttClG_1FDvhilCMWqIsYcD0E4p_zZ7euzDudM0_uCjoA5Zl533PoBAaxP3HGlh7ux81Dwd0uR1JWi9ZLfJGPYcIaV0vzENcKhq4sfavJFzenNDPaNd2RQcHq5wvaPf7HXi1GmNR4HakU3uumDRsrOTn6P1rfE81pPY708dje_up3_X0&amp;t=fffffffff003925f" type="text/javascript"></script><script src="/ScriptResource.axd?d=74FHISOx3fOPKwLxL0RMYn1El0YHJaMUdOXxQc6i5c27b05kS5hIp1l5moown8NXeF9_rB-mhGtEifZ8BrxlJ1p1sqVF3uNOF3it-Ht_Ak3YrMTi74v_luDjdMeCdygg94S7-SMJ_1z7jH5S1swcpmaAl0ckT9kBoONpL8Yd-gzb_k7b3GA7UcTryWd8cYuA0&amp;t=fffffffff003925f" type="text/javascript"></script> <div id="pagewrapper"> <div id="sfPageContainer"> <div id="topbarcontentcontainer"> 
+
+
+
+
+    <div class="lists list-expanded item-title-hide text-center  institutional-alert-button" list-title="Global web ALERT button" utmb-4x-template="Lists.List.ExpandedList" page-url="www.utmb.edu/enrollmentservices/future-students/ferpa">
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ </div> <header id="header" role="banner"> <!-- Alerts --> <div class="header-modern"> <div id="hgroup" class="hgroup uk-sticky" data-uk-sticky="show-on-up:true"> <a class="header-site-title" href="https://www.utmb.edu/enrollmentservices" title="">Office of Enrollment Services</a> <span class="header-site-subtitle">
+                                The University of Texas Medical Branch
+                            </span> <!-- Explore Menu --> <nav id="explore" role="navigation" aria-label="Institutional Navigation"> <div id="menu-explore"> <div class="title-area"> <div class="sr-only">Explore UTMB</div> </div> <div class="menu-container"> <ul class="nav-menu"> <li data-item-id="exploreHealthCare"> <a href="https://www.utmb.edu/health" title="">Health Care</a> </li> <li data-item-id="exploreAcademics"> <a href="https://www.utmb.edu/academics" title="">Education</a> </li> <li data-item-id="exploreResearch"> <a href="https://www.utmb.edu/research" title="">Research</a> </li> <li data-item-id="exploreInstitutional"> <a href="https://www.utmb.edu/all-utmb" title="">UTMB Support Areas</a> </li> <li data-item-id="exploreGive"> <a href="https://www.utmb.edu/support" title="" class="">Giving</a> </li> <li data-item-id="exploreContacts"> <a href="https://www.utmb.edu/contact" title="" class="">Contacts</a> </li> <li data-item-id="exploreAlerts" class="utmb-alert-site"> <a href="https://www.utmb.edu/alert" title="" class="">Alerts</a> </li> <li data-item-id="exploreSearch"> <a href="#search-modal-full" title="" uk-toggle> <span aria-hidden="true" class="fa fa-search"></span> <span class="sr-only">Search</span> </a> </li> </ul> </div> </div> </nav> <!-- Search --> <div id="search-modal-full" uk-modal="" class="uk-modal-full uk-modal"> <div uk-height-viewport="" class="uk-modal-dialog uk-flex uk-flex-center uk-flex-middle" style="min-height: calc(100vh);"> <button id="btnSearchQuery" class="uk-modal-close-full" type="button" uk-close> <span class="sr-only">Close Search Screen</span> </button> <div class="uk-search uk-search-large"> <label for="SearchQuery" class="sr-only">Search</label> <input id="SearchQuery" name="SearchQuery" type="search" placeholder="Search UTMB..." autofocus="autofocus" class="uk-search-input uk-text-center"> <!-- Search Options --> <div class="search-options"> <div class="search-options-toggle"> <span id="searchOptionsList"> <label for="searchOptionsUtmb"> <input id="searchOptionsUtmb" type="radio" name="searchOptions" value="utmb" checked="checked" />
+                                                            UTMB
+                                                        </label> <label for="searchOptionsGoogle"> <input id="searchOptionsGoogle" type="radio" name="searchOptions" value="google" />
+                                                            Google
+                                                        </label> </span> </div> </div> </div> </div> </div> </div> <div id="masthead-wrapper" class="masthead-wrapper uk-sticky" data-uk-sticky> <div id="masthead" class="head"> <a id="brand" class="branding" href="https://www.utmb.edu/" title="The University of Texas Medical Branch"><span>UTMB Health</span></a> <!-- Navigate --> <style>
+    @media (min-width: 992px) {
+        #navigate ul#nav-site > li > .submenu.active {
+            max-height: 400px;
+            overflow-y: auto;
+        }
+        /* width */
+            #navigate ul#nav-site > li > .submenu.active::-webkit-scrollbar {
+                width: 10px;
+            }
+
+        /* Track */
+            #navigate ul#nav-site > li > .submenu.active::-webkit-scrollbar-track {
+                background: #f1f1f1;
+            }
+
+        /* Handle */
+            #navigate ul#nav-site > li > .submenu.active::-webkit-scrollbar-thumb {
+                background: #888;
+            }
+
+            /* Handle on hover */
+                #navigate ul#nav-site > li > .submenu.active::-webkit-scrollbar-thumb:hover {
+                    background: #555;
+                }
+    }
+</style> <nav id="navigate" role="navigation" aria-label="Site Navigation"> <div class="collapse tandem-nav" id="menu-navigate"> <div class="menu-container"> <ul id="nav-site" class="nav"> <li data-item-id="navTier1_EnrollmentServices"> <a href="https://www.utmb.edu/enrollmentservices/home" class="" title="" target="_self" data-url="https://www.utmb.edu/enrollmentservices/home">Enrollment Services</a> </li> <li data-item-id="navTier1_FutureStudents" class="has-submenu"> <a href="https://www.utmb.edu/enrollmentservices/future-students" class="" title="" target="_self" data-url="https://www.utmb.edu/enrollmentservices/future-students">Future Students</a> <div class="submenu"> <ul class="nav"> <li data-item-id="navTier2_Admissions"> <a href="https://www.utmb.edu/enrollmentservices/future-students/admissions" class="" title="" target="_self" data-url="https://www.utmb.edu/enrollmentservices/future-students/admissions">Admissions</a> </li> <li data-item-id="navTier2_Catalogs" class="has-submenu"> <a href="https://www.utmb.edu/enrollmentservices/future-students/catalogs" class="" title="" target="_self" data-url="https://www.utmb.edu/enrollmentservices/future-students/catalogs">Catalogs</a> <div class="submenu"> <ul class="nav"> <li data-item-id="navTier3_GeneralInformationCatalog"> <a href="https://www.utmb.edu/enrollmentservices/future-students/catalogs/general-information-catalog" class="" title="" target="_self" data-url="https://www.utmb.edu/enrollmentservices/future-students/catalogs/general-information-catalog">General Information Catalog</a> </li> <li data-item-id="navTier3_BrowseCourseCatalog"> <a href="https://www.utmb.edu/enrollmentservices/future-students/catalogs/browse-course-catalog" class="" title="" target="_self" data-url="https://www.utmb.edu/enrollmentservices/future-students/catalogs/browse-course-catalog">Browse Course Catalog</a> </li> <li data-item-id="navTier3_GraduateSchoolofBiomedicalSciencesBulletin"> <a href="https://www.utmb.edu/enrollmentservices/future-students/catalogs/graduate-school-of-biomedical-sciences-bulletin" class="" title="" target="_self" data-url="https://www.utmb.edu/enrollmentservices/future-students/catalogs/graduate-school-of-biomedical-sciences-bulletin">Graduate School of Biomedical Sciences Bulletin</a> </li> <li data-item-id="navTier3_JohnSealySchoolofMedicineBulletin"> <a href="https://www.utmb.edu/enrollmentservices/future-students/catalogs/school-of-medicine-bulletin" class="" title="" target="_self" data-url="https://www.utmb.edu/enrollmentservices/future-students/catalogs/school-of-medicine-bulletin">John Sealy School of Medicine Bulletin</a> </li> <li data-item-id="navTier3_SchoolofHealthProfessionsBulletin"> <a href="https://www.utmb.edu/enrollmentservices/future-students/catalogs/school-of-health-professions-bulletin" class="" title="" target="_self" data-url="https://www.utmb.edu/enrollmentservices/future-students/catalogs/school-of-health-professions-bulletin">School of Health Professions Bulletin</a> </li> <li data-item-id="navTier3_SchoolofNursingBulletin"> <a href="https://www.utmb.edu/enrollmentservices/future-students/catalogs/school-of-nursing-bulletin" class="" title="" target="_self" data-url="https://www.utmb.edu/enrollmentservices/future-students/catalogs/school-of-nursing-bulletin">School of Nursing Bulletin</a> </li> <li data-item-id="navTier3_SchoolofPublicandPopulationHealth"> <a href="https://www.utmb.edu/enrollmentservices/future-students/catalogs/school-of-public-and-population-health" class="" title="" target="_self" data-url="https://www.utmb.edu/enrollmentservices/future-students/catalogs/school-of-public-and-population-health">School of Public and Population Health</a> </li> <li data-item-id="navTier3_CatalogBulletinArchive"> <a href="https://www.utmb.edu/enrollmentservices/future-students/catalogs/catalog-bulletin-archive" class="" title="" target="_self" data-url="https://www.utmb.edu/enrollmentservices/future-students/catalogs/catalog-bulletin-archive">Catalog Bulletin Archive</a> </li> </ul> </div> </li> <li data-item-id="navTier2_CriminalBackgroundImpactonLicensure"> <a href="https://www.utmb.edu/enrollmentservices/future-students/criminal-background-impact-on-licensure" class="" title="" target="_self" data-url="https://www.utmb.edu/enrollmentservices/future-students/criminal-background-impact-on-licensure">Criminal Background Impact on Licensure</a> </li> <li data-item-id="navTier2_EssentialFunctions"> <a href="https://www.utmb.edu/enrollmentservices/future-students/essential-functions-redirect" class="" title="" target="_self" data-url="https://www.utmb.edu/enrollmentservices/future-students/essential-functions-redirect">Essential Functions</a> </li> <li data-item-id="navTier2_FederalWorkStudy"> <a href="https://www.utmb.edu/enrollmentservices/future-students/federal-work-study" class="" title="" target="_self" data-url="https://www.utmb.edu/enrollmentservices/future-students/federal-work-study">Federal Work Study</a> </li> <li data-item-id="navTier2_FERPA"> <a href="https://www.utmb.edu/enrollmentservices/future-students/ferpa" class="current" title="" target="_self" data-url="https://www.utmb.edu/enrollmentservices/future-students/ferpa">FERPA</a> </li> <li data-item-id="navTier2_FinancialAid"> <a href="https://www.utmb.edu/enrollmentservices/future-students/financial-aid" class="" title="" target="_self" data-url="https://www.utmb.edu/enrollmentservices/future-students/financial-aid">Financial Aid</a> </li> <li data-item-id="navTier2_NewStudentOrientation"> <a href="https://www.utmb.edu/enrollmentservices/future-students/new-student-orientation" class="" title="" target="_self" data-url="https://www.utmb.edu/enrollmentservices/future-students/new-student-orientation">New Student Orientation</a> </li> <li data-item-id="navTier2_RequestforInformationRFI"> <a href="https://www.utmb.edu/enrollmentservices/future-students/request-for-information-(rfi)" class="" title="" target="_self" data-url="https://www.utmb.edu/enrollmentservices/future-students/request-for-information-(rfi)">Request for Information (RFI)</a> </li> <li data-item-id="navTier2_Scholarships" class="has-submenu"> <a href="https://www.utmb.edu/enrollmentservices/future-students/scholarships" class="" title="" target="_self" data-url="https://www.utmb.edu/enrollmentservices/future-students/scholarships">Scholarships</a> <div class="submenu"> <ul class="nav"> <li data-item-id="navTier3_UTMBScholarships"> <a href="https://www.utmb.edu/enrollmentservices/future-students/scholarships/utmb-scholarships" class="" title="" target="_self" data-url="https://www.utmb.edu/enrollmentservices/future-students/scholarships/utmb-scholarships">UTMB Scholarships</a> </li> <li data-item-id="navTier3_ScholarshipsbySchool" class="has-submenu"> <a href="https://www.utmb.edu/enrollmentservices/future-students/scholarships/scholarships-by-school" class="" title="" target="_self" data-url="https://www.utmb.edu/enrollmentservices/future-students/scholarships/scholarships-by-school">Scholarships by School</a> <div class="submenu"> <ul class="nav"> <li data-item-id="navTier4_GraduateSchoolofBiomedicalSciences"> <a href="https://www.utmb.edu/enrollmentservices/future-students/scholarships/scholarships-by-school/graduate-school-of-biomedical-sciences" class="" title="" target="_self" data-url="https://www.utmb.edu/enrollmentservices/future-students/scholarships/scholarships-by-school/graduate-school-of-biomedical-sciences">Graduate School of Biomedical Sciences</a> </li> <li data-item-id="navTier4_GraduateSchoolofMedicinePhysiciansAssistant"> <a href="https://www.utmb.edu/enrollmentservices/future-students/scholarships/scholarships-by-school/som---pa" class="" title="" target="_self" data-url="https://www.utmb.edu/enrollmentservices/future-students/scholarships/scholarships-by-school/som---pa">Graduate School of Medicine - Physician's Assistant</a> </li> <li data-item-id="navTier4_JohnSealySchoolofMedicine"> <a href="https://www.utmb.edu/enrollmentservices/future-students/scholarships/scholarships-by-school/school-of-medicine" class="" title="" target="_self" data-url="https://www.utmb.edu/enrollmentservices/future-students/scholarships/scholarships-by-school/school-of-medicine">John Sealy School of Medicine</a> </li> <li data-item-id="navTier4_SchoolofHealthProfessions"> <a href="https://www.utmb.edu/enrollmentservices/future-students/scholarships/scholarships-by-school/school-of-health-professions" class="" title="" target="_self" data-url="https://www.utmb.edu/enrollmentservices/future-students/scholarships/scholarships-by-school/school-of-health-professions">School of Health Professions</a> </li> <li data-item-id="navTier4_SchoolofNursing"> <a href="https://www.utmb.edu/enrollmentservices/future-students/scholarships/scholarships-by-school/school-of-nursing" class="" title="" target="_self" data-url="https://www.utmb.edu/enrollmentservices/future-students/scholarships/scholarships-by-school/school-of-nursing">School of Nursing</a> </li> <li data-item-id="navTier4_SchoolofPublicandPopulationHealth"> <a href="https://www.utmb.edu/enrollmentservices/future-students/scholarships/scholarships-by-school/school-of-public-and-population-health" class="" title="" target="_self" data-url="https://www.utmb.edu/enrollmentservices/future-students/scholarships/scholarships-by-school/school-of-public-and-population-health">School of Public and Population Health</a> </li> </ul> </div> </li> </ul> </div> </li> <li data-item-id="navTier2_StudentAccounts"> <a href="https://www.utmb.edu/enrollmentservices/future-students/student-accounts" class="" title="" target="_self" data-url="https://www.utmb.edu/enrollmentservices/future-students/student-accounts">Student Accounts</a> </li> <li data-item-id="navTier2_StudentsWithDisabilities"> <a href="https://www.utmb.edu/enrollmentservices/future-students/students-with-disabilities" class="" title="" target="_self" data-url="https://www.utmb.edu/enrollmentservices/future-students/students-with-disabilities">Students With Disabilities</a> </li> <li data-item-id="navTier2_TuitionandFees"> <a href="https://www.utmb.edu/enrollmentservices/future-students/tuition-and-fees" class="" title="" target="_self" data-url="https://www.utmb.edu/enrollmentservices/future-students/tuition-and-fees">Tuition and Fees</a> </li> <li data-item-id="navTier2_UTMBLiving"> <a href="https://www.utmb.edu/enrollmentservices/future-students/utmb-living" class="" title="" target="_self" data-url="https://www.utmb.edu/enrollmentservices/future-students/utmb-living">UTMB Living</a> </li> <li data-item-id="navTier2_UTMBSMSTermsandConditionsStudents"> <a href="https://www.utmb.edu/enrollmentservices/future-students/utmb-sms-terms-and-conditions-students" class="" title="" target="_self" data-url="https://www.utmb.edu/enrollmentservices/future-students/utmb-sms-terms-and-conditions-students">UTMB SMS Terms and Conditions - Students</a> </li> <li data-item-id="navTier2_VeteransAffairs"> <a href="https://www.utmb.edu/enrollmentservices/future-students/veterans-affairs" class="" title="" target="_self" data-url="https://www.utmb.edu/enrollmentservices/future-students/veterans-affairs">Veterans Affairs</a> </li> </ul> </div> </li> <li data-item-id="navTier1_CurrentStudents" class="has-submenu"> <a href="https://www.utmb.edu/enrollmentservices/currentstudents" class="" title="" target="_self" data-url="https://www.utmb.edu/enrollmentservices/currentstudents">Current Students</a> <div class="submenu"> <ul class="nav"> <li data-item-id="navTier2_Admissions"> <a href="https://www.utmb.edu/enrollmentservices/currentstudents/admissions" class="" title="" target="_self" data-url="https://www.utmb.edu/enrollmentservices/currentstudents/admissions">Admissions</a> </li> <li data-item-id="navTier2_Catalogs" class="has-submenu"> <a href="https://www.utmb.edu/enrollmentservices/currentstudents/catalogs" class="" title="" target="_self" data-url="https://www.utmb.edu/enrollmentservices/currentstudents/catalogs">Catalogs</a> <div class="submenu"> <ul class="nav"> <li data-item-id="navTier3_GeneralInformationCatalog"> <a href="https://www.utmb.edu/enrollmentservices/currentstudents/catalogs/general-information-catalog" class="" title="" target="_self" data-url="https://www.utmb.edu/enrollmentservices/currentstudents/catalogs/general-information-catalog">General Information Catalog</a> </li> <li data-item-id="navTier3_BrowseCourseCatalog"> <a href="https://www.utmb.edu/enrollmentservices/currentstudents/catalogs/browse-course-catalog" class="" title="" target="_self" data-url="https://www.utmb.edu/enrollmentservices/currentstudents/catalogs/browse-course-catalog">Browse Course Catalog</a> </li> <li data-item-id="navTier3_GraduateSchoolofBiomedicalSciencesBulletin"> <a href="https://www.utmb.edu/enrollmentservices/currentstudents/catalogs/graduate-school-of-biomedical-sciences-bulletin" class="" title="" target="_self" data-url="https://www.utmb.edu/enrollmentservices/currentstudents/catalogs/graduate-school-of-biomedical-sciences-bulletin">Graduate School of Biomedical Sciences Bulletin</a> </li> <li data-item-id="navTier3_JohnSealySchoolofMedicineBulletin"> <a href="https://www.utmb.edu/enrollmentservices/currentstudents/catalogs/school-of-medicine-bulletin" class="" title="" target="_self" data-url="https://www.utmb.edu/enrollmentservices/currentstudents/catalogs/school-of-medicine-bulletin">John Sealy School of Medicine Bulletin</a> </li> <li data-item-id="navTier3_SchoolofHealthProfessionsBulletin"> <a href="https://www.utmb.edu/enrollmentservices/currentstudents/catalogs/school-of-health-professions-bulletin" class="" title="" target="_self" data-url="https://www.utmb.edu/enrollmentservices/currentstudents/catalogs/school-of-health-professions-bulletin">School of Health Professions Bulletin</a> </li> <li data-item-id="navTier3_SchoolofNursingBulletin"> <a href="https://www.utmb.edu/enrollmentservices/currentstudents/catalogs/school-of-nursing-bulletin" class="" title="" target="_self" data-url="https://www.utmb.edu/enrollmentservices/currentstudents/catalogs/school-of-nursing-bulletin">School of Nursing Bulletin</a> </li> <li data-item-id="navTier3_SchoolofPublicandPopulationHealth"> <a href="https://www.utmb.edu/enrollmentservices/currentstudents/catalogs/school-of-public-and-population-health" class="" title="" target="_self" data-url="https://www.utmb.edu/enrollmentservices/currentstudents/catalogs/school-of-public-and-population-health">School of Public and Population Health</a> </li> <li data-item-id="navTier3_CatalogBulletinArchive"> <a href="https://www.utmb.edu/enrollmentservices/currentstudents/catalogs/catalog-bulletin-archive" class="" title="" target="_self" data-url="https://www.utmb.edu/enrollmentservices/currentstudents/catalogs/catalog-bulletin-archive">Catalog Bulletin Archive</a> </li> </ul> </div> </li> <li data-item-id="navTier2_DisabilityInsuranceforMedicalStudents"> <a href="https://www.utmb.edu/enrollmentservices/currentstudents/disability-insurance-for-medical-students" class="" title="" target="_self" data-url="https://www.utmb.edu/enrollmentservices/currentstudents/disability-insurance-for-medical-students">Disability Insurance for Medical Students</a> </li> <li data-item-id="navTier2_EssentialFunctions"> <a href="https://www.utmb.edu/enrollmentservices/currentstudents/essential-functions-redirect-current" class="" title="" target="_self" data-url="https://www.utmb.edu/enrollmentservices/currentstudents/essential-functions-redirect-current">Essential Functions</a> </li> <li data-item-id="navTier2_FERPA"> <a href="https://www.utmb.edu/enrollmentservices/currentstudents/ferpa" class="" title="" target="_self" data-url="https://www.utmb.edu/enrollmentservices/currentstudents/ferpa">FERPA</a> </li> <li data-item-id="navTier2_FinancialAid"> <a href="https://www.utmb.edu/enrollmentservices/currentstudents/financial-aid" class="" title="" target="_self" data-url="https://www.utmb.edu/enrollmentservices/currentstudents/financial-aid">Financial Aid</a> </li> <li data-item-id="navTier2_NCSARA"> <a href="https://www.utmb.edu/enrollmentservices/currentstudents/ncsara" class="" title="" target="_self" data-url="https://www.utmb.edu/enrollmentservices/currentstudents/ncsara">NCSARA</a> </li> <li data-item-id="navTier2_RecommendedCourseSequenceRCS"> <a href="https://www.utmb.edu/enrollmentservices/currentstudents/recommended-course-sequence" class="" title="" target="_self" data-url="https://www.utmb.edu/enrollmentservices/currentstudents/recommended-course-sequence">Recommended Course Sequence (RCS)</a> </li> <li data-item-id="navTier2_RecordsandEnrollment" class="has-submenu"> <a href="https://www.utmb.edu/enrollmentservices/currentstudents/records-and-enrollment" class="" title="" target="_self" data-url="https://www.utmb.edu/enrollmentservices/currentstudents/records-and-enrollment">Records and Enrollment</a> <div class="submenu"> <ul class="nav"> <li data-item-id="navTier3_UTMBRecordsandEnrollment"> <a href="https://www.utmb.edu/enrollmentservices/currentstudents/records-and-enrollment/utmb-records-and-enrollment" class="" title="" target="_self" data-url="https://www.utmb.edu/enrollmentservices/currentstudents/records-and-enrollment/utmb-records-and-enrollment">UTMB Records and Enrollment</a> </li> <li data-item-id="navTier3_ApplicationforReEnrollment" class="has-submenu"> <a href="https://www.utmb.edu/enrollmentservices/currentstudents/records-and-enrollment/application-for-re-enrollment" class="" title="" target="_self" data-url="https://www.utmb.edu/enrollmentservices/currentstudents/records-and-enrollment/application-for-re-enrollment">Application for Re-Enrollment</a> <div class="submenu"> <ul class="nav"> <li data-item-id="navTier4_GraduateSchoolofBiomedicalSciences"> <a href="https://www.utmb.edu/enrollmentservices/currentstudents/records-and-enrollment/application-for-re-enrollment/graduate-school-of-biomedical-sciences" class="" title="" target="_self" data-url="https://www.utmb.edu/enrollmentservices/currentstudents/records-and-enrollment/application-for-re-enrollment/graduate-school-of-biomedical-sciences">Graduate School of Biomedical Sciences</a> </li> <li data-item-id="navTier4_SchoolofHealthProfessions"> <a href="https://www.utmb.edu/enrollmentservices/currentstudents/records-and-enrollment/application-for-re-enrollment/school-of-health-professions" class="" title="" target="_self" data-url="https://www.utmb.edu/enrollmentservices/currentstudents/records-and-enrollment/application-for-re-enrollment/school-of-health-professions">School of Health Professions</a> </li> <li data-item-id="navTier4_SchoolofNursing"> <a href="https://www.utmb.edu/enrollmentservices/currentstudents/records-and-enrollment/application-for-re-enrollment/school-of-nursing" class="" title="" target="_self" data-url="https://www.utmb.edu/enrollmentservices/currentstudents/records-and-enrollment/application-for-re-enrollment/school-of-nursing">School of Nursing</a> </li> <li data-item-id="navTier4_AllOtherSchools"> <a href="https://www.utmb.edu/enrollmentservices/currentstudents/records-and-enrollment/application-for-re-enrollment/all-other-schools" class="" title="" target="_self" data-url="https://www.utmb.edu/enrollmentservices/currentstudents/records-and-enrollment/application-for-re-enrollment/all-other-schools">All Other Schools</a> </li> </ul> </div> </li> <li data-item-id="navTier3_EnrollmentVerification"> <a href="https://www.utmb.edu/enrollmentservices/currentstudents/records-and-enrollment/enrollment-verification" class="" title="" target="_self" data-url="https://www.utmb.edu/enrollmentservices/currentstudents/records-and-enrollment/enrollment-verification">Enrollment Verification</a> </li> <li data-item-id="navTier3_NameChange"> <a href="https://www.utmb.edu/enrollmentservices/currentstudents/records-and-enrollment/name-change" class="" title="" target="_self" data-url="https://www.utmb.edu/enrollmentservices/currentstudents/records-and-enrollment/name-change">Name Change</a> </li> <li data-item-id="navTier3_Registration"> <a href="https://www.utmb.edu/enrollmentservices/currentstudents/records-and-enrollment/registration" class="" title="" target="_self" data-url="https://www.utmb.edu/enrollmentservices/currentstudents/records-and-enrollment/registration">Registration</a> </li> <li data-item-id="navTier3_ServiceRequest"> <a href="https://www.utmb.edu/enrollmentservices/currentstudents/records-and-enrollment/service-request" class="" title="" target="_self" data-url="https://www.utmb.edu/enrollmentservices/currentstudents/records-and-enrollment/service-request">Service Request</a> </li> <li data-item-id="navTier3_TranscriptRequest" class="has-submenu"> <a href="https://www.utmb.edu/enrollmentservices/currentstudents/records-and-enrollment/transcript-request" class="" title="" target="_self" data-url="https://www.utmb.edu/enrollmentservices/currentstudents/records-and-enrollment/transcript-request">Transcript Request</a> <div class="submenu"> <ul class="nav"> <li data-item-id="navTier4_CurrentStudent"> <a href="https://www.utmb.edu/enrollmentservices/currentstudents/records-and-enrollment/transcript-request/current-student" class="" title="" target="_self" data-url="https://www.utmb.edu/enrollmentservices/currentstudents/records-and-enrollment/transcript-request/current-student">Current Student</a> </li> <li data-item-id="navTier4_AlumniFormerStudent"> <a href="https://www.utmb.edu/enrollmentservices/currentstudents/records-and-enrollment/transcript-request/alumni-former-student" class="" title="" target="_self" data-url="https://www.utmb.edu/enrollmentservices/currentstudents/records-and-enrollment/transcript-request/alumni-former-student">Alumni/Former Student</a> </li> </ul> </div> </li> </ul> </div> </li> <li data-item-id="navTier2_Scholarships" class="has-submenu"> <a href="https://www.utmb.edu/enrollmentservices/currentstudents/scholarships" class="" title="" target="_self" data-url="https://www.utmb.edu/enrollmentservices/currentstudents/scholarships">Scholarships</a> <div class="submenu"> <ul class="nav"> <li data-item-id="navTier3_UTMBScholarships"> <a href="https://www.utmb.edu/enrollmentservices/currentstudents/scholarships/utmb-scholarships" class="" title="" target="_self" data-url="https://www.utmb.edu/enrollmentservices/currentstudents/scholarships/utmb-scholarships">UTMB Scholarships</a> </li> <li data-item-id="navTier3_ScholarshipsbySchool" class="has-submenu"> <a href="https://www.utmb.edu/enrollmentservices/currentstudents/scholarships/scholarships-by-school" class="" title="" target="_self" data-url="https://www.utmb.edu/enrollmentservices/currentstudents/scholarships/scholarships-by-school">Scholarships by School</a> <div class="submenu"> <ul class="nav"> <li data-item-id="navTier4_GraduateSchoolofBiomedicalSciences"> <a href="https://www.utmb.edu/enrollmentservices/currentstudents/scholarships/scholarships-by-school/graduate-school-of-biomedical-sciences" class="" title="" target="_self" data-url="https://www.utmb.edu/enrollmentservices/currentstudents/scholarships/scholarships-by-school/graduate-school-of-biomedical-sciences">Graduate School of Biomedical Sciences</a> </li> <li data-item-id="navTier4_GraduateSchoolofMedicinePhysiciansAssistant"> <a href="https://www.utmb.edu/enrollmentservices/currentstudents/scholarships/scholarships-by-school/graduate-school-of-medicine---physician&#39;s-assistant" class="" title="" target="_self" data-url="https://www.utmb.edu/enrollmentservices/currentstudents/scholarships/scholarships-by-school/graduate-school-of-medicine---physician&#39;s-assistant">Graduate School of Medicine - Physician's Assistant</a> </li> <li data-item-id="navTier4_JohnSealySchoolofMedicine"> <a href="https://www.utmb.edu/enrollmentservices/currentstudents/scholarships/scholarships-by-school/school-of-medicine" class="" title="" target="_self" data-url="https://www.utmb.edu/enrollmentservices/currentstudents/scholarships/scholarships-by-school/school-of-medicine">John Sealy School of Medicine</a> </li> <li data-item-id="navTier4_SchoolofHealthProfessions"> <a href="https://www.utmb.edu/enrollmentservices/currentstudents/scholarships/scholarships-by-school/school-of-health-professions" class="" title="" target="_self" data-url="https://www.utmb.edu/enrollmentservices/currentstudents/scholarships/scholarships-by-school/school-of-health-professions">School of Health Professions</a> </li> <li data-item-id="navTier4_SchoolofNursing"> <a href="https://www.utmb.edu/enrollmentservices/currentstudents/scholarships/scholarships-by-school/school-of-nursing" class="" title="" target="_self" data-url="https://www.utmb.edu/enrollmentservices/currentstudents/scholarships/scholarships-by-school/school-of-nursing">School of Nursing</a> </li> </ul> </div> </li> </ul> </div> </li> <li data-item-id="navTier2_StudentAccounts"> <a href="https://www.utmb.edu/enrollmentservices/currentstudents/student-accounts" class="" title="" target="_self" data-url="https://www.utmb.edu/enrollmentservices/currentstudents/student-accounts">Student Accounts</a> </li> <li data-item-id="navTier2_StudentsWithDisabilities"> <a href="https://www.utmb.edu/enrollmentservices/currentstudents/students-with-disabilities" class="" title="" target="_self" data-url="https://www.utmb.edu/enrollmentservices/currentstudents/students-with-disabilities">Students With Disabilities</a> </li> <li data-item-id="navTier2_TitleIX"> <a href="https://www.utmb.edu/enrollmentservices/currentstudents/title-ix" class="" title="" target="_self" data-url="https://www.utmb.edu/enrollmentservices/currentstudents/title-ix">Title IX</a> </li> <li data-item-id="navTier2_TuitionandFees"> <a href="https://www.utmb.edu/enrollmentservices/currentstudents/tuition-and-fees" class="" title="" target="_self" data-url="https://www.utmb.edu/enrollmentservices/currentstudents/tuition-and-fees">Tuition and Fees</a> </li> <li data-item-id="navTier2_UTMBSMSTermsandConditionsStudents"> <a href="https://www.utmb.edu/enrollmentservices/currentstudents/utmb-sms-terms-and-conditions-students" class="" title="" target="_self" data-url="https://www.utmb.edu/enrollmentservices/currentstudents/utmb-sms-terms-and-conditions-students">UTMB SMS Terms and Conditions - Students</a> </li> <li data-item-id="navTier2_VisitingMedicalStudents"> <a href="https://www.utmb.edu/enrollmentservices/currentstudents/visiting-students" class="" title="" target="_self" data-url="https://www.utmb.edu/enrollmentservices/currentstudents/visiting-students">Visiting Medical Students</a> </li> </ul> </div> </li> <li data-item-id="navTier1_InternationalStudents"> <a href="https://www.utmb.edu/enrollmentservices/students-international" class="" title="" target="_self" data-url="https://www.utmb.edu/enrollmentservices/students-international">International Students</a> </li> <li data-item-id="navTier1_Veterans" class="has-submenu"> <a href="https://www.utmb.edu/enrollmentservices/veterans" class="" title="" target="_self" data-url="https://www.utmb.edu/enrollmentservices/veterans">Veterans</a> <div class="submenu"> <ul class="nav"> <li data-item-id="navTier2_VeteransAffairs"> <a href="https://www.utmb.edu/enrollmentservices/veterans/veterans-affairs" class="" title="" target="_self" data-url="https://www.utmb.edu/enrollmentservices/veterans/veterans-affairs">Veterans Affairs</a> </li> </ul> </div> </li> <li data-item-id="navTier1_AlumniInformation" class="has-submenu"> <a href="https://www.utmb.edu/enrollmentservices/esalumni" class="" title="" target="_self" data-url="https://www.utmb.edu/enrollmentservices/esalumni">Alumni Information</a> <div class="submenu"> <ul class="nav"> <li data-item-id="navTier2_InformationforAlumni"> <a href="https://www.utmb.edu/enrollmentservices/esalumni/information-for-alumni" class="" title="" target="_self" data-url="https://www.utmb.edu/enrollmentservices/esalumni/information-for-alumni">Information for Alumni</a> </li> <li data-item-id="navTier2_AlumniRelations"> <a href="https://www.utmb.edu/enrollmentservices/esalumni/alumni-relations" class="" title="" target="_self" data-url="https://www.utmb.edu/enrollmentservices/esalumni/alumni-relations">Alumni Relations</a> </li> </ul> </div> </li> <li data-item-id="navTier1_mySTAR"> <a href="https://www.utmb.edu/enrollmentservices/mystar" class="" title="" target="_self" data-url="https://www.utmb.edu/enrollmentservices/mystar">mySTAR</a> </li> </ul> </div> </div> </nav> <!-- MobiButton --> <div class="mobi-btn"> <a href="#mobi" title="" uk-toggle=""> <span class="bar1"></span> <span class="bar2"></span> <span class="bar3"></span> <span class="mobi-btn-text sr-only">Menu</span> </a> </div> </div> </div> </div> </header> <main id="maincontent" role="main"> <div id="atopcontent"> 
+ </div> <div id="primarycontent"> <div id="featurecontent"> 
+ </div> <article id="article"> <div id="main-content" name="main-content"> <div id="bodycontent"> 
+<div class="sf_cols">
+    <div class="sf_colsOut sf_1col_1_100" style="">
+        <div id="Body_TA6025652001_Col00" class="sf_colsIn sf_1col_1in_100" style="margin: 30px 0px;"><div id="Body_TA6025652002_Col00" class="sf_colsIn container" data-sf-element="Container">
+<div class="utmbsf-content-block" utmb-4x-template="ContentBlock.Default">
+    <h1 style="text-align:center;">FERPA</h1><p class="pnormal">The Family Educational Rights and Privacy Act (FERPA) (20 U.S.C. &sect; 1232g; 34 CFR Part 99) is a Federal law that protects the privacy of student education records. The law applies to all schools that receive funds under an applicable program of the
+    U.S. Department of Education.</p><p class="pnormal">Federal and state law provide students with the following rights with respect to their education records:</p><ul><li>to inspect and review;</li><li>to consent to disclosure to third parties, except to the extent that FERPA authorizes disclosure without consent;</li><li>to request amendment to ensure education records are not inaccurate or misleading;</li><li>to be notified of his/her privacy rights under FERPA; and</li><li>to file a complaint with the U.S. Department of Education concerning alleged failures by UTMB to comply with FERPA requirements.</li></ul><br /><p class="pnormal">Directory information may appear in public documents and may be disclosed without student consent unless a student submits a written request to restrict the information as confidential.</p><p class="pnormal">UTMB designates the following information as directory information:</p><ol><li>student&rsquo;s name (including previous names);</li><li>campus phone number;</li><li>campus address;</li><li>email address;</li><li>student pictures (if applicable);</li><li>previous institution(s) attended;</li><li>major field of study;</li><li>dates of attendance;</li><li>degree(s) and date(s) conferred (including degrees from previous institutions);</li><li>honors and awards;</li><li>participation in officially recognized activities; and</li><li>postgraduate training site (for M.D. and Ph.D. graduates).</li></ol><br /><p class="pnormal">The full UTMB FERPA policy can be found in the <a href="https://liveutmb.sharepoint.com/:b:/s/collaboration/webfiles/EWtknMD6lhdHpOhh6HWtnP8B24X8Ckd5v9PAcbOtPr_1_Q" title="General Information Catalog" data-sf-ec-immutable="">General Information Catalog</a> and in the Institutional Handbook of Operating Procedures (<a href="https://intranet.utmb.edu/policies_and_procedures/policy/14094374" title="IHOP Policy" data-sf-ec-immutable="">IHOP Policy, 07.01.30</a>).</p><p class="pnormal">For more information about FERPA, visit <a href="https://studentprivacy.ed.gov/ferpa" title="FERPA US Department of Education" data-sf-ec-immutable="">https://studentprivacy.ed.gov/ferpa</a></p><p class="pnormal">Click <a href="https://liveutmb.sharepoint.com/:b:/s/collaboration/webfiles/EW-cQGk63ApDsS4KGAjkZL4BltiPmXj-WrufRDjc0QngJw" title="FERPA Instructions" data-sf-ec-immutable="">here</a> for instructions for updating your FERPA setting in mySTAR.</p><br />
+</div>
+
+
+</div>
+
+            
+        </div>
+    </div>
+</div> </div> </div> </article> <div id="basecontent"> 
+ </div> </div> <div id="subcontent"> 
+<section class="row section-box-row" data-sf-element="Row">
+    <div class="section-box bg-coolgray3 arrow-coolgray3" data-sf-element="SectionBoxWrapper">
+        <div class="section-box-container">
+            <div class="arrow"></div>
+            <div id="BelowPageContent_T2834B648001_Col00" class="sf_colsIn section-content" data-sf-element="SectionBox"><div id="BelowPageContent_T2834B648002_Col00" class="sf_colsIn container" data-sf-element="Container"><div class="sf_cols">
+    <div class="sf_colsOut sf_2cols_1_67" style="width: 74%;">
+        <div id="BelowPageContent_T2834B648004_Col00" class="sf_colsIn sf_2cols_1in_67">
+<div class="utmbsf-content-block" utmb-4x-template="ContentBlock.Default">
+    <div style="text-align:center;"><p style="margin:0px 0px 10px;font-size:1.3em;font-weight:bold;">Enrollment Services Contact Information</p></div>
+</div>
+
+<div class="sf_cols">
+    <div class="sf_colsOut sf_1col_1_100">
+        <div id="BelowPageContent_T2834B648015_Col00" class="sf_colsIn sf_1col_1in_100"><div class="sf_cols">
+    <div class="sf_colsOut sf_3cols_1_33" style="width: 15%;">
+        <div id="BelowPageContent_T2834B648013_Col00" class="sf_colsIn sf_3cols_1in_33">
+<div class="utmbsf-content-block" utmb-4x-template="ContentBlock.Default">
+    <p style="margin:0px 0px 10px;font-size:1em;font-weight:bold;">All Contacts:</p><a alt="List of all contacts" title="Web listing of contacts" href="/enrollmentservices/contact-list"><img src="/images/librariesprovider60/default-album/contactus5b05ce93-e88f-4d04-be86-166af4c8a4e4.png?sfvrsn=53b8c357_3" alt="" title="ContactUs" data-displaymode="Original" style="display:block;margin-left:auto;margin-right:auto;" /></a>
+</div>
+
+
+            
+        </div>
+    </div>
+    <div class="sf_colsOut sf_3cols_2_34" style="width: 38%;">
+        <div id="BelowPageContent_T2834B648013_Col01" class="sf_colsIn sf_3cols_2in_34">
+<div class="utmbsf-content-block" utmb-4x-template="ContentBlock.Default">
+    <p style="margin:0px 0px 10px;font-size:1em;font-weight:bold;">Mailing Address:</p><p style="margin:0px 0px 10px;font-size:1em;">Office of Enrollment Services<br />The University of Texas Medical Branch<br />301 University Boulevard<br />Galveston, Texas 77555-1305</p>
+</div>
+
+
+            
+        </div>
+    </div>
+    <div class="sf_colsOut sf_3cols_3_33" style="width: 46%;">
+        <div id="BelowPageContent_T2834B648013_Col02" class="sf_colsIn sf_3cols_3in_33">
+<div class="utmbsf-content-block" utmb-4x-template="ContentBlock.Default">
+    <p style="margin:0px 0px 10px;font-size:1em;font-weight:bold;">All other:</p><p style="margin:0px 0px 10px;font-size:1em;">Phone: 409-772-1215<br />Fax: 409-772-5056<br />Email Addresses:  <a href="mailto://enrollment.services@utmb.edu" title="Enrollment Services email address">enrollment.services@utmb.edu</a></p>
+</div>
+
+
+            
+        </div>
+    </div>
+</div>
+            
+        </div>
+    </div>
+</div>
+            
+        </div>
+    </div>
+    <div class="sf_colsOut sf_2cols_2_33" style="width: 25%;">
+        <div id="BelowPageContent_T2834B648004_Col01" class="sf_colsIn sf_2cols_2in_33"><div class="sf_cols">
+    <div class="sf_colsOut sf_1col_1_100">
+        <div id="BelowPageContent_T2834B648016_Col00" class="sf_colsIn sf_1col_1in_100">
+<div class="utmbsf-content-block" utmb-4x-template="ContentBlock.Default">
+    <div style="text-align:center;"><span style="font-size:1.3em;font-weight:bold;">Campus Map</span></div>
+</div>
+
+
+<div class="utmbsf-content-block" utmb-4x-template="ContentBlock.Default">
+    <a href="https://www.utmb.edu/map/"><img src="/images/librariesprovider60/default-album/campusmap.tmb-medium.jpg?Culture=en&sfvrsn=47faa058_1" alt="campusmap" title="campusmap" data-displaymode="Thumbnail" style="display:block;margin-left:auto;margin-right:auto;" /></a>
+</div>
+
+
+            
+        </div>
+    </div>
+</div>
+            
+        </div>
+    </div>
+</div>
+</div>
+
+            </div>
+        </div>
+    </div>
+</section> </div> </main> </div> </div> <div id="mobi" role="navigation" aria-label="Mobile Navigation" uk-offcanvas="overlay: true; mode: slide"> <div class="uk-offcanvas-bar"> <button class="uk-offcanvas-close" type="button" uk-close> <span class="sr-only">Close Off-Canvas Mobile Menu</span> </button> <!-- MobiSearch --> <div id="mobi-search" class="menu-container"> <label for="MobiSearchQuery" class="search-label menu-title">Search</label> <div class="search-input-group"> <input id="MobiSearchQuery" name="MobiSearchQuery" type="text"> <div class="search-input-group-btn"> <button id="btnMobiSearchQuery" type="button" class="search-btn"> <span aria-hidden="true" class="fa fa-search"></span> <span class="search-btn-text sr-only">Submit Search Query</span> </button> </div> </div> <!-- Search Options --> <div class="search-options"> <div class="search-options-toggle"> <span id="mobiSearchOptionsList"> <label for="mobiSearchOptionsUtmb"> <input id="mobiSearchOptionsUtmb" type="radio" name="mobiSearchOptions" value="utmb" checked="checked" />
+                                        UTMB
+                                    </label> <label for="mobiSearchOptionsGoogle"> <input id="mobiSearchOptionsGoogle" type="radio" name="mobiSearchOptions" value="google" />
+                                        Google
+                                    </label> </span> </div> </div> </div> <!-- MobiNavigate --> <div id="mobi-navigate" class="menu-container"> <strong class="menu-title">Navigate</strong> </div> <!-- MobiExplore --> <div id="mobi-explore" class="menu-container"> <strong class="menu-title">Explore UTMB</strong> <ul class="nav-menu"> <li data-item-id="mobiExploreHealthCare"> <a href="https://www.utmb.edu/health" title="">Health Care</a> </li> <li data-item-id="mobiExploreAcademics"> <a href="https://www.utmb.edu/academics" title="">Education</a> </li> <li data-item-id="mobiExploreResearch"> <a href="https://www.utmb.edu/research" title="">Research</a> </li> <li data-item-id="mobiExploreInstitutional"> <a href="https://www.utmb.edu/all-utmb" title="">UTMB Support Areas</a> </li> <li data-item-id="mobiExploreGive"> <a href="https://www.utmb.edu/support" title="">Giving</a> </li> <li data-item-id="mobiExploreContacts"> <a href="https://www.utmb.edu/contact" title="">Contacts</a> </li> <li data-item-id="mobiExploreAlerts" class="utmb-alert-site-mobi"> <a href="https://www.utmb.edu/alert" title="">Alerts</a> </li> </ul> </div> </div> </div> <footer id="footer" role="contentinfo" class="footer footer-modern"> <div class="back-to-top-container"> <a href="#top" title="Back to top of page" class="back-to-top">Back to top <span class="caret"></span></a> </div> <div class="container utmb-marketing-brightedge"> <!--BE IXF: The following <div> block needs to be placed in the location where the link block will be displayed--> <!--BE IXF: For your websidata:image/pjpeg;base64,/9j/4AAQSkZJRgABAQEAYABgAAD/2wBDAAEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQH/2wBDAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQH/wAARCABAAEADASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwD+wCiiivnz7AKKKKACiiigAooooAKKKKAPMPiB8bvgx8JrjTbT4qfFz4Y/DS71mG4udHtviB498K+DbjVbe0eOK7n02HxFqunSX0NrJNDHcS2qypC8sSSMrSIDm+B/2h/gB8Ttb/4Rn4bfHH4P/ELxGLO41E+H/BHxL8F+K9bGn2jRJdX39laDrV/f/Y7Zp4VuLn7P5ELTRCR1MiBvw7/4K7Wvwqvf24v+Cd9p8cm8Pp8Iri68Yx/EF/Fd59g8OL4abX/DP286ze+fbfZrHbt86Xz4tox84r9BP2SPBH/BMi1+JOo61+xynwMvPidpXhW//tOf4Z+KJNc1yx8JX19ptrqD3Vt/bF+sWnTag2lwSzPCMTvboHUvg8MMRVniatJexjGlUjBqcpKpJOEJtwitH8TS1Sv3O+WGpwwtKs/rEp1acppwpxdGDVSUEpzumr8t9nuj6o8QftUfsw+E9c1Pwz4p/aN+A/hrxJot7Npus+H/ABB8Xvh/o2t6TqNu2yew1PStR8Q21/YXkL/JNa3UEU8bfK6KeK9c8NeKfDPjPR7TxF4P8R6F4r8P34ZrHXPDWr6fruj3io21zaanpdxdWVwFYFWMM7hWGDg1/Od+yp+zX8Cf2jv+CkH/AAU30745/DTw58R9P8L+P7O80CDxCl2U0i41TxL4qg1G4tJLS7tJIpLmGztklfeSBChXaRk9D/wTw0vw18H/APgqn+158A/2Z9bvNU/ZZ0/4ew+IL7RLLXLzxJ4S8N+PLRvh3G1tp+sXN3eLcajouu634z8KW7y3dxqEunWt3Y31xqEmgfa4ohjKvNTc6cHTq1p0Y8km6ilByV3FpJr3Xe0tE7vy1qYClGNRQq1fa0cNSxM+enFUXGpGlJwjOMnJTXtVyqUXzcrWl7r+i2iiivRPLCiiigD+d7/grjc/Cyz/AG5/+Cdl18bl8NP8JILvxjJ8QF8Y2kV94Xbw2Nf8M/bhrlnPDcQ3Gn7dvnRSQSq3GUNfoJ+y18Q/+CYi/Es+H/2R7z9njTfil4p0TUbB7P4WeHNP0TxFrOgaaI9d1KzlnsdIsnn0+2/syLUp4JZvL32cUoUvGlfYfxJ+AfwM+MtzpV58Xvg18LPild6FBdW2iXXxE+H/AIU8aXGj217JDLeW+lzeI9K1GSwhu5beCS5itWiSd4YnlVmjQjD8C/sufs0fC/xHa+MPhr+z18Efh94tsYbu3svE/gn4V+B/C3iGzt7+3ktL6C11nQ9DsdRgivLWWW2uo4rhUuLeR4ZQ8bsp4Y4arDEVaq9hKNWrGd5wlKpBKEINQd0k3ZvqtfkehLFUp4WnRl9ZjOlSnBKE4qjOTnKcXOLTbSckns7LQ/nm+CX7FvwS/bL/AOCjf/BSHRvjVbeKrqw8DfEeLUdEi8L+J7zw0Xm13xH4ktdQTUHtI5GvIHh063WONinlHzCrZc4/oH/Zy/ZS+An7J3hS88H/AAI+H+neC9O1a4gvNfvxc6hrHiLxHe2ySR21xr3iLWbq+1fURaLNcfYLOW7GnaYLq6XTLOzS5nV/SvDfwq+GHg3xP4s8beEPhz4G8LeMvHlwl3448WeHfCehaL4k8Y3UU09xHc+Kdc06wttT1+eOe5uJkl1W5upFlnmkVg8rlu+q8PhYUbycISquc37RR97llJyUeZq+istOxGKxtXEcsFOqqMadGCpObcOalTjBy5U+XVxclppfuFFFFdZxBRRRQAUUUUAFFFFABRRRQB//2Q==te, the location is   --> <div class="be-ix-link-block"><!--Link Block Target Div--></div> <!--BE IXF: end --> </div> <div class="foot h-card"> <nav role="navigation" aria-label="Institutional Footer Navigation" class="footer-links"> <a href="https://www.utmb.edu" title="UTMB home" class="footer-link-utmbedu">UTMB.edu</a><a href="https://www.utmbhealth.com" title="UTMB Health patient care" class="footer-link-utmbhealthcom">UTMBHealth.com</a><a href="https://www.utmb.edu/map/" title="UTMB maps and directions" class="footer-link-maps">Maps &amp; Directions</a><a href="https://www.utmb.edu/site-policies/" title="UTMB Health privacy policy and required links" class="footer-link-policies">Privacy Policy &amp; Required Links</a> </nav> <div class="footer-copy"> <div> <span>&copy;</span> <span id="footer-copyright-date"></span><a href="https://www.utmb.edu/" title="UTMB Health, The University of Texas Medical Branch" class="p-name u-url"><span class="p-org">The University of Texas Medical Branch at Galveston</span></a>
+                    &nbsp; Member,
+                    <span class="p-org h-card">Texas Medical Center®</span><br> <div> <span class="utmbsf-footer-login">
+                            UTMB Web:&nbsp;
+                            <a href="https://www.utmb.edu/sitefinity/" title="Log into UTMB Sitefinity on www.utmb.edu">WWW Login</a> <span class="pipe">|</span> <a href="https://intranet.utmb.edu/sitefinity/" title="Log into UTMB Sitefinity on intranet.utmb.edu">Intranet Login</a> </span> </div> </div> </div> <div class="footer-logo"> <a id="brand-footer" href="https://www.utmb.edu/" title="UTMB Health, The University of Texas Medical Branch" class="branding"> <span class="">UTMB Health</span> </a> </div> </div> </footer> <!-- UTMB Bootstrap 3x --> <script src="https://utmb-cdn.azureedge.net/web/js/lib/bootstrap/bootstrap.min.js" type="text/javascript" rel="jquery-lib"></script> <!-- UTMB Web 4x for Sitefinity --> <script src="https://utmb-cdn.azureedge.net/web/4.2.2/js/utmb-sitefinity.min.js" type="text/javascript" rel="utmb-sitefinity"></script> <!-- Siteimprove Analytics --> <script async src="https://siteimproveanalytics.com/js/siteanalyze_67412.js"></script>  
+ 
+
+<script type="text/javascript">
+//<![CDATA[
+window.__TsmHiddenField = $get('ctl05_TSM');;(function() {
+                        function loadHandler() {
+                            var hf = $get('ctl06_TSSM');
+                            if (!hf._RSSM_init) { hf._RSSM_init = true; hf.value = ''; }
+                            hf.value += ';Telerik.Sitefinity.Resources, Version=15.3.8522.0, Culture=neutral, PublicKeyToken=b28c218413bdf563:en:3768ae42-d8f5-4fb3-bab3-68e873ac101a:7a90d6a';
+                            Sys.Application.remove_load(loadHandler);
+                        };
+                        Sys.Application.add_load(loadHandler);
+                    })();//]]>
+</script>
+</form></body> </html>
+
+
+
+
+
+
+

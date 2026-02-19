@@ -1,0 +1,1374 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" /><script type="text/javascript">(window.NREUM||(NREUM={})).init={ajax:{deny_list:["bam.nr-data.net"]},feature_flags:["soft_nav"]};(window.NREUM||(NREUM={})).loader_config={licenseKey:"NRJS-d17f109c7e1c3c29839",applicationID:"425086169",browserID:"425122639"};;/*! For license information please see nr-loader-rum-1.309.0.min.js.LICENSE.txt */
+(()=>{var e,t,r={163:(e,t,r)=>{"use strict";r.d(t,{j:()=>E});var n=r(384),i=r(1741);var a=r(2555);r(860).K7.genericEvents;const s="experimental.resources",o="register",c=e=>{if(!e||"string"!=typeof e)return!1;try{document.createDocumentFragment().querySelector(e)}catch{return!1}return!0};var d=r(2614),u=r(944),l=r(8122);const f="[data-nr-mask]",g=e=>(0,l.a)(e,(()=>{const e={feature_flags:[],experimental:{allow_registered_children:!1,resources:!1},mask_selector:"*",block_selector:"[data-nr-block]",mask_input_options:{color:!1,date:!1,"datetime-local":!1,email:!1,month:!1,number:!1,range:!1,search:!1,tel:!1,text:!1,time:!1,url:!1,week:!1,textarea:!1,select:!1,password:!0}};return{ajax:{deny_list:void 0,block_internal:!0,enabled:!0,autoStart:!0},api:{get allow_registered_children(){return e.feature_flags.includes(o)||e.experimental.allow_registered_children},set allow_registered_children(t){e.experimental.allow_registered_children=t},duplicate_registered_data:!1},browser_consent_mode:{enabled:!1},distributed_tracing:{enabled:void 0,exclude_newrelic_header:void 0,cors_use_newrelic_header:void 0,cors_use_tracecontext_headers:void 0,allowed_origins:void 0},get feature_flags(){return e.feature_flags},set feature_flags(t){e.feature_flags=t},generic_events:{enabled:!0,autoStart:!0},harvest:{interval:30},jserrors:{enabled:!0,autoStart:!0},logging:{enabled:!0,autoStart:!0},metrics:{enabled:!0,autoStart:!0},obfuscate:void 0,page_action:{enabled:!0},page_view_event:{enabled:!0,autoStart:!0},page_view_timing:{enabled:!0,autoStart:!0},performance:{capture_marks:!1,capture_measures:!1,capture_detail:!0,resources:{get enabled(){return e.feature_flags.includes(s)||e.experimental.resources},set enabled(t){e.experimental.resources=t},asset_types:[],first_party_domains:[],ignore_newrelic:!0}},privacy:{cookies_enabled:!0},proxy:{assets:void 0,beacon:void 0},session:{expiresMs:d.wk,inactiveMs:d.BB},session_replay:{autoStart:!0,enabled:!1,preload:!1,sampling_rate:10,error_sampling_rate:100,collect_fonts:!1,inline_images:!1,fix_stylesheets:!0,mask_all_inputs:!0,get mask_text_selector(){return e.mask_selector},set mask_text_selector(t){c(t)?e.mask_selector="".concat(t,",").concat(f):""===t||null===t?e.mask_selector=f:(0,u.R)(5,t)},get block_class(){return"nr-block"},get ignore_class(){return"nr-ignore"},get mask_text_class(){return"nr-mask"},get block_selector(){return e.block_selector},set block_selector(t){c(t)?e.block_selector+=",".concat(t):""!==t&&(0,u.R)(6,t)},get mask_input_options(){return e.mask_input_options},set mask_input_options(t){t&&"object"==typeof t?e.mask_input_options={...t,password:!0}:(0,u.R)(7,t)}},session_trace:{enabled:!0,autoStart:!0},soft_navigations:{enabled:!0,autoStart:!0},spa:{enabled:!0,autoStart:!0},ssl:void 0,user_actions:{enabled:!0,elementAttributes:["id","className","tagName","type"]}}})());var p=r(6154),m=r(9324);let h=0;const v={buildEnv:m.F3,distMethod:m.Xs,version:m.xv,originTime:p.WN},b={consented:!1},y={appMetadata:{},get consented(){return this.session?.state?.consent||b.consented},set consented(e){b.consented=e},customTransaction:void 0,denyList:void 0,disabled:!1,harvester:void 0,isolatedBacklog:!1,isRecording:!1,loaderType:void 0,maxBytes:3e4,obfuscator:void 0,onerror:void 0,ptid:void 0,releaseIds:{},session:void 0,timeKeeper:void 0,registeredEntities:[],jsAttributesMetadata:{bytes:0},get harvestCount(){return++h}},_=e=>{const t=(0,l.a)(e,y),r=Object.keys(v).reduce((e,t)=>(e[t]={value:v[t],writable:!1,configurable:!0,enumerable:!0},e),{});return Object.defineProperties(t,r)};var w=r(5701);const x=e=>{const t=e.startsWith("http");e+="/",r.p=t?e:"https://"+e};var R=r(7836),k=r(3241);const A={accountID:void 0,trustKey:void 0,agentID:void 0,licenseKey:void 0,applicationID:void 0,xpid:void 0},S=e=>(0,l.a)(e,A),T=new Set;function E(e,t={},r,s){let{init:o,info:c,loader_config:d,runtime:u={},exposed:l=!0}=t;if(!c){const e=(0,n.pV)();o=e.init,c=e.info,d=e.loader_config}e.init=g(o||{}),e.loader_config=S(d||{}),c.jsAttributes??={},p.bv&&(c.jsAttributes.isWorker=!0),e.info=(0,a.D)(c);const f=e.init,m=[c.beacon,c.errorBeacon];T.has(e.agentIdentifier)||(f.proxy.assets&&(x(f.proxy.assets),m.push(f.proxy.assets)),f.proxy.beacon&&m.push(f.proxy.beacon),e.beacons=[...m],function(e){const t=(0,n.pV)();Object.getOwnPropertyNames(i.W.prototype).forEach(r=>{const n=i.W.prototype[r];if("function"!=typeof n||"constructor"===n)return;let a=t[r];e[r]&&!1!==e.exposed&&"micro-agent"!==e.runtime?.loaderType&&(t[r]=(...t)=>{const n=e[r](...t);return a?a(...t):n})})}(e),(0,n.US)("activatedFeatures",w.B)),u.denyList=[...f.ajax.deny_list||[],...f.ajax.block_internal?m:[]],u.ptid=e.agentIdentifier,u.loaderType=r,e.runtime=_(u),T.has(e.agentIdentifier)||(e.ee=R.ee.get(e.agentIdentifier),e.exposed=l,(0,k.W)({agentIdentifier:e.agentIdentifier,drained:!!w.B?.[e.agentIdentifier],type:"lifecycle",name:"initialize",feature:void 0,data:e.config})),T.add(e.agentIdentifier)}},384:(e,t,r)=>{"use strict";r.d(t,{NT:()=>o,US:()=>l,Zm:()=>c,bQ:()=>u,dV:()=>d,pV:()=>f});var n=r(6154),i=r(1863),a=r(944),s=r(1910);const o={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net"};function c(){return n.gm.NREUM||(n.gm.NREUM={}),void 0===n.gm.newrelic&&(n.gm.newrelic=n.gm.NREUM),n.gm.NREUM}function d(){let e=c();return e.o||(e.o={ST:n.gm.setTimeout,SI:n.gm.setImmediate||n.gm.setInterval,CT:n.gm.clearTimeout,XHR:n.gm.XMLHttpRequest,REQ:n.gm.Request,EV:n.gm.Event,PR:n.gm.Promise,MO:n.gm.MutationObserver,FETCH:n.gm.fetch,WS:n.gm.WebSocket},(0,s.i)(...Object.values(e.o))),e}function u(e,t){let r=c();r.initializedAgents??={},t.initializedAt={ms:(0,i.t)(),date:new Date},r.initializedAgents[e]=t,2===Object.keys(r.initializedAgents).length&&(0,a.R)(69)}function l(e,t){c()[e]=t}function f(){return function(){let e=c();const t=e.info||{};e.info={beacon:o.beacon,errorBeacon:o.errorBeacon,...t}}(),function(){let e=c();const t=e.init||{};e.init={...t}}(),d(),function(){let e=c();const t=e.loader_config||{};e.loader_config={...t}}(),c()}},782:(e,t,r)=>{"use strict";r.d(t,{T:()=>n});const n=r(860).K7.pageViewTiming},860:(e,t,r)=>{"use strict";r.d(t,{$J:()=>u,K7:()=>c,P3:()=>d,XX:()=>i,Yy:()=>o,df:()=>a,qY:()=>n,v4:()=>s});const n="events",i="jserrors",a="browser/blobs",s="rum",o="browser/logs",c={ajax:"ajax",genericEvents:"generic_events",jserrors:i,logging:"logging",metrics:"metrics",pageAction:"page_action",pageViewEvent:"page_view_event",pageViewTiming:"page_view_timing",sessionReplay:"session_replay",sessionTrace:"session_trace",softNav:"soft_navigations",spa:"spa"},d={[c.pageViewEvent]:1,[c.pageViewTiming]:2,[c.metrics]:3,[c.jserrors]:4,[c.spa]:5,[c.ajax]:6,[c.sessionTrace]:7,[c.softNav]:8,[c.sessionReplay]:9,[c.logging]:10,[c.genericEvents]:11},u={[c.pageViewEvent]:s,[c.pageViewTiming]:n,[c.ajax]:n,[c.spa]:n,[c.softNav]:n,[c.metrics]:i,[c.jserrors]:i,[c.sessionTrace]:a,[c.sessionReplay]:a,[c.logging]:o,[c.genericEvents]:"ins"}},944:(e,t,r)=>{"use strict";r.d(t,{R:()=>i});var n=r(3241);function i(e,t){"function"==typeof console.debug&&(console.debug("New Relic Warning: https://github.com/newrelic/newrelic-browser-agent/blob/main/docs/warning-codes.md#".concat(e),t),(0,n.W)({agentIdentifier:null,drained:null,type:"data",name:"warn",feature:"warn",data:{code:e,secondary:t}}))}},1687:(e,t,r)=>{"use strict";r.d(t,{Ak:()=>d,Ze:()=>f,x3:()=>u});var n=r(3241),i=r(7836),a=r(3606),s=r(860),o=r(2646);const c={};function d(e,t){const r={staged:!1,priority:s.P3[t]||0};l(e),c[e].get(t)||c[e].set(t,r)}function u(e,t){e&&c[e]&&(c[e].get(t)&&c[e].delete(t),p(e,t,!1),c[e].size&&g(e))}function l(e){if(!e)throw new Error("agentIdentifier required");c[e]||(c[e]=new Map)}function f(e="",t="feature",r=!1){if(l(e),!e||!c[e].get(t)||r)return p(e,t);c[e].get(t).staged=!0,g(e)}function g(e){const t=Array.from(c[e]);t.every(([e,t])=>t.staged)&&(t.sort((e,t)=>e[1].priority-t[1].priority),t.forEach(([t])=>{c[e].delete(t),p(e,t)}))}function p(e,t,r=!0){const s=e?i.ee.get(e):i.ee,c=a.i.handlers;if(!s.aborted&&s.backlog&&c){if((0,n.W)({agentIdentifier:e,type:"lifecycle",name:"drain",feature:t}),r){const e=s.backlog[t],r=c[t];if(r){for(let t=0;e&&t<e.length;++t)m(e[t],r);Object.entries(r).forEach(([e,t])=>{Object.values(t||{}).forEach(t=>{t[0]?.on&&t[0].context()instanceof o.y&&!t[0].listeners(e).includes(t[1])&&t[0].on(e,t[1])})})}}s.isolatedBacklog||delete c[t],s.backlog[t]=null,s.emit("drain-"+t,[])}}function m(e,t){var r=e[1];Object.values(t[r]||{}).forEach(t=>{var r=e[0];if(t[0]===r){var n=t[1],i=e[3],a=e[2];n.apply(i,a)}})}},1738:(e,t,r)=>{"use strict";r.d(t,{U:()=>g,Y:()=>f});var n=r(3241),i=r(9908),a=r(1863),s=r(944),o=r(5701),c=r(3969),d=r(8362),u=r(860),l=r(4261);function f(e,t,r,a){const f=a||r;!f||f[e]&&f[e]!==d.d.prototype[e]||(f[e]=function(){(0,i.p)(c.xV,["API/"+e+"/called"],void 0,u.K7.metrics,r.ee),(0,n.W)({agentIdentifier:r.agentIdentifier,drained:!!o.B?.[r.agentIdentifier],type:"data",name:"api",feature:l.Pl+e,data:{}});try{return t.apply(this,arguments)}catch(e){(0,s.R)(23,e)}})}function g(e,t,r,n,s){const o=e.info;null===r?delete o.jsAttributes[t]:o.jsAttributes[t]=r,(s||null===r)&&(0,i.p)(l.Pl+n,[(0,a.t)(),t,r],void 0,"session",e.ee)}},1741:(e,t,r)=>{"use strict";r.d(t,{W:()=>a});var n=r(944),i=r(4261);class a{#e(e,...t){if(this[e]!==a.prototype[e])return this[e](...t);(0,n.R)(35,e)}addPageAction(e,t){return this.#e(i.hG,e,t)}register(e){return this.#e(i.eY,e)}recordCustomEvent(e,t){return this.#e(i.fF,e,t)}setPageViewName(e,t){return this.#e(i.Fw,e,t)}setCustomAttribute(e,t,r){return this.#e(i.cD,e,t,r)}noticeError(e,t){return this.#e(i.o5,e,t)}setUserId(e,t=!1){return this.#e(i.Dl,e,t)}setApplicationVersion(e){return this.#e(i.nb,e)}setErrorHandler(e){return this.#e(i.bt,e)}addRelease(e,t){return this.#e(i.k6,e,t)}log(e,t){return this.#e(i.$9,e,t)}start(){return this.#e(i.d3)}finished(e){return this.#e(i.BL,e)}recordReplay(){return this.#e(i.CH)}pauseReplay(){return this.#e(i.Tb)}addToTrace(e){return this.#e(i.U2,e)}setCurrentRouteName(e){return this.#e(i.PA,e)}interaction(e){return this.#e(i.dT,e)}wrapLogger(e,t,r){return this.#e(i.Wb,e,t,r)}measure(e,t){return this.#e(i.V1,e,t)}consent(e){return this.#e(i.Pv,e)}}},1863:(e,t,r)=>{"use strict";function n(){return Math.floor(performance.now())}r.d(t,{t:()=>n})},1910:(e,t,r)=>{"use strict";r.d(t,{i:()=>a});var n=r(944);const i=new Map;function a(...e){return e.every(e=>{if(i.has(e))return i.get(e);const t="function"==typeof e?e.toString():"",r=t.includes("[native code]"),a=t.includes("nrWrapper");return r||a||(0,n.R)(64,e?.name||t),i.set(e,r),r})}},2555:(e,t,r)=>{"use strict";r.d(t,{D:()=>o,f:()=>s});var n=r(384),i=r(8122);const a={beacon:n.NT.beacon,errorBeacon:n.NT.errorBeacon,licenseKey:void 0,applicationID:void 0,sa:void 0,queueTime:void 0,applicationTime:void 0,ttGuid:void 0,user:void 0,account:void 0,product:void 0,extra:void 0,jsAttributes:{},userAttributes:void 0,atts:void 0,transactionName:void 0,tNamePlain:void 0};function s(e){try{return!!e.licenseKey&&!!e.errorBeacon&&!!e.applicationID}catch(e){return!1}}const o=e=>(0,i.a)(e,a)},2614:(e,t,r)=>{"use strict";r.d(t,{BB:()=>s,H3:()=>n,g:()=>d,iL:()=>c,tS:()=>o,uh:()=>i,wk:()=>a});const n="NRBA",i="SESSION",a=144e5,s=18e5,o={STARTED:"session-started",PAUSE:"session-pause",RESET:"session-reset",RESUME:"session-resume",UPDATE:"session-update"},c={SAME_TAB:"same-tab",CROSS_TAB:"cross-tab"},d={OFF:0,FULL:1,ERROR:2}},2646:(e,t,r)=>{"use strict";r.d(t,{y:()=>n});class n{constructor(e){this.contextId=e}}},2843:(e,t,r)=>{"use strict";r.d(t,{G:()=>a,u:()=>i});var n=r(3878);function i(e,t=!1,r,i){(0,n.DD)("visibilitychange",function(){if(t)return void("hidden"===document.visibilityState&&e());e(document.visibilityState)},r,i)}function a(e,t,r){(0,n.sp)("pagehide",e,t,r)}},3241:(e,t,r)=>{"use strict";r.d(t,{W:()=>a});var n=r(6154);const i="newrelic";function a(e={}){try{n.gm.dispatchEvent(new CustomEvent(i,{detail:e}))}catch(e){}}},3606:(e,t,r)=>{"use strict";r.d(t,{i:()=>a});var n=r(9908);a.on=s;var i=a.handlers={};function a(e,t,r,a){s(a||n.d,i,e,t,r)}function s(e,t,r,i,a){a||(a="feature"),e||(e=n.d);var s=t[a]=t[a]||{};(s[r]=s[r]||[]).push([e,i])}},3878:(e,t,r)=>{"use strict";function n(e,t){return{capture:e,passive:!1,signal:t}}function i(e,t,r=!1,i){window.addEventListener(e,t,n(r,i))}function a(e,t,r=!1,i){document.addEventListener(e,t,n(r,i))}r.d(t,{DD:()=>a,jT:()=>n,sp:()=>i})},3969:(e,t,r)=>{"use strict";r.d(t,{TZ:()=>n,XG:()=>o,rs:()=>i,xV:()=>s,z_:()=>a});const n=r(860).K7.metrics,i="sm",a="cm",s="storeSupportabilityMetrics",o="storeEventMetrics"},4234:(e,t,r)=>{"use strict";r.d(t,{W:()=>a});var n=r(7836),i=r(1687);class a{constructor(e,t){this.agentIdentifier=e,this.ee=n.ee.get(e),this.featureName=t,this.blocked=!1}deregisterDrain(){(0,i.x3)(this.agentIdentifier,this.featureName)}}},4261:(e,t,r)=>{"use strict";r.d(t,{$9:()=>d,BL:()=>o,CH:()=>g,Dl:()=>_,Fw:()=>y,PA:()=>h,Pl:()=>n,Pv:()=>k,Tb:()=>l,U2:()=>a,V1:()=>R,Wb:()=>x,bt:()=>b,cD:()=>v,d3:()=>w,dT:()=>c,eY:()=>p,fF:()=>f,hG:()=>i,k6:()=>s,nb:()=>m,o5:()=>u});const n="api-",i="addPageAction",a="addToTrace",s="addRelease",o="finished",c="interaction",d="log",u="noticeError",l="pauseReplay",f="recordCustomEvent",g="recordReplay",p="register",m="setApplicationVersion",h="setCurrentRouteName",v="setCustomAttribute",b="setErrorHandler",y="setPageViewName",_="setUserId",w="start",x="wrapLogger",R="measure",k="consent"},5289:(e,t,r)=>{"use strict";r.d(t,{GG:()=>s,Qr:()=>c,sB:()=>o});var n=r(3878),i=r(6389);function a(){return"undefined"==typeof document||"complete"===document.readyState}function s(e,t){if(a())return e();const r=(0,i.J)(e),s=setInterval(()=>{a()&&(clearInterval(s),r())},500);(0,n.sp)("load",r,t)}function o(e){if(a())return e();(0,n.DD)("DOMContentLoaded",e)}function c(e){if(a())return e();(0,n.sp)("popstate",e)}},5607:(e,t,r)=>{"use strict";r.d(t,{W:()=>n});const n=(0,r(9566).bz)()},5701:(e,t,r)=>{"use strict";r.d(t,{B:()=>a,t:()=>s});var n=r(3241);const i=new Set,a={};function s(e,t){const r=t.agentIdentifier;a[r]??={},e&&"object"==typeof e&&(i.has(r)||(t.ee.emit("rumresp",[e]),a[r]=e,i.add(r),(0,n.W)({agentIdentifier:r,loaded:!0,drained:!0,type:"lifecycle",name:"load",feature:void 0,data:e})))}},6154:(e,t,r)=>{"use strict";r.d(t,{OF:()=>c,RI:()=>i,WN:()=>u,bv:()=>a,eN:()=>l,gm:()=>s,mw:()=>o,sb:()=>d});var n=r(1863);const i="undefined"!=typeof window&&!!window.document,a="undefined"!=typeof WorkerGlobalScope&&("undefined"!=typeof self&&self instanceof WorkerGlobalScope&&self.navigator instanceof WorkerNavigator||"undefined"!=typeof globalThis&&globalThis instanceof WorkerGlobalScope&&globalThis.navigator instanceof WorkerNavigator),s=i?window:"undefined"!=typeof WorkerGlobalScope&&("undefined"!=typeof self&&self instanceof WorkerGlobalScope&&self||"undefined"!=typeof globalThis&&globalThis instanceof WorkerGlobalScope&&globalThis),o=Boolean("hidden"===s?.document?.visibilityState),c=/iPad|iPhone|iPod/.test(s.navigator?.userAgent),d=c&&"undefined"==typeof SharedWorker,u=((()=>{const e=s.navigator?.userAgent?.match(/Firefox[/\s](\d+\.\d+)/);Array.isArray(e)&&e.length>=2&&e[1]})(),Date.now()-(0,n.t)()),l=()=>"undefined"!=typeof PerformanceNavigationTiming&&s?.performance?.getEntriesByType("navigation")?.[0]?.responseStart},6389:(e,t,r)=>{"use strict";function n(e,t=500,r={}){const n=r?.leading||!1;let i;return(...r)=>{n&&void 0===i&&(e.apply(this,r),i=setTimeout(()=>{i=clearTimeout(i)},t)),n||(clearTimeout(i),i=setTimeout(()=>{e.apply(this,r)},t))}}function i(e){let t=!1;return(...r)=>{t||(t=!0,e.apply(this,r))}}r.d(t,{J:()=>i,s:()=>n})},6630:(e,t,r)=>{"use strict";r.d(t,{T:()=>n});const n=r(860).K7.pageViewEvent},7699:(e,t,r)=>{"use strict";r.d(t,{It:()=>a,KC:()=>o,No:()=>i,qh:()=>s});var n=r(860);const i=16e3,a=1e6,s="SESSION_ERROR",o={[n.K7.logging]:!0,[n.K7.genericEvents]:!1,[n.K7.jserrors]:!1,[n.K7.ajax]:!1}},7836:(e,t,r)=>{"use strict";r.d(t,{P:()=>o,ee:()=>c});var n=r(384),i=r(8990),a=r(2646),s=r(5607);const o="nr@context:".concat(s.W),c=function e(t,r){var n={},s={},u={},l=!1;try{l=16===r.length&&d.initializedAgents?.[r]?.runtime.isolatedBacklog}catch(e){}var f={on:p,addEventListener:p,removeEventListener:function(e,t){var r=n[e];if(!r)return;for(var i=0;i<r.length;i++)r[i]===t&&r.splice(i,1)},emit:function(e,r,n,i,a){!1!==a&&(a=!0);if(c.aborted&&!i)return;t&&a&&t.emit(e,r,n);var o=g(n);m(e).forEach(e=>{e.apply(o,r)});var d=v()[s[e]];d&&d.push([f,e,r,o]);return o},get:h,listeners:m,context:g,buffer:function(e,t){const r=v();if(t=t||"feature",f.aborted)return;Object.entries(e||{}).forEach(([e,n])=>{s[n]=t,t in r||(r[t]=[])})},abort:function(){f._aborted=!0,Object.keys(f.backlog).forEach(e=>{delete f.backlog[e]})},isBuffering:function(e){return!!v()[s[e]]},debugId:r,backlog:l?{}:t&&"object"==typeof t.backlog?t.backlog:{},isolatedBacklog:l};return Object.defineProperty(f,"aborted",{get:()=>{let e=f._aborted||!1;return e||(t&&(e=t.aborted),e)}}),f;function g(e){return e&&e instanceof a.y?e:e?(0,i.I)(e,o,()=>new a.y(o)):new a.y(o)}function p(e,t){n[e]=m(e).concat(t)}function m(e){return n[e]||[]}function h(t){return u[t]=u[t]||e(f,t)}function v(){return f.backlog}}(void 0,"globalEE"),d=(0,n.Zm)();d.ee||(d.ee=c)},8122:(e,t,r)=>{"use strict";r.d(t,{a:()=>i});var n=r(944);function i(e,t){try{if(!e||"object"!=typeof e)return(0,n.R)(3);if(!t||"object"!=typeof t)return(0,n.R)(4);const r=Object.create(Object.getPrototypeOf(t),Object.getOwnPropertyDescriptors(t)),a=0===Object.keys(r).length?e:r;for(let s in a)if(void 0!==e[s])try{if(null===e[s]){r[s]=null;continue}Array.isArray(e[s])&&Array.isArray(t[s])?r[s]=Array.from(new Set([...e[s],...t[s]])):"object"==typeof e[s]&&"object"==typeof t[s]?r[s]=i(e[s],t[s]):r[s]=e[s]}catch(e){r[s]||(0,n.R)(1,e)}return r}catch(e){(0,n.R)(2,e)}}},8362:(e,t,r)=>{"use strict";r.d(t,{d:()=>a});var n=r(9566),i=r(1741);class a extends i.W{agentIdentifier=(0,n.LA)(16)}},8374:(e,t,r)=>{r.nc=(()=>{try{return document?.currentScript?.nonce}catch(e){}return""})()},8990:(e,t,r)=>{"use strict";r.d(t,{I:()=>i});var n=Object.prototype.hasOwnProperty;function i(e,t,r){if(n.call(e,t))return e[t];var i=r();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,t,{value:i,writable:!0,enumerable:!1}),i}catch(e){}return e[t]=i,i}},9324:(e,t,r)=>{"use strict";r.d(t,{F3:()=>i,Xs:()=>a,xv:()=>n});const n="1.309.0",i="PROD",a="CDN"},9566:(e,t,r)=>{"use strict";r.d(t,{LA:()=>o,bz:()=>s});var n=r(6154);const i="xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx";function a(e,t){return e?15&e[t]:16*Math.random()|0}function s(){const e=n.gm?.crypto||n.gm?.msCrypto;let t,r=0;return e&&e.getRandomValues&&(t=e.getRandomValues(new Uint8Array(30))),i.split("").map(e=>"x"===e?a(t,r++).toString(16):"y"===e?(3&a()|8).toString(16):e).join("")}function o(e){const t=n.gm?.crypto||n.gm?.msCrypto;let r,i=0;t&&t.getRandomValues&&(r=t.getRandomValues(new Uint8Array(e)));const s=[];for(var o=0;o<e;o++)s.push(a(r,i++).toString(16));return s.join("")}},9908:(e,t,r)=>{"use strict";r.d(t,{d:()=>n,p:()=>i});var n=r(7836).ee.get("handle");function i(e,t,r,i,a){a?(a.buffer([e],i),a.emit(e,t,r)):(n.buffer([e],i),n.emit(e,t,r))}}},n={};function i(e){var t=n[e];if(void 0!==t)return t.exports;var a=n[e]={exports:{}};return r[e](a,a.exports,i),a.exports}i.m=r,i.d=(e,t)=>{for(var r in t)i.o(t,r)&&!i.o(e,r)&&Object.defineProperty(e,r,{enumerable:!0,get:t[r]})},i.f={},i.e=e=>Promise.all(Object.keys(i.f).reduce((t,r)=>(i.f[r](e,t),t),[])),i.u=e=>"nr-rum-1.309.0.min.js",i.o=(e,t)=>Object.prototype.hasOwnProperty.call(e,t),e={},t="NRBA-1.309.0.PROD:",i.l=(r,n,a,s)=>{if(e[r])e[r].push(n);else{var o,c;if(void 0!==a)for(var d=document.getElementsByTagName("script"),u=0;u<d.length;u++){var l=d[u];if(l.getAttribute("src")==r||l.getAttribute("data-webpack")==t+a){o=l;break}}if(!o){c=!0;var f={296:"sha512-ZBBVWt6PVOQQpTGc/xzYP/zYs+pj6QnNTqG2pFYHQrwWdUi4/1lsIi9EaFcj4Ifn3O38eFqKr9dqSv/HftTqtA=="};(o=document.createElement("script")).charset="utf-8",i.nc&&o.setAttribute("nonce",i.nc),o.setAttribute("data-webpack",t+a),o.src=r,0!==o.src.indexOf(window.location.origin+"/")&&(o.crossOrigin="anonymous"),f[s]&&(o.integrity=f[s])}e[r]=[n];var g=(t,n)=>{o.onerror=o.onload=null,clearTimeout(p);var i=e[r];if(delete e[r],o.parentNode&&o.parentNode.removeChild(o),i&&i.forEach(e=>e(n)),t)return t(n)},p=setTimeout(g.bind(null,void 0,{type:"timeout",target:o}),12e4);o.onerror=g.bind(null,o.onerror),o.onload=g.bind(null,o.onload),c&&document.head.appendChild(o)}},i.r=e=>{"undefined"!=typeof Symbol&&Symbol.toStringTag&&Object.defineProperty(e,Symbol.toStringTag,{value:"Module"}),Object.defineProperty(e,"__esModule",{value:!0})},i.p="https://js-agent.newrelic.com/",(()=>{var e={374:0,840:0};i.f.j=(t,r)=>{var n=i.o(e,t)?e[t]:void 0;if(0!==n)if(n)r.push(n[2]);else{var a=new Promise((r,i)=>n=e[t]=[r,i]);r.push(n[2]=a);var s=i.p+i.u(t),o=new Error;i.l(s,r=>{if(i.o(e,t)&&(0!==(n=e[t])&&(e[t]=void 0),n)){var a=r&&("load"===r.type?"missing":r.type),s=r&&r.target&&r.target.src;o.message="Loading chunk "+t+" failed: ("+a+": "+s+")",o.name="ChunkLoadError",o.type=a,o.request=s,n[1](o)}},"chunk-"+t,t)}};var t=(t,r)=>{var n,a,[s,o,c]=r,d=0;if(s.some(t=>0!==e[t])){for(n in o)i.o(o,n)&&(i.m[n]=o[n]);if(c)c(i)}for(t&&t(r);d<s.length;d++)a=s[d],i.o(e,a)&&e[a]&&e[a][0](),e[a]=0},r=self["webpackChunk:NRBA-1.309.0.PROD"]=self["webpackChunk:NRBA-1.309.0.PROD"]||[];r.forEach(t.bind(null,0)),r.push=t.bind(null,r.push.bind(r))})(),(()=>{"use strict";i(8374);var e=i(8362),t=i(860);const r=Object.values(t.K7);var n=i(163);var a=i(9908),s=i(1863),o=i(4261),c=i(1738);var d=i(1687),u=i(4234),l=i(5289),f=i(6154),g=i(944),p=i(384);const m=e=>f.RI&&!0===e?.privacy.cookies_enabled;function h(e){return!!(0,p.dV)().o.MO&&m(e)&&!0===e?.session_trace.enabled}var v=i(6389),b=i(7699);class y extends u.W{constructor(e,t){super(e.agentIdentifier,t),this.agentRef=e,this.abortHandler=void 0,this.featAggregate=void 0,this.loadedSuccessfully=void 0,this.onAggregateImported=new Promise(e=>{this.loadedSuccessfully=e}),this.deferred=Promise.resolve(),!1===e.init[this.featureName].autoStart?this.deferred=new Promise((t,r)=>{this.ee.on("manual-start-all",(0,v.J)(()=>{(0,d.Ak)(e.agentIdentifier,this.featureName),t()}))}):(0,d.Ak)(e.agentIdentifier,t)}importAggregator(e,t,r={}){if(this.featAggregate)return;const n=async()=>{let n;await this.deferred;try{if(m(e.init)){const{setupAgentSession:t}=await i.e(296).then(i.bind(i,3305));n=t(e)}}catch(e){(0,g.R)(20,e),this.ee.emit("internal-error",[e]),(0,a.p)(b.qh,[e],void 0,this.featureName,this.ee)}try{if(!this.#t(this.featureName,n,e.init))return(0,d.Ze)(this.agentIdentifier,this.featureName),void this.loadedSuccessfully(!1);const{Aggregate:i}=await t();this.featAggregate=new i(e,r),e.runtime.harvester.initializedAggregates.push(this.featAggregate),this.loadedSuccessfully(!0)}catch(e){(0,g.R)(34,e),this.abortHandler?.(),(0,d.Ze)(this.agentIdentifier,this.featureName,!0),this.loadedSuccessfully(!1),this.ee&&this.ee.abort()}};f.RI?(0,l.GG)(()=>n(),!0):n()}#t(e,r,n){if(this.blocked)return!1;switch(e){case t.K7.sessionReplay:return h(n)&&!!r;case t.K7.sessionTrace:return!!r;default:return!0}}}var _=i(6630),w=i(2614),x=i(3241);class R extends y{static featureName=_.T;constructor(e){var t;super(e,_.T),this.setupInspectionEvents(e.agentIdentifier),t=e,(0,c.Y)(o.Fw,function(e,r){"string"==typeof e&&("/"!==e.charAt(0)&&(e="/"+e),t.runtime.customTransaction=(r||"http://custom.transaction")+e,(0,a.p)(o.Pl+o.Fw,[(0,s.t)()],void 0,void 0,t.ee))},t),this.importAggregator(e,()=>i.e(296).then(i.bind(i,3943)))}setupInspectionEvents(e){const t=(t,r)=>{t&&(0,x.W)({agentIdentifier:e,timeStamp:t.timeStamp,loaded:"complete"===t.target.readyState,type:"window",name:r,data:t.target.location+""})};(0,l.sB)(e=>{t(e,"DOMContentLoaded")}),(0,l.GG)(e=>{t(e,"load")}),(0,l.Qr)(e=>{t(e,"navigate")}),this.ee.on(w.tS.UPDATE,(t,r)=>{(0,x.W)({agentIdentifier:e,type:"lifecycle",name:"session",data:r})})}}class k extends e.d{constructor(e){var t;(super(),f.gm)?(this.features={},(0,p.bQ)(this.agentIdentifier,this),this.desiredFeatures=new Set(e.features||[]),this.desiredFeatures.add(R),(0,n.j)(this,e,e.loaderType||"agent"),t=this,(0,c.Y)(o.cD,function(e,r,n=!1){if("string"==typeof e){if(["string","number","boolean"].includes(typeof r)||null===r)return(0,c.U)(t,e,r,o.cD,n);(0,g.R)(40,typeof r)}else(0,g.R)(39,typeof e)},t),function(e){(0,c.Y)(o.Dl,function(t,r=!1){if("string"!=typeof t&&null!==t)return void(0,g.R)(41,typeof t);const n=e.info.jsAttributes["enduser.id"];r&&null!=n&&n!==t?(0,a.p)(o.Pl+"setUserIdAndResetSession",[t],void 0,"session",e.ee):(0,c.U)(e,"enduser.id",t,o.Dl,!0)},e)}(this),function(e){(0,c.Y)(o.nb,function(t){if("string"==typeof t||null===t)return(0,c.U)(e,"application.version",t,o.nb,!1);(0,g.R)(42,typeof t)},e)}(this),function(e){(0,c.Y)(o.d3,function(){e.ee.emit("manual-start-all")},e)}(this),function(e){(0,c.Y)(o.Pv,function(t=!0){if("boolean"==typeof t){if((0,a.p)(o.Pl+o.Pv,[t],void 0,"session",e.ee),e.runtime.consented=t,t){const t=e.features.page_view_event;t.onAggregateImported.then(e=>{const r=t.featAggregate;e&&!r.sentRum&&r.sendRum()})}}else(0,g.R)(65,typeof t)},e)}(this),this.run()):(0,g.R)(21)}get config(){return{info:this.info,init:this.init,loader_config:this.loader_config,runtime:this.runtime}}get api(){return this}run(){try{const e=function(e){const t={};return r.forEach(r=>{t[r]=!!e[r]?.enabled}),t}(this.init),n=[...this.desiredFeatures];n.sort((e,r)=>t.P3[e.featureName]-t.P3[r.featureName]),n.forEach(r=>{if(!e[r.featureName]&&r.featureName!==t.K7.pageViewEvent)return;if(r.featureName===t.K7.spa)return void(0,g.R)(67);const n=function(e){switch(e){case t.K7.ajax:return[t.K7.jserrors];case t.K7.sessionTrace:return[t.K7.ajax,t.K7.pageViewEvent];case t.K7.sessionReplay:return[t.K7.sessionTrace];case t.K7.pageViewTiming:return[t.K7.pageViewEvent];default:return[]}}(r.featureName).filter(e=>!(e in this.features));n.length>0&&(0,g.R)(36,{targetFeature:r.featureName,missingDependencies:n}),this.features[r.featureName]=new r(this)})}catch(e){(0,g.R)(22,e);for(const e in this.features)this.features[e].abortHandler?.();const t=(0,p.Zm)();delete t.initializedAgents[this.agentIdentifier]?.features,delete this.sharedAggregator;return t.ee.get(this.agentIdentifier).abort(),!1}}}var A=i(2843),S=i(782);class T extends y{static featureName=S.T;constructor(e){super(e,S.T),f.RI&&((0,A.u)(()=>(0,a.p)("docHidden",[(0,s.t)()],void 0,S.T,this.ee),!0),(0,A.G)(()=>(0,a.p)("winPagehide",[(0,s.t)()],void 0,S.T,this.ee)),this.importAggregator(e,()=>i.e(296).then(i.bind(i,2117))))}}var E=i(3969);class j extends y{static featureName=E.TZ;constructor(e){super(e,E.TZ),f.RI&&document.addEventListener("securitypolicyviolation",e=>{(0,a.p)(E.xV,["Generic/CSPViolation/Detected"],void 0,this.featureName,this.ee)}),this.importAggregator(e,()=>i.e(296).then(i.bind(i,9623)))}}new k({features:[R,T,j],loaderType:"lite"})})()})();</script>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="noai, noimageai">
+
+    <!-- Add this as early as possible in <head>, before the actual script -->
+    <link rel="preconnect" href="https://htlbid.com" crossorigin>
+    <link rel="preconnect" href="https://securepubads.g.doubleclick.net">
+    <link rel="preconnect" href="https://googletagservices.com">
+    <link rel="preload" as="script" href="https://htlbid.com/v3/wishtv.com/opscobid.js" fetchpriority="high">
+
+    <style type="text/css">.has-secondary-menu .page-content {
+    padding-top: 175px;
+}
+.logged-in.has-secondary-menu .page-content {
+    padding-top: 140px !important;
+}
+
+body.home .popular-stroies .popular-stories-list ul li.featured-post-row .content-box .post-title a {
+    float: none;
+}
+popular-stroies.variation1 .popular-stories-list {
+    margin-bottom: 15px;
+}
+@media (max-width: 1199px) {
+    .home .popular-stroies .popular-stories-list ul li.featured-post-row .featured-image {
+        flex: 155px 0 0 !important;
+    }
+}
+@media (max-width: 574px) {
+    .home .popular-stroies .popular-stories-list ul li.featured-post-row .featured-image {
+        flex: 125px 0 0 !important;
+    }
+}
+
+body .videoicon.post-has-video .fa-brands:before {
+    content: "\f04b";
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+    font-size: 16px;
+}
+
+body .opscoad-billboard-1,
+body .opscoad-homepage_billboard-1 {
+    display: inline-flex !important;
+    justify-content: center;
+}
+body.search .opscoad-billboard-1,
+body.search .opscoad-homepage_billboard-1 {
+    margin-bottom: 30px;
+    display: inline !important;
+}
+.page-template-podcasts footer,
+.search footer {
+    margin-top: 30px;
+}
+.single-photo-gallery .gallery-item img {
+    height: auto !important;
+}
+.logged-in .page-content {
+    padding-top: 130px !important;
+}
+@media (max-width: 1360px) {
+    .page-content {
+        padding-top: 95px !important;
+    }
+    .logged-in .page-content {
+        padding-top: 60px !important;
+    }
+    body header {
+        margin-top: 0px !important;
+    }
+    .has-secondary-menu .page-content {
+        padding-top: 125px !important;
+    }
+    .logged-in.has-secondary-menu .page-content {
+        padding-top: 85px !important;
+    }
+}
+
+@media (max-width: 700px) {
+    body header {
+        margin-top: 90px !important;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        margin: 0 auto;
+        z-index: 99999;
+    }
+    .page-content {
+        padding-top: 187px !important;
+    }
+    .logged-in .page-content {
+        padding-top: 140px !important;
+    }
+    .has-secondary-menu .page-content {
+        padding-top: 207px !important;
+    }
+    .logged-in.has-secondary-menu .page-content {
+        padding-top: 166px !important;
+    }
+}
+
+@media (max-width: 1024px) {
+    .single-photo-gallery .gallery-item img {
+        height: auto !important;
+    }
+}
+
+@media (max-width: 575px) {
+    header .logo img {
+        max-width: 190px !important;
+    }
+    .wish-photo-gallery .gallery-item .photo-item {
+        height: auto !important;
+    }
+}
+
+@media (max-width: 375px) {
+    header .logo img {
+        max-width: 130px !important;
+    }
+}
+
+.single-post .fusion-flexslider .fuel-meta {
+    display: block !important;
+}
+.single-post .fusion-flexslider .fuel-meta .fuel-player-share {
+    display: block !important;
+}
+
+.email_news_cls .is-layout-flow {
+    background-color: rgb(146, 146, 146);
+}
+.bitcentral-fuel-player-section h1.fuel-title-heading {
+    display: none;
+}
+
+@media only screen and (max-width: 1640px) {
+    .main-navigation .menu li.menu-item > a {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 1200px) {
+    .email-alerts-block .wp-block-columns.email_news_cls {
+        gap: 20px;
+        justify-content: space-between;
+        margin: 0;
+    }
+}
+@media (max-width: 991px) {
+    .food-stories .tree-item:nth-child(2) .titlerow span a .title-1 {
+        padding: 3px 5px 3px 0 !important;
+        flex: auto 0 0 !important;
+        justify-content: flex-start;
+    }
+    .single-photo-gallery .gallery-item picture img {
+        height: 400px;
+        object-fit: cover;
+    }
+}
+.email-alerts-block .wp-block-columns.email_news_cls .wp-block-column {
+    width: auto !important;
+}
+.popular-stroies .popular-stories-list ul li.featured-post-row .featured-image img {
+    width: auto;
+}
+.sbn-header h3.sbn-header-headline:after {
+    display: none;
+}
+.single .news-storie-row > .row, .single-post .news-storie-row > .row {
+    width: 100%;
+}</style><!-- Adblocker popup addition Start -->
+
+<script async src="https://fundingchoicesmessages.google.com/i/pub-7477157129758762?ers=1"></script><script>(function() {function signalGooglefcPresent() {if (!window.frames['googlefcPresent']) {if (document.body) {const iframe = document.createElement('iframe'); iframe.style = 'width: 0; height: 0; border: none; z-index: -1000; left: -1000px; top: -1000px;'; iframe.style.display = 'none'; iframe.name = 'googlefcPresent'; document.body.appendChild(iframe);} else {setTimeout(signalGooglefcPresent, 0);}}}signalGooglefcPresent();})();</script>
+<!-- Adblocker popup addition End -->
+<!-- MGID Header -->
+<script src="https://jsc.mgid.com/site/871355.js" async> 
+ </script>
+<!-- MGID Header End -->
+
+<script src="//apv-launcher.minute-ly.com/api/launcher/MIN-903060.js" async></script>
+    <meta name='robots' content='index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' />
+
+<!-- Google Tag Manager for WordPress by gtm4wp.com -->
+<script data-cfasync="false" data-pagespeed-no-defer>
+	var gtm4wp_datalayer_name = "dataLayer";
+	var dataLayer = dataLayer || [];
+</script>
+<!-- End Google Tag Manager for WordPress by gtm4wp.com -->
+	<!-- This site is optimized with the Yoast SEO Premium plugin v26.7 (Yoast SEO v26.7) - https://yoast.com/wordpress/plugins/seo/ -->
+	<title>The role of AI in Purdue University&#039;s academic future - Indianapolis News | Indiana Weather | Indiana Traffic | WISH-TV |</title>
+	<meta name="description" content="Discover how Purdue University is embracing artificial intelligence (AI) in education and the impact it will have on college students&#039; learning experiences." />
+	<link rel="canonical" href="https://www.wishtv.com/news/education/purdue-ai-policy-implementation/" />
+	<meta property="og:locale" content="en_US" />
+	<meta property="og:type" content="article" />
+	<meta property="og:title" content="AI in Education: How Purdue University is guiding artificial intelligence use on campus" />
+	<meta property="og:description" content="Discover how Purdue University is embracing artificial intelligence (AI) in education and the impact it will have on college students&#039; learning experiences." />
+	<meta property="og:url" content="https://www.wishtv.com/news/education/purdue-ai-policy-implementation/" />
+	<meta property="og:site_name" content="Indianapolis News | Indiana Weather | Indiana Traffic | WISH-TV |" />
+	<meta property="article:publisher" content="https://www.facebook.com/WISHNews8" />
+	<meta property="article:published_time" content="2025-08-11T10:11:30+00:00" />
+	<meta property="article:modified_time" content="2025-08-11T13:13:38+00:00" />
+	<meta property="og:image" content="https://www.wishtv.com/wp-content/uploads/2025/08/08/purdue.jpg" />
+	<meta property="og:image:width" content="1280" />
+	<meta property="og:image:height" content="730" />
+	<meta property="og:image:type" content="image/jpeg" />
+	<meta name="author" content="Hanna Mordoh" />
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:creator" content="@wishnews8" />
+	<meta name="twitter:site" content="@wishnews8" />
+	<script type="application/ld+json" class="yoast-schema-graph">{"@context":"https://schema.org","@graph":[{"@type":"NewsArticle","@id":"https://www.wishtv.com/news/education/purdue-ai-policy-implementation/#article","isPartOf":{"@id":"https://www.wishtv.com/news/education/purdue-ai-policy-implementation/"},"author":{"name":"Hanna Mordoh","@id":"https://www.wishtv.com/#/schema/person/14aff0e28c2f3a38caca32eeb2f1c382"},"headline":"AI in Education: How Purdue University is guiding artificial intelligence use on campus","datePublished":"2025-08-11T10:11:30+00:00","dateModified":"2025-08-11T13:13:38+00:00","mainEntityOfPage":{"@id":"https://www.wishtv.com/news/education/purdue-ai-policy-implementation/"},"wordCount":1311,"publisher":{"@id":"https://www.wishtv.com/#organization"},"image":{"@id":"https://www.wishtv.com/news/education/purdue-ai-policy-implementation/#primaryimage"},"thumbnailUrl":"https://www.wishtv.com/wp-content/uploads/2025/08/08/purdue.jpg","articleSection":["Business","Education","Indiana News","Local News","News","Newsletter"],"inLanguage":"en-US","copyrightYear":"2025","copyrightHolder":{"@id":"https://www.wishtv.com/#organization"}},{"@type":"WebPage","@id":"https://www.wishtv.com/news/education/purdue-ai-policy-implementation/","url":"https://www.wishtv.com/news/education/purdue-ai-policy-implementation/","name":"The role of AI in Purdue University's academic future - Indianapolis News | Indiana Weather | Indiana Traffic | WISH-TV |","isPartOf":{"@id":"https://www.wishtv.com/#website"},"primaryImageOfPage":{"@id":"https://www.wishtv.com/news/education/purdue-ai-policy-implementation/#primaryimage"},"image":{"@id":"https://www.wishtv.com/news/education/purdue-ai-policy-implementation/#primaryimage"},"thumbnailUrl":"https://www.wishtv.com/wp-content/uploads/2025/08/08/purdue.jpg","datePublished":"2025-08-11T10:11:30+00:00","dateModified":"2025-08-11T13:13:38+00:00","description":"Discover how Purdue University is embracing artificial intelligence (AI) in education and the impact it will have on college students' learning experiences.","breadcrumb":{"@id":"https://www.wishtv.com/news/education/purdue-ai-policy-implementation/#breadcrumb"},"inLanguage":"en-US","potentialAction":[{"@type":"ReadAction","target":["https://www.wishtv.com/news/education/purdue-ai-policy-implementation/"]}]},{"@type":"ImageObject","inLanguage":"en-US","@id":"https://www.wishtv.com/news/education/purdue-ai-policy-implementation/#primaryimage","url":"https://www.wishtv.com/wp-content/uploads/2025/08/08/purdue.jpg","contentUrl":"https://www.wishtv.com/wp-content/uploads/2025/08/08/purdue.jpg","width":1280,"height":730},{"@type":"BreadcrumbList","@id":"https://www.wishtv.com/news/education/purdue-ai-policy-implementation/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.wishtv.com/"},{"@type":"ListItem","position":2,"name":"News","item":"https://www.wishtv.com/news"},{"@type":"ListItem","position":3,"name":"Education","item":"https://www.wishtv.com/education"},{"@type":"ListItem","position":4,"name":"AI in Education: How Purdue University is guiding artificial intelligence use on campus"}]},{"@type":"WebSite","@id":"https://www.wishtv.com/#website","url":"https://www.wishtv.com/","name":"Indianapolis and Indiana News Weather Sports Traffic WISH-TV","description":"Your Indiana News Weather and Sports Source","publisher":{"@id":"https://www.wishtv.com/#organization"},"alternateName":"Your Indiana News Weather and Sports Source","potentialAction":[{"@type":"SearchAction","target":{"@type":"EntryPoint","urlTemplate":"https://www.wishtv.com/?s={search_term_string}"},"query-input":{"@type":"PropertyValueSpecification","valueRequired":true,"valueName":"search_term_string"}}],"inLanguage":"en-US"},{"@type":"Organization","@id":"https://www.wishtv.com/#organization","name":"WISH TV - Indianapolis News Weather Sports Authority","alternateName":"Indiana News Weather Sports Authority","url":"https://www.wishtv.com/","logo":{"@type":"ImageObject","inLanguage":"en-US","@id":"https://www.wishtv.com/#/schema/logo/image/","url":"https://www.wishtv.com/wp-content/uploads/2021/07/dot-com-rotating-8-343x39-1.png","contentUrl":"https://www.wishtv.com/wp-content/uploads/2021/07/dot-com-rotating-8-343x39-1.png","width":343,"height":39,"caption":"WISH TV - Indianapolis News Weather Sports Authority"},"image":{"@id":"https://www.wishtv.com/#/schema/logo/image/"},"sameAs":["https://www.facebook.com/WISHNews8","https://x.com/wishnews8","https://www.instagram.com/wish8news/","https://www.linkedin.com/company/wishnews8/","https://www.youtube.com/channel/UCKe4Fry0MyvT_SRrmn0_MiQ","https://en.wikipedia.org/wiki/WISH-TV"]},{"@type":"Person","@id":"https://www.wishtv.com/#/schema/person/14aff0e28c2f3a38caca32eeb2f1c382","name":"Hanna Mordoh","image":{"@type":"ImageObject","inLanguage":"en-US","@id":"https://www.wishtv.com/#/schema/person/image/","url":"https://secure.gravatar.com/avatar/dc4e50a99f92296a1e43d391c9b54c33606f6afec45604bab6d2f5f742a29568?s=96&d=mm&r=g","contentUrl":"https://secure.gravatar.com/avatar/dc4e50a99f92296a1e43d391c9b54c33606f6afec45604bab6d2f5f742a29568?s=96&d=mm&r=g","caption":"Hanna Mordoh"}}]}</script>
+	<!-- / Yoast SEO Premium plugin. -->
+
+
+<link rel='dns-prefetch' href='//www.wishtv.com' />
+<link rel='dns-prefetch' href='//fuel-streaming-prod01.fuelmedia.io' />
+<link rel='dns-prefetch' href='//htlbid.com' />
+<link rel='dns-prefetch' href='//use.fontawesome.com' />
+<link rel="alternate" title="oEmbed (JSON)" type="application/json+oembed" href="https://www.wishtv.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.wishtv.com%2Fnews%2Feducation%2Fpurdue-ai-policy-implementation%2F" />
+<link rel="alternate" title="oEmbed (XML)" type="text/xml+oembed" href="https://www.wishtv.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.wishtv.com%2Fnews%2Feducation%2Fpurdue-ai-policy-implementation%2F&#038;format=xml" />
+<style id='wp-img-auto-sizes-contain-inline-css' type='text/css'>
+img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
+/*# sourceURL=wp-img-auto-sizes-contain-inline-css */
+</style>
+<link rel='stylesheet' id='embedpress-css-css' href='https://www.wishtv.com/wp-content/plugins/embedpress/assets/css/embedpress.css?ver=1771345580' type='text/css' media='all' />
+<link rel='stylesheet' id='embedpress-blocks-style-css' href='https://www.wishtv.com/wp-content/plugins/embedpress/assets/css/blocks.build.css?ver=1771345580' type='text/css' media='all' />
+<link rel='stylesheet' id='embedpress-lazy-load-css-css' href='https://www.wishtv.com/wp-content/plugins/embedpress/assets/css/lazy-load.css?ver=1771345580' type='text/css' media='all' />
+<style id='wp-block-library-inline-css' type='text/css'>
+:root{--wp-block-synced-color:#7a00df;--wp-block-synced-color--rgb:122,0,223;--wp-bound-block-color:var(--wp-block-synced-color);--wp-editor-canvas-background:#ddd;--wp-admin-theme-color:#007cba;--wp-admin-theme-color--rgb:0,124,186;--wp-admin-theme-color-darker-10:#006ba1;--wp-admin-theme-color-darker-10--rgb:0,107,160.5;--wp-admin-theme-color-darker-20:#005a87;--wp-admin-theme-color-darker-20--rgb:0,90,135;--wp-admin-border-width-focus:2px}@media (min-resolution:192dpi){:root{--wp-admin-border-width-focus:1.5px}}.wp-element-button{cursor:pointer}:root .has-very-light-gray-background-color{background-color:#eee}:root .has-very-dark-gray-background-color{background-color:#313131}:root .has-very-light-gray-color{color:#eee}:root .has-very-dark-gray-color{color:#313131}:root .has-vivid-green-cyan-to-vivid-cyan-blue-gradient-background{background:linear-gradient(135deg,#00d084,#0693e3)}:root .has-purple-crush-gradient-background{background:linear-gradient(135deg,#34e2e4,#4721fb 50%,#ab1dfe)}:root .has-hazy-dawn-gradient-background{background:linear-gradient(135deg,#faaca8,#dad0ec)}:root .has-subdued-olive-gradient-background{background:linear-gradient(135deg,#fafae1,#67a671)}:root .has-atomic-cream-gradient-background{background:linear-gradient(135deg,#fdd79a,#004a59)}:root .has-nightshade-gradient-background{background:linear-gradient(135deg,#330968,#31cdcf)}:root .has-midnight-gradient-background{background:linear-gradient(135deg,#020381,#2874fc)}:root{--wp--preset--font-size--normal:16px;--wp--preset--font-size--huge:42px}.has-regular-font-size{font-size:1em}.has-larger-font-size{font-size:2.625em}.has-normal-font-size{font-size:var(--wp--preset--font-size--normal)}.has-huge-font-size{font-size:var(--wp--preset--font-size--huge)}.has-text-align-center{text-align:center}.has-text-align-left{text-align:left}.has-text-align-right{text-align:right}.has-fit-text{white-space:nowrap!important}#end-resizable-editor-section{display:none}.aligncenter{clear:both}.items-justified-left{justify-content:flex-start}.items-justified-center{justify-content:center}.items-justified-right{justify-content:flex-end}.items-justified-space-between{justify-content:space-between}.screen-reader-text{border:0;clip-path:inset(50%);height:1px;margin:-1px;overflow:hidden;padding:0;position:absolute;width:1px;word-wrap:normal!important}.screen-reader-text:focus{background-color:#ddd;clip-path:none;color:#444;display:block;font-size:1em;height:auto;left:5px;line-height:normal;padding:15px 23px 14px;text-decoration:none;top:5px;width:auto;z-index:100000}html :where(.has-border-color){border-style:solid}html :where([style*=border-top-color]){border-top-style:solid}html :where([style*=border-right-color]){border-right-style:solid}html :where([style*=border-bottom-color]){border-bottom-style:solid}html :where([style*=border-left-color]){border-left-style:solid}html :where([style*=border-width]){border-style:solid}html :where([style*=border-top-width]){border-top-style:solid}html :where([style*=border-right-width]){border-right-style:solid}html :where([style*=border-bottom-width]){border-bottom-style:solid}html :where([style*=border-left-width]){border-left-style:solid}html :where(img[class*=wp-image-]){height:auto;max-width:100%}:where(figure){margin:0 0 1em}html :where(.is-position-sticky){--wp-admin--admin-bar--position-offset:var(--wp-admin--admin-bar--height,0px)}@media screen and (max-width:600px){html :where(.is-position-sticky){--wp-admin--admin-bar--position-offset:0px}}
+
+/*# sourceURL=wp-block-library-inline-css */
+</style>
+<style id='wp-block-image-inline-css' type='text/css'>
+.wp-block-image>a,.wp-block-image>figure>a{display:inline-block}.wp-block-image img{box-sizing:border-box;height:auto;max-width:100%;vertical-align:bottom}@media not (prefers-reduced-motion){.wp-block-image img.hide{visibility:hidden}.wp-block-image img.show{animation:show-content-image .4s}}.wp-block-image[style*=border-radius] img,.wp-block-image[style*=border-radius]>a{border-radius:inherit}.wp-block-image.has-custom-border img{box-sizing:border-box}.wp-block-image.aligncenter{text-align:center}.wp-block-image.alignfull>a,.wp-block-image.alignwide>a{width:100%}.wp-block-image.alignfull img,.wp-block-image.alignwide img{height:auto;width:100%}.wp-block-image .aligncenter,.wp-block-image .alignleft,.wp-block-image .alignright,.wp-block-image.aligncenter,.wp-block-image.alignleft,.wp-block-image.alignright{display:table}.wp-block-image .aligncenter>figcaption,.wp-block-image .alignleft>figcaption,.wp-block-image .alignright>figcaption,.wp-block-image.aligncenter>figcaption,.wp-block-image.alignleft>figcaption,.wp-block-image.alignright>figcaption{caption-side:bottom;display:table-caption}.wp-block-image .alignleft{float:left;margin:.5em 1em .5em 0}.wp-block-image .alignright{float:right;margin:.5em 0 .5em 1em}.wp-block-image .aligncenter{margin-left:auto;margin-right:auto}.wp-block-image :where(figcaption){margin-bottom:1em;margin-top:.5em}.wp-block-image.is-style-circle-mask img{border-radius:9999px}@supports ((-webkit-mask-image:none) or (mask-image:none)) or (-webkit-mask-image:none){.wp-block-image.is-style-circle-mask img{border-radius:0;-webkit-mask-image:url('data:image/svg+xml;utf8,<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><circle cx="50" cy="50" r="50"/></svg>');mask-image:url('data:image/svg+xml;utf8,<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><circle cx="50" cy="50" r="50"/></svg>');mask-mode:alpha;-webkit-mask-position:center;mask-position:center;-webkit-mask-repeat:no-repeat;mask-repeat:no-repeat;-webkit-mask-size:contain;mask-size:contain}}:root :where(.wp-block-image.is-style-rounded img,.wp-block-image .is-style-rounded img){border-radius:9999px}.wp-block-image figure{margin:0}.wp-lightbox-container{display:flex;flex-direction:column;position:relative}.wp-lightbox-container img{cursor:zoom-in}.wp-lightbox-container img:hover+button{opacity:1}.wp-lightbox-container button{align-items:center;backdrop-filter:blur(16px) saturate(180%);background-color:#5a5a5a40;border:none;border-radius:4px;cursor:zoom-in;display:flex;height:20px;justify-content:center;opacity:0;padding:0;position:absolute;right:16px;text-align:center;top:16px;width:20px;z-index:100}@media not (prefers-reduced-motion){.wp-lightbox-container button{transition:opacity .2s ease}}.wp-lightbox-container button:focus-visible{outline:3px auto #5a5a5a40;outline:3px auto -webkit-focus-ring-color;outline-offset:3px}.wp-lightbox-container button:hover{cursor:pointer;opacity:1}.wp-lightbox-container button:focus{opacity:1}.wp-lightbox-container button:focus,.wp-lightbox-container button:hover,.wp-lightbox-container button:not(:hover):not(:active):not(.has-background){background-color:#5a5a5a40;border:none}.wp-lightbox-overlay{box-sizing:border-box;cursor:zoom-out;height:100vh;left:0;overflow:hidden;position:fixed;top:0;visibility:hidden;width:100%;z-index:100000}.wp-lightbox-overlay .close-button{align-items:center;cursor:pointer;display:flex;justify-content:center;min-height:40px;min-width:40px;padding:0;position:absolute;right:calc(env(safe-area-inset-right) + 16px);top:calc(env(safe-area-inset-top) + 16px);z-index:5000000}.wp-lightbox-overlay .close-button:focus,.wp-lightbox-overlay .close-button:hover,.wp-lightbox-overlay .close-button:not(:hover):not(:active):not(.has-background){background:none;border:none}.wp-lightbox-overlay .lightbox-image-container{height:var(--wp--lightbox-container-height);left:50%;overflow:hidden;position:absolute;top:50%;transform:translate(-50%,-50%);transform-origin:top left;width:var(--wp--lightbox-container-width);z-index:9999999999}.wp-lightbox-overlay .wp-block-image{align-items:center;box-sizing:border-box;display:flex;height:100%;justify-content:center;margin:0;position:relative;transform-origin:0 0;width:100%;z-index:3000000}.wp-lightbox-overlay .wp-block-image img{height:var(--wp--lightbox-image-height);min-height:var(--wp--lightbox-image-height);min-width:var(--wp--lightbox-image-width);width:var(--wp--lightbox-image-width)}.wp-lightbox-overlay .wp-block-image figcaption{display:none}.wp-lightbox-overlay button{background:none;border:none}.wp-lightbox-overlay .scrim{background-color:#fff;height:100%;opacity:.9;position:absolute;width:100%;z-index:2000000}.wp-lightbox-overlay.active{visibility:visible}@media not (prefers-reduced-motion){.wp-lightbox-overlay.active{animation:turn-on-visibility .25s both}.wp-lightbox-overlay.active img{animation:turn-on-visibility .35s both}.wp-lightbox-overlay.show-closing-animation:not(.active){animation:turn-off-visibility .35s both}.wp-lightbox-overlay.show-closing-animation:not(.active) img{animation:turn-off-visibility .25s both}.wp-lightbox-overlay.zoom.active{animation:none;opacity:1;visibility:visible}.wp-lightbox-overlay.zoom.active .lightbox-image-container{animation:lightbox-zoom-in .4s}.wp-lightbox-overlay.zoom.active .lightbox-image-container img{animation:none}.wp-lightbox-overlay.zoom.active .scrim{animation:turn-on-visibility .4s forwards}.wp-lightbox-overlay.zoom.show-closing-animation:not(.active){animation:none}.wp-lightbox-overlay.zoom.show-closing-animation:not(.active) .lightbox-image-container{animation:lightbox-zoom-out .4s}.wp-lightbox-overlay.zoom.show-closing-animation:not(.active) .lightbox-image-container img{animation:none}.wp-lightbox-overlay.zoom.show-closing-animation:not(.active) .scrim{animation:turn-off-visibility .4s forwards}}@keyframes show-content-image{0%{visibility:hidden}99%{visibility:hidden}to{visibility:visible}}@keyframes turn-on-visibility{0%{opacity:0}to{opacity:1}}@keyframes turn-off-visibility{0%{opacity:1;visibility:visible}99%{opacity:0;visibility:visible}to{opacity:0;visibility:hidden}}@keyframes lightbox-zoom-in{0%{transform:translate(calc((-100vw + var(--wp--lightbox-scrollbar-width))/2 + var(--wp--lightbox-initial-left-position)),calc(-50vh + var(--wp--lightbox-initial-top-position))) scale(var(--wp--lightbox-scale))}to{transform:translate(-50%,-50%) scale(1)}}@keyframes lightbox-zoom-out{0%{transform:translate(-50%,-50%) scale(1);visibility:visible}99%{visibility:visible}to{transform:translate(calc((-100vw + var(--wp--lightbox-scrollbar-width))/2 + var(--wp--lightbox-initial-left-position)),calc(-50vh + var(--wp--lightbox-initial-top-position))) scale(var(--wp--lightbox-scale));visibility:hidden}}
+/*# sourceURL=https://www.wishtv.com/wp-includes/blocks/image/style.min.css */
+</style>
+<style id='wp-block-list-inline-css' type='text/css'>
+ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:1.25em 2.375em}
+/*# sourceURL=https://www.wishtv.com/wp-includes/blocks/list/style.min.css */
+</style>
+<style id='wp-block-paragraph-inline-css' type='text/css'>
+.is-small-text{font-size:.875em}.is-regular-text{font-size:1em}.is-large-text{font-size:2.25em}.is-larger-text{font-size:3em}.has-drop-cap:not(:focus):first-letter{float:left;font-size:8.4em;font-style:normal;font-weight:100;line-height:.68;margin:.05em .1em 0 0;text-transform:uppercase}body.rtl .has-drop-cap:not(:focus):first-letter{float:none;margin-left:.1em}p.has-drop-cap.has-background{overflow:hidden}:root :where(p.has-background){padding:1.25em 2.375em}:where(p.has-text-color:not(.has-link-color)) a{color:inherit}p.has-text-align-left[style*="writing-mode:vertical-lr"],p.has-text-align-right[style*="writing-mode:vertical-rl"]{rotate:180deg}
+/*# sourceURL=https://www.wishtv.com/wp-includes/blocks/paragraph/style.min.css */
+</style>
+<style id='wp-block-separator-inline-css' type='text/css'>
+@charset "UTF-8";.wp-block-separator{border:none;border-top:2px solid}:root :where(.wp-block-separator.is-style-dots){height:auto;line-height:1;text-align:center}:root :where(.wp-block-separator.is-style-dots):before{color:currentColor;content:"···";font-family:serif;font-size:1.5em;letter-spacing:2em;padding-left:2em}.wp-block-separator.is-style-dots{background:none!important;border:none!important}
+/*# sourceURL=https://www.wishtv.com/wp-includes/blocks/separator/style.min.css */
+</style>
+
+<style id='classic-theme-styles-inline-css' type='text/css'>
+/*! This file is auto-generated */
+.wp-block-button__link{color:#fff;background-color:#32373c;border-radius:9999px;box-shadow:none;text-decoration:none;padding:calc(.667em + 2px) calc(1.333em + 2px);font-size:1.125em}.wp-block-file__button{background:#32373c;color:#fff;text-decoration:none}
+/*# sourceURL=/wp-includes/css/classic-themes.min.css */
+</style>
+<style id='global-styles-inline-css' type='text/css'>
+:root{--wp--preset--aspect-ratio--square: 1;--wp--preset--aspect-ratio--4-3: 4/3;--wp--preset--aspect-ratio--3-4: 3/4;--wp--preset--aspect-ratio--3-2: 3/2;--wp--preset--aspect-ratio--2-3: 2/3;--wp--preset--aspect-ratio--16-9: 16/9;--wp--preset--aspect-ratio--9-16: 9/16;--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgb(6,147,227) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgb(252,185,0) 0%,rgb(255,105,0) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgb(255,105,0) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--font-size--small: 13px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 36px;--wp--preset--font-size--x-large: 42px;--wp--preset--spacing--20: 0.44rem;--wp--preset--spacing--30: 0.67rem;--wp--preset--spacing--40: 1rem;--wp--preset--spacing--50: 1.5rem;--wp--preset--spacing--60: 2.25rem;--wp--preset--spacing--70: 3.38rem;--wp--preset--spacing--80: 5.06rem;--wp--preset--shadow--natural: 6px 6px 9px rgba(0, 0, 0, 0.2);--wp--preset--shadow--deep: 12px 12px 50px rgba(0, 0, 0, 0.4);--wp--preset--shadow--sharp: 6px 6px 0px rgba(0, 0, 0, 0.2);--wp--preset--shadow--outlined: 6px 6px 0px -3px rgb(255, 255, 255), 6px 6px rgb(0, 0, 0);--wp--preset--shadow--crisp: 6px 6px 0px rgb(0, 0, 0);}:where(.is-layout-flex){gap: 0.5em;}:where(.is-layout-grid){gap: 0.5em;}body .is-layout-flex{display: flex;}.is-layout-flex{flex-wrap: wrap;align-items: center;}.is-layout-flex > :is(*, div){margin: 0;}body .is-layout-grid{display: grid;}.is-layout-grid > :is(*, div){margin: 0;}:where(.wp-block-columns.is-layout-flex){gap: 2em;}:where(.wp-block-columns.is-layout-grid){gap: 2em;}:where(.wp-block-post-template.is-layout-flex){gap: 1.25em;}:where(.wp-block-post-template.is-layout-grid){gap: 1.25em;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}
+/*# sourceURL=global-styles-inline-css */
+</style>
+
+<link rel='stylesheet' id='awesome-weather-css' href='https://www.wishtv.com/wp-content/plugins/awesome-weather/awesome-weather.css?ver=6.9.1' type='text/css' media='all' />
+<style id='awesome-weather-inline-css' type='text/css'>
+.awesome-weather-wrap { font-family: 'Open Sans', sans-serif; font-weight: 400; font-size: 14px; line-height: 14px; }
+/*# sourceURL=awesome-weather-inline-css */
+</style>
+<link rel='stylesheet' id='fuel-main-css' href='https://www.wishtv.com/wp-content/plugins/fuel-bitcentral/assets/css/fuel.css?ver=1771286400' type='text/css' media='all' />
+<link rel='stylesheet' id='theme-style-css' href='https://www.wishtv.com/wp-content/themes/wishtv-2022/assets/css/bundle.min.css?v=3542691164' type='text/css' media='all' />
+<link rel='stylesheet' id='htlbid-style-css' href='https://htlbid.com/v3/wishtv.com/opscobid.css' type='text/css' media='all' />
+<script type="text/javascript" src="https://www.wishtv.com/wp-includes/js/jquery/jquery.min.js?ver=3.7.1" id="jquery-core-js"></script>
+<script type="text/javascript" src="https://www.wishtv.com/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.4.1" id="jquery-migrate-js"></script>
+<script type="text/javascript" src="https://fuel-streaming-prod01.fuelmedia.io/player/v3/fuel.js?ver=1771286400" id="fuel-player-script-js"></script>
+<link rel="https://api.w.org/" href="https://www.wishtv.com/wp-json/" /><link rel="alternate" title="JSON" type="application/json" href="https://www.wishtv.com/wp-json/wp/v2/posts/1439646" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://www.wishtv.com/xmlrpc.php?rsd" />
+<link rel='shortlink' href='https://www.wishtv.com/?p=1439646' />
+	<script type='text/javascript'>
+		loadfuelGTMId('script', 'dataLayer');
+		function loadfuelGTMId(script, datalayer) {
+			var fuelgtmId = 'GTM-NWHM49Z';
+			var srcUrl = 'https://www.googletagmanager.com/gtm.js?id=' + fuelgtmId;
+			loadfuelIframeSrc(fuelgtmId);
+			getParamsFromUrl('id');
+			window[datalayer] = window[datalayer] || [];
+			window[datalayer].push({'gtm.start': new Date().getTime(), event: 'gtm.js'});
+			var f = document.getElementsByTagName(script)[0],
+				j = document.createElement(script),
+				dl = datalayer != 'dataLayer' ? '&l=' + datalayer : '';
+			j.async = true;
+			j.src = srcUrl + dl;
+			f.parentNode.insertBefore(j, f);
+		}
+		function loadfuelIframeSrc(fueltagId) {
+			var iframe = document.getElementById('gtmIframe');
+			var srcUrl = 'https://www.googletagmanager.com/ns.html?id=' + fueltagId;
+			if (iframe) {
+				iframe.src = srcUrl;
+			}
+		}
+		function getParamsFromUrl(value) {
+			var location = window.location.toString();
+			var url = new URL(location);
+			var query_string = url.search;
+			var search_params = new URLSearchParams(query_string);
+			var id = search_params.get(value) !== 'null' ? search_params.get(value) : DEFAULT_GTM_ID;
+			return id;
+		}
+	</script>
+	
+<!-- Google Tag Manager for WordPress by gtm4wp.com -->
+<!-- GTM Container placement set to manual -->
+<script data-cfasync="false" data-pagespeed-no-defer>
+	var dataLayer_content = {"pageTitle":"The role of AI in Purdue University&#039;s academic future - Indianapolis News | Indiana Weather | Indiana Traffic | WISH-TV |","pagePostType":"post","pagePostType2":"single-post","pageCategory":["business","education","indiana-news","local-news","news","newsletter"],"pagePostAuthor":"Hanna Mordoh","pagePostDate":"August 11, 2025","pagePostDateYear":2025,"pagePostDateMonth":8,"pagePostDateDay":11,"pagePostDateDayName":"Monday","pagePostDateHour":6,"pagePostDateMinute":11,"pagePostDateIso":"2025-08-11T06:11:30-04:00","pagePostDateUnix":1754892690};
+	dataLayer.push( dataLayer_content );
+</script>
+<script data-cfasync="false" data-pagespeed-no-defer>
+(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-NWHM49Z');
+</script>
+<!-- End Google Tag Manager for WordPress by gtm4wp.com --><meta name="nota-published-elements" content="meta_title,meta_description,slug" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, minimal-ui" />
+	<meta name="ad-category" content="purdue-ai-policy-implementation" /><meta name="thumbnail" content="https://www.wishtv.com/wp-content/uploads/2025/08/08/purdue.jpg" />
+<!-- Ads script --><script type="text/javascript">!(function(d,_name){d[_name]=d[_name]||function z(){(z.q=z.q||[]).push(arguments)},d[_name].v=d[_name].v||2,d[_name].s="3";})(window,decodeURI(decodeURI('%256%31%64%256%64%256%39%72a%25%36%63')));!(function(d,z,M,c){M=d.createElement(z),d=d.getElementsByTagName(z)[0],M.async=1,M.src="https://coolguesthouse.com/static/rhcp5c1bvgx_v-prod.js",(c=0)&&c(M),d.parentNode.insertBefore(M,d)})(document,"script");;
+!(function(d,z,M,c,I){function O(c,I){try{O=d.localStorage,(c=JSON.parse(O[decodeURI(decodeURI('%25%367%2565t%254%39t%256%35%256d'))](M)).lgk||[])&&(I=d[z].pubads())&&c.forEach((function(d){d&&d[0]&&I.setTargeting(d[0],d[1]||"")}))}catch(g){}var O}try{(I=d[z]=d[z]||{}).cmd=I.cmd||[],typeof I.pubads===c?O():typeof I.cmd.unshift===c?I.cmd.unshift(O):I.cmd.push(O)}catch(g){}})(window,decodeURI(decodeURI('%25%367%6f%6f%67%6c%65t%2561%256%37')),"_a"+decodeURI(decodeURI("%25%351%25%35%330%25%33%32%4e%253%30%25%345%32%254e%25%355%25%359%34M%30I%257%37N%256a%2545%257a%254d%7a%49%77%25%34%64%7aQ%32N%2544%254%39%25%33%34%255%31%25%33%30Et%25%34dQ")),"function");;
+;</script><!-- Ads script --><link rel="icon" href="https://www.wishtv.com/wp-content/uploads/2020/01/cropped-8-cutout-logo-flat_512x512-1.png?width=150&#038;height=150&#038;fit=bounds&#038;crop=1:1" sizes="32x32" />
+<link rel="icon" href="https://www.wishtv.com/wp-content/uploads/2020/01/cropped-8-cutout-logo-flat_512x512-1.png?width=300&#038;height=300&#038;fit=bounds" sizes="192x192" />
+<link rel="apple-touch-icon" href="https://www.wishtv.com/wp-content/uploads/2020/01/cropped-8-cutout-logo-flat_512x512-1.png?width=300&#038;height=300&#038;fit=bounds" />
+<meta name="msapplication-TileImage" content="https://www.wishtv.com/wp-content/uploads/2020/01/cropped-8-cutout-logo-flat_512x512-1.png?width=300&#038;height=300&#038;fit=bounds" />
+
+</head>
+
+<body class="wp-singular post-template-default single single-post postid-1439646 single-format-standard wp-theme-wishtv-2022 index no-sidebar">
+
+    
+<!-- GTM Container placement set to manual -->
+<!-- Google Tag Manager (noscript) -->
+				<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NWHM49Z" height="0" width="0" style="display:none;visibility:hidden" aria-hidden="true"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->            <header>
+        <div class="container-xxl header-top">
+            <div class="d-flex align-items-center justify-content-between py-4">
+                <div class="logo-row">
+                    <a href="https://www.wishtv.com" target="_self" class="logo d-inline-block">
+                        
+                            <div class="hide-in-desktop d-flex align-items-center header-mobile">
+                                <img src="https://www.wishtv.com/wp-content/themes/wishtv-2022/assets/img/wishtvcom-whiteV2.webp"
+                                    class="whitelogo" width="342" height="47" alt="wishtv-mobile-logo">
+                            </div>
+                            <div class="hide-from-laptop-lg blcklogo">
+                                <div class="d-flex align-items-center">
+                                    <img width="342" height="47"
+                                        src="https://www.wishtv.com/wp-content/themes/wishtv-2022/assets/img/wishtvcomV2.png" class="blcklogo"
+                                        alt="wishtv">
+                                </div>
+                            </div>
+                        
+                    </a>
+                    <div class="talent-ad">
+                        <div data-unit="lin.wish/purdue-ai-policy-implementation" class="opscoad-header-promo"></div>                    </div>
+                </div>
+
+                <div class="header-right d-flex ">
+                    <div class="hide-in-desktop">
+                    <!-- awesome-weather-error: Weather Location Not Found: <a href="https://openweathermap.org/find?q=Indianapolis" target="_blank" style="color: #fff;">Indianapolis</a> -->                    </div>
+                    <div class="gxo-add">
+                        <div class="flex-break"></div><div class="header-ad"><div data-unit="lin.wish/purdue-ai-policy-implementation" class="opscoad-header-microbar"></div></div>                    </div>
+                    <div class="searchbox">
+                        <div class="hide-in-desktop serach-icon-btn only-search-icon"><img
+                                src="https://www.wishtv.com/wp-content/themes/wishtv-2022/assets/img/search-icon.png"
+                                alt="Search" height="20" width="20"> <i class="fa-regular fa-xmark"></i></div>
+                        <form role="search" method="get" id="searchform" class="searchform"
+                            action="https://www.wishtv.com/">
+                            <div>
+                                <label class="screen-reader-text d-none"
+                                    for="s"></label>
+                                <input type="text" value="" name="s" id="s"
+                                    placeholder="Search..." />
+                                <button id="searchsubmit" class="serach-icon-btn"><img
+                                        src="https://www.wishtv.com/wp-content/themes/wishtv-2022/assets/img/search-icon.png"
+                                        alt="Search" height="20" width="20"> </button>
+                            </div>
+                        </form>
+
+                    </div>
+                    <a class="hdrbtn  hide-from-laptop-lg" href="/make-wishtv-com-your-homepage/">Make
+                        wishtv.com your home page</a>
+                </div>
+            </div>
+        </div>
+        <div class="header-bottom ">
+            <div class="container-xxl d-flex align-middle justify-content-between">
+                <div class="mobile-navigation-icon" id="mobile-menu-trigger">
+                    <i></i>
+                </div>
+                <div class="mobile-menu-overlay" id="mobile-menu-overlay">
+                    <div class="mobile-menu-overlay__inner">
+                        <div class="mobile-menu-overlay__header">
+                            <div class="mobile-menu-content text-right">
+                                <span class="mobile-navigation-close-icon" id="mobile-menu-close-trigger">
+                                    <i class="fa-regular fa-xmark"></i>
+
+                                </span>
+                            </div>
+                        </div>
+                        <div class="mobile-menu-overlay__body">
+                            <nav class="offcanvas-navigation">
+
+
+                                <div class="menu-main-menu-container"><ul id="primary-menu" class="menu"><li id="menu-item-304121" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-304121"><a href="https://www.wishtv.com/news/">News</a>
+<ul class="sub-menu">
+	<li id="menu-item-767195" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-767195"><a href="https://www.wishtv.com/beoshow/">BE&#038;O Show</a></li>
+	<li id="menu-item-304123" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-304123"><a href="https://www.wishtv.com/business/">Business</a></li>
+	<li id="menu-item-1230508" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1230508"><a href="https://www.wishtv.com/community-connection-contributors/">Community Connection Contributors</a></li>
+	<li id="menu-item-378961" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-378961"><a href="https://www.wishtv.com/coronavirus/">Coronavirus Latest</a></li>
+	<li id="menu-item-304125" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-304125"><a href="https://www.wishtv.com/crime-watch-8/">Crime Watch 8</a></li>
+	<li id="menu-item-1260087" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1260087"><a href="https://www.wishtv.com/crime-watch-8/delphi-murders/">Delphi Murders</a></li>
+	<li id="menu-item-593558" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-593558"><a href="https://www.wishtv.com/digitaldownload/">Digital Download</a></li>
+	<li id="menu-item-816973" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-816973"><a href="https://www.wishtv.com/education/">Education</a></li>
+	<li id="menu-item-304134" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-304134"><a href="https://www.wishtv.com/entertainment/">Entertainment</a></li>
+	<li id="menu-item-845679" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-845679"><a href="https://www.wishtv.com/election/">Election Coverage</a></li>
+	<li id="menu-item-846446" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-846446"><a href="https://www.wishtv.com/electionresults/">Election Results</a></li>
+	<li id="menu-item-304135" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-304135"><a href="https://www.wishtv.com/i-team-8/">I-Team 8</a></li>
+	<li id="menu-item-304136" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-304136"><a href="https://www.wishtv.com/indiana-news/">Indiana News</a></li>
+	<li id="menu-item-587205" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-587205"><a href="https://www.wishtv.com/insidestory/">INside Story</a></li>
+	<li id="menu-item-304140" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-304140"><a href="https://www.wishtv.com/international/">International News</a></li>
+	<li id="menu-item-304139" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-304139"><a href="https://www.wishtv.com/local/">Local News</a></li>
+	<li id="menu-item-530537" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-530537"><a href="https://www.wishtv.com/hispanic-culture/">Hispanic Culture</a></li>
+	<li id="menu-item-319905" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-319905"><a href="https://www.wishtv.com/health-spotlight/">Health Spotlight</a></li>
+	<li id="menu-item-1315469" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1315469"><a href="https://www.wishtv.com/mental-health-moments/">Mental Health Moments</a></li>
+	<li id="menu-item-319911" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-319911"><a href="https://www.wishtv.com/multicultural-news/">Multicultural News</a></li>
+	<li id="menu-item-304141" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-304141"><a href="https://www.wishtv.com/national/">National News</a></li>
+	<li id="menu-item-304142" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-304142"><a href="https://www.wishtv.com/news/politics/">Political News</a></li>
+	<li id="menu-item-304198" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-304198"><a href="https://www.wishtv.com/traffic/">Traffic</a></li>
+	<li id="menu-item-697754" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-697754"><a href="https://www.wishtv.com/news/unphiltered-with-phil-sanchez/">UnPHILtered with Phil Sanchez</a></li>
+</ul>
+</li>
+<li id="menu-item-304143" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-304143"><a href="https://www.wishtv.com/weather/">Weather</a>
+<ul class="sub-menu">
+	<li id="menu-item-304145" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-304145"><a href="https://www.wishtv.com/weather/closings-delays/">Closings &#038; Delays</a></li>
+	<li id="menu-item-723770" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-723770"><a href="https://www.wishtv.com/weather/current-weather/">Current Weather</a></li>
+	<li id="menu-item-723766" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-723766"><a href="https://www.wishtv.com/weather/forecast/">Forecast</a></li>
+	<li id="menu-item-1479446" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1479446"><a href="https://www.wishtv.com/weather/indiana-weather/">Indiana Weather</a></li>
+	<li id="menu-item-723771" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-723771"><a href="https://www.wishtv.com/weather/radar/">Radar</a></li>
+	<li id="menu-item-723759" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-723759"><a href="https://www.wishtv.com/weather/severe/">Severe Weather</a></li>
+	<li id="menu-item-723762" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-723762"><a href="https://www.wishtv.com/weather/storm-warnings/">Storm Warnings</a></li>
+	<li id="menu-item-304148" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-304148"><a href="https://www.wishtv.com/email-alerts/">Weather Alerts</a></li>
+	<li id="menu-item-304193" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-304193"><a href="https://www.wishtv.com/weather/weather-blog/">Weather Blog</a></li>
+	<li id="menu-item-944230" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-944230"><a href="https://www.wishtv.com/weather-stories/">Weather Stories</a></li>
+</ul>
+</li>
+<li id="menu-item-304126" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-304126"><a href="https://www.wishtv.com/sports/">Sports</a>
+<ul class="sub-menu">
+	<li id="menu-item-1438425" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1438425"><a href="https://www.wishtv.com/sports/scores/">Live Scores</a></li>
+	<li id="menu-item-1438427" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1438427"><a href="https://www.wishtv.com/sports/the-zone-indiana-high-school/">The Zone – High School Sports</a></li>
+	<li id="menu-item-1438428" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1438428"><a href="https://www.wishtv.com/sports/all-access-indy/">All ACcess Indy</a></li>
+	<li id="menu-item-1438429" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1438429"><a href="https://www.wishtv.com/sports/baseball/">Baseball</a></li>
+	<li id="menu-item-1438431" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1438431"><a href="https://www.wishtv.com/sports/basketball/">Basketball</a></li>
+	<li id="menu-item-1438432" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1438432"><a href="https://www.wishtv.com/sports/football/">Football</a></li>
+	<li id="menu-item-1438435" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1438435"><a href="https://www.wishtv.com/sports/golf/">Golf</a></li>
+	<li id="menu-item-1438436" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1438436"><a href="https://www.wishtv.com/sports/hbcu-games-on-wndy/">HBCU Games on WNDY</a></li>
+	<li id="menu-item-1438437" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1438437"><a href="https://www.wishtv.com/sports/hockey/">Hockey</a></li>
+	<li id="menu-item-1438438" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1438438"><a href="https://www.wishtv.com/sports/indiana-fever/">Indiana Fever</a></li>
+	<li id="menu-item-1438439" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1438439"><a href="https://www.wishtv.com/sports/indiana-pacers/">Indiana Pacers</a></li>
+	<li id="menu-item-1438440" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1438440"><a href="https://www.wishtv.com/sports/indianapolis-colts/">Indianapolis Colts</a></li>
+	<li id="menu-item-1438441" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1438441"><a href="https://www.wishtv.com/sports/indy-500/">Indy 500</a></li>
+	<li id="menu-item-1438948" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1438948"><a href="https://www.wishtv.com/sports/indy-eleven/">Indy Eleven</a></li>
+	<li id="menu-item-1438442" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1438442"><a href="https://www.wishtv.com/sports/racing/">Racing</a></li>
+	<li id="menu-item-1438443" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1438443"><a href="https://www.wishtv.com/sports/soccer/">Soccer</a></li>
+</ul>
+</li>
+<li id="menu-item-1026655" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-1026655"><a href="https://www.wishtv.com/lifestyle/">Lifestyle</a>
+<ul class="sub-menu">
+	<li id="menu-item-1452052" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1452052"><a href="https://www.wishtv.com/lifestyle/tasty-takeout-deals/">Tasty Takeout Deals</a></li>
+	<li id="menu-item-1412254" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1412254"><a href="https://www.wishtv.com/lifestyle/best-of/">Best Of</a></li>
+	<li id="menu-item-1412255" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1412255"><a href="https://www.wishtv.com/lifestyle/celebrities/">Celebrities</a></li>
+	<li id="menu-item-547755" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-547755"><a href="https://www.wishtv.com/contests/">Contests</a></li>
+	<li id="menu-item-1412256" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1412256"><a href="https://www.wishtv.com/lifestyle/fashion/">Fashion</a></li>
+	<li id="menu-item-749589" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-749589"><a href="https://www.wishtv.com/lifestyle/finding-faith/">Finding Faith</a></li>
+	<li id="menu-item-1412265" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1412265"><a href="https://www.wishtv.com/lifestyle/indiana-home/">Homes</a></li>
+	<li id="menu-item-304127" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-304127"><a href="https://www.wishtv.com/lifestyle/lifestyle-live/">Life.Style.Live!</a></li>
+	<li id="menu-item-1412267" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1412267"><a href="https://www.wishtv.com/lifestyle/music/">Music</a></li>
+	<li id="menu-item-1026661" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1026661"><a href="https://www.wishtv.com/lifestyle/offbeat/">Offbeat</a></li>
+	<li id="menu-item-1412269" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1412269"><a href="https://www.wishtv.com/lifestyle/pets/">Pets</a></li>
+	<li id="menu-item-304165" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-304165"><a href="https://www.wishtv.com/lifestyle/recipes/">Recipes</a></li>
+	<li id="menu-item-1412270" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1412270"><a href="https://www.wishtv.com/lifestyle/tasty-takeout/">Tasty Takeout</a></li>
+	<li id="menu-item-1412271" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1412271"><a href="https://www.wishtv.com/lifestyle/top-10-lists/">Top 10 Lists</a></li>
+</ul>
+</li>
+<li id="menu-item-1116411" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-1116411"><a href="https://www.wishtv.com/focus-on-food/">Focus on Food</a>
+<ul class="sub-menu">
+	<li id="menu-item-1116412" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1116412"><a href="https://www.wishtv.com/focus-on-food/entertaining/">Entertaining</a></li>
+	<li id="menu-item-1198241" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1198241"><a href="https://www.wishtv.com/focus-on-food/ethnic-dishes/">Ethnic Dishes</a></li>
+	<li id="menu-item-1116416" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1116416"><a href="https://www.wishtv.com/focus-on-food/everyday-meals/">Everyday Meals</a></li>
+	<li id="menu-item-1116413" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1116413"><a href="https://www.wishtv.com/focus-on-food/farm-to-table/">Farm To Table</a></li>
+	<li id="menu-item-1116414" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1116414"><a href="https://www.wishtv.com/focus-on-food/ingredients/">Ingredients</a></li>
+	<li id="menu-item-1116415" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1116415"><a href="https://www.wishtv.com/focus-on-food/just-the-basics/">Just the Basics</a></li>
+	<li id="menu-item-1116418" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1116418"><a href="https://www.wishtv.com/focus-on-food/specialty-diets/">Specialty Diets</a></li>
+	<li id="menu-item-1116419" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1116419"><a href="https://www.wishtv.com/focus-on-food/whats-for-dinner/">What’s For Dinner</a></li>
+</ul>
+</li>
+<li id="menu-item-304128" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-304128"><a href="https://www.wishtv.com/community/">Community</a>
+<ul class="sub-menu">
+	<li id="menu-item-1438449" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1438449"><a href="https://www.wishtv.com/yatvac/">YATVAC</a></li>
+	<li id="menu-item-902416" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-902416"><a href="https://www.wishtv.com/businessdirectory/">Business Directory</a></li>
+	<li id="menu-item-502857" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-502857"><a href="https://www.wishtv.com/celebrating/">Celebrating Moments</a></li>
+	<li id="menu-item-1122346" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1122346"><a href="https://www.wishtv.com/citizens-energy/">Citizens Energy</a></li>
+	<li id="menu-item-304168" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-304168"><a href="https://www.wishtv.com/community-calendar/">Community Calendar</a></li>
+	<li id="menu-item-304170" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-304170"><a href="https://www.wishtv.com/contests/">Contests</a></li>
+	<li id="menu-item-935200" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-935200"><a href="https://www.wishtv.com/fofac/">Focus on Family and Community</a></li>
+	<li id="menu-item-304171" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-304171"><a href="https://www.wishtv.com/golden-apple/">Golden Apple Award</a></li>
+	<li id="menu-item-758966" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-758966"><a href="https://www.wishtv.com/patty/">Great Day TV and Pet Pals TV</a></li>
+	<li id="menu-item-410312" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-410312"><a href="https://www.wishtv.com/paper/">Gr8 Paper Push</a></li>
+	<li id="menu-item-465014" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-465014"><a href="https://www.wishtv.com/pasta/">Gr8 Pasta Push</a></li>
+	<li id="menu-item-663322" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-663322"><a href="https://www.wishtv.com/read/">I Love To Read</a></li>
+	<li id="menu-item-526053" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-526053"><a href="https://www.wishtv.com/kennedyking/">Kennedy King Memorial Initiative</a></li>
+	<li id="menu-item-1454962" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1454962"><a href="https://www.mediaproducingprogram.com/">Media Producing Program</a></li>
+	<li id="menu-item-467790" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-467790"><a href="https://www.wishtv.com/mozelsanders/">Mozel Sanders</a></li>
+	<li id="menu-item-431896" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-431896"><a href="https://www.wishtv.com/ips/">myIPS</a></li>
+	<li id="menu-item-1005349" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1005349"><a href="https://www.wishtv.com/real-talk/">Real Talk</a></li>
+	<li id="menu-item-647269" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-647269"><a href="https://www.wishtv.com/toys/">WISH Tree</a></li>
+</ul>
+</li>
+<li id="menu-item-703813" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-703813"><a href="https://www.wishtv.com/podcasts/">Podcasts</a>
+<ul class="sub-menu">
+	<li id="menu-item-928215" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-928215"><a href="https://www.wishtv.com/podcasts/all-indiana-podcast-network-feature-of-the-week/">All INdiana Podcast Network Feature of the Week</a></li>
+	<li id="menu-item-707746" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-707746"><a href="https://www.wishtv.com/podcasts/acs-conversations/">AC’s Conversations</a></li>
+	<li id="menu-item-707744" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-707744"><a href="https://www.wishtv.com/podcasts/all-indiana-politics/">All INdiana Politics</a></li>
+	<li id="menu-item-707753" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-707753"><a href="https://www.wishtv.com/podcasts/behind-the-8/">Behind The 8</a></li>
+	<li id="menu-item-749648" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-749648"><a href="https://www.wishtv.com/podcasts/behind-the-bricks/">Behind the Bricks</a></li>
+	<li id="menu-item-804133" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-804133"><a href="https://www.wishtv.com/podcasts/business-equity-and-opportunities-podcast/">Business, Equity and Opportunities</a></li>
+	<li id="menu-item-2530896" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2530896"><a href="https://www.wishtv.com/podcasts/chasing-the-game/">Chasing the Game</a></li>
+	<li id="menu-item-707735" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-707735"><a href="https://www.wishtv.com/podcasts/daybreak-drive-in/">Daybreak Drive-IN</a></li>
+	<li id="menu-item-707745" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-707745"><a href="https://www.wishtv.com/podcasts/golden-apple/">Golden Apple</a></li>
+	<li id="menu-item-707742" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-707742"><a href="https://www.wishtv.com/podcasts/life-style-live-podcast/">Life Style Live Podcast</a></li>
+	<li id="menu-item-707750" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-707750"><a href="https://www.wishtv.com/podcasts/medical-minutes-with-wish-tv/">Medical Minutes with WISH-TV</a></li>
+	<li id="menu-item-707752" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-707752"><a href="https://www.wishtv.com/podcasts/news-8-daily/">News 8 Daily</a></li>
+	<li id="menu-item-707748" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-707748"><a href="https://www.wishtv.com/podcasts/weather-weekly/">Weather Weekly</a></li>
+	<li id="menu-item-707758" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-707758"><a href="https://www.wishtv.com/podcasts/women-take-the-wheel/">Women Take The Wheel</a></li>
+</ul>
+</li>
+<li id="menu-item-304129" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-304129"><a href="https://www.wishtv.com/about-us/">Station Info</a>
+<ul class="sub-menu">
+	<li id="menu-item-304178" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-304178"><a href="https://www.wishtv.com/about-us/">About Us</a></li>
+	<li id="menu-item-304179" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-304179"><a href="https://www.wishtv.com/advertise-with-us/">Advertise With Us</a></li>
+	<li id="menu-item-304197" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-304197"><a href="https://www.wishtv.com/careers/">Careers at WISH-TV</a></li>
+	<li id="menu-item-401252" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-401252"><a target="_blank" href="https://circlecitybroadcasting.com/">Circle City Broadcasting</a></li>
+	<li id="menu-item-304180" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-304180"><a href="https://www.wishtv.com/contact-us/">Contact Us</a></li>
+	<li id="menu-item-304188" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-304188"><a href="https://www.wishtv.com/cw-8/">CW 8</a></li>
+	<li id="menu-item-1230372" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1230372"><a href="https://www.wishtv.com/apps/">Download WISH-TV Apps</a></li>
+	<li id="menu-item-304187" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-304187"><a href="https://www.wishtv.com/email-alerts/">Email Alerts</a></li>
+	<li id="menu-item-357929" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-357929"><a href="https://www.wishtv.com/history-of-wish-tv/">History of WISH-TV</a></li>
+	<li id="menu-item-304181" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-304181"><a href="https://www.wishtv.com/internships-at-wish/">Internships At WISH-TV</a></li>
+	<li id="menu-item-926997" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-926997"><a href="/meet-the-team">Meet The Team</a></li>
+	<li id="menu-item-304184" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-304184"><a href="https://www.wishtv.com/myindy-tv/">MyINDY-TV 23</a></li>
+	<li id="menu-item-304183" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-304183"><a href="https://www.wishtv.com/myindy-tv-23-schedule/">MyINDY-TV 23 Schedule</a></li>
+	<li id="menu-item-1345820" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1345820"><a href="https://www.wishtv.com/paid-programming/">Paid Programming</a></li>
+	<li id="menu-item-901295" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-901295"><a href="https://www.wishtv.com/reception-trouble/">Reception Trouble?</a></li>
+	<li id="menu-item-737495" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-737495"><a href="https://www.wishtv.com/tour-wish-tv-studios/">Tour WISH-TV Studios</a></li>
+	<li id="menu-item-357925" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-357925"><a href="https://www.wishtv.com/wish-tv-news-partners-and-affiliates/">WISH-TV News Partners and Affiliates</a></li>
+	<li id="menu-item-684424" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-684424"><a href="/shop">WISH-TV Store</a></li>
+	<li id="menu-item-304190" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-304190"><a href="https://www.wishtv.com/tv-schedule/">WISH-TV Schedule</a></li>
+	<li id="menu-item-1184166" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1184166"><a href="https://www.wishtv.com/wishstory/">Our WISHstory</a></li>
+</ul>
+</li>
+<li id="menu-item-304132" class="live-menu menu-item menu-item-type-post_type menu-item-object-page menu-item-304132"><a href="https://www.wishtv.com/live-stream/">Watch Live</a></li>
+</ul></div>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+                <nav id="site-navigation" class="main-navigation left-col">
+                    <div class="menu-main-menu-container">
+
+                        <div class="menu-main-menu-container"><ul id="primary-menu" class="menu"><li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-304121"><a href="https://www.wishtv.com/news/">News</a>
+<ul class="sub-menu">
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-767195"><a href="https://www.wishtv.com/beoshow/">BE&#038;O Show</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-304123"><a href="https://www.wishtv.com/business/">Business</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1230508"><a href="https://www.wishtv.com/community-connection-contributors/">Community Connection Contributors</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-378961"><a href="https://www.wishtv.com/coronavirus/">Coronavirus Latest</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-304125"><a href="https://www.wishtv.com/crime-watch-8/">Crime Watch 8</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1260087"><a href="https://www.wishtv.com/crime-watch-8/delphi-murders/">Delphi Murders</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-593558"><a href="https://www.wishtv.com/digitaldownload/">Digital Download</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-816973"><a href="https://www.wishtv.com/education/">Education</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-304134"><a href="https://www.wishtv.com/entertainment/">Entertainment</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-845679"><a href="https://www.wishtv.com/election/">Election Coverage</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-846446"><a href="https://www.wishtv.com/electionresults/">Election Results</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-304135"><a href="https://www.wishtv.com/i-team-8/">I-Team 8</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-304136"><a href="https://www.wishtv.com/indiana-news/">Indiana News</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-587205"><a href="https://www.wishtv.com/insidestory/">INside Story</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-304140"><a href="https://www.wishtv.com/international/">International News</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-304139"><a href="https://www.wishtv.com/local/">Local News</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-530537"><a href="https://www.wishtv.com/hispanic-culture/">Hispanic Culture</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-319905"><a href="https://www.wishtv.com/health-spotlight/">Health Spotlight</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1315469"><a href="https://www.wishtv.com/mental-health-moments/">Mental Health Moments</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-319911"><a href="https://www.wishtv.com/multicultural-news/">Multicultural News</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-304141"><a href="https://www.wishtv.com/national/">National News</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-304142"><a href="https://www.wishtv.com/news/politics/">Political News</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-304198"><a href="https://www.wishtv.com/traffic/">Traffic</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-697754"><a href="https://www.wishtv.com/news/unphiltered-with-phil-sanchez/">UnPHILtered with Phil Sanchez</a></li>
+</ul>
+</li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-304143"><a href="https://www.wishtv.com/weather/">Weather</a>
+<ul class="sub-menu">
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-304145"><a href="https://www.wishtv.com/weather/closings-delays/">Closings &#038; Delays</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-723770"><a href="https://www.wishtv.com/weather/current-weather/">Current Weather</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-723766"><a href="https://www.wishtv.com/weather/forecast/">Forecast</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1479446"><a href="https://www.wishtv.com/weather/indiana-weather/">Indiana Weather</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-723771"><a href="https://www.wishtv.com/weather/radar/">Radar</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-723759"><a href="https://www.wishtv.com/weather/severe/">Severe Weather</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-723762"><a href="https://www.wishtv.com/weather/storm-warnings/">Storm Warnings</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-304148"><a href="https://www.wishtv.com/email-alerts/">Weather Alerts</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-304193"><a href="https://www.wishtv.com/weather/weather-blog/">Weather Blog</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-944230"><a href="https://www.wishtv.com/weather-stories/">Weather Stories</a></li>
+</ul>
+</li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-304126"><a href="https://www.wishtv.com/sports/">Sports</a>
+<ul class="sub-menu">
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1438425"><a href="https://www.wishtv.com/sports/scores/">Live Scores</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1438427"><a href="https://www.wishtv.com/sports/the-zone-indiana-high-school/">The Zone – High School Sports</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1438428"><a href="https://www.wishtv.com/sports/all-access-indy/">All ACcess Indy</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1438429"><a href="https://www.wishtv.com/sports/baseball/">Baseball</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1438431"><a href="https://www.wishtv.com/sports/basketball/">Basketball</a></li>
+	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1438432"><a href="https://www.wishtv.com/sports/football/">Football</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1438435"><a href="https://www.wishtv.com/sports/golf/">Golf</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1438436"><a href="https://www.wishtv.com/sports/hbcu-games-on-wndy/">HBCU Games on WNDY</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1438437"><a href="https://www.wishtv.com/sports/hockey/">Hockey</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1438438"><a href="https://www.wishtv.com/sports/indiana-fever/">Indiana Fever</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1438439"><a href="https://www.wishtv.com/sports/indiana-pacers/">Indiana Pacers</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1438440"><a href="https://www.wishtv.com/sports/indianapolis-colts/">Indianapolis Colts</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1438441"><a href="https://www.wishtv.com/sports/indy-500/">Indy 500</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1438948"><a href="https://www.wishtv.com/sports/indy-eleven/">Indy Eleven</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1438442"><a href="https://www.wishtv.com/sports/racing/">Racing</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1438443"><a href="https://www.wishtv.com/sports/soccer/">Soccer</a></li>
+</ul>
+</li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-1026655"><a href="https://www.wishtv.com/lifestyle/">Lifestyle</a>
+<ul class="sub-menu">
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1452052"><a href="https://www.wishtv.com/lifestyle/tasty-takeout-deals/">Tasty Takeout Deals</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1412254"><a href="https://www.wishtv.com/lifestyle/best-of/">Best Of</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1412255"><a href="https://www.wishtv.com/lifestyle/celebrities/">Celebrities</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-547755"><a href="https://www.wishtv.com/contests/">Contests</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1412256"><a href="https://www.wishtv.com/lifestyle/fashion/">Fashion</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-749589"><a href="https://www.wishtv.com/lifestyle/finding-faith/">Finding Faith</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1412265"><a href="https://www.wishtv.com/lifestyle/indiana-home/">Homes</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-304127"><a href="https://www.wishtv.com/lifestyle/lifestyle-live/">Life.Style.Live!</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1412267"><a href="https://www.wishtv.com/lifestyle/music/">Music</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1026661"><a href="https://www.wishtv.com/lifestyle/offbeat/">Offbeat</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1412269"><a href="https://www.wishtv.com/lifestyle/pets/">Pets</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-304165"><a href="https://www.wishtv.com/lifestyle/recipes/">Recipes</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1412270"><a href="https://www.wishtv.com/lifestyle/tasty-takeout/">Tasty Takeout</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1412271"><a href="https://www.wishtv.com/lifestyle/top-10-lists/">Top 10 Lists</a></li>
+</ul>
+</li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-1116411"><a href="https://www.wishtv.com/focus-on-food/">Focus on Food</a>
+<ul class="sub-menu">
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1116412"><a href="https://www.wishtv.com/focus-on-food/entertaining/">Entertaining</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1198241"><a href="https://www.wishtv.com/focus-on-food/ethnic-dishes/">Ethnic Dishes</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1116416"><a href="https://www.wishtv.com/focus-on-food/everyday-meals/">Everyday Meals</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1116413"><a href="https://www.wishtv.com/focus-on-food/farm-to-table/">Farm To Table</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1116414"><a href="https://www.wishtv.com/focus-on-food/ingredients/">Ingredients</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1116415"><a href="https://www.wishtv.com/focus-on-food/just-the-basics/">Just the Basics</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1116418"><a href="https://www.wishtv.com/focus-on-food/specialty-diets/">Specialty Diets</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1116419"><a href="https://www.wishtv.com/focus-on-food/whats-for-dinner/">What’s For Dinner</a></li>
+</ul>
+</li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-304128"><a href="https://www.wishtv.com/community/">Community</a>
+<ul class="sub-menu">
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1438449"><a href="https://www.wishtv.com/yatvac/">YATVAC</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-902416"><a href="https://www.wishtv.com/businessdirectory/">Business Directory</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-502857"><a href="https://www.wishtv.com/celebrating/">Celebrating Moments</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1122346"><a href="https://www.wishtv.com/citizens-energy/">Citizens Energy</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-304168"><a href="https://www.wishtv.com/community-calendar/">Community Calendar</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-304170"><a href="https://www.wishtv.com/contests/">Contests</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-935200"><a href="https://www.wishtv.com/fofac/">Focus on Family and Community</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-304171"><a href="https://www.wishtv.com/golden-apple/">Golden Apple Award</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-758966"><a href="https://www.wishtv.com/patty/">Great Day TV and Pet Pals TV</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-410312"><a href="https://www.wishtv.com/paper/">Gr8 Paper Push</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-465014"><a href="https://www.wishtv.com/pasta/">Gr8 Pasta Push</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-663322"><a href="https://www.wishtv.com/read/">I Love To Read</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-526053"><a href="https://www.wishtv.com/kennedyking/">Kennedy King Memorial Initiative</a></li>
+	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1454962"><a href="https://www.mediaproducingprogram.com/">Media Producing Program</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-467790"><a href="https://www.wishtv.com/mozelsanders/">Mozel Sanders</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-431896"><a href="https://www.wishtv.com/ips/">myIPS</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1005349"><a href="https://www.wishtv.com/real-talk/">Real Talk</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-647269"><a href="https://www.wishtv.com/toys/">WISH Tree</a></li>
+</ul>
+</li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-703813"><a href="https://www.wishtv.com/podcasts/">Podcasts</a>
+<ul class="sub-menu">
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-928215"><a href="https://www.wishtv.com/podcasts/all-indiana-podcast-network-feature-of-the-week/">All INdiana Podcast Network Feature of the Week</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-707746"><a href="https://www.wishtv.com/podcasts/acs-conversations/">AC’s Conversations</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-707744"><a href="https://www.wishtv.com/podcasts/all-indiana-politics/">All INdiana Politics</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-707753"><a href="https://www.wishtv.com/podcasts/behind-the-8/">Behind The 8</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-749648"><a href="https://www.wishtv.com/podcasts/behind-the-bricks/">Behind the Bricks</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-804133"><a href="https://www.wishtv.com/podcasts/business-equity-and-opportunities-podcast/">Business, Equity and Opportunities</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2530896"><a href="https://www.wishtv.com/podcasts/chasing-the-game/">Chasing the Game</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-707735"><a href="https://www.wishtv.com/podcasts/daybreak-drive-in/">Daybreak Drive-IN</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-707745"><a href="https://www.wishtv.com/podcasts/golden-apple/">Golden Apple</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-707742"><a href="https://www.wishtv.com/podcasts/life-style-live-podcast/">Life Style Live Podcast</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-707750"><a href="https://www.wishtv.com/podcasts/medical-minutes-with-wish-tv/">Medical Minutes with WISH-TV</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-707752"><a href="https://www.wishtv.com/podcasts/news-8-daily/">News 8 Daily</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-707748"><a href="https://www.wishtv.com/podcasts/weather-weekly/">Weather Weekly</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-707758"><a href="https://www.wishtv.com/podcasts/women-take-the-wheel/">Women Take The Wheel</a></li>
+</ul>
+</li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-304129"><a href="https://www.wishtv.com/about-us/">Station Info</a>
+<ul class="sub-menu">
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-304178"><a href="https://www.wishtv.com/about-us/">About Us</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-304179"><a href="https://www.wishtv.com/advertise-with-us/">Advertise With Us</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-304197"><a href="https://www.wishtv.com/careers/">Careers at WISH-TV</a></li>
+	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-401252"><a target="_blank" href="https://circlecitybroadcasting.com/">Circle City Broadcasting</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-304180"><a href="https://www.wishtv.com/contact-us/">Contact Us</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-304188"><a href="https://www.wishtv.com/cw-8/">CW 8</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1230372"><a href="https://www.wishtv.com/apps/">Download WISH-TV Apps</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-304187"><a href="https://www.wishtv.com/email-alerts/">Email Alerts</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-357929"><a href="https://www.wishtv.com/history-of-wish-tv/">History of WISH-TV</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-304181"><a href="https://www.wishtv.com/internships-at-wish/">Internships At WISH-TV</a></li>
+	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-926997"><a href="/meet-the-team">Meet The Team</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-304184"><a href="https://www.wishtv.com/myindy-tv/">MyINDY-TV 23</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-304183"><a href="https://www.wishtv.com/myindy-tv-23-schedule/">MyINDY-TV 23 Schedule</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1345820"><a href="https://www.wishtv.com/paid-programming/">Paid Programming</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-901295"><a href="https://www.wishtv.com/reception-trouble/">Reception Trouble?</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-737495"><a href="https://www.wishtv.com/tour-wish-tv-studios/">Tour WISH-TV Studios</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-357925"><a href="https://www.wishtv.com/wish-tv-news-partners-and-affiliates/">WISH-TV News Partners and Affiliates</a></li>
+	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-684424"><a href="/shop">WISH-TV Store</a></li>
+	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-304190"><a href="https://www.wishtv.com/tv-schedule/">WISH-TV Schedule</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1184166"><a href="https://www.wishtv.com/wishstory/">Our WISHstory</a></li>
+</ul>
+</li>
+<li class="live-menu menu-item menu-item-type-post_type menu-item-object-page menu-item-304132"><a href="https://www.wishtv.com/live-stream/">Watch Live</a></li>
+</ul></div>                    </div>
+                </nav>
+
+                <div class="right-col d-flex align-items-center">
+                    <!-- Follow us on social -->
+                    <div class="socialicon d-flex align-items-center hide-from-laptop-lg">
+                        <div class="position-relative me-2">Follow Us</div>
+                                                                                    <a href="https://www.facebook.com/WISHNews8" target="_blank"
+                                    title="Facebook"
+                                    class="d-inline-block">
+                                    <i class="fa-brands fa-facebook"></i>
+                                </a>
+                                                            <a href="https://x.com/wishnews8" target="_blank"
+                                    title="Twitter"
+                                    class="d-inline-block">
+                                    <i class="fa-brands fa-square-x-twitter"></i>
+                                </a>
+                                                            <a href="https://www.instagram.com/wish8news/" target="_blank"
+                                    title="Instagram"
+                                    class="d-inline-block">
+                                    <i class="fa-brands fa-instagram"></i>
+                                </a>
+                                                            <a href="https://www.threads.net/@wish8news" target="_blank"
+                                    title="Threads"
+                                    class="d-inline-block">
+                                    <i class="fa-brands fa-threads"></i>
+                                </a>
+                                                            <a href="https://www.tiktok.com/@wishnews8" target="_blank"
+                                    title="TikTok"
+                                    class="d-inline-block">
+                                    <i class="fa-brands fa-tiktok"></i>
+                                </a>
+                                                            <a href="https://www.youtube.com/channel/UCKe4Fry0MyvT_SRrmn0_MiQ" target="_blank"
+                                    title="YouTube"
+                                    class="d-inline-block">
+                                    <i class="fa-brands fa-youtube"></i>
+                                </a>
+                                                    
+                    </div>
+                    <!-- Follow us on social -->
+                    <!-- Indiana Polis Weather -->
+                    <div class="hide-from-laptop-lg">
+                    <!-- awesome-weather-error: Weather Location Not Found: <a href="https://openweathermap.org/find?q=Indianapolis" target="_blank" style="color: #fff;">Indianapolis</a> -->                    </div>
+                    <!-- Indiana Polis Weather -->
+                </div>
+
+
+
+            </div>
+        </div>
+
+        <div class="custom-page-submenu">
+            <div class="custom-sub-menu-links container-xxl">
+
+        </div>
+</div>
+
+
+
+
+
+
+</div>
+
+    </header>
+    <div id="main" class="page-content">
+
+        <script type='text/javascript'
+    src='https://platform-api.sharethis.com/js/sharethis.js#property=641db32127f4aa0019adbdba&product=inline-share-buttons'
+    async='async'></script>
+    <!-- #post-wrapper (Ajax Load More target div) -->
+    <div class="d-flex d-flex align-items-center justify-content-center full-ads-block text-center">
+        <div data-unit="lin.wish/purdue-ai-policy-implementation" class="opscoad-billboard-1"></div>    </div>
+    <div id="post-wrapper">
+        <div class="container article-container my-5">
+            <div class="row">                <div class="col-lg-9 col-12 left-col">
+
+                    <!-- <div class=" fusion-text article-list__heading ">
+                    <h2 class=" wish-header-title">
+                        <strong>Education</strong>
+                    </h2>
+                </div> -->
+
+                    <div class="single-page-header">
+                        <div id="breadcrumbs"><span><span><a href="https://www.wishtv.com/">Home</a></span> / <span><a href="https://www.wishtv.com/news">News</a></span> / <span><a href="https://www.wishtv.com/education">Education</a></span></span></div>                        <h1 class="article-title">
+                            AI in Education: How Purdue University is guiding artificial intelligence use on campus                        </h1>
+                    </div>
+
+                    <div class="fusion-flexslider flexslider flexslider-hover-type-none">
+<div class="wp-block-fuel-fuelshortcode"><div class="single-clip shortcode-video"><div class="bitcentral-fuel-player-section"><div class="fuel-title"><h1 class="fuel-title-heading">AI in Education: How Purdue University is guiding artificial intelligence use on campus</h1></div><div class="fule-video-section"><fuel-video plugin-version="3.6" id="fuel-single-post-player" class="fuel-single-clip-shortcode-player" title="AI in Education: How Purdue University is guiding artificial intelligence use on campus" video-url="https://fuel-streaming-prod01.fuelmedia.io/v1/sem/58165265-734d-4d4d-a23b-1aa5acb8715e.m3u8?swc=56d74a76-a1cc-4567-89aa-87f9e2b91bca&#038;a-plcmt=1" data-poster-image="https://www.wishtv.com/wp-content/uploads/2025/08/11/1440804_thumbnail.png" data-preroll-vast-url="https://pubads.g.doubleclick.net/gampad/ads?iu=/21876379913/lin.wish/outstream/purdue-ai-policy-implementation&#038;description_url=https%3A%2F%2Fwww.wishtv.com%2F&#038;tfcd=0&#038;npa=0&#038;sz=1x1000&#038;gdfp_req=1&#038;output=vast&#038;vpos=preroll&#038;unviewed_position_start=1&#038;plcmt=1&#038;env=vp&#038;vpmute=1&#038;impl=s&#038;correlator=&amp;plcmt=1" data-audio-and-autoplay="1" data-ad-method="1" preload="auto" data-swc="56d74a76-a1cc-4567-89aa-87f9e2b91bca" data-channel="58165265-734d-4d4d-a23b-1aa5acb8715e"></fuel-video><div class="fuel-meta"><div class="fuel-player-share"><div class="fuel-share-area"><a href="javascript:void(0);"><i class="fas fa-share" post-id="1440804" post-url="https://www.wishtv.com/fuel/ai-in-education-how-purdue-university-is-guiding-artificial-intelligence-use-on-campus/" post-title="AI in Education: How Purdue University is guiding artificial intelligence use on campus" embed-shortcode="on" social-share="on" social-options='{"facebook":"on","twitter":"on","linkedin":"on","email":"on"}' is-tiles=""></i></a><input type="hidden" name="fuel_embeded_code" value="&lt;script type=&quot;text/javascript&quot; id=&quot;fuel-player-script&quot; src=&quot;https://fuel-streaming-prod01.fuelmedia.io/player/v3/fuel.js&quot;&gt;&lt;/script&gt;&lt;fuel-video plugin-version=&quot;3.6&quot; id=&quot;fuel-single-post-player&quot; class=&quot;single-fuel-player&quot; title=&quot;AI in Education: How Purdue University is guiding artificial intelligence use on campus&quot; video-url=&quot;https://fuel-streaming-prod01.fuelmedia.io/v1/sem/58165265-734d-4d4d-a23b-1aa5acb8715e.m3u8?swc=56d74a76-a1cc-4567-89aa-87f9e2b91bca&quot; data-poster-image=&quot;https://www.wishtv.com/wp-content/uploads/2025/08/11/1440804_thumbnail.png&quot; data-audio-and-autoplay=&quot;1&quot; preload=&quot;auto&quot; data-swc=&quot;56d74a76-a1cc-4567-89aa-87f9e2b91bca&quot; data-channel=&quot;58165265-734d-4d4d-a23b-1aa5acb8715e&quot;&gt;&lt;/fuel-video&gt;" class="fuel_embeded_code_1440804"></div></div></div></div><div class="fuel_post_template_description"> </div></div></div></div>
+                    </div>
+
+                    <!-- Share This Button - Displaying from 3rd party website sharethis -->
+                    <div class="sharethis-inline-share-buttons" data-network="email"
+                        data-title="Check out this article from WISH-TV"
+                        data-email-subject="Check out this article from WISH-TV"></div>
+
+                                        <!-- Text to speech -->
+                    <script defer="defer" src="https://tts.carbonatixaudio.com/static/js/tts_player.js"></script>
+                    <div class="tts-player exclude-player">
+                        <div id="xml-audio-player"
+                            data-src="https://api.prod.carbonatixaudio.com/article?token=1NJOa7MmZxfoKhp{M(21KERxftyw!vV90}wlTj.w">
+                        </div>
+                        <div id="tts-shadow-root"></div>
+                    </div>
+                                        <div class="article-meta">
+                                                    <div class="byline">by: <a
+                                    href="/meet-the-team">Hanna Mordoh</a></div>
+
+
+                                                    <div class="posttime">Posted: <time>Aug 11, 2025 / 06:11 AM EST</time> / Updated: <time>Aug 11, 2025 / 09:13 AM EST</time></div>
+                    </div>
+
+                    <div class="article-content rich-text">
+                        <p>
+                        <p>
+                            <p><em>This is the second entry of WISH-TV&#8217;s deeper dive into artificial intelligence in education, first examining how AI is being used in colleges and universities.</em></p>
+<ul class="wp-block-list">
+<li><a href="https://www.wishtv.com/news/ai-education-lawrence-township/"><strong>AI in Education: Lawrence Township embraces AI in classrooms this school year</strong></a></li>
+</ul>
+<p>WEST LAFAYETTE, Ind. (WISH) — Students start the fall semester at <a href="https://www.purdue.edu/">Purdue University</a> Aug. 25. </p>
+<p>Leaders there say artificial intelligence will likely be a part of all college students&#8217; education. However, how much or how little depends on their major, their professors, and the students themselves.</p>
+<p>Jamil Mansouri just graduated from Purdue in May and double majored in Agricultural Economics and Political Science. He will soon start graduate school for Business Analytics and Data Management. He has become familiar with AI as a student.</p>
+<p>&#8220;I think there are fields where AI can be your biggest tool or not help you that much,&#8221; Mansouri said.</p>
+<p>He is also a member of the <a href="https://www.purdue.edu/innovativelearning/programs/student-pedagogy-advocates/">Student Pedagogy Advocates</a>&nbsp;program and is a student voice while the university develops frameworks for how to use and teach AI.</p>
+<div class="wp-block-image">
+<figure class="aligncenter size-full"><img fetchpriority="high" decoding="async" width="1206" height="667" src="https://www.wishtv.com/wp-content/uploads/2025/08/08/purdue-3.jpg" alt="" class="wp-image-1439677" /><figcaption class="wp-element-caption">Jamil Mansouri demonstrates AI use via Chat GPT on his phone. <br />(WISH Photo)</figcaption></figure>
+</div>
+<p>When asked what people should know about AI in the university setting, Mansouri said, &#8220;The student body is not a monolith, it is very major specific. The second thing is students want consistent frameworks and guidance when using it. </p><div class="opscoad-teads"></div>
+<p>&#8220;A lot of faculty have very different perspectives on AI and it translates into their coursework. Some faculty actively support it and give you these resources. Others say &#8216;If I even find a hint of it, I&#8217;m going to give you an F&nbsp;in the class. Students feel confused students don&#8217;t know exactly where to go with it where to engage with these tools.&#8221;</p>
+<p>That&#8217;s where David Nelson comes into play. He is the associate director for Purdue Center for Instructional Excellence and a courtesy faculty in the John Martinson Honors College. </p>
+<p>He helps the 2,400 faculty members stay updated on educational trends, such as AI.</p>
+<p>&#8220;AI disrupts a lot of processes that we&#8217;ve come to rely on an education,&#8221; Nelson explained. &#8220;AI is creating a lot more freedom of choice in cognitive work. That&#8217;s a big part of what it is doing right now and we haven&#8217;t had to worry about that choice. So, now are we.&#8221; </p>
+<p>He&#8217;s helping implement <a href="https://www.purdue.edu/teaching-learning/instructors/ai.php">Purdue University&#8217;s AI policy</a>.</p>
+<p>&#8220;Rather than institute one kind of broad AI policy, the university has encouraged different instructors and different departments to really investigate it,&#8221; Nelson said.</p>
+<p>Professors will set the AI policy for their own classes; the level of use and implementation will depend on the course, the subject and the faculty member.</p>
+<p>&#8220;We&#8217;re very much encouraging transparency for faculty instructors in their AI policies and those can be very different from class to class. We&#8217;re also encouraging faculty and instructors to make sure that there is a human in the loop when trying to give feedback or assessment to students by using any AI,&#8221; he said. &#8220;Everything else has been kind of &#8216;We&#8217;d like you to experiment we want you to be aware of what existing rules are about academic integrity and research&#8217; &#8212;&nbsp; but it&#8217;s a lot of trust in full-time professionals to do their jobs.&#8221; </p>
+<div class="wp-block-image">
+<figure class="aligncenter size-full"><img decoding="async" width="1206" height="888" src="https://www.wishtv.com/wp-content/uploads/2025/08/08/purdue-2.jpg" alt="" class="wp-image-1439679" /><figcaption class="wp-element-caption">Pedestrians walk across the street in front of Purdue&#8217;s main gate. <br />(WISH Photo)</figcaption></figure>
+</div>
+<p>Purdue is trusting students, too. </p>
+<p>Nelson says there are pros and cons to AI: A chat bot can act as a study buddy, or something to bounce ideas off of when brainstorming. It can even act as a language translator; however, it should not do the thinking for students.</p>
+<p>Nelson encourages students to learn how algorithms work and determine what they really want to accomplish with their higher education experience &#8211; and encouraging staff to have bold and up front conversations with students about AI.</p>
+<p>&#8220;How can we incentivize change the way that we are encouraging students engaging with them so that they&#8217;re making the proactive choice to learn and realize this is something that could be harmful or helpful to me and if they don&#8217;t know what guidance can they get?&#8221; Nelson said.</p>
+<p>The university says there will not be a freshman orientation focused on AI. This will be a subject individual professors will approach at the start of each semester. </p>
+<p>While the university is embracing the technology, faculty at Purdue also hope it will encourage students to really think about what they want to get out of their education and perhaps promote face to face interactions with professors.</p>
+<p>Mansouri said this has prompted a lot of professors to change their course work. </p>
+<p>&#8220;It is no secret that in computer science you can get up through your junior year by just using Chat GPT to guide you through the code. So, professors are adapting so now you have to come in and have one-on-one conversations and explain your coding and how you got there. You&#8217;re going to see different projects I think. You&#8217;re going to see a lot more presentations &#8211; a lot more of the social side of it and a lot more, kind of, showing and talking your way through something rather than writing on paper how you got to a solution,&#8221; Mansouri said.</p>
+<p>When it comes to the issue of cheating, the university says AI detectors don&#8217;t work well anymore. </p>
+<p>The school is relying on professors getting to know their students and feeling when something seems off. Nelson says he has had to do this with students, and generally, they admit to the generative AI use in circumstances that are not allowed.</p>
+<p>&#8220;Identifying that is a feeling as well as a discussion. But when students do admit to it it is a violation of academic integrity and so it does violate the university&#8217;s honesty policy and there are the same kind of consequences from directly copying from one previous static document to your own work and saying, &#8216;This is what I did.&#8217;&#8221; Nelson said.</p>
+<p>The university is also encouraging students to take<a href="https://www.purdue.edu/teaching-learning/instructors/honor-pledge.php"> Purdue&#8217;s Honor Pledge</a>. </p>
+<p>According to its website, students developed the honor pledge to advance a supportive environment that promotes academic integrity and excellence. &#8220;It is intended that this pledge inspires Boilermakers of all generations to stay &#8216;on track&#8217; to themselves and their University,&#8221; according to Purdue.</p>
+<p>As for Chat GPT&#8217;s&nbsp;advice to college students? &nbsp;</p>
+<p>The chat bot&#8217;s bottom line is that it&#8217;s a tool. It can generally be abused. But, it can challenge you to think critically and help shape your education and future career.</p>
+<p>&#8220;I think, fundamentally, I agree with its perspective on that,&#8221; Mansouri said. &#8220;It can give you an edge but it can also harm your education. So use it as the tool that it is and it can be a double-edged sword.&#8221;</p>
+<p>Nelson said the best analogy for AI is when radio started. It was a paradigm shift in technology that was suddenly everywhere&#8230;</p>
+<p>He says AI is also a paradigm shift for education and potentially careers. Some students tell News 8 they are re-thinking or worried about jobs after school because of AI&#8217;s impact.</p>
+<hr class="wp-block-separator has-alpha-channel-opacity" />
+<p><em>Next in this series, WISH-TV explore how AI is changing what students choose to do in higher education, the trades, and its impact on careers. </em></p>
+<p><em>That story will air Aug. 18 on Daybreak.</em></p>
+</p>                        </p>
+
+
+                    </div>
+                </div>                 <div class="wish-sidebar col-lg-3 col-12 right-col">                                             <section id="block-42" class="widget widget_block"><div class="adsblock d-flex align-items-center justify-content-center full-ads-block">
+    <div data-unit="lin.wish/purdue-ai-policy-implementation" class="opscoad-rectangle-1"></div></div>
+</section><section id="block-32" class="widget widget_block">
+<div id="ads-block_4a1483ecbe732f239fc3503c570d94f0" class="popular-stroies  variation2">
+            <h2 class="ttl">WISHTV.com Trending Stories </h2>
+    
+                    <div class="popular-stories-list">
+            <ul>
+                
+                                    <!-- Featured Story -->
+                    <li class="featured-post-row">
+                                                    <div class="featured-image">
+                                <a href="https://www.wishtv.com/news/crime-watch-8/union-city-school-secretary-accused-of-inappropriate-relationship-with-17-year-old-student/">
+                                    <img loading="lazy" decoding="async" width="150" height="150" src="https://www.wishtv.com/wp-content/uploads/2026/02/15/Alicia-Hughes-Mugshot.jpg?width=150&amp;height=150&amp;fit=bounds&amp;crop=1:1" class="attachment-thumbnail size-thumbnail wp-post-image" alt="" srcset="https://www.wishtv.com/wp-content/uploads/2026/02/15/Alicia-Hughes-Mugshot.jpg?width=150&amp;height=150&amp;fit=bounds&amp;crop=1:1 150w, https://www.wishtv.com/wp-content/uploads/2026/02/15/Alicia-Hughes-Mugshot.jpg?width=300&amp;height=300&amp;fit=bounds 300w" sizes="auto, (max-width: 150px) 100vw, 150px" />                                </a>
+                            </div>
+                        
+                        <div class="content-box">
+                            <div class="post-title">
+                                <a href="https://www.wishtv.com/news/crime-watch-8/union-city-school-secretary-accused-of-inappropriate-relationship-with-17-year-old-student/">Union City school secretary accused of inappr...</a>
+                            </div>
+                            <div class="view-box">
+                                <span>37,828 Views</span>
+                                <div class="social-sharing">
+                                    <a class="facebook" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.wishtv.com%2Fnews%2Fcrime-watch-8%2Funion-city-school-secretary-accused-of-inappropriate-relationship-with-17-year-old-student%2F" target="_blank" rel="noopener"><i class="fa-brands fa-facebook"></i></a>
+                                    <a class="twitter" href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fwww.wishtv.com%2Fnews%2Fcrime-watch-8%2Funion-city-school-secretary-accused-of-inappropriate-relationship-with-17-year-old-student%2F&text=Union%20City%20school%20secretary%20accused%20of%20inappr..." target="_blank" rel="noopener"><i class="fa-brands fa-x-twitter"></i></a>
+                                    <a class="envelope" href="mailto:?subject=Check%20out%20this%20story%20from%20WISH-TV&body=Check%20out%20this%20story:%20https%3A%2F%2Fwww.wishtv.com%2Fnews%2Fcrime-watch-8%2Funion-city-school-secretary-accused-of-inappropriate-relationship-with-17-year-old-student%2F" target="_blank" rel="noopener"><i class="fa-regular fa-envelope"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                                
+                                    <!-- Regular Story -->
+                    <li>
+                        <div class="post-row">
+                            <div class="post-title">
+                                <a href="https://www.wishtv.com/news/crime-watch-8/beech-grove-police-officer-killed-another-injured-in-shooting-suspect-in-custody/">Beech Grove police officer killed, another in...</a>
+                                <div class="social-sharing">
+                                    <a class="facebook" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.wishtv.com%2Fnews%2Fcrime-watch-8%2Fbeech-grove-police-officer-killed-another-injured-in-shooting-suspect-in-custody%2F" target="_blank" rel="noopener"><i class="fa-brands fa-facebook"></i></a>
+                                    <a class="twitter" href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fwww.wishtv.com%2Fnews%2Fcrime-watch-8%2Fbeech-grove-police-officer-killed-another-injured-in-shooting-suspect-in-custody%2F&text=Beech%20Grove%20police%20officer%20killed%2C%20another%20in..." target="_blank" rel="noopener"><i class="fa-brands fa-x-twitter"></i></a>
+                                    <a class="envelope" href="mailto:?subject=Check%20out%20this%20story%20from%20WISH-TV&body=Check%20out%20this%20story:%20https%3A%2F%2Fwww.wishtv.com%2Fnews%2Fcrime-watch-8%2Fbeech-grove-police-officer-killed-another-injured-in-shooting-suspect-in-custody%2F" target="_blank" rel="noopener"><i class="fa-regular fa-envelope"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <input type="hidden" value="Beech Grove police officer killed, another in... - 21842">
+                                
+                                    <!-- Regular Story -->
+                    <li>
+                        <div class="post-row">
+                            <div class="post-title">
+                                <a href="https://www.wishtv.com/sports/the-zone-indiana-high-school/regional-champions-crowned-in-girls-basketball/">Regional champions crowned in girls basketbal...</a>
+                                <div class="social-sharing">
+                                    <a class="facebook" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.wishtv.com%2Fsports%2Fthe-zone-indiana-high-school%2Fregional-champions-crowned-in-girls-basketball%2F" target="_blank" rel="noopener"><i class="fa-brands fa-facebook"></i></a>
+                                    <a class="twitter" href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fwww.wishtv.com%2Fsports%2Fthe-zone-indiana-high-school%2Fregional-champions-crowned-in-girls-basketball%2F&text=Regional%20champions%20crowned%20in%20girls%20basketbal..." target="_blank" rel="noopener"><i class="fa-brands fa-x-twitter"></i></a>
+                                    <a class="envelope" href="mailto:?subject=Check%20out%20this%20story%20from%20WISH-TV&body=Check%20out%20this%20story:%20https%3A%2F%2Fwww.wishtv.com%2Fsports%2Fthe-zone-indiana-high-school%2Fregional-champions-crowned-in-girls-basketball%2F" target="_blank" rel="noopener"><i class="fa-regular fa-envelope"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <input type="hidden" value="Regional champions crowned in girls basketbal... - 7587">
+                                
+                                    <!-- Regular Story -->
+                    <li>
+                        <div class="post-row">
+                            <div class="post-title">
+                                <a href="https://www.wishtv.com/news/crime-watch-8/father-and-stepmother-arrested-in-death-of-11-year-old-daughter/">Father and stepmother arrested in death of 11...</a>
+                                <div class="social-sharing">
+                                    <a class="facebook" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.wishtv.com%2Fnews%2Fcrime-watch-8%2Ffather-and-stepmother-arrested-in-death-of-11-year-old-daughter%2F" target="_blank" rel="noopener"><i class="fa-brands fa-facebook"></i></a>
+                                    <a class="twitter" href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fwww.wishtv.com%2Fnews%2Fcrime-watch-8%2Ffather-and-stepmother-arrested-in-death-of-11-year-old-daughter%2F&text=Father%20and%20stepmother%20arrested%20in%20death%20of%2011..." target="_blank" rel="noopener"><i class="fa-brands fa-x-twitter"></i></a>
+                                    <a class="envelope" href="mailto:?subject=Check%20out%20this%20story%20from%20WISH-TV&body=Check%20out%20this%20story:%20https%3A%2F%2Fwww.wishtv.com%2Fnews%2Fcrime-watch-8%2Ffather-and-stepmother-arrested-in-death-of-11-year-old-daughter%2F" target="_blank" rel="noopener"><i class="fa-regular fa-envelope"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <input type="hidden" value="Father and stepmother arrested in death of 11... - 6615">
+                                
+                                    <!-- Regular Story -->
+                    <li>
+                        <div class="post-row">
+                            <div class="post-title">
+                                <a href="https://www.wishtv.com/news/local-news/i69-i465-bridge-demolition/">Bridge demolition to close several Indy inter...</a>
+                                <div class="social-sharing">
+                                    <a class="facebook" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.wishtv.com%2Fnews%2Flocal-news%2Fi69-i465-bridge-demolition%2F" target="_blank" rel="noopener"><i class="fa-brands fa-facebook"></i></a>
+                                    <a class="twitter" href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fwww.wishtv.com%2Fnews%2Flocal-news%2Fi69-i465-bridge-demolition%2F&text=Bridge%20demolition%20to%20close%20several%20Indy%20inter..." target="_blank" rel="noopener"><i class="fa-brands fa-x-twitter"></i></a>
+                                    <a class="envelope" href="mailto:?subject=Check%20out%20this%20story%20from%20WISH-TV&body=Check%20out%20this%20story:%20https%3A%2F%2Fwww.wishtv.com%2Fnews%2Flocal-news%2Fi69-i465-bridge-demolition%2F" target="_blank" rel="noopener"><i class="fa-regular fa-envelope"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <input type="hidden" value="Bridge demolition to close several Indy inter... - 1260">
+                                            </ul>
+        </div>
+            </div>
+</section><section id="block-43" class="widget widget_block"><div class="adsblock d-flex align-items-center justify-content-center full-ads-block">
+    <div data-unit="lin.wish/purdue-ai-policy-implementation" class="opscoad-rectangle-2"></div></div>
+</section>                    
+                </div><!-- .wish-sidebar -->
+            </div>
+                                                                                                                <div class="email-alert-cta">
+                        <a href="/email-alerts/" target="_blank">News at your fingertips!</a> Stay informed with <a
+                            href="/indiana-news/" target="_blank">Indiana</a>, <a href="/local/" target="_blank">Local</a>, and <a
+                            href="/national/" target="_blank">National News</a> straight to your inbox.
+                    </div>
+                                        <div class="news-storie-row">
+                <div class="row">
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-12">                            <!-- RevContent -->
+                            <div data-widget-host="revcontent" data-pub-id="150797" data-widget-id="288619" data-widget-title="MORE STORIES"></div>
+                            <script src="https://delivery.revcontent.com/150797/288619/widget.js"></script>
+                            <script>
+                                document.addEventListener("DOMContentLoaded", function() {
+                                    const interval = setInterval(() => {
+                                        const header = document.querySelector('.sbn-header .sbn-header-headline');
+                                        if (header) {
+                                            header.textContent = "MORE STORIES";
+                                            clearInterval(interval);
+                                        }
+                                    }, 300);
+                                });
+                            </script>
+                        
+                                            </div>
+                </div>
+            </div>
+        </div><!-- .article-container -->
+    </div> <!-- End #post-wrapper -->
+
+
+    <!-- AJAX call to set post view for popular posts  -->
+    <script type="text/javascript">
+        jQuery(document).ready(function() {
+            jQuery.ajax({
+                type: "POST",
+                url: localVars.ajaxurl,
+                data: {
+                    action: "set_post_view_count",
+                    post_id: 1439646,
+                },
+                success: function(data) {
+                    return false;
+                },
+                error: function(jqXHR, textStatus, errorThrown) {},
+            });
+        });
+    </script>
+</div>
+
+<footer>
+    <div class="container">
+        <div class="row">
+                            <div class="col-xl-3 col-12 d-flex align-items-center footer-logo  mb-5 lg-mb-0">
+                    <div class="widget_text chw-widget"><div class="textwidget custom-html-widget"><a href="/"><img src="/wp-content/uploads/2023/02/footer-logo-300x36-1.png" alt="Wish TV"></a></div></div>                </div>
+            
+                            <div class="col-xl-3 col-md-6 mb-5 lg-mb-0">
+                    <div class="chw-widget"><h2>Categories</h2>
+<ul>
+    <li class="elementor-icon-list-item">
+        <a href="/news">
+            <span class="elementor-icon-list-text">News</span>
+        </a>
+    </li>
+    <li class="elementor-icon-list-item">
+        <a href="/weather/">
+            <span class="elementor-icon-list-text">Weather</span>
+        </a>
+    </li>
+    <li class="elementor-icon-list-item">
+        <a href="/sports/">
+            <span class="elementor-icon-list-text">Sports</span>
+        </a>
+    </li>
+    <li class="elementor-icon-list-item">
+        <a href="/lifestylelive/">
+            <span class="elementor-icon-list-text"> Life. Style. Live!</span>
+        </a>
+    </li>
+    <li class="elementor-icon-list-item">
+        <a href="/community/">
+
+            <span class="elementor-icon-list-text">Community</span>
+        </a>
+    </li>
+    <li class="elementor-icon-list-item">
+        <a href="/about-us/">
+
+            <span class="elementor-icon-list-text">Station Info</span>
+        </a>
+    </li>
+    <li class="elementor-icon-list-item">
+        <a href="/tv-schedule/">
+
+            <span class="elementor-icon-list-text">TV Schedule</span>
+        </a>
+    </li>
+    <li class="elementor-icon-list-item">
+        <a href="/live-stream/">
+
+            <span class="elementor-icon-list-text">Watch Live</span>
+        </a>
+    </li>
+    <li class="elementor-icon-list-item">
+        <a href="/photo-galleries/">
+
+            <span class="elementor-icon-list-text">Photo Galleries</span>
+        </a>
+    </li>
+    <li class="elementor-icon-list-item">
+        <a href="/betting/">
+
+            <span class="elementor-icon-list-text">Betting</span>
+        </a>
+    </li>
+</ul></div>                </div>
+                                        <div class="col-xl-3 col-md-6 news-weather-column  mb-5 lg-mb-0">
+                    <div class="chw-widget"><h2>News/Weather App</h2>
+                    <div class="d-flex align-items-center justify-content-between ">
+                        <div class="appicons">
+                            <h6>News</h6>
+                            <a href="https://apps.apple.com/us/app/wish-tv-indianapolis/id1492304585" target="_blank"><img decoding="async" src="https://www.wishtv.com/wp-content/uploads/2023/03/appstore_footer-1.png" alt="Appstore" class="mb-2"></a>
+                            <a href="https://play.google.com/store/apps/details?id=wish.id3676" target="_blank"><img decoding="async" src="https://www.wishtv.com/wp-content/uploads/2023/03/googleplay_footer-1.png" alt="Google play Store"></a>
+                        </div>
+                        <div class="appicons">
+                            <h6>Weather</h6>
+                            <a href="https://wish8tv.page.link/qbvQ" target="_blank"><img decoding="async" src="https://www.wishtv.com/wp-content/uploads/2023/03/appstore_footer-1.png" alt="Appstore" class="mb-2"></a>
+                            <a href="https://play.google.com/store/apps/details?id=com.wish8tv.android.weatherapp&amp;hl=en_US&amp;pli=1" target="_blank"><img decoding="async" src="https://www.wishtv.com/wp-content/uploads/2023/03/googleplay_footer-1.png" alt="Google play Store"></a>
+                        </div>
+                    </div></div>                </div>
+                                        <div class="col-lg-3">
+                    <div class="chw-widget"><h2>Follow Us</h2>
+<div class="ft-socialicon d-flex">
+    <a href="https://www.facebook.com/WISHNews8" target="_blank" class="d-flex"><i class="fa-brands fa-facebook"></i>
+    </a>
+    <a href="https://x.com/wishnews8" class="d-flex" target="_blank"><i
+            class="fa-brands fa-square-x-twitter"></i>
+    </a>
+    <a href="https://www.instagram.com/wish8news/" class="d-flex" target="_blank"><i
+            class="fa-brands fa-instagram"></i>
+    </a>
+    <a href="https://www.threads.net/@wish8news" class="d-flex" target="_blank"><i
+        class="fa-brands fa-threads" style="color: #262626;"></i>
+    </a>
+    <a href="https://www.tiktok.com/@wishnews8" class="d-flex" target="_blank"><i
+        class="fa-brands fa-tiktok" style="color: #262626;"></i>
+    </a>
+    <a href="https://www.youtube.com/channel/UCKe4Fry0MyvT_SRrmn0_MiQ" class="d-flex" target="_blank"><i
+            class="fa-brands fa-youtube"></i>
+    </a>
+</div>
+<a href="https://circlecitybroadcasting.com/" target="_blank"><img decoding="async"
+        src="/wp-content/uploads/2023/02/CCB-Horizontal-white.png" alt="city circle broadcasting"></a></div>                </div>
+                    </div>
+    </div>
+    <div class="bottom-footer">
+        <div class="container-xxl">
+            <div class="row align-items-center">
+                <div class="col-xl-7 col-12">
+                    <div class="menu-footer-primary-container"><ul id="menu-footer-primary" class="menu"><li id="menu-item-1323852" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1323852"><a href="https://www.wishtv.com/terms-of-use/">Terms of Use</a></li>
+<li id="menu-item-1324138" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1324138"><a href="https://www.wishtv.com/privacy-policy/">Privacy Policy</a></li>
+<li id="menu-item-1084170" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1084170"><a href="https://www.wishtv.com/publishing-principles/">Publishing Principles</a></li>
+<li id="menu-item-901252" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-901252"><a href="https://www.wishtv.com/wp-content/uploads/2024/08/01/EEO-ANNUAL-PUBLIC-FILE-REPORT-WISH-WNDY-WIIH-TV-4.1.2023-3.31.2024V2.pdf">EEO Report</a></li>
+<li id="menu-item-901253" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-901253"><a href="https://publicfiles.fcc.gov/tv-profile/wish-tv">FCC Public File (WISH)</a></li>
+<li id="menu-item-901255" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-901255"><a href="https://publicfiles.fcc.gov/tv-profile/wndy-tv">FCC Public File (WNDY)</a></li>
+</ul></div>                </div>
+                <div class="col-xl-5 col-12 text-center text-xl-end">© 2026 CIRCLE CITY BROADCASTING I, LLC. | ALL RIGHTS RESERVED.</div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+    <script type="text/javascript">
+var sPath = window.location.pathname;
+var parent = window.location.pathname.split('/');
+var sid = 543;
+
+if (sPath == '/weather/' || parent[1] == 'weather' || parent[1] == 'closings') {
+sid = 308;
+}
+else if (sPath == '/beoshow/' || parent[1] == 'beoshow') {
+sid = 513;
+}
+else if (sPath == '/podcasts/' || parent[1] == 'podcasts') {
+sid = 544;
+}
+
+
+;!function(){
+window.PianoESPConfig = {
+id: sid
+}
+var e=document.createElement("script");e.setAttribute("id","pnesplucidsdksel"),e.type="text/javascript",e.src="//api-esp.piano.io/public/sdk/v04/sdk.js?v="+(localStorage&&localStorage.lucidsdkver||"xxx"),e.async=!0,document.getElementsByTagName("script")[0].parentNode.appendChild(e);
+}();
+</script>
+<script type="text/javascript">
+    if (typeof SDG === 'object' && typeof SDG.webAppHacks !== 'undefined') {
+        window.setTimeout(function() {
+            var webAppHacks = new SDG.webAppHacks();
+        }, 1300);
+
+        window.setTimeout(function() {
+            if ( $('.wish-hero').length === 0 ) {
+                SDG.webAppHacksNew = function() {
+                	var $ = jQuery;
+                	/* Hacks go here */
+                	var wishTitles = jQuery('body:not(.home)').find('.post-content>.fusion-fullwidth>.fusion-row>.fusion-layout-column>.fusion-column-wrapper').find('>.article-list__heading, >.fusion-title,>.fusion-text').find('>h1,>h2,>h3');
+                
+                	var wishHero = $('.post-content').find('article.post,fuel-video').find('img,video,iframe').first();
+                
+                	if ( wishHero.length === 0 && wishTitles.length ) {
+                		var altWishHero = wishTitles.first().parents('.fusion-layout-column').next('.fusion-layout-column').find('iframe').first();
+                		if ( altWishHero.length && altWishHero.width() > 400 ) {
+                			wishHero = altWishHero;
+                		}
+                	}
+                
+                	wishTitles.addClass('wish-header-title');
+                	wishHero.addClass('wish-hero');
+                
+                	if (wishHero.length && wishTitles.length) {
+                		var width = wishHero.is('video') ? $('.wish-hero').parents('.fusion-column-wrapper').width() : $('.wish-hero').width();
+                		$('.wish-header-title').first().css('width', width).css('max-width', '100%');
+                	}
+                
+                	var headlines = $('#main .fusion-fullwidth + .fusion-fullwidth > .fusion-row > .fusion-layout-column > .fusion-column-wrapper > .fusion-text > p:first-child:last-child');
+                
+                	if ( headlines.length ) {
+                
+                		$.each(headlines, function() {
+                			var text = $(this).text(),
+                			parent = $(this).parent();
+                
+                			if ( text.length < 80 ) {
+                				parent.html('<h3 class="wish-header-title">' + text + '</h3>');
+                			}
+                		});
+                	}
+                
+                	var badHeaders = $('.page > div > div.fusion-fullwidth > div > .fusion-layout-column > div > .fusion-title > h2:first-child:last-child p:first-child:last-child');
+                
+                	if ( badHeaders.length ) {
+                		$.each(badHeaders, function() {
+                			var text = $(this).text(),
+                				parent = $(this).parents('.fusion-title');
+                
+                			if ( text.length < 80 ) {
+                				parent.html('<h3 class="wish-header-title">' + text + '</h3>');
+                			}
+                		});
+                	}
+                };
+                var webAppHacksNew = new SDG.webAppHacksNew();
+            } else {
+                if ( $('.wish-hero').length && $('.wish-hero').width() < 500 ) {
+                    $('.wish-header-title[style*="max-width: 100%"]').css('width', '100%');
+                }
+            }
+        }, 1600);
+    }
+    
+</script>
+<script type="text/javascript">
+document.addEventListener("DOMContentLoaded", function() {
+  if (document.querySelector('.custom-page-submenu .custom-sub-menu-parent')) {
+    document.body.classList.add('has-secondary-menu');
+  }
+});
+</script><script>
+    function isOnScreen(elem) {
+        // if the element doesn't exist, abort
+        if (elem.length == 0) {
+            return;
+        }
+        var $window = jQuery(window)
+        var viewport_top = $window.scrollTop()
+        var viewport_height = $window.height()
+        var viewport_bottom = viewport_top + viewport_height
+        var $elem = jQuery(elem)
+        var top = $elem.offset().top
+        var height = $elem.height()
+        var bottom = top + height
+
+        return (top >= viewport_top && top < viewport_bottom) ||
+            (bottom > viewport_top && bottom <= viewport_bottom) ||
+            (height > viewport_height && top <= viewport_top && bottom >= viewport_bottom)
+    }
+
+
+    jQuery(document).ready(function () {
+        jQuery('.accordion-list > li > .answer').hide();
+
+        jQuery('.accordion-list > li').click(function () {
+            if (jQuery(this).hasClass("active")) {
+                jQuery(this).removeClass("active").find(".answer").slideUp();
+            } else {
+                jQuery(".accordion-list > li.active .answer").slideUp();
+                jQuery(".accordion-list > li.active").removeClass("active");
+                jQuery(this).addClass("active").find(".answer").slideDown();
+            }
+            return false;
+        });
+        $(".only-search-icon").click(function () {
+            $('#searchform').toggle();
+        });
+
+    });
+    </script>
+
+<script type="speculationrules">
+{"prefetch":[{"source":"document","where":{"and":[{"href_matches":"/*"},{"not":{"href_matches":["/wp-*.php","/wp-admin/*","/wp-content/uploads/*","/wp-content/*","/wp-content/plugins/*","/wp-content/themes/wishtv-2022/*","/*\\?(.+)"]}},{"not":{"selector_matches":"a[rel~=\"nofollow\"]"}},{"not":{"selector_matches":".no-prefetch, .no-prefetch a"}}]},"eagerness":"conservative"}]}
+</script>
+<script type="text/javascript" src="https://www.wishtv.com/wp-content/plugins/embedpress/assets/js/gallery-justify.js?ver=1771345580" id="embedpress-gallery-justify-js"></script>
+<script type="text/javascript" src="https://www.wishtv.com/wp-content/plugins/embedpress/assets/js/lazy-load.js?ver=1771345580" id="embedpress-lazy-load-js"></script>
+<script type="text/javascript" src="https://www.wishtv.com/wp-content/plugins/awesome-weather/js/awesome-weather-widget-frontend.js?ver=1.1" id="awesome_weather-js"></script>
+<script type="text/javascript" id="fuel-bitcentral-script-js-extra">
+/* <![CDATA[ */
+var fuelajax = {"ajaxurl":"https://www.wishtv.com/wp-admin/admin-ajax.php"};
+//# sourceURL=fuel-bitcentral-script-js-extra
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://www.wishtv.com/wp-content/plugins/fuel-bitcentral/assets/js/fuel-bitcentral.js?ver=1771286400" id="fuel-bitcentral-script-js"></script>
+<script type="text/javascript" src="https://www.wishtv.com/wp-content/plugins/duracelltomi-google-tag-manager/dist/js/gtm4wp-form-move-tracker.js?ver=1.22.3" id="gtm4wp-form-move-tracker-js"></script>
+<script type="text/javascript" id="theme-scripts-js-extra">
+/* <![CDATA[ */
+var localVars = {"ajaxurl":"https://www.wishtv.com/wp-admin/admin-ajax.php"};
+//# sourceURL=theme-scripts-js-extra
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://www.wishtv.com/wp-content/themes/wishtv-2022/assets/js/bundle.min.js?v=3542691164" id="theme-scripts-js"></script>
+<script type="text/javascript" src="https://htlbid.com/v3/wishtv.com/opscobid.js" id="htlbid-script-js"></script>
+
+<script>
+    //Automatically load more posts every 5 minutes on sub-category pages
+            var w = 1;
+        if (jQuery("#loade_more_posts").length > 0) {
+            var refreshId = setInterval(function () {
+                jQuery("#loade_more_posts").click();
+
+                if (w >= 5) {
+                    clearInterval(refreshId);
+                }
+                w++;
+            }, 30000);
+
+        }
+    </script>
+<script>
+    window.opscobid = window.opscobid || {};
+    opscobid.cmd = opscobid.cmd || [];
+    opscobid.cmd.push(function () {
+        opscobid.layout('universal'); // Leave as 'universal' or add custom layout
+                opscobid.setTargeting("is_testing", "no"); // Set to "no" for production
+                        opscobid.setTargeting("is_home", "no"); // Set to "yes" on the homepage
+            
+                    opscobid.setTargeting("category", "Education"); // dynamically pass page category into this function
+        
+        opscobid.setTargeting("post_id", 1439646); // dynamically pass unique post/page id into this function
+    });
+</script>
+
+
+
+<div data-unit="lin.wish/purdue-ai-policy-implementation" class="opscoad-leaderboard-3"></div>
+
+<!-- Infolink for header popup ad -->
+    <script type="text/javascript">
+        var infolinks_pid = 3287549;
+        var infolinks_wsid = 0;
+    </script>
+    <script type="text/javascript" src="//resources.infolinks.com/js/infolinks_main.js" async defer></script>
+<!-- Infolink for header popup ad -->
+
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"NRJS-d17f109c7e1c3c29839","applicationID":"425086169","transactionName":"Y1EGbBcCCEFZUxBQWVobJVsRCglcF0MNV1FYUQ==","queueTime":0,"applicationTime":1202,"atts":"TxYFGl8YG08=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>

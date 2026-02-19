@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<!--[if IE 7]>
+<html class="ie ie7" lang="en-US">
+<![endif]-->
+<!--[if IE 8]>
+<html class="ie ie8" lang="en-US">
+<![endif]-->
+<!--[if !(IE 7) & !(IE 8)]><!-->
+<html lang="en-US">
+<!--<![endif]-->
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Week5- Basics about Prompt Engineering &#038; Testing of ChatGPT Vs DeepSeek Vs Perplexity &#8211; ENGL8180 | tzhang23&#8217;s Site</title>
+	<link rel="profile" href="https://gmpg.org/xfn/11">
+	<link rel="pingback" href="https://sites.gsu.edu/tzhang23/xmlrpc.php">
+	<!--[if lt IE 9]>
+	<script src="https://sites.gsu.edu/tzhang23/wp-content/themes/twentyfourteen/js/html5.js?ver=3.7.0"></script>
+	<![endif]-->
+	<meta name='robots' content='max-image-preview:large' />
+<link rel="alternate" type="application/rss+xml" title="tzhang23&#039;s Site &raquo; Feed" href="https://sites.gsu.edu/tzhang23/feed/" />
+<link rel="alternate" type="application/rss+xml" title="tzhang23&#039;s Site &raquo; Comments Feed" href="https://sites.gsu.edu/tzhang23/comments/feed/" />
+<link rel="alternate" type="application/rss+xml" title="tzhang23&#039;s Site &raquo; Week5- Basics about Prompt Engineering &#038; Testing of ChatGPT Vs DeepSeek Vs Perplexity &#8211; ENGL8180 Comments Feed" href="https://sites.gsu.edu/tzhang23/2025/02/16/week5-basics-about-prompt-engineering-testing-of-chatgpt-vs-deepseekvs-perplexity-engl8180/feed/" />
+<link rel="alternate" title="oEmbed (JSON)" type="application/json+oembed" href="https://sites.gsu.edu/tzhang23/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fsites.gsu.edu%2Ftzhang23%2F2025%2F02%2F16%2Fweek5-basics-about-prompt-engineering-testing-of-chatgpt-vs-deepseekvs-perplexity-engl8180%2F" />
+<link rel="alternate" title="oEmbed (XML)" type="text/xml+oembed" href="https://sites.gsu.edu/tzhang23/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fsites.gsu.edu%2Ftzhang23%2F2025%2F02%2F16%2Fweek5-basics-about-prompt-engineering-testing-of-chatgpt-vs-deepseekvs-perplexity-engl8180%2F&#038;format=xml" />
+<style id='wp-img-auto-sizes-contain-inline-css'>
+img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
+/*# sourceURL=wp-img-auto-sizes-contain-inline-css */
+</style>
+<link rel='stylesheet' id='dashicons-css' href='https://sites.gsu.edu/tzhang23/wp-includes/css/dashicons.min.css?ver=6.9' media='all' />
+<link rel='stylesheet' id='admin-bar-css' href='https://sites.gsu.edu/tzhang23/wp-includes/css/admin-bar.min.css?ver=6.9' media='all' />
+<style id='admin-bar-inline-css'>
+
+		@media screen { html { margin-top: 32px !important; } }
+		@media screen and ( max-width: 782px ) { html { margin-top: 46px !important; } }
+	
+@media print { #wpadminbar { display:none; } }
+/*# sourceURL=admin-bar-inline-css */
+</style>
+<style id='wp-emoji-styles-inline-css'>
+
+	img.wp-smiley, img.emoji {
+		display: inline !important;
+		border: none !important;
+		box-shadow: none !important;
+		height: 1em !important;
+		width: 1em !important;
+		margin: 0 0.07em !important;
+		vertical-align: -0.1em !important;
+		background: none !important;
+		padding: 0 !important;
+	}
+/*# sourceURL=wp-emoji-styles-inline-css */
+</style>
+<style id='wp-block-library-inline-css'>
+:root{--wp-block-synced-color:#7a00df;--wp-block-synced-color--rgb:122,0,223;--wp-bound-block-color:var(--wp-block-synced-color);--wp-editor-canvas-background:#ddd;--wp-admin-theme-color:#007cba;--wp-admin-theme-color--rgb:0,124,186;--wp-admin-theme-color-darker-10:#006ba1;--wp-admin-theme-color-darker-10--rgb:0,107,160.5;--wp-admin-theme-color-darker-20:#005a87;--wp-admin-theme-color-darker-20--rgb:0,90,135;--wp-admin-border-width-focus:2px}@media (min-resolution:192dpi){:root{--wp-admin-border-width-focus:1.5px}}.wp-element-button{cursor:pointer}:root .has-very-light-gray-background-color{background-color:#eee}:root .has-very-dark-gray-background-color{background-color:#313131}:root .has-very-light-gray-color{color:#eee}:root .has-very-dark-gray-color{color:#313131}:root .has-vivid-green-cyan-to-vivid-cyan-blue-gradient-background{background:linear-gradient(135deg,#00d084,#0693e3)}:root .has-purple-crush-gradient-background{background:linear-gradient(135deg,#34e2e4,#4721fb 50%,#ab1dfe)}:root .has-hazy-dawn-gradient-background{background:linear-gradient(135deg,#faaca8,#dad0ec)}:root .has-subdued-olive-gradient-background{background:linear-gradient(135deg,#fafae1,#67a671)}:root .has-atomic-cream-gradient-background{background:linear-gradient(135deg,#fdd79a,#004a59)}:root .has-nightshade-gradient-background{background:linear-gradient(135deg,#330968,#31cdcf)}:root .has-midnight-gradient-background{background:linear-gradient(135deg,#020381,#2874fc)}:root{--wp--preset--font-size--normal:16px;--wp--preset--font-size--huge:42px}.has-regular-font-size{font-size:1em}.has-larger-font-size{font-size:2.625em}.has-normal-font-size{font-size:var(--wp--preset--font-size--normal)}.has-huge-font-size{font-size:var(--wp--preset--font-size--huge)}.has-text-align-center{text-align:center}.has-text-align-left{text-align:left}.has-text-align-right{text-align:right}.has-fit-text{white-space:nowrap!important}#end-resizable-editor-section{display:none}.aligncenter{clear:both}.items-justified-left{justify-content:flex-start}.items-justified-center{justify-content:center}.items-justified-right{justify-content:flex-end}.items-justified-space-between{justify-content:space-between}.screen-reader-text{border:0;clip-path:inset(50%);height:1px;margin:-1px;overflow:hidden;padding:0;position:absolute;width:1px;word-wrap:normal!important}.screen-reader-text:focus{background-color:#ddd;clip-path:none;color:#444;display:block;font-size:1em;height:auto;left:5px;line-height:normal;padding:15px 23px 14px;text-decoration:none;top:5px;width:auto;z-index:100000}html :where(.has-border-color){border-style:solid}html :where([style*=border-top-color]){border-top-style:solid}html :where([style*=border-right-color]){border-right-style:solid}html :where([style*=border-bottom-color]){border-bottom-style:solid}html :where([style*=border-left-color]){border-left-style:solid}html :where([style*=border-width]){border-style:solid}html :where([style*=border-top-width]){border-top-style:solid}html :where([style*=border-right-width]){border-right-style:solid}html :where([style*=border-bottom-width]){border-bottom-style:solid}html :where([style*=border-left-width]){border-left-style:solid}html :where(img[class*=wp-image-]){height:auto;max-width:100%}:where(figure){margin:0 0 1em}html :where(.is-position-sticky){--wp-admin--admin-bar--position-offset:var(--wp-admin--admin-bar--height,0px)}@media screen and (max-width:600px){html :where(.is-position-sticky){--wp-admin--admin-bar--position-offset:0px}}
+
+/*# sourceURL=wp-block-library-inline-css */
+</style><style id='global-styles-inline-css'>
+:root{--wp--preset--aspect-ratio--square: 1;--wp--preset--aspect-ratio--4-3: 4/3;--wp--preset--aspect-ratio--3-4: 3/4;--wp--preset--aspect-ratio--3-2: 3/2;--wp--preset--aspect-ratio--2-3: 2/3;--wp--preset--aspect-ratio--16-9: 16/9;--wp--preset--aspect-ratio--9-16: 9/16;--wp--preset--color--black: #000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #fff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--color--green: #24890d;--wp--preset--color--dark-gray: #2b2b2b;--wp--preset--color--medium-gray: #767676;--wp--preset--color--light-gray: #f5f5f5;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgb(6,147,227) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgb(252,185,0) 0%,rgb(255,105,0) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgb(255,105,0) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--font-size--small: 13px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 36px;--wp--preset--font-size--x-large: 42px;--wp--preset--spacing--20: 0.44rem;--wp--preset--spacing--30: 0.67rem;--wp--preset--spacing--40: 1rem;--wp--preset--spacing--50: 1.5rem;--wp--preset--spacing--60: 2.25rem;--wp--preset--spacing--70: 3.38rem;--wp--preset--spacing--80: 5.06rem;--wp--preset--shadow--natural: 6px 6px 9px rgba(0, 0, 0, 0.2);--wp--preset--shadow--deep: 12px 12px 50px rgba(0, 0, 0, 0.4);--wp--preset--shadow--sharp: 6px 6px 0px rgba(0, 0, 0, 0.2);--wp--preset--shadow--outlined: 6px 6px 0px -3px rgb(255, 255, 255), 6px 6px rgb(0, 0, 0);--wp--preset--shadow--crisp: 6px 6px 0px rgb(0, 0, 0);}:where(.is-layout-flex){gap: 0.5em;}:where(.is-layout-grid){gap: 0.5em;}body .is-layout-flex{display: flex;}.is-layout-flex{flex-wrap: wrap;align-items: center;}.is-layout-flex > :is(*, div){margin: 0;}body .is-layout-grid{display: grid;}.is-layout-grid > :is(*, div){margin: 0;}:where(.wp-block-columns.is-layout-flex){gap: 2em;}:where(.wp-block-columns.is-layout-grid){gap: 2em;}:where(.wp-block-post-template.is-layout-flex){gap: 1.25em;}:where(.wp-block-post-template.is-layout-grid){gap: 1.25em;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}
+/*# sourceURL=global-styles-inline-css */
+</style>
+
+<style id='classic-theme-styles-inline-css'>
+/*! This file is auto-generated */
+.wp-block-button__link{color:#fff;background-color:#32373c;border-radius:9999px;box-shadow:none;text-decoration:none;padding:calc(.667em + 2px) calc(1.333em + 2px);font-size:1.125em}.wp-block-file__button{background:#32373c;color:#fff;text-decoration:none}
+/*# sourceURL=/wp-includes/css/classic-themes.min.css */
+</style>
+<link rel='stylesheet' id='lean-captcha-css-css' href='https://sites.gsu.edu/tzhang23/wp-content/mu-plugins/lean-captcha/css/lean-captcha.css?ver=1' media='all' />
+<link rel='stylesheet' id='wpa-style-css' href='https://sites.gsu.edu/tzhang23/wp-content/plugins/wp-accessibility/css/wpa-style.css?ver=2.2.5' media='all' />
+<style id='wpa-style-inline-css'>
+:root { --admin-bar-top : 37px; }
+/*# sourceURL=wpa-style-inline-css */
+</style>
+<link rel='stylesheet' id='twentyfourteen-lato-css' href='https://sites.gsu.edu/tzhang23/wp-content/themes/twentyfourteen/fonts/font-lato.css?ver=20230328' media='all' />
+<link rel='stylesheet' id='genericons-css' href='https://sites.gsu.edu/tzhang23/wp-content/themes/twentyfourteen/genericons/genericons.css?ver=3.0.3' media='all' />
+<link rel='stylesheet' id='twentyfourteen-style-css' href='https://sites.gsu.edu/tzhang23/wp-content/themes/twentyfourteen/style.css?ver=20250415' media='all' />
+<link rel='stylesheet' id='twentyfourteen-block-style-css' href='https://sites.gsu.edu/tzhang23/wp-content/themes/twentyfourteen/css/blocks.css?ver=20240708' media='all' />
+<script src="https://sites.gsu.edu/tzhang23/wp-includes/js/jquery/jquery.min.js?ver=3.7.1" id="jquery-core-js"></script>
+<script src="https://sites.gsu.edu/tzhang23/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.4.1" id="jquery-migrate-js"></script>
+<script src="https://sites.gsu.edu/tzhang23/wp-content/themes/twentyfourteen/js/functions.js?ver=20230526" id="twentyfourteen-script-js" defer data-wp-strategy="defer"></script>
+<link rel="https://api.w.org/" href="https://sites.gsu.edu/tzhang23/wp-json/" /><link rel="alternate" title="JSON" type="application/json" href="https://sites.gsu.edu/tzhang23/wp-json/wp/v2/posts/340" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://sites.gsu.edu/tzhang23/xmlrpc.php?rsd" />
+<meta name="generator" content="Georgia State University Sites 6.9 - http://sites.gsu.edu/" />
+<link rel="canonical" href="https://sites.gsu.edu/tzhang23/2025/02/16/week5-basics-about-prompt-engineering-testing-of-chatgpt-vs-deepseekvs-perplexity-engl8180/" />
+<link rel='shortlink' href='https://sites.gsu.edu/tzhang23/?p=340' />
+	<style>
+		@media screen and (max-width: 782px) {
+			#wpadminbar li#wp-admin-bar-log-in,
+			#wpadminbar li#wp-admin-bar-register {
+				display: block;
+			}
+
+			#wpadminbar li#wp-admin-bar-log-in a,
+			#wpadminbar li#wp-admin-bar-register a {
+				padding: 0 8px;
+			}
+		}
+	</style>
+<style id="simpler-css-style" type="text/css">
+</style><!-- end of custom css -->
+
+        <script type="text/javascript">
+            var jQueryMigrateHelperHasSentDowngrade = false;
+
+			window.onerror = function( msg, url, line, col, error ) {
+				// Break out early, do not processing if a downgrade reqeust was already sent.
+				if ( jQueryMigrateHelperHasSentDowngrade ) {
+					return true;
+                }
+
+				var xhr = new XMLHttpRequest();
+				var nonce = 'aa51a00998';
+				var jQueryFunctions = [
+					'andSelf',
+					'browser',
+					'live',
+					'boxModel',
+					'support.boxModel',
+					'size',
+					'swap',
+					'clean',
+					'sub',
+                ];
+				var match_pattern = /\)\.(.+?) is not a function/;
+                var erroredFunction = msg.match( match_pattern );
+
+                // If there was no matching functions, do not try to downgrade.
+                if ( null === erroredFunction || typeof erroredFunction !== 'object' || typeof erroredFunction[1] === "undefined" || -1 === jQueryFunctions.indexOf( erroredFunction[1] ) ) {
+                    return true;
+                }
+
+                // Set that we've now attempted a downgrade request.
+                jQueryMigrateHelperHasSentDowngrade = true;
+
+				xhr.open( 'POST', 'https://sites.gsu.edu/tzhang23/wp-admin/admin-ajax.php' );
+				xhr.setRequestHeader( 'Content-Type', 'application/x-www-form-urlencoded' );
+				xhr.onload = function () {
+					var response,
+                        reload = false;
+
+					if ( 200 === xhr.status ) {
+                        try {
+                        	response = JSON.parse( xhr.response );
+
+                        	reload = response.data.reload;
+                        } catch ( e ) {
+                        	reload = false;
+                        }
+                    }
+
+					// Automatically reload the page if a deprecation caused an automatic downgrade, ensure visitors get the best possible experience.
+					if ( reload ) {
+						location.reload();
+                    }
+				};
+
+				xhr.send( encodeURI( 'action=jquery-migrate-downgrade-version&_wpnonce=' + nonce ) );
+
+				// Suppress error alerts in older browsers
+				return true;
+			}
+        </script>
+
+		<style>.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style><style type="text/css">
+/* <![CDATA[ */
+img.latex { vertical-align: middle; border: none; }
+/* ]]> */
+</style>
+<link rel="icon" href="https://sites.gsu.edu/files/2023/10/favicon.png" sizes="32x32" />
+<link rel="icon" href="https://sites.gsu.edu/files/2023/10/favicon.png" sizes="192x192" />
+<link rel="apple-touch-icon" href="https://sites.gsu.edu/files/2023/10/favicon.png" />
+<meta name="msapplication-TileImage" content="https://sites.gsu.edu/files/2023/10/favicon.png" />
+</head>
+
+<body class="wp-singular post-template-default single single-post postid-340 single-format-standard admin-bar no-customize-support wp-embed-responsive wp-theme-twentyfourteen masthead-fixed full-width singular">
+		<div id="wpadminbar" class="nojq nojs">
+						<div class="quicklinks" id="wp-toolbar" role="navigation" aria-label="Toolbar">
+				<ul role='menu' id='wp-admin-bar-top-secondary' class="ab-top-secondary ab-top-menu"><li role='group' id='wp-admin-bar-log-in'><a class='ab-item' role="menuitem" href='https://sites.gsu.edu/tzhang23/wp-login.php?action=shibboleth'>Log In</a></li><li role='group' id='wp-admin-bar-search' class="admin-bar-search"><div class="ab-item ab-empty-item" tabindex="-1" role="menuitem"><form action="https://sites.gsu.edu/tzhang23/" method="get" id="adminbarsearch"><input class="adminbar-input" name="s" id="adminbar-search" type="text" value="" maxlength="150" /><label for="adminbar-search" class="screen-reader-text">Search</label><input type="submit" class="adminbar-button" value="Search" /></form></div></li></ul>			</div>
+		</div>
+
+		<a class="screen-reader-text skip-link" href="#content">
+	Skip to content</a>
+<div id="page" class="hfeed site">
+		
+	<header id="masthead" class="site-header">
+		<div class="header-main">
+			<h1 class="site-title"><a href="https://sites.gsu.edu/tzhang23/" rel="home" >tzhang23&#8217;s Site</a></h1>
+
+			<div class="search-toggle">
+				<a href="#search-container" class="screen-reader-text" aria-expanded="false" aria-controls="search-container">
+					Search				</a>
+			</div>
+
+			<nav id="primary-navigation" class="site-navigation primary-navigation">
+				<button class="menu-toggle">Primary Menu</button>
+				<div id="primary-menu" class="nav-menu"><ul>
+<li class="page_item page-item-2"><a href="https://sites.gsu.edu/tzhang23/sample-page/">Sample Page</a></li>
+</ul></div>
+			</nav>
+		</div>
+
+		<div id="search-container" class="search-box-wrapper hide">
+			<div class="search-box">
+				<form role="search" method="get" class="search-form" action="https://sites.gsu.edu/tzhang23/">
+				<label>
+					<span class="screen-reader-text">Search for:</span>
+					<input type="search" class="search-field" placeholder="Search &hellip;" value="" name="s" />
+				</label>
+				<input type="submit" class="search-submit" value="Search" />
+			</form>			</div>
+		</div>
+	</header><!-- #masthead -->
+
+	<div id="main" class="site-main">
+
+	<div id="primary" class="content-area">
+		<div id="content" class="site-content" role="main">
+			
+<article id="post-340" class="post-340 post type-post status-publish format-standard hentry category-uncategorized">
+	
+	<header class="entry-header">
+				<div class="entry-meta">
+			<span class="cat-links"><a href="https://sites.gsu.edu/tzhang23/category/uncategorized/" rel="category tag">Uncategorized</a></span>
+		</div>
+			<h1 class="entry-title">Week5- Basics about Prompt Engineering &#038; Testing of ChatGPT Vs DeepSeek Vs Perplexity &#8211; ENGL8180</h1>
+		<div class="entry-meta">
+			<span class="entry-date"><a href="https://sites.gsu.edu/tzhang23/2025/02/16/week5-basics-about-prompt-engineering-testing-of-chatgpt-vs-deepseekvs-perplexity-engl8180/" rel="bookmark"><time class="entry-date" datetime="2025-02-16T21:51:05+00:00">February 16, 2025</time></a></span> <span class="byline"><span class="author vcard"><a class="url fn n" href="https://sites.gsu.edu/tzhang23/author/tzhang23/" rel="author">Tingyu Zhang</a></span></span>			<span class="comments-link"><a href="https://sites.gsu.edu/tzhang23/2025/02/16/week5-basics-about-prompt-engineering-testing-of-chatgpt-vs-deepseekvs-perplexity-engl8180/#respond">Leave a comment</a></span>
+						</div><!-- .entry-meta -->
+	</header><!-- .entry-header -->
+
+		<div class="entry-content">
+		<p>Tingyu Zhang<br />
+Dr. Pullman<br />
+February 17, 2025<br />
+<strong>Week5: Read Is prompt engineering a &#8216;fad&#8217; hindering AI progress?<br />
+Blog about prompting in whatever way you want.</strong><br />
+According to AI and Writing by Sidney I. Dobrin, prompt engineering means the process of writing prompts and subsequently adjusting them.  The author is a professor and chair in the English department at the University of Florida in Gainesville. He has written and edited more than 23 books about writing, ecology, and technology.</p>
+<p>He mentions there are 5 key points in writing an effective prompt which are being clear, specific, contextual, accurate, and ethical (Dobrin 66). Being clear means the human should type what is intended in the prompts. Otherwise, it may increase the likelihood of hallucinations (Dobrin 66). Being specific refers to having sufficient details to result in a strong output (Dobrin 66). Being contextual is defined as providing as much as background information as possible such as the intended audience and the scenario that the writing is for(a piece of journalism, a brief professional email, etc.), and the intended tone and style(Dobrin 66). Being accurate is due to the fact that Gen AI programs cannot currently discern between correct and incorrect information(Dobrin 66). The inaccurate information used in a prompt also becomes part of the Gen AI’s LLMs, which may poison future outputs from that GenAI program as well (Dobrin 66). Lastly, in terms of being ethical, he argues “ In general, prompts should avoid directing GenAI toward offensive content, intentionally misleading content, and content that might lead to harm. It’s important to keep in mind as well that GenAI programs often exhibit biases and prompts should be written with an awareness of these biases” (Dobrin 66).</p>
+<p>Regarding how to refine prompts, Dobrin claims that some strategies can be adopted to revise the initial prompts which do not lead to the outputs the person intends (Dobrin 68). The first one is to clarify details of the task including the purpose, the number of words, the type of sources the individual wishes to use, and their target audience(Dobrin 68). Secondly, people can identify any restrictions. For instance, “avoid the use of first-person language”(Dobrin 68). Thirdly, structure and order the prompt by using a fill-in-blank approach (Dobrin 68). For example, “provide a discussion of 3 key aspects of opportunity cost: 1. ____ 2.____3.____” (Dobrin 68). Fourthly, provide input/output examples to illustrate the style or format the user wishes to receive as an output (Dobrin 68). For example, we might write a prompt with the prefix, “In a voice appropriate to a business workplace, write a report&#8230;” or “Writing as if you were a biologist, write a&#8230;”(Dobrin 68).</p>
+<p><strong>Below is an example of using the regular ones and the Reason Features of ChatGPT, Deepseek, and Perplexity in revising the writing to become more cohesive. My goal is to test which one is the quickest in response and the most excellent in revising their output considering the audience factor.</strong><br />
+The first prompt is   “Please revise any mistakes in this writing to be more cohesive and highlight the corrections.”<br />
+The second prompt is   “Please revise any mistakes in this writing be more cohesive and highlight the corrections. The reader is a Rhetoric and Composition professor teaching a graduate-level  Writing Research and Methodology course.”<br />
+The title of my paper is Integrating Artificial Intelligence into Freshman Composition Pedagogy: Challenges and Solutions for ENGL 1101 and 1102.</p>
+<p>I write the introduction part as the situation and overview of the topic. <strong>Below is my original text: </strong><br />
+“Freshman composition courses, ENGL 1101 and 1102, are required at many U.S. universities, to fulfill core curriculum requirements. These courses help students develop essential writing skills crucial for academic success and career readiness. Through tasks like literacy narratives, visual analyses, argumentative essays, and professional autobiographies, students hone transferable skills such as critical thinking, creativity, and problem-solving. Mastering tasks such as analyzing prompts, generating original ideas, and presenting logical persuasive arguments prepares students to excel in competitive job markets and tackle complex workplace challenges. <br />
+Nowadays, emerging technologies, particularly artificial intelligence (AI), have been increasingly integrated into freshman composition pedagogy. AI, which refers to machines or algorithms capable of performing tasks or solving problems, has seen significant advancements, especially in natural language processing (Hutson et al. 2024). Tools like ChatGPT, Gemini, and CoPilot can understand and generate human language. A report by the Capgemini Research Institute reveals that 70% of American teachers believe curricula and assessments must adapt to AI&#8217;s growing influence (Heaton 2024). ”</p>
+<p><strong>The result of my testing is below:</strong><br />
+Sometimes, the regular CharGPT didn’t follow all of my directions such as not highlighting the words it corrected or even not bolding these words. The regular ChatGPT even hallucinates some of what I’ve written. For instance, ChatGPT suggests I should write&#8221;such as&#8221; instead of &#8220;like&#8221; (in formal lists) → &#8220;Such as&#8221; is preferred in academic writing for listing examples. In reality, I didn’t have “like” in the original sentence of “Freshman composition courses, ENGL 1101 and 1102, are required at many U.S. universities, to fulfill core curriculum requirements. ”</p>
+<p>Compared to the regular ChatGPT, Perplexity, and Deepseek, their Reasoning features took longer to generate the outputs but they closely followed my directions by bolding the corrections but the Gen AI could not highlight them. ChatGPT with the Reasoning feature finished the task just in 6 seconds more quickly than Perplexity and Deepseek with the same feature. However, Perplexity and Deepseek with the Reasoning feature can give a simpler and more condensed vision than ChatGPT with the same feature. For instance, in terms of advice on Flow and Cohesion, the Perplexity with Reason feature suggests I remove redundant phrases (e.g., “to fulfill core curriculum requirements” → “core requirements”). Deepseek recommends I replace repetitive phrasing (“required at many U.S. universities, to fulfill core curriculum requirements”) with “core requirements… designed to equip students” to eliminate redundancy and emphasize purpose. Perplexity and Deepseek with the Reason features give similar advice in this sentence.</p>
+<p>Considering the prompt with requirement of the audience awareness, ChatGPT with the Reason Feature provided the answer within 16 seconds. Deepseek with the same feature came the second within 25 seconds; Perplexity with the same one did it within 30 seconds. However, ChatGPT with the Reason Feature is the only one without any detailed analysis of the correction and it doesn’t take into account the audience factor as the second version does not change too much. </p>
+<p>Overall, Deepseek with the Reason Feature and Perplexity with Feature consider the audience well in their answers by adding more rhetoric and pedagogy terms to the revised prompts. But I cannot tell which one, Deepseek or Perplexity with the Reason Features, is better in giving answers considering the audience.  Although ChatGPT does the quickest job of these 3 Gen AI tools in giving writing revision suggestions,  the regular Chat GPT and ChatGPT with Reason Feature both lack reliability in giving revision suggestions on the original writing.</p>
+<p><strong>Here are some screenshots in the testing:</strong></p>
+<p>Regular ChatGPT：<br />
+Below is the answer to the first prompt: “Please revise any mistakes in this writing to be more cohesive and highlight the corrections.”</p>
+<div class="wp-block-image"><a href="https://sites.gsu.edu/tzhang23/files/2025/02/Picture1.png"><img fetchpriority="high" decoding="async" src="https://sites.gsu.edu/tzhang23/files/2025/02/Picture1.png" alt="" width="871" height="667" data-warning="Missing alt text" class="wpa-warning wpa-image-missing-alt alignnone size-full wp-image-341" srcset="https://sites.gsu.edu/tzhang23/files/2025/02/Picture1.png 871w, https://sites.gsu.edu/tzhang23/files/2025/02/Picture1-300x230.png 300w, https://sites.gsu.edu/tzhang23/files/2025/02/Picture1-768x588.png 768w" sizes="(max-width: 871px) 100vw, 871px" /></a></div>
+<div class="wp-block-image"><a href="https://sites.gsu.edu/tzhang23/files/2025/02/Picture2.png"><img decoding="async" src="https://sites.gsu.edu/tzhang23/files/2025/02/Picture2.png" alt="" width="918" height="693" data-warning="Missing alt text" class="wpa-warning wpa-image-missing-alt alignnone size-full wp-image-342" srcset="https://sites.gsu.edu/tzhang23/files/2025/02/Picture2.png 918w, https://sites.gsu.edu/tzhang23/files/2025/02/Picture2-300x226.png 300w, https://sites.gsu.edu/tzhang23/files/2025/02/Picture2-768x580.png 768w" sizes="(max-width: 918px) 100vw, 918px" /></a></div>
+<p>Regular Deepseek：<br />
+Below is the answer of the first prompt: “Please revise any mistakes in this writing be more cohesive and highlight the corrections.”</p>
+<div class="wp-block-image"><a href="https://sites.gsu.edu/tzhang23/files/2025/02/Picture3.png"><img decoding="async" src="https://sites.gsu.edu/tzhang23/files/2025/02/Picture3.png" alt="" width="852" height="693" data-warning="Missing alt text" class="wpa-warning wpa-image-missing-alt alignnone size-full wp-image-343" srcset="https://sites.gsu.edu/tzhang23/files/2025/02/Picture3.png 852w, https://sites.gsu.edu/tzhang23/files/2025/02/Picture3-300x244.png 300w, https://sites.gsu.edu/tzhang23/files/2025/02/Picture3-768x625.png 768w" sizes="(max-width: 852px) 100vw, 852px" /></a></div>
+<div class="wp-block-image"><a href="https://sites.gsu.edu/tzhang23/files/2025/02/Picture4.png"><img loading="lazy" decoding="async" src="https://sites.gsu.edu/tzhang23/files/2025/02/Picture4.png" alt="" width="760" height="676" data-warning="Missing alt text" class="wpa-warning wpa-image-missing-alt alignnone size-full wp-image-344" srcset="https://sites.gsu.edu/tzhang23/files/2025/02/Picture4.png 760w, https://sites.gsu.edu/tzhang23/files/2025/02/Picture4-300x267.png 300w" sizes="auto, (max-width: 760px) 100vw, 760px" /></a></div>
+<p>Regular Perplexity：<br />
+Below is the answer of the first prompt: “Please revise any mistakes in this writing to be more cohesive and highlight the corrections.”</p>
+<div class="wp-block-image"><a href="https://sites.gsu.edu/tzhang23/files/2025/02/Picture5.png"><img loading="lazy" decoding="async" src="https://sites.gsu.edu/tzhang23/files/2025/02/Picture5.png" alt="" width="739" height="631" data-warning="Missing alt text" class="wpa-warning wpa-image-missing-alt alignnone size-full wp-image-345" srcset="https://sites.gsu.edu/tzhang23/files/2025/02/Picture5.png 739w, https://sites.gsu.edu/tzhang23/files/2025/02/Picture5-300x256.png 300w" sizes="auto, (max-width: 739px) 100vw, 739px" /></a></div>
+<div class="wp-block-image"><a href="https://sites.gsu.edu/tzhang23/files/2025/02/Picture6.png"><img loading="lazy" decoding="async" src="https://sites.gsu.edu/tzhang23/files/2025/02/Picture6.png" alt="" width="741" height="712" data-warning="Missing alt text" class="wpa-warning wpa-image-missing-alt alignnone size-full wp-image-346" srcset="https://sites.gsu.edu/tzhang23/files/2025/02/Picture6.png 741w, https://sites.gsu.edu/tzhang23/files/2025/02/Picture6-300x288.png 300w" sizes="auto, (max-width: 741px) 100vw, 741px" /></a></div>
+<p>ChatGPT with Reason Feature：<br />
+Below is the answer of the second prompt: “Please revise any mistakes in this writing to be more cohesive and highlight the corrections. The reader is a Rhetoric and Composition professor teaching a graduate-level  Writing Research and Methodology course.”</p>
+<div class="wp-block-image"><a href="https://sites.gsu.edu/tzhang23/files/2025/02/Picture7.png"><img loading="lazy" decoding="async" src="https://sites.gsu.edu/tzhang23/files/2025/02/Picture7.png" alt="" width="631" height="559" data-warning="Missing alt text" class="wpa-warning wpa-image-missing-alt alignnone size-full wp-image-347" srcset="https://sites.gsu.edu/tzhang23/files/2025/02/Picture7.png 631w, https://sites.gsu.edu/tzhang23/files/2025/02/Picture7-300x266.png 300w" sizes="auto, (max-width: 631px) 100vw, 631px" /></a></div>
+<p>Deepseek with Reason Feature：<br />
+Below is the answer of the second prompt: “Please revise any mistakes in this writing to be more cohesive and highlight the corrections. The reader is a Rhetoric and Composition professor teaching a graduate-level  Writing Research and Methodology course.”</p>
+<div class="wp-block-image"><a href="https://sites.gsu.edu/tzhang23/files/2025/02/Picture8.png"><img loading="lazy" decoding="async" src="https://sites.gsu.edu/tzhang23/files/2025/02/Picture8.png" alt="" width="591" height="640" data-warning="Missing alt text" class="wpa-warning wpa-image-missing-alt alignnone size-full wp-image-348" srcset="https://sites.gsu.edu/tzhang23/files/2025/02/Picture8.png 591w, https://sites.gsu.edu/tzhang23/files/2025/02/Picture8-277x300.png 277w" sizes="auto, (max-width: 591px) 100vw, 591px" /></a></div>
+<div class="wp-block-image"><a href="https://sites.gsu.edu/tzhang23/files/2025/02/Picture9.png"><img loading="lazy" decoding="async" src="https://sites.gsu.edu/tzhang23/files/2025/02/Picture9.png" alt="" width="636" height="774" data-warning="Missing alt text" class="wpa-warning wpa-image-missing-alt alignnone size-full wp-image-349" srcset="https://sites.gsu.edu/tzhang23/files/2025/02/Picture9.png 636w, https://sites.gsu.edu/tzhang23/files/2025/02/Picture9-247x300.png 247w" sizes="auto, (max-width: 636px) 100vw, 636px" /></a></div>
+<p>Perplexity with Reason Feature：<br />
+Below is the answer of the second prompt: “Please revise any mistakes in this writing to be more cohesive and highlight the corrections. The reader is a Rhetoric and Composition professor teaching a graduate-level  Writing Research and Methodology course.”</p>
+<div class="wp-block-image"><a href="https://sites.gsu.edu/tzhang23/files/2025/02/Picture10.png"><img loading="lazy" decoding="async" src="https://sites.gsu.edu/tzhang23/files/2025/02/Picture10.png" alt="" width="553" height="579" data-warning="Missing alt text" class="wpa-warning wpa-image-missing-alt alignnone size-full wp-image-350" srcset="https://sites.gsu.edu/tzhang23/files/2025/02/Picture10.png 553w, https://sites.gsu.edu/tzhang23/files/2025/02/Picture10-287x300.png 287w" sizes="auto, (max-width: 553px) 100vw, 553px" /></a></div>
+<div class="wp-block-image"><a href="https://sites.gsu.edu/tzhang23/files/2025/02/Picture11.png"><img loading="lazy" decoding="async" src="https://sites.gsu.edu/tzhang23/files/2025/02/Picture11.png" alt="" width="534" height="754" data-warning="Missing alt text" class="wpa-warning wpa-image-missing-alt alignnone size-full wp-image-351" srcset="https://sites.gsu.edu/tzhang23/files/2025/02/Picture11.png 534w, https://sites.gsu.edu/tzhang23/files/2025/02/Picture11-212x300.png 212w" sizes="auto, (max-width: 534px) 100vw, 534px" /></a></div>
+<p>                       Works Cited</p>
+<p>Dobrin, Sidney I. AI and writing. Broadview Press, 2023.</p>
+	</div><!-- .entry-content -->
+	
+	</article><!-- #post-340 -->
+		<nav class="navigation post-navigation">
+		<h1 class="screen-reader-text">
+			Post navigation		</h1>
+		<div class="nav-links">
+			<a href="https://sites.gsu.edu/tzhang23/2025/02/09/week-4-superficial-overview-of-llmts-definition-of-ai/" rel="prev"><span class="meta-nav">Previous Post</span>Week 4 Superficial Overview of LLMTs &#038; Definition of AI</a><a href="https://sites.gsu.edu/tzhang23/2025/02/24/tutorials%ef%bc%9ahow-to-use-zotero-to-take-notes-and-search-notes/" rel="next"><span class="meta-nav">Next Post</span>ENGL 8115-Tutorials：How to Use Zotero to Take Notes and Search Notes -Tingyu Zhang</a>			</div><!-- .nav-links -->
+		</nav><!-- .navigation -->
+		
+<div id="comments" class="comments-area">
+
+	
+		<div id="respond" class="comment-respond">
+		<h3 id="reply-title" class="comment-reply-title">Leave a Reply <small><a rel="nofollow" id="cancel-comment-reply-link" href="/tzhang23/2025/02/16/week5-basics-about-prompt-engineering-testing-of-chatgpt-vs-deepseekvs-perplexity-engl8180/#respond" style="display:none;">Cancel reply</a></small></h3><form action="https://sites.gsu.edu/tzhang23/wp-comments-post.php" method="post" id="commentform" class="comment-form"><p class="comment-notes"><span id="email-notes">Your email address will not be published.</span> <span class="required-field-message">Required fields are marked <span class="required">*</span></span></p><p class="comment-form-comment"><label for="comment">Comment <span class="required">*</span></label> <textarea id="comment" name="comment" cols="45" rows="8" maxlength="65525" required></textarea></p><p class="comment-form-author"><label for="author">Name <span class="required">*</span></label> <input id="author" name="author" type="text" value="" size="30" maxlength="245" autocomplete="name" required /></p>
+<p class="comment-form-email"><label for="email">Email <span class="required">*</span></label> <input id="email" name="email" type="email" value="" size="30" maxlength="100" aria-describedby="email-notes" autocomplete="email" required /></p>
+<p class="comment-form-cookies-consent"><input id="wp-comment-cookies-consent" name="wp-comment-cookies-consent" type="checkbox" value="yes" /> <label for="wp-comment-cookies-consent">Save my name, email, and website in this browser for the next time I comment.</label></p>
+<p class="form-submit"><input name="submit" type="submit" id="submit" class="submit" value="Post Comment" /> <input type='hidden' name='comment_post_ID' value='340' id='comment_post_ID' />
+<input type='hidden' name='comment_parent' id='comment_parent' value='0' />
+</p></form>	</div><!-- #respond -->
+	
+</div><!-- #comments -->
+		</div><!-- #content -->
+	</div><!-- #primary -->
+
+<div id="secondary">
+		<h2 class="site-description">Just another Georgia State University site</h2>
+	
+	
+		<div id="primary-sidebar" class="primary-sidebar widget-area" role="complementary">
+		<aside id="search-2" class="widget widget_search"><form role="search" method="get" class="search-form" action="https://sites.gsu.edu/tzhang23/">
+				<label>
+					<span class="screen-reader-text">Search for:</span>
+					<input type="search" class="search-field" placeholder="Search &hellip;" value="" name="s" />
+				</label>
+				<input type="submit" class="search-submit" value="Search" />
+			</form></aside>
+		<aside id="recent-posts-2" class="widget widget_recent_entries">
+		<h1 class="widget-title">Recent Posts</h1><nav aria-label="Recent Posts">
+		<ul>
+											<li>
+					<a href="https://sites.gsu.edu/tzhang23/2025/02/25/engl8180-visual-rhetoric-and-my-writing-practice-with-ai-generated-images-videos/">ENGL8180-Visual Rhetoric and My Writing Practice with AI-Generated Images &#038; Videos</a>
+									</li>
+											<li>
+					<a href="https://sites.gsu.edu/tzhang23/2025/02/24/tutorials%ef%bc%9ahow-to-use-zotero-to-take-notes-and-search-notes/">ENGL 8115-Tutorials：How to Use Zotero to Take Notes and Search Notes -Tingyu Zhang</a>
+									</li>
+											<li>
+					<a href="https://sites.gsu.edu/tzhang23/2025/02/16/week5-basics-about-prompt-engineering-testing-of-chatgpt-vs-deepseekvs-perplexity-engl8180/" aria-current="page">Week5- Basics about Prompt Engineering &#038; Testing of ChatGPT Vs DeepSeek Vs Perplexity &#8211; ENGL8180</a>
+									</li>
+											<li>
+					<a href="https://sites.gsu.edu/tzhang23/2025/02/09/week-4-superficial-overview-of-llmts-definition-of-ai/">Week 4 Superficial Overview of LLMTs &#038; Definition of AI</a>
+									</li>
+											<li>
+					<a href="https://sites.gsu.edu/tzhang23/2025/02/02/week3-commonplace-book-notetaking-composition-in-the-age-of-ai/">Week3 Commonplace Book- Notetaking-Composition in the Age of AI</a>
+									</li>
+					</ul>
+
+		</nav></aside><aside id="recent-comments-2" class="widget widget_recent_comments"><h1 class="widget-title">Recent Comments</h1><nav aria-label="Recent Comments"><ul id="recentcomments"></ul></nav></aside><aside id="archives-2" class="widget widget_archive"><h1 class="widget-title">Archives</h1><nav aria-label="Archives">
+			<ul>
+					<li><a href='https://sites.gsu.edu/tzhang23/2025/02/'>February 2025</a></li>
+	<li><a href='https://sites.gsu.edu/tzhang23/2025/01/'>January 2025</a></li>
+	<li><a href='https://sites.gsu.edu/tzhang23/2024/12/'>December 2024</a></li>
+	<li><a href='https://sites.gsu.edu/tzhang23/2024/10/'>October 2024</a></li>
+	<li><a href='https://sites.gsu.edu/tzhang23/2024/09/'>September 2024</a></li>
+	<li><a href='https://sites.gsu.edu/tzhang23/2024/04/'>April 2024</a></li>
+	<li><a href='https://sites.gsu.edu/tzhang23/2024/03/'>March 2024</a></li>
+	<li><a href='https://sites.gsu.edu/tzhang23/2024/02/'>February 2024</a></li>
+	<li><a href='https://sites.gsu.edu/tzhang23/2024/01/'>January 2024</a></li>
+			</ul>
+
+			</nav></aside><aside id="categories-2" class="widget widget_categories"><h1 class="widget-title">Categories</h1><nav aria-label="Categories">
+			<ul>
+					<li class="cat-item cat-item-2"><a href="https://sites.gsu.edu/tzhang23/category/dmp/">Digital Media Production</a>
+</li>
+	<li class="cat-item cat-item-11"><a href="https://sites.gsu.edu/tzhang23/category/engl-8180-composition-in-the-age-of-ai/">ENGL 8180 Composition in the Age of AI</a>
+</li>
+	<li class="cat-item cat-item-12"><a href="https://sites.gsu.edu/tzhang23/category/technical-writing/">Technical Writing</a>
+</li>
+	<li class="cat-item cat-item-1"><a href="https://sites.gsu.edu/tzhang23/category/uncategorized/">Uncategorized</a>
+</li>
+	<li class="cat-item cat-item-3"><a href="https://sites.gsu.edu/tzhang23/category/uew/">User Experience Writing</a>
+</li>
+			</ul>
+
+			</nav></aside><aside id="meta-2" class="widget widget_meta"><h1 class="widget-title">Meta</h1>			<ul>
+						<li><a href="https://sites.gsu.edu/tzhang23/wp-login.php?action=shibboleth">Log in</a></li>
+			<li><a href="https://sites.gsu.edu/tzhang23/feed/" title="Syndicate this site using RSS 2.0">Entries <abbr title="Really Simple Syndication">RSS</abbr></a></li>
+			<li><a href="https://sites.gsu.edu/tzhang23/comments/feed/" title="The latest comments to all posts in RSS">Comments <abbr title="Really Simple Syndication">RSS</abbr></a></li>
+			<li><a href="http://sites.gsu.edu/" title="Powered by sites@gsu - Blogs for Georgia State University">sites@gsu - Blogs for Georgia State University</a></li>
+						</ul>
+		</aside>	</div><!-- #primary-sidebar -->
+	</div><!-- #secondary -->
+
+		</div><!-- #main -->
+
+		<footer id="colophon" class="site-footer">
+
+			
+			<div class="site-info">
+												<a href="https://wordpress.org/" class="imprint">
+					Proudly powered by WordPress				</a>
+			</div><!-- .site-info -->
+		</footer><!-- #colophon -->
+	</div><!-- #page -->
+
+	<script type="speculationrules">
+{"prefetch":[{"source":"document","where":{"and":[{"href_matches":"/tzhang23/*"},{"not":{"href_matches":["/tzhang23/wp-*.php","/tzhang23/wp-admin/*","/tzhang23/files/*","/tzhang23/wp-content/*","/tzhang23/wp-content/plugins/*","/tzhang23/wp-content/themes/twentyfourteen/*","/tzhang23/*\\?(.+)"]}},{"not":{"selector_matches":"a[rel~=\"nofollow\"]"}},{"not":{"selector_matches":".no-prefetch, .no-prefetch a"}}]},"eagerness":"conservative"}]}
+</script>
+<script src="https://sites.gsu.edu/tzhang23/wp-includes/js/hoverintent-js.min.js?ver=2.2.1" id="hoverintent-js-js"></script>
+<script src="https://sites.gsu.edu/tzhang23/wp-includes/js/admin-bar.min.js?ver=6.9" id="admin-bar-js"></script>
+<script src="https://sites.gsu.edu/tzhang23/wp-content/mu-plugins/lean-captcha/js/howler.min.js?ver=2015102605" id="lean-captcha-howler-js"></script>
+<script id="lean-captcha-js-extra">
+var lean_captcha_object = {"ajax_url":"https://sites.gsu.edu/tzhang23/wp-admin/admin-ajax.php","key":"lc_qNiATG8DGSrEUlwsWHjBhg=="};
+//# sourceURL=lean-captcha-js-extra
+</script>
+<script src="https://sites.gsu.edu/tzhang23/wp-content/mu-plugins/lean-captcha/js/lean-captcha.js?ver=201709035" id="lean-captcha-js"></script>
+<script id="blog_templates_front-js-extra">
+var blog_templates_params = {"type":""};
+//# sourceURL=blog_templates_front-js-extra
+</script>
+<script src="https://sites.gsu.edu/tzhang23/wp-content/plugins/blogtemplates//blogtemplatesfiles/assets/js/front.js?ver=2.6.8.2" id="blog_templates_front-js"></script>
+<script src="https://sites.gsu.edu/tzhang23/wp-includes/js/comment-reply.min.js?ver=6.9" id="comment-reply-js" async data-wp-strategy="async" fetchpriority="low"></script>
+<script id="wp-accessibility-js-extra">
+var wpa = {"skiplinks":{"enabled":false,"output":""},"target":"","tabindex":"","underline":{"enabled":false,"target":"a"},"videos":"","dir":"ltr","lang":"en-US","titles":"1","labels":"1","wpalabels":{"s":"Search","author":"Name","email":"Email","url":"Website","comment":"Comment"},"alt":"","altSelector":".hentry img[alt]:not([alt=\"\"]), .comment-content img[alt]:not([alt=\"\"]), #content img[alt]:not([alt=\"\"]),.entry-content img[alt]:not([alt=\"\"])","current":"","errors":"","tracking":"","ajaxurl":"https://sites.gsu.edu/tzhang23/wp-admin/admin-ajax.php","security":"ae9b5af738","action":"wpa_stats_action","url":"disabled","post_id":"340","continue":"","pause":"Pause video","play":"Play video","restUrl":"https://sites.gsu.edu/tzhang23/wp-json/wp/v2/media","ldType":"button","ldHome":"https://sites.gsu.edu/tzhang23","ldText":"\u003Cspan class=\"dashicons dashicons-media-text\" aria-hidden=\"true\"\u003E\u003C/span\u003E\u003Cspan class=\"screen-reader\"\u003ELong Description\u003C/span\u003E"};
+//# sourceURL=wp-accessibility-js-extra
+</script>
+<script src="https://sites.gsu.edu/tzhang23/wp-content/plugins/wp-accessibility/js/wp-accessibility.min.js?ver=2.2.5" id="wp-accessibility-js" defer data-wp-strategy="defer"></script>
+<script id="wp-emoji-settings" type="application/json">
+{"baseUrl":"https://s.w.org/images/core/emoji/17.0.2/72x72/","ext":".png","svgUrl":"https://s.w.org/images/core/emoji/17.0.2/svg/","svgExt":".svg","source":{"concatemoji":"https://sites.gsu.edu/tzhang23/wp-includes/js/wp-emoji-release.min.js?ver=6.9"}}
+</script>
+<script type="module">
+/*! This file is auto-generated */
+const a=JSON.parse(document.getElementById("wp-emoji-settings").textContent),o=(window._wpemojiSettings=a,"wpEmojiSettingsSupports"),s=["flag","emoji"];function i(e){try{var t={supportTests:e,timestamp:(new Date).valueOf()};sessionStorage.setItem(o,JSON.stringify(t))}catch(e){}}function c(e,t,n){e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(t,0,0);t=new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data);e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(n,0,0);const a=new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data);return t.every((e,t)=>e===a[t])}function p(e,t){e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(t,0,0);var n=e.getImageData(16,16,1,1);for(let e=0;e<n.data.length;e++)if(0!==n.data[e])return!1;return!0}function u(e,t,n,a){switch(t){case"flag":return n(e,"\ud83c\udff3\ufe0f\u200d\u26a7\ufe0f","\ud83c\udff3\ufe0f\u200b\u26a7\ufe0f")?!1:!n(e,"\ud83c\udde8\ud83c\uddf6","\ud83c\udde8\u200b\ud83c\uddf6")&&!n(e,"\ud83c\udff4\udb40\udc67\udb40\udc62\udb40\udc65\udb40\udc6e\udb40\udc67\udb40\udc7f","\ud83c\udff4\u200b\udb40\udc67\u200b\udb40\udc62\u200b\udb40\udc65\u200b\udb40\udc6e\u200b\udb40\udc67\u200b\udb40\udc7f");case"emoji":return!a(e,"\ud83e\u1fac8")}return!1}function f(e,t,n,a){let r;const o=(r="undefined"!=typeof WorkerGlobalScope&&self instanceof WorkerGlobalScope?new OffscreenCanvas(300,150):document.createElement("canvas")).getContext("2d",{willReadFrequently:!0}),s=(o.textBaseline="top",o.font="600 32px Arial",{});return e.forEach(e=>{s[e]=t(o,e,n,a)}),s}function r(e){var t=document.createElement("script");t.src=e,t.defer=!0,document.head.appendChild(t)}a.supports={everything:!0,everythingExceptFlag:!0},new Promise(t=>{let n=function(){try{var e=JSON.parse(sessionStorage.getItem(o));if("object"==typeof e&&"number"==typeof e.timestamp&&(new Date).valueOf()<e.timestamp+604800&&"object"==typeof e.supportTests)return e.supportTests}catch(e){}return null}();if(!n){if("undefined"!=typeof Worker&&"undefined"!=typeof OffscreenCanvas&&"undefined"!=typeof URL&&URL.createObjectURL&&"undefined"!=typeof Blob)try{var e="postMessage("+f.toString()+"("+[JSON.stringify(s),u.toString(),c.toString(),p.toString()].join(",")+"));",a=new Blob([e],{type:"text/javascript"});const r=new Worker(URL.createObjectURL(a),{name:"wpTestEmojiSupports"});return void(r.onmessage=e=>{i(n=e.data),r.terminate(),t(n)})}catch(e){}i(n=f(s,u,c,p))}t(n)}).then(e=>{for(const n in e)a.supports[n]=e[n],a.supports.everything=a.supports.everything&&a.supports[n],"flag"!==n&&(a.supports.everythingExceptFlag=a.supports.everythingExceptFlag&&a.supports[n]);var t;a.supports.everythingExceptFlag=a.supports.everythingExceptFlag&&!a.supports.flag,a.supports.everything||((t=a.source||{}).concatemoji?r(t.concatemoji):t.wpemoji&&t.twemoji&&(r(t.twemoji),r(t.wpemoji)))});
+//# sourceURL=https://sites.gsu.edu/tzhang23/wp-includes/js/wp-emoji-loader.min.js
+</script>
+</body>
+</html>

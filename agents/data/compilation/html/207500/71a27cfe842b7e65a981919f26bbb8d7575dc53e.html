@@ -1,0 +1,870 @@
+
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head><meta name="viewport" content="width=device-width, initial-scale=1.0" /><!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-WR9V5K73');</script>
+<!-- End Google Tag Manager --><script>
+  window.TdxGtmContext = {"User":{"Id":0,"UID":"00000000-0000-0000-0000-000000000000","UserName":"","FullName":"Public User","AlertEmail":"publicuser@noreply.com","Role":"Experience User","HasTDNext":false,"StandardApplicationNames":null,"TicketApplicationNames":[],"AssetApplicationNames":[],"ClientPortalApplicationNames":[],"Type":"Technician","Analytics":{"Title":null,"Organization":null}},"Partition":{"Id":62,"Name":"University of Oklahoma Production"},"BillableEntity":{"Id":2,"Name":"University of Oklahoma","SalesForceIdentifier":"0013600000EM5FmAAL","GWMIID":"283fb453-67f6-49d1-87cc-7b141ff96495"},"Environment":{"ShortName":"PRD"}};
+</script><script src="/TDPortal/Content/Scripts/jquery/2.2.4/jquery.min.js?v=20260213000508"></script><script src="/TDPortal/Content/Scripts/jquery-migrate/1.4.1/jquery-migrate.min.js?v=20260213000508"></script><script src="/TDPortal/Content/Scripts/jquery-ui/1.13.2/jquery-ui-1.13.2.custom.timepicker.min.js?v=20260213000818"></script><link href="/TDPortal/Content/Styles/jquery-ui/1.13.2/jquery-ui.compiled.min.css?v=20260213000820" rel="stylesheet" type="text/css"  /><link href="/TDPortal/Content/bootstrap/3.4.1/dist/css/bootstrap.min.css?v=20260213000508" rel="stylesheet" type="text/css" id="lnkBootstrapCSS" /><script src="/TDPortal/Content/bootstrap/3.4.1/dist/js/bootstrap.min.js?v=20260213000508"></script><link href="/TDPortal/Content/FontAwesome/css/fontawesome.min.css?v=20260213000506" rel="stylesheet" type="text/css" id="lnkFontAwesome" /><link href="/TDPortal/Content/FontAwesome/css/solid.css?v=20260213000506" rel="stylesheet" type="text/css"  /><link href="/TDPortal/Content/FontAwesome/css/regular.css?v=20260213000506" rel="stylesheet" type="text/css"  /><link href="/TDPortal/Content/FontAwesome/css/brands.css?v=20260213000506" rel="stylesheet" type="text/css"  /><link href="/TDPortal/Content/FontAwesome/css/v4-shims.css?v=20260213000506" rel="stylesheet" type="text/css"  /><link href="/TDClient/Styles/bootstrap_custom.min.css?v=20260213000818" rel="stylesheet" type="text/css"  /><link href="/TDClient/Styles/TDStyles.min.css?v=20260213000820" rel="stylesheet" type="text/css"  /><link href="https://itsupport.ou.edu/TDPortal/BE/Style/2/TDClient/35?v=20230406172348" rel="stylesheet" type="text/css" /><script src="/TDPortal/Content/Scripts/tdx/dist/TDJSFramework.compiled.min.js?v=20260213000818"></script><script src="/TDPortal/Content/Scripts/tdx/dist/modalFocusTrap.min.js?v=20260213000816"></script><script src="/TDPortal/Content/Scripts/underscore/1.12.1/underscore-min.js?v=20260213000508"></script>
+<script src="/TDClient/Scripts/clientOS.min.js?v=20260213000810"></script>
+<script src="/TDClient/Scripts/collapseMe.min.js?v=20260213000810"></script>
+<script src="/TDClient/Scripts/tdsearchfilter.min.js?v=20260213000810"></script>
+<script src="/TDClient/Scripts/SiteSearch.min.js?v=20260213000810"></script>
+<script src="/TDPortal/Content/Scripts/tdx/dist/elasticsearchAutocomplete.min.js?v=20260213000816"></script>
+<link id="ctl00_ctl00_lnkFavicon" rel="icon" href="https://itsupport.ou.edu/TDPortal/BE/Icon/2/35?v=20200617174529" />
+
+    
+    <script async src="//www.googletagmanager.com/gtag/js?id=G-NN1NY25M63"></script>
+    <script>
+
+      $(function () {
+
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        // Be sure to set the proper cookie domain to the customer's full subdomain when sending the pageview hit.
+        gtag('config', 'G-NN1NY25M63', { 'cookie_domain': 'itsupport.ou.edu' });
+
+        });
+
+    </script>
+
+  
+
+  <script>
+
+      $(function () {
+        var masterUi = MasterUI({
+          isPostback: false,
+          baseUrl: '/TDClient/',
+          isTdGoogleAnalyticsEnabled: true,
+          isAuthenticated: false
+          });
+
+        $('#collapseMe').collapseMe({
+          toggleVisibilitySelector: '.navbar-toggle'
+        });
+
+        TeamDynamix.addRequiredFieldHelp();
+      });
+
+      // The sub-nav menu uses padding-top to position itself below the header bar and main navigation sections. When the
+      // window is resized, there is a chance that the content of these header or nav sections wraps, causing the height
+      // to change, potentially covering the sub-nav menu, which is obviously a big usability problem. This function
+      // listens for when the window size or orientation is changing (and also when the window first loads), and adjusts
+      // the padding so that the sub-nav menu appears in the correct location.
+      $(window).bind('load ready resize orientationchange', function () {
+        var headerHeight = $('#divMstrHeader').height();
+        $('#navShim').css({
+          "padding-top": headerHeight
+        });
+
+        $('#content').css({
+          "padding-top": headerHeight,
+          "margin-top": headerHeight * -1
+        });
+      });
+  </script>
+
+  
+  
+  
+  <script src="/TDPortal/Content/select2/v3/select2.min.js?v=20260213002344"></script><link href="/TDPortal/Content/select2/v3/select2.compiled.min.css?v=20260213002344" rel="stylesheet" type="text/css" id="lnkSelect2" />
+  <script src="/TDClient/Scripts/attachmentHandler.min.js?v=20260213000818"></script>
+
+  <style type="text/css">
+    .honey-pot-div {
+      display: none;
+    }
+  </style>
+
+  <script>
+    
+
+    function shareArticle() {
+      if ($('#ctl00_ctl00_cpContent_cpContent_shareRecipients').val().trim() === "") {
+        alert('You must first enter a valid email.');
+        $('#btnShare').progressButton('reset');
+      }
+      else {
+        __doPostBack('ctl00$ctl00$cpContent$cpContent$btnSendShare', '');
+      }
+    }
+
+    function closeShareModal() {
+      $('#divShareModal').modal('hide');
+      $('#btnShare').progressButton('reset');
+    }
+
+    function toggleFeedback(isHelpful) {
+      $('#divHelpfulComments').show();
+      $('#divHelpfulYesNo').hide();
+      $('#ctl00_ctl00_cpContent_cpContent_hdnIsHelpful').val(isHelpful);
+      $('#ctl00_ctl00_cpContent_cpContent_txtComments').focus();
+    }
+
+    function toggleFeedbackResult() {
+      $('#divWasHelpful, #divFeedbackRecorded, #divHelpfulComments, #divHelpfulYesNo').toggle();
+    }
+
+    // The following two functions were added as a result of ticket ID: 1392522. We are generating these buttons dynamically to
+    // prevent bots from clicking them and posting feedback on an article. Additionally, we have an input that is hidden from
+    // the user. If a bot enters text in that input, which it likely will (bots love filling out forms), then we don't accept the
+    // form submission
+    function generateFeedbackButtons() {
+      var $btnHelpfulYes = $('<button id="btnHelpfulYes" type="button" class="btn btn-primary gutter-left" onclick="toggleFeedback(1);">Yes</button>');
+      var $btnHelpfulNo = $('<button id="btnHelpfulNo" type="button" class="btn btn-primary gutter-left-sm" onclick="toggleFeedback(0);">No</button>');
+
+      $('#divWasHelpful').append($btnHelpfulYes);
+      $('#divWasHelpful').append($btnHelpfulNo);
+    }
+    function attemptAddFeedback(e) {
+      if ($('#honeyPot').val() !== '') {
+        e.preventDefault();
+        window.location.reload();
+      }
+    }
+
+    function cancelFeedback() {
+      $('#ctl00_ctl00_cpContent_cpContent_txtComments').val('');
+      $('#divHelpfulComments, #divHelpfulYesNo').toggle();
+    }
+
+    function confirmDeleteFeedback(id) {
+      if (confirm('Are you sure you want to delete this feedback? This cannot be undone.')) {
+        $('#ctl00_ctl00_cpContent_cpContent_hdnFeedbackID').val(id);
+        __doPostBack('ctl00$ctl00$cpContent$cpContent$btnDeleteFeedback', '');
+      }
+    }
+
+    function toggleAddressed(id, isAddressed) {
+      $('#ctl00_ctl00_cpContent_cpContent_hdnFeedbackID').val(id);
+      $('#ctl00_ctl00_cpContent_cpContent_hdnIsAddressed').val(isAddressed);
+      __doPostBack('ctl00$ctl00$cpContent$cpContent$btnToggleAddressed', '');
+    }
+
+    $(function () {
+      
+
+      generateFeedbackButtons();
+      $('[data-toggle="popover"]').popover();
+
+      var attachmentHandler = new TeamDynamix.AttachmentHandler({
+        containerSelector: '.js-article-attachments',
+        resultLabelSelector: '#ctl00_ctl00_cpContent_cpContent_lblResults_lblResults-label',
+        baseControllerUrl: '/TDClient/35/Norman/Shared/Attachments',
+        antiForgeryToken: 'JhJFnpL3-yU_ooZAOc06ZIv6x2Qtg1B1ICAi-jIkzGvos4fOBSEuHQXpC4ZAoicmeUjufuTYPq9CLt1Gk0xE-Xp_E801:WdnifiLeKfM4Luki2MBBP83igknfduj1kWClqC6hTdGLnoB0Z_rEj9tQir2ZHP8wWWRJV7Hiv25ecJLP-SQnAW92dJ01',
+        itemId: 3078,
+        componentId: 26,
+        feedId: 'articleFeed',
+        readOnly: false
+      });
+
+      $('#btnShare').on('click', function () {
+        shareArticle();
+      });
+
+      // Don't try and update the table styles if the user wanted to opt out.
+      $('#ctl00_ctl00_cpContent_cpContent_divBody table:not(.SkipTableFixup)').each(function () {
+        var padding = $(this).attr('cellpadding');
+        var spacing = $(this).attr('cellspacing');
+
+        $(this).css("border-collapse", "separate");
+
+        if (spacing) {
+          $(this).css("border-spacing", spacing + "px");
+        }
+
+        $(this).find('td').each(function () { $(this).css('padding', padding + 'px') });
+      });
+
+      
+    });
+
+    
+  </script>
+
+
+
+<meta property="og:title" content="Qualtrics - Acceptable Use Policy" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://itsupport.ou.edu/TDClient/35/Norman/KB/ArticleDet?ID=3078" />
+<meta property="og:image" content="https://itsupport.ou.edu/TDPortal/BE/Logo/2/35" />
+<meta property="og:description" content="This Acceptable Use Policy outlines the terms and conditions governing the use of Qualtrics and establishes guidelines for appropriate behavior and usage." />
+  <meta property="og:site_name" content="University of Oklahoma - Knowledge Base" />
+  <meta property="article:section" content="Research" />
+  <meta property="article:published_time" content="2023-10-02T15:28Z" />
+  <meta property="article:modified_time" content="2025-12-04T15:25Z" /><title>
+	Article - Qualtrics - Acceptable Use ...
+</title></head>
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WR9V5K73"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+<form method="post" action="/TDClient/35/Norman/KB/ArticleDet?ID=3078&amp;SIDs=3017" onsubmit="javascript:return WebForm_OnSubmit();" id="aspnetForm">
+<div class="aspNetHidden">
+<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
+<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="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" />
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['aspnetForm'];
+if (!theForm) {
+    theForm = document.aspnetForm;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script>
+
+
+<script src="/TDClient/WebResource.axd?d=pynGkmcFUV13He1Qd6_TZMSMQxVWLi4fik2rw1_u_hZsCNzwv5c621ov6_ZX_wzTt5vh-g2&amp;t=638901392248157332" type="text/javascript"></script>
+
+
+<script src="/TDClient/ScriptResource.axd?d=nv7asgRUU0tRmHNR2D6t1NXOAgTb3J37FC1L2PfbYYFmSPm-ANa7n6FP0x7BAsbHeL4jfY3ptd1q7zKKVI7DbuXZcwEoKOwj9WxCI1VrQlbWE1Trg1t1GmJDN43kQMJsB7X8tw2&amp;t=ffffffff93d1c106" type="text/javascript"></script>
+<script src="/TDClient/ScriptResource.axd?d=NJmAwtEo3Ipnlaxl6CMhvmVxW3-Ljsg_2Hna32smxrg-6ogyYAN3UTPsJQ8m1uwzn_kuf2Wpne6NSFmYui3h0wCQhJN3ZUiLTNkvhiIgZpq74-lKmofUPQGJ8own8RI2_mwAcmvlSj2WBnqwm5Wj4cyNvv81&amp;t=5c0e0825" type="text/javascript"></script>
+<script src="/TDClient/ScriptResource.axd?d=dwY9oWetJoJoVpgL6Zq8OLdGoo5BVWQ_Eo60QZTEhEcHeiVfwgY9tLCgzdZ5TRwvrwYEnOvujbNccOVLUfWtUg4HivSIsewg6JABxkBGEqVVV64eiRyCAsPDqh6tUioISUQKB74sWMO4Er2mHrWEIWs_sBM1&amp;t=5c0e0825" type="text/javascript"></script>
+<script src="/TDClient/WebResource.axd?d=xtfVMqdF1exC2MBVkOJwMveStDR5kg3dbZWgIXMXZmB1xXom6CcIrWFgHa7jsp4qJuFW2L5XShudyzlBsIO3JhCfiU5HmL2BDz__mCv9dznmBlEMS7LvcYg6wTdPTrAXIXI2CvtjwlnpZd-j4Zpsx2wG_uA1&amp;t=639065204200000000" type="text/javascript"></script>
+<script src="/TDClient/WebResource.axd?d=sp7vCoAo-SSYfpsQ1sYBBeEDnwCGxDYEwZCM0ler88yoVZIPDXMk1C3XF2L2L0xrbB8Rvhli51TswRlmPIOCZgaY58lKhPr-Pv1jTFJ1oUAu7x6RDtNFZUxbtxs3KYQGLK6FpPD5bKuB0e0NmS9HkAqRVks1&amp;t=639065204200000000" type="text/javascript"></script>
+<script src="/TDClient/WebResource.axd?d=icMURy63hv40LPPfq4rTvmm-RfB_YkC6rEEF_2QOO68q3TseXYNBetRKKgBXJ8mn2e8UIgCPiV23HaQUZbjySMHqSgmYZgLcYltBqwD2_EK8aQ08zBuqc3ZBVZITQrbtn6w46dRxFLibMIQg0Aho73rn8Rpxrzg5YMG_JR0UOrUR0wlZ0&amp;t=639065204200000000" type="text/javascript"></script>
+<script src="/TDClient/WebResource.axd?d=1HpFfNpwNihNfEP1lyJHvdPVqbv8KRoFH4-_ZORUgPOP-bqmmtIJRvFQc7828Vf59O_-fdBXcnwdv-hYp5RptPuHmMR0kGQM0_3rS4Z7sKfC7jy9Cc_8fyfcUWa8psszacEQlAXHPXmNwyRymbGSywEmhrE1&amp;t=639065204200000000" type="text/javascript"></script>
+<script type="text/javascript">
+//<![CDATA[
+function WebForm_OnSubmit() {
+CKEditor_TextBoxEncode('ctl00_ctl00_cpContent_cpContent_shareBody_txtBody', 0); if (typeof(ValidatorOnSubmit) == "function" && ValidatorOnSubmit() == false) return false;
+return true;
+}
+//]]>
+</script>
+
+<div class="aspNetHidden">
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="784CA02E" />
+</div>
+<script type="text/javascript">
+//<![CDATA[
+Sys.WebForms.PageRequestManager._initialize('ctl00$ctl00$smMain', 'aspnetForm', ['tctl00$ctl00$cpContent$cpContent$UpdatePanel1','','tctl00$ctl00$cpContent$cpContent$upFeedbackGrid','','tctl00$ctl00$cpContent$cpContent$lblResults$ctl00',''], ['ctl00$ctl00$cpContent$cpContent$btnSubmitComments','','ctl00$ctl00$cpContent$cpContent$btnToggleSubscribe','','ctl00$ctl00$cpContent$cpContent$btnToggleFavorite','','ctl00$ctl00$cpContent$cpContent$btnSendShare',''], [], 90, 'ctl00$ctl00');
+//]]>
+</script>
+
+<div id="ctl00_ctl00_upMain" style="display:none;">
+	
+    <div id="ctl00_ctl00_pbMain" class="progress-box-container"><div class="progress-box-body"><div class="well shadow"><h2 class="h4 gutter-top-none">Updating...</h2><div class="progress" style="margin-bottom: 0;"><div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuemin="0" aria-valuemax="100" style="width: 100%"></div></div></div></div></div>
+  
+</div>
+
+<header id="ctl00_ctl00_navHeader" role="banner">
+
+  <div id="divMstrHeader" class="master-header NoPrint" style="background-color: #fff;">
+
+  <div class="globalheader" style="background-image: url(&quot;//www.ou.edu/content/dam/common/design2013/ou-globalheader-bg.jpg&quot;); background-repeat: repeat">
+    <div class="container">
+        <div class="globalheader_2012">
+            <div class="row">
+                <ul style="height: 30px; list-style-type: none; overflow: visible; margin: 0; padding: 0; float: right">
+                    <li style="line-height: 20px; float: left"><a class="tip home" href="//www.ou.edu/web.html" alt="OU Home link" style="color: #981A1E; outline: none; background-image: url(&quot;//www.ou.edu/content/dam/common/design2013/ou-globalheader-icons.png&quot;); background-repeat: no-repeat; display: block; height: 30px; width: 30px; background-position: left top"><span style="display: none">OU Homepage</span></a></li>
+                    <li style="line-height: 20px; float: left"><a class="tip search" href="https://www.ou.edu/web/search" alt="OU Search link" style="color: #981A1E; outline: none; background-image: url(&quot;//www.ou.edu/content/dam/common/design2013/ou-globalheader-icons.png&quot;); background-repeat: no-repeat; display: block; height: 30px; width: 30px; background-position: -30px 0"><span style="display: none">Search OU</span></a></li>
+                    <li style="line-height: 20px; float: left"><a class="tip search" href="https://www.ou.edu/web/socialmediadirectory" alt="OU Social Media link" style="color: #981A1E; outline: none; background-image: url(&quot;//www.ou.edu/content/dam/common/design2013/ou-globalheader-icons.png&quot;); background-repeat: no-repeat; display: block; height: 30px; width: 30px; background-position: -60px 0"><span style="display: none">OU Social Media</span></a></li>
+                    <li class="wordmark" style="line-height: 20px; float: left; text-indent: -99999px; width: 200px; height: 30px; margin-left: 5px; background-image: url(&quot;//www.ou.edu/content/dam/common/design2013/ou-wordmark.png&quot;); background-repeat: no-repeat; background-position: center; background-size: contain">
+                        The University of Oklahoma</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    
+</div>
+  
+
+  <div class="logo-header-full hidden-xs">
+
+    
+    <div class="pull-left">
+      <a href="#mainContent" class="sr-only sr-only-focusable">Skip to main content</a>
+    </div>
+
+
+    <div id="ctl00_ctl00_divPageHeader" class="container logo-header clearfix" style="padding: 5px;">
+
+      <div id="divLogo" class="pull-left logo-container">
+
+        <a href="https://www.ou.edu/ouit"
+           target="_blank">
+          <img src="/TDPortal/BE/Logo/2/0" alt="University of Oklahoma Home Page" class="js-logo img-responsive" />
+          <span class="sr-only">(opens in a new tab)</span>
+        </a>
+
+      </div>
+
+      <div class="master-header-right pull-right padding-top padding-bottom">
+
+        
+
+          <div class="pull-left topLevelSearch input-group">
+            <div id="SiteSearch-1fbb9c51e64a4500bf2668cb3924c53e" class="gutter-bottom input-group site-search" style="max-width: 400px;">
+  <div id="SiteSearch-dropdown-1fbb9c51e64a4500bf2668cb3924c53e" class="input-group-btn">
+    <button type="button" id="SiteSearch-filter-1fbb9c51e64a4500bf2668cb3924c53e" class="btn btn-default dropdown-toggle" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false" title="Filter your search by category" data-component="all">
+      <span class="fa-solid fa-solid fa-earth-americas"></span><span class="fa-solid fa-fw fa-nopad fa-caret-down" aria-hidden="true"></span>
+      <span class="sr-only">
+        Filter your search by category. Current category:
+        <span class="js-current-component">All</span>
+      </span>
+    </button>
+    <ul tabindex="-1" aria-label="Filter your search by category" role="menu" class="dropdown-menu" >
+      <li>
+        <a role="menuitem" href="javascript:void(0);" data-component-text="All" data-component="all" data-component-icon="fa-solid fa-earth-americas" title="Search all areas">
+          <span class="fa-solid fa-fw fa-nopad fa-earth-americas" aria-hidden="true"></span>
+          All
+        </a>
+      </li>
+
+      <li aria-hidden="true" class="divider"></li>
+
+        <li role="presentation">
+          <a role="menuitem" href="javascript:void(0);" data-component-text="Knowledge Base" data-component="kb" data-component-icon="fa-lightbulb" title="Search Knowledge Base">
+            <span class="fa-regular fa-fw fa-nopad fa-lightbulb" aria-hidden="true"></span>
+            Knowledge Base
+          </a>
+        </li>
+
+        <li role="presentation">
+          <a role="menuitem" href="javascript:void(0);" data-component-text="Service Catalog" data-component="sc" data-component-icon="fa-compass" title="Search Service Catalog">
+            <span class="fa-solid fa-fw fa-nopad fa-compass" aria-hidden="true"></span>
+            Service Catalog
+          </a>
+        </li>
+
+    </ul>
+  </div>
+
+  <label class="sr-only" for="SiteSearch-text-1fbb9c51e64a4500bf2668cb3924c53e">Search the client portal</label>
+
+  <input id="SiteSearch-text-1fbb9c51e64a4500bf2668cb3924c53e" type="text" class="form-control" autocomplete="off" placeholder="Search the client portal" title="To search for items with a specific tag, enter the # symbol followed by the name of the tag.
+To search for items using exact match, place double quotes around your text." />
+
+  <span class="input-group-btn">
+    <button id="SiteSearch-button-1fbb9c51e64a4500bf2668cb3924c53e" class="btn btn-default" type="button" title="Search">
+      <span class="fa-solid fa-fw fa-nopad fa-search blue" aria-hidden="true"></span>
+      <span class="sr-only">Search</span>
+    </button>
+  </span>
+</div>
+
+<script>
+  $(function() {
+    var siteSearch = new TeamDynamix.SiteSearch({
+      searchUrl: "/TDClient/35/Norman/Shared/Search",
+      autocompleteSearchUrl: '/TDClient/35/Norman/Shared/AutocompleteSearch',
+      autocompleteResultsPosition: 'fixed',
+      autocompleteResultsZIndex: 1000,
+      searchTextBoxSelector: '#SiteSearch-text-1fbb9c51e64a4500bf2668cb3924c53e',
+      searchComponentFilterButtonSelector: '#SiteSearch-filter-1fbb9c51e64a4500bf2668cb3924c53e',
+      searchButtonSelector: '#SiteSearch-button-1fbb9c51e64a4500bf2668cb3924c53e',
+      searchFilterDropdownSelector: '#SiteSearch-dropdown-1fbb9c51e64a4500bf2668cb3924c53e',
+      showKnowledgeBaseOption: true,
+      showServicesOption: true,
+      showForumsOption: false,
+      autoFocusSearch: false
+    });
+  });
+</script>
+          </div>
+
+        
+          <div title="Sign In" class="pull-right gutter-top-sm">
+            <a href="/TDClient/35/Norman/Login.aspx?ReturnUrl=%2fTDClient%2f35%2fNorman%2fKB%2fArticleDet%3fID%3d3078%26SIDs%3d3017">
+              Sign In
+            </a>
+          </div>
+        
+      </div>
+
+    </div>
+
+  </div>
+
+  <nav id="ctl00_ctl00_mainNav" class="navbar navbar-default themed tdbar" aria-label="Primary">
+    <div id="navContainer" class="container">
+
+      <div class="navbar-header">
+        <button type="button" class="pull-left navbar-toggle collapsed themed tdbar-button-anchored tdbar-toggle gutter-left" data-toggle="collapse" data-target=".navbar-collapse">
+          <span class="tdbar-button-anchored icon-bar"></span>
+          <span class="tdbar-button-anchored icon-bar"></span>
+          <span class="tdbar-button-anchored icon-bar"></span>
+          <span class="sr-only">Show Applications Menu</span>
+        </button>
+        <a class="navbar-brand hidden-sm hidden-md hidden-lg themed tdbar-button-anchored truncate-be" href="#">
+
+          Norman - Client Portal
+        </a>
+      </div>
+
+      <div id="td-navbar-collapse" class="collapse navbar-collapse">
+
+        <ul class="nav navbar-nav nav-collapsing" id="collapseMe">
+
+          
+            <li class="themed tdbar-button-anchored hidden-sm hidden-md hidden-lg">
+              <a href="/TDClient/35/Norman/Login.aspx?ReturnUrl=%2fTDClient%2f35%2fNorman%2fKB%2fArticleDet%3fID%3d3078%26SIDs%3d3017">Sign In</a>
+            </li>
+          
+            <li id="divSearch" class="themed tdbar-button-anchored hidden-sm hidden-md hidden-lg">
+              <a href="/TDClient/35/Norman/Shared/Search" title="search">Search</a>
+            </li>
+          
+              <li id="divDesktop4fbe1f59-07cd-41e9-8f37-5f49aa0d150a" class="themed tdbar-button-anchored">
+                <a href="/TDClient/35/Norman/Home/">Home</a>
+              </li>
+            
+
+          
+            <li id="divTDRequests" class="themed tdbar-button-anchored sr-focusable">
+              <a href="/TDClient/35/Norman/Requests/ServiceCatalog">Services</a>
+            </li>
+          
+            <li id="divTDKnowledgeBase" class="themed tdbar-button-anchored sr-focusable">
+              <a href="/TDClient/35/Norman/KB/">Knowledge Base</a>
+            </li>
+          
+
+          <li class="themed tdbar-button-anchored hidden-xs more-items-button" id="moreMenu">
+            <a data-toggle="dropdown" title="More Applications" href="javascript:;">
+              <span class="sr-only">More Applications</span>
+              <span class="fa-solid fa-ellipsis-h" aria-hidden="true"></span>
+            </a>
+            <ul class="dropdown-menu dropdown-menu-right themed tdbar" id="collapsed"></ul>
+          </li>
+
+        </ul>
+      </div>
+
+    </div>
+
+  </nav>
+
+  </div>
+
+  </header>
+
+
+
+<div id="navShim" class="hidden-xs hidden-sm"></div>
+<main role="main">
+  <div id="content">
+    <div id="mainContent" tabindex="-1"></div>
+    
+
+  <nav id="ctl00_ctl00_cpContent_divTabHeader" class="tdbar-sub NoPrint hidden-xs navbar-subnav" aria-label="Knowledge Base">
+      <a href="#kbContent" class="sr-only sr-only-focusable">Skip to Knowledge Base content</a>
+      <div class="container clearfix">
+        <ul class="nav navbar-nav js-submenu" id="kbSubMenu" style="margin-left: -15px;">
+          
+          <li>
+            <a href="/TDClient/35/Norman/KB/Search">Search <span class="sr-only">Articles</span></a>
+          </li>
+
+          
+          
+        </ul>
+      </div>
+    </nav>
+  
+
+  <div id="kbContent" class="container gutter-top gutter-bottom" tabindex="-1" style="outline:none;">
+    
+
+<input type="hidden" name="ctl00$ctl00$cpContent$cpContent$hdnFeedbackID" id="ctl00_ctl00_cpContent_cpContent_hdnFeedbackID" />
+<input type="hidden" name="ctl00$ctl00$cpContent$cpContent$hdnIsAddressed" id="ctl00_ctl00_cpContent_cpContent_hdnIsAddressed" />
+
+<span id="ctl00_ctl00_cpContent_cpContent_lblResults_ctl00" aria-live="polite" aria-atomic="true"><span id="ctl00_ctl00_cpContent_cpContent_lblResults_lblResults-label" class="red tdx-error-text"></span></span>
+
+<a id="ctl00_ctl00_cpContent_cpContent_btnSendShare" tabindex="-1" class="hidden" aria-hidden="true" href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$ctl00$cpContent$cpContent$btnSendShare&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))">Blank</a>
+
+<div class="clearfix">
+  <nav aria-label="Breadcrumb">
+    <ol class="breadcrumb pull-left">
+      <li><a href="/TDClient/35/Norman/KB/">Knowledge Base</a></li><li class="active"><a href="/TDClient/35/Norman/KB/?CategoryID=18">Research</a></li><li class="active">Qualtrics - Acceptable Use Policy</li>
+    </ol>
+  </nav>
+  <span class="js-open-monitor" style="display: none;"></span>
+</div>
+
+
+
+<div class="row gutter-top">
+
+<div id="divMainContent" class="col-md-8">
+
+<h1 class="gutter-top" style="-ms-word-wrap: break-word; word-wrap: break-word;">
+  Qualtrics - Acceptable Use Policy
+</h1>
+
+
+
+
+
+<div id="ctl00_ctl00_cpContent_cpContent_divBody" class="gutter-top break-word ckeShim clearfix"><h2>Purpose and Use</h2>
+
+<p>Qualtrics is a web-based survey service available for use by all OU faculty, administrators, staff and students. The Qualtrics survey research tool allows users to conduct research and gather information in support of the university's educational mission and organizational goals.</p>
+
+<p>This Acceptable Use Policy outlines the terms and conditions governing the use of Qualtrics and establishes guidelines for appropriate behavior and usage.</p>
+
+<h2>Usage Guidelines</h2>
+
+<ol start="1" style="list-style-type: decimal">
+	<li>Qualtrics surveys can only be used for purposes directly related to the university's mission. Such uses include academic research, surveys carried out under the auspices of a university course, surveys conducted by schools/colleges/divisions and other appropriate campus units, and surveys conducted under student government's auspices. The use of Qualtrics for non-university related activities is prohibited.</li>
+	<li value="2">All usage of Qualtrics, distribution of surveys, and use of university computers must comply with the <a href="https://www.ou.edu/content/dam/IT/cybersecurity/Docs/policies-standards-and-guidelines/all-users/University_wide_active_policies/ou-it-acceptable-use-policy-2020.pdf">Acceptable Use Policy,</a> <a href="https://www.ou.edu/content/dam/IT/cybersecurity/Docs/policies-standards-and-guidelines/all-users/University_wide_active_policies/ou-cybersecurity-policy-2020.pdf">Cybersecurity Policy</a> and <a href="https://www.ou.edu/content/dam/IT/cybersecurity/Docs/policies-standards-and-guidelines/all-users/University_wide_active_policies/ou-email-transmission-and-use-policy.pdf">Email Transmission and Use Policy</a> mandated by OU Information Technology.</li>
+	<li value="3">Surveys must protect the privacy and confidentiality of student, faculty, staff, patient, and/or other institutional information as required by FERPA, HIPAA, and all other applicable university policies, state laws, and federal law including the <a href="https://www.copyright.gov/help/faq/">federal copyright laws</a>. Specifically, surveys may never be used to collect:
+	<ul>
+		<li value="3">Social Security Numbers (SSN)</li>
+		<li value="3">Payment Card Information (includes credit cards, bank cards, and other forms of payment)</li>
+		<li value="3">Financial account numbers</li>
+		<li value="3">Driver's License or State Identification Numbers</li>
+		<li value="3">Employer or Taxpayer Identification Numbers (EINs or TINs)</li>
+		<li value="3">Passport or national identification numbers</li>
+		<li value="3">Biometric data (including fingerprints or retinal scans)</li>
+		<li value="3">Usernames and Passwords</li>
+	</ul>
+	</li>
+	<li value="4">The University of Oklahoma has established a HIPAA Business Associate Agreement (BAA) with Qualtrics allowing the Health Science Center health care components (HCC) to utilize the Qualtrics online survey and analytics tool with ePHI. With this update, please know that the use of University PHI for research, analytics, and reporting is still governed by the <a href="https://hipaa.ouhsc.edu/Portals/1412/Assets/Documents/NPP/NoticePrivacyPracticesFullPage%20032323.pdf">University’s HIPAA polices.</a> If you have any questions, please reach out to the University’s HIPAA Compliance Team at&nbsp;<a href="mailto:oucompliance@ouhsc.edu">oucompliance@ouhsc.edu</a></li>
+	<li value="5"><a>Qualtrics is also compliant with handling FERPA data</a>. Users can use Qualtrics for academic research and surveys, ensuring compliance with FERPA regulations and maintaining the confidentiality of student information. For detailed information on FERPA, please refer to the <a href="https://www.ou.edu/registrar/academic-records/ferpa">OU FERPA Information Page</a>.</li>
+	<li value="6">In accordance with federal regulations and University policies, all research involving human subjects must be reviewed and approved by an Institutional Review Board (IRB) prior to any research intervention with participants. Please visit the <a href="https://compliance.ouhsc.edu/HRPP">OU IRB</a> for more information. Users are responsible for ensuring compliance with federal regulations and OU research policies.</li>
+	<li value="7">The use of OU’s&nbsp;logos,&nbsp;seals, or&nbsp;trademarks within survey&nbsp;must conform to relevant university polices and brand guidelines as outlined by the <a href="https://www.ou.edu/brand">OU Brand Guide</a>.</li>
+	<li value="8">Surveys may not contain any inappropriate, foul, disrespectful, or prejudicial language, questions, or comments. Information regarding harassment and discrimination can be found here: <a href="https://www.ou.edu/eoo/about/policies-procedures/non-discrimination">https://www.ou.edu/eoo/about/policies-procedures/non-discrimination</a></li>
+	<li value="9">Qualtrics indefinitely archives survey tools and responses, but users must ensure data is stored securely. To comply with FERPA and HIPAA regulations, archival must use compliant storage such as OU IT Network File Storage, Microsoft Teams/SharePoint, OneDrive, or encrypted drives. Departments may face penalties for improper storage, especially if unencrypted drives with survey data are misplaced or stolen.</li>
+	<li value="10">Qualtrics administrators will routinely monitor the volume of surveys and survey respondents for system management purposes. Usage may also be subject to auditing and security testing.</li>
+</ol></div>
+
+<div id="ctl00_ctl00_cpContent_cpContent_divFeedback2" class="well gutter-top-lg">
+
+  <div class="row" id="divHelpfulYesNo">
+    <div class="col-sm-7">
+      
+        <div>
+          <a href="/TDClient/35/Norman/Login.aspx?ReturnUrl=%2fTDClient%2f35%2fNorman%2fKB%2fArticleDet%3fID%3d3078%26SIDs%3d3017">Sign in to leave feedback</a>
+        </div>
+      
+    </div>
+    <div class="col-sm-5 text-right">
+      <div id="ctl00_ctl00_cpContent_cpContent_UpdatePanel1" aria-live="polite" aria-atomic="true">
+	
+          67% helpful - 3 reviews
+        
+</div>
+    </div>
+  </div>
+
+  </div>
+
+
+
+<div class="tab-content gutter-top gutter-bottom">
+  
+  <div id="ctl00_ctl00_cpContent_cpContent_upFeedbackGrid">
+	
+        <a id="ctl00_ctl00_cpContent_cpContent_btnToggleAddressed" tabindex="-1" class="hidden" aria-hidden="true" href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$ctl00$cpContent$cpContent$btnToggleAddressed&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))">Blank</a>
+        <a id="ctl00_ctl00_cpContent_cpContent_btnDeleteFeedback" tabindex="-1" class="hidden" aria-hidden="true" href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$ctl00$cpContent$cpContent$btnDeleteFeedback&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))">Blank</a>
+        
+      
+</div>
+    
+    
+
+    
+</div>
+</div>
+
+<div class="col-md-4">
+
+
+
+    <a id="ctl00_ctl00_cpContent_cpContent_btnToggleSubscribe" tabindex="-1" class="hidden" aria-hidden="true" href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$ctl00$cpContent$cpContent$btnToggleSubscribe&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))">Blank</a>
+
+<a id="ctl00_ctl00_cpContent_cpContent_btnToggleFavorite" tabindex="-1" class="hidden" aria-hidden="true" href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$ctl00$cpContent$cpContent$btnToggleFavorite&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))">Blank</a>
+
+<a class="DetailAction print-article" href="/TDClient/35/Norman/KB/PrintArticle?ID=3078&amp;SIDs=3017" rel="nofollow" target="_blank">  <span class="fa-solid fa-print fa-fw" aria-hidden="true"></span>
+Print Article</a>
+
+<div id="ctl00_ctl00_cpContent_cpContent_divKB" class="panel panel-default">
+
+  <div class="panel-heading">
+    <h2 class="h3 panel-title">Related Articles (1)</h2>
+  </div>
+
+  <div class="panel-body">
+    
+        <div id="ctl00_ctl00_cpContent_cpContent_rptArticles_ctl00_ctlArticle_divContainer" class="gutter-top-sm gutter-bottom-lg">
+  <div class="clearfix">
+    <div class="pull-left font-md">
+      <a target="_blank" href="https://itsupport.ou.edu/TDClient/35/Norman/KB/ArticleDet?ID=342&SIDs=1668">Qualtrics - Activate Your Account at qualtrics.ou.edu</a>
+    </div>
+  </div>
+  <div id="ctl00_ctl00_cpContent_cpContent_rptArticles_ctl00_ctlArticle_divSummary">
+    OU provides access to Qualtrics for faculty, staff, and students. The first time you log into Qualtrics, your account must be activated. The process for doing so is described and illustrated in the steps inside.
+  </div>
+  
+</div>
+      
+  </div>
+
+</div>
+
+<div id="ctl00_ctl00_cpContent_cpContent_divRelatedServicesAndOfferings" class="panel panel-default">
+
+  <div class="panel-heading">
+    <h3 class="panel-title">Related Services / Offerings (1)</h3>
+  </div>
+
+  <div class="panel-body">
+    
+        <div class="gutter-top-sm gutter-bottom-lg">
+          <div class="clearfix">
+            <div class="pull-left font-md">
+              <a href="/TDClient/35/Norman/Requests/ServiceDet?ID=82&SIDs=1845">Qualtrics</a>
+            </div>
+          </div>
+          <div>
+            
+          </div>
+        </div>
+      
+  </div>
+
+</div>
+
+<div id="divAttachments" class="js-article-attachments"></div>
+
+</div>
+
+</div>
+
+<div id="ctl00_ctl00_cpContent_cpContent_divProgress" style="display: none; z-index: 60;">
+  <div id="ctl00_ctl00_cpContent_cpContent_pbMain" class="progress-box-container"><div class="progress-box-body"><div class="well shadow"><h2 class="h4 gutter-top-none">Deleting...</h2><div class="progress" style="margin-bottom: 0;"><div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuemin="0" aria-valuemax="100" style="width: 100%"></div></div></div></div></div>
+</div>
+
+
+
+  </div>
+
+
+  </div>
+</main>
+
+
+
+<script type="text/javascript">
+//<![CDATA[
+setNavPosition('TDKnowledgeBase');window.CKEDITOR_BASEPATH = 'https://itsupport.ou.edu/TDPortal/Content/ckeditor/';
+//]]>
+</script>
+<script src="https://itsupport.ou.edu/TDPortal/Content/ckeditor/ckeditor.js?t=C6HH5UF" type="text/javascript"></script>
+<script type="text/javascript">
+//<![CDATA[
+var CKEditor_Controls=[],CKEditor_Init=[];function CKEditor_TextBoxEncode(d,e){var f;if(typeof CKEDITOR=='undefined'||typeof CKEDITOR.instances[d]=='undefined'){f=document.getElementById(d);if(f)f.value=f.value.replace(/</g,'&lt;').replace(/>/g,'&gt;');}else{var g=CKEDITOR.instances[d];if(e&&(typeof Page_BlockSubmit=='undefined'||!Page_BlockSubmit)){g.destroy();f=document.getElementById(d);if(f)f.style.visibility='hidden';}else g.updateElement();}};(function(){if(typeof CKEDITOR!='undefined'){var d=document.getElementById('ctl00_ctl00_cpContent_cpContent_shareBody_txtBody');if(d)d.style.visibility='hidden';}var e=function(){var f=CKEditor_Controls,g=CKEditor_Init,h=window.pageLoad,i=function(){for(var j=f.length;j--;){var k=document.getElementById(f[j]);if(k&&k.value&&(k.value.indexOf('<')==-1||k.value.indexOf('>')==-1))k.value=k.value.replace(/&lt;/g,'<').replace(/&gt;/g,'>').replace(/&amp;/g,'&');}if(typeof CKEDITOR!='undefined')for(var j=0;j<g.length;j++)g[j].call(this);};window.pageLoad=function(j,k){if(k.get_isPartialLoad())setTimeout(i,0);if(h&&typeof h=='function')h.call(this,j,k);};if(typeof Page_ClientValidate=='function'&&typeof CKEDITOR!='undefined')Page_ClientValidate=CKEDITOR.tools.override(Page_ClientValidate,function(j){return function(){for(var k in CKEDITOR.instances){if(document.getElementById(k))CKEDITOR.instances[k].updateElement();}return j.apply(this,arguments);};});setTimeout(i,0);};if(typeof Sys!='undefined'&&typeof Sys.Application!='undefined')Sys.Application.add_load(e);if(window.addEventListener)window.addEventListener('load',e,false);else if(window.attachEvent)window.attachEvent('onload',e);})();CKEditor_Controls.push('ctl00_ctl00_cpContent_cpContent_shareBody_txtBody');
+CKEditor_Init.push(function(){if(typeof CKEDITOR.instances['ctl00_ctl00_cpContent_cpContent_shareBody_txtBody']!='undefined' || !document.getElementById('ctl00_ctl00_cpContent_cpContent_shareBody_txtBody')) return;CKEDITOR.replace('ctl00_ctl00_cpContent_cpContent_shareBody_txtBody',{"autoGrow_maxHeight" : 175, "autoGrow_minHeight" : 175, "contentsCss" : ['https://itsupport.ou.edu/TDPortal/Content/ckeditor/contents.css', '/TDPortal/Content/FontAwesome/css/fontawesome.min.css', '/TDPortal/Content/FontAwesome/css/brands.min.css', '/TDPortal/Content/FontAwesome/css/regular.min.css', '/TDPortal/Content/FontAwesome/css/solid.min.css', '/TDPortal/Content/FontAwesome/css/v4-shims.min.css'], "height" : "175", "htmlEncodeOutput" : true, "image_previewText" : " ", "removePlugins" : "magicline,devtools,templates,elementspath,fontawesome,youtube,uploadimage,simpleimage,remoteimageblocker", "title" : "Message", "toolbar" : "TDSimple"}); });
+
+var Page_ValidationActive = false;
+if (typeof(ValidatorOnLoad) == "function") {
+    ValidatorOnLoad();
+}
+
+function ValidatorOnSubmit() {
+    if (Page_ValidationActive) {
+        return ValidatorCommonOnSubmit();
+    }
+    else {
+        return true;
+    }
+}
+        Sys.Application.add_init(function() {
+    $create(Sys.UI._UpdateProgress, {"associatedUpdatePanelId":null,"displayAfter":500,"dynamicLayout":true}, null, null, $get("ctl00_ctl00_upMain"));
+});
+//]]>
+</script>
+</form>
+
+
+
+
+
+  <footer role="contentinfo">
+
+    <div class="master-footer">
+      
+<div style="background-color: #333333; color: #FFFFFF; font-family: Arial, sans-serif; padding: 30px 20px 10px; width: 100%">
+
+  
+  <div style="display: flex; max-width: 1200px; margin: auto">
+
+    
+    <div style="display: flex; min-width: 200px">
+      <img src="https://www.ou.edu/content/dam/homepage2012/design/footerlogo.png" alt="OU Logo" style="width: 50px; height: 65px; margin-right: 10px">
+      <div>
+        <div style="font-weight: bold; margin-bottom: 6px">OU Information Technology</div>
+        <div>660 Parrington Oval, Room 321<br>Norman, OK 73019</div>
+        <div style="margin-top: 6px">Phone: 405.325.4357</div>
+      </div>
+    </div>
+
+
+<div style="display: flex; margin-left: auto; min-width: 300px; margin-top: 10px">
+
+  
+  <a href="https://www.facebook.com/UniversityOfOklahoma" target="_blank" rel="noopener noreferrer" style="display: flex; background: #EEEEEE; border-radius: 6px; width: 45px; height: 45px; margin-right: 10px">
+    <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/facebook.svg" alt="Facebook" style="display: flex; width: 24px; height: 24px; margin: auto">
+  </a>
+
+  
+  <a href="https://twitter.com/OU_IT" target="_blank" rel="noopener noreferrer" style="display: flex; background: #EEEEEE; border-radius: 6px; width: 45px; height: 45px; margin-right: 10px">
+    <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/x.svg" alt="X (Twitter)" style="display: flex; width: 24px; height: 24px; margin: auto">
+  </a>
+
+  
+  <a href="https://www.linkedin.com/school/university-of-oklahoma/" target="_blank" rel="noopener noreferrer" style="display: flex; background: #EEEEEE; border-radius: 6px; width: 45px; height: 45px; margin-right: 10px">
+    <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/linkedin.svg" alt="LinkedIn" style="display: flex; width: 24px; height: 24px; margin: auto">
+  </a>
+
+  
+  <a href="https://www.youtube.com/user/UniversityOfOklahoma" target="_blank" rel="noopener noreferrer" style="display: flex; background: #EEEEEE; border-radius: 6px; width: 45px; height: 45px; margin-right: 10px">
+    <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/youtube.svg" alt="YouTube" style="display: flex; width: 24px; height: 24px; margin: auto">
+  </a>
+
+</div>
+
+
+  </div> 
+
+  
+  <div style="border-top: 1px solid #777777; margin-top: 20px; padding-top: 10px">
+    <div style="max-width: 1200px; margin: auto; text-align: center; font-size: 14px">
+      <a href="https://www.ou.edu/marcomm/accessibility-statement" target="_blank" rel="noopener noreferrer" style="color: #FFFFFF; margin: 0 10px">Accessibility</a> |
+      <a href="https://www.ou.edu/sustainability" target="_blank" rel="noopener noreferrer" style="color: #FFFFFF; margin: 0 10px">Sustainability</a> |
+      <a href="https://apps.ouhsc.edu/hipaa/" target="_blank" rel="noopener noreferrer" style="color: #FFFFFF; margin: 0 10px">HIPAA</a> |
+      <a href="https://jobs.ou.edu/" target="_blank" rel="noopener noreferrer" style="color: #FFFFFF; margin: 0 10px">OU Job Search</a> |
+      <a href="https://www.ou.edu/web/landing/policy" target="_blank" rel="noopener noreferrer" style="color: #FFFFFF; margin: 0 10px">Policies</a> |
+      <a href="https://www.ou.edu/web/landing/legalnotices" target="_blank" rel="noopener noreferrer" style="color: #FFFFFF; margin: 0 10px">Legal Notices</a> |
+      <a href="https://www.ou.edu/marcomm/copyright" target="_blank" rel="noopener noreferrer" style="color: #FFFFFF; margin: 0 10px">Copyright</a> |
+      <a href="https://www.ou.edu/web/resources_offices" target="_blank" rel="noopener noreferrer" style="color: #FFFFFF; margin: 0 10px">Resources &amp; Offices</a> |
+      <a href="https://ouregents.ethicspoint.com/" target="_blank" rel="noopener noreferrer" style="color: #FFFFFF; margin: 0 10px">OU Report It!</a>
+    </div>
+  </div>
+
+</div>
+
+<script type="text/javascript" src="https://bot.ivy.ai/bot/script/category/90JvaRm8Ob7KwjGB9zM6EZXoB3peVnNz"></script>
+      
+    </div>
+
+  </footer>
+
+
+
+<script>
+
+    
+    
+
+      // Inject the Google Analytics isogram. This must happen here because it
+      // cannot be injected through an external javascript library.
+      (function (i, s, o, g, r, a, m) {
+        i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+          (i[r].q = i[r].q || []).push(arguments)
+        }, i[r].l = 1 * new Date(); a = s.createElement(o),
+          m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+      })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+    
+
+      // Per Incident #6707155. Need to focus on img. pseudo-class :focus-within is not supported in IE
+      (function ($) {
+        var $anchor = $('#divLogo a');
+        var $beLogo = $('#divLogo a img');
+
+        $anchor.focus(function () {
+          $beLogo.addClass('accessibility-focus-on-logo');
+        }).blur(function () {
+          $beLogo.removeClass('accessibility-focus-on-logo');
+        });
+
+        
+        
+          const queryParams = new URLSearchParams(window.location.search);
+          let showChatbot = true;
+          if (queryParams.has('nobot')) {
+            const nobotFlag = queryParams.get('nobot');
+            if (nobotFlag === '1' || nobotFlag === 'true') {
+              showChatbot = false;
+            }
+          }
+
+          if(showChatbot) {
+            $.ajax({
+              url: "/TDClient/35/Norman/Chatbots/GetScript",
+              type: "GET",
+              dataType: 'text',
+              success: function (data) {
+                
+                var jQueryAjaxSettingsCache = jQuery.ajaxSettings.cache;
+                jQuery.ajaxSettings.cache = true;
+                $(document.body).append(data);
+                jQuery.ajaxSettings.cache = jQueryAjaxSettingsCache;
+              }
+            });
+          }
+        
+
+        window.addEventListener("message", (event) => {
+
+          // Only accept events that come from the same origin
+          if (event.origin != window.location.origin) {
+            return;
+          }
+
+          switch (event.data.type) {
+
+            case "authenticate-using-popup":
+              handleAuthenticateUsingPopup(event.data.payload);
+              break;
+
+            case "authenticated-successfully":
+              handleAuthenticatedSuccessfully(event.data.payload);
+              break;
+
+            default:
+              break;
+          }
+
+        });
+
+        function handleAuthenticateUsingPopup(payload) {
+          let loginUrl = '/TDClient/35/Norman/Login.aspx';
+
+          if (payload.successCallbackUrl) {
+            loginUrl += '?SuccessCallbackUrl=' + payload.successCallbackUrl;
+          }
+
+          window.open(loginUrl, "_blank", "popup=1");
+        }
+
+        function handleAuthenticatedSuccessfully() {
+          event.source.close();
+          window.location.href = window.location.href;
+        }
+    })(jQuery);
+
+</script>
+
+</body>
+</html>

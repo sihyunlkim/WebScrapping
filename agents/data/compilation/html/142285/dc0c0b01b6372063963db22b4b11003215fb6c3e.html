@@ -1,0 +1,744 @@
+
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head><meta name="viewport" content="width=device-width, initial-scale=1.0" /><!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-WR9V5K73');</script>
+<!-- End Google Tag Manager --><script>
+  window.TdxGtmContext = {"User":{"Id":0,"UID":"00000000-0000-0000-0000-000000000000","UserName":"","FullName":"Public User","AlertEmail":"publicuser@noreply.com","Role":"Experience User","HasTDNext":false,"StandardApplicationNames":null,"TicketApplicationNames":[],"AssetApplicationNames":[],"ClientPortalApplicationNames":[],"Type":"Technician","Analytics":{"Title":null,"Organization":null}},"Partition":{"Id":16,"Name":"Idaho Production"},"BillableEntity":{"Id":2,"Name":"University of Idaho","SalesForceIdentifier":"0013600000EM5E1AAL","GWMIID":"a7b0fbb6-3af1-4d57-8d14-4314acc0da87"},"Environment":{"ShortName":"PRD"}};
+</script><script src="/TDPortal/Content/Scripts/jquery/2.2.4/jquery.min.js?v=20260213000508"></script><script src="/TDPortal/Content/Scripts/jquery-migrate/1.4.1/jquery-migrate.min.js?v=20260213000508"></script><script src="/TDPortal/Content/Scripts/jquery-ui/1.13.2/jquery-ui-1.13.2.custom.timepicker.min.js?v=20260213000818"></script><link href="/TDPortal/Content/Styles/jquery-ui/1.13.2/jquery-ui.compiled.min.css?v=20260213000820" rel="stylesheet" type="text/css"  /><link href="/TDPortal/Content/bootstrap/3.4.1/dist/css/bootstrap.min.css?v=20260213000508" rel="stylesheet" type="text/css" id="lnkBootstrapCSS" /><script src="/TDPortal/Content/bootstrap/3.4.1/dist/js/bootstrap.min.js?v=20260213000508"></script><link href="/TDPortal/Content/FontAwesome/css/fontawesome.min.css?v=20260213000506" rel="stylesheet" type="text/css" id="lnkFontAwesome" /><link href="/TDPortal/Content/FontAwesome/css/solid.css?v=20260213000506" rel="stylesheet" type="text/css"  /><link href="/TDPortal/Content/FontAwesome/css/regular.css?v=20260213000506" rel="stylesheet" type="text/css"  /><link href="/TDPortal/Content/FontAwesome/css/brands.css?v=20260213000506" rel="stylesheet" type="text/css"  /><link href="/TDPortal/Content/FontAwesome/css/v4-shims.css?v=20260213000506" rel="stylesheet" type="text/css"  /><link href="/TDClient/Styles/bootstrap_custom.min.css?v=20260213000818" rel="stylesheet" type="text/css"  /><link href="/TDClient/Styles/TDStyles.min.css?v=20260213000820" rel="stylesheet" type="text/css"  /><link href="https://support.uidaho.edu/TDPortal/BE/Style/2/TDClient/40?v=20240513233244" rel="stylesheet" type="text/css" /><script src="/TDPortal/Content/Scripts/tdx/dist/TDJSFramework.compiled.min.js?v=20260213000818"></script><script src="/TDPortal/Content/Scripts/tdx/dist/modalFocusTrap.min.js?v=20260213000816"></script><script src="/TDPortal/Content/Scripts/underscore/1.12.1/underscore-min.js?v=20260213000508"></script>
+<script src="/TDClient/Scripts/clientOS.min.js?v=20260213000810"></script>
+<script src="/TDClient/Scripts/collapseMe.min.js?v=20260213000810"></script>
+<script src="/TDClient/Scripts/tdsearchfilter.min.js?v=20260213000810"></script>
+<script src="/TDClient/Scripts/SiteSearch.min.js?v=20260213000810"></script>
+<script src="/TDPortal/Content/Scripts/tdx/dist/elasticsearchAutocomplete.min.js?v=20260213000816"></script>
+<link id="ctl00_ctl00_lnkFavicon" rel="icon" href="https://support.uidaho.edu/TDPortal/BE/Icon/2/40?v=20180215215033" />
+
+    
+    <script async src="//www.googletagmanager.com/gtag/js?id=G-Z19Z9F3ST0"></script>
+    <script>
+
+      $(function () {
+
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        // Be sure to set the proper cookie domain to the customer's full subdomain when sending the pageview hit.
+        gtag('config', 'G-Z19Z9F3ST0', { 'cookie_domain': 'support.uidaho.edu' });
+
+        });
+
+    </script>
+
+  
+
+  <script>
+
+      $(function () {
+        var masterUi = MasterUI({
+          isPostback: false,
+          baseUrl: '/TDClient/',
+          isTdGoogleAnalyticsEnabled: true,
+          isAuthenticated: false
+          });
+
+        $('#collapseMe').collapseMe({
+          toggleVisibilitySelector: '.navbar-toggle'
+        });
+
+        TeamDynamix.addRequiredFieldHelp();
+      });
+
+      // The sub-nav menu uses padding-top to position itself below the header bar and main navigation sections. When the
+      // window is resized, there is a chance that the content of these header or nav sections wraps, causing the height
+      // to change, potentially covering the sub-nav menu, which is obviously a big usability problem. This function
+      // listens for when the window size or orientation is changing (and also when the window first loads), and adjusts
+      // the padding so that the sub-nav menu appears in the correct location.
+      $(window).bind('load ready resize orientationchange', function () {
+        var headerHeight = $('#divMstrHeader').height();
+        $('#navShim').css({
+          "padding-top": headerHeight
+        });
+
+        $('#content').css({
+          "padding-top": headerHeight,
+          "margin-top": headerHeight * -1
+        });
+      });
+  </script>
+
+  
+  
+  
+  <script src="/TDPortal/Content/select2/v3/select2.min.js?v=20260213002344"></script><link href="/TDPortal/Content/select2/v3/select2.compiled.min.css?v=20260213002344" rel="stylesheet" type="text/css" id="lnkSelect2" />
+  <script src="/TDClient/Scripts/attachmentHandler.min.js?v=20260213000818"></script>
+
+  <style type="text/css">
+    .honey-pot-div {
+      display: none;
+    }
+  </style>
+
+  <script>
+    
+
+    function shareArticle() {
+      if ($('#ctl00_ctl00_cpContent_cpContent_shareRecipients').val().trim() === "") {
+        alert('You must first enter a valid email.');
+        $('#btnShare').progressButton('reset');
+      }
+      else {
+        __doPostBack('ctl00$ctl00$cpContent$cpContent$btnSendShare', '');
+      }
+    }
+
+    function closeShareModal() {
+      $('#divShareModal').modal('hide');
+      $('#btnShare').progressButton('reset');
+    }
+
+    function toggleFeedback(isHelpful) {
+      $('#divHelpfulComments').show();
+      $('#divHelpfulYesNo').hide();
+      $('#ctl00_ctl00_cpContent_cpContent_hdnIsHelpful').val(isHelpful);
+      $('#ctl00_ctl00_cpContent_cpContent_txtComments').focus();
+    }
+
+    function toggleFeedbackResult() {
+      $('#divWasHelpful, #divFeedbackRecorded, #divHelpfulComments, #divHelpfulYesNo').toggle();
+    }
+
+    // The following two functions were added as a result of ticket ID: 1392522. We are generating these buttons dynamically to
+    // prevent bots from clicking them and posting feedback on an article. Additionally, we have an input that is hidden from
+    // the user. If a bot enters text in that input, which it likely will (bots love filling out forms), then we don't accept the
+    // form submission
+    function generateFeedbackButtons() {
+      var $btnHelpfulYes = $('<button id="btnHelpfulYes" type="button" class="btn btn-primary gutter-left" onclick="toggleFeedback(1);">Yes</button>');
+      var $btnHelpfulNo = $('<button id="btnHelpfulNo" type="button" class="btn btn-primary gutter-left-sm" onclick="toggleFeedback(0);">No</button>');
+
+      $('#divWasHelpful').append($btnHelpfulYes);
+      $('#divWasHelpful').append($btnHelpfulNo);
+    }
+    function attemptAddFeedback(e) {
+      if ($('#honeyPot').val() !== '') {
+        e.preventDefault();
+        window.location.reload();
+      }
+    }
+
+    function cancelFeedback() {
+      $('#ctl00_ctl00_cpContent_cpContent_txtComments').val('');
+      $('#divHelpfulComments, #divHelpfulYesNo').toggle();
+    }
+
+    function confirmDeleteFeedback(id) {
+      if (confirm('Are you sure you want to delete this feedback? This cannot be undone.')) {
+        $('#ctl00_ctl00_cpContent_cpContent_hdnFeedbackID').val(id);
+        __doPostBack('ctl00$ctl00$cpContent$cpContent$btnDeleteFeedback', '');
+      }
+    }
+
+    function toggleAddressed(id, isAddressed) {
+      $('#ctl00_ctl00_cpContent_cpContent_hdnFeedbackID').val(id);
+      $('#ctl00_ctl00_cpContent_cpContent_hdnIsAddressed').val(isAddressed);
+      __doPostBack('ctl00$ctl00$cpContent$cpContent$btnToggleAddressed', '');
+    }
+
+    $(function () {
+      
+
+      generateFeedbackButtons();
+      $('[data-toggle="popover"]').popover();
+
+      var attachmentHandler = new TeamDynamix.AttachmentHandler({
+        containerSelector: '.js-article-attachments',
+        resultLabelSelector: '#ctl00_ctl00_cpContent_cpContent_lblResults_lblResults-label',
+        baseControllerUrl: '/TDClient/40/Portal/Shared/Attachments',
+        antiForgeryToken: 'u9LIrsQc99sX6wmLReuWt_3axNX88DnvjWg-PANuOU6PNP5Ct22ufL8M0gbuaQWnHlBneRuyzHOt50DuM7glFcmOqts1:lvXucUlM5LtN29ZOUgMgDyQMmg66CPr145PYsfOSezD_sq130KCEuCXoYPd7RD_dlicCPvUNuR5P5HE9xaGLuazNKIM1',
+        itemId: 2826,
+        componentId: 26,
+        feedId: 'articleFeed',
+        readOnly: false
+      });
+
+      $('#btnShare').on('click', function () {
+        shareArticle();
+      });
+
+      // Don't try and update the table styles if the user wanted to opt out.
+      $('#ctl00_ctl00_cpContent_cpContent_divBody table:not(.SkipTableFixup)').each(function () {
+        var padding = $(this).attr('cellpadding');
+        var spacing = $(this).attr('cellspacing');
+
+        $(this).css("border-collapse", "separate");
+
+        if (spacing) {
+          $(this).css("border-spacing", spacing + "px");
+        }
+
+        $(this).find('td').each(function () { $(this).css('padding', padding + 'px') });
+      });
+
+      
+    });
+
+    
+  </script>
+
+
+
+<meta property="og:title" content="Center for Excellence in Teaching and Learning - AI Information" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://support.uidaho.edu/TDClient/40/Portal/KB/ArticleDet?ID=2826" />
+<meta property="og:image" content="https://support.uidaho.edu/TDPortal/BE/Logo/2/40" />
+<meta property="og:description" content="Center for Excellence in Teaching and Learning AI Page" />
+  <meta property="og:site_name" content="University of Idaho - Knowledge Base" />
+  <meta property="article:section" content="Artificial Intelligence (AI)" />
+  <meta property="article:published_time" content="2023-11-30T18:23Z" />
+  <meta property="article:modified_time" content="2025-04-29T15:46Z" />
+    <meta property="article:tag" content="AI" />
+    <meta property="article:tag" content="artificial-intelligence" />
+    <meta property="article:tag" content="CETL" /><title>
+	Article - Center for Excellence in Te...
+</title></head>
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WR9V5K73"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+<form method="post" action="/TDClient/40/Portal/KB/ArticleDet?ID=2826" onsubmit="javascript:return WebForm_OnSubmit();" id="aspnetForm">
+<div class="aspNetHidden">
+<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
+<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="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" />
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['aspnetForm'];
+if (!theForm) {
+    theForm = document.aspnetForm;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script>
+
+
+<script src="/TDClient/WebResource.axd?d=pynGkmcFUV13He1Qd6_TZMSMQxVWLi4fik2rw1_u_hZsCNzwv5c621ov6_ZX_wzTt5vh-g2&amp;t=638901392248157332" type="text/javascript"></script>
+
+
+<script src="/TDClient/ScriptResource.axd?d=nv7asgRUU0tRmHNR2D6t1NXOAgTb3J37FC1L2PfbYYFmSPm-ANa7n6FP0x7BAsbHeL4jfY3ptd1q7zKKVI7DbuXZcwEoKOwj9WxCI1VrQlbWE1Trg1t1GmJDN43kQMJsB7X8tw2&amp;t=ffffffff93d1c106" type="text/javascript"></script>
+<script src="/TDClient/ScriptResource.axd?d=NJmAwtEo3Ipnlaxl6CMhvmVxW3-Ljsg_2Hna32smxrg-6ogyYAN3UTPsJQ8m1uwzn_kuf2Wpne6NSFmYui3h0wCQhJN3ZUiLTNkvhiIgZpq74-lKmofUPQGJ8own8RI2_mwAcmvlSj2WBnqwm5Wj4cyNvv81&amp;t=5c0e0825" type="text/javascript"></script>
+<script src="/TDClient/ScriptResource.axd?d=dwY9oWetJoJoVpgL6Zq8OLdGoo5BVWQ_Eo60QZTEhEcHeiVfwgY9tLCgzdZ5TRwvrwYEnOvujbNccOVLUfWtUg4HivSIsewg6JABxkBGEqVVV64eiRyCAsPDqh6tUioISUQKB74sWMO4Er2mHrWEIWs_sBM1&amp;t=5c0e0825" type="text/javascript"></script>
+<script src="/TDClient/WebResource.axd?d=xtfVMqdF1exC2MBVkOJwMveStDR5kg3dbZWgIXMXZmB1xXom6CcIrWFgHa7jsp4qJuFW2L5XShudyzlBsIO3JhCfiU5HmL2BDz__mCv9dznmBlEMS7LvcYg6wTdPTrAXIXI2CvtjwlnpZd-j4Zpsx2wG_uA1&amp;t=639065204200000000" type="text/javascript"></script>
+<script src="/TDClient/WebResource.axd?d=sp7vCoAo-SSYfpsQ1sYBBeEDnwCGxDYEwZCM0ler88yoVZIPDXMk1C3XF2L2L0xrbB8Rvhli51TswRlmPIOCZgaY58lKhPr-Pv1jTFJ1oUAu7x6RDtNFZUxbtxs3KYQGLK6FpPD5bKuB0e0NmS9HkAqRVks1&amp;t=639065204200000000" type="text/javascript"></script>
+<script src="/TDClient/WebResource.axd?d=icMURy63hv40LPPfq4rTvmm-RfB_YkC6rEEF_2QOO68q3TseXYNBetRKKgBXJ8mn2e8UIgCPiV23HaQUZbjySMHqSgmYZgLcYltBqwD2_EK8aQ08zBuqc3ZBVZITQrbtn6w46dRxFLibMIQg0Aho73rn8Rpxrzg5YMG_JR0UOrUR0wlZ0&amp;t=639065204200000000" type="text/javascript"></script>
+<script src="/TDClient/WebResource.axd?d=1HpFfNpwNihNfEP1lyJHvdPVqbv8KRoFH4-_ZORUgPOP-bqmmtIJRvFQc7828Vf59O_-fdBXcnwdv-hYp5RptPuHmMR0kGQM0_3rS4Z7sKfC7jy9Cc_8fyfcUWa8psszacEQlAXHPXmNwyRymbGSywEmhrE1&amp;t=639065204200000000" type="text/javascript"></script>
+<script type="text/javascript">
+//<![CDATA[
+function WebForm_OnSubmit() {
+CKEditor_TextBoxEncode('ctl00_ctl00_cpContent_cpContent_shareBody_txtBody', 0); if (typeof(ValidatorOnSubmit) == "function" && ValidatorOnSubmit() == false) return false;
+return true;
+}
+//]]>
+</script>
+
+<div class="aspNetHidden">
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="784CA02E" />
+</div>
+<script type="text/javascript">
+//<![CDATA[
+Sys.WebForms.PageRequestManager._initialize('ctl00$ctl00$smMain', 'aspnetForm', ['tctl00$ctl00$cpContent$cpContent$UpdatePanel1','','tctl00$ctl00$cpContent$cpContent$upFeedbackGrid','','tctl00$ctl00$cpContent$cpContent$lblResults$ctl00',''], ['ctl00$ctl00$cpContent$cpContent$btnSubmitComments','','ctl00$ctl00$cpContent$cpContent$btnToggleSubscribe','','ctl00$ctl00$cpContent$cpContent$btnToggleFavorite','','ctl00$ctl00$cpContent$cpContent$btnSendShare',''], [], 90, 'ctl00$ctl00');
+//]]>
+</script>
+
+<div id="ctl00_ctl00_upMain" style="display:none;">
+	
+    <div id="ctl00_ctl00_pbMain" class="progress-box-container"><div class="progress-box-body"><div class="well shadow"><h2 class="h4 gutter-top-none">Updating...</h2><div class="progress" style="margin-bottom: 0;"><div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuemin="0" aria-valuemax="100" style="width: 100%"></div></div></div></div></div>
+  
+</div>
+
+<header id="ctl00_ctl00_navHeader" role="banner">
+
+  <div id="divMstrHeader" class="master-header NoPrint" style="background-color: #fff;">
+
+  
+
+  <div class="logo-header-full hidden-xs">
+
+    
+    <div class="pull-left">
+      <a href="#mainContent" class="sr-only sr-only-focusable">Skip to main content</a>
+    </div>
+
+
+    <div id="ctl00_ctl00_divPageHeader" class="container logo-header clearfix" style="padding: 5px;">
+
+      <div id="divLogo" class="pull-left logo-container">
+
+        <a href="https://support.uidaho.edu/TDClient/Home/"
+           target="_blank">
+          <img src="/TDPortal/BE/Logo/2/0" alt="University of Idaho logo" class="js-logo img-responsive" />
+          <span class="sr-only">(opens in a new tab)</span>
+        </a>
+
+      </div>
+
+      <div class="master-header-right pull-right padding-top padding-bottom">
+
+        
+
+          <div class="pull-left topLevelSearch input-group">
+            <div id="SiteSearch-f82d9c1c0b5a4048a00aaee1656c1f82" class="gutter-bottom input-group site-search" style="max-width: 400px;">
+  <div id="SiteSearch-dropdown-f82d9c1c0b5a4048a00aaee1656c1f82" class="input-group-btn">
+    <button type="button" id="SiteSearch-filter-f82d9c1c0b5a4048a00aaee1656c1f82" class="btn btn-default dropdown-toggle" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false" title="Filter your search by category" data-component="all">
+      <span class="fa-solid fa-solid fa-earth-americas"></span><span class="fa-solid fa-fw fa-nopad fa-caret-down" aria-hidden="true"></span>
+      <span class="sr-only">
+        Filter your search by category. Current category:
+        <span class="js-current-component">All</span>
+      </span>
+    </button>
+    <ul tabindex="-1" aria-label="Filter your search by category" role="menu" class="dropdown-menu" >
+      <li>
+        <a role="menuitem" href="javascript:void(0);" data-component-text="All" data-component="all" data-component-icon="fa-solid fa-earth-americas" title="Search all areas">
+          <span class="fa-solid fa-fw fa-nopad fa-earth-americas" aria-hidden="true"></span>
+          All
+        </a>
+      </li>
+
+      <li aria-hidden="true" class="divider"></li>
+
+        <li role="presentation">
+          <a role="menuitem" href="javascript:void(0);" data-component-text="Knowledge Base" data-component="kb" data-component-icon="fa-lightbulb" title="Search Knowledge Base">
+            <span class="fa-regular fa-fw fa-nopad fa-lightbulb" aria-hidden="true"></span>
+            Knowledge Base
+          </a>
+        </li>
+
+        <li role="presentation">
+          <a role="menuitem" href="javascript:void(0);" data-component-text="Service Catalog" data-component="sc" data-component-icon="fa-compass" title="Search Service Catalog">
+            <span class="fa-solid fa-fw fa-nopad fa-compass" aria-hidden="true"></span>
+            Service Catalog
+          </a>
+        </li>
+
+    </ul>
+  </div>
+
+  <label class="sr-only" for="SiteSearch-text-f82d9c1c0b5a4048a00aaee1656c1f82">Search the client portal</label>
+
+  <input id="SiteSearch-text-f82d9c1c0b5a4048a00aaee1656c1f82" type="text" class="form-control" autocomplete="off" placeholder="Search the client portal" title="To search for items with a specific tag, enter the # symbol followed by the name of the tag.
+To search for items using exact match, place double quotes around your text." />
+
+  <span class="input-group-btn">
+    <button id="SiteSearch-button-f82d9c1c0b5a4048a00aaee1656c1f82" class="btn btn-default" type="button" title="Search">
+      <span class="fa-solid fa-fw fa-nopad fa-search blue" aria-hidden="true"></span>
+      <span class="sr-only">Search</span>
+    </button>
+  </span>
+</div>
+
+<script>
+  $(function() {
+    var siteSearch = new TeamDynamix.SiteSearch({
+      searchUrl: "/TDClient/40/Portal/Shared/Search",
+      autocompleteSearchUrl: '/TDClient/40/Portal/Shared/AutocompleteSearch',
+      autocompleteResultsPosition: 'fixed',
+      autocompleteResultsZIndex: 1000,
+      searchTextBoxSelector: '#SiteSearch-text-f82d9c1c0b5a4048a00aaee1656c1f82',
+      searchComponentFilterButtonSelector: '#SiteSearch-filter-f82d9c1c0b5a4048a00aaee1656c1f82',
+      searchButtonSelector: '#SiteSearch-button-f82d9c1c0b5a4048a00aaee1656c1f82',
+      searchFilterDropdownSelector: '#SiteSearch-dropdown-f82d9c1c0b5a4048a00aaee1656c1f82',
+      showKnowledgeBaseOption: true,
+      showServicesOption: true,
+      showForumsOption: false,
+      autoFocusSearch: false
+    });
+  });
+</script>
+          </div>
+
+        
+          <div title="Sign In" class="pull-right gutter-top-sm">
+            <a href="/TDClient/40/Portal/Login.aspx?ReturnUrl=%2fTDClient%2f40%2fPortal%2fKB%2fArticleDet%3fID%3d2826">
+              Sign In
+            </a>
+          </div>
+        
+      </div>
+
+    </div>
+
+  </div>
+
+  <nav id="ctl00_ctl00_mainNav" class="navbar navbar-default themed tdbar" aria-label="Primary">
+    <div id="navContainer" class="container">
+
+      <div class="navbar-header">
+        <button type="button" class="pull-left navbar-toggle collapsed themed tdbar-button-anchored tdbar-toggle gutter-left" data-toggle="collapse" data-target=".navbar-collapse">
+          <span class="tdbar-button-anchored icon-bar"></span>
+          <span class="tdbar-button-anchored icon-bar"></span>
+          <span class="tdbar-button-anchored icon-bar"></span>
+          <span class="sr-only">Show Applications Menu</span>
+        </button>
+        <a class="navbar-brand hidden-sm hidden-md hidden-lg themed tdbar-button-anchored truncate-be" href="#">
+
+          Client Portal
+        </a>
+      </div>
+
+      <div id="td-navbar-collapse" class="collapse navbar-collapse">
+
+        <ul class="nav navbar-nav nav-collapsing" id="collapseMe">
+
+          
+            <li class="themed tdbar-button-anchored hidden-sm hidden-md hidden-lg">
+              <a href="/TDClient/40/Portal/Login.aspx?ReturnUrl=%2fTDClient%2f40%2fPortal%2fKB%2fArticleDet%3fID%3d2826">Sign In</a>
+            </li>
+          
+            <li id="divSearch" class="themed tdbar-button-anchored hidden-sm hidden-md hidden-lg">
+              <a href="/TDClient/40/Portal/Shared/Search" title="search">Search</a>
+            </li>
+          
+              <li id="divDesktopc7f04803-bde9-4f97-b993-d26d238d7291" class="themed tdbar-button-anchored">
+                <a href="/TDClient/40/Portal/Home/">Home</a>
+              </li>
+            
+              <li id="divDesktop695d1b14-31e7-471f-b7b6-dfa3e8e8f254" class="themed tdbar-button-anchored">
+                <a href="/TDClient/40/Portal/Home/?ID=695d1b14-31e7-471f-b7b6-dfa3e8e8f254">IT Support</a>
+              </li>
+            
+
+          
+            <li id="divTDRequests" class="themed tdbar-button-anchored sr-focusable">
+              <a href="/TDClient/40/Portal/Requests/ServiceCatalog">Services</a>
+            </li>
+          
+            <li id="divTDKnowledgeBase" class="themed tdbar-button-anchored sr-focusable">
+              <a href="/TDClient/40/Portal/KB/">Knowledge Base</a>
+            </li>
+          
+
+          <li class="themed tdbar-button-anchored hidden-xs more-items-button" id="moreMenu">
+            <a data-toggle="dropdown" title="More Applications" href="javascript:;">
+              <span class="sr-only">More Applications</span>
+              <span class="fa-solid fa-ellipsis-h" aria-hidden="true"></span>
+            </a>
+            <ul class="dropdown-menu dropdown-menu-right themed tdbar" id="collapsed"></ul>
+          </li>
+
+        </ul>
+      </div>
+
+    </div>
+
+  </nav>
+
+  </div>
+
+  </header>
+
+
+
+<div id="navShim" class="hidden-xs hidden-sm"></div>
+<main role="main">
+  <div id="content">
+    <div id="mainContent" tabindex="-1"></div>
+    
+
+  <nav id="ctl00_ctl00_cpContent_divTabHeader" class="tdbar-sub NoPrint hidden-xs navbar-subnav" aria-label="Knowledge Base">
+      <a href="#kbContent" class="sr-only sr-only-focusable">Skip to Knowledge Base content</a>
+      <div class="container clearfix">
+        <ul class="nav navbar-nav js-submenu" id="kbSubMenu" style="margin-left: -15px;">
+          
+          <li>
+            <a href="/TDClient/40/Portal/KB/Search">Search <span class="sr-only">Articles</span></a>
+          </li>
+
+          
+          
+        </ul>
+      </div>
+    </nav>
+  
+
+  <div id="kbContent" class="container gutter-top gutter-bottom" tabindex="-1" style="outline:none;">
+    
+
+<input type="hidden" name="ctl00$ctl00$cpContent$cpContent$hdnFeedbackID" id="ctl00_ctl00_cpContent_cpContent_hdnFeedbackID" />
+<input type="hidden" name="ctl00$ctl00$cpContent$cpContent$hdnIsAddressed" id="ctl00_ctl00_cpContent_cpContent_hdnIsAddressed" />
+
+<span id="ctl00_ctl00_cpContent_cpContent_lblResults_ctl00" aria-live="polite" aria-atomic="true"><span id="ctl00_ctl00_cpContent_cpContent_lblResults_lblResults-label" class="red tdx-error-text"></span></span>
+
+<a id="ctl00_ctl00_cpContent_cpContent_btnSendShare" tabindex="-1" class="hidden" aria-hidden="true" href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$ctl00$cpContent$cpContent$btnSendShare&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))">Blank</a>
+
+<div class="clearfix">
+  <nav aria-label="Breadcrumb">
+    <ol class="breadcrumb pull-left">
+      <li><a href="/TDClient/40/Portal/KB/">Knowledge Base</a></li><li class="active"><a href="/TDClient/40/Portal/KB/?CategoryID=329">Artificial Intelligence (AI)</a></li><li class="active">Center for Excellence in Teaching and Learning - AI Information</li>
+    </ol>
+  </nav>
+  <span class="js-open-monitor" style="display: none;"></span>
+</div>
+
+
+
+<div class="row gutter-top">
+
+<div id="divMainContent" class="col-md-8">
+
+<h1 class="gutter-top" style="-ms-word-wrap: break-word; word-wrap: break-word;">
+  Center for Excellence in Teaching and Learning - AI Information
+</h1>
+
+<div id="ctl00_ctl00_cpContent_cpContent_divTags">
+  <span class="sr-only">Tags</span>
+  <span class="fa-solid fa-tags gray gutter-right-sm" aria-hidden="true" title="Tags"></span>
+  
+      <a href="/TDClient/40/Portal/KB/Search?SearchText=%2523AI" id="ctl00_ctl00_cpContent_cpContent_rptTags_ctl00_TagControl1_lnkDisplay" title="AI">AI</a>
+
+    
+      <span class="fa-solid fa-circle gray gutter-right-sm font-xs vert-middle" aria-hidden="true"></span>
+    
+      <a href="/TDClient/40/Portal/KB/Search?SearchText=%2523artificial-intelligence" id="ctl00_ctl00_cpContent_cpContent_rptTags_ctl02_TagControl1_lnkDisplay" title="artificial-intelligence">artificial-intelligence</a>
+
+    
+      <span class="fa-solid fa-circle gray gutter-right-sm font-xs vert-middle" aria-hidden="true"></span>
+    
+      <a href="/TDClient/40/Portal/KB/Search?SearchText=%2523CETL" id="ctl00_ctl00_cpContent_cpContent_rptTags_ctl04_TagControl1_lnkDisplay" title="CETL">CETL</a>
+
+    
+</div>
+
+
+
+<div id="ctl00_ctl00_cpContent_cpContent_divBody" class="gutter-top break-word ckeShim clearfix"><p><a href="https://vandalsuidaho.sharepoint.com/sites/InsideUI-CETL/SitePages/AI-at-the-University-of-Idaho.aspx?xsdata=MDV8MDJ8fGFkYTI1YTAzN2FkMzQxMWFhM2JlMDhkZDg3MzQxYzJifDdlYmM2YjYzNTc5MjRhMTliMjBiMDRiODI2MDQ4ODUzfDB8MHw2Mzg4MTUzODAwMzcxNDk2MzB8VW5rbm93bnxWR1ZoYlhOVFpXTjFjbWwwZVZObGNuWnBZMlY4ZXlKV0lqb2lNQzR3TGpBd01EQWlMQ0pRSWpvaVYybHVNeklpTENKQlRpSTZJazkwYUdWeUlpd2lWMVFpT2pFeGZRPT18MXxMMk5vWVhSekx6RTVPbTFsWlhScGJtZGZXbTFGZDFscVkzcE5WMFYwV21wRmVscERNREJPZWxac1RGZEthVTU2YTNSTlIwMTRUMVJCTVU1cVl6VlBWRVYzUUhSb2NtVmhaQzUyTWk5dFpYTnpZV2RsY3k4eE56UTFPVFF4TWpBeU1EQTV8ODBhMTBjNDhjYjExNDk2NWEzYmUwOGRkODczNDFjMmJ8ZTZmMGY0ZTI4ZjUzNDM3OWEyYjU4Zjk3MmZjNWEwYjk%3D&amp;sdata=QWdUNEFEN1hCUmpUK3V3d1dYaFlXSTA1cU5lcEhiTGV2OWZZQ2NxNVMvST0%3D&amp;ovuser=7ebc6b63-5792-4a19-b20b-04b826048853%2Ctamos%40uidaho.edu&amp;OR=Teams-HL&amp;CT=1745941212628&amp;clickparams=eyJBcHBOYW1lIjoiVGVhbXMtRGVza3RvcCIsIkFwcFZlcnNpb24iOiI1MC8yNTA0MDMxOTExMyIsIkhhc0ZlZGVyYXRlZFVzZXIiOmZhbHNlfQ%3D%3D">AI at the University of Idaho (uidaho.edu)</a></p></div>
+
+<div id="ctl00_ctl00_cpContent_cpContent_divFeedback2" class="well gutter-top-lg">
+
+  <div class="row" id="divHelpfulYesNo">
+    <div class="col-sm-7">
+      
+        <div>
+          <a href="/TDClient/40/Portal/Login.aspx?ReturnUrl=%2fTDClient%2f40%2fPortal%2fKB%2fArticleDet%3fID%3d2826">Sign in to leave feedback</a>
+        </div>
+      
+    </div>
+    <div class="col-sm-5 text-right">
+      <div id="ctl00_ctl00_cpContent_cpContent_UpdatePanel1" aria-live="polite" aria-atomic="true">
+	
+          0 reviews
+        
+</div>
+    </div>
+  </div>
+
+  </div>
+
+
+
+<div class="tab-content gutter-top gutter-bottom">
+  
+  <div id="ctl00_ctl00_cpContent_cpContent_upFeedbackGrid">
+	
+        <a id="ctl00_ctl00_cpContent_cpContent_btnToggleAddressed" tabindex="-1" class="hidden" aria-hidden="true" href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$ctl00$cpContent$cpContent$btnToggleAddressed&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))">Blank</a>
+        <a id="ctl00_ctl00_cpContent_cpContent_btnDeleteFeedback" tabindex="-1" class="hidden" aria-hidden="true" href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$ctl00$cpContent$cpContent$btnDeleteFeedback&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))">Blank</a>
+        
+      
+</div>
+    
+    
+
+    
+</div>
+</div>
+
+<div class="col-md-4">
+
+
+
+    <a id="ctl00_ctl00_cpContent_cpContent_btnToggleSubscribe" tabindex="-1" class="hidden" aria-hidden="true" href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$ctl00$cpContent$cpContent$btnToggleSubscribe&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))">Blank</a>
+
+<a id="ctl00_ctl00_cpContent_cpContent_btnToggleFavorite" tabindex="-1" class="hidden" aria-hidden="true" href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$ctl00$cpContent$cpContent$btnToggleFavorite&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))">Blank</a>
+
+<a class="DetailAction print-article" href="/TDClient/40/Portal/KB/PrintArticle?ID=2826" rel="nofollow" target="_blank">  <span class="fa-solid fa-print fa-fw" aria-hidden="true"></span>
+Print Article</a>
+
+
+
+
+
+<div id="divAttachments" class="js-article-attachments"></div>
+
+</div>
+
+</div>
+
+<div id="ctl00_ctl00_cpContent_cpContent_divProgress" style="display: none; z-index: 60;">
+  <div id="ctl00_ctl00_cpContent_cpContent_pbMain" class="progress-box-container"><div class="progress-box-body"><div class="well shadow"><h2 class="h4 gutter-top-none">Deleting...</h2><div class="progress" style="margin-bottom: 0;"><div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuemin="0" aria-valuemax="100" style="width: 100%"></div></div></div></div></div>
+</div>
+
+
+
+  </div>
+
+
+  </div>
+</main>
+
+
+
+<script type="text/javascript">
+//<![CDATA[
+setNavPosition('TDKnowledgeBase');window.CKEDITOR_BASEPATH = 'https://support.uidaho.edu/TDPortal/Content/ckeditor/';
+//]]>
+</script>
+<script src="https://support.uidaho.edu/TDPortal/Content/ckeditor/ckeditor.js?t=C6HH5UF" type="text/javascript"></script>
+<script type="text/javascript">
+//<![CDATA[
+var CKEditor_Controls=[],CKEditor_Init=[];function CKEditor_TextBoxEncode(d,e){var f;if(typeof CKEDITOR=='undefined'||typeof CKEDITOR.instances[d]=='undefined'){f=document.getElementById(d);if(f)f.value=f.value.replace(/</g,'&lt;').replace(/>/g,'&gt;');}else{var g=CKEDITOR.instances[d];if(e&&(typeof Page_BlockSubmit=='undefined'||!Page_BlockSubmit)){g.destroy();f=document.getElementById(d);if(f)f.style.visibility='hidden';}else g.updateElement();}};(function(){if(typeof CKEDITOR!='undefined'){var d=document.getElementById('ctl00_ctl00_cpContent_cpContent_shareBody_txtBody');if(d)d.style.visibility='hidden';}var e=function(){var f=CKEditor_Controls,g=CKEditor_Init,h=window.pageLoad,i=function(){for(var j=f.length;j--;){var k=document.getElementById(f[j]);if(k&&k.value&&(k.value.indexOf('<')==-1||k.value.indexOf('>')==-1))k.value=k.value.replace(/&lt;/g,'<').replace(/&gt;/g,'>').replace(/&amp;/g,'&');}if(typeof CKEDITOR!='undefined')for(var j=0;j<g.length;j++)g[j].call(this);};window.pageLoad=function(j,k){if(k.get_isPartialLoad())setTimeout(i,0);if(h&&typeof h=='function')h.call(this,j,k);};if(typeof Page_ClientValidate=='function'&&typeof CKEDITOR!='undefined')Page_ClientValidate=CKEDITOR.tools.override(Page_ClientValidate,function(j){return function(){for(var k in CKEDITOR.instances){if(document.getElementById(k))CKEDITOR.instances[k].updateElement();}return j.apply(this,arguments);};});setTimeout(i,0);};if(typeof Sys!='undefined'&&typeof Sys.Application!='undefined')Sys.Application.add_load(e);if(window.addEventListener)window.addEventListener('load',e,false);else if(window.attachEvent)window.attachEvent('onload',e);})();CKEditor_Controls.push('ctl00_ctl00_cpContent_cpContent_shareBody_txtBody');
+CKEditor_Init.push(function(){if(typeof CKEDITOR.instances['ctl00_ctl00_cpContent_cpContent_shareBody_txtBody']!='undefined' || !document.getElementById('ctl00_ctl00_cpContent_cpContent_shareBody_txtBody')) return;CKEDITOR.replace('ctl00_ctl00_cpContent_cpContent_shareBody_txtBody',{"autoGrow_maxHeight" : 175, "autoGrow_minHeight" : 175, "contentsCss" : ['https://support.uidaho.edu/TDPortal/Content/ckeditor/contents.css', '/TDPortal/Content/FontAwesome/css/fontawesome.min.css', '/TDPortal/Content/FontAwesome/css/brands.min.css', '/TDPortal/Content/FontAwesome/css/regular.min.css', '/TDPortal/Content/FontAwesome/css/solid.min.css', '/TDPortal/Content/FontAwesome/css/v4-shims.min.css'], "height" : "175", "htmlEncodeOutput" : true, "image_previewText" : " ", "removePlugins" : "magicline,devtools,templates,elementspath,fontawesome,youtube,uploadimage,simpleimage,remoteimageblocker", "title" : "Message", "toolbar" : "TDSimple"}); });
+
+var Page_ValidationActive = false;
+if (typeof(ValidatorOnLoad) == "function") {
+    ValidatorOnLoad();
+}
+
+function ValidatorOnSubmit() {
+    if (Page_ValidationActive) {
+        return ValidatorCommonOnSubmit();
+    }
+    else {
+        return true;
+    }
+}
+        Sys.Application.add_init(function() {
+    $create(Sys.UI._UpdateProgress, {"associatedUpdatePanelId":null,"displayAfter":500,"dynamicLayout":true}, null, null, $get("ctl00_ctl00_upMain"));
+});
+//]]>
+</script>
+</form>
+
+
+
+
+
+  <footer role="contentinfo">
+
+    <div class="master-footer">
+      <script type="text/javascript" src="https://bot.ivy.ai/bot/script/category/vdwgWrNjaV6LQlDWgBG5kAJ407omKEDb"></script>
+      
+    </div>
+
+  </footer>
+
+
+
+<script>
+
+    
+    
+
+      // Inject the Google Analytics isogram. This must happen here because it
+      // cannot be injected through an external javascript library.
+      (function (i, s, o, g, r, a, m) {
+        i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+          (i[r].q = i[r].q || []).push(arguments)
+        }, i[r].l = 1 * new Date(); a = s.createElement(o),
+          m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+      })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+    
+
+      // Per Incident #6707155. Need to focus on img. pseudo-class :focus-within is not supported in IE
+      (function ($) {
+        var $anchor = $('#divLogo a');
+        var $beLogo = $('#divLogo a img');
+
+        $anchor.focus(function () {
+          $beLogo.addClass('accessibility-focus-on-logo');
+        }).blur(function () {
+          $beLogo.removeClass('accessibility-focus-on-logo');
+        });
+
+        
+        
+          const queryParams = new URLSearchParams(window.location.search);
+          let showChatbot = true;
+          if (queryParams.has('nobot')) {
+            const nobotFlag = queryParams.get('nobot');
+            if (nobotFlag === '1' || nobotFlag === 'true') {
+              showChatbot = false;
+            }
+          }
+
+          if(showChatbot) {
+            $.ajax({
+              url: "/TDClient/40/Portal/Chatbots/GetScript",
+              type: "GET",
+              dataType: 'text',
+              success: function (data) {
+                
+                var jQueryAjaxSettingsCache = jQuery.ajaxSettings.cache;
+                jQuery.ajaxSettings.cache = true;
+                $(document.body).append(data);
+                jQuery.ajaxSettings.cache = jQueryAjaxSettingsCache;
+              }
+            });
+          }
+        
+
+        window.addEventListener("message", (event) => {
+
+          // Only accept events that come from the same origin
+          if (event.origin != window.location.origin) {
+            return;
+          }
+
+          switch (event.data.type) {
+
+            case "authenticate-using-popup":
+              handleAuthenticateUsingPopup(event.data.payload);
+              break;
+
+            case "authenticated-successfully":
+              handleAuthenticatedSuccessfully(event.data.payload);
+              break;
+
+            default:
+              break;
+          }
+
+        });
+
+        function handleAuthenticateUsingPopup(payload) {
+          let loginUrl = '/TDClient/40/Portal/Login.aspx';
+
+          if (payload.successCallbackUrl) {
+            loginUrl += '?SuccessCallbackUrl=' + payload.successCallbackUrl;
+          }
+
+          window.open(loginUrl, "_blank", "popup=1");
+        }
+
+        function handleAuthenticatedSuccessfully() {
+          event.source.close();
+          window.location.href = window.location.href;
+        }
+    })(jQuery);
+
+</script>
+
+</body>
+</html>

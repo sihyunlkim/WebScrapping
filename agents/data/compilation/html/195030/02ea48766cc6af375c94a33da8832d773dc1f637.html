@@ -1,0 +1,851 @@
+
+
+<!doctype html>
+<html lang="en-US">
+
+<head>
+	<!-- Character encoding -->
+	<meta charset="UTF-8">
+
+	<!-- Site author -->
+	<meta name="author" content="Office of the Provost">
+
+	<!-- Mobile-friendly meta tags -->
+	<meta name="HandheldFriendly" content="True">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" type="image/png" href="https://www.rochester.edu/assets/images/brand/favicon/favicon-96x96.png?v=3"
+		sizes="96x96" />
+	<link rel="icon" type="image/svg+xml" href="https://www.rochester.edu/assets/images/brand/favicon/favicon.svg?v=3" />
+	<link rel="shortcut icon" href="https://www.rochester.edu/assets/images/brand/favicon/favicon.ico?v=3" />
+	<link rel="apple-touch-icon" sizes="180x180"
+		href="https://www.rochester.edu/assets/images/brand/favicon/apple-touch-icon.png?v=3" />
+	<link rel="manifest" href="https://www.rochester.edu/assets/images/brand/favicon/site.webmanifest?v=3" />
+
+	<!-- WordPress head hook for plugins and theme functionality -->
+	<script data-cfasync="false" data-no-defer="1" data-no-minify="1" data-no-optimize="1">var ewww_webp_supported=!1;function check_webp_feature(A,e){var w;e=void 0!==e?e:function(){},ewww_webp_supported?e(ewww_webp_supported):((w=new Image).onload=function(){ewww_webp_supported=0<w.width&&0<w.height,e&&e(ewww_webp_supported)},w.onerror=function(){e&&e(!1)},w.src="data:image/webp;base64,"+{alpha:"UklGRkoAAABXRUJQVlA4WAoAAAAQAAAAAAAAAAAAQUxQSAwAAAARBxAR/Q9ERP8DAABWUDggGAAAABQBAJ0BKgEAAQAAAP4AAA3AAP7mtQAAAA=="}[A])}check_webp_feature("alpha");</script><script data-cfasync="false" data-no-defer="1" data-no-minify="1" data-no-optimize="1">var Arrive=function(c,w){"use strict";if(c.MutationObserver&&"undefined"!=typeof HTMLElement){var r,a=0,u=(r=HTMLElement.prototype.matches||HTMLElement.prototype.webkitMatchesSelector||HTMLElement.prototype.mozMatchesSelector||HTMLElement.prototype.msMatchesSelector,{matchesSelector:function(e,t){return e instanceof HTMLElement&&r.call(e,t)},addMethod:function(e,t,r){var a=e[t];e[t]=function(){return r.length==arguments.length?r.apply(this,arguments):"function"==typeof a?a.apply(this,arguments):void 0}},callCallbacks:function(e,t){t&&t.options.onceOnly&&1==t.firedElems.length&&(e=[e[0]]);for(var r,a=0;r=e[a];a++)r&&r.callback&&r.callback.call(r.elem,r.elem);t&&t.options.onceOnly&&1==t.firedElems.length&&t.me.unbindEventWithSelectorAndCallback.call(t.target,t.selector,t.callback)},checkChildNodesRecursively:function(e,t,r,a){for(var i,n=0;i=e[n];n++)r(i,t,a)&&a.push({callback:t.callback,elem:i}),0<i.childNodes.length&&u.checkChildNodesRecursively(i.childNodes,t,r,a)},mergeArrays:function(e,t){var r,a={};for(r in e)e.hasOwnProperty(r)&&(a[r]=e[r]);for(r in t)t.hasOwnProperty(r)&&(a[r]=t[r]);return a},toElementsArray:function(e){return e=void 0!==e&&("number"!=typeof e.length||e===c)?[e]:e}}),e=(l.prototype.addEvent=function(e,t,r,a){a={target:e,selector:t,options:r,callback:a,firedElems:[]};return this._beforeAdding&&this._beforeAdding(a),this._eventsBucket.push(a),a},l.prototype.removeEvent=function(e){for(var t,r=this._eventsBucket.length-1;t=this._eventsBucket[r];r--)e(t)&&(this._beforeRemoving&&this._beforeRemoving(t),(t=this._eventsBucket.splice(r,1))&&t.length&&(t[0].callback=null))},l.prototype.beforeAdding=function(e){this._beforeAdding=e},l.prototype.beforeRemoving=function(e){this._beforeRemoving=e},l),t=function(i,n){var o=new e,l=this,s={fireOnAttributesModification:!1};return o.beforeAdding(function(t){var e=t.target;e!==c.document&&e!==c||(e=document.getElementsByTagName("html")[0]);var r=new MutationObserver(function(e){n.call(this,e,t)}),a=i(t.options);r.observe(e,a),t.observer=r,t.me=l}),o.beforeRemoving(function(e){e.observer.disconnect()}),this.bindEvent=function(e,t,r){t=u.mergeArrays(s,t);for(var a=u.toElementsArray(this),i=0;i<a.length;i++)o.addEvent(a[i],e,t,r)},this.unbindEvent=function(){var r=u.toElementsArray(this);o.removeEvent(function(e){for(var t=0;t<r.length;t++)if(this===w||e.target===r[t])return!0;return!1})},this.unbindEventWithSelectorOrCallback=function(r){var a=u.toElementsArray(this),i=r,e="function"==typeof r?function(e){for(var t=0;t<a.length;t++)if((this===w||e.target===a[t])&&e.callback===i)return!0;return!1}:function(e){for(var t=0;t<a.length;t++)if((this===w||e.target===a[t])&&e.selector===r)return!0;return!1};o.removeEvent(e)},this.unbindEventWithSelectorAndCallback=function(r,a){var i=u.toElementsArray(this);o.removeEvent(function(e){for(var t=0;t<i.length;t++)if((this===w||e.target===i[t])&&e.selector===r&&e.callback===a)return!0;return!1})},this},i=new function(){var s={fireOnAttributesModification:!1,onceOnly:!1,existing:!1};function n(e,t,r){return!(!u.matchesSelector(e,t.selector)||(e._id===w&&(e._id=a++),-1!=t.firedElems.indexOf(e._id)))&&(t.firedElems.push(e._id),!0)}var c=(i=new t(function(e){var t={attributes:!1,childList:!0,subtree:!0};return e.fireOnAttributesModification&&(t.attributes=!0),t},function(e,i){e.forEach(function(e){var t=e.addedNodes,r=e.target,a=[];null!==t&&0<t.length?u.checkChildNodesRecursively(t,i,n,a):"attributes"===e.type&&n(r,i)&&a.push({callback:i.callback,elem:r}),u.callCallbacks(a,i)})})).bindEvent;return i.bindEvent=function(e,t,r){t=void 0===r?(r=t,s):u.mergeArrays(s,t);var a=u.toElementsArray(this);if(t.existing){for(var i=[],n=0;n<a.length;n++)for(var o=a[n].querySelectorAll(e),l=0;l<o.length;l++)i.push({callback:r,elem:o[l]});if(t.onceOnly&&i.length)return r.call(i[0].elem,i[0].elem);setTimeout(u.callCallbacks,1,i)}c.call(this,e,t,r)},i},o=new function(){var a={};function i(e,t){return u.matchesSelector(e,t.selector)}var n=(o=new t(function(){return{childList:!0,subtree:!0}},function(e,r){e.forEach(function(e){var t=e.removedNodes,e=[];null!==t&&0<t.length&&u.checkChildNodesRecursively(t,r,i,e),u.callCallbacks(e,r)})})).bindEvent;return o.bindEvent=function(e,t,r){t=void 0===r?(r=t,a):u.mergeArrays(a,t),n.call(this,e,t,r)},o};d(HTMLElement.prototype),d(NodeList.prototype),d(HTMLCollection.prototype),d(HTMLDocument.prototype),d(Window.prototype);var n={};return s(i,n,"unbindAllArrive"),s(o,n,"unbindAllLeave"),n}function l(){this._eventsBucket=[],this._beforeAdding=null,this._beforeRemoving=null}function s(e,t,r){u.addMethod(t,r,e.unbindEvent),u.addMethod(t,r,e.unbindEventWithSelectorOrCallback),u.addMethod(t,r,e.unbindEventWithSelectorAndCallback)}function d(e){e.arrive=i.bindEvent,s(i,e,"unbindArrive"),e.leave=o.bindEvent,s(o,e,"unbindLeave")}}(window,void 0),ewww_webp_supported=!1;function check_webp_feature(e,t){var r;ewww_webp_supported?t(ewww_webp_supported):((r=new Image).onload=function(){ewww_webp_supported=0<r.width&&0<r.height,t(ewww_webp_supported)},r.onerror=function(){t(!1)},r.src="data:image/webp;base64,"+{alpha:"UklGRkoAAABXRUJQVlA4WAoAAAAQAAAAAAAAAAAAQUxQSAwAAAARBxAR/Q9ERP8DAABWUDggGAAAABQBAJ0BKgEAAQAAAP4AAA3AAP7mtQAAAA==",animation:"UklGRlIAAABXRUJQVlA4WAoAAAASAAAAAAAAAAAAQU5JTQYAAAD/////AABBTk1GJgAAAAAAAAAAAAAAAAAAAGQAAABWUDhMDQAAAC8AAAAQBxAREYiI/gcA"}[e])}function ewwwLoadImages(e){if(e){for(var t=document.querySelectorAll(".batch-image img, .image-wrapper a, .ngg-pro-masonry-item a, .ngg-galleria-offscreen-seo-wrapper a"),r=0,a=t.length;r<a;r++)ewwwAttr(t[r],"data-src",t[r].getAttribute("data-webp")),ewwwAttr(t[r],"data-thumbnail",t[r].getAttribute("data-webp-thumbnail"));for(var i=document.querySelectorAll("div.woocommerce-product-gallery__image"),r=0,a=i.length;r<a;r++)ewwwAttr(i[r],"data-thumb",i[r].getAttribute("data-webp-thumb"))}for(var n=document.querySelectorAll("video"),r=0,a=n.length;r<a;r++)ewwwAttr(n[r],"poster",e?n[r].getAttribute("data-poster-webp"):n[r].getAttribute("data-poster-image"));for(var o,l=document.querySelectorAll("img.ewww_webp_lazy_load"),r=0,a=l.length;r<a;r++)e&&(ewwwAttr(l[r],"data-lazy-srcset",l[r].getAttribute("data-lazy-srcset-webp")),ewwwAttr(l[r],"data-srcset",l[r].getAttribute("data-srcset-webp")),ewwwAttr(l[r],"data-lazy-src",l[r].getAttribute("data-lazy-src-webp")),ewwwAttr(l[r],"data-src",l[r].getAttribute("data-src-webp")),ewwwAttr(l[r],"data-orig-file",l[r].getAttribute("data-webp-orig-file")),ewwwAttr(l[r],"data-medium-file",l[r].getAttribute("data-webp-medium-file")),ewwwAttr(l[r],"data-large-file",l[r].getAttribute("data-webp-large-file")),null!=(o=l[r].getAttribute("srcset"))&&!1!==o&&o.includes("R0lGOD")&&ewwwAttr(l[r],"src",l[r].getAttribute("data-lazy-src-webp"))),l[r].className=l[r].className.replace(/\bewww_webp_lazy_load\b/,"");for(var s=document.querySelectorAll(".ewww_webp"),r=0,a=s.length;r<a;r++)e?(ewwwAttr(s[r],"srcset",s[r].getAttribute("data-srcset-webp")),ewwwAttr(s[r],"src",s[r].getAttribute("data-src-webp")),ewwwAttr(s[r],"data-orig-file",s[r].getAttribute("data-webp-orig-file")),ewwwAttr(s[r],"data-medium-file",s[r].getAttribute("data-webp-medium-file")),ewwwAttr(s[r],"data-large-file",s[r].getAttribute("data-webp-large-file")),ewwwAttr(s[r],"data-large_image",s[r].getAttribute("data-webp-large_image")),ewwwAttr(s[r],"data-src",s[r].getAttribute("data-webp-src"))):(ewwwAttr(s[r],"srcset",s[r].getAttribute("data-srcset-img")),ewwwAttr(s[r],"src",s[r].getAttribute("data-src-img"))),s[r].className=s[r].className.replace(/\bewww_webp\b/,"ewww_webp_loaded");window.jQuery&&jQuery.fn.isotope&&jQuery.fn.imagesLoaded&&(jQuery(".fusion-posts-container-infinite").imagesLoaded(function(){jQuery(".fusion-posts-container-infinite").hasClass("isotope")&&jQuery(".fusion-posts-container-infinite").isotope()}),jQuery(".fusion-portfolio:not(.fusion-recent-works) .fusion-portfolio-wrapper").imagesLoaded(function(){jQuery(".fusion-portfolio:not(.fusion-recent-works) .fusion-portfolio-wrapper").isotope()}))}function ewwwWebPInit(e){ewwwLoadImages(e),ewwwNggLoadGalleries(e),document.arrive(".ewww_webp",function(){ewwwLoadImages(e)}),document.arrive(".ewww_webp_lazy_load",function(){ewwwLoadImages(e)}),document.arrive("videos",function(){ewwwLoadImages(e)}),"loading"==document.readyState?document.addEventListener("DOMContentLoaded",ewwwJSONParserInit):("undefined"!=typeof galleries&&ewwwNggParseGalleries(e),ewwwWooParseVariations(e))}function ewwwAttr(e,t,r){null!=r&&!1!==r&&e.setAttribute(t,r)}function ewwwJSONParserInit(){"undefined"!=typeof galleries&&check_webp_feature("alpha",ewwwNggParseGalleries),check_webp_feature("alpha",ewwwWooParseVariations)}function ewwwWooParseVariations(e){if(e)for(var t=document.querySelectorAll("form.variations_form"),r=0,a=t.length;r<a;r++){var i=t[r].getAttribute("data-product_variations"),n=!1;try{for(var o in i=JSON.parse(i))void 0!==i[o]&&void 0!==i[o].image&&(void 0!==i[o].image.src_webp&&(i[o].image.src=i[o].image.src_webp,n=!0),void 0!==i[o].image.srcset_webp&&(i[o].image.srcset=i[o].image.srcset_webp,n=!0),void 0!==i[o].image.full_src_webp&&(i[o].image.full_src=i[o].image.full_src_webp,n=!0),void 0!==i[o].image.gallery_thumbnail_src_webp&&(i[o].image.gallery_thumbnail_src=i[o].image.gallery_thumbnail_src_webp,n=!0),void 0!==i[o].image.thumb_src_webp&&(i[o].image.thumb_src=i[o].image.thumb_src_webp,n=!0));n&&ewwwAttr(t[r],"data-product_variations",JSON.stringify(i))}catch(e){}}}function ewwwNggParseGalleries(e){if(e)for(var t in galleries){var r=galleries[t];galleries[t].images_list=ewwwNggParseImageList(r.images_list)}}function ewwwNggLoadGalleries(e){e&&document.addEventListener("ngg.galleria.themeadded",function(e,t){window.ngg_galleria._create_backup=window.ngg_galleria.create,window.ngg_galleria.create=function(e,t){var r=$(e).data("id");return galleries["gallery_"+r].images_list=ewwwNggParseImageList(galleries["gallery_"+r].images_list),window.ngg_galleria._create_backup(e,t)}})}function ewwwNggParseImageList(e){for(var t in e){var r=e[t];if(void 0!==r["image-webp"]&&(e[t].image=r["image-webp"],delete e[t]["image-webp"]),void 0!==r["thumb-webp"]&&(e[t].thumb=r["thumb-webp"],delete e[t]["thumb-webp"]),void 0!==r.full_image_webp&&(e[t].full_image=r.full_image_webp,delete e[t].full_image_webp),void 0!==r.srcsets)for(var a in r.srcsets)nggSrcset=r.srcsets[a],void 0!==r.srcsets[a+"-webp"]&&(e[t].srcsets[a]=r.srcsets[a+"-webp"],delete e[t].srcsets[a+"-webp"]);if(void 0!==r.full_srcsets)for(var i in r.full_srcsets)nggFSrcset=r.full_srcsets[i],void 0!==r.full_srcsets[i+"-webp"]&&(e[t].full_srcsets[i]=r.full_srcsets[i+"-webp"],delete e[t].full_srcsets[i+"-webp"])}return e}check_webp_feature("alpha",ewwwWebPInit);</script><meta name='robots' content='index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' />
+<link rel='preload' as='style' href='https://use.typekit.net/trg3udu.css?display=swap' onload="this.rel='stylesheet'"><noscript><link rel='stylesheet' href='https://use.typekit.net/trg3udu.css?display=swap'></noscript>
+	<!-- This site is optimized with the Yoast SEO plugin v26.9 - https://yoast.com/product/yoast-seo-wordpress/ -->
+	<title>Responsible Use of AI Tools and Institutional Data Security - Office of the Provost</title>
+<link data-rocket-prefetch href="https://tr.snapchat.com" rel="dns-prefetch">
+<link data-rocket-prefetch href="https://connect.facebook.net" rel="dns-prefetch">
+<link data-rocket-prefetch href="https://bat.bing.com" rel="dns-prefetch">
+<link data-rocket-prefetch href="https://sc-static.net" rel="dns-prefetch">
+<link data-rocket-prefetch href="https://www.googletagmanager.com" rel="dns-prefetch">
+<link data-rocket-prefetch href="" rel="dns-prefetch">
+<link data-rocket-prefetch href="https://use.typekit.net" rel="dns-prefetch">
+<link data-rocket-prefetch href="https://pro.fontawesome.com" rel="dns-prefetch">
+<link data-rocket-prefetch href="https://googleads.g.doubleclick.net" rel="dns-prefetch">
+	<link rel="canonical" href="https://www.rochester.edu/provost/responsible-use-of-ai-tools-and-institutional-data-security/" />
+	<meta property="og:locale" content="en_US" />
+	<meta property="og:type" content="article" />
+	<meta property="og:title" content="Responsible Use of AI Tools and Institutional Data Security - Office of the Provost" />
+	<meta property="og:description" content="Dear University Community, As we embrace artificial intelligence (AI) advancements, I am asking that everyone please take a minute to review our data secure policy, which is vital to keep our&hellip;" />
+	<meta property="og:url" content="https://www.rochester.edu/provost/responsible-use-of-ai-tools-and-institutional-data-security/" />
+	<meta property="og:site_name" content="Office of the Provost" />
+	<meta property="article:published_time" content="2025-03-03T15:26:18+00:00" />
+	<meta property="og:image" content="https://www.rochester.edu/provost/wp-content/uploads/2022/02/Link-Preview-Provost-1200x630.png" />
+	<meta property="og:image:width" content="1200" />
+	<meta property="og:image:height" content="630" />
+	<meta property="og:image:type" content="image/png" />
+	<meta name="author" content="Jim Ver Steeg" />
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:label1" content="Written by" />
+	<meta name="twitter:data1" content="Jim Ver Steeg" />
+	<meta name="twitter:label2" content="Est. reading time" />
+	<meta name="twitter:data2" content="2 minutes" />
+	<script type="application/ld+json" class="yoast-schema-graph">{"@context":"https://schema.org","@graph":[{"@type":"Article","@id":"https://www.rochester.edu/provost/responsible-use-of-ai-tools-and-institutional-data-security/#article","isPartOf":{"@id":"https://www.rochester.edu/provost/responsible-use-of-ai-tools-and-institutional-data-security/"},"author":{"name":"Jim Ver Steeg","@id":"https://www.rochester.edu/provost/#/schema/person/df4979cdb2bc116ffdd57e07a1646a6a"},"headline":"Responsible Use of AI Tools and Institutional Data Security","datePublished":"2025-03-03T15:26:18+00:00","mainEntityOfPage":{"@id":"https://www.rochester.edu/provost/responsible-use-of-ai-tools-and-institutional-data-security/"},"wordCount":292,"articleSection":["Announcements","Data Governance","Provost’s Messages"],"inLanguage":"en-US"},{"@type":"WebPage","@id":"https://www.rochester.edu/provost/responsible-use-of-ai-tools-and-institutional-data-security/","url":"https://www.rochester.edu/provost/responsible-use-of-ai-tools-and-institutional-data-security/","name":"Responsible Use of AI Tools and Institutional Data Security - Office of the Provost","isPartOf":{"@id":"https://www.rochester.edu/provost/#website"},"datePublished":"2025-03-03T15:26:18+00:00","author":{"@id":"https://www.rochester.edu/provost/#/schema/person/df4979cdb2bc116ffdd57e07a1646a6a"},"breadcrumb":{"@id":"https://www.rochester.edu/provost/responsible-use-of-ai-tools-and-institutional-data-security/#breadcrumb"},"inLanguage":"en-US","potentialAction":[{"@type":"ReadAction","target":["https://www.rochester.edu/provost/responsible-use-of-ai-tools-and-institutional-data-security/"]}]},{"@type":"BreadcrumbList","@id":"https://www.rochester.edu/provost/responsible-use-of-ai-tools-and-institutional-data-security/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.rochester.edu/provost/"},{"@type":"ListItem","position":2,"name":"Responsible Use of AI Tools and Institutional Data Security"}]},{"@type":"WebSite","@id":"https://www.rochester.edu/provost/#website","url":"https://www.rochester.edu/provost/","name":"Office of the Provost","description":"University of Rochester","potentialAction":[{"@type":"SearchAction","target":{"@type":"EntryPoint","urlTemplate":"https://www.rochester.edu/provost/?s={search_term_string}"},"query-input":{"@type":"PropertyValueSpecification","valueRequired":true,"valueName":"search_term_string"}}],"inLanguage":"en-US"},{"@type":"Person","@id":"https://www.rochester.edu/provost/#/schema/person/df4979cdb2bc116ffdd57e07a1646a6a","name":"Jim Ver Steeg","url":"https://www.rochester.edu/provost/author/jverstee/"}]}</script>
+	<!-- / Yoast SEO plugin. -->
+
+
+<link rel='dns-prefetch' href='//pro.fontawesome.com' />
+
+<link rel="alternate" type="application/rss+xml" title="Office of the Provost &raquo; Feed" href="https://www.rochester.edu/provost/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Office of the Provost &raquo; Comments Feed" href="https://www.rochester.edu/provost/comments/feed/" />
+<link rel="alternate" title="oEmbed (JSON)" type="application/json+oembed" href="https://www.rochester.edu/provost/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.rochester.edu%2Fprovost%2Fresponsible-use-of-ai-tools-and-institutional-data-security%2F" />
+<link rel="alternate" title="oEmbed (XML)" type="text/xml+oembed" href="https://www.rochester.edu/provost/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.rochester.edu%2Fprovost%2Fresponsible-use-of-ai-tools-and-institutional-data-security%2F&#038;format=xml" />
+<style id='wp-img-auto-sizes-contain-inline-css' type='text/css'>
+img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
+/*# sourceURL=wp-img-auto-sizes-contain-inline-css */
+</style>
+<style id='classic-theme-styles-inline-css' type='text/css'>
+/*! This file is auto-generated */
+.wp-block-button__link{color:#fff;background-color:#32373c;border-radius:9999px;box-shadow:none;text-decoration:none;padding:calc(.667em + 2px) calc(1.333em + 2px);font-size:1.125em}.wp-block-file__button{background:#32373c;color:#fff;text-decoration:none}
+/*# sourceURL=/wp-includes/css/classic-themes.min.css */
+</style>
+<style id='font-awesome-svg-styles-default-inline-css' type='text/css'>
+.svg-inline--fa {
+  display: inline-block;
+  height: 1em;
+  overflow: visible;
+  vertical-align: -.125em;
+}
+/*# sourceURL=font-awesome-svg-styles-default-inline-css */
+</style>
+<link rel='stylesheet' id='font-awesome-svg-styles-css' href='https://www.rochester.edu/provost/wp-content/uploads/font-awesome/v5.15.4/css/svg-with-js.css' type='text/css' media='all' />
+<style id='font-awesome-svg-styles-inline-css' type='text/css'>
+   .wp-block-font-awesome-icon svg::before,
+   .wp-rich-text-font-awesome-icon svg::before {content: unset;}
+/*# sourceURL=font-awesome-svg-styles-inline-css */
+</style>
+<style id='global-styles-inline-css' type='text/css'>
+:root{--wp--preset--aspect-ratio--square: 1;--wp--preset--aspect-ratio--4-3: 4/3;--wp--preset--aspect-ratio--3-4: 3/4;--wp--preset--aspect-ratio--3-2: 3/2;--wp--preset--aspect-ratio--2-3: 2/3;--wp--preset--aspect-ratio--16-9: 16/9;--wp--preset--aspect-ratio--9-16: 9/16;--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgb(6,147,227) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgb(252,185,0) 0%,rgb(255,105,0) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgb(255,105,0) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--font-size--small: 13px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 36px;--wp--preset--font-size--x-large: 42px;--wp--preset--spacing--20: 0.44rem;--wp--preset--spacing--30: 0.67rem;--wp--preset--spacing--40: 1rem;--wp--preset--spacing--50: 1.5rem;--wp--preset--spacing--60: 2.25rem;--wp--preset--spacing--70: 3.38rem;--wp--preset--spacing--80: 5.06rem;--wp--preset--shadow--natural: 6px 6px 9px rgba(0, 0, 0, 0.2);--wp--preset--shadow--deep: 12px 12px 50px rgba(0, 0, 0, 0.4);--wp--preset--shadow--sharp: 6px 6px 0px rgba(0, 0, 0, 0.2);--wp--preset--shadow--outlined: 6px 6px 0px -3px rgb(255, 255, 255), 6px 6px rgb(0, 0, 0);--wp--preset--shadow--crisp: 6px 6px 0px rgb(0, 0, 0);}:where(.is-layout-flex){gap: 0.5em;}:where(.is-layout-grid){gap: 0.5em;}body .is-layout-flex{display: flex;}.is-layout-flex{flex-wrap: wrap;align-items: center;}.is-layout-flex > :is(*, div){margin: 0;}body .is-layout-grid{display: grid;}.is-layout-grid > :is(*, div){margin: 0;}:where(.wp-block-columns.is-layout-flex){gap: 2em;}:where(.wp-block-columns.is-layout-grid){gap: 2em;}:where(.wp-block-post-template.is-layout-flex){gap: 1.25em;}:where(.wp-block-post-template.is-layout-grid){gap: 1.25em;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}
+/*# sourceURL=global-styles-inline-css */
+</style>
+
+<link rel='stylesheet' id='core-theme-base-css' href='https://www.rochester.edu/provost/wp-content/themes/ur-core/css/dist/theme.min.css?ver=02.06.2026%2017.10.06' type='text/css' media='all' />
+<link rel='stylesheet' id='font-awesome-official-css' href='https://pro.fontawesome.com/releases/v5.15.4/css/all.css' type='text/css' media='all' integrity="sha384-rqn26AG5Pj86AF4SO72RK5fyefcQ/x32DNQfChxWvbXIyXFePlEktwD18fEz+kQU" crossorigin="anonymous" />
+<link rel='stylesheet' id='font-awesome-official-v4shim-css' href='https://pro.fontawesome.com/releases/v5.15.4/css/v4-shims.css' type='text/css' media='all' integrity="sha384-sKQhO4q55X7e4nIIO+wnutVfpIITv8+QJG6hE15hThUjV3ssIxUGT4VAoAGYmOU5" crossorigin="anonymous" />
+<style id='font-awesome-official-v4shim-inline-css' type='text/css'>
+@font-face {
+font-family: "FontAwesome";
+font-display: block;
+src: url("https://pro.fontawesome.com/releases/v5.15.4/webfonts/fa-brands-400.eot"),
+		url("https://pro.fontawesome.com/releases/v5.15.4/webfonts/fa-brands-400.eot?#iefix") format("embedded-opentype"),
+		url("https://pro.fontawesome.com/releases/v5.15.4/webfonts/fa-brands-400.woff2") format("woff2"),
+		url("https://pro.fontawesome.com/releases/v5.15.4/webfonts/fa-brands-400.woff") format("woff"),
+		url("https://pro.fontawesome.com/releases/v5.15.4/webfonts/fa-brands-400.ttf") format("truetype"),
+		url("https://pro.fontawesome.com/releases/v5.15.4/webfonts/fa-brands-400.svg#fontawesome") format("svg");
+}
+
+@font-face {
+font-family: "FontAwesome";
+font-display: block;
+src: url("https://pro.fontawesome.com/releases/v5.15.4/webfonts/fa-solid-900.eot"),
+		url("https://pro.fontawesome.com/releases/v5.15.4/webfonts/fa-solid-900.eot?#iefix") format("embedded-opentype"),
+		url("https://pro.fontawesome.com/releases/v5.15.4/webfonts/fa-solid-900.woff2") format("woff2"),
+		url("https://pro.fontawesome.com/releases/v5.15.4/webfonts/fa-solid-900.woff") format("woff"),
+		url("https://pro.fontawesome.com/releases/v5.15.4/webfonts/fa-solid-900.ttf") format("truetype"),
+		url("https://pro.fontawesome.com/releases/v5.15.4/webfonts/fa-solid-900.svg#fontawesome") format("svg");
+}
+
+@font-face {
+font-family: "FontAwesome";
+font-display: block;
+src: url("https://pro.fontawesome.com/releases/v5.15.4/webfonts/fa-regular-400.eot"),
+		url("https://pro.fontawesome.com/releases/v5.15.4/webfonts/fa-regular-400.eot?#iefix") format("embedded-opentype"),
+		url("https://pro.fontawesome.com/releases/v5.15.4/webfonts/fa-regular-400.woff2") format("woff2"),
+		url("https://pro.fontawesome.com/releases/v5.15.4/webfonts/fa-regular-400.woff") format("woff"),
+		url("https://pro.fontawesome.com/releases/v5.15.4/webfonts/fa-regular-400.ttf") format("truetype"),
+		url("https://pro.fontawesome.com/releases/v5.15.4/webfonts/fa-regular-400.svg#fontawesome") format("svg");
+unicode-range: U+F004-F005,U+F007,U+F017,U+F022,U+F024,U+F02E,U+F03E,U+F044,U+F057-F059,U+F06E,U+F070,U+F075,U+F07B-F07C,U+F080,U+F086,U+F089,U+F094,U+F09D,U+F0A0,U+F0A4-F0A7,U+F0C5,U+F0C7-F0C8,U+F0E0,U+F0EB,U+F0F3,U+F0F8,U+F0FE,U+F111,U+F118-F11A,U+F11C,U+F133,U+F144,U+F146,U+F14A,U+F14D-F14E,U+F150-F152,U+F15B-F15C,U+F164-F165,U+F185-F186,U+F191-F192,U+F1AD,U+F1C1-F1C9,U+F1CD,U+F1D8,U+F1E3,U+F1EA,U+F1F6,U+F1F9,U+F20A,U+F247-F249,U+F24D,U+F254-F25B,U+F25D,U+F267,U+F271-F274,U+F279,U+F28B,U+F28D,U+F2B5-F2B6,U+F2B9,U+F2BB,U+F2BD,U+F2C1-F2C2,U+F2D0,U+F2D2,U+F2DC,U+F2ED,U+F328,U+F358-F35B,U+F3A5,U+F3D1,U+F410,U+F4AD;
+}
+/*# sourceURL=font-awesome-official-v4shim-inline-css */
+</style>
+<script type="text/javascript" src="https://www.rochester.edu/provost/wp-includes/js/jquery/jquery.min.js?ver=3.7.1" id="jquery-core-js"></script>
+<link rel="https://api.w.org/" href="https://www.rochester.edu/provost/wp-json/" /><link rel="alternate" title="JSON" type="application/json" href="https://www.rochester.edu/provost/wp-json/wp/v2/posts/53302" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://www.rochester.edu/provost/xmlrpc.php?rsd" />
+<meta name="generator" content="WordPress 6.9.1" />
+<link rel='shortlink' href='https://www.rochester.edu/provost/?p=53302' />
+<!-- Google Tag Manager -->
+	<script>
+		(function (w, d, s, l, i) {
+			w[l] = w[l] || [];
+			w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
+			var f = d.getElementsByTagName(s)[0],
+				j = d.createElement(s),
+				dl = l != "dataLayer" ? "&amp;l=" + l : "";
+			j.async = true;
+			j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+			f.parentNode.insertBefore(j, f);
+		})(window, document, "script", "dataLayer", "GTM-TT7PP8Z");
+	</script>
+	<!-- End Google Tag Manager --><noscript><style>.lazyload[data-src]{display:none !important;}</style></noscript><style>.lazyload{background-image:none !important;}.lazyload:before{background-image:none !important;}</style>		<style type="text/css" id="wp-custom-css">
+			.su-accordion {margin-top:2rem !important;}
+	.su-spoiler{margin-top:-35px !important;}
+	.su-spoiler-title {color:#283FAF !important;text-transform:capitalize!important;}
+
+	.su-spoiler-style-default>.su-spoiler-title {padding-left:20px !important;}
+	.su-spoiler-title{color:#283FAF !important;
+	}
+		.su-spoiler-icon{color:#283FAF !important;text-align:left !important}
+
+		</style>
+		<meta name="generator" content="WP Rocket 3.20.3" data-wpr-features="wpr_preconnect_external_domains wpr_image_dimensions wpr_preload_links wpr_desktop" /></head>
+
+<body data-js="body" class="wp-singular post-template-default single single-post postid-53302 single-format-standard wp-theme-ur-core">
+	<div  class="l-wrapper" data-js="site-wrap">
+
+		
+<!-- Site Masthead -->
+<header  id="masthead" class="masthead" data-js="masthead">
+	<!-- Accessibility Skip Link -->
+	<a href="#main" class="a11y-skip-link a11y-visual-hide">
+		Skip to content	</a>
+
+	<!-- Top Row (Utility Navigation) -->
+	<div  class="masthead__top-row">
+		
+<!-- Masthead Top Row Container -->
+<div class="grid-container ">
+	<div class="masthead-top-row">
+
+		<!-- University Logo -->
+		<a class="logo__wrap "
+			href="https://www.rochester.edu" rel="home" title="University of Rochester Homepage">
+
+							<img width="212" height="50" class="logo lazyload" alt="Primary University of Rochester Logo"
+				 src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAANQAAAAyAQAAAAAMuMgqAAAAAnRSTlMAAHaTzTgAAAAUSURBVDjLY2AYBaNgFIyCUUBPAAAFeAABKXG5/AAAAABJRU5ErkJggg==" data-src="https://www.rochester.edu/provost/wp-content/themes/ur-core/img/theme/branding-assets/new-logo.svg" decoding="async" data-eio-rwidth="212" data-eio-rheight="50" /><noscript><img width="212" height="50" class="logo" alt="Primary University of Rochester Logo"
+					src="https://www.rochester.edu/provost/wp-content/themes/ur-core/img/theme/branding-assets/new-logo.svg" data-eio="l" /></noscript>
+					</a>
+
+		<!-- Right Side Navigation and Search -->
+		<div class="masthead-right">
+
+			<!-- Top Navigation Menu -->
+			<nav class="top-nav" role="navigation" aria-label="Quick Links">
+				<ul class="top-nav__list">
+					<li class="top-nav__item">
+						<a href="https://rochester.edu/admissions" class="top-nav__link">Apply</a>
+					</li>
+					<li class="top-nav__item">
+						<a href="https://rochester.edu/visit" class="top-nav__link">Visit</a>
+					</li>
+					<li class="top-nav__item">
+						<a href="https://everbetter.rochester.edu" class="top-nav__link">Give</a>
+					</li>
+				</ul>
+			</nav>
+
+			<!-- Search Form -->
+			<div class="masthead-search">
+				
+<div class="header-search">
+	<form role="search" aria-label="Search site" method="get" class="header-search-form" data-js="search-form"
+		action="https://www.rochester.edu/provost">
+		<div class="search__input-wrap">
+			<label class="search__label" data-js="search-label" for="s-69949ed7952c4">
+				Search Office of the Provost			</label>
+
+			<input type="search" id="s-69949ed7952c4" data-js="search-query" class="search-form__query"
+				name="s" value="" placeholder="Search this site" />
+
+			<button type="submit" aria-label="Submit Search">
+				<span aria-hidden="true" class="fas fa-search"></span>
+				<span class="button-text">
+					Search				</span>
+			</button>
+		</div>
+	</form>
+</div>			</div>
+
+		</div>
+	</div>
+	</div>
+
+<script>
+	(function () {
+		function initBrandArchitecture() {
+			// Attach to all brand architecture buttons and wire them to their controlled menu
+			var buttons = document.querySelectorAll('.brand-architecture-button');
+			if (!buttons || buttons.length === 0) return;
+
+			buttons.forEach(function (btn) {
+				var menuId = btn.getAttribute('aria-controls');
+				if (!menuId) return;
+
+				var menu = document.getElementById(menuId);
+				var overlay = document.getElementById('brand-architecture-overlay');
+				var closeButton = menu ? menu.querySelector('[data-action="close"]') : null;
+
+				if (!menu || !overlay) return;
+
+				// Ensure initial ARIA state
+				btn.setAttribute('aria-expanded', btn.getAttribute('aria-expanded') || 'false');
+				menu.setAttribute('aria-hidden', menu.getAttribute('aria-hidden') || 'true');
+				menu.setAttribute('role', 'dialog');
+				menu.setAttribute('aria-modal', 'false');
+				menu.inert = true;
+
+				/**
+				 * Get all focusable elements within the menu
+				 */
+				var getFocusableElements = function () {
+					var focusableSelectors = 'a, button, input:not([disabled]), select:not([disabled]), textarea:not([disabled]), [tabindex]:not([tabindex="-1"])';
+					var elements = Array.from(menu.querySelectorAll(focusableSelectors));
+					// Filter out hidden elements
+					return elements.filter(function (el) {
+						return el.offsetParent !== null && el.getAttribute('aria-hidden') !== 'true';
+					});
+				};
+
+				/**
+				 * Handle focus trapping on Tab key
+				 */
+				var handleFocusTrap = function (e) {
+					// Only trap on Tab key and only when menu is open
+					if (e.key !== 'Tab' || !menu.classList.contains('is-open')) {
+						return;
+					}
+
+					var focusableElements = getFocusableElements();
+					if (focusableElements.length === 0) return;
+
+					var activeElement = document.activeElement;
+					var firstElement = focusableElements[0];
+					var lastElement = focusableElements[focusableElements.length - 1];
+
+					// If Shift+Tab and focus is on first element, move to last
+					if (e.shiftKey && activeElement === firstElement) {
+						e.preventDefault();
+						lastElement.focus();
+					}
+					// If Tab and focus is on last element, move to first
+					else if (!e.shiftKey && activeElement === lastElement) {
+						e.preventDefault();
+						firstElement.focus();
+					}
+				};
+
+				var openMenu = function () {
+					menu.classList.add('is-open');
+					overlay.classList.add('is-open');
+					btn.setAttribute('aria-expanded', 'true');
+					menu.setAttribute('aria-hidden', 'false');
+					menu.setAttribute('aria-modal', 'true');
+					menu.inert = false;
+					document.body.classList.add('is-locked');
+
+					var focusable = menu.querySelector('a, button, input, select, textarea, [tabindex]:not([tabindex="-1"])');
+					if (focusable) {
+						focusable.focus();
+					}
+
+					// Add focus trap listener with proper context
+					document.addEventListener('keydown', handleFocusTrap, true);
+				};
+
+				var closeMenu = function () {
+					menu.classList.remove('is-open');
+					overlay.classList.remove('is-open');
+					btn.setAttribute('aria-expanded', 'false');
+					menu.setAttribute('aria-hidden', 'true');
+					menu.setAttribute('aria-modal', 'false');
+					menu.inert = true;
+					document.body.classList.remove('is-locked');
+
+					// Remove focus trap listener
+					document.removeEventListener('keydown', handleFocusTrap, true);
+
+					btn.focus();
+				};
+
+				btn.addEventListener('click', function () {
+					var expanded = btn.getAttribute('aria-expanded') === 'true';
+					expanded ? closeMenu() : openMenu();
+				});
+
+				overlay.addEventListener('click', function () {
+					closeMenu();
+				});
+
+				if (closeButton) {
+					closeButton.addEventListener('click', function () {
+						closeMenu();
+					});
+				}
+
+				document.addEventListener('keydown', function (e) {
+					if (e.key === 'Escape' || e.key === 'Esc') {
+						if (menu.classList.contains('is-open')) {
+							closeMenu();
+						}
+					}
+				});
+			});
+		}
+
+		if (document.readyState === 'loading') {
+			document.addEventListener('DOMContentLoaded', initBrandArchitecture);
+		} else {
+			initBrandArchitecture();
+		}
+	})();
+</script>	</div>
+
+	<!-- Title Row -->
+	<div  class="masthead__title-row" data-js="title-row">
+		
+<!-- Masthead Title Container -->
+<div class="grid-container">
+	<div class="masthead-title">
+		<!-- Optional Business Line Branding -->
+				<!-- Site Title -->
+		<a class="title h1" href="https://www.rochester.edu/provost">
+			Office of the Provost		</a>
+	</div>
+
+	<div class="masthead__secondary">
+		<div class="masthead__secondary-desktop">
+			<nav id="nav__secondary" class="site-nav nav__secondary" data-js="nav-secondary"
+	aria-label="Secondary">
+	<ul class="site-nav__list nav-secondary__list">
+		<li class="contact nav-secondary__list-item nav-secondary__list-item--depth-0"><a href="https://www.rochester.edu/provost/contact/" class="nav-secondary__action nav-secondary__action--depth-0"><span>Contact</span></a></li>
+	</ul>
+</nav>		</div>
+
+		<!-- Mobile Navigation Toggle Button -->
+		<button id="toggle-site-nav" data-js="toggle-site-nav" class="masthead__trigger masthead__trigger--site-nav"
+			title="Toggle site navigation"
+			aria-label="Open site navigation"
+			data-label-shown="Close site navigation"
+			data-label-hidden="Open site navigation" aria-expanded="false"
+			aria-controls="site-navigation">
+			<span class="fa fa-bars"></span>
+			Menu
+		</button>
+	</div>
+</div>
+
+<script>
+	document.querySelectorAll('[data-js="toggle-site-nav"]').forEach(function (button) {
+		button.addEventListener('click', function () {
+			const expanded = button.getAttribute('aria-expanded') === 'true';
+			button.setAttribute('aria-expanded', !expanded);
+
+			if (!expanded) {
+				// Submenu is opening
+				button.setAttribute('aria-label', button.getAttribute('data-label-shown'));
+			} else {
+				// Submenu is closing
+				button.setAttribute('aria-label', button.getAttribute('data-label-hidden'));
+			}
+		});
+	});
+</script>
+			</div>
+
+	<!-- Main Navigation -->
+	<div  id="site-navigation" data-js="site-navigation" class="masthead__nav-row">
+		
+<!-- Site Navigation Wrapper -->
+<div class="grid-container">
+	<div class="site-nav__wrap" data-js="site-nav__wrap">
+		<nav id="nav__primary" class="site-nav nav__primary" data-js="nav-primary"
+	aria-label="Primary">
+
+		<ul class="site-nav__list nav-primary__list drop-down"><li class="nav-primary__list-item nav-primary__list-item--depth-0 nav-primary__list-item--has-children"><span class="nav-primary__actions"><a href="https://www.rochester.edu/provost/about/" id="menu-item-63372" class="nav-primary__action nav-primary__action--depth-0 nav-primary__action--has-children nav-primary__action--has-button"><span class="nav-primary__text">About</span></a><button inert class="nav-primary__trigger" data-js="trigger-child-menu" aria-controls="menu-item-child-63372" aria-expanded="false" title="Toggle submenu" aria-label="Open submenu for About" data-label-hidden="Open submenu for About" data-label-shown="Close submenu for About"><span class="fa fa-chevron-down" aria-hidden="true"></span></button></span>
+<div id="menu-item-child-63372" class="nav-primary__wrap-child nav-primary__wrap-child--depth-0" data-js="child-menu"><ul class="nav-primary__list-child nav-primary__list-child--depth-0" aria-label="Submenu for About">
+	<li class="nav-primary__list-item nav-primary__list-item--depth-1"><a href="https://www.rochester.edu/provost/about/offices-of-the-provost/" id="menu-item-63382" class="nav-primary__action nav-primary__action--depth-1"><span class="nav-primary__text">Our Offices</span></a></li>
+	<li class="nav-primary__list-item nav-primary__list-item--depth-1"><a href="https://www.rochester.edu/provost/about/our-people/provost/" id="menu-item-63392" class="nav-primary__action nav-primary__action--depth-1"><span class="nav-primary__text">Meet the Provost</span></a></li>
+	<li class="nav-primary__list-item nav-primary__list-item--depth-1"><a href="https://www.rochester.edu/provost/about/our-people/" id="menu-item-63402" class="nav-primary__action nav-primary__action--depth-1"><span class="nav-primary__text">Our People</span></a></li>
+	<li class="nav-primary__list-item nav-primary__list-item--depth-1"><a href="https://www.rochester.edu/provost/about/organizational-chart/" id="menu-item-63412" class="nav-primary__action nav-primary__action--depth-1"><span class="nav-primary__text">Organizational Chart</span></a></li>
+	<li class="nav-primary__list-item nav-primary__list-item--depth-1"><a href="https://www.rochester.edu/provost/about/university-councils-and-committees/" id="menu-item-63422" class="nav-primary__action nav-primary__action--depth-1"><span class="nav-primary__text">University Councils and Committees</span></a></li>
+	<li class="nav-primary__list-item nav-primary__list-item--depth-1"><a href="https://www.rochester.edu/provost/honors-awards/" id="menu-item-63432" class="nav-primary__action nav-primary__action--depth-1"><span class="nav-primary__text">Honors and Awards</span></a></li>
+	<li class="nav-primary__list-item nav-primary__list-item--depth-1"><a href="https://www.rochester.edu/provost/contact/" id="menu-item-63442" class="nav-primary__action nav-primary__action--depth-1"><span class="nav-primary__text">Contact Us</span></a></li>
+</ul>
+</div>
+</li>
+<li class="nav-primary__list-item nav-primary__list-item--depth-0 nav-primary__list-item--has-children"><span class="nav-primary__actions"><a href="https://www.rochester.edu/provost/faculty-support/" id="menu-item-63452" class="nav-primary__action nav-primary__action--depth-0 nav-primary__action--has-children nav-primary__action--has-button"><span class="nav-primary__text">Faculty</span></a><button inert class="nav-primary__trigger" data-js="trigger-child-menu" aria-controls="menu-item-child-63452" aria-expanded="false" title="Toggle submenu" aria-label="Open submenu for Faculty" data-label-hidden="Open submenu for Faculty" data-label-shown="Close submenu for Faculty"><span class="fa fa-chevron-down" aria-hidden="true"></span></button></span>
+<div id="menu-item-child-63452" class="nav-primary__wrap-child nav-primary__wrap-child--depth-0" data-js="child-menu"><ul class="nav-primary__list-child nav-primary__list-child--depth-0" aria-label="Submenu for Faculty">
+	<li class="nav-primary__list-item nav-primary__list-item--depth-1"><a href="https://www.rochester.edu/provost/faculty-support/" id="menu-item-63462" class="nav-primary__action nav-primary__action--depth-1"><span class="nav-primary__text">Faculty Support</span></a></li>
+	<li class="nav-primary__list-item nav-primary__list-item--depth-1"><a href="https://www.rochester.edu/provost/academic-resources/academic-policies-procedures/" id="menu-item-63472" class="nav-primary__action nav-primary__action--depth-1"><span class="nav-primary__text">Academic Policies and Procedures</span></a></li>
+	<li class="nav-primary__list-item nav-primary__list-item--depth-1"><a href="https://www.rochester.edu/provost/faculty-support/faculty-development/" id="menu-item-63482" class="nav-primary__action nav-primary__action--depth-1"><span class="nav-primary__text">Faculty Training and Development</span></a></li>
+	<li class="nav-primary__list-item nav-primary__list-item--depth-1"><a href="https://www.rochester.edu/provost/faculty-support/faculty-senior-associates-program/" id="menu-item-63492" class="nav-primary__action nav-primary__action--depth-1"><span class="nav-primary__text">Faculty Senior Associates Program</span></a></li>
+	<li class="nav-primary__list-item nav-primary__list-item--depth-1"><a href="https://www.rochester.edu/provost/honors-awards/teaching-awards/" id="menu-item-63502" class="nav-primary__action nav-primary__action--depth-1"><span class="nav-primary__text">Teaching Awards</span></a></li>
+	<li class="nav-primary__list-item nav-primary__list-item--depth-1"><a href="https://www.rochester.edu/provost/ur-faculty/" id="menu-item-63512" class="nav-primary__action nav-primary__action--depth-1"><span class="nav-primary__text">UR Faculty</span></a></li>
+	<li class="nav-primary__list-item nav-primary__list-item--depth-1"><a href="https://www.rochester.edu/provost/transdisciplinary-rfp/" id="menu-item-63522" class="nav-primary__action nav-primary__action--depth-1"><span class="nav-primary__text">Transdisciplinary Research</span></a></li>
+	<li class="nav-primary__list-item nav-primary__list-item--depth-1"><a href="https://www.rochester.edu/provost/faculty-support/faculty-development/funding-opportunities/" id="menu-item-63532" class="nav-primary__action nav-primary__action--depth-1"><span class="nav-primary__text">Fellowships and Funding Opportunities</span></a></li>
+</ul>
+</div>
+</li>
+<li class="nav-primary__list-item nav-primary__list-item--depth-0 nav-primary__list-item--has-children"><span class="nav-primary__actions"><a href="https://www.rochester.edu/provost/for-students/" id="menu-item-63542" class="nav-primary__action nav-primary__action--depth-0 nav-primary__action--has-children nav-primary__action--has-button"><span class="nav-primary__text">For Students</span></a><button inert class="nav-primary__trigger" data-js="trigger-child-menu" aria-controls="menu-item-child-63542" aria-expanded="false" title="Toggle submenu" aria-label="Open submenu for For Students" data-label-hidden="Open submenu for For Students" data-label-shown="Close submenu for For Students"><span class="fa fa-chevron-down" aria-hidden="true"></span></button></span>
+<div id="menu-item-child-63542" class="nav-primary__wrap-child nav-primary__wrap-child--depth-0" data-js="child-menu"><ul class="nav-primary__list-child nav-primary__list-child--depth-0" aria-label="Submenu for For Students">
+	<li class="nav-primary__list-item nav-primary__list-item--depth-1"><a href="https://www.rochester.edu/provost/for-students/" id="menu-item-63552" class="nav-primary__action nav-primary__action--depth-1"><span class="nav-primary__text">For Students</span></a></li>
+	<li class="nav-primary__list-item nav-primary__list-item--depth-1"><a href="https://www.rochester.edu/provost/for-students/ur-essentials/" id="menu-item-63562" class="nav-primary__action nav-primary__action--depth-1"><span class="nav-primary__text">UR Essentials</span></a></li>
+	<li class="nav-primary__list-item nav-primary__list-item--depth-1"><a href="https://www.rochester.edu/provost/for-students/future-faculty-workshops/" id="menu-item-63572" class="nav-primary__action nav-primary__action--depth-1"><span class="nav-primary__text">Future Faculty Workshops</span></a></li>
+	<li class="nav-primary__list-item nav-primary__list-item--depth-1"><a href="https://www.rochester.edu/provost/for-students/student-policies/" id="menu-item-63592" class="nav-primary__action nav-primary__action--depth-1"><span class="nav-primary__text">Student Policies</span></a></li>
+	<li class="nav-primary__list-item nav-primary__list-item--depth-1"><a href="https://www.rochester.edu/provost/honors-awards/student-awards/" id="menu-item-63582" class="nav-primary__action nav-primary__action--depth-1"><span class="nav-primary__text">Student Awards</span></a></li>
+</ul>
+</div>
+</li>
+<li class="nav-primary__list-item nav-primary__list-item--depth-0 nav-primary__list-item--has-children"><span class="nav-primary__actions"><a href="https://www.rochester.edu/provost/academic-resources/" id="menu-item-63602" class="nav-primary__action nav-primary__action--depth-0 nav-primary__action--has-children nav-primary__action--has-button"><span class="nav-primary__text">Academic Resources</span></a><button inert class="nav-primary__trigger" data-js="trigger-child-menu" aria-controls="menu-item-child-63602" aria-expanded="false" title="Toggle submenu" aria-label="Open submenu for Academic Resources" data-label-hidden="Open submenu for Academic Resources" data-label-shown="Close submenu for Academic Resources"><span class="fa fa-chevron-down" aria-hidden="true"></span></button></span>
+<div id="menu-item-child-63602" class="nav-primary__wrap-child nav-primary__wrap-child--depth-0" data-js="child-menu"><ul class="nav-primary__list-child nav-primary__list-child--depth-0" aria-label="Submenu for Academic Resources">
+	<li class="nav-primary__list-item nav-primary__list-item--depth-1"><a href="https://www.rochester.edu/provost/academic-resources/" id="menu-item-63612" class="nav-primary__action nav-primary__action--depth-1"><span class="nav-primary__text">Resources</span></a></li>
+	<li class="nav-primary__list-item nav-primary__list-item--depth-1"><a href="https://www.rochester.edu/provost/academic-resources/academic-calendar/" id="menu-item-63622" class="nav-primary__action nav-primary__action--depth-1"><span class="nav-primary__text">Academic Calendar</span></a></li>
+	<li class="nav-primary__list-item nav-primary__list-item--depth-1"><a href="https://www.rochester.edu/provost/gen-ai-education/" id="menu-item-63632" class="nav-primary__action nav-primary__action--depth-1"><span class="nav-primary__text">Generative AI Use in Education</span></a></li>
+	<li class="nav-primary__list-item nav-primary__list-item--depth-1"><a href="https://www.rochester.edu/provost/academic-administration-accreditation-and-assessment/" id="menu-item-63732" class="nav-primary__action nav-primary__action--depth-1"><span class="nav-primary__text">Academic Affairs</span></a></li>
+	<li class="nav-primary__list-item nav-primary__list-item--depth-1"><a href="https://www.rochester.edu/provost/meliora-press/" id="menu-item-63642" class="nav-primary__action nav-primary__action--depth-1"><span class="nav-primary__text">Meliora Press</span></a></li>
+</ul>
+</div>
+</li>
+<li class="nav-primary__list-item nav-primary__list-item--depth-0 nav-primary__list-item--has-children"><span class="nav-primary__actions"><a href="https://www.rochester.edu/provost/university-data/" id="menu-item-63652" class="nav-primary__action nav-primary__action--depth-0 nav-primary__action--has-children nav-primary__action--has-button"><span class="nav-primary__text">University Data</span></a><button inert class="nav-primary__trigger" data-js="trigger-child-menu" aria-controls="menu-item-child-63652" aria-expanded="false" title="Toggle submenu" aria-label="Open submenu for University Data" data-label-hidden="Open submenu for University Data" data-label-shown="Close submenu for University Data"><span class="fa fa-chevron-down" aria-hidden="true"></span></button></span>
+<div id="menu-item-child-63652" class="nav-primary__wrap-child nav-primary__wrap-child--depth-0" data-js="child-menu"><ul class="nav-primary__list-child nav-primary__list-child--depth-0" aria-label="Submenu for University Data">
+	<li class="nav-primary__list-item nav-primary__list-item--depth-1"><a href="https://www.rochester.edu/provost/university-data/data-insights-reporting/university-of-rochester-fact-book/" id="menu-item-63662" class="nav-primary__action nav-primary__action--depth-1"><span class="nav-primary__text">University of Rochester Fact Book</span></a></li>
+	<li class="nav-primary__list-item nav-primary__list-item--depth-1"><a href="https://www.rochester.edu/provost/university-data/data-insights-reporting/university-of-rochester-common-data-set/" id="menu-item-63672" class="nav-primary__action nav-primary__action--depth-1"><span class="nav-primary__text">Common Data Set</span></a></li>
+	<li class="nav-primary__list-item nav-primary__list-item--depth-1"><a href="https://www.rochester.edu/provost/university-data/data-governance-overview/data-presentation-and-visualization-resources/" id="menu-item-63682" class="nav-primary__action nav-primary__action--depth-1"><span class="nav-primary__text">Data Governance</span></a></li>
+	<li class="nav-primary__list-item nav-primary__list-item--depth-1"><a href="https://www.rochester.edu/provost/university-data/data-insights-reporting/institutional-reporting/" id="menu-item-63692" class="nav-primary__action nav-primary__action--depth-1"><span class="nav-primary__text">Institutional Reporting</span></a></li>
+	<li class="nav-primary__list-item nav-primary__list-item--depth-1"><a href="https://www.rochester.edu/provost/university-data/data-insights-reporting/contact/" id="menu-item-63702" class="nav-primary__action nav-primary__action--depth-1"><span class="nav-primary__text">Contact Data Insights and Reporting</span></a></li>
+	<li class="nav-primary__list-item nav-primary__list-item--depth-1"><a href="https://www.rochester.edu/provost/academic-administration-accreditation-and-assessment/verification-of-compliance/" id="menu-item-63722" class="nav-primary__action nav-primary__action--depth-1"><span class="nav-primary__text">Verification of Compliance</span></a></li>
+</ul>
+</div>
+</li>
+<li class="nav-primary__list-item nav-primary__list-item--depth-0"><a href="https://www.rochester.edu/provost/news-messages/" id="menu-item-63712" class="nav-primary__action nav-primary__action--depth-0"><span class="nav-primary__text">News &#038; Messages</span></a></li>
+</ul></nav>
+
+<script>
+	document.querySelectorAll('[data-js="trigger-child-menu"]').forEach(function (button) {
+		button.addEventListener('click', function () {
+			const expanded = button.getAttribute('aria-expanded') === 'true';
+			button.setAttribute('aria-expanded', !expanded);
+
+			if (!expanded) {
+				// Submenu is opening
+				button.setAttribute('aria-label', button.getAttribute('data-label-shown'));
+			} else {
+				// Submenu is closing
+				button.setAttribute('aria-label', button.getAttribute('data-label-hidden'));
+			}
+		});
+	});
+</script>		<div class="secondary-mobile">
+			<span class="secondary-mobile-text">Resources</span>
+			<nav id="nav__secondary" class="site-nav nav__secondary" data-js="nav-secondary"
+	aria-label="Secondary">
+	<ul class="site-nav__list nav-secondary__list">
+		<li class="contact nav-secondary__list-item nav-secondary__list-item--depth-0"><a href="https://www.rochester.edu/provost/contact/" class="nav-secondary__action nav-secondary__action--depth-0"><span>Contact</span></a></li>
+	</ul>
+</nav>			<!-- Search Modal Trigger -->
+			
+<div class="search__form">
+	<form role="search" aria-label="Search site" method="get" class="search-form" data-js="search-form"
+		action="https://www.rochester.edu/provost">
+		<div class="search__input-wrap">
+			<label class="search__label" data-js="search-label" for="s-69949ed7a92e2">
+				Search Office of the Provost			</label>
+
+			<input type="search" id="s-69949ed7a92e2" data-js="search-query"
+				class="form-control search-form__query" name="s" value=""
+				placeholder="Search Office of the Provost" autofocus />
+
+			<button class="search-form__submit" type="submit" aria-label="Submit Search">
+				<span class="button-text">
+					Search				</span>
+			</button>
+		</div>
+
+		<div class="dynamic_content">
+					</div>
+	</form>
+</div>		</div>
+	</div>
+</div>
+			</div>
+
+	<!-- Search Modal Wrapper -->
+	<div  class="search-modal-wrapper" data-js="search-modal-wrapper">
+		<!-- Accessible Search Modal Dialog -->
+		<dialog id="search-modal" data-js="search-modal" class="masthead__search" aria-label="Search site"
+			aria-modal="true">
+			
+<!-- Search Modal Wrapper -->
+<div data-js="search__modal-wrapper" class="search__modal-wrapper grid-container">
+	<div class="search__modal">
+		<!-- Search Modal Close Button -->
+		<button data-js="toggle-search" class="masthead__trigger masthead__trigger--search masthead__trigger--search-modal"
+			aria-label="Close site search">
+			<span class="fa fa-close" aria-hidden="true"></span>
+			Close
+		</button>
+
+		
+<div class="search__form">
+	<form role="search" aria-label="Search site" method="get" class="search-form" data-js="search-form"
+		action="https://www.rochester.edu/provost">
+		<div class="search__input-wrap">
+			<label class="search__label" data-js="search-label" for="s-69949ed7a98f5">
+				Search Office of the Provost			</label>
+
+			<input type="search" id="s-69949ed7a98f5" data-js="search-query"
+				class="form-control search-form__query" name="s" value=""
+				placeholder="Search Office of the Provost" autofocus />
+
+			<button class="search-form__submit" type="submit" aria-label="Submit Search">
+				<span class="button-text">
+					Search				</span>
+			</button>
+		</div>
+
+		<div class="dynamic_content">
+					</div>
+	</form>
+</div>	</div>
+</div>		</dialog>
+	</div>
+</header>
+<main  id="main">
+
+	
+	
+<!-- Single Post Header -->
+<header  class="content-header" data-js="sticky-scroll-target">
+	<div class="header-wrap grid-container__stagger-double">
+		<div class="header__inner">
+			<a href="https://www.rochester.edu/provost/category/announcements/" class="primary-category">Announcements</a>
+			<h1 class="page-title">Responsible Use of AI Tools and Institutional Data Security</h1>
+					</div>
+
+		
+<div class="single__post-meta t-content">
+				<div class="meta-box">
+			<div class="date">
+				March 3, 2025			</div>
+		
+		
+<ul class="sticky-header__list sticky-header__list-single list-bullet no-bullets list--inline"
+	data-js="social-share-networks">
+	<li class="sticky-header__list-item">
+		<p>
+			SHARE		</p>
+	</li>
+
+	<li class="sticky-header__list-item">
+		<a rel="noopener" target="_blank" class="sticky-header__list-link"
+			href="http://www.facebook.com/sharer.php?u=https://www.rochester.edu/provost/responsible-use-of-ai-tools-and-institutional-data-security/">
+			<span class="fa-brands fa-square-facebook"></span>
+			Facebook
+			<span class="a11y-visual-hide">
+				Share on Facebook			</span>
+		</a>
+	</li>
+	<li class="sticky-header__list-item">
+		<a rel="noopener" target="_blank" class="sticky-header__list-link"
+			href="https://twitter.com/share?url=https://www.rochester.edu/provost/responsible-use-of-ai-tools-and-institutional-data-security/" class="button policy-download_link">
+			<span class="fa-brands fa-square-x-twitter"></span>
+			X/Twitter
+			<span class="a11y-visual-hide">
+				Share on Twitter			</span>
+		</a>
+	</li>
+	<li class="sticky-header__list-item">
+		<a rel="noopener" target="_blank" class="sticky-header__list-link"
+			href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fwww.rochester.edu%2Fprovost%2Fresponsible-use-of-ai-tools-and-institutional-data-security%2F">
+			<span class="fa-brands fa-linkedin"></span>
+			LinkedIn
+			<span class="a11y-visual-hide">
+				Share on LinkedIn			</span>
+		</a>
+	</li>
+</ul>	</div>
+</div>	</div>
+</header>
+	
+<!-- Sticky Header Container -->
+<div  class="sticky-header" data-js="sticky-header">
+	<div class="grid-container">
+		<!-- Sticky Header Title -->
+		<p class="sticky-header__title">
+			<a href="#masthead" class="back-to-top">
+				Responsible Use of AI Tools and Institutional Data Security			</a>
+		</p>
+
+		
+<!-- Social Sharing Links -->
+<ul class="sticky-header__list sticky-header__list-single list-bullet no-bullets list--inline"
+	data-js="social-share-networks">
+	<!-- Share Label -->
+	<li class="sticky-header__list-item">
+		<p>
+			SHARE		</p>
+	</li>
+
+	<!-- Facebook Sharbrandsink -->
+	<li class="sticky-header__list-item">
+		<a target="_blank" rel="noopener" class="sticky-header__list-link"
+			href="http://www.facebook.com/sharer.php?u=https://www.rochester.edu/provost/responsible-use-of-ai-tools-and-institutional-data-security/">
+			<span class="fa-brands fa-square-facebook"></span>
+			Facebook
+			<span class="a11y-visual-hide">
+				Share on Facebook			</span>
+		</a>
+	</li>
+
+	<!-- X/Twitter Share Link -->
+	<li class="sticky-header__list-item">
+		<a target="_blank" rel="noopener" class="sticky-header__list-link"
+			href="https://twitter.com/share?url=https://www.rochester.edu/provost/responsible-use-of-ai-tools-and-institutional-data-security/">
+			<span class="fa-brands fa-square-x-twitter"></span>
+			X/Twitter
+			<span class="a11y-visual-hide">
+				Share on Twitter			</span>
+		</a>
+	</li>
+
+	<!-- LinkedIn Share Link -->
+	<li class="sticky-header__list-item">
+		<a target="_blank" rel="noopener" class="sticky-header__list-link"
+			href="https://www.linkedin.com/sharing/share-offsite/?url=http://https%3A%2F%2Fwww.rochester.edu%2Fprovost%2Fresponsible-use-of-ai-tools-and-institutional-data-security%2F">
+			<span class="fa-brands fa-linkedin"></span>
+			LinkedIn
+			<span class="a11y-visual-hide">
+				Share on LinkedIn			</span>
+		</a>
+	</li>
+</ul>	</div>
+
+	<!-- Scroll Progress Bar -->
+	<div id="progress" class="progress" data-js="progress-bar"></div>
+</div>
+	
+		<div  class="grid-container" data-js="progress-content">
+
+			
+
+
+
+	<div class="t-content grid-container__stagger-double post_content">
+		<p class="xmsonormal">Dear University Community,</p>
+<p class="xmsonormal">As we embrace artificial intelligence (AI) advancements, I am asking that everyone please take a minute to review our<span class="apple-converted-space"> </span><a title="https://www.rochester.edu/provost/data-security-classifications/" href="https://www.rochester.edu/provost/data-security-classifications/">data secure policy</a>, which is vital to keep our student, patient, and other University data protected. It is imperative to remember that non-public or sensitive University information should never be uploaded into external AI tools—whether free or paid—unless there is a university agreement with the vendor approved by one of the various AI governance groups. This policy is crucial for maintaining our data security and applies to all members of our community.</p>
+<p class="xmsonormal">I encourage you to take advantage of our secure version of a generative AI chatbot, designed to securely handle medium- and high-risk institutional data. Accessible at<span class="apple-converted-space"> </span><a title="http://chat.rochester.edu/" href="http://chat.rochester.edu/">chat.rochester.edu</a>, this advanced AI tool is exclusively for our faculty, staff, and students, providing a reliable and secure platform for managing a variety of inquiries and tasks. I am also excited to inform you that additional features will be introduced soon, further enhancing its capabilities. Please note that while the site is internet accessible, two-factor authentication (Duo) is required when off-network.</p>
+<p class="xmsonormal">To begin using our secure AI chatbot, please visit<span class="apple-converted-space"> </span><a title="http://chat.rochester.edu/" href="http://chat.rochester.edu/">chat.rochester.edu</a><span class="apple-converted-space"> </span>and log in with your UR or URMC credential.<span class="apple-converted-space"> </span><a title="mailto:https://tech.rochester.edu/services/microsoft-entra-id/" href="mailto:https://tech.rochester.edu/services/microsoft-entra-id/">Help with logging in is available here</a>.</p>
+<p class="xmsonormal">Should you require any assistance or have questions, the University IT or ISD Help Desk are available to support you at<span class="apple-converted-space"> </span><a title="mailto:univithelp@rochester.edu" href="mailto:univithelp@rochester.edu">univithelp@rochester.edu</a><span class="apple-converted-space"> </span>(585) 275-2000 or<span class="apple-converted-space"> </span><a title="mailto:ISDHelpdesk@URMC.rochester.edu" href="mailto:ISDHelpdesk@URMC.rochester.edu">ISDHelpdesk@URMC.rochester.edu</a><span class="apple-converted-space"> </span>(585) 275-3200.</p>
+<p class="xmsonormal">Thank you for your commitment to upholding the integrity and security of our institutional data. Together, we are advancing toward a more secure and Boundless future.</p>
+<p class="xmsonormal">Best regards,</p>
+<p class="xmsonormal">Nicole Sampson<br />
+Provost<span class="apple-converted-space"> </span>and Chief Academic Officer<br />
+University Professor of Chemistry</p>
+	</div>
+
+			</div>
+
+			
+		
+		</main>
+
+
+
+
+<footer class="site-footer">
+	<a class="skip-link-top" href="#masthead" data-js="skip-link-top">
+	<span class="screen-reader-text" aria-label="Return to the top of the page">
+		Return to the top of the page	</span>
+</a>
+	
+	<div class="site-footer__inner grid-container">
+
+		<!-- Contact Information Block -->
+		<div class="site-footer__block site-footer__block--contact">
+
+			<!-- University Logo -->
+			<a class="logo__wrap logo__wrap--footer" href="https://www.rochester.edu" rel="home"
+				title="University of Rochester Homepage">
+				<img width="850" height="200" class="logo lazyload" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAA1IAAADIAQAAAADKSO0SAAAAAnRSTlMAAHaTzTgAAAAsSURBVHja7cEBDQAAAMKg909tDjegAAAAAAAAAAAAAAAAAAAAAAAAAACAVwNUYAABi5gLYgAAAABJRU5ErkJggg=="
+					alt="University of Rochester" data-src="https://www.rochester.edu/assets/images/brand/logos/primary_horizontal_knockout.svg" decoding="async" data-eio-rwidth="850" data-eio-rheight="200" /><noscript><img width="850" height="200" class="logo" src="https://www.rochester.edu/assets/images/brand/logos/primary_horizontal_knockout.svg"
+					alt="University of Rochester" data-eio="l" /></noscript>
+			</a>
+
+			<!-- Location Information -->
+			<div class="contact-info">
+				<a href="https://www.rochester.edu/maps/" class="contact-info__link contact-info__link--map">
+					<i class="fa fa-map-marker-alt"></i>
+					<div class="information">
+						<span class="contact-info__link-label">
+							See maps and directions						</span>
+						<span class="contact-info__details">
+							Rochester, NY 14627						</span>
+					</div>
+				</a>
+			</div>
+		</div>
+
+		<!-- Navigation and Search Block -->
+		<div class="site-footer__block site-footer__block--nav">
+
+			<!-- University-wide Search -->
+			<div class="site-footer__search-wrap">
+				
+<div class="search__form">
+	<form method="get" class="search-form" data-js="search-form" action="https://www.rochester.edu/search/index.php">
+		<label class="search__label" for="s-69949ed7b7133">
+			Search rochester.edu		</label>
+
+		<div class="search__input-wrap">
+			<input type="text" id="s-69949ed7b7133" class="search__input" name="q" data-js="search-query"
+				placeholder="Search rochester.edu" />
+
+			<button aria-label="Submit Search" class="search-form__submit" type="submit">
+				<span aria-hidden="true" class="fa fa-search"></span>
+			</button>
+		</div>
+	</form>
+</div>			</div>
+
+			<!-- Footer Navigation -->
+			<div class="site-footer__nav-wrap">
+				<nav class="site-footer__nav" aria-label="Footer">
+					<ol>
+						<!-- Footer Navigation Links -->
+													<li class="site-footer__nav-item">
+								<a href="https://www.rochester.edu/accessibility.html">
+									Accessibility								</a>
+							</li>
+													<li class="site-footer__nav-item">
+								<a href="https://www.rochester.edu/oee/nondiscrimination/">
+									Nondiscrimination								</a>
+							</li>
+													<li class="site-footer__nav-item">
+								<a href="https://www.rochester.edu/communications/work/digital-strategy/feedback/">
+									Feedback								</a>
+							</li>
+													<li class="site-footer__nav-item">
+								<a href="https://www.rochester.edu/privacy/">
+									Privacy								</a>
+							</li>
+													<li class="site-footer__nav-item">
+								<a href="https://www.rochester.edu/copyright.html">
+									Copyright								</a>
+							</li>
+													<li class="site-footer__nav-item">
+								<a href="https://www.rochester.edu/emergency/">
+									Emergency Information								</a>
+							</li>
+											</ol>
+				</nav>
+			</div>
+		</div>
+	</div>
+
+	<!-- Copyright Notice -->
+	<div class="copyright">
+		&copy; University of Rochester 1996-2026	</div>
+</footer>
+</div><!-- .l-wrapper - Closes the main site wrapper div opened in header.php -->
+
+<script type="speculationrules">
+{"prefetch":[{"source":"document","where":{"and":[{"href_matches":"/provost/*"},{"not":{"href_matches":["/provost/wp-*.php","/provost/wp-admin/*","/provost/wp-content/uploads/*","/provost/wp-content/*","/provost/wp-content/plugins/*","/provost/wp-content/themes/ur-core/*","/provost/*\\?(.+)"]}},{"not":{"selector_matches":"a[rel~=\"nofollow\"]"}},{"not":{"selector_matches":".no-prefetch, .no-prefetch a"}}]},"eagerness":"conservative"}]}
+</script>
+<!-- Google Tag Manager (noscript) -->
+	
+	<!-- End Google Tag Manager (noscript) --><script type="text/javascript" id="eio-lazy-load-js-before">
+/* <![CDATA[ */
+var eio_lazy_vars = {"exactdn_domain":"","skip_autoscale":0,"bg_min_dpr":1.100000000000000088817841970012523233890533447265625,"threshold":0,"use_dpr":1};
+//# sourceURL=eio-lazy-load-js-before
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://www.rochester.edu/provost/wp-content/plugins/ewww-image-optimizer/includes/lazysizes.min.js?ver=831" id="eio-lazy-load-js" async="async" data-wp-strategy="async"></script>
+<script type="text/javascript" id="rocket-browser-checker-js-after">
+/* <![CDATA[ */
+"use strict";var _createClass=function(){function defineProperties(target,props){for(var i=0;i<props.length;i++){var descriptor=props[i];descriptor.enumerable=descriptor.enumerable||!1,descriptor.configurable=!0,"value"in descriptor&&(descriptor.writable=!0),Object.defineProperty(target,descriptor.key,descriptor)}}return function(Constructor,protoProps,staticProps){return protoProps&&defineProperties(Constructor.prototype,protoProps),staticProps&&defineProperties(Constructor,staticProps),Constructor}}();function _classCallCheck(instance,Constructor){if(!(instance instanceof Constructor))throw new TypeError("Cannot call a class as a function")}var RocketBrowserCompatibilityChecker=function(){function RocketBrowserCompatibilityChecker(options){_classCallCheck(this,RocketBrowserCompatibilityChecker),this.passiveSupported=!1,this._checkPassiveOption(this),this.options=!!this.passiveSupported&&options}return _createClass(RocketBrowserCompatibilityChecker,[{key:"_checkPassiveOption",value:function(self){try{var options={get passive(){return!(self.passiveSupported=!0)}};window.addEventListener("test",null,options),window.removeEventListener("test",null,options)}catch(err){self.passiveSupported=!1}}},{key:"initRequestIdleCallback",value:function(){!1 in window&&(window.requestIdleCallback=function(cb){var start=Date.now();return setTimeout(function(){cb({didTimeout:!1,timeRemaining:function(){return Math.max(0,50-(Date.now()-start))}})},1)}),!1 in window&&(window.cancelIdleCallback=function(id){return clearTimeout(id)})}},{key:"isDataSaverModeOn",value:function(){return"connection"in navigator&&!0===navigator.connection.saveData}},{key:"supportsLinkPrefetch",value:function(){var elem=document.createElement("link");return elem.relList&&elem.relList.supports&&elem.relList.supports("prefetch")&&window.IntersectionObserver&&"isIntersecting"in IntersectionObserverEntry.prototype}},{key:"isSlowConnection",value:function(){return"connection"in navigator&&"effectiveType"in navigator.connection&&("2g"===navigator.connection.effectiveType||"slow-2g"===navigator.connection.effectiveType)}}]),RocketBrowserCompatibilityChecker}();
+//# sourceURL=rocket-browser-checker-js-after
+/* ]]> */
+</script>
+<script type="text/javascript" id="rocket-preload-links-js-extra">
+/* <![CDATA[ */
+var RocketPreloadLinksConfig = {"excludeUris":"/provost(/university-data/about-institutional-research/university-of-rochester-fact-book/build-your-own-table/|/university-data/about-institutional-research/university-of-rochester-fact-book/international-students/|/university-data/about-institutional-research/university-of-rochester-fact-book/enrollment-trends/|/university-data/about-institutional-research/university-of-rochester-fact-book/quick-facts/|/academic-administration-accreditation-and-assessment/accreditation/accredited-degree-programs/|/(?:.+/)?feed(?:/(?:.+/?)?)?$|/(?:.+/)?embed/|/(index.php/)?(.*)wp-json(/.*|$))|/refer/|/go/|/recommend/|/recommends/","usesTrailingSlash":"1","imageExt":"jpg|jpeg|gif|png|tiff|bmp|webp|avif|pdf|doc|docx|xls|xlsx|php","fileExt":"jpg|jpeg|gif|png|tiff|bmp|webp|avif|pdf|doc|docx|xls|xlsx|php|html|htm","siteUrl":"https://www.rochester.edu/provost","onHoverDelay":"100","rateThrottle":"3"};
+//# sourceURL=rocket-preload-links-js-extra
+/* ]]> */
+</script>
+<script type="text/javascript" id="rocket-preload-links-js-after">
+/* <![CDATA[ */
+(function() {
+"use strict";var r="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(e){return typeof e}:function(e){return e&&"function"==typeof Symbol&&e.constructor===Symbol&&e!==Symbol.prototype?"symbol":typeof e},e=function(){function i(e,t){for(var n=0;n<t.length;n++){var i=t[n];i.enumerable=i.enumerable||!1,i.configurable=!0,"value"in i&&(i.writable=!0),Object.defineProperty(e,i.key,i)}}return function(e,t,n){return t&&i(e.prototype,t),n&&i(e,n),e}}();function i(e,t){if(!(e instanceof t))throw new TypeError("Cannot call a class as a function")}var t=function(){function n(e,t){i(this,n),this.browser=e,this.config=t,this.options=this.browser.options,this.prefetched=new Set,this.eventTime=null,this.threshold=1111,this.numOnHover=0}return e(n,[{key:"init",value:function(){!this.browser.supportsLinkPrefetch()||this.browser.isDataSaverModeOn()||this.browser.isSlowConnection()||(this.regex={excludeUris:RegExp(this.config.excludeUris,"i"),images:RegExp(".("+this.config.imageExt+")$","i"),fileExt:RegExp(".("+this.config.fileExt+")$","i")},this._initListeners(this))}},{key:"_initListeners",value:function(e){-1<this.config.onHoverDelay&&document.addEventListener("mouseover",e.listener.bind(e),e.listenerOptions),document.addEventListener("mousedown",e.listener.bind(e),e.listenerOptions),document.addEventListener("touchstart",e.listener.bind(e),e.listenerOptions)}},{key:"listener",value:function(e){var t=e.target.closest("a"),n=this._prepareUrl(t);if(null!==n)switch(e.type){case"mousedown":case"touchstart":this._addPrefetchLink(n);break;case"mouseover":this._earlyPrefetch(t,n,"mouseout")}}},{key:"_earlyPrefetch",value:function(t,e,n){var i=this,r=setTimeout(function(){if(r=null,0===i.numOnHover)setTimeout(function(){return i.numOnHover=0},1e3);else if(i.numOnHover>i.config.rateThrottle)return;i.numOnHover++,i._addPrefetchLink(e)},this.config.onHoverDelay);t.addEventListener(n,function e(){t.removeEventListener(n,e,{passive:!0}),null!==r&&(clearTimeout(r),r=null)},{passive:!0})}},{key:"_addPrefetchLink",value:function(i){return this.prefetched.add(i.href),new Promise(function(e,t){var n=document.createElement("link");n.rel="prefetch",n.href=i.href,n.onload=e,n.onerror=t,document.head.appendChild(n)}).catch(function(){})}},{key:"_prepareUrl",value:function(e){if(null===e||"object"!==(void 0===e?"undefined":r(e))||!1 in e||-1===["http:","https:"].indexOf(e.protocol))return null;var t=e.href.substring(0,this.config.siteUrl.length),n=this._getPathname(e.href,t),i={original:e.href,protocol:e.protocol,origin:t,pathname:n,href:t+n};return this._isLinkOk(i)?i:null}},{key:"_getPathname",value:function(e,t){var n=t?e.substring(this.config.siteUrl.length):e;return n.startsWith("/")||(n="/"+n),this._shouldAddTrailingSlash(n)?n+"/":n}},{key:"_shouldAddTrailingSlash",value:function(e){return this.config.usesTrailingSlash&&!e.endsWith("/")&&!this.regex.fileExt.test(e)}},{key:"_isLinkOk",value:function(e){return null!==e&&"object"===(void 0===e?"undefined":r(e))&&(!this.prefetched.has(e.href)&&e.origin===this.config.siteUrl&&-1===e.href.indexOf("?")&&-1===e.href.indexOf("#")&&!this.regex.excludeUris.test(e.href)&&!this.regex.images.test(e.href))}}],[{key:"run",value:function(){"undefined"!=typeof RocketPreloadLinksConfig&&new n(new RocketBrowserCompatibilityChecker({capture:!0,passive:!0}),RocketPreloadLinksConfig).init()}}]),n}();t.run();
+}());
+
+//# sourceURL=rocket-preload-links-js-after
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://www.rochester.edu/provost/wp-content/themes/ur-core/js/dist/theme.min.js?ver=02.06.2026%2017.10.06" id="core-theme-scripts-js"></script>
+
+</body>
+
+</html>
+<!-- This website is like a Rocket, isn't it? Performance optimized by WP Rocket. Learn more: https://wp-rocket.me -->

@@ -1,0 +1,1319 @@
+
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head><meta name="viewport" content="width=device-width, initial-scale=1.0" /><!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-WR9V5K73');</script>
+<!-- End Google Tag Manager --><script>
+  window.TdxGtmContext = {"User":{"Id":0,"UID":"00000000-0000-0000-0000-000000000000","UserName":"","FullName":"Public User","AlertEmail":"publicuser@noreply.com","Role":"Experience User","HasTDNext":false,"StandardApplicationNames":null,"TicketApplicationNames":[],"AssetApplicationNames":[],"ClientPortalApplicationNames":[],"Type":"Technician","Analytics":{"Title":null,"Organization":null}},"Partition":{"Id":3094,"Name":"University of Kansas Production"},"BillableEntity":{"Id":2,"Name":"University of Kansas","SalesForceIdentifier":"0013600000EM5EAAA1","GWMIID":"2583b0ce-45ea-4e60-b1cb-95bea73cd1c4"},"Environment":{"ShortName":"PRD"}};
+</script><script src="/TDPortal/Content/Scripts/jquery/2.2.4/jquery.min.js?v=20260213000508"></script><script src="/TDPortal/Content/Scripts/jquery-migrate/1.4.1/jquery-migrate.min.js?v=20260213000508"></script><script src="/TDPortal/Content/Scripts/jquery-ui/1.13.2/jquery-ui-1.13.2.custom.timepicker.min.js?v=20260213000818"></script><link href="/TDPortal/Content/Styles/jquery-ui/1.13.2/jquery-ui.compiled.min.css?v=20260213000820" rel="stylesheet" type="text/css"  /><link href="/TDPortal/Content/bootstrap/3.4.1/dist/css/bootstrap.min.css?v=20260213000508" rel="stylesheet" type="text/css" id="lnkBootstrapCSS" /><script src="/TDPortal/Content/bootstrap/3.4.1/dist/js/bootstrap.min.js?v=20260213000508"></script><link href="/TDPortal/Content/FontAwesome/css/fontawesome.min.css?v=20260213000506" rel="stylesheet" type="text/css" id="lnkFontAwesome" /><link href="/TDPortal/Content/FontAwesome/css/solid.css?v=20260213000506" rel="stylesheet" type="text/css"  /><link href="/TDPortal/Content/FontAwesome/css/regular.css?v=20260213000506" rel="stylesheet" type="text/css"  /><link href="/TDPortal/Content/FontAwesome/css/brands.css?v=20260213000506" rel="stylesheet" type="text/css"  /><link href="/TDPortal/Content/FontAwesome/css/v4-shims.css?v=20260213000506" rel="stylesheet" type="text/css"  /><link href="/TDClient/Styles/bootstrap_custom.min.css?v=20260213000818" rel="stylesheet" type="text/css"  /><link href="/TDClient/Styles/TDStyles.min.css?v=20260213000820" rel="stylesheet" type="text/css"  /><link href="https://services.ku.edu/TDPortal/BE/Style/2/TDClient/818?v=20250320154101" rel="stylesheet" type="text/css" /><script src="/TDPortal/Content/Scripts/tdx/dist/TDJSFramework.compiled.min.js?v=20260213000818"></script><script src="/TDPortal/Content/Scripts/tdx/dist/modalFocusTrap.min.js?v=20260213000816"></script><script src="/TDPortal/Content/Scripts/underscore/1.12.1/underscore-min.js?v=20260213000508"></script>
+<script src="/TDClient/Scripts/clientOS.min.js?v=20260213000810"></script>
+<script src="/TDClient/Scripts/collapseMe.min.js?v=20260213000810"></script>
+<script src="/TDClient/Scripts/tdsearchfilter.min.js?v=20260213000810"></script>
+<script src="/TDClient/Scripts/SiteSearch.min.js?v=20260213000810"></script>
+<script src="/TDPortal/Content/Scripts/tdx/dist/elasticsearchAutocomplete.min.js?v=20260213000816"></script>
+<link id="ctl00_ctl00_lnkFavicon" rel="icon" href="https://services.ku.edu/TDPortal/BE/Icon/2/818?v=20241209231230" />
+
+  <script>
+
+      $(function () {
+        var masterUi = MasterUI({
+          isPostback: false,
+          baseUrl: '/TDClient/',
+          isTdGoogleAnalyticsEnabled: true,
+          isAuthenticated: false
+          });
+
+        $('#collapseMe').collapseMe({
+          toggleVisibilitySelector: '.navbar-toggle'
+        });
+
+        TeamDynamix.addRequiredFieldHelp();
+      });
+
+      // The sub-nav menu uses padding-top to position itself below the header bar and main navigation sections. When the
+      // window is resized, there is a chance that the content of these header or nav sections wraps, causing the height
+      // to change, potentially covering the sub-nav menu, which is obviously a big usability problem. This function
+      // listens for when the window size or orientation is changing (and also when the window first loads), and adjusts
+      // the padding so that the sub-nav menu appears in the correct location.
+      $(window).bind('load ready resize orientationchange', function () {
+        var headerHeight = $('#divMstrHeader').height();
+        $('#navShim').css({
+          "padding-top": headerHeight
+        });
+
+        $('#content').css({
+          "padding-top": headerHeight,
+          "margin-top": headerHeight * -1
+        });
+      });
+  </script>
+
+  
+  
+  
+  <script src="/TDPortal/Content/select2/v3/select2.min.js?v=20260213002344"></script><link href="/TDPortal/Content/select2/v3/select2.compiled.min.css?v=20260213002344" rel="stylesheet" type="text/css" id="lnkSelect2" />
+  <script src="/TDClient/Scripts/attachmentHandler.min.js?v=20260213000818"></script>
+
+  <style type="text/css">
+    .honey-pot-div {
+      display: none;
+    }
+  </style>
+
+  <script>
+    
+
+    function shareArticle() {
+      if ($('#ctl00_ctl00_cpContent_cpContent_shareRecipients').val().trim() === "") {
+        alert('You must first enter a valid email.');
+        $('#btnShare').progressButton('reset');
+      }
+      else {
+        __doPostBack('ctl00$ctl00$cpContent$cpContent$btnSendShare', '');
+      }
+    }
+
+    function closeShareModal() {
+      $('#divShareModal').modal('hide');
+      $('#btnShare').progressButton('reset');
+    }
+
+    function toggleFeedback(isHelpful) {
+      $('#divHelpfulComments').show();
+      $('#divHelpfulYesNo').hide();
+      $('#ctl00_ctl00_cpContent_cpContent_hdnIsHelpful').val(isHelpful);
+      $('#ctl00_ctl00_cpContent_cpContent_txtComments').focus();
+    }
+
+    function toggleFeedbackResult() {
+      $('#divWasHelpful, #divFeedbackRecorded, #divHelpfulComments, #divHelpfulYesNo').toggle();
+    }
+
+    // The following two functions were added as a result of ticket ID: 1392522. We are generating these buttons dynamically to
+    // prevent bots from clicking them and posting feedback on an article. Additionally, we have an input that is hidden from
+    // the user. If a bot enters text in that input, which it likely will (bots love filling out forms), then we don't accept the
+    // form submission
+    function generateFeedbackButtons() {
+      var $btnHelpfulYes = $('<button id="btnHelpfulYes" type="button" class="btn btn-primary gutter-left" onclick="toggleFeedback(1);">Yes</button>');
+      var $btnHelpfulNo = $('<button id="btnHelpfulNo" type="button" class="btn btn-primary gutter-left-sm" onclick="toggleFeedback(0);">No</button>');
+
+      $('#divWasHelpful').append($btnHelpfulYes);
+      $('#divWasHelpful').append($btnHelpfulNo);
+    }
+    function attemptAddFeedback(e) {
+      if ($('#honeyPot').val() !== '') {
+        e.preventDefault();
+        window.location.reload();
+      }
+    }
+
+    function cancelFeedback() {
+      $('#ctl00_ctl00_cpContent_cpContent_txtComments').val('');
+      $('#divHelpfulComments, #divHelpfulYesNo').toggle();
+    }
+
+    function confirmDeleteFeedback(id) {
+      if (confirm('Are you sure you want to delete this feedback? This cannot be undone.')) {
+        $('#ctl00_ctl00_cpContent_cpContent_hdnFeedbackID').val(id);
+        __doPostBack('ctl00$ctl00$cpContent$cpContent$btnDeleteFeedback', '');
+      }
+    }
+
+    function toggleAddressed(id, isAddressed) {
+      $('#ctl00_ctl00_cpContent_cpContent_hdnFeedbackID').val(id);
+      $('#ctl00_ctl00_cpContent_cpContent_hdnIsAddressed').val(isAddressed);
+      __doPostBack('ctl00$ctl00$cpContent$cpContent$btnToggleAddressed', '');
+    }
+
+    $(function () {
+      
+
+      generateFeedbackButtons();
+      $('[data-toggle="popover"]').popover();
+
+      var attachmentHandler = new TeamDynamix.AttachmentHandler({
+        containerSelector: '.js-article-attachments',
+        resultLabelSelector: '#ctl00_ctl00_cpContent_cpContent_lblResults_lblResults-label',
+        baseControllerUrl: '/TDClient/818/Portal/Shared/Attachments',
+        antiForgeryToken: 'cyZ98bqLBofXLrj400G77pzpteddzxR-HKZBrYdtxVzgvpVZtN20Sk7MNE64FyWvnkp_R2EmIvPHcn8uu9afLbID59s1:zDE65oOcRDS3Pq1i-bqoF6-LS3SNV2G9JOviq8EhUTdDTc0cAAd8ntvzgR-ND7EHe9Oz9zTyvM4F-GWqSnGO1bYW4oU1',
+        itemId: 21400,
+        componentId: 26,
+        feedId: 'articleFeed',
+        readOnly: false
+      });
+
+      $('#btnShare').on('click', function () {
+        shareArticle();
+      });
+
+      // Don't try and update the table styles if the user wanted to opt out.
+      $('#ctl00_ctl00_cpContent_cpContent_divBody table:not(.SkipTableFixup)').each(function () {
+        var padding = $(this).attr('cellpadding');
+        var spacing = $(this).attr('cellspacing');
+
+        $(this).css("border-collapse", "separate");
+
+        if (spacing) {
+          $(this).css("border-spacing", spacing + "px");
+        }
+
+        $(this).find('td').each(function () { $(this).css('padding', padding + 'px') });
+      });
+
+      
+    });
+
+    
+  </script>
+
+
+
+<meta property="og:title" content="Student Records Policy" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://services.ku.edu/TDClient/818/Portal/KB/ArticleDet?ID=21400" />
+<meta property="og:image" content="https://services.ku.edu/TDPortal/BE/Logo/2/818" />
+<meta property="og:description" content="This policy is intended to inform students of their rights and responsibilities pertaining to their university records, in compliance with federal notification requirements; to reflect the University&#39;s responsibility; to protect the privacy of student records; and to articulate definitions relati..." />
+  <meta property="og:site_name" content="KU - Knowledge Base" />
+  <meta property="article:section" content="Office of the Chancellor" />
+  <meta property="article:published_time" content="2025-03-13T17:22Z" />
+  <meta property="article:modified_time" content="2025-11-13T22:12Z" />
+    <meta property="article:tag" content="FERPA" />
+    <meta property="article:tag" content="HLC" />
+    <meta property="article:tag" content="privacy" />
+    <meta property="article:tag" content="record" /><title>
+	Article - Student Records Policy
+</title></head>
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WR9V5K73"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+<form method="post" action="/TDClient/818/Portal/KB/ArticleDet?ID=21400" onsubmit="javascript:return WebForm_OnSubmit();" id="aspnetForm">
+<div class="aspNetHidden">
+<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
+<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="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" />
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['aspnetForm'];
+if (!theForm) {
+    theForm = document.aspnetForm;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script>
+
+
+<script src="/TDClient/WebResource.axd?d=pynGkmcFUV13He1Qd6_TZMSMQxVWLi4fik2rw1_u_hZsCNzwv5c621ov6_ZX_wzTt5vh-g2&amp;t=638901392248157332" type="text/javascript"></script>
+
+
+<script src="/TDClient/ScriptResource.axd?d=nv7asgRUU0tRmHNR2D6t1NXOAgTb3J37FC1L2PfbYYFmSPm-ANa7n6FP0x7BAsbHeL4jfY3ptd1q7zKKVI7DbuXZcwEoKOwj9WxCI1VrQlbWE1Trg1t1GmJDN43kQMJsB7X8tw2&amp;t=ffffffff93d1c106" type="text/javascript"></script>
+<script src="/TDClient/ScriptResource.axd?d=NJmAwtEo3Ipnlaxl6CMhvmVxW3-Ljsg_2Hna32smxrg-6ogyYAN3UTPsJQ8m1uwzn_kuf2Wpne6NSFmYui3h0wCQhJN3ZUiLTNkvhiIgZpq74-lKmofUPQGJ8own8RI2_mwAcmvlSj2WBnqwm5Wj4cyNvv81&amp;t=5c0e0825" type="text/javascript"></script>
+<script src="/TDClient/ScriptResource.axd?d=dwY9oWetJoJoVpgL6Zq8OLdGoo5BVWQ_Eo60QZTEhEcHeiVfwgY9tLCgzdZ5TRwvrwYEnOvujbNccOVLUfWtUg4HivSIsewg6JABxkBGEqVVV64eiRyCAsPDqh6tUioISUQKB74sWMO4Er2mHrWEIWs_sBM1&amp;t=5c0e0825" type="text/javascript"></script>
+<script src="/TDClient/WebResource.axd?d=xtfVMqdF1exC2MBVkOJwMveStDR5kg3dbZWgIXMXZmB1xXom6CcIrWFgHa7jsp4qJuFW2L5XShudyzlBsIO3JhCfiU5HmL2BDz__mCv9dznmBlEMS7LvcYg6wTdPTrAXIXI2CvtjwlnpZd-j4Zpsx2wG_uA1&amp;t=639065204200000000" type="text/javascript"></script>
+<script src="/TDClient/WebResource.axd?d=sp7vCoAo-SSYfpsQ1sYBBeEDnwCGxDYEwZCM0ler88yoVZIPDXMk1C3XF2L2L0xrbB8Rvhli51TswRlmPIOCZgaY58lKhPr-Pv1jTFJ1oUAu7x6RDtNFZUxbtxs3KYQGLK6FpPD5bKuB0e0NmS9HkAqRVks1&amp;t=639065204200000000" type="text/javascript"></script>
+<script src="/TDClient/WebResource.axd?d=icMURy63hv40LPPfq4rTvmm-RfB_YkC6rEEF_2QOO68q3TseXYNBetRKKgBXJ8mn2e8UIgCPiV23HaQUZbjySMHqSgmYZgLcYltBqwD2_EK8aQ08zBuqc3ZBVZITQrbtn6w46dRxFLibMIQg0Aho73rn8Rpxrzg5YMG_JR0UOrUR0wlZ0&amp;t=639065204200000000" type="text/javascript"></script>
+<script src="/TDClient/WebResource.axd?d=1HpFfNpwNihNfEP1lyJHvdPVqbv8KRoFH4-_ZORUgPOP-bqmmtIJRvFQc7828Vf59O_-fdBXcnwdv-hYp5RptPuHmMR0kGQM0_3rS4Z7sKfC7jy9Cc_8fyfcUWa8psszacEQlAXHPXmNwyRymbGSywEmhrE1&amp;t=639065204200000000" type="text/javascript"></script>
+<script type="text/javascript">
+//<![CDATA[
+function WebForm_OnSubmit() {
+CKEditor_TextBoxEncode('ctl00_ctl00_cpContent_cpContent_shareBody_txtBody', 0); if (typeof(ValidatorOnSubmit) == "function" && ValidatorOnSubmit() == false) return false;
+return true;
+}
+//]]>
+</script>
+
+<div class="aspNetHidden">
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="784CA02E" />
+</div>
+<script type="text/javascript">
+//<![CDATA[
+Sys.WebForms.PageRequestManager._initialize('ctl00$ctl00$smMain', 'aspnetForm', ['tctl00$ctl00$cpContent$cpContent$UpdatePanel1','','tctl00$ctl00$cpContent$cpContent$upFeedbackGrid','','tctl00$ctl00$cpContent$cpContent$lblResults$ctl00',''], ['ctl00$ctl00$cpContent$cpContent$btnSubmitComments','','ctl00$ctl00$cpContent$cpContent$btnToggleSubscribe','','ctl00$ctl00$cpContent$cpContent$btnToggleFavorite','','ctl00$ctl00$cpContent$cpContent$btnSendShare',''], [], 90, 'ctl00$ctl00');
+//]]>
+</script>
+
+<div id="ctl00_ctl00_upMain" style="display:none;">
+	
+    <div id="ctl00_ctl00_pbMain" class="progress-box-container"><div class="progress-box-body"><div class="well shadow"><h2 class="h4 gutter-top-none">Updating...</h2><div class="progress" style="margin-bottom: 0;"><div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuemin="0" aria-valuemax="100" style="width: 100%"></div></div></div></div></div>
+  
+</div>
+
+<header id="ctl00_ctl00_navHeader" role="banner">
+
+  <div id="divMstrHeader" class="master-header NoPrint" style="background-color: #fff;">
+
+  
+
+  <div class="logo-header-full hidden-xs">
+
+    
+    <div class="pull-left">
+      <a href="#mainContent" class="sr-only sr-only-focusable">Skip to main content</a>
+    </div>
+
+
+    <div id="ctl00_ctl00_divPageHeader" class="container logo-header clearfix" style="padding: 5px;">
+
+      <div id="divLogo" class="pull-left logo-container">
+
+        <a href="https://services.ku.edu/TDClient/818/Portal/Home/"
+           target="_blank">
+          <img src="/TDPortal/BE/Logo/2/818" alt="KU Policy Administration Client Portal Home Page" class="js-logo img-responsive" />
+          <span class="sr-only">(opens in a new tab)</span>
+        </a>
+
+      </div>
+
+      <div class="master-header-right pull-right padding-top padding-bottom">
+
+        
+
+          <div class="pull-left topLevelSearch input-group">
+            <div id="SiteSearch-9f7e9444b8af4c54a17368ff3d504cbc" class="gutter-bottom input-group site-search" style="max-width: 400px;">
+  <div id="SiteSearch-dropdown-9f7e9444b8af4c54a17368ff3d504cbc" class="input-group-btn">
+    <button type="button" id="SiteSearch-filter-9f7e9444b8af4c54a17368ff3d504cbc" class="btn btn-default dropdown-toggle" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false" title="Filter your search by category" data-component="all">
+      <span class="fa-solid fa-solid fa-earth-americas"></span><span class="fa-solid fa-fw fa-nopad fa-caret-down" aria-hidden="true"></span>
+      <span class="sr-only">
+        Filter your search by category. Current category:
+        <span class="js-current-component">All</span>
+      </span>
+    </button>
+    <ul tabindex="-1" aria-label="Filter your search by category" role="menu" class="dropdown-menu" >
+      <li>
+        <a role="menuitem" href="javascript:void(0);" data-component-text="All" data-component="all" data-component-icon="fa-solid fa-earth-americas" title="Search all areas">
+          <span class="fa-solid fa-fw fa-nopad fa-earth-americas" aria-hidden="true"></span>
+          All
+        </a>
+      </li>
+
+      <li aria-hidden="true" class="divider"></li>
+
+        <li role="presentation">
+          <a role="menuitem" href="javascript:void(0);" data-component-text="Knowledge Base" data-component="kb" data-component-icon="fa-lightbulb" title="Search Knowledge Base">
+            <span class="fa-regular fa-fw fa-nopad fa-lightbulb" aria-hidden="true"></span>
+            Knowledge Base
+          </a>
+        </li>
+
+        <li role="presentation">
+          <a role="menuitem" href="javascript:void(0);" data-component-text="Service Catalog" data-component="sc" data-component-icon="fa-compass" title="Search Service Catalog">
+            <span class="fa-solid fa-fw fa-nopad fa-compass" aria-hidden="true"></span>
+            Service Catalog
+          </a>
+        </li>
+
+    </ul>
+  </div>
+
+  <label class="sr-only" for="SiteSearch-text-9f7e9444b8af4c54a17368ff3d504cbc">Search the client portal</label>
+
+  <input id="SiteSearch-text-9f7e9444b8af4c54a17368ff3d504cbc" type="text" class="form-control" autocomplete="off" placeholder="Search the client portal" title="To search for items with a specific tag, enter the # symbol followed by the name of the tag.
+To search for items using exact match, place double quotes around your text." />
+
+  <span class="input-group-btn">
+    <button id="SiteSearch-button-9f7e9444b8af4c54a17368ff3d504cbc" class="btn btn-default" type="button" title="Search">
+      <span class="fa-solid fa-fw fa-nopad fa-search blue" aria-hidden="true"></span>
+      <span class="sr-only">Search</span>
+    </button>
+  </span>
+</div>
+
+<script>
+  $(function() {
+    var siteSearch = new TeamDynamix.SiteSearch({
+      searchUrl: "/TDClient/818/Portal/Shared/Search",
+      autocompleteSearchUrl: '/TDClient/818/Portal/Shared/AutocompleteSearch',
+      autocompleteResultsPosition: 'fixed',
+      autocompleteResultsZIndex: 1000,
+      searchTextBoxSelector: '#SiteSearch-text-9f7e9444b8af4c54a17368ff3d504cbc',
+      searchComponentFilterButtonSelector: '#SiteSearch-filter-9f7e9444b8af4c54a17368ff3d504cbc',
+      searchButtonSelector: '#SiteSearch-button-9f7e9444b8af4c54a17368ff3d504cbc',
+      searchFilterDropdownSelector: '#SiteSearch-dropdown-9f7e9444b8af4c54a17368ff3d504cbc',
+      showKnowledgeBaseOption: true,
+      showServicesOption: true,
+      showForumsOption: false,
+      autoFocusSearch: false
+    });
+  });
+</script>
+          </div>
+
+        
+          <div title="Sign In" class="pull-right gutter-top-sm">
+            <a href="/TDClient/818/Portal/Login.aspx?ReturnUrl=%2fTDClient%2f818%2fPortal%2fKB%2fArticleDet%3fID%3d21400">
+              Sign In
+            </a>
+          </div>
+        
+      </div>
+
+    </div>
+
+  </div>
+
+  <nav id="ctl00_ctl00_mainNav" class="navbar navbar-default themed tdbar" aria-label="Primary">
+    <div id="navContainer" class="container">
+
+      <div class="navbar-header">
+        <button type="button" class="pull-left navbar-toggle collapsed themed tdbar-button-anchored tdbar-toggle gutter-left" data-toggle="collapse" data-target=".navbar-collapse">
+          <span class="tdbar-button-anchored icon-bar"></span>
+          <span class="tdbar-button-anchored icon-bar"></span>
+          <span class="tdbar-button-anchored icon-bar"></span>
+          <span class="sr-only">Show Applications Menu</span>
+        </button>
+        <a class="navbar-brand hidden-sm hidden-md hidden-lg themed tdbar-button-anchored truncate-be" href="#">
+
+          Policy Admin Client Portal
+        </a>
+      </div>
+
+      <div id="td-navbar-collapse" class="collapse navbar-collapse">
+
+        <ul class="nav navbar-nav nav-collapsing" id="collapseMe">
+
+          
+            <li class="themed tdbar-button-anchored hidden-sm hidden-md hidden-lg">
+              <a href="/TDClient/818/Portal/Login.aspx?ReturnUrl=%2fTDClient%2f818%2fPortal%2fKB%2fArticleDet%3fID%3d21400">Sign In</a>
+            </li>
+          
+            <li id="divSearch" class="themed tdbar-button-anchored hidden-sm hidden-md hidden-lg">
+              <a href="/TDClient/818/Portal/Shared/Search" title="search">Search</a>
+            </li>
+          
+              <li id="divDesktopf39145cf-36de-4b20-80b6-2aa59e09ba58" class="themed tdbar-button-anchored">
+                <a href="/TDClient/818/Portal/Home/">Home</a>
+              </li>
+            
+              <li id="divDesktop7962033f-f5ca-4a78-b73d-f8a25a373dce" class="themed tdbar-button-anchored">
+                <a href="/TDClient/818/Portal/Home/?ID=7962033f-f5ca-4a78-b73d-f8a25a373dce">Search A-Z</a>
+              </li>
+            
+              <li id="divDesktop8ec86700-09b7-474e-a21c-66de5797f2a2" class="themed tdbar-button-anchored">
+                <a href="/TDClient/818/Portal/Home/?ID=8ec86700-09b7-474e-a21c-66de5797f2a2">Search All University</a>
+              </li>
+            
+              <li id="divDesktop318e591d-dbcd-40da-adda-1641a51df3d6" class="themed tdbar-button-anchored">
+                <a href="/TDClient/818/Portal/Home/?ID=318e591d-dbcd-40da-adda-1641a51df3d6">Search by Topic</a>
+              </li>
+            
+
+          
+            <li id="divTDRequests" class="themed tdbar-button-anchored sr-focusable">
+              <a href="/TDClient/818/Portal/Requests/ServiceCatalog">Services</a>
+            </li>
+          
+            <li id="divTDKnowledgeBase" class="themed tdbar-button-anchored sr-focusable">
+              <a href="/TDClient/818/Portal/KB/">Knowledge Base</a>
+            </li>
+          
+
+          <li class="themed tdbar-button-anchored hidden-xs more-items-button" id="moreMenu">
+            <a data-toggle="dropdown" title="More Applications" href="javascript:;">
+              <span class="sr-only">More Applications</span>
+              <span class="fa-solid fa-ellipsis-h" aria-hidden="true"></span>
+            </a>
+            <ul class="dropdown-menu dropdown-menu-right themed tdbar" id="collapsed"></ul>
+          </li>
+
+        </ul>
+      </div>
+
+    </div>
+
+  </nav>
+
+  </div>
+
+  </header>
+
+
+
+<div id="navShim" class="hidden-xs hidden-sm"></div>
+<main role="main">
+  <div id="content">
+    <div id="mainContent" tabindex="-1"></div>
+    
+
+  <nav id="ctl00_ctl00_cpContent_divTabHeader" class="tdbar-sub NoPrint hidden-xs navbar-subnav" aria-label="Knowledge Base">
+      <a href="#kbContent" class="sr-only sr-only-focusable">Skip to Knowledge Base content</a>
+      <div class="container clearfix">
+        <ul class="nav navbar-nav js-submenu" id="kbSubMenu" style="margin-left: -15px;">
+          
+          <li>
+            <a href="/TDClient/818/Portal/KB/Search">Search <span class="sr-only">Articles</span></a>
+          </li>
+
+          
+          
+        </ul>
+      </div>
+    </nav>
+  
+
+  <div id="kbContent" class="container gutter-top gutter-bottom" tabindex="-1" style="outline:none;">
+    
+
+<input type="hidden" name="ctl00$ctl00$cpContent$cpContent$hdnFeedbackID" id="ctl00_ctl00_cpContent_cpContent_hdnFeedbackID" />
+<input type="hidden" name="ctl00$ctl00$cpContent$cpContent$hdnIsAddressed" id="ctl00_ctl00_cpContent_cpContent_hdnIsAddressed" />
+
+<span id="ctl00_ctl00_cpContent_cpContent_lblResults_ctl00" aria-live="polite" aria-atomic="true"><span id="ctl00_ctl00_cpContent_cpContent_lblResults_lblResults-label" class="red tdx-error-text"></span></span>
+
+<a id="ctl00_ctl00_cpContent_cpContent_btnSendShare" tabindex="-1" class="hidden" aria-hidden="true" href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$ctl00$cpContent$cpContent$btnSendShare&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))">Blank</a>
+
+<div class="clearfix">
+  <nav aria-label="Breadcrumb">
+    <ol class="breadcrumb pull-left">
+      <li><a href="/TDClient/818/Portal/KB/">Knowledge Base</a></li><li class="active"><a href="/TDClient/818/Portal/KB/?CategoryID=3784">Office of the Chancellor</a></li><li class="active">Student Records Policy</li>
+    </ol>
+  </nav>
+  <span class="js-open-monitor" style="display: none;"></span>
+</div>
+
+
+
+<div class="row gutter-top">
+
+<div id="divMainContent" class="col-md-8">
+
+<h1 class="gutter-top" style="-ms-word-wrap: break-word; word-wrap: break-word;">
+  Student Records Policy
+</h1>
+
+<div id="ctl00_ctl00_cpContent_cpContent_divTags">
+  <span class="sr-only">Tags</span>
+  <span class="fa-solid fa-tags gray gutter-right-sm" aria-hidden="true" title="Tags"></span>
+  
+      <a href="/TDClient/818/Portal/KB/Search?SearchText=%2523FERPA" id="ctl00_ctl00_cpContent_cpContent_rptTags_ctl00_TagControl1_lnkDisplay" title="FERPA">FERPA</a>
+
+    
+      <span class="fa-solid fa-circle gray gutter-right-sm font-xs vert-middle" aria-hidden="true"></span>
+    
+      <a href="/TDClient/818/Portal/KB/Search?SearchText=%2523HLC" id="ctl00_ctl00_cpContent_cpContent_rptTags_ctl02_TagControl1_lnkDisplay" title="HLC">HLC</a>
+
+    
+      <span class="fa-solid fa-circle gray gutter-right-sm font-xs vert-middle" aria-hidden="true"></span>
+    
+      <a href="/TDClient/818/Portal/KB/Search?SearchText=%2523privacy" id="ctl00_ctl00_cpContent_cpContent_rptTags_ctl04_TagControl1_lnkDisplay" title="privacy">privacy</a>
+
+    
+      <span class="fa-solid fa-circle gray gutter-right-sm font-xs vert-middle" aria-hidden="true"></span>
+    
+      <a href="/TDClient/818/Portal/KB/Search?SearchText=%2523record" id="ctl00_ctl00_cpContent_cpContent_rptTags_ctl06_TagControl1_lnkDisplay" title="record">record</a>
+
+    
+</div>
+
+
+
+<div id="ctl00_ctl00_cpContent_cpContent_divBody" class="gutter-top break-word ckeShim clearfix"><p>PRINT DISCLAIMER: Official version of this document is accessible in the online policy library at <a href="https://policyoffice.ku.edu/" target="_blank">https://policyoffice.ku.edu/</a>. Printed copies may not reflect the most recent updates.</p>
+
+<h2><b>DOCUMENT TYPE: </b></h2>
+
+<p>Policy</p>
+
+<h2><b>PURPOSE: </b></h2>
+
+<p>This policy is intended to inform students of their rights and responsibilities pertaining to their university records, in compliance with federal notification requirements; to reflect the University's responsibility; to protect the privacy of student records; and to articulate definitions relating to student records, how they may be accessed and disclosed, the complaint procedure and other information relevant to the student record.</p>
+
+<h2><b>APPLIES TO:</b></h2>
+
+<p>University employees (faculty, staff, student employees) and all covered individuals (including but not limited to affiliates, vendors, and independent contractors) in their accessing and handling of student records, data or information in all forms during the course of conducting University business (administrative, financial, teaching, research, or service). This policy shall apply to all current or former students of the University of Kansas (KU).</p>
+
+<h2><b>CAMPUS: </b></h2>
+
+<p>Edwards, Lawrence, Leavenworth, Juniper Gardens, Parsons, Pittsburg, Salina, Topeka, Wichita, Yoder, Medical Center, Kansas City</p>
+
+<h2><b>TABLE OF CONTENTS:</b></h2>
+
+<ol>
+	<li><a href="#1">Overview</a></li>
+	<li><a href="#2">Student Access to Education Records</a></li>
+	<li><a href="#3">Waiver of Rights</a></li>
+	<li><a href="#4">Disclosure of "Personally Identifiable" and "Directory" Information</a></li>
+	<li><a href="#5">Notice to Third Parties</a></li>
+	<li><a href="#6">Maintaining Education Records and Records of Requests and Disclosures</a></li>
+	<li><a href="#8">Complaint Procedure</a></li>
+	<li><a href="#definitions">Definitions</a></li>
+</ol>
+
+<h2><b>DEFINITIONS:</b></h2>
+
+<p><strong>Attendance:</strong>&nbsp;Attendance at the University of Kansas is considered to begin on the announced first day of classes for the initial semester (Fall, Spring, or Summer) for which a person is enrolled in one or more classes and shall include any person “attending” on campus or by any electronic means (including for example webinar, correspondence, and the like) as prescribed by the class requirements. Non-credit bearing courses, workshops, seminars, etc. developed, targeted to external audiences, or consisting solely of minor children shall not be considered in attendance for the purposes of this policy, although information related these audiences should be treated in accordance with appropriate data handling and privacy policies and procedures.</p>
+
+<p><strong>Consent:</strong>&nbsp;Some University systems incorporate electronic provision of consent within the system (e.g., advising tool, on-line transcript request system, etc). In these systems, proper authentication will require a login with the KU Student on-line ID, secure password, and positive action to indicate release. Such authentication shall constitute consent. In all other cases, consent shall be in writing and shall be signed and dated by the student giving consent. For both written and electronic categories, the consent shall include (a) specification of records to be released; (b) purposes of such release; and (c) parties or class of parties to whom such records may be released.</p>
+
+<p><strong>Custodian of Student Records:</strong>&nbsp;Except as otherwise designated in this policy, the head of each academic or administrative unit is responsible for the education records within the unit. A list of custodians of primary records for the Lawrence and Edwards campuses is found in the document “<a href="https://policy.ku.edu/registrar/student-record-policy-primary-records-custodians" target="_blank">Student Record Policy Records Custodians</a>”. In all cases of subpoenas or court orders, these custodians should consult General Counsel. For all interpretations of this policy and/or if there is a question concerning privacy of the Education Record, these custodians should refer to the appropriate Registrar.</p>
+
+<p><strong>Directory Information:<a name="Directory"></a></strong>&nbsp;The student related directory information is defined by the University of Kansas as: name; current address and telephone number; permanent address and telephone number; e-mail address (except as limited below); level and school; month and day of birth; major field of study; enrollment status (full-time; half-time; less than half-time); dates of attendance; degrees, honors and awards received; the most recent previous educational institution attended by the student; participation in officially recognized activities and sports (including participation status); and height and weight of members of athletic teams. For purposes of official University news releases, or conducting University business and advancement, student photographs and parent name, address, telephone number and e-mail are also defined as directory information. To protect individual privacy, a student’s email address is not considered “directory information” where requests by non-university organizations for multiple e-mail addresses are made. The name(s), position(s), length of service and/or courses taught may be disclosed for student employees. Information not included above is not directory information and thus is to be maintained as confidential information; this includes but is not limited to Social Security Numbers and KU ID numbers.</p>
+
+<p><strong>Disclosure:</strong>&nbsp;Permitting access to or the release, transfer, or other communication of any part or all of the education records of the student or the personally identifiable information contained therein, orally, in writing, by any electronic means, or by any other means to any party. Disclosure does not include the return of the Education Record from an instructor to the student, so long as the student may inspect the Education Record in the possession of the instructor. Release of information from education records as required or permitted by law will not be considered a disclosure under this policy.</p>
+
+<p><strong>Education Records:</strong>&nbsp;Those records that are directly related to a student and that are maintained by the University or by a party acting for the University. A record means any information recorded in any way, including, but not limited to, handwriting, print, copmuter media, video-tape, audiotape, film, microfilm, microfiche, and email.</p>
+
+<p>Records described in items 1-5 below are excluded from the category of ''education records,'' therefore, the law does not guarantee the right of student access to the following:</p>
+
+<ol type="1">
+	<li>Records created by and kept in the sole possession of an individual staff member that are not revealed to any other individual except to a person who might temporarily substitute for the original staff member.</li>
+	<li>Medical and psychological records that are maintained only in connection with provision of treatment to the student and that are not available to persons other than those providing treatment except that such records may be personally reviewed by a physician or other appropriate professional of the student's choice and with the student's written consent.</li>
+	<li>Records that contain only information relating to a person after that person is no longer a student at the University. An example would be information collected by the University or the Alumni Association pertaining to the accomplishments of an alumnus/alumna.</li>
+	<li>Employment records of any person if maintained in the normal course of business and used only for purposes relating to the employment, unless the person is employed at the University only because of status as a student. In such cases, student employment records are education records and&nbsp;<strong>are</strong>&nbsp;covered by this policy.</li>
+	<li>Records of the KU Police Department and the KUMC Public Safety Department created and maintained by those departments for the purpose of law enforcement.</li>
+</ol>
+
+<p><strong>Electronic Authentication System:</strong>&nbsp;At the University of Kansas electronic authentication consists of a unique on-line ID and a strong password intended to be known only by the user. The e-signature is used to electronically access systems at the University. It is NOT communicated in written or oral form to permit access and/or signify consent.</p>
+
+<p><strong>Legitimate Educational Interests:</strong>&nbsp;The interest of University personnel who have a demonstrably legitimate need to review records in order to fulfill their official professional responsibilities. Such responsibilities must involve the University in its primary educational and scholarly functions and/or secondary administrative functions of maintaining property, disbursing funds, keeping records, providing living accommodations and other services, sponsoring activities, recognizing student educational achievements, and protecting the health and safety of persons or property in the University community. If a question arises concerning the legitimacy of a request to review records, such questions shall be referred to the appropriate Registrar.</p>
+
+<p><strong>Parent:</strong>&nbsp;Includes a parent, a guardian, or an individual acting as a parent of a student in the absence of a parent or guardian.</p>
+
+<p><strong>Personally Identifiable Information:</strong>&nbsp;Includes the name of the student, the student's parent or other family members, the address of the student or parent, personal identifiers such as social security or student numbers, personal characteristics or information requested by a person whom the University reasonably believes knows the identity of the student to whom the education record relates. In cases where aggregate data is released, this definition includes any cell sizes with five or fewer students.</p>
+
+<p><strong>School Official:</strong>&nbsp;Faculty, staff, student employees, or committees (when the members of the committee are appointed or elected to an officially constituted committee) who perform a function or task on behalf of, and at the request of, the University, its faculty, colleges, schools, departments or units are School Officials for purposes of this policy. Additionally, agencies, organizations, contractors, consultants, volunteers and other outside service providers officially acting on behalf of the University and subject to the control of the University and that provide services, functions or conducts research the University would otherwise perform itself are considered school officials for the purposes of this policy (including, but not limited to accountants, attorneys, degree or transcript services, testing services, computer security services).</p>
+
+<p><strong>Student:</strong>&nbsp;For purposes of this policy, an eligible student is anyone who is currently attending or who has previously attended the University of Kansas. with the following exceptions:</p>
+
+<ol type="1">
+	<li>A person who has applied for admission to, but has never been in attendance at, a component unit of the University (such as the various schools and colleges of the University), even if that individual is or has been in attendance at another component unit of the University, is not considered to be a student with respect to the component to which an application for admission has been made.</li>
+	<li>A minor who is taking non-credit classes, workshops, seminars, clinics, camps etc. designed and targeted exclusively for minor children.</li>
+	<li>Attendees at conferences, seminars, workshops or similar activities for which University academic credit is not conferred.</li>
+</ol>
+
+<p>See also “<a href="https://policy.ku.edu/chancellor/student-record-policy#attendance">Attendance</a>”.</p>
+
+<h2><b>POLICY STATEMENT:</b></h2>
+
+<h3><strong><a name="1"></a>1. Overview</strong></h3>
+
+<p>The University of Kansas protects the privacy of its students’ education records in compliance with the federal Family Educational Rights and Privacy Act (FERPA) and its implementing regulations. FERPA and this policy also provide students the right to inspect and review their educational records. A notice of this policy is published each year on the <a href="https://registrar.ku.edu/" target="_blank">Office of the University Registrar website</a>. Notification of this publication is made annually to enrolled students via email.</p>
+
+<h3><strong><a name="2"></a>2. Student Access to Education Records</strong></h3>
+
+<p>A student has the right and shall be accorded the opportunity to inspect, review, and/or receive copies of the student's educational records upon written request to the appropriate record custodian.&nbsp;Requests must be submitted in accordance with the applicable campus procedures for the University of Kansas Medical Center (KUMC) and all reporting units and University of Kansas Lawrence Campus (KUL) and all reporting units.</p>
+
+<p>The University must comply with the student's request within a reasonable period, not to exceed 45 days after the request is received.</p>
+
+<p>Copies may be provided at the student's request and expense; however, the charge to the student for any such records, except for official academic transcripts, statements of degree and enrollment certifications may not exceed the copy charges allowed by the University (see the Comprehensive Fee Schedule). The University may not charge a fee to search for or retrieve a record requested by a student regarding only the education record. The student shall be asked to provide the student's University I.D. and/or other government issued/approved identification to receive and/or view the student’s educational records.</p>
+
+<p>Academic transcript and diploma requests may be denied in connection with disciplinary actions resulting from academic or non-academic misconduct.</p>
+
+<p>The University is not required to allow inspection and review of the following records:</p>
+
+<ol type="I">
+	<li>Financial records of the student's parents submitted as part of the financial aid process or for other official University purpose;</li>
+	<li>Confidential letters and statements of recommendation that were placed in the student's&nbsp;education records <strong>prior</strong> to January 1, 1975, as long as they are used only for the purpose for which they were specifically intended; and</li>
+	<li>Confidential letters and statements of recommendation received <strong>after</strong> January 1, 1975, for which the student has signed a waiver of the right to access and that pertain to (a) admission to this or any other educational institution or agency; (b) application for employment; or (c) receipt of an honor or honorary recognition; so long as these letters are used solely for the purpose for which they were specifically intended.</li>
+</ol>
+
+<p>If an education record contains information on more than one student, the student may inspect only the information about their records.</p>
+
+<h3><strong><a name="3"></a>3. Waiver of Rights</strong></h3>
+
+<p>The University may request, but not require, students to waive rights under this policy. The waivers must be in writing and signed by the student, or must be positively indicated electronically and include appropriate electronic authorization. A student may waive the right to inspect and review confidential statements and confidential letters of recommendation only if: (a) the student, upon request, is notified of the names of all persons providing letters/statements; (b) the letters/ statements are used only for the purpose for which they were originally intended; (c) the waiver is not required as a condition of admission to or for any other service or benefit of the University.</p>
+
+<p>The student may revoke any waiver in writing, the revocation may only apply to documents received or entered into the record after the date of execution of the revocation.</p>
+
+<h3><strong><a name="4"></a>4. Disclosure of "Personally Identifiable" and "Directory Information"</strong></h3>
+
+<p>The University shall obtain the written consent, or system consent via appropriate electronic authorization in an authorized University system from the student before disclosing personally identifiable information from the education records of the student, other than directory information, except as otherwise provided in this policy.</p>
+
+<p>The University may, without the consent of the student, disclose <a href="#Directory"><strong>directory information</strong></a>. If a student wishes to have such information withheld, the student must notify the appropriate Registrar either in writing, or via an authorized University system requiring <strong>electronic authentication</strong>. This notification may occur at any time; however, if a student wishes to prevent the publication of directory information in the University telephone directory, the student must notify the appropriate Registrar by the end of the first week of the term.</p>
+
+<p>The University may disclose personally identifiable information from a student’s Education Record(s) without the consent of the student if the disclosure is made to:</p>
+
+<ol type="I">
+	<li>School officials within the institution determined to have a legitimate educational interest(s).</li>
+	<li>Authorized persons to comply with a judicial order or lawfully issued subpoena, provided the University makes a reasonable effort to notify the student in advance of compliance; except the University will not disclose to the student information about a grand jury subpoena, a subpoena issued for a law enforcement purpose when notice is prohibited, or a court order obtained by the United States Attorney General or Assistant Attorney General in investigations or prosecutions of certain criminal offenses or an act of terrorism, in accordance with law or regulation. certain officials of the U.S. Department of Education, the Comptroller General and state and local educational authorities in connection with an audit or evaluation of Federal or State supported education programs, or for the enforcement of or compliance with Federal legal requirements that relate to those programs.</li>
+	<li>Financial aid personnel in conjunction with an application for or receipt of financial assistance, provided that the disclosure is needed: (a) to determine the eligibility of the student for financial aid; (b) to determine the amount of financial aid; (c) to determine the conditions that will be imposed; or (d) to enforce the terms or conditions of the financial aid.</li>
+	<li>Parent(s) or legal guardian(s) of dependent students who provide a written request for grades to the University Registrar pursuant to Board of Regents policy. Dependency, for this purpose, is defined by the Internal Revenue Code of 1954, Section 152. The student will be notified in writing and/or electronically of any disclosure of grades made to the student's parent(s) or legal guardian(s).</li>
+	<li>Appropriate parties, including parents, in connection with an emergency, if knowledge of the information is necessary to protect the health or safety of the student or other individuals. In deciding to disclose personally identifiable information from an education record in a health and safety emergency, the University shall take into account the totality of the circumstances pertaining to the threat or health of the student or other individuals. If the University determines that there is an articulable and significant threat to the health or safety of the student or other individuals, disclosure may be made to any person whose knowledge of the information is necessary to protect the health and safety of the student or other individuals. All disclosures will be documented. Kansas Department of Health and the Environment (KDHE) or local law enforcement officials for the following purposes: Watkins Health Services is required to report to KDHE the names and current address of students who have certain communicable diseases, including hepatitis, tuberculosis and sexually transmitted diseases. Additionally, Watkins Health Services is required to report to local law enforcement officials the name of any student who is wounded with a deadly weapon.</li>
+	<li>Organizations conducting studies for, or on behalf of, educational agencies or institutions to develop, validate, or administer predictive tests; to administer student aid programs; to improve instruction or services in a manner that does not permit personal identification of students by individuals other than representatives of the organizations that have legitimate interests in the information. The University and the organization will enter into a written agreement, containing: the purpose, scope, and duration of the study, and the information to be disclosed in the study; restrictions to use information only for the purpose of the study, to destroy or return the information when no longer needed, to specify the time period for destruction of information; and agreement to not re-disclose information. The appropriate Registrar must provide clearance for the release of and will maintain a record of all student records involved in the release. The University may release records or information from education records after the removal of all personally identifiable information or when the release is of de-identified student level data for the purpose of education research by attaching a code to each record that cannot be used to ascertain personally identifiable information about a student.</li>
+	<li>Accrediting organizations to carry out their accrediting functions.</li>
+	<li>An outside contractor, consultant, or other party who is acting for the University, subject to the written direction and security requirements of the University, and who is performing a service or function that the University would otherwise have to perform for itself.</li>
+	<li>To initiate legal action against a parent or student, or to defend the University if a parent or student initiates legal action against the University, when the student’s education records are relevant to the legal action.</li>
+	<li>Individuals requesting academic information for deceased students. The appropriate Registrar will evaluate each request for the release of a transcript or other academic records of a deceased student on the individual merits of that request. The University of Kansas may deny the request in whole or to release only part of the academic records that are requested.</li>
+	<li>Officials of another school, school system, or postsecondary institution where a student seeks or intends to enroll, or is already enrolled, to supplement, update or correct any records sent by the University during the student’s application or transfer period.</li>
+	<li>To a victim of an alleged perpetrator of a crime of violence or non-forcible sex offense, as defined in 8 U.S,C. 16, the final results of the disciplinary proceeding conducted by the University against the alleged perpetrator of that crime or offense, regardless of the conclusion. See <a href="http://ioa.ku.edu/clery-act-compliance-information" target="_blank">Clery Act Compliance Information</a>.</li>
+	<li>To Veterans Administration officials pursuant to 38 U.S.C. 3690 (c).</li>
+	<li>To the public concerning sex offenders and other individuals required to register under community notification programs.</li>
+	<li>Information the university has designated as “directory information,” unless a <a href="https://registrar.ku.edu/delegate" target="_blank">hold has been placed upon release of the information by the student</a>.</li>
+	<li>As described by the <a href="https://policy.ku.edu/student-affairs/parent-notification-policy" target="_blank">Parental Notification Policy</a>.</li>
+</ol>
+
+<h3><strong><a name="5"></a>5. Notice to Third Parties</strong></h3>
+
+<p>The University must inform the parties to whom personally identifiable information is given that they are not permitted to disclose that information to others without the written consent of the student and that the information is to be used only for the purpose(s) intended. However, parties to whom personally identifiable information is given may make further disclosures of the information if they are acting on behalf of the University and as directed by the University. The names of the additional parties to which the receiving party may disclose the information and the legitimate interests of each of these additional parties must be provided as part of the request process. If a third party outside the University permits access to personally identifiable information in violation of University policy, the University shall not permit access to information from education records to that third party for a period of not less than five (5) years. Once the third party that is acting on behalf of the University has finished the project or contract under which personally identifiable information is utilized, the third party shall be required to return the information to the University, or if directed by the University, to securely destroy and/or wipe systems containing such data.</p>
+
+<h3><a name="6"></a><strong>6. Maintaining Education Records and Records of Requests and Disclosures</strong></h3>
+
+<p>Each office that maintains education records shall adopt its own policy regarding the destruction of education records, subject to the University Record Retention policy. No education record, however, may be destroyed if there is an outstanding request or notice of pending request to inspect and review the record. Also, the record of requests for and disclosures of the education record and any explanations that are a part of the record must be maintained for as long as the education record to which it pertains is maintained.</p>
+
+<p>The applicable record custodian shall maintain documentation of requests and disclosures of personally identifiable information from a student's education records. The record shall include, whether requests are granted or not, the name(s) of the person(s) who requested the information; the names of the additional parties to whom the receiving party may disclose the information on behalf of the University; and their legitimate interests in the information. Records of requests and disclosures will not be maintained for: (a) requests made by the student; (b) requests for which the student has given written consent; (c) requests made by school officials with legitimate educational interests; or (d) requests for directory information.</p>
+
+<p>The record of requests and disclosures may be inspected by the student, by school officials responsible for the custody of the records, and by federal and state officials for the purpose of auditing record keeping procedures.</p>
+
+<h3><strong><a name="8"></a>7. Complaint Procedure</strong></h3>
+
+<p>If a student believes that the University is not in compliance with this policy and/or the Family Educational Rights and Privacy Act (FERPA), the student should check first with the office involved and/or the Office of the Vice Provost for Enrollment Management (Lawrence/Edwards campus), or the applicable Dean of Students (Medical Center).</p>
+
+<p>If a student wishes to file a complaint with the federal government concerning the University's failure to comply with FERPA, the student must submit the complaint, in writing, to the Family Policy Compliance Office, U.S. Department of Education, 400 Maryland Avenue, SW, Washington, D.C. 20202-5920, (<a href="https://studentprivacy.ed.gov/file-a-complaint" target="_blank">https://studentprivacy.ed.gov/file-a-complaint</a>). The Family Policy Compliance Office will notify the student and the University when the complaint has been received. They will investigate the complaint, and may require further information. Following the investigation, they will provide written notification of findings and the basis for such findings. In the event the University is found not to comply, it will be afforded the necessary time to comply. If it does not then comply, additional action may be taken by the Family Policy Compliance Office. For guidelines concerning this complaint procedure, see 34 CFR Paragraph 99.64 and the subsequent regulations of the Family Educational Rights and Privacy Act.</p>
+
+<h2><b>EXCLUSIONS OR SPECIAL CIRCUMSTANCES:</b></h2>
+
+<p>Faculty, staff and/or student employees who violate this University policy may be subject to disciplinary action for misconduct and/or performance based on the administrative process appropriate to their employment.</p>
+
+<p>Students who violate this University policy may be subject to proceedings for non-academic misconduct based upon their student status.</p>
+
+<p>Faculty, staff, student employees and/or students may also be subject to the discontinuance of specified information technology services based on the policy violation.</p>
+
+<h2><b>CONTACT: </b></h2>
+
+<p><strong>Lawrence campus &amp; all reporting units</strong><br>
+Office of the University Registrar<br>
+1502 Building<br>
+1502 Iowa Street<br>
+Lawrence, KS 66045<br>
+<a href="mailto:registrar@ku.edu">registrar@ku.edu</a><br>
+785-864-4423</p>
+
+<p><strong>KU Medical Center campus &amp; all reporting units</strong><br>
+Office of the Registrar<br>
+3901 Rainbow Boulevard<br>
+Mailstop 4005&nbsp;<br>
+Kansas City, KS 66160<br>
+913-588-7055<br>
+<a href="mailto:kumcregistrar@kumc.edu">kumcregistrar@kumc.edu</a></p>
+
+<h2><strong>RESPONSIBLE UNIT:&nbsp;</strong></h2>
+
+<p>Office of the Chancellor</p>
+
+<h2><b>APPROVED BY: </b></h2>
+
+<p>Chancellor</p>
+
+<h2><b>APPROVED ON: </b></h2>
+
+<p>2010-01-20</p>
+
+<h2><b>EFFECTIVE ON: </b></h2>
+
+<p>2010-03-01</p>
+
+<h2><b>REVIEW CYCLE: </b></h2>
+
+<p>Annual (As Needed)</p>
+
+<h2><b>BACKGROUND: </b></h2>
+
+<p><a href="https://studentprivacy.ed.gov/faq/what-ferpa" target="_blank">Family Educational Rights and Privacy Act</a></p>
+
+<h2><b>RELATED STATUTES, REGULATIONS, AND/OR POLICIES: </b></h2>
+
+<p><a href="https://registrar.ku.edu/personal-information-and-privacy" target="_blank">Information Hold Form</a></p>
+
+<p><a href="https://registrar.ku.edu/delegate" target="_blank">Information Release Form</a></p>
+
+<p><a href="https://generalcounsel.ku.edu/open-records" target="_blank">Open Records Act</a></p>
+
+<p><a href="https://studentprivacy.ed.gov/" target="_blank">US Department of Education Family Educational Rights and Privacy Act Website</a></p>
+
+<p><a href="https://www.hlcommission.org/accreditation/policies/assumed-practices/">HLC&nbsp;Assumed Practices: Part A</a></p>
+
+<p><a href="https://www.hlcommission.org/accreditation/policies/federal-compliance-requirements/">HLC&nbsp;Federal Compliance</a></p>
+
+<h2><b>RELATED PROCEDURES:</b></h2>
+
+<p><a href="https://kumc-publicpoliciesandprocedures.policystat.com/policy/15349152/latest/" target="_blank">KUMC: Procedures for Accessing and Amending Education Records</a></p>
+
+<h2><b>CHANGE HISTORY: </b></h2>
+
+<p>10/24/2025: Added Federal Compliance link.<br>
+10/09/2025: Updated formatting.<br>
+09/19/2025: Added HLC&nbsp;link.<br>
+04/30/2025: Updated links.&nbsp;<br>
+03/26/2025: Migration to TeamDynamix from Drupal.<br>
+10/11/2024: Updated to align with Department of Education rule 34 CFR 668.14(b)(34).<br>
+03/05/2024: Added KUMC link.<br>
+02/28/2024: Updated applicable record custodian and removed campus processes to procedural document.<br>
+12/07/2023:&nbsp;Updated Office of Public Safety to KU Police Department to reflect department name change.<br>
+11/09/2023: Updated broken links.<br>
+03/27/2023: Updated broken link.<br>
+03/01/2023: Updated contact section.<br>
+12/10/2021: Updated internal link.<br>
+02/20/2020: Fixed broken link.<br>
+08/15/2018: Updated the campus section to match policy statement.<br>
+07/11/2016: Updated to remove gendered pronouns.<br>
+10/27/2014: Updated references to Health Services in 4.V. to read "Watkins Health Services", consistent with recent unit name change.<br>
+10/16/2014: Policy formatting cleanup (e.g., bolding, spacing).<br>
+06/26/2013: major revisions in formatting and content to comply with FERPA amendments, implementation of Alcohol Notification Policy and relocation to Policy Library.<br>
+(11/29/05 Contact information updated in "Primary Records Custodians and Locations on Lawrence Campus" section.)<br>
+(07/28/04 Contact information updated in "Primary Records Custodians and Locations on Lawrence Campus" section.)<br>
+(05/26/04 Contact information updated in "Primary Records Custodians and Locations on Lawrence Campus" section.)<br>
+Revised Policy approved July 2001<br>
+Original adoption date January 1, 1975</p>
+
+<h2><strong>TITLE:&nbsp;</strong></h2>
+
+<p>Student Records Policy</p></div>
+
+<div id="ctl00_ctl00_cpContent_cpContent_divFeedback2" class="well gutter-top-lg">
+
+  <div class="row" id="divHelpfulYesNo">
+    <div class="col-sm-7">
+      
+        <div>
+          <a href="/TDClient/818/Portal/Login.aspx?ReturnUrl=%2fTDClient%2f818%2fPortal%2fKB%2fArticleDet%3fID%3d21400">Sign in to leave feedback</a>
+        </div>
+      
+    </div>
+    <div class="col-sm-5 text-right">
+      <div id="ctl00_ctl00_cpContent_cpContent_UpdatePanel1" aria-live="polite" aria-atomic="true">
+	
+          0 reviews
+        
+</div>
+    </div>
+  </div>
+
+  </div>
+
+
+
+<div class="tab-content gutter-top gutter-bottom">
+  
+  <div id="ctl00_ctl00_cpContent_cpContent_upFeedbackGrid">
+	
+        <a id="ctl00_ctl00_cpContent_cpContent_btnToggleAddressed" tabindex="-1" class="hidden" aria-hidden="true" href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$ctl00$cpContent$cpContent$btnToggleAddressed&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))">Blank</a>
+        <a id="ctl00_ctl00_cpContent_cpContent_btnDeleteFeedback" tabindex="-1" class="hidden" aria-hidden="true" href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$ctl00$cpContent$cpContent$btnDeleteFeedback&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))">Blank</a>
+        
+      
+</div>
+    
+    
+
+    
+</div>
+</div>
+
+<div class="col-md-4">
+
+
+
+    <a id="ctl00_ctl00_cpContent_cpContent_btnToggleSubscribe" tabindex="-1" class="hidden" aria-hidden="true" href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$ctl00$cpContent$cpContent$btnToggleSubscribe&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))">Blank</a>
+
+<a id="ctl00_ctl00_cpContent_cpContent_btnToggleFavorite" tabindex="-1" class="hidden" aria-hidden="true" href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$ctl00$cpContent$cpContent$btnToggleFavorite&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))">Blank</a>
+
+<a class="DetailAction print-article" href="/TDClient/818/Portal/KB/PrintArticle?ID=21400" rel="nofollow" target="_blank">  <span class="fa-solid fa-print fa-fw" aria-hidden="true"></span>
+Print Article</a>
+
+<div id="ctl00_ctl00_cpContent_cpContent_divKB" class="panel panel-default">
+
+  <div class="panel-heading">
+    <h2 class="h3 panel-title">Related Articles (15)</h2>
+  </div>
+
+  <div class="panel-body">
+    
+        <div id="ctl00_ctl00_cpContent_cpContent_rptArticles_ctl00_ctlArticle_divContainer" class="gutter-top-sm gutter-bottom-lg">
+  <div class="clearfix">
+    <div class="pull-left font-md">
+      <a target="_blank" href="https://services.ku.edu/TDClient/818/Portal/KB/ArticleDet?ID=21011">Code of Student Rights and Responsibilities (Student Code)</a>
+    </div>
+  </div>
+  <div id="ctl00_ctl00_cpContent_cpContent_rptArticles_ctl00_ctlArticle_divSummary">
+    The Code of Student Rights and Responsibilities outlines the rights of students and many of the standards of conduct expected within the University of Kansas community.
+  </div>
+  
+</div>
+      
+        <div id="ctl00_ctl00_cpContent_cpContent_rptArticles_ctl01_ctlArticle_divContainer" class="gutter-top-sm gutter-bottom-lg">
+  <div class="clearfix">
+    <div class="pull-left font-md">
+      <a target="_blank" href="https://services.ku.edu/TDClient/818/Portal/KB/ArticleDet?ID=21029">Data Classification and Handling Procedures Guide</a>
+    </div>
+  </div>
+  <div id="ctl00_ctl00_cpContent_cpContent_rptArticles_ctl01_ctlArticle_divSummary">
+    This Procedures Guide for the University community was created to help you effectively manage information in your daily mission-related activities. Determining how to protect &amp;amp; handle information depends on a consideration of the information’s type, importance, and usage. These procedures outline the minimum level of protection necessary when performing certain activities, based on the classification of the information being handled. Classification is necessary to understand which security p
+  </div>
+  
+</div>
+      
+        <div id="ctl00_ctl00_cpContent_cpContent_rptArticles_ctl02_ctlArticle_divContainer" class="gutter-top-sm gutter-bottom-lg">
+  <div class="clearfix">
+    <div class="pull-left font-md">
+      <a target="_blank" href="https://services.ku.edu/TDClient/818/Portal/KB/ArticleDet?ID=21018">Data Classification Policy</a>
+    </div>
+  </div>
+  <div id="ctl00_ctl00_cpContent_cpContent_rptArticles_ctl02_ctlArticle_divSummary">
+    The purpose of this policy is to define a consistent, risk-based framework for identifying, classifying, and protecting data across the University of Kansas (KU), the University of Kansas Medical Center (KUMC), the University of Kansas Health System (health system), and related affiliates.
+  </div>
+  
+</div>
+      
+        <div id="ctl00_ctl00_cpContent_cpContent_rptArticles_ctl03_ctlArticle_divContainer" class="gutter-top-sm gutter-bottom-lg">
+  <div class="clearfix">
+    <div class="pull-left font-md">
+      <a target="_blank" href="https://services.ku.edu/TDClient/818/Portal/KB/ArticleDet?ID=20837">E-commerce Policy</a>
+    </div>
+  </div>
+  <div id="ctl00_ctl00_cpContent_cpContent_rptArticles_ctl03_ctlArticle_divSummary">
+    To provide the requirements for processing e-commerce transactions and any acceptance of credit card payments by administering entities for the University of Kansas Lawrence campus and its reporting units; to establish protocols to reduce the risk of exposure of cardholders’ personal financial information when such information is processed electronically through an e-commerce transaction; and to subject all e-commerce transactions to mandatory compliance with the Payment Card Industry (PCI) Data
+  </div>
+  
+</div>
+      
+        <div id="ctl00_ctl00_cpContent_cpContent_rptArticles_ctl04_ctlArticle_divContainer" class="gutter-top-sm gutter-bottom-lg">
+  <div class="clearfix">
+    <div class="pull-left font-md">
+      <a target="_blank" href="https://services.ku.edu/TDClient/818/Portal/KB/ArticleDet?ID=21459">Gramm-Leach-Bliley Student Financial Information Security Program</a>
+    </div>
+  </div>
+  <div id="ctl00_ctl00_cpContent_cpContent_rptArticles_ctl04_ctlArticle_divSummary">
+    This document outlines the University of Kansas, Lawrence, program to protect critical information and data and to comply with Federal Law[1]&#160;on student financial information. The goal of this document is to define the University&#39;s Gramm Leach Bliley (GLB) Student Financial Information Security Program, to provide an outline to assure ongoing compliance with federal regulations related to the Program and to enhance the University’s ability to respond to likely future privacy and security regulat
+  </div>
+  
+</div>
+      
+        <div id="ctl00_ctl00_cpContent_cpContent_rptArticles_ctl05_ctlArticle_divContainer" class="gutter-top-sm gutter-bottom-lg">
+  <div class="clearfix">
+    <div class="pull-left font-md">
+      <a target="_blank" href="https://services.ku.edu/TDClient/818/Portal/KB/ArticleDet?ID=21254">Information Access Control Policy</a>
+    </div>
+  </div>
+  <div id="ctl00_ctl00_cpContent_cpContent_rptArticles_ctl05_ctlArticle_divSummary">
+    To ensure the security and integrity of university data and information assets as well as safeguard the information of its constituents. All Kansas University technology resources will adhere to a uniform access control standard and framework.
+  </div>
+  
+</div>
+      
+        <div id="ctl00_ctl00_cpContent_cpContent_rptArticles_ctl06_ctlArticle_divContainer" class="gutter-top-sm gutter-bottom-lg">
+  <div class="clearfix">
+    <div class="pull-left font-md">
+      <a target="_blank" href="https://services.ku.edu/TDClient/818/Portal/KB/ArticleDet?ID=21416">KU Card Terms and Conditions</a>
+    </div>
+  </div>
+  <div id="ctl00_ctl00_cpContent_cpContent_rptArticles_ctl06_ctlArticle_divSummary">
+    To enumerate terms and conditions for receiving and using the KU Card issued by the University of Kansas.
+  </div>
+  
+</div>
+      
+        <div id="ctl00_ctl00_cpContent_cpContent_rptArticles_ctl07_ctlArticle_divContainer" class="gutter-top-sm gutter-bottom-lg">
+  <div class="clearfix">
+    <div class="pull-left font-md">
+      <a target="_blank" href="https://services.ku.edu/TDClient/818/Portal/KB/ArticleDet?ID=21405">Parent Notification Policy</a>
+    </div>
+  </div>
+  <div id="ctl00_ctl00_cpContent_cpContent_rptArticles_ctl07_ctlArticle_divSummary">
+    To describe the University of Kansas, Lawrence, policy and procedure for notifying the parent/legal guardian of a student under the age of 21 who has alcohol or drug violations.
+  </div>
+  
+</div>
+      
+        <div id="ctl00_ctl00_cpContent_cpContent_rptArticles_ctl08_ctlArticle_divContainer" class="gutter-top-sm gutter-bottom-lg">
+  <div class="clearfix">
+    <div class="pull-left font-md">
+      <a target="_blank" href="https://services.ku.edu/TDClient/818/Portal/KB/ArticleDet?ID=21319">Privacy Policy, General</a>
+    </div>
+  </div>
+  <div id="ctl00_ctl00_cpContent_cpContent_rptArticles_ctl08_ctlArticle_divSummary">
+    To set forth requirements regarding information entrusted to the University by the public and members of the KU community.
+  </div>
+  
+</div>
+      
+        <div id="ctl00_ctl00_cpContent_cpContent_rptArticles_ctl09_ctlArticle_divContainer" class="gutter-top-sm gutter-bottom-lg">
+  <div class="clearfix">
+    <div class="pull-left font-md">
+      <a target="_blank" href="https://services.ku.edu/TDClient/818/Portal/KB/ArticleDet?ID=21069">Procedures for Requesting to Inspect Education Records</a>
+    </div>
+  </div>
+  <div id="ctl00_ctl00_cpContent_cpContent_rptArticles_ctl09_ctlArticle_divSummary">
+    To set forth the procedures for requesting to inspect or amend education records.
+  </div>
+  
+</div>
+      
+        <div id="ctl00_ctl00_cpContent_cpContent_rptArticles_ctl10_ctlArticle_divContainer" class="gutter-top-sm gutter-bottom-lg">
+  <div class="clearfix">
+    <div class="pull-left font-md">
+      <a target="_blank" href="https://services.ku.edu/TDClient/818/Portal/KB/ArticleDet?ID=21367">Roles and Responsibilities for Information Management Policy</a>
+    </div>
+  </div>
+  <div id="ctl00_ctl00_cpContent_cpContent_rptArticles_ctl10_ctlArticle_divSummary">
+    The proper stewardship and custodianship of University administrative information will facilitate access to data that supports the work of those with official educational or administrative responsibilities within the institution, consistent with legal, ethical, competitive, and practical considerations.This document informs information stewards, managers, custodians, and users of data of their responsibilities.Note:&#160; Nothing in this document precludes or addresses the&#160;release of institutional da
+  </div>
+  
+</div>
+      
+        <div id="ctl00_ctl00_cpContent_cpContent_rptArticles_ctl11_ctlArticle_divContainer" class="gutter-top-sm gutter-bottom-lg">
+  <div class="clearfix">
+    <div class="pull-left font-md">
+      <a target="_blank" href="https://services.ku.edu/TDClient/818/Portal/KB/ArticleDet?ID=21399">Student Record Policy Primary Records Custodians</a>
+    </div>
+  </div>
+  <div id="ctl00_ctl00_cpContent_cpContent_rptArticles_ctl11_ctlArticle_divSummary">
+    Define the primary records custodians and their locations for student records at the University of Kansas.
+  </div>
+  
+</div>
+      
+        <div id="ctl00_ctl00_cpContent_cpContent_rptArticles_ctl12_ctlArticle_divContainer" class="gutter-top-sm gutter-bottom-lg">
+  <div class="clearfix">
+    <div class="pull-left font-md">
+      <a target="_blank" href="https://services.ku.edu/TDClient/818/Portal/KB/ArticleDet?ID=21562">Survey Coordination Policy</a>
+    </div>
+  </div>
+  <div id="ctl00_ctl00_cpContent_cpContent_rptArticles_ctl12_ctlArticle_divSummary">
+    To balance the demand for survey information with the burden surveys impose on students, faculty, and staff. To establish a process of best practices regarding survey development, submission, distribution, and approval and to outline protocols for survey data collection and access for the campus-wide community.
+  </div>
+  
+</div>
+      
+        <div id="ctl00_ctl00_cpContent_cpContent_rptArticles_ctl13_ctlArticle_divContainer" class="gutter-top-sm gutter-bottom-lg">
+  <div class="clearfix">
+    <div class="pull-left font-md">
+      <a target="_blank" href="https://services.ku.edu/TDClient/818/Portal/KB/ArticleDet?ID=20879">Undergraduate Instructional Assistants Best Practices</a>
+    </div>
+  </div>
+  <div id="ctl00_ctl00_cpContent_cpContent_rptArticles_ctl13_ctlArticle_divSummary">
+    This document offers best practices and baseline suggestions for how to best utilize undergraduate instructional assistants within a variety of classroom or instructional capacities. It includes best practices for scope and responsibilities, selection, hiring and training, supervising and mentoring, compensation, and handling conflicts of interest.
+  </div>
+  
+</div>
+      
+        <div id="ctl00_ctl00_cpContent_cpContent_rptArticles_ctl14_ctlArticle_divContainer" class="gutter-top-sm gutter-bottom-lg">
+  <div class="clearfix">
+    <div class="pull-left font-md">
+      <a target="_blank" href="https://services.ku.edu/TDClient/818/Portal/KB/ArticleDet?ID=21294">University Senate Rules and Regulations (USRR)</a>
+    </div>
+  </div>
+  <div id="ctl00_ctl00_cpContent_cpContent_rptArticles_ctl14_ctlArticle_divSummary">
+    To articulate University Senate Rules and Regulations
+  </div>
+  
+</div>
+      
+  </div>
+
+</div>
+
+
+
+<div id="divAttachments" class="js-article-attachments"></div>
+
+</div>
+
+</div>
+
+<div id="ctl00_ctl00_cpContent_cpContent_divProgress" style="display: none; z-index: 60;">
+  <div id="ctl00_ctl00_cpContent_cpContent_pbMain" class="progress-box-container"><div class="progress-box-body"><div class="well shadow"><h2 class="h4 gutter-top-none">Deleting...</h2><div class="progress" style="margin-bottom: 0;"><div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuemin="0" aria-valuemax="100" style="width: 100%"></div></div></div></div></div>
+</div>
+
+
+
+  </div>
+
+
+  </div>
+</main>
+
+
+
+<script type="text/javascript">
+//<![CDATA[
+setNavPosition('TDKnowledgeBase');window.CKEDITOR_BASEPATH = 'https://services.ku.edu/TDPortal/Content/ckeditor/';
+//]]>
+</script>
+<script src="https://services.ku.edu/TDPortal/Content/ckeditor/ckeditor.js?t=C6HH5UF" type="text/javascript"></script>
+<script type="text/javascript">
+//<![CDATA[
+var CKEditor_Controls=[],CKEditor_Init=[];function CKEditor_TextBoxEncode(d,e){var f;if(typeof CKEDITOR=='undefined'||typeof CKEDITOR.instances[d]=='undefined'){f=document.getElementById(d);if(f)f.value=f.value.replace(/</g,'&lt;').replace(/>/g,'&gt;');}else{var g=CKEDITOR.instances[d];if(e&&(typeof Page_BlockSubmit=='undefined'||!Page_BlockSubmit)){g.destroy();f=document.getElementById(d);if(f)f.style.visibility='hidden';}else g.updateElement();}};(function(){if(typeof CKEDITOR!='undefined'){var d=document.getElementById('ctl00_ctl00_cpContent_cpContent_shareBody_txtBody');if(d)d.style.visibility='hidden';}var e=function(){var f=CKEditor_Controls,g=CKEditor_Init,h=window.pageLoad,i=function(){for(var j=f.length;j--;){var k=document.getElementById(f[j]);if(k&&k.value&&(k.value.indexOf('<')==-1||k.value.indexOf('>')==-1))k.value=k.value.replace(/&lt;/g,'<').replace(/&gt;/g,'>').replace(/&amp;/g,'&');}if(typeof CKEDITOR!='undefined')for(var j=0;j<g.length;j++)g[j].call(this);};window.pageLoad=function(j,k){if(k.get_isPartialLoad())setTimeout(i,0);if(h&&typeof h=='function')h.call(this,j,k);};if(typeof Page_ClientValidate=='function'&&typeof CKEDITOR!='undefined')Page_ClientValidate=CKEDITOR.tools.override(Page_ClientValidate,function(j){return function(){for(var k in CKEDITOR.instances){if(document.getElementById(k))CKEDITOR.instances[k].updateElement();}return j.apply(this,arguments);};});setTimeout(i,0);};if(typeof Sys!='undefined'&&typeof Sys.Application!='undefined')Sys.Application.add_load(e);if(window.addEventListener)window.addEventListener('load',e,false);else if(window.attachEvent)window.attachEvent('onload',e);})();CKEditor_Controls.push('ctl00_ctl00_cpContent_cpContent_shareBody_txtBody');
+CKEditor_Init.push(function(){if(typeof CKEDITOR.instances['ctl00_ctl00_cpContent_cpContent_shareBody_txtBody']!='undefined' || !document.getElementById('ctl00_ctl00_cpContent_cpContent_shareBody_txtBody')) return;CKEDITOR.replace('ctl00_ctl00_cpContent_cpContent_shareBody_txtBody',{"autoGrow_maxHeight" : 175, "autoGrow_minHeight" : 175, "contentsCss" : ['https://services.ku.edu/TDPortal/Content/ckeditor/contents.css', '/TDPortal/Content/FontAwesome/css/fontawesome.min.css', '/TDPortal/Content/FontAwesome/css/brands.min.css', '/TDPortal/Content/FontAwesome/css/regular.min.css', '/TDPortal/Content/FontAwesome/css/solid.min.css', '/TDPortal/Content/FontAwesome/css/v4-shims.min.css'], "height" : "175", "htmlEncodeOutput" : true, "image_previewText" : " ", "removePlugins" : "magicline,devtools,templates,elementspath,fontawesome,youtube,uploadimage,simpleimage,remoteimageblocker", "title" : "Message", "toolbar" : "TDSimple"}); });
+
+var Page_ValidationActive = false;
+if (typeof(ValidatorOnLoad) == "function") {
+    ValidatorOnLoad();
+}
+
+function ValidatorOnSubmit() {
+    if (Page_ValidationActive) {
+        return ValidatorCommonOnSubmit();
+    }
+    else {
+        return true;
+    }
+}
+        Sys.Application.add_init(function() {
+    $create(Sys.UI._UpdateProgress, {"associatedUpdatePanelId":null,"displayAfter":500,"dynamicLayout":true}, null, null, $get("ctl00_ctl00_upMain"));
+});
+//]]>
+</script>
+</form>
+
+
+
+
+
+  <footer role="contentinfo">
+
+    <div class="master-footer">
+      <div class="container" style="width: 100%; background-color: #003459; color: #FFFFFF; padding-top: 50px; padding-bottom: 45px; font-family: Segoe UI; font-size: 1.5rem; line-height: 2.25rem">
+            <div class="container">
+                <div class="row" style="display: flex; flex-wrap: wrap">
+        
+                    <div class="col-xs-12 col-sm-12 col-md-6">
+                        <div style="width: 210px">
+                            <a href="https://ku.edu" title="The University of Kansas">
+                                <img class="img-responsive" src="https://technology.ku.edu/libraries/ku-web-styleguide/images/logos/KUSig_Horz_Web_White.png" alt="KU The University of Kansas" style="width: 100%; margin-bottom: 32.5px">
+                            </a>
+                        </div>
+        
+                        <div>
+                            <div style="margin-bottom: 32.5px">
+                                <address>
+                                    Strong Hall
+                                    <br>
+                                    1450 Jayhawk Blvd.
+                                    <br>
+                                    Lawrence, KS 66045
+                                    <br>
+                                </address>
+        
+                                <address>
+                                    <a href="mailto:policy@ku.edu" style="color: #FFFFFF">policy@ku.edu</a>
+                                    <br>
+                                    <a href="tel:785-864-9600" style="color: #FFFFFF">785-864-9600</a>
+                                </address>
+                            </div>
+                        </div>
+        
+                        <div>
+                            <div style="font-size: 17.5px; width: 100%; margin-bottom: 32.5px">
+                                <a style="padding-right: 1rem !important" href="https://www.facebook.com/KU/">
+                                    <i aria-hidden="true" class="fa-brands fa-square-facebook" style="color: #FFFFFF"></i>
+                                    <span class="fa-sr-only">University of Kansas Facebook account</span>
+                                </a>
+                                <a style="padding-right: 1rem !important" href="https://www.instagram.com/universityofkansas/">
+                                    <i aria-hidden="true" class="fa-brands fa-instagram" style="color: #FFFFFF"></i>
+                                    <span class="fa-sr-only">University of Kansas Instagram account</span>
+                                </a>
+                                <a style="padding-right: 1rem !important" href="https://twitter.com/univofkansas">
+                                    <i aria-hidden="true" class="fa-brands fa-twitter" style="color: #FFFFFF"></i>
+                                    <span class="fa-sr-only">University of Kansas X-Twitter account</span>
+                                </a>
+                                <a style="padding-right: 1rem !important" href="https://www.youtube.com/user/KU">
+                                    <i aria-hidden="true" class="fa-brands fa-youtube" style="color: #FFFFFF"></i>
+                                    <span class="fa-sr-only">University of Kansas YouTube account</span>
+                                </a>
+                                <a style="padding-right: 1rem !important" href="https://www.linkedin.com/school/university-of-kansas/">
+                                    <i aria-hidden="true" class="fa-brands fa-linkedin" style="color: #FFFFFF"></i>
+                                    <span class="fa-sr-only">University of Kansas LinkedIn account</span>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div style="width: 100px; margin-top: 20px; margin-bottom: 20px">
+                            <hr style="background-color: #2767FF; height: 9px; border-top: 1px solid #000000; margin-top: 1rem; margin-bottom: 1rem">
+                        </div>
+                    </div>
+        
+                    <div class="col-xs-12 col-sm-12 col-md-3">
+                        <div>
+                            <div>
+                                <ul style="list-style: none; width: 100%">
+                                    <li style="margin-left: -35px; border-top: 3px solid #2767FF; border-bottom: 1px solid #2767FF; padding: 1.125rem 0">
+                                        <a href="https://policyoffice.ku.edu/" style="color: #FFFFFF">Policy Administration</a>
+                                    </li>
+                                    <li style="margin-left: -35px; border-bottom: 1px solid #2767FF; padding: 1.125rem 0">
+                                        <a href="https://policy.ku.edu/university-policy-program" style="color: #FFFFFF">University Policy Program</a>
+                                    </li>
+                                    <li style="margin-left: -35px; border-bottom: 1px solid #2767FF; padding: 1.125rem 0">
+                                        <a href="https://policyoffice.ku.edu/developing-university-policy" style="color: #FFFFFF">Develop University Policy</a>
+                                    </li>
+                                    <li style="margin-left: -35px; border-bottom: 1px solid #2767FF; padding: 1.125rem 0">
+                                        <a href="https://policyoffice.ku.edu/policy-library-template" style="color: #FFFFFF">Policy Library Template</a>
+                                    </li>
+                                    <li style="margin-left: -35px; border-bottom: 1px solid #2767FF; padding: 1.125rem 0">
+                                        <a href="https://services.ku.edu/TDClient/818/Portal/Requests/ServiceCatalog" style="color: #FFFFFF">Need Help?</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+        
+                    <div class="col-xs-12 col-sm-12 col-md-3">
+                        <div>
+                            <div>
+                                <ul style="list-style: none; width: 100%">
+                                    <li style="margin-left: -35px; border-top: 3px solid #2767FF; border-bottom: 1px solid #2767FF; padding: 1.125rem 0">
+                                        <a href="https://ku.edu/visit" style="color: #FFFFFF">Visit KU</a>
+                                    </li>
+                                    <li style="margin-left: -35px; border-bottom: 1px solid #2767FF; padding: 1.125rem 0">
+                                        <a href="https://ku.edu/admissions" style="color: #FFFFFF">Apply</a>
+                                    </li>
+                                    <li style="margin-left: -35px; border-bottom: 1px solid #2767FF; padding: 1.125rem 0">
+                                        <a href="http://www.kuendowment.org/" style="color: #FFFFFF">Give</a>
+                                    </li>
+                                    <li style="margin-left: -35px; border-bottom: 1px solid #2767FF; padding: 1.125rem 0">
+                                        <a href="https://news.ku.edu/" style="color: #FFFFFF">News</a>
+                                    </li>
+                                    <li style="margin-left: -35px; border-bottom: 1px solid #2767FF; padding: 1.125rem 0">
+                                        <a href="https://calendar.ku.edu/" style="color: #FFFFFF">Events</a>
+                                    </li>
+                                    <li style="margin-left: -35px; border-bottom: 1px solid #2767FF; padding: 1.125rem 0">
+                                        <a href="https://employment.ku.edu/" style="color: #FFFFFF">Careers</a>
+                                    </li>
+                                    <li style="margin-left: -35px; border-bottom: 1px solid #2767FF; padding: 1.125rem 0">
+                                        <a href="http://www.kualumni.org/" style="color: #FFFFFF">Alumni</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row" style="display: flex; flex-wrap: wrap; align-items: center !important">
+					<div class="col-xs-12 col-sm-12 col-md-5 col-lg-4">
+						<div>
+								<a href="https://services.ku.edu/TDClient/818/Portal/KB/ArticleDet?ID=21297" style="color: #FFFFFF">Nondiscrimination statement</a>
+						</div>
+					</div>
+
+					<div class="col-xs-12 col-sm-12 col-md-3 col-lg-5">
+						<a href="https://accessibility.ku.edu" style="color: #FFFFFF">Accessibility</a><span> | </span>
+						<a href="https://cms.ku.edu" style="color: #FFFFFF">Website support</a><span> | </span>
+						<a href="https://technology.ku.edu/cas" style="color: #FFFFFF">CMS login</a>
+					</div>
+
+					<div class="col-xs-12 col-sm-12 col-md-4 col-lg-3" style="text-align: right">
+						<div style="margin: 0 0 15px">
+							<a href="https://ksdegreestats.org">
+							<img alt="KU degree stats logo" src="https://technology.ku.edu/libraries/ku-web-styleguide/images/logos/KSDegreeStats_Logo_Std.png" style="width: 174px">
+							</a>
+						</div>
+						<div style="font-size: 1.125rem">
+							<p>© 2026 <a href="https://ku.edu" style="color: #FFFFFF">The University of Kansas</a></p>
+						</div>
+					</div>
+				</div>
+            </div>
+        </div>
+      
+    </div>
+
+  </footer>
+
+
+
+<script>
+
+    
+    
+
+      // Inject the Google Analytics isogram. This must happen here because it
+      // cannot be injected through an external javascript library.
+      (function (i, s, o, g, r, a, m) {
+        i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+          (i[r].q = i[r].q || []).push(arguments)
+        }, i[r].l = 1 * new Date(); a = s.createElement(o),
+          m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+      })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+    
+
+      // Per Incident #6707155. Need to focus on img. pseudo-class :focus-within is not supported in IE
+      (function ($) {
+        var $anchor = $('#divLogo a');
+        var $beLogo = $('#divLogo a img');
+
+        $anchor.focus(function () {
+          $beLogo.addClass('accessibility-focus-on-logo');
+        }).blur(function () {
+          $beLogo.removeClass('accessibility-focus-on-logo');
+        });
+
+        
+        
+          const queryParams = new URLSearchParams(window.location.search);
+          let showChatbot = true;
+          if (queryParams.has('nobot')) {
+            const nobotFlag = queryParams.get('nobot');
+            if (nobotFlag === '1' || nobotFlag === 'true') {
+              showChatbot = false;
+            }
+          }
+
+          if(showChatbot) {
+            $.ajax({
+              url: "/TDClient/818/Portal/Chatbots/GetScript",
+              type: "GET",
+              dataType: 'text',
+              success: function (data) {
+                
+                var jQueryAjaxSettingsCache = jQuery.ajaxSettings.cache;
+                jQuery.ajaxSettings.cache = true;
+                $(document.body).append(data);
+                jQuery.ajaxSettings.cache = jQueryAjaxSettingsCache;
+              }
+            });
+          }
+        
+
+        window.addEventListener("message", (event) => {
+
+          // Only accept events that come from the same origin
+          if (event.origin != window.location.origin) {
+            return;
+          }
+
+          switch (event.data.type) {
+
+            case "authenticate-using-popup":
+              handleAuthenticateUsingPopup(event.data.payload);
+              break;
+
+            case "authenticated-successfully":
+              handleAuthenticatedSuccessfully(event.data.payload);
+              break;
+
+            default:
+              break;
+          }
+
+        });
+
+        function handleAuthenticateUsingPopup(payload) {
+          let loginUrl = '/TDClient/818/Portal/Login.aspx';
+
+          if (payload.successCallbackUrl) {
+            loginUrl += '?SuccessCallbackUrl=' + payload.successCallbackUrl;
+          }
+
+          window.open(loginUrl, "_blank", "popup=1");
+        }
+
+        function handleAuthenticatedSuccessfully() {
+          event.source.close();
+          window.location.href = window.location.href;
+        }
+    })(jQuery);
+
+</script>
+
+</body>
+</html>

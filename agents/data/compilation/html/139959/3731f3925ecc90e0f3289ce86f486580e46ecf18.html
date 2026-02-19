@@ -1,0 +1,180 @@
+<!DOCTYPE html><html>
+<head>
+    <meta charset="UTF-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/><title>Login - UGA SSO &#8211; Central Authentication Service</title>
+    <link href="https://fonts.googleapis.com/css?family=Merriweather+Sans&display=swap" rel="stylesheet"><link rel="stylesheet" type="text/css" href="/cas/webjars/font-awesome/6.7.2/css/all.min-7441465cab20b640d4156626d19cc63e.css"/><link rel="stylesheet" type="text/css" href="/cas/webjars/bootstrap/5.3.3/css/bootstrap.min-a549af2a81cd9900ee897d8bc9c4b5e9.css"/><link rel="stylesheet" type="text/css" href="/cas/css/cas.css,/css/custom-d41d8cd98f00b204e9800998ecf8427e.css"/><link rel="stylesheet" type="text/css" href="/cas/css/style.min.css" /><link rel="icon" href="/cas/images/favicon-05a1dcb21643231723dda550fbc8701b.ico" type="image/x-icon"/><script type="text/javascript" src="/cas/webjars/jquery/3.7.1/jquery.min-2c872dbe60f4ba70fb85356113d8b35e.js"></script>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/></head>
+
+<body class="login">
+<div class="container d-flex justify-content-center flex-column">
+    <div class="wrapper">
+        <main role="main" class="content">
+            <div class="login">
+	<header role="banner">
+    <img src="./images/Screen-GEORGIA-V-FC.png" style="max-width:125px" alt="University of Georgia Logo"><h1>UGA Single Sign-On Service</h1>
+</header>
+            
+	    <div id="loginForm">
+                <!-- th:if="${@casThymeleafLoginFormDirector.isLoginFormViewable(#vars)}" --><!--div th:replace="fragments/loginform :: loginform"--><div>                
+                <div class="">
+                    <form method="post" id="fm1" action="login">
+                        <section class="form-group">
+                            <span><span class="accesskey">U</span>sername:</span>
+
+                            <div>
+                                <input class="form-input required"
+                                       id="username"
+                                       size="25"
+                                       tabindex="1"
+                                       type="text"
+                                       accesskey="u"
+                                       autocomplete="off" name="username" value=""/></div>
+                        </section>
+
+                        <section class="form-group">
+                            <span><span class="accesskey">P</span>assword:</span>
+
+                            <div>
+                                <input class="form-input required"
+                                       type="password"
+                                       id="password"
+                                       size="25"
+                                       tabindex="2"
+                                       accesskey="p"
+                                       autocomplete="off" name="password" value=""/><span id="capslock-on" style="display:none;">
+                                <p>
+                                    <i class="fa fa-exclamation-circle"></i>
+                                    <span>CAPSLOCK key is turned on!</span>
+                                </p>
+                            </span>
+                            </div>
+                        </section>
+
+                        <section class="form-group">
+                            </section>
+
+                        <input type="hidden" name="execution" value="1dbdbead-0519-4e46-a556-f1c6f2f20fa2_ZXlKaGJHY2lPaUpJVXpVeE1pSXNJblI1Y0NJNklrcFhWQ0lzSW10cFpDSTZJamcyTlRFeU16SmlMV00wWmpBdE5EazFOQzA1T1dWaExXVTROVGM1WkRjd09HRXlOQ0o5LjBrY0RHY2dzTV8yZVoxUm9RZmk5MkdmWkpJNGxPZ2pNNC1ZbUhHc2J3SUdOUkV2dmR5U2xNdzBZa0F1MGNFeVRyRC03b1VRdm1fSWNfM0tCbE5rSDZBU1lvc3dUZEJDMWNFelBZRXFxWE5sc29RZm9QNVBidWdyeFhJQm9oa2NmbG9OMEFiTFhGWmZVZWVHYVVRWXl5NWw5MjQ4UUd2aG9BMkRRQ3Y5UUdSMmd0b0t6ck5VNXhPWFdyUF9HajlhQXhyOFJLd3dOajZydUx5TlJLajlOQ0w0ejBOZEJPZ2NlM2VjZWpCdWl1VVg2Qk9EX1dHR3pLY3FvNXBLZXZxZ2I3ZmJ2Mk5ITE9oMUMtMEU1ZkJfdXB4OHpQMWhhODUzTDlnaF9xYW44eF94QmRPbkJ1Wk9JcW5pbTVMNjFfUDdRWm1KV01lVDRKRG1MTG9yRWFmZDByWHFGeVIwV3l3d2pPYzFmVVQ1UWNscExTRTJrdVZLN0Q4WHJKSzNWLXlwVWs3X3pPNjJzWWVVczE5bjhnR0MxcGo1elEyY0xjSFEzRm13RGhmT2h0WXBNZ1dQLXZ5ZXJsM1NZdWRveDNCR043QlBzWG9fYkxOejR4eE9WY1Zzei1veTVhU1VVVGUtMWdQS0dWZkxOam1iY0FrRHUxOHowYnlBckpxeEhXanZzalhYU0lVeHJFSkxsaWdJTTRWM2gyQ0dja1dxWTRuOEp3RUpDa3QxMXR1Zm05TXJEUTljQzhKekdIUUxGOTdMRy1DM2FUSjRObjd6cEh4cTFodTJxU0N1MjluQXJ4SU5OYlNVN1JZN2tHOGIyVHdJTkhibzV4LVNaQXVuTGw5NEVvNVk5WXVrWm51WDdRcTZsQ1pkcWdIaW5YdnVpOVNoQUhUUjJpSHktSk9iOHpBaDVPUlBrQnRCWlhqRnNyVVh0aDQxVWF3VkkwcEQ2Q0dWOV9wUTBwVUxwQ1hsMmtZMUpyakQ2MXFySThJTUZUZmhJQmtRUGdLZ05zMW9pWFBWVVVKaHUwbjVfVnhhX3drVjZwWEFmcVIyQVZHNW9WbkIwV0ZPNmt2ekc5c05RaGpxeXRGV002dzk5aGE4RE9OdG9rWUNxV0l2bTlfSVphQURyTU5DZVVzamZHdzh0MFBlMlotOXFnRTdWbmJUanIyNU5WRkZUN0ZHNjlBREd2QXk3S1JpM3QxeXBTcGZ1M21obTdVRlcxSGhiSVYySzdTUWtTbkhvejc1emViWTd5R2lHekloZHRFcWdLaGtXWHRUMUJOUXk4RklIYUZKcy00S0pOZW92YlBzaHFscVFRU1NoV2VKcnJOdVVUb2NPRWRRYXdFRFVaVC1vNV9uTUg5R0IwTV9Ld3dDbHZYdzRfR2NoVzFLT292QmlRMjFacWRTNUE1TjdkYmZYS0RmWDVfVHRVQ3ZubTBZaVZHcS01eG93TWEtZklrYU9CclppR3k3N003WXhKZFp2azNuajFXMDJudUdDV0RyeUdMSENGTENuUTY2UzM5M09GU0dwZk9NaXl4WThNTTg1SzgwbzRrUWd3OTh5ZlhMZ0Z3dkZRYjhNSHAxVnFhTlA0Vkh1XzROdWVzS1V1bmNJYXlTNDFaZU8zenhJb1RpZk9QWkROYVV0NV9tTUtOdWxvb0d1SWh3emlvWFM5QWpWY3locjhrZGZRc2dqVTdRUHI3aExfdlNDSjdPVXRYa1VZNVpGVklwdnYxMWhyVFVVX0lMZHREc1Jfa1dmNHFpa2NnOEc0czZ4VS1JeHh2QVloVmNIWS1JbFFsQ3J0TzE0UTdTNzNQdTM3MmV3Y0ZaNEZ4QmNIcm91MVVxUUFMczE5TjZreGRLXzM4YnRVZ0cwNXpCME9yU1B0TkZ6ODItVGlIeG9EZU9fYkRnSEJOakVzOW9SZWVlU1Z1QXBlODE4cjRsd0xjQkJCRFZGZC0zMGtWazIxTXE0YVptVVZJZkhFM2N4QVJ5Qm8zOUlFcTBnZlQ1WVh3UW1xQmhMRHZNMG1nbEswODk3VWlLcVVLREpDeEg2X1VWbVd1LTlTbkNIc2hjRXYzTVJHWEY0T0hJUlpra3E5TkJjb3BXUzdaUWM0ZXpUbHZ0MFdXdzIyYUtiN0RoVUQ3SGItUHN6cC02cXkycmZnSjFYbmtoSW1peDNONkRhc3E2Y3pvS25JV0thcEJOQmtRSF9TdFRId3FsaTFZR3ZHZjhCblhXT0pjOU1lbC1JSld1UGtXMENHZ0otQV8yUkhsS19uQmdvajVfbG80QWNpWkdFRFFSYktXendwZXRpMUF1aDBPSk9EU0ZpbGg3V0NjODdoUVB1OG9lWjZoLWhwdVR0Qms0Wkd2U3lVZVc3R0plZDRaaldQWWNXelZJRWUxbDFRUnpPNjdWQk1HR1EtSzJfWGRDMDdIZm94S2hvblRvcEJsY1RZSHlpWk1lZDNpZXBzU2FXYmtKekxqX3UtTzJwZEY2S0tEZHVRcS1xMktIQ2Ywd0thcjNhcTdkaGRSZlBGTWgyZDVTclNlWkZ3a3RBRG5rUXdUSHlzajg2UG02MklwSGF6cGpaVkF5NzNIM3BiSVZaMXh5YV8tMDBsS21lYnluX0ZrbmxoZGN2TGFwdy15S1B4OXF5dEYySlZGRXFtcDVzc0UyS2RxNGloSkFPcVF4aV9qLTVBZ3NMSWFlUktaU2Y2aExaejRKbGZtR0pDY2tSaUw4a280OHJ6ZUZhdGdkSm1iZnd5bUE4TEZONjJsbHRhUV9WZ1FXTlFXdTl0U3l6T01aczBGSFpXbm5sQjhtcFJXQkM3R1YwOFF0MEJIRDAxNHA2TFB4RVFTNHFQMDMtNDRMejhoYjFvc2NTZE4xcmlqMFNBSWlLODM2TkNzYm5uSEFFZmoyLUd2Z3ZobFJwQ2RsVlRMekZLb0tkWUpMZWhoR3ZXNjY4UWhnT3c0aUFrN1dEaUJWZ1hfYjVpeU5DTmd4eTNyVWNMQ2xNcWIycjI5YjJKeDQzTGx4d3QwQ3BNYXUwLUF2czNYWTByVnR4UGx0OHRHWUtIN0RPbFpuV0tRYjdOZDY5dzlxbHpxUjJ4N2h5cXFJSE1jMHNFUU5QLUtCbDBUdEN3TTBueXdwQmVIWEtVQ1QwNkN5eUJmTkc1MnZ4VU1sczBaQktQOVJKMkJia05jODFjV3F0RFlpQXN6bzVaMEJwYmVpcDJ2bHdURjcwaG1XSTZQNF9WZTRmVF9abllIV1VZQWlURzJtTGt3TmJXTkhiSklTZHV1Tk5sYURSREdUTkx2Z1JSR1U2ODlxbVIzMEltZzcwRUNjQ2lyTnc0NjktQk1QUVhqRmpLdUZENWJBY0pFVHhfX0lZaGJLQzd3NkhpRkVlMzlCWVd0VHZTU3ZWdFZNd2dEODVOZjF2NGhmX3FuRk9tbVk4c0hJTWl6blN5NzI1TVp2aS1tZ2NFZG5CWHA2V3c1aVRlaVMtOEROX3h6V3dENzlQc2ExcU5kR09rQWxQcDd5NmhYTkVURTZUYmkyVUt1RGlNZ1lMamRrRWI1d3lkanVZb1hCNmU5NTlsalFtUUk2azRlUXZCS1FPVl8wVDZObE1VcU01ME9qTk9OU2JLUFp2SXBicmtucEVQbjVzSGZ6RlRON3RYUEdXR3UzMC1ucm0zNXFrSlVvSGZZdnFWQ19tWEFSdklxRm9TYllmdnhxRlBsT0tva3FIRFA3cnpfZDRwR3VQYVA4YzVLSlVNMjBfTk5TVTZMQmQ3eHp4U1ZPbEMtdUVSS25KMUxsai1DRDJoaUhLQzNMV2hQNzFYSVpJaDdQTmxDWFFGUGIxQXp0d2Z5TnRDVDBDaG1mTnNURVVlZGZEZ3F0MTRxZjNUQUFseDQyWUg2WUJoMmZhZEhpQjNMS1lXR2taQ2k3cERRX0VNUTJZNXJsYVBOTUE0TmVObG81cFZ0aHljRUk1OUZJdGprVDFwSTZJYXg0cENjTHBnNXJ0YXlZc041aHg3dExWZm9IYlVnaEFYX2h0WG9IOW9ZLXRLTENqdXYyNXl1LWh5TGFHWXJuM3ZVM2N0aFFSZDBVdy1Kblpldk1aV0VRMjNEZU9GLXdfNkZrOHhJdTU3d3FWVzJzOVJkb2JFRUdMTnk1Mi1yNHJWSjgtU2VraG8xYzg2Ym54OFdvaThMNkJCOWx3Q1doTFVEdy1zcmFqVTJ1V2p4blVSQ1F3ZVdVX3Raa3ZMQThFTTNwUFRNYmZvc2UwOG5SWVJnQmJjLVRpalE0dFpib1BYZkpMcUZzV01MbjRHMXBpRy1aNUZmWHJxdnVtcUJMazlBbDA5QjdrUUFVeTlfS3NQQVBWdmRoQ1pYS0ZzMm81TnRhcUp4ZDRrOWROdTNkbk5LS3UxVUpjeTZHZGRGczFjeGloRWVDUnBFZldjUXJvejVZT1JhaWxhTC1WWXdtanoybTVENDFtUVJIOGpoWW9YYmtlVDA1Z2hKd2hUMGhUZW5HV2Y1enJ3RHlSU0JZR2xwUkdoUGZHcmlEMUhjRnpZT0RSWVd6REMtMkZ3ZXBsWk5tOFZtcXp1YlplZnFEQ2FUcTdERHFVUHRtNm02OTFIaXBmejVOX0VGOGg3amR3NDJTYm5qenhkTkhWemtmb1ZGbTktZllVQWk3Y2lqRXRVNFRPRDhXejRzd3FxTTJ6dDB1MFdDdWk1a3R1YnN1Ymh2MG5jQl9wSnBwaFBid29iMlZma0x0a2ZFVnFJNW92VThIcHRZRmZFbVVkTUJoaVU4SHBQZERYR21Zd0dJQXExUVM2Z25fcUZHemZHUGFPV0ZwbDhjS0I2T2xyR1c2cDc0ZHpvcF9PclJLcGY2dmg1Mk1MZzA0NkVNNC15ZENQZlRfb1gxb1Z1bUdHaDM3VGFBWWx4UjZKN0toZGZhd0gxbkItMzBaZEhTTFdLWkVOTGw3UFZwSEEwQmE0M3IyVjN4OHctQVYxUzJFWkFQclpVOEpKZlpIcnkzNngySXp4X21GUXRJTFQ0N21ZREtwX0l6UHZWUUo4b29OT0dBSGJKV3FpQzlKTGJpVWl3bTI1U2pmdlJQVURDQmFZendJOENXYkk3WnE2U1EzV0xqMUZRWk1NeDhMLVFfaUpoVFcyaWFYZ3Jzam5NRlJwbGFDNDh2bFpNVUgzSzctNkV6WFd1UzNNcGs4eEVaRzlRMm1mRWxmSDF4Y1paNFVRRlNKZFpyREJSakZ5WFBEZTJfN2lLMHRSdnF4Sml3aGsyUUtXRDRJVlZrZ2xuY1lvUV9VLXJxeW9XSjd0YjF5WndDY2NiSWJ6b0kyR1hSQ2FVY2R3ZDFEZEpfeHRIempPQmtkRkRHMm5ZZkZPcG1taUZyZ1VMVzh6ZHZvUjQ2UGsxUlAzZzVaRFpJZHFwNWRMdHVNUllwSlA0WWJWVnB5a2Z3RUZQZXZNbTNRWDVKMW5lbF9meTRWTGkwV0E4NE92VjJiVlJLZEdweUp2TjFXUmxndEtlOURabDM4emRhZWVzNXIzWU5Sbl9vYi1oWTVNZVk3MWt1YjhGaDVrSXBsLV9BQ1hMMmU2ZGg3ejFieGJxZ2JMZTZ4aDd5aGZRalRyWFdjVFlrNWhfXzFNd3VadzhQX1lVa0VnN3RxNHk0Y1BPUFkzcHIyU1gzaU4wZ3VKMzdjY3dQMWFwWHE2ZWduUDVkSnRWNkpLYjFJM3c2dy1PTmNsYzVfVkdCYmlweVhfQ3FFTXB3eGtGYVNvVE0wT19FaEkzR3dXVU4tY0ZXWjhlNXZHSktCUmtiSDRsTnJuQnRsZmwzZG1CeGlWb0JpR3pOdndqMnVFcXAtNUJGRFNWZWhTa1g2MUlZRS1jR29ORmM0dmhNNnhaZG9HSldxNUlTY1ZoQlY3LXNsVVhkTHJYYVI5ZGNHNXhtN1otd2IzLWxYRlZTdURFNmJDMHJGYjg3Zmc0Rk5VcmdOeFppdDZpSEM2Z3lnN0dmVGlQRlJuMEhVZHdGSUZVSmpfa191SGRMTG56b09mai03bi1SS3BXNXB2a2JkYzFkaGxiNXhsRVJ4T19LZjV0Z2YwbXVtcURyT1ppNWRraUpuaURRcDMxLWFYUFJDZlR2c2JscWh1Q21pclk5cVh3a2hTbExzdVRMNkEwSTYtOUY4eGVPRzRBT0FhUEZLeF81SEh1MmtsM3Z4VTVSeERzVFZZTk9mM3FRdVZVLUtEYVZEcExBNkpvMUxkaXZ5ejFyT3ktZmdTSzVhY3JMeGxqVjZMZVZMdW9feG5INldVQlJndmo3cHVSaXRYb2hiMmdTRXBGR2hZejlvQ1ZuRmpVd0F4U0d2N1JqTzl1V1NMaUw4MGYyemVBQUpvR2RRR2hKX2xuS01OVEY1eU5Vb0YwZV94dUVyNjAyeW9fbFBUM2Vsb2UxZFh5X1d6d3c3azZoUU5ycGhaU2hWZTI0ejNiaExkUEFkRnBrUy1Mc3BTY0RyREhYdWljOWdoamhhd3lqdTlhaHRyWmpETXNCcmlxa0hKVWFuSGN1VFh6S3F4ZEJ3MkFnMDc2aXZSVXNkS0xfSndaOU43ekp4b0RsblNjdzBPY3JhNWFsMk9VNDFWdTNEM09DcW9yZXZibDdQcTBfMTFOUlB4aEZqQ3k1RXAwZG50YUxPbFNVRVVETzB3R05WVkdFR2JWOEdra2d3MHlpX2tIekY2TllidmJkWkhfTTRjQnlIbkVEdFRra0NyMkVFRXhtNVp0WnlUbkMwVVp5YTdMZ2FzRldya1h6aDRKQVlFSkxDY19wVlQ4V0lsVWJPWFdsUFlzVUhMb01jS2pZdWkwUS44cU1vaGVMS1BESzRQczBPNnVuYXk5NHp2aXlCdVhlR3JzTHY2eHVrRmtXaUw5TWVpMzd2ZklNTXZKQndpQ2tvT2JXUnQzeGFnWVM5R3JfN2EzT2VlQQ=="/><input type="hidden" name="_eventId" value="submit"/><input type="hidden" name="geolocation"/><!--p th:if="${#request.getMethod().equalsIgnoreCase('POST')}"--><div class="d-flex justify-content-center align-items-center py-1">
+                            <input class="btn btn-submit m-1"
+                                name="submit"
+                                accesskey="l"
+                                tabindex="6"
+                                type="submit"
+                                value="Login"
+                            /><input class="btn btn-reset m-1"
+                                name="clear"
+                                accesskey="l"
+                                tabindex="7"
+                                type="reset"
+                                value="CLEAR"
+                            /></div>
+
+                        </form>
+
+                    <!--<div th:unless="${passwordManagementEnabled}">
+                        <br/>
+                        <span class="fa fa-question-circle"></span>
+                        <span th:utext="#{screen.pm.button.forgotpwd}">Forgot your password?</span>
+                        <p/>
+                    </div>--><script type="text/javascript">
+                        /*<![CDATA[*/
+                        var i = "One moment please..."
+                            /*]]>*/
+                            $(document).ready(function () {
+                                $("#fm1").submit(function () {
+                                    $(":submit").attr("disabled", true);
+                                    $(":submit").attr("value", i);
+                                    return true;
+                                });
+                            });
+                    </script>
+                </div>
+            </div>
+            </div>
+            <div id="providers" style="display: none;">
+                <script>
+            var redirectTo = $( "a[autoRedirect=true]" ).attr("href");
+            if (redirectTo != null && redirectTo != undefined) {
+                window.location.href = redirectTo;
+            }
+        </script>
+    </div>
+            <hr /><div class="help">
+                <h2 class="pb-2">
+                    <a href="https://uga.teamdynamix.com/TDClient/3190/eitsclientportal/KB/ArticleDet?ID=169252" target="_blank">
+                        Trouble logging in?
+                    </a>
+                </h2>
+                <div class="mt-4 d-flex justify-content-around align-items-center">
+                    <h2 class="px-3 w-40">
+                        <a href="https://uga.teamdynamix.com/TDClient/3190/eitsclientportal/KB/ArticleDet?ID=154812" target="_blank">About SSO</a>
+                    </h2>
+                    <div class="px-3 w-20">
+                        <img src="/cas/images/red_column.png" alt="line divider" class="separator-img"></div>
+                    <h2 class="px-3 w-40">
+                        <a href="https://eits.uga.edu/" target="_blank">About Us</a>
+                    </h2>
+                </div>
+            </div>
+            <script>
+                if ($('#list-providers').length) {
+                    $('#providers').addClass("col");
+                    $('#loginForm').addClass("col");
+                    $('#providers').show();
+                }
+            </script>
+        </div>
+        </main>
+    </div>
+    <!--div th:replace="fragments/footer :: footer"--><footer class="footer mt-4" role="contentinfo">
+        <p>This site is operated by <a href="https://eits.uga.edu/">Enterprise Information Technology Services</a>.</p>
+        <p><a href="https://eits.uga.edu/access_and_security/infosec/pols_regs/policies/privacy/">Privacy Policy</a></p>
+    </footer>
+</div>
+<script type="text/javascript" src="/cas/webjars/es5-shim/4.5.9/es5-shim.min-136920ce3d575efb89300c3c277555fb.js"></script>
+<script type="text/javascript" src="/cas/webjars/css-vars-ponyfill/2.4.9/dist/css-vars-ponyfill.min-d95555bf007fcdda849a37d9714463b7.js"></script>
+<script type="text/javascript" src="/cas/webjars/bootstrap/5.3.3/js/bootstrap.min-4800bcc26467d999f49b472f02906b8d.js"></script>
+<script type="text/javascript" src="/cas/webjars/jquery/3.7.1/jquery.min-2c872dbe60f4ba70fb85356113d8b35e.js"></script>
+<script type="text/javascript" src="/cas/js/cas.js,/js/material.js,/js/custom-d41d8cd98f00b204e9800998ecf8427e.js"></script>
+<script type="text/javascript" src="/cas/js/cas.js"></script>
+<script type="text/javascript" src="/cas/js/material.js"></script>
+<script type="text/javascript" src="/cas/js/custom.js"></script>
+
+
+<script>
+    if (typeof resourceLoadedSuccessfully === "function") {
+        resourceLoadedSuccessfully();
+    }
+    cssVars({});
+</script>
+
+    
+
+<script>
+    /*<![CDATA[*/
+
+    var trackGeoLocation = false;
+
+    var googleAnalyticsTrackingId = "UA-155853975-1";
+
+    /**prod**/ if (googleAnalyticsTrackingId != null && googleAnalyticsTrackingId != 'G-PDMYJVK0XT') {
+    /**stage** if (googleAnalyticsTrackingId != null && googleAnalyticsTrackingId != 'G-NGPL5Y8XWT') {**/
+   /** dev ** if (googleAnalyticsTrackingId != null && googleAnalyticsTrackingId != 'G-PZF4RBK1HE') {**/  
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r;
+            i[r] = i[r] || function () {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date();
+            a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0];
+            a.async = 1;
+            a.src = g;
+            m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+
+        ga('create', googleAnalyticsTrackingId, 'auto');
+        ga('send', 'pageview');
+    }
+
+    /*]]>*/
+</script>
+</body>
+</html>

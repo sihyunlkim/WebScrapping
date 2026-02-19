@@ -1,0 +1,2448 @@
+<!DOCTYPE html>
+<html class="Page" lang="en" >
+    <head>
+    <meta charset="UTF-8">
+
+    <style data-cssvarsponyfill="true">
+            :root {
+    --primaryColor: #006eb6;
+    --secondaryColor: #a2daff;
+
+    --grayscaleOne: #faf9f9;
+    --grayscaleTwo: #f1eced;
+    --grayscaleThree: #e6dfe0;
+    --grayscaleFour: #f0f0f0;
+    --grayscaleFive: #949494;
+    --grayscaleSix: #656565;
+
+    --primaryTextColor: #141414;
+    --secondaryTextColor:#141414;
+    --inverseTextColor:#ffffff;
+    --quoteTextColor:#000000;
+
+    --linkTextColor: #006eb6;
+    --linkHoverColor: #1764aa;
+
+    --containerMaxWidth: 1240px;
+    --containerXlMaxWidth: 1440px;
+    --containerNarrowWidth: 800px;
+    --gap: 20px;
+    --verticalGap: var(--gap);
+
+    --siteBgColor: #ffffff;
+    --backgroundColor: #ffffff;
+    --borderColor: #006eb6;
+
+    --headerBgColor: #006eb6;
+    --headerTextColor: #ffffff;
+    --headerHeight: 32px;
+
+    --footerBgColor: #006eb6;
+    --footerTextColor: #ffffff;
+    --footerLinkTextColor: var(--secondaryTextColor);
+
+    --buttonBorderWidth: 1.5px;
+    --buttonBorderRadius: 5px;
+
+    --primaryButtonBgColor:#006eb6;
+    --primaryButtonBorderColor:#006eb6;
+    --primaryButtonTextColor: #ffffff;
+    --primaryButtonHoverColor: #1764aa;
+
+    --secondaryButtonBgColor:#656565;
+    --secondaryButtonBorderColor:#656565;
+    --secondaryButtonTextColor: #ffffff;
+
+    --primaryHeadlineFont: acumin-pro-semi-condensed;
+    --bodyFont: acumin-pro;
+    --serif: freight-micro-pro;
+
+    --live: #ee0120;
+    --gray: #d4d4d4;
+    --white: #ffffff;
+    --black: #000000;
+    --error: #ee0120;
+    --success: #28a745;
+    --idaho-blue: #006eb6;
+    --colorCharcoal: #2a2a2a;
+
+    --bannerBgColor: #a2daff;
+    --bannerTextColor: #ffffff;
+
+    --infoLightColor: #afd6fe;
+    --buttonBgColor1: #0057b8;
+    --buttonBorderColor1: #0057b8;
+    --buttonTextColor1: #ffffff;
+    --inverseButtonBgColor: #afd6fe;
+    --tagButtonBorderColor: #e2dfdd;
+    --tagButtonTextColor: #0057b8;
+    --customButtonHoverColor: #1a66b7;
+    --primaryLinkColor: #0057b8;
+}
+
+    </style>
+
+    <style>
+    body:before {
+        visibility: hidden;
+        border: 0;
+        clip: rect(0, 0, 0, 0);
+        height: 1px;
+        margin: -1px;
+        overflow: hidden;
+        padding: 0;
+        position: absolute;
+        width: 1px;
+    }
+
+    @media only screen and (min-width: 320px) {
+        body:before {
+            content: "mq-xs";
+        }
+    }
+
+    @media only screen and (min-width: 568px) {
+        body:before {
+            content: "mq-sm";
+        }
+    }
+
+    @media only screen and (min-width: 768px) {
+        body:before {
+            content: "mq-md";
+        }
+    }
+
+    @media only screen and (min-width: 1024px) {
+        body:before {
+            content: "mq-lg";
+        }
+    }
+
+    @media only screen and (min-width: 1240px) {
+        body:before {
+            content: "mq-hk";
+        }
+    }
+
+    @media only screen and (min-width: 1440px) {
+        body:before {
+            content: "mq-xl";
+        }
+    }
+</style>
+    
+    
+
+    <meta property="og:title" content="AI in Academics: Shaping the Future of Learning at BYU-Idaho">
+
+    <meta property="og:url" content="https://www.byui.edu/genai/ai-in-academics">
+
+    <meta property="og:description" content="At BYU-Idaho, we are strategically integrating Artificial Intelligence to enhance academic excellence and prepare our students for an evolving world. Our focus is on three core priorities that empower both students and faculty in the age of AI.">
+
+    <meta property="og:site_name" content="Generative Artificial Intelligence">
+
+
+
+    <meta property="og:type" content="website">
+
+    
+    <meta name="twitter:card" content="summary_large_image"/>
+    
+    
+    
+    
+    <meta name="twitter:description" content="At BYU-Idaho, we are strategically integrating Artificial Intelligence to enhance academic excellence and prepare our students for an evolving world. Our focus is on three core priorities that empower both students and faculty in the age of AI."/>
+    
+    
+    
+    
+    
+    
+    <meta name="twitter:title" content="AI in Academics: Shaping the Future of Learning at BYU-Idaho"/>
+    
+
+
+    <meta name="description6" content="Testing URL regex">
+
+
+    <link rel="preconnect" href="//fonts.googleapis.com">
+<link rel="preload" as="style" href="//fonts.googleapis.com/css?family=Noto+Sans:ital,wght@0,400;0,700;1,400&display=swap">
+<link href="//fonts.googleapis.com/css?family=Noto+Sans:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+
+
+    <link data-cssvarsponyfill="true" class="Webpack-css" rel="stylesheet" href="https://brightspotcdn.byui.edu/resource/00000179-0eeb-d7c7-affb-eeef5f450000/styleguide/All.min.ca93f9469586d08515b260489f142ab8.gz.css">
+
+    
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=5"><title>AI in Academics: Shaping the Future of Learning | GenAI | BYU-Idaho</title><meta name="description" content="Learn more about how BYU-Idaho in integrating AI (artificial intelligence) technology in its innovative learning model. "><link rel="canonical" href="https://www.byui.edu/genai/ai-in-academics"><meta name="brightspot.contentId" content="00000197-ccbf-de84-a997-feff37a00000"><link rel="apple-touch-icon"sizes="180x180"href="/apple-touch-icon.png"><link rel="icon"type="image/png"href="/favicon-32x32.png"><link rel="icon"type="image/png"href="/favicon-16x16.png">
+    <link type="application/rss+xml" rel="alternate" title="AI in Academics: Shaping the Future of Learning at BYU-Idaho" href="https://www.byui.edu/genai/ai-in-academics.rss">
+
+    
+    
+    <meta name="brightspot.cached" content="false">
+
+    <!--This is needed for custom elements to function in browsers that
+    support them natively but that are using es6 code transpiled to es5.
+    This will cause a non-fatal error to show up in the IE11 console.
+    It can be safely ignored. https://github.com/webcomponents/webcomponentsjs/issues/749 -->
+    <script>
+        (function () {
+            'use strict';
+            (()=>{'use strict';if(!window.customElements)return;const a=HTMLElement,b=window.customElements.define,c=window.customElements.get,d=new Map,e=new Map;let f=!1,g=!1;HTMLElement=function(){if(!f){const a=d.get(this.constructor),b=c.call(window.customElements,a);g=!0;const e=new b;return e}f=!1;},HTMLElement.prototype=a.prototype;Object.defineProperty(window,'customElements',{value:window.customElements,configurable:!0,writable:!0}),Object.defineProperty(window.customElements,'define',{value:(c,h)=>{const i=h.prototype,j=class extends a{constructor(){super(),Object.setPrototypeOf(this,i),g||(f=!0,h.call(this)),g=!1;}},k=j.prototype;j.observedAttributes=h.observedAttributes,k.connectedCallback=i.connectedCallback,k.disconnectedCallback=i.disconnectedCallback,k.attributeChangedCallback=i.attributeChangedCallback,k.adoptedCallback=i.adoptedCallback,d.set(h,c),e.set(c,h),b.call(window.customElements,c,j);},configurable:!0,writable:!0}),Object.defineProperty(window.customElements,'get',{value:(a)=>e.get(a),configurable:!0,writable:!0});})();
+            /**
+             @license
+             Copyright (c) 2017 The Polymer Project Authors. All rights reserved.
+             This code may only be used under the BSD style license found at http://polymer.github.io/LICENSE.txt
+             The complete set of authors may be found at http://polymer.github.io/AUTHORS.txt
+             The complete set of contributors may be found at http://polymer.github.io/CONTRIBUTORS.txt
+             Code distributed by Google as part of the polymer project is also
+             subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
+             */
+        }());
+    </script>
+
+    <script>
+        /**
+         For the fastest load times https://developers.google.com/speed/docs/insights/BlockingJS
+         and to prevent any FOUC, as well as prevent any race conditions for browsers that also
+         rely on the CSS variables polyfill, this is inlined.
+         **/
+        if (!window.customElements) {
+            (function(){
+                'use strict';var h=new function(){};var aa=new Set("annotation-xml color-profile font-face font-face-src font-face-uri font-face-format font-face-name missing-glyph".split(" "));function m(b){var a=aa.has(b);b=/^[a-z][.0-9_a-z]*-[\-.0-9_a-z]*$/.test(b);return!a&&b}function n(b){var a=b.isConnected;if(void 0!==a)return a;for(;b&&!(b.__CE_isImportDocument||b instanceof Document);)b=b.parentNode||(window.ShadowRoot&&b instanceof ShadowRoot?b.host:void 0);return!(!b||!(b.__CE_isImportDocument||b instanceof Document))}
+                function p(b,a){for(;a&&a!==b&&!a.nextSibling;)a=a.parentNode;return a&&a!==b?a.nextSibling:null}
+                function t(b,a,c){c=c?c:new Set;for(var d=b;d;){if(d.nodeType===Node.ELEMENT_NODE){var e=d;a(e);var f=e.localName;if("link"===f&&"import"===e.getAttribute("rel")){d=e.import;if(d instanceof Node&&!c.has(d))for(c.add(d),d=d.firstChild;d;d=d.nextSibling)t(d,a,c);d=p(b,e);continue}else if("template"===f){d=p(b,e);continue}if(e=e.__CE_shadowRoot)for(e=e.firstChild;e;e=e.nextSibling)t(e,a,c)}d=d.firstChild?d.firstChild:p(b,d)}}function u(b,a,c){b[a]=c};function v(){this.a=new Map;this.s=new Map;this.f=[];this.b=!1}function ba(b,a,c){b.a.set(a,c);b.s.set(c.constructor,c)}function w(b,a){b.b=!0;b.f.push(a)}function x(b,a){b.b&&t(a,function(a){return y(b,a)})}function y(b,a){if(b.b&&!a.__CE_patched){a.__CE_patched=!0;for(var c=0;c<b.f.length;c++)b.f[c](a)}}function z(b,a){var c=[];t(a,function(b){return c.push(b)});for(a=0;a<c.length;a++){var d=c[a];1===d.__CE_state?b.connectedCallback(d):A(b,d)}}
+                function B(b,a){var c=[];t(a,function(b){return c.push(b)});for(a=0;a<c.length;a++){var d=c[a];1===d.__CE_state&&b.disconnectedCallback(d)}}
+                function C(b,a,c){c=c?c:{};var d=c.w||new Set,e=c.i||function(a){return A(b,a)},f=[];t(a,function(a){if("link"===a.localName&&"import"===a.getAttribute("rel")){var c=a.import;c instanceof Node&&(c.__CE_isImportDocument=!0,c.__CE_hasRegistry=!0);c&&"complete"===c.readyState?c.__CE_documentLoadHandled=!0:a.addEventListener("load",function(){var c=a.import;if(!c.__CE_documentLoadHandled){c.__CE_documentLoadHandled=!0;var f=new Set(d);f.delete(c);C(b,c,{w:f,i:e})}})}else f.push(a)},d);if(b.b)for(a=0;a<
+                f.length;a++)y(b,f[a]);for(a=0;a<f.length;a++)e(f[a])}
+                function A(b,a){if(void 0===a.__CE_state){var c=a.ownerDocument;if(c.defaultView||c.__CE_isImportDocument&&c.__CE_hasRegistry)if(c=b.a.get(a.localName)){c.constructionStack.push(a);var d=c.constructor;try{try{if(new d!==a)throw Error("The custom element constructor did not produce the element being upgraded.");}finally{c.constructionStack.pop()}}catch(r){throw a.__CE_state=2,r;}a.__CE_state=1;a.__CE_definition=c;if(c.attributeChangedCallback)for(c=c.observedAttributes,d=0;d<c.length;d++){var e=c[d],
+                        f=a.getAttribute(e);null!==f&&b.attributeChangedCallback(a,e,null,f,null)}n(a)&&b.connectedCallback(a)}}}v.prototype.connectedCallback=function(b){var a=b.__CE_definition;a.connectedCallback&&a.connectedCallback.call(b)};v.prototype.disconnectedCallback=function(b){var a=b.__CE_definition;a.disconnectedCallback&&a.disconnectedCallback.call(b)};
+                v.prototype.attributeChangedCallback=function(b,a,c,d,e){var f=b.__CE_definition;f.attributeChangedCallback&&-1<f.observedAttributes.indexOf(a)&&f.attributeChangedCallback.call(b,a,c,d,e)};function D(b,a){this.c=b;this.a=a;this.b=void 0;C(this.c,this.a);"loading"===this.a.readyState&&(this.b=new MutationObserver(this.f.bind(this)),this.b.observe(this.a,{childList:!0,subtree:!0}))}function E(b){b.b&&b.b.disconnect()}D.prototype.f=function(b){var a=this.a.readyState;"interactive"!==a&&"complete"!==a||E(this);for(a=0;a<b.length;a++)for(var c=b[a].addedNodes,d=0;d<c.length;d++)C(this.c,c[d])};function ca(){var b=this;this.b=this.a=void 0;this.f=new Promise(function(a){b.b=a;b.a&&a(b.a)})}function F(b){if(b.a)throw Error("Already resolved.");b.a=void 0;b.b&&b.b(void 0)};function G(b){this.j=!1;this.c=b;this.o=new Map;this.l=function(b){return b()};this.g=!1;this.m=[];this.u=new D(b,document)}
+                G.prototype.define=function(b,a){var c=this;if(!(a instanceof Function))throw new TypeError("Custom element constructors must be functions.");if(!m(b))throw new SyntaxError("The element name '"+b+"' is not valid.");if(this.c.a.get(b))throw Error("A custom element with name '"+b+"' has already been defined.");if(this.j)throw Error("A custom element is already being defined.");this.j=!0;var d,e,f,r,k;try{var g=function(b){var a=l[b];if(void 0!==a&&!(a instanceof Function))throw Error("The '"+b+"' callback must be a function.");
+                    return a},l=a.prototype;if(!(l instanceof Object))throw new TypeError("The custom element constructor's prototype is not an object.");d=g("connectedCallback");e=g("disconnectedCallback");f=g("adoptedCallback");r=g("attributeChangedCallback");k=a.observedAttributes||[]}catch(q){return}finally{this.j=!1}a={localName:b,constructor:a,connectedCallback:d,disconnectedCallback:e,adoptedCallback:f,attributeChangedCallback:r,observedAttributes:k,constructionStack:[]};ba(this.c,b,a);this.m.push(a);this.g||
+                (this.g=!0,this.l(function(){return da(c)}))};G.prototype.i=function(b){C(this.c,b)};function da(b){if(!1!==b.g){b.g=!1;for(var a=b.m,c=[],d=new Map,e=0;e<a.length;e++)d.set(a[e].localName,[]);C(b.c,document,{i:function(a){if(void 0===a.__CE_state){var e=a.localName,f=d.get(e);f?f.push(a):b.c.a.get(e)&&c.push(a)}}});for(e=0;e<c.length;e++)A(b.c,c[e]);for(;0<a.length;){for(var f=a.shift(),e=f.localName,f=d.get(f.localName),r=0;r<f.length;r++)A(b.c,f[r]);(e=b.o.get(e))&&F(e)}}}
+                G.prototype.get=function(b){if(b=this.c.a.get(b))return b.constructor};G.prototype.whenDefined=function(b){if(!m(b))return Promise.reject(new SyntaxError("'"+b+"' is not a valid custom element name."));var a=this.o.get(b);if(a)return a.f;a=new ca;this.o.set(b,a);this.c.a.get(b)&&!this.m.some(function(a){return a.localName===b})&&F(a);return a.f};G.prototype.v=function(b){E(this.u);var a=this.l;this.l=function(c){return b(function(){return a(c)})}};window.CustomElementRegistry=G;
+                G.prototype.define=G.prototype.define;G.prototype.upgrade=G.prototype.i;G.prototype.get=G.prototype.get;G.prototype.whenDefined=G.prototype.whenDefined;G.prototype.polyfillWrapFlushCallback=G.prototype.v;var H=window.Document.prototype.createElement,ea=window.Document.prototype.createElementNS,fa=window.Document.prototype.importNode,ga=window.Document.prototype.prepend,ha=window.Document.prototype.append,ia=window.DocumentFragment.prototype.prepend,ja=window.DocumentFragment.prototype.append,I=window.Node.prototype.cloneNode,J=window.Node.prototype.appendChild,K=window.Node.prototype.insertBefore,L=window.Node.prototype.removeChild,M=window.Node.prototype.replaceChild,N=Object.getOwnPropertyDescriptor(window.Node.prototype,
+                        "textContent"),O=window.Element.prototype.attachShadow,P=Object.getOwnPropertyDescriptor(window.Element.prototype,"innerHTML"),Q=window.Element.prototype.getAttribute,R=window.Element.prototype.setAttribute,S=window.Element.prototype.removeAttribute,T=window.Element.prototype.getAttributeNS,U=window.Element.prototype.setAttributeNS,ka=window.Element.prototype.removeAttributeNS,la=window.Element.prototype.insertAdjacentElement,ma=window.Element.prototype.insertAdjacentHTML,na=window.Element.prototype.prepend,
+                        oa=window.Element.prototype.append,V=window.Element.prototype.before,pa=window.Element.prototype.after,qa=window.Element.prototype.replaceWith,ra=window.Element.prototype.remove,sa=window.HTMLElement,W=Object.getOwnPropertyDescriptor(window.HTMLElement.prototype,"innerHTML"),ta=window.HTMLElement.prototype.insertAdjacentElement,ua=window.HTMLElement.prototype.insertAdjacentHTML;function va(){var b=X;window.HTMLElement=function(){function a(){var a=this.constructor,d=b.s.get(a);if(!d)throw Error("The custom element being constructed was not registered with `customElements`.");var e=d.constructionStack;if(!e.length)return e=H.call(document,d.localName),Object.setPrototypeOf(e,a.prototype),e.__CE_state=1,e.__CE_definition=d,y(b,e),e;var d=e.length-1,f=e[d];if(f===h)throw Error("The HTMLElement constructor was either called reentrantly for this constructor or called multiple times.");
+                    e[d]=h;Object.setPrototypeOf(f,a.prototype);y(b,f);return f}a.prototype=sa.prototype;return a}()};function Y(b,a,c){function d(a){return function(c){for(var e=[],d=0;d<arguments.length;++d)e[d-0]=arguments[d];for(var d=[],f=[],l=0;l<e.length;l++){var q=e[l];q instanceof Element&&n(q)&&f.push(q);if(q instanceof DocumentFragment)for(q=q.firstChild;q;q=q.nextSibling)d.push(q);else d.push(q)}a.apply(this,e);for(e=0;e<f.length;e++)B(b,f[e]);if(n(this))for(e=0;e<d.length;e++)f=d[e],f instanceof Element&&z(b,f)}}c.h&&(a.prepend=d(c.h));c.append&&(a.append=d(c.append))};function wa(){var b=X;u(Document.prototype,"createElement",function(a){if(this.__CE_hasRegistry){var c=b.a.get(a);if(c)return new c.constructor}a=H.call(this,a);y(b,a);return a});u(Document.prototype,"importNode",function(a,c){a=fa.call(this,a,c);this.__CE_hasRegistry?C(b,a):x(b,a);return a});u(Document.prototype,"createElementNS",function(a,c){if(this.__CE_hasRegistry&&(null===a||"http://www.w3.org/1999/xhtml"===a)){var d=b.a.get(c);if(d)return new d.constructor}a=ea.call(this,a,c);y(b,a);return a});
+                    Y(b,Document.prototype,{h:ga,append:ha})};function xa(){var b=X;function a(a,d){Object.defineProperty(a,"textContent",{enumerable:d.enumerable,configurable:!0,get:d.get,set:function(a){if(this.nodeType===Node.TEXT_NODE)d.set.call(this,a);else{var e=void 0;if(this.firstChild){var c=this.childNodes,k=c.length;if(0<k&&n(this))for(var e=Array(k),g=0;g<k;g++)e[g]=c[g]}d.set.call(this,a);if(e)for(a=0;a<e.length;a++)B(b,e[a])}}})}u(Node.prototype,"insertBefore",function(a,d){if(a instanceof DocumentFragment){var e=Array.prototype.slice.apply(a.childNodes);
+                    a=K.call(this,a,d);if(n(this))for(d=0;d<e.length;d++)z(b,e[d]);return a}e=n(a);d=K.call(this,a,d);e&&B(b,a);n(this)&&z(b,a);return d});u(Node.prototype,"appendChild",function(a){if(a instanceof DocumentFragment){var c=Array.prototype.slice.apply(a.childNodes);a=J.call(this,a);if(n(this))for(var e=0;e<c.length;e++)z(b,c[e]);return a}c=n(a);e=J.call(this,a);c&&B(b,a);n(this)&&z(b,a);return e});u(Node.prototype,"cloneNode",function(a){a=I.call(this,a);this.ownerDocument.__CE_hasRegistry?C(b,a):x(b,a);
+                    return a});u(Node.prototype,"removeChild",function(a){var c=n(a),e=L.call(this,a);c&&B(b,a);return e});u(Node.prototype,"replaceChild",function(a,d){if(a instanceof DocumentFragment){var e=Array.prototype.slice.apply(a.childNodes);a=M.call(this,a,d);if(n(this))for(B(b,d),d=0;d<e.length;d++)z(b,e[d]);return a}var e=n(a),f=M.call(this,a,d),c=n(this);c&&B(b,d);e&&B(b,a);c&&z(b,a);return f});N&&N.get?a(Node.prototype,N):w(b,function(b){a(b,{enumerable:!0,configurable:!0,get:function(){for(var a=[],b=
+                            0;b<this.childNodes.length;b++)a.push(this.childNodes[b].textContent);return a.join("")},set:function(a){for(;this.firstChild;)L.call(this,this.firstChild);J.call(this,document.createTextNode(a))}})})};function ya(b){var a=Element.prototype;function c(a){return function(e){for(var c=[],d=0;d<arguments.length;++d)c[d-0]=arguments[d];for(var d=[],k=[],g=0;g<c.length;g++){var l=c[g];l instanceof Element&&n(l)&&k.push(l);if(l instanceof DocumentFragment)for(l=l.firstChild;l;l=l.nextSibling)d.push(l);else d.push(l)}a.apply(this,c);for(c=0;c<k.length;c++)B(b,k[c]);if(n(this))for(c=0;c<d.length;c++)k=d[c],k instanceof Element&&z(b,k)}}V&&(a.before=c(V));V&&(a.after=c(pa));qa&&u(a,"replaceWith",function(a){for(var e=
+                        [],c=0;c<arguments.length;++c)e[c-0]=arguments[c];for(var c=[],d=[],k=0;k<e.length;k++){var g=e[k];g instanceof Element&&n(g)&&d.push(g);if(g instanceof DocumentFragment)for(g=g.firstChild;g;g=g.nextSibling)c.push(g);else c.push(g)}k=n(this);qa.apply(this,e);for(e=0;e<d.length;e++)B(b,d[e]);if(k)for(B(b,this),e=0;e<c.length;e++)d=c[e],d instanceof Element&&z(b,d)});ra&&u(a,"remove",function(){var a=n(this);ra.call(this);a&&B(b,this)})};function za(){var b=X;function a(a,c){Object.defineProperty(a,"innerHTML",{enumerable:c.enumerable,configurable:!0,get:c.get,set:function(a){var e=this,d=void 0;n(this)&&(d=[],t(this,function(a){a!==e&&d.push(a)}));c.set.call(this,a);if(d)for(var f=0;f<d.length;f++){var r=d[f];1===r.__CE_state&&b.disconnectedCallback(r)}this.ownerDocument.__CE_hasRegistry?C(b,this):x(b,this);return a}})}function c(a,c){u(a,"insertAdjacentElement",function(a,e){var d=n(e);a=c.call(this,a,e);d&&B(b,e);n(a)&&z(b,e);
+                    return a})}function d(a,c){function e(a,e){for(var c=[];a!==e;a=a.nextSibling)c.push(a);for(e=0;e<c.length;e++)C(b,c[e])}u(a,"insertAdjacentHTML",function(a,b){a=a.toLowerCase();if("beforebegin"===a){var d=this.previousSibling;c.call(this,a,b);e(d||this.parentNode.firstChild,this)}else if("afterbegin"===a)d=this.firstChild,c.call(this,a,b),e(this.firstChild,d);else if("beforeend"===a)d=this.lastChild,c.call(this,a,b),e(d||this.firstChild,null);else if("afterend"===a)d=this.nextSibling,c.call(this,
+                        a,b),e(this.nextSibling,d);else throw new SyntaxError("The value provided ("+String(a)+") is not one of 'beforebegin', 'afterbegin', 'beforeend', or 'afterend'.");})}O&&u(Element.prototype,"attachShadow",function(a){return this.__CE_shadowRoot=a=O.call(this,a)});P&&P.get?a(Element.prototype,P):W&&W.get?a(HTMLElement.prototype,W):w(b,function(b){a(b,{enumerable:!0,configurable:!0,get:function(){return I.call(this,!0).innerHTML},set:function(a){var b="template"===this.localName,e=b?this.content:this,
+                            c=H.call(document,this.localName);for(c.innerHTML=a;0<e.childNodes.length;)L.call(e,e.childNodes[0]);for(a=b?c.content:c;0<a.childNodes.length;)J.call(e,a.childNodes[0])}})});u(Element.prototype,"setAttribute",function(a,c){if(1!==this.__CE_state)return R.call(this,a,c);var e=Q.call(this,a);R.call(this,a,c);c=Q.call(this,a);b.attributeChangedCallback(this,a,e,c,null)});u(Element.prototype,"setAttributeNS",function(a,c,d){if(1!==this.__CE_state)return U.call(this,a,c,d);var e=T.call(this,a,c);U.call(this,
+                        a,c,d);d=T.call(this,a,c);b.attributeChangedCallback(this,c,e,d,a)});u(Element.prototype,"removeAttribute",function(a){if(1!==this.__CE_state)return S.call(this,a);var c=Q.call(this,a);S.call(this,a);null!==c&&b.attributeChangedCallback(this,a,c,null,null)});u(Element.prototype,"removeAttributeNS",function(a,c){if(1!==this.__CE_state)return ka.call(this,a,c);var d=T.call(this,a,c);ka.call(this,a,c);var e=T.call(this,a,c);d!==e&&b.attributeChangedCallback(this,c,d,e,a)});ta?c(HTMLElement.prototype,
+                        ta):la?c(Element.prototype,la):console.warn("Custom Elements: `Element#insertAdjacentElement` was not patched.");ua?d(HTMLElement.prototype,ua):ma?d(Element.prototype,ma):console.warn("Custom Elements: `Element#insertAdjacentHTML` was not patched.");Y(b,Element.prototype,{h:na,append:oa});ya(b)};/*
+                Copyright (c) 2016 The Polymer Project Authors. All rights reserved.
+                This code may only be used under the BSD style license found at http://polymer.github.io/LICENSE.txt
+                The complete set of authors may be found at http://polymer.github.io/AUTHORS.txt
+                The complete set of contributors may be found at http://polymer.github.io/CONTRIBUTORS.txt
+                Code distributed by Google as part of the polymer project is also
+                subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
+                */
+                var Z=window.customElements;if(!Z||Z.forcePolyfill||"function"!=typeof Z.define||"function"!=typeof Z.get){var X=new v;va();wa();Y(X,DocumentFragment.prototype,{h:ia,append:ja});xa();za();document.__CE_hasRegistry=!0;var customElements=new G(X);Object.defineProperty(window,"customElements",{configurable:!0,enumerable:!0,value:customElements})};
+            }).call(self);
+        }
+        /**
+         This allows us to load the IE polyfills via feature detection so that they do not load
+         needlessly in the browsers that do not need them. It also ensures they are loaded
+         non async so that they load before the rest of our JS.
+         */
+        var head = document.getElementsByTagName('head')[0];
+        if (!window.CSS || !window.CSS.supports || !window.CSS.supports('--fake-var', 0)) {
+            var script = document.createElement('script');
+            script.setAttribute('src', "https://brightspotcdn.byui.edu/resource/00000179-0eeb-d7c7-affb-eeef5f450000/styleguide/util/IEPolyfills.min.c53309ffdfae419c7a19f0c2b5c99876.gz.js");
+            script.setAttribute('type', 'text/javascript');
+            script.async = false;
+            head.appendChild(script);
+        }
+    </script>
+    <script src="https://brightspotcdn.byui.edu/resource/00000179-0eeb-d7c7-affb-eeef5f450000/styleguide/All.min.d9b6437c51027a937c52aed1d0616eef.gz.js" async></script>
+    <script src="//cdnapisec.kaltura.com/p/1157612/sp/115761200/embedIframeJs/uiconf_id/42438262/partner_id/1157612"></script>
+<script>
+
+    window.fbAsyncInit = function() {
+        FB.init({
+            
+            xfbml : true,
+            version : 'v2.9'
+        });
+    };
+
+    window.addEventListener('load', (event) => {
+        (function(d, s, id){
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) {return;}
+            js = d.createElement(s); js.id = id;
+            js.src = "//connect.facebook.net/en_US/sdk.js";
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
+    });
+</script>
+<script src="https://consent.trustarc.com/v2/notice/zapcra?pcookie&amp;privacypolicylink=https://www.byui.edu/legal/privacy-notice" async></script>
+<script src="https://www.googletagmanager.com/gtm.js?id=GTM-5F7DQD4"></script>
+<script src="https://byui-supportagent-dphsbtd5afaba6c3.a01.azurefd.net/support-widget/chat-widget.js"></script>
+
+
+    
+        
+
+    
+
+    
+</head>
+    <body class="Page-body"data-rounded-corners="false"
+data-rounded-corners-button="true"
+data-has-aside="false"
+data-has-hat="false"
+ data-has-nav
+
+
+
+
+
+>
+        <a class="Page-header-skipToMainContent button-primary" href="#maincontent" data-cms-ai="0">Skip to main content</a>
+<svg xmlns="http://www.w3.org/2000/svg" style="display:none" id="iconsMap">
+    <symbol id="mono-icon-facebook" viewBox="0 0 320 512">
+        <path d="M279.14 288l14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.43 0 225.36 0c-73.22 0-121.08 44.38-121.08 124.72v70.62H22.89V288h81.39v224h100.17V288z"/>
+    </symbol>
+
+    <symbol id="mono-icon-instagram" viewBox="0 0 448 512">
+        <path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"/>
+    </symbol>
+    <symbol id="mono-icon-email" viewBox="0 0 30 30">
+        <g fill="none" fill-rule="evenodd">
+            <circle cx="15" cy="15" r="14.5" stroke="currentColor"/>
+            <g>
+                <path d="M0 0L20 0 20 20 0 20z" transform="translate(5 5)"/>
+                <path fill="currentColor" fill-rule="nonzero" d="M16.667 3.333H3.333c-.916 0-1.658.75-1.658 1.667l-.008 10c0 .917.75 1.667 1.666 1.667h13.334c.916 0 1.666-.75 1.666-1.667V5c0-.917-.75-1.667-1.666-1.667zm-.334 3.542l-5.891 3.683c-.267.167-.617.167-.884 0L3.667 6.875c-.209-.133-.334-.358-.334-.6 0-.558.609-.892 1.084-.6L10 9.167l5.583-3.492c.475-.292 1.084.042 1.084.6 0 .242-.125.467-.334.6z" transform="translate(5 5)"/>
+            </g>
+        </g>
+    </symbol>
+    <symbol id="mono-icon-print" viewBox="0 0 30 30">
+        <g fill="none" fill-rule="evenodd">
+            <circle cx="15" cy="15" r="14.5" stroke="currentColor"/>
+            <g>
+                <path d="M0 0L20 0 20 20 0 20z" transform="translate(5 5)"/>
+                <path fill="currentColor" fill-rule="nonzero" d="M15.833 6.667H4.167c-1.384 0-2.5 1.116-2.5 2.5V12.5c0 .917.75 1.667 1.666 1.667H5v1.666c0 .917.75 1.667 1.667 1.667h6.666c.917 0 1.667-.75 1.667-1.667v-1.666h1.667c.916 0 1.666-.75 1.666-1.667V9.167c0-1.384-1.116-2.5-2.5-2.5zM12.5 15.833h-5c-.458 0-.833-.375-.833-.833v-3.333h6.666V15c0 .458-.375.833-.833.833zM15.833 10c-.458 0-.833-.375-.833-.833 0-.459.375-.834.833-.834.459 0 .834.375.834.834 0 .458-.375.833-.834.833zm-1.666-7.5H5.833c-.458 0-.833.375-.833.833V5c0 .458.375.833.833.833h8.334c.458 0 .833-.375.833-.833V3.333c0-.458-.375-.833-.833-.833z" transform="translate(5 5)"/>
+            </g>
+        </g>
+    </symbol>
+    <symbol id="mono-icon-copylink" viewBox="0 0 12 12">
+        <g fill-rule="evenodd">
+            <path d="M10.199 2.378c.222.205.4.548.465.897.062.332.016.614-.132.774L8.627 6.106c-.187.203-.512.232-.75-.014a.498.498 0 0 0-.706.028.499.499 0 0 0 .026.706 1.509 1.509 0 0 0 2.165-.04l1.903-2.06c.37-.398.506-.98.382-1.636-.105-.557-.392-1.097-.77-1.445L9.968.8C9.591.452 9.03.208 8.467.145 7.803.072 7.233.252 6.864.653L4.958 2.709a1.509 1.509 0 0 0 .126 2.161.5.5 0 1 0 .68-.734c-.264-.218-.26-.545-.071-.747L7.597 1.33c.147-.16.425-.228.76-.19.353.038.71.188.931.394l.91.843.001.001zM1.8 9.623c-.222-.205-.4-.549-.465-.897-.062-.332-.016-.614.132-.774l1.905-2.057c.187-.203.512-.232.75.014a.498.498 0 0 0 .706-.028.499.499 0 0 0-.026-.706 1.508 1.508 0 0 0-2.165.04L.734 7.275c-.37.399-.506.98-.382 1.637.105.557.392 1.097.77 1.445l.91.843c.376.35.937.594 1.5.656.664.073 1.234-.106 1.603-.507L7.04 9.291a1.508 1.508 0 0 0-.126-2.16.5.5 0 0 0-.68.734c.264.218.26.545.071.747l-1.904 2.057c-.147.16-.425.228-.76.191-.353-.038-.71-.188-.931-.394l-.91-.843z"></path>
+            <path d="M8.208 3.614a.5.5 0 0 0-.707.028L3.764 7.677a.5.5 0 0 0 .734.68L8.235 4.32a.5.5 0 0 0-.027-.707"></path>
+        </g>
+    </symbol>
+    <symbol id="mono-icon-linkedin" viewBox="0 0 448 512">
+        <path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"/>
+    </symbol>
+    <symbol id="mono-icon-pinterest" viewBox="0 0 496 512">
+        <path d="M496 256c0 137-111 248-248 248-25.6 0-50.2-3.9-73.4-11.1 10.1-16.5 25.2-43.5 30.8-65 3-11.6 15.4-59 15.4-59 8.1 15.4 31.7 28.5 56.8 28.5 74.8 0 128.7-68.8 128.7-154.3 0-81.9-66.9-143.2-152.9-143.2-107 0-163.9 71.8-163.9 150.1 0 36.4 19.4 81.7 50.3 96.1 4.7 2.2 7.2 1.2 8.3-3.3.8-3.4 5-20.3 6.9-28.1.6-2.5.3-4.7-1.7-7.1-10.1-12.5-18.3-35.3-18.3-56.6 0-54.7 41.4-107.6 112-107.6 60.9 0 103.6 41.5 103.6 100.9 0 67.1-33.9 113.6-78 113.6-24.3 0-42.6-20.1-36.7-44.8 7-29.5 20.5-61.3 20.5-82.6 0-19-10.2-34.9-31.4-34.9-24.9 0-44.9 25.7-44.9 60.2 0 22 7.4 36.8 7.4 36.8s-24.5 103.8-29 123.2c-5 21.4-3 51.6-.9 71.2C65.4 450.9 0 361.1 0 256 0 119 111 8 248 8s248 111 248 248z"/>
+    </symbol>
+    <symbol id="mono-icon-tumblr" viewBox="0 0 320 512">
+        <path d="M309.8 480.3c-13.6 14.5-50 31.7-97.4 31.7-120.8 0-147-88.8-147-140.6v-144H17.9c-5.5 0-10-4.5-10-10v-68c0-7.2 4.5-13.6 11.3-16 62-21.8 81.5-76 84.3-117.1.8-11 6.5-16.3 16.1-16.3h70.9c5.5 0 10 4.5 10 10v115.2h83c5.5 0 10 4.4 10 9.9v81.7c0 5.5-4.5 10-10 10h-83.4V360c0 34.2 23.7 53.6 68 35.8 4.8-1.9 9-3.2 12.7-2.2 3.5.9 5.8 3.4 7.4 7.9l22 64.3c1.8 5 3.3 10.6-.4 14.5z"/>
+    </symbol>
+    <symbol id="mono-icon-twitter" viewBox="0 0 512 512">
+        <path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"/>
+    </symbol>
+    <symbol id="mono-icon-youtube" viewBox="0 0 576 512">
+        <path d="M549.655 124.083c-6.281-23.65-24.787-42.276-48.284-48.597C458.781 64 288 64 288 64S117.22 64 74.629 75.486c-23.497 6.322-42.003 24.947-48.284 48.597-11.412 42.867-11.412 132.305-11.412 132.305s0 89.438 11.412 132.305c6.281 23.65 24.787 41.5 48.284 47.821C117.22 448 288 448 288 448s170.78 0 213.371-11.486c23.497-6.321 42.003-24.171 48.284-47.821 11.412-42.867 11.412-132.305 11.412-132.305s0-89.438-11.412-132.305zm-317.51 213.508V175.185l142.739 81.205-142.739 81.201z"/>
+    </symbol>
+    <symbol id="mono-icon-google" viewBox="0 0 30 30">
+        <g fill="none" fill-rule="evenodd">
+            <circle cx="15" cy="15" r="14.5" stroke="currentColor"/>
+            <path fill="currentColor" fill-rule="nonzero" d="M8 15c0-3.86 3.14-7 7-7 1.559 0 3.034.502 4.267 1.45l-1.627 2.113c-.762-.586-1.675-.896-2.64-.896-2.39 0-4.333 1.944-4.333 4.333 0 2.39 1.944 4.333 4.333 4.333 1.924 0 3.56-1.26 4.123-3H15v-2.666h7V15c0 3.86-3.14 7-7 7s-7-3.14-7-7z"/>
+        </g>
+    </symbol>
+    <svg id="arrow-down" viewBox="0 0 14 9" fill="none">
+        <path d="M1 1L7 7L13 1" stroke="#141414" stroke-width="1.5" stroke-linecap="round"/>
+    </svg>
+    <symbol id="burger-menu" viewBox="0 0 18 12" fill="none">
+        <path d="M0 12V10H18V12H0ZM0 7V5H18V7H0ZM0 2V0H18V2H0Z" fill="currentColor"/>
+    </symbol>
+    <symbol id="icon-magnify" viewBox="0 0 24.827 24.827">
+        <path id="Union_1" d="M545.066,14367.357a9.74,9.74,0,1,1,2.49-2.488l5.872,5.869-2.489,2.493Zm-11.733-8.01a6.212,6.212,0,1,0,6.212-6.216A6.218,6.218,0,0,0,533.333,14359.348Z" transform="translate(-529.308 -14349.111)" stroke="rgba(0,0,0,0)" stroke-miterlimit="10" stroke-width="1"/>
+    </symbol>`
+    <symbol id="close-x" viewBox="0 0 16 16">
+        <path fill-rule="evenodd" d="M1.707.293l6.01 6.009 6.01-6.01c.391-.39 1.025-.39 1.415 0 .39.391.39 1.025 0 1.415l-6.01 6.01 6.01 6.01c.39.391.39 1.025 0 1.415-.39.39-1.024.39-1.414 0l-6.011-6.01-6.01 6.01c-.39.39-1.024.39-1.414 0-.39-.39-.39-1.024 0-1.414l6.009-6.011-6.01-6.01c-.39-.39-.39-1.024 0-1.414.391-.39 1.025-.39 1.415 0z"/>
+    </symbol>
+    <symbol id="chevron" viewBox="0 0 100 100">
+        <g>
+            <path d="M22.4566257,37.2056786 L-21.4456527,71.9511488 C-22.9248661,72.9681457 -24.9073712,72.5311671 -25.8758148,70.9765924 L-26.9788683,69.2027424 C-27.9450684,67.6481676 -27.5292733,65.5646602 -26.0500598,64.5484493 L20.154796,28.2208967 C21.5532435,27.2597011 23.3600078,27.2597011 24.759951,28.2208967 L71.0500598,64.4659264 C72.5292733,65.4829232 72.9450684,67.5672166 71.9788683,69.1217913 L70.8750669,70.8956413 C69.9073712,72.4502161 67.9241183,72.8848368 66.4449048,71.8694118 L22.4566257,37.2056786 Z" id="Transparent-Chevron" transform="translate(22.500000, 50.000000) rotate(90.000000) translate(-22.500000, -50.000000) "></path>
+        </g>
+    </symbol>
+    <symbol id="chevron-down-regular" viewBox="0 0 448 512">
+        <path d="M441.9 167.3l-19.8-19.8c-4.7-4.7-12.3-4.7-17 0L224 328.2 42.9 147.5c-4.7-4.7-12.3-4.7-17 0L6.1 167.3c-4.7 4.7-4.7 12.3 0 17l209.4 209.4c4.7 4.7 12.3 4.7 17 0l209.4-209.4c4.7-4.7 4.7-12.3 0-17z"></path>
+    </symbol>
+    <symbol id="icon-chevron-left" viewBox="0 0 256 512">
+        <path
+            d="M231.293 473.899l19.799-19.799c4.686-4.686 4.686-12.284 0-16.971L70.393 256 251.092 74.87c4.686-4.686 4.686-12.284 0-16.971L231.293 38.1c-4.686-4.686-12.284-4.686-16.971 0L4.908 247.515c-4.686 4.686-4.686 12.284 0 16.971L214.322 473.9c4.687 4.686 12.285 4.686 16.971-.001z">
+        </path>
+    </symbol>
+    <symbol id="icon-chevron-right" viewBox="0 0 256 512">
+        <path
+            d="M24.707 38.101L4.908 57.899c-4.686 4.686-4.686 12.284 0 16.971L185.607 256 4.908 437.13c-4.686 4.686-4.686 12.284 0 16.971L24.707 473.9c4.686 4.686 12.284 4.686 16.971 0l209.414-209.414c4.686-4.686 4.686-12.284 0-16.971L41.678 38.101c-4.687-4.687-12.285-4.687-16.971 0z">
+        </path>
+    </symbol>
+    <symbol id="icon-chevron-right-2" width="19" height="18" viewBox="0 0 19 18" fill="none">
+        <g clip-path="url(#clip0_4329_3511)">
+        <path d="M9.7475 15.0975L11.075 16.425L18.5 8.99999L11.075 1.57499L9.7475 2.90249L15.845 8.99999L9.7475 15.0975Z" fill="#006EB6"/>
+        </g>
+        <defs>
+        <clipPath id="clip0_4329_3511">
+        <rect width="18" height="18" fill="white" transform="translate(18.5 18) rotate(-180)"/>
+        </clipPath>
+        </defs>
+    </symbol>
+    <symbol id="icon-arrow-forward" viewBox="0 0 14 9">
+        <g fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+            <g stroke="currentColor" stroke-width="1.5">
+                <path d="M13.5 4.504L.5 4.504M9 8.504L13.5 4.504 9 .504" />
+            </g>
+        </g>
+    </symbol>
+    <symbol id="icon-arrow-back" viewBox="0 0 14 9">
+        <g fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round" transform="rotate(180 7 4.5)">
+            <g stroke="currentColor" stroke-width="1.5">
+                <path d="M13.5 4.504L.5 4.504M9 8.504L13.5 4.504 9 .504" />
+            </g>
+        </g>
+    </symbol>
+    <symbol id="icon-arrow" viewBox="0 0 256 512">
+        <path d="M136.5 185.1l116 117.8c4.7 4.7 4.7 12.3 0 17l-7.1 7.1c-4.7 4.7-12.3 4.7-17 0L128 224.7 27.6 326.9c-4.7 4.7-12.3 4.7-17 0l-7.1-7.1c-4.7-4.7-4.7-12.3 0-17l116-117.8c4.7-4.6 12.3-4.6 17 .1z"></path>
+    </symbol>
+    <symbol id="icon-activity" viewBox="0 0 20 20">
+        <g fill="currentColor" fill-rule="evenodd">
+            <path d="M4 4h16v2H4zM0 4h2v2H0zM4 9h14v2H4zM0 9h2v2H0zM4 14h10v2H4zM0 14h2v2H0z"></path>
+        </g>
+    </symbol>
+    <symbol id="player-forward-5" viewBox="0 0 24 25">
+        <g fill="currentColor">
+            <path d="M10.893 14.448c.669 0 1.171-.205 1.507-.617.336-.411.504-.879.504-1.402 0-.602-.174-1.06-.523-1.375-.35-.315-.758-.473-1.227-.473-.231 0-.428.03-.59.09-.096.037-.23.11-.402.223l.203-1.239h2.317V8.71H9.56l-.399 3.13 1 .046c.089-.17.22-.285.395-.348.099-.034.216-.05.351-.05.287 0 .498.1.633.298.135.2.203.444.203.733 0 .294-.072.538-.217.732-.144.194-.354.291-.63.291-.24 0-.422-.066-.547-.197-.125-.132-.21-.318-.254-.56h-1.11c.04.53.232.94.578 1.23.347.289.79.433 1.329.433z" transform="translate(1 1.2)"/>
+            <path stroke="currentColor" stroke-width=".5" d="M19.052 5.482l-4.319-.243c-.312-.017-.55.204-.567.493-.017.289.209.536.505.553l5.473.308.03.001c.138 0 .27-.05.37-.143.107-.099.168-.237.168-.38V.523c0-.29-.24-.524-.537-.524-.297 0-.537.235-.537.524v4.002C17.538 2.116 14.444.71 11.112.71 4.985.71 0 5.486 0 11.356 0 17.225 4.985 22 11.112 22c5.233 0 9.807-3.557 10.876-8.456.062-.283-.123-.562-.413-.622-.291-.06-.576.12-.638.404-.964 4.419-5.096 7.626-9.825 7.626-5.535 0-10.037-4.305-10.037-9.596 0-5.292 4.502-9.598 10.037-9.598 3.14 0 6.044 1.377 7.94 3.724z" transform="translate(1 1.2)"/>
+        </g>
+    </symbol>
+    <symbol id="player-back-5" viewBox="0 0 24 25">
+        <g fill="currentColor">
+            <path stroke="currentColor" stroke-width=".5" d="M2.948 5.482l4.319-.243c.312-.017.55.204.567.493.017.289-.209.536-.505.553l-5.473.308-.03.001c-.138 0-.27-.05-.37-.143-.107-.099-.168-.237-.168-.38V.523c0-.29.24-.524.537-.524.297 0 .537.235.537.524v4.002C4.462 2.116 7.556.71 10.888.71 17.015.71 22 5.486 22 11.356 22 17.225 17.015 22 10.888 22 5.655 22 1.081 18.443.012 13.544c-.062-.283.123-.562.413-.622.291-.06.576.12.638.404.964 4.419 5.096 7.626 9.825 7.626 5.535 0 10.037-4.305 10.037-9.596 0-5.292-4.502-9.598-10.037-9.598-3.14 0-6.044 1.377-7.94 3.724z" transform="translate(1 1.2)"/>
+            <path d="M10.893 14.448c.669 0 1.171-.205 1.507-.617.336-.411.504-.879.504-1.402 0-.602-.174-1.06-.523-1.375-.35-.315-.758-.473-1.227-.473-.231 0-.428.03-.59.09-.096.037-.23.11-.402.223l.203-1.239h2.317V8.71H9.56l-.399 3.13 1 .046c.089-.17.22-.285.395-.348.099-.034.216-.05.351-.05.287 0 .498.1.633.298.135.2.203.444.203.733 0 .294-.072.538-.217.732-.144.194-.354.291-.63.291-.24 0-.422-.066-.547-.197-.125-.132-.21-.318-.254-.56h-1.11c.04.53.232.94.578 1.23.347.289.79.433 1.329.433z" transform="translate(1 1.2)"/>
+        </g>
+    </symbol>
+    <symbol id="player-pause" viewBox="0 0 40 40">
+        <path fill="currentColor" d="M20 0C8.96 0 0 8.96 0 20s8.96 20 20 20 20-8.96 20-20S31.04 0 20 0zm0 38c-9.922 0-18-8.078-18-18S10.078 2 20 2s18 8.078 18 18-8.078 18-18 18zm-4-26c.552 0 1 .448 1 1v14c0 .552-.448 1-1 1s-1-.448-1-1V13c0-.552.448-1 1-1zm8 0c.552 0 1 .448 1 1v14c0 .552-.448 1-1 1s-1-.448-1-1V13c0-.552.448-1 1-1z"/>
+    </symbol>
+    <symbol id="player-fullscreen" viewBox="0 0 12 12">
+        <path fill="currentColor" d="M.857 7.714C.386 7.714 0 8.1 0 8.571v2.572c0 .471.386.857.857.857H3.43c.471 0 .857-.386.857-.857 0-.472-.386-.857-.857-.857H1.714V8.57c0-.471-.385-.857-.857-.857zm0-3.428c.472 0 .857-.386.857-.857V1.714H3.43c.471 0 .857-.385.857-.857C4.286.386 3.9 0 3.429 0H.857C.386 0 0 .386 0 .857V3.43c0 .471.386.857.857.857zm9.429 6H8.57c-.471 0-.857.385-.857.857 0 .471.386.857.857.857h2.572c.471 0 .857-.386.857-.857V8.57c0-.471-.386-.857-.857-.857-.472 0-.857.386-.857.857v1.715zM7.714.857c0 .472.386.857.857.857h1.715V3.43c0 .471.385.857.857.857.471 0 .857-.386.857-.857V.857C12 .386 11.614 0 11.143 0H8.57c-.471 0-.857.386-.857.857z"/>
+    </symbol>
+    <symbol id="player-volume" viewBox="0 0 12 12">
+        <path fill="currentColor" d="M0 4.667v2.666C0 7.7.3 8 .667 8h2l2.193 2.193c.42.42 1.14.12 1.14-.473V2.273c0-.593-.72-.893-1.14-.473L2.667 4h-2C.3 4 0 4.3 0 4.667zM9 6c0-1.18-.68-2.193-1.667-2.687V8.68C8.32 8.193 9 7.18 9 6zM7.333.967V1.1c0 .253.167.473.4.567 1.72.686 2.934 2.373 2.934 4.333s-1.214 3.647-2.934 4.333c-.24.094-.4.314-.4.567v.133c0 .42.42.714.807.567C10.4 10.74 12 8.56 12 6c0-2.56-1.6-4.74-3.86-5.6-.387-.153-.807.147-.807.567z"/>
+    </symbol>
+    <symbol id="player-play" viewBox="0 0 40 40">
+        <path fill="currentColor" d="M17.6 27.8l9.34-7c.54-.4.54-1.2 0-1.6l-9.34-7c-.66-.5-1.6-.02-1.6.8v14c0 .82.94 1.3 1.6.8zM20 0C8.96 0 0 8.96 0 20s8.96 20 20 20 20-8.96 20-20S31.04 0 20 0zm0 38c-9.922 0-18-8.078-18-18S10.078 2 20 2s18 8.078 18 18-8.078 18-18 18z"/>
+    </symbol>
+    <symbol id="player-fullscreen-exit" viewBox="0 0 12 12">
+        <g stroke="none" stroke-width="1" fill="currentColor" fill-rule="evenodd">
+            <path d="M0.857142857,9.42857143 L2.57142857,9.42857143 L2.57142857,11.1428571 C2.57142857,11.6142857 2.95714286,12 3.42857143,12 C3.9,12 4.28571429,11.6142857 4.28571429,11.1428571 L4.28571429,8.57142857 C4.28571429,8.1 3.9,7.71428571 3.42857143,7.71428571 L0.857142857,7.71428571 C0.385714286,7.71428571 0,8.1 0,8.57142857 C0,9.04285714 0.385714286,9.42857143 0.857142857,9.42857143 Z M2.57142857,2.57142857 L0.857142857,2.57142857 C0.385714286,2.57142857 0,2.95714286 0,3.42857143 C0,3.9 0.385714286,4.28571429 0.857142857,4.28571429 L3.42857143,4.28571429 C3.9,4.28571429 4.28571429,3.9 4.28571429,3.42857143 L4.28571429,0.857142857 C4.28571429,0.385714286 3.9,0 3.42857143,0 C2.95714286,0 2.57142857,0.385714286 2.57142857,0.857142857 L2.57142857,2.57142857 Z M8.57142857,12 C9.04285714,12 9.42857143,11.6142857 9.42857143,11.1428571 L9.42857143,9.42857143 L11.1428571,9.42857143 C11.6142857,9.42857143 12,9.04285714 12,8.57142857 C12,8.1 11.6142857,7.71428571 11.1428571,7.71428571 L8.57142857,7.71428571 C8.1,7.71428571 7.71428571,8.1 7.71428571,8.57142857 L7.71428571,11.1428571 C7.71428571,11.6142857 8.1,12 8.57142857,12 Z M9.42857143,2.57142857 L9.42857143,0.857142857 C9.42857143,0.385714286 9.04285714,0 8.57142857,0 C8.1,0 7.71428571,0.385714286 7.71428571,0.857142857 L7.71428571,3.42857143 C7.71428571,3.9 8.1,4.28571429 8.57142857,4.28571429 L11.1428571,4.28571429 C11.6142857,4.28571429 12,3.9 12,3.42857143 C12,2.95714286 11.6142857,2.57142857 11.1428571,2.57142857 L9.42857143,2.57142857 Z"></path>
+        </g>
+    </symbol>
+    <symbol id="player-volume-off" viewBox="0 0 12 12">
+        <g stroke="none" stroke-width="1" fill="currentColor" fill-rule="evenodd">
+            <path d="M0.42,0.42 C0.16,0.68 0.16,1.1 0.42,1.36 L2.86,3.8 L2.66666667,4 L0.666666667,4 C0.3,4 0,4.3 0,4.66666667 L0,7.33333333 C0,7.7 0.3,8 0.666666667,8 L2.66666667,8 L4.86,10.1933333 C5.28,10.6133333 6,10.3133333 6,9.72 L6,6.94 L8.78666667,9.72666667 C8.46,9.97333333 8.10666667,10.18 7.72,10.3333333 C7.48,10.4333333 7.33333333,10.6866667 7.33333333,10.9466667 C7.33333333,11.4266667 7.82,11.7333333 8.26,11.5533333 C8.79333333,11.3333333 9.29333333,11.04 9.74,10.68 L10.6333333,11.5733333 C10.8933333,11.8333333 11.3133333,11.8333333 11.5733333,11.5733333 C11.8333333,11.3133333 11.8333333,10.8933333 11.5733333,10.6333333 L1.36666667,0.42 C1.10666667,0.16 0.686666667,0.16 0.42,0.42 Z M10.6666667,6 C10.6666667,6.54666667 10.5666667,7.07333333 10.3933333,7.56 L11.4133333,8.58 C11.7866667,7.8 12,6.92666667 12,6 C12,3.44666667 10.4,1.26 8.14666667,0.4 C7.75333333,0.246666667 7.33333333,0.553333333 7.33333333,0.973333333 L7.33333333,1.1 C7.33333333,1.35333333 7.5,1.57333333 7.74,1.66666667 C9.45333333,2.36 10.6666667,4.04 10.6666667,6 Z M4.86,1.80666667 L4.74666667,1.92 L6,3.17333333 L6,2.27333333 C6,1.68 5.28,1.38666667 4.86,1.80666667 Z M9,6 C9,4.82 8.32,3.80666667 7.33333333,3.31333333 L7.33333333,4.50666667 L8.98666667,6.16 C8.99333333,6.10666667 9,6.05333333 9,6 Z"></path>
+        </g>
+    </symbol>
+    <symbol id="play-24" viewBox="0 0 24 24">
+        <g fill="none" fill-rule="evenodd">
+            <circle cx="12" cy="12" r="11" fill="#4B4545" stroke="#FFFFFF" stroke-width="2"/>
+            <path fill="#FFFFFF" fill-rule="nonzero" d="M10.56 16.68l5.604-4.2c.324-.24.324-.72 0-.96l-5.604-4.2c-.396-.3-.96-.012-.96.48v8.4c0 .492.564.78.96.48z"/>
+        </g>
+    </symbol>
+    <symbol id="icon-bullet-arrow-circle" viewBox="0 0 12 12">
+        <g id="bullet/arrow-circle" stroke-width="1" fill-rule="evenodd">
+            <path
+                d="M9.345,6.533 L6.5875,9.4435 C6.4465,9.592 6.2565,9.674 6.053,9.674 C5.8565,9.674 5.6715,9.5975 5.532,9.458 L5.384,9.311 C5.0965,9.023 5.083,8.543 5.354,8.2405 L6.4645,6.998 L2.7505,6.998 C2.3365,6.998 2.0005,6.6615 2.0005,6.248 L2.0005,5.75 C2.0005,5.336 2.3365,5 2.7505,5 L6.4475,5.001 L5.307,3.7575 C5.0315,3.457 5.042,2.978 5.3305,2.6895 L5.4785,2.542 C5.7625,2.258 6.2575,2.2635 6.536,2.552 L9.341,5.464 C9.624,5.758 9.626,6.237 9.345,6.533 M6,0 C2.6915,0 0,2.691 0,6 C0,9.3085 2.6915,12 6,12 C9.3085,12 12,9.3085 12,6 C12,2.691 9.3085,0 6,0"
+                id="Fill-399"></path>
+        </g>
+    </symbol>
+    <symbol id="icon-bullet-solid" viewBox="0 0 12 12">
+        <circle cx="6" cy="6" r="3" fill-rule="evenodd" />
+    </symbol>
+    <symbol id="icon-bullet-chevron" viewBox="0 0 12 12">
+        <g id="bullet/chevron" stroke-width="1" fill-rule="evenodd">
+            <path
+                d="M10.1632872,5.81004475 L3.51983519,0.0610863115 C3.46933556,0.017586626 3.40333604,-0.00391321855 3.33783651,0.000586748922 C3.27133699,0.00608670916 3.20983743,0.0365864887 3.16633775,0.08758612 L2.05984575,1.37857679 C2.01684606,1.42857643 1.99534622,1.49457595 2.00084618,1.56057547 C2.00634614,1.62707499 2.03734591,1.68857455 2.08834554,1.73157423 L7.11330922,5.99904338 L2.08834554,10.2685125 C2.03734591,10.3115122 2.00634614,10.3730118 2.00084618,10.4395113 C1.99534622,10.5055108 2.01684606,10.5715103 2.05984575,10.62151 L3.16633775,11.9125006 C3.20983743,11.9635003 3.27133699,11.994 3.33783651,11.9995 C3.34383647,12 3.34983642,12 3.35633638,12 C3.41583595,12 3.47383553,11.9785002 3.51983519,11.9390004 L10.1632872,6.18804202 C10.2177868,6.14054236 10.2497865,6.07204286 10.2497865,5.99904338 C10.2497865,5.92604391 10.2177868,5.85754441 10.1632872,5.81004475"
+                id="Fill-397"></path>
+        </g>
+    </symbol>
+    <symbol id="icon-bullet-dash" viewBox="0 0 12 12">
+        <g id="bullet/dash" stroke-width="1" fill-rule="evenodd">
+            <rect id="Rectangle" x="1" y="5" width="10" height="2" rx="1"></rect>
+        </g>
+    </symbol>
+    <symbol id="icon-bullet-arrow" viewBox="0 0 12 12">
+        <g id="bullet/arrow" stroke-width="1" fill-rule="evenodd">
+            <path
+                d="M11.9263107,5.37327196 L6.85189122,0.348851732 C6.37189884,-0.131140648 5.51241248,-0.113140933 5.01192043,0.386351137 C4.49392865,0.904342913 4.47692892,1.72982981 4.97742098,2.23132185 L7.13838667,4.30278896 L1.01548388,4.30278896 C0.379993967,4.30278896 0,4.93877886 0,5.55276911 C0,5.86176421 0.0839986664,6.15625953 0.236496245,6.38275594 C0.420493324,6.65675159 0.692489006,6.80774919 1.00098411,6.80774919 L7.13888666,6.80774919 L5.06141964,8.88771617 C4.83242328,9.11471256 4.70742526,9.42320767 4.70742526,9.7552024 C4.70692527,10.1091968 4.85392294,10.4596912 5.11041887,10.7161871 C5.3664148,10.9716831 5.71590925,11.1186807 6.06990363,11.1186807 C6.40189836,11.1186807 6.71039347,10.9931827 6.93938983,10.7646864 L11.9278106,5.72676635 C12.0248091,5.62876791 12.0238091,5.47027042 11.9263107,5.37327196"
+                id="Fill-347"></path>
+        </g>
+    </symbol>
+
+    <symbol id="icon-case-study" viewBox="0 0 24 24">
+        <g fill="none" fill-rule="evenodd">
+            <path d="M0 0H24V24H0z"/>
+            <path fill="currentColor" fill-rule="nonzero" d="M19 3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.89-2-2-2zm0 16H5V7h14v12zm-5.5-6c0 .83-.67 1.5-1.5 1.5s-1.5-.67-1.5-1.5.67-1.5 1.5-1.5 1.5.67 1.5 1.5zM12 9c-2.73 0-5.06 1.66-6 4 .94 2.34 3.27 4 6 4s5.06-1.66 6-4c-.94-2.34-3.27-4-6-4zm0 6.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+        </g>
+    </symbol>
+
+    <symbol id="icon-article" viewBox="0 0 24 24">
+        <g fill="none" fill-rule="evenodd">
+            <path d="M0 0H24V24H0z"/>
+            <path fill="currentColor" fill-rule="nonzero" d="M19 5v14H5V5h14m0-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z"/>
+            <path fill="currentColor" fill-rule="nonzero" d="M13 17H8c-.55 0-1-.45-1-1s.45-1 1-1h5c.55 0 1 .45 1 1s-.45 1-1 1zM16 13H8c-.55 0-1-.45-1-1s.45-1 1-1h8c.55 0 1 .45 1 1s-.45 1-1 1zM16 9H8c-.55 0-1-.45-1-1s.45-1 1-1h8c.55 0 1 .45 1 1s-.45 1-1 1z"/>
+        </g>
+    </symbol>
+
+    <symbol id="icon-ebook" viewBox="0 0 24 24">
+        <g fill="none" fill-rule="evenodd">
+            <path d="M0 0L24 0 24 24 0 24z"/>
+            <path fill="currentColor" fill-rule="nonzero" d="M18 2H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zM9 4h2v5l-1-.75L9 9V4zm9 16H6V4h1v9l3-2.25L13 13V4h5v16z"/>
+        </g>
+    </symbol>
+
+    <symbol id="icon-video" viewBox="0 0 24 24">
+        <g fill="none" fill-rule="evenodd">
+            <path d="M0 0L24 0 24 24 0 24z"/>
+            <path fill="currentColor" fill-rule="nonzero" d="M21 3H3c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h5v1c0 .55.45 1 1 1h6c.55 0 1-.45 1-1v-1h5c1.1 0 1.99-.9 1.99-2L23 5c0-1.11-.9-2-2-2zm-1 14H4c-.55 0-1-.45-1-1V6c0-.55.45-1 1-1h16c.55 0 1 .45 1 1v10c0 .55-.45 1-1 1zm-5.52-5.13l-3.98 2.28c-.67.38-1.5-.11-1.5-.87V8.72c0-.77.83-1.25 1.5-.87l3.98 2.28c.67.39.67 1.35 0 1.74z"/>
+        </g>
+    </symbol>
+
+    <symbol id="icon-plus" viewBox="0 0 14 14">
+        <path d="M13, 6H8V1A1, 1, 0, 0, 0, 6, 1V6H1A1, 1, 0, 0, 0, 1, 8H6v5a1, 1, 0, 0, 0, 2, 0V8h5a1, 1, 0, 0, 0, 0-2Z"/>
+    </symbol>
+
+    <symbol id="icon-minus" viewBox="0 0 14 14">
+        <path d="M13, 8H1A1, 1, 0, 0, 1, 1, 6H13a1, 1, 0, 0, 1, 0, 2Z"/>
+    </symbol>
+
+    <symbol id="icon-spinner" viewBox="0 0 38 38">
+        <g fill="none" fill-rule="evenodd">
+            <g transform="translate(1 1)">
+                <path d="M36 18c0-9.94-8.06-18-18-18" stroke="currentColor" stroke-width="2">
+                    <animateTransform
+                        attributeName="transform"
+                        type="rotate"
+                        from="0 18 18"
+                        to="360 18 18"
+                        dur="0.9s"
+                        repeatCount="indefinite" />
+                </path>
+            </g>
+        </g>
+    </symbol>
+
+    <symbol id="icon-24-plus" viewBox="0 0 24 24">
+        <path fill="currentColor" d="M12,5a.94.94,0,0,1,1,.69V11h5.22A.91.91,0,0,1,19,12a.94.94,0,0,1-.69,1H13v5.22A.91.91,0,0,1,12,19a.94.94,0,0,1-1-.69V13H5.78A.91.91,0,0,1,5,12a.94.94,0,0,1,.69-1H11V5.78A.91.91,0,0,1,12,5Z"/>
+    </symbol>
+
+    <symbol id="icon-24-minus" viewBox="0 0 24 24">
+        <path fill="currentColor" d="M18.22,11A.91.91,0,0,1,19,12a.94.94,0,0,1-.69,1H5.78A.91.91,0,0,1,5,12a.94.94,0,0,1,.69-1H18.22Z"/>
+    </symbol>
+
+    <symbol id="icon-24-chevron-right" viewBox="0 0 24 24">
+        <path fill="currentColor" d="M9.62,5.29a.91.91,0,0,0-1.34,0A1,1,0,0,0,8.2,6.61l.08.1,5,5.29-5,5.29a1,1,0,0,0-.08,1.32l.08.1a.91.91,0,0,0,1.25.08l.09-.08L16,12Z"/>
+    </symbol>
+
+    <symbol id="icon-24-chevron-left" viewBox="0 0 24 24">
+        <path fill="currentColor" d="M14.38,5.29a.91.91,0,0,1,1.34,0,1,1,0,0,1,.08,1.32l-.08.1-5,5.29,5,5.29a1,1,0,0,1,.08,1.32l-.08.1a.91.91,0,0,1-1.25.08l-.09-.08L8,12Z"/>
+    </symbol>
+
+    <symbol id="icon-24-chevron-down" viewBox="0 0 24 24">
+        <path fill="currentColor" d="M5.29,9.62a.91.91,0,0,1,0-1.34A1,1,0,0,1,6.61,8.2l.1.08,5.29,5,5.29-5a1,1,0,0,1,1.32-.08l.1.08a.91.91,0,0,1,.08,1.25l-.08.09L12,16Z"/>
+    </symbol>
+
+    <symbol id="icon-24-chevron-up" viewBox="0 0 24 24">
+        <path fill="currentColor" d="M18.71,14.38a.91.91,0,0,1,0,1.34,1,1,0,0,1-1.32.08l-.1-.08-5.29-5-5.29,5a1,1,0,0,1-1.32.08l-.1-.08a.91.91,0,0,1-.08-1.25l.08-.09L12,8Z"/>
+    </symbol>
+
+    <symbol id="icon-24-times" viewBox="0 0 24 24">
+        <path fill="currentColor" d="M17,7.05a1,1,0,0,1,.22,1.19l-.06.07L13.41,12l3.7,3.69A.92.92,0,0,1,17,17a1,1,0,0,1-1.19.22l-.07-.06L12,13.41l-3.69,3.7A.92.92,0,0,1,7.05,17a1,1,0,0,1-.22-1.19l.06-.07L10.59,12,6.89,8.31a.92.92,0,0,1,.16-1.26,1,1,0,0,1,1.19-.22l.07.06L12,10.59l3.69-3.7A.92.92,0,0,1,17,7.05Z"/>
+    </symbol>
+
+    <symbol id="icon-24-expand" viewBox="0 0 24 24">
+        <g fill="none" fill-rule="evenodd">
+            <path fill="currentColor" d="M0 0H24V24H0z"/>
+            <path fill="#ffffff" fill-rule="nonzero" d="M6.017 5.167h3.237c.321 0 .58-.259.58-.58V4.58c0-.32-.259-.579-.58-.579H4.58C4.26 4 4 4.258 4 4.58v4.674c0 .321.258.58.58.58h.008c.32 0 .579-.259.579-.58V6.017l4.879 4.846c.108.108.254.166.408.166.154 0 .3-.058.409-.17.225-.226.225-.592 0-.817L6.017 5.167zM19.42 4h-4.675c-.321 0-.58.258-.58.58v.008c0 .32.259.579.58.579h3.237l-4.846 4.879c-.225.225-.225.591 0 .817.109.108.255.17.409.17.154 0 .3-.058.408-.166l4.88-4.85v3.237c0 .321.258.58.579.58h.008c.32 0 .579-.259.579-.58V4.58c0-.32-.258-.579-.58-.579zm-8.967 8.967c-.154 0-.3.058-.408.166l-4.88 4.85v-3.237c0-.321-.258-.58-.579-.58H4.58c-.32 0-.579.259-.579.58v4.675c0 .32.258.579.58.579h4.674c.321 0 .58-.258.58-.58v-.008c0-.32-.259-.579-.58-.579H6.017l4.846-4.879c.225-.225.225-.591 0-.817-.109-.108-.255-.17-.409-.17zm8.967 1.2h-.008c-.321 0-.58.258-.58.579v3.237l-4.879-4.846c-.108-.108-.254-.166-.408-.166-.154 0-.3.058-.409.17-.225.226-.225.592 0 .817l4.846 4.875h-3.237c-.321 0-.58.259-.58.58v.008c0 .32.259.579.58.579h4.675c.32 0 .579-.258.579-.58v-4.674c0-.321-.258-.58-.58-.58z"/>
+        </g>
+    </symbol>
+
+    <symbol id="icon-close-overlay-x" viewBox="0 0 30 30">
+        <path fill="currentColor"
+            d="M14.625 0c4.031 0 7.477 1.43 10.336 4.29 2.86 2.858 4.289 6.304 4.289 10.335 0 4.031-1.43 7.477-4.29 10.336-2.858 2.86-6.304 4.289-10.335 4.289-4.031 0-7.477-1.43-10.336-4.29C1.43 22.103 0 18.657 0 14.626c0-4.031 1.43-7.477 4.29-10.336C7.147 1.43 10.593 0 14.624 0zm0 27.984c3.75 0 6.914-1.289 9.492-3.867 2.578-2.578 3.867-5.742 3.867-9.492 0-3.75-1.289-6.914-3.867-9.492-2.578-2.578-5.742-3.867-9.492-3.867-3.75 0-6.914 1.289-9.492 3.867-2.578 2.578-3.867 5.742-3.867 9.492 0 3.75 1.289 6.914 3.867 9.492 2.578 2.578 5.742 3.867 9.492 3.867zm5.906-20.109l.844.844-5.906 5.906 5.906 5.906-.844.844-5.906-5.906-5.906 5.906-.844-.844 5.906-5.906-5.906-5.906.844-.844 5.906 5.906 5.906-5.906z" />
+    </symbol>
+    <symbol id="icon-checkbox-off" viewBox="0 0 24 24">
+        <g fill="none" fill-rule="evenodd">
+            <path d="M0 0L24 0 24 24 0 24z"/>
+            <path fill="currentColor" fill-rule="nonzero" d="M19 5v14H5V5h14m0-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z"/>
+        </g>
+    </symbol>
+    <symbol id="icon-checkbox-on" viewBox="0 0 24 24">
+        <g fill="none" fill-rule="evenodd">
+            <path d="M0 0L24 0 24 24 0 24z"/>
+            <path fill="currentColor" fill-rule="nonzero" d="M19 3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.11 0 2-.9 2-2V5c0-1.1-.89-2-2-2zm-9 14l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+        </g>
+    </symbol>
+    <symbol id="icon-24-close" viewBox="0 0 24 24">
+        <g fill="none" fill-rule="evenodd">
+            <circle cx="12" cy="12" r="12" fill="#FFF"/>
+            <path fill="currentColor" fill-rule="nonzero" d="M16.793 7.207c.362.363.449.874.216 1.189l-.06.068-3.692 3.693 3.693 3.693c.303.304.233.866-.157 1.257-.363.363-.874.45-1.189.216l-.068-.059-3.693-3.693-3.693 3.693c-.304.304-.866.233-1.257-.157-.363-.363-.45-.874-.216-1.188l.059-.07 3.693-3.692-3.693-3.693c-.304-.303-.233-.866.157-1.257.363-.362.874-.449 1.188-.216l.07.06 3.692 3.692 3.693-3.693c.303-.303.866-.233 1.257.157z"/>
+        </g>
+    </symbol>
+    <symbol id="icon-filter" viewBox="0 0 512 512">
+        <path fill="currentColor" d="M487.976 0H24.028C2.71 0-8.047 25.866 7.058 40.971L192 225.941V432c0 7.831 3.821 15.17 10.237 19.662l80 55.98C298.02 518.69 320 507.493 320 487.98V225.941l184.947-184.97C520.021 25.896 509.338 0 487.976 0z"></path>
+    </symbol>
+    <symbol id="icon-caret-right" viewBox="0 0 5 9">
+        <path fill="currentColor" d="M1.014.188c-.232-.25-.608-.25-.84 0-.214.232-.23.597-.05.849l.05.06L3.319 4.5.174 7.903c-.214.231-.23.596-.05.848l.05.06c.214.232.551.25.784.054l.056-.053L5 4.5 1.014.188z"/>
+    </symbol>
+    <symbol id="icon-bookmark" viewBox="0 0 30 30">
+        <g fill="none" fill-rule="evenodd">
+            <g transform="translate(-836 -306) translate(100 170) translate(561 136)">
+                <g transform="translate(175)">
+                    <circle cx="15" cy="15" r="14.5" stroke="currentColor"/>
+                    <g>
+                        <path d="M0 0L24 0 24 24 0 24z" transform="translate(3 3)"/>
+                        <path fill="currentColor" fill-rule="nonzero" d="M17 4H7c-1.1 0-2 .9-2 2v14l7-4 7 4V6c0-1.1-.9-2-2-2z" transform="translate(3 3)"/>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </symbol>
+    <symbol id="icon-favorite" viewBox="0 0 30 30">
+        <g fill="none" fill-rule="evenodd">
+            <g>
+                <g>
+                    <g>
+                        <g transform="translate(-871 -306) translate(100 170) translate(561 136) translate(210)">
+                            <circle cx="15" cy="15" r="14.5" stroke="currentColor"/>
+                            <path fill="currentColor" d="M15.568 21.836c-.11.11-.243.164-.401.164-.158 0-.292-.055-.401-.164l-5.688-5.487c-.06-.049-.144-.128-.25-.237-.107-.11-.275-.308-.506-.597-.231-.289-.438-.585-.62-.889-.182-.304-.345-.671-.488-1.103-.143-.431-.214-.85-.214-1.257 0-1.337.386-2.382 1.158-3.136C8.929 8.377 9.996 8 11.357 8c.377 0 .76.065 1.153.196.392.13.756.307 1.094.529.337.221.627.43.87.624s.474.401.693.62c.218-.219.45-.426.692-.62.243-.194.534-.403.87-.624.338-.222.703-.398 1.095-.529.391-.13.776-.196 1.153-.196 1.36 0 2.427.377 3.199 1.13.771.754 1.157 1.799 1.157 3.136 0 1.343-.695 2.71-2.087 4.101l-5.678 5.469z"/>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </symbol>
+    <symbol id="icon-bookmark-active" viewBox="0 0 30 30">
+        <g fill="none" fill-rule="evenodd">
+            <g>
+                <g>
+                    <g transform="translate(-836 -724) translate(100 588) translate(561 136)">
+                        <g fill="currentColor">
+                            <path d="M15 0c8.284 0 15 6.716 15 15 0 8.284-6.716 15-15 15-8.284 0-15-6.716-15-15C0 6.716 6.716 0 15 0zm5 7H10c-1.1 0-2 .9-2 2v14l7-4 7 4V9c0-1.1-.9-2-2-2z" transform="translate(175)"/>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </symbol>
+    <symbol id="icon-favorite-active" viewBox="0 0 30 30">
+        <g fill="none" fill-rule="evenodd">
+            <g fill="currentColor">
+                <g>
+                    <g>
+                        <g>
+                            <path d="M15 0c8.284 0 15 6.716 15 15 0 8.284-6.716 15-15 15-8.284 0-15-6.716-15-15C0 6.716 6.716 0 15 0zm3.977 8c-.377 0-.762.065-1.153.196-.392.13-.757.307-1.094.529-.337.221-.628.43-.87.624-.244.194-.475.401-.693.62-.22-.219-.45-.426-.693-.62-.243-.194-.533-.403-.87-.624-.338-.222-.702-.398-1.094-.529-.392-.13-.776-.196-1.153-.196-1.361 0-2.428.377-3.2 1.13C7.387 9.884 7 10.93 7 12.266c0 .407.071.826.214 1.257.143.432.306.8.488 1.103.182.304.389.6.62.889.23.289.4.488.505.597.107.11.19.188.251.237l5.688 5.487c.109.11.243.164.4.164.159 0 .292-.055.402-.164l5.678-5.469c1.392-1.391 2.087-2.758 2.087-4.101 0-1.337-.386-2.382-1.157-3.136-.772-.753-1.838-1.13-3.2-1.13z" transform="translate(-871 -724) translate(100 588) translate(561 136) translate(210)"/>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </symbol>
+    <symbol id="icon-checkmark" viewBox="0 0 12 9">
+        <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+            <g transform="translate(-921.000000, -735.000000)" fill="currentColor" fill-rule="nonzero">
+                <g transform="translate(100.000000, 588.000000)">
+                    <g transform="translate(561.000000, 136.000000)">
+                        <g transform="translate(245.000000, 0.000000)">
+                            <path d="M24.4625,11.2925 L18.5825,17.1725 L16.7025,15.2925 C16.3125,14.9025 15.6825,14.9025 15.2925,15.2925 C14.9025,15.6825 14.9025,16.3125 15.2925,16.7025 L17.8825,19.2925 C18.2725,19.6825 18.9025,19.6825 19.2925,19.2925 L25.8825,12.7025 C26.2725,12.3125 26.2725,11.6825 25.8825,11.2925 C25.4925,10.9025 24.8525,10.9025 24.4625,11.2925 Z"></path>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </symbol>
+    <symbol id="icon-radio-on" viewBox="0 0 24 24">
+        <path fill="currentColor" fill-rule="nonzero" d="M12 7c-2.76 0-5 2.24-5 5s2.24 5 5 5 5-2.24 5-5-2.24-5-5-5zm0-5C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8z" />
+    </symbol>
+    <symbol id="icon-radio-off" viewBox="0 0 24 24">
+        <path fill="currentColor" fill-rule="nonzero" d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8z" />
+    </symbol>
+    <symbol id="icon-radio-on" viewBox="0 0 24 24">
+        <path fill="currentColor" fill-rule="nonzero" d="M12 7c-2.76 0-5 2.24-5 5s2.24 5 5 5 5-2.24 5-5-2.24-5-5-5zm0-5C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8z" />
+    </symbol>
+    <symbol id="icon-arrow-forward-backup" viewBox="0 0 14 9">
+        <g fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+            <g stroke="currentColor" stroke-width="1.5">
+                <path d="M13.5 4.504L.5 4.504M9 8.504L13.5 4.504 9 .504" />
+            </g>
+        </g>
+    </symbol>
+    <symbol id="arrow-left-large" viewBox="0 0 60 60">
+        <g fill-rule="evenodd">
+            <path fill-rule="nonzero" d="M30 58.5c15.74 0 28.5-12.76 28.5-28.5S45.74 1.5 30 1.5 1.5 14.26 1.5 30 14.26 58.5 30 58.5zm0 1.5C13.431 60 0 46.569 0 30 0 13.431 13.431 0 30 0c16.569 0 30 13.431 30 30 0 16.569-13.431 30-30 30z"/>
+            <path d="M34.5 20.586L23.953 30.5 34.5 40.414l-1.477 1.336L21 30.5l12.023-11.25z"/>
+        </g>
+    </symbol>
+    <symbol id="arrow-left-large-hover" viewBox="0 0 60 60">
+        <g fill-rule="evenodd">
+            <path fill-rule="evenodd" d="M30 60C13.431 60 0 46.569 0 30 0 13.431 13.431 0 30 0c16.569 0 30 13.431 30 30 0 16.569-13.431 30-30 30zm4.5-39.414l-1.477-1.336L21 30.5l12.023 11.25 1.477-1.336L23.953 30.5 34.5 20.586z"/>
+        </g>
+    </symbol>
+    <symbol id="arrow-right-large" viewBox="0 0 60 60">
+        <g fill-rule="evenodd">
+            <path fill-rule="nonzero" d="M30 58.5c15.74 0 28.5-12.76 28.5-28.5S45.74 1.5 30 1.5 1.5 14.26 1.5 30 14.26 58.5 30 58.5zm0 1.5C13.431 60 0 46.569 0 30 0 13.431 13.431 0 30 0c16.569 0 30 13.431 30 30 0 16.569-13.431 30-30 30z"/>
+            <path d="M25 20.586l1.477-1.336L38.5 30.5 26.477 41.75 25 40.414 35.547 30.5z"/>
+        </g>
+    </symbol>
+    <symbol id="arrow-right-large-hover" viewBox="0 0 60 60">
+        <g fill-rule="evenodd">
+            <path fill-rule="evenodd" d="M30 60C13.431 60 0 46.569 0 30 0 13.431 13.431 0 30 0c16.569 0 30 13.431 30 30 0 16.569-13.431 30-30 30zm-5-39.414L35.547 30.5 25 40.414l1.477 1.336L38.5 30.5 26.477 19.25 25 20.586z"/>
+        </g>
+    </symbol>
+    <symbol id="icon-filter-lines" viewBox="0 0 32 32">
+        <g data-name="Layer 24" id="Layer_24">
+            <path d="M10,12H6a1,1,0,0,1-1-1V7A1,1,0,0,1,6,6h4a1,1,0,0,1,1,1v4A1,1,0,0,1,10,12ZM7,10H9V8H7Z"/>
+            <path d="M6,8.47V11h4V8.47a2.11,2.11,0,0,1-2,1A2.11,2.11,0,0,1,6,8.47Z"/>
+            <path d="M21,15.47V18h4V15.47a2.11,2.11,0,0,1-2,1A2.11,2.11,0,0,1,21,15.47Z"/>
+            <path d="M6,22.47V25h4V22.47a2.11,2.11,0,0,1-2,1A2.11,2.11,0,0,1,6,22.47Z"/>
+            <path d="M29,10H10a1,1,0,0,1,0-2H29a1,1,0,0,1,0,2Z"/>
+            <path d="M6,10H3A1,1,0,0,1,3,8H6a1,1,0,0,1,0,2Z"/>
+            <path d="M10,26H6a1,1,0,0,1-1-1V21a1,1,0,0,1,1-1h4a1,1,0,0,1,1,1v4A1,1,0,0,1,10,26ZM7,24H9V22H7Z"/>
+            <path d="M6,24H3a1,1,0,0,1,0-2H6a1,1,0,0,1,0,2Z"/>
+            <path d="M29,24H10a1,1,0,0,1,0-2H29a1,1,0,0,1,0,2Z"/>
+            <path d="M25,19H21a1,1,0,0,1-1-1V14a1,1,0,0,1,1-1h4a1,1,0,0,1,1,1v4A1,1,0,0,1,25,19Zm-3-2h2V15H22Z"/>
+            <path d="M21,17H3a1,1,0,0,1,0-2H21a1,1,0,0,1,0,2Z"/>
+            <path d="M29,17H25a1,1,0,0,1,0-2h4a1,1,0,0,1,0,2Z"/>
+        </g>
+    </symbol>
+    <symbol id="icon-polygon" viewBox="0 0 13 6" fill="none">
+        <path d="M6.5 6L0.870832 -1.06037e-06L12.1292 -7.61308e-08L6.5 6Z" fill="#2F9AE0"/>
+    </symbol>
+    <symbol id="icon-user" viewBox="0 0 14 14" fill="none">
+        <path d="M7 7C8.93375 7 10.5 5.43375 10.5 3.5C10.5 1.56625 8.93375 0 7 0C5.06625 0 3.5 1.56625 3.5 3.5C3.5 5.43375 5.06625 7 7 7ZM7 8.75C4.66375 8.75 0 9.9225 0 12.25V14H14V12.25C14 9.9225 9.33625 8.75 7 8.75Z" fill="white"/>
+    </symbol>
+    <symbol id="icon-filter-alt" width="24" height="25" viewBox="0 0 24 25" fill="none">
+        <path d="M20 19.1924L14 19.1924M14 19.1924C14 18.0878 13.1046 17.1924 12 17.1924C10.8954 17.1924 10 18.0878 10 19.1924M14 19.1924C14 20.2969 13.1046 21.1924 12 21.1924C10.8954 21.1924 10 20.2969 10 19.1924M10 19.1924L4 19.1924M20 12.1924L8 12.1924M8 12.1924C8 11.0878 7.10457 10.1924 6 10.1924C4.89543 10.1924 4 11.0878 4 12.1924C4 13.2969 4.89543 14.1924 6 14.1924C7.10457 14.1924 8 13.2969 8 12.1924ZM16 5.19235L4 5.19235M16 5.19235C16 6.29692 16.8954 7.19235 18 7.19235C19.1046 7.19235 20 6.29692 20 5.19235C20 4.08778 19.1046 3.19235 18 3.19235C16.8954 3.19235 16 4.08778 16 5.19235Z" stroke="#006EB6" stroke-width="1.2" stroke-linecap="round"/>
+    </symbol>
+    <symbol id="icon-note" viewBox="0 0 24 24">
+        <g fill="none" fill-rule="evenodd">
+            <path fill="currentColor" d="M24.333 3H5.653C4.187 3 3 4.2 3 5.667l.013 18.666C3.013 25.8 4.2 27 5.667 27H19l8-8V5.667C27 4.2 25.8 3 24.333 3zm-16 6.667h13.334v2.666H8.333V9.667zm6.667 8H8.333V15H15v2.667zM17.667 25v-7.333H25L17.667 25z" />
+        </g>
+    </symbol>
+    <symbol id="icon-warning" viewBox="0 0 24 24">
+        <g fill="none" fill-rule="evenodd">
+            <path d="M0 0L24 0 24 24 0 24z"/>
+            <path fill="currentColor" d="M0 22.727h24L12 2 0 22.727zm13.09-3.272h-2.18v-2.182h2.18v2.182zm0-4.364h-2.18v-4.364h2.18v4.364z"/>
+        </g>
+    </symbol>
+    <symbol id="icon-wand" viewBox="0 0 24 24">
+        <g fill="none" fill-rule="evenodd">
+            <path d="M0.003 0L24.003 0 24.003 24 0.003 24z"/>
+            <path fill="currentColor" d="M24 0l-2.857 1.6L18.286 0l1.6 2.857-1.6 2.857 2.857-1.6L24 5.714l-1.6-2.857L24 0zm-8.719 6.045c-.446-.446-1.166-.446-1.611 0L.334 19.381c-.445.445-.445 1.165 0 1.61l2.674 2.675c.446.445 1.166.445 1.611 0l13.325-13.324c.445-.446.445-1.166 0-1.612L15.28 6.045zm-1.177 6.274l-2.423-2.423 2.789-2.788 2.422 2.422-2.788 2.789z"/>
+        </g>
+    </symbol>
+    <symbol id="icon-star" viewBox="0 0 24 24">
+        <g fill="none" fill-rule="evenodd">
+            <path d="M0 0L24 0 24 24 0 24z"/>
+            <path d="M0 0L24 0 24 24 0 24z"/>
+            <path fill="currentColor" d="M12 18.324L19.416 22.8 17.448 14.364 24 8.688 15.372 7.956 12 0 8.628 7.956 0 8.688 6.552 14.364 4.584 22.8z"/>
+        </g>
+    </symbol>
+    <svg id="caution" viewBox="0 0 32 32">
+        <g fill="none"><path fill="#ffb11f" d="m14.839 5.668l-12.66 21.93c-.51.89.13 2.01 1.16 2.01h25.32c1.03 0 1.67-1.11 1.16-2.01l-12.66-21.93c-.52-.89-1.8-.89-2.32 0"/><path fill="#fdf4d5" d="M14.599 21.498a1.4 1.4 0 1 0 2.8-.01v-9.16c0-.77-.62-1.4-1.4-1.4c-.77 0-1.4.62-1.4 1.4zm2.8 3.98a1.4 1.4 0 1 1-2.8 0a1.4 1.4 0 0 1 2.8 0"/></g>
+    </svg>
+</svg>
+
+
+<ps-header class="Page-header" data-nav-alignment="right"data-sticky-header
+data-shrink-header="false"
+data-header-style="tall"
+ >
+    
+        
+    
+    <div class="Page-header-hamburger-menu" id="PageMenu">
+        <div class="Page-header-hamburger-menu-wrapper">
+            <div class="Page-header-hamburger-menu-content">
+                <div class="Page-header-hamburger-primaryNav">
+                    
+                        <form class="SearchOverlay-form" action="https://www.byui.edu/alt-search" novalidate="" autocomplete="off">
+                            <label class="sr-only" for="SearchOverlayInput">Search</label>
+                            <input id="SearchOverlayInput" type="text" class="SearchOverlay-input" name="q" placeholder="Search...">
+                            <button type="submit" class="SearchOverlay-button" aria-label="Search">
+                                <svg class="icon-magnify"><use xlink:href="#icon-magnify"/></svg>
+                            </button>
+                        </form>
+                    
+                    <div class="Page-header-hamburger-primaryNav-header">
+                        
+                            
+                                <div class="Page-header-hamburger-primaryNav-header-currentSection">
+                                    <div class="Page-header-hamburger-primaryNav-header-currentSection-span">
+                                        <a class="Link" href="https://www.byui.edu/genai/" data-cms-ai="0">Generative Artificial Intelligence</a>
+                                    </div>
+                                </div>
+                            
+                        
+                        
+                    </div>
+                    <div class="Page-header-hamburger-primaryNav-menu">
+                        
+                            <ps-nav class="GlobalNavigation">
+    <div class="GlobalNavigation-menu">
+        
+        
+    </div>
+    <div class="GlobalNavigation-buttons">
+        
+            
+                <div class="GlobalNavigation-buttons-link"><a class="Link
+            " href="https://my.byui.edu/" target="_blank" rel="noopener" data-cms-ai="0">myBYUI<svg class="icon-user"><use xlink:href="#icon-user"></use></svg></a></div>
+            
+                <div class="GlobalNavigation-buttons-link"><a class="Link
+            " href="https://www.byui.edu/directories/" target="_blank" rel="noopener" data-cms-ai="0">Directories</a></div>
+            
+                <div class="GlobalNavigation-buttons-link"><a class="Link
+            " href="https://www.byui.edu/a-z-index/" target="_blank" rel="noopener" data-cms-ai="0">A-Z Index</a></div>
+            
+                <div class="GlobalNavigation-buttons-link"><a class="Link
+            " href="https://www.byui.edu/giving/?utm_source=header" target="_blank" rel="noopener" data-cms-ai="0">Give</a></div>
+            
+        
+    </div>
+</ps-nav>
+
+                        
+                    </div>
+                </div>
+                
+                    
+                        <div class="Page-header-hamburger-secondaryNav">
+                            <ps-nav class="Navigation" data-allow-nav-overflow="true">
+    
+    
+        <ul class="Navigation-items">
+            
+                
+                
+                    <li class="Navigation-items-item"><div class="NavigationItem">
+    <div class="NavigationItem-text ">
+        
+
+        
+            
+                <a class="NavigationItem-text-link" href="https://www.byui.edu/genai/" data-cms-ai="0">
+                    <span class="NavigationItem-text-link-label">Home</span>
+                </a>
+            
+        
+        
+    </div>
+
+    
+</div></li>
+                
+            
+                
+                
+                    <li class="Navigation-items-item"><div class="NavigationItem">
+    <div class="NavigationItem-text withSubNav">
+        
+
+        
+            
+                <a class="NavigationItem-text-link" href="https://www.byui.edu/genai/about" data-cms-ai="0">
+                    <span class="NavigationItem-text-link-label">About GenAI</span>
+                </a>
+            
+        
+        
+            <div class="NavigationItem-more arrowAfter">
+                <button aria-label="About GenAI dropdown" class="desktop-symbol">
+                    <svg><use href="#icon-polygon"></use></svg>
+                </button>
+                <button aria-label="About GenAI dropdown" class="mobile-symbol">
+                    <svg><use href="#arrow-down"></use></svg>
+                </button>
+            </div>
+        
+    </div>
+
+    
+        <div class="NavigationItem-items-container">
+            <div class="NavigationItem-items-wrapper"  ><ul class="NavigationItem-items"><li class="NavigationItem-items-item" ><a class="NavigationLink" href="https://www.byui.edu/genai/custom-bots" data-cms-ai="0">
+    <span class="NavigationLink-title">Custom Bots</span>
+    
+</a>
+</li><li class="NavigationItem-items-item" ><a class="NavigationLink" href="https://www.byui.edu/genai/connectors" data-cms-ai="0">
+    <span class="NavigationLink-title">AI &amp; Connectors</span>
+    
+</a>
+</li><li class="NavigationItem-items-item" ><a class="NavigationLink" href="https://www.byui.edu/genai/training" data-cms-ai="0">
+    <span class="NavigationLink-title">GenAI Training</span>
+    
+</a>
+</li></ul></div>
+        </div>
+    
+</div></li>
+                
+            
+                
+                
+                    <li class="Navigation-items-item" data-current-nav-item><div class="NavigationItem">
+    <div class="NavigationItem-text withSubNav">
+        
+
+        
+            <div class="NavigationItem-text-link" tabindex="0">
+                <span class="NavigationItem-text-link-label">Academics</span>
+            </div>
+        
+        
+            <div class="NavigationItem-more arrowAfter">
+                <button aria-label="Academics dropdown" class="desktop-symbol">
+                    <svg><use href="#icon-polygon"></use></svg>
+                </button>
+                <button aria-label="Academics dropdown" class="mobile-symbol">
+                    <svg><use href="#arrow-down"></use></svg>
+                </button>
+            </div>
+        
+    </div>
+
+    
+        <div class="NavigationItem-items-container">
+            <div class="NavigationItem-items-wrapper"  ><ul class="NavigationItem-items"><li class="NavigationItem-items-item" data-active><a class="NavigationLink" href="https://www.byui.edu/genai/ai-in-academics" data-cms-ai="0">
+    <span class="NavigationLink-title">AI in Academics</span>
+    
+</a>
+</li><li class="NavigationItem-items-item" ><a class="NavigationLink" href="https://www.byui.edu/genai/academic-integrity" data-cms-ai="0">
+    <span class="NavigationLink-title">Academic Integrity and AI Use at BYU-Idaho</span>
+    
+</a>
+</li><li class="NavigationItem-items-item" ><a class="NavigationLink" href="https://www.byui.edu/genai/grading-with-ai" data-cms-ai="0">
+    <span class="NavigationLink-title">AI Grading</span>
+    
+</a>
+</li><li class="NavigationItem-items-item" ><a class="NavigationLink" href="https://www.byui.edu/genai/ai-in-the-syllabus" data-cms-ai="0">
+    <span class="NavigationLink-title">AI in the Syllabus</span>
+    
+</a>
+</li></ul></div>
+        </div>
+    
+</div></li>
+                
+            
+                
+                
+                    <li class="Navigation-items-item"><div class="NavigationItem">
+    <div class="NavigationItem-text ">
+        
+
+        
+            
+                <a class="NavigationItem-text-link" href="https://www.byui.edu/genai/copyright" data-cms-ai="0">
+                    <span class="NavigationItem-text-link-label">Copyright</span>
+                </a>
+            
+        
+        
+    </div>
+
+    
+</div></li>
+                
+            
+                
+                
+                    <li class="Navigation-items-item"><div class="NavigationItem">
+    <div class="NavigationItem-text withSubNav">
+        
+
+        
+            
+                <a class="NavigationItem-text-link" href="https://www.byui.edu/genai/products" data-cms-ai="0">
+                    <span class="NavigationItem-text-link-label">Products</span>
+                </a>
+            
+        
+        
+            <div class="NavigationItem-more arrowAfter">
+                <button aria-label="Products dropdown" class="desktop-symbol">
+                    <svg><use href="#icon-polygon"></use></svg>
+                </button>
+                <button aria-label="Products dropdown" class="mobile-symbol">
+                    <svg><use href="#arrow-down"></use></svg>
+                </button>
+            </div>
+        
+    </div>
+
+    
+        <div class="NavigationItem-items-container">
+            <div class="NavigationItem-items-wrapper"  ><ul class="NavigationItem-items"><li class="NavigationItem-items-item" ><a class="NavigationLink" href="https://www.byui.edu/genai/products/chatgpt" data-cms-ai="0">
+    <span class="NavigationLink-title">OpenAI ChatGPT</span>
+    
+</a>
+</li><li class="NavigationItem-items-item" ><a class="NavigationLink" href="https://www.byui.edu/genai/products/copilot" data-cms-ai="0">
+    <span class="NavigationLink-title">Microsoft Copilot</span>
+    
+</a>
+</li><li class="NavigationItem-items-item" ><a class="NavigationLink" href="https://www.byui.edu/genai/products/gemini" data-cms-ai="0">
+    <span class="NavigationLink-title">Google Gemini</span>
+    
+</a>
+</li><li class="NavigationItem-items-item" ><a class="NavigationLink" href="https://www.byui.edu/genai/products/notebooklm" data-cms-ai="0">
+    <span class="NavigationLink-title">Google NotebookLM</span>
+    
+</a>
+</li><li class="NavigationItem-items-item" ><a class="NavigationLink" href="https://www.byui.edu/genai/products/ai-companion" data-cms-ai="0">
+    <span class="NavigationLink-title">Zoom AI Companion</span>
+    
+</a>
+</li><li class="NavigationItem-items-item" ><a class="NavigationLink" href="https://www.byui.edu/genai/products/collaborative-ai" data-cms-ai="0">
+    <span class="NavigationLink-title">Lucid Collaborative AI</span>
+    
+</a>
+</li><li class="NavigationItem-items-item" ><a class="NavigationLink" href="https://www.byui.edu/genai/products/firefly" data-cms-ai="0">
+    <span class="NavigationLink-title">Adobe Firefly</span>
+    
+</a>
+</li><li class="NavigationItem-items-item" ><a class="NavigationLink" href="https://www.byui.edu/genai/products/ace" data-cms-ai="0">
+    <span class="NavigationLink-title">TopHat Ace</span>
+    
+</a>
+</li><li class="NavigationItem-items-item" ><a class="NavigationLink" href="https://www.byui.edu/genai/products/apple-intelligence" data-cms-ai="0">
+    <span class="NavigationLink-title">Apple Intelligence</span>
+    
+</a>
+</li><li class="NavigationItem-items-item" ><a class="NavigationLink" href="https://www.byui.edu/genai/products/go" data-cms-ai="0">
+    <span class="NavigationLink-title">Grammarly GO</span>
+    
+</a>
+</li></ul></div>
+        </div>
+    
+</div></li>
+                
+            
+                
+                
+                    <li class="Navigation-items-item"><div class="NavigationItem">
+    <div class="NavigationItem-text ">
+        
+
+        
+            
+                <a class="NavigationItem-text-link" href="https://www.byui.edu/genai/privacy" data-cms-ai="0">
+                    <span class="NavigationItem-text-link-label">Privacy</span>
+                </a>
+            
+        
+        
+    </div>
+
+    
+</div></li>
+                
+            
+                
+                
+                    <li class="Navigation-items-item"><div class="NavigationItem">
+    <div class="NavigationItem-text ">
+        
+
+        
+            
+                <a class="NavigationItem-text-link" href="https://www.byui.edu/genai/expo" data-cms-ai="0">
+                    <span class="NavigationItem-text-link-label">Events</span>
+                </a>
+            
+        
+        
+    </div>
+
+    
+</div></li>
+                
+            
+        </ul>
+    
+</ps-nav>
+                        </div>
+                    
+                
+            </div>
+        </div>
+    </div>
+    <div class="Page-header-bar" id="Page-header-bar">
+        
+        
+            <div class="Page-header-bar-global">
+                
+                    <div class="Page-header-bar-buttons">
+                        <ps-nav class="GlobalNavigation">
+    <div class="GlobalNavigation-menu">
+        
+        
+    </div>
+    <div class="GlobalNavigation-buttons">
+        
+            
+                <div class="GlobalNavigation-buttons-link"><a class="Link
+            " href="https://my.byui.edu/" target="_blank" rel="noopener" data-cms-ai="0">myBYUI<svg class="icon-user"><use xlink:href="#icon-user"></use></svg></a></div>
+            
+                <div class="GlobalNavigation-buttons-link"><a class="Link
+            " href="https://www.byui.edu/directories/" target="_blank" rel="noopener" data-cms-ai="0">Directories</a></div>
+            
+                <div class="GlobalNavigation-buttons-link"><a class="Link
+            " href="https://www.byui.edu/a-z-index/" target="_blank" rel="noopener" data-cms-ai="0">A-Z Index</a></div>
+            
+                <div class="GlobalNavigation-buttons-link"><a class="Link
+            " href="https://www.byui.edu/giving/?utm_source=header" target="_blank" rel="noopener" data-cms-ai="0">Give</a></div>
+            
+        
+    </div>
+</ps-nav>
+
+                    </div>
+                
+            </div>
+
+            <div class="Page-header-navigation mobileView">
+                
+                    
+                        <div class="Page-header-bar-logo">
+                            <a aria-label="home page" href="/" data-cms-ai="0"  >
+    
+        
+            <img class="PageLogo-image" src="https://brightspotcdn.byui.edu/dims4/default/041182f/2147483647/strip/true/crop/100x58+0+0/resize/76x44!/quality/90/?url=https%3A%2F%2Fbyu-idaho-brightspot-production-us-east-2.s3.us-east-2.amazonaws.com%2Ff2%2F6f%2Fa2c043a64e0488068d9dc10578cd%2Fbyu-idaho-logo-blue-100.png" alt="/" srcset="https://brightspotcdn.byui.edu/dims4/default/854adf4/2147483647/strip/true/crop/100x58+0+0/resize/152x88!/quality/90/?url=https%3A%2F%2Fbyu-idaho-brightspot-production-us-east-2.s3.us-east-2.amazonaws.com%2Ff2%2F6f%2Fa2c043a64e0488068d9dc10578cd%2Fbyu-idaho-logo-blue-100.png 2x"  width="76"  height="44" />
+        
+    </a>
+
+                            <a class="Link" href="/" data-cms-ai="0">HOME</a>
+                        </div>
+                    
+                
+                <div class="Page-header-menu mobileView">
+                    <button class="Page-header-menu-trigger" aria-label="Site Navigation Menu" aria-expanded="false" aria-haspopup="true" aria-controls="PageMenu">
+                        <svg class="burger-menu"><use xlink:href="#burger-menu"></use></svg><svg class="close-x"><use xlink:href="#close-x"></use></svg>
+                    </button>
+                </div>
+            </div>
+
+            <div class="Page-header-navigation desktopView">
+                
+                    
+                        <div class="Page-header-bar-logo">
+                            <a aria-label="home page" href="/" data-cms-ai="0"  >
+    
+        
+            <img class="PageLogo-image" src="https://brightspotcdn.byui.edu/dims4/default/041182f/2147483647/strip/true/crop/100x58+0+0/resize/76x44!/quality/90/?url=https%3A%2F%2Fbyu-idaho-brightspot-production-us-east-2.s3.us-east-2.amazonaws.com%2Ff2%2F6f%2Fa2c043a64e0488068d9dc10578cd%2Fbyu-idaho-logo-blue-100.png" alt="/" srcset="https://brightspotcdn.byui.edu/dims4/default/854adf4/2147483647/strip/true/crop/100x58+0+0/resize/152x88!/quality/90/?url=https%3A%2F%2Fbyu-idaho-brightspot-production-us-east-2.s3.us-east-2.amazonaws.com%2Ff2%2F6f%2Fa2c043a64e0488068d9dc10578cd%2Fbyu-idaho-logo-blue-100.png 2x"  width="76"  height="44" />
+        
+    </a>
+
+                            <a class="Link" href="/" data-cms-ai="0">HOME</a>
+                        </div>
+                    
+                
+                <div class="Page-header-site-wrapper">
+                    
+                        <div class="Page-header-site">
+                            <div class="Page-header-site-start" tabindex="0">
+                                
+                                    <div class="Page-header-navigation-siteName">
+                                        <a class="Link" href="https://www.byui.edu/genai/" data-cms-ai="0">Generative Artificial Intelligence</a>
+                                    </div>
+                                
+                            </div>
+                            <div class="Page-header-site-end">
+                                
+                                <div class="Page-header-search-icon">
+                                    
+                                        <div class="Page-header-search-buttons" tabindex="0">
+                                            <a href="/search" class="Page-header-search-open" aria-label="Show Search Form" data-click="openSearch" data-cms-ai="0">
+                                                <svg class="icon-magnify"><use xlink:href="#icon-magnify"></use></svg></span>
+                                            </a>
+                                            
+                                        </div>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    
+                    <div class="Page-header-navigation-items">
+                        
+                            
+                                <ps-nav class="Navigation" data-allow-nav-overflow="true">
+    
+    
+        <ul class="Navigation-items">
+            
+                
+                
+                    <li class="Navigation-items-item"><div class="NavigationItem">
+    <div class="NavigationItem-text ">
+        
+
+        
+            
+                <a class="NavigationItem-text-link" href="https://www.byui.edu/genai/" data-cms-ai="0">
+                    <span class="NavigationItem-text-link-label">Home</span>
+                </a>
+            
+        
+        
+    </div>
+
+    
+</div></li>
+                
+            
+                
+                
+                    <li class="Navigation-items-item"><div class="NavigationItem">
+    <div class="NavigationItem-text withSubNav">
+        
+
+        
+            
+                <a class="NavigationItem-text-link" href="https://www.byui.edu/genai/about" data-cms-ai="0">
+                    <span class="NavigationItem-text-link-label">About GenAI</span>
+                </a>
+            
+        
+        
+            <div class="NavigationItem-more arrowAfter">
+                <button aria-label="About GenAI dropdown" class="desktop-symbol">
+                    <svg><use href="#icon-polygon"></use></svg>
+                </button>
+                <button aria-label="About GenAI dropdown" class="mobile-symbol">
+                    <svg><use href="#arrow-down"></use></svg>
+                </button>
+            </div>
+        
+    </div>
+
+    
+        <div class="NavigationItem-items-container">
+            <div class="NavigationItem-items-wrapper"  ><ul class="NavigationItem-items"><li class="NavigationItem-items-item" ><a class="NavigationLink" href="https://www.byui.edu/genai/custom-bots" data-cms-ai="0">
+    <span class="NavigationLink-title">Custom Bots</span>
+    
+</a>
+</li><li class="NavigationItem-items-item" ><a class="NavigationLink" href="https://www.byui.edu/genai/connectors" data-cms-ai="0">
+    <span class="NavigationLink-title">AI &amp; Connectors</span>
+    
+</a>
+</li><li class="NavigationItem-items-item" ><a class="NavigationLink" href="https://www.byui.edu/genai/training" data-cms-ai="0">
+    <span class="NavigationLink-title">GenAI Training</span>
+    
+</a>
+</li></ul></div>
+        </div>
+    
+</div></li>
+                
+            
+                
+                
+                    <li class="Navigation-items-item" data-current-nav-item><div class="NavigationItem">
+    <div class="NavigationItem-text withSubNav">
+        
+
+        
+            <div class="NavigationItem-text-link" tabindex="0">
+                <span class="NavigationItem-text-link-label">Academics</span>
+            </div>
+        
+        
+            <div class="NavigationItem-more arrowAfter">
+                <button aria-label="Academics dropdown" class="desktop-symbol">
+                    <svg><use href="#icon-polygon"></use></svg>
+                </button>
+                <button aria-label="Academics dropdown" class="mobile-symbol">
+                    <svg><use href="#arrow-down"></use></svg>
+                </button>
+            </div>
+        
+    </div>
+
+    
+        <div class="NavigationItem-items-container">
+            <div class="NavigationItem-items-wrapper"  ><ul class="NavigationItem-items"><li class="NavigationItem-items-item" data-active><a class="NavigationLink" href="https://www.byui.edu/genai/ai-in-academics" data-cms-ai="0">
+    <span class="NavigationLink-title">AI in Academics</span>
+    
+</a>
+</li><li class="NavigationItem-items-item" ><a class="NavigationLink" href="https://www.byui.edu/genai/academic-integrity" data-cms-ai="0">
+    <span class="NavigationLink-title">Academic Integrity and AI Use at BYU-Idaho</span>
+    
+</a>
+</li><li class="NavigationItem-items-item" ><a class="NavigationLink" href="https://www.byui.edu/genai/grading-with-ai" data-cms-ai="0">
+    <span class="NavigationLink-title">AI Grading</span>
+    
+</a>
+</li><li class="NavigationItem-items-item" ><a class="NavigationLink" href="https://www.byui.edu/genai/ai-in-the-syllabus" data-cms-ai="0">
+    <span class="NavigationLink-title">AI in the Syllabus</span>
+    
+</a>
+</li></ul></div>
+        </div>
+    
+</div></li>
+                
+            
+                
+                
+                    <li class="Navigation-items-item"><div class="NavigationItem">
+    <div class="NavigationItem-text ">
+        
+
+        
+            
+                <a class="NavigationItem-text-link" href="https://www.byui.edu/genai/copyright" data-cms-ai="0">
+                    <span class="NavigationItem-text-link-label">Copyright</span>
+                </a>
+            
+        
+        
+    </div>
+
+    
+</div></li>
+                
+            
+                
+                
+                    <li class="Navigation-items-item"><div class="NavigationItem">
+    <div class="NavigationItem-text withSubNav">
+        
+
+        
+            
+                <a class="NavigationItem-text-link" href="https://www.byui.edu/genai/products" data-cms-ai="0">
+                    <span class="NavigationItem-text-link-label">Products</span>
+                </a>
+            
+        
+        
+            <div class="NavigationItem-more arrowAfter">
+                <button aria-label="Products dropdown" class="desktop-symbol">
+                    <svg><use href="#icon-polygon"></use></svg>
+                </button>
+                <button aria-label="Products dropdown" class="mobile-symbol">
+                    <svg><use href="#arrow-down"></use></svg>
+                </button>
+            </div>
+        
+    </div>
+
+    
+        <div class="NavigationItem-items-container">
+            <div class="NavigationItem-items-wrapper"  ><ul class="NavigationItem-items"><li class="NavigationItem-items-item" ><a class="NavigationLink" href="https://www.byui.edu/genai/products/chatgpt" data-cms-ai="0">
+    <span class="NavigationLink-title">OpenAI ChatGPT</span>
+    
+</a>
+</li><li class="NavigationItem-items-item" ><a class="NavigationLink" href="https://www.byui.edu/genai/products/copilot" data-cms-ai="0">
+    <span class="NavigationLink-title">Microsoft Copilot</span>
+    
+</a>
+</li><li class="NavigationItem-items-item" ><a class="NavigationLink" href="https://www.byui.edu/genai/products/gemini" data-cms-ai="0">
+    <span class="NavigationLink-title">Google Gemini</span>
+    
+</a>
+</li><li class="NavigationItem-items-item" ><a class="NavigationLink" href="https://www.byui.edu/genai/products/notebooklm" data-cms-ai="0">
+    <span class="NavigationLink-title">Google NotebookLM</span>
+    
+</a>
+</li><li class="NavigationItem-items-item" ><a class="NavigationLink" href="https://www.byui.edu/genai/products/ai-companion" data-cms-ai="0">
+    <span class="NavigationLink-title">Zoom AI Companion</span>
+    
+</a>
+</li><li class="NavigationItem-items-item" ><a class="NavigationLink" href="https://www.byui.edu/genai/products/collaborative-ai" data-cms-ai="0">
+    <span class="NavigationLink-title">Lucid Collaborative AI</span>
+    
+</a>
+</li><li class="NavigationItem-items-item" ><a class="NavigationLink" href="https://www.byui.edu/genai/products/firefly" data-cms-ai="0">
+    <span class="NavigationLink-title">Adobe Firefly</span>
+    
+</a>
+</li><li class="NavigationItem-items-item" ><a class="NavigationLink" href="https://www.byui.edu/genai/products/ace" data-cms-ai="0">
+    <span class="NavigationLink-title">TopHat Ace</span>
+    
+</a>
+</li><li class="NavigationItem-items-item" ><a class="NavigationLink" href="https://www.byui.edu/genai/products/apple-intelligence" data-cms-ai="0">
+    <span class="NavigationLink-title">Apple Intelligence</span>
+    
+</a>
+</li><li class="NavigationItem-items-item" ><a class="NavigationLink" href="https://www.byui.edu/genai/products/go" data-cms-ai="0">
+    <span class="NavigationLink-title">Grammarly GO</span>
+    
+</a>
+</li></ul></div>
+        </div>
+    
+</div></li>
+                
+            
+                
+                
+                    <li class="Navigation-items-item"><div class="NavigationItem">
+    <div class="NavigationItem-text ">
+        
+
+        
+            
+                <a class="NavigationItem-text-link" href="https://www.byui.edu/genai/privacy" data-cms-ai="0">
+                    <span class="NavigationItem-text-link-label">Privacy</span>
+                </a>
+            
+        
+        
+    </div>
+
+    
+</div></li>
+                
+            
+                
+                
+                    <li class="Navigation-items-item"><div class="NavigationItem">
+    <div class="NavigationItem-text ">
+        
+
+        
+            
+                <a class="NavigationItem-text-link" href="https://www.byui.edu/genai/expo" data-cms-ai="0">
+                    <span class="NavigationItem-text-link-label">Events</span>
+                </a>
+            
+        
+        
+    </div>
+
+    
+</div></li>
+                
+            
+        </ul>
+    
+</ps-nav>
+                            
+                        
+                        
+                    </div>
+                </div>
+                
+                    <ps-search-overlay class="SearchOverlay">
+    <div class="SearchOverlay-content">
+        <form class="SearchOverlay-form" action="https://www.byui.edu/alt-search" novalidate="" autocomplete="off">
+            <label class="sr-only" for="SearchOverlayInput">Search</label>
+            <input id="SearchOverlayInput" type="text" class="SearchOverlay-input" name="q" placeholder="Search...">
+            <button type="submit" class="SearchOverlay-button" aria-label="Search">
+                <svg class="icon-magnify"><use xlink:href="#icon-magnify"/></svg>
+            </button>
+        </form>
+    </div>
+</ps-search-overlay>
+
+                
+            </div>
+        
+    </div>
+</ps-header>
+
+<div id="maincontent"></div>
+        
+
+        <byu-fade-in>
+            <main class="Page-main">
+                
+    
+        <div class="Page-pageLead" data-modulewell data-short-height>
+            <div class="PromoLeadE" 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ data-module data-has-background >
+    <div class="PromoLeadE-container">
+        <div class="PromoLeadE-content">
+            
+            
+    
+        <h1 class="PromoLeadE-title">
+            <span class="Link ">AI in Academics: Shaping the Future of Learning at BYU-Idaho</span>
+        </h1>
+    
+
+            
+            
+    <div class="PromoLeadE-description">At BYU-Idaho, we are strategically integrating Artificial Intelligence to enhance academic excellence and prepare our students for an evolving world. Our focus is on three core priorities that empower both students and faculty in the age of AI.</div>
+
+        </div>
+    </div>
+</div>
+        </div>
+    
+<div class="Page-content">
+                        <div class="Page-content-main" data-modulewell><div class="ListE" data-list-columns="1"
+data-list-item-count="3"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    data-module-align="center"
+
+
+
+
+
+
+
+
+ data-module>
+
+    
+    <div class="ModuleHeader" data-align="center" style="--moduleHeaderTextAlignment:center;"><h2
+            class="ModuleHeader-title"
+        >Our Student-Centered, Future-Ready AI Priorities</h2>
+        <div class="ModuleHeader-divider"></div></div>
+
+
+
+    <div class="ListE-items" data-items data-list-columns="1"
+data-list-item-count="3"
+><div class="ListE-items-item" data-item><div class="PromoC" data-module="narrow" 
+
+
+
+
+
+
+
+
+
+
+
+
+    data-align="left"
+
+
+
+
+
+
+
+
+
+
+
+
+
+    data-has-media
+
+
+
+style="--moduleBgOpacity: NaN;--boxBgOpacity: NaN;--textAlignment: left;">
+    
+        <div class="PromoC-media">
+            
+                
+                    <span class="Link "><picture>
+    
+        
+
+    
+
+    
+        
+
+    
+
+    
+        
+
+    
+
+    
+        
+
+    
+
+    
+        
+
+    
+
+    
+        
+    
+        <source type="image/webp"  width="108"
+     height="108"
+    data-image-size="promoExtraSmall"
+        data-srcset="https://brightspotcdn.byui.edu/dims4/default/4e2acb4/2147483647/strip/true/crop/1108x1108+0+0/resize/216x216!/format/webp/quality/90/?url=https%3A%2F%2Fbyu-idaho-brightspot-production-us-east-2.s3.us-east-2.amazonaws.com%2F81%2F4a%2F8bd9d7f44c889e34cea2806ed620%2Fhead-brain-mind-byui-blue.png 2x" data-lazy-load="true" srcset='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZlcnNpb249IjEuMSIgaGVpZ2h0PSIxMDhweCIgd2lkdGg9IjEwOHB4Ij48L3N2Zz4='/>
+    
+
+    
+        <source width="108"
+     height="108"
+    data-image-size="promoExtraSmall"
+        data-srcset="https://brightspotcdn.byui.edu/dims4/default/253e499/2147483647/strip/true/crop/1108x1108+0+0/resize/108x108!/quality/90/?url=https%3A%2F%2Fbyu-idaho-brightspot-production-us-east-2.s3.us-east-2.amazonaws.com%2F81%2F4a%2F8bd9d7f44c889e34cea2806ed620%2Fhead-brain-mind-byui-blue.png" data-lazy-load="true" srcset='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZlcnNpb249IjEuMSIgaGVpZ2h0PSIxMDhweCIgd2lkdGg9IjEwOHB4Ij48L3N2Zz4='/>
+    
+
+
+    
+    
+    <img class="Image" data-image-size="promoExtraSmall" alt="head-brain-mind-byui-blue.png" srcset="https://brightspotcdn.byui.edu/dims4/default/82a9380/2147483647/strip/true/crop/1108x1108+0+0/resize/216x216!/quality/90/?url=https%3A%2F%2Fbyu-idaho-brightspot-production-us-east-2.s3.us-east-2.amazonaws.com%2F81%2F4a%2F8bd9d7f44c889e34cea2806ed620%2Fhead-brain-mind-byui-blue.png 2x" width="108" height="108"
+            data-src="https://brightspotcdn.byui.edu/dims4/default/253e499/2147483647/strip/true/crop/1108x1108+0+0/resize/108x108!/quality/90/?url=https%3A%2F%2Fbyu-idaho-brightspot-production-us-east-2.s3.us-east-2.amazonaws.com%2F81%2F4a%2F8bd9d7f44c889e34cea2806ed620%2Fhead-brain-mind-byui-blue.png" data-lazy-load="true" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZlcnNpb249IjEuMSIgaGVpZ2h0PSIxMDhweCIgd2lkdGg9IjEwOHB4Ij48L3N2Zz4=">
+
+</picture>
+</span>
+                
+            
+        </div>
+    
+    <div class="PromoC-content">
+        <div class="PromoC-divider">
+</div>
+        
+        
+    
+        <div class="PromoC-title">
+            <span class="Link ">Advance Knowledge &amp; Enhance Learning</span>
+        </div>
+    
+
+        
+    <div class="PromoC-description">We are committed to helping every student and faculty member gain essential AI literacy. This involves equipping our community with the foundational knowledge and skills necessary to utilize AI as a learning tool. The goal is to help students become <b>agents to act</b>, not simply objects to be acted upon by technology, as they advance in their education.</div>
+
+        
+    </div>
+</div></div><div class="ListE-items-item" data-item><div class="PromoC" data-module="narrow" 
+
+
+
+
+
+
+
+
+
+
+
+
+    data-align="left"
+
+
+
+
+
+
+
+
+
+
+
+
+
+    data-has-media
+
+
+
+style="--moduleBgOpacity: NaN;--boxBgOpacity: NaN;--textAlignment: left;">
+    
+        <div class="PromoC-media">
+            
+                
+                    <span class="Link "><picture>
+    
+        
+
+    
+
+    
+        
+
+    
+
+    
+        
+
+    
+
+    
+        
+
+    
+
+    
+        
+
+    
+
+    
+        
+    
+        <source type="image/webp"  width="108"
+     height="108"
+    data-image-size="promoExtraSmall"
+        data-srcset="https://brightspotcdn.byui.edu/dims4/default/83472ff/2147483647/strip/true/crop/1108x1108+0+0/resize/216x216!/format/webp/quality/90/?url=https%3A%2F%2Fbyu-idaho-brightspot-production-us-east-2.s3.us-east-2.amazonaws.com%2Ff7%2F5f%2F632ed1ca450ea6eb3a237cfc9f60%2Flighthouse-advisement-byui-blue.png 2x" data-lazy-load="true" srcset='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZlcnNpb249IjEuMSIgaGVpZ2h0PSIxMDhweCIgd2lkdGg9IjEwOHB4Ij48L3N2Zz4='/>
+    
+
+    
+        <source width="108"
+     height="108"
+    data-image-size="promoExtraSmall"
+        data-srcset="https://brightspotcdn.byui.edu/dims4/default/1681282/2147483647/strip/true/crop/1108x1108+0+0/resize/108x108!/quality/90/?url=https%3A%2F%2Fbyu-idaho-brightspot-production-us-east-2.s3.us-east-2.amazonaws.com%2Ff7%2F5f%2F632ed1ca450ea6eb3a237cfc9f60%2Flighthouse-advisement-byui-blue.png" data-lazy-load="true" srcset='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZlcnNpb249IjEuMSIgaGVpZ2h0PSIxMDhweCIgd2lkdGg9IjEwOHB4Ij48L3N2Zz4='/>
+    
+
+
+    
+    
+    <img class="Image" data-image-size="promoExtraSmall" alt="lighthouse-advisement-byui-blue.png" srcset="https://brightspotcdn.byui.edu/dims4/default/e9a6558/2147483647/strip/true/crop/1108x1108+0+0/resize/216x216!/quality/90/?url=https%3A%2F%2Fbyu-idaho-brightspot-production-us-east-2.s3.us-east-2.amazonaws.com%2Ff7%2F5f%2F632ed1ca450ea6eb3a237cfc9f60%2Flighthouse-advisement-byui-blue.png 2x" width="108" height="108"
+            data-src="https://brightspotcdn.byui.edu/dims4/default/1681282/2147483647/strip/true/crop/1108x1108+0+0/resize/108x108!/quality/90/?url=https%3A%2F%2Fbyu-idaho-brightspot-production-us-east-2.s3.us-east-2.amazonaws.com%2Ff7%2F5f%2F632ed1ca450ea6eb3a237cfc9f60%2Flighthouse-advisement-byui-blue.png" data-lazy-load="true" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZlcnNpb249IjEuMSIgaGVpZ2h0PSIxMDhweCIgd2lkdGg9IjEwOHB4Ij48L3N2Zz4=">
+
+</picture>
+</span>
+                
+            
+        </div>
+    
+    <div class="PromoC-content">
+        <div class="PromoC-divider">
+</div>
+        
+        
+    
+        <div class="PromoC-title">
+            <span class="Link ">Develop Workforce Readiness</span>
+        </div>
+    
+
+        
+    <div class="PromoC-description">The demand for AI-related skills is rapidly increasing across all industries. We are actively strengthening our connections with industry partners to integrate the practical applications of AI within our academic fields. We will use this knowledge to inform our program and course outcomes, assessments, and teaching practices. This ensures our graduates are workplace-ready and prepared to use AI for <b>righteous work</b>, bringing their skills and faith to a competitive, ever-changing landscape.</div>
+
+        
+    </div>
+</div></div><div class="ListE-items-item" data-item><div class="PromoC" data-module="narrow" 
+
+
+
+
+
+
+
+
+
+
+
+
+    data-align="left"
+
+
+
+
+
+
+
+
+
+
+
+
+
+    data-has-media
+
+
+
+style="--moduleBgOpacity: NaN;--boxBgOpacity: NaN;--textAlignment: left;">
+    
+        <div class="PromoC-media">
+            
+                
+                    <span class="Link "><picture>
+    
+        
+
+    
+
+    
+        
+
+    
+
+    
+        
+
+    
+
+    
+        
+
+    
+
+    
+        
+
+    
+
+    
+        
+    
+        <source type="image/webp"  width="108"
+     height="108"
+    data-image-size="promoExtraSmall"
+        data-srcset="https://brightspotcdn.byui.edu/dims4/default/006bfa2/2147483647/strip/true/crop/1108x1108+0+0/resize/216x216!/format/webp/quality/90/?url=https%3A%2F%2Fbyu-idaho-brightspot-production-us-east-2.s3.us-east-2.amazonaws.com%2F9f%2F0b%2F5321db0b4eb18c87834db9ca301d%2Ftarget-byui-blue.png 2x" data-lazy-load="true" srcset='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZlcnNpb249IjEuMSIgaGVpZ2h0PSIxMDhweCIgd2lkdGg9IjEwOHB4Ij48L3N2Zz4='/>
+    
+
+    
+        <source width="108"
+     height="108"
+    data-image-size="promoExtraSmall"
+        data-srcset="https://brightspotcdn.byui.edu/dims4/default/9a6e72b/2147483647/strip/true/crop/1108x1108+0+0/resize/108x108!/quality/90/?url=https%3A%2F%2Fbyu-idaho-brightspot-production-us-east-2.s3.us-east-2.amazonaws.com%2F9f%2F0b%2F5321db0b4eb18c87834db9ca301d%2Ftarget-byui-blue.png" data-lazy-load="true" srcset='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZlcnNpb249IjEuMSIgaGVpZ2h0PSIxMDhweCIgd2lkdGg9IjEwOHB4Ij48L3N2Zz4='/>
+    
+
+
+    
+    
+    <img class="Image" data-image-size="promoExtraSmall" alt="target-byui-blue.png" srcset="https://brightspotcdn.byui.edu/dims4/default/98394eb/2147483647/strip/true/crop/1108x1108+0+0/resize/216x216!/quality/90/?url=https%3A%2F%2Fbyu-idaho-brightspot-production-us-east-2.s3.us-east-2.amazonaws.com%2F9f%2F0b%2F5321db0b4eb18c87834db9ca301d%2Ftarget-byui-blue.png 2x" width="108" height="108"
+            data-src="https://brightspotcdn.byui.edu/dims4/default/9a6e72b/2147483647/strip/true/crop/1108x1108+0+0/resize/108x108!/quality/90/?url=https%3A%2F%2Fbyu-idaho-brightspot-production-us-east-2.s3.us-east-2.amazonaws.com%2F9f%2F0b%2F5321db0b4eb18c87834db9ca301d%2Ftarget-byui-blue.png" data-lazy-load="true" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZlcnNpb249IjEuMSIgaGVpZ2h0PSIxMDhweCIgd2lkdGg9IjEwOHB4Ij48L3N2Zz4=">
+
+</picture>
+</span>
+                
+            
+        </div>
+    
+    <div class="PromoC-content">
+        <div class="PromoC-divider">
+</div>
+        
+        
+    
+        <div class="PromoC-title">
+            <span class="Link ">Facilitate Student Support &amp; Advising</span>
+        </div>
+    
+
+        
+    <div class="PromoC-description">Our goal is to leverage AI's <b>untold possibilities</b> to optimize student support and advising. We are exploring applications such as personalized academic plans, career path guidance, and timely support services. By using AI to enhance meaningful human interaction, we can help students navigate their educational journey and receive the guidance they need to succeed.</div>
+
+        
+    </div>
+</div></div></div>
+    
+
+
+
+</div></div>
+                        
+
+                    </div></main>
+        </byu-fade-in>
+        
+
+        
+            
+    <nav class="SiteFooter"  data-gray-bg >
+        <div class="SiteFooter-wrapper">
+            
+                <ul class="SiteFooter-items">
+                    
+                        <li class="SiteFooter-items-item">
+                            <div class="FooterNavigationItem">
+    
+        <div class="FooterNavigationItem-text-link">
+            <span class="FooterNavigationItem-text-link-label">Contact</span>
+        </div>
+    
+    
+        <ul class="FooterNavigationItem-items">
+            
+                <li class="FooterNavigationItem-items-item"><div class="RteSubNavigationItem" data-module 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+>
+
+        <div class="RteSubNavigationItem-items RichTextBody"><p><b>University AI Office</b><br>Kimball 210D<br><a class="Link
+            " href="tel:2084964622" target="_blank" rel="noopener" data-cms-ai="0">208-496-4622</a><br><a class="Link
+            " href="mailto:palmers@byui.edu" target="_blank" rel="noopener" data-cms-ai="0">palmers@byui.edu</a><br></p></div>
+    
+</div></li>
+            
+        </ul>
+    
+</div>
+                        </li>
+                    
+                        <li class="SiteFooter-items-item">
+                            <div class="FooterNavigationItem">
+    
+        <div class="FooterNavigationItem-text-link">
+            <span class="FooterNavigationItem-text-link-label"></span>
+        </div>
+    
+    
+        <ul class="FooterNavigationItem-items">
+            
+                <li class="FooterNavigationItem-items-item"><div class="RteSubNavigationItem" data-module 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+>
+
+        <div class="RteSubNavigationItem-items RichTextBody"><p><b>Learning Innovation &amp; Technology</b><br>Manwaring Center 384<br><a class="Link
+            " href="tel:2084961536" target="_blank" rel="noopener" data-cms-ai="0">208-496-1536</a><br><a class="Link
+            " href="mailto:ashbyd@byui.edu" target="_blank" rel="noopener" data-cms-ai="0">ashbyd@byui.edu</a><br></p></div>
+    
+</div></li>
+            
+        </ul>
+    
+</div>
+                        </li>
+                    
+                </ul>
+            
+        </div>
+    </nav>
+
+        
+        
+    <footer class="GlobalFooter" >
+        
+            <div class="GlobalFooter-firstWrapper">
+                <div class="GlobalFooter-firstWrapper-section">
+                    
+                        <div class="GlobalFooter-logo"><a aria-label="home page" href="/" data-cms-ai="0"  >
+    
+        <img class="PageLogo-image" src="https://brightspotcdn.byui.edu/05/03/49af98c440f3b6174c307b9005a0/byu-i-footer-logo.svg" alt="/" width="136"  height="70" />
+    
+    </a></div>
+                    
+                    <div class="GlobalFooter-firstWrapper-section-content">
+                        
+                            <div class="GlobalFooter-content" data-modulewell="standard">
+                                
+                                    
+                                        <div class="RichTextModule" data-module 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+>
+
+    <div class="RichTextModule-items RichTextBody"><p>Call or Text <a class="Link
+            " href="tel:2084961411" target="_blank" rel="noopener" data-cms-ai="0">208-496-1411</a></p></div>
+
+
+</div>
+                                    
+                                        <div class="RichTextModule" data-module 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+>
+
+    <div class="RichTextModule-items RichTextBody"><p><a class="Link
+            " href="mailto:ask@byui.edu" target="_blank" rel="noopener" data-cms-ai="0">ask@byui.edu</a></p></div>
+
+
+</div>
+                                    
+                                        <div class="RichTextModule" data-module 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+>
+
+    <div class="RichTextModule-items RichTextBody"><p><a class="Link
+            " href="https://www.byui.edu/whatsapp/" target="_blank" rel="noopener" data-cms-ai="0">WhatsApp</a></p></div>
+
+
+</div>
+                                    
+                                        <div class="RichTextModule" data-module 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+>
+
+    <div class="RichTextModule-items RichTextBody"><p><a class="Link
+            " href="https://www.byui.edu/contact-us/" data-cms-ai="0">Get Help</a></p></div>
+
+
+</div>
+                                    
+                                
+                            </div>
+                            <div class="GlobalFooter-hr"></div>
+                        
+                        
+                            <div class="GlobalFooter-navigation">
+                                <nav class="FooterNavigation">
+    
+        <ul class="FooterNavigation-items">
+            
+                <li class="FooterNavigation-items-item">
+                    <div class="FooterNavigationItem">
+    
+        <a class="FooterNavigationItem-text-link" href="https://www.byui.edu/speeches/devotionals" data-cms-ai="0" >Devotionals</a>
+    
+    
+</div>
+                </li>
+            
+                <li class="FooterNavigation-items-item">
+                    <div class="FooterNavigationItem">
+    
+        <a class="FooterNavigationItem-text-link" href="https://maps.byui.edu/"  target="_blank" data-cms-ai="0" >Campus Map</a>
+    
+    
+</div>
+                </li>
+            
+                <li class="FooterNavigation-items-item">
+                    <div class="FooterNavigationItem">
+    
+        <a class="FooterNavigationItem-text-link" href="https://www.byui.edu/campus-tours/"  target="_blank" data-cms-ai="0" >Campus Tours</a>
+    
+    
+</div>
+                </li>
+            
+                <li class="FooterNavigation-items-item">
+                    <div class="FooterNavigationItem">
+    
+        <a class="FooterNavigationItem-text-link" href="https://www.byui.edu/human-resources/"  target="_blank" data-cms-ai="0" >Employment</a>
+    
+    
+</div>
+                </li>
+            
+                <li class="FooterNavigation-items-item">
+                    <div class="FooterNavigationItem">
+    
+        <a class="FooterNavigationItem-text-link" href="https://www.byui.edu/giving/?utm_source=footer"  target="_blank" data-cms-ai="0" >Give to BYU-Idaho</a>
+    
+    
+</div>
+                </li>
+            
+                <li class="FooterNavigation-items-item">
+                    <div class="FooterNavigationItem">
+    
+        <div class="FooterNavigationItem-text-link">
+            <span class="FooterNavigationItem-text-link-label"></span>
+        </div>
+    
+    
+        <ul class="FooterNavigationItem-items">
+            
+                <li class="FooterNavigationItem-items-item"><div class="RteSubNavigationItem" data-module 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+>
+
+        <div class="RteSubNavigationItem-items RichTextBody"><div class="Enhancement" data-align-center
+            >
+                <div class="Enhancement-item">
+    <div class="HtmlModule"  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    data-is-enhancement
+ data-module>
+    <div id="consent-banner"></div>
+
+    
+</div>
+
+</div>
+            </div><p></p></div>
+    
+</div></li>
+            
+        </ul>
+    
+</div>
+                </li>
+            
+        </ul>
+    
+</nav>
+                            </div>
+                        
+                        
+                            <div class="GlobalFooter-social mobile">
+                                <div class="SocialBar">
+    <div class="SocialBar-heading">Follow Us</div>
+
+    
+        <ul class="SocialBar-items">
+            
+                <li class="SocialBar-items-item"><a class="SocialLink" rel="noreferrer" href="https://twitter.com/byuidaho" target="_blank" rel="noopener" data-social-service="twitter" data-cms-ai="0">
+    <svg><use xlink:href="#mono-icon-twitter"></use></svg>
+    <span class="sr-only">twitter</span>
+    <span class="SocialLink-text">byuidaho</span>
+</a>
+</li>
+            
+                <li class="SocialBar-items-item"><a class="SocialLink" rel="noreferrer" href="https://www.instagram.com/byuidaho/" target="_blank" rel="noopener" data-social-service="instagram" data-cms-ai="0">
+    <svg><use xlink:href="#mono-icon-instagram"></use></svg>
+    <span class="sr-only">instagram</span>
+    <span class="SocialLink-text">byuidaho</span>
+</a>
+</li>
+            
+                <li class="SocialBar-items-item"><a class="SocialLink" rel="noreferrer" href="https://www.youtube.com/byui" target="_blank" rel="noopener" data-social-service="youtube" data-cms-ai="0">
+    <svg><use xlink:href="#mono-icon-youtube"></use></svg>
+    <span class="sr-only">youtube</span>
+    <span class="SocialLink-text">byui</span>
+</a>
+</li>
+            
+                <li class="SocialBar-items-item"><a class="SocialLink" rel="noreferrer" href="https://www.facebook.com/BYUID" target="_blank" rel="noopener" data-social-service="facebook" data-cms-ai="0">
+    <svg><use xlink:href="#mono-icon-facebook"></use></svg>
+    <span class="sr-only">facebook</span>
+    <span class="SocialLink-text">BYUID</span>
+</a>
+</li>
+            
+                <li class="SocialBar-items-item"><a class="SocialLink" rel="noreferrer" href="https://www.linkedin.com/company/byu-idaho" target="_blank" rel="noopener" data-social-service="linkedin" data-cms-ai="0">
+    <svg><use xlink:href="#mono-icon-linkedin"></use></svg>
+    <span class="sr-only">linkedin</span>
+    <span class="SocialLink-text">byu-idaho</span>
+</a>
+</li>
+            
+        </ul>
+    
+</div>
+
+                            </div>
+                        
+                    </div>
+                    
+                        <div class="GlobalFooter-social desktop">
+                            <div class="SocialBar">
+    <div class="SocialBar-heading">Follow Us</div>
+
+    
+        <ul class="SocialBar-items">
+            
+                <li class="SocialBar-items-item"><a class="SocialLink" rel="noreferrer" href="https://twitter.com/byuidaho" target="_blank" rel="noopener" data-social-service="twitter" data-cms-ai="0">
+    <svg><use xlink:href="#mono-icon-twitter"></use></svg>
+    <span class="sr-only">twitter</span>
+    <span class="SocialLink-text">byuidaho</span>
+</a>
+</li>
+            
+                <li class="SocialBar-items-item"><a class="SocialLink" rel="noreferrer" href="https://www.instagram.com/byuidaho/" target="_blank" rel="noopener" data-social-service="instagram" data-cms-ai="0">
+    <svg><use xlink:href="#mono-icon-instagram"></use></svg>
+    <span class="sr-only">instagram</span>
+    <span class="SocialLink-text">byuidaho</span>
+</a>
+</li>
+            
+                <li class="SocialBar-items-item"><a class="SocialLink" rel="noreferrer" href="https://www.youtube.com/byui" target="_blank" rel="noopener" data-social-service="youtube" data-cms-ai="0">
+    <svg><use xlink:href="#mono-icon-youtube"></use></svg>
+    <span class="sr-only">youtube</span>
+    <span class="SocialLink-text">byui</span>
+</a>
+</li>
+            
+                <li class="SocialBar-items-item"><a class="SocialLink" rel="noreferrer" href="https://www.facebook.com/BYUID" target="_blank" rel="noopener" data-social-service="facebook" data-cms-ai="0">
+    <svg><use xlink:href="#mono-icon-facebook"></use></svg>
+    <span class="sr-only">facebook</span>
+    <span class="SocialLink-text">BYUID</span>
+</a>
+</li>
+            
+                <li class="SocialBar-items-item"><a class="SocialLink" rel="noreferrer" href="https://www.linkedin.com/company/byu-idaho" target="_blank" rel="noopener" data-social-service="linkedin" data-cms-ai="0">
+    <svg><use xlink:href="#mono-icon-linkedin"></use></svg>
+    <span class="sr-only">linkedin</span>
+    <span class="SocialLink-text">byu-idaho</span>
+</a>
+</li>
+            
+        </ul>
+    
+</div>
+
+                        </div>
+                    
+                </div>
+            </div>
+
+            
+                <div class="GlobalFooter-secondWrapper">
+                    <div class="GlobalFooter-secondWrapper-section">
+                        
+                            <div class="GlobalFooter-address">525 S Center St<br>Rexburg, ID 83460</div>
+                        
+
+                        <div class="GlobalFooter-secondWrapper-section-content">
+                            
+                                <div class="GlobalFooter-customLinks"><a class="Link
+            " href="https://www.byui.edu/disability-services/" target="_blank" rel="noopener" data-cms-ai="0">Accessibility</a><a class="Link
+            " href="https://www.byui.edu/information-technology/" target="_blank" rel="noopener" data-cms-ai="0">Technical Help</a><a class="Link
+            " href="https://www.byui.edu/scheduling-office/" target="_blank" rel="noopener" data-cms-ai="0">Room Scheduling</a><a class="Link
+            " href="https://td.byui.edu/TDClient/75/Portal/Requests/TicketRequests/NewForm?ID=pGAEmNLYsIs_" target="_blank" rel="noopener" data-cms-ai="0">Website Feedback</a><a class="Link
+            " href="https://www.byui.edu/security/" target="_blank" rel="noopener" data-cms-ai="0">Security</a><a class="Link
+            " href="https://cesprivacy.org/ces-institutions-privacy-notice" target="_blank" rel="noopener" data-cms-ai="0">Privacy</a><a class="Link
+            " href="https://www.byui.edu/legal/" target="_blank" rel="noopener" data-cms-ai="0">Legal</a><a class="Link
+            " href="https://www.byui.edu/legal/byu-idaho-cookies-preferences" target="_blank" rel="noopener" data-cms-ai="0">Cookie Preferences</a><a class="Link
+            " href="https://www.byui.edu/copyright/copyright-use-information" target="_blank" rel="noopener" data-cms-ai="0">© 2025 BYU-Idaho</a></div>
+                            
+
+                            
+                        </div>
+                    </div>
+                </div>
+            
+        
+    </footer>
+
+    <span data-bsp-pv="e30edf29-8fe1-3857-864d-a0240c664e80"></span><span data-bsp-pv="00000197-ccbf-de84-a997-feff37a00000"></span><script data-bsp-site="00000191-0983-d1dd-a5d9-0beb22d60000" data-bsp-contentid="00000197-ccbf-de84-a997-feff37a00000"></script><script data-bsp-site="00000191-0983-d1dd-a5d9-0beb22d60000" data-bsp-contentid="00000197-ccbf-de84-a997-feff37a00000" src="https://brightspotcdn.byui.edu/resource/00000179-0eeb-d7c7-affb-eeef5f450000/_resource/analytics/bsp-analytics.min.3d492319d8b084de04ab3a208c32f0b5.gz.js"></script></body>
+</html>

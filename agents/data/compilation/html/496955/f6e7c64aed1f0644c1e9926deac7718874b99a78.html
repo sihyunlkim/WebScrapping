@@ -1,0 +1,966 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <script type="text/javascript">
+        var appInsights = window.appInsights || function (config) {
+            function i(config) { t[config] = function () { var i = arguments; t.queue.push(function () { t[config].apply(t, i) }) } } var t = { config: config }, u = document, e = window, o = "script", s = "AuthenticatedUserContext", h = "start", c = "stop", l = "Track", a = l + "Event", v = l + "Page", y = u.createElement(o), r, f; y.src = config.url || "https://az416426.vo.msecnd.net/scripts/a/ai.0.js"; u.getElementsByTagName(o)[0].parentNode.appendChild(y); try { t.cookie = u.cookie } catch (p) { } for (t.queue = [], t.version = "1.0", r = ["Event", "Exception", "Metric", "PageView", "Trace", "Dependency"]; r.length;) i("track" + r.pop()); return i("set" + s), i("clear" + s), i(h + a), i(c + a), i(h + v), i(c + v), i("flush"), config.disableExceptionTracking || (r = "onerror", i("_" + r), f = e[r], e[r] = function (config, i, u, e, o) { var s = f && f(config, i, u, e, o); return s !== !0 && t["_" + r](config, i, u, e, o), s }), t
+        }({
+            instrumentationKey: "e617c517-acb2-4ea4-ad4a-e3957bf4c34a"
+        });
+
+        window.appInsights = appInsights;
+        appInsights.trackPageView();
+    </script>
+
+
+
+    
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <script type="text/javascript" src="/Assets/scripts/jquery-1.8.2.js?_b_=24998880"></script>
+<script type="text/javascript" src="/Assets/scripts/jquery-ui-1.10.2.custom.min.js?_b_=24998880"></script>
+<script type="text/javascript" src="/Assets/scripts/jquery.corner.js?_b_=24998880"></script>
+<script type="text/javascript" src="/Assets/scripts/jquery.unobtrusive-ajax.min.js?_b_=24998880"></script>
+<script type="text/javascript" src="/Assets/scripts/jquery.validate.min.js?_b_=24998880"></script>
+<script type="text/javascript" src="/Assets/scripts/jquery.validate.unobtrusive.min.js?_b_=24998880"></script>
+<script type="text/javascript" src="/Assets/scripts/jquery.formatCurrency-1.4.0.min.js?_b_=24998880"></script>
+<script type="text/javascript" src="/Assets/scripts/jquery.cookie.js?_b_=24998880"></script>
+<script type="text/javascript" src="/Assets/scripts/json2.min.js?_b_=24998880"></script>
+<script type="text/javascript" src="/Assets/scripts/layout.js?_b_=24998880"></script>
+<script type="text/javascript" src="/Assets/scripts/common-behavior.js?_b_=24998880"></script>
+<script type="text/javascript" src="/Assets/scripts/translate.js?_b_=24998880"></script>
+
+
+  
+
+    <link type="text/css" rel="stylesheet" media="screen" href="/dist/styles/main.min.css?_b_=24998880"/>
+
+
+    
+    <script src="https://use.fontawesome.com/be3f86bf09.js"></script>
+
+    
+    <link rel='shortcut icon' href="/Assets//ClientAssets/IEC/uei/images/favicon.ico" />
+
+    <!-- no site touch icons -->
+
+    <!-- no site scripts -->
+
+    <link href="/Assets/ClientAssets/IEC/uei/styles/skin.css?_b=24998880" rel="stylesheet" type="text/css" />
+ 
+<link rel="image_src" href="/Assets/bu/images/bu-logo-150-75-color.jpg" />
+
+
+    
+        <meta name="robots" content="noindex,nofollow" />
+    
+
+<!--[if IE]>
+    <style type="text/css">
+        /* place css fixes for all versions of IE in this conditional comment */
+        .twoColElsRtHdr #sidebar1 { padding-top: 30px; }
+        .twoColElsRtHdr #mainContent { zoom: 1; padding-top: 15px; }
+        /* the above proprietary zoom property gives IE the hasLayout it needs to avoid several bugs */
+    </style>
+<![endif]-->
+<!--[if IE 7]>
+    <link rel="stylesheet" type="text/css" href="/dist/styles/ie7quirks.min.css"/>
+<![endif]-->
+
+    <title>UEI College and UEI - Student Portal Questions</title>
+    
+    <script type="text/javascript" src="/Assets/scripts/jquery.validate.min.js?_b_=24998880"></script>
+<script type="text/javascript" src="/Assets/scripts/jquery.validate.unobtrusive.min.js?_b_=24998880"></script>
+<script type="text/javascript" src="/Assets/scripts/npc-behavior.js?_b_=24998880"></script>
+<script type="text/javascript" src="/Assets/scripts/jquery.mask.min.js?_b_=24998880"></script>
+
+    <link type="text/css" rel="stylesheet" media="screen" href="/dist/styles/npc-style.min.css?_b_=24998880"/>
+
+
+</head>
+<body>
+    <div id="container" >
+        
+
+<input type="hidden" id="SessionExpirationMinutes" value="0" />
+<input type="hidden" id="IsSessionTimeoutEnabled" value="False" />
+
+<input type="hidden" id="RedirectUrlAfterLogout" value="/Account/LogOn?ReturnUrl=%2fNpc" />
+
+
+        <div id="header">
+            <div id="headerRight">
+                <div id="myOptions">
+                    <p>
+                        <a href="/Account/LogOn">Log On</a>
+
+                    </p>
+                </div>
+                <br class="clearfloat" />
+            </div>
+                <div id="language-picker-container">
+        <ul id="language-picker">
+                <li data-code="es" class="language-picker-language">Spanish</li>
+                <li data-code="en" class="language-picker-language">English</li>
+        </ul>
+        <div id="translator-notify" style="display:none;">
+            <img src="/Assets/images/spinner-transparent.gif" alt="Translating" />Translating
+        </div>
+    </div>
+
+            <div id="logo">
+                <h1><a href='/' alt='UEI College and UEI - Student Portal'>&nbsp;</a></h1>
+            </div>
+            <div id="siteTitle">Student Enrollment Portal</div>
+            <br class="clearFloat" />
+            <!-- end #header -->
+        </div>
+        
+        <div id="topMenu">
+            
+<ol>
+    
+        <li><a href="/">Home</a></li>
+    
+        <li><a href="/SiteContent/ShowPage/Contact">Contact</a></li>
+    
+</ol>
+
+        </div>
+
+
+
+        <div id="mainContent">
+
+            
+
+            
+<div id="leftColumn">
+
+    <input id="hideFormCenterLink" type="hidden" value="0" />
+
+    
+
+        <div class="panel left-side-panel">
+            <div class="panel-top">
+                <h2>Navigation</h2>
+            </div>
+            <div class="panel-body">
+                <div id="leftMenu">
+                    <!-- this partial view renders dynamic navigation based on authentication of visitor -->
+                    
+<h2>Main</h2>
+<ul>
+    
+        <li><a href="/">Home</a></li>
+    
+        <li><a href="/SiteContent/ShowPage/Contact">Contact</a></li>
+    
+</ul>
+    <h2>Funding Your Education</h2>
+    <ul>
+            <li>
+                <a target="_self" href="/SiteContent/ShowPage/FundingOverview">
+                    Funding Overview
+                </a>
+            </li>
+            <li>
+                <a target="_self" href="/SiteContent/ShowPage/FederalAid">
+                    Federal Financial Planning Services
+                </a>
+            </li>
+            <li>
+                <a target="_self" href="/SiteContent/ShowPage/NonFederalAid">
+                    Non-Federal Financial Planning Services
+                </a>
+            </li>
+            <li>
+                <a target="_self" href="/SiteContent/ShowPage/Scholarships">
+                    Scholarships and State Grants
+                </a>
+            </li>
+    </ul>
+    <h2>Help and Support</h2>
+    <ul>
+            <li>
+                <a target="_self" href="/SiteContent/ShowPage/PasswordAssistance">
+                    Password Assistance
+                </a>
+            </li>
+            <li>
+                <a target="_self" href="/SiteContent/ShowPage/InformationSheet">
+                    Important Phone Numbers
+                </a>
+            </li>
+            <li>
+                <a target="_self" href="/Npc">
+                    Net Price Calculator
+                </a>
+            </li>
+            <li>
+                <a target="_self" href="/FundingEstimates">
+                    Get an Estimate
+                </a>
+            </li>
+            <li>
+                <a target="_self" href="/SiteContent/ShowPage/Glossary">
+                    Glossary of Terms
+                </a>
+            </li>
+            <li>
+                <a target="_self" href="/SiteContent/ShowPage/QandA">
+                    Questions and Answers
+                </a>
+            </li>
+            <li>
+                <a target="_self" href="/SiteContent/ShowPage/LoanAssistance">
+                    Loan Assistance
+                </a>
+            </li>
+    </ul>
+
+                </div>
+            </div>
+        </div>
+
+</div>
+
+
+            <div id="mainColumn">
+                <div class="panel center-panel">
+                    <div class="panel-top">
+                         <h2>Net Price Calculator</h2> 
+                    </div>
+                    <div class="panel-body">
+                        <noscript>
+                            <p class="spacer"></p>
+                            <div id="no-script">
+                                <h3>NOTICE</h3>
+                                <p class="topPadding">
+                                    This site makes use of javascript to provide the functionality needed.
+                                    You are either using a browser that does not support javascript or you have javascript disabled.
+                                </p>
+                                <p>
+                                    In order to use the site successfully you will need to enable javascript or switch to a browser that does support javascript.
+                                </p>
+                            </div>
+                        </noscript>
+                        
+
+
+<div id="npc-container">
+<form action="/Npc" method="post">            <input type="hidden" id="isProgramVerionTitleIvEligible" value="true" />
+    <div id="progress-container" style="display: none;">
+        <div class="progress-title">Your Progress <span class="perc"></span></div>
+        <div id="progressbar"></div>
+    </div>
+    <div class="groups-wrapper">
+        <div id="group00" class="group">
+            <div class="intro">
+                <p>
+                   This tool is designed to help you understand the costs of attending UEI College and UEI
+                   and how possible financial aid for which you might be eligible can help offset some of the cost.
+                   You will be asked a few questions to help determine your financial and living situation
+                   so the best possible information can be provided to help make your decision about
+                   attending UEI College and UEI and how you will finance your education.
+                </p>
+            </div>
+            <div class="questions">
+                <h3>Disclaimer - Please read before proceeding.</h3>
+			    <p>
+                    By clicking <i>I Agree</i>, you acknowledge that:
+                </p>
+			    <ul class="bulletlist">
+                    <li>
+                        This Net Price Calculator (NPC) is intended for incoming freshmen who plan to enroll as
+                        full-time undergraduate students and meet the established priority deadline when applying
+                        for financial assistance at UEI College and UEI.
+                    </li>
+			        <li>
+                        This NPC provides only a rough estimate of financial aid and is only as accurate as
+                        the data entered into it.
+                    </li>
+			        <li>
+                        Not all students will qualify for all of the aid that the NPC indicates may be available.
+                    </li>
+			        <li>
+                        This NPC should not be used as the primary means of selecting a school.
+                    </li>
+			        <li>
+                        This NPC is not designed to replace the Free Application for Federal Student Aid (FAFSA)
+                        or a complete financial aid award package provided by UEI College and UEI.
+                    </li>
+                    <li>
+                        UEI College and UEI Financial Planning specialists will be able to help
+                        you determine what aid you might qualify for, what your net costs will be, and how you may
+                        finance your education with minimal debt obligation after graduation.
+                    </li>
+                </ul>
+			    <p>
+                    The owners and licensees of this NPC and its underlying software disclaim any liability
+                    arising from the use of or reliance upon this NPC by any person.
+                </p>
+            </div>
+            <div class="stepNav">
+                <button type="button" class="commonBtn nextButton">I Agree</button>
+           </div>
+        </div>
+        <div id="group01" class="group" style="display: none;">
+            <div class="intro">
+                <p>
+                   Please provide the following information.&nbsp;&nbsp;
+                   Your responses will be used to calculate an <u>estimated</u> price for
+                   attending UEI College and UEI for one academic year.
+                </p>
+            </div>
+            <div class="questions">
+                <table>
+                    <tbody>
+                        <tr class="step01">
+                            <td class="description" colspan="2">
+                                <p>Please provide the following information</p>
+                            </td>
+                        </tr>
+                    <tr class="step01">
+                        <td class="editor-label">
+                           What is the campus location you are interested in?
+                        </td>
+                        <td class="editor-field">
+                            <input id="CampusId" name="CampusId" title="A&#32;Campus&#32;Location&#32;selection&#32;is&#32;required" type="hidden" value="-1" />
+                            <select id="CampusIdList" name="CampusIdList"></select>
+                        </td>
+                    </tr>
+                    <tr class="step02">
+                        <td class="editor-label">
+                            What is the degree level you are interested in?
+                        </td>
+                        <td class="editor-field">
+                            <input id="ProgramTypeId" name="ProgramTypeId" title="A&#32;Degree&#32;Level&#32;selection&#32;is&#32;required" type="hidden" value="-1" />
+                            <select id="ProgramTypeIdList" name="ProgramTypeIdList"></select>
+                        </td>
+                    </tr>
+                    <tr class="step03">
+                        <td class="editor-label">
+                            What is the specific program you are interested in?
+                        </td>
+                        <td class="editor-field">
+                            <input id="ProgramId" name="ProgramId" title="A&#32;Program&#32;selection&#32;is&#32;required" type="hidden" value="-1" />
+                            <select id="ProgramIdList" name="ProgramIdList"></select>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="stepNav">
+                <button type="button" class="commonBtn startButton">Start Over</button>
+                <button type="button" class="commonBtn nextButton">Continue</button>
+           </div>
+        </div>
+    <div id="group02" class="group" style="display: none;">
+        <div class="intro">
+            <p>
+                Please provide the following information.&nbsp;&nbsp;
+                Your responses will be used to calculate an <u>estimated</u> price for
+                attending UEI College and UEI for one academic year.
+            </p>
+        </div>
+        <div class="questions">
+            <table>
+                <tbody>
+                    <tr class="step01">
+                        <td class="description" colspan="2">
+                            <p>Please provide the following information</p>
+                            <p id="FinAidInfo" name="FinAidInfo">Based on your selected program or residency status, federal financial aid is not available. Please contact the Financial Aid office to discuss your options.</p>
+                            </td>
+                    </tr>
+                <tr class="step01">
+                    <td class="editor-label">
+                        Are you U.S. Citizen?
+                    </td>
+                    <td class="editor-field">
+                        <select id="USCitizen" name="USCitizen">
+                            <option value="true">Yes</option>
+                            <option value="false">No</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr class="step02">
+                    <td class="editor-label">
+                        Do you plan to apply for federal financial aid?
+                    </td>
+                    <td class="editor-field">
+                        <select id="FinAid" name="FinAid">
+                            <option value="true">Yes</option>
+                            <option value="false">No</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr class="step03">
+                    <td class="editor-label">
+                        What is your Date Of Birth?
+                    </td>
+                    <td class="editor-field">
+                        <input class="dateOfBirth" id="sudentDateOfBirth" maxlength="10" name="StudentInformation.DateOfBirth" type="text" value="" />
+                        
+                    </td>
+                </tr>
+                <tr class="step04">
+                    <td class="editor-label">
+                        Where will you live while attending school?
+                    </td>
+                    <td class="editor-field">
+                        <input id="NpcHousingStatus" name="NpcHousingStatus" title="A&#32;housing&#32;status&#32;selection&#32;is&#32;required" type="hidden" value="Select" />
+                        <select id="NpcHousingStatusList" name="NpcHousingStatusList"></select>
+                    </td>
+                </tr>
+                <tr id="trGraduateTypeEntry" class="step05">
+                    <td class="editor-label">
+                        Secondary education experience
+                    </td>
+                    <td class="editor-field">
+                        <input id="GraduateType" name="GraduateType" title="A&#32;graduate&#32;type&#32;selection&#32;is&#32;required" type="hidden" value="" />
+                        <select id="GraduateTypeList" name="GraduateTypeList"></select>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="stepNav">
+            <button type="button" class="commonBtn prevButton">Previous</button>
+            <button type="button" class="commonBtn startButton">Start Over</button>
+            <button type="button" class="commonBtn nextButton">Continue</button>
+        </div>
+    </div>
+        
+        <div id="group03" class="group" style="display: none;">
+        <div class="intro">
+            <p>
+                Please provide the following information.&nbsp;&nbsp;
+                Your responses will be used to calculate an <u>estimated</u> price for
+                attending UEI College and UEI for one academic year.
+                Remember, this is only a rough estimate. Your Financial Planning specialist
+                will be able to more accurately help you determine the actual cost of
+                attendance and the financial aid for which you might qualify.
+            </p>
+        </div>
+        <div class="questions">
+            <table>
+                <tbody>
+                    <tr class="step01">
+                        <td class="description" colspan="2">
+                            <p>Please provide the following student information</p>
+                        </td>
+                    </tr>
+                <tr class="step01">
+                    <td class="editor-label">
+                        <p>Were you born Before 1/1/<span id="studentBornBeforeYear"></span>?</p>
+                    </td>
+                    <td class="editor-field">
+                        <select class="yesNo" id="studentIsBornBefore" name="StudentInformation.IsBornBefore"><option selected="selected" value="False">No</option>
+<option value="True">Yes</option>
+</select>
+                        
+                    </td>
+                </tr>
+                <tr class="step02">
+                    <td class="editor-label">
+                        <p>Marital Status?</p>
+                    </td>
+                    <td class="editor-field">
+                        <select id="studentMaritalStatus" name="StudentInformation.MaritalStatus"><option value="1">Single (Never married)</option>
+<option value="2">Married (not separated)</option>
+<option value="3">Remarried</option>
+<option value="4">Divorced</option>
+<option value="5">Separated</option>
+<option value="6">Widowed</option>
+<option value="7">Married / Remarried</option>
+<option value="8">Divorced / Widowed</option>
+</select>
+                        
+                    </td>
+                </tr>
+                <tr class="step03">
+                    <td class="editor-label">
+                        <p>Are you enrolled in as Master's/Doctorate Program?</p>
+                    </td>
+                    <td class="editor-field">
+                        <select class="yesNo" id="StudentInformation_IsEnrolledInMastersOrDoctorateProgram" name="StudentInformation.IsEnrolledInMastersOrDoctorateProgram"><option selected="selected" value="False">No</option>
+<option value="True">Yes</option>
+</select>
+                        
+                    </td>
+                </tr>
+                <tr class="step04">
+                    <td class="editor-label">
+                        <p>Are you on active duty in the United States Armed Forces?</p>
+                    </td>
+                    <td class="editor-field">
+                        <select class="yesNo" id="StudentInformation_IsOnActiveDutyInUSArmedForces" name="StudentInformation.IsOnActiveDutyInUSArmedForces"><option selected="selected" value="False">No</option>
+<option value="True">Yes</option>
+</select>
+                        
+                    </td>
+                </tr>
+                <tr class="step05">
+                    <td class="editor-label">
+                        <p>Are you considered a Veteran of the United States Armed Forces?</p>
+                    </td>
+                    <td class="editor-field">
+                        <select class="yesNo" id="StudentInformation_IsConsideredVeteranOfUSArmedForces" name="StudentInformation.IsConsideredVeteranOfUSArmedForces"><option selected="selected" value="False">No</option>
+<option value="True">Yes</option>
+</select>
+                        
+                    </td>
+                </tr>
+                <tr class="step06">
+                    <td class="editor-label">
+                        <p>Do you have children for whom you provide support?</p>
+                    </td>
+                    <td class="editor-field">
+                        <select class="yesNo" id="studentHasChildrenToSupport" name="StudentInformation.HasChildrenToSupport"><option selected="selected" value="False">No</option>
+<option value="True">Yes</option>
+</select>
+                    </td>
+                </tr>
+                <tr class="step07">
+                    <td class="editor-label">
+                        <p>Do you have dependents other than children/spouse?</p>
+                    </td>
+                    <td class="editor-field">
+                        <select class="yesNo" id="StudentInformation_HasDependentsOtherThanChildrenOrSpouse" name="StudentInformation.HasDependentsOtherThanChildrenOrSpouse"><option selected="selected" value="False">No</option>
+<option value="True">Yes</option>
+</select>
+                        
+                    </td>
+                </tr>
+                <tr class="step08">
+                    <td class="editor-label">
+                        <p>Are you in legal guardianship?</p>
+                    </td>
+                    <td class="editor-field">
+                        <select class="yesNo" id="StudentInformation_IsInLegalGuardanship" name="StudentInformation.IsInLegalGuardanship"><option selected="selected" value="False">No</option>
+<option value="True">Yes</option>
+</select>
+                        
+                    </td>
+                </tr>
+                <tr class="step09">
+                    <td class="editor-label">
+                        <p>Are you an orphan, ward of the court, or emancipated minor?</p>
+                    </td>
+                    <td class="editor-field">
+                        <select class="yesNo" id="StudentInformation_IsOrphanOrWardOfCourtOrEmancipatedMinor" name="StudentInformation.IsOrphanOrWardOfCourtOrEmancipatedMinor"><option selected="selected" value="False">No</option>
+<option value="True">Yes</option>
+</select>
+                        
+                    </td>
+                </tr>
+                <tr class="step10">
+                    <td class="editor-label">
+                        <p>Are you homeless child or youth?</p>
+                    </td>
+                    <td class="editor-field">
+                        <select class="yesNo" id="StudentInformation_IsHomelessChildOrYouth" name="StudentInformation.IsHomelessChildOrYouth"><option selected="selected" value="False">No</option>
+<option value="True">Yes</option>
+</select>
+                        
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="stepNav">
+            <button type="button" class="commonBtn prevButton">Previous</button>
+            <button type="button" class="commonBtn startButton">Start Over</button>
+            <button type="button" class="commonBtn nextButton">Continue</button>
+        </div>
+    </div>
+        
+    <div id="group04" class="group" style="display: none;">
+        <div class="intro">
+            <p>
+                Please provide the following information.&nbsp;&nbsp;
+                Your responses will be used to calculate an <u>estimated</u> price for
+                attending UEI College and UEI for one academic year.
+                Remember, this is only a rough estimate. Your Financial Planning specialist
+                will be able to more accurately help you determine the actual cost of
+                attendance and the financial aid for which you might qualify.
+            </p>
+        </div>
+        <div class="questions">
+            <table>
+                <tbody>
+                <tr class="step01">
+                    <td class="description" colspan="2">
+                        <p> Your previous selection indicates you have not received or will receive a High School Diploma, General Educational Development Certificate, homeschool completion credential. Please review the below and indicate whether any of the options apply to your situation.
+                            <ul class="bulletlist">
+                                <li>Passed an independently administered Department of Education approved ATB test. </li>
+                                <li>Completed at least 6 credit hours or 225 clock hours that are applicable toward a degree or certificate offered by the postsecondary institution</li>
+                                <li>Completed at least a two-year program that is acceptable for full credit toward a bachelor's degree</li>
+                                <li>Seeking enrollment in an educational program that leads to <underline>at least an associate degree or its equivalent </underline> and who has not completed high school, but who excelled academically in high school.</li>
+                            </ul>
+                        </p>
+                    </td>
+                </tr>
+                <tr class="step03">
+                    <td class="editor-label">
+                        <label for="AtbEligible">Eligible:</label>
+                    </td>
+                    <td class="editor-field">
+                        <select id="AtbEligible" name="AtbEligible">
+                            <option value="true">Yes</option>
+                            <option value="false">No</option>
+                        </select>
+                    </td>
+                </tr>
+
+                </tbody>
+            </table>
+        </div>
+        <div class="stepNav">
+            <button type="button" class="commonBtn prevButton">Previous</button>
+            <button type="button" class="commonBtn startButton">Start Over</button>
+            <button type="button" class="commonBtn nextButton">Continue</button>
+        </div>
+    </div>
+
+        
+    <div id="groupEfc" class="group" style="display: none;">
+        <div class="intro">
+            <p>
+                Please provide the following information.&nbsp;&nbsp;
+                Your responses will be used to calculate an <u>estimated</u> price for
+                attending UEI College and UEI for one academic year.
+            </p>
+        </div>
+        <div class="questions">
+            <table id="studentInfo">
+                <tbody>
+                    <tr>
+                        <td class="description" colspan="2">
+                            <p>Please provide the following student information</p>
+                        </td>
+                    </tr>
+                <tr class="step01">
+                    <td class="editor-label">
+                        <p>Including yourself, how many people are in your household?</p>
+                    </td>
+                    <td class="editor-field">
+                        <select id="sudentFamilySize" name="StudentInformation.FamilySizeSelected"><option value="1">1</option>
+<option value="2">2</option>
+<option value="3">3</option>
+<option value="4">4</option>
+<option value="5">5</option>
+<option value="6">6</option>
+</select>
+                    </td>
+                </tr>
+                <tr class="step02">
+                    <td class="editor-label">
+                        <p>Including yourself, how many in your household will be attending college?</p>
+                    </td>
+                    <td class="editor-field">
+                        <select id="sudentNumberInCollege" name="StudentInformation.NumberInCollegeSelected"><option value="1">1</option>
+<option value="2">2</option>
+<option value="3">3</option>
+<option value="4">4</option>
+<option value="5">5</option>
+</select>
+                    </td>
+                </tr>
+                <tr class="step03">
+                    <td class="editor-label">
+                        <p>What is your State of Legal Residence?</p>
+                    </td>
+                    <td class="editor-field">
+                        <input id="studentStateId" name="StudentInformation.StateSelected" type="hidden" value="" />
+                        <select id="studentState" name="StudentInformation.StateSelected"></select>
+                    </td>
+                </tr>
+                <tr class="step04">
+                    <td class="editor-label">
+                        <p>Tax Filer</p>
+                    </td>
+                    <td class="editor-field">
+                        <select id="studentTaxFiled" name="StudentIncome.TaxFiled"><option value="0">Tax Filer</option>
+<option value="1">Non Tax Filer</option>
+</select>
+                    </td>
+                </tr>
+                <tr class="step05">
+                    <td class="editor-label">
+                        <p>Adjusted Gross Income</p>
+                    </td>
+                    <td class="editor-field">
+                        <input class="auto-currency" id="studentAdjustedGross" maxlength="12" name="StudentIncome.AdjustedGrossIncome" type="text" value="0" />
+                        
+                    </td>
+                </tr>
+                <tr class="step06">
+                    <td class="editor-label">
+                        <p>Earned Income from Work (Student)</p>
+                    </td>
+                    <td class="editor-field">
+                        <input class="auto-currency" id="studentEarnedIncomeFromWork" maxlength="12" name="StudentIncome.EarnedIncomeFromWork" type="text" value="0" />
+                        
+                    </td>
+                </tr>
+                <tr class="step07">
+                    <td class="editor-label">
+                        <p>Earned Income from Work (Spouse)</p>
+                    </td>
+                    <td class="editor-field">
+                        <input class="auto-currency" id="studentEarnedIncomeFromWorkSpouse" maxlength="12" name="StudentIncome.EarnedIncomeFormWorkForTheSpouse" type="text" value="0" />
+                        
+                    </td>
+                </tr>
+
+                <tr class="step08">
+                    <td class="editor-label">
+                        <p>Untaxed income and benefits</p>
+                    </td>
+                    <td class="editor-field">
+                        <input class="auto-currency" id="studentUntaxedIncomeAndBenefits" maxlength="11" name="StudentIncome.UntaxedIncomeAndBenefits" type="text" value="0" />
+                        
+                    </td>
+                </tr>
+
+                <tr class="step09">
+                    <td class="editor-label">
+                        <p>Additional Financial Information</p>
+                    </td>
+                    <td class="editor-field">
+                        <input class="auto-currency" id="studentAdditionalFinancialInformation" maxlength="11" name="StudentIncome.AdditionalFinancialInformation" type="text" value="0" />
+                        
+                    </td>
+                </tr>
+
+                <tr class="step10">
+                    <td class="editor-label">
+                        <p>US Income Tax Paid</p>
+                    </td>
+                    <td class="editor-field">
+                        <input class="auto-currency" id="studentUSIncomeTaxPaid" maxlength="11" name="StudentIncome.USIncomeTaxPaid" type="text" value="0" />
+                        
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="stepNav">
+            <button type="button" class="commonBtn prevButton">Previous</button>
+            <button type="button" class="commonBtn startButton">Start Over</button>
+            <button type="button" class="commonBtn nextButton" id="continueOrSubmitButton">Continue</button>
+        </div>
+    </div>
+
+    <div id="groupParentInfo" class="group" style="display: none;">
+        <div class="intro">
+            <p>
+                Please provide the following information.&nbsp;&nbsp;
+                Your responses will be used to calculate an <u>estimated</u> price for
+                attending UEI College and UEI for one academic year.
+            </p>
+        </div>
+        <div class="questions">
+            <table>
+                <tbody>
+                    <tr class="step01">
+                        <td class="description" colspan="2">
+                            <p>Please provide the following parent information</p>
+                        </td>
+                    </tr>
+                <tr class="step01">
+                    <td class="editor-label">
+                        <p>Marital Status</p>
+                    </td>
+                    <td class="editor-field">
+                        <select id="ParentInformation_MaritalStatusSelected" name="ParentInformation.MaritalStatusSelected"><option value="1">Single (Never married)</option>
+<option value="2">Unmarried, living together</option>
+<option value="3">Married (not separated)</option>
+<option value="4">Remarried</option>
+<option value="5">Divorced</option>
+<option value="6">Separated</option>
+<option value="7">Widowed</option>
+<option value="8">Single</option>
+<option value="9">Married / Remarried</option>
+<option value="10">Divorced / Separated</option>
+</select>
+                    </td>
+                </tr>
+                
+                <tr class="step02">
+                    <td class="editor-label">
+                        <p>Family Size</p>
+                    </td>
+                    <td class="editor-field">
+                        <select id="parentFamilySize" name="ParentInformation.FamilySizeSelected"><option value="2">2</option>
+<option value="3">3</option>
+<option value="4">4</option>
+<option value="5">5</option>
+<option value="6">6</option>
+</select>
+                    </td>
+                </tr>
+                
+                <tr class="step03">
+                    <td class="editor-label">
+                        <p>Number in College</p>
+                    </td>
+                    <td class="editor-field">
+                        <select id="parentNumberInCollege" name="ParentInformation.NumberInCollegeSelected"><option value="1">1</option>
+<option value="2">2</option>
+<option value="3">3</option>
+<option value="4">4</option>
+<option value="5">5</option>
+</select>
+                    </td>
+                </tr>
+                
+                <tr class="step04">
+                    <td class="editor-label">
+                        <p>State of Legal Residence</p>
+                    </td>
+                    <td class="editor-field">
+                        <input id="parentStateId" name="ParentInformation.StateSelected" type="hidden" value="" />
+                        <select id="parentState" name="ParentInformation.StateSelected"></select>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="stepNav">
+            <button type="button" class="commonBtn prevButton">Previous</button>
+            <button type="button" class="commonBtn startButton">Start Over</button>
+            <button type="button" class="commonBtn nextButton">Continue</button>
+        </div>
+    </div>
+        <div id="groupParentIncome" class="group"  style="display: none;">
+            <div class="intro">
+                <p>
+                    Please provide the following information.&nbsp;&nbsp;
+                    Your responses will be used to calculate an <u>estimated</u> price for
+                    attending UEI College and UEI for one academic year.
+                </p>
+            </div>
+            <div class="questions">
+                <table>
+                    <tbody>
+                        <tr class="step01">
+                            <td class="description" colspan="2">
+                                <p>Please provide the following parent information</p>
+                            </td>
+                        </tr>
+                        <tr class="step01">
+                            <td class="editor-label">
+                                <p>Tax Filer</p>
+                            </td>
+                            <td class="editor-field">
+                                <select id="parentTaxFiled" name="ParentIncome.TaxFiled"><option value="0">Tax Filer</option>
+<option value="1">Non Tax Filer</option>
+</select>
+                            </td>
+                        </tr>
+                       
+                        <tr class="step02">
+                            <td class="editor-label">
+                                <p>Adjusted Gross Income</p>
+                            </td>
+                            <td class="editor-field">
+                                <input class="auto-currency" id="parentAdjustedGross" maxlength="12" name="ParentIncome.AdjustedGrossIncome" type="text" value="0" />
+                                
+                            </td>
+                        </tr>
+                       
+                        <tr class="step03">
+                            <td class="editor-label">
+                                <p>Earned Income from Work (Parent)</p>
+                            </td>
+                            <td class="editor-field">
+                                <input class="auto-currency" id="parentEarnedIncomeFromWork" maxlength="12" name="ParentIncome.EarnedIncomeFromWork" type="text" value="0" />
+                                
+                            </td>
+                        </tr>
+                        
+                        <tr class="step04">
+                            <td class="editor-label">
+                                <p>Earned Income from Work (Parent Spouse)</p>
+                            </td>
+                            <td class="editor-field">
+                                <input class="auto-currency" id="parentEarnedIncomeFromWorkSpouse" maxlength="12" name="ParentIncome.EarnedIncomeFormWorkForTheSpouse" type="text" value="0" />
+                                
+                            </td>
+                        </tr>
+                       
+                        <tr class="step05">
+                            <td class="editor-label">
+                                <p>Untaxed income and benefits</p>
+                            </td>
+                            <td class="editor-field">
+                                <input class="auto-currency" id="parentUntaxedIncomeAndBenefits" maxlength="11" name="ParentIncome.UntaxedIncomeAndBenefits" type="text" value="0" />
+                                
+                            </td>
+                        </tr>
+                        
+                        <tr class="step06">
+                            <td class="editor-label">
+                                <p>Additional Financial Information</p>
+                            </td>
+                            <td class="editor-field">
+                                <input class="auto-currency" id="parentAdditionalFinancialInformation" maxlength="11" name="ParentIncome.AdditionalFinancialInformation" type="text" value="0" />
+                                
+                            </td>
+                        </tr>
+                       
+                        <tr class="step07">
+                            <td class="editor-label">
+                                <p>US Income Tax Paid</p>
+                            </td>
+                            <td class="editor-field">
+                                <input class="auto-currency" id="parentUSIncomeTaxPaid" maxlength="11" name="ParentIncome.USIncomeTaxPaid" type="text" value="0" />
+                                
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="stepNav">
+                <button type="button" class="commonBtn prevButton">Previous</button>
+                <button type="button" class="commonBtn startButton">Start Over</button>
+                <button type="button" class="commonBtn nextButton">Submit</button>
+            </div>
+        </div>
+    </div>
+    <span id="npc-loading" style="display: none;">
+        <span class="commonProgress">
+            <span class="message">Loading . . .</span>
+        </span>
+    </span>
+</form>
+</div>
+
+
+
+
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+<!-- This clearing element should immediately follow the #mainContent div in order to force the #container div to contain all child floats -->
+        <div class="clearfloat"></div>
+
+        <div id="footer">
+            <p>UEI College and UEI Student Portal &copy;2010-2026&nbsp;&nbsp;FAS&nbsp;26.2.0&nbsp;&nbsp;v4.37.6.0</p>
+            <!-- end #footer -->
+        </div>
+        <!-- end #container -->
+ 
+
+
+    </div>
+</body>
+</html>

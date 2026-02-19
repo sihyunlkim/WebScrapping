@@ -1,0 +1,403 @@
+
+<!DOCTYPE HTML>
+<html lang='en'>
+<head>
+	<meta charset='utf-8'>
+	<!--
+	template: /home/www/html/newcms/code/templates/vault_template.html
+	callers: header_footer2.wrap -> code/templates/vault_template.tt -> custom.dt -> /home/www/html/newcms/code/templates/vault_template.html
+	-->
+	
+	<title> :: Andrews University</title>
+
+	<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="robots" content="all"/>
+	<meta name="keywords" content="andrews, andrews university, seventh-day adventist, adventist, christian university, christian education, college of arts and sciences, school of health professions, school of business administration, school of education, seventh-day adventist theological seminary, school of architecture art and design"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1"/>
+	<meta name="description" content="Andrews University is the flagship educational institution of the Seventh-day Adventist Church, including the Seventh-day Adventist Theological Seminary, College of Arts and Sciences, School of Architecture, School of Business Administration, School of Education, and School of Health Professions."/>
+
+<!--
+	ssl: 
+		env.HTTPS: 
+		env.HTTP_X_USING_SSL: https
+		env: 32	globalbase: https://cmspreview.andrews.edu
+-->
+	<link href="https://cmspreview.andrews.edu/css/andrews-ens.css?_=5" rel="stylesheet" type="text/css" />
+	<link href="/css/andrews-bootstrap.css?_=5" rel="stylesheet" type="text/css" />
+	<link href="/css/andrews-ens.css?_=5" rel="stylesheet" type="text/css" />
+	<link href="/code/bootstrap_tour_ver_0_10_2/bootstrap-tour.css?_=5" rel="stylesheet" type="text/css" />
+	<script type="text/javascript" src="/code/js/jquery-1.11.1.min.js?_=5"></script>
+	<script type="text/javascript" src="/code/js/global.js?_=5"></script>
+	<script type="text/javascript" src="/code/js/cookies.js?_=5"></script>
+	<script type="text/javascript" src="/code/bootstrap_dropdown_patch.js?_=5"></script>
+	<script type="text/javascript" src="/code/bootstrap_ver_3_3_2/js/bootstrap.js?_=5"></script>
+	<script type="text/javascript" src="/code/bootstrap-plugins/bootstrap-hover-dropdown-master/bootstrap-hover-dropdown.min.js?_=5"></script>
+	<script type="text/javascript" src="/code/js/expanding-search/js/modernizr-custom.js?_=5"></script>
+	<script type="text/javascript" src="/code/js/expanding-search/js/classie.js?_=5"></script>
+	<script type="text/javascript" src="/code/js/expanding-search/js/uisearch.js?_=5"></script>
+	<script type="text/javascript" src="/code/bootstrap_tour_ver_0_10_2/bootstrap-tour.js?_=5"></script>
+
+
+	<script>
+		$(function(){
+			$('body').tooltip({
+				selector: ".tooltip-left, .tooltip-right, .tooltip-top, .tooltip-bottom",
+				placement: function(self, tip, element){
+					var result = $(tip).attr('class').match('tooltip-(left|right|top|bottom)')[1];
+					return result;
+					}
+				});
+			});
+	</script>
+
+<!-- 
+-->
+	<script>
+		$(function(){
+			if($('#sb-search').length){
+				new UISearch( document.getElementById( 'sb-search' ), 200 );
+				} 
+			});
+	</script>
+
+	<script>
+		jQuery(document).ready(function() {
+		    var offset = 250;
+		    var duration = 400;
+		    jQuery(window).scroll(function() {
+		        if (jQuery(this).scrollTop() > offset) {
+		            jQuery('.back-to-top:first').fadeIn(duration);
+		        } else {
+		            jQuery('.back-to-top:first').fadeOut(duration);
+		        }
+		    }).triggerHandler('scroll');
+		
+		    jQuery('.back-to-top').click(function(event) {
+		        event.preventDefault();
+		        jQuery('html, body').animate({scrollTop: 0}, duration);
+		        return false;
+		    })
+		});
+	</script>
+
+	<script>
+		bootstrap_dropdown_patch();
+	</script>
+        <script>
+	$('body').on('login', function () { load_quick_links(); });
+	</script>
+
+
+
+
+<!-- ZenDesk doesn't work on phone, as it conflicts with collapse global dropdown menu sandwich bars -->
+
+
+</head>
+<body>
+
+
+
+
+<div id="wrapper">
+	<div class="clear"></div>
+
+	<header class="andrews-global-header ">
+		<div class="container">
+			<div class="row andrews-global-header-content">
+				<div class="col-xs-12 col-md-3  global-logo tour-intro">
+					<button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target=".navigation-mobile">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					      </button>
+					<a href="/"><img alt="Andrews University" src="/img/2015/andrews-logo.png" class="img-responsive"></a>
+				</div>
+				<div class="col-xs-12 col-md-9 global-links">
+					<nav>
+						<ul class="nav navbar-nav navbar-right tour-audiences">
+							<li><a class="dropdown-toggle" data-toggle="dropdown" dddddata-hover="dropdown" data-delay="500" href="#parents_dropdown">Parents</a>
+								<div class="dropdown-menu dropdown-menu-left" id='global-current-student' role="menu">
+									<div class="col-sm-12 left-column">
+										<ul>
+											<li><a href="/parents/calendarsandevents/">Calendar &amp; Events</a></li>
+											<li><a href="/parents/newtoandrews/">New to Andrews</a></li>
+											<li><a href="/parents/finances/">Finances</a></li>
+											<li><a href="/parents/comevisit/">Come Visit</a></li>
+											<li><a class="btn-inset btn-gray" href="/parents/">Parents page</a></li>
+										</ul>
+									</div>
+									<div class="col-sm-6 right-column">
+										
+									</div>
+								</div>
+							</li>
+
+							<li class="future-students"><a class="dropdown-toggle" data-toggle="dropdown" ddddata-hover="dropdown" data-delay="500" href="/admissions/">Future Students</a>
+								<div class="dropdown-menu dropdown-menu-left" id='global-future-student' role="menu">
+									<div class="col-sm-6 left-column">
+										<ul>
+											<li>
+												<a class="" href="/undergrad/">Undergraduates</a>
+												<p>First-time college students, transfer students, those seeking a degree at a Bachelors level</p>
+											<li>
+												<ul>
+													<li><a class="" href="/undergrad/">Freshman</a></li>
+													<li><a class="" href="/undergrad/apply/transfers.html">Transfer/Adult Students</a></li>
+													<li><a class="" href="/undergrad/">International Students</a></li>
+													<li><a class="" href="/undergrad/">Homeschool</a></li>
+													<li><a class="" href="/undergrad/apply/guest-student.html">Guest Student</a></li>
+													<li><a class="" href="/undergrad/apply/hs.html">University Credit for High School Students</a></li>
+												</ul>
+											</li>	
+											<li>
+												<a class="" href="/grad/">Graduates</a>
+												<p>Post-college degrees in the Masters and Doctoral levels</p>
+											</li>
+										</ul>
+									</div>
+									<div class="col-sm-6 right-column-future-students">
+										<ul>
+											<li>
+												<a class="" href="/gueststudent/">Guest Students</a>
+												<p>One-time, non-degree-seeking courses</p>
+											</li>
+											<li>
+												<a class="" href="/distance/">Distance Students</a>
+												<p>Students studying away from Berrien Springs campus</p>
+											</li>
+											<li>
+												<br><br><a href="/virtualtour/" title="Virtual Tour"><img src="/undergrad/images/visit-page-virtual-tour-feature.jpg" class="img-responsive"></a>
+											</li>
+										</ul>
+									</div>
+								</div> 
+							</li>
+	
+							<li><a class="dropdown-toggle" data-toggle="dropdown" dddddata-hover="dropdown" data-delay="500" href="/students/">Current Students</a>
+								<div class="dropdown-menu dropdown-menu-left" id='global-current-student' role="menu">
+									<div class="col-sm-12 left-column">
+										<ul>
+											<li><a class="secure" href="https://email.andrews.edu/">Email</a></li>
+											<li><a class="secure" href="https://vault.andrews.edu/">Vault Intranet</a></li>
+											<li><a class="secure" href="https://vault.andrews.edu/vault/goto/secure/studentsuccess/apps/fs/determine/role/">iVue</a></li>
+											<li><a class="secure" href="https://vault.andrews.edu/schedule/">Course Schedule</a></li>
+											<li><a class="secure" href="https://vault.andrews.edu/registration/central">Registration Central</a></li>
+											<li><a class="" href="/go/ugchoices/">Co-Curriculum Choices</a></li>
+											<li><a class="secure" href="https://orgsync.com/login/andrews-university">OrgSync</a></li>
+											<li><a class="" href="http://learninghub.andrews.edu/">LearningHub</a></li>
+											<li><a class="" href="/services/its/clientservices/itscc/index.html">ITS Contact Center</a></li>
+											<li><a class="" href="//bulletin.andrews.edu/">Academic Bulletin</a></li>
+											<li><a class="" href="/library/">Library</a></li>
+											
+											<li><a class="btn-inset btn-gray" href="/students/">Students page</a></li>
+										</ul>
+									</div>
+									<div class="col-sm-6 right-column">
+										
+									</div>
+								</div>
+							</li>
+
+							<li><a class="dropdown-toggle" data-toggle="dropdown" ddddddata-hover="dropdown" data-delay="500" href="/faculty/">Faculty &amp; Staff</a>
+								<div class="dropdown-menu" id="global-faculty-staff" role="menu">
+									<div class="col-sm-12 left-column">
+										<ul class="">
+											<li><a href="https://exchange.andrews.edu/">Email (Exchange)</a></li>
+											<li><a href="https://email.andrews.edu/">Email (IMAP)</a></li>
+											<li><a class="secure" href="https://vault.andrews.edu/vault/goto/secure/studentsuccess/apps/fs/determine/role">iVue</a></li>
+											<li><a class="secure" href="https://www.andrews.edu/admsvs/LOOKUP/nida/nida.cgi">NIDA Lookup</a></li>
+											<li><a class="secure" href="https://www.andrews.edu/admres/registrar/AUSched.cgi">Course Schedule</a></li>
+											<li><a class="secure" href="https://www.andrews.edu/access/">Computer User Services</a></li>
+											<li><a class="secure" href="https://vault.andrews.edu/">Vault Intranet</a></li>
+											<li><a class="" href="http://learninghub.andrews.edu/">LearningHub</a></li>
+											<li><a class="secure" href="https://vault.andrews.edu/registration/central">Registration Central</a></li>
+											<li><a class="" href="//bulletin.andrews.edu/">Academic Bulletin</a></li>
+											<li><a class="" href="/library/">Library</a></li>
+											<li><a class="btn-inset btn-gray" href="/faculty/">Faculty &amp; Staff page</a></li>
+										</ul>
+									</div>
+									<div class="col-sm-6 right-column">
+										
+									</div>
+								</div>
+							</li>
+	
+							<li><a class="dropdown-toggle" data-toggle="dropdown" dddddata-hover="dropdown" data-delay="500" href="http://alumni.andrews.edu/">Alumni</a>
+								<div class="dropdown-menu dropdown-menu-right" id='global-current-student' role="menu">
+									<div class="col-sm-12 left-column">
+										<ul>
+											<li><a href="/email/">Email</a></li>
+											<li><a href="http://alumni.andrews.edu/rsvp/">Alumni events</a></li>
+											<li><a href="http://alumni.andrews.edu/homecoming/">Homecoming</a></li>
+											<li><a href="http://alumni.andrews.edu/benefits/">Benefits</a></li>
+											<li><a class="btn-inset btn-gray" href="http://alumni.andrews.edu/">Alumni page</a></li>
+										</ul>
+									</div>
+								</div>
+							</li>
+							<li class="divider">&nbsp;</li>
+							<li><a href="/services/development/">Give</a></li>
+							<li class="quick-links tour-quicklinks" id="quick_links_dropdown"><a class="dropdown-toggle" data-toggle="dropdown" ddddddata-hover="dropdown" data-delay="500" href="#quick_links_click">Quick Links&nbsp;- Todd</span></a>
+								<div class="dropdown-menu" id="global-helpful-links" role="menu">
+									<!-- AJAX lazy load from /tools/usage/ ... template is list_top.html.tt -->
+									Loading...
+								</div>
+							</li>
+							<li style="width: 60px;"></li> <!-- empty space so nav bar is not behind search button -->							
+						</ul>
+					</nav>
+					<div id="sb-search" class="sb-search">
+						<form action="/search/index.html" id="cse-search-box">
+							<input class="sb-search-input" placeholder="Enter your search term..." type="text" value="" name="q" id="search">
+							<input class="sb-search-submit" type="submit" value="">
+								<span class="sb-icon-search icon-zoom2"></span>
+								<!-- <span class="icon-zoom2" style="z-index: 90;"></span> -->
+						</form>
+					</div>
+				</div>			
+			</div>
+		</div>
+	
+	</header>  <!-- end global andrews header -->
+
+	<div class="tour-audiences-mobile"><div class="collapse navbar-collapse navigation-mobile">
+		<div style="padding-bottom: 7px; border-bottom: 1px solid #ddd; margin-bottom: 10px;">
+		<form action="/search/index.html" class="navbar-form navbar-left" role="search">
+		        <div class="form-group col-xs-9">
+		          <input type="text" class="form-control" placeholder="Search" name="q" id="search">
+		        </div>
+		        <button type="submit" class="btn btn-default col-xs-3">Submit</button>
+		      </form>
+			<div class="clearfix"></div>
+		</div>
+		<!-- Nav tabs -->
+		<ul class="nav nav-tabs" role="tablist">
+			<li role="presentation" class="active"><a href="#quick-links" aria-controls="quicklinks" role="tab" data-toggle="tab">Quick Links</a></li>
+			<li role="presentation"><a href="#audiences" aria-controls="audiences" role="tab" data-toggle="tab">Audiences</a></li>
+			<li role="presentation"><a href="#navigation" aria-controls="navigation" role="tab" data-toggle="tab">Navigation</a></li>
+		</ul>
+		<!-- Tab panes -->
+		<div class="tab-content">
+			<div role="tabpanel" class="tab-pane active" id="quick-links">
+				<nav class="quick-links col-xs-6 tour-quicklinks-mobile">
+					<h4>Quick Links</h4>
+					<ul class="depth_1">
+						<li><a href="/about/visiting/campus_map.html">Campus Map</a></li>
+						<li><a href="/virtualtour/">Virtual Tour</a></li>
+						<li><a href="/services/safety/parking/registration.html">Parking Information</a></li>
+						<li><a href="/directory/">Campus Directory</a></li>
+						<li><a href="/safety/">Campus Safety</a></li>
+						<li><a href="/go/academiccalendar/">Academic Calendar</a></li>
+						<li><a href="/library/">Library</a></li>
+						<li><a href="/bookstore/">Bookstore</a></li>
+					</ul>
+				</nav>
+			</div>
+			<div role="tabpanel" class="tab-pane" id="audiences">
+				<nav class="audiences col-xs-6">
+					<h4>Audiences</h4>
+					<ul>
+						<li><a href="/admissions/">Future Students</a></li>
+						<li><a href="/students/">Current Students</a></li>
+						<li><a href="/faculty/">Faculty &amp; Staff</a></li>
+						<li><a href="//alumni.andrews.edu/">Alumni</a></li>
+					</ul>  
+				</nav>
+				</div>
+			<div role="tabpanel" class="tab-pane" id="navigation">
+				<nav class="navigation col-xs-6">
+					<h4>Navigation</h4>
+					<ul class="depth_1">
+						<li><a href="/admissions/">Admissions</a></li>
+						<li><a href="/academics/">Academics</a></li>
+						<li><a href="/services/research/">Research</a></li>
+						<li><a href="/services/studentlife/">Student Life</a></li>
+						<li><a href="/about/">About Andrews</a></li>
+						<li><a href="/go/give/">Give to Andrews</a></li>
+						<li><a href="/services/" class="last">A-Z Index</a></li>
+					</ul>
+				</nav>
+			</div>
+		</div>
+
+
+
+
+
+
+
+		<!-- <nav class="quick-links col-xs-6 tour-quicklinks-mobile">
+			<h4>Quick Links</h4>
+			<ul class="depth_1">
+				<li><a href="/about/visiting/campus_map.html">Campus Map</a></li>
+				<li><a href="/virtualtour/">Virtual Tour</a></li>
+				<li><a href="/services/safety/parking/registration.html">Parking Information</a></li>
+				<li><a href="/directory/">Campus Directory</a></li>
+				<li><a href="/safety/">Campus Safety</a></li>
+				<li><a href="/go/academiccalendar/">Academic Calendar</a></li>
+				<li><a href="/library/">Library</a></li>
+				<li><a href="/bookstore/">Bookstore</a></li>
+			</ul>
+		</nav>
+		<nav class="audiences col-xs-6">
+			<h4>Audiences</h4>
+			<ul>
+				<li><a href="/admissions/">Future Students</a></li>
+				<li><a href="/students/">Current Students</a></li>
+				<li><a href="/faculty/">Faculty &amp; Staff</a></li>
+				<li><a href="//alumni.andrews.edu/">Alumni</a></li>
+			</ul>  
+		</nav>
+		<nav class="navigation col-xs-6">
+			<h4>Navigation</h4>
+			<ul class="depth_1">
+				<li><a href="/admissions/">Admissions</a></li>
+				<li><a href="/academics/">Academics</a></li>
+				<li><a href="/services/research/">Research</a></li>
+				<li><a href="/services/studentlife/">Student Life</a></li>
+				<li><a href="/about/">About Andrews</a></li>
+				<li><a href="/go/give/">Give to Andrews</a></li>
+				<li><a href="/services/" class="last">A-Z Index</a></li>
+			</ul>
+		</nav> -->
+	</div>
+	</div>
+	<div class='col-xs-push-4 col-xs-4'>
+  <table>
+   <tr><th valign="top"><img src="/icons/blank.gif" alt="[ICO]"></th><th><a href="?C=N;O=D">Name</a></th><th><a href="?C=S;O=A">Size</a></th></tr>
+   <tr><th colspan="3"><hr></th></tr>
+<tr><td valign="top"><img src="/icons/back.gif" alt="[PARENTDIR]"></td><td><a href="/documents/">Parent Directory</a></td><td align="right">  - </td></tr>
+<tr><td valign="top"><img src="/icons/unknown.gif" alt="[   ]"></td><td><a href="meta.js">meta.js</a></td><td align="right">294 </td></tr>
+<tr><td valign="top"><img src="/icons/layout.gif" alt="[   ]"></td><td><a href="working_policy_2013_administration_w_index.pdf">working_policy_2013_administration_w_index.pdf</a></td><td align="right">1.5M</td></tr>
+<tr><td valign="top"><img src="/icons/layout.gif" alt="[   ]"></td><td><a href="working_policy_2013_faculty__w_index.pdf">working_policy_2013_faculty__w_index.pdf</a></td><td align="right">1.4M</td></tr>
+   <tr><th colspan="3"><hr></th></tr>
+</table>
+
+</div>	
+<footer id="footer">
+		<div class="container">
+			<div class="row">					
+				<div class="col-xs-12 col-sm-6 col-md-3 logo">
+					<a href="/"><img src="/img/andrews-logo-footer.png" class="andrews-logo-footer" alt="Logo - Andrews University"></a>
+					<ul style="padding-left: 43px;">
+						<li class="tagline">
+							Seek Knowledge.<br>
+							Affirm Faith.<br>
+							Change the World.
+						</li>
+						<li class="berrien"><a href="https://goo.gl/maps/kuZNw" target="_blank" title="View Berrien Springs, MI in Google Maps" class="tooltip-top">Berrien Springs, MI</a></li>
+						<li class="weather">
+							<a href="http://www.crh.noaa.gov/forecasts/MIZ077.php?warncounty=MIC021&amp;city=Berrien+Springs" target="_blank">
+								41&deg;F/5&deg;C&nbsp;&nbsp;Overcast&nbsp;&nbsp;
+								<img src="/img/weather-icons/cloudy_sm.png" height="20" border="0" alt="Overcast" />
+							</a>
+						</li><!-- end of weather -->
+					</ul>
+				</div>
+
+				<div class="col-xs-12 col-sm-6 col-md-3 col-md-push-6 links-3">
+					<ul>
+				

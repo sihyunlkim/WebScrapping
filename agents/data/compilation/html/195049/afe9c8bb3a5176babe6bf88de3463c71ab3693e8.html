@@ -1,0 +1,364 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+	<title>The Rockefeller University &raquo; Office of Sponsored Programs Administration</title>
+	<link type="text/css" rel="stylesheet" href="/sr-pd/css/nav.css" media="all" />
+	<link type="text/css" rel="stylesheet" href="/sr-pd/css/templateStyle2012.css" media="all" />
+	<link type="text/css" rel="stylesheet" href="/sr-pd/css/department.css" media="all" />
+    
+
+	
+	<!--[if IE]>
+		<link type="text/css" rel="stylesheet" href="/sr-pd/css/ie.css" media="all" />
+	<![endif]-->
+	
+	<!--[if IE 6]>
+		<link type="text/css" rel="stylesheet" href="/sr-pd/css/ie6.css" media="all" />
+	<![endif]-->	
+
+	<!--[if IE 7]>
+		<link type="text/css" rel="stylesheet" href="/sr-pd/css/ie7.css" media="all" />
+	<![endif]-->	
+	
+	<link type="text/css" rel="stylesheet" href="/sr-pd/css/print.css" media="print" />	
+	
+
+	<!--<script type="text/javascript" src="/sr-pd/js/jquery/jquery_core.js"></script>	-->
+	<script type="text/javascript" src="/sr-pd/funding/js/jquery-ui-1.8.18.custom/js/jquery-1.7.1.min.js"></script>	
+	<script type="text/javascript" src="/sr-pd/js/jquery/plugins/jquery.niftycube.js"></script>
+	<script type="text/javascript" src="/sr-pd/js/ru.js"></script>		
+    
+    <script language="javascript" type="text/javascript" src="/sr-pd/js/sr-pd.js"></script>
+	<script language="javascript" type="text/javascript" src="/js/scrollButtons.js"></script>
+
+
+	 <meta name="keywords" content="responsible conduct research training instruction"> 	
+
+
+
+<!-- Global site tag (gtag.js) - Google Analytics --> <script async src="https://www.googletagmanager.com/gtag/js?id=G-J2J6M9VPF5"></script> <script> window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'G-J2J6M9VPF5'); </script><script>var RU_GA_ID = 'G-J2J6M9VPF5';</script>
+
+
+</head>
+
+		
+
+
+
+<body>
+<!-- wrapper start -->
+<div id="wrapper">	
+   <div id="skip-to-content"><a href="#content">Skip to Main Content</a></div>	
+	
+	<div id="header">
+		<ul id="quickLinks">
+			<li><a href="/calendar">Calendar</a></li><li><a href="https://ph.rockefeller.edu/">Directory</a></li><li class="lastQL"><a href="/insideHR/career.php">Employment</a></li>
+       	</ul>
+
+       	
+		<form action="https://search.rockefeller.edu" method="get" name="gs" id="mainSearch">
+			<label for="q" class="ADA-only">Search The Rockefeller University Site</label><input type="text" name="q" value="Search" class="search defaultValue" />
+			<input type="image" src="/sr-pd/images/static/go.gif" width="32" height="18" alt="Search" style="vertical-align: bottom;" />
+		</form>
+		
+      <a href="https://giveandjoin.rockefeller.edu/donate" id="donate">Donate</a>
+
+		<p>Tuesday, February 17, 2026</p>		
+		<a href="/"><img src="/sr-pd/images/static/headerRU.gif" width="445" height="45" alt="The Rockefeller University" /></a>
+
+		<h1>
+			<a href="/sr-pd">Office of Sponsored Programs Administration</a>
+			<a href="?printer=1" id="printerFriendly"><img src="/sr-pd/images/static/print.gif" width="18" height="18" alt="printer icon" /></a>
+		</h1>		
+	</div>	
+
+		
+	
+	
+				
+		<script>
+		
+
+// add functions to onload w/out overwriting existing functions
+function addLoadEvent(func) {
+        var oldonload = window.onload;
+        if(typeof window.onload != 'function') {
+                window.onload = func;
+        } else {
+                window.onload = function() {
+                        oldonload();
+                        func();
+                }
+        }
+}
+function sizeBoxes() { // size each row of divs to one w/ most content in that row
+        if(!document.getElementById) return false;
+        var general = document.getElementById('general'); // get divs
+        var deadlines = document.getElementById('deadlines');
+        var SR = document.getElementById('SR');
+        var PD = document.getElementById('PD');
+
+        var row1 = getTallest(general,deadlines); // get largest height for each row
+        //row1 += 10;     // add some spacing
+        var row2 = getTallest(SR,PD);
+        //row2 += 30;
+
+        if(row1 > 240) { // row 1 heights
+                general.style.height = row1+"px";
+                deadlines.style.height = row1+"px";
+        } else {
+                general.style.height = "240px";
+                deadlines.style.height = "240px";
+        }
+        if(row2 > 240) { // row 2 heights
+                SR.style.height = row2+"px";
+                PD.style.height = row2+"px";
+                //PD.style.height = (row2 - 3)+"px"; // subtract 3px so corner image lines up
+        } else {
+                SR.style.height = "200px";
+                PD.style.height = "200px";
+        }
+}
+function getTallest(one, two) { // get largest div height for the two divs in each row
+        divs = new Array(2);
+        divs[0] = one.offsetHeight;
+        divs[1] = two.offsetHeight;
+        divs.sort(function(a,b){return b - a}) // sort in descending numerical order
+        return divs[0]; // return tallest height
+}
+
+
+
+
+// remove default value from Search SR-PD input on focus
+function defaultClear() {
+        if(!document.getElementById) return false;
+        var input = document.getElementById('searchSRPD');
+        input.onfocus = function() {
+                var default_value = 'Search SR-PD'
+                if(this.value == default_value) this.value = "";
+        }
+        input.onblur = function() {
+                if(this.value == "") this.value = "Search SR-PD";
+        }
+}
+
+addLoadEvent(defaultClear);
+                </script>
+                
+
+
+
+
+<!--  Begin nav  -->
+		<div id="nav" class="">
+		<ul class="menu">
+			<li id="firstNavCol"><a href="/sr-pd/index.php?page=index">About</a></li>
+			<li><a href="/sr-pd/index.php?page=News">News</a></li>		
+			<li><a href="/sr-pd/index.php?page=Tips__Corner">Tips</a></li>	
+                        <li><a href="/sr-pd/index.php?page=InfoEd_FAQ">InfoEd FAQ</a></li>
+	    <li><a href="/sr-pd/index.php?page=SR-PDSpotlight">Spotlight</a></li>	
+            <li><a href="/sr-pd/index.php?page=forms">Forms & E-Tools</a></li>	
+            <li><a href="/sr-pd/index.php?page=institutional-data">Administrative Data</a></li>	
+            <li><a href="/sr-pd/funding">Funding Database</a></li>	
+                        <li><a href="/sr-pd/index.php?page=boilerplates">Boilerplates & Examples</a></li>
+            <li><a href="/sr-pd/index.php?page=specialist">Your SPO</a></li>	
+            <li><a href="/sr-pd/index.php?page=contact-us">Contact Us</a></li>	
+			
+			<li style="padding-left: 0; padding: 20px 0 0 6px;">
+                                <a href="https://rasgrants.rockefeller.edu/" target="_blank"><img src="/sr-pd/images/ras-grants.gif" alt="RAS-Grants log-in button" width="145" height="40" /></a>
+				<!--<a href="https://spas.rockefeller.edu"><img src="/sr-pd/images/infoEdroll.jpg" alt="infoEd log-in button" width="145" height="40" /></a>-->
+			</li>
+			<li style="padding: 0px 0px 0px 45px; font-weight:normal;">
+				Use RUNET login
+			</li>
+			
+			<li>
+			<br /><br />
+        
+      <div class='navCalendarDiv' onClick='location.href="/sr-pd/funding/calendar.php"'><a href='/sr-pd/funding/calendar.php' style='text-decoration: none;cursor: pointer;margin:0px;padding:0px;width:100%;'><table cellspacing='0' cellpadding='0' border='0' width='100%' class='navCalendarTitle'>
+					<td align='center'>
+						<b>February 2026</b>
+				  </td>
+				</table>
+				
+				<table cellspacing='0' cellpadding='0' border='0' width='100%' class='navCalendar'><tr class='navCalendarDayOfWeek'>
+            <td width='40' align='center'>Su</td>
+            <td width='40' align='center'>Mo</td>
+            <td width='40' align='center'>Tu</td>
+            <td width='40' align='center'>We</td>
+            <td width='40' align='center'>Th</td>
+            <td width='40' align='center'>Fr</td>
+            <td width='40' align='center'>Sa</td>
+        </tr><td align='center' class='navCalendarSatOrSun'>
+                				1
+                			</td><td align='center' class='navCalendarDay'>
+                				2
+                			</td><td align='center' class='navCalendarDay'>
+                				3
+                			</td><td align='center' class='navCalendarDay'>
+                				4
+                			</td><td align='center' class='navCalendarDay'>
+                				5
+                			</td><td align='center' class='navCalendarDay'>
+                				6
+                			</td><td align='center' class='navCalendarSatOrSun'>
+                				7
+                			</td></tr><td align='center' class='navCalendarSatOrSun'>
+                				8
+                			</td><td align='center' class='navCalendarDay'>
+                				9
+                			</td><td align='center' class='navCalendarDay'>
+                				10
+                			</td><td align='center' class='navCalendarDay'>
+                				11
+                			</td><td align='center' class='navCalendarDay'>
+                				12
+                			</td><td align='center' class='navCalendarDay'>
+                				13
+                			</td><td align='center' class='navCalendarSatOrSun'>
+                				14
+                			</td></tr><td align='center' class='navCalendarSatOrSun'>
+                				15
+                			</td><td align='center' class='navCalendarDay'>
+                				16
+                			</td><td align='center' class='navCalendarDay'>
+                				<b>17</b>
+                  		</td><td align='center' class='navCalendarDay'>
+                				18
+                			</td><td align='center' class='navCalendarDay'>
+                				19
+                			</td><td align='center' class='navCalendarDay'>
+                				20
+                			</td><td align='center' class='navCalendarSatOrSun'>
+                				21
+                			</td></tr><td align='center' class='navCalendarSatOrSun'>
+                				22
+                			</td><td align='center' class='navCalendarDay'>
+                				23
+                			</td><td align='center' class='navCalendarDay'>
+                				24
+                			</td><td align='center' class='navCalendarDay'>
+                				25
+                			</td><td align='center' class='navCalendarDay'>
+                				26
+                			</td><td align='center' class='navCalendarDay'>
+                				27
+                			</td><td align='center' class='navCalendarSatOrSun'>
+                				28
+                			</td></tr></table></a></div>			</li>
+			
+			<li>
+				<br /><br />
+            
+        <table cellspacing="0" cellpadding="0" border="0" style="background-color:#c8d5dd; margin:2px;" width="165px">
+    	
+    		<tr><td style="padding-bottom:2px;" align="center"><b><font color="#000000">Most Visited</font></b></td></tr>
+    		    			    			<tr>
+    				<td align="left" style="padding:3px;background-color:#ffffff;">
+    				 <a href="/sr-pd/index.php?page=PostdocPrograms" title="Postdoctoral Programs" style='text-decoration: none;cursor: pointer;margin:0px;padding:0px;width:100%;'>Postdoctoral Prog...</a>
+    				</td>
+    			</tr>
+    			    			<tr>
+    				<td align="left" style="padding:3px;background-color:#ffffff;">
+    				 <a href="/sr-pd/index.php?page=TipsArchive" title="TIPs Archive" style='text-decoration: none;cursor: pointer;margin:0px;padding:0px;width:100%;'>TIPs Archive</a>
+    				</td>
+    			</tr>
+    			    			<tr>
+    				<td align="left" style="padding:3px;background-color:#ffffff;">
+    				 <a href="/sr-pd/index.php?page=fundingopp" title="Grant Seeking Resources" style='text-decoration: none;cursor: pointer;margin:0px;padding:0px;width:100%;'>Grant Seeking Res...</a>
+    				</td>
+    			</tr>
+    			    			<tr>
+    				<td align="left" style="padding:3px;background-color:#ffffff;">
+    				 <a href="/sr-pd/index.php?page=COVID_Funding_Opps" title="COVID Funding Opportunities" style='text-decoration: none;cursor: pointer;margin:0px;padding:0px;width:100%;'>COVID Funding Opp...</a>
+    				</td>
+    			</tr>
+    			    			<tr>
+    				<td align="left" style="padding:3px;background-color:#ffffff;">
+    				 <a href="/sr-pd/index.php?page=NIH_Modular_Budget_Justification_Guidelines" title="NIH Modular Budget Justification Guidelines" style='text-decoration: none;cursor: pointer;margin:0px;padding:0px;width:100%;'>NIH Modular Budge...</a>
+    				</td>
+    			</tr>
+    			    			<tr>
+    				<td align="left" style="padding:3px;background-color:#ffffff;">
+    				 <a href="/sr-pd/index.php?page=nihformsq" title="NIH Application Forms" style='text-decoration: none;cursor: pointer;margin:0px;padding:0px;width:100%;'>NIH Application F...</a>
+    				</td>
+    			</tr>
+    			    			<tr>
+    				<td align="left" style="padding:3px;background-color:#ffffff;">
+    				 <a href="/sr-pd/index.php?page=Consortium-ContractualArrangements" title="Consortium and Contractual Arrangements" style='text-decoration: none;cursor: pointer;margin:0px;padding:0px;width:100%;'>Consortium and Co...</a>
+    				</td>
+    			</tr>
+    			    		    		</table>
+			</li>
+			    </ul>
+        
+            
+	</div>
+
+<!--  End nav -->
+
+
+<!-- content start -->	
+<div id="content">	
+	<div id="contentTop">&nbsp;</div>
+						
+										
+												<form id="searchForm" action="https://search.rockefeller.edu" method="get" style="padding: 0px; margin: 0px;">
+										          <input type="text" name="q" value="Search OSPA" id="searchSRPD">
+															<input type="submit" value="Go" id="submitSearchSRPD" />
+										  	</form>
+
+										
+	
+<br/>
+
+		 		
+			<div id="editor-container" style="width:690px;">
+			<p class="MsoNormal" style="text-align: center;"><span class="contentTitle">Responsible Conduct of Research (RCR)<br /></span></p>
+<p class="MsoNormal" style="text-align: left;"><span class="body"><span style="font-style: italic;"><em>Our boilerplates and sample text for selected application sections may be used as a starting point for your applications, and should be modified to meet sponsor's requirements and to align with your proposed research plan.&nbsp;</em></span></span></p>
+<div style="text-align: left;"><span class="body">This boilerplate addresses the requirement for training in the Responsible Conduct of Research by the <a href="http://grants.nih.gov/training/responsibleconduct.htm">NIH</a> (as of November 24, 2009) and <a href="http://www.nsf.gov/bfa/dias/policy/rcr.jsp">NSF</a> (effective January 4, 2010).<br /><br />Other sponsors' RCR requirements will be added as necessary. <br /></span><br /><span class="contentSubtitle">Scope of Training</span><br />The RCR course heightens the awareness of trainees to ethical considerations relevant to the conduct of research, to inform them of federal, state and institutional policies, regulations and procedures, and to provide trainees with critical analysis and problem solving skills for ethical decision-making. <br />
+<p class="MsoNormal">At The Rockefeller University the RCR training is overseen by the <a href="http://www.rockefeller.edu/graduate/contact/">Dean's Office</a> and includes the following instruction components:</p>
+</div>
+<p class="MsoNormal"><span class="contentSubtitle">1. Format</span> <br />The Rockefeller University (RU) RCR training is provided in collaboration with Memorial Sloan-Kettering Cancer Center (MSKCC).&nbsp; MSKCC and RU offer participants joint formal training in the responsible and ethical conduct of research through a Responsible Conduct of Research Course created and directed by MSKCC Director of Research Outreach and Compliance. The Responsible Conduct of Research course is a comprehensive, semester-long course, which is offered annually in the fall. Certificates of completion are granted once all course requirements are satisfied.<br /><br /><span class="contentSubtitle">2. Subject Matter</span><br />Course content covers instruction in the following subject areas: conflict of interest (personal, professional, and financial); policies regarding human subjects, live vertebrate animal subjects in research, safe laboratory practices, mentor/mentee responsibilities and relationships, collaborative research including collaborations with industry, peer review, data acquisition and laboratory tools (including management, sharing and ownership), research and scientific misconduct and policies for handling misconduct, responsible authorship and publication, the scientist as a responsible member of society, contemporary ethical issues in biomedical research and the environmental and societal impacts of scientific research. Content is continuously updated to ensure that it addresses the most current policies and regulations, as well as topical and timely cases in which participants can engage in real time.</p>
+<p class="MsoNormal">Course participants are graded based on class attendance and participation and completion of the required online course materials. <br /><br /><span class="contentSubtitle">3. Faculty Participation</span><br />The Responsible Conduct of Research course is directed by the MSKCC Director of Research Outreach and Compliance and is taught by members of the faculty from The Rockefeller University (RU) and Memorial Sloan Kettering Cancer Center (MSKCC). Course instructors include junior and senior faculty from these two institutions, as well as senior administrators who are engaged in research compliance efforts.</p>
+<p class="MsoNormal">For current course schedule and more details contact <a href="mailto:cullenk@rockefeller.edu">Kristen Cullen</a>.<br /><br />On-site training is provided by the individual's mentor/s through working together in the laboratory, sharing experiences and insights, advising on and supervising research activities, and reviewing scientific issues and ethical challenges associated with the specific projects. Mentors provide invaluable practical and experiential guidance to the trainees, and offer other training opportunities designed to prepare her/his trainee/s for well-rounded and productive careers, including laboratory meetings, seminars, journal clubs, and other training venues. [<span style="font-style: italic;">Important to include schedules detailing frequency of individual meetings of trainees with their mentors, meetings of trainees with his/her advisory committee, and how individual progress will be evaluated, as required.</span>]</p>
+<p class="MsoNormal"><span class="contentSubtitle">4. Duration of Instruction<br /></span>The RCR course is comprised of four face-to-face sessions (eight hours) and nine online sessions. Specific sessions normally include an interactive Orientation session, three small group case study analysis sessions led by faculty and an interactive on-line course that features instructional readings and topical case analysis.<br /><br /><span class="contentSubtitle">5. Frequency of Instruction</span><br />Instruction in the responsible conduct of research occurs throughout a scientist&rsquo;s career as is appropriate to one's career stage.&nbsp; All RU pre- and post-doctoral appointees on NIH funded NRSA programs must complete this course in the first year of their appointment. In addition, all first year Graduate Fellows and third year Biomedical Fellows must complete the course, so that they are trained in ethical considerations from the outset of their graduate education.&nbsp;</p>
+<p class="MsoNormal">I plan to take the RCR course <span style="font-style: italic;">[indicate target date.]/I have taken the course [indicate completion date./ Previous RCR training from another institution will be evaluated by the Dean&rsquo;s Office on a case by case basis.]</span> I am also committed to undertake additional training in the responsible conduct of research at least once during each career stage, and at a frequency of no less than once every four years.&nbsp;&nbsp;</p>
+<p><a href="https://www.mskcc.org/research-advantage/support/rtm/compliance-review-and-oversight/education">RCR course at MSK</a><br /><a href="http://www2.rockefeller.edu/sr-pd/index.php?page=RCRCompliance">RCR at RU</a><br /><br /><span class="contentSubtitle">Useful links</span><br /><a href="http://www2.rockefeller.edu/sr-pd/index.php?page=Compliance_Support">Compliance Support</a><br /><a href="http://grants.nih.gov/training/responsibleconduct.htm">NIH - Training in the Responsible Conduct of Research</a> <br /><a href="http://grants.nih.gov/grants/guide/notice-files/NOT-OD-10-019.html">NIH - Update on the Requirement for Instruction in Responsible Conduct of Research</a>&nbsp; <br /><a href="http://grants.nih.gov/podcasts/All_About_Grants/episodes/RCR_December_2010.htm">NIH - Transcript of Podcast on Training in the Responsible Conduct of Research (12.03.10)</a><br /><a href="http://www.nsf.gov/bfa/dias/policy/rcr.jsp">NSF - Responsible Conduct of Research (RCR)</a> <br /><a href="http://www.nsf.gov/od/oise/intl-research-integrity.jsp">NSF - International Research Integrity</a> <br /><a href="http://www.nationalpostdoc.org/?RCR_toolkit">NPA - RCR Toolkit</a><br /><a href="https://ori.hhs.gov/index.php/general-resources">ORI - RCR Resources</a><br /><a href="http://www2.rockefeller.edu/sr-pd/index.php?page=MentoringPlan">Training &amp; Mentoring Biomedical Researchers</a><br />Public Responsibility in Medicine and Research (PRIM&amp;R) - <a href="http://www.magnetmail.net/actions/email_web_version.cfm?recipient_id=150196160&amp;message_id=952262&amp;user_id=PRIMR">RCR Webinar</a>&nbsp;</p>
+<p class="MsoNormal"><span class="contentSubtitle">Examples</span><br /><a href="https://ura.uchicago.edu/page/sample-language">University of Chicago</a><br /><a href="https://www.google.com/url?sa=t&amp;rct=j&amp;q=&amp;esrc=s&amp;source=web&amp;cd=2&amp;cad=rja&amp;uact=8&amp;ved=0ahUKEwit_KGUndPYAhVJ6YMKHZ8TDtMQFggvMAE&amp;url=https%3A%2F%2Fmed.stanford.edu%2Fcontent%2Fdam%2Fsm%2Fbioethics%2Fdocuments%2Feducation%2Frcr%2Fgg_Sample_RCR.pdf&amp;usg=AOvVaw2Dgfq6e-obIDmEicoINVT7">Stanford University</a><br /><span style="font-style: italic;"><br /></span></p>
+<p><br /><br /></p>
+<div style="text-align: center;"><span class="body"><a href="mailto:sr-pd@rockefeller.edu">We value your comments and rely on your feedback to improve our services.</a></span></div>
+<p>&nbsp;</p>
+			</div>
+			
+	<div style="clear:both;"></div>
+<p id="contentBottom"></p>
+	</div>
+<!-- content end -->
+
+<!-- footer start -->
+   <div id="footer">
+         <div id="footer-btns">
+            <a href="http://www.facebook.com/rockefelleruniversity" target="_blank"><img src="/sr-pd/images/static/btn-med-fb.gif" width="32" height="32" alt="Facebook" /></a>
+            <a href="http://www.twitter.com/rockefelleruniv" target="_blank"><img src="/sr-pd/images/static/btn-med-twitter.gif" width="32" height="32" alt="Twitter" /></a>
+            <a href="http://www.youtube.com/rockefelleruniv" target="_blank"><img src="/sr-pd/images/static/btn-med-youtube.gif" width="32" height="32" alt="YouTube" /></a>
+            <a href="https://www.linkedin.com/company/rockefeller-university/careers" target="_blank"><img src="//www.rockefeller.edu/images/static/btn-med-linkedin.gif" width="32" height="32" alt="LinkedIn"></a>
+            <a href="https://instagram.com/rockefelleruniv/" target="_blank"><img src="/images/static/btn-med-instagram.gif" width="32" height="32" alt="Instagram" /></a>
+            <a href="https://inside.rockefeller.edu" id="footer-inside-link"><img src="/sr-pd/images/static/inside.gif" /></a>
+         </div>
+      <p>
+            The Rockefeller University  |  1230 York Avenue, New York, NY 10065  |  212-327-8000<br />
+         Copyright &copy; 2004&ndash;2026         The Rockefeller University. All rights reserved.  <br />
+         <a href="http://www.rockefeller.edu/about/contact">Contact</a> |
+         <a href="http://www.rockefeller.edu/about/comments">Comments</a> |
+         <a href="http://www.rockefeller.edu/about/sitemap">Site Map</a> |
+         <a href="http://www.rockefeller.edu/about/dmca">Copyright Complaints</a>
+      </p>
+   </div><!-- footer end -->
+
+	</div>
+</body>
+</html>

@@ -1,0 +1,497 @@
+
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head><meta name="viewport" content="width=device-width, initial-scale=1.0" /><!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-WR9V5K73');</script>
+<!-- End Google Tag Manager --><script>
+  window.TdxGtmContext = {"User":{"Id":0,"UID":"00000000-0000-0000-0000-000000000000","UserName":"","FullName":"Public User","AlertEmail":"publicuser@noreply.com","Role":"Experience User","HasTDNext":false,"StandardApplicationNames":null,"TicketApplicationNames":[],"AssetApplicationNames":[],"ClientPortalApplicationNames":[],"Type":"Technician","Analytics":{"Title":null,"Organization":null}},"Partition":{"Id":1006,"Name":"Multi-Tenant 06 Production"},"BillableEntity":{"Id":92,"Name":"Lake Sumter State College","SalesForceIdentifier":"0013600000EM4SmAAL","GWMIID":"4635f61f-9f19-4b24-95e2-e14539b4d38e"},"Environment":{"ShortName":"PRD"}};
+</script><script src="/TDPortal/Content/Scripts/jquery/2.2.4/jquery.min.js?v=20260213000508"></script><script src="/TDPortal/Content/Scripts/jquery-migrate/1.4.1/jquery-migrate.min.js?v=20260213000508"></script><script src="/TDPortal/Content/Scripts/jquery-ui/1.13.2/jquery-ui-1.13.2.custom.timepicker.min.js?v=20260213000818"></script><link href="/TDPortal/Content/Styles/jquery-ui/1.13.2/jquery-ui.compiled.min.css?v=20260213000820" rel="stylesheet" type="text/css"  /><link href="/TDPortal/Content/bootstrap/3.4.1/dist/css/bootstrap.min.css?v=20260213000508" rel="stylesheet" type="text/css" id="lnkBootstrapCSS" /><script src="/TDPortal/Content/bootstrap/3.4.1/dist/js/bootstrap.min.js?v=20260213000508"></script><link href="/TDPortal/Content/FontAwesome/css/fontawesome.min.css?v=20260213000506" rel="stylesheet" type="text/css" id="lnkFontAwesome" /><link href="/TDPortal/Content/FontAwesome/css/solid.css?v=20260213000506" rel="stylesheet" type="text/css"  /><link href="/TDPortal/Content/FontAwesome/css/regular.css?v=20260213000506" rel="stylesheet" type="text/css"  /><link href="/TDPortal/Content/FontAwesome/css/brands.css?v=20260213000506" rel="stylesheet" type="text/css"  /><link href="/TDPortal/Content/FontAwesome/css/v4-shims.css?v=20260213000506" rel="stylesheet" type="text/css"  /><link href="/TDClient/Styles/bootstrap_custom.min.css?v=20260213000818" rel="stylesheet" type="text/css"  /><link href="/TDClient/Styles/TDStyles.min.css?v=20260213000820" rel="stylesheet" type="text/css"  /><link href="https://lssc.teamdynamix.com/TDPortal/BE/Style/92/TDClient/302?v=20250221203758" rel="stylesheet" type="text/css" /><script src="/TDPortal/Content/Scripts/tdx/dist/TDJSFramework.compiled.min.js?v=20260213000818"></script><script src="/TDPortal/Content/Scripts/tdx/dist/modalFocusTrap.min.js?v=20260213000816"></script><script src="/TDPortal/Content/Scripts/underscore/1.12.1/underscore-min.js?v=20260213000508"></script>
+<script src="/TDClient/Scripts/clientOS.min.js?v=20260213000810"></script>
+<script src="/TDClient/Scripts/collapseMe.min.js?v=20260213000810"></script>
+<script src="/TDClient/Scripts/tdsearchfilter.min.js?v=20260213000810"></script>
+<script src="/TDClient/Scripts/SiteSearch.min.js?v=20260213000810"></script>
+<script src="/TDPortal/Content/Scripts/tdx/dist/elasticsearchAutocomplete.min.js?v=20260213000816"></script>
+<link id="ctl00_lnkFavicon" rel="icon" href="https://lssc.teamdynamix.com/TDPortal/BE/Icon/92/302?v=20240815182715" />
+
+    
+    <script async src="//www.googletagmanager.com/gtag/js?id=G-376309433"></script>
+    <script>
+
+      $(function () {
+
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        // Be sure to set the proper cookie domain to the customer's full subdomain when sending the pageview hit.
+        gtag('config', 'G-376309433', { 'cookie_domain': 'lssc.teamdynamix.com' });
+
+        });
+
+    </script>
+
+  
+
+  <script>
+
+      $(function () {
+        var masterUi = MasterUI({
+          isPostback: false,
+          baseUrl: '/TDClient/',
+          isTdGoogleAnalyticsEnabled: true,
+          isAuthenticated: false
+          });
+
+        $('#collapseMe').collapseMe({
+          toggleVisibilitySelector: '.navbar-toggle'
+        });
+
+        TeamDynamix.addRequiredFieldHelp();
+      });
+
+      // The sub-nav menu uses padding-top to position itself below the header bar and main navigation sections. When the
+      // window is resized, there is a chance that the content of these header or nav sections wraps, causing the height
+      // to change, potentially covering the sub-nav menu, which is obviously a big usability problem. This function
+      // listens for when the window size or orientation is changing (and also when the window first loads), and adjusts
+      // the padding so that the sub-nav menu appears in the correct location.
+      $(window).bind('load ready resize orientationchange', function () {
+        var headerHeight = $('#divMstrHeader').height();
+        $('#navShim').css({
+          "padding-top": headerHeight
+        });
+
+        $('#content').css({
+          "padding-top": headerHeight,
+          "margin-top": headerHeight * -1
+        });
+      });
+  </script>
+
+  
+  
+  <script src="/TDClient/Scripts/DesktopModules.min.js?v=20260213000818"></script>
+
+
+  <script>
+
+    var desktopModules;
+
+    $(function () {
+
+      desktopModules = new TeamDynamix.DesktopModules({
+        applicationName: 'TDClient',
+        serviceUrl: '/TDClient/302/Portal/DesktopModules/',
+        antiForgeryToken: '9oqBGVWx_iaWrg7l_dBhHn3fS6cOzLsWAKCR3g9Y98C7T6P6769TGvrijCgr_XREO09vVqfV52qzWr2mPezIQpK0ZTE1:m_05LFaDENdTUXNWBxLF7JV3Z5b2kp8mc4Me4n8hdWB2WmaolokqVnNhWY0YvXS0zqpj1xmg-QROhWsLuL_xrp6_ZiA1',
+        displayAutoRefreshInfo: false
+      });
+
+    });
+
+    function refreshModule(moduleId) {
+      desktopModules.refreshModule(moduleId);
+    }
+
+  </script>
+
+  
+    <style>
+    div.ModuleHdr {
+      cursor: auto;
+    }
+  </style>
+  <meta property="og:title" content="Home" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://lssc.teamdynamix.com/TDClient/302/Portal/Home/?DesktopID=c6b7ff2e-c3c9-47d3-bb22-e331a6430260" />
+<meta property="og:image" content="https://lssc.teamdynamix.com/TDPortal/BE/Logo/92/302" />
+  <meta property="og:site_name" content="Lake Sumter State College" /><title>
+	Client Portal Home
+</title></head>
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WR9V5K73"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+<form method="post" action="/TDClient/302/Portal/Home/" id="aspnetForm">
+<div class="aspNetHidden">
+<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
+<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="7u7L8P5HKQyLkyJN1IpEiSw7hJMf39CGlN+OsqfKDGGt3CVSX0nqUbTWCwnBP1dncIUM2vrnFvnWPOlHGjbOrqCfbqU8G+JmgOVY7/0KDkDYJrafR98e1vGJvozNOJQBIAt72+3YS8B6Kh6Oxkn9k8PldPzPJtarpc1/yl8nV0NAdSkW0KUUMxMa9tdbHxeOMmJJyBrSsPXDqva2ulbLnWx2OsqRuxVDySh8jcSfUv2ltSHfFHhxqobhA/eeGUIpU3u/IA08u69QYLcKiFvnbCNT6h4MsPThCjG532LvmTQbjDJqJwmtodeXyyLYzJA1+eRAFw==" />
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['aspnetForm'];
+if (!theForm) {
+    theForm = document.aspnetForm;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script>
+
+
+<script src="/TDClient/WebResource.axd?d=pynGkmcFUV13He1Qd6_TZMSMQxVWLi4fik2rw1_u_hZsCNzwv5c621ov6_ZX_wzTt5vh-g2&amp;t=638901392248157332" type="text/javascript"></script>
+
+
+<script src="/TDClient/ScriptResource.axd?d=NJmAwtEo3Ipnlaxl6CMhvmVxW3-Ljsg_2Hna32smxrg-6ogyYAN3UTPsJQ8m1uwzn_kuf2Wpne6NSFmYui3h0wCQhJN3ZUiLTNkvhiIgZpq74-lKmofUPQGJ8own8RI2_mwAcmvlSj2WBnqwm5Wj4cyNvv81&amp;t=5c0e0825" type="text/javascript"></script>
+<script src="/TDClient/ScriptResource.axd?d=dwY9oWetJoJoVpgL6Zq8OLdGoo5BVWQ_Eo60QZTEhEcHeiVfwgY9tLCgzdZ5TRwvrwYEnOvujbNccOVLUfWtUg4HivSIsewg6JABxkBGEqVVV64eiRyCAsPDqh6tUioISUQKB74sWMO4Er2mHrWEIWs_sBM1&amp;t=5c0e0825" type="text/javascript"></script>
+<div class="aspNetHidden">
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="E1568E68" />
+</div>
+<script type="text/javascript">
+//<![CDATA[
+Sys.WebForms.PageRequestManager._initialize('ctl00$smMain', 'aspnetForm', [], [], [], 90, 'ctl00');
+//]]>
+</script>
+
+<div id="ctl00_upMain" style="display:none;">
+	
+    <div id="ctl00_pbMain" class="progress-box-container"><div class="progress-box-body"><div class="well shadow"><h2 class="h4 gutter-top-none">Updating...</h2><div class="progress" style="margin-bottom: 0;"><div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuemin="0" aria-valuemax="100" style="width: 100%"></div></div></div></div></div>
+  
+</div>
+
+<header id="ctl00_navHeader" role="banner">
+
+  <div id="divMstrHeader" class="master-header NoPrint" style="background-color: #fff;">
+
+  
+
+  <div class="logo-header-full hidden-xs">
+
+    
+    <div class="pull-left">
+      <a href="#mainContent" class="sr-only sr-only-focusable">Skip to main content</a>
+    </div>
+
+
+    <div id="ctl00_divPageHeader" class="container logo-header clearfix" style="padding: 5px;">
+
+      <div id="divLogo" class="pull-left logo-container">
+
+        <a href="https://lssc.teamdynamix.com/TDClient/302/Portal/Home/"
+           target="_blank">
+          <img src="/TDPortal/BE/Logo/92/302" alt="Lake Sumter State College" class="js-logo img-responsive" />
+          <span class="sr-only">(opens in a new tab)</span>
+        </a>
+
+      </div>
+
+      <div class="master-header-right pull-right padding-top padding-bottom">
+
+        
+
+          <div class="pull-left topLevelSearch input-group">
+            <div id="SiteSearch-3ab7b570886f4913a67066c3b482c7f0" class="gutter-bottom input-group site-search" style="max-width: 400px;">
+  <div id="SiteSearch-dropdown-3ab7b570886f4913a67066c3b482c7f0" class="input-group-btn">
+    <button type="button" id="SiteSearch-filter-3ab7b570886f4913a67066c3b482c7f0" class="btn btn-default dropdown-toggle" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false" title="Filter your search by category" data-component="all">
+      <span class="fa-solid fa-solid fa-earth-americas"></span><span class="fa-solid fa-fw fa-nopad fa-caret-down" aria-hidden="true"></span>
+      <span class="sr-only">
+        Filter your search by category. Current category:
+        <span class="js-current-component">All</span>
+      </span>
+    </button>
+    <ul tabindex="-1" aria-label="Filter your search by category" role="menu" class="dropdown-menu" >
+      <li>
+        <a role="menuitem" href="javascript:void(0);" data-component-text="All" data-component="all" data-component-icon="fa-solid fa-earth-americas" title="Search all areas">
+          <span class="fa-solid fa-fw fa-nopad fa-earth-americas" aria-hidden="true"></span>
+          All
+        </a>
+      </li>
+
+      <li aria-hidden="true" class="divider"></li>
+
+        <li role="presentation">
+          <a role="menuitem" href="javascript:void(0);" data-component-text="Knowledge Base" data-component="kb" data-component-icon="fa-lightbulb" title="Search Knowledge Base">
+            <span class="fa-regular fa-fw fa-nopad fa-lightbulb" aria-hidden="true"></span>
+            Knowledge Base
+          </a>
+        </li>
+
+        <li role="presentation">
+          <a role="menuitem" href="javascript:void(0);" data-component-text="Service Catalog" data-component="sc" data-component-icon="fa-compass" title="Search Service Catalog">
+            <span class="fa-solid fa-fw fa-nopad fa-compass" aria-hidden="true"></span>
+            Service Catalog
+          </a>
+        </li>
+
+    </ul>
+  </div>
+
+  <label class="sr-only" for="SiteSearch-text-3ab7b570886f4913a67066c3b482c7f0">Search the client portal</label>
+
+  <input id="SiteSearch-text-3ab7b570886f4913a67066c3b482c7f0" type="text" class="form-control" autocomplete="off" placeholder="Search the client portal" title="To search for items with a specific tag, enter the # symbol followed by the name of the tag.
+To search for items using exact match, place double quotes around your text." />
+
+  <span class="input-group-btn">
+    <button id="SiteSearch-button-3ab7b570886f4913a67066c3b482c7f0" class="btn btn-default" type="button" title="Search">
+      <span class="fa-solid fa-fw fa-nopad fa-search blue" aria-hidden="true"></span>
+      <span class="sr-only">Search</span>
+    </button>
+  </span>
+</div>
+
+<script>
+  $(function() {
+    var siteSearch = new TeamDynamix.SiteSearch({
+      searchUrl: "/TDClient/302/Portal/Shared/Search",
+      autocompleteSearchUrl: '/TDClient/302/Portal/Shared/AutocompleteSearch',
+      autocompleteResultsPosition: 'fixed',
+      autocompleteResultsZIndex: 1000,
+      searchTextBoxSelector: '#SiteSearch-text-3ab7b570886f4913a67066c3b482c7f0',
+      searchComponentFilterButtonSelector: '#SiteSearch-filter-3ab7b570886f4913a67066c3b482c7f0',
+      searchButtonSelector: '#SiteSearch-button-3ab7b570886f4913a67066c3b482c7f0',
+      searchFilterDropdownSelector: '#SiteSearch-dropdown-3ab7b570886f4913a67066c3b482c7f0',
+      showKnowledgeBaseOption: true,
+      showServicesOption: true,
+      showForumsOption: false,
+      autoFocusSearch: false
+    });
+  });
+</script>
+          </div>
+
+        
+          <div title="Sign In" class="pull-right gutter-top-sm">
+            <a href="/TDClient/302/Portal/Login.aspx?ReturnUrl=%2fTDClient%2f302%2fPortal%2fHome%2f">
+              Sign In
+            </a>
+          </div>
+        
+      </div>
+
+    </div>
+
+  </div>
+
+  <nav id="ctl00_mainNav" class="navbar navbar-default themed tdbar" aria-label="Primary">
+    <div id="navContainer" class="container">
+
+      <div class="navbar-header">
+        <button type="button" class="pull-left navbar-toggle collapsed themed tdbar-button-anchored tdbar-toggle gutter-left" data-toggle="collapse" data-target=".navbar-collapse">
+          <span class="tdbar-button-anchored icon-bar"></span>
+          <span class="tdbar-button-anchored icon-bar"></span>
+          <span class="tdbar-button-anchored icon-bar"></span>
+          <span class="sr-only">Show Applications Menu</span>
+        </button>
+        <a class="navbar-brand hidden-sm hidden-md hidden-lg themed tdbar-button-anchored truncate-be" href="#">
+
+          Client Portal
+        </a>
+      </div>
+
+      <div id="td-navbar-collapse" class="collapse navbar-collapse">
+
+        <ul class="nav navbar-nav nav-collapsing" id="collapseMe">
+
+          
+            <li class="themed tdbar-button-anchored hidden-sm hidden-md hidden-lg">
+              <a href="/TDClient/302/Portal/Login.aspx?ReturnUrl=%2fTDClient%2f302%2fPortal%2fHome%2f">Sign In</a>
+            </li>
+          
+            <li id="divSearch" class="themed tdbar-button-anchored hidden-sm hidden-md hidden-lg">
+              <a href="/TDClient/302/Portal/Shared/Search" title="search">Search</a>
+            </li>
+          
+              <li id="divDesktopc6b7ff2e-c3c9-47d3-bb22-e331a6430260" class="themed tdbar-button-anchored">
+                <a href="/TDClient/302/Portal/Home/">Home</a>
+              </li>
+            
+
+          
+            <li id="divTDRequests" class="themed tdbar-button-anchored sr-focusable">
+              <a href="/TDClient/302/Portal/Requests/ServiceCatalog">Services</a>
+            </li>
+          
+            <li id="divTDKnowledgeBase" class="themed tdbar-button-anchored sr-focusable">
+              <a href="/TDClient/302/Portal/KB/">Knowledge Base</a>
+            </li>
+          
+
+          <li class="themed tdbar-button-anchored hidden-xs more-items-button" id="moreMenu">
+            <a data-toggle="dropdown" title="More Applications" href="javascript:;">
+              <span class="sr-only">More Applications</span>
+              <span class="fa-solid fa-ellipsis-h" aria-hidden="true"></span>
+            </a>
+            <ul class="dropdown-menu dropdown-menu-right themed tdbar" id="collapsed"></ul>
+          </li>
+
+        </ul>
+      </div>
+
+    </div>
+
+  </nav>
+
+  </div>
+
+  </header>
+
+
+
+<div id="navShim" class="hidden-xs hidden-sm"></div>
+<main role="main">
+  <div id="content">
+    <div id="mainContent" tabindex="-1"></div>
+    
+
+  <div class="container gutter-top gutter-bottom-lg">
+
+    <span id="ctl00_cpContent_lblResults" class="red"></span>
+
+    <div class="row"><div id="Column1" class="col-md-12"><div id="46609" class="desktop-module panel panel-default no-border"><div class="ModuleContent"><div class="desktop-module-not-loaded"><span class="gray fa-solid fa-spinner fa-pulse fa-nopad fa-4x vert-25"></span><span class="sr-only">Loading...</span></div></div></div><div id="46142" class="desktop-module panel panel-default no-border"><div class="ModuleContent"><div class="desktop-module-not-loaded"><span class="gray fa-solid fa-spinner fa-pulse fa-nopad fa-4x vert-25"></span><span class="sr-only">Loading...</span></div></div></div><div id="44218" class="desktop-module panel panel-default no-border"><div class="ModuleContent"><div class="desktop-module-not-loaded"><span class="gray fa-solid fa-spinner fa-pulse fa-nopad fa-4x vert-25"></span><span class="sr-only">Loading...</span></div></div></div><div id="46319" class="desktop-module panel panel-default no-border"><div class="ModuleContent"><div class="desktop-module-not-loaded"><span class="gray fa-solid fa-spinner fa-pulse fa-nopad fa-4x vert-25"></span><span class="sr-only">Loading...</span></div></div></div></div></div><div class="row"><div id="Column2" class="col-md-4"><div id="34511" class="desktop-module panel panel-default"><div class="panel-heading clearfix"><h3 class="panel-title pull-left">Popular Services</h3><div class="pull-right"><button title="Refresh" type="button" class="btn btn-link black js-module-refresh-button" onclick="refreshModule('34511');"><span class="fa-solid fa-refresh fa-lg" aria-hidden="true"></span><span class="fa-solid fa-ban superscript" style="display: none;" aria-hidden="true"></span><span class="sr-only">Refresh Module</span></button></div></div><div class="ModuleContent"><div class="desktop-module-not-loaded"><span class="gray fa-solid fa-spinner fa-pulse fa-nopad fa-4x vert-25"></span><span class="sr-only">Loading...</span></div></div></div></div><div id="Column3" class="col-md-4"><div id="34508" class="desktop-module panel panel-default"><div class="panel-heading clearfix"><h3 class="panel-title pull-left">Popular Articles</h3><div class="pull-right"><button title="Refresh" type="button" class="btn btn-link black js-module-refresh-button" onclick="refreshModule('34508');"><span class="fa-solid fa-refresh fa-lg" aria-hidden="true"></span><span class="fa-solid fa-ban superscript" style="display: none;" aria-hidden="true"></span><span class="sr-only">Refresh Module</span></button></div></div><div class="ModuleContent"><div class="desktop-module-not-loaded"><span class="gray fa-solid fa-spinner fa-pulse fa-nopad fa-4x vert-25"></span><span class="sr-only">Loading...</span></div></div></div></div><div id="Column4" class="col-md-4"><div id="46163" class="desktop-module panel panel-default no-border"><div class="ModuleContent"><div class="desktop-module-not-loaded"><span class="gray fa-solid fa-spinner fa-pulse fa-nopad fa-4x vert-25"></span><span class="sr-only">Loading...</span></div></div></div><div id="51450" class="desktop-module panel panel-default no-border"><div class="ModuleContent"><div class="desktop-module-not-loaded"><span class="gray fa-solid fa-spinner fa-pulse fa-nopad fa-4x vert-25"></span><span class="sr-only">Loading...</span></div></div></div></div></div>
+
+  </div>
+
+
+  </div>
+</main>
+
+
+
+<script type="text/javascript">
+//<![CDATA[
+setNavPosition('Desktopc6b7ff2e-c3c9-47d3-bb22-e331a6430260');Sys.Application.add_init(function() {
+    $create(Sys.UI._UpdateProgress, {"associatedUpdatePanelId":null,"displayAfter":500,"dynamicLayout":true}, null, null, $get("ctl00_upMain"));
+});
+//]]>
+</script>
+</form>
+
+
+
+
+
+  <footer role="contentinfo">
+
+    <div class="master-footer">
+      <div class="container-fluid">
+  <div class="row" style="color: #FFFFFF; background-color: #125184">
+    <div class="col-md-4">
+      <p>© 2025 Lake-Sumter State College</p>
+    </div>
+    <div class="col-md-8" style="text-align: right">
+      <nav>
+        <p>
+          <a href="https://www.lssc.edu/dept/hr/work-with-us/" target="_blank&quot;" style="color: #FFFFFF">Career Opportunities</a> |
+          <a href="https://www.lssc.edu/safety/" target="_blank&quot;" style="color: #FFFFFF">Campus Safety</a> |
+          <a href="https://www.lssc.edu/about-us/accreditation/" target="_blank&quot;" style="color: #FFFFFF">Accreditation</a> |
+          <a href="https://www.lssc.edu/student-resources/student-accessibility-services/" target="_blank&quot;" style="color: #FFFFFF">Accessibility</a>
+        </p>
+      </nav>
+    </div>
+  </div>
+</div>
+      
+    </div>
+
+  </footer>
+
+
+
+<script>
+
+    
+    
+
+      // Inject the Google Analytics isogram. This must happen here because it
+      // cannot be injected through an external javascript library.
+      (function (i, s, o, g, r, a, m) {
+        i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+          (i[r].q = i[r].q || []).push(arguments)
+        }, i[r].l = 1 * new Date(); a = s.createElement(o),
+          m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+      })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+    
+
+      // Per Incident #6707155. Need to focus on img. pseudo-class :focus-within is not supported in IE
+      (function ($) {
+        var $anchor = $('#divLogo a');
+        var $beLogo = $('#divLogo a img');
+
+        $anchor.focus(function () {
+          $beLogo.addClass('accessibility-focus-on-logo');
+        }).blur(function () {
+          $beLogo.removeClass('accessibility-focus-on-logo');
+        });
+
+        
+        
+          const queryParams = new URLSearchParams(window.location.search);
+          let showChatbot = true;
+          if (queryParams.has('nobot')) {
+            const nobotFlag = queryParams.get('nobot');
+            if (nobotFlag === '1' || nobotFlag === 'true') {
+              showChatbot = false;
+            }
+          }
+
+          if(showChatbot) {
+            $.ajax({
+              url: "/TDClient/302/Portal/Chatbots/GetScript",
+              type: "GET",
+              dataType: 'text',
+              success: function (data) {
+                
+                var jQueryAjaxSettingsCache = jQuery.ajaxSettings.cache;
+                jQuery.ajaxSettings.cache = true;
+                $(document.body).append(data);
+                jQuery.ajaxSettings.cache = jQueryAjaxSettingsCache;
+              }
+            });
+          }
+        
+
+        window.addEventListener("message", (event) => {
+
+          // Only accept events that come from the same origin
+          if (event.origin != window.location.origin) {
+            return;
+          }
+
+          switch (event.data.type) {
+
+            case "authenticate-using-popup":
+              handleAuthenticateUsingPopup(event.data.payload);
+              break;
+
+            case "authenticated-successfully":
+              handleAuthenticatedSuccessfully(event.data.payload);
+              break;
+
+            default:
+              break;
+          }
+
+        });
+
+        function handleAuthenticateUsingPopup(payload) {
+          let loginUrl = '/TDClient/302/Portal/Login.aspx';
+
+          if (payload.successCallbackUrl) {
+            loginUrl += '?SuccessCallbackUrl=' + payload.successCallbackUrl;
+          }
+
+          window.open(loginUrl, "_blank", "popup=1");
+        }
+
+        function handleAuthenticatedSuccessfully() {
+          event.source.close();
+          window.location.href = window.location.href;
+        }
+    })(jQuery);
+
+</script>
+
+</body>
+</html>

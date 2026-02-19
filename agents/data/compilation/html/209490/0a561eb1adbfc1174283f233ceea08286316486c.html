@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+  	<head>
+    	<meta charset="utf-8">
+    	<title>Oregon Health & Science University</title>
+    	<link rel="stylesheet" type="text/css" href="/idp/css/main.css">
+  	</head>
+  	<body>
+    <div class="wrapper">
+      <div class="container">
+
+        <div class="content">
+          <div class="column one">
+
+            <!-- OHSU: Move and center login logo within column one. -->
+            <header style="text-align:center">
+              <img src="/idp/images/ohsu-logo.png" alt="Oregon Health & Science University">
+            </header>
+
+
+
+            <form action="/idp/profile/SAML2/Redirect/SSO?execution=e1s1" method="post">
+
+                        
+              <div class="form-element-wrapper">
+                <label for="username">Username</label>
+                <input class="form-element form-field" id="username" name="j_username" type="text"
+                	value="" autofocus="autofocus">
+              </div>
+
+              <!-- OHSU: Set focus to user name -->
+              <script>
+                if (!("autofocus" in document.createElement("username"))) {
+                  document.getElementById("username").focus();
+                }
+              </script>
+
+              <div class="form-element-wrapper">
+                <label for="password">Password</label>
+                <input class="form-element form-field" id="password" name="j_password" type="password" value="">
+              </div>
+              
+
+              <div class="form-element-wrapper">
+                <button class="form-element form-button" type="submit" name="_eventId_proceed"
+                    onClick="this.childNodes[0].nodeValue='Logging in, please wait...'"
+                    >Login</button>
+              </div>
+
+            </form>
+
+			
+          
+		  <!-- OHSU: Custom notification message for Special SSO projects and notifications -->
+		  <!-- https://www.w3schools.com/html/html_formatting.asp -->
+		  
+		  
+            <!-- OHSU: Moved help link into column one. -->
+            <ul class="list list-help">
+              <li class="list-help-item"><a href="https://o2.ohsu.edu/information-technology-group/help-desk/index.cfm"><span class="item-marker">&rsaquo;</span> Need Help? (Internal Only)</a></li>
+            </ul>
+
+          </div>
+
+        </div>
+      </div>
+
+      <footer>
+        <div class="container container-footer">
+          <p class="footer-text">NOTICE: This is a private system.<br><br>All users of this system are subject to having their activities audited. This system is to be used only for OHSU business, and access requires explicit written authorization.<br><br>Unauthorized access - or attempts to damage data, programs, or equipment - may violate applicable law and could result in corrective action or criminal prosecution.</p>
+        </div>
+      </footer>
+    </div>
+    
+ 	</body>
+</html>

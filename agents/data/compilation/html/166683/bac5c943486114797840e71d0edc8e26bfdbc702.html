@@ -1,0 +1,430 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<html>
+<head>
+<title>Generative Models of Images</title>
+<style type="text/css">
+	body
+	{
+		width:1400px;
+		text-align: center;
+		font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;#"Avenir";
+		font-weight: 300;
+		font-size:16px;
+		background-color: #FFF;
+	}
+	hr
+	{
+		border: 0;
+		height: 1px;
+		background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+	}
+
+	table
+	{
+		padding: 5px;
+	}
+
+	table.pub_table,td.pub_td1,td.pub_td2
+	{
+		border-collapse: collapse;
+		border-bottom: 0px solid #9B9B9B;
+		padding-bottom: 10px;
+		padding-top: 10px;
+		padding-left: 10px;
+		width: 1100px;
+	}
+	td.pub_td1
+	{
+		width:100px;
+	}
+	td.pub_td2
+	{
+	}
+	td.year_heading
+	{
+		color: #3B3B3B;
+		font-weight: 700;
+		font-size:20px;
+	}
+	tr {
+		background-color: #FFF;
+	}
+
+	div#container
+	{
+		margin-left: auto;
+		margin-right: auto;
+		width: 1200px;
+		text-align: left;
+		position: relative;
+		background-color: #FFF;
+	}
+	div#DocInfo
+	{
+		color: #9B9B9B;
+		height: 128px;
+	}
+	h4,h3,h2,h1
+	{
+		color: #3B3B3B;
+	}
+	h2
+	{
+		font-size:130%;
+	}
+	p
+	{
+		color: #000;
+		margin-bottom: 20px;
+	}
+	p.caption
+	{
+		color: #9B9B9B;
+		text-align: left;
+		width: 600px;
+		font:11px helvetica,sans-serif;
+	}
+	p.caption2
+	{
+		color: #9B9B9B;
+		text-align: left;
+		width: 800px;
+		font:11px helvetica,sans-serif;
+	}
+	#header_img
+	{
+		position: absolute;
+		top: 0px; right: 0px;
+	}
+	a:link,a:visited
+	{
+		color: #1367a7;
+		text-decoration: none;
+	}
+	.section_div {
+		background-color: #FFF;
+		padding: 10px 10px 10px 10px;
+		margin: 10px 10px 10px 10px;
+		//border: 1px solid #AAA;
+	}
+	body {
+		background-color: #FFF;
+	}
+	#personal_info {
+		background-color: #FFF;
+	}
+	p.announcement {
+		padding: 10px;
+		background-color: #EEE;
+	}
+	img.teaser_img {
+		width: 256px;
+		display: block;
+    margin-left: auto;
+    margin-right: auto;
+		margin-top: 5px;
+		margin-bottom: 5px;
+		border: 0px solid black
+	}
+	img.photo_of_me {
+		border-radius: 20px;
+	}
+	div.teaser_img_div {
+		width: 286px;
+	}
+	table.personnel td {
+		padding: 16px;
+		vertical-align: top
+	}
+	div.citation {
+    font-size: 10pt; 
+    background-color:#EEE; 
+    padding: 10px;
+		height: 200px;
+  }
+  img.teaser_img {
+    float: right;
+    width: auto;
+    height: 400px;
+		margin: 0px;
+  }
+  div.title_div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+		height: 180px;
+  }
+  h1.title {
+		padding: 10px;
+    text-align: left;
+    flex-grow: 1;
+		height: 40px;
+		margin: 0px
+  }
+	
+	div.vid_div {
+		position: relative;
+	  display: flex;
+	  justify-content: center;
+	  align-items: center;
+	}
+	.my-video {
+		width: 600px;
+	}
+	div.caption {
+		font-size: 10pt;
+    padding: 10px;
+		width: 145px;
+		position: absolute;
+	  right: 0;
+	}
+	.play-button {
+      display: none;
+      position: absolute;
+      top: 50%;
+      left: 10%;
+      transform: translate(-50%, -50%);
+      background: rgba(0, 0, 0, 0.5);
+      color: white;
+      padding: 10px;
+      cursor: pointer;
+  }
+
+
+</style>
+
+</head>
+
+
+<body>
+	
+<div id="container">
+
+<img class='teaser_img' src='./teaser.jpg'/>
+<div style="height: 400px">
+	<div class='title_div'>
+		<h1 class='title'>Generative Models of Images</h1>
+	</div>
+	<div class='citation'>
+		<p>
+		<a href="http://web.mit.edu/phillipi/">Phillip Isola</a><br>
+		3/26/23<br>
+		<br>
+		This is a blog version of a 10-minute talk I gave at a "Generative AI roundtable" at CSAIL, MIT on March 20th 2023.<!-- <br>It is expanded 
+		from the talk version to include a few additional ways of training generative models.-->
+		<br>
+		A recording of my talk, and the full roundtable, is <a href="https://web.mit.edu/webcast/csail/s23/1/">here</a>.
+		<br><br>
+		<i>Credits</i>:<br>
+		Thanks to Daniela Rus, Jacob Andreas, and Armando Solar-Lezama for help on prepping the talk.<br>
+		All graphics were made by me, using Keynote. The bird cartoons were based on the following photos: 
+		<a href="https://cdn.download.ams.birds.cornell.edu/api/v1/asset/303441381/2400">1</a>, 
+		<a href="https://cdn.download.ams.birds.cornell.edu/api/v1/asset/396782291/1200">2<a>,
+		<a href="https://media.sciencephoto.com/z8/60/00/64/z8600064-800px-wm.jpg">3</a><br>
+		Formatting and video editing was aided by ChatGPT and ffmpeg. The teaser and final figure were made using DALL-E 2.
+		</p>
+	</div>
+</div>
+
+<p>This blog will give a brief, high-level overview of generative models of images. First we will see what these models can do and then I'll describe one way of training 
+them.</p>
+
+<p><b>Let's start with a model you might be more familiar with, a classifier.</b> Classifiers are used all over the place in data science and if you've 
+  ever taken a machine learning class you will have seen them. They try to assign labels to data. Below we show an image classifier, 
+	which will output the label "bird" for the image of the left. If you understand what a classifier does, it can be easy to understand what 
+	a generative model does, because a generative model is just the inverse:</p>
+	
+	<div class="vid_div">
+	 <video class='my-video' loop muted>
+     	<source src="./classifier_to_generator.mp4" type="video/mp4">
+	 </video>
+	 <div class="caption">A generator is the inverse of a classifier.</div>
+	 <div class="play-button">Play</div>
+ </div>
+
+<p>A generative model takes as input some description of the scene you want to create, say the label "bird", and synthesizes an image that 
+	matches that input. Things are a bit different operating in this direction compared to in the classifier direction. How does the 
+	model know <i>which</i> bird to generate? This robin does indeed match the label bird, but it also would have been fine to generate a different 
+	kind of bird, or a bird in a different pose.</p>
+	
+<p>The way generative models handle this ambiguity is by <i>randomizing</i> the output, which they achieve by inserting <i>random variables</i> into the model. You can think of these random variables as 
+	like a roll of dice. The dice control exactly which bird you should generate, they specify all the attributes that are left unspecified 
+	by the label. In our example, one roll of the dice will result in the robin, another roll will result in a blue bird, and rolling 
+	again we might get a parrot:</p>
+	
+	<div class="vid_div">
+	 <video class='my-video' id='generating_multiple_birds' loop muted>
+     	<source src="./generating_multiple_birds.mp4" type="video/mp4">
+	 </video>
+	 <div class="caption">Different dice rolls result in different images that all match the label "bird".</div>
+	 <div class="play-button">Play</div>
+ </div>
+
+<p><b>The technical term for the dice is "latent variables."</b> We usually have a quite a few dice, maybe 100+ dice that we are rolling. 
+	That is, we have a vector of random variables (the dice) that are input to the generator. You can think of each dimension of this vector 
+	as a die, and each die controls one type of attribute. The first dimension might control the color of the bird, so randomizing that 
+	dimension, rolling that die, will change the color of the bird. Another dimension might control the angle of the bird, and another might 
+	control its size:
+	
+	<div class="vid_div">
+	 <video class='my-video' loop muted>
+     	<source src="./dice_as_latent_dims.mp4" type="video/mp4">
+	 </video>
+	 <div class="caption">Each input die (latent variable) specifies a different attribute of the generated image.</div>
+	 <div class="play-button">Play</div>
+ </div> 
+	
+	
+	But remember there can be 100s of these randomized inputs, so that the collection of all of them can specify all the different 
+	detailed properties of how the bird will look.</p>
+	
+	
+	<p>You can randomly roll these dice and get a random bird, but it turns out you can do 
+	something much more interesting. You can use these dice to control the generator's output by setting them to have the values you want. 
+	In this usage, the dice are actually more like <i>control knobs</i>. You can spin them randomly and get a random bird or you can set them manually 
+	and get the bird you want:</p>
+	
+	<div class="vid_div">
+	 <video class='my-video' loop muted>
+     	<source src="./color_knob.mp4" type="video/mp4">
+	 </video>
+	 <div class="caption">You can tune the input random variable that controls color to find exactly the color we 
+	 	want. Sometimes this is called model steering [<a href="#references">1</a>].</div>
+		<div class="play-button">Play</div>
+ </div> 
+
+<p>I want to show a real example too, not just cartoons. Below is a generative model, BigGAN, that came out in 2018. Already back then you 
+	could do the things I'm describing. On the left we have the vector of control knobs that are input to the generator, i.e. the latent variables. 
+	The circle is the whole <i>latent space</i> of settings of these latent variables. If we turn one knob 
+	it corresponds to walking along one dimension in the latent space; in the below example, the first dimension turns out to control the bird's orientation. 
+	Turning another knob corresponds to walking in another orthogonal direction in the latent space and here that controls the background color of the photo:</p>
+	
+	<div class="vid_div">
+	 <video class='my-video' loop muted>
+     	<source src="./biggan_ex.mp4" type="video/mp4">
+	 </video>
+	 <div class="caption">A real example of the structure of latent space, using the BigGAN generator [<a href="#references">2</a>].</div>
+	 <div class="play-button">Play</div>
+ </div> 
+
+
+	<p>So that's how image generators work! The input is some set of controls that can be specified or randomized and the output 
+		is imagery.</p>
+	
+	<p><b>Now let's turn to how to train these models:</b> how does the generator learn to map from a vector of randomized 
+		inputs to a set of output images that look compelling? It turns out there are many ways and I'll describe just one: 
+		<i>diffusion models</i> [<a href="#references">3</a>]. 
+		This approach is really popular right now but next year a different approach might 
+		be more popular. The thing to keep in mind is that all the approaches are more alike than they are different. They all work around 
+		the same basic principle: make outputs that look like the training data. You show the generator tons of examples of what real 
+		images of birds look like, and then it can learn to make outputs that look like these examples.</p>
+	
+	<p>Just like the generators we saw above, a diffusion model maps from random variables, which we will now call "noise", to images. Figuring 
+		out how to create an image from noise turns out to be really hard. The trick of diffusion is to instead go in the opposite 
+		direction, and just turn images into noise:</p>
+	
+		<div class="vid_div">
+		 <video class='my-video' loop muted>
+	     	<source src="./diffusion.mp4" type="video/mp4">
+		 </video>
+		 <div class="caption">Diffusion turns structure into noise.</div>
+		 <div class="play-button">Play</div>
+	 </div> 
+	
+	<p>Diffusion is a very simple process, and it's just like the physical process of diffusion. Suppose these birds are not cartoons but are 
+		balloon animals, filled with colorful gas. If I pop the balloons, the gas will diffuse outward, it will lose its shape and being completely entropic; it will become "noise". 
+		Each gas particle takes a random walk. Diffusion models do this to an image. Each pixel takes a random walk. What this looks is an image getting noisier and noisier, as shown 
+		in the bottom row of the movie above.</p>
+	
+	<p>We can create a lot of sequences like this, each showing a different image turning into noise. Diffusion models treat these sequences 
+		as <i>training data</i> in order to learn the reverse process: how to undo the effect of adding noise. Notice that the reverse process is an image generator! It is a mapping 
+		from pure noise to imagery. You can think of the reverse process as turning back time, and watching all the gas particles get sucked back into the shape 
+		of the balloon animals they came from. Diffusion models generate images by reversing time's arrow.</p>
+		
+		<div class="vid_div">
+		 <video class='my-video' loop muted>
+	     	<source src="./rev_proc.mp4" type="video/mp4">
+		 </video>
+		 <div class="caption">The reverse diffusion process maps noise to images, and is supervised by examples from the forward process.</div>
+		 <div class="play-button">Play</div>
+	 </div> 
+	
+	<p>Once this system is all trained up, we can roll the dice, sampling a new noise image, and then apply the denoising process to congeal 
+		on a bird. If we roll the dice again we get different noise and that maps to a different bird.</p>
+	
+	<p><b>This is how popular models like DALL-E 2 [<a href="#references">4</a>] work.</b> You write a sentence 
+		like "A photo of a group of robots building the Stata Center" and then the model will sample some noise and congeal it into imagery that 
+		matches that sentence, using the reverse diffusion process. The noise acts to specify everything that the text input leaves unspecified -- 
+		the camera angle, the type of robot, exactly what they are doing, etc:</p>
+		
+		<div class="vid_div">
+		 <img src='./robots_stata_center_dalle2.jpg' width=800px/>
+		 <div class="caption">.</div>
+	 </div> 
+		
+		<p>Why does the output match the text? That's the job of a separate part of the model. A common strategy is to just collect tons of 
+			{text, image} pairs as training data, then learn a function that can score text-image alignment from that data. The generative model is then 
+			trained to satisfy this function. See [<a href="#references">5</a>] for more details on this approach.</p>
+			
+		<p>To summarize, image generators map noise to data, and one way to train this mapping is via diffusion. After these models are trained, 
+			the mapping ends up having lots of structure. Rather than thinking of the input as "noise", think of it as a large set of control knobs. These knobs 
+			can be randomly spun to give random images, or can be steered to create the images a user wants. Text inputs are just a different set of 
+			control knobs, and you can add other kinds of controls too, like sketches and layout schematics [<a href="#references">6</a>, <a href="#references">7</a>].
+		</p>
+		<!--<p>What about other generative models, like GANs [<a href="">6</a>] or VAEs [<a href="">7</a>]? 
+		Those models also just map noise to data, but they are trained to do this via other clever tricks, somewhat (but not entirely) different than diffusion.</p>-->
+		
+		<div class='citation' id="references" style="height:auto">
+			<p>
+			References:<br><br>
+			[1] <a href="https://arxiv.org/abs/1907.07171">On the "steerability" of generative adversarial networks</a>, Jahanian*, Chai*, Isola, ICLR 2020<br>
+			[2] <a href="https://arxiv.org/abs/1809.11096">Large Scale GAN Training for High Fidelity Natural Image Synthesis</a>, Brock*, Donahue*, Simonyan*, ICLR 2019<br>
+			[3] <a href="https://cdn.openai.com/papers/dall-e-2.pdf">Hierarchical Text-Conditional Image Generation with CLIP Latents</a>, Ramesh*, Dhariwal*, Nicol*, Chu*, Chen, 2022<br>
+			[4] <a href="http://proceedings.mlr.press/v37/sohl-dickstein15.pdf">Deep Unsupervised Learning using Nonequilibrium Thermodynamics</a>, Sohl-Dickstein, Weiss, Maheswaranathan, Ganguli, ICML 2015<br>
+			[5] <a href="https://arxiv.org/abs/2103.00020">Learning Transferable Visual Models From Natural Language Supervision</a>, Radford*, Kim*, Hallacy, Ramesh, Goh, Agarwal, Sastry, Askell, Mishkin, Clark, Krueger, Sutskever, ICML 2021<br>
+			[6] <a href="https://arxiv.org/abs/1611.07004">Image-to-Image Translation with Conditional Adversarial Networks</a>, Isola, Zhu, Zhou, Efros, CVPR 2017<br>
+			[7] <a href="https://arxiv.org/abs/2302.05543">Adding Conditional Control to Text-to-Image Diffusion Models</a>, Zhang & Agrawal, 2023<br>
+			</p>
+		</div>
+		
+		<hr>
+		<center><a href="http://accessibility.mit.edu/">Accessibility</a></center>
+		
+		<script>
+			// Function to detect if the user is on a mobile device
+			function isMobileDevice() {
+				return (typeof window.orientation !== "undefined") || (navigator.userAgent.indexOf('IEMobile') !== -1);
+			}
+
+			// Get all the video elements and play button elements
+	    var videos = document.querySelectorAll('.my-video');
+	    var playButtons = document.querySelectorAll('.play-button');
+
+	    if (isMobileDevice()) {
+	      // Show the play buttons on mobile devices
+	      playButtons.forEach(function(playButton, index) {
+	        playButton.style.display = 'block';
+
+	        // Add a click event listener to each play button
+	        playButton.addEventListener('click', function() {
+	          // Play the corresponding video and hide the play button
+	          videos[index].play();
+	          //playButton.style.display = 'none';
+	        });
+	      });
+				
+				videos.forEach(function(video) {
+					video.currentTime = 0;
+      		video.pause();
+				});
+	    } else {
+	      // Autoplay all the videos on non-mobile devices (computers)
+	      videos.forEach(function(video) {
+	        video.autoplay = true;
+	      });
+    }
+		</script>
+</body>
+
+</html>

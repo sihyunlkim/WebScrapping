@@ -1,0 +1,705 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" prefix="og: https://ogp.me/ns#">
+  <head>
+    <meta charset="utf-8">
+    <!-- Prevents GDPR-dependent scripts from executing on load -->
+    <script>
+      window.YETT_BLACKLIST = [
+        /addthis\.com/
+      ];
+    </script>
+    <script src="//unpkg.com/yett"></script>
+    <meta charset="utf-8" />
+<noscript><style>form.antibot * :not(.antibot-message) { display: none !important; }</style>
+</noscript><link rel="canonical" href="https://www.it.iastate.edu/projects/generative-artificial-intelligence" />
+<meta property="og:image" content="https://cdn.theme.iastate.edu/img/isu-wall.jpg" />
+<meta property="og:image:type" content="image/jpeg" />
+<meta property="og:image:width" content="1080" />
+<meta property="og:image:height" content="720" />
+<meta property="og:image:alt" content="Iowa State University" />
+<meta name="Generator" content="Drupal 10 (https://www.drupal.org)" />
+<meta name="MobileOptimized" content="width" />
+<meta name="HandheldFriendly" content="true" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="https://cdn.theme.iastate.edu/favicon/favicon.ico" sizes="any"><!-- 48×48 -->
+    <link rel="icon" href="https://cdn.theme.iastate.edu/favicon/favicon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="https://cdn.theme.iastate.edu/favicon/apple-touch-icon.png"><!-- 180×180 -->
+    <link rel="manifest" href="https://cdn.theme.iastate.edu/favicon/manifest.webmanifest">
+    <title>Creating Generative AI Guidance - Information Technology Services</title>
+    <script type="application/json" data-drupal-selector="drupal-settings-json">{"path":{"baseUrl":"\/","pathPrefix":"","currentPath":"node\/80","currentPathIsAdmin":false,"isFront":false,"currentLanguage":"en"},"pluralDelimiter":"\u0003","gtag":{"tagId":"UA-562292-1","consentMode":false,"otherIds":["G-9VP7W0KBC8"],"events":[],"additionalConfigInfo":[]},"suppressDeprecationErrors":true,"ajaxPageState":{"libraries":"eJxtitEKwjAMRX-oW0d_qKRNiN1iA0vG3N-rMEXRlwvnnsOqLJQdOPJjAn_zCDPcQgNzcEpTSpFFC8ifa5htuBDgp9rx3bvtmOtC2FzX2DpS9yJalx_1xPGFpxU4dPNctiZIZ5ONqjftwQ5zusYCRncs406A","theme":"iastate2022wd","theme_token":null},"ajaxTrustedUrl":[],"user":{"uid":0,"permissionsHash":"72d360c800153256a0d944cb3a9f1c7be6c91d7c805b683ac222caa19000b7f5"}}</script>
+<script src="/files/js/js_CmhyD7h3LHp377Xvi9lcQMSzKxIhpXKL7yTGnh0yHZI.js?scope=header&amp;delta=0&amp;language=en&amp;theme=iastate2022wd&amp;include=eJxLz89Pz0mNL0lM108HEjrpqHy9xKzECp3MxOKSxJJUIwMjI_30nPykxBwASd0UUA"></script>
+<script src="/modules/contrib/google_tag/js/gtag.js?t8xxuk"></script>
+
+    <link rel="stylesheet" media="all" href="/files/css/css_2LqyPb1PFbukWXBMw3cXEhB_eF27OXe9Heg4RkW0iD8.css?delta=0&amp;language=en&amp;theme=iastate2022wd&amp;include=eJxlil0KwyAMgC9U6vBCEk0oqZkpJtL19mNgx2CP30_RTgH7OEBW2OG1MJiDU3zEGDbRDPKrTvxKtxNTqYTs2gM3pOZZtNS_9MH1xlkFLh2e8mBBmk8yKs7aFrvM6RkyGL0B6G49mg" />
+<link rel="stylesheet" media="all" href="/files/css/css_wcX_WoN9wmDXAkaSGRMOrJcgo2hUk8fhYyljAYbGaQY.css?delta=1&amp;language=en&amp;theme=iastate2022wd&amp;include=eJxlil0KwyAMgC9U6vBCEk0oqZkpJtL19mNgx2CP30_RTgH7OEBW2OG1MJiDU3zEGDbRDPKrTvxKtxNTqYTs2gM3pOZZtNS_9MH1xlkFLh2e8mBBmk8yKs7aFrvM6RkyGL0B6G49mg" />
+<link rel="stylesheet" media="all" href="https://cdn.theme.iastate.edu/iastate/5+/css/iastate.min.css" crossorigin="anonymous" />
+<link rel="stylesheet" media="all" href="/files/css/css_qzPMgRUcsoFrgXd5ZfJWO4vto9yjxrZE6-gnsvPRJig.css?delta=3&amp;language=en&amp;theme=iastate2022wd&amp;include=eJxlil0KwyAMgC9U6vBCEk0oqZkpJtL19mNgx2CP30_RTgH7OEBW2OG1MJiDU3zEGDbRDPKrTvxKtxNTqYTs2gM3pOZZtNS_9MH1xlkFLh2e8mBBmk8yKs7aFrvM6RkyGL0B6G49mg" />
+<link rel="stylesheet" media="print" href="/files/css/css_CatrGow8RA74zY3g8tiIJ144WoPJ1HIJvae_5uZtWyI.css?delta=4&amp;language=en&amp;theme=iastate2022wd&amp;include=eJxlil0KwyAMgC9U6vBCEk0oqZkpJtL19mNgx2CP30_RTgH7OEBW2OG1MJiDU3zEGDbRDPKrTvxKtxNTqYTs2gM3pOZZtNS_9MH1xlkFLh2e8mBBmk8yKs7aFrvM6RkyGL0B6G49mg" />
+<link rel="stylesheet" media="all" href="/files/css/css_OLqMMMR3oGFbBX3aNOvDGXe7pIetB91ul3eE72gteCU.css?delta=5&amp;language=en&amp;theme=iastate2022wd&amp;include=eJxlil0KwyAMgC9U6vBCEk0oqZkpJtL19mNgx2CP30_RTgH7OEBW2OG1MJiDU3zEGDbRDPKrTvxKtxNTqYTs2gM3pOZZtNS_9MH1xlkFLh2e8mBBmk8yKs7aFrvM6RkyGL0B6G49mg" />
+<link rel="stylesheet" media="all" href="/files/css-local/local.css?t8xxuk" />
+
+
+    <script>
+      document.documentElement.classList.add('js');
+    </script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  </head>
+  <body>
+    <svg aria-hidden="true" focusable="false" style="width:0; height:0; position:absolute;">
+  <linearGradient id="gradient-fill-gold-white" x2="0" y2="1">
+    <stop offset="0%" stop-color="var(--iastate-gold)" />
+    <stop offset="100%" stop-color="#ffffff" />
+  </linearGradient>
+  <linearGradient id="gradient-fill-white-light-blue" x2="0" y2="1">
+    <stop offset="0%" stop-color="#ffffff" />
+    <stop offset="100%" stop-color="var(--iastate-light-blue)" />
+  </linearGradient>
+  <linearGradient id="gradient-fill-red-gold">
+    <stop offset="0%" stop-color="var(--iastate-red)" />
+    <stop offset="100%" stop-color="var(--iastate-gold)" />
+  </linearGradient>
+</svg>
+
+        <a href="#main-content" class="skip-link">
+      Skip to main content
+    </a>
+          <div class="dialog-off-canvas-main-canvas" data-off-canvas-main-canvas>
+    
+<div class="off-canvas">
+  <div class="max-bound">
+
+          <header class="site-header site-header--ecosystem">
+  <div class="site-header__top">
+    <div class="site-header__logo-name-wrap">
+      <a href="https://www.iastate.edu/" class="site-header__logo">
+        <img src="/themes/custom/iastate2022/img/iowa-state-university-logo-no-tagline-red.svg" alt="Iowa State University" loading="lazy" width="224" height="17">
+      </a>
+      <a class="site-header__parent-unit-name" href="https://www.president.iastate.edu/">Office of the President</a>    </div>
+    <div class="site-header__website-title"><a href="/">Information Technology Services</a></div>
+    <div class="site-header__utility-search-wrap">
+              <nav class="site-header__utility" aria-label="Utility">
+          
+
+              <ul>
+              <li>
+        <a href="/help" data-drupal-link-system-path="node/23">Get Help</a>
+              </li>
+          <li>
+        <a href="https://iastate.service-now.com/esc">ISU Service Portal</a>
+              </li>
+          <li>
+        <a href="https://status.it.iastate.edu">Is It Down?</a>
+              </li>
+          <li>
+        <a href="/employment" data-drupal-link-system-path="node/19">Jobs</a>
+              </li>
+          <li>
+        <a href="/about" data-drupal-link-system-path="node/11">About</a>
+              </li>
+              <li><button class="site-header__utility-dropdown-trigger">Info For...</button>
+        <ul class="site-header__utility-dropdown-menu">
+          <li><a href="https://students.info.iastate.edu">Current Students</a></li>
+          <li><a href="https://facultystaff.info.iastate.edu">Faculty and Staff</a></li>
+          <li><a href="https://parents.dso.iastate.edu/resources">Parents and Families</a></li>
+        </ul>
+      </li>
+              <li><a href="https://login.iastate.edu">Sign Ons</a></li>
+          </ul>
+  
+
+
+        </nav>
+                    <div class="site-header__search">
+          <a href="#site-search" class="site-header__search-toggle" tabindex="0">
+            <span class="visible-for-screen-readers">Search</span>
+            <span class="fak fa-iastate22-magnifying-glass" aria-hidden="true"></span>
+          </a>
+          <form class="site-header__search-form-desktop" method="get" action="/search">
+            <label for="searchDesktop">Search</label>
+            <input type="search" id="searchDesktop" name="q" placeholder="Search">
+            <input type="hidden" name="cx" value="016927462813702242193:trwpe3ciob8">            <input type="hidden" name="as_sitesearch" value="www.it.iastate.edu">            <button type="submit"><span class="fak fa-iastate22-magnifying-glass" aria-hidden="true"></span><span class="visible-for-screen-readers">Submit Search</span></button>
+          </form>
+          <a href="#" class="site-header__search-close" tabindex="0">
+            <span class="visible-for-screen-readers">Close Search</span>
+            <span class="fa-light fa-xmark"></span>
+          </a>
+        </div>
+                </div>
+  </div>
+  <div class="site-header__main">
+    
+    <a href="#site-header-mega-menu" class="site-header__mega-menu-open" role="button" aria-controls="site-header-mega-menu">
+      <span class="visible-for-screen-readers">Toggle Menu</span>
+      <span class="site-header__mega-menu-open-line-wrap">
+        <span></span>
+        <span></span>
+        <span></span>
+      </span>
+    </a>
+    <div class="site-header__mega-menu" id="site-header-mega-menu">
+      <div class="site-header__mega-menu-inner">
+        <div class="site-header__mega-menu-scroller" tabindex="-1">
+          <noscript>
+            <a href="#" role="button" class="nojs-close-menu">Close Main Menu</a>
+          </noscript>
+          <div>
+            <div class="site-header__mega-menu-main">
+              <div class="site-header__mega-menu-max-bound">
+                <div class="site-header__website-title"><a href="/">Information Technology Services</a></div>
+                                  <nav class="site-header__mega-menu-main-nav" aria-label="Main">
+                    
+              <ul>
+                          <li>
+
+                                                          
+                  <a href="/for-students" data-drupal-link-system-path="node/47">Resources For Students</a>
+        
+
+                                                                    <ul class="two-column-dropdown">
+                          <li>
+
+                                                                              
+                  <a href="/student-tech" class="link-tertiary" data-drupal-link-system-path="node/15">            Your Technology <span class="arrow"></span>
+          </a>
+        
+
+              </li>
+                      <li>
+
+                                                                              
+                  <a href="/on-campus-resources" class="link-tertiary" data-drupal-link-system-path="node/99">            On Campus Resources <span class="arrow"></span>
+          </a>
+        
+
+              </li>
+                      <li>
+
+                                                                              
+                  <a href="/resources/printing" class="link-tertiary" data-drupal-link-system-path="node/13">            Printing on Campus <span class="arrow"></span>
+          </a>
+        
+
+              </li>
+                      <li>
+
+                                                                              
+                  <a href="/resources/requirementfaq" class="link-tertiary" data-drupal-link-system-path="node/12">            Computer Requirement <span class="arrow"></span>
+          </a>
+        
+
+              </li>
+                      <li>
+
+                                                                              
+                  <a href="https://iastate.service-now.com/esc" target="_blank" class="link-tertiary">            How-to Articles <span class="arrow"></span>
+          </a>
+        
+
+              </li>
+                      <li>
+
+                                                                              
+                  <a href="https://research.it.iastate.edu/" target="_blank" class="link-tertiary">            High Performance &amp; Research Computing <span class="arrow"></span>
+          </a>
+        
+
+              </li>
+        </ul>
+  
+              </li>
+                      <li>
+
+                                                          
+                  <a href="/for-employees" data-drupal-link-system-path="node/48">Resources For Employees</a>
+        
+
+                                                                    <ul class="two-column-dropdown">
+                          <li>
+
+                                                                              
+                  <a href="/resources/employee-tech" class="link-tertiary" data-drupal-link-system-path="node/16">            For Staff <span class="arrow"></span>
+          </a>
+        
+
+              </li>
+                      <li>
+
+                                                                              
+                  <a href="https://it.iastate.edu/resources/employee-tech#JustFaculty" class="link-tertiary">            For Faculty <span class="arrow"></span>
+          </a>
+        
+
+              </li>
+                      <li>
+
+                                                                              
+                  <a href="/resources/remotework" class="link-tertiary" data-drupal-link-system-path="node/17">            Remote Work <span class="arrow"></span>
+          </a>
+        
+
+              </li>
+                      <li>
+
+                                                                              
+                  <a href="/resources/file-storage" class="link-tertiary" data-drupal-link-system-path="node/41">            File Storage <span class="arrow"></span>
+          </a>
+        
+
+              </li>
+                      <li>
+
+                                                                              
+                  <a href="/digital-access-toolkit" class="link-tertiary" data-drupal-link-system-path="node/38">            Digital Accessibility Toolkit <span class="arrow"></span>
+          </a>
+        
+
+              </li>
+                      <li>
+
+                                                                              
+                  <a href="https://research.it.iastate.edu/" target="_blank" class="link-tertiary">            High Performance and Research Computing <span class="arrow"></span>
+          </a>
+        
+
+              </li>
+                      <li>
+
+                                                                              
+                  <a href="https://iastate.service-now.com/it" target="_blank" class="link-tertiary">            ISU Service Portal <span class="arrow"></span>
+          </a>
+        
+
+              </li>
+                      <li>
+
+                                                                              
+                  <a href="/media/376/file/Cybersecurity%20Tip%20Sheet" target="_blank" class="link-tertiary" data-drupal-link-system-path="media/376/file/Cybersecurity Tip Sheet">            Cybersecurity Tip Sheet <span class="arrow"></span>
+          </a>
+        
+
+              </li>
+        </ul>
+  
+              </li>
+                      <li>
+
+                                                          
+                  <a href="/projects" data-drupal-link-system-path="node/46">Projects</a>
+        
+
+                                                                    <ul class="two-column-dropdown">
+                          <li>
+
+                                                                              
+                  <a href="/projects/campus-calling" class="link-tertiary" data-drupal-link-system-path="node/120">            Campus Phone Migration <span class="arrow"></span>
+          </a>
+        
+
+              </li>
+                      <li>
+
+                                                                              
+                  <a href="/projects/replacing-webex-lti" class="link-tertiary" data-drupal-link-system-path="node/167">            Replacing Webex LTI in Canvas <span class="arrow"></span>
+          </a>
+        
+
+              </li>
+                      <li>
+
+                                                                              
+                  <a href="/projects/DOJ-Digital-Accessibility" title="Department of Justice Digital Accessibility Update" class="link-tertiary" data-drupal-link-system-path="node/95">            Department of Justice Digital Accessibility Update <span class="arrow"></span>
+          </a>
+        
+
+              </li>
+                      <li>
+
+                                                                              
+                  <a href="/projects/cloud-storage" class="link-tertiary" data-drupal-link-system-path="node/157">            Cloud Storage Optimization <span class="arrow"></span>
+          </a>
+        
+
+              </li>
+                      <li>
+
+                                                                              
+                  <a href="/its-department-annual-report-2025" class="link-tertiary" data-drupal-link-system-path="node/86">            Annual Report 2025 <span class="arrow"></span>
+          </a>
+        
+
+              </li>
+                      <li>
+
+                                                                              
+                  <a href="https://forms.office.com/r/8qcq14Wn11" class="link-tertiary">            Internal Project Request Initiation Form <span class="arrow"></span>
+          </a>
+        
+
+              </li>
+        </ul>
+  
+              </li>
+                      <li>
+
+                                                          
+                  <a href="/teams" data-drupal-link-system-path="node/61">Teams</a>
+        
+
+                                                                    <ul class="two-column-dropdown">
+                          <li>
+
+                                                                              
+                  <a href="/teams/campus-technology" class="link-tertiary" data-drupal-link-system-path="node/28">            Campus Technology <span class="arrow"></span>
+          </a>
+        
+
+              </li>
+                      <li>
+
+                                                                              
+                  <a href="/teams/it-infrastructure" class="link-tertiary" data-drupal-link-system-path="node/31">            IT Infrastructure <span class="arrow"></span>
+          </a>
+        
+
+              </li>
+                      <li>
+
+                                                                              
+                  <a href="/teams/digital-accessibility" class="link-tertiary" data-drupal-link-system-path="node/18">            Digital Accessibility <span class="arrow"></span>
+          </a>
+        
+
+              </li>
+                      <li>
+
+                                                                              
+                  <a href="https://www.hpc.iastate.edu/" target="_blank" class="link-tertiary">            High Performance &amp; Research Computing <span class="arrow"></span>
+          </a>
+        
+
+              </li>
+                      <li>
+
+                                                                              
+                  <a href="/teams/development-integration" class="link-tertiary" data-drupal-link-system-path="node/29">            Development &amp; Integration <span class="arrow"></span>
+          </a>
+        
+
+              </li>
+                      <li>
+
+                                                                              
+                  <a href="/teams/security" class="link-tertiary" data-drupal-link-system-path="node/25">            IT Security <span class="arrow"></span>
+          </a>
+        
+
+              </li>
+                      <li>
+
+                                                                              
+                  <a href="/teams/information-systems" class="link-tertiary" data-drupal-link-system-path="node/30">            Information Systems <span class="arrow"></span>
+          </a>
+        
+
+              </li>
+                      <li>
+
+                                                                              
+                  <a href="/workday-operations" class="link-tertiary" data-drupal-link-system-path="node/65">            Workday Operations <span class="arrow"></span>
+          </a>
+        
+
+              </li>
+        </ul>
+  
+              </li>
+                                    <li class="site-header__parent-link-no-subnav-wrap">
+
+                                                                                            
+                  <a href="/news/archive" class="site-header__parent-link-no-subnav" data-drupal-link-system-path="node/21">News</a>
+        
+
+              </li>
+        </ul>
+  
+
+
+                  </nav>
+                              </div>
+            </div>
+            <div class="site-header__mega-menu-secondary">
+              <div class="site-header__mega-menu-max-bound">
+                <nav class="site-header__mega-menu-utility" aria-label="Utility">
+                                      
+
+              <ul>
+              <li>
+        <a href="/help" data-drupal-link-system-path="node/23">Get Help</a>
+              </li>
+          <li>
+        <a href="https://iastate.service-now.com/esc">ISU Service Portal</a>
+              </li>
+          <li>
+        <a href="https://status.it.iastate.edu">Is It Down?</a>
+              </li>
+          <li>
+        <a href="/employment" data-drupal-link-system-path="node/19">Jobs</a>
+              </li>
+          <li>
+        <a href="/about" data-drupal-link-system-path="node/11">About</a>
+              </li>
+              <li><a href="https://students.info.iastate.edu">Current Students</a></li>
+      <li><a href="https://facultystaff.info.iastate.edu">Faculty and Staff</a></li>
+      <li><a href="https://parents.dso.iastate.edu/resources">Parents and Families</a></li>
+              <li><a href="https://login.iastate.edu">Sign Ons</a></li>
+          </ul>
+  
+
+
+                                                                          <form class="site-header__search-form-mobile" method="get" action="/search">
+                      <label for="searchMobile">Search</label>
+                      <div class="search-group">
+                        <input type="search" id="searchMobile" name="q" placeholder="Search">
+                        <input type="hidden" name="cx" value="016927462813702242193:trwpe3ciob8">                        <input type="hidden" name="as_sitesearch" value="www.it.iastate.edu">                        <button type="submit"><span class="fak fa-iastate22-magnifying-glass" aria-hidden="true"></span><span class="visible-for-screen-readers">Submit Search</span></button>
+                      </div>
+                    </form>
+                                  </nav>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+
+    
+    <main id="main-content" role="main">
+      <div class="outer-pad">
+
+        
+        
+        
+        
+
+        
+          <div>
+    <div data-drupal-messages-fallback class="hidden"></div>
+<div id="block-iastate2022wd-mainpagecontent">
+  
+    
+      
+
+<article>
+
+  
+    
+
+  
+  <div>
+    <div  class="itswd-section-wrapper itswd-section-wrapper-0 itswd-section-wrapper-first itswd-section-wrapper-last">
+  <section  class="itswd-section itswd-section-full-width">
+    <div  class="itswd-section-content itswd-section-content-constrained">
+              <div  class="region-body">
+          <div>
+
+  
+      <div class="hero hero--no-media">
+  <div class="hero__text-wrap">
+             <nav class="iastate22-breadcrumb" aria-label="Breadcrumb">
+        <ol class="iastate22-breadcrumb__list">
+          <li>
+                              <a href="/">Home</a>
+                        </li>
+          <li>
+                              <a href="/projects">Projects</a>
+                        </li>
+          <li>
+                              <a href="" aria-current="page">Creating Generative AI Guidance</a>
+                        </li>
+        </ol>
+  </nav>
+
+        <h1 class="hero__title">Creating Generative AI Guidance</h1>
+  </div>
+    </div>
+
+  
+</div>
+<div>
+
+  
+      
+<div class="paragraph-widget paragraph-widget--full-width-image">
+
+<figure class="full-width-image">
+  <div class="full-width-image__image">
+      <img loading="lazy" src="/files/styles/banner/public/images/2024-03/AdobeStock_225729680.jpeg?itok=ighn1szJ" width="2400" height="1025" alt="Student sitting in comfortable chair on a laptop. " class="img-fluid" />
+
+
+
+  </div>
+  </figure>
+
+</div>
+
+  
+</div>
+<div>
+
+  
+      <div class="paragraph-widget paragraph-widget--button-set">
+
+<div class="iastate22-button-set">
+  <ul><li>
+        <a href="https://ai.iastate.edu" class="iastate22-button">AI Tools and Guidance<span class="arrow"></span></a>
+      </li><li>
+        <a href="mailto:aifeedback@iastate.edu" class="iastate22-button">Email AI Feedback<span class="arrow"></span></a>
+      </li></ul>
+</div>
+
+</div>
+
+  
+</div>
+<div>
+
+  
+      <div class="paragraph-widget paragraph-widget--text-html"><div class="text-content">  <h2>Creating Generative AI Guidance</h2><p>In 2024, ITS convened a committee to develop guidance for using generative AI across various aspects of the university. Five subcommittees were formed for each of the following areas:</p><ul><li>Policy</li><li>Teaching and Learning</li><li>Research</li><li>Communications</li><li>Operational Efficiencies</li></ul><h2>Charge and Work</h2><p>The subcommittees undertook the following work with the general principles:</p><ul><li>Defined Purpose: Clarify each department’s vision, mission, and goals, and explore how AI can bolster them.</li><li>Assessed the Landscape: Evaluate our current AI capabilities, infrastructure, data availability, talent pool, and organizational culture. Identify gaps and opportunities.</li><li>Incorporated an Ethical Framework: Establish principles, policies, and governance for responsible AI use, aligning them with our university’s values.</li><li>Prioritized Strategically: Identify high-impact AI use cases that align with our overall objectives.</li><li>Considered a Roadmap and Execution: Develop a practical plan for implementing, scaling, and sustaining AI initiatives. Define roles, responsibilities, and necessary resources.</li></ul><h2>Key Tasks</h2><p>Below are the four key tasks each subcommittee was asked to undertake:</p><ul><li>Convene a Diverse Team: Assemble a group of 3 to 4 individuals who share an interest in the intersection of AI and our field. These team members need not be part of the existing task force; fresh perspectives are valuable.</li><li>Campus Inventory: Take stock of existing activities, groups, and resources related to AI on campus. We’ll create a dedicated Teams channel for sharing documentation.</li><li>Identify Opportunities and Risks: Brainstorm a concise list of opportunities and potential threats or risks specific to your area. How can AI enhance our work, and what challenges might we face?</li><li>Think Creatively: Explore innovative uses of AI —how can AI revolutionize our teaching and learning efforts?</li></ul><h2>Project Completion and Shared Responsibility</h2><p>The 2024 Generative AI Guidance Committee has successfully completed its charge. The subcommittees were assembled, carried out their tasks diligently, and contributed valuable insights and recommendations. Their work has laid a strong foundation for our institutional AI strategy. For more information and access to resources, please visit <a href="https://ai.iastate.edu" data-entity-type="external">ai.iastate.edu</a></p><p>Artificial Intelligence is a rapidly evolving field. New applications, tools, and ethical considerations emerge continuously, offering fresh opportunities to enhance our work and improve outcomes. At Iowa State University, we remain committed to staying at the forefront of AI innovation.</p><p>While AI is a powerful technology and an enterprise tool managed by ITS, it belongs to all of us at Iowa State University. It is a shared endeavor and a collective goal to innovate responsibly. Every member of our university community has a role to play in shaping the future of AI.</p>
+</div></div>
+  
+</div>
+
+        </div>
+          </div>
+        
+  </section>
+</div>
+
+  </div>
+
+</article>
+
+  </div>
+
+  </div>
+
+        
+      </div>
+    </main>
+
+          <footer class="site-footer site-footer--ecosystem">
+  <div class="site-footer__flex-wrap">
+    <div class="site-footer__logo-social-links-wrap">
+      <a href="https://www.iastate.edu" class="site-footer__logo">
+        <img  src="/themes/custom/iastate2022/img/iowa-state-university-logo-with-tagline-sci-tech.svg" alt="Iowa State University of Science and Technology" loading="lazy" width="516" height="69">
+      </a>
+                      </div>
+
+          <nav class="site-footer__primary-nav" aria-label="Footer Primary">
+                          
+              <ul>
+              <li>
+        <a href="/help" data-drupal-link-system-path="node/23">Get Help</a>
+              </li>
+        </ul>
+  
+
+
+              </nav>
+    
+          <nav class="site-footer__secondary-nav" aria-label="Footer Secondary">
+                          <h2 class="site-footer__section-label">Quick Links</h2>          
+              <ul>
+              <li>
+        <a href="https://www.iastate.edu/index">A-Z Index</a>
+              </li>
+          <li>
+        <a href="https://www.info.iastate.edu">Directory</a>
+              </li>
+          <li>
+        <a href="https://www.event.iastate.edu/">Events</a>
+              </li>
+          <li>
+        <a href="/about" data-drupal-link-system-path="node/11">About ITS</a>
+              </li>
+          <li>
+        <a href="https://iastate.service-now.com/it?id=sc_cat_item&amp;sys_id=53d448a9db56d0d06870467239961981">Submit Website Feedback</a>
+              </li>
+        </ul>
+  
+
+
+              </nav>
+    
+                              
+
+<div class="site-footer__site-org-contact-info">
+
+  <h2 class="site-footer__section-label">Information Technology Services — IT Solution Center</h2>
+      <div class="site-footer__site-org-contact-address">
+      <p>031 Parks Library<br>        701 Morrill Rd<br>
+        Ames, IA 50011</p>
+    </div>
+    <div class="site-footer__site-org-contact-email-phone-wrap">
+          <div class="site-footer__site-org-contact-phone">
+                  <p>            515-294-4000</p>
+              </div>
+              <div class="site-footer__site-org-contact-email">
+                  <p>            <a href="mailto:solution@iastate.edu">solution@iastate.edu</a></p>
+              </div>
+      </div>
+
+</div>
+
+
+            
+  </div>
+
+  
+  <div class="site-footer__bottom-wrap">
+    <nav class="site-footer__utility-nav" aria-label="Footer Utility">
+      <ul>
+        <li><a href="https://www.iastate.edu/disclaimers-and-terms">Privacy Policy</a></li>
+        <li><a href="https://www.policy.iastate.edu/policy/discrimination">Non-discrimination Policy</a></li>
+        <li><a href="https://www.digitalaccess.iastate.edu/">Digital Access and Accessibility</a></li>
+        <li><a href="https://www.iastate.edu/consumer-information">Consumer Information</a></li>
+      </ul>
+    </nav>
+    <div class="site-footer__copyright"><p>&copy; Iowa State University of Science and Technology</p></div>
+  </div>
+</footer>
+
+    
+  </div>
+</div>
+
+
+
+  </div>
+
+        <script type="text/javascript">
+  /*<![CDATA[*/
+  (function() {
+    var sz = document.createElement('script');
+    sz.type = 'text/javascript'; sz.async = true;
+    sz.src = '//siteimproveanalytics.com/js/siteanalyze_37570.js';
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(sz, s);
+  })();
+  /*]]>*/
+</script>
+
+    
+    <script src="/files/js/js_k6owLklC32V5QYEskQC42k-vvf2Guk3J7nFqSRiM-o0.js?scope=footer&amp;delta=0&amp;language=en&amp;theme=iastate2022wd&amp;include=eJxLz89Pz0mNL0lM108HEjrpqHy9xKzECp3MxOKSxJJUIwMjI_30nPykxBwASd0UUA"></script>
+<script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.15/index.global.min.js" crossorigin="anonymous"></script>
+<script src="/files/js/js_DUmOyP6F9CVnYl2eW5CI0Qh4DCP8iQY2mc5u0aZ9-wA.js?scope=footer&amp;delta=2&amp;language=en&amp;theme=iastate2022wd&amp;include=eJxLz89Pz0mNL0lM108HEjrpqHy9xKzECp3MxOKSxJJUIwMjI_30nPykxBwASd0UUA"></script>
+<script src="https://kit.fontawesome.com/b658fac974.js" crossorigin="anonymous"></script>
+
+  </body>
+</html>

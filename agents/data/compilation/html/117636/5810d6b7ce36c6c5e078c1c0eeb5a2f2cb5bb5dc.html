@@ -1,0 +1,594 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="en" class="nexus-font-support">
+
+
+<head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <meta name="google" content="nositelinkssearchbox"/>
+    <meta name="tdm-reservation" content="0">
+    <title>
+        Patient-centric Summarization of Radiology Findings Using Two-step Training of Large Language Models
+      -  Faculty Experts - Loma Linda University</title>
+    
+    
+    
+
+
+
+<meta property="og:site_name" content="Faculty Experts - Loma Linda University">
+
+
+    <meta property="og:title" content="Patient-centric Summarization of Radiology Findings Using Two-step Training of Large Language Models"/>
+
+
+<meta property="og:url" content="https://experts.llu.edu/en/publications/patient-centric-summarization-of-radiology-findings-using-two-ste/">
+<meta property="og:locale" content="en_US">
+
+
+
+
+    
+        <meta property="og:image" content="https://experts.llu.edu/skin/headerImage/">
+    
+
+
+
+
+    
+        <meta property="og:type" content="article">
+    
+
+    
+
+    
+
+
+    <link rel="stylesheet" href="/assets/application-93938edba93d583f5a9983ff978f7735.css" />
+    
+    
+    <link href="/skin/css/" rel="stylesheet"/>
+    
+    <script src="/skin/script/" type="text/javascript"></script>
+    <script type="text/javascript" src="/assets/application-d931a0c4960ed3b322742bb44da154ca.js" ></script>
+    <!--[if lt IE 9]>
+    <script type="text/javascript" src="/assets/html5shiv.min-ca5300beead9a4a9d2c9c584a9016410.js" ></script>
+    <script type="text/javascript" src="/assets/respond.min-678d372b349e434d9923e1b591f14a1e.js" ></script>
+    <![endif]-->
+    
+        
+        
+        <meta name="citation_title" content="Patient-centric Summarization of Radiology Findings Using Two-step Training of Large Language Models"></meta><meta name="citation_author" content="Amara Tariq"></meta><meta name="citation_author_institution" content="Mayo Clinic Scottsdale-Phoenix, Arizona"></meta><meta name="citation_author" content="Shubham Trivedi"></meta><meta name="citation_author_institution" content="Mayo Clinic Scottsdale-Phoenix, Arizona"></meta><meta name="citation_author" content="Aisha Urooj"></meta><meta name="citation_author_institution" content="Mayo Clinic Scottsdale-Phoenix, Arizona"></meta><meta name="citation_author" content="Gokul Ramasamy"></meta><meta name="citation_author_institution" content="Mayo Clinic Scottsdale-Phoenix, Arizona"></meta><meta name="citation_author" content="Sam Fathizadeh"></meta><meta name="citation_author_institution" content="U of Illinois College of Medicine"></meta><meta name="citation_author" content="Matthew Stib"></meta><meta name="citation_author_institution" content="Mayo Clinic Scottsdale-Phoenix, Arizona"></meta><meta name="citation_author" content="Nelly Tan"></meta><meta name="citation_author_institution" content="Mayo Clinic Scottsdale-Phoenix, Arizona"></meta><meta name="citation_author" content="Bhavik Patel"></meta><meta name="citation_author_institution" content="Mayo Clinic Scottsdale-Phoenix, Arizona"></meta><meta name="citation_author" content="Imon Banerjee"></meta><meta name="citation_author_institution" content="Mayo Clinic Scottsdale-Phoenix, Arizona"></meta><meta name="citation_publication_date" content="2025/04/24"></meta><meta name="citation_doi" content="10.1145/3709154"></meta><meta name="citation_language" content="English"></meta><meta name="citation_keywords" content="chest computed tomography; domain-specific training; large language models"></meta><meta name="citation_journal_title" content="ACM Transactions on Computing for Healthcare"></meta><meta name="citation_issn" content="2691-1957"></meta><meta name="citation_volume" content="6"></meta><meta name="citation_issue" content="2"></meta><meta name="citation_firstpage" content="21"></meta>
+        <script src="/assets/Chart.min-27bff060c3e539ceb22e763c8f2e9e10.js"></script>
+        <script src="/assets/jquery.content-chart-9c09bb79ba3fc3829b6478d0e114f737.js"></script>
+        
+    
+    
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+<script src="https://www.googletagmanager.com/gtag/js?id=G-J2XWCLS1T0" async=""></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-J2XWCLS1T0', {'cookie_domain' : document.location.hostname, 'anonymize_ip': true });
+</script>
+    <script src="//assets.adobedtm.com/4a848ae9611a/ea83f870454d/launch-af020409b299.min.js" async=""></script>
+    
+    <!-- Pendo: Disabled -->
+</head>
+
+<body class="">
+<div id="aria-polite" aria-live="polite"></div>
+
+<div id="aria-assertive" aria-live="assertive"></div>
+
+<nav aria-label="Skip to main content" class="skip-content">
+    <ul>
+        <li>
+            <a href="#main-navigation" class="sr-only sr-only-focusable">Skip to main navigation</a>
+        </li>
+        
+            <li>
+                <a href="#main-search" class="sr-only sr-only-focusable">Skip to search</a>
+            </li>
+        
+        <li>
+            <a href="#main-content" class="sr-only sr-only-focusable">Skip to main content</a>
+
+            
+        </li>
+    </ul>
+</nav>
+
+
+
+
+
+
+
+    <header class="header" id="page-header">
+        <div class="primary  ">
+            <div class="container">
+                
+                <a href="/en/" class="logo">
+                    
+                        <span class="sr-only">Faculty Experts - Loma Linda University Home</span>
+                        <img src="/skin/headerImage/" alt="Faculty Experts - Loma Linda University Logo"/>
+                    
+                </a>
+                
+                
+                
+            </div>
+        </div>
+        
+        
+            <div class="subMenu">
+                <div class="secondary">
+                    <div class="container">
+                        <nav id="main-navigation" aria-label="Main navigation" class="content-navigation three-third">
+                            <ul class="has-overflow-navigation" data-value="More" role="menubar">
+                                <li class="" role="none">
+                                    <a href="/en/" role="menuitem" tabindex="-1">Home</a>
+                                </li>
+
+                                
+                                    <li class="" role="none">
+                                        <a class="portal_link" tabindex="-1" role="menuitem" href="/en/persons/"><span>Profiles</span></a>
+                                    </li>
+                                
+                                    <li class="" role="none">
+                                        <a class="portal_link" tabindex="-1" role="menuitem" href="/en/organisations/"><span>Research units</span></a>
+                                    </li>
+                                
+                                    <li class="selected" role="none">
+                                        <a class="portal_link" tabindex="0" role="menuitem" href="/en/publications/"><span>Publications</span></a>
+                                    </li>
+                                
+                                    <li class="" role="none">
+                                        <a class="portal_link" tabindex="-1" role="menuitem" href="/en/projects/"><span>Projects</span></a>
+                                    </li>
+                                
+                                    <li class="" role="none">
+                                        <a class="portal_link" tabindex="-1" role="menuitem" href="/en/activities/"><span>Activities</span></a>
+                                    </li>
+                                
+                                    <li class="" role="none">
+                                        <a class="portal_link" tabindex="-1" role="menuitem" href="/en/prizes/"><span>Prizes</span></a>
+                                    </li>
+                                
+                            </ul>
+                        </nav>
+                        
+                            <div class="header-search">
+                                
+<form action="/en/searchAll/index/patient-centric-summarization-of-radiology-findings-using-two-ste/" method="get"
+      class="search-form" id="search-everything">
+
+    <div class="global-search-wrapper">
+        <div class="global-search mini">
+            <div class="field-button-wrapper">
+                <div class="search-cell search-field">
+                    <label for="main-search" class="sr-only">Search by expertise, name or affiliation</label>
+                    <input id="main-search" class="search-field" value="" name="search"
+                           placeholder="Search"/>
+                </div>
+
+                <div class="search-submit">
+                    <button type="submit" aria-label="Search">
+                        <i class="icon icon-magnifying-glass" aria-hidden="true"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>
+<script>
+    $(function () {
+        var searchForm = $("#search-everything");
+        var searchField = $(".search-field", searchForm);
+        searchForm.on("submit", function () {
+            var field = searchField.find("input");
+            var searchString = field.val();
+
+            // No enter key submit nothing :-)
+            if (!searchString) return false;
+
+            if (searchString.length >= 200) {
+                searchForm.attr("method", "post");
+                searchForm.attr("action", "/en/concepts/copypaste/");
+                field.attr("name", "text");
+            }
+        });
+    });
+</script>
+                            </div>
+                        
+                    </div>
+                </div>
+            </div>
+        
+    </header>
+
+    <main id="page-content">
+        
+    <div class="page-section page-section-publications page-section-publications-view ">
+
+        
+        
+        
+        
+        <section
+                class="page-section-header page-section-header-publications page-section-header-publications-view
+                 no-backdrop-image"
+                data-stickyheader=""
+                style="">
+            
+            
+        
+
+
+<div class="container">
+    <div class="row">
+        <div class="introduction no-metrics">
+            <div class="rendering"><h1><span>Patient-centric Summarization of Radiology Findings Using Two-step Training of Large Language Models</span></h1></div>
+            <div class="rendering rendering_researchoutput  rendering_researchoutput_associatespersonsclassifiedportal rendering_contributiontojournal rendering_associatespersonsclassifiedportal rendering_contributiontojournal_associatespersonsclassifiedportal"><ul class="relations persons"><li>Amara Tariq</li><li>, Shubham Trivedi</li><li>, Aisha Urooj</li><li>, Gokul Ramasamy</li><li>, Sam Fathizadeh</li><li>, Matthew Stib</li><li>, Nelly Tan</li><li>, Bhavik Patel</li><li>, Imon Banerjee</li></div>
+            
+            
+            <div class="rendering rendering_researchoutput  rendering_researchoutput_publicationcontenttyperendererportalng rendering_contributiontojournal rendering_publicationcontenttyperendererportalng rendering_contributiontojournal_publicationcontenttyperendererportalng"><p class="type"><span class="type_family">Research output<span class="type_family_sep">: </span></span><span class="type_classification_parent">Contribution to journal<span class="type_parent_sep"> › </span></span><span class="type_classification">Article</span><span class="type_classification"><span class="type_parent_sep"> › </span>peer-review</span></p></div>
+        </div>
+
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </div>
+
+</div>
+<div class="subMenu">
+    <div class="content-profile-navigation">
+    <div class="container">
+        <nav role="navigation">
+            <ul class="has-overflow-navigation" role="menubar">
+                <li class="selected" role="none">
+                    <a class="portal_link" role="menuitem" href="/en/publications/patient-centric-summarization-of-radiology-findings-using-two-ste/"><span>
+                        <i class="icon icon-publication" aria-hidden="true"></i>
+                        <span class="label">Overview</span>
+                    </span></a>
+                </li>
+                
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+
+            </ul>
+        </nav>
+    </div>
+    </div>
+</div>
+
+    
+        </section>
+
+        <div id="main-content"
+             class="page-section-content page-section-content-publications page-section-content-publications-view   ">
+            
+        <section class="page-section content-relation-section">
+            <div class="container">
+                <div class="clearfix">
+                    <div class="content-content publication-content">
+                        
+                        
+                        <div class="rendering rendering_researchoutput  rendering_researchoutput_detailsportal rendering_contributiontojournal rendering_detailsportal rendering_contributiontojournal_detailsportal"><div class="article"><table class="properties"><tbody><tr class="language"><th scope="row">Original language</th><td>English</td></tr><tr><th scope="row">Article number</th><td>21</td></tr><tr><th scope="row">Journal</th><td><a rel="Journal" href="#" class="link"><span>ACM Transactions on Computing for Healthcare</span></a></td></tr><tr><th scope="row">Volume</th><td>6</td></tr><tr><th scope="row">Issue number</th><td>2</td></tr><tr class="digital_object_identifiers"><th scope="row">DOIs</th><td><ul class="relations digital_object_identifiers"><li><a onclick="window.open(this.href, '_blank','noopener,noreferrer'); return false;" href="https://doi.org/10.1145/3709154" class="link"><span>https://doi.org/10.1145/3709154</span></a> </li></ul></td></tr><tr class="status"><th scope="row">State</th><td><span class="prefix">Published - </span><span class="date">Apr 24 2025</span></td></tr><tr><th scope="row">Externally published</th><td>Yes</td></tr></tbody></table></div></div>
+                        
+
+                        
+
+                        <div class="rendering rendering_keywordable rendering_expertkeywordgrouspbytypeportal rendering_keywordable_expertkeywordgrouspbytypeportal"><div class="keyword-group"><h2 class="subheader">ASJC Scopus Subject Areas</h2><ul class="relations keywords"><li><span>Software</span></li><li><span>Medicine (miscellaneous)</span></li><li><span>Information Systems</span></li><li><span>Biomedical Engineering</span></li><li><span>Computer Science Applications</span></li><li><span>Health Informatics</span></li><li><span>Health Information Management</span></li></ul></div><div class="keyword-group"><h2 class="subheader">Keywords</h2><ul class="relations keywords"><li class="userdefined-keyword"><span>chest computed tomography</span></li><li class="userdefined-keyword"><span>domain-specific training</span></li><li class="userdefined-keyword"><span>large language models</span></li></ul></div></div>
+
+                    </div>
+
+                    <div class="content-sidebar publication-sidebar">
+                        
+                        
+                            <h2 class="subheader">Access to Document</h2>
+                        <div class="rendering rendering_researchoutput  rendering_researchoutput_publicationaccessrenderer rendering_contributiontojournal rendering_publicationaccessrenderer rendering_contributiontojournal_publicationaccessrenderer"><ul class="dois"><li><div class="doi"><a onclick="window.open(this.href, '_blank','noopener,noreferrer'); return false;" href="https://doi.org/10.1145/3709154" class="link"><span>10.1145/3709154</span></a></div></li></ul></div>
+
+                        <div class="rendering rendering_researchoutput  rendering_researchoutput_publicationsfxportalrenderer rendering_contributiontojournal rendering_publicationsfxportalrenderer rendering_contributiontojournal_publicationsfxportalrenderer"><h2 class="subheader">OpenUrl availability</h2><span class="globe"><a href="https://libkey.io/libraries/343/openurl?ctx_ver=Z39.88-2004&amp;ctx_tim=2025-12-04T01%3A18%3A02PST&amp;ctx_enc=info%3Aofi%2FencUTF-8&amp;url_ver=Z39.88-2004&amp;url_ctx_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Actx&amp;rft.genre=article&amp;rft_val_fmt=info%3Aofi%2Fkev%3Afmt%3Ajournal&amp;rfr_id=info%3Asid%2Fpure.atira.dk%3Apure&amp;rft.atitle=Patient-centric%20Summarization%20of%20Radiology%20Findings%20Using%20Two-step%20Training%20of%20Large%20Language%20Models&amp;rft_id=info%3Adoi%2F10.1145%2F3709154&amp;rft.aulast=Tariq&amp;rft.aufirst=Amara&amp;rft.auinit=A&amp;rft.date=2025-04-24&amp;rft.volume=6&amp;rft.issue=2&amp;rft.issn=2691-1957&amp;rft.jtitle=ACM%20Transactions%20on%20Computing%20for%20Healthcare">Full text</a></span></div>
+
+                        
+
+                        
+                            <h2 class="subheader">Other files and links</h2>
+                        <div class="rendering rendering_researchoutput  rendering_researchoutput_publicationotherfilesandlinksrenderer rendering_contributiontojournal rendering_publicationotherfilesandlinksrenderer rendering_contributiontojournal_publicationotherfilesandlinksrenderer"><ul class="links"><li><div class="link"><a onclick="window.open(this.href, '_blank','noopener,noreferrer'); return false;" href="https://www.scopus.com/pages/publications/105004365818" class="link"><span>Link to publication in Scopus</span></a></div></li><li><div class="link"><a onclick="window.open(this.href, '_blank','noopener,noreferrer'); return false;" href="https://www.scopus.com/pages/publications/105004365818#tab=citedBy" class="link"><span>Link to the citations in Scopus</span></a></div></li></ul></div>
+
+                        
+
+                        
+
+
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+        <section class="page-section cite">
+            <div class="container">
+                <section class="publication-cite" aria-labelledby="publications-cite-title">
+    <h2 class="subheader" id="publications-cite-title">Cite this</h2>
+    <ul class="tabs has-overflow-navigation" role="tablist" aria-label="Cite this">
+        
+            <li class="selected" role="tab" id="tab-0" aria-controls="cite-apa" tabindex="-1"  aria-selected="false" >
+                APA
+            </li>
+        
+            <li class="" role="tab" id="tab-1" aria-controls="cite-standard" tabindex="-1"  aria-selected="false" >
+                Standard
+            </li>
+        
+            <li class="" role="tab" id="tab-2" aria-controls="cite-harvard" tabindex="-1"  aria-selected="false" >
+                Harvard
+            </li>
+        
+            <li class="" role="tab" id="tab-3" aria-controls="cite-vancouver" tabindex="-1"  aria-selected="false" >
+                Vancouver
+            </li>
+        
+            <li class="" role="tab" id="tab-4" aria-controls="cite-author" tabindex="-1"  aria-selected="false" >
+                Author
+            </li>
+        
+            <li class="" role="tab" id="tab-5" aria-controls="cite-BIBTEX" tabindex="-1"  aria-selected="false" >
+                BIBTEX
+            </li>
+        
+            <li class="" role="tab" id="tab-6" aria-controls="cite-RIS" tabindex="-1"  aria-selected="false" >
+                RIS
+            </li>
+        
+    </ul>
+    <div class="tab-container">
+        
+            <div id="cite-apa" class="tab selected" role="tabpanel" aria-labelledby="tab-0" tabindex="-1" aria-hidden="true">
+                <div class="rendering rendering_researchoutput  rendering_researchoutput_apa rendering_contributiontojournal rendering_apa rendering_contributiontojournal_apa">Tariq, A., Trivedi, S., Urooj, A., Ramasamy, G., Fathizadeh, S., Stib, M., Tan, N., Patel, B., &amp; Banerjee, I. (2025). <a rel="ContributionToJournal" href="https://experts.llu.edu/en/publications/patient-centric-summarization-of-radiology-findings-using-two-ste/" class="link"><span>Patient-centric Summarization of Radiology Findings Using Two-step Training of Large Language Models</span></a>. <a rel="Journal" href="#" class="link"><span><em>ACM Transactions on Computing for Healthcare</em></span></a>, <em>6</em>(2), Article 21. <a onclick="window.open(this.href, '_blank','noopener,noreferrer'); return false;" href="https://doi.org/10.1145/3709154" class="link"><span>https://doi.org/10.1145/3709154</span></a></div>
+            </div>
+        
+            <div id="cite-standard" class="tab " role="tabpanel" aria-labelledby="tab-1" tabindex="-1" aria-hidden="true">
+                <div class="rendering rendering_researchoutput  rendering_researchoutput_standard rendering_contributiontojournal rendering_standard rendering_contributiontojournal_standard"><a rel="ContributionToJournal" href="https://experts.llu.edu/en/publications/patient-centric-summarization-of-radiology-findings-using-two-ste/" class="link"><span><strong>Patient-centric Summarization of Radiology Findings Using Two-step Training of Large Language Models.</strong></span></a> / Tariq, Amara; Trivedi, Shubham; Urooj, Aisha et al. <br />In: <a rel="Journal" href="#" class="link"><span>ACM Transactions on Computing for Healthcare</span></a>, Vol. 6, No. 2, 21, 24.04.2025.<p class="type"><span class="type_family">Research output<span class="type_family_sep">: </span></span><span class="type_classification_parent">Contribution to journal<span class="type_parent_sep"> › </span></span><span class="type_classification">Article</span><span class="type_classification"><span class="type_parent_sep"> › </span>peer-review</span></p></div>
+            </div>
+        
+            <div id="cite-harvard" class="tab " role="tabpanel" aria-labelledby="tab-2" tabindex="-1" aria-hidden="true">
+                <div class="rendering rendering_researchoutput  rendering_researchoutput_harvard rendering_contributiontojournal rendering_harvard rendering_contributiontojournal_harvard">Tariq, A, Trivedi, S, Urooj, A, Ramasamy, G, Fathizadeh, S, Stib, M, Tan, N, Patel, B &amp; Banerjee, I 2025, '<a rel="ContributionToJournal" href="https://experts.llu.edu/en/publications/patient-centric-summarization-of-radiology-findings-using-two-ste/" class="link harvard_title"><span>Patient-centric Summarization of Radiology Findings Using Two-step Training of Large Language Models</span></a>', <a rel="Journal" href="#" class="link"><span><em>ACM Transactions on Computing for Healthcare</em></span></a>, vol. 6, no. 2, 21. <a onclick="window.open(this.href, '_blank','noopener,noreferrer'); return false;" href="https://doi.org/10.1145/3709154" class="link"><span>https://doi.org/10.1145/3709154</span></a></div>
+            </div>
+        
+            <div id="cite-vancouver" class="tab " role="tabpanel" aria-labelledby="tab-3" tabindex="-1" aria-hidden="true">
+                <div class="rendering rendering_researchoutput  rendering_researchoutput_vancouver rendering_contributiontojournal rendering_vancouver rendering_contributiontojournal_vancouver">Tariq A, Trivedi S, Urooj A, Ramasamy G, Fathizadeh S, Stib M et al. <span class="title"><a rel="ContributionToJournal" href="https://experts.llu.edu/en/publications/patient-centric-summarization-of-radiology-findings-using-two-ste/" class="link"><span>Patient-centric Summarization of Radiology Findings Using Two-step Training of Large Language Models</span></a></span>. <a rel="Journal" href="#" class="link"><span>ACM Transactions on Computing for Healthcare</span></a>. 2025 Apr 24;6(2):21. doi: 10.1145/3709154</div>
+            </div>
+        
+            <div id="cite-author" class="tab " role="tabpanel" aria-labelledby="tab-4" tabindex="-1" aria-hidden="true">
+                <div class="rendering rendering_researchoutput  rendering_researchoutput_author rendering_contributiontojournal rendering_author rendering_contributiontojournal_author">Tariq, Amara ; Trivedi, Shubham ; Urooj, Aisha et al. / <a rel="ContributionToJournal" href="https://experts.llu.edu/en/publications/patient-centric-summarization-of-radiology-findings-using-two-ste/" class="link"><span><strong>Patient-centric Summarization of Radiology Findings Using Two-step Training of Large Language Models</strong></span></a>. In: <a rel="Journal" href="#" class="link"><span>ACM Transactions on Computing for Healthcare</span></a>. 2025 ; Vol. 6, No. 2.</div>
+            </div>
+        
+            <div id="cite-BIBTEX" class="tab " role="tabpanel" aria-labelledby="tab-5" tabindex="-1" aria-hidden="true">
+                <div class="rendering rendering_researchoutput  rendering_researchoutput_bibtex rendering_contributiontojournal rendering_bibtex rendering_contributiontojournal_bibtex"><div>@article{55788e7dc6784e8f95dbc5e19c63ec80,</div><div>  title    = "Patient-centric Summarization of Radiology Findings Using Two-step Training of Large Language Models",</div><div>  keywords = "chest computed tomography, domain-specific training, large language models",</div><div>  author   = "Amara Tariq and Shubham Trivedi and Aisha Urooj and Gokul Ramasamy and Sam Fathizadeh and Matthew Stib and Nelly Tan and Bhavik Patel and Imon Banerjee",</div><div>  note     = "Publisher Copyright: {\textcopyright} 2025 Copyright held by the owner/author(s).",</div><div>  year     = "2025",</div><div>  month    = apr,</div><div>  day      = "24",</div><div>  doi      = "10.1145/3709154",</div><div>  language = "English",</div><div>  volume   = "6",</div><div>  journal  = "ACM Transactions on Computing for Healthcare",</div><div>  issn     = "2691-1957",</div><div>  number   = "2",</div><p>}</p></div>
+            </div>
+        
+            <div id="cite-RIS" class="tab " role="tabpanel" aria-labelledby="tab-6" tabindex="-1" aria-hidden="true">
+                <div class="rendering rendering_researchoutput  rendering_researchoutput_ris rendering_contributiontojournal rendering_ris rendering_contributiontojournal_ris"><p>TY  - JOUR</p><p>T1  - Patient-centric Summarization of Radiology Findings Using Two-step Training of Large Language Models</p><p>AU  - Tariq, Amara</p><p>AU  - Trivedi, Shubham</p><p>AU  - Urooj, Aisha</p><p>AU  - Ramasamy, Gokul</p><p>AU  - Fathizadeh, Sam</p><p>AU  - Stib, Matthew</p><p>AU  - Tan, Nelly</p><p>AU  - Patel, Bhavik</p><p>AU  - Banerjee, Imon</p><p>N1  - Publisher Copyright:
+© 2025 Copyright held by the owner/author(s).</p><p>PY  - 2025/4/24</p><p>Y1  - 2025/4/24</p><p>KW  - chest computed tomography</p><p>KW  - domain-specific training</p><p>KW  - large language models</p><p>UR  - https://www.scopus.com/pages/publications/105004365818</p><p>UR  - https://www.scopus.com/pages/publications/105004365818#tab=citedBy</p><p>U2  - 10.1145/3709154</p><p>DO  - 10.1145/3709154</p><p>M3  - Article</p><p>AN  - SCOPUS:105004365818</p><p>SN  - 2691-1957</p><p>VL  - 6</p><p>JO  - ACM Transactions on Computing for Healthcare</p><p>JF  - ACM Transactions on Computing for Healthcare</p><p>IS  - 2</p><p>M1  - 21</p><p>ER  - </p></div>
+            </div>
+        
+
+        <script>
+            $(function() {
+                $(".tab-container .rendering a:not([href^='http://dx.doi.org'])").contents().unwrap();
+            });
+        </script>
+    </div>
+</section>
+
+            </div>
+        </section>
+        <script>
+    $(function () {
+        if($('.publication-sidebar').length > 0){
+            if($('a.document-link').length === 0){
+                $(".metrics-top").addClass("one");
+                $('div.metrics-downloads').remove();
+            }
+        }
+    });
+
+    function plumXError(e) {
+        $(e).closest('.metric-plum-x').closest('.metrics-bottom').addClass('one');
+        $(e).closest('.metric-plum-x').remove();
+    }
+    $('div.altmetric-embed').on('altmetric:hide', function () {
+        $(this).closest('.metric-altmetric').closest('.metrics-bottom').addClass('one');
+        $(this).closest('.metric-altmetric').remove();
+    });
+</script>
+        
+
+
+
+    
+    
+    
+    
+    
+    
+
+    
+        
+        
+        
+    
+
+    <div class="share-box">
+        <ul>
+            <li class="icon-share"></li>
+            <li><a aria-label="Share on Facebook"
+                   href="https://www.facebook.com/sharer.php?u=https://experts.llu.edu/en/publications/patient-centric-summarization-of-radiology-findings-using-two-ste/%3Futm_source%3Dfacebook%26utm_medium%3Dsocial%26utm_campaign%3Dsharelink%26doi%3D10.1145%2F3709154&p[summary]=Check+out+this+research+output+at+Faculty+Experts+-+Loma+Linda+University%3A+Patient-centric+Summarization+of+Radiology+Findings+Using+Two-step+Training+of+Large+Language+Models"
+                   class="icon-facebook"
+                   onclick="window.location.origin('https://www.facebook.com/sharer.php?u=https://experts.llu.edu/en/publications/patient-centric-summarization-of-radiology-findings-using-two-ste/%3Futm_source%3Dfacebook%26utm_medium%3Dsocial%26utm_campaign%3Dsharelink%26doi%3D10.1145%2F3709154&p[summary]=Check+out+this+research+output+at+Faculty+Experts+-+Loma+Linda+University%3A+Patient-centric+Summarization+of+Radiology+Findings+Using+Two-step+Training+of+Large+Language+Models', 'Facebook', 'width=600,height=600,scrollbars=no,resizable=no');
+                   return false;" target="popup"></a></li>
+            <li><a aria-label="Share on Twitter"
+                   href="https://twitter.com/intent/tweet?url=https://experts.llu.edu/en/publications/patient-centric-summarization-of-radiology-findings-using-two-ste/%3Futm_source%3Dtwitter%26utm_medium%3Dsocial%26utm_campaign%3Dsharelink%26doi%3D10.1145%2F3709154&text=Check+out+this+research+output+at+Faculty+Experts+-+Loma+Linda+University%3A+Patient-centric+Summarization+of+Radiology+Findings+Using+Two-step+Training+of+Large+Language+Models"
+                   onclick="window.location.origin('https://twitter.com/intent/tweet?url=https://experts.llu.edu/en/publications/patient-centric-summarization-of-radiology-findings-using-two-ste/%3Futm_source%3Dtwitter%26utm_medium%3Dsocial%26utm_campaign%3Dsharelink%26doi%3D10.1145%2F3709154&text=Check+out+this+research+output+at+Faculty+Experts+-+Loma+Linda+University%3A+Patient-centric+Summarization+of+Radiology+Findings+Using+Two-step+Training+of+Large+Language+Models doi%3A10.1145%2F3709154', 'Twitter', 'width=600,height=600,scrollbars=no,resizable=no');
+                   return false;" class="twitter" target="popup"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 300 271">
+                    
+                    <path d="m236 0h46l-101 115 118 156h-92.6l-72.5-94.8-83 94.8h-46l107-123-113-148h94.9l65.5 86.6zm-16.1 244h25.5l-165-218h-27.4z"></path>
+                </svg></a></li>
+            <li><a aria-label="Share on LinkedIn"
+                   href="https://www.linkedin.com/shareArticle?mini=true&url=https://experts.llu.edu/en/publications/patient-centric-summarization-of-radiology-findings-using-two-ste/%3Futm_source%3Dlinkedin%26utm_medium%3Dsocial%26utm_campaign%3Dsharelink%26doi%3D10.1145%2F3709154&summary=Check+out+this+research+output+at+Faculty+Experts+-+Loma+Linda+University%3A+Patient-centric+Summarization+of+Radiology+Findings+Using+Two-step+Training+of+Large+Language+Models"
+                   onclick="window.location.origin('https://www.linkedin.com/shareArticle?mini=true&url=https://experts.llu.edu/en/publications/patient-centric-summarization-of-radiology-findings-using-two-ste/%3Futm_source%3Dlinkedin%26utm_medium%3Dsocial%26utm_campaign%3Dsharelink%26doi%3D10.1145%2F3709154&summary=Check+out+this+research+output+at+Faculty+Experts+-+Loma+Linda+University%3A+Patient-centric+Summarization+of+Radiology+Findings+Using+Two-step+Training+of+Large+Language+Models doi%3A10.1145%2F3709154', 'LinkedIn', 'width=600,height=600,scrollbars=no,resizable=no');
+                   return false;" class="icon-linkedin" target="popup"></a></li>
+            <li><a aria-label="Share by email" href="/cdn-cgi/l/email-protection#06397573646c6365723b5667726f6368722b65636872746f6523343655736b6b67746f7c67726f696823343669602334365467626f696a69617f233436406f68626f68617523343653756f68612334365271692b757263762334365274676f686f686123343669602334364a677461632334364a676861736761632334364b6962636a75206469627f3b456e63656d233436697372233436726e6f75233436746375636774656e2334366973727673722334366772233436406765736a727f233436437e76637472752334362b2334364a696b672334364a6f68626723343653686f706374756f727f2335472334365667726f6368722b65636872746f6523343655736b6b67746f7c67726f696823343669602334365467626f696a69617f233436406f68626f68617523343653756f68612334365271692b757263762334365274676f686f686123343669602334364a677461632334364a676861736761632334364b6962636a75267a266e727276753c2929637e7663747275286a6a7328636273296368297673646a6f6567726f696875297667726f6368722b65636872746f652b75736b6b67746f7c67726f69682b69602b7467626f696a69617f2b606f68626f6861752b73756f68612b7271692b757263293973726b597569737465633b636b676f6a20676b763d73726b596b63626f736b3b636b676f6a20676b763d73726b5965676b76676f61683b756e6774636a6f686d" class="icon-email"></a></li>
+        </ul>
+    </div>
+
+
+
+
+    
+        </div>
+    </div>
+
+    <div id="new-modal-overlay"></div>
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+        $(document).ready(function () {
+            runToolTips();
+        });
+    </script>
+    
+    </main>
+
+    <footer id="page-footer" class="main-footer">
+        <div class="container">
+            <div class="footer-wrapper">
+                <div class="content-navigation three-third">
+                    <div dir="ltr" class="footer-columns">
+                        
+                        <div class="footer-column">
+                            <p>
+                                Powered by <a href="http://www.elsevier.com/online-tools/research-intelligence/products-and-services/pure">Pure</a>, <a href="http://www.scopus.com/">Scopus</a> & <a href="https://www.elsevier.com/products/elsevier-fingerprint-engine">Elsevier Fingerprint Engine&trade;</a>
+                            </p>
+
+                            <p>
+                                All content on this site: Copyright &copy; 2026 Faculty Experts - Loma Linda University, its licensors, and contributors. All rights are reserved, including those for text and data mining, AI training, and similar technologies. For all open access content, the relevant licensing terms apply
+                            </p>
+
+                            <p>We use cookies to help provide and enhance our service and tailor content. By continuing you agree to the <a href="/en/about/cookies/">use of cookies</a></p>
+                            
+                            
+                                <p><a href="https://experts.llu.edu/admin/workspace.xhtml" rel="nofollow" target="_blank">Log in to Pure</a></p>
+                            
+                            <p></p>
+                        </div>
+
+                        <div class="footer-column">
+                            
+                                <p><a href="https://lluh.org/privacy" target="_blank">Faculty Experts - Loma Linda University data protection policy</a></p>
+                            
+                            
+                            
+                                <p><a href="/en/web-accessibility/" rel="nofollow" target="_blank">About web accessibility</a></p>
+                            
+
+                            <p>
+                                
+                            </p>
+
+                            <p>
+                                
+                            </p>
+
+                            <p>
+                                <a href="https://elsevier.responsibledisclosure.com/hc/en-us/requests/new" target="_blank" rel="nofollow">Report vulnerability</a>
+                            </p>
+                        </div>
+
+                        
+                            <div class="footer-column">
+                                
+                                    
+                                        <p>
+                                            <a href="/en/contact/index/"> Contact us</a>
+                                        </p>
+                                    
+                                
+
+                            </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="back-to-top">
+            <a href="#" class="back-to-top" aria-label="Go to top"><i class="icon icon-up-open"></i></a>
+        </div>
+    </footer>
+
+
+    <script src="//d1bxh8uas1mnw7.cloudfront.net/assets/embed.js"></script>
+
+
+
+    
+
+    
+
+
+<script>window.appData = window.appData || [];</script><script type="text/javascript">
+try {(function() {
+appData.push({...{"page":{"businessUnit":"ELS:RP:ST","cmsName":"Pure Portal","environment":"prod","language":"en","loadTime":"178","loadTimestamp":"1771407535271","name":"pure portal:publications:view","noTracking":"false","productName":"PR","type":"CP-CA"},"visitor":{"accountId":"","accountName":"pr:Loma Linda University","ipAddress":"","accessType":"pr:ANON_GUEST","loginStatus":"anonymous"},"content":[{"id":"55788e7d-c678-4e8f-95db-c5e19c63ec80","title":"Patient-centric Summarization of Radiology Findings Using Two-step Training of Large Language Models","recordType":"researchoutput"}]}, event: "pageLoad"});})();} catch(e) {if(console) { console.log(e) } }</script>
+<script>try {(function() {
+window.appData = window.appData || [];
+})();} catch(e) {if(console) { console.log(e) } }</script>
+
+</body>
+</html>
+

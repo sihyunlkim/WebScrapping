@@ -1,0 +1,1240 @@
+<!DOCTYPE html><html lang="en"><head><meta http-equiv="X-UA-Compatible" content="IE=Edge" /><meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Optimizing prompts - Generative AI and Chatbots - Research Guides at Temple University</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noarchive" />
+<!-- favicon.twig -->
+<link rel="apple-touch-icon" sizes="180x180" href="//d2jv02qf7xgjwx.cloudfront.net/apps/common/favicon/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="//d2jv02qf7xgjwx.cloudfront.net/apps/common/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="//d2jv02qf7xgjwx.cloudfront.net/apps/common/favicon/favicon-16x16.png">
+<link rel="manifest" href="//d2jv02qf7xgjwx.cloudfront.net/apps/common/favicon/site.webmanifest">
+<link rel="mask-icon" href="//d2jv02qf7xgjwx.cloudfront.net/apps/common/favicon/safari-pinned-tab.svg" color="#5bbad5">
+<link rel="shortcut icon" href="//d2jv02qf7xgjwx.cloudfront.net/apps/common/favicon/favicon.ico">
+<meta name="msapplication-TileColor" content="#ffc40d">
+<meta name="msapplication-config" content="//d2jv02qf7xgjwx.cloudfront.net/apps/common/favicon/browserconfig.xml">
+<meta name="theme-color" content="#ffffff">
+<!-- !favicon.twig -->
+
+
+
+<!-- public_metadata.twig -->
+
+    <!-- auto generated dublin core metadata -->
+    <meta name="DC.Title" content="Research Guides: Generative AI and Chatbots: Optimizing prompts"/>
+    <meta name="DC.Creator" content="Nancy Turner"/>
+    <meta name="DC.Subject" content=""/>
+    <meta name="DC.Description" content="This guide offers advice on generative AI chatbots and tools and how to best use them to support your work."/>
+    <meta name="DC.Publishers" content="Temple University"/>
+    <meta name="DC.Rights" content="Copyright Temple University 2026"/>
+    <meta name="DC.Language" content="en"/>
+    <meta name="DC.Identifier" content="https://guides.temple.edu/ai-chatbots/prompts"/>
+    <meta name="DC.Date.Created" content="Jul 7, 2023"/>
+    <meta name="DC.Date.Modified" content="Dec 16, 2025"/>
+    
+
+<meta property="og:title" content="Research Guides: Generative AI and Chatbots: Optimizing prompts">
+<meta property="og:description" content="This guide offers advice on generative AI chatbots and tools and how to best use them to support your work.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://guides.temple.edu/ai-chatbots/prompts">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@springshare">
+
+
+
+<link rel="stylesheet" href="https://static-assets-us.libguides.com/web/jquery/css/jquery-ui.min.css?2691" />
+
+<link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"/>
+
+<link rel="stylesheet" type="text/css" href="https://static-assets-us.libguides.com/web/slick-1.8.1/slick/slick.css">
+<link rel="stylesheet" type="text/css" href="https://static-assets-us.libguides.com/web/slick-1.8.1/slick/slick-theme.css">
+
+    <link rel="stylesheet" href="https://static-assets-us.libguides.com/web/css3.23.5/lg-public.min.css" />
+
+<script type="text/javascript" src="https://static-assets-us.libguides.com/web/jquery/js/1.12.4_jquery.min.js"></script>
+<script>
+    jQuery(document).ready(function () {
+        jQuery(".dropdown-toggle").on("click", function(e){
+            jQuery(this).siblings("ul.s-lg-subtab-ul.dropdown-menu").toggle();
+        });
+                        var s_lg_guide_name = jQuery('#s-lg-guide-name');
+        if (s_lg_guide_name.length) {
+            if (jQuery.trim(s_lg_guide_name.text()) === '') {
+                s_lg_guide_name.remove();
+            }
+        }
+    });
+</script>
+
+    <script src="//code.jquery.com/ui/1.13.2/jquery-ui.min.js"></script>
+    <script>
+        jQuery.ui ||
+        document.write('<script src="https://static-assets-us.libguides.com/web/jquery/js/jquery-ui.min.js?2691">\x3C/script>');
+    </script>
+
+    <script type="text/javascript" src="https://static-assets-us.libguides.com/web/js3.23.5/lg-public.min.js"></script>
+<style>/** bootstrap_tab_css.twig **/
+#s-lg-tabs-container .nav-tabs > li > a,
+#s-lg-tabs-container .nav-tabs > li > button,
+#s-lg-tabs-container .nav-pills > li > a,
+#s-lg-tabs-container .nav-pills > li > button {
+    border: 1px solid transparent; -webkit-border-radius: 4px; -moz-border-radius: 4px; border-radius: 4px;
+    background-color: #28608f;
+    color: #fff;
+    font-weight: bold;
+    padding: 4px 15px;
+}
+
+#s-lg-tabs-container .nav-tabs {
+    border-bottom: 0;
+}
+
+#s-lg-tabs-container .nav-tabs > li#s-lg-admin-tab-add > a {
+    -webkit-border-radius: 4px 4px 0 0;
+    -moz-border-radius: 4px 4px 0 0;
+    border-radius: 4px 4px 0 0;
+}
+
+#s-lg-tabs-container .nav-tabs > li > a:hover,
+#s-lg-tabs-container .nav-tabs > li > button:hover,
+#s-lg-tabs-container .nav-pills > li > a:hover,
+#s-lg-tabs-container .nav-pills > li > button:hover {
+    border: 1px solid transparent; -webkit-border-radius: 4px; -moz-border-radius: 4px; border-radius: 4px;
+    background-color: #4a6c96;
+    color: #fff;
+}
+
+#s-lg-tabs-container .nav-tabs > .active > a,
+#s-lg-tabs-container .nav-tabs > .active > button,
+#s-lg-tabs-container .nav-pills > .active > a,
+#s-lg-tabs-container .nav-pills > .active > button {
+    color: #fff;
+    cursor: default;
+    background-color: #4a6c96;
+    border: 1px solid transparent; -webkit-border-radius: 4px; -moz-border-radius: 4px; border-radius: 4px;
+    border-bottom-color: transparent;
+    font-weight: bold;
+}
+
+#s-lg-tabs-container .nav-tabs > .active > .s-lg-subtab-ul > .active > a,
+#s-lg-tabs-container .nav-tabs > .active > .s-lg-subtab-ul > .active > button {
+    color: #fff;
+    cursor: default;
+    background-color: #4a6c96;
+    border-bottom-color: transparent;
+}
+
+#s-lg-tabs-container .nav-tabs > .active > a:hover,
+#s-lg-tabs-container .nav-pills > .active > a:hover,
+#s-lg-tabs-container .nav-tabs > .active > button:hover,
+#s-lg-tabs-container .nav-pills > .active > button:hover {
+    color: #fff;
+    cursor: pointer;
+    background-color: #4a6c96;
+    border: 1px solid transparent; -webkit-border-radius: 4px; -moz-border-radius: 4px; border-radius: 4px;
+    border-bottom-color: transparent;
+    font-weight: bold;
+}
+
+#s-lg-tabs-container .nav .dropdown-toggle .caret {
+    border-top-color: #e1e1e1;
+}
+
+#s-lg-tabs-container .nav-tabs button.dropdown-toggle .caret {
+    margin-left: 2px;
+    margin-top: -3px;
+}
+
+#s-lg-tabs-container .nav-tabs > li > a.s-lg-tab-drop {
+    border-radius: 0 4px 4px 0;
+    padding: 4px 6px 4px 3px;
+    border-left: 1px solid transparent;
+}
+
+#s-lg-tabs-container .nav-tabs > li > button.s-lg-tab-drop {
+    border-radius: 0 4px 4px 0;
+    padding: 4px 6px 0px 3px;
+    border-left: 1px solid transparent;
+    margin-right: 2px;
+}
+
+#s-lg-tabs-container .nav-tabs > li > a.s-lg-tab-drop:hover {
+    border-radius: 0 4px 4px 0;
+    border-left: 1px solid #bbb;
+    padding: 4px 6px 4px 3px;
+}
+
+#s-lg-tabs-container .nav-tabs > li > button.s-lg-tab-drop:hover {
+    border-radius: 0 4px 4px 0;
+    border-left: 1px solid #bbb;
+    padding: 4px 6px 0px 3px;
+}
+
+#s-lg-tabs-container .nav-tabs > li > a.s-lg-tab-top-link,
+#s-lg-tabs-container .nav-tabs > li > a.s-lg-tab-top-link:hover,
+#s-lg-tabs-container .nav-tabs > li > button.s-lg-tab-top-link,
+#s-lg-tabs-container .nav-tabs > li > button.s-lg-tab-top-link:hover {
+    border-radius: 4px;
+    font-weight: bold;
+    padding: 4px 5px 4px 10px;
+}
+
+.nav-tabs > li > a.s-lg-tab-top-link,
+.nav-tabs > li > button.s-lg-tab-top-link {
+    margin-right: 0px;
+}
+
+#s-lg-tabs-container .nav-pills > li > a.s-lg-tab-drop,
+#s-lg-tabs-container .nav-pills > li > button.s-lg-tab-drop {
+    border-radius: 0 4px 4px 0;
+    padding: 4px 8px 4px 8px;
+    border-left: 1px solid transparent;
+    position: absolute;
+    right: 0;
+}
+
+#s-lg-tabs-container .nav-pills > li > a.s-lg-tab-drop:hover,
+#s-lg-tabs-container .nav-pills > li > button.s-lg-tab-drop:hover {
+    border-radius: 0 4px 4px 0;
+    border-left: 1px solid #bbb;
+    padding: 4px 8px 4px 8px;
+}
+
+#s-lg-tabs-container .nav-pills > li > a.s-lg-tab-top-link,
+#s-lg-tabs-container .nav-pills > li > a.s-lg-tab-top-link:hover,
+#s-lg-tabs-container .nav-pills > li > button.s-lg-tab-top-link,
+#s-lg-tabs-container .nav-pills > li > button.s-lg-tab-top-link:hover {
+    width: 100%;
+    float: left;
+    border-radius: 4px;
+    font-weight: bold;
+    padding: 4px 15px 4px 15px;
+}
+
+/** !bootstrap_tab_css.twig **/
+ .s-lib-box {border-color: #cccccc;
+                border-width: 0px;
+                box-shadow: none;
+                border-radius: 4px 4px 4px 4px;
+                background-color: #fff;
+            }
+            .s-lib-box-std .s-lib-box-title {background-color: #fafafa; background-image: none;color: #888;
+                border-bottom: 0px solid #cccccc;
+            }
+            .s-lib-box .s-lib-box-title {background-color: #fafafa; background-image: none;color: #888;
+                border-bottom: 0px solid #cccccc;
+                border-radius: 3px 3px 0px 0px;
+            }
+            .s-lib-box .s-lg-box-footer {
+                border-radius: 0px 0px 3px 3px;
+            }</style><link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Karla">
+<script type="text/javascript" src="//s3.amazonaws.com/libapps/sites/17/include/libguides_streamline.js"></script>
+
+<style type="text/css">@media (min-width: 1200px)
+.container {width: 1200px;}
+
+ @font-face {
+    font-family: 'ChoplinBook';
+    src: url('https://s3.amazonaws.com/libapps/sites/17/include/ChoplinBook.otf') format('truetype');
+}
+
+@font-face {
+    font-family: 'ChoplinBook';
+    src: url('//s3.amazonaws.com/libapps/sites/17/include/ChoplinBook.otf') format('truetype');
+}
+
+p {
+    margin: 0px 0 10px 10px
+}
+
+/*header with logo, breadcrumbs, header text*/
+#s-lib-banner-img {
+    width: auto;
+    padding: 10px;
+    height: 75px;
+    background-color: #A22137;
+}
+#s-lib-banner-img2 { 
+display: inline;
+padding: 0px;
+background-color: #A22137;
+margin-left:50px;
+}
+
+.s-lib-header {
+font-family: "Karla", serif; 
+color: #47525e; 
+margin-top: 5px;
+}
+
+#s-lg-guide-desc-container {
+font-family: "Karla", serif; 
+font-size:16px;
+margin-top: 5px;
+line-height:normal;
+}
+.breadcrumb>li>a {color:#337AB7; text-decoration:underline;}
+
+#s-lib-bc .breadcrumb, #s-lib-admin-bc .breadcrumb {
+	margin: 14px 0 10px 0;font-weight: normal;font-size: 10px;padding: 0px; border-radius: 0px;
+	}
+	ol.breadcrumb li {
+		font-size: 1.3em;  letter-spacing: .5px;
+		}
+
+#s-lg-public-skiplink {
+    position: absolute;
+    width: auto;
+    z-index: 100;
+}
+
+
+/* Banner images */
+
+.logo-container {
+  border-bottom: solid #A50030 2px;
+}
+.logo-container .container {
+  margin-bottom: 14px;
+  margin-top: 14px;
+}
+.logo-container a.header-name {
+    color: #000;
+    font-size: 3.5rem;
+    font-family: Faustina, Times, serif;
+    vertical-align: bottom;
+    text-decoration: none;
+    white-space: nowrap;
+}
+.logo-container a.header-name img {
+    max-width: 90px;
+    max-height: 90px;
+    min-width: 90px;
+    min-height: 90px;
+    vertical-align: bottom;
+    display: inline-block;
+    margin-right: 10px;
+}
+
+
+/* Making the header responsive. */
+
+@media all and (max-width: 849px) {
+
+#s-lib-banner-img {
+width: auto;
+padding: 5px 0px 8px 0px;
+height: 65px;
+background-color: #a22137;
+}
+
+#s-lib-banner-img2 {
+display:none;
+}
+
+
+#s-lg-guide-header-info h1, .s-lib-header h1{font-size:26px;}
+
+}
+
+/*LibChat in Banner 
+#libchat_54bdf084dc3e8415767f4958ac806c00 {margin: none;line-height: 1;position: absolute;top: 2.5em;right: 1em;font-size: 1.2em;display: block;text-decoration: none !important; padding-left: 1.8em;padding: 0 15em 0 2em; font-weight: normal; color: #fff !important; border: 0;width: auto; border-radius: 0; text-shadow: none; background-image:url();background-repeat: no-repeat;background-position: top left;}
+*/
+
+/*Body, boxes*/
+
+/*guide level*/
+.s-lib-box .s-lib-box-title{
+  font-family: "Karla", serif;
+  font-weight: normal; 
+  font-size: 1.8em;
+}
+
+.s-lg-page-section h4 {
+    margin: 3px 0;
+    display: none;}
+
+.s-lg-page-section {
+    border-bottom: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.panel-default > .panel-heading {
+  color: #333;
+  font-family: "Karla", serif;
+  font-size: 1.1em;
+}
+
+.s-lib-box-idx-guide-list {
+  color: #333;
+  font-family: "Karla", serif;
+  font-size: 1.1em;
+}
+
+/*.s-lg-link-list li a {text-decoration:underline;}*/
+
+
+/*Highlight box content*/
+
+.highlight {
+  border: 1px solid #BCCADC;
+  background-color: #F1F5F7;
+  padding: 10px;
+}
+
+.example {
+display: block;
+font-family: "Karla", serif; 
+padding: 5px;
+margin: 0 0 10px 20px;
+font-size: 15px;
+line-height: 1.42857143;
+color: #666;
+border-left: 4px solid #82C3E4;
+}
+
+label {
+    font-weight: 100;
+}
+
+.s-lg-guide-body, .s-lib-public-body{
+     padding:0;
+     font-size: 14px;
+}
+a{
+	color:#0A619F;
+}
+
+#s-lg-guide-main {
+	padding-top: 10px;
+}
+
+/*Guide-level Navigation*/
+.s-lib-box-content {
+font-size: 15px;
+color:#404040;
+line-height: 1.5;
+}
+
+.s-lg-tabs-side .nav {
+font-weight:normal;
+font-family: "Karla", serif; 
+font-size: 15px;}
+#s-lg-tabs-container .nav-tabs > li > a {text-decoration:none;}
+
+/*individual boxes and box headers*/
+.s-lib-box {
+color:#222222;
+}
+.s-lib-box .s-lib-box-title {
+background: #eeeeee;
+background: #eeeeee; color: #494949;
+}
+
+@media (min-width: 992px){
+.s-lg-tabs-side {
+width: auto;
+min-width:20%;
+max-width:100px;
+}}
+
+@media (max-width: 768px){
+.container{padding-left:10px; padding-right: 10px;
+}}
+
+/*search boxes*/
+
+form .element-invisible { 
+ position:absolute !important;  
+clip:rect(1px 1px 1px 1px);  
+clip:rect(1px,1px,1px,1px); 
+overflow:hidden; height:1px;
+}
+
+.search input[type="text"]{
+vertical-align: bottom;
+font-size: 110%;
+padding: 6px;
+border:1px solid #ccc;
+border-radius: 4px;
+height: 35px;
+
+}
+
+.search input[type="submit"] {display: inline; 
+height: 35px;
+border: solid #ccc 1px;
+background-color: #903;
+color: #fff;
+border: 1px solid transparent;
+border-radius: 4px;
+font-family: "Karla", serif;
+}
+
+@media all and (max-width: 600px) {
+input, select, textarea {
+    width: 100%;
+    box-sizing: border-box;
+    margin-bottom: 1em;
+}
+}
+/*LibGuides search box @ guide level*/
+
+#s-lg-guide-search-box {
+display:none;
+}
+
+/*Various styled features*/
+/*style for code markup*/
+code {
+font-family: monospace;
+}
+
+.s-lg-rss-lis{
+list-style:none;
+margin:15px;
+}
+
+/*tables*/
+
+table {
+border-collapse: collapse;
+}
+
+/****footer from Chris Doyle in LTS to match main website footer****/
+****footer*****/
+#footer-wrapper{padding:0;}@media (min-width:768px){#footer-wrapper.container{width:750px;padding-left:0;padding-right:0;}}@media (min-width:992px){#footer-wrapper.container{width:970px;padding-left:0;padding-right:0;}}@media (min-width:1200px){#footer-wrapper.container{width:1170px;padding-left:0;padding-right:0;}.panels-flexible-region-site_footer-center{margin-left:42px;}}.panels-flexible-region.panels-flexible-region-site_footer-left.panels-flexible-region-first {float:left;}.panels-flexible-region-site_footer-center{float:left;}@font-face {  font-family: "BebasNeueRegular";  src: url("https://web.old.tul-infra.page/sites/all/themes/templelibrary_responsive/fonts/BebasNeue-webfont.eot");  src: url("https://web.old.tul-infra.page/sites/all/themes/templelibrary_responsive/fonts/BebasNeue-webfont.eot?#iefix") format("embedded-opentype"), url("https://web.old.tul-infra.page/sites/all/themes/templelibrary_responsive/fonts/BebasNeue-webfont.woff") format("woff"), url("fonts/BebasNeue-webfont.ttf") format("truetype"), url("fonts/BebasNeue-webfont.svg#BebasNeueRegular") format("svg");  font-weight: normal !important;  font-style: normal !important;}@font-face {  font-family: "Droid";  src: url("https://web.old.tul-infra.page/sites/all/themes/templelibrary_responsive/fonts/droidsans-webfont.eot");  src: url("https://web.old.tul-infra.page/sites/all/themes/templelibrary_responsive/fonts/droidsans-webfont.eot?#iefix") format("embedded-opentype"), url("https://web.old.tul-infra.page/sites/all/themes/templelibrary_responsive/fonts/droidsans-webfont.woff") format("woff"), url("fonts/droidsans-webfont.ttf") format("truetype"), url("fonts/droidsans-webfont.svg#Droid") format("svg");  font-weight: normal !important;  font-style: normal !important;}@font-face {  font-family: "DroidBld";  src: url("https://web.old.tul-infra.page/sites/all/themes/templelibrary_responsive/fonts/droidsans-bold-webfont.eot");  src: url("https://web.old.tul-infra.page/sites/all/themes/templelibrary_responsive/fonts/droidsans-bold-webfont.eot?#iefix") format("embedded-opentype"), url("https://web.old.tul-infra.page/sites/all/themes/templelibrary_responsive/fonts/droidsans-bold-webfont.woff") format("woff"), url("fonts/droidsans-bold-webfont.ttf") format("truetype"), url("fonts/droidsans-bold-webfont.svg#DroidBld") format("svg");  font-weight: normal !important;  font-style: normal !important;}#footer {  margin-top: 0px;  background-color: #222222;  color: white;  padding-bottom: 28px;  font-family: BebasNeueRegular;  width: 100%;}#footer .identity {  position: relative;  top: -10px;  font-size: 1.375em;  line-height: 1.2em;  margin-left: 42px;}#footer h1, #footer h2, #footer h3, #footer h4, #footer h5, #footer h6 {  color: white;  font-family: arial !important;  font-size: 1.125em;  letter-spacing: 0.075em;}#footer p, #footer div, #footer a {  color: white;  font-family: Arial !important;}#footer h2 {  font-size: 1.375em;  line-height: 1.2em;  font-weight: 100;}/****footer*****/#footer-wrapper{  padding:0;}@media (min-width:768px){  #footer-wrapper.container{    width:750px;padding-left:0;padding-right:0;  }}@media (min-width:992px){  #footer-wrapper.container{    width:970px;padding-left:0;padding-right:0;  }}@media (min-width:1200px){  #footer-wrapper.container{    width:1170px;padding-left:0;padding-right:0;  }  .panels-flexible-region-site_footer-center{    margin-left:42px;  }}.panels-flexible-region.panels-flexible-region-site_footer-left.panels-flexible-region-first {  float:left;}.panels-flexible-region-site_footer-center{  float:left;}#mini-panel-footer_mini_panel .panels-flexible-region-site_footer-center {  background-color: transparent;  padding: 0px;  padding-left: 77px;  margin-bottom: 21px;}}#mini-panel-footer_mini_panel ul {  margin: auto;}#mini-panel-footer_mini_panel ul li {  list-style-type: none;  line-height: 2.5;  padding-left: 28px;}#footer-top {  height: 21px;  background-color: #303030;  width: 100%;  clear: both;  margin-bottom: 14px;}#footer-wrapper {  position: relative;  bottom: 0;  width: 100%;}#sys-status { margin: 0; padding: 4px 0 4px 42px;  width: 100%;  background-color: #303030;  color: #aaaaaa;}#sys-status a {  color: #eeeeee;}#social-media {  padding-right: 35px;  text-align: right;}#social-media img {  display: inline-block;  height: 36px;  width: 36px;  border: 0px;  vertical-align: bottom;  margin-right: 35px;}.pane-search-form {  width: 100%;  float: right;  padding: 28px;}.pane-search-form h2.pane-title {  display: inline;}.pane-search-form .pane-content {  display: inline;}.pane-search-form .pane-content form {  display: inline;}.pane-search-form .pane-content form div {  display: inline;}.pane-search-form {  width: 100%;  padding: 14px 0;  text-align: left;}#search-block-form input {  margin: 0 5px;  display: inline;}#search-block-form .field-prefix {  color: #494949;  font-size: 12px;  font-weight: bold;}#block-search-form {  overflow: hidden;  *zoom: 1;  width: 295px;}.pane-block-48 {  width: 100%;}#homebox-link {  float: right;  margin: -22px 42px 0 0;  z-index: 10000;  position: relative;}
+
+#header { background-color: #F9E7BD;}
+
+.chat-widget {
+  position: fixed;
+  bottom: 1px;
+  right: 1px;
+  z-index: 1000;
+  padding: 1em;
+  font-size: 16px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: flex-end;
+  align-content: flex-end;
+  align-items: flex-end;
+  box-sizing: border-box;
+  iframe {
+    display: none;
+  }
+.s-la-widget .btn-fullWidth, .s-lch-btn-close {
+    display: none!important;
+ }
+}
+
+.chat-widget.open {
+  top: 1px;
+  width: 375px;
+  height: 100%;
+  iframe {
+    display: flex;
+    flex: 0 1 auto;
+    transition: flex-grow 2s;
+    border-radius: 5px;
+    border: 1px solid rgb(221, 221, 221);
+    box-shadow: 0.1em 0.2em 0.5em #ccc;
+    min-height: 200px;
+    width: 100%;
+    height: 100%;
+    z-index: 501;
+    position: relative;
+    border: double white 1px;
+  }
+.s-la-widget .btn-fullWidth, .s-lch-btn-close {
+    display: none!important;
+ }
+
+</style><style>
+div.s-lg-guide-list-info { display: none; }
+</style><script>
+    var springStats = springStats || {};
+    springStats.saConfig = springStats.saConfig || {
+        site_id: 17,
+        tracking_parameters: {"_st_guide_id":1331776,"_st_page_id":9808777,"_st_site_id":17},
+        tracking_server_host: "libguides-proc.springyaws.com"
+    };
+</script>
+<script  src="https://static-assets-us.libguides.com/web/js/sa.min.js?3116"></script>
+<script>
+			springSpace.Common = springSpace.Common || { };
+			springSpace.Common.constant = {
+					PROCESSING: {
+						ACTION_DISPLAY_POLL: 159
+					}
+			};
+			springSpace.Common.baseURL = "https://guides.temple.edu/";
+			
+			handleScroll=function() {
+                if (false) {
+					var target_elt = "#s-lg-page-section-9808777";
+					jQuery("html, body").animate({ scrollTop: jQuery(target_elt).offset().top }, 750);
+					if (jQuery(this).scrollTop() > 220) {
+						jQuery("#s-lib-scroll-top").fadeIn(750);
+					}
+				}
+			}
+	   </script>
+        <script>
+            // Enable tooltips.
+            jQuery(function () {
+                try {
+                    springSpace.UI.initPopOvers(false);
+                    jQuery(".az-bs-tooltip").tooltip();
+                } catch (e) { }
+            });
+        jQuery(document).ready(function () {
+            springSpace.springTrack.trackPage({_st_type_id: '1',_st_group_id: '17244',_st_guide_id: '1331776',_st_page_id: '9808777'});
+        });
+            jQuery(document).ready(function() {
+                handleScroll();
+            });
+        </script></head><!-- SIDE NAV -->
+    <body class="s-lg-guide-body">
+        <a id="s-lg-public-skiplink" class="alert-info" href="#s-lg-guide-main">Skip to Main Content</a>
+        
+        <!-- BEGIN: Page Header -->
+        <div class="logo-container">
+   <div class="container">
+      <a href="https://library.temple.edu" class="header-name" id="header-logo">
+        <img src="https://libproxy.temple.edu/public/temple-logo-t-box.png" class="header-logo" alt="">
+         <span>University Libraries</span>
+      </a>
+  </div> 
+  </div>
+</div>
+        <!-- END: Page Header -->
+        <!-- BEGIN: Guide Header -->
+          <div id="s-lg-guide-header" class="container s-lib-header s-lib-side-borders">
+            <div id="s-lib-bc">
+                <ol id="s-lib-bc-list" class="breadcrumb"><li id="s-lib-bc-customer" class="breadcrumb-item"><a href="http://library.temple.edu">Libraries</a></li><li id="s-lib-bc-site" class="breadcrumb-item"><a href="https://guides.temple.edu/">Research Guides</a></li><li id="s-lib-bc-group" class="breadcrumb-item"><a href="https://guides.temple.edu?group_id=17244">Topic Guides</a></li><li id="s-lib-bc-guide" class="breadcrumb-item"><a href="https://guides.temple.edu/ai-chatbots">Generative AI and Chatbots</a></li><li id="s-lib-bc-page" class="active breadcrumb-item">Optimizing prompts</li></ol>
+            </div>
+            <div class="pull-right">
+                <div id="s-lg-guide-header-search">
+                    
+<div id="s-lg-guide-search-box">
+    <form role="search" id="s-lg-guide-search-form" action="https://guides.temple.edu/srch.php" method="GET">
+        <div class="input-group input-group-sm">
+            <input 
+                type="text" 
+                id="s-lg-guide-search-terms" 
+                name="q" 
+                class="form-control"
+                maxlength="260" 
+                placeholder="Search this Guide">
+                
+            <label class="sr-only" for="s-lg-guide-search-terms">Search this Guide</label>
+
+                            <input type="hidden" name="guide_id" value="1331776">
+            
+            
+            <span class="input-group-btn">
+                <button class="btn btn-default" type="submit">
+                    Search
+                </button>
+            </span>
+        </div>
+    </form>
+</div>
+                </div>
+                
+            </div>
+            <div id="s-lg-guide-header-info">
+                <h1 id="s-lg-guide-name">Generative AI and Chatbots</h1>
+                <div id="s-lg-guide-desc-container">
+                    <span id="s-lg-guide-description">This guide offers advice on generative AI chatbots and tools and how to best use them to support your work.</span>
+                </div>
+            </div>
+        </div>
+        <!-- END: Guide Header -->
+        <div id="s-lg-guide-tabs-title-bar" class="container s-lib-side-borders"></div>
+        <div id="s-lg-tabs-container" class="container s-lib-side-borders pad-top-med">
+            <div id="s-lg-guide-tabs">
+                <div class="row">
+                    <div class="col-md-3 s-lg-tabs-side pad-bottom-med">
+                        <ul class="nav nav-pills nav-stacked">
+
+
+    <li class="">
+        <a title="" class="" 
+           href="https://guides.temple.edu/c.php?g=1331776&amp;p=9808350" 
+            
+            
+           >
+            <span>Home</span>
+            
+        </a>
+        
+    </li>
+
+
+
+    <li class="">
+        <a title="" class="" 
+           href="https://guides.temple.edu/ai-chatbots/explained" 
+            
+            
+           >
+            <span>How chatbots work</span>
+            
+        </a>
+        
+    </li>
+
+
+
+    <li class="">
+        <a title="" class="" 
+           href="https://guides.temple.edu/ai-chatbots/well" 
+            
+            
+           >
+            <span>What chatbots do well</span>
+            
+        </a>
+        
+    </li>
+
+
+
+    <li class="">
+        <a title="" class="" 
+           href="https://guides.temple.edu/ai-chatbots/not-well" 
+            
+            
+           >
+            <span>What chatbots do less well</span>
+            
+        </a>
+        
+    </li>
+
+
+
+    <li class="active">
+        <a title="" class="active" 
+           href="https://guides.temple.edu/ai-chatbots/prompts" 
+            
+            
+           >
+            <span>Optimizing prompts</span>
+            
+        </a>
+        <ul class="list-group s-lg-boxnav"><li class="list-group-item"><a href="#s-lg-box-31016608">Prompt Optimization Definition</a></li><li class="list-group-item"><a href="#s-lg-box-31009780">Prompt optimization basics</a></li><li class="list-group-item"><a href="#s-lg-box-31009783">More advice for fine tuning prompts</a></li><li class="list-group-item"><a href="#s-lg-box-31016622">Prompt Optimization Resources</a></li></ul>
+    </li>
+
+
+
+    <li class="">
+        <a title="" class="" 
+           href="https://guides.temple.edu/ai-chatbots/websearch" 
+            
+            
+           >
+            <span>Generative AI in web search</span>
+            
+        </a>
+        
+    </li>
+
+
+
+    <li class="">
+        <a title="" class="" 
+           href="https://guides.temple.edu/ai-chatbots/citation" 
+            
+            
+           >
+            <span>Citing generative AI</span>
+            
+        </a>
+        
+    </li>
+
+
+
+    <li class="">
+        <a title="" class="" 
+           href="https://guides.temple.edu/ai-research-tools" 
+            target="_blank"  
+            
+           >
+            <span>AI tools for research</span>
+             <i class="fa fa-fw fa-external-link " title="This link opens in a new window"><span class="sr-only">This link opens in a new window</span></i>
+        </a>
+        
+    </li>
+
+
+
+    <li class="">
+        <a title="" class="" 
+           href="https://guides.temple.edu/ai-chatbots/ethics" 
+            
+            
+           >
+            <span>Ethical, equity, and privacy concerns</span>
+            
+        </a>
+        
+    </li>
+
+
+
+    <li class="">
+        <a title="" class="" 
+           href="https://guides.temple.edu/ai-chatbots/help" 
+            
+            
+           >
+            <span>Get help</span>
+            
+        </a>
+        
+    </li>
+
+</ul>
+                        <div class="s-lg-row margin-top-med"><div id="s-lg-col-0"><div class="s-lg-col-boxes"></div></div></div>
+                    </div>
+                    <div class="col-md-9">
+                        <div class="s-lg-tab-content">
+                            <div id="s-lg-guide-main" class="tab-pane active">
+                                
+<div class="row s-lg-row">
+  <div id="s-lg-col-1" class="col-md-12">
+          <div class="s-lg-col-boxes">
+               <div id="s-lg-box-wrapper-36474729" class="s-lg-box-wrapper-36474729">
+
+
+    <div id="s-lg-box-31016608-container" class="s-lib-box-container">
+        <div id="s-lg-box-31016608" class="s-lib-box s-lib-box-std">
+                            <h2 class="s-lib-box-title">
+                    Prompt Optimization Definition
+                                    </h2>
+                        <div id="s-lg-box-collapse-31016608" >
+                <div class="s-lib-box-content">
+                    <div id="s-lg-content-72514958" class="  clearfix">
+    <p><strong>Prompt optimization</strong> (also called prompt engineering) &quot;is the process of creating and refining prompts to optimize the performance of a language model or chatbot. A prompt is a piece of text that provides context and guidance for generating a response to a user query. It typically consists of a short phrase or sentence that describes the desired outcome of the conversation.&quot;&nbsp;<a href="https://www.linkedin.com/pulse/prompt-optimization-engineering-future-intelligent-ai-dr-tuhin-banik/" rel="noreferrer noopener" target="_blank">(Banik 2023)</a></p>
+
+
+    </div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+</div><div id="s-lg-box-wrapper-36466665" class="s-lg-box-wrapper-36466665">
+
+
+    <div id="s-lg-box-31009780-container" class="s-lib-box-container">
+        <div id="s-lg-box-31009780" class="s-lib-box s-lib-box-std">
+                            <h2 class="s-lib-box-title">
+                    Prompt optimization basics
+                                    </h2>
+                        <div id="s-lg-box-collapse-31009780" >
+                <div class="s-lib-box-content">
+                    <div id="s-lg-content-72514968" class="  clearfix">
+    <p lang="EN-US" paraeid="{71240e17-179a-4145-aac0-02e3706367c3}{24}" paraid="1995745473" xml:lang="EN-US">Be as specific as you can. The better information you give to a chatbot, the better response you will get.&nbsp;</p>
+
+<p lang="EN-US" paraeid="{2c0bb238-cbc5-40f0-8b84-cf6a3daf31fe}{135}" paraid="852100664" xml:lang="EN-US">Consider including information about:&nbsp;</p>
+
+<ul role="list">
+	<li aria-setsize="-1" data-aria-level="1" data-aria-posinset="1" data-font="Symbol" data-leveltext="" data-list-defn-props="{&quot;335552541&quot;:1,&quot;335559683&quot;:0,&quot;335559684&quot;:-2,&quot;335559685&quot;:720,&quot;335559991&quot;:360,&quot;469769226&quot;:&quot;Symbol&quot;,&quot;469769242&quot;:[8226],&quot;469777803&quot;:&quot;left&quot;,&quot;469777804&quot;:&quot;&quot;,&quot;469777815&quot;:&quot;hybridMultilevel&quot;}" data-listid="37" role="listitem">
+	<p lang="EN-US" paraeid="{7feab73d-275c-4e80-88c0-a1e80e81658a}{60}" paraid="688621232" xml:lang="EN-US">Audience: Who is the response intended for?&nbsp;(e.g. respond at a 6th grade reading level)</p>
+	</li>
+	<li aria-setsize="-1" data-aria-level="1" data-aria-posinset="2" data-font="Symbol" data-leveltext="" data-list-defn-props="{&quot;335552541&quot;:1,&quot;335559683&quot;:0,&quot;335559684&quot;:-2,&quot;335559685&quot;:720,&quot;335559991&quot;:360,&quot;469769226&quot;:&quot;Symbol&quot;,&quot;469769242&quot;:[8226],&quot;469777803&quot;:&quot;left&quot;,&quot;469777804&quot;:&quot;&quot;,&quot;469777815&quot;:&quot;hybridMultilevel&quot;}" data-listid="37" role="listitem">
+	<p lang="EN-US" paraeid="{b4961938-21fa-4794-a208-0a57d5cab064}{47}" paraid="1555534890" xml:lang="EN-US">Tone: What&nbsp;tone is appropriate for the context? (e.g. a professional business letter? A humorous response?)&nbsp;</p>
+	</li>
+	<li aria-setsize="-1" data-aria-level="1" data-aria-posinset="3" data-font="Symbol" data-leveltext="" data-list-defn-props="{&quot;335552541&quot;:1,&quot;335559683&quot;:0,&quot;335559684&quot;:-2,&quot;335559685&quot;:720,&quot;335559991&quot;:360,&quot;469769226&quot;:&quot;Symbol&quot;,&quot;469769242&quot;:[8226],&quot;469777803&quot;:&quot;left&quot;,&quot;469777804&quot;:&quot;&quot;,&quot;469777815&quot;:&quot;hybridMultilevel&quot;}" data-listid="37" role="listitem">
+	<p lang="EN-US" paraeid="{329a8096-d923-4caa-a1ea-50959689cb09}{74}" paraid="1795548443" xml:lang="EN-US">Length: How long should the&nbsp;response be? (e.g. summarize the article in one paragraph, list&nbsp;the top 5 things related to my topic)&nbsp;</p>
+	</li>
+	<li aria-setsize="-1" data-aria-level="1" data-aria-posinset="4" data-font="Symbol" data-leveltext="" data-list-defn-props="{&quot;335552541&quot;:1,&quot;335559683&quot;:0,&quot;335559684&quot;:-2,&quot;335559685&quot;:720,&quot;335559991&quot;:360,&quot;469769226&quot;:&quot;Symbol&quot;,&quot;469769242&quot;:[8226],&quot;469777803&quot;:&quot;left&quot;,&quot;469777804&quot;:&quot;&quot;,&quot;469777815&quot;:&quot;hybridMultilevel&quot;}" data-listid="37" role="listitem">
+	<p lang="EN-US" paraeid="{3978ee0c-684f-42b1-891a-cc74fa2fe194}{128}" paraid="117361908" xml:lang="EN-US">Format: Is there a specific way the response should be formatted? (e.g. bullet points for a PowerPoint presentation, sort the results by date oldest to newest)&nbsp;</p>
+	</li>
+	<li aria-setsize="-1" data-aria-level="1" data-aria-posinset="5" data-font="Symbol" data-leveltext="" data-list-defn-props="{&quot;335552541&quot;:1,&quot;335559683&quot;:0,&quot;335559684&quot;:-2,&quot;335559685&quot;:720,&quot;335559991&quot;:360,&quot;469769226&quot;:&quot;Symbol&quot;,&quot;469769242&quot;:[8226],&quot;469777803&quot;:&quot;left&quot;,&quot;469777804&quot;:&quot;&quot;,&quot;469777815&quot;:&quot;hybridMultilevel&quot;}" data-listid="37" role="listitem">
+	<p lang="EN-US" paraeid="{3978ee0c-684f-42b1-891a-cc74fa2fe194}{192}" paraid="905515404" xml:lang="EN-US">Role: What is the context for the query? Who is doing the asking? (e.g. &quot;imagine you are...&quot;,&nbsp;&quot;act as if...&quot;)</p>
+	</li>
+</ul>
+
+<p lang="EN-US" paraeid="{9e40d781-44e3-469a-8bc1-ba91f101b4e5}{150}" paraid="928894775" xml:lang="EN-US">Example: Provide a list for a camp counselor of 10 fun outdoor activities for a group of 12-year-olds that will make them want to spend more time outside and away from screens.</p>
+
+
+    </div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+</div><div id="s-lg-box-wrapper-36466670" class="s-lg-box-wrapper-36466670">
+
+
+    <div id="s-lg-box-31009783-container" class="s-lib-box-container">
+        <div id="s-lg-box-31009783" class="s-lib-box s-lib-box-std">
+                            <h2 class="s-lib-box-title">
+                    More advice for fine tuning prompts
+                                    </h2>
+                        <div id="s-lg-box-collapse-31009783" >
+                <div class="s-lib-box-content">
+                    <div id="s-lg-content-72514977" class="  clearfix">
+    <p paraeid="{39151284-493d-405a-b71a-5f75d5a494b5}{2}" paraid="1052400841">Here are some additional techniques for improving chatbot&nbsp;responses:</p>
+
+<ul role="list">
+	<li aria-setsize="-1" data-aria-level="2" data-aria-posinset="2" data-font="Courier New" data-leveltext="o" data-list-defn-props="{&quot;335552541&quot;:1,&quot;335559684&quot;:-2,&quot;335559685&quot;:1800,&quot;335559991&quot;:360,&quot;469769226&quot;:&quot;Courier New&quot;,&quot;469769242&quot;:[9675],&quot;469777803&quot;:&quot;left&quot;,&quot;469777804&quot;:&quot;o&quot;,&quot;469777815&quot;:&quot;hybridMultilevel&quot;}" data-listid="4" role="listitem">
+	<p paraeid="{39151284-493d-405a-b71a-5f75d5a494b5}{2}" paraid="1052400841">Articulate the desired output format through examples&nbsp;&nbsp;&nbsp;</p>
+	</li>
+	<li aria-setsize="-1" data-aria-level="2" data-aria-posinset="3" data-font="Courier New" data-leveltext="o" data-list-defn-props="{&quot;335552541&quot;:1,&quot;335559684&quot;:-2,&quot;335559685&quot;:1800,&quot;335559991&quot;:360,&quot;469769226&quot;:&quot;Courier New&quot;,&quot;469769242&quot;:[9675],&quot;469777803&quot;:&quot;left&quot;,&quot;469777804&quot;:&quot;o&quot;,&quot;469777815&quot;:&quot;hybridMultilevel&quot;}" data-listid="4" role="listitem">
+	<p paraeid="{39151284-493d-405a-b71a-5f75d5a494b5}{11}" paraid="877160384">Avoid saying what not to do but say what to do instead&nbsp;&nbsp;&nbsp;</p>
+	</li>
+</ul>
+
+<ul role="list">
+	<li aria-setsize="-1" data-aria-level="2" data-aria-posinset="1" data-font="Courier New" data-leveltext="o" data-list-defn-props="{&quot;335552541&quot;:1,&quot;335559684&quot;:-2,&quot;335559685&quot;:1800,&quot;335559991&quot;:360,&quot;469769226&quot;:&quot;Courier New&quot;,&quot;469769242&quot;:[9675],&quot;469777803&quot;:&quot;left&quot;,&quot;469777804&quot;:&quot;o&quot;,&quot;469777815&quot;:&quot;hybridMultilevel&quot;}" data-listid="4" role="listitem">
+	<p paraeid="{39151284-493d-405a-b71a-5f75d5a494b5}{20}" paraid="1250141482">Interacting with chatbots can be iterative. Break questions into smaller steps and build.</p>
+	</li>
+	<li aria-setsize="-1" data-aria-level="2" data-aria-posinset="1" data-font="Courier New" data-leveltext="o" data-list-defn-props="{&quot;335552541&quot;:1,&quot;335559684&quot;:-2,&quot;335559685&quot;:1800,&quot;335559991&quot;:360,&quot;469769226&quot;:&quot;Courier New&quot;,&quot;469769242&quot;:[9675],&quot;469777803&quot;:&quot;left&quot;,&quot;469777804&quot;:&quot;o&quot;,&quot;469777815&quot;:&quot;hybridMultilevel&quot;}" data-listid="4" role="listitem">
+	<p paraeid="{39151284-493d-405a-b71a-5f75d5a494b5}{20}" paraid="1250141482">Ask follow-up questions if you don&rsquo;t get the response you were expecting.&nbsp;</p>
+	</li>
+	<li aria-setsize="-1" data-aria-level="2" data-aria-posinset="2" data-font="Courier New" data-leveltext="o" data-list-defn-props="{&quot;335552541&quot;:1,&quot;335559684&quot;:-2,&quot;335559685&quot;:1800,&quot;335559991&quot;:360,&quot;469769226&quot;:&quot;Courier New&quot;,&quot;469769242&quot;:[9675],&quot;469777803&quot;:&quot;left&quot;,&quot;469777804&quot;:&quot;o&quot;,&quot;469777815&quot;:&quot;hybridMultilevel&quot;}" data-listid="4" role="listitem">
+	<p paraeid="{39151284-493d-405a-b71a-5f75d5a494b5}{29}" paraid="819360629">Be prepared to rephrase and correct the chatbot</p>
+	</li>
+</ul>
+
+
+    </div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+</div><div id="s-lg-box-wrapper-36474745" class="s-lg-box-wrapper-36474745">
+
+
+    <div id="s-lg-box-31016622-container" class="s-lib-box-container">
+        <div id="s-lg-box-31016622" class="s-lib-box s-lib-box-std">
+                            <h2 class="s-lib-box-title">
+                    Prompt Optimization Resources
+                                    </h2>
+                        <div id="s-lg-box-collapse-31016622" >
+                <div class="s-lib-box-content">
+                    
+
+    <div class="">
+        <ul id="s-lg-link-list-84389296"
+            class="s-lg-link-list s-lg-link-list-2">
+
+<li class="">
+    
+
+
+<div id="s-lg-content-81925905" class="">
+    <span>
+                    <a href="https://www.writingbeginner.com/best-prompts-for-chatgpt/" target="_blank" onclick="return springSpace.springTrack.trackLink({link: this,_st_type_id: &#039;2&#039;,_st_content_id: &#039;81925905&#039;,_st_inc_return: this});" >
+                650+ Best Prompts for ChatGPT
+            </a>
+        
+            </span>
+
+    
+    
+                <div id="s-lg-link-desc-81925905" class="s-lg-link-desc">
+            From Writing Beginner, the "ultimate" list for 2025
+        </div>
+    
+    </div>
+
+</li>
+
+
+
+
+<li class="">
+    
+
+
+<div id="s-lg-content-75675788" class="">
+    <span>
+                    <a href="https://www.moreusefulthings.com/prompts" target="_blank" onclick="return springSpace.springTrack.trackLink({link: this,_st_type_id: &#039;2&#039;,_st_content_id: &#039;75675788&#039;,_st_inc_return: this});" >
+                One Useful Thing prompt library
+            </a>
+        
+            </span>
+
+    
+    
+                <div id="s-lg-link-desc-75675788" class="s-lg-link-desc">
+            Prompt library created by Ethan Mollick and Lilach Mollick as a companion to their substack, One Useful Thing.
+        </div>
+    
+    </div>
+
+</li>
+
+
+
+
+<li class="">
+    
+
+
+<div id="s-lg-content-81925870" class="">
+    <span>
+                    <a href="https://oercommons.org/courseware/lesson/107793/overview" target="_blank" onclick="return springSpace.springTrack.trackLink({link: this,_st_type_id: &#039;2&#039;,_st_content_id: &#039;81925870&#039;,_st_inc_return: this});" >
+                Prompt Engineering and AI Tools
+            </a>
+        
+            </span>
+
+    
+    
+                <div id="s-lg-link-desc-81925870" class="s-lg-link-desc">
+            From OER Commons, guidance for use with both text and image generators
+        </div>
+    
+    </div>
+
+</li>
+
+
+
+
+<li class="">
+    
+
+
+<div id="s-lg-content-81926190" class="">
+    <span>
+                    <a href="https://help.openai.com/en/articles/10032626-prompt-engineering-best-practices-for-chatgpt" target="_blank" onclick="return springSpace.springTrack.trackLink({link: this,_st_type_id: &#039;2&#039;,_st_content_id: &#039;81926190&#039;,_st_inc_return: this});" >
+                Prompt engineering best practices for ChatGPT | OpenAI Help Center
+            </a>
+        
+            </span>
+
+    
+    
+                <div id="s-lg-link-desc-81926190" class="s-lg-link-desc">
+            From OpenAI, tips for optimizing your ChatGPT prompts
+        </div>
+    
+    </div>
+
+</li>
+
+        </ul>
+
+        
+    </div>
+
+                </div>
+                
+            </div>
+        </div>
+    </div>
+</div>
+          </div>
+     </div>
+</div>
+<div class="row s-lg-row">
+
+     <div id="s-lg-col-2" class="col-md-8">
+          <div class="s-lg-col-boxes">
+               
+          </div>
+     </div>
+
+   <div id="s-lg-col-3" class="col-md-4">
+          <div class="s-lg-col-boxes">
+            
+          </div>
+</div>
+
+    
+
+ 
+</div>
+
+
+<div class="row s-lg-row">
+
+     <div id="s-lg-col-4" class="col-md-6">
+          <div class="s-lg-col-boxes">
+               
+          </div>
+     </div>
+
+   <div id="s-lg-col-5" class="col-md-6">
+          <div class="s-lg-col-boxes">
+            
+          </div>
+</div>
+
+    
+
+ 
+</div>
+
+<div class="row s-lg-row">
+  <div id="s-lg-col-6" class="col-md-12">
+          <div class="s-lg-col-boxes">
+               
+          </div>
+     </div>
+</div>
+
+                            </div>
+                        </div>
+                        <ul id="s-lg-page-prevnext" class="pager s-lib-hide">
+    <li class="previous">
+        <a class="page-link" href="https://guides.temple.edu/ai-chatbots/not-well">&lt;&lt; <strong>Previous:</strong> What chatbots do less well</a>
+    </li>
+    <li class="next">
+        <a class="page-link" href="https://guides.temple.edu/ai-chatbots/websearch"><strong>Next:</strong> Generative AI in web search &gt;&gt;</a>
+    </li>
+</ul>
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- BEGIN: Page Footer -->
+        <div id="s-lib-footer-public" class="s-lib-footer footer container  s-lib-side-borders">
+            <div id="s-lg-guide-header-meta" class="pad-top-sm pad-left-med clearfix">
+                <ul id="s-lg-guide-header-attributes" class="">
+                    <li id="s-lg-guide-header-updated" class="s-lg-h-separator">
+                        <span class="s-lg-guide-label">Last Updated:</span> <span class="s-lg-text-greyout">Dec 16, 2025 2:59 PM</span>                    </li>
+                    <li id="s-lg-guide-header-url" class="s-lg-h-separator">
+                        <span class="s-lg-guide-label">URL:</span> <span class="s-lg-text-greyout">https://guides.temple.edu/ai-chatbots</span>
+                    </li>
+                    <li id="s-lg-guide-print-url">
+                        <a href="javascript: window.print();"><i class="fa fa-print" aria-hidden="true" title="Print Page"></i> Print Page</a>
+                    </li>    
+                    </ul>
+                <div id="s-lib-footer-login-link" class="pull-right pad-right-med">
+                    <a href="https://temple.libapps.com/libapps/login.php?site_id=17&target64=L2xpYmd1aWRlcy9hZG1pbl9jLnBocD9nPTEzMzE3NzYmcD05ODA4Nzc3">Login to LibApps</a>                </div>
+            </div>
+            <div class="pad-bottom-sm clearfix">
+                <div id="s-lib-footer-support-link" class="pull-right pad-right-med">
+                    <a href="mailto:asktulibrary@temple.edu?subject=LIBGUIDES: Reporting a problem on Generative AI and Chatbots: Optimizing prompts page, owner: https://guides.temple.edu/prf.php?id=58e19824-7cdb-11ed-9922-0ad758b798c3">Report a broken link or other problem</a>. 
+                </div>
+                <div id="s-lg-guide-header-subjects" class="pad-top-sm pad-left-med pad-right-med pull-left">
+                    
+                </div>
+                <div id="s-lg-guide-header-tags" class="pad-top-sm pad-left-med">
+                    <span class="s-lg-guide-label">Tags: </span><span class="s-lg-small bold"><a href="https://guides.temple.edu/srch.php?tag=AI&default_lg=1">AI</a>, <a href="https://guides.temple.edu/srch.php?tag=AI+ethics&default_lg=1">AI ethics</a>, <a href="https://guides.temple.edu/srch.php?tag=artificial+intelligence&default_lg=1">artificial intelligence</a>, <a href="https://guides.temple.edu/srch.php?tag=Bard&default_lg=1">Bard</a>, <a href="https://guides.temple.edu/srch.php?tag=Bing&default_lg=1">Bing</a>, <a href="https://guides.temple.edu/srch.php?tag=chatbots&default_lg=1">chatbots</a>, <a href="https://guides.temple.edu/srch.php?tag=ChatGPT&default_lg=1">ChatGPT</a>, <a href="https://guides.temple.edu/srch.php?tag=Copilot&default_lg=1">Copilot</a>, <a href="https://guides.temple.edu/srch.php?tag=digital+literacy&default_lg=1">digital literacy</a>, <a href="https://guides.temple.edu/srch.php?tag=Gemini&default_lg=1">Gemini</a>, <a href="https://guides.temple.edu/srch.php?tag=generative+AI&default_lg=1">generative AI</a>, <a href="https://guides.temple.edu/srch.php?tag=machine+learning&default_lg=1">machine learning</a>, <a href="https://guides.temple.edu/srch.php?tag=misinformation&default_lg=1">misinformation</a>, <a href="https://guides.temple.edu/srch.php?tag=Perplexity&default_lg=1">Perplexity</a>, <a href="https://guides.temple.edu/srch.php?tag=prompt+engineering&default_lg=1">prompt engineering</a>, <a href="https://guides.temple.edu/srch.php?tag=prompt+optimization&default_lg=1">prompt optimization</a></span>
+                </div>
+            </div>
+        </div>
+        <!-- END: Page Footer -->
+        
+            <div id="s-lib-scroll-top" title="Back to Top">
+                <span class="fa-stack fa-lg">
+                  <i class="fa fa-square-o fa-stack-2x"></i>
+                  <i class="fa fa-angle-double-up fa-stack-1x" style="position:relative; bottom:2px;"></i>
+                </span>
+            </div>        <div id="s-lib-alert" title="">
+                            <div id="s-lib-alert-content"></div>
+                       </div>        
+                <!-- BEGIN: Custom Footer -->
+                
+<div id="footer-wrapper" class="container">
+
+          <div id="footer" class="clearfix" style="padding-bottom: 0">
+          <div class="region region-footer">
+    <div id="block-block-101" class="block block-block">
+
+    
+  <div class="content">
+    <div id="footer-top"> </div>  </div>
+</div>
+<div id="block-panels-mini-footer-mini-panel" class="block block-panels-mini">
+
+    
+  <div class="content">
+    <div class="panel-flexible panels-flexible-site_footer clearfix" id="mini-panel-footer_mini_panel">
+<div class="panel-flexible-inside panels-flexible-site_footer-inside">
+<div class="panels-flexible-row panels-flexible-row-site_footer-main-row panels-flexible-row-first clearfix">
+  <div class="inside panels-flexible-row-inside panels-flexible-row-site_footer-main-row-inside panels-flexible-row-inside-first clearfix">
+<div class="panels-flexible-region panels-flexible-region-site_footer-left panels-flexible-region-first ">
+  <div class="inside panels-flexible-region-inside panels-flexible-region-site_footer-left-inside panels-flexible-region-inside-first">
+<div class="panel-pane pane-block pane-block-100">
+  
+      
+  
+  <div class="pane-content">
+    <div class="identity">
+      <h2 style="margin-bottom: 0;"><a href="https://www.temple.edu/">Temple University</a></h2>
+        <h3 style="margin-top: 7px;"><a href="https://library.temple.edu">University Libraries</a></h3>
+        <p class="droid" style="font-size:80%;margin-left: 0"><a href="https://library.temple.edu/libraries/2">See all library locations</a></p>
+     </div> 
+  </div>
+
+  
+  </div>
+  </div>
+</div>
+<div class="panels-flexible-region panels-flexible-region-site_footer-center">
+  <div class="inside panels-flexible-region-inside panels-flexible-region-site_footer-center-inside">
+<div class="panel-pane pane-block pane-block-98">
+  
+      
+  
+  <div class="pane-content">
+    <ul><li class="directory"><a href="https://library.temple.edu/people">Library Directory</a></li><li class="maps"><a href="https://library.temple.edu/libraries/2">Locations and Directions</a></li><li class="numbers"><a href="https://library.temple.edu/pages/19">Frequently Called Numbers</a></li></ul>  </div>
+
+  
+  </div>
+  </div>
+</div>
+<div class="panels-flexible-region panels-flexible-region-site_footer-right panels-flexible-region-last ">
+  <div class="inside panels-flexible-region-inside panels-flexible-region-site_footer-right-inside panels-flexible-region-inside-last">
+<div class="panel-pane pane-block pane-block-97">
+  
+      
+  
+  <div class="pane-content">
+    <p id="social-media"><a href="https://library.temple.edu/pages/18"><img alt="Twitter Icon" src="https://libproxy.temple.edu/public/twitter-logo_white.png"><img alt="Facebook Icon" src="https://libproxy.temple.edu/public/facebook-logo_white.png"><img alt="Instagram Icon" src="https://libproxy.temple.edu/public/instagram-logo_white.png"></a></p>  </div>
+
+  
+  </div>
+<div class="panel-separator"></div>
+
+  
+  </div>
+  </div>
+</div>
+  </div>
+</div>
+<div class="panels-flexible-row panels-flexible-row-site_footer-1 panels-flexible-row-last clearfix ">
+  <div class="inside panels-flexible-row-inside panels-flexible-row-site_footer-1-inside panels-flexible-row-inside-last clearfix">
+<div class="panels-flexible-region panels-flexible-region-site_footer-bottom panels-flexible-region-first panels-flexible-region-last ">
+  <div class="inside panels-flexible-region-inside panels-flexible-region-site_footer-bottom-inside panels-flexible-region-inside-first panels-flexible-region-inside-last">
+<div class="panel-pane pane-block pane-block-99">
+  
+      
+  
+  <div class="pane-content">
+    <p id="sys-status"><span>Need help? <a href="mailto:asktulibrary@temple.edu" rel="nofollow">Email us</a> at asktulibrary@temple.edu</span></p>  </div>
+
+  
+  </div>
+  </div>
+</div>
+  </div>
+</div>
+</div>
+</div>
+  </div>
+</div>
+  </div>
+       
+      </div> <!-- /#footer -->
+
+        <!-- END: Custom Footer -->
+    <!-- BEGIN: Analytics code --><!-- Google tag (gtag.js) --><script async src="https://www.googletagmanager.com/gtag/js?id=G-BZYNDX0781"></script><script>  window.dataLayer = window.dataLayer || [];  function gtag(){dataLayer.push(arguments);}  gtag('js', new Date());  gtag('config', 'G-BZYNDX0781', {'cookie_domain': 'guides.temple.edu'});</script><!-- END: Analytics code --></body></html>

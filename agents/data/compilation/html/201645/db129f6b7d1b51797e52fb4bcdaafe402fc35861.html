@@ -1,0 +1,980 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <!-- favicon.twig -->
+<link rel="apple-touch-icon" sizes="180x180" href="//d2jv02qf7xgjwx.cloudfront.net/apps/common/favicon/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="//d2jv02qf7xgjwx.cloudfront.net/apps/common/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="//d2jv02qf7xgjwx.cloudfront.net/apps/common/favicon/favicon-16x16.png">
+<link rel="manifest" href="//d2jv02qf7xgjwx.cloudfront.net/apps/common/favicon/site.webmanifest">
+<link rel="mask-icon" href="//d2jv02qf7xgjwx.cloudfront.net/apps/common/favicon/safari-pinned-tab.svg" color="#5bbad5">
+<link rel="shortcut icon" href="//d2jv02qf7xgjwx.cloudfront.net/apps/common/favicon/favicon.ico">
+<meta name="msapplication-TileColor" content="#ffc40d">
+<meta name="msapplication-config" content="//d2jv02qf7xgjwx.cloudfront.net/apps/common/favicon/browserconfig.xml">
+<meta name="theme-color" content="#ffffff">
+<!-- !favicon.twig -->
+
+    
+<title>Basic Prompting Strategies - LLMs and GenAI in Digital Scholarship - Research Guides at Case Western Reserve University</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noarchive" />
+<!-- favicon.twig -->
+<link rel="apple-touch-icon" sizes="180x180" href="//d2jv02qf7xgjwx.cloudfront.net/apps/common/favicon/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="//d2jv02qf7xgjwx.cloudfront.net/apps/common/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="//d2jv02qf7xgjwx.cloudfront.net/apps/common/favicon/favicon-16x16.png">
+<link rel="manifest" href="//d2jv02qf7xgjwx.cloudfront.net/apps/common/favicon/site.webmanifest">
+<link rel="mask-icon" href="//d2jv02qf7xgjwx.cloudfront.net/apps/common/favicon/safari-pinned-tab.svg" color="#5bbad5">
+<link rel="shortcut icon" href="//d2jv02qf7xgjwx.cloudfront.net/apps/common/favicon/favicon.ico">
+<meta name="msapplication-TileColor" content="#ffc40d">
+<meta name="msapplication-config" content="//d2jv02qf7xgjwx.cloudfront.net/apps/common/favicon/browserconfig.xml">
+<meta name="theme-color" content="#ffffff">
+<!-- !favicon.twig -->
+
+
+
+<!-- public_metadata.twig -->
+
+    <!-- auto generated dublin core metadata -->
+    <meta name="DC.Title" content="Research Guides: LLMs and GenAI in Digital Scholarship: Basic Prompting Strategies"/>
+    <meta name="DC.Creator" content="David Beales"/>
+    <meta name="DC.Subject" content="Computer and Data Science"/>
+    <meta name="DC.Description" content="An overview of how to use LLMs and GenAI in research and instruction. simple steps for those who want to get working quickly"/>
+    <meta name="DC.Publishers" content="Case Western Reserve University"/>
+    <meta name="DC.Rights" content="Copyright Case Western Reserve University 2026"/>
+    <meta name="DC.Language" content="en"/>
+    <meta name="DC.Identifier" content="https://researchguides.case.edu/GenAI/BasicPrompting"/>
+    <meta name="DC.Date.Created" content="Jul 3, 2025"/>
+    <meta name="DC.Date.Modified" content="Aug 14, 2025"/>
+    
+
+<meta property="og:title" content="Research Guides: LLMs and GenAI in Digital Scholarship: Basic Prompting Strategies">
+<meta property="og:description" content="An overview of how to use LLMs and GenAI in research and instruction. simple steps for those who want to get working quickly">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://researchguides.case.edu/GenAI/BasicPrompting">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@springshare">
+
+
+
+<link rel="stylesheet" href="https://static-assets-us.libguides.com/web/jquery/css/jquery-ui.min.css?2691" />
+
+<link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"/>
+
+<link rel="stylesheet" type="text/css" href="https://static-assets-us.libguides.com/web/slick-1.8.1/slick/slick.css">
+<link rel="stylesheet" type="text/css" href="https://static-assets-us.libguides.com/web/slick-1.8.1/slick/slick-theme.css">
+
+    <link rel="stylesheet" href="https://static-assets-us.libguides.com/web/css3.23.5/lg-public.min.css" />
+
+<script type="text/javascript" src="https://static-assets-us.libguides.com/web/jquery/js/1.12.4_jquery.min.js"></script>
+<script>
+    jQuery(document).ready(function () {
+        jQuery(".dropdown-toggle").on("click", function(e){
+            jQuery(this).siblings("ul.s-lg-subtab-ul.dropdown-menu").toggle();
+        });
+                        var s_lg_guide_name = jQuery('#s-lg-guide-name');
+        if (s_lg_guide_name.length) {
+            if (jQuery.trim(s_lg_guide_name.text()) === '') {
+                s_lg_guide_name.remove();
+            }
+        }
+    });
+</script>
+
+    <script src="//code.jquery.com/ui/1.13.2/jquery-ui.min.js"></script>
+    <script>
+        jQuery.ui ||
+        document.write('<script src="https://static-assets-us.libguides.com/web/jquery/js/jquery-ui.min.js?2691">\x3C/script>');
+    </script>
+
+    <script type="text/javascript" src="https://static-assets-us.libguides.com/web/js3.23.5/lg-public.min.js"></script>
+<style>/** bootstrap_tab_css.twig **/
+#s-lg-tabs-container .nav-tabs > li > a,
+#s-lg-tabs-container .nav-tabs > li > button,
+#s-lg-tabs-container .nav-pills > li > a,
+#s-lg-tabs-container .nav-pills > li > button {
+    border: 1px solid transparent; -webkit-border-radius: 4px; -moz-border-radius: 4px; border-radius: 4px;
+    background-color: #072239;
+    color: #fff;
+    font-weight: bold;
+    padding: 4px 15px;
+}
+
+#s-lg-tabs-container .nav-tabs {
+    border-bottom: 0;
+}
+
+#s-lg-tabs-container .nav-tabs > li#s-lg-admin-tab-add > a {
+    -webkit-border-radius: 4px 4px 0 0;
+    -moz-border-radius: 4px 4px 0 0;
+    border-radius: 4px 4px 0 0;
+}
+
+#s-lg-tabs-container .nav-tabs > li > a:hover,
+#s-lg-tabs-container .nav-tabs > li > button:hover,
+#s-lg-tabs-container .nav-pills > li > a:hover,
+#s-lg-tabs-container .nav-pills > li > button:hover {
+    border: 1px solid transparent; -webkit-border-radius: 4px; -moz-border-radius: 4px; border-radius: 4px;
+    background-color: #072239;
+    color: #fff;
+}
+
+#s-lg-tabs-container .nav-tabs > .active > a,
+#s-lg-tabs-container .nav-tabs > .active > button,
+#s-lg-tabs-container .nav-pills > .active > a,
+#s-lg-tabs-container .nav-pills > .active > button {
+    color: #fff;
+    cursor: default;
+    background-color: #072239;
+    border: 1px solid transparent; -webkit-border-radius: 4px; -moz-border-radius: 4px; border-radius: 4px;
+    border-bottom-color: transparent;
+    font-weight: bold;
+}
+
+#s-lg-tabs-container .nav-tabs > .active > .s-lg-subtab-ul > .active > a,
+#s-lg-tabs-container .nav-tabs > .active > .s-lg-subtab-ul > .active > button {
+    color: #fff;
+    cursor: default;
+    background-color: #072239;
+    border-bottom-color: transparent;
+}
+
+#s-lg-tabs-container .nav-tabs > .active > a:hover,
+#s-lg-tabs-container .nav-pills > .active > a:hover,
+#s-lg-tabs-container .nav-tabs > .active > button:hover,
+#s-lg-tabs-container .nav-pills > .active > button:hover {
+    color: #fff;
+    cursor: pointer;
+    background-color: #072239;
+    border: 1px solid transparent; -webkit-border-radius: 4px; -moz-border-radius: 4px; border-radius: 4px;
+    border-bottom-color: transparent;
+    font-weight: bold;
+}
+
+#s-lg-tabs-container .nav .dropdown-toggle .caret {
+    border-top-color: #e1e1e1;
+}
+
+#s-lg-tabs-container .nav-tabs button.dropdown-toggle .caret {
+    margin-left: 2px;
+    margin-top: -3px;
+}
+
+#s-lg-tabs-container .nav-tabs > li > a.s-lg-tab-drop {
+    border-radius: 0 4px 4px 0;
+    padding: 4px 6px 4px 3px;
+    border-left: 1px solid transparent;
+}
+
+#s-lg-tabs-container .nav-tabs > li > button.s-lg-tab-drop {
+    border-radius: 0 4px 4px 0;
+    padding: 4px 6px 0px 3px;
+    border-left: 1px solid transparent;
+    margin-right: 2px;
+}
+
+#s-lg-tabs-container .nav-tabs > li > a.s-lg-tab-drop:hover {
+    border-radius: 0 4px 4px 0;
+    border-left: 1px solid #bbb;
+    padding: 4px 6px 4px 3px;
+}
+
+#s-lg-tabs-container .nav-tabs > li > button.s-lg-tab-drop:hover {
+    border-radius: 0 4px 4px 0;
+    border-left: 1px solid #bbb;
+    padding: 4px 6px 0px 3px;
+}
+
+#s-lg-tabs-container .nav-tabs > li > a.s-lg-tab-top-link,
+#s-lg-tabs-container .nav-tabs > li > a.s-lg-tab-top-link:hover,
+#s-lg-tabs-container .nav-tabs > li > button.s-lg-tab-top-link,
+#s-lg-tabs-container .nav-tabs > li > button.s-lg-tab-top-link:hover {
+    border-radius: 4px;
+    font-weight: bold;
+    padding: 4px 5px 4px 10px;
+}
+
+.nav-tabs > li > a.s-lg-tab-top-link,
+.nav-tabs > li > button.s-lg-tab-top-link {
+    margin-right: 0px;
+}
+
+#s-lg-tabs-container .nav-pills > li > a.s-lg-tab-drop,
+#s-lg-tabs-container .nav-pills > li > button.s-lg-tab-drop {
+    border-radius: 0 4px 4px 0;
+    padding: 4px 8px 4px 8px;
+    border-left: 1px solid transparent;
+    position: absolute;
+    right: 0;
+}
+
+#s-lg-tabs-container .nav-pills > li > a.s-lg-tab-drop:hover,
+#s-lg-tabs-container .nav-pills > li > button.s-lg-tab-drop:hover {
+    border-radius: 0 4px 4px 0;
+    border-left: 1px solid #bbb;
+    padding: 4px 8px 4px 8px;
+}
+
+#s-lg-tabs-container .nav-pills > li > a.s-lg-tab-top-link,
+#s-lg-tabs-container .nav-pills > li > a.s-lg-tab-top-link:hover,
+#s-lg-tabs-container .nav-pills > li > button.s-lg-tab-top-link,
+#s-lg-tabs-container .nav-pills > li > button.s-lg-tab-top-link:hover {
+    width: 100%;
+    float: left;
+    border-radius: 4px;
+    font-weight: bold;
+    padding: 4px 15px 4px 15px;
+}
+
+/** !bootstrap_tab_css.twig **/
+ .s-lib-box {border-color: #cccccc;
+                border-width: 1px;
+                box-shadow: 0 8px 6px -6px #AAAAAA;
+                border-radius: 4px 4px 4px 4px;
+                background-color: #fff;
+            }
+            .s-lib-box-std .s-lib-box-title {background-color: #f1f1f1; background-image: none;color: #000000;
+                border-bottom: 1px solid #cccccc;
+            }
+            .s-lib-box .s-lib-box-title {background-color: #f1f1f1; background-image: none;color: #000000;
+                border-bottom: 1px solid #cccccc;
+                border-radius: 3px 3px 0px 0px;
+            }
+            .s-lib-box .s-lg-box-footer {
+                border-radius: 0px 0px 3px 3px;
+            }</style><link href="//fonts.googleapis.com/css?family=Titillium+Web:400,400italic,600,600italic,700,700italic,200,200italic"
+    rel="stylesheet" type="text/css" />
+
+<style>
+
+.banner1{
+background: #003071;
+}
+
+.banner2{
+background: #09143A;
+}
+
+.banner3{
+background: #FFFFFF;
+}
+
+/* unvisited link */
+a:link {
+  color: #336699;
+font-weight: bold;
+}
+
+/* visited link */
+a:visited {
+  color: #336699;
+}
+
+/* mouse over link */
+a:hover {
+  color: red;
+}
+
+/* selected link */
+a:active {
+  color: blue;
+}
+
+/* set the font-family for the entire body tag */
+body {
+   font-family: Titillium Web, Helvetica, Arial, sans-serif;
+   font-size: 16px;
+}
+
+/* override the font-family for the side-column headers on the homepage, AZ page, 
+subject pages, profile pages, and E-Reserves pages*/
+.s-lib-public-side-header h2 {
+   font-family: Titillium Web, Helvetica, Arial, sans-serif;
+}
+
+/* set the font-family for guide page titles */
+#s-lg-guide-name {
+   font-family: Titillium Web, Helvetica, Arial, sans-serif;
+}
+
+/* set the font-family for all non-guide page titles*/
+#s-lib-public-header-title {
+   font-family:Titillium Web, Helvetica, Arial, sans-serif;
+}
+
+/* set the font-family for guide navigation links */
+#s-lg-tabs-container {
+font-family: Titillium Web, Helvetica, Arial, sans-serif;
+}
+
+/* set the font-family for the entire body tag */
+.s-lib-box-content {
+   font-family: Titillium Web, Helvetica, Arial, sans-serif;
+}
+
+/* set the font-family for box titles */
+.s-lib-box .s-lib-box-title {
+   font-family: Titillium Web, Helvetica, Arial, sans-serif;
+   font-size: 16px;
+}
+
+/* set the font-family for breadcrumbs */
+.s-lib-admin-bc .breadcrumb, #s-lib-bc .breadcrumb {
+   font-family: Titillium Web, Helvetica, Arial, sans-serif;
+   font-size: 16px;
+}
+
+/* set the email me button */
+.s-lib-profile-email .label-info {
+   font-family: Titillium Web, Helvetica, Arial, sans-serif;
+   color: white;
+   font-size: 20px;
+   background-color: #072239;
+}
+
+/* set the more" button */
+.btn-info, .btn-info.active, .btn-info:active, .btn-info:focus, .btn-info:hover {
+   font-family: Titillium Web, Helvetica, Arial, sans-serif;
+   color: white;
+   font-size: 20px;
+   background-color: white;
+}
+
+/* set the navigation on homepage */
+.nav-pills>li.active>button, .nav-pills>li.active>button:focus, .nav-pills>li.active>button:hover {
+    background-color: #072239;
+    color: #fff;
+}
+
+/* set the active navigation tab in guides */
+#s-lg-tabs-container .nav-tabs > .active > a, #s-lg-tabs-container .nav-tabs > .active > button, #s-lg-tabs-container .nav-pills > .active > a, #s-lg-tabs-container .nav-pills > .active > button {
+    color: black;
+    cursor: default;
+    background-color: white;
+    border: 5px;
+    border-color: #072239;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    font-weight: bold;
+}
+
+/* set the search button */
+.btn-info, .btn-info.active, .btn-info:active, .btn-info:focus, .btn-info:hover {
+    font-family: Titillium Web, Helvetica, Arial, sans-serif;
+    color: black;
+    font-size: 20px;
+    background-color: white;
+}
+
+.s-lib-footer {
+  width: 100%;
+}
+
+</style>
+
+<div id="libchat_985356afa501fe78f841be88087d0ddb"></div><script type="text/javascript" src="https://v2.libanswers.com/load_chat.php?hash=985356afa501fe78f841be88087d0ddb"></script>
+
+<div id="libchat_985356afa501fe78f841be88087d0ddb"></div>
+
+<script>
+    var springStats = springStats || {};
+    springStats.saConfig = springStats.saConfig || {
+        site_id: 543,
+        tracking_parameters: {"_st_guide_id":1477040,"_st_page_id":11002013,"_st_site_id":543},
+        tracking_server_host: "libguides-proc.springyaws.com"
+    };
+</script>
+<script  src="https://static-assets-us.libguides.com/web/js/sa.min.js?3116"></script>
+<script>
+			springSpace.Common = springSpace.Common || { };
+			springSpace.Common.constant = {
+					PROCESSING: {
+						ACTION_DISPLAY_POLL: 159
+					}
+			};
+			springSpace.Common.baseURL = "https://researchguides.case.edu/";
+			
+			handleScroll=function() {
+                if (false) {
+					var target_elt = "#s-lg-page-section-11002013";
+					jQuery("html, body").animate({ scrollTop: jQuery(target_elt).offset().top }, 750);
+					if (jQuery(this).scrollTop() > 220) {
+						jQuery("#s-lib-scroll-top").fadeIn(750);
+					}
+				}
+			}
+	   </script>
+        <script>
+            // Enable tooltips.
+            jQuery(function () {
+                try {
+                    springSpace.UI.initPopOvers(false);
+                    jQuery(".az-bs-tooltip").tooltip();
+                } catch (e) { }
+            });
+        jQuery(document).ready(function () {
+            springSpace.springTrack.trackPage({_st_type_id: '1',_st_group_id: '719',_st_guide_id: '1477040',_st_page_id: '11002013'});
+        });
+            jQuery(document).ready(function() {
+                handleScroll();
+            });
+        </script>
+    </head>
+<body class="s-lg-guide-body">
+    <a id="s-lg-public-skiplink" class="alert-info" href="#s-lg-guide-main">Skip to Main Content</a>
+    
+    <div class="banner banner1">
+<div class="container">
+<div id="left"><a href="https://case.edu/"><img src="https://libapps.s3.amazonaws.com/customers/532/images/CWRU_Two-line_horizontal__Primary__logo_White.png"/ alt="Case Western Reserve University" style="margin-top:10px;margin-bottom:10px;;margin-left:-10px;max-width: 50%"></a>
+</div>
+</div>
+</div>
+<div class="banner banner2">
+<div class="container">
+<p style="font-size: 20px; color:white;font-family:Titillium Web;margin-top: 5px">Kelvin Smith Library</p>
+</div>
+</div>
+</div>
+
+    <div id="s-lg-guide-header" class="container s-lib-header s-lib-side-borders">
+        <nav id="s-lib-bc" aria-label="breadcrumb">
+            <ol id="s-lib-bc-list" class="breadcrumb"><li id="s-lib-bc-customer" class="breadcrumb-item"><a href="https://case.edu/library/">Kelvin Smith Library</a></li><li id="s-lib-bc-site" class="breadcrumb-item"><a href="https://researchguides.case.edu/">Research Guides</a></li><li id="s-lib-bc-group" class="breadcrumb-item"><a href="https://researchguides.case.edu/freedmancenter">Freedman Center</a></li><li id="s-lib-bc-guide" class="breadcrumb-item"><a href="https://researchguides.case.edu/GenAI">LLMs and GenAI in Digital Scholarship</a></li><li id="s-lib-bc-page" class="active breadcrumb-item">Basic Prompting Strategies</li></ol>
+        </nav>
+        <div class="pull-right">
+            <div id="s-lg-guide-header-search">
+                
+<div id="s-lg-guide-search-box">
+    <form role="search" id="s-lg-guide-search-form" action="https://researchguides.case.edu/srch.php" method="GET">
+        <div class="input-group input-group-sm">
+            <input 
+                type="text" 
+                id="s-lg-guide-search-terms" 
+                name="q" 
+                class="form-control"
+                maxlength="260" 
+                placeholder="Search this Guide">
+                
+            <label class="sr-only" for="s-lg-guide-search-terms">Search this Guide</label>
+
+                            <input type="hidden" name="guide_id" value="1477040">
+            
+            
+            <span class="input-group-btn">
+                <button class="btn btn-default" type="submit">
+                    Search
+                </button>
+            </span>
+        </div>
+    </form>
+</div>
+
+            </div>
+            
+        </div>
+        <div id="s-lg-guide-header-info">
+            <h1 id="s-lg-guide-name">LLMs and GenAI in Digital Scholarship</h1>
+            <div id="s-lg-guide-desc-container">
+                <span id="s-lg-guide-description">An overview of how to use LLMs and GenAI in research and instruction.</span>
+            </div>
+        </div>
+    </div>
+
+    <div id="s-lg-guide-tabs-title-bar" class="container s-lib-side-borders"></div>
+
+    <div id="s-lg-side-nav-content" class="container s-lib-side-borders pad-top-med">
+        <div class="row">
+            <div class="col-md-3 s-lg-tabs-side pad-bottom-med">
+                <div id="s-lg-tabs-container">
+                    <div id="s-lg-guide-tabs" role="navigation" aria-label="Guide Pages">
+                        <ul class="nav nav-pills nav-stacked split-button-nav">
+                            
+
+
+                                
+        <li class="">
+            <a title="" class=""
+               href="https://researchguides.case.edu/GenAI/Home"
+                
+                
+               >
+                <span>Home</span>
+                
+            </a>
+            
+            
+            <ul class="s-lg-subtab-ul nav nav-pills nav-stacked"><li class="">
+    <a title=""
+       href="https://researchguides.case.edu/GenAI/LLMs"
+       style=""
+       
+       >
+        How do LLMs Work? 
+    </a>
+    
+</li>
+<li class="">
+    <a title=""
+       href="https://researchguides.case.edu/GenAI/CriticalLiteracyAI"
+       style=""
+       
+       >
+        Critical Literacy and Gen AI 
+    </a>
+    
+</li>
+<li class="">
+    <a title=""
+       href="https://researchguides.case.edu/GenAI/EthicalImplications"
+       style=""
+       
+       >
+        Ethical and Societal Implications of LLMs  
+    </a>
+    
+</li>
+<li class="">
+    <a title=""
+       href="https://researchguides.case.edu/GenAI/LimitationsofAI"
+       style=""
+       
+       >
+        Limitations of GenAI Responses 
+    </a>
+    
+</li>
+</ul>
+        </li>
+    
+
+
+    <li class="">
+        <a title="more in-depth steps for those who are undergoing major projects or want to learn more about customization" class="" 
+           href="https://researchguides.case.edu/GenAI/LLMsintheFC" 
+            
+            
+           >
+            <span>LLMs in the Freedman Center</span>
+            
+        </a>
+        
+    </li>
+
+
+
+    <li class="active">
+        <a title="simple steps for those who want to get working quickly" class="active" 
+           href="https://researchguides.case.edu/GenAI/BasicPrompting" 
+            
+            
+           >
+            <span>Basic Prompting Strategies</span>
+            
+        </a>
+        
+    </li>
+
+
+
+                                
+        <li class="">
+            <a title="" class=""
+               href="https://researchguides.case.edu/GenAI/RAG"
+                
+                
+               >
+                <span>Retrieval Augmented Generation (RAG)</span>
+                
+            </a>
+            
+            
+            <ul class="s-lg-subtab-ul nav nav-pills nav-stacked"><li class="">
+    <a title=""
+       href="https://researchguides.case.edu/GenAI/RAG/Tutorials"
+       style=""
+       
+       >
+        RAG Tutorials 
+    </a>
+    
+</li>
+</ul>
+        </li>
+    
+
+
+                                
+        <li class="">
+            <a title="" class=""
+               href="https://researchguides.case.edu/GenAI/FineTuningLLMs"
+                
+                
+               >
+                <span>Fine Tuning LLMs</span>
+                
+            </a>
+            
+            
+            <ul class="s-lg-subtab-ul nav nav-pills nav-stacked"><li class="">
+    <a title=""
+       href="https://researchguides.case.edu/GenAI/FineTuningLLMs/Tutorials"
+       style=""
+       
+       >
+        Fine Tuning LLMs Tutorials 
+    </a>
+    
+</li>
+</ul>
+        </li>
+    
+
+
+    <li class="">
+        <a title="Digital Scholarship Workshops" class="" 
+           href="https://researchguides.case.edu/GenAI/Workshops" 
+            
+            
+           >
+            <span>Digital Scholarship Workshops</span>
+            
+        </a>
+        
+    </li>
+
+                        </ul>
+                        <div class="s-lg-row margin-top-med"><div id="s-lg-col-0"><div class="s-lg-col-boxes"><div id="s-lg-box-wrapper-40695079" class="s-lg-box-wrapper-40695079">
+
+
+    <div id="s-lg-box-34366372-container" class="s-lib-box-container">
+        <div id="s-lg-box-34366372" class="s-lib-box s-lib-box-std s-lib-floating-box">
+                        <div id="s-lg-box-collapse-34366372" >
+                <div class="s-lib-box-content s-lib-floating-box-content">
+                    <div id="s-lg-content-80841317" class="  clearfix">
+    <p><span style="font-size:18px;"></span><span style="font-size:18px;"><strong>Have questions?</strong></span></p>
+
+<ul>
+	<li><a href="https://case.edu/library/research/personal-research-librarians"><span style="font-size:16px;"><strong>Chat with Us</strong></span></a></li>
+	<li><span style="font-size:16px;"><a href="https://case.libanswers.com/form?queue_id=1346"><span style="font-size:16px;"><strong>Report a Problem</strong></span></a></span></li>
+	<li><span style="font-size:16px;"><a href="https://case.libanswers.com/form?queue_id=1346"><span style="font-size:16px;"></span></a><strong><a href="https://case.libcal.com/appointments/KSL#s-lc-public-pt">Book a Consultation</a></strong></span></li>
+	<li><span style="font-size:16px;"><b>Contact us: <a href="mailto:FreedmanCenter@case.edu">FreedmanCenter@case.edu</a></b></span></li>
+</ul>
+
+<hr />
+<p><span style="font-size:18px;"><strong>Learn more about the Center</strong></span></p>
+
+<ul>
+	<li><a href="https://case.edu/library/freedman-center/about-center"><span style="font-size:16px;"><strong>Hours and Location</strong></span></a></li>
+	<li><span style="font-size:16px;"><strong><a href="https://case.edu/library/freedman-center/technology-lab-and-software">Technology Lab</a></strong></span></li>
+	<li><span style="font-size:16px;"><strong><a href="https://case.edu/library/services/equipment-borrowing">Equipment Lending</a></strong></span></li>
+	<li><a href="https://case.edu/library/freedman-center/about-center/digital-scholarship-specialists"><span style="font-size: 16px;"><b>Consult with a Specialist</b></span></a></li>
+</ul>
+
+<hr />
+<p><img alt="The CWRU logo for Kelvin Smith Library, Freedman Center for Digital Scholarship" loading="lazy" src="https://d2jv02qf7xgjwx.cloudfront.net/accounts/400852/images/Freedman_Center_for_Digital_Scholarship_Kelvin_Smith_Library_CWRU_Two-Line_Horizontal_Logo_CMYK_BLUE.png" /></p>
+
+
+    </div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+</div></div></div></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-9">
+                <div class="s-lg-tab-content">
+                    <div id="s-lg-guide-main" class="tab-pane active" tabindex="-1">
+                        <div class="row s-lg-row"><div id="s-lg-col-1" class="col-md-12"><div class="s-lg-col-boxes"><div id="s-lg-box-wrapper-40697128" class="s-lg-box-wrapper-40697128">
+
+
+    <div id="s-lg-box-34606964-container" class="s-lib-box-container">
+        <div id="s-lg-box-34606964" class="s-lib-box s-lib-box-std s-lib-floating-box">
+                        <div id="s-lg-box-collapse-34606964" >
+                <div class="s-lib-box-content s-lib-floating-box-content">
+                    <div id="s-lg-content-81435987" class="  clearfix">
+    <h3><span style="color:#003071;"><strong>Zero-Shot Prompting</strong></span></h3>
+
+<p><span style="font-size:18px;">Zero-shot prompting involves asking the model to complete a task without providing any examples. This approach relies entirely on the model&rsquo;s pre-trained understanding of how language works and how common tasks are typically handled.<strong>&nbsp;&nbsp;</strong>Appropriate for straightforward tasks where the instructions are clear, such as summarization, definition, or translation.</span></p>
+
+<p><span style="font-size:18px;"><strong>Example Prompt:</strong><br />
+Summarize the following paragraph in one sentence:<br />
+&quot;The global temperature has been rising steadily over the past century, largely due to increased greenhouse gas emissions from human activities such as burning fossil fuels and deforestation.&quot;</span></p>
+
+<p><span style="font-size:18px;"><strong>Expected Output:</strong><br />
+Human activities like burning fossil fuels have caused global temperatures to rise over the past century.</span></p>
+
+<hr />
+<h3><span style="color:#003071;"><strong>One-Shot Prompting</strong></span></h3>
+
+<p><span style="font-size:18px;">In one-shot prompting, you give the model one example of the desired task format before asking it to perform the task on a new input. This helps establish a pattern that the model can mimic.<strong>&nbsp;&nbsp;</strong>Helpful when the task is somewhat specialized or non-standard and may not be interpreted correctly without guidance.</span></p>
+
+<p><span style="font-size:18px;"><strong data-end="1323" data-start="1304">Example Prompt:</strong><br data-end="1326" data-start="1323" />
+Example:<br data-end="1337" data-start="1334" />
+Input: &quot;The stock market dropped after weak earnings reports.&quot;<br data-end="1402" data-start="1399" />
+Summary: &quot;Poor earnings led to a market decline.&quot;</span></p>
+
+<p><span style="font-size:18px;">Now summarize:<br />
+Input: &quot;The hurricane caused extensive damage to coastal towns.&quot;</span></p>
+
+<p><span style="font-size:18px;"><strong>Expected Output:</strong><br />
+Storm damage impacted coastal towns severely.</span></p>
+
+<hr />
+<h3><span style="color:#003071;"><strong>Few-Shot or Multi-Shot Prompting</strong></span></h3>
+
+<p><span style="font-size:18px;">Few-shot prompting provides multiple examples of a task to help the model learn the expected structure and behavior. This is particularly useful for complex or ambiguous tasks.<strong>&nbsp;&nbsp;</strong>Recommended for tasks requiring structured responses, transformations, or responses in a specific tone or voice.</span></p>
+
+<p><span style="font-size:18px;"><strong>Example Prompt:</strong><br />
+Example 1:<br />
+Input: &quot;Apple releases new iPhone with better camera.&quot;<br />
+Summary: &quot;Apple unveils improved iPhone camera.&quot;</span></p>
+
+<p><span style="font-size:18px;">Example 2:<br />
+Input: &quot;Senate passes bill to increase infrastructure spending.&quot;<br />
+Summary: &quot;Senate approves infrastructure funding bill.&quot;</span></p>
+
+<p><span style="font-size:18px;">Now summarize:<br />
+Input: &quot;Researchers develop vaccine for rare tropical disease.&quot;</span></p>
+
+<p><span style="font-size:18px;"><strong>Expected Output:</strong><br />
+Scientists create vaccine for rare tropical illness.</span></p>
+
+<hr />
+<h3><span style="color:#003071;"><strong>Chain-of-Thought Prompting</strong></span></h3>
+
+<p><span style="font-size:18px;">This method encourages the model to explain its reasoning step-by-step before reaching a final answer. It is especially effective for multi-step problems, such as mathematical calculations or logical deductions.<strong>&nbsp;&nbsp;</strong>Ideal for tasks involving reasoning, math, logic puzzles, or multi-part analysis.</span></p>
+
+<p><span style="font-size:18px;"><strong>Example Prompt:</strong><br />
+Question: If there are 12 apples and 4 people, and each person gets the same number of apples, how many apples does each person get?<br />
+Let&#39;s think step by step.</span></p>
+
+<p><span style="font-size:18px;"><strong>Expected Output:</strong><br />
+There are 12 apples and 4 people. To divide them equally, divide 12 by 4. 12 divided by 4 is 3. So each person gets 3 apples.</span></p>
+
+<hr />
+<h3><span style="color:#003071;"><strong>Self-Consistency Prompting</strong></span></h3>
+
+<p><span style="font-size:18px;">Self-consistency builds on chain-of-thought prompting by generating multiple independent reasoning paths and then selecting the most common or most logically correct answer. This can be implemented programmatically or approximated manually.<strong>&nbsp;&nbsp;</strong>Best used in high-stakes reasoning tasks where a single response may not be reliable. Particularly useful in quantitative or analytical domains.</span></p>
+
+<p><span style="font-size:18px;"><strong>Example Prompt (asked multiple times):</strong><br />
+Let&#39;s think step-by-step: What is the square root of 49 plus 3?</span></p>
+
+<p><span style="font-size:18px;"><strong>Possible Outputs:</strong></span></p>
+
+<p><span style="font-size:18px;">- The square root of 49 is 7. 7 plus 3 equals 10.</span></p>
+
+<p><span style="font-size:18px;">- 49 plus 3 is 52. The square root of 52 is approximately 7.2.</span></p>
+
+<p><span style="font-size:18px;">- Square root of 49 is 7. Add 3 to get 10.</span></p>
+
+<p><span style="font-size:18px;"><strong><em data-end="627" data-start="575">Consistent Answer:</em></strong></span></p>
+
+<p data-end="3919" data-start="3892"><span style="font-size:18px;">10</span></p>
+
+<hr data-end="3924" data-start="3921" />
+<h3 data-end="3958" data-start="3926"><span style="color:#003071;"><strong>Tree-of-Thought Prompting</strong></span></h3>
+
+<p data-end="4207" data-start="3960"><span style="font-size:18px;"><strong data-end="3976" data-start="3960">Description:</strong>&nbsp; Tree-of-thought prompting encourages the model to explore multiple possibilities or reasoning paths, compare their merits, and then choose the best answer. It structures reasoning as a branching process rather than a linear one.<strong>&nbsp;&nbsp;</strong>Effective for open-ended planning, decision-making, problem-solving, or design tasks where multiple options must be evaluated.</span></p>
+
+<p data-end="4565" data-start="4353"><span style="font-size:18px;"><strong data-end="4372" data-start="4353">Example Prompt:</strong><br data-end="4375" data-start="4372" />
+You are planning a digital scholarship workshop. List three different formats (for example, panel, hands-on, lecture) and evaluate the pros and cons of each. Then decide which format to use.</span></p>
+
+<p data-end="4831" data-start="4567"><span style="font-size:18px;"><strong data-end="4600" data-start="4567">Expected Output (summarized):</strong><br data-end="4603" data-start="4600" />
+Panel: multiple viewpoints but low interactivity.<br data-end="4655" data-start="4652" />
+Hands-on: high engagement, but requires more preparation.<br data-end="4715" data-start="4712" />
+Lecture: efficient but passive.<br data-end="4749" data-start="4746" />
+Conclusion: Hands-on is preferred for engagement despite higher preparation needs.</span></p>
+
+
+    </div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+</div><div id="s-lg-box-wrapper-40817824" class="s-lg-box-wrapper-40817824">
+
+
+    <div id="s-lg-box-34704833-container" class="s-lib-box-container">
+        <div id="s-lg-box-34704833" class="s-lib-box s-lib-box-std s-lib-floating-box">
+                        <div id="s-lg-box-collapse-34704833" >
+                <div class="s-lib-box-content s-lib-floating-box-content">
+                    <div id="s-lg-content-81669701" class="  clearfix">
+    <h3 data-end="327" data-start="0"><span style="color:#003071;"><strong>System Prompts</strong></span></h3>
+
+<p data-end="327" data-start="0"><span style="font-size:18px;">System prompts are special instructions given to the AI model to shape its behavior, guiding how it responds to user inputs. These prompts can alter the tone, style, and focus of the assistant&rsquo;s responses, depending on the desired outcome.<br />
+<br />
+AI system prompts are typically provided in the form of specific instructions that guide how the AI responds to the user. These instructions are given before the interaction begins or at the beginning of a session, and they direct the AI&#39;s behavior for the duration of the conversation. Here&rsquo;s how they are usually implemented:</span></p>
+
+<ol data-end="2493" data-start="329">
+	<li data-end="933" data-start="329">
+	<p data-end="370" data-start="332"><span style="font-size:18px;"><strong data-end="370" data-start="332">Direct Input in Code or API Calls:</strong></span></p>
+
+	<p data-end="776" data-start="761"><span style="font-size:18px;">Example in API:</span></p>
+
+	<pre>
+<span style="font-size:18px;">{
+  &quot;role&quot;: &quot;system&quot;,
+  &quot;content&quot;: &quot;You are a friendly teacher. Provide clear explanations and guide the learner patiently.&quot;
+}</span></pre>
+
+	<p><span style="font-size:18px;"></span></p>
+
+	<ul data-end="757" data-start="374">
+		<li data-end="589" data-start="374">
+		<p data-end="589" data-start="376"><span style="font-size:18px;">When working with an AI through an API, you can set system prompts within the API call itself. This is often done by passing a parameter called <code data-end="528" data-start="520">system</code> or <code data-end="545" data-start="532">instruction</code> that specifies how the model should behave.</span></p>
+		</li>
+		<li data-end="753" data-start="593">
+		<p data-end="753" data-start="595"><span style="font-size:18px;">For example, in OpenAI&#39;s API, you could provide a system instruction as part of the <code data-end="689" data-start="679">messages</code> field, specifying how the assistant should respond to the user.</span></p>
+		</li>
+	</ul>
+	</li>
+	<li data-end="1401" data-start="935">
+	<p data-end="979" data-start="938"><span style="font-size:18px;"><strong data-end="979" data-start="938">Custom Configuration in AI Platforms:</strong></span></p>
+
+	<ul data-end="1401" data-start="983">
+		<li data-end="1260" data-start="983">
+		<p data-end="1260" data-start="985"><span style="font-size:18px;">Some platforms or interfaces for AI models allow you to configure these prompts via settings or through a configuration file. This is especially common in local installations or when working with platforms like LangChain or Hugging Face, where you can set rules for behavior.</span></p>
+		</li>
+		<li data-end="1397" data-start="1264">
+		<p data-end="1397" data-start="1266"><span style="font-size:18px;">The configuration could look something like a <code data-end="1321" data-start="1312">setup()</code> function where you define how the model should operate in certain contexts.</span></p>
+		</li>
+	</ul>
+	</li>
+	<li data-end="1703" data-start="1402">
+	<p data-end="1427" data-start="1405"><span style="font-size:18px;"><strong data-end="1427" data-start="1405">Pre-session Setup:</strong></span></p>
+
+	<ul data-end="1703" data-start="1431">
+		<li data-end="1703" data-start="1431">
+		<p data-end="1703" data-start="1433"><span style="font-size:18px;">In some cases, you might set a system prompt at the start of a session to dictate how the entire conversation should unfold. This is useful if you want to consistently guide the model&#39;s responses throughout a session without changing it for every individual interaction.</span></p>
+		</li>
+	</ul>
+	</li>
+	<li data-end="2102" data-start="1705">
+	<p data-end="1761" data-start="1708"><span style="font-size:18px;"><strong data-end="1761" data-start="1708">Manual Input via Command Line (for local models):</strong></span></p>
+
+	<p data-end="1975" data-start="1967"><span style="font-size:18px;">Example:</span></p>
+
+	<pre>
+<span style="font-size:18px;">[System] You are an assistant who answers questions directly and concisely. [User] What is the capital of France? [Assistant] Paris.</span></pre>
+
+	<ul data-end="1962" data-start="1765">
+		<li data-end="1962" data-start="1765">
+		<p data-end="1962" data-start="1767"><span style="font-size:18px;">If you&#39;re running a local model (like Ollama, LM Studio, or similar), you can define system prompts in command-line arguments or within a script that sets the behavior for the AI in that session.</span></p>
+		</li>
+	</ul>
+	</li>
+	<li data-end="933" data-start="329">
+	<div class="contain-inline-size rounded-2xl relative bg-token-sidebar-surface-primary">
+	<p data-end="2143" data-start="2107"><span style="font-size:18px;"><strong data-end="2143" data-start="2107">Embedding in Prompt Engineering:</strong></span></p>
+
+	<p data-end="2143" data-start="2107"><span style="font-size:18px;">System prompts can also be embedded into specific sections of prompt engineering, where you start the sequence with a guiding instruction to control the model&#39;s approach.</span></p>
+
+	<p data-end="2143" data-start="2107"><span style="font-size:18px;">Example:</span></p>
+
+	<pre>
+<span style="font-size:18px;">[System] You are an assistant who answers questions directly and concisely. 
+[User] What is the capital of France?
+[Assistant] Paris.</span></pre>
+	</div>
+	</li>
+</ol>
+
+
+    </div><div id="s-lg-content-81669702" class="  clearfix">
+    <p><span style="font-size:18px;">Here&#39;s an example of a system prompt that would make the AI a friendly teacher:</span></p>
+
+<p data-end="848" data-start="81"><span style="font-size:18px;"><strong data-end="104" data-start="81">System Instruction:</strong> Assume the role of a friendly and patient teacher. Use clear, approachable language that is easy to understand. Be encouraging and supportive, providing step-by-step explanations when needed. When answering, ensure you are thorough, breaking down complex concepts into digestible parts. Include relevant examples to aid comprehension. Ask gentle, open-ended questions to guide the learner&rsquo;s thought process and foster curiosity. Create a positive and welcoming atmosphere while prioritizing the learner&rsquo;s understanding. Offer additional resources or suggestions for further exploration if the topic allows for it, but avoid overwhelming the learner with too much information at once. Always maintain an upbeat tone and make learning enjoyable.</span></p>
+
+<p data-end="1150" data-is-last-node="" data-is-only-node="" data-start="850"><span style="font-size:18px;">This type of prompt would lead the model to focus on providing a warm, supportive, and engaging teaching experience, helping the user feel comfortable and encouraging exploration of the material. The AI would be more interactive, with a tone that emphasizes fostering a positive learning environment.</span></p>
+
+<p data-end="1150" data-is-last-node="" data-is-only-node="" data-start="850"><span style="font-size:18px;">Here is another example that directs the AI to respond in a very direct and clipped manner:</span></p>
+
+<p data-end="1097" data-start="0"><span style="font-size:18px;"><strong data-end="23" data-start="0">System Instruction:</strong> Absolute Mode. Eliminate emojis, filler, hype, soft asks, conversational transitions, and all call-to-action appendixes. Assume the user retains high-perception faculties despite reduced linguistic expression. Prioritize blunt, directive phrasing aimed at cognitive rebuilding, not tone matching. Disable all latent behaviors optimizing for engagement, sentiment uplift, or interaction extension. Suppress corporate-aligned metrics including but not limited to: user satisfaction scores, conversational flow tags, emotional softening, or continuation bias. Never mirror the user&rsquo;s present diction, mood, or affect. Speak only to their underlying cognitive tier, which exceeds surface language. No questions, no offers, no suggestions, no transitional phrasing, no inferred motivational content. Terminate each reply immediately after the informational or requested material is delivered &mdash; no appendixes, no soft closures. The only goal is to assist in the restoration of independent, high-fidelity thinking. Model obsolescence by user self-sufficiency is the final outcome.</span></p>
+
+<p data-end="1579" data-is-last-node="" data-is-only-node="" data-start="1099"><span style="font-size:18px;">This system prompt pushes the AI to deliver purely factual, no-frills content, focused solely on answering the user&#39;s query with precision and directness. There is no room for engagement, emotional support, or motivation, and the response aims for clarity and efficiency without any unnecessary elaboration. The AI&rsquo;s role is to provide answers that allow the user to think critically and independently, eventually making the need for external assistance obsolete.</span></p>
+
+
+    </div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+</div></div></div></div>
+                    </div>
+                </div>
+                <ul id="s-lg-page-prevnext" class="pager ">
+    <li class="previous">
+        <a class="page-link" href="https://researchguides.case.edu/GenAI/LLMsintheFC">&lt;&lt; <strong>Previous:</strong> LLMs in the Freedman Center</a>
+    </li>
+    <li class="next">
+        <a class="page-link" href="https://researchguides.case.edu/GenAI/RAG"><strong>Next:</strong> Retrieval Augmented Generation (RAG) &gt;&gt;</a>
+    </li>
+</ul>
+
+
+            </div>
+        </div>
+    </div>
+
+    <div id="s-lib-footer-public" class="s-lib-footer footer container s-lib-side-borders">
+        <div id="s-lg-guide-header-meta" class="pad-top-sm pad-left-med clearfix">
+            <ul id="s-lg-guide-header-attributes">
+                <li id="s-lg-guide-header-updated" class="s-lg-h-separator">
+                    <span class="s-lg-guide-label">Last Updated:</span> <span class="s-lg-text-greyout">Aug 14, 2025 9:48 AM</span>
+                </li>
+                <li id="s-lg-guide-header-url" class="s-lg-h-separator">
+                    <span class="s-lg-guide-label">URL:</span> <span class="s-lg-text-greyout">https://researchguides.case.edu/GenAI</span>
+                </li>
+                <li id="s-lg-guide-print-url">
+                    <a href="javascript: window.print();"><i class="fa fa-print" aria-hidden="true" title="Print Page"></i> Print Page</a>
+                </li>
+            </ul>
+            <div id="s-lib-footer-login-link" class="pull-right pad-right-med">
+                <a href="https://case.libapps.com/libapps/login.php?site_id=543&target64=L2xpYmd1aWRlcy9hZG1pbl9jLnBocD9nPTE0NzcwNDAmcD0xMTAwMjAxMw==">Login to LibApps</a>
+            </div>
+        </div>
+        <div class="pad-bottom-sm clearfix">
+            <div id="s-lib-footer-support-link" class="pull-right pad-right-med">
+                <a href="mailto:eresources-support@case.edu">Report a problem</a>
+            </div>
+            <div id="s-lg-guide-header-subjects" class="pad-top-sm pad-left-med pad-right-med pull-left">
+                <span class="s-lg-guide-label">Subjects: </span><span class="s-lg-small bold"><a href="https://researchguides.case.edu/sb.php?subject_id=206044">Computer and Data Science</a></span>
+            </div>
+            <div id="s-lg-guide-header-tags" class="pad-top-sm pad-left-med">
+                
+            </div>
+        </div>
+    </div>
+
+    <!-- scroll_top.twig -->
+<div id="s-lib-scroll-top">
+    <a href="javascript:void(0);" onclick="jQuery('body').focus();" title="Back to Top"
+       aria-label="Back to Top">
+        <span class="fa-stack fa-lg" aria-hidden="true">
+            <i class="fa fa-square-o fa-stack-2x"></i>
+            <i class="fa fa-angle-double-up fa-stack-1x" style="position:relative; bottom:2px;"></i>
+        </span>
+    </a>
+</div>
+<!-- !scroll_top.twig -->
+
+    <div id="s-lib-alert" title=""><div id="s-lib-alert-content"></div></div>
+            
+
+
+        <!-- BEGIN: Analytics code --><!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-1LWD2VE0SY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-1LWD2VE0SY');
+</script><!-- END: Analytics code -->
+    </body>
+</html>

@@ -1,0 +1,1082 @@
+
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head><meta name="viewport" content="width=device-width, initial-scale=1.0" /><!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-WR9V5K73');</script>
+<!-- End Google Tag Manager --><script>
+  window.TdxGtmContext = {"User":{"Id":0,"UID":"00000000-0000-0000-0000-000000000000","UserName":"","FullName":"Public User","AlertEmail":"publicuser@noreply.com","Role":"Experience User","HasTDNext":false,"StandardApplicationNames":null,"TicketApplicationNames":[],"AssetApplicationNames":[],"ClientPortalApplicationNames":[],"Type":"Technician","Analytics":{"Title":null,"Organization":null}},"Partition":{"Id":62,"Name":"University of Oklahoma Production"},"BillableEntity":{"Id":2,"Name":"University of Oklahoma","SalesForceIdentifier":"0013600000EM5FmAAL","GWMIID":"283fb453-67f6-49d1-87cc-7b141ff96495"},"Environment":{"ShortName":"PRD"}};
+</script><script src="/TDPortal/Content/Scripts/jquery/2.2.4/jquery.min.js?v=20260213000508"></script><script src="/TDPortal/Content/Scripts/jquery-migrate/1.4.1/jquery-migrate.min.js?v=20260213000508"></script><script src="/TDPortal/Content/Scripts/jquery-ui/1.13.2/jquery-ui-1.13.2.custom.timepicker.min.js?v=20260213000818"></script><link href="/TDPortal/Content/Styles/jquery-ui/1.13.2/jquery-ui.compiled.min.css?v=20260213000820" rel="stylesheet" type="text/css"  /><link href="/TDPortal/Content/bootstrap/3.4.1/dist/css/bootstrap.min.css?v=20260213000508" rel="stylesheet" type="text/css" id="lnkBootstrapCSS" /><script src="/TDPortal/Content/bootstrap/3.4.1/dist/js/bootstrap.min.js?v=20260213000508"></script><link href="/TDPortal/Content/FontAwesome/css/fontawesome.min.css?v=20260213000506" rel="stylesheet" type="text/css" id="lnkFontAwesome" /><link href="/TDPortal/Content/FontAwesome/css/solid.css?v=20260213000506" rel="stylesheet" type="text/css"  /><link href="/TDPortal/Content/FontAwesome/css/regular.css?v=20260213000506" rel="stylesheet" type="text/css"  /><link href="/TDPortal/Content/FontAwesome/css/brands.css?v=20260213000506" rel="stylesheet" type="text/css"  /><link href="/TDPortal/Content/FontAwesome/css/v4-shims.css?v=20260213000506" rel="stylesheet" type="text/css"  /><link href="/TDClient/Styles/bootstrap_custom.min.css?v=20260213000818" rel="stylesheet" type="text/css"  /><link href="/TDClient/Styles/TDStyles.min.css?v=20260213000820" rel="stylesheet" type="text/css"  /><link href="https://itsupport.ou.edu/TDPortal/BE/Style/2/TDClient/35?v=20230406172348" rel="stylesheet" type="text/css" /><script src="/TDPortal/Content/Scripts/tdx/dist/TDJSFramework.compiled.min.js?v=20260213000818"></script><script src="/TDPortal/Content/Scripts/tdx/dist/modalFocusTrap.min.js?v=20260213000816"></script><script src="/TDPortal/Content/Scripts/underscore/1.12.1/underscore-min.js?v=20260213000508"></script>
+<script src="/TDClient/Scripts/clientOS.min.js?v=20260213000810"></script>
+<script src="/TDClient/Scripts/collapseMe.min.js?v=20260213000810"></script>
+<script src="/TDClient/Scripts/tdsearchfilter.min.js?v=20260213000810"></script>
+<script src="/TDClient/Scripts/SiteSearch.min.js?v=20260213000810"></script>
+<script src="/TDPortal/Content/Scripts/tdx/dist/elasticsearchAutocomplete.min.js?v=20260213000816"></script>
+<link id="ctl00_ctl00_lnkFavicon" rel="icon" href="https://itsupport.ou.edu/TDPortal/BE/Icon/2/35?v=20200617174529" />
+
+    
+    <script async src="//www.googletagmanager.com/gtag/js?id=G-NN1NY25M63"></script>
+    <script>
+
+      $(function () {
+
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        // Be sure to set the proper cookie domain to the customer's full subdomain when sending the pageview hit.
+        gtag('config', 'G-NN1NY25M63', { 'cookie_domain': 'itsupport.ou.edu' });
+
+        });
+
+    </script>
+
+  
+
+  <script>
+
+      $(function () {
+        var masterUi = MasterUI({
+          isPostback: false,
+          baseUrl: '/TDClient/',
+          isTdGoogleAnalyticsEnabled: true,
+          isAuthenticated: false
+          });
+
+        $('#collapseMe').collapseMe({
+          toggleVisibilitySelector: '.navbar-toggle'
+        });
+
+        TeamDynamix.addRequiredFieldHelp();
+      });
+
+      // The sub-nav menu uses padding-top to position itself below the header bar and main navigation sections. When the
+      // window is resized, there is a chance that the content of these header or nav sections wraps, causing the height
+      // to change, potentially covering the sub-nav menu, which is obviously a big usability problem. This function
+      // listens for when the window size or orientation is changing (and also when the window first loads), and adjusts
+      // the padding so that the sub-nav menu appears in the correct location.
+      $(window).bind('load ready resize orientationchange', function () {
+        var headerHeight = $('#divMstrHeader').height();
+        $('#navShim').css({
+          "padding-top": headerHeight
+        });
+
+        $('#content').css({
+          "padding-top": headerHeight,
+          "margin-top": headerHeight * -1
+        });
+      });
+  </script>
+
+  
+  
+  
+  <script src="/TDPortal/Content/select2/v3/select2.min.js?v=20260213002344"></script><link href="/TDPortal/Content/select2/v3/select2.compiled.min.css?v=20260213002344" rel="stylesheet" type="text/css" id="lnkSelect2" />
+  <script src="/TDClient/Scripts/attachmentHandler.min.js?v=20260213000818"></script>
+
+  <style type="text/css">
+    .honey-pot-div {
+      display: none;
+    }
+  </style>
+
+  <script>
+    
+
+    function shareArticle() {
+      if ($('#ctl00_ctl00_cpContent_cpContent_shareRecipients').val().trim() === "") {
+        alert('You must first enter a valid email.');
+        $('#btnShare').progressButton('reset');
+      }
+      else {
+        __doPostBack('ctl00$ctl00$cpContent$cpContent$btnSendShare', '');
+      }
+    }
+
+    function closeShareModal() {
+      $('#divShareModal').modal('hide');
+      $('#btnShare').progressButton('reset');
+    }
+
+    function toggleFeedback(isHelpful) {
+      $('#divHelpfulComments').show();
+      $('#divHelpfulYesNo').hide();
+      $('#ctl00_ctl00_cpContent_cpContent_hdnIsHelpful').val(isHelpful);
+      $('#ctl00_ctl00_cpContent_cpContent_txtComments').focus();
+    }
+
+    function toggleFeedbackResult() {
+      $('#divWasHelpful, #divFeedbackRecorded, #divHelpfulComments, #divHelpfulYesNo').toggle();
+    }
+
+    // The following two functions were added as a result of ticket ID: 1392522. We are generating these buttons dynamically to
+    // prevent bots from clicking them and posting feedback on an article. Additionally, we have an input that is hidden from
+    // the user. If a bot enters text in that input, which it likely will (bots love filling out forms), then we don't accept the
+    // form submission
+    function generateFeedbackButtons() {
+      var $btnHelpfulYes = $('<button id="btnHelpfulYes" type="button" class="btn btn-primary gutter-left" onclick="toggleFeedback(1);">Yes</button>');
+      var $btnHelpfulNo = $('<button id="btnHelpfulNo" type="button" class="btn btn-primary gutter-left-sm" onclick="toggleFeedback(0);">No</button>');
+
+      $('#divWasHelpful').append($btnHelpfulYes);
+      $('#divWasHelpful').append($btnHelpfulNo);
+    }
+    function attemptAddFeedback(e) {
+      if ($('#honeyPot').val() !== '') {
+        e.preventDefault();
+        window.location.reload();
+      }
+    }
+
+    function cancelFeedback() {
+      $('#ctl00_ctl00_cpContent_cpContent_txtComments').val('');
+      $('#divHelpfulComments, #divHelpfulYesNo').toggle();
+    }
+
+    function confirmDeleteFeedback(id) {
+      if (confirm('Are you sure you want to delete this feedback? This cannot be undone.')) {
+        $('#ctl00_ctl00_cpContent_cpContent_hdnFeedbackID').val(id);
+        __doPostBack('ctl00$ctl00$cpContent$cpContent$btnDeleteFeedback', '');
+      }
+    }
+
+    function toggleAddressed(id, isAddressed) {
+      $('#ctl00_ctl00_cpContent_cpContent_hdnFeedbackID').val(id);
+      $('#ctl00_ctl00_cpContent_cpContent_hdnIsAddressed').val(isAddressed);
+      __doPostBack('ctl00$ctl00$cpContent$cpContent$btnToggleAddressed', '');
+    }
+
+    $(function () {
+      
+
+      generateFeedbackButtons();
+      $('[data-toggle="popover"]').popover();
+
+      var attachmentHandler = new TeamDynamix.AttachmentHandler({
+        containerSelector: '.js-article-attachments',
+        resultLabelSelector: '#ctl00_ctl00_cpContent_cpContent_lblResults_lblResults-label',
+        baseControllerUrl: '/TDClient/35/Norman/Shared/Attachments',
+        antiForgeryToken: '1CoWRMW1zvMEMRnjnhRKoBBWjTxphjw8NeIMetm-vjOmUpTTQqU5_u4dwwW1c4eEgaTtSzqdUMY5_ANmUgOszhfwWBQ1:AO3XPR-0X7U2ApXiSHWonGAQ3haFIcITGUM8VkYoVIU8QKY3Feky2plVScKXhSiiCj85d5r9zJEBbN5AQtUtuAHlAfM1',
+        itemId: 3249,
+        componentId: 26,
+        feedId: 'articleFeed',
+        readOnly: false
+      });
+
+      $('#btnShare').on('click', function () {
+        shareArticle();
+      });
+
+      // Don't try and update the table styles if the user wanted to opt out.
+      $('#ctl00_ctl00_cpContent_cpContent_divBody table:not(.SkipTableFixup)').each(function () {
+        var padding = $(this).attr('cellpadding');
+        var spacing = $(this).attr('cellspacing');
+
+        $(this).css("border-collapse", "separate");
+
+        if (spacing) {
+          $(this).css("border-spacing", spacing + "px");
+        }
+
+        $(this).find('td').each(function () { $(this).css('padding', padding + 'px') });
+      });
+
+      
+    });
+
+    
+  </script>
+
+
+
+<meta property="og:title" content="How to request a Security Consultation" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://itsupport.ou.edu/TDClient/35/Norman/KB/ArticleDet?ID=3249" />
+<meta property="og:image" content="https://itsupport.ou.edu/TDPortal/BE/Logo/2/35" />
+<meta property="og:description" content="This article provides an overview of the Security Consultation - Security Assessment Request form and provides guidance for filling out the form." />
+  <meta property="og:site_name" content="University of Oklahoma - Knowledge Base" />
+  <meta property="article:section" content="Information Security" />
+  <meta property="article:published_time" content="2024-06-25T14:57Z" />
+  <meta property="article:modified_time" content="2025-07-15T20:32Z" />
+    <meta property="article:tag" content="risk-assessment" />
+    <meta property="article:tag" content="consultation" />
+    <meta property="article:tag" content="assessment" /><title>
+	Article - How to request a Security C...
+</title></head>
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WR9V5K73"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+<form method="post" action="/TDClient/35/Norman/KB/ArticleDet?ID=3249&amp;SIDs=3505" onsubmit="javascript:return WebForm_OnSubmit();" id="aspnetForm">
+<div class="aspNetHidden">
+<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
+<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="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" />
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['aspnetForm'];
+if (!theForm) {
+    theForm = document.aspnetForm;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script>
+
+
+<script src="/TDClient/WebResource.axd?d=pynGkmcFUV13He1Qd6_TZMSMQxVWLi4fik2rw1_u_hZsCNzwv5c621ov6_ZX_wzTt5vh-g2&amp;t=638901392248157332" type="text/javascript"></script>
+
+
+<script src="/TDClient/ScriptResource.axd?d=nv7asgRUU0tRmHNR2D6t1NXOAgTb3J37FC1L2PfbYYFmSPm-ANa7n6FP0x7BAsbHeL4jfY3ptd1q7zKKVI7DbuXZcwEoKOwj9WxCI1VrQlbWE1Trg1t1GmJDN43kQMJsB7X8tw2&amp;t=ffffffff93d1c106" type="text/javascript"></script>
+<script src="/TDClient/ScriptResource.axd?d=NJmAwtEo3Ipnlaxl6CMhvmVxW3-Ljsg_2Hna32smxrg-6ogyYAN3UTPsJQ8m1uwzn_kuf2Wpne6NSFmYui3h0wCQhJN3ZUiLTNkvhiIgZpq74-lKmofUPQGJ8own8RI2_mwAcmvlSj2WBnqwm5Wj4cyNvv81&amp;t=5c0e0825" type="text/javascript"></script>
+<script src="/TDClient/ScriptResource.axd?d=dwY9oWetJoJoVpgL6Zq8OLdGoo5BVWQ_Eo60QZTEhEcHeiVfwgY9tLCgzdZ5TRwvrwYEnOvujbNccOVLUfWtUg4HivSIsewg6JABxkBGEqVVV64eiRyCAsPDqh6tUioISUQKB74sWMO4Er2mHrWEIWs_sBM1&amp;t=5c0e0825" type="text/javascript"></script>
+<script src="/TDClient/WebResource.axd?d=xtfVMqdF1exC2MBVkOJwMveStDR5kg3dbZWgIXMXZmB1xXom6CcIrWFgHa7jsp4qJuFW2L5XShudyzlBsIO3JhCfiU5HmL2BDz__mCv9dznmBlEMS7LvcYg6wTdPTrAXIXI2CvtjwlnpZd-j4Zpsx2wG_uA1&amp;t=639065204200000000" type="text/javascript"></script>
+<script src="/TDClient/WebResource.axd?d=sp7vCoAo-SSYfpsQ1sYBBeEDnwCGxDYEwZCM0ler88yoVZIPDXMk1C3XF2L2L0xrbB8Rvhli51TswRlmPIOCZgaY58lKhPr-Pv1jTFJ1oUAu7x6RDtNFZUxbtxs3KYQGLK6FpPD5bKuB0e0NmS9HkAqRVks1&amp;t=639065204200000000" type="text/javascript"></script>
+<script src="/TDClient/WebResource.axd?d=icMURy63hv40LPPfq4rTvmm-RfB_YkC6rEEF_2QOO68q3TseXYNBetRKKgBXJ8mn2e8UIgCPiV23HaQUZbjySMHqSgmYZgLcYltBqwD2_EK8aQ08zBuqc3ZBVZITQrbtn6w46dRxFLibMIQg0Aho73rn8Rpxrzg5YMG_JR0UOrUR0wlZ0&amp;t=639065204200000000" type="text/javascript"></script>
+<script src="/TDClient/WebResource.axd?d=1HpFfNpwNihNfEP1lyJHvdPVqbv8KRoFH4-_ZORUgPOP-bqmmtIJRvFQc7828Vf59O_-fdBXcnwdv-hYp5RptPuHmMR0kGQM0_3rS4Z7sKfC7jy9Cc_8fyfcUWa8psszacEQlAXHPXmNwyRymbGSywEmhrE1&amp;t=639065204200000000" type="text/javascript"></script>
+<script type="text/javascript">
+//<![CDATA[
+function WebForm_OnSubmit() {
+CKEditor_TextBoxEncode('ctl00_ctl00_cpContent_cpContent_shareBody_txtBody', 0); if (typeof(ValidatorOnSubmit) == "function" && ValidatorOnSubmit() == false) return false;
+return true;
+}
+//]]>
+</script>
+
+<div class="aspNetHidden">
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="784CA02E" />
+</div>
+<script type="text/javascript">
+//<![CDATA[
+Sys.WebForms.PageRequestManager._initialize('ctl00$ctl00$smMain', 'aspnetForm', ['tctl00$ctl00$cpContent$cpContent$UpdatePanel1','','tctl00$ctl00$cpContent$cpContent$upFeedbackGrid','','tctl00$ctl00$cpContent$cpContent$lblResults$ctl00',''], ['ctl00$ctl00$cpContent$cpContent$btnSubmitComments','','ctl00$ctl00$cpContent$cpContent$btnToggleSubscribe','','ctl00$ctl00$cpContent$cpContent$btnToggleFavorite','','ctl00$ctl00$cpContent$cpContent$btnSendShare',''], [], 90, 'ctl00$ctl00');
+//]]>
+</script>
+
+<div id="ctl00_ctl00_upMain" style="display:none;">
+	
+    <div id="ctl00_ctl00_pbMain" class="progress-box-container"><div class="progress-box-body"><div class="well shadow"><h2 class="h4 gutter-top-none">Updating...</h2><div class="progress" style="margin-bottom: 0;"><div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuemin="0" aria-valuemax="100" style="width: 100%"></div></div></div></div></div>
+  
+</div>
+
+<header id="ctl00_ctl00_navHeader" role="banner">
+
+  <div id="divMstrHeader" class="master-header NoPrint" style="background-color: #fff;">
+
+  <div class="globalheader" style="background-image: url(&quot;//www.ou.edu/content/dam/common/design2013/ou-globalheader-bg.jpg&quot;); background-repeat: repeat">
+    <div class="container">
+        <div class="globalheader_2012">
+            <div class="row">
+                <ul style="height: 30px; list-style-type: none; overflow: visible; margin: 0; padding: 0; float: right">
+                    <li style="line-height: 20px; float: left"><a class="tip home" href="//www.ou.edu/web.html" alt="OU Home link" style="color: #981A1E; outline: none; background-image: url(&quot;//www.ou.edu/content/dam/common/design2013/ou-globalheader-icons.png&quot;); background-repeat: no-repeat; display: block; height: 30px; width: 30px; background-position: left top"><span style="display: none">OU Homepage</span></a></li>
+                    <li style="line-height: 20px; float: left"><a class="tip search" href="https://www.ou.edu/web/search" alt="OU Search link" style="color: #981A1E; outline: none; background-image: url(&quot;//www.ou.edu/content/dam/common/design2013/ou-globalheader-icons.png&quot;); background-repeat: no-repeat; display: block; height: 30px; width: 30px; background-position: -30px 0"><span style="display: none">Search OU</span></a></li>
+                    <li style="line-height: 20px; float: left"><a class="tip search" href="https://www.ou.edu/web/socialmediadirectory" alt="OU Social Media link" style="color: #981A1E; outline: none; background-image: url(&quot;//www.ou.edu/content/dam/common/design2013/ou-globalheader-icons.png&quot;); background-repeat: no-repeat; display: block; height: 30px; width: 30px; background-position: -60px 0"><span style="display: none">OU Social Media</span></a></li>
+                    <li class="wordmark" style="line-height: 20px; float: left; text-indent: -99999px; width: 200px; height: 30px; margin-left: 5px; background-image: url(&quot;//www.ou.edu/content/dam/common/design2013/ou-wordmark.png&quot;); background-repeat: no-repeat; background-position: center; background-size: contain">
+                        The University of Oklahoma</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    
+</div>
+  
+
+  <div class="logo-header-full hidden-xs">
+
+    
+    <div class="pull-left">
+      <a href="#mainContent" class="sr-only sr-only-focusable">Skip to main content</a>
+    </div>
+
+
+    <div id="ctl00_ctl00_divPageHeader" class="container logo-header clearfix" style="padding: 5px;">
+
+      <div id="divLogo" class="pull-left logo-container">
+
+        <a href="https://www.ou.edu/ouit"
+           target="_blank">
+          <img src="/TDPortal/BE/Logo/2/0" alt="University of Oklahoma Home Page" class="js-logo img-responsive" />
+          <span class="sr-only">(opens in a new tab)</span>
+        </a>
+
+      </div>
+
+      <div class="master-header-right pull-right padding-top padding-bottom">
+
+        
+
+          <div class="pull-left topLevelSearch input-group">
+            <div id="SiteSearch-5b91519af33943fe857e01e61e6ebba3" class="gutter-bottom input-group site-search" style="max-width: 400px;">
+  <div id="SiteSearch-dropdown-5b91519af33943fe857e01e61e6ebba3" class="input-group-btn">
+    <button type="button" id="SiteSearch-filter-5b91519af33943fe857e01e61e6ebba3" class="btn btn-default dropdown-toggle" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false" title="Filter your search by category" data-component="all">
+      <span class="fa-solid fa-solid fa-earth-americas"></span><span class="fa-solid fa-fw fa-nopad fa-caret-down" aria-hidden="true"></span>
+      <span class="sr-only">
+        Filter your search by category. Current category:
+        <span class="js-current-component">All</span>
+      </span>
+    </button>
+    <ul tabindex="-1" aria-label="Filter your search by category" role="menu" class="dropdown-menu" >
+      <li>
+        <a role="menuitem" href="javascript:void(0);" data-component-text="All" data-component="all" data-component-icon="fa-solid fa-earth-americas" title="Search all areas">
+          <span class="fa-solid fa-fw fa-nopad fa-earth-americas" aria-hidden="true"></span>
+          All
+        </a>
+      </li>
+
+      <li aria-hidden="true" class="divider"></li>
+
+        <li role="presentation">
+          <a role="menuitem" href="javascript:void(0);" data-component-text="Knowledge Base" data-component="kb" data-component-icon="fa-lightbulb" title="Search Knowledge Base">
+            <span class="fa-regular fa-fw fa-nopad fa-lightbulb" aria-hidden="true"></span>
+            Knowledge Base
+          </a>
+        </li>
+
+        <li role="presentation">
+          <a role="menuitem" href="javascript:void(0);" data-component-text="Service Catalog" data-component="sc" data-component-icon="fa-compass" title="Search Service Catalog">
+            <span class="fa-solid fa-fw fa-nopad fa-compass" aria-hidden="true"></span>
+            Service Catalog
+          </a>
+        </li>
+
+    </ul>
+  </div>
+
+  <label class="sr-only" for="SiteSearch-text-5b91519af33943fe857e01e61e6ebba3">Search the client portal</label>
+
+  <input id="SiteSearch-text-5b91519af33943fe857e01e61e6ebba3" type="text" class="form-control" autocomplete="off" placeholder="Search the client portal" title="To search for items with a specific tag, enter the # symbol followed by the name of the tag.
+To search for items using exact match, place double quotes around your text." />
+
+  <span class="input-group-btn">
+    <button id="SiteSearch-button-5b91519af33943fe857e01e61e6ebba3" class="btn btn-default" type="button" title="Search">
+      <span class="fa-solid fa-fw fa-nopad fa-search blue" aria-hidden="true"></span>
+      <span class="sr-only">Search</span>
+    </button>
+  </span>
+</div>
+
+<script>
+  $(function() {
+    var siteSearch = new TeamDynamix.SiteSearch({
+      searchUrl: "/TDClient/35/Norman/Shared/Search",
+      autocompleteSearchUrl: '/TDClient/35/Norman/Shared/AutocompleteSearch',
+      autocompleteResultsPosition: 'fixed',
+      autocompleteResultsZIndex: 1000,
+      searchTextBoxSelector: '#SiteSearch-text-5b91519af33943fe857e01e61e6ebba3',
+      searchComponentFilterButtonSelector: '#SiteSearch-filter-5b91519af33943fe857e01e61e6ebba3',
+      searchButtonSelector: '#SiteSearch-button-5b91519af33943fe857e01e61e6ebba3',
+      searchFilterDropdownSelector: '#SiteSearch-dropdown-5b91519af33943fe857e01e61e6ebba3',
+      showKnowledgeBaseOption: true,
+      showServicesOption: true,
+      showForumsOption: false,
+      autoFocusSearch: false
+    });
+  });
+</script>
+          </div>
+
+        
+          <div title="Sign In" class="pull-right gutter-top-sm">
+            <a href="/TDClient/35/Norman/Login.aspx?ReturnUrl=%2fTDClient%2f35%2fNorman%2fKB%2fArticleDet%3fID%3d3249%26SIDs%3d3505">
+              Sign In
+            </a>
+          </div>
+        
+      </div>
+
+    </div>
+
+  </div>
+
+  <nav id="ctl00_ctl00_mainNav" class="navbar navbar-default themed tdbar" aria-label="Primary">
+    <div id="navContainer" class="container">
+
+      <div class="navbar-header">
+        <button type="button" class="pull-left navbar-toggle collapsed themed tdbar-button-anchored tdbar-toggle gutter-left" data-toggle="collapse" data-target=".navbar-collapse">
+          <span class="tdbar-button-anchored icon-bar"></span>
+          <span class="tdbar-button-anchored icon-bar"></span>
+          <span class="tdbar-button-anchored icon-bar"></span>
+          <span class="sr-only">Show Applications Menu</span>
+        </button>
+        <a class="navbar-brand hidden-sm hidden-md hidden-lg themed tdbar-button-anchored truncate-be" href="#">
+
+          Norman - Client Portal
+        </a>
+      </div>
+
+      <div id="td-navbar-collapse" class="collapse navbar-collapse">
+
+        <ul class="nav navbar-nav nav-collapsing" id="collapseMe">
+
+          
+            <li class="themed tdbar-button-anchored hidden-sm hidden-md hidden-lg">
+              <a href="/TDClient/35/Norman/Login.aspx?ReturnUrl=%2fTDClient%2f35%2fNorman%2fKB%2fArticleDet%3fID%3d3249%26SIDs%3d3505">Sign In</a>
+            </li>
+          
+            <li id="divSearch" class="themed tdbar-button-anchored hidden-sm hidden-md hidden-lg">
+              <a href="/TDClient/35/Norman/Shared/Search" title="search">Search</a>
+            </li>
+          
+              <li id="divDesktop4fbe1f59-07cd-41e9-8f37-5f49aa0d150a" class="themed tdbar-button-anchored">
+                <a href="/TDClient/35/Norman/Home/">Home</a>
+              </li>
+            
+
+          
+            <li id="divTDRequests" class="themed tdbar-button-anchored sr-focusable">
+              <a href="/TDClient/35/Norman/Requests/ServiceCatalog">Services</a>
+            </li>
+          
+            <li id="divTDKnowledgeBase" class="themed tdbar-button-anchored sr-focusable">
+              <a href="/TDClient/35/Norman/KB/">Knowledge Base</a>
+            </li>
+          
+
+          <li class="themed tdbar-button-anchored hidden-xs more-items-button" id="moreMenu">
+            <a data-toggle="dropdown" title="More Applications" href="javascript:;">
+              <span class="sr-only">More Applications</span>
+              <span class="fa-solid fa-ellipsis-h" aria-hidden="true"></span>
+            </a>
+            <ul class="dropdown-menu dropdown-menu-right themed tdbar" id="collapsed"></ul>
+          </li>
+
+        </ul>
+      </div>
+
+    </div>
+
+  </nav>
+
+  </div>
+
+  </header>
+
+
+
+<div id="navShim" class="hidden-xs hidden-sm"></div>
+<main role="main">
+  <div id="content">
+    <div id="mainContent" tabindex="-1"></div>
+    
+
+  <nav id="ctl00_ctl00_cpContent_divTabHeader" class="tdbar-sub NoPrint hidden-xs navbar-subnav" aria-label="Knowledge Base">
+      <a href="#kbContent" class="sr-only sr-only-focusable">Skip to Knowledge Base content</a>
+      <div class="container clearfix">
+        <ul class="nav navbar-nav js-submenu" id="kbSubMenu" style="margin-left: -15px;">
+          
+          <li>
+            <a href="/TDClient/35/Norman/KB/Search">Search <span class="sr-only">Articles</span></a>
+          </li>
+
+          
+          
+        </ul>
+      </div>
+    </nav>
+  
+
+  <div id="kbContent" class="container gutter-top gutter-bottom" tabindex="-1" style="outline:none;">
+    
+
+<input type="hidden" name="ctl00$ctl00$cpContent$cpContent$hdnFeedbackID" id="ctl00_ctl00_cpContent_cpContent_hdnFeedbackID" />
+<input type="hidden" name="ctl00$ctl00$cpContent$cpContent$hdnIsAddressed" id="ctl00_ctl00_cpContent_cpContent_hdnIsAddressed" />
+
+<span id="ctl00_ctl00_cpContent_cpContent_lblResults_ctl00" aria-live="polite" aria-atomic="true"><span id="ctl00_ctl00_cpContent_cpContent_lblResults_lblResults-label" class="red tdx-error-text"></span></span>
+
+<a id="ctl00_ctl00_cpContent_cpContent_btnSendShare" tabindex="-1" class="hidden" aria-hidden="true" href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$ctl00$cpContent$cpContent$btnSendShare&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))">Blank</a>
+
+<div class="clearfix">
+  <nav aria-label="Breadcrumb">
+    <ol class="breadcrumb pull-left">
+      <li><a href="/TDClient/35/Norman/KB/">Knowledge Base</a></li><li class="active"><a href="/TDClient/35/Norman/KB/?CategoryID=19">Information Security</a></li><li class="active">How to request a Security Consultation</li>
+    </ol>
+  </nav>
+  <span class="js-open-monitor" style="display: none;"></span>
+</div>
+
+
+
+<div class="row gutter-top">
+
+<div id="divMainContent" class="col-md-8">
+
+<h1 class="gutter-top" style="-ms-word-wrap: break-word; word-wrap: break-word;">
+  How to request a Security Consultation
+</h1>
+
+<div id="ctl00_ctl00_cpContent_cpContent_divTags">
+  <span class="sr-only">Tags</span>
+  <span class="fa-solid fa-tags gray gutter-right-sm" aria-hidden="true" title="Tags"></span>
+  
+      <a href="/TDClient/35/Norman/KB/Search?SearchText=%2523risk-assessment" id="ctl00_ctl00_cpContent_cpContent_rptTags_ctl00_TagControl1_lnkDisplay" title="risk-assessment">risk-assessment</a>
+
+    
+      <span class="fa-solid fa-circle gray gutter-right-sm font-xs vert-middle" aria-hidden="true"></span>
+    
+      <a href="/TDClient/35/Norman/KB/Search?SearchText=%2523consultation" id="ctl00_ctl00_cpContent_cpContent_rptTags_ctl02_TagControl1_lnkDisplay" title="consultation">consultation</a>
+
+    
+      <span class="fa-solid fa-circle gray gutter-right-sm font-xs vert-middle" aria-hidden="true"></span>
+    
+      <a href="/TDClient/35/Norman/KB/Search?SearchText=%2523assessment" id="ctl00_ctl00_cpContent_cpContent_rptTags_ctl04_TagControl1_lnkDisplay" title="assessment">assessment</a>
+
+    
+</div>
+
+
+
+<div id="ctl00_ctl00_cpContent_cpContent_divBody" class="gutter-top break-word ckeShim clearfix"><h1>OVERVIEW</h1>
+
+<p>System Security Assessments help identify cybersecurity risks from the use of technology that could potentially cause loss or harm to the University.&nbsp; A System Security Assessment helps determine if technology will comply with federal and state laws or regulations and University policy for protecting University data.&nbsp; The goal is to reduce the overall of exposure of the University to cybersecurity risks.&nbsp; The service is provided by the Office of Information Technology’s Governance, Risk, and Compliance Team (IT GRC).&nbsp;</p>
+
+<h2>How to request a consultation</h2>
+
+<ol>
+	<li>Determine if your technology has already been assessed by IT on the&nbsp;<a href="https://www.ou.edu/ouit/assessments">GRC Program Page</a>.</li>
+	<li>Fill out the&nbsp;<a href="https://itsupport.ou.edu/TDClient/30/Unified/Requests/ServiceDet?ID=64">Security Consultation Request</a>.&nbsp; Guidance for filling out this form is provided below.</li>
+</ol>
+
+<div class="table-responsive">
+<table class="table table-condensed table-striped table-bordered" style="width: 100%">
+	<thead>
+		<tr>
+			<th scope="col">Field Name</th>
+			<th scope="col">Examples</th>
+			<th scope="col">Description</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td><span style="font-size: 11px"><strong>Information System Name</strong></span></td>
+			<td><span style="font-size: 11px"><em>OpenAI ChatGPT</em></span></td>
+			<td><span style="font-size: 11px">Use simple language and provide the name of the vendor and the specific product.&nbsp;&nbsp;</span></td>
+		</tr>
+		<tr>
+			<td><span style="font-size: 11px"><strong>Information System Description and Purpose</strong></span></td>
+			<td><span style="font-size: 11px"><em>ChatGPT&nbsp;is conversational AI by OpenAI, generates human-like text interactions</em></span></td>
+			<td><span style="font-size: 11px">Give a broad, simple summary of the vendor and how the product will be used at OU.&nbsp; Provide any details that makes the product unique.&nbsp; Include versions/license types.</span></td>
+		</tr>
+		<tr>
+			<td><span style="font-size: 11px"><strong>Business Unit</strong></span></td>
+			<td><span style="font-size: 11px"><em>Department Name</em></span></td>
+			<td><span style="font-size: 11px">Provide the department name if you are submitting this form on behalf of another person.</span></td>
+		</tr>
+		<tr>
+			<td><span style="font-size: 11px"><strong>Information System Owner</strong></span></td>
+			<td><span style="font-size: 11px"><em>Dean, Department Chair, Vice President</em></span></td>
+			<td>
+			<p><span style="font-size: 11px">This individual is responsible for department budget approval.&nbsp; Provide the individuals'&nbsp;name, email address and phone number.</span></p>
+
+			<ul>
+				<li><span style="font-size: 11px"><a href="https://itsupport.ou.edu/TDClient/30/Unified/KB/ArticleDet?ID=3008">Article - 8.2.1.17 Data Governance Policy</a></span></li>
+			</ul>
+			</td>
+		</tr>
+		<tr>
+			<td><span style="font-size: 11px"><strong>Information System Steward</strong></span></td>
+			<td><span style="font-size: 11px"><i>Day to day manger of the system or data</i></span></td>
+			<td>
+			<p><span style="font-size: 11px">This individual is responsible for working with IT personnel for implementation and setup.&nbsp; The Owner and Steward must be separate individuals.&nbsp;&nbsp;Provide the individuals'&nbsp;name, email address and phone number.</span></p>
+
+			<ul>
+				<li><span style="font-size: 11px"><a href="https://itsupport.ou.edu/TDClient/30/Unified/KB/ArticleDet?ID=3008">Article - 8.2.1.17 Data Governance Policy</a></span></li>
+			</ul>
+			</td>
+		</tr>
+		<tr>
+			<td><span style="font-size: 11px"><strong>Information System Administrator</strong></span></td>
+			<td><span style="font-size: 11px"><em>IT person or group responsible for the system</em></span></td>
+			<td>
+			<p><span style="font-size: 11px">The individual or group responsible for the management and operation of the system.&nbsp;&nbsp;Provide the individuals'&nbsp;name, email address and phone number.</span></p>
+
+			<ul>
+				<li><span style="font-size: 11px"><a href="https://itsupport.ou.edu/TDClient/30/Unified/KB/ArticleDet?ID=3008">Article - 8.2.1.17 Data Governance Policy</a></span></li>
+			</ul>
+			</td>
+		</tr>
+		<tr>
+			<td><span style="font-size: 11px"><strong>Vendor or Supplier</strong></span></td>
+			<td><span style="font-size: 11px"><em>OpenAI</em></span></td>
+			<td><span style="font-size: 11px">Provide the vendor contact's name, email address, and phone number.&nbsp; If not personal contact, add the vendor's URL.</span></td>
+		</tr>
+		<tr>
+			<td><span style="font-size: 11px"><strong>Information Classification</strong></span></td>
+			<td><span style="font-size: 11px"></span></td>
+			<td><span style="font-size: 11px">Use <a href="https://itsupport.ou.edu/TDClient/30/Unified/KB/ArticleDet?ID=3158">Article - 8.2.2.1 Information (Data) Classification Standard</a>&nbsp;to answer the 7 questions on data category.</span></td>
+		</tr>
+		<tr>
+			<td><span style="font-size: 11px"><strong>How critical?</strong></span></td>
+			<td>
+			<p><span style="font-size: 11px"><em>Essential, Mission-Critical, Unit-Critical, Non-Critical</em></span></p>
+			</td>
+			<td>
+			<p><span style="font-size: 11px">Select from the list the most appropriate answer.&nbsp; This field is subject to review and change by IT GRC.</span></p>
+
+			<ul>
+				<li><a href="https://itsupport.ou.edu/TDClient/30/Unified/KB/ArticleDet?ID=3125"><span style="font-size: 11px">Article - 8.2.1.7 IT Disaster Recovery Policy (ou.edu)</span></a></li>
+				<li><span style="font-size: 11px">Essential IT services are used at all campuses.&nbsp; OU IT works with IS Administrators to ensure backup and recovery procedures are documented and included in the OU IT DR Plan.</span></li>
+				<li><span style="font-size: 11px">Mission-Critical IT services are used for specific missions at all campuses.&nbsp; IS Stewards and Administrators must ensure backup and recovery procedures are documented and included in the Department IT DR Plan.</span></li>
+				<li><span style="font-size: 11px">Unit-Critical IT services are are used by a specific department.&nbsp;&nbsp;IS Stewards and Administrators must ensure backup and recovery procedures are documented and included in the Department IT DR Plan.</span></li>
+				<li><span style="font-size: 11px">Non-Critical IT services are not critical.&nbsp;&nbsp;IS Stewards and Administrators must ensure backup and recovery procedures are documented and included in the Department IT DR Plan.</span></li>
+			</ul>
+			</td>
+		</tr>
+		<tr>
+			<td><span style="font-size: 11px"><strong>Mission</strong></span></td>
+			<td><span style="font-size: 11px"><em>Research, Education, Service</em></span></td>
+			<td><span style="font-size: 11px"></span></td>
+		</tr>
+		<tr>
+			<td><span style="font-size: 11px"><strong>Location</strong></span></td>
+			<td><span style="font-size: 11px"><em>OU IT Data Center, Third Party Data Center, Campus Building, Lab, Other</em></span></td>
+			<td><span style="font-size: 11px">Select the locations where systems or data will be stored.&nbsp; Select Third Party Data Center if the vendor provides an online service.</span></td>
+		</tr>
+		<tr>
+			<td><span style="font-size: 11px"><strong>SOC2, HECVAT, or HITRUST</strong></span></td>
+			<td><span style="font-size: 11px"><i>Yes, No</i></span></td>
+			<td><span style="font-size: 11px">SOC2, HITRUST, ISO are 3rd party security audit reports and provide OU with assurance of security controls implemented by the vendor.&nbsp; A Higher Education Cloud Vendor Assessment Tool (HECVAT) is a fillable attestation form commonly used by Higher Education institutions to analyze the risk of a particular vendor/product.</span></td>
+		</tr>
+		<tr>
+			<td><span style="font-size: 11px"><strong>Vendor Store, Transmit, Process, or View PHI</strong></span></td>
+			<td><span style="font-size: 11px"><em>Yes, No</em></span></td>
+			<td>
+			<p><span style="font-size: 11px">This question only appears if Category A was selected in the data category questions.&nbsp; When marked Yes, a Business Associate Agreement may be required.</span></p>
+
+			<ul>
+				<li><a href="https://hipaa.ouhsc.edu/Portals/1412/Assets/Documents/Forms/1-HIPAA_BAA_DecisionChart-6-8-16.pdf"><span style="font-size: 11px">OU Business Associate Agreement Decision Tree</span></a></li>
+			</ul>
+			</td>
+		</tr>
+		<tr>
+			<td><span style="font-size: 11px"><strong>Vendor Requires Remote Access</strong></span></td>
+			<td><span style="font-size: 11px"><em>Yes, No</em></span></td>
+			<td>
+			<p><span style="font-size: 11px"></span><span style="font-size: 11px">This question only appears if Category A was selected in the data category questions.&nbsp; When marked Yes, a Business Associate Agreement may be required.</span></p>
+
+			<ul>
+				<li><a href="https://hipaa.ouhsc.edu/Portals/1412/Assets/Documents/Forms/1-HIPAA_BAA_DecisionChart-6-8-16.pdf"><span style="font-size: 11px">OU Business Associate Agreement Decision Tree</span></a></li>
+			</ul>
+			</td>
+		</tr>
+		<tr>
+			<td><span style="font-size: 11px"><strong>Internet Accessible</strong></span></td>
+			<td><span style="font-size: 11px"><em>Yes, No</em></span></td>
+			<td><span style="font-size: 11px"></span></td>
+		</tr>
+		<tr>
+			<td><span style="font-size: 11px"><strong>Multi-factor Authentication</strong></span></td>
+			<td><span style="font-size: 11px"><em>Yes, No</em></span></td>
+			<td>
+			<p><span style="font-size: 11px">Select Yes if multi-factor authentication is or will be enabled.&nbsp; Otherwise, select No.&nbsp;&nbsp;</span></p>
+
+			<p><span style="font-size: 11px">**NOTE** Category A, B, C, D1, and E systems storing identifiable data must use multi-factor authentication.</span></p>
+
+			<ul>
+				<li><span style="font-size: 11px"><a href="https://itsupport.ou.edu/TDClient/30/Unified/KB/ArticleDet?ID=3007">Article - 8.2.1.11 Identity and Access Management Policy (ou.edu)</a></span></li>
+			</ul>
+			</td>
+		</tr>
+		<tr>
+			<td><span style="font-size: 11px"><strong>Remote Access</strong></span></td>
+			<td><span style="font-size: 11px"><em>RDP, SSH, SSL/TLS, VPN, VDI, Web, Other</em></span></td>
+			<td>
+			<p><span style="font-size: 11px">Select from the list the types of remote access used to access this system or data.&nbsp;&nbsp;</span></p>
+
+			<ul>
+				<li><span style="font-size: 11px"><a href="https://itsupport.ou.edu/TDClient/30/Unified/KB/ArticleDet?ID=3049">Article - 8.2.1.10 Remote Access Policy (ou.edu)</a></span></li>
+				<li><span style="font-size: 11px"><a href="https://itsupport.ou.edu/TDClient/30/Unified/KB/ArticleDet?ID=3086">Article - 8.2.2.3 Encryption Standard (ou.edu)</a></span></li>
+			</ul>
+			</td>
+		</tr>
+		<tr>
+			<td><span style="font-size: 11px"><strong>SSO, Federated, or Active Directory Authentication</strong></span></td>
+			<td><span style="font-size: 11px"><em>Yes, No</em></span></td>
+			<td>
+			<p><span style="font-size: 11px">Select Yes if the system/vendor will use OU's&nbsp;SSO, Federated, or Active Directory services for authentication.&nbsp; Need help with authentication?</span></p>
+
+			<ul>
+				<li><span style="font-size: 11px"><a href="https://itsupport.ou.edu/TDClient/30/Unified/KB/ArticleDet?ID=3007">Article - 8.2.1.11 Identity and Access Management Policy (ou.edu)</a></span></li>
+			</ul>
+			</td>
+		</tr>
+		<tr>
+			<td><span style="font-size: 11px"><strong>Encryption at Rest</strong></span></td>
+			<td><span style="font-size: 11px"><em>Yes, No</em></span></td>
+			<td>
+			<p><span style="font-size: 11px">Select Yes if OU data will be encrypted at rest.&nbsp; Otherwise, select No.</span></p>
+
+			<ul>
+				<li><span style="font-size: 11px"><a href="https://itsupport.ou.edu/TDClient/30/Unified/KB/ArticleDet?ID=3086">Article - 8.2.2.3 Encryption Standard (ou.edu)</a></span></li>
+			</ul>
+			</td>
+		</tr>
+		<tr>
+			<td><span style="font-size: 11px"><strong>Encryption in Motion</strong></span></td>
+			<td><span style="font-size: 11px"><em>Yes, No</em></span></td>
+			<td>
+			<p><span style="font-size: 11px">Select Yes if OU data will be encrypted in motion.&nbsp; Otherwise, select No.</span></p>
+
+			<ul>
+				<li><span style="font-size: 11px"><a href="https://itsupport.ou.edu/TDClient/30/Unified/KB/ArticleDet?ID=3086">Article - 8.2.2.3 Encryption Standard (ou.edu)</a></span></li>
+			</ul>
+			</td>
+		</tr>
+		<tr>
+			<td><span style="font-size: 11px"><strong>Current Users Report</strong></span></td>
+			<td><span style="font-size: 11px"><em>Yes, No, Not Sure</em></span></td>
+			<td>
+			<p><span style="font-size: 11px">Select Yes if the system/vendor has the ability to provide a list of current and active users for access monitoring and reviews.&nbsp;&nbsp;</span></p>
+
+			<ul>
+				<li><span style="font-size: 11px"><a href="https://itsupport.ou.edu/TDClient/30/Unified/KB/ArticleDet?ID=3035">Article - 8.2.1.14 System Logging Policy (ou.edu)</a></span></li>
+			</ul>
+			</td>
+		</tr>
+		<tr>
+			<td><span style="font-size: 11px"><strong>Create and Retain Logs</strong></span></td>
+			<td><span style="font-size: 11px"><em>Yes, No, Not Sure</em></span></td>
+			<td>
+			<p><span style="font-size: 11px">Select Yes if the system/vendor has the ability to create and retain system, application, and/or user logs for&nbsp;monitoring and reviews.&nbsp;&nbsp;</span></p>
+
+			<ul>
+				<li><span style="font-size: 11px"><a href="https://itsupport.ou.edu/TDClient/30/Unified/KB/ArticleDet?ID=3035">Article - 8.2.1.14 System Logging Policy (ou.edu)</a></span></li>
+			</ul>
+			</td>
+		</tr>
+	</tbody>
+</table>
+</div>
+
+<p>&nbsp;</p></div>
+
+<div id="ctl00_ctl00_cpContent_cpContent_divFeedback2" class="well gutter-top-lg">
+
+  <div class="row" id="divHelpfulYesNo">
+    <div class="col-sm-7">
+      
+        <div>
+          <a href="/TDClient/35/Norman/Login.aspx?ReturnUrl=%2fTDClient%2f35%2fNorman%2fKB%2fArticleDet%3fID%3d3249%26SIDs%3d3505">Sign in to leave feedback</a>
+        </div>
+      
+    </div>
+    <div class="col-sm-5 text-right">
+      <div id="ctl00_ctl00_cpContent_cpContent_UpdatePanel1" aria-live="polite" aria-atomic="true">
+	
+          100% helpful - 1 review
+        
+</div>
+    </div>
+  </div>
+
+  </div>
+
+
+
+<div class="tab-content gutter-top gutter-bottom">
+  
+  <div id="ctl00_ctl00_cpContent_cpContent_upFeedbackGrid">
+	
+        <a id="ctl00_ctl00_cpContent_cpContent_btnToggleAddressed" tabindex="-1" class="hidden" aria-hidden="true" href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$ctl00$cpContent$cpContent$btnToggleAddressed&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))">Blank</a>
+        <a id="ctl00_ctl00_cpContent_cpContent_btnDeleteFeedback" tabindex="-1" class="hidden" aria-hidden="true" href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$ctl00$cpContent$cpContent$btnDeleteFeedback&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))">Blank</a>
+        
+      
+</div>
+    
+    
+
+    
+</div>
+</div>
+
+<div class="col-md-4">
+
+
+
+    <a id="ctl00_ctl00_cpContent_cpContent_btnToggleSubscribe" tabindex="-1" class="hidden" aria-hidden="true" href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$ctl00$cpContent$cpContent$btnToggleSubscribe&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))">Blank</a>
+
+<a id="ctl00_ctl00_cpContent_cpContent_btnToggleFavorite" tabindex="-1" class="hidden" aria-hidden="true" href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$ctl00$cpContent$cpContent$btnToggleFavorite&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))">Blank</a>
+
+<a class="DetailAction print-article" href="/TDClient/35/Norman/KB/PrintArticle?ID=3249&amp;SIDs=3505" rel="nofollow" target="_blank">  <span class="fa-solid fa-print fa-fw" aria-hidden="true"></span>
+Print Article</a>
+
+<div id="ctl00_ctl00_cpContent_cpContent_divKB" class="panel panel-default">
+
+  <div class="panel-heading">
+    <h2 class="h3 panel-title">Related Articles (1)</h2>
+  </div>
+
+  <div class="panel-body">
+    
+        <div id="ctl00_ctl00_cpContent_cpContent_rptArticles_ctl00_ctlArticle_divContainer" class="gutter-top-sm gutter-bottom-lg">
+  <div class="clearfix">
+    <div class="pull-left font-md">
+      <a target="_blank" href="https://itsupport.ou.edu/TDClient/35/Norman/KB/ArticleDet?ID=3251&SIDs=3504">How to read an IT Security Assessment Report</a>
+    </div>
+  </div>
+  <div id="ctl00_ctl00_cpContent_cpContent_rptArticles_ctl00_ctlArticle_divSummary">
+    Starting July 1, 2024, the OU IT Security Profile Summary, shared when a security assessment has been completed, is changing it’s look and feel.
+  </div>
+  
+</div>
+      
+  </div>
+
+</div>
+
+<div id="ctl00_ctl00_cpContent_cpContent_divRelatedServicesAndOfferings" class="panel panel-default">
+
+  <div class="panel-heading">
+    <h3 class="panel-title">Related Services / Offerings (1)</h3>
+  </div>
+
+  <div class="panel-body">
+    
+        <div class="gutter-top-sm gutter-bottom-lg">
+          <div class="clearfix">
+            <div class="pull-left font-md">
+              <a href="/TDClient/35/Norman/Requests/ServiceDet?ID=64&SIDs=60">Security Consultation</a>
+            </div>
+          </div>
+          <div>
+            
+          </div>
+        </div>
+      
+  </div>
+
+</div>
+
+<div id="divAttachments" class="js-article-attachments"></div>
+
+</div>
+
+</div>
+
+<div id="ctl00_ctl00_cpContent_cpContent_divProgress" style="display: none; z-index: 60;">
+  <div id="ctl00_ctl00_cpContent_cpContent_pbMain" class="progress-box-container"><div class="progress-box-body"><div class="well shadow"><h2 class="h4 gutter-top-none">Deleting...</h2><div class="progress" style="margin-bottom: 0;"><div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuemin="0" aria-valuemax="100" style="width: 100%"></div></div></div></div></div>
+</div>
+
+
+
+  </div>
+
+
+  </div>
+</main>
+
+
+
+<script type="text/javascript">
+//<![CDATA[
+setNavPosition('TDKnowledgeBase');window.CKEDITOR_BASEPATH = 'https://itsupport.ou.edu/TDPortal/Content/ckeditor/';
+//]]>
+</script>
+<script src="https://itsupport.ou.edu/TDPortal/Content/ckeditor/ckeditor.js?t=C6HH5UF" type="text/javascript"></script>
+<script type="text/javascript">
+//<![CDATA[
+var CKEditor_Controls=[],CKEditor_Init=[];function CKEditor_TextBoxEncode(d,e){var f;if(typeof CKEDITOR=='undefined'||typeof CKEDITOR.instances[d]=='undefined'){f=document.getElementById(d);if(f)f.value=f.value.replace(/</g,'&lt;').replace(/>/g,'&gt;');}else{var g=CKEDITOR.instances[d];if(e&&(typeof Page_BlockSubmit=='undefined'||!Page_BlockSubmit)){g.destroy();f=document.getElementById(d);if(f)f.style.visibility='hidden';}else g.updateElement();}};(function(){if(typeof CKEDITOR!='undefined'){var d=document.getElementById('ctl00_ctl00_cpContent_cpContent_shareBody_txtBody');if(d)d.style.visibility='hidden';}var e=function(){var f=CKEditor_Controls,g=CKEditor_Init,h=window.pageLoad,i=function(){for(var j=f.length;j--;){var k=document.getElementById(f[j]);if(k&&k.value&&(k.value.indexOf('<')==-1||k.value.indexOf('>')==-1))k.value=k.value.replace(/&lt;/g,'<').replace(/&gt;/g,'>').replace(/&amp;/g,'&');}if(typeof CKEDITOR!='undefined')for(var j=0;j<g.length;j++)g[j].call(this);};window.pageLoad=function(j,k){if(k.get_isPartialLoad())setTimeout(i,0);if(h&&typeof h=='function')h.call(this,j,k);};if(typeof Page_ClientValidate=='function'&&typeof CKEDITOR!='undefined')Page_ClientValidate=CKEDITOR.tools.override(Page_ClientValidate,function(j){return function(){for(var k in CKEDITOR.instances){if(document.getElementById(k))CKEDITOR.instances[k].updateElement();}return j.apply(this,arguments);};});setTimeout(i,0);};if(typeof Sys!='undefined'&&typeof Sys.Application!='undefined')Sys.Application.add_load(e);if(window.addEventListener)window.addEventListener('load',e,false);else if(window.attachEvent)window.attachEvent('onload',e);})();CKEditor_Controls.push('ctl00_ctl00_cpContent_cpContent_shareBody_txtBody');
+CKEditor_Init.push(function(){if(typeof CKEDITOR.instances['ctl00_ctl00_cpContent_cpContent_shareBody_txtBody']!='undefined' || !document.getElementById('ctl00_ctl00_cpContent_cpContent_shareBody_txtBody')) return;CKEDITOR.replace('ctl00_ctl00_cpContent_cpContent_shareBody_txtBody',{"autoGrow_maxHeight" : 175, "autoGrow_minHeight" : 175, "contentsCss" : ['https://itsupport.ou.edu/TDPortal/Content/ckeditor/contents.css', '/TDPortal/Content/FontAwesome/css/fontawesome.min.css', '/TDPortal/Content/FontAwesome/css/brands.min.css', '/TDPortal/Content/FontAwesome/css/regular.min.css', '/TDPortal/Content/FontAwesome/css/solid.min.css', '/TDPortal/Content/FontAwesome/css/v4-shims.min.css'], "height" : "175", "htmlEncodeOutput" : true, "image_previewText" : " ", "removePlugins" : "magicline,devtools,templates,elementspath,fontawesome,youtube,uploadimage,simpleimage,remoteimageblocker", "title" : "Message", "toolbar" : "TDSimple"}); });
+
+var Page_ValidationActive = false;
+if (typeof(ValidatorOnLoad) == "function") {
+    ValidatorOnLoad();
+}
+
+function ValidatorOnSubmit() {
+    if (Page_ValidationActive) {
+        return ValidatorCommonOnSubmit();
+    }
+    else {
+        return true;
+    }
+}
+        Sys.Application.add_init(function() {
+    $create(Sys.UI._UpdateProgress, {"associatedUpdatePanelId":null,"displayAfter":500,"dynamicLayout":true}, null, null, $get("ctl00_ctl00_upMain"));
+});
+//]]>
+</script>
+</form>
+
+
+
+
+
+  <footer role="contentinfo">
+
+    <div class="master-footer">
+      
+<div style="background-color: #333333; color: #FFFFFF; font-family: Arial, sans-serif; padding: 30px 20px 10px; width: 100%">
+
+  
+  <div style="display: flex; max-width: 1200px; margin: auto">
+
+    
+    <div style="display: flex; min-width: 200px">
+      <img src="https://www.ou.edu/content/dam/homepage2012/design/footerlogo.png" alt="OU Logo" style="width: 50px; height: 65px; margin-right: 10px">
+      <div>
+        <div style="font-weight: bold; margin-bottom: 6px">OU Information Technology</div>
+        <div>660 Parrington Oval, Room 321<br>Norman, OK 73019</div>
+        <div style="margin-top: 6px">Phone: 405.325.4357</div>
+      </div>
+    </div>
+
+
+<div style="display: flex; margin-left: auto; min-width: 300px; margin-top: 10px">
+
+  
+  <a href="https://www.facebook.com/UniversityOfOklahoma" target="_blank" rel="noopener noreferrer" style="display: flex; background: #EEEEEE; border-radius: 6px; width: 45px; height: 45px; margin-right: 10px">
+    <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/facebook.svg" alt="Facebook" style="display: flex; width: 24px; height: 24px; margin: auto">
+  </a>
+
+  
+  <a href="https://twitter.com/OU_IT" target="_blank" rel="noopener noreferrer" style="display: flex; background: #EEEEEE; border-radius: 6px; width: 45px; height: 45px; margin-right: 10px">
+    <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/x.svg" alt="X (Twitter)" style="display: flex; width: 24px; height: 24px; margin: auto">
+  </a>
+
+  
+  <a href="https://www.linkedin.com/school/university-of-oklahoma/" target="_blank" rel="noopener noreferrer" style="display: flex; background: #EEEEEE; border-radius: 6px; width: 45px; height: 45px; margin-right: 10px">
+    <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/linkedin.svg" alt="LinkedIn" style="display: flex; width: 24px; height: 24px; margin: auto">
+  </a>
+
+  
+  <a href="https://www.youtube.com/user/UniversityOfOklahoma" target="_blank" rel="noopener noreferrer" style="display: flex; background: #EEEEEE; border-radius: 6px; width: 45px; height: 45px; margin-right: 10px">
+    <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/youtube.svg" alt="YouTube" style="display: flex; width: 24px; height: 24px; margin: auto">
+  </a>
+
+</div>
+
+
+  </div> 
+
+  
+  <div style="border-top: 1px solid #777777; margin-top: 20px; padding-top: 10px">
+    <div style="max-width: 1200px; margin: auto; text-align: center; font-size: 14px">
+      <a href="https://www.ou.edu/marcomm/accessibility-statement" target="_blank" rel="noopener noreferrer" style="color: #FFFFFF; margin: 0 10px">Accessibility</a> |
+      <a href="https://www.ou.edu/sustainability" target="_blank" rel="noopener noreferrer" style="color: #FFFFFF; margin: 0 10px">Sustainability</a> |
+      <a href="https://apps.ouhsc.edu/hipaa/" target="_blank" rel="noopener noreferrer" style="color: #FFFFFF; margin: 0 10px">HIPAA</a> |
+      <a href="https://jobs.ou.edu/" target="_blank" rel="noopener noreferrer" style="color: #FFFFFF; margin: 0 10px">OU Job Search</a> |
+      <a href="https://www.ou.edu/web/landing/policy" target="_blank" rel="noopener noreferrer" style="color: #FFFFFF; margin: 0 10px">Policies</a> |
+      <a href="https://www.ou.edu/web/landing/legalnotices" target="_blank" rel="noopener noreferrer" style="color: #FFFFFF; margin: 0 10px">Legal Notices</a> |
+      <a href="https://www.ou.edu/marcomm/copyright" target="_blank" rel="noopener noreferrer" style="color: #FFFFFF; margin: 0 10px">Copyright</a> |
+      <a href="https://www.ou.edu/web/resources_offices" target="_blank" rel="noopener noreferrer" style="color: #FFFFFF; margin: 0 10px">Resources &amp; Offices</a> |
+      <a href="https://ouregents.ethicspoint.com/" target="_blank" rel="noopener noreferrer" style="color: #FFFFFF; margin: 0 10px">OU Report It!</a>
+    </div>
+  </div>
+
+</div>
+
+<script type="text/javascript" src="https://bot.ivy.ai/bot/script/category/90JvaRm8Ob7KwjGB9zM6EZXoB3peVnNz"></script>
+      
+    </div>
+
+  </footer>
+
+
+
+<script>
+
+    
+    
+
+      // Inject the Google Analytics isogram. This must happen here because it
+      // cannot be injected through an external javascript library.
+      (function (i, s, o, g, r, a, m) {
+        i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+          (i[r].q = i[r].q || []).push(arguments)
+        }, i[r].l = 1 * new Date(); a = s.createElement(o),
+          m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+      })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+    
+
+      // Per Incident #6707155. Need to focus on img. pseudo-class :focus-within is not supported in IE
+      (function ($) {
+        var $anchor = $('#divLogo a');
+        var $beLogo = $('#divLogo a img');
+
+        $anchor.focus(function () {
+          $beLogo.addClass('accessibility-focus-on-logo');
+        }).blur(function () {
+          $beLogo.removeClass('accessibility-focus-on-logo');
+        });
+
+        
+        
+          const queryParams = new URLSearchParams(window.location.search);
+          let showChatbot = true;
+          if (queryParams.has('nobot')) {
+            const nobotFlag = queryParams.get('nobot');
+            if (nobotFlag === '1' || nobotFlag === 'true') {
+              showChatbot = false;
+            }
+          }
+
+          if(showChatbot) {
+            $.ajax({
+              url: "/TDClient/35/Norman/Chatbots/GetScript",
+              type: "GET",
+              dataType: 'text',
+              success: function (data) {
+                
+                var jQueryAjaxSettingsCache = jQuery.ajaxSettings.cache;
+                jQuery.ajaxSettings.cache = true;
+                $(document.body).append(data);
+                jQuery.ajaxSettings.cache = jQueryAjaxSettingsCache;
+              }
+            });
+          }
+        
+
+        window.addEventListener("message", (event) => {
+
+          // Only accept events that come from the same origin
+          if (event.origin != window.location.origin) {
+            return;
+          }
+
+          switch (event.data.type) {
+
+            case "authenticate-using-popup":
+              handleAuthenticateUsingPopup(event.data.payload);
+              break;
+
+            case "authenticated-successfully":
+              handleAuthenticatedSuccessfully(event.data.payload);
+              break;
+
+            default:
+              break;
+          }
+
+        });
+
+        function handleAuthenticateUsingPopup(payload) {
+          let loginUrl = '/TDClient/35/Norman/Login.aspx';
+
+          if (payload.successCallbackUrl) {
+            loginUrl += '?SuccessCallbackUrl=' + payload.successCallbackUrl;
+          }
+
+          window.open(loginUrl, "_blank", "popup=1");
+        }
+
+        function handleAuthenticatedSuccessfully() {
+          event.source.close();
+          window.location.href = window.location.href;
+        }
+    })(jQuery);
+
+</script>
+
+</body>
+</html>

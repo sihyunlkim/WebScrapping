@@ -1,0 +1,774 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head profile="http://www.w3.org/1999/xhtml/vocab">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><script type="text/javascript">(window.NREUM||(NREUM={})).init={ajax:{deny_list:["bam.nr-data.net"]},feature_flags:["soft_nav"]};(window.NREUM||(NREUM={})).loader_config={licenseKey:"4e34bbaf17",applicationID:"4513637",browserID:"4513646"};;/*! For license information please see nr-loader-rum-1.309.0.min.js.LICENSE.txt */
+(()=>{var e,t,r={163:(e,t,r)=>{"use strict";r.d(t,{j:()=>E});var n=r(384),i=r(1741);var a=r(2555);r(860).K7.genericEvents;const s="experimental.resources",o="register",c=e=>{if(!e||"string"!=typeof e)return!1;try{document.createDocumentFragment().querySelector(e)}catch{return!1}return!0};var d=r(2614),u=r(944),l=r(8122);const f="[data-nr-mask]",g=e=>(0,l.a)(e,(()=>{const e={feature_flags:[],experimental:{allow_registered_children:!1,resources:!1},mask_selector:"*",block_selector:"[data-nr-block]",mask_input_options:{color:!1,date:!1,"datetime-local":!1,email:!1,month:!1,number:!1,range:!1,search:!1,tel:!1,text:!1,time:!1,url:!1,week:!1,textarea:!1,select:!1,password:!0}};return{ajax:{deny_list:void 0,block_internal:!0,enabled:!0,autoStart:!0},api:{get allow_registered_children(){return e.feature_flags.includes(o)||e.experimental.allow_registered_children},set allow_registered_children(t){e.experimental.allow_registered_children=t},duplicate_registered_data:!1},browser_consent_mode:{enabled:!1},distributed_tracing:{enabled:void 0,exclude_newrelic_header:void 0,cors_use_newrelic_header:void 0,cors_use_tracecontext_headers:void 0,allowed_origins:void 0},get feature_flags(){return e.feature_flags},set feature_flags(t){e.feature_flags=t},generic_events:{enabled:!0,autoStart:!0},harvest:{interval:30},jserrors:{enabled:!0,autoStart:!0},logging:{enabled:!0,autoStart:!0},metrics:{enabled:!0,autoStart:!0},obfuscate:void 0,page_action:{enabled:!0},page_view_event:{enabled:!0,autoStart:!0},page_view_timing:{enabled:!0,autoStart:!0},performance:{capture_marks:!1,capture_measures:!1,capture_detail:!0,resources:{get enabled(){return e.feature_flags.includes(s)||e.experimental.resources},set enabled(t){e.experimental.resources=t},asset_types:[],first_party_domains:[],ignore_newrelic:!0}},privacy:{cookies_enabled:!0},proxy:{assets:void 0,beacon:void 0},session:{expiresMs:d.wk,inactiveMs:d.BB},session_replay:{autoStart:!0,enabled:!1,preload:!1,sampling_rate:10,error_sampling_rate:100,collect_fonts:!1,inline_images:!1,fix_stylesheets:!0,mask_all_inputs:!0,get mask_text_selector(){return e.mask_selector},set mask_text_selector(t){c(t)?e.mask_selector="".concat(t,",").concat(f):""===t||null===t?e.mask_selector=f:(0,u.R)(5,t)},get block_class(){return"nr-block"},get ignore_class(){return"nr-ignore"},get mask_text_class(){return"nr-mask"},get block_selector(){return e.block_selector},set block_selector(t){c(t)?e.block_selector+=",".concat(t):""!==t&&(0,u.R)(6,t)},get mask_input_options(){return e.mask_input_options},set mask_input_options(t){t&&"object"==typeof t?e.mask_input_options={...t,password:!0}:(0,u.R)(7,t)}},session_trace:{enabled:!0,autoStart:!0},soft_navigations:{enabled:!0,autoStart:!0},spa:{enabled:!0,autoStart:!0},ssl:void 0,user_actions:{enabled:!0,elementAttributes:["id","className","tagName","type"]}}})());var p=r(6154),m=r(9324);let h=0;const v={buildEnv:m.F3,distMethod:m.Xs,version:m.xv,originTime:p.WN},b={consented:!1},y={appMetadata:{},get consented(){return this.session?.state?.consent||b.consented},set consented(e){b.consented=e},customTransaction:void 0,denyList:void 0,disabled:!1,harvester:void 0,isolatedBacklog:!1,isRecording:!1,loaderType:void 0,maxBytes:3e4,obfuscator:void 0,onerror:void 0,ptid:void 0,releaseIds:{},session:void 0,timeKeeper:void 0,registeredEntities:[],jsAttributesMetadata:{bytes:0},get harvestCount(){return++h}},_=e=>{const t=(0,l.a)(e,y),r=Object.keys(v).reduce((e,t)=>(e[t]={value:v[t],writable:!1,configurable:!0,enumerable:!0},e),{});return Object.defineProperties(t,r)};var w=r(5701);const x=e=>{const t=e.startsWith("http");e+="/",r.p=t?e:"https://"+e};var R=r(7836),k=r(3241);const A={accountID:void 0,trustKey:void 0,agentID:void 0,licenseKey:void 0,applicationID:void 0,xpid:void 0},S=e=>(0,l.a)(e,A),T=new Set;function E(e,t={},r,s){let{init:o,info:c,loader_config:d,runtime:u={},exposed:l=!0}=t;if(!c){const e=(0,n.pV)();o=e.init,c=e.info,d=e.loader_config}e.init=g(o||{}),e.loader_config=S(d||{}),c.jsAttributes??={},p.bv&&(c.jsAttributes.isWorker=!0),e.info=(0,a.D)(c);const f=e.init,m=[c.beacon,c.errorBeacon];T.has(e.agentIdentifier)||(f.proxy.assets&&(x(f.proxy.assets),m.push(f.proxy.assets)),f.proxy.beacon&&m.push(f.proxy.beacon),e.beacons=[...m],function(e){const t=(0,n.pV)();Object.getOwnPropertyNames(i.W.prototype).forEach(r=>{const n=i.W.prototype[r];if("function"!=typeof n||"constructor"===n)return;let a=t[r];e[r]&&!1!==e.exposed&&"micro-agent"!==e.runtime?.loaderType&&(t[r]=(...t)=>{const n=e[r](...t);return a?a(...t):n})})}(e),(0,n.US)("activatedFeatures",w.B)),u.denyList=[...f.ajax.deny_list||[],...f.ajax.block_internal?m:[]],u.ptid=e.agentIdentifier,u.loaderType=r,e.runtime=_(u),T.has(e.agentIdentifier)||(e.ee=R.ee.get(e.agentIdentifier),e.exposed=l,(0,k.W)({agentIdentifier:e.agentIdentifier,drained:!!w.B?.[e.agentIdentifier],type:"lifecycle",name:"initialize",feature:void 0,data:e.config})),T.add(e.agentIdentifier)}},384:(e,t,r)=>{"use strict";r.d(t,{NT:()=>o,US:()=>l,Zm:()=>c,bQ:()=>u,dV:()=>d,pV:()=>f});var n=r(6154),i=r(1863),a=r(944),s=r(1910);const o={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net"};function c(){return n.gm.NREUM||(n.gm.NREUM={}),void 0===n.gm.newrelic&&(n.gm.newrelic=n.gm.NREUM),n.gm.NREUM}function d(){let e=c();return e.o||(e.o={ST:n.gm.setTimeout,SI:n.gm.setImmediate||n.gm.setInterval,CT:n.gm.clearTimeout,XHR:n.gm.XMLHttpRequest,REQ:n.gm.Request,EV:n.gm.Event,PR:n.gm.Promise,MO:n.gm.MutationObserver,FETCH:n.gm.fetch,WS:n.gm.WebSocket},(0,s.i)(...Object.values(e.o))),e}function u(e,t){let r=c();r.initializedAgents??={},t.initializedAt={ms:(0,i.t)(),date:new Date},r.initializedAgents[e]=t,2===Object.keys(r.initializedAgents).length&&(0,a.R)(69)}function l(e,t){c()[e]=t}function f(){return function(){let e=c();const t=e.info||{};e.info={beacon:o.beacon,errorBeacon:o.errorBeacon,...t}}(),function(){let e=c();const t=e.init||{};e.init={...t}}(),d(),function(){let e=c();const t=e.loader_config||{};e.loader_config={...t}}(),c()}},782:(e,t,r)=>{"use strict";r.d(t,{T:()=>n});const n=r(860).K7.pageViewTiming},860:(e,t,r)=>{"use strict";r.d(t,{$J:()=>u,K7:()=>c,P3:()=>d,XX:()=>i,Yy:()=>o,df:()=>a,qY:()=>n,v4:()=>s});const n="events",i="jserrors",a="browser/blobs",s="rum",o="browser/logs",c={ajax:"ajax",genericEvents:"generic_events",jserrors:i,logging:"logging",metrics:"metrics",pageAction:"page_action",pageViewEvent:"page_view_event",pageViewTiming:"page_view_timing",sessionReplay:"session_replay",sessionTrace:"session_trace",softNav:"soft_navigations",spa:"spa"},d={[c.pageViewEvent]:1,[c.pageViewTiming]:2,[c.metrics]:3,[c.jserrors]:4,[c.spa]:5,[c.ajax]:6,[c.sessionTrace]:7,[c.softNav]:8,[c.sessionReplay]:9,[c.logging]:10,[c.genericEvents]:11},u={[c.pageViewEvent]:s,[c.pageViewTiming]:n,[c.ajax]:n,[c.spa]:n,[c.softNav]:n,[c.metrics]:i,[c.jserrors]:i,[c.sessionTrace]:a,[c.sessionReplay]:a,[c.logging]:o,[c.genericEvents]:"ins"}},944:(e,t,r)=>{"use strict";r.d(t,{R:()=>i});var n=r(3241);function i(e,t){"function"==typeof console.debug&&(console.debug("New Relic Warning: https://github.com/newrelic/newrelic-browser-agent/blob/main/docs/warning-codes.md#".concat(e),t),(0,n.W)({agentIdentifier:null,drained:null,type:"data",name:"warn",feature:"warn",data:{code:e,secondary:t}}))}},1687:(e,t,r)=>{"use strict";r.d(t,{Ak:()=>d,Ze:()=>f,x3:()=>u});var n=r(3241),i=r(7836),a=r(3606),s=r(860),o=r(2646);const c={};function d(e,t){const r={staged:!1,priority:s.P3[t]||0};l(e),c[e].get(t)||c[e].set(t,r)}function u(e,t){e&&c[e]&&(c[e].get(t)&&c[e].delete(t),p(e,t,!1),c[e].size&&g(e))}function l(e){if(!e)throw new Error("agentIdentifier required");c[e]||(c[e]=new Map)}function f(e="",t="feature",r=!1){if(l(e),!e||!c[e].get(t)||r)return p(e,t);c[e].get(t).staged=!0,g(e)}function g(e){const t=Array.from(c[e]);t.every(([e,t])=>t.staged)&&(t.sort((e,t)=>e[1].priority-t[1].priority),t.forEach(([t])=>{c[e].delete(t),p(e,t)}))}function p(e,t,r=!0){const s=e?i.ee.get(e):i.ee,c=a.i.handlers;if(!s.aborted&&s.backlog&&c){if((0,n.W)({agentIdentifier:e,type:"lifecycle",name:"drain",feature:t}),r){const e=s.backlog[t],r=c[t];if(r){for(let t=0;e&&t<e.length;++t)m(e[t],r);Object.entries(r).forEach(([e,t])=>{Object.values(t||{}).forEach(t=>{t[0]?.on&&t[0].context()instanceof o.y&&!t[0].listeners(e).includes(t[1])&&t[0].on(e,t[1])})})}}s.isolatedBacklog||delete c[t],s.backlog[t]=null,s.emit("drain-"+t,[])}}function m(e,t){var r=e[1];Object.values(t[r]||{}).forEach(t=>{var r=e[0];if(t[0]===r){var n=t[1],i=e[3],a=e[2];n.apply(i,a)}})}},1738:(e,t,r)=>{"use strict";r.d(t,{U:()=>g,Y:()=>f});var n=r(3241),i=r(9908),a=r(1863),s=r(944),o=r(5701),c=r(3969),d=r(8362),u=r(860),l=r(4261);function f(e,t,r,a){const f=a||r;!f||f[e]&&f[e]!==d.d.prototype[e]||(f[e]=function(){(0,i.p)(c.xV,["API/"+e+"/called"],void 0,u.K7.metrics,r.ee),(0,n.W)({agentIdentifier:r.agentIdentifier,drained:!!o.B?.[r.agentIdentifier],type:"data",name:"api",feature:l.Pl+e,data:{}});try{return t.apply(this,arguments)}catch(e){(0,s.R)(23,e)}})}function g(e,t,r,n,s){const o=e.info;null===r?delete o.jsAttributes[t]:o.jsAttributes[t]=r,(s||null===r)&&(0,i.p)(l.Pl+n,[(0,a.t)(),t,r],void 0,"session",e.ee)}},1741:(e,t,r)=>{"use strict";r.d(t,{W:()=>a});var n=r(944),i=r(4261);class a{#e(e,...t){if(this[e]!==a.prototype[e])return this[e](...t);(0,n.R)(35,e)}addPageAction(e,t){return this.#e(i.hG,e,t)}register(e){return this.#e(i.eY,e)}recordCustomEvent(e,t){return this.#e(i.fF,e,t)}setPageViewName(e,t){return this.#e(i.Fw,e,t)}setCustomAttribute(e,t,r){return this.#e(i.cD,e,t,r)}noticeError(e,t){return this.#e(i.o5,e,t)}setUserId(e,t=!1){return this.#e(i.Dl,e,t)}setApplicationVersion(e){return this.#e(i.nb,e)}setErrorHandler(e){return this.#e(i.bt,e)}addRelease(e,t){return this.#e(i.k6,e,t)}log(e,t){return this.#e(i.$9,e,t)}start(){return this.#e(i.d3)}finished(e){return this.#e(i.BL,e)}recordReplay(){return this.#e(i.CH)}pauseReplay(){return this.#e(i.Tb)}addToTrace(e){return this.#e(i.U2,e)}setCurrentRouteName(e){return this.#e(i.PA,e)}interaction(e){return this.#e(i.dT,e)}wrapLogger(e,t,r){return this.#e(i.Wb,e,t,r)}measure(e,t){return this.#e(i.V1,e,t)}consent(e){return this.#e(i.Pv,e)}}},1863:(e,t,r)=>{"use strict";function n(){return Math.floor(performance.now())}r.d(t,{t:()=>n})},1910:(e,t,r)=>{"use strict";r.d(t,{i:()=>a});var n=r(944);const i=new Map;function a(...e){return e.every(e=>{if(i.has(e))return i.get(e);const t="function"==typeof e?e.toString():"",r=t.includes("[native code]"),a=t.includes("nrWrapper");return r||a||(0,n.R)(64,e?.name||t),i.set(e,r),r})}},2555:(e,t,r)=>{"use strict";r.d(t,{D:()=>o,f:()=>s});var n=r(384),i=r(8122);const a={beacon:n.NT.beacon,errorBeacon:n.NT.errorBeacon,licenseKey:void 0,applicationID:void 0,sa:void 0,queueTime:void 0,applicationTime:void 0,ttGuid:void 0,user:void 0,account:void 0,product:void 0,extra:void 0,jsAttributes:{},userAttributes:void 0,atts:void 0,transactionName:void 0,tNamePlain:void 0};function s(e){try{return!!e.licenseKey&&!!e.errorBeacon&&!!e.applicationID}catch(e){return!1}}const o=e=>(0,i.a)(e,a)},2614:(e,t,r)=>{"use strict";r.d(t,{BB:()=>s,H3:()=>n,g:()=>d,iL:()=>c,tS:()=>o,uh:()=>i,wk:()=>a});const n="NRBA",i="SESSION",a=144e5,s=18e5,o={STARTED:"session-started",PAUSE:"session-pause",RESET:"session-reset",RESUME:"session-resume",UPDATE:"session-update"},c={SAME_TAB:"same-tab",CROSS_TAB:"cross-tab"},d={OFF:0,FULL:1,ERROR:2}},2646:(e,t,r)=>{"use strict";r.d(t,{y:()=>n});class n{constructor(e){this.contextId=e}}},2843:(e,t,r)=>{"use strict";r.d(t,{G:()=>a,u:()=>i});var n=r(3878);function i(e,t=!1,r,i){(0,n.DD)("visibilitychange",function(){if(t)return void("hidden"===document.visibilityState&&e());e(document.visibilityState)},r,i)}function a(e,t,r){(0,n.sp)("pagehide",e,t,r)}},3241:(e,t,r)=>{"use strict";r.d(t,{W:()=>a});var n=r(6154);const i="newrelic";function a(e={}){try{n.gm.dispatchEvent(new CustomEvent(i,{detail:e}))}catch(e){}}},3606:(e,t,r)=>{"use strict";r.d(t,{i:()=>a});var n=r(9908);a.on=s;var i=a.handlers={};function a(e,t,r,a){s(a||n.d,i,e,t,r)}function s(e,t,r,i,a){a||(a="feature"),e||(e=n.d);var s=t[a]=t[a]||{};(s[r]=s[r]||[]).push([e,i])}},3878:(e,t,r)=>{"use strict";function n(e,t){return{capture:e,passive:!1,signal:t}}function i(e,t,r=!1,i){window.addEventListener(e,t,n(r,i))}function a(e,t,r=!1,i){document.addEventListener(e,t,n(r,i))}r.d(t,{DD:()=>a,jT:()=>n,sp:()=>i})},3969:(e,t,r)=>{"use strict";r.d(t,{TZ:()=>n,XG:()=>o,rs:()=>i,xV:()=>s,z_:()=>a});const n=r(860).K7.metrics,i="sm",a="cm",s="storeSupportabilityMetrics",o="storeEventMetrics"},4234:(e,t,r)=>{"use strict";r.d(t,{W:()=>a});var n=r(7836),i=r(1687);class a{constructor(e,t){this.agentIdentifier=e,this.ee=n.ee.get(e),this.featureName=t,this.blocked=!1}deregisterDrain(){(0,i.x3)(this.agentIdentifier,this.featureName)}}},4261:(e,t,r)=>{"use strict";r.d(t,{$9:()=>d,BL:()=>o,CH:()=>g,Dl:()=>_,Fw:()=>y,PA:()=>h,Pl:()=>n,Pv:()=>k,Tb:()=>l,U2:()=>a,V1:()=>R,Wb:()=>x,bt:()=>b,cD:()=>v,d3:()=>w,dT:()=>c,eY:()=>p,fF:()=>f,hG:()=>i,k6:()=>s,nb:()=>m,o5:()=>u});const n="api-",i="addPageAction",a="addToTrace",s="addRelease",o="finished",c="interaction",d="log",u="noticeError",l="pauseReplay",f="recordCustomEvent",g="recordReplay",p="register",m="setApplicationVersion",h="setCurrentRouteName",v="setCustomAttribute",b="setErrorHandler",y="setPageViewName",_="setUserId",w="start",x="wrapLogger",R="measure",k="consent"},5289:(e,t,r)=>{"use strict";r.d(t,{GG:()=>s,Qr:()=>c,sB:()=>o});var n=r(3878),i=r(6389);function a(){return"undefined"==typeof document||"complete"===document.readyState}function s(e,t){if(a())return e();const r=(0,i.J)(e),s=setInterval(()=>{a()&&(clearInterval(s),r())},500);(0,n.sp)("load",r,t)}function o(e){if(a())return e();(0,n.DD)("DOMContentLoaded",e)}function c(e){if(a())return e();(0,n.sp)("popstate",e)}},5607:(e,t,r)=>{"use strict";r.d(t,{W:()=>n});const n=(0,r(9566).bz)()},5701:(e,t,r)=>{"use strict";r.d(t,{B:()=>a,t:()=>s});var n=r(3241);const i=new Set,a={};function s(e,t){const r=t.agentIdentifier;a[r]??={},e&&"object"==typeof e&&(i.has(r)||(t.ee.emit("rumresp",[e]),a[r]=e,i.add(r),(0,n.W)({agentIdentifier:r,loaded:!0,drained:!0,type:"lifecycle",name:"load",feature:void 0,data:e})))}},6154:(e,t,r)=>{"use strict";r.d(t,{OF:()=>c,RI:()=>i,WN:()=>u,bv:()=>a,eN:()=>l,gm:()=>s,mw:()=>o,sb:()=>d});var n=r(1863);const i="undefined"!=typeof window&&!!window.document,a="undefined"!=typeof WorkerGlobalScope&&("undefined"!=typeof self&&self instanceof WorkerGlobalScope&&self.navigator instanceof WorkerNavigator||"undefined"!=typeof globalThis&&globalThis instanceof WorkerGlobalScope&&globalThis.navigator instanceof WorkerNavigator),s=i?window:"undefined"!=typeof WorkerGlobalScope&&("undefined"!=typeof self&&self instanceof WorkerGlobalScope&&self||"undefined"!=typeof globalThis&&globalThis instanceof WorkerGlobalScope&&globalThis),o=Boolean("hidden"===s?.document?.visibilityState),c=/iPad|iPhone|iPod/.test(s.navigator?.userAgent),d=c&&"undefined"==typeof SharedWorker,u=((()=>{const e=s.navigator?.userAgent?.match(/Firefox[/\s](\d+\.\d+)/);Array.isArray(e)&&e.length>=2&&e[1]})(),Date.now()-(0,n.t)()),l=()=>"undefined"!=typeof PerformanceNavigationTiming&&s?.performance?.getEntriesByType("navigation")?.[0]?.responseStart},6389:(e,t,r)=>{"use strict";function n(e,t=500,r={}){const n=r?.leading||!1;let i;return(...r)=>{n&&void 0===i&&(e.apply(this,r),i=setTimeout(()=>{i=clearTimeout(i)},t)),n||(clearTimeout(i),i=setTimeout(()=>{e.apply(this,r)},t))}}function i(e){let t=!1;return(...r)=>{t||(t=!0,e.apply(this,r))}}r.d(t,{J:()=>i,s:()=>n})},6630:(e,t,r)=>{"use strict";r.d(t,{T:()=>n});const n=r(860).K7.pageViewEvent},7699:(e,t,r)=>{"use strict";r.d(t,{It:()=>a,KC:()=>o,No:()=>i,qh:()=>s});var n=r(860);const i=16e3,a=1e6,s="SESSION_ERROR",o={[n.K7.logging]:!0,[n.K7.genericEvents]:!1,[n.K7.jserrors]:!1,[n.K7.ajax]:!1}},7836:(e,t,r)=>{"use strict";r.d(t,{P:()=>o,ee:()=>c});var n=r(384),i=r(8990),a=r(2646),s=r(5607);const o="nr@context:".concat(s.W),c=function e(t,r){var n={},s={},u={},l=!1;try{l=16===r.length&&d.initializedAgents?.[r]?.runtime.isolatedBacklog}catch(e){}var f={on:p,addEventListener:p,removeEventListener:function(e,t){var r=n[e];if(!r)return;for(var i=0;i<r.length;i++)r[i]===t&&r.splice(i,1)},emit:function(e,r,n,i,a){!1!==a&&(a=!0);if(c.aborted&&!i)return;t&&a&&t.emit(e,r,n);var o=g(n);m(e).forEach(e=>{e.apply(o,r)});var d=v()[s[e]];d&&d.push([f,e,r,o]);return o},get:h,listeners:m,context:g,buffer:function(e,t){const r=v();if(t=t||"feature",f.aborted)return;Object.entries(e||{}).forEach(([e,n])=>{s[n]=t,t in r||(r[t]=[])})},abort:function(){f._aborted=!0,Object.keys(f.backlog).forEach(e=>{delete f.backlog[e]})},isBuffering:function(e){return!!v()[s[e]]},debugId:r,backlog:l?{}:t&&"object"==typeof t.backlog?t.backlog:{},isolatedBacklog:l};return Object.defineProperty(f,"aborted",{get:()=>{let e=f._aborted||!1;return e||(t&&(e=t.aborted),e)}}),f;function g(e){return e&&e instanceof a.y?e:e?(0,i.I)(e,o,()=>new a.y(o)):new a.y(o)}function p(e,t){n[e]=m(e).concat(t)}function m(e){return n[e]||[]}function h(t){return u[t]=u[t]||e(f,t)}function v(){return f.backlog}}(void 0,"globalEE"),d=(0,n.Zm)();d.ee||(d.ee=c)},8122:(e,t,r)=>{"use strict";r.d(t,{a:()=>i});var n=r(944);function i(e,t){try{if(!e||"object"!=typeof e)return(0,n.R)(3);if(!t||"object"!=typeof t)return(0,n.R)(4);const r=Object.create(Object.getPrototypeOf(t),Object.getOwnPropertyDescriptors(t)),a=0===Object.keys(r).length?e:r;for(let s in a)if(void 0!==e[s])try{if(null===e[s]){r[s]=null;continue}Array.isArray(e[s])&&Array.isArray(t[s])?r[s]=Array.from(new Set([...e[s],...t[s]])):"object"==typeof e[s]&&"object"==typeof t[s]?r[s]=i(e[s],t[s]):r[s]=e[s]}catch(e){r[s]||(0,n.R)(1,e)}return r}catch(e){(0,n.R)(2,e)}}},8362:(e,t,r)=>{"use strict";r.d(t,{d:()=>a});var n=r(9566),i=r(1741);class a extends i.W{agentIdentifier=(0,n.LA)(16)}},8374:(e,t,r)=>{r.nc=(()=>{try{return document?.currentScript?.nonce}catch(e){}return""})()},8990:(e,t,r)=>{"use strict";r.d(t,{I:()=>i});var n=Object.prototype.hasOwnProperty;function i(e,t,r){if(n.call(e,t))return e[t];var i=r();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,t,{value:i,writable:!0,enumerable:!1}),i}catch(e){}return e[t]=i,i}},9324:(e,t,r)=>{"use strict";r.d(t,{F3:()=>i,Xs:()=>a,xv:()=>n});const n="1.309.0",i="PROD",a="CDN"},9566:(e,t,r)=>{"use strict";r.d(t,{LA:()=>o,bz:()=>s});var n=r(6154);const i="xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx";function a(e,t){return e?15&e[t]:16*Math.random()|0}function s(){const e=n.gm?.crypto||n.gm?.msCrypto;let t,r=0;return e&&e.getRandomValues&&(t=e.getRandomValues(new Uint8Array(30))),i.split("").map(e=>"x"===e?a(t,r++).toString(16):"y"===e?(3&a()|8).toString(16):e).join("")}function o(e){const t=n.gm?.crypto||n.gm?.msCrypto;let r,i=0;t&&t.getRandomValues&&(r=t.getRandomValues(new Uint8Array(e)));const s=[];for(var o=0;o<e;o++)s.push(a(r,i++).toString(16));return s.join("")}},9908:(e,t,r)=>{"use strict";r.d(t,{d:()=>n,p:()=>i});var n=r(7836).ee.get("handle");function i(e,t,r,i,a){a?(a.buffer([e],i),a.emit(e,t,r)):(n.buffer([e],i),n.emit(e,t,r))}}},n={};function i(e){var t=n[e];if(void 0!==t)return t.exports;var a=n[e]={exports:{}};return r[e](a,a.exports,i),a.exports}i.m=r,i.d=(e,t)=>{for(var r in t)i.o(t,r)&&!i.o(e,r)&&Object.defineProperty(e,r,{enumerable:!0,get:t[r]})},i.f={},i.e=e=>Promise.all(Object.keys(i.f).reduce((t,r)=>(i.f[r](e,t),t),[])),i.u=e=>"nr-rum-1.309.0.min.js",i.o=(e,t)=>Object.prototype.hasOwnProperty.call(e,t),e={},t="NRBA-1.309.0.PROD:",i.l=(r,n,a,s)=>{if(e[r])e[r].push(n);else{var o,c;if(void 0!==a)for(var d=document.getElementsByTagName("script"),u=0;u<d.length;u++){var l=d[u];if(l.getAttribute("src")==r||l.getAttribute("data-webpack")==t+a){o=l;break}}if(!o){c=!0;var f={296:"sha512-ZBBVWt6PVOQQpTGc/xzYP/zYs+pj6QnNTqG2pFYHQrwWdUi4/1lsIi9EaFcj4Ifn3O38eFqKr9dqSv/HftTqtA=="};(o=document.createElement("script")).charset="utf-8",i.nc&&o.setAttribute("nonce",i.nc),o.setAttribute("data-webpack",t+a),o.src=r,0!==o.src.indexOf(window.location.origin+"/")&&(o.crossOrigin="anonymous"),f[s]&&(o.integrity=f[s])}e[r]=[n];var g=(t,n)=>{o.onerror=o.onload=null,clearTimeout(p);var i=e[r];if(delete e[r],o.parentNode&&o.parentNode.removeChild(o),i&&i.forEach(e=>e(n)),t)return t(n)},p=setTimeout(g.bind(null,void 0,{type:"timeout",target:o}),12e4);o.onerror=g.bind(null,o.onerror),o.onload=g.bind(null,o.onload),c&&document.head.appendChild(o)}},i.r=e=>{"undefined"!=typeof Symbol&&Symbol.toStringTag&&Object.defineProperty(e,Symbol.toStringTag,{value:"Module"}),Object.defineProperty(e,"__esModule",{value:!0})},i.p="https://js-agent.newrelic.com/",(()=>{var e={374:0,840:0};i.f.j=(t,r)=>{var n=i.o(e,t)?e[t]:void 0;if(0!==n)if(n)r.push(n[2]);else{var a=new Promise((r,i)=>n=e[t]=[r,i]);r.push(n[2]=a);var s=i.p+i.u(t),o=new Error;i.l(s,r=>{if(i.o(e,t)&&(0!==(n=e[t])&&(e[t]=void 0),n)){var a=r&&("load"===r.type?"missing":r.type),s=r&&r.target&&r.target.src;o.message="Loading chunk "+t+" failed: ("+a+": "+s+")",o.name="ChunkLoadError",o.type=a,o.request=s,n[1](o)}},"chunk-"+t,t)}};var t=(t,r)=>{var n,a,[s,o,c]=r,d=0;if(s.some(t=>0!==e[t])){for(n in o)i.o(o,n)&&(i.m[n]=o[n]);if(c)c(i)}for(t&&t(r);d<s.length;d++)a=s[d],i.o(e,a)&&e[a]&&e[a][0](),e[a]=0},r=self["webpackChunk:NRBA-1.309.0.PROD"]=self["webpackChunk:NRBA-1.309.0.PROD"]||[];r.forEach(t.bind(null,0)),r.push=t.bind(null,r.push.bind(r))})(),(()=>{"use strict";i(8374);var e=i(8362),t=i(860);const r=Object.values(t.K7);var n=i(163);var a=i(9908),s=i(1863),o=i(4261),c=i(1738);var d=i(1687),u=i(4234),l=i(5289),f=i(6154),g=i(944),p=i(384);const m=e=>f.RI&&!0===e?.privacy.cookies_enabled;function h(e){return!!(0,p.dV)().o.MO&&m(e)&&!0===e?.session_trace.enabled}var v=i(6389),b=i(7699);class y extends u.W{constructor(e,t){super(e.agentIdentifier,t),this.agentRef=e,this.abortHandler=void 0,this.featAggregate=void 0,this.loadedSuccessfully=void 0,this.onAggregateImported=new Promise(e=>{this.loadedSuccessfully=e}),this.deferred=Promise.resolve(),!1===e.init[this.featureName].autoStart?this.deferred=new Promise((t,r)=>{this.ee.on("manual-start-all",(0,v.J)(()=>{(0,d.Ak)(e.agentIdentifier,this.featureName),t()}))}):(0,d.Ak)(e.agentIdentifier,t)}importAggregator(e,t,r={}){if(this.featAggregate)return;const n=async()=>{let n;await this.deferred;try{if(m(e.init)){const{setupAgentSession:t}=await i.e(296).then(i.bind(i,3305));n=t(e)}}catch(e){(0,g.R)(20,e),this.ee.emit("internal-error",[e]),(0,a.p)(b.qh,[e],void 0,this.featureName,this.ee)}try{if(!this.#t(this.featureName,n,e.init))return(0,d.Ze)(this.agentIdentifier,this.featureName),void this.loadedSuccessfully(!1);const{Aggregate:i}=await t();this.featAggregate=new i(e,r),e.runtime.harvester.initializedAggregates.push(this.featAggregate),this.loadedSuccessfully(!0)}catch(e){(0,g.R)(34,e),this.abortHandler?.(),(0,d.Ze)(this.agentIdentifier,this.featureName,!0),this.loadedSuccessfully(!1),this.ee&&this.ee.abort()}};f.RI?(0,l.GG)(()=>n(),!0):n()}#t(e,r,n){if(this.blocked)return!1;switch(e){case t.K7.sessionReplay:return h(n)&&!!r;case t.K7.sessionTrace:return!!r;default:return!0}}}var _=i(6630),w=i(2614),x=i(3241);class R extends y{static featureName=_.T;constructor(e){var t;super(e,_.T),this.setupInspectionEvents(e.agentIdentifier),t=e,(0,c.Y)(o.Fw,function(e,r){"string"==typeof e&&("/"!==e.charAt(0)&&(e="/"+e),t.runtime.customTransaction=(r||"http://custom.transaction")+e,(0,a.p)(o.Pl+o.Fw,[(0,s.t)()],void 0,void 0,t.ee))},t),this.importAggregator(e,()=>i.e(296).then(i.bind(i,3943)))}setupInspectionEvents(e){const t=(t,r)=>{t&&(0,x.W)({agentIdentifier:e,timeStamp:t.timeStamp,loaded:"complete"===t.target.readyState,type:"window",name:r,data:t.target.location+""})};(0,l.sB)(e=>{t(e,"DOMContentLoaded")}),(0,l.GG)(e=>{t(e,"load")}),(0,l.Qr)(e=>{t(e,"navigate")}),this.ee.on(w.tS.UPDATE,(t,r)=>{(0,x.W)({agentIdentifier:e,type:"lifecycle",name:"session",data:r})})}}class k extends e.d{constructor(e){var t;(super(),f.gm)?(this.features={},(0,p.bQ)(this.agentIdentifier,this),this.desiredFeatures=new Set(e.features||[]),this.desiredFeatures.add(R),(0,n.j)(this,e,e.loaderType||"agent"),t=this,(0,c.Y)(o.cD,function(e,r,n=!1){if("string"==typeof e){if(["string","number","boolean"].includes(typeof r)||null===r)return(0,c.U)(t,e,r,o.cD,n);(0,g.R)(40,typeof r)}else(0,g.R)(39,typeof e)},t),function(e){(0,c.Y)(o.Dl,function(t,r=!1){if("string"!=typeof t&&null!==t)return void(0,g.R)(41,typeof t);const n=e.info.jsAttributes["enduser.id"];r&&null!=n&&n!==t?(0,a.p)(o.Pl+"setUserIdAndResetSession",[t],void 0,"session",e.ee):(0,c.U)(e,"enduser.id",t,o.Dl,!0)},e)}(this),function(e){(0,c.Y)(o.nb,function(t){if("string"==typeof t||null===t)return(0,c.U)(e,"application.version",t,o.nb,!1);(0,g.R)(42,typeof t)},e)}(this),function(e){(0,c.Y)(o.d3,function(){e.ee.emit("manual-start-all")},e)}(this),function(e){(0,c.Y)(o.Pv,function(t=!0){if("boolean"==typeof t){if((0,a.p)(o.Pl+o.Pv,[t],void 0,"session",e.ee),e.runtime.consented=t,t){const t=e.features.page_view_event;t.onAggregateImported.then(e=>{const r=t.featAggregate;e&&!r.sentRum&&r.sendRum()})}}else(0,g.R)(65,typeof t)},e)}(this),this.run()):(0,g.R)(21)}get config(){return{info:this.info,init:this.init,loader_config:this.loader_config,runtime:this.runtime}}get api(){return this}run(){try{const e=function(e){const t={};return r.forEach(r=>{t[r]=!!e[r]?.enabled}),t}(this.init),n=[...this.desiredFeatures];n.sort((e,r)=>t.P3[e.featureName]-t.P3[r.featureName]),n.forEach(r=>{if(!e[r.featureName]&&r.featureName!==t.K7.pageViewEvent)return;if(r.featureName===t.K7.spa)return void(0,g.R)(67);const n=function(e){switch(e){case t.K7.ajax:return[t.K7.jserrors];case t.K7.sessionTrace:return[t.K7.ajax,t.K7.pageViewEvent];case t.K7.sessionReplay:return[t.K7.sessionTrace];case t.K7.pageViewTiming:return[t.K7.pageViewEvent];default:return[]}}(r.featureName).filter(e=>!(e in this.features));n.length>0&&(0,g.R)(36,{targetFeature:r.featureName,missingDependencies:n}),this.features[r.featureName]=new r(this)})}catch(e){(0,g.R)(22,e);for(const e in this.features)this.features[e].abortHandler?.();const t=(0,p.Zm)();delete t.initializedAgents[this.agentIdentifier]?.features,delete this.sharedAggregator;return t.ee.get(this.agentIdentifier).abort(),!1}}}var A=i(2843),S=i(782);class T extends y{static featureName=S.T;constructor(e){super(e,S.T),f.RI&&((0,A.u)(()=>(0,a.p)("docHidden",[(0,s.t)()],void 0,S.T,this.ee),!0),(0,A.G)(()=>(0,a.p)("winPagehide",[(0,s.t)()],void 0,S.T,this.ee)),this.importAggregator(e,()=>i.e(296).then(i.bind(i,2117))))}}var E=i(3969);class j extends y{static featureName=E.TZ;constructor(e){super(e,E.TZ),f.RI&&document.addEventListener("securitypolicyviolation",e=>{(0,a.p)(E.xV,["Generic/CSPViolation/Detected"],void 0,this.featureName,this.ee)}),this.importAggregator(e,()=>i.e(296).then(i.bind(i,9623)))}}new k({features:[R,T,j],loaderType:"lite"})})()})();</script>
+<link rel="shortcut icon" href="https://ctlt.calpoly.edu/sites/all/themes/cpstandard_r/common/images_html/favicon.ico" type="image/vnd.microsoft.icon" />
+<meta http-equiv="content-language" content="en" />
+<meta charset="UTF-8" />
+<meta name="viewport" content="initial-scale=1" />
+<meta name="description" content="Throughout the academic year, including the summer, the CTLT offers scheduled workshops and Workshops by Request designed to support faculty and staff in creating rich and engaging learn-by-doing environments for students.Workshop topics encompass a wide range of topics, such as effective teaching practices, quality course design, and the integration of various academic" />
+<link rel="canonical" href="https://ctlt.calpoly.edu/workshops" />
+<meta property="og:site_name" content="CTLT" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://ctlt.calpoly.edu/workshops" />
+<meta property="og:title" content="Workshops | CTLT" />
+<meta property="og:description" content="Throughout the academic year, including the summer, the CTLT offers scheduled workshops and Workshops by Request designed to support faculty and staff in creating rich and engaging learn-by-doing environments for students.Workshop topics encompass a wide range of topics, such as effective teaching practices, quality course design, and the integration of various academic technologies." />
+<meta name="dcterms.title" content="Workshops | CTLT" />
+<meta name="dcterms.description" content="Throughout the academic year, including the summer, the CTLT offers scheduled workshops and Workshops by Request designed to support faculty and staff in creating rich and engaging learn-by-doing environments for students.Workshop topics encompass a wide range of topics, such as effective teaching practices, quality course design, and the integration of various academic technologies." />
+<meta name="dcterms.type" content="Text" />
+<meta name="dcterms.format" content="text/html" />
+  <title>Workshops - CTLT - Cal Poly, San Luis Obispo</title>
+  <style type="text/css" media="all">
+@import url("https://ctlt.calpoly.edu/modules/system/system.base.css?t7h8h4");
+@import url("https://ctlt.calpoly.edu/modules/system/system.menus.css?t7h8h4");
+@import url("https://ctlt.calpoly.edu/modules/system/system.messages.css?t7h8h4");
+@import url("https://ctlt.calpoly.edu/modules/system/system.theme.css?t7h8h4");
+</style>
+<style type="text/css" media="all">
+@import url("https://ctlt.calpoly.edu/modules/aggregator/aggregator.css?t7h8h4");
+@import url("https://ctlt.calpoly.edu/modules/comment/comment.css?t7h8h4");
+@import url("https://ctlt.calpoly.edu/modules/field/theme/field.css?t7h8h4");
+@import url("https://ctlt.calpoly.edu/modules/node/node.css?t7h8h4");
+@import url("https://ctlt.calpoly.edu/modules/search/search.css?t7h8h4");
+@import url("https://ctlt.calpoly.edu/modules/user/user.css?t7h8h4");
+@import url("https://ctlt.calpoly.edu/sites/all/modules/views/css/views.css?t7h8h4");
+@import url("https://ctlt.calpoly.edu/sites/all/modules/ckeditor/css/ckeditor.css?t7h8h4");
+</style>
+<style type="text/css" media="all">
+@import url("https://ctlt.calpoly.edu/sites/all/modules/ctools/css/ctools.css?t7h8h4");
+@import url("https://ctlt.calpoly.edu/sites/all/modules/tableofcontents/tableofcontents.css?t7h8h4");
+</style>
+<link type="text/css" rel="stylesheet" href="//fonts.googleapis.com/css?family=Open+Sans:400,600%7CVollkorn:400italic,400" media="all" />
+<style type="text/css" media="all">
+@import url("https://ctlt.calpoly.edu/sites/all/themes/cpstandard_r/common/css/cp_style.min.css?t7h8h4");
+@import url("https://ctlt.calpoly.edu/sites/all/themes/cpstandard_r/common/css/font-awesome.min.css?t7h8h4");
+@import url("https://ctlt.calpoly.edu/sites/all/themes/cpstandard_r/common/css/jquery-ui.min.css?t7h8h4");
+@import url("https://ctlt.calpoly.edu/sites/all/themes/cpstandard_r/css/cp_custom.css?t7h8h4");
+@import url("https://ctlt.calpoly.edu/sites/all/themes/cpstandard_r/css/honeypot.css?t7h8h4");
+</style>
+<style type="text/css" media="print">
+@import url("https://ctlt.calpoly.edu/sites/all/themes/cpstandard_r/common/css/cp_print.min.css?t7h8h4");
+</style>
+  <script type="text/javascript" src="https://ctlt.calpoly.edu/sites/ctlt.calpoly.edu/files/js/js_YD9ro0PAqY25gGWrTki6TjRUG8TdokmmxjfqpNNfzVU.js"></script>
+<script type="text/javascript" src="https://ctlt.calpoly.edu/sites/ctlt.calpoly.edu/files/js/js_-zpHfuGV_8VVwgRhy2PKeQaVJAtxKrM3J3ALmgmc1PQ.js"></script>
+<script type="text/javascript" src="https://ctlt.calpoly.edu/sites/ctlt.calpoly.edu/files/js/js_Koy9SwiUJmXG6zyo7C_1eqnqg3wjiLSjat9vhI0EoTw.js"></script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+jQuery.extend(Drupal.settings, {"basePath":"\/","pathPrefix":"","setHasJsCookie":0,"ajaxPageState":{"theme":"cpstandard_r","theme_token":"9YvXpP1vIf6Spfc92MI31uAMVDENAptFyjWPxSwd8YI","js":{"misc\/jquery.js":1,"misc\/jquery-extend-3.4.0.js":1,"misc\/jquery-html-prefilter-3.5.0-backport.js":1,"misc\/jquery.once.js":1,"misc\/drupal.js":1,"sites\/all\/modules\/tableofcontents\/jquery.scrollTo-min.js":1,"sites\/all\/modules\/tableofcontents\/jquery.localscroll-min.js":1,"sites\/all\/modules\/tableofcontents\/tableofcontents.js":1,"sites\/all\/themes\/cpstandard_r\/common\/js\/jquery-1.11.3.min.js":1,"sites\/all\/themes\/cpstandard_r\/common\/js\/jquery-ui.min.js":1,"sites\/all\/themes\/cpstandard_r\/common\/js\/noconflict.js":1,"sites\/all\/themes\/cpstandard_r\/common\/js\/calpoly.min.js":1,"sites\/all\/themes\/cpstandard_r\/common\/js\/_accordion.js":1},"css":{"modules\/system\/system.base.css":1,"modules\/system\/system.menus.css":1,"modules\/system\/system.messages.css":1,"modules\/system\/system.theme.css":1,"modules\/aggregator\/aggregator.css":1,"modules\/comment\/comment.css":1,"modules\/field\/theme\/field.css":1,"modules\/node\/node.css":1,"modules\/search\/search.css":1,"modules\/user\/user.css":1,"sites\/all\/modules\/views\/css\/views.css":1,"sites\/all\/modules\/ckeditor\/css\/ckeditor.css":1,"sites\/all\/modules\/ctools\/css\/ctools.css":1,"sites\/all\/modules\/tableofcontents\/tableofcontents.css":1,"\/\/fonts.googleapis.com\/css?family=Open+Sans:400,600%7CVollkorn:400italic,400":1,"sites\/all\/themes\/cpstandard_r\/common\/css\/cp_style.min.css":1,"sites\/all\/themes\/cpstandard_r\/common\/css\/font-awesome.min.css":1,"sites\/all\/themes\/cpstandard_r\/common\/css\/jquery-ui.min.css":1,"sites\/all\/themes\/cpstandard_r\/css\/cp_custom.css":1,"sites\/all\/themes\/cpstandard_r\/css\/honeypot.css":1,"sites\/all\/themes\/cpstandard_r\/common\/css\/cp_print.min.css":1}},"tableOfContents":{"boxSettings":{"hideText":"hide","showText":"show"}}});
+//--><!]]>
+</script>
+  <!-- Global Site Tag (gtag.js) - Google Analytics --> 
+<!-- Google Analytics - contact Cal Poly University Marketing for access to GA data --> 
+<!-- GTM / Contact UCM -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start': new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src= 'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f); })(window,document,'script','dataLayer','GTM-TKZNRR2');</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-CY2GPTVZY7"></script>
+<script>window.dataLayer = window.dataLayer || []; function gtag() {window.dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'G-CY2GPTVZY7'); </script>
+<!-- End GA gtag -->
+<!-- Slate / Contact SEM -->
+<script async="async" src="https://connect.calpoly.edu/ping">/**/</script>
+<!-- End Slate -->
+</head>
+
+<body class="html not-front not-logged-in no-sidebars page-node page-node- page-node-69 node-type-page" >
+    <!--Header Content for Analytics-->
+  <div id="header-blocks" class="region region-header-content">
+        <div id="block-block-7" class="block block-block " >
+<p><br /><!-- Add your analytics script here e.g. Google Analytics --><!-- If you don't want to use analytics, just ignore this block --></p></div>
+
+  </div>
+
+<div id="wrapper">
+  
+  <header>
+    <div id="accessibilityNav"><ul><li><a href="#topH1" id="skip" title="skip to content">Skip to Content</a></li><li><a href="https://www.calpoly.edu/help.html" id="helpLink" title="help">?</a></li></ul></div>    <div id="audienceNav"><ul><li><a href="http://www.calpoly.edu/student/enrolled.html">Current Students</a></li>
+<li><a href="http://admissions.calpoly.edu/">Prospective Students</a></li>
+<li><a href="http://www.calpoly.edu/student/parents.html">Parents</a></li>
+<li><a href="http://www.calpoly.edu/business-community.html">Business Community</a></li>
+<li><a href="http://www.calpoly.edu/faculty-staff/faculty-staff.html">Faculty &amp; Staff</a></li>
+<li><a href="http://alumni.calpoly.edu/">Alumni</a></li>
+</ul></div>    <hr>
+    <div id="myCalPolyNav"><a href="https://my.calpoly.edu" id="login" title="my CalPoly login">my CalPoly login</a></div>    <div id="utilityNav"><ul><li id="azindex"><a href="/a-to-z-index" title="">A-Z Index</a>
+<ul id="azindexdropdown"><li class="darkGreen"><a href="/a-to-z-index#A" tabindex="1">A</a></li>
+<li class="darkGreen"><a href="/a-to-z-index#B" tabindex="1">B</a></li>
+<li class="lightGreen"><a href="/a-to-z-index#C" tabindex="1">C</a></li>
+<li class="lightGreen"><a href="/a-to-z-index#D" tabindex="1">D</a></li>
+<li class="darkGreen"><a href="/a-to-z-index#E" tabindex="1">E</a></li>
+<li class="darkGreen"><a href="/a-to-z-index#F" tabindex="1">F</a></li>
+<li class="lightGreen"><a href="/a-to-z-index#G" tabindex="1">G</a></li>
+<li class="lightGreen"><a href="/a-to-z-index#H" tabindex="1">H</a></li>
+<li class="darkGreen"><a href="/a-to-z-index#I" tabindex="1">I</a></li>
+<li class="darkGreen"><a href="/a-to-z-index#J" tabindex="1">J</a></li>
+<li class="lightGreen"><a href="/a-to-z-index#K" tabindex="1">K</a></li>
+<li class="lightGreen"><a href="/a-to-z-index#L" tabindex="1">L</a></li>
+<li class="darkGreen"><a href="/a-to-z-index#M" tabindex="1">M</a></li>
+<li class="darkGreen"><a href="/a-to-z-index#N" tabindex="1">N</a></li>
+<li class="lightGreen"><a href="/a-to-z-index#O" tabindex="1">O</a></li>
+<li class="lightGreen"><a href="/a-to-z-index#P" tabindex="1">P</a></li>
+<li class="darkGreen"><span tabindex="1" class="nolink">Q</span></li>
+<li class="darkGreen"><a href="/a-to-z-index#R" tabindex="1">R</a></li>
+<li class="lightGreen"><a href="/a-to-z-index#S" tabindex="1">S</a></li>
+<li class="lightGreen"><a href="/a-to-z-index#T" tabindex="1">T</a></li>
+<li class="darkGreen"><a href="/a-to-z-index#U" tabindex="1">U</a></li>
+<li class="darkGreen"><a href="/a-to-z-index#V" tabindex="1">V</a></li>
+<li class="lightGreen"><a href="/a-to-z-index#W" tabindex="1">W</a></li>
+<li class="lightGreen"><span tabindex="1" class="nolink">X</span></li>
+<li class="darkGreen"><a href="/a-to-z-index#Y" tabindex="1">Y</a></li>
+<li class="darkGreen"><span tabindex="1" class="nolink">Z</span></li>
+</ul></li>
+<li id="quicklinks"><a href="/" title="">Quick Links</a>
+<ul id="quicklinksdropdown"><li class="darkGreen"><a href="/workshops" tabindex="1" class="active">Workshops</a></li>
+<li class="darkGreen"><a href="/faculty-showcasess" tabindex="1">Fac Showcase</a></li>
+<li class="lightGreen"><a href="/syllabus-design" tabindex="1">Syllabus</a></li>
+<li class="lightGreen"><a href="/qolt-support" tabindex="1">QOLT</a></li>
+<li class="darkGreen"><a href="/workshops" tabindex="1" class="active">Flipping</a></li>
+</ul></li>
+<li id="maps"><a href="http://maps.calpoly.edu/" title="">Maps</a></li>
+<li id="searchli"><div id="search"><form method="get" title="Search Form" action="https://www.calpoly.edu/search/?q=">
+	<div>
+		<input id="searchField" type="text" maxlength="256" placeholder="Search" title="Search this site" name="q" alt="Search Text" />
+		<input id="searchSubmit" type="image" name="submit" title="Submit Search Query" alt="Go" src="/sites/all/themes/cpstandard_r/common/images_html/header/search-arrow.png" />
+	</div>
+</form></div></li></ul></div>          
+    <div id="headerContent">
+      <div id="headerTop">
+        <div id="cplogo">
+          <a href="https://www.calpoly.edu/" >
+            <img title="Go to Cal Poly Home" alt="Cal Poly" src="/sites/all/themes/cpstandard_r/common/images_html/header/cplogo.svg">
+          </a>
+        </div>
+
+        <div id="mobileNavDept">
+          <div id="mobileIcons">
+          </div>
+        </div>
+      </div>
+
+      <div id="mobileNav">
+        <ul id="mobileMenu" style="display: none;">
+        </ul>
+        <ul id="mobileSearch" style="display: none;"><li id="searchli"><div id="search"><form method="get" title="Search Form" action="https://www.calpoly.edu/search/?q=">
+	<div>
+		<input id="searchField" type="text" maxlength="256" placeholder="Search" title="Search this site" name="q" alt="Search Text" />
+		<input id="searchSubmit" type="image" name="submit" title="Submit Search Query" alt="Go" src="/sites/all/themes/cpstandard_r/common/images_html/header/search-arrow.png" />
+	</div>
+</form></div></li></ul>
+      </div><!-- end #mobileNav -->
+
+      <div id="headerBottom">
+        <div id="deptName"><h2><a href="/">CTLT</a></h2><h3>Center for Teaching, Learning &amp; Technology</h3></div>
+      </div>
+    </div>
+        </header>
+
+  <nav>
+    <ul id="cpUl" class="cpStandardNav"><li><a href="/programs-services">Programs &amp; Services</a></li>
+<li><a href="/teaching-resources">Teaching Resources</a></li>
+<li><a href="/about-us">About Us</a></li>
+</ul>  </nav>
+
+  
+  
+  <!-- Old Breadcrumb Processing -->
+    <div id="breadcrumb"><a href="/">Home</a> : <a href="/programs-services" title="">Programs &amp; Services</a> : Workshops</div>
+          <div id="rightCol">
+        <div id="block-menu-menu-sample-menu-1" class="block block-menu " >
+  <h2>NAVIGATION</h2>
+<ul><li class="first expanded active-trail"><a href="/programs-services" title="" class="active-trail">Programs &amp; Services</a><ul><li class="first leaf"><a href="/communities-practice" title="">Communities of Practice</a></li>
+<li class="leaf"><a href="/consultations" title="">Consultations</a></li>
+<li class="leaf"><a href="/effective-online-teaching-practices-home-page" title="">Effective Teaching Practices</a></li>
+<li class="leaf"><a href="/qolt-support" title="">QOLT Support</a></li>
+<li class="leaf active-trail"><a href="/workshops" title="" class="active-trail active">Workshops</a></li>
+<li class="leaf"><a href="/engaging-in-writing" title="">Writing Groups</a></li>
+<li class="last leaf"><a href="https://cpslo-my.sharepoint.com/:f:/g/personal/ctlt_calpoly_edu/Els_pz92ADpGqkSFdgq_N9oBuZqC50dMJDh_-8bUlmMNpQ?e=iAIXJe" title="">Archived Newsletters</a></li>
+</ul></li>
+<li class="expanded"><a href="/teaching-resources" title="">Teaching Resources</a><ul><li class="first collapsed"><a href="/accessible-learning" title="">Accessible Learning</a></li>
+<li class="leaf"><a href="https://ctlt.calpoly.edu/syllabus-statements" title="">Syllabus Statements</a></li>
+<li class="collapsed"><a href="/writing-across-curriculum" title="">Writing Resources</a></li>
+<li class="collapsed"><a href="/inclusivity-classroom" title="">Diversity &amp; Inclusion</a></li>
+<li class="collapsed"><a href="/course-design" title="">Course Design</a></li>
+<li class="collapsed"><a href="/instructional-technologies" title="">Instructional Technologies</a></li>
+<li class="collapsed"><a href="/instructional-practices" title="">Instructional Practices</a></li>
+<li class="last leaf"><a href="/a-to-z-index" title="">A-Z Resources</a></li>
+</ul></li>
+<li class="collapsed"><a href="/about-us" title="">About Us</a></li>
+<li class="last expanded"><a href="/instructional-continuity-home" title="Instructional Continuity">Instructional Continuity</a><ul><li class="first leaf"><a href="https://ctlt.calpoly.edu/instructional-continuity-resources-getting-started" title="Instructional Continuity: Quick Start ">Quick Start</a></li>
+<li class="leaf"><a href="https://ctlt.calpoly.edu/instructional-continuity-strategies" title="Instructional Continuity: Strategies">Strategies</a></li>
+<li class="leaf"><a href="https://ctlt.calpoly.edu/instructional-continuity-streaming-live-or-recording-classes-zoom" title="Teaching with ZOOM">ZOOM</a></li>
+<li class="leaf"><a href="https://ctlt.calpoly.edu/instructional-continuity-screencast-o-matic" title="Teaching with Screencast-O-Matic">ScreenPal</a></li>
+<li class="leaf"><a href="https://ctlt.calpoly.edu/instructional-continuity-considerations-for-students-with-disabilities" title="Considerations for Students with Disabilities">Students with Disabilities</a></li>
+<li class="leaf"><a href="https://ctlt.calpoly.edu/Instructional-continuity-plan-accessibility-when-teaching-remotely" title="Plan for Accessibility when Teaching Remotely">Plan for Accessibility</a></li>
+<li class="leaf"><a href="https://ctlt.calpoly.edu/instructional-continuity-captioning-live-and-recorded-lectures" title="Instructional Continuity: Captioning for Live and Recorded Lectures">Captioning for Live and Recorded Lectures</a></li>
+<li class="leaf"><a href="/AssessmentsVirtualInstruction" title="Assessments for Virtual Instruction">Assessments for Virtual Instruction</a></li>
+<li class="last leaf"><a href="https://ctlt.calpoly.edu/instructional-continuity-strategies-promoting-equity-and-inclusion-when-moving-virtual-instruction" title="Instructional Continuity: Strategies for Equity and Inclusion when Moving to Virtual Instruction">Strategies for Equity and Inclusion</a></li>
+</ul></li>
+</ul></div>
+
+    </div>
+    
+    <main id="">
+      <a id="topH1"></a>
+                  <div id="contentLine"></div>            
+      <!-- Old Page Title Processing
+              <h1 class="page-title"></h1>
+            -->
+      
+      <div id="mainLeftFull"><div id="contentHeader"><h1 class="page-title">Workshops</h1></div>    <div id="block-system-main" class="block block-system " >
+
+<div class="field field-name-body field-type-text-with-summary field-label-hidden"><div class="field-items"><div class="field-item even" property="content:encoded"><p><img alt="Workshops" class="image_left_noborder" height="250" src="//content-calpoly-edu.s3.amazonaws.com/ctlt/1/images/workshops_250.png" width="250" /><em>Throughout the academic year, including the summer, the CTLT offers scheduled workshops and Workshops by Request designed to support faculty and staff in creating rich and engaging learn-by-doing environments for students.<span>Workshop topics encompass a wide range of topics, such as effective teaching practices, quality course design, and the integration of various academic technologies. Our workshop offerings are updated quarterly; please check often for our updated schedules. We hope you will join us! </span></em></p>
+
+<p> </p>
+
+<table cellpadding="3" cellspacing="3" width="90%"><tbody><tr><td bgcolor="#FEFAE7" border="5px" fontcolor="#000000">
+			<h3 id="ALERT:_Deadline_for_Course_Content_Accessibility_is_April_24_2026"><strong class="emphRed">ALERT: Deadline for Course Content Accessibility is April 24, 2026</strong></h3>
+
+			<p>All digital course materials must be fully accessible to all students by April 24, 2026, to comply with <strong><a href="https://www.ada.gov/resources/2024-03-08-web-rule/">Title II of the ADA</a></strong>. The mandate includes all course materials in Canvas to ensure that every student has equitable access to learning as well as to avoid potential legal consequences. Visit the CTLT's <strong><a href="https://ctlt.calpoly.edu/access-for-all">“Access for All”</a></strong> for details and available support resources.</p>
+			</td>
+		</tr></tbody></table><h2 class="h2_heavy" id="Current_Workshops">Current Workshops</h2>
+
+<p>Our current workshops are updated quarterly. Please check often for our updated schedules!</p>
+
+<div class="accordion">
+<div>
+<h3 id="Accessibility_and_Universal_Design_for_Learning">Accessibility &amp; Universal Design for Learning</h3>
+</div>
+
+<div>
+<div class="articleEntry"><img alt="faculty associate accessibility workshops" height="130" src="https://content-calpoly-edu.s3.amazonaws.com/ctlt/1/images/FacAssADA_180.png" width="180" /><div>
+<h4 id="Academic_Departments_Invited_to_Host_Accessible_Course_Materials_Workshops"><strong>Academic Departments Invited to Host Accessible Course Materials Workshops</strong></h4>
+
+<p class="subtitle"> </p>
+
+<p>CTLT’s <a href="https://ctlt.calpoly.edu/FacAssocACM" target="_blank">Faculty Associates for Accessible Course Materials</a> are available to facilitate Essential Skills for Accessible Course Materials workshops during department meetings or for other faculty groups.</p>
+
+<p>These hands-on sessions support faculty in meeting the April 24, 2026 <a href="/accessible-learning">Title II ADA instructional materials accessibility compliance deadline</a>, as outlined by the CTLT, and focus on accessibility best practices, including headings, alt text, accessible links, and Canvas tools (<a href="https://canvassupport.calpoly.edu/Access4All" target="_blank">Access4All</a> and <a href="https://canvassupport.calpoly.edu/tidyup" target="_blank">TidyUp</a>).</p>
+
+<p>Departments may request a workshop by completing the <a href="https://forms.office.com/Pages/ResponsePage.aspx?id=2wING578lUSVNx03nMoq513kv8HVw-BEn18sNVAVHG5UOFA1T0g2N0VRTVhIWVpPVDRBMDQyNDFTMS4u" target="_blank">accessibility skills workshop request form.</a></p>
+</div>
+</div>
+
+<div class="articleEntry"><img alt="Library PDF, no download copyright" height="130" src="https://content-calpoly-edu.s3.amazonaws.com/ctlt/1/images/LibraryPDFDownLoadNO_180_0.png" width="180" /><div>
+<h4 id="Best_Practices_for_Accessibility:_Linking_to_Library-Licensed_Materials_in_Canvas"><strong>Best Practices for Accessibility: Linking to Library-Licensed Materials in Canvas</strong></h4>
+
+<p class="subtitle"><b>Feb. 6 &amp; Mar. 6</b></p>
+
+<p>Are you concerned that the materials you’ve posted on Canvas are not meeting accessibility standards? This hands-on workshop will equip you with the skills needed to leverage accessible, library-licensed materials in your courses, while avoiding common issues with <strong>posting PDFs</strong> (i<strong>naccessible materials and copyright violations</strong>).</p>
+
+<p>Participants are encouraged to bring lists of articles they might want help finding in library databases. Coffee and pastries will be served, and a <strong>$25 </strong>Cal Poly bookstore gift card will be sent to participants after the workshop.</p>
+
+<p><strong>This workshop will be offered twice:</strong><br /><strong>Dates</strong>: February 6 and March 6<br /><strong>Time</strong>: 9:00 a.m. to 10:30 a.m.<br /><strong>Location</strong>: Robert E. Kennedy Library (Bld 35), Room 103</p>
+
+<p><strong>Learn more</strong>: <a href="https://ctlt.calpoly.edu/best-practices-accessibility-linking-library-licensed-materials-canvas">Linking to Library Licensed Materials in Canvas</a></p>
+
+<p><strong>Register</strong>: <a href="https://forms.office.com/r/zL19rj1jtQ" target="_blank">Best Practices for Accessibility: Linking to Library-Licensed Materials in Canvas</a> – Fill out the form.</p>
+</div>
+</div>
+
+<div class="articleEntry"><img alt="Canvas Word and PowerPoint logos" height="169" src="https://content-calpoly-edu.s3.amazonaws.com/ctlt/1/images/Screenshot%202024-11-25%20at%208.53.47%E2%80%AFAM.png" width="180" /><div>
+<h4 id="One-week_or_Self-paced_Accessibility_Workshops:_Canvas_Documents_PowerPoint">One-week  or Self-paced Accessibility Workshops: Canvas, Documents, PowerPoint</h4>
+
+<p class="subtitle"> </p>
+
+<p>Accessibility is an essential part of course design and ensures that all students have equitable access to learning. Learn how to create accessible course content by selecting the links below. </p>
+
+<p><b>Enroll in a self-paced workshop</b>: </p>
+
+<ul><li><a href="https://canvas.calpoly.edu/enroll/MKXMXC">Creating Accessible Canvas Content</a></li>
+	<li><a href="https://canvas.calpoly.edu/enroll/JH6HPF">Creating Accessible Documents</a></li>
+	<li><a href="https://canvas.calpoly.edu/enroll/JMYPWY">Creating Accessible PowerPoint</a></li>
+</ul></div>
+</div>
+
+<div class="articleEntry"><img alt="TidyUP logo" height="164" src="https://content-calpoly-edu.s3.amazonaws.com/ctlt/1/images/Screenshot%202024-11-22%20at%202.30.03%E2%80%AFPM_1.png" width="180" /><div>
+<h4 id="TidyUPand_Access4All:_Improve_your_Course_Accessibility">TidyUP and Access4All: Improve your Course Accessibility</h4>
+
+<p>TidyUP is a tool in Canvas that can help you identify and remove outdated files and unused Canvas content. This handy tool can help you quickly and efficiently improve your course accessibility! This <b>Self-enroll</b> workshop provides hands-on experience using TidyUP, as well as experience using Access4All to identify and fix inaccessible Canvas content.</p>
+
+<p><strong>Self-enroll module</strong>:  <a data-sk="tooltip_parent" data-stringify-link="https://calpoly.instructure.com/enroll/7N9ALC" href="https://calpoly.instructure.com/enroll/7N9ALC" rel="noopener noreferrer" target="_blank">TidyUP &amp; Access4All</a></p>
+</div>
+</div>
+
+<div class="articleEntry"><img alt="UDOIT logo" height="164" src="https://content-calpoly-edu.s3.amazonaws.com/ctlt/1/images/UDOIT_164.png" width="164" /><div>
+<h4 id="TidyUp_and_Access4All_UDOIT_QandA_and_Training_Webinars">TidyUp &amp; Access4All (UDOIT) Q&amp;A and Training Webinars</h4>
+
+<p class="subtitle"> </p>
+
+<p>Interested in training for <strong>TidyUP</strong>? Choose your own adventure!</p>
+
+<ul><li>Visit the searchable <a href="https://share.vidyard.com/watch/HMq2VoSSxphBtH6tLSS85G" target="_blank">video hub</a> to access all training videos at once.</li>
+	<li>Are you an admin or trainer for your institution? Join us live! RSVP for our synchronous sessions on our <a href="https://d2v4xb04.na1.hs-sales-engage.com/Ctc/5F+23284/d2v4XB04/JkM4YGXpW6N1X8z6lZ3nGW3R1r9y1c-Yn9W1rlRVQ7f8C4fW71wRKY6DlYCtW6rh91v7rL5DRW4x1QvG6tFdflN5Cd6nZxd0NsW3V3tvm8Vy6vdW2_RMXN6-ScVVW3zbbGx6QM95_N65P6q8Hd43zW4qzKmw61xkyZN8Rh0C07fMQ0W5XDCwT1fGSn7W4_zK7_1m9tsSW30DSD28nW2chW2ZJpll3rnP0dW7SXGxT55XGH3W7-rlQ19dtgZnW7fLzL_3zLHr3W8wz3_H2_jDd8TZ18R4DT_dTW1CM6001XNF_kN7ywbwKgk90FN3kRP3Zsshp9W2htlbK7nV3vfW7QC2zg97PhnpW16F3QK14YwJNW7_m4VF8NNtwGW8RSTmF41hkz7N4y1dbKqpZwvW2F8sh42t21fQVYHVQF3rnX0PW69Jymk8yBDlwW9kQ5N_2jNbvlW1pbhCv1rBcccW8Z5G0b658q2_W5QT93N7RgD5qW1tL7hH22X4BFf379q0004" target="_blank"><strong>Training Calendar</strong></a>.</li>
+</ul><p>Interested in training for <strong>Access4All</strong> (UDOIT)? Choose your own adventure!</p>
+
+<ul><li>Visit the searchable <a href="https://share.vidyard.com/watch/7xLra7cqHoRtJmg4sc5wGm" target="_blank">video hub</a> to access all training videos at once.</li>
+	<li>Are you an admin or trainer for your institution? Join us live! RSVP for our synchronous Train-the-Trainer sessions on our <a href="https://d2v4xb04.na1.hs-sales-engage.com/Ctc/5F+23284/d2v4XB04/JkM4YGXpW6N1X8z6lZ3nGW3R1r9y1c-Yn9W1rlRVQ7f8C4fW71wRKY6DlYCtW6rh91v7rL5DRW4x1QvG6tFdflN5Cd6nZxd0NsW3V3tvm8Vy6vdW2_RMXN6-ScVVW3zbbGx6QM95_N65P6q8Hd43zW4qzKmw61xkyZN8Rh0C07fMQ0W5XDCwT1fGSn7W4_zK7_1m9tsSW30DSD28nW2chW2ZJpll3rnP0dW7SXGxT55XGH3W7-rlQ19dtgZnW7fLzL_3zLHr3W8wz3_H2_jDd8TZ18R4DT_dTW1CM6001XNF_kN7ywbwKgk90FN3kRP3Zsshp9W2htlbK7nV3vfW7QC2zg97PhnpW16F3QK14YwJNW7_m4VF8NNtwGW8RSTmF41hkz7N4y1dbKqpZwvW2F8sh42t21fQVYHVQF3rnX0PW69Jymk8yBDlwW9kQ5N_2jNbvlW1pbhCv1rBcccW8Z5G0b658q2_W5QT93N7RgD5qW1tL7hH22X4BFf379q0004" target="_blank"><strong>Training Calendar</strong></a>.</li>
+</ul></div>
+</div>
+
+<div class="articleEntry"><img alt="Parakeets of different colors on branch" height="136" src="https://content-calpoly-edu.s3.amazonaws.com/ctlt/1/images/head%20with%20cogwheels_2.jpg" width="180" /><div>
+<h4 id="Inclusive_Course_Design:_Implementing_the_UDL_Guidelines">Inclusive Course Design: Implementing the UDL Guidelines</h4>
+
+<p class="subtitle"><b>Self-enroll workshop</b></p>
+
+<p><strong>Universal Design for Learning (UDL) Guidelines</strong> <br />
+is a framework to guide the design of learning environments that are accessible, inclusive, equitable, and challenging for every learner. This self-paced online workshop offers strategies to apply the principles of UDL to course materials, activities, and assessments to improve learning experiences for all students. </p>
+
+<p>Self-enroll link: <a href="https://canvas.calpoly.edu/enroll/YJ46NL">Inclusive Course Design</a></p>
+</div>
+</div>
+</div>
+</div>
+
+<div class="accordion">
+<div>
+<h3 id="Canvas">Canvas</h3>
+</div>
+
+<div>
+<div class="articleEntry"><img alt="Canvas" height="148" src="https://content-calpoly-edu.s3.amazonaws.com/ctlt/1/images/canvas.png" width="180" /><div>
+<h4 id="Fall_Conference_Canvas_Workshops">Fall Conference Canvas Workshops</h4>
+
+<p class="subtitle"><b>Sept 16 &amp; 17, 2025</b></p>
+
+<p> </p>
+
+<p><strong>Intro to Canvas</strong><br />
+During this presentation, faculty will learn the basics of Cal Poly Canvas’ login, navigation, tools, and menus. Support resources, including course templates, online self-paced courses, web resources, email, chat, and consultations, will also be demonstrated.</p>
+
+<p>Tuesday, Sept. 16, from 2-3 pm PST - <a href="https://calpoly.zoom.us/j/82950016465" target="_blank">Zoom Meeting</a><br />
+Wednesday, Sept 17, from 10-11 am PST - <a href="https://calpoly.zoom.us/j/83873686336" target="_blank">Zoom Meeting</a></p>
+
+<p> </p>
+
+<p><strong>Canvas: Assessments &amp; Gradebook Setup</strong><br />
+During this presentation, faculty will get an overview of the Canvas Assessments tools and when to use them. Since all graded assessments will be added to the Gradebook, faculty will also learn about Gradebook settings and layout.</p>
+
+<p>Tuesday, Sept. 16, from 3-4 pm PST -<a href="https://calpoly.zoom.us/j/83688126525" target="_blank"> Zoom Meeting</a><br />
+Wednesday, Sept 17, from 11-noon  PST - <a href="https://calpoly.zoom.us/j/82818382915" target="_blank">Zoom Meeting</a></p>
+</div>
+</div>
+</div>
+</div>
+
+<div class="accordion">
+<div>
+<h3 id="Artificial_Intelligence">Artificial Intelligence</h3>
+</div>
+
+<div>
+<div class="articleEntry"><img alt="AI Buffet sign over long table" height="180" src="https://content-calpoly-edu.s3.amazonaws.com/ctlt/1/images/ai%20buffet.jpeg" width="180" /><div>
+<h4 id="Artificial_Intelligence_Buffet">Artificial Intelligence Buffet</h4>
+
+<p class="subtitle"><strong>spring 2026: multiple dates</strong></p>
+
+<p><strong>AI Buffet 1: April 6-17<br />
+AI Buffet 2: April 20 - May 1<br />
+AI Buffet 3: May 11-22</strong></p>
+
+<p> </p>
+
+<p>Are you curious about AI but not sure where to start?</p>
+
+<p>This two-week, self-paced workshop introduces the history of AI (including Generative AI which we are using), a smattering of technology, some ethical considerations, and a whole bunch of interesting applications you can use right away to see what AI is capable of (or not).</p>
+
+<p>We'll also explore the limits of the CSU version of ChatGPT.</p>
+
+<p>The information is presented as a type of buffet, where you can put as much or as little on your plate as you like. We’ll have one optional Zoom discussion per workshop where you can find other diners on their journey to consume AI information as well.</p>
+
+<p>Optional Zoom meetings will take place on Wednesday of the second week of each workshop, times TBA</p>
+
+<p><strong>Learn more and register</strong><span>: </span><a href="https://ctlt.calpoly.edu/artificial-intelligence-buffet-spring-26"><strong>AI Buffet</strong></a></p>
+</div>
+</div>
+
+<div class="articleEntry"><img alt="Custom GPTs" height="148" src="https://content-calpoly-edu.s3.amazonaws.com/ctlt/1/images/custom_gpts.png" width="148" /><h4 id="Custom_GPTs_for_your_Course">Custom GPTs for your Course</h4>
+
+<p class="subtitle"><b>winter 2026</b></p>
+
+<p>This hands-on workshop demonstrates the process of building Custom GPTs using ChatGPT’s creation tools. Participants learn how to turn their existing course materials into interactive AI assistants designed to support students with content clarification, study help, and course navigation.<br /><br /><strong>Dates: February 13, February 27</strong><br /><strong>Time: 11 am until 1:30 pm</strong><br /><strong>Location:</strong> Student Services (Building 124) room 117</p>
+
+<p><a href="https://ctlt.calpoly.edu/custom-gpts-your-course-winter-2026">Learn more and register</a></p>
+</div>
+</div>
+</div>
+
+<div class="accordion">
+<div>
+<h3 id="Team_Learning">Team Learning</h3>
+</div>
+
+<div>
+<div class="articleEntry"><img alt="gulls over the ocean" height="120" src="https://content-calpoly-edu.s3.amazonaws.com/ctlt/1/images/gulls-370012_640.jpg" width="180" /></div>
+
+<h4 id="Team_Learning_Basics">Team Learning Basics</h4>
+
+<p class="subtitle"><b>Self-enroll workshop</b></p>
+
+<p>This fully online self-paced workshop provides an overview of team learning in the higher education classroom, and offers strategies for creating, managing, and assessing teams. This workshop includes team learning examples from Cal Poly instructors.</p>
+
+<p><b>Self-enroll link: </b><a href="https://canvas.calpoly.edu/enroll/49DB6J">Team Learning Basics</a></p>
+</div>
+</div>
+
+<div class="accordion">
+<div>
+<h3 id="Assignment_and_Assessment_Design">Assignment &amp; Assessment Design</h3>
+</div>
+
+<div>
+<div class="articleEntry"><img alt="Course Design Gears Image" height="170" src="https://content-calpoly-edu.s3.amazonaws.com/ctlt/1/images/TeachingwithWritingImages/triangle-3.gif" width="180" /><div>
+<h4 id="Assignment_and_Assessment_Design_to_Promote_Academic_Integrity">Assignment and Assessment Design to Promote Academic Integrity</h4>
+
+<p class="subtitle"><b>Spring 2026 Offering TBD</b></p>
+
+<p>This workshop builds faculty knowledge about course design factors that enhance student self-efficacy and increase the promotion of academic integrity. Assignment and Assessment Design to Promote Academic Integrity reviews evidence-based teaching strategies for designing or revising course assignments to enhance students' learning, critical thinking, and reflection practices.</p>
+
+<p>The workshop includes support for creating activities and assignments that meet desired course learning outcomes, increase intrinsic motivation, and promote students' honest engagement with learning processes.</p>
+
+<p><strong>Learn more: <a href="https://ctlt.calpoly.edu/assignment-and-assessment-design-promote-academic-integrity-1">Assignment and Assessment Design to Promote Academic Integrity</a></strong></p>
+</div>
+</div>
+</div>
+</div>
+
+<div class="accordion">
+<div>
+<h3 id="Online_and_Hybrid_Teaching">Online and Hybrid Teaching</h3>
+</div>
+
+<div>
+<div class="articleEntry"><img alt="blended hybrid course map" height="141" src="https://content-calpoly-edu.s3.amazonaws.com/ctlt/1/images/online_map_to_success.png" width="200" /><div>
+<h4 id="Online_and_Hybrid_Teaching_Presentation">Online and Hybrid Teaching Presentation</h4>
+
+<p class="subtitle"><strong>Winter 2026: multiple dates</strong></p>
+
+<p>Are you interested in teaching an online or hybrid course but not sure where to start?</p>
+
+<p>This short presentation, offered multiple times throughout Winter 2026, will help guide you through the resources and pathways available for teaching online or hybrid courses at Cal Poly after the semester conversion.<br /><br />
+This presentation explains the online course proposal process, CSU Rubric for Quality Teaching, how to obtain certification for quality for both your teaching and your course, and what the CSU Fully Online / CourseMatch program has to offer. </p>
+
+<p><strong>Learn more and register</strong>: <a href="https://ctlt.calpoly.edu/online-and-hybrid-resources-presentation-winter-2026"><strong>Online and Hybrid Resources Presentation</strong></a></p>
+</div>
+</div>
+
+<div class="articleEntry"><img alt="" height="158" padding="20px" src="https://content-calpoly-edu.s3.amazonaws.com/ctlt/1/images/IOTL_image.jpg" width="240" /><div>
+<h4 id="Introduction_to_Online_Teaching_and_Learning_IOTL_for_Semester_Redesign">Introduction to Online Teaching and Learning (IOTL) for Semester Redesign</h4>
+
+<p class="subtitle"><strong>Spring 2026: April 26-May 22</strong></p>
+
+<p>We are accepting applications for this <strong>four-week, fully online and</strong> <strong>asynchronous </strong>(no Zoom sessions) workshop which will focus on best practices for redesigning your semester course for the online or hybrid learning environment, including developing pre-course welcome letters, course policies, and creating a course design road map that implements a strong pedagogical approach to online course delivery. By the end of this workshop, participants will map out a semester course and design and complete one modular unit (typically 1 week) of a fully online course of their choosing.<br /><br />
+There is a <strong>$500 stipend available</strong> to eligible participants who pass the course with <strong>a minimum 80% score</strong>, and who <strong>complete all activities</strong>.<br /><br /><strong>Learn more and register: <a href="https://ctlt.calpoly.edhttps://ctlt.calpoly.edu/intro-online-teaching-and-learning-semester-courses-spring-2026u/intro-online-teaching-and-learning-semester-courses-2026">IOTL for Semester Courses Spring 2026</a> </strong></p>
+
+<p> </p>
+</div>
+</div>
+</div>
+</div>
+
+<div class="accordion">
+<div>
+<h3 id="Inclusive_Teaching">Inclusive Teaching</h3>
+</div>
+
+<div> 
+<div class="articleEntry"><img alt="DEI Rainbow Crystal Color Wheel" height="107" src="https://content-calpoly-edu.s3.amazonaws.com/ctlt/1/images/TeachingwithWritingImages/inclusivity2.jpg" width="176" /><div>
+<h4 id="Intro_to_Equitable_and_Inclusive_Teaching">Intro to Equitable and Inclusive Teaching</h4>
+
+<p class="subtitle"><b>October 15-November 19; Wednesdays from 10-11am</b></p>
+
+<p>Introduction to Equitable and Inclusive Teaching introduces faculty to evidence-based teaching strategies for equity and inclusion, supports faculty in developing an inclusive course climate, encourages faculty to reflect on the impacts of social identities in higher education teaching and learning environments, and supports faculty in further developing an equitable and inclusive teaching lens. Participating in this program is a way for you to contribute in concrete and powerful ways to our goals of making Cal Poly more equitable and inclusive. </p>
+
+<p><strong>Learn more and register</strong>: <a href="https://ctlt.calpoly.edu/intro-equitable-and-inclusive-teaching-summer-2025-0"><b>Intro to Equitable and Inclusive Teaching</b></a></p>
+</div>
+</div>
+</div>
+</div>
+
+<div class="accordion">
+<div>
+<h3 id="Sustainability">Sustainability</h3>
+</div>
+
+<div>
+<div class="articleEntry"><b><img alt="Photo of Morro Rock with sea mist by Marya Figueroa" class="image_left_border" height="190" src="https://content-calpoly-edu.s3.amazonaws.com/ctlt/1/images/Resources/0099854a-3322-37ff-5e4b-1f715d7e2896.png" width="202" /></b>
+
+<div>
+<h4 id="Sustainability_Catalog_SUSCAT_Course_Inclusion_Workshop"><strong>Sustainability Catalog (SUSCAT) Course Inclusion Workshop </strong></h4>
+
+<p class="subtitle"><b>AY 2025-2026 Offerings TBD</b></p>
+
+<p>There is still time to include your course in the 2026 Curriculum Catalog as a Sustainability focused or related course, so choose a date and attend this activity-focused workshop. These workshops provide valuable insights into aligning all or part of your course curriculum and course content with sustainability principles, meeting institutional sustainability goals, and gaining formal recognition within the university’s sustainability framework. </p>
+
+<p>Learn more and register: <strong>SUSCAT Course Inclusion Workshop</strong></p>
+</div>
+</div>
+
+<div class="articleEntry"><b><img alt="Photo of Morro Rock with sea mist by Marya Figueroa" class="image_left_border" height="135" src="https://content-calpoly-edu.s3.amazonaws.com/ctlt/1/images/TeachingwithWritingImages/09California-Today-morro-popup_0.jpg" width="202" /></b>
+
+<div>
+<h4 id="Cultivating_Connections:_Parts_One_and_Two"><strong>Cultivating Connections: Parts One and Two</strong></h4>
+
+<p class="subtitle"><b>AY 2025-2026 Offerings TBD</b></p>
+
+<p>This two-part workshop series extends an invitation to faculty members from all disciplines who are keen on deepening their comprehension regarding Native Nations. It aims to equip participants with the necessary awareness and tools to engage with Tribal communities equitably and effectively, while also exploring the Indigenous underpinnings of contemporary sustainability practices and knowledge.</p>
+
+<p>Learn more: <a href="https://ctlt.calpoly.edu/https%3A//ctlt.calpoly.edu/sustainability-curriculum"><strong>Cultivating Connections</strong></a></p>
+</div>
+</div>
+</div>
+</div>
+
+<div class="accordion">
+<div>
+<h3 id="Writing">Writing</h3>
+</div>
+
+<div>
+<div class="articleEntry"><img alt="Graphic of a sprinting woman" height="180" src="https://content-calpoly-edu.s3.amazonaws.com/ctlt/1/images/Writers%27%20Sprints.jpg" width="180" /><div>
+<h4 id="Winter_2026_Faculty_12-Day_Writers-_Sprints">Winter 2026 Faculty 1/2-Day Writers' Sprints</h4>
+
+<p class="subtitle">March 23-24, Monday &amp; Tuesday, 9:00 am-12:00 pm</p>
+
+<p>These 2, half-day Faculty Writers' Sprints are designed to help faculty make progress on their scholarly writing. The group meets daily with facilitator Dr. Dianna Winslow, CTLT Assistant Director and Writing Instruction Specialist.</p>
+
+<p>Each day there will be group check-ins with a light breakfast to start, concentrated writing time, and plenty of snacks and coffee to keep the momentum going. </p>
+
+<p>Dianna will offer one-on-one consultations as requested, and help form "buddy groups" for post-sprint encouragement if desired. Tara Gray's <i>Publish and Flourish </i>book and other occasional resources shape daily discussions about the writing and research process. The newest edition of Gray's book will be provided to you free of charge by the CTLT once you enroll in the group.</p>
+
+<p><strong>Learn more and register: <a href="https://ctlt.calpoly.edu/winter-2026-half-day-faculty-writers-sprints">Winter 2026 1/2-Day Faculty Writers' Sprints</a></strong></p>
+</div>
+</div>
+
+<div class="articleEntry"><b><img alt="Course Design Gears Image" height="140" src="https://content-calpoly-edu.s3.amazonaws.com/ctlt/1/images/TeachingwithWritingImages/Knowledge%20Word%20Cloud%20copy.png" width="180" /></b>
+
+<div>
+<h4 id="Writing_in_the_Disciplines">Writing in the Disciplines</h4>
+
+<p class="subtitle"><b>Winter and Spring 2026 Offerings TBD</b></p>
+
+<p>This workshop is offered in partnership with the Office of Writing and Learning Initiatives and is designed to create space for faculty to explore how writing operates within their disciplines and to develop writing learning outcomes for their courses.  </p>
+
+<p>Writing In the Disciplines provides evidence-based teaching strategies for using writing to enhance students' learning, critical thinking, and written communication practices.</p>
+
+<p><strong>Learn more and register: Writing in the Disciplines</strong></p>
+</div>
+</div>
+</div>
+</div>
+
+<hr /><h2 id="Additional_Offerings">Additional Offerings</h2>
+
+<p>We offer a variety of self-paced workshops, Book Circles, and more! We also provide workshops and consultations upon request.</p>
+
+<div class="accordion">
+<div>
+<h3 id="Self-enroll_Workshops">Self-enroll Workshops</h3>
+</div>
+
+<div>
+<div class="articleEntry">
+<h4 id="Creating_Effective_Learning_Objectives_self-paced_module"><a id="self-pace" name="self-pace"></a><img alt="Bloom's wheel of categories" height="182" src="https://content-calpoly-edu.s3.amazonaws.com/ctlt/1/images/stock_images/Screen%20Shot%202022-10-18%20at%2010.47.45%20AM_0.png" width="180" />Creating Effective Learning Objectives (self-paced module)</h4>
+
+<p class="subtitle">Always available</p>
+
+<div>
+<p>Developing clear learning objectives is a fundamental element of effective course design, yet not all instructors have had the opportunity to learn to write <em>effective and measurable</em> learning objectives. This self-paced module provides guidance and instructions for those who are new to writing learning objectives, and those who may wish to review and revise current objectives.</p>
+
+<p>Self-enroll: <strong><a href="https://canvas.calpoly.edu/enroll/PN4FJK">Creating Effective Learning Objectives</a></strong></p>
+</div>
+</div>
+
+<div class="articleEntry">
+<h4 id="OER_Faculty_Roadmap_self-paced_module"><img alt="Road and hills" height="159" src="https://content-calpoly-edu.s3.amazonaws.com/ctlt/1/images/Screenshot%202023-02-21%20at%2011.53.26%20AM.png" width="180" />OER Faculty Roadmap (self-paced module)</h4>
+
+<p class="subtitle">Always available</p>
+
+<div>
+<p>The OER Faculty Roadmap is a self-paced online Canvas module designed to help faculty explore, create, optimize, and maintain Open Educational Resources (OER) for their courses.</p>
+
+<p><strong>Self-enroll: <a href="https://canvas.calpoly.edu/enroll/YE4MWM" rel="noreferrer noopener" target="_blank">OER Faculty Roadmap</a></strong></p>
+</div>
+</div>
+
+<div class="articleEntry"><img alt="access key on qwerty keyboard" class="image_left_border" height="114" src="https://content-calpoly-edu.s3.amazonaws.com/ctlt/1/images/Access%20Key%20copy%202_0.jpg" width="180" /><div>
+<h4 id="Self-paced_Accessibility_Modules">Self-paced Accessibility Modules</h4>
+
+<p class="subtitle">Always available</p>
+
+<p>Accessibility is an essential part of course design and ensures that all students have equitable access to learning. Select any of the links below to self-enroll in an online module to learn how to create accessible course content.</p>
+
+<ul><li><a href="https://canvas.calpoly.edu/enroll/MKXMXC">Creating Accessible Canvas Content</a></li>
+	<li><a href="https://canvas.calpoly.edu/enroll/JH6HPF">Creating Accessible Documents</a></li>
+	<li><a href="https://canvas.calpoly.edu/enroll/JMYPWY">Creating Accessible PowerPoint</a></li>
+	<li><a href="https://canvas.calpoly.edu/enroll/XYPDFB">Creating Accessible Video</a></li>
+	<li><a href="https://canvas.calpoly.edu/enroll/7N9ALC">Using TidyUP &amp; Access4All to Improve your Course Accessibility</a></li>
+</ul></div>
+<b> </b></div>
+
+<div class="articleEntry"><img alt="" height="180" src="https://content-calpoly-edu.s3.amazonaws.com/ctlt/1/images/Canvas%20logo.jpg" width="180" /><div>
+<h4 id="Canvas_Webinar_Recordings_and_Self-Paced_Courses"><b>Canvas Webinar Recordings &amp; Self-Paced Courses</b></h4>
+
+<p class="subtitle"><b>Always available</b></p>
+
+<p>We provide live webinars and share recording links on the <a href="https://canvassupport.calpoly.edu/workshops" target="_blank">Canvas Workshop and Events page</a>. Please check out the page for items, such as:</p>
+
+<ul><li>Introduction to Canvas </li>
+	<li>Using Templates</li>
+	<li>Creating Content</li>
+	<li>Gradebook Setup </li>
+	<li>Secure Exams</li>
+</ul><h4 id="Self-Paced_Online_Courses"><b>Self-Paced Online Courses</b></h4>
+
+<ul><li><b><a href="https://sso.canvaslms.com/delegated_auth_pass_through?target=https%3A%2F%2Fcanvas.calpoly.edu%2Fenroll%2F6DDYW4" target="_blank">Cal Poly Canvas Orientation</a></b></li>
+	<li><b><a href="https://canvas.calpoly.edu/enroll/3YBMC7" target="_blank">Launching a Course Online with Canvas</a></b></li>
+</ul></div>
+</div>
+</div>
+</div>
+
+<div class="accordion">
+<div>
+<h3 id="Book_Circles">Book Circles</h3>
+</div>
+
+<div>
+<div class="articleEntry">
+<h4 id="CTLT_Book_Circles"><img alt="books on shelf" height="140" src="https://content-calpoly-edu.s3.amazonaws.com/ctlt/1/images/bookshelf-on-computer-screen-180X140.png" width="180" />CTLT Book Circles</h4>
+
+<div>
+<p class="subtitle"> </p>
+
+<p>The CTLT hosts book circles every academic quarter and during summers. They are open to all Cal Poly educators. Selected books draw from a broad array of thoughtful and inspiring educational literature. </p>
+
+<p><a href="https://ctlt.calpoly.edu/book-circles-winter-2026"><strong>Learn more and register:</strong> <strong>CTLT Book Circles</strong></a></p>
+</div>
+</div>
+</div>
+</div>
+
+<div class="accordion">
+<div>
+<h3 id="Workshops_by_Request">Workshops by Request</h3>
+</div>
+
+<div>
+<h4 id="Workshops_by_Request-1">Workshops by Request</h4>
+
+<p>The CTLT offers one-on-one, small group, and departmental consultations that enable all Cal Poly faculty and staff, either full or part-time, to enhance their teaching effectiveness, discuss opportunities for teaching innovation, and implement new pedagogies. Consultations provide a mechanism for educators to reflect upon their teaching practices and develop a research-informed plan to improve student learning. ​</p>
+
+<p>For information on CTLT Staff expertise and consultation topics, visit <a href="https://ctlt.calpoly.edu/consultations">CTLT Consultations.</a> </p>
+</div>
+</div></div></div></div></div>
+
+<h2 id="relatedLinksTitle">Related Content</h2><div id="relatedLinksBottom"></div></div>
+      <div class="clear"></div>
+          </main>
+
+    <div class="clear"></div>
+
+    <section class="widgets">    <div class="widget">
+        <h2>Teaching</h2>
+  			
+
+
+	
+	<a href="https://ctlt.calpoly.edu/teaching-resources"><img 0="" src="https://content-calpoly-edu.s3.amazonaws.com/ctlt/1/widget_images/FacultyResources_176_107.jpg" alt="" /></a>	
+
+
+	<p><a href="https://ctlt.calpoly.edu/teaching-resources" class="linkArrow">Teaching Resources</a></p>
+	</div>
+<div class="widget">
+        <h2>CTLT Workshops</h2>
+  			
+
+
+	
+	<a href="https://ctlt.calpoly.edu/workshops"><img 0="" src="https://content-calpoly-edu.s3.amazonaws.com/ctlt/1/widget_images/worskshopIcon2.png" alt="" /></a>	
+
+	<p>Want to learn more?</p>
+
+	<p><a href="https://ctlt.calpoly.edu/workshops" class="linkArrow">Workshops</a></p>
+	</div>
+<div class="widget">
+        <h2>Canvas</h2>
+  			
+
+
+	
+	<a href="http://canvassupport.calpoly.edu"><img 0="" src="https://content-calpoly-edu.s3.amazonaws.com/ctlt/1/widget_images/Canvas_Widget_176.png" alt="" /></a>	
+
+	<p>Cal Poly Canvas...</p>
+
+	<p><a href="http://canvassupport.calpoly.edu" class="linkArrow">Learn More</a></p>
+	</div>
+<div class="widget">
+        <h2>Inclusion</h2>
+  			
+
+
+	
+	<a href="https://ctlt.calpoly.edu/inclusivity-classroom"><img 0="" src="https://content-calpoly-edu.s3.amazonaws.com/ctlt/1/widget_images/inclusivity2.jpg" alt="" /></a>	
+
+	<p>Diversity & Inclusion in the Classroom.</p>
+
+	<p><a href="https://ctlt.calpoly.edu/inclusivity-classroom" class="linkArrow">More about inclusion</a></p>
+	</div>
+<div class="widget">
+        <h2>Writing</h2>
+  			
+
+
+	
+	<a href="https://ctlt.calpoly.edu/engaging-in-writing"><img 0="" src="https://content-calpoly-edu.s3.amazonaws.com/ctlt/1/widget_images/Writing_176_107.png" alt="" /></a>	
+
+	<p>​Writing across the curriculum.</p>
+
+	<p><a href="https://ctlt.calpoly.edu/engaging-in-writing" class="linkArrow">Writing Matters</a></p>
+	</div>
+</section>    
+  <footer>
+        <div id="footerSocial">
+  <p id="socialConnect">CONNECT WITH CAL POLY</p>
+  <div id="socialIcons">
+    <span class="on-the-web otw-twitter otw-0"><a href="http://twitter.com/calpolyCTLT" title="Find Us on Twitter"><img typeof="foaf:Image" src="https://ctlt.calpoly.edu/sites/all/modules/on_the_web/images/sm/twitter.png" alt="Find Us on Twitter" title="Find Us on Twitter" /></a></span><span class="on-the-web otw-facebook otw-1"><a href="https://www.facebook.com/calpolyctlt" title="Find Us on Facebook"><img typeof="foaf:Image" src="https://ctlt.calpoly.edu/sites/all/modules/on_the_web/images/sm/facebook.png" alt="Find Us on Facebook" title="Find Us on Facebook" /></a></span><span class="on-the-web otw-flickr otw-2"><a href="http://www.flickr.com/photos/30208331@N03/sets/" title="Find Us on Flickr"><img typeof="foaf:Image" src="https://ctlt.calpoly.edu/sites/all/modules/on_the_web/images/sm/flickr.png" alt="Find Us on Flickr" title="Find Us on Flickr" /></a></span><span class="on-the-web otw-linkedin otw-3"><a href="https://www.calpoly.edu/linkedin" title="Find Us on LinkedIn"><img typeof="foaf:Image" src="https://ctlt.calpoly.edu/sites/all/modules/on_the_web/images/sm/linkedin.png" alt="Find Us on LinkedIn" title="Find Us on LinkedIn" /></a></span>  </div>
+</div>
+    
+      <ul id="footer_links">
+        <li><a href="https://www.calpoly.edu/">CP Home</a></li>
+        <li><a href="https://myportal.calpoly.edu/s/directory">Directory</a></li>
+        <li><a href="https://maps.calpoly.edu/">Campus Maps &amp; Directions</a></li>
+        <li><a href="https://www.bkstr.com/calpolystore">University Store</a></li>
+        <li><a href="https://registrar.calpoly.edu/acad_cal/">Calendar</a></li>
+        <li><a href="https://afd.calpoly.edu/hr/job-opportunities/">Employment</a></li>
+        <li><a href="https://policy.calpoly.edu/">Campus Policies</a></li>
+        <li><a href="https://www.calpoly.edu/contact/">Contact Us</a></li>
+      </ul>
+
+<div id="getPlugins">
+      <ul>
+        <li><a href="https://www.calpoly.edu/privacy/">Privacy Notice</a></li>
+        <li><a href="https://accessibility.calpoly.edu/website-accessibility-statement">Web Accessibility Statement</a></li>
+        <li><a href="https://crco.calpoly.edu/content/title-ix">Title IX</a></li>
+      </ul>
+</div>
+
+<div id="footer_deptinfo">
+  <p>&#169; 2026 California Polytechnic State University &nbsp;<img src="/sites/all/themes/cpstandard_r/common/images_html/footer/footer_separator.jpg" alt="" height="10" width="1" />&nbsp; San Luis Obispo, California 93407<br>Phone: 805-756-1111</p>
+</div>
+
+      </footer>
+
+      <div class="clear"></div>
+</div>
+
+<div id="closure-blocks" class="region region-closure">
+    <div id="block-block-8" class="block block-block " >
+<p><br /><!-- Add your analytics script here e.g. CrazyEgg --><!-- If you don't want to use analytics, just ignore this block --></p></div>
+
+</div>
+  <script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"4e34bbaf17","applicationID":"4513637","transactionName":"YldTYBRYXUVVURdZXFsdZEYPFlpYUFcbHkNdQg==","queueTime":0,"applicationTime":40,"atts":"ThBQFlxCTks=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+
+<script>(function trackOutbounds(){var hitCallbackHandler=function(url,win){if(win){window.open(url,win)}else{window.location.href=url}};var addEvent=function(el,eventName,handler){if(el.addEventListener){el.addEventListener(eventName,handler)}else{el.attachEvent('on'+eventName,function(){handler.call(el)})}}
+if(document.getElementsByTagName){var el=document.getElementsByTagName('a');var getDomain=document.domain.split('.').reverse()[1]+'.'+document.domain.split('.').reverse()[0];for(var i=0;i<el.length;i++){var href=(typeof(el[i].getAttribute('href'))=='string')?el[i].getAttribute('href'):'';var myDomain=href.match(getDomain);if((href.match(/^(https?:|\/\/)/i)&&!myDomain)||href.match(/^mailto\:/i)){addEvent(el[i],'click',function(e){var url=this.getAttribute('href'),win=(typeof(this.getAttribute('target'))=='string')?this.getAttribute('target'):'';console.log("add event",url);ga('send','event','outbound','click',url,{'hitCallback':hitCallbackHandler(url,win)},{'nonInteraction':1});e.preventDefault()})}}}})();</script>
+</html>

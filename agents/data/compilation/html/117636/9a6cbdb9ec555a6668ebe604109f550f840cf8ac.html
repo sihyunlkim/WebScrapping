@@ -1,0 +1,521 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<link href="/css/myllu.css" rel="stylesheet" type="text/css" />
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<meta name="msvalidate.01" content="04F2518A7B9ECC2DD2DA32576D96F7BC" />
+<meta name="google-site-verification" content="JA2JAlAovsR5wOgsHOJP2oHJtwrPZvx97FzymIbTHAE" />
+
+<title>myLLU Help</title>
+<link href="/apps/css/lluapps.css" rel="stylesheet" type="text/css" />
+<link href="/css/printerfriendly.css" rel="stylesheet" type="text/css" media="print" />
+<link href="/apps/css/menu.css" rel="stylesheet" type="text/css" />
+<link href="/apps/themes/blue-default/theme.css" rel="stylesheet" type="text/css" />
+<link href="/apps/library/js/jquery/plugin/jquery-ui/themes/lightness/ui.theme.css" rel="stylesheet" type="text/css" />
+
+<!--[if IE]>
+<style type="text/css" media="screen">
+  #standard_top_menu ul li {float: left; width: 100%; z-index:500}
+  #local_top_menu    ul li {float: left; width: 100%; z-index:400}
+  #local_left_menu   ul li {float: left; width: 100%; z-index:400}
+</style>
+<![endif]-->
+<!--[if lt IE 7]>
+<script src="/apps/library/js/ie7/ie7-standard-p.js" type="text/javascript">
+</script>
+<style type="text/css" media="screen">
+  body { behavior: url(/apps/library/cssmenu/csshover.htc); font-size: 12px; min-width: 1000px; }
+
+  #standard_top_menu ul li a {height: 1%;} 
+  #standard_top_menu a, #standard_top_menu h2 { font: bold Verdana, Arial, Helvetica, sans-serif;}
+
+  #local_top_menu ul li a {height: 1%;} 
+  #local_top_menu a, #local_top_menu h2 { font: bold  arial, helvetica, sans-serif;}
+
+  #local_left_menu ul li a {height: 1%;} 
+  #local_left_menu a, #local_left_menu h2 { font: bold  arial, helvetica, sans-serif;}
+
+div#local_left_menu ul li:hover ul ul,
+div#local_left_menu ul ul li:hover ul ul
+{display: none;}
+
+div#local_left_menu ul li:hover ul,
+div#local_left_menu ul ul li:hover ul,
+div#local_left_menu ul ul ul li:hover ul
+{display: block;}
+
+.floating_column {
+	width:30%;
+}
+
+</style>
+<![endif]-->
+
+    	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.7/jquery-ui.min.js"></script>
+<script type="text/javascript" language="javascript">
+
+<!-- This script and many more are available free online at -->
+<!-- The JavaScript Source!! http://javascript.internet.com -->
+<!-- Original:  Torsten Frey (tf@tfrey.de) -->
+<!-- Web Site:  http://www.tfrey.de -->
+
+<!-- Begin
+function check_date(field){
+var checkstr = "0123456789";
+var DateField = field;
+var Datevalue = "";
+var DateTemp = "";
+var seperator = "/";
+var day;
+var month;
+var year;
+var leap = 0;
+var err = 0;
+var i;
+   err = 0;
+   DateValue = DateField.value;
+   /* Delete all chars except 0..9 */
+   if ((DateValue.substr(1,1)=='/') || (DateValue.substr(1,1)=='-'))
+      {DateValue = '0' + DateValue; }
+   if ((DateValue.substr(4,1)=='/') || (DateValue.substr(4,1)=='-'))
+      {DateValue = DateValue.substr(0,3) + '0' + DateValue.substr(3,7);  }
+   for (i = 0; i < DateValue.length; i++) {
+	  if (checkstr.indexOf(DateValue.substr(i,1)) >= 0) {
+	     DateTemp = DateTemp + DateValue.substr(i,1);
+	  }
+   }
+   DateValue = DateTemp;
+   /* Always change date to 8 digits - string*/
+   /* if year is entered as 2-digit / always assume 20xx */
+   if (DateValue.length == 6) {
+      DateValue = DateValue.substr(0,4) + '20' + DateValue.substr(4,2); alert('Fix year'+DateValue);}
+   if (DateValue.length != 8) {
+      err = 19;}
+   /* year is wrong if year = 0000 */
+   year = DateValue.substr(4,4);
+   if (year == 0) {
+      err = 20;
+   }
+   /* Validation of month*/
+   month = DateValue.substr(0,2);
+   if ((month < 1) || (month > 12)) {
+      err = 21;
+   }
+   /* Validation of day*/
+   day = DateValue.substr(2,2);
+   if (day < 1) {
+     err = 22;
+   }
+   /* Validation leap-year / february / day */
+   if ((year % 4 == 0) || (year % 100 == 0) || (year % 400 == 0)) {
+      leap = 1;
+   }
+   if ((month == 2) && (leap == 1) && (day > 29)) {
+      err = 23;
+   }
+   if ((month == 2) && (leap != 1) && (day > 28)) {
+      err = 24;
+   }
+   /* Validation of other months */
+   if ((day > 31) && ((month == "01") || (month == "03") || (month == "05") || (month == "07") || (month == "08") || (month == "10") || (month == "12"))) {
+      err = 25;
+   }
+   if ((day > 30) && ((month == "04") || (month == "06") || (month == "09") || (month == "11"))) {
+      err = 26;
+   }
+   if ( ((year<"1902") || (year>"2030")) && (year!=="") )
+      { alert("Valid years between 1902 and 2030"); DateField.focus(); }
+   /* if 00 ist entered, no error, deleting the entry */
+   if ((day == 0) && (month == 0) && (year == 00)) {
+      err = 0; day = ""; month = ""; year = ""; seperator = "";
+   }
+   /* if no error, write the completed date to Input-Field (e.g. 12/13/2001) */
+   if (err == 0) {
+      DateField.value = month + seperator + day + seperator + year;
+   }
+   /* Error-message if err != 0 */
+   else {
+      alert("Invalid Date!");
+      DateField.select();
+			DateField.value='';
+	  DateField.focus();
+   }
+}
+
+function toggleDiv(location) {
+    if (document.getElementById(location).style.display=='none' || document.getElementById(location).style.display=='')
+      {    document.getElementById(location).style.display = 'block'; }
+    else
+      {document.getElementById(location).style.display = 'none'; }
+}
+
+function hide_div(location)
+{
+  document.getElementById(location).style.display='none';
+}
+
+function show_div(location)
+{
+  document.getElementById(location).style.display='block';
+}
+
+function toggle_by_css(cssName, hideshow) 
+{
+	if(hideshow == null)
+	{
+		hideshow = false;
+	}
+	
+	var elarray = $$(cssName);
+	for(var i=0; i<elarray.length; i++)
+	{
+		el = elarray[i];
+		if(hideshow == 'hide')
+		{
+			el.hide();
+		}
+		else if(hideshow == 'show')
+		{
+			el.show();
+		}
+		else
+		{
+			if(el.visible())
+			{
+				el.hide();
+			}
+			else
+			{
+				el.show();
+			}
+		}
+	}
+}
+
+//addslashes and stripslashes for javascript
+//taken from http://javascript.about.com/library/bladdslash.htm
+function addslashes(str) {
+str=str.replace(/\'/g,'\\\'');
+str=str.replace(/\"/g,'\\"');
+str=str.replace(/\\/g,'\\\\');
+str=str.replace(/\0/g,'\\0');
+return str;
+}
+function stripslashes(str) {
+str=str.replace(/\\'/g,'\'');
+str=str.replace(/\\"/g,'"');
+str=str.replace(/\\\\/g,'\\');
+str=str.replace(/\\0/g,'\0');
+return str;
+}
+
+
+function add_report_values()
+{
+	var cur_page_num = "";
+	var title        = "";
+	var rid          = "";
+	var r_type       = "";
+	var cur_url      = "/help/index.php";
+	var where_fields_values = '';
+	
+	for(var x = 0; x < 100; x++)
+	{
+		if($('where_field_'+x))
+		{
+			where_fields_values += $('where_field_'+x).options[$('where_field_'+x).selectedIndex].value +';';
+		}
+		else
+		{
+			break;
+		}
+	}
+	where_fields_values = where_fields_values.substr(0, where_fields_values.length - 1);
+}
+//  End -->
+</script>
+</head>
+<body>
+<div id="header">
+	<div id="navtab">
+		<div id="tabslant" style="">
+		</div><!-- tabslant div -->
+        <div id="navtabf">
+            <span class="navtab">
+          <a target="_blank" href="/contacts">Directory</a> |
+          <a target="_blank" href="https://ssweb.llu.edu/loginsso">Banner</a> |
+          <a target="_blank" href="https://ssweb.llu.edu/loginpin">Banner PIN</a> |
+          <a target="_blank" href="https://llu.instructure.com">Canvas</a> |
+          <a target="_blank" href="http://mail.llu.edu/">Webmail</a> |
+          <a target="_blank" href="https://swap.llu.edu/">Change Password</a> 
+            </span>
+        </div>
+	</div> <!-- navtab div -->
+  	<form method="get" action="http://search.llu.edu/search" accept-charset="iso-8859-1" name="seek1" id="seek1" class="form">
+		<input type="hidden" name="site" value="Entire_Site"/>
+		<input type="hidden" name="entqr" value="0"/>
+		<input type="hidden" name="ud" value="1"/>
+		<input type="hidden" name="sort" value="date%3AD%3AL%3Ad1"/>
+		<input type="hidden" name="output" value="xml_no_dtd"/>
+		<input type="hidden" name="oe" value="UTF-8"/>
+		<input type="hidden" name="ie" value="UTF-8"/>
+		<input type="hidden" name="client" value="lluahsc_frontend"/>
+		<input type="hidden" name="proxystylesheet" value="lluahsc_frontend"/>
+    	<div id="banner">
+      		<div id="search">
+        		<script type="text/javascript">
+					// <![CDATA[
+					function clearDefault(el) {
+					if (el.defaultValue==el.value) el.value = ""
+					}
+					// ]]>
+				</script>
+				<div style="float:left"><input name="q" type="text" maxlength="1991" id="keywrds" value="Search LLU" onfocus="clearDefault(this)" /></div>
+				<div style="float:left"><input type="image" src="/images/search_btn.gif" /></div>
+			</div><!-- search div -->
+    		<div>
+				<a href="/"><img src="/apps/themes/blue-default/lluappsbannerlogo.gif" alt="Loma Linda University" width="439" height="55" id="logoname" border="0" /></a>
+			</div>
+  		</div><!-- banner div -->
+	</form>
+</div> <!-- header div -->
+
+<div id="navbar">
+	<div id="nav">
+    	<div id="standard_top_menu">
+  <ul style="width:50px;">
+    <li><a href="/index.php">MyLLU</a>
+      <ul style="width:90px;">
+      	<li><a href="/communities/">Communities</a></li>
+                  <li><a href="/login.php?next_step=%2Fhelp%2F">Login</a></li>
+                </ul>
+    </li>
+  </ul>
+  <ul style="width:120px;">
+    <li><a href="http://www.llu.edu/central/ssweb/index.page" target="_blank">Student Resources</a>
+      <ul style="width:120px;">
+
+        <li><a href="https://ssweb.llu.edu/login" target="_blank">Student Services Login</a></li>
+	  <li><a href="https://wiki.llu.edu/display/UnivRecords/University+Records" target="_blank">WikiRecords</a></li>
+        <li><a href="http://www.llu.edu/central/studenthealth/index.page" target="_blank">Student Health</a></li>
+
+                <li><a href='/student.php'>PDF Forms and Electronic Processes</a></li>
+<!--        <li><a href='#'>PDF Forms</a>
+          <ul style="width:240px; height:12px">
+            <li><a href="http://www.llu.edu/assets/central/ssweb/documents/acadvar.pdf"            target="_blank">Academic Variance Petition</a></li>
+            <li><a href="http://www.llu.edu/assets/central/ssweb/documents/conedreg.pdf"           target="_blank">Continuing Education Registration</a></li>
+            <li><a href="http://www.llu.edu/assets/central/ssweb/documents/geacadvar.pdf"          target="_blank">General education academic variance petition</a></li>
+            <li><a href="http://www.llu.edu/assets/central/ssweb/documents/acadload.pdf"           target="_blank">Load validation request</a></li>
+            <li><a href="http://www.llu.edu/assets/central/ssweb/documents/changename.pdf"         target="_blank">Name change request</a></li>
+            <li><a href="http://www.llu.edu/assets/central/ssweb/documents/nondegree.pdf"          target="_blank">Non-degree student registration</a></li>
+            <li><a href="http://www.llu.edu/assets/central/ssweb/documents/regchange.pdf"          target="_blank">Registration change request (add/drop form)</a></li>
+            <li><a href="http://www.llu.edu/assets/central/ssweb/documents/intgrad.pdf"            target="_blank">Undergraduate intent to graduate</a></li>
+            <li><a href="http://www.llu.edu/assets/central/ssweb/documents/transcript.pdf"         target="_blank">Transcript Request</a></li>
+            <li><a href="http://www.llu.edu/central/ssweb/0static/reqtrans.page"            target="_blank">Transcript Request Instructions</a></li>
+            <li><a href="http://www.llu.edu/central/ssweb/graduation.page"                  target="_blank">Change of name request instructions</a></li>
+            <li><a href="http://www.llu.edu/assets/central/ssweb/documents/changename.pdf"         target="_blank">Change of name request form</a></li>
+          </ul>
+        </li>
+        <li><a href='#' title="Forms which can be processed online">Electronic Processes</a>
+          <ul style="width:240px;" >
+            <li><a href="http://www.llu.edu/central/ssweb/registration.page" target="_blank">Registration </a></li>
+            <li><a href="http://www.llu.edu/central/apply/intltrans.page" target="_blank">International Transcripts </a></li>
+            <li><a href="http://myllu.llu.edu/apps/studproc/istr/Start.php" target="_blank">Independent Study Title Request Form</a></li>
+          </ul>
+        </li>-->
+        <li><a href='#'>Publications and Information</a>
+          <ul style="width:240px;" >
+            <li><a href="http://www.llu.edu/assets/central/handbook/documents/student-handbook.pdf" target="_blank">Student Handbook</a></li>
+            <li><a href="http://www.llu.edu/ssweb/0terms/schedule.html" target="_blank">Course schedules </a></li>
+            <li><a href="http://myllu.llu.edu/apps/PublicationsV2/publication.php?binder_name=University%20Catalog&binder_content_id=1" target="_blank">University Catalog</a></li>
+            <li><a href="http://www.llu.edu/central/academics/catalog.page" target="_blank">Previous Catalogs</a></li>
+          </ul>
+        </li>
+        <!--
+<li><a href="#">Offices and Processes</a>
+          <ul style="width:240px;">
+-->
+            <li><a href="http://www.llu.edu/central/studentaffairs/parking.page" target="_blank">Parking</a></li>
+            <li><a href="http://www.llu.edu/ssweb/0static/reqtrans.html" target="_blank">Transcript request </a></li>
+            <li><a href="http://www.llu.edu/central/ssweb/graduation.page" target="_blank">Graduation </a></li>
+            <li><a href="http://www.llu.edu/central/ssweb/finaid/index.page" target="_blank">Financial Aid </a></li>
+            <li><a href="http://www.llu.edu/central/ssweb/studentfinance/index.page" target="_blank">Student Finance </a></li>
+            <li><a href="http://www.llu.edu/central/ssweb/studentloan/index.page" target="_blank">Loan collection </a></li>
+            <li><a href="http://www.llu.edu/central/studentaffairs/index.page" target="_blank">Student Affairs </a></li>
+            <li><a href="http://www.llu.edu/central/store/index.page" target="_blank">Bookstore </a></li>
+       <!--
+   </ul>
+        </li>
+-->
+
+	
+
+   
+
+      </ul>
+    </li>
+  </ul>
+  <ul style="width:120px;">
+    <li><a href="#">Learning Resources</a>
+      <ul style="width:160px;">
+        <li><a href="http://lluonline.llu.edu" target="_blank">Blackboard</a></li>
+        <li><a href="http://www.llu.edu/library/index.page" target="_blank">University Libraries </a></li>
+        <li><a href="http://www.llu.edu/central/ess/index.page" target="_blank">Educational Support Services</a></li>
+              </ul>
+    </li>
+  </ul>
+  <ul style="width:120px;">
+    <li><a href="/apps/finman/" target="_blank">Business/Finance</a>
+            <ul style="width:150px;">
+        <li><a>Not available, because</a></li>
+                <li><a>Not on-campus</a></li>
+                          <li><a>Not logged in</a></li>
+                </ul>
+          </li>
+  </ul>
+  <ul style="width:80px;">
+    <li><a href="http://www.llu.edu/central/studentaffairs/index.page" target="_blank">Campus Life</a>
+      <ul style="width:100px;">
+      	<li><a href="http://oncampus.llu.edu/" target="_blank">On Campus</a></li>
+        <li><a href="http://www.llu.edu/central/drayson/index.page" target="_blank">Drayson Center </a></li>
+        <li><a href="http://www.llu.edu/central/chaplain/live.page" target="_blank">Chapel Casts</a></li>
+        <li><a href="http://www.llu.edu/central/foundation/foodsrv.page" target="_blank">Dining Options </a></li>
+        <li><a href="http://www.llu.edu/central/store/index.page" target="_blank">LLU Store </a></li>
+      </ul>
+    </li>
+  </ul>
+  <ul style="width:120px;">
+    <li><a href="/apps/acadman/" target="_blank">Academic Resources</a>
+      <ul style="width:120px;">
+        <li><a href="http://www.llu.edu/pages/faculty/directory/index.html" target="_blank">Faculty Directory </a></li>
+        <li><a href="/apps/eportfolio">Faculty Information System </a></li>
+        <li><a href="http://www.llu.edu/central/assessment/index.page" target="_blank">Assessment and Institutional Learning</a></li>
+				<li><a href="http://www.llu.edu/central/ssweb/registration.page" target="_blank">Registration</a></li>
+                	      </ul>
+    </li>
+  </ul>
+  <ul style="width:120px;">
+    <li><a href="http://home.mc.llumc.edu/Departments/LLUHS-Departments/Human-Resource-Management/Index.html" target="_blank">Human Resources</a>
+      <ul style="width:120px;">
+      	<li><a target="_blank" href="http://home.mc.llumc.edu/Departments/LLUHS-Departments/Human-Resource-Management/Index.html">HRM website</a></li>
+		<li><a target="_blank" href="http://www.llu.edu/hrm/jobs/">Job Opportunities</a></li>
+       <!-- <li><a target="_blank" href="http://www.llu.edu/hrm/">External Employment Opportunities</a></li> -->
+        <li><a target="_blank" href="http://www.socaldocs.com">Physicians Opportunities</a></li>
+        <li><a target="_blank" href="http://vip.mc.llumc.edu/Departments/LLUHS-Departments/Human-Resource-Management/LLU/Index.html">HR Forms</a></li>
+        <li><a target="_blank" href="https://peopleportal.llu.edu">PeopleSoft Self Service Portal</a></li>
+        <!-- Commented because it was pointed out that this has nothing to do with HR, and not sure who's using it. JB <li><a target="_blank" href="http://wisdom.mc.llumc.edu/hr/Forms/FAS_Form.doc">Financial Assistance for Students (FAS) Form</a></li> -->
+                <li><a href="http://vip.mc.llumc.edu/vip/Departments/LLUHS-Departments/Payroll/Index.page">Payroll</a>
+          <ul>
+            <li><a href="http://homestead.llu.edu/plslweb/" target="_blank">Paid-leave/sick-leave for Salary Employees</a></li>
+            <li><a href="http://homestead.llu.edu/salaryweb/" target="_blank">Payroll Salary Timesheet</a></li>
+            <li><a href="http://timeclock.llu.edu/edithour/" target="_blank">Payroll Hourly Timesheet</a></li>
+            <li><a href="http://homestead.llu.edu/grantweb/" target="_blank">Grants Management</a></li>
+            <li><a target="_blank" href="http://vip.mc.llumc.edu/vip/forms/departments/LLUHS-Departments/Human-Resource-Management/Rate-Slip-LLU.doc ">Rate Slip</a></li>
+            <li><a target="_blank" href=" http://vip.mc.llumc.edu/vip/forms/departments/LLUHS-Departments/Human-Resource-Management/Special-Payment-Form.doc">Special Payment Form</a></li>
+            <li><a target="_blank" href=" http://vip.mc.llumc.edu/vip/forms/departments/LLUHS-Departments/Payroll/Payroll-Adjustment-Form-LLU.pdf">Payroll Adjustment Form</a></li>          </ul>
+        </li>
+        <li><a target="_blank" href="http://vip.mc.llumc.edu/vip/forms/departments/LLUHS-Departments/Human-Resource-Management/Employee-Handbook-LLU.pdf">LLU Staff handbook</a></li>
+        <li><a target="_blank" href="http://www.llu.edu/pages/handbook/facultyhandbook/index.php">Faculty Handbook</a></li>
+        <li><a target="_blank" href=" http://www.llu.edu/pages/handbook/administrativehandbook/index.php">Administrative handbook</a></li>
+<!--        <li><a target="_blank" href="http://whisper.mc.llumc.edu/bluebook/">BLUE Book</a></li>-->
+        <li><a target="_blank" href="http://vip.mc.llumc.edu/Departments/LLUHS-Departments/Environmental-Health-and-Safety/Index.html">Environmental Health &amp; Safety</a></li>
+        <li><a target="_blank" href="http://vip.mc.llumc.edu/Departments/LLUHS-Departments/Environmental-Health-and-Safety/Reports-and-Resources/MSDS-Information/Index.html">Maxcom</a></li>
+        <li><a target="_blank" href="http://www.healthcaresource.com/performance/lluahsc">Performance Manager - LLUAHSC</a></li>
+      </ul>
+    </li>
+  </ul>
+  <ul style="width:120px;">
+    <li><a href="http://www.llu.edu/research/index.page" target="_blank">Research Affairs</a>
+      <ul style="width:120px;">
+        <li><a href="http://research.llu.edu/Default.asp" target="_blank">Research Administration</a></li>
+      </ul>
+    </li>
+  </ul>
+  <ul style="width:40px;">
+  	<li><a href="/help/" target="_blank">Help</a>
+		<ul style="width:80px">
+                    <li><a href="http://www.llu.edu/central/lluis/index.page" target="_blank">LLUIS Information</a></li>
+                    <li><a href="/help/" target="_blank">IT611(48611)</a></li>
+                    <li><a href="/help/" target="_blank">Tutorials</a>
+                        <ul style="width:120px">
+                            <li><a href="/help/myllu_introduction/" target="_blank">MyLLU Introduction</a></li>
+                            <li><a href="/help/myllu_environment/" target="_blank">MyLLU Environment</a></li>
+                            <li><a href="/help/myllu_navigation/" target="_blank">MyLLU Navigation</a></li>
+                            <li><a href="/help/myllu_portlets/" target="_blank">MyLLU Portlets</a></li>
+                        </ul>
+                    </li>
+			
+		</ul>
+	</li>
+  </ul>
+    <!-- 
+	<ul style="width:120px;">
+  <li><a>Service Learning</a>
+  </li>
+</ul>
+ -->
+ 
+</div> <!-- standard_top_menu div -->
+  	</div><!-- nav div -->
+</div> <!-- navbar div -->
+<div id="middle">
+  <div id="application_name">
+    myLLU  </div>
+  <div id="left_menu_section">
+      </div>
+  <div id="content_section">&nbsp;
+    <div align="center">
+      <h1>MyLLU Help</h1>
+    </div>
+    <br />
+    <h1>Problems with the myLLU Portal</h1><br />
+    If you are having difficulty logging into myLLU, using the 'Workflow Summary', or if you have any technical questions about myLLU, contact the helpdesk at <a href="mailto:lluhelpdesk@llu.edu">lluhelpdesk@llu.edu</a> or Ext. 48611 on campus or (909) 558-1000 Ext. 48611 off campus.
+    <!--<ul>
+	  <li>Logging In </li>
+	  <li>Workflow Summary Portlet</li>
+	<li>Technical Questions</li></ul>-->
+    <br /><br /><h1>Forms for  University Records Office</h1><br />
+    If you need assistance filling out forms for the Records office, contact University Records at <a href="mailto:registrar@llu.edu">registrar@llu.edu</a>.
+    <br /><br /><h1>Training Videos</h1>
+    <ul>
+      <li><strong><a href="http://myllu.llu.edu/help/myllu_introduction/">Introduction to myLLU</a> - </strong> A brief overview of what myLLU is and how to access it. </li>
+      <li><strong><a href="http://myllu.llu.edu/help/myllu_environment/">myLLU Environment</a> - </strong>Teaching you how to adjust and setup your personal myLLU environment.</li>
+      <li><strong><a href="http://myllu.llu.edu/help/myllu_navigation/">Navigating myLLU</a> - </strong>Teaching you how to navigate your way within the myLLU business portal. </li>
+	  <li><strong><a href="http://myllu.llu.edu/help/myllu_portlets/">myLLU Portlets</a> - </strong> Teaching you how to edit a portlet in the myLLU business portal. </li>
+    </ul>
+    <br />
+    <br />
+  </div>
+</div>
+</div>
+<!full_section>
+<div id="breadcrumbs"></div>
+
+<div class="clearBoth"></div>
+
+
+
+<div id="footer">
+    &nbsp;
+</div>
+<div id="copyright">
+&copy; 2026 <a href="http://www.llu.edu" target="_blank">Loma Linda University</a>
+</div><!-- copyright div -->
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-GM14E8NSWV"></script>
+<script>
+    window.dataLayer = window.dataLayer || []; 
+
+    function gtag(){ 
+        dataLayer.push(arguments);
+    } 
+
+    gtag('js', new Date()); 
+    gtag('config', 'G-GM14E8NSWV');
+</script>
+<div id="errors" style="display:none"></div>
+<! set display to :block to turn on error messages >
+</body>
+</html>

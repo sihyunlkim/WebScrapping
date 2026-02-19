@@ -1,0 +1,573 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head><meta http-equiv="X-UA-Compatible" content="IE=EDGE" /><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" /><title>
+	Academic Materials - Main View | MyOlivet Portal | MyOlivet Portal | MyOlivet
+</title><base href="https://my.uolivet.edu/ICS/">
+<script type="text/javascript">
+    window.jenzabar = {};
+    jenzabar.userSettings = {
+        culture:    'en-US',
+        language:   'en',
+        dateFormat: 'm/d/yy'
+    };
+    window.userSettings = jenzabar.userSettings;
+
+    jenzabar.jicsVersion = {
+        text: {
+	        version: '?v=' + '2025.1.0'
+        }
+    }
+    jenzabar.siteSettings = {
+        textEditorSettings: {
+            customAudioMinutesLimit: 5,
+            customVideoMinutesLimit: 5
+        },
+        text: {
+            more: 'More'
+        }
+    };
+</script>
+
+<!-- BEGIN Html Head Elements -->
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.7/handlebars.min.js"></script>
+<script src="//stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jqueryui/1.13.2/jquery-ui.min.js"></script>
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.bundle.min.js"></script>
+  <script type="text/javascript" src="//cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@0.3.0"></script>
+<link rel="stylesheet" type="text/css" href="/ICS/UI/Common/Styles/jQuery/jquery-ui.custom.css" />
+<link href="//fonts.googleapis.com/css?family=Open+Sans:400,600,700" rel="stylesheet" type="text/css">
+<link href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="//stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+<script type="text/javascript" src="portlets/cus/ics/BCProxyLogin/Scripts/ProxyLogin.js"></script>
+			<link type="text/css" rel="stylesheet" href="portlets/cus/ics/BCProxyLogin/Styles/ProxyLoginStyles.css" />
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/signalr.js/2.4.3/jquery.signalR.min.js?v=2025.1.0"></script>
+<script type="text/javascript" src="/ICS/signalr/hubs?v=2025.1.0"></script>
+<script type="text/javascript" src="/ICS/UI/Common/Scripts/tinymce/plugins/moxiemanager/js/moxman.loader.min.js?v=2025.1.0"></script>
+<!-- END Html Head Elements -->
+
+<link href="/ICS/UI/Common/Styles/css/site-bundle.css?v=TFtOHsXFl8Vblh1bw_wfIB0WPjuLn6qMGsTVo93UJHE1" rel="stylesheet"/>
+
+
+
+<link rel="stylesheet" type="text/css" media="print" href="/ICS/UI/Common/Styles/print.css" />
+
+
+<script type="text/javascript" src="/ICS/UI/Common/Scripts/jcsfl.js"></script>
+<script src="/ICS/UI/Common/Scripts/site-bundle.js?v=A2fQgZEqNEreaFQK9bann7d6vgKBS5XbWsBUwSSNhvg1"></script>
+
+
+<!-- BEGIN Html Head Elements After JICS JS Framework -->
+<script type="text/javascript" src="/ICS/UI/Common/Scripts/SignalRManager.js?v=2025.1.0"></script>
+<script type="text/javascript" src="/ICS/UI/Common/Scripts/LayoutManager.js?v=2025.1.0"></script>
+<!-- END Html Head Elements After JICS JS Framework -->
+
+<script type="text/javascript" src="/ICS/UI/Common/Scripts/Globalization.js.aspx?id=8659790fcae44454aaf16f2d28a1f36b"></script>
+<!--[if IE]>
+<style type="text/css" media="all">@import url( UI/Common/Styles/IEOnly.css );</style>
+<script type="text/javascript" language="JavaScript" src="UI/Common/Scripts/IEOnly.js"></SCRIPT>
+<![endif]-->
+<script type="text/javascript">
+    window.Portal =
+    {
+        url: 'https://my.uolivet.edu/ICS/',
+        uid: null,
+    };
+</script>
+
+
+<script type="text/javascript">
+    $.extend(window.Portal,{
+        timeout: 20,
+        SessionMonitor: JCSL.JICS.get_session_monitor()
+        
+    });
+</script>
+
+<script type="text/javascript">
+    jQuery(function () {
+        jenzabar.framework.timeoutWarning.create(true);
+    });
+</script>
+<script type="text/javascript" language="javascript">
+
+    $.connection.portalHub.client.sendLoginWarning = function (userId) {
+        let id = "b0b00000-c542-4d2a-86e6-55ebbbcd85da";
+        if (id === userId) {
+            alert("Your username has been used to authenticate in another browser.  If you are not responsible for this login, your account may be compromised!  Contact an administrator for assistance.");
+        }
+    }
+
+</script><link rel="stylesheet" type="text/css" href="/ICSFileServer/Themes/J1_My_UOlivet_v1/style.css?v=1&u=02%2f18%2f2026+08%3a05%3a10" />
+<script type="text/javascript" src="/ICSFileServer/Themes/J1_My_UOlivet_v1/js/javascript.js?v=1"></script>
+
+<style id="customCssImport_custom" type="text/css" media="all">
+	@import url( /ICS/StaticPages/GetFile.aspx?target=be7884da-8f42-4016-b362-9c70b7f95a83);
+</style>
+<link rel="Shortcut Icon" href="favicon.ico" type="image/x-icon">
+<style id="customHead_custom" type="text/css" media="all">
+	@import url( /ICS/ClientConfig/HtmlContent/custom-bundle.css?v=_XH_LOjaqeIKcDGI7bkhDsslWzU-Ym7msBVgcfQ4Lnk1);
+</style>
+</head>
+<body onload="doLoad();" >
+	<div id="siteWrapper" class="custom-grid">
+		<form name="MAINFORM" method="post" action="/ICS/MyOlivet_Portal.jnz?portlet=My_Olivet" id="MAINFORM" enctype="multipart/form-data" autocomplete="off">
+<div class="aspNetHidden">
+<input type="hidden" name="_scriptManager_HiddenField" id="_scriptManager_HiddenField" value="" />
+<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
+<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="kyfCWtUnJp2NVmHfKhLSbU7e9ztWF09SMetRN3Hf0LXZ8r4f6Gin9ACRxdrSm3xBU8AMtgywStG5K0OXZ35bs2/ZQbZY0GQcxqczl7fURQLyWsNwSFLpUOi6bbTb89DIICpUxCkGAhFrKIZLOlst1PoQ9JUttG5PX+tvPsVurIY2v4+/NC8esdladycb+iBzg77KKNSFKEOUiLFQMarvJOh6ZtRIn5fbBvw1xJSIKGUiDoxnygFrgn1G1S9vJayytDAFe7/VTp9XQ/FOwh92dg+su04Hh4dvlVS2jhoZTqMz7CRPAwzqDf2IP5GH3YHWhBt8YqIsWt0fd4HNpK2F5IQWwrSEvOEhLQiixTUzTPm03aRP8rkQZsZMRtg6yTSDT4F/zv5ivgxo/tsgDMgKxK2mU9xgQ1NxSuwmk2mvsAB5K9y+Ws/dYqz5nstOz8ucEdsLIIpNlVlGLToiyz5LAtDb6BeJsHGHy99CghZITixHBl/+JOcTb56pwRZpeIRRF3X6sKN/O1y8e3rknz27VWAfaVMfAXHOckUL6D2qXUowU856Gden/+MEp/nMXaVWa0mPA6q6R8aAEIm4ivgLzeLNZZOo7DAghi158a90UZvE6IVrXE3OCOrdLpeuQ0Bm3APOnYmcKm57XBwVNP8HW/vfO/tLkrzgf+XT+jbFchMjZUqNHL+bZvYTvdKEZktsvX/+ynHIJcyiA/8ENA2OQ6Z5DW2NocQf61ZFjZrHnJMSjziCQRFPcTioK+bV0XYcCXpAW7p16qF0ZED7VkoyNYNpm4EMpFNR9f0wb/POmav+j23fH8kfW8hy488PFIvsLdG6VLp4TrJGSIlS+H/rzb9vBPrF4Th8pGc0AFdhIGDXE/QZcgaiOuW9N7DD819K5NTxFeIWbVCD/VWoJIZ4ppJKfDzJnqdp/oVJxf1ln40YnVa5Th2e76gxFxZKzcE3+foVr5RMR5hxi9DsTYVqVbadVWhTYh3JpMEz+fBt8EdFOlJUIdgtjFwtqUFtKcs0BdsgGHbIin81eWJ9SYYmBQPxGZUszOa7duUT3/zYhRx9L8o0dcBzQZI4Uv2zV7e2F9z/3fm+acWkf31bS9rs1cAX2MjVbcMA9w/EGPTHcL848A3XYVHyHWnK/bsthpTYKPuDtiCD4VffDg75YOyjMVx2jRr0h86NVNCg3OCCx2WnM/hxhwC1najT0WpgygH50ZrO6BeoPel/86qs1C6GD6hgzunqv21P1kP55Rwq0zbXbgqOWxSE+a2G9KUgpFsiyrbExUkZw0N1IqhQkmdolBKE03Kmb/UjlMRPsEypqVi8mbKXlXSHnbz0sgudjBcERTTxAek9K3G7H10PnidMbMeMSG+wfswse2twwu3IcplLxnmB1RvaNPT+J6fT0DZxMhi18O7XBO/F6Tbun70wGJrPOUS0fIUI4O12i9jWxX9t6pUSmBAzFfpg8FPCeNlQow6Q4vYSXTg4fzrjjE+rO+O1qFZyKkR0aqxGMO8quorNfAfVr+1t0DBS9wVDcV7W4VtOUlhd3mCCWH2fpSaS/uuX4ZrHVOMbUuY/FinUk86csdDZgf4IblpLLIK5FPCUTlLN5AuxGwmZoNFY7w8ErbQgjXCyAR/wammhzzkIQZ+tFTYtnJgbfK7kpCoxM6zEukfKrjclfaiBcxmkCQcAsctNwVQmwwva+mg7YNQ7NWH4T/P8Qr0RJ2Rw6b0OBDH6f2PavLtmhYK9ERvXJ909tBMmU1LTEMTkJvPwE8nJ3AM75OwP15tBJYmeU14Z5X2EilHSRojOGmEvQQU/9JQXxyTlaD+v058ZL3CogWRL53OamO8fSiCxyXlm8B07qk7eK/mF1IsZ9Iuq4VqxVOrLkcbIe4k/KwXHGCP6auWpp+SPqL4I5OkDeOR6Z778+75GvwbJ1bBsKTuTcEP9QSWiS2JzkVxhPj4vMUZajirnX/i6rTtTr5vlOLmXHO6jqy4OWhrJSMOp6vHfcH9w736s9qngnm7ZZH8JBGbAUilX2W0f+bTnCpfBx9lhcQoMoLocURTvjw1/lEqym8fuxu3sHqiVRgYmJQxwQS0y1ZFzbzLfUX81AfQZTa7tnakwV8KcjwsGt43avnFDp6yx/4M50L984r2fq6nA65oTIFUXGUYfvEUlgOC7Cd6y73BwnZu/YfoxUtpmv0yKqBLddhiu8rYOphLeNiDilAxWzZPJxfSLE93uBrmz8oBJEMu1AjswjRivJeNBUS9zVGBmH+R+rMQ/8ItLl41xlxSqaoWAiXZkBmDiNVEUi9t+HkC0+J06aj/g52TgPlk3vfyePKUz9XKYmPDvQ3Tg3qpRnYSR/fnoZiEwco9kQi5OO6o2Ya5v42fFkLvwX94lLOESIbcbiYjd8NYxv5lc/CnwOahzrJT1d46WfmopaQj2tHjxk5qGSp2kOK5UDpCSMgyPUfz4DwOgADDUPNgUj6ovv8LrSYcOzMBb2puHWAZ6ULnL6qRmqjSRlulvEvObtqUc359abP6R1JbcWX9wf6pWGvXIvqFqR3/Wsuilpy5DPJaz76H3gFkWrRFtmBq+oNJhd0ZmyUst9dsQHB3rzkcDQPv9AKAZ3HVzD9U3dBKgZJNispc6tY2wzNrc6pUMDe/4dny6DyVJmVQTUMvvRwMYsblF3QUjVCF5s1dIjB7S0f/Ti92s73/ficKlbd6q2tVHGvyh0x0/UUizEHLgRR6EzCEItfYkfBfOFg3fWlrrwrccgr5FsN1/C4ArTby1hIxMt61bvCXQMYhul3fvLCG3otya1eHf7XAuAEqqxPfahHdwFNwKArIjkkDgybx60JGuFQwBknmEYj8O5ynRO4eU59cxYmLjctEiWKswrKSfbyELOeZ+bxY3ryX/gzJhhTPsA5kj2PZH7Jf8luYVtQeFHQQJNbv9T5YNdqt6py6n1LBAlGywlGizJiWKbNuQ2XpWCx6Ym2U04xOPOLaMQDk8RL9PdjFYHVaUQC5D6kFEFneOIbxXKWa9kC4qGDfaiXDWPLStIZkuWmja9RV5Y4O6cgM2J+dBG/4voXrGOER9GMxzoiR3DXg180dX08uYVUKirmG9AVgOAKF5JylpO1qh0URjUPyGIIljGey2Io4BxrIvovIBv6hMR2kJtG4PLP5JsH9LvuKhSRLW1/8lAV7EFmrEF6o5/FFMuEuO6bO1FvEONBseIEy1JN2mX50FwEv70cyjRB4xwcdF58JnY+hOCMo/OuGYbIvlnp/6JcueoBgpMtlsilEw0nCkqwmNLHfYF6YlPmk9nLmIJxwhtJ6OUVoS5KDXe9UGNHh6ax99W2udfZupj1d7SuoCTVfLnA3NXgot0s3YkzA8oibRsvpEzyhjhCr9w/s+n41paz4qNZSZwflVlEogoT+c+3qVWm8Ki/IOnkwBkAJozc6/n/k8nMQWZP89Ou6sbdpMipANoN4QGrQ7huYOQXYMJQOEHrCVpVXEaMsB5rOtv7J+xLmvMfWt5jFs4X429SQmtpNxAhZJQVaUzB6kBQNAyT69OKnfyie5dvKnAetTKCDOaR8x7fysKapPHXUiR/f0QJ/o8+ot2xmddvM78DSLcqUxnOBoZf4Cla2Tz44SFCveKmfgpx2VbpTCEvkviJOA+5p5K0OAyER0zVZgufzpJ2EiMcQWT7//N9knTZB5SjADZ6q9Y2RQeJleVzRblbiS41WDSuDlTo6Ddk0g89e4VK5uwVjfOK9YtaOHqOFiZyse1N03AWRVZ/l30rKUOWM9mSqg6GlPtkAEo46neZrYgHwMeCgV7ONSNjy+IBg91erBd7uThCGpee5sZi5ArageP/wkCrm1x7tDHYBX/GsqsgIwOWXV2MWHliakplcbbBB5S4ZYlRnL1YVDEZIpuF9iDplbeRzeut5ClWzGo3QjpuUDy2DYrLMs0N6mmj0z1yxt9bky7S8RpSmtWRToJZi6Mw0jxR6FM+L55bQF/W2hFThIn7L3uuPSDPquAvc8ruSTV/NcDQ+5MgHDpefwbH72lB+rfE/2+rS8SBaFrPtuue0sgROlwPb8pkYlDiowZhJ8KIYyMgDo50yWC6suUiEj3FJhUN1dlJ03rSyq9xmHjU9akNC8x+ndO0rpyyrRiHVcurh+WuKrYBJE1a5Pa3BYQ2rDWaa6Z/8hBlRnPNfZl/ZaPwN8UhG+BrNVTM2AD1XfJPJlN73naH9lF6kBN8taMarONYnBmQUgoOil6ynYlTHURAI33s70dbIR7kr0Kc5MEe2B4Jhc7DmQor8YuhLQo7R6iEjy7EdADckPn8oommPOFCmraoYtmzkkjzNbMCYMWDYiSQp3ciPlmtsKjEnarCSVoFN1/oiMCUbd50eeUPxnRkBvj2+vw+tGUGqfLvrt8C2e5xZEUHXpbwl4LgbIqdAghHCLt8mcrARry2L5/+OrgJ85zAeycJp0YlNo8pYUOBP8U5M+Em08pE1rJZWY0YRSYfaWJdFpI6YzNLxLeTd/2neuxPaEOM2kr1s+IworQHmMFNjD0/eYD28bOkFkjmgRirusElL3RX4O2Ghu33aRVC6ZhOSqvH1DPy6cNAa90UJdTp+PMhIl0XEt0nGlJxH4BXC5SpHmaZBzJsRl1C103VBsBNEEKBtJ6qEhnl6WEfPx01kaBPlkDCoIVyNqKM1H3wgDyUm84igC8oJ0LPY04o93RNlY08gQnVQypD1gYnM5hBRqKMi8gMZrMlux6TGVG93jSVWmm77qD7p2370N9bX4N4LFRok0zrOK6Y3EJdXRbcaE5MR36LE3Hgls+tsQa3BbxPdHZx+cyID7f5bzq1WNmjA34mQWGBMWSwBK78LFnjaFf5jGdPuKlR653hlQoBPNmhDamPAC7nHU3RAEZ1A3ukhhlY5spuXSHIeFBsi/7QeQbrLIk5HyCoSwHA/hpSA3KusXrnwbZqolLfBx/s6LWjCp5J+i09ez+RIT8BuH5WRNMsq8gfKU8EUeIhz5W+uddLHscCHbBDVdHYx/ATbtcAFnrrs80vVoa20V4GNwxMxjg7eY3sWFoDWYJ1H3xH/DiB3EqsCAYCPb6fAVO8L1iTGrrNdFGpJg/yD+rgurrE2P6k9EfqMyzTyFEbvpQA1xEmtrA0T5EV0/Vbk63ODwegv9vdHTJIn5tp9+a//YG2Ui4yzv9rj5KHTSBJ/fAFgG0ni+i4Dz9kqD+2Olkle2HZvvTWZJnYadwbQ3Az+7h1kzRl0XJDE/XBeoplmS5LgzIn/wCWvdLrd/qFM64m2aprbbJlBYtRsu+G9kMDoF4yvz8HcIqqejyzySs2K2yvjQOakoFL/s4n7PdfACJjEOFooCWd5Cgf1ZDxBxUfkgMkUPMmUH00pl9uwDQTPIEow5+qXgzLQXiffBwjcrlUniyaL5hmpGCpVxvfdPpJPnK6m5iDl/ZbBbFGmibpViztmY3AzbS6khwQBiifyzDxaQSrE1Jat8QgjKIubqx20ec9ngo5fKW9hEd5lEBO/+VeJG300wBJttBwvUUYylu2nJcy4KVy1gM2r0wvZpKv793uI8yDBSKCIO4+2WMIB2m9sM6G/vjkZ6HeI32u9OfEw28+GO0Rd7zzZB4UD0XUpZ2Fs/pL9vosulFFkkoNzC9Bg+il6fwP4GuqHY7Uw4bbGfWmeBhMv2l9W2+6u2gCbUT3Q5udYph0/tVOHj6sWZAd+Ad8eyuHB+pHoaJloiNMKcenlTw78xsFi11s+/EtP9RgR3DVp1HAg+kgrnpu4t0rMmUBJGu4/gXbxTi1S4vKsnJXsRil86eFPt9rQap+HqzEDX+ykwFsKk+KAmtCzhlfr1wPYSw06P2eFX1X9IDeUH5TcRTSS7VSAUsj9ASLJuz7PqFgDJX/cByTvFDiFPabMhoA3A80MpAJN0EesfN9ZPeshbkEOCqieQMHINz6bY+TkM2CpgDo4AwDz14OKZkV8yxNwg5QWfQDCNyDwQqajaZE4+3o4WT32/6SqlxvIxpCWl8QiwJ7lYTqb0bcAoRDKoI8hOx+lglL4ezZUpqR3SDgUeZMpMV7IyEsVMcjLREwl7gK4Pwmot0fqUnuhQGEJnRj/eRWZZ1BglVac598mIZE8GTJ/GTV7F3E+yx5BXaSyQLIpYzIuZddQKDckhrj4cZ1Z0k+yQB0uIGPnvS0ZrHuyOHH7iL0WGfjuJH2WJADMWa6WW5NK7qGAYkDFh07ZXo3jC3f3g7w7EKQWFm3caFz7cu4BWBujpUpVwIds7k4hq6CRS9bF4Oe0VbMyWb8G62s4GuSezJdKKIq4f53uap7Ssi6PY2av9WQGzQZwYla6cbuyIYBM8bdjOwK0mij0LoPMtKmj4PPzoA4rxpqmCPIKIv4xmbTRCMQYTbrMgoZYJxf+sVZmkVkX4lSmWUwBTefBeWgfjlenUHbZKKMtaNwnNJw4RK/Ffw6qlUxHEe3Tgu/30DzCInTBVC0BUrk7bzMyBWY7uXAh9U1byWEVAAcw7D2uRCpwNAUY0BVaozMvcPfvmLneCYfXK4yXupl9nMqLUwG1KA80ygIqAqHloYPl7U+hy0vz7W4c7g0sK2L7/97J8OFJ32hKNCoAVmtZMF1eANv81il18FBGMNrh81BwYFt8KcHlFzklxIVN7Z53tAos01j+oqOC7WMdtm8rRmf/waYc2vGC6zLf95Oc76C9hqfvANgCytHf8fdrtNZVOpTmqHV2F49nuSyzswPfVUw4fh33MpVgGCwn/XE4b8hrywrNIQcc1KRA7TcqqDtE0qmNFl/UD0EEhsZPk5JCGvRb5hMiXAYiUdLoUoukdC/0XvcoUoqs/a2GvgxJCOap6dnAN4qYpfIiYfIngeE76oTaW4LtQWBXgaeQKOxSBDnJMe+jQ+OiOGqcwgSDGl6/MtLYBsbvbBFDIFWT/ppYuNgjpOke5Fs/XWZJMoqlY0mucQDrPMV2JsR2iorcrgBzs0T/Y9dR5lkikC+csbXYcj7luQFV02oe4QRWDhuYuAb+AiF/cNDMg2K88kTJB1Wh29RWC6HuIEP4tbxSsK5hA9JJy3KNVQj/9w9LE56z+YAp2b+fAB++fDqaeMQVait8uVl5pnzOh7fmAMw9+PymHL4Y3YezUPLSw7HUHUy9kCC7GHv2al+j46Z+m8Q6lakMIp0dN02whzOFgck+nB5yKwlJtEA/GmkpiqrjTfnX0DG45S3U9ije87JImZNpNyFZ32dU7FZvzHdO9SLEw6X0PNBRsapcGjTNEPfRq6T0GdjQzKf3vWApyQcbuQQuH3KmaI9+qmD2HkUMR7X7RCuraHXlZuU+oalBnrqJVwsD9XkXJnjK3VDsaz4N4+5mApjIrRY0E1F2yNsS+YVtpqNc2on1lAMhOoxVvGPXzoKAVDzi2g/WWvTXvOz2kW66EK5mj089eIby0vCg0DURvFMoiPHSPWP7aueWy56CJsgotlyni5BjNMJpt5A08fYpZfpDY0kXPFft1fXJuIe9Gd8wZmPX3nTCk+ZnRYUcoIjsTP4AkF8fUFZGAalBy6fhKQB9cjWTJjP/3H7+ZelfUZ3cx8t6eiJ9oWKG9Foky5QkNAyqSzVkYssn7r8hQCLNEABaAbo2/Nn3ZLsPBNPsUVMSbv0TQHK/czkBqYa5KQ7qO0KUPL7f3kffGJ/IPgRz7B8wEfVHPnmwnP+IjXIfcvfRxT15nNiREHk0xbrcBcrhZ1SpYDyUpW73Btv9feEoPNJm/qxLfhd3WAsnaNGFJsfyeOblWccaNAmVE6qTZ0dGx/6Li8/RR7ciat7EUf8AxFuKEnUbQP3pu230IOcijJuHp9vpumCVI+aV/Y0Hu8J07rBLRlGlSEEDr8f/yO/cZC1iYMTmHLXpi1RxgryXR7dcTrD7E/8sbxTnbo5ufw9NRBEgr1afuR+fR5/WLFLyweCzCtt+VdrcONqwEb3dylrqboT9qr374Uj5AOCfp5FL2Be4HCSgzuSPOuJnmGtvrcozjJxaPUQjK5Y5HoWjo2MBOuftgGdVPJbvFzHM8GsTZZld2jJBKHvZXeVo2uZxYMBg0616sA8LwUcddSI3bG/7HXtxSLwO0h7ler/h8QFuoHiB/+rGzPJeFV3t3iJULiIFe5KArFEglB+oNcywBhwwuP41EXxCHaf/v+uEOZONH7Kb8HlI1EU3rJap/YbvxyuTZUH7yH0P5g47irOQujSCdMo5r0ID1L6dcMSehjnXDuv+s2F9fmF+Btrf55+GbyAFfXWjzEr3zJPRNqVhEXq6lNLapxD2SHKKDbFlGlHVTX/d3huXkbXifoSOh9mpyeicJTvNIZk7Uk9ZnH3TmBeOzesrHR/Qupqoyc3Lt5cAEK/8qUEEenwx2FuqM5nevLyfyCwH9FiGsDw8WTdVInwi8b/ccz4jTCJt8WJWEs5arPoQZ4y9XSkMSLI/orYtmMvyFIBPjSZQ01t8i25rSj34DEkdF8k+uA5KsfGu2WI/FSjFDG3R0tIeX3iVflCpWkxqQvEOro8xQRrOcdn3eFHTeG3vmsvl7rVzxempei0kKZ8egBftXzQ3PxJ6lI4pMqo3dFiULrzDsoFPTb+gegJAAJXjnRXwtFJ/xMccTlQPDbAvnFSOjAU+TUHaLUIQ0Io4kIv0+V/quG6CuL5qk623ShQzQZTHWbFPTscAybHF4HbFsOePGNvODYtsTLHTVmqJxjHLmdxWKiXm/+zNO2wgGHA/yqy+Tec6HQBKkBFrLLFXcI3rfkKAChrHctlz3BcMwlXUdm+2hKnPv3uRSvesPG79HIuuKRhBA9Vxxl4J9nwbSGcgCsd/aw8NKt10/5Bcsxk9fQv4zyqTfcC6MA1gAn1bd+oaONLo04nno2FBEy6IXxr7tGn9EEl6Y594ZGVB9vnYsPh/iJWzFqh1iheB8CPgaUx9HqQ7vnlCegJ6wnOD2AV0Pqt39LB9f9JJjY0FYgwkVrm8Upa1V6izj4SlypOKRT4VzZ6VTcB7JUmX6SM/lLuzRisgHpCosqk483xcwQvAbQ62WViSHyqMmbtl6X5EUClQcghIchUbtKjvtFlHzIfDYtfo3uSI4tDoj9tNISPJR/kh/je7XHPrFnVIOT6SccMyDwXOg/CGD6UkpTrH4C6dSxHDuKU8sPmxFWLFTwcALGX9iPVpLWWd9QIHY+nD4EEe9Ihiwv4kr2lN2grw3R8Ru64uGXBvBuKLleO1+I2CuSVGE0o+0hbClNFj1N/w+6y573Vp/stR7T4FAddNI2k/7J9EcjuHOaA/GvNlhohHIQh4WGkw5UDXWlnWk1yEgUYorEycIHlPG8k+Z5rKJxJDjvyBL1z1rP9+8Hj8MRPiogHJe7OVHaIuyoY5PdWxZm3fViOSBO5BrpBspmIY7pfwOs/ZLMYh7YplX6mK04lnQErs9AUuzJCYnA1A6JZqqR07YGMgQMue3PbjuNCv9YdtMTaGmY5mH7tA7/YsT96chWiJwwW4q7nc8s28b+4LoEKvA2Zi+dkPSIbZUYqJaI23xzqiQ4nsn3EcKop7P/fLLf4zI0KVXiNxOtg7taYjphVyLm1fhhKm0wIeoN7/jHH9igKy4ePbvtYzuT/Z/7vHa7WO2GBKFN/eBWzXV5cEGMOY+jsGF3NxOdKShM2BVJRTrPQJ99XnwykBzpiUyD0vttJwA6v4/dJDBXR6B485sO6Qbkhw/Jt5CeGgnk6d/XJcdcJlt7Hvrp3O0eqpF+nic0PMAbXZX9ODo89ZFQDzpGgL1SIUOx4EmvLyc26u7tW0T99luI2eUaUHqs3yEk0HpSFCCPNciy3NvseAmnlYwYYrIDzri2MJoZGyEjWQV82zMp1hygpM/3BS/0Cd5IggQAbcfxqbmqTgOQ8op0bIW3Q8lRvvGxnYCoIGimRd6fNasQAosrJHM4zDJAw+zWlu7nqurbQuevhUyG3adTRjGDz03mvkODWBWjtBSgumBROl5FPLpycrhctXbmQaUNcm+zTW8Xdyt50l3fhvE78oEFezmZLEsI+YxClYs5fkI8+4qrtxzcOJHOzgWgMmc9i39v9RMUIltCL5Yc5oXnD1ra56qydS25Vg6sqDspwWo+w2eSR7coqTRhAHVSdTi/GgIf6q432XNDPHgDWws4K8fws56ONneE++iK98VKU3Tk9oF41uGtLkYVlirCbc60y2U0GN/f2CmcRF/hI1ElhqPuau36erGoq/dWb+nhx/ie0HWfRr/lY/FiFakQePYL+EhO+4nmb8kxcJzVY9MzQPap3wHLyIk9+sE5MijJt/EdTAF61XFGSuZWlYR7u7TH9g/8ZRggDVQv3zYhqxX/Q38bpz27TzvBBeh0Ywg8ldO4bOD/sp0upERbexK1PYpSdm+1T0IKCFYUzDiWYy30WMcCnBezgOtQXqs+8kP8NHwJUV0aV6X5kyDxW6JVHkCQORa5+DMqAFKdMTObq21G+h3AmRH75VRjjf+OonMt4TLGYpDQ7Y8EFMaxYEmHKumnGDDD5XhC5UsLxxpzGzwx0vkOt01YOxsJ4YOpD4xbEA5r67kf0YLvRluATejvvr1WSU5CQ3EUmmIW8PkUBLIfwPKyh1WGqxZizVFe82NAhW8GOlyogAje+qGG7/0yrcZq5DpAbL0AoyYtFDTIey5xTJ3kSl/tbaeelvFENfvBOoaNzRv3CZyDag3Z0h6vxQbrjlUsW4IYEauO8KcvqBuy+uxWiY58380K5RoQuzbWgTxrlpiCtRwZ/JD/gVklS059kNRAJ7q9fzKjCH+blTCKgHCLBYw8lwJiSe4w2qOU6zoiIULHV/fzGCfbudu1rQjJZbHoSP+NfDAOo8KWly3GwKDt47CWLHmC9HmeRlhjSb5uJ5nLDtgsYpdOdfhGkvySUFv3OEo8GUN/3z3tMF7PjTGaFseATLCcO79TlsdodW0ihOoTOVGEGizTEpvMWzwSWSjA9neghHeE+nNlMgPahBgTVu+HTHVe1E/OAtaLJy/kKrCuuUMpbXQAGm0Fjgv/XkjIaA5PkESojiml0B0Y6hFz0nXrWTTrlizan71VhnA8EJ8fuiZqsEcB1XwxSuQjOATu4D6oVuSpm8P6bnQfwzhAe0d5OANFION4nGNbfe+ZRT1gF/188vi4VeTWHvcP7FpUuE9NYIne087o17r/dhWjkqf7FYBr7BhTMnLpL4tqOBIMRf/g9aodu4YIuOkMyH+QGs8nZD/9wSthbv2J1OExOv9FHNsK1eSEwBn+UhbNupGlzCTfZAEew4RP9iU/zCQFFXgHXN5UJew3Vk69X1MsOQ/B/tDpn4mdRnz5I3srBQh2gWnCJrT6X7Hq8/RER9oQWTSwT2Reh1crIPhyLoNfORRyo6v+zNh2k12jTtUzaIuA0eGOG+PdeAd9W5ilvtZ3lf1h6nkfSfPiu6AELMpH1E5BTwwgxeEYa4tB2yNns0SBZBUDpBkfyDT+GY27t8UmKO0RTlvsNcy2MFaKuSpSzbSwKGDX6AdvLbGo8NNe5J9AZsfidYBKCHGtaAwTnryHHkPe4DrC9bT4n7ZZMJvPW1mR58ORI/JZjXFkjyMiIpiFXp6O1Kni+nHuR/woyWFnptrAT7brx33SXjD5q/RzNPt5w/tnzMfsR5MXNRQenGvxcT7RAu0Y6pMMhGcGvplYeMy7te4EpTTCfEYpZSJa3GcFcYo9OSt8dyK5I6thph8MwnmVLBHaLzRtNlEFYSoILeOeFMbY5sVsha1h08nI2EsVD568CHKdJaIyXtlOGRx5B2/RTvodFbRClcb7Dt1+SYZc6sBijbRa9xfBVN3KuLvAcfLm/ohcyQCy5Ji7jhNoDJsS6ySDXTeMb/8a80MMaLUjSPYToIP3yYYeqbUVI9XUa6VTuhFugpjDVLxh4k1COdr26uUIHIqoOVnUkU4zgdOf5x0J8L8XtM87a4oxA9Ct8Dl5aolcJJE23qYhffV3veSkmU1ehI+EyugO7VT3Ux/TUSNnOejLn1jTY/oxXoVWGMwp/4rtscJHVKUpyI54V/opT8cKMoCxlmS5NIYNMez0bqSiA82S1TYnuri20tZ5DjyW0WIMGelgBenRQvrE/jFU0zOClAA5mxcDtb2RxMq3XloodEB6QEeGd0XTbFOsE5bXCIeRzyU9j7Y+ZXleMO5wjwetVN0q3uS43wbb5tUbMfywo+URar5oy6DMkO7VOq2fqyZbZc4k0LjbXp6Buw30snDJeBRO29BTAB8AwZRfbhZN82liRN6cCMQTzN57lBnwjFbq8oppnD6JPmSjq3CxWpRKFwVhg+C0JBl4b0x4ipSXJbWUXTyyVnPrfxDy0LalxmvKFWGpimENJabkA5U+ZquW+Ht+P/SB5uNMikD+a/JV3KycUTxFw1LqZvyO4+7J2gTZea5vAXbQBST49SUJ1JC9pXrcJ5nrN65jl6EBJMXl361IoGjk1P1Lw+MP/sIFA1OFqyrpetfGYvtOfYQ8F0IB14HOZoauEm0sXUWqEvRIp9QbLCgTZagZw3a9YDQdhnfAoOwT0gcHR4JMwd+P84Oy7Dn3VvycBmTKGRt2XUwa5qQTMgfmwVqIoFRekXcYiRyJ+efQ7N4ElS0MlRp/LlHYq2govrImSj3gMVS8Heb5OjgAIws/tE9yG82RY+rECtOr/uiOkFbNrzvXjxeJkYuKIR8k2+gsZ9s6ChGSxQysE4xh7Sq4D7Vb0pUYV18WqFceI0hbphvjG7YzLqG1F/pY38MfYEtN7hLaO+/X8Z4WQGYThUf468hNB91wkVBHGgaHEXBDDkeY6ZD7yai8PykKZsmzooEiwvlgg0cvsLgZ2nfboq2w2+h0+x8+Pgn/a9P/6HdD4dq8rgSECTSZNo2irUiwxaFHOYoMwz3nHE1bcDfNWG+HCfSEo/56dTTgujcIP3UUvxNLmoZNbubqoEuxwkuJqhZMfYfJZ3m+Xys+TPsANjku+T+fby+I9GLg9SXLv5VODPAzNybIrL62vDy+3E5U81s/jFo2t/+wPGetIunYAdu4hJg1vsTxKo9TFEbSKMiOK5OU4kZQla/GyMlBdx9mwk+UviTyWKNgIqBffD7gqwGO91ukaJry1iRpZk5qXcXYMbNDxUawIu1gHrTXyoR1qR+TrhSOpIJF7t4gsI2WIz6Toc+SqqtMhUlPd36jsmnRWZaFoRiM2BIQNkuel/rZjKvZLHkqDjkmA2Aol0ZS4GInjcL85BGkfp9DL+bWXxffblhX6x+r1rQQR/ksGrlv+q2Pp0h/kZx69/Cb6I4oCPUNAgDOc1yVgLlJyB142Q3pMUMYGM5+SSdktA52AQk/Fz1W2WLKkxgZF/6k4iUlGak7A3GeVTs8T5zVjqvjEnRfi63O93A+k7N6HnwXo2HJq2hV8U1dKCo+GFRpT7OS5q7TFLd0CkRaSjrR2PYq0xRXmpyB4qLhzcEcB47bJVTxaUnEjvjAD9biuUNjeTK3AMS2/ZNRKWBIkvsBWBv483uFJnat8MaqgC3zYVrP5RyyeH8Q1tnRo+ya0THVGQiftVNk0gWV7wjLRdOggafe/FGrWASEqOP+2O9gH7bRY7GiZSc4EGBwZTf5Wz4zfEKl0cbgvsHOztpKKXrzL/Mg5hJ4AMpXvOWYVMHez7ke4XNuiuYOQhHGn258BPvD3PekEAzYInYZQdYMeLg0vaMbD1wP10xTKXdayJYG0PTvhVHEm7wIA9ZhpxpWmgVBKq4UO0AJh46xvfdbh/A/TvHhiTWKB8SprIfB+j8okGQQB/PVZj4WHbdqrFQx1QW0UveOKIDbtuAKFdcb/fvz9RJk9+D5W9cLQbmyqnsdPPVQ7h6tAJnMKAemd8VBCmWHhQmtScCOI0lbxDRXg5BcAmny7U0kmEvHuLivWsPDlyKeTzundp8Fpd/0zdztOXF/gdhe6nDzmw2kO9g84FIs6wdi1ltEMS1Tk8p9PrKgJpJ9tpIsAJpfsqMYc/hknVuIS6nzy6d7PQyi3q5EqdHMywXcUUq1mrWXckim025jVRzA1pUljrNoEkyzQT3b0GxysDWAseknuuhFat60wPWgeO9xXW1+vMJBAmKZCd+lbulw9CsD9NGhYRcZ16MYYVgvi9rC92DK0ccPTQkuNtq/kH4VUFRVH6IKiL33peDifDRTvnBotRi50fWWP2Y20mri4PBYHHCNVgJzA+iyDpYckILqKfrAh2sAAitoSqWI6da5lUCbZMQHikR5eLDtALYMoOp1zf56J2owlLCaF8IGTIArH9WDTJEkDKuCBdrywFTwW/p4tJ/w/PhM8SW8SBUbsDmI/qtjJa0zveEw8qxu9ETkdlaZ6jOmA0f9Fdsqhg+rKiNJMnhIccEDVjUyOhg79JzrYEniVM/G/st4ZNKrQ/1MPAWUGwoVwT8u4Wtqse0EVBID/qKzisi3RAGyjJB5mBuHC1KzQw7lf4o4XunXzzucpS1+KhS10kiOsbqjUOEwKrNUqaoDKF/Ejs3L6F2PahHMHCMjU5kg3I11fxFbGX7Q7wUMmfeefEH7B7UNXy1rVbAjWW2iDiDxOLpG8xwdcqah/hwBw+yXUuPmU7yQ5dGT8PXFYVuOT6NwDBEZRn+NPu/fm5BUICXLM+3ICPEp2UHSTfk5wSmM6MzBIkc1okXQNFxB1BpX3SjoOpKZl4RtnmTle+FawnV0NbyrLGENY9hlaeZ5uu1BSJ4oxFl0xp6vi88kFPUs5xESUEIKQ4HFYougGzck4nhforNu6phhqsJulISL0xaV7i8Y0nJt8Eu1hWP6qgUNHpmrp3Om+Gm5wbis4BeZIXw+YfRcYlc/zaig6PQhJGm2JFlbR4s9bwG2KpJbbu1l4ym3N7nv3xItCC/KpJ7XHmXM4Mf6GNEWZs5/eWV6s8kvzmGDFmv0goVVUjS5mypVHb5IJDwSQWBi3DBO3XTHtpYg56FHUocaRKz0GsNdHMsHkUsuk33vRG5B2cyX7TmwPshh/JEIXWp9vDN1OcyRWZYscRM2OAUsgaVJeHMUuaFZj8ismx1Kbqr7lrVAIohSHJbN6cDDHLRmCy7ssDpPggfJj9EQUvDt/gvvuiT1HXYGnBBoeqSEOkEQJ2fFQS+tlox12SEFWpzyKtgFyDA2NyQEQJDUcneC01SFjhaTtArxNG5mtvvoMMrIiyl5UJV6BjzGVJ+B2izFMeOb/Vv9UlIhq+XOt6g6DUosHSySB0czkDjmhmbeHMphaHw6qYENHcWo8fjZVWowMdg72+kftu+KsS5yCjAdfJVp4lwIiysrvUn0GHHxB0sdAch4WC6b1eM2+btzQPUVvnkoBMW2/xWyYnRSy1MBi4PQmEQbeJdBZRkkr7J6nAWR9aNHnZ47ieJ9EMWNHE06Z1MzXSdNAebu3y6RXllL8teKKJ72t74olmIHtHe+0uK8zmsQSXHzho58Wk9tj1Svyh04ZUb6bWu/VmyY+YLkgJdMSyD82U9zG6vFJJgS0sVVyPYmfdBVmDbekmpu5o+AVpZOvUsTD4/OgOa3/UY7epkshJvnrYxyydtt0NTNP7QTMFTlbC/5dP1mjlWb2Ip9fC/Hw+eVJtoabCpkQYeeBFgzBIG0EqAI4su2KZKrAbkHS0J/1hQunnekDS2dFYi6t2bn7oB/87jNZSycw2iigMxBZMElqp6PeqYq1Ud0WElPUv+X2j2HckJZz3QndJM7zxlxn8B4B//XG6lgNaK0Hy9wkvqua/0uOV0lWUy+yjQX7zbgjxfsvn9JhuzIsp5q9p+tqbfvsVwLDVLqyBkwnGfEOp+5IIlDZG5pL9GbV7cL/cg+y5jWqF15WODcpFi30FjMfTQkx8txuSdsLSX1vQ0QpYZDUdCTKnEY9Cnqw3+vevKqQQroSiK4Iw7W2knC+o98TI1iO8LlNSeG4vHemAn2fmcmZziogWBIDcG/pTm5pqXdK4Wz+NbdiDtj4t/3EQOsj5CqmXo0TlGqKpbVrwTzXAuvBoZAfiBD16SQiWZUMly9z/jwFYIE/Ztv2/BLpDZmmE97IFtwxGnfydKSz/OnR34fjBmlJsOwOynTzu5Y+W8Ll/8AtKisuwVjUsb6qzbATepwv+dmxFs+NMS63RpMQkZMwme2U/hf8sLtsQk0vU4DACHdnWZUkdTLRaAcdtQRODZ5ROvNb+s3MDEHr70b1S0h7zxuzAJo1lAwGcYsF7SIo7NR1XQVKjLKdt2SVxcmow2z+tQTxyQ+dFiVXE3atmaPwY+7aQU1wd1CVgakP9HcjQnTg==" />
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['MAINFORM'];
+if (!theForm) {
+    theForm = document.MAINFORM;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script>
+
+
+<script src="/ICS/WebResource.axd?d=pynGkmcFUV13He1Qd6_TZEtVow38E00gy4yJZOwMUtCHtwBU_PQDlcVLisC3-hzXhk2wW_-b4OxaTIQW080zRA2&amp;t=638901392248157332" type="text/javascript"></script>
+
+
+<script type="text/javascript">
+//<![CDATA[
+$(function() {jenzabar.framework.login.initializeForPossibleRedirect({continueButton: $('#siteNavBar_welcomeBackBarLoggedOut_JicsLoginRedirectContinue'),userNameSection: $('.init-user-username-section'),standardLoginFields: $('.init-user-password-section, .forgot-password-link, .init-user-login-btn'),userNameField: $('#userName'),passwordField: $('#password'),userLoginSection: $('#user-login-section'),simpleLoginButton: $('#jics-login-redirect-simple-button'),showStandardFieldsSection: $('#jics-login-show-standard-fields-section'),showStandardFieldsButton: $('#jics-login-show-standard-fields-button'),simpleLogin: $('.js-simple-login') },{"pleaseWaitForRedirect":"Please wait...","redirectModalTitle":"Login","checkingUserNameAccessibility":"Please wait for the login process to continue.","errorOccurred":"An unexpected error occurred during login. Try again, or contact an administrator for assistance."},{"authenticationMethodId":"1e82d053-7631-4569-b3c3-8b0daec35092","isLoginDisplayedInline":false,"isRedirectedForLogin":true,"loginUrl":"/ICS/StaticPages/SAML/ServiceProvider/Request.aspx?RelayState=%2fICS%2fMyOlivet_Portal.jnz%3fportlet%3dMy_Olivet&methodId=1e82d053-7631-4569-b3c3-8b0daec35092"});});(function( pi, $) {pi.PageID = '';pi.DisplayName = '';pi.PageURL = '';pi.IsCustomizing ='';pi.IsShowingPortlet = '';}(window.PageInfo = window.PageInfo || {}, PageInfo));try {window.PageInfo.PageID = '5e68db08-21ea-4ba8-be3e-254ecb08a8e5';window.PageInfo.DisplayName = 'MyOlivet Portal';window.PageInfo.PageURL = '/ICS/MyOlivet_Portal.jnz';window.PageInfo.IsCustomizing ='False';window.PageInfo.IsShowingPortlet = 'True';window.PageInfo.IsReadOnly = 'False';}catch(ex){ console.error(ex);}//]]>
+</script>
+
+<script src="/ICS/ScriptResource.axd?d=x6wALODbMJK5e0eRC_p1LbyIPf_UdQ5KwcFcldr2pr1UVhN2fIQBtwCDgAMtoOWytvdPEhAQHw1g-O4gv2C0KhhGkZ-tGjLClmUhNcUJmxsUL0G59rzCsPvS278fRtJ30&amp;t=245582f9" type="text/javascript"></script>
+<script src="/ICS/ScriptResource.axd?d=P5lTttoqSeZXoYRLQMIScFsGUyhdwCZVKRgZFals_g6No_dYqc6M2HX3vyxSZ3OHupV4hy-JZKPyEn1JLJy_ieFfjn6oydbLURuVaXgzCFT9GC8lgk7rRh2fKiL6MnMB0&amp;t=245582f9" type="text/javascript"></script>
+<div class="aspNetHidden">
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="38ABEAAB" />
+</div>
+			<script type="text/javascript">
+//<![CDATA[
+Sys.WebForms.PageRequestManager._initialize('_scriptManager', 'MAINFORM', [], [], [], 90, '');
+//]]>
+</script>
+
+			<input name="___BrowserRefresh" type="hidden" id="___BrowserRefresh" value="488b3001-36f0-4564-9952-61840370f30f" />
+			
+			<header>
+				<a href="#content" class="skip-navigation sr-only-focusable">Skip to content</a>
+				
+
+<div class="site-header-container">
+    <div class="mobile-fixed-container"></div>
+    <div id="sitemasthead">
+        <div>
+            
+                <button id="main-nav-btn" class="btn btn-no-bg-hover-color-content-one glyphicons glyphicons-menu-hamburger main-nav-btn" type="button" data-toggle="collapse" data-target="#hamburger-menu-section" aria-expanded="false" aria-controls="hamburger-menu-section"><span class="sr-only">main navigation</span></button>
+                <h1 id="logo-heading">
+<a class="site-logo-link" href=".">
+	<img class="site-logo" src="/ICS/icsfs/logo.png?target=be50cd02-e51f-4ce8-a1e7-a3df23c1e0a2" alt="logo"/>
+</a>
+</h1>
+<div id="welcomeBackBar" class="main-nav-submenu-container">
+	<div id="siteNavBar_welcomeBackBarLoggedOut_welcomeBackBarLoggedOut">
+		<button id="siteNavBar_welcomeBackBarLoggedOut_loginToggle" class="btn login-btn" type="button" data-toggle="collapse" data-target="#user-login-section" aria-expanded="false" aria-controls="user-login-section"><span>Login</span></button>
+		<div id="user-login-section" aria-label="Login" class="collapse user-login form-inline">
+			<div class="input-group init-user-username-section">
+				<span class="input-group-addon glyphicons glyphicons-user"></span>
+				<label id="siteNavBar_welcomeBackBarLoggedOut_UserNameLabel" for="userName" class="sr-only">Username</label>
+				<input type="text" name="userName" id="userName" placeholder="Username" class="form-control user-name" autocomplete="username" value="" />
+			</div>
+			<div class="input-group init-user-password-section">
+				<span class="input-group-addon glyphicons glyphicons-asterisk"></span>
+				<label id="siteNavBar_welcomeBackBarLoggedOut_PasswordLabel" for="password" class="sr-only">Password</label>
+				<input type="password" name="password" id="password" placeholder="Password" class="form-control user-password" autocomplete="off" />
+			</div>
+			<input type="submit" name="siteNavBar$welcomeBackBarLoggedOut$ButtonLogin" value="Login" id="siteNavBar_welcomeBackBarLoggedOut_ButtonLogin" class="btn btn-sm btn-block btn-primary init-user-login-btn" />
+			<button id="siteNavBar_welcomeBackBarLoggedOut_JicsLoginRedirectContinue" type="button" class="btn btn-sm btn-block btn-primary init-user-login-continue-btn">Continue</button>
+			<div id="siteNavBar_welcomeBackBarLoggedOut_JicsSimpleLogin">
+				<div id="siteNavBar_welcomeBackBarLoggedOut_JicsLoginRedirectSimple">
+					<div id="jics-login-redirect-simple" class="jics-login-redirect-simple">
+						<button id="jics-login-redirect-simple-button" type="button" class="btn btn-sm btn-block btn-primary init-user-login-continue-btn jics-login-redirect-simple-button">
+							Login
+						</button>
+					</div>
+					<div id="siteNavBar_welcomeBackBarLoggedOut_AlternativeLogin" class="js-alternative-login hide">
+						<div id="jics-login-show-standard-fields-section" class="jics-login-show-standard-fields-section">
+							<span id="jics-login-show-standard-fields-text" class="jics-login-show-standard-fields-text">
+								
+							</span>
+							<button id="jics-login-show-standard-fields-button" type="button" class="btn link-btn color-content-one jics-login-show-standard-fields-button" aria-labelledby="jics-login-show-standard-fields-text jics-login-show-standard-fields-button">
+								Login Here
+							</button>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+			
+		</div>
+	</div>
+</div>
+<iframe src="/ICS/StaticPages/SAML/ServiceProvider/Request.aspx?RelayState=%2fICS%2fMyOlivet_Portal.jnz%3fportlet%3dMy_Olivet&methodId=1e82d053-7631-4569-b3c3-8b0daec35092" id="siteNavBar_welcomeBackBarLoggedOut_AutoLoginFrame" style="display:none" width="1" height="1"></iframe>
+
+<script type="text/javascript">
+    jQuery(document).ready(function ($) {
+	    if (searchBox !== null && searchBox !== undefined) {
+		    searchBox.searchPanel = 'siteNavBar_searchBox_searchPanel';
+		    searchBox.textBox = 'siteNavBar_searchBox_tbSearch';
+		    searchBox.button = 'siteNavBar_searchBox_lbSearch';
+		    searchBox.userId = "b0b00000-c542-4d2a-86e6-55ebbbcd85da";
+		    searchBox.autoCompleteSelect = function(event, ui) {
+			    $("#" + searchBox.textBox).val(ui.item.value);
+			    __doPostBack('siteNavBar$searchBox$lbSearch','');
+		    };
+		    searchBox.initAutoComplete();
+		    $('#siteNavBar_searchBox_lbSearch').keypress(function(e) {
+			    var key = e.which;
+			    if (key === 32 || key === 13) {
+				    if (searchBox.searchClick()) {
+					    window.location.href = this.href;
+				    }
+				    return false;
+			    }
+		    });
+
+		    // Hack needed to comply with A11y
+		    $('#siteNavBar_searchBox_searchPanel').removeAttr('onkeypress');
+		    $('#siteNavBar_searchBox_tbSearch').keypress(function (e) {
+			    return WebForm_FireDefaultButton(e, searchBox.button);
+		    });
+	    }
+    });
+ </script>
+
+<span role="search">
+	<button id="siteNavBar_searchBox_SearchButton" class="btn btn-no-bg-hover-color-content-one glyphicons glyphicons-search search-btn" type="button" data-toggle="collapse" data-target="#search-section" aria-expanded="false" aria-controls="search-section">
+		<span class="sr-only">
+			Search
+		</span>
+	</button>
+</span>
+
+<div id="searchAutoCompleteResults" class="searchAutoComplete"> </div>
+
+<div id="siteNavBar_searchBox_searchPanel" class="search-panel" onkeypress="javascript:return WebForm_FireDefaultButton(event, &#39;siteNavBar_searchBox_lbSearch&#39;)">
+	
+    <div id="siteNavBar_searchBox_divSideBarContainer">
+        <div id="search-section" aria-label="Search" class="search-section collapse popover fade bottom">
+            <div class="arrow" style="left: 90%;"></div>
+            <div class="popover-content form-wrapper">
+                <div class="form-group"> 
+                    <label for="siteNavBar_searchBox_tbSearch" id="siteNavBar_searchBox_lblForSearch" class="sr-only">Search</label>
+                    <input name="siteNavBar$searchBox$tbSearch" type="text" id="siteNavBar_searchBox_tbSearch" class="search-input global-search-input form-control" placeholder="Search..." onfocus="return searchBox.cleardefault();" onblur="return searchBox.restoredefault();" />
+               </div>
+                <a onclick="return searchBox.validate();" id="siteNavBar_searchBox_lbSearch" class="btn btn-sm btn-block btn-primary init-search-btn" role="button" href="javascript:__doPostBack(&#39;siteNavBar$searchBox$lbSearch&#39;,&#39;&#39;)">Search</a>
+            </div>
+        </div>
+    </div>
+
+</div>
+<script>
+	$(function () {
+		$('#top-nav-bar').attr("aria-label", "Site tabs");
+	});
+</script>
+<nav id="top-nav-bar" class="top-nav-bar navbar navbar-default navbar-fixed-top">
+	<div class="nav-container">
+		<div id="header-tabs" class="link-scroll horizontal-slide">
+			<div class="collapse h-menu" id="hamburger-menu-section">
+				
+						<ul id="main-nav" class="nav navbar-nav no-margin">
+					
+						<li class="tabs tab_Home firstTab selected">
+							<a href="/ICS/">
+								Home
+							</a>
+						</li>
+					
+						<li class="tabs tab_Student_Development">
+							<a href="/ICS/Campus_Life/">
+								Student Development
+							</a>
+						</li>
+					
+						<li class="tabs tab_Tech_Support">
+							<a href="/ICS/Tech_Support/">
+								Tech Support
+							</a>
+						</li>
+					
+						<li class="tabs tab_Success_Center">
+							<a href="/ICS/Success_Center/">
+								Success Center
+							</a>
+						</li>
+					
+						<li class="tabs tab_Institutional_Research lastTab">
+							<a href="/ICS/Institutional_Research/">
+								Institutional Research
+							</a>
+						</li>
+					
+						</ul>
+					
+			</div>
+		</div>
+	</div>
+</nav>
+
+        </div>
+    </div>
+</div>
+			</header>
+			
+<div id="mainCrumbs" class="main-crumbs" role="navigation" aria-label="Site breadcrumb">
+	<span class="breadcrumbs-title text-bold">You are here:</span>
+	<span class="crumbs">
+		<ul id="youAreHere" class="breadcrumbs-container">
+			 <li><a href="/ICS/">Home</a></li>  <li><a href="/ICS/MyOlivet_Portal.jnz">MyOlivet Portal</a></li>  <li><a href="/ICS/MyOlivet_Portal.jnz?portlet=My_Olivet">Academic Materials</a></li> 
+			
+		</ul>
+	</span>
+</div>
+
+			
+			
+			<div id="mainLayout" class="main-layout">
+				<div class="container-fluid">
+					<div class="row">
+						
+						<nav aria-label="Site pages">
+							<div id="sideBar" aria-label="Sidebar links" class="col-md-2 mobile-padding-horizontal-none sidebar">
+								<div id="sidebar-slide-menu-container" class="slide-menu-right">
+									
+									<div id="thisContext" class="side-section"><span class="sidebar-link-title"><a href="/ICS/"  accesskey="">MyOlivet Portal</a></span><div class="navbar navbar-default"><ul id="contextPages" class="nav nav-pills nav-stacked"><li class="slide-menu-toggle-btns-wrapper"><ul id="slide-menu-toggle-btns" class="nav nav-pills nav-stacked slide-menu-toggle-btns"><li class="active"><a id="menu-links-tab" data-toggle="tab" href="#menu-links" aria-expanded="true" aria-controls="menu-links">Menu</a></li><li><a id="quick-links-tab" data-toggle="tab" href="#quick-links" aria-expanded="false" aria-controls="quick-links">Quick Links</a></li></ul></li><li id="menu-links" class="menu-links tab-pane fade in active"><ul id="this-context-pages" class="nav nav-pills nav-stacked" aria-label="Page menu "><li class="current-page"><button id="page-portlets-label" type="button" class="page-portlets sub-nav" data-toggle="collapse" data-target="#pagePortlets" aria-expanded="false" aria-controls="pagePortlets">MyOlivet Portal<span class="glyphicons glyphicons-chevron-down"></span></button><ul id="pagePortlets" class="nav nav-pills nav-stacked sub-nav collapse" aria-labelledby="page-portlets-label"><li><a href="/ICS/MyOlivet_Portal.jnz?portlet=My_Olivet" >Academic Materials</a></li><li><a href="/ICS/MyOlivet_Portal.jnz?portlet=Campus_Menu" >Campus Food Services</a></li><li><a href="/ICS/MyOlivet_Portal.jnz?portlet=Free-form_Content_1" >Financial Aid and Bill Payment Information</a></li><li><a href="/ICS/MyOlivet_Portal.jnz?portlet=Free-form_Content" >Important Information</a></li></ul></li><li><a href="/ICS/Academic_Calendar.jnz" >Academic Calendar and Final Exam Schedule</a></li><li><a href="/ICS/Campus_Events.jnz" >Campus Events</a></li><li><a href="/ICS/Current_Course_Offerings_-_Course_Search.jnz" >Current Course Offerings - Course Search</a></li><li><a href="/ICS/Anonymous_Incident_Reporting.jnz" >Anonymous Incident Reporting</a></li><li><a href="/ICS/Inclusion_Diversity_and_Title_IX.jnz" >Inclusion Diversity and Title IX</a></li><li><a href="/ICS/UO_Emergency_Alert.jnz" >UO Emergency Alert</a></li></ul></li><li id="quick-links" class="quick-links tab-pane fade"><span class="sidebar-link-title">Quick Links</span><ul id="quick-links-menu" class="nav nav-pills nav-stacked"><li class="sidebar-quick-link"><a class="anchor-contains-icon" target="_blank" href=" https://research.ebsco.com/c/xse6fa/search?acr_values=ip+guest" title="Burrage Library EverythingSearch">Burrage Library EverythingSearch<span class="glyphicons glyphicons-link sidebar-icon-link"></span></a></li><li class="sidebar-quick-link"><a class="anchor-contains-icon" target="_blank" href="https://olivet.mywconline.com/" title="Tutoring">Tutoring<span class="glyphicons glyphicons-link sidebar-icon-link"></span></a></li><li class="sidebar-quick-link"><a class="anchor-contains-icon" target="_blank" href="https://aka.ms/sspr" title="Self-Service Password Reset">Self-Service Password Reset<span class="glyphicons glyphicons-link sidebar-icon-link"></span></a></li><li class="sidebar-quick-link"><a class="anchor-contains-icon" target="_blank" href="https://events.dudesolutions.com/uolivet/?view=grid&search=y" title="Campus Events Reservation/Management">Campus Events Reservation/Management<span class="glyphicons glyphicons-link sidebar-icon-link"></span></a></li><li class="sidebar-quick-link"><a class="anchor-contains-icon" target="_blank" href="https://outlook.office.com/mail/" title="Please use username@uolivet.edu">Campus Email<span class="glyphicons glyphicons-link sidebar-icon-link"></span></a></li><li class="sidebar-quick-link"><a class="anchor-contains-icon" href="https://my.uolivet.edu/m" title="MyOlivet Mobile">MyOlivet Mobile<span class="glyphicons glyphicons-link sidebar-icon-link"></span></a></li><li class="sidebar-quick-link"><a class="anchor-contains-icon" target="_blank" href="http://uolivetspiritstore.com" title="Spirit Store">Spirit Store<span class="glyphicons glyphicons-link sidebar-icon-link"></span></a></li><li class="sidebar-quick-link"><a class="anchor-contains-icon" target="_blank" href="https://dineoncampus.com/olivet/feedback" title="Food Services Feedback">Food Services Feedback<span class="glyphicons glyphicons-link sidebar-icon-link"></span></a></li><li class="sidebar-quick-link"><a class="anchor-contains-icon" target="_blank" href="https://uolivet.starrezhousing.com/StarRezPortalX" title="Student Housing Application (StarRez)">Student Housing Application (StarRez)<span class="glyphicons glyphicons-link sidebar-icon-link"></span></a></li><li class="sidebar-quick-link"><a class="anchor-contains-icon" target="_blank" href="https://my.uolivet.edu/ICS/UO_Emergency_Alert.jnz" title="Emergency Alert System">Emergency Alert System<span class="glyphicons glyphicons-link sidebar-icon-link"></span></a></li><li class="sidebar-quick-link"><a class="anchor-contains-icon" target="_blank" href="https://uolivet.joinhandshake.com/" title="Handshake">Handshake<span class="glyphicons glyphicons-link sidebar-icon-link"></span></a></li><li class="sidebar-quick-link"><a class="anchor-contains-icon" target="_blank" href="https://workforcenow.adp.com" title="ADP Workforce">ADP Workforce<span class="glyphicons glyphicons-link sidebar-icon-link"></span></a></li><li class="sidebar-quick-link"><a class="anchor-contains-icon" target="_blank" href="https://bncvirtual.com/olivet" title="Online Bookstore">Online Bookstore<span class="glyphicons glyphicons-link sidebar-icon-link"></span></a></li></ul></li></ul></div></div>
+									
+
+
+
+									
+									<div class="sideBarFoot containerFoot"></div>
+								</div>
+								<button id="sidebar-slide-menu-button" class="slide-menu-btn mobile-hide nsn is-closed" type="button" aria-expanded="false">
+									<span class="sidebar-slide-btn-icon glyphicons glyphicons-chevron-right">
+										<span class="sr-only">Sidebar</span>
+									</span>
+								</button>
+							</div>
+						</nav>
+						
+						<div id="portlets" role="main" class="col-md-10 mobile-padding-horizontal-none">
+							
+							
+
+<script type="text/javascript">
+    $( document ).ready(function() {
+        $(`[id*="pageOpenMoxieManager"]`).click(function () {
+            // Below we check every 200ms if the MoxieManager dialog is opened yet, then move keyboard focus if it is.
+            // We have to do this check because MoxieManager removed the 'onopen' option from the moxman.browse() function...
+            let intervalIndex = 0;
+            let interval = setInterval(function () {
+                let createButton = $($(`.moxman-reset .moxman-i-create`)[0].parentElement.parentElement);
+                if (createButton.length === 1) {
+                    createButton.focus();
+                    clearInterval(interval);
+                } else if (createButton.length === 0 && intervalIndex === 20000) { // We will stop trying to shift focus after 20 seconds.
+                    console.log("Error: Keyboard focus could not be shifted to the MoxieManager window");
+                    clearInterval(interval);
+                }
+                intervalIndex = intervalIndex + 200;
+            }, 200);
+        });
+    });
+</script>
+
+<div id="PageBar_pageTitle" class="page-title page-title-bar">
+    <h2><a href="/ICS/" id="contextName">MyOlivet Portal</a></h2>
+</div>
+<div id="PageBar_pageTitleButtons" class="page-title-btn">
+    
+    
+    <button id="PageBar_btnPrintView" class="btn btn-no-bg-hover-color-content-one glyphicons glyphicons-print" type="button" onclick="window.print(); return false;">
+        <span class="sr-only">Send to Printer</span>
+    </button>
+    
+</div>
+
+
+							
+							<span id="content" tabindex="-1"></span>
+							<div id="portlet-grid" class="portlet-grid one_column"><div class="row"><div class="portlet-column col-md-12"><div id="pg0_CustomContentPortlet" class="portlet pt_CustomContentPortlet pi_My_Olivet" style="z-index:0;"><div class="portlet-header-bar"><h3><a href="/ICS/MyOlivet_Portal.jnz?portlet=My_Olivet" title="Go to main Academic Materials screen">Academic Materials</a></h3><div class="portlet-help-wrapper"> <a class="btn btn-no-bg-hover-color-content-one help" target="blank" href="https://jenzabarhelp.jenzabar.com/ews/help/JICS/Base/released/en/free-form-content.html" title="Get help using 'Academic Materials'"><span aria-hidden="true" class="glyphicons glyphicons-question-sign"></span><span class="sr-only">Get help using 'Academic Materials'</span></a></div></div><div class="portlet-padding">
+<SCRIPT language="javascript">
+<!--
+    function ConfirmDelete(msg) {
+        return confirm(msg);
+    }
+//-->
+</SCRIPT>
+
+
+<link rel="stylesheet" type="text/css" property="stylesheet" href="/ICS/UI/Common/Styles/lightbox.css" />
+<script src="/ICS/UI/Common/Scripts/jquery.lightbox.js"></script>
+<script>
+    $(document).ready(function() { LoadLightboxValues();});    
+	function LoadLightboxValues() 
+	{
+	    $(".lightbox").lightbox(
+	        {
+	            fileLoadingImage: '/ICS/UI/Common/Images/PortletImages/Lightbox/loading.gif',
+	            fileBottomNavCloseImage: '/ICS/UI/Common/Images/PortletImages/Lightbox/closelabel.gif'
+	        });
+	}
+ 
+</script>
+
+
+
+
+        <h4>Academic Calendar and Final Exam Schedule</h4><div class="pSection ccSection text-word-wrap-break-word"><div align="left"><div class="wysiwygtext"><p><strong><span style="font-size: 12pt"><a href="https://my.uolivet.edu/ICS/Academic_Calendar.jnz" target="_blank" rel="noopener">Click here for Academic Calendars and Final Exam Schedules</a></span></strong></p>
+<p> </p>
+<p> </p></div></div></div>
+        
+        <div style="clear:both"></div>
+    
+        <h4>Academic Catalogs</h4><div class="pSection ccSection text-word-wrap-break-word"><div align="left"><div class="wysiwygtext"><div><span style="font-size: 12pt; color: rgba(52, 73, 94, 1)"><strong>Current Academic Catalog</strong></span></div>
+<div> </div>
+<div><span style="font-size: 12pt"><strong><span style="color: rgba(0, 0, 0, 1); font-family: verdana, geneva, sans-serif"><a title="2025-2026 Academic Catalog - New Online Version" href="https://catalog.uolivet.edu/">2025-2026 Academic Catalog</a></span></strong></span></div>
+<div> </div>
+<div> </div>
+<div> </div>
+<div><span style="font-size: 12pt; color: rgba(52, 73, 94, 1)"><strong>Past Academic Catalogs</strong></span></div>
+<div> </div>
+<div><strong><span style="color: rgba(0, 0, 0, 1); font-size: 10pt"><a style="color: rgba(0, 0, 0, 1)" href="https://issuu.com/olivet123/docs/uolivet_academic_catalog_2024-25">2024-2025 </a></span></strong></div>
+<div>
+<div><strong><span style="color: rgba(0, 0, 0, 1); font-size: 10pt"><a style="color: rgba(0, 0, 0, 1)" href="https://www.uolivet.edu/wp-content/uploads/2023/09/2023-2024-Full-Academic-Handbook-REVISED-9-27-23.pdf" target="_blank" rel="noopener">2023-2024</a></span></strong></div>
+</div>
+<div><strong><span style="color: rgba(0, 0, 0, 1); font-size: 10pt"><a style="color: rgba(0, 0, 0, 1)" href="https://www.uolivet.edu/wp-content/uploads/2022/08/2022-2023-Academic-Catalog.pdf" target="_blank" rel="noopener">2022-2023</a></span></strong></div>
+<div><strong><span style="color: rgba(0, 0, 0, 1); font-size: 10pt"><a style="color: rgba(0, 0, 0, 1)" href="https://www.uolivet.edu/wp-content/uploads/2021/09/2021%E2%80%9322-Academic-Catalog-Searchable.pdf" target="_blank" rel="noopener">2021-2022</a></span></strong></div>
+<div>
+<div><strong><span style="color: rgba(0, 0, 0, 1); font-size: 10pt"><a style="color: rgba(0, 0, 0, 1)" href="/ICS/icsfs/mm/2020-2021_academic_catalog.pdf?target=d4277fdd-c9c3-4cf0-b905-550ec433a7a8" target="_blank" rel="noopener">2020-2021</a></span></strong></div>
+</div>
+<div>
+<div><strong><span style="color: rgba(0, 0, 0, 1); font-size: 10pt"><a style="color: rgba(0, 0, 0, 1)" title="201-2020 Academic Catalog" href="https://www.uolivet.edu/wp-content/uploads/2019/08/2019-2020-Olivet-College-Academic-Catalog.pdf" target="_blank" rel="noopener">2019-2020</a></span></strong></div>
+</div>
+<div><strong><span style="color: rgba(0, 0, 0, 1); font-size: 10pt"><a style="color: rgba(0, 0, 0, 1)" href="https://www.uolivet.edu/wp-content/uploads/2018/11/2018-2019-Academic-Catalog-searchable.pdf" target="_blank" rel="noopener">2018-2019</a></span></strong></div>
+<div><strong><span style="color: rgba(0, 0, 0, 1); font-size: 10pt"><a style="color: rgba(0, 0, 0, 1)" href="https://www.uolivet.edu/wp-content/uploads/2017/08/2017-2018-Academic-Catalog.pdf" target="_blank" rel="noopener">2017-2018</a></span></strong></div>
+<div> </div>
+<div> </div></div></div></div>
+        
+        <div style="clear:both"></div>
+    
+        <h4>Academic Advising Worksheets</h4><div class="pSection ccSection text-word-wrap-break-word"><div align="left"><div class="wysiwygtext"><p>To access academic advising worksheets <a href="https://ocsso.olivetcollege.edu/adfs/ls/?wa=wsignin1.0&wtrealm=urn:federation:MicrosoftOnline&wctx=MEST%3D0%26LoginOptions%3D2%26wa%3Dwsignin1.0%26rpsnv%3D2%26ct%3D1292977249%26rver%3D6.1.6206.0%26wp%3DMCMBI%26wreply%3Dhttps:%252F%252Folivetcollege.sharepoint.com%252Fadvising%252Fdefault.aspx%26lc%3D1033%26id%3D271345" target="_blank" rel="noopener">click here</a>. Advising worksheets are organized by catalog year. Users can gain access of these documents from both on and off campus. For a key listing course offering timeframes used on advising sheets <a title="Course Offering Timeframes" href="https://my.uolivet.edu/ICS/icsfs/Key_for_Course_Offering_Timeframes.pdf?target=a62a1c99-ffb2-4718-8501-2209e1f64085" target="_blank" rel="noopener">click here</a>.  These codes are listed after each course on major and minor advising sheets. If you have any questions or concerns, please contact Nicole Baker, Assistant Dean for Academic Records, via email nbaker@uolivet.edu or by calling (269) 749-7390.</p>
+<p> </p>
+<p> </p></div></div></div>
+        
+        <div style="clear:both"></div>
+    
+        <h4>Michigan Transfer Equivalencies</h4><div class="pSection ccSection text-word-wrap-break-word"><div align="left"><div class="wysiwygtext"><p>The University Of Olivet utilizes the Michigan Transfer Network to record transfer course equivalencies for Michigan colleges and universities. Click <a href="https://www.mitransfer.org/search-courses">Michigan Transfer Network</a> to view these course equivalencies.</p>
+<p>The substitution of any additional courses you have taken at other institutions for particular courses at the university can only be approved by the Dean for Academic Affairs. No guarantee exists that a particular course taken at another institution will be permitted to substitute for a particular course at The University of Olivet. Students who wish to have a particular course or courses considered for substitution must complete a Course Substitution Form.  Submit the form along with the course description or syllabus of the course you wish to be considered to the Dean for Academic Affairs, Dr. Meredith Dodson, at <a>mdodson@uolivet.edu</a>.</p>
+<p>If you have further questions about transfer coursework, please contact <a target="_blank" rel="noopener">Nicole Baker</a>, Assistant Dean for Academic Records, at <a>nbaker@uolivet.edu</a>.</p>
+<p> </p>
+<p> </p></div></div></div>
+        
+        <div style="clear:both"></div>
+    
+        <h4>MyOlivet Mobile Site Available for Students</h4><div class="pSection ccSection text-word-wrap-break-word"><div align="left"><div class="wysiwygtext"><div><span style="font-size: 10pt; font-family: verdana, geneva, sans-serif">Now you can access the MyOlivet Portal in a mobile device friendly way by going to <a href="https://my.uolivet.edu/m">https://my.uolivet.edu/m </a> or simply by accessing MyOlivet from your mobile devices.</span></div>
+<div><span style="font-size: 10pt; font-family: verdana, geneva, sans-serif"> <br>The Mobile version of MyOlivet will allow you to access various functions of the MyOlivet site which you are accustomed to in a more mobile-friendly way. The mobile site accepts the same authentication information as the full desktop MyOlivet site.</span></div>
+<div> </div>
+<div> </div></div></div></div>
+        
+        <div style="clear:both"></div>
+    
+        <h4>Tax Documents for Students</h4><div class="pSection ccSection text-word-wrap-break-word"><div align="left"><div class="wysiwygtext"><p><strong><span style="color: rgba(255, 0, 0, 1);">NEW!  </span><span style="color: rgba(0, 0, 0, 1); background-color: rgba(255, 255, 0, 1);">Student Form 1098T - Reporting Year 2025</span></strong></p>
+<p><span style="color: rgba(0, 0, 0, 1);">IRS Form 1098-T is an important tax document that assists students and their families to determine if they qualify for certain education-related tax credits.</span></p>
+<p><span style="color: rgba(0, 0, 0, 1);">Students seeking Form 1098T for the 2025 tax year may obtain their 1098T by going directly to <a href="https://1098Tforms.com">https://1098Tforms.com</a>. <strong>**</strong> If it is your first time accessing the site, please follow the enrollment instructions to create your login. Students may opt-in BEFORE January 31, 2025 to receive electronic delivery; otherwise, a copy will be mailed on January 31, 2026. 1098T form will be available to those eligible students only.</span></p>
+<table style="width: 588px; height: 259.5px;">
+<thead>
+<tr style="height: 249.5px;">
+<td style="width: 349.938px; height: 249.5px;">
+<p><strong><a href="https://1098tforms.com/" target="_blank" rel="noopener">Click Here</a> - To go to 1098tforms.com directly</strong><br><strong>-OR-</strong><br><strong><a href="https://portal.1098tforms.com/student-enrollment">Click here</a> - For first time enrollment</strong><br><strong>-OR-</strong><br><strong><a href="https://portal.1098tforms.com/auth?action=login&referrer=/student-access">Click here</a> - For returning students</strong><br><strong>-OR-</strong><br><strong><a href="https://1098tforms.com/instructions/" target="_blank" rel="noopener">Click here</a> - For instructions </strong></p>
+</td>
+<td style="width: 209.5px; height: 259.5px;" rowspan="2"><img src="/ICS/icsfs/HB-1098t.png?target=34203b28-77b6-41d4-ba20-09e310e9c758" width="183" height="236"></td>
+</tr>
+<tr style="height: 10px;">
+<td style="width: 349.938px; height: 10px;"> </td>
+</tr>
+</thead>
+</table>
+<p><strong>If you experience consistent errors or cannot complete the opt-in process, you should:</strong></p>
+<ul style="list-style-type: disc;">
+<li>
+<p>Close the browser and clear the cache on your device. Restarting the device is preferred.</p>
+</li>
+<li>
+<p>Begin the OPT-IN process again, starting at the “TO STUDENT ENROLLMENT PAGE” Link, and use a different Username than the first Username that was used.</p>
+</li>
+</ul>
+<p>**<em><span style="font-size: 8pt;">1098Tforms is provided by Herring Bank and powered by Financial Payments. Herring Bank is a community bank headquartered in Amarillo, Texas. The bank provides a full range of commercial and consumer banking products, as well as investment and trust services. The University of Olivet utilizes services from Herring Bank for financial processing and 1098T distribution.</span></em></p>
+<p> </p>
+<p> </p></div></div></div>
+        
+        <div style="clear:both"></div>
+    
+        <h4>Payments and Payment Plans</h4><div class="pSection ccSection text-word-wrap-break-word"><div align="left"><div class="wysiwygtext"><p style="line-height: normal; margin-bottom: 0">Make easy, secure payments online using<span style="font-size: 12pt"> </span><strong>e-check</strong>, Visa, Mastercard, Discover or American Express.</p>
+<ul>
+<li>Select "<strong>Student Account and Financial Aid</strong>" from the "Student" tab</li>
+<li>Select "<strong>Pay Now</strong>" from the "<strong>My Account Information</strong>" box</li>
+<li>Follow the on screen directions to pay balance and enter payment information </li>
+</ul>
+<p> </p>
+<p> </p></div></div></div>
+        
+        <div style="clear:both"></div>
+    
+        <h4>Student Services Feedback</h4><div class="pSection ccSection text-word-wrap-break-word"><div align="left"><div class="wysiwygtext"><div><strong style="font-family: Tahoma">Share your experience with Student Services with us. </strong></div>
+<div> </div>
+<div><a href="https://my.uolivet.edu/ICS/Online_Forms.jnz?portlet=Student_Services_Feedback">Send feedback</a> </div>
+<div> </div>
+<div> </div></div></div></div>
+        
+        <div style="clear:both"></div>
+    
+</div></div>
+</div></div></div>
+							<div class="portletsFoot containerFoot"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="container-fluid footer-wrapper primary">
+				<div class="row no-margin-r no-margin-l">
+					<div class="col-md-12"><footer><div id="foot" class="footer-links"><a target="_blank" href="/ICS/ClientConfig/HtmlContent/Privacy.html" >Privacy policy</a><a target="_blank" href="/ICS/ClientConfig/HtmlContent/AboutUs.html" >About us</a><a target="_blank" href="/ICS/ClientConfig/HtmlContent/ContactUs.html" >Contact us</a><span id="copyright">  Powered by Jenzabar. v2025.1</span></div></footer></div>
+				</div>
+			</div>
+			
+		
+
+<script type="text/javascript">
+//<![CDATA[
+(function() {var fn = function() {$get("_scriptManager_HiddenField").value = '';Sys.Application.remove_init(fn);};Sys.Application.add_init(fn);})();//]]>
+</script>
+</form>
+	</div>
+<script type="text/javascript">
+	$(function() {
+		$("#youAreHere a:last").attr("aria-current", "page");
+
+		jenzabar.framework.accessibleSidebarMenu.init();
+		jenzabar.framework.accessibleSearchMenu.init();
+		jenzabar.framework.accessibleLoginMenu.init();
+		jenzabar.framework.accessibleHamburgerMenu.init();
+	});
+</script>
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015" integrity="sha512-ZpsOmlRQV6y907TI0dKBHq9Md29nnaEIPlkf84rnaERnq6zvWvPUqr2ft8M1aS28oN72PdrCzSjY4U6VaAw1EQ==" data-cf-beacon='{"rayId":"9cfdbc029ad0941f","version":"2025.9.1","serverTiming":{"name":{"cfExtPri":true,"cfEdge":true,"cfOrigin":true,"cfL4":true,"cfSpeedBrain":true,"cfCacheStatus":true}},"token":"1c569ba8f1dd4833bada8e7f4d1fec80","b":1}' crossorigin="anonymous"></script>
+</body>
+</html>

@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>AI Symposium: Building the Future of AI- Together</title>
+    <link href='//fonts.googleapis.com/css?family=Roboto+Condensed:300italic,400italic,700italic,400,300,700&amp;subset=all' rel='stylesheet' type='text/css'>
+    <!-- Bootstrap CSS (Stable version 5.3.0) -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Link to custom CSS file -->
+    <link href="styles.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+document.getElementById('registrationForm').addEventListener('submit', function (e) {
+ e.preventDefault();
+
+ document.getElementById('loadingSpinner').style.display = 'block';
+
+ var formData = new FormData(this);
+
+ var data = {
+   FirstName: formData.get('firstname'),
+   LastName: formData.get('lastname'),
+   Email: formData.get('email'),
+   CampusRole: formData.get('role'),
+   Question: formData.get('question'),
+   ReservationDateTime: new Date().toISOString()
+ };
+
+ fetch('https://www.citytech.cuny.edu/rsvp/odata/ExecutiveViceChancellorVisits1', {
+   method: 'POST',
+   headers: {
+     'Content-Type': 'application/json',
+     'Accept': 'application/json'
+   },
+   body: JSON.stringify(data)
+ })
+ .then(response => {
+   if (response.ok) {
+     document.getElementById('loadingSpinner').style.display = 'none';
+     window.location.href = 'https://www.citytech.cuny.edu/ai-symposium/thank-you.aspx';
+   } else {
+     return response.text().then(text => {
+       console.error('Server error:', text);
+       throw new Error(text);
+     });
+   }
+ })
+ .catch(error => {
+   document.getElementById('loadingSpinner').style.display = 'none';
+   alert('There was an error with your submission. Please try again.\n\nDetails: ' + error.message);
+   console.error('Submission error:', error);
+ });
+});
+});
+
+       </script>
+
+
+    
+</head>
+<body>
+
+<!-- Header with Navigation -->
+<header class="text-white" style="background-color: #007fa3; padding-top: 20px; padding-bottom: 20px;">
+    <div class="container d-flex flex-column flex-md-row justify-content-between align-items-center">
+        <!-- Logo -->
+        <div class="logo mb-3 mb-md-0">
+            <img src="https://www.citytech.cuny.edu/images/logos/citytech_cuny_logo.png" alt="City Tech Logo" class="img-fluid" style="max-height: 55px;">
+        </div>
+
+        <!-- Navbar (Stacked below logo on mobile) -->
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#home">Home</a>
+                    </li>
+                 
+                    <li class="nav-item">
+                        <a class="nav-link" href="#agenda">Program</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#registration">Registration</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#keynote">Keynote Speaker</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#sponsors">Sponsors</a>
+                    </li>
+                  
+                </ul>
+            </div>
+        </nav>
+    </div>
+</header>
+
+<!-- Hero Section -->
+<section class="hero text-white py-5" style="background-image: url('images/ai_background.jpg'); background-size: cover; background-position: center; height: 500px;">
+  
+</section>
+
+
+<!-- Event Info Section -->
+<section id="info" style="background-color: #005066;" class="py-5 text-white">
+    <div class="container">
+        <h2 class="text-center mb-4">City Tech AI Symposium: Building the Future of AI &mdash; Together</h2>
+        
+        <p class="card-text">
+            Join us for a day of innovation, collaboration, and AI discussions. Engage with industry leaders, learn from faculty experts and students. Participate in interactive AI activities and speak to industry representatives.
+This is your opportunity to contribute to AI discussions at the College, connect, and foster collaborative relationships.
+        </p>
+
+      
+        <p class="card-text"><strong>Location:</strong> Academic Complex</p>
+        <p class="card-text"><strong>Date:</strong> Thursday, May 8, 2025</p>
+        <p class="card-text"><strong>Time:</strong> 9:30 am - 3:00 pm</p>
+
+       <!-- Register Now Button -->
+<div class="text-center mt-4">
+    <a href="#registration" class="btn btn-warning btn-lg shadow-lg px-5 py-3" style="font-size: 1.25rem; font-weight: bold;">
+        Register Now 
+    </a>
+</div>
+
+    </div>
+</section>
+
+
+<section id="agenda" class="py-5" style="background-color: #f8f9fa;"> 
+    <div class="container">
+        <h2 class="text-center mb-5" style="font-weight: bold; text-transform: uppercase; color: #343a40;">PROGRAM</h2>
+
+        <div class="row">
+            <div class="col-md-12">
+                <div class="timeline">
+
+                    <!-- Session 1 -->
+                    <div class="timeline-item" style="display: flex; align-items: flex-start; margin-bottom: 30px; background-color: #e6f2f7; border-left: 5px solid #007fa3; padding: 15px; border-radius: 8px;">
+                        <div class="timeline-time" style="background-color: #007fa3; color: white; padding: 10px; border-radius: 5px; font-weight: bold; width: 80px; text-align: center; flex-shrink: 0; margin-right: 20px;">
+                            9:30 AM
+                        </div>
+                        <div class="timeline-content">
+                            <h5 style="color: #003b5c; font-weight: bold;">Welcome & Opening Event </h5>
+                            <p>Welcome address by Executive Administration (President/Provost). Introduction to the AI Symposium and its objectives, and a brief overview of City Tech's commitment to AI innovation. Includes "AI Time Capsule" activity.</p>
+                        </div>
+                    </div>
+
+                    <!-- Session 2 -->
+                    <div class="timeline-item" style="display: flex; align-items: flex-start; margin-bottom: 30px; background-color: #e6f2f7; border-left: 5px solid #007fa3; padding: 15px; border-radius: 8px;">
+                        <div class="timeline-time" style="background-color: #007fa3; color: white; padding: 10px; border-radius: 5px; font-weight: bold; width: 80px; text-align: center; flex-shrink: 0; margin-right: 20px;">
+                            10:00 AM
+                        </div>
+                        <div class="timeline-content">
+                            <h5 style="color: #003b5c; font-weight: bold;">Keynote: Navigating the AI Revolution [Mark Roman - Info Tech Group] </h5>
+                            <p>Presentation by Info-Tech on the evolving AI landscape in higher education. Topics include emerging trends, ethical considerations, and innovation opportunities in teaching, learning, and research.</p>
+                        </div>
+                    </div>
+
+                    <!-- Session 3 -->
+                    <div class="timeline-item" style="display: flex; align-items: flex-start; margin-bottom: 30px; background-color: #e6f2f7; border-left: 5px solid #007fa3; padding: 15px; border-radius: 8px;">
+                        <div class="timeline-time" style="background-color: #007fa3; color: white; padding: 10px; border-radius: 5px; font-weight: bold; width: 80px; text-align: center; flex-shrink: 0; margin-right: 20px;">
+                            10:45 AM
+                        </div>
+                        <div class="timeline-content">
+                            <h5 style="color: #003b5c; font-weight: bold;">AI at City Tech: College Initiatives [David Smith - City Tech]</h5>
+                            <p>An overview of AI-related projects, sessions, survey results, and goals from across City Tech. A look into successes, challenges, and the evolving AI roadmap within the college.</p>
+                        </div>
+                    </div>
+
+                    <!-- Session 4 -->
+                    <div class="timeline-item" style="display: flex; align-items: flex-start; margin-bottom: 30px; background-color: #e6f2f7; border-left: 5px solid #007fa3; padding: 15px; border-radius: 8px;">
+                        <div class="timeline-time" style="background-color: #007fa3; color: white; padding: 10px; border-radius: 5px; font-weight: bold; width: 80px; text-align: center; flex-shrink: 0; margin-right: 20px;">
+                            11:00 AM
+                        </div>
+                        <div class="timeline-content">
+                            <h5 style="color: #003b5c; font-weight: bold;">Roundtable: The Evolving Classroom [Moderator: Rita Uddin - City Tech]</h5>
+                            <p>Panel discussion on the role of AI in education: can it enhance collaboration, engagement, and personalization, or does it pose a disruptive force to academic norms? Featuring students, faculty, and technologists. <b></b></p>
+
+                            <ul style="padding-left: 20px;">
+                                <li><strong>Panelists:</strong>
+                                    <ul>
+                                        <li><strong>Twaambo Kabosha</strong>, <i>City Tech SGA President 2024-2025</i></li>
+                                        <li><strong>Kyshia Anderson</strong>, <i>City Tech student - Business & Technology of Fashion - Business and Fashion</i></li>
+                                        <li><strong><a href="https://openlab.citytech.cuny.edu/members/bmendoza/">Benito Mendoza</a></strong>, <i>Associate Professor - Computer Engineering Technology</i></li>
+                                        <li><strong><a href="https://www.citytech.cuny.edu/ai/jose-diaz.aspx">Jose Diaz</a></strong>, <i>Director - Academic Technologies and Online Learning (AtoL)</i></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                            
+                        </div>
+                    </div>
+
+                    <!-- Session 5 -->
+                    <div class="timeline-item" style="display: flex; align-items: flex-start; margin-bottom: 30px; background-color: #e6f2f7; border-left: 5px solid #007fa3; padding: 15px; border-radius: 8px;">
+                        <div class="timeline-time" style="background-color: #007fa3; color: white; padding: 10px; border-radius: 5px; font-weight: bold; width: 80px; text-align: center; flex-shrink: 0; margin-right: 20px;">
+                            12:00 PM
+                        </div>
+                        <div class="timeline-content">
+                            <h5 style="color: #003b5c; font-weight: bold;">Break</h5>
+                            <p>Light refreshments served.</p>
+                        </div>
+                    </div>
+
+                    <!-- Session 6 - AI Presentations -->
+                    <div class="timeline-item" style="display: flex; align-items: flex-start; margin-bottom: 30px; background-color: #e6f2f7; border-left: 5px solid #007fa3; padding: 15px; border-radius: 8px;">
+                        <div class="timeline-time" style="background-color: #007fa3; color: white; padding: 10px; border-radius: 5px; font-weight: bold; width: 80px; text-align: center; flex-shrink: 0; margin-right: 20px;">
+                            12:30 PM
+                        </div>
+                        <div class="timeline-content">
+                            <h5 style="color: #003b5c; font-weight: bold;">Session 1: ML/AI Tools for Research [<a href="https://en.wikipedia.org/wiki/Viviana_Acquaviva">Viviana Acquaviva - City Tech</a>]</h5>
+                            <p>Viviana Acquaviva (City Tech) presents practical use cases and tools for leveraging machine learning in academic research.</p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item" style="display: flex; align-items: flex-start; margin-bottom: 30px; background-color: #e6f2f7; border-left: 5px solid #007fa3; padding: 15px; border-radius: 8px;">
+                        <div class="timeline-time" style="background-color: #007fa3; color: white; padding: 10px; border-radius: 5px; font-weight: bold; width: 80px; text-align: center; flex-shrink: 0; margin-right: 20px;">
+                            1:15 PM
+                        </div>
+                   
+
+                        <div class="timeline-content">
+                            <h5 style="color: #003b5c; font-weight: bold;">Session 2: Ethical Consideration in AI Development and Deployment &mdash; An Introduction to Ethical Challenges in Legal Practice Involving AI [Marissa Moran - City Tech] </h5>
+                            <p>Marissa Moran (City Tech) discusses the legal and ethical challenges posed by the growing use of AI in law, emphasizing the importance for legal professionals to understand these emerging risks as AI becomes more widely adopted in legal practice.</p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item" style="display: flex; align-items: flex-start; margin-bottom: 30px; background-color: #e6f2f7; border-left: 5px solid #007fa3; padding: 15px; border-radius: 8px;">
+                        <div class="timeline-time" style="background-color: #007fa3; color: white; padding: 10px; border-radius: 5px; font-weight: bold; width: 80px; text-align: center; flex-shrink: 0; margin-right: 20px;">
+                            2:00 PM
+                        </div>
+                        <div class="timeline-content">
+                            <h5 style="color: #003b5c; font-weight: bold;">Session 3: AI and Computer Science [<a href="https://www.pace.edu/profile/christelle-scharff">Christelle Scharff - Pace University</a>]</h5>
+                            <p>Christelle Scharff (Pace University) explores how AI is transforming the field of computer science and how students can engage with emerging technologies.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="timeline-item" style="display: flex; align-items: flex-start; margin-bottom: 30px; background-color: #e6f2f7; border-left: 5px solid #007fa3; padding: 15px; border-radius: 8px;">
+                        <div class="timeline-time" style="background-color: #007fa3; color: white; padding: 10px; border-radius: 5px; font-weight: bold; width: 80px; text-align: center; flex-shrink: 0; margin-right: 20px;">
+                            2:45 PM
+                        </div>
+                        <div class="timeline-content">
+                            <h5 style="color: #003b5c; font-weight: bold;">Session 4: AI-Powered Personalized Learning [<a href="https://www.linkedin.com/in/miguelamigot">Miguel Amigot - ibl.ai</a>]</h5>
+                            <p>Miguel Amigot (<a href="https://ibl.ai">ibl.ai</a>) demonstrates how universities are implementing AI-native teaching and learning, focused on faculty support and student success.</p>
+                        </div>
+                    </div>
+
+
+                    
+
+                   
+<div class="timeline-item" style="display: flex; flex-direction: column; margin-bottom: 40px; background-color: #d9edf7; border-left: 5px solid #007fa3; padding: 20px; border-radius: 10px;">
+    <div style="display: flex; align-items: center; margin-bottom: 15px;">
+        <div class="timeline-time" style="background-color: #007fa3; color: white; padding: 10px 20px; border-radius: 5px; font-weight: bold; font-size: 1rem; width: 130px; text-align: center; flex-shrink: 0; margin-right: 20px;">
+            2:00 PM
+        </div>
+        <h5 style="color: #003b5c; font-weight: bold; margin: 0;">Interact & Collaborate Zone</h5>
+    </div>
+    <p style="margin-bottom: 25px;">Dive into our hands-on Interactive & Collaboration Zone! This interactive session features industry demos, Q&A booths, student showcases, and poster sessions. Below are the stations and demos available:</p>
+
+    <!-- Demos List -->
+    <div class="row row-cols-1 row-cols-md-2 g-4">
+        <!-- Cisco AI -->
+        <div class="col">
+            <div class="card h-100 shadow-sm border-0">
+                <div class="card-body">
+                    <h6 class="card-title text-primary fw-bold">Cisco AI</h6>
+                    <p class="card-text">Explore Cisco's AI-driven network and infrastructure solutions in real time.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Microsoft CoPilot -->
+        <div class="col">
+            <div class="card h-100 shadow-sm border-0">
+                <div class="card-body">
+                    <h6 class="card-title text-primary fw-bold">Microsoft CoPilot</h6>
+                    <p class="card-text">Get hands-on with CoPilot &mdash; discover how it's transforming productivity through smart automation.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- AI Tool Speed Run -->
+        <div class="col">
+            <div class="card h-100 shadow-sm border-0">
+                <div class="card-body">
+                    <h6 class="card-title text-primary fw-bold">AI Tool Speed Run</h6>
+                    <p class="card-text">Try multiple AI tools quickly to find the perfect fit for your teaching or work style.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- AI Music -->
+        <div class="col">
+            <div class="card h-100 shadow-sm border-0">
+                <div class="card-body">
+                    <h6 class="card-title text-primary fw-bold">AI Music Tools</h6>
+                    <p class="card-text">Create, remix, and explore sound with AI tools that bring music to life.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- AI Arts -->
+        <div class="col">
+            <div class="card h-100 shadow-sm border-0">
+                <div class="card-body">
+                    <h6 class="card-title text-primary fw-bold">AI Art Generation</h6>
+                    <p class="card-text">Unleash your creativity with AI-powered art tools &mdash; from painting to digital design.</p>
+                </div>
+            </div>
+        </div>
+
+       
+
+        <!-- Data Science Club -->
+        <div class="col">
+            <div class="card h-100 shadow-sm border-0">
+                <div class="card-body">
+                    <h6 class="card-title text-primary fw-bold">WHO's SARAH (Smart AI Resource Assistant for Health) [Sunita Cheddie, Fatima Barnes]</h6>
+                    <p class="card-text">Showcase WHO's SARAH (Smart AI Resource Assistant for Health), a prototype digital health promoter developed by the World Health Organization</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section id="registration" class="py-5" style="background-color: #e6f2f7;">
+    <div class="container">
+      <h2 class="text-center mb-4" style="color: #003b5c; font-weight: bold;">
+        Register for the AI Symposium <small class="text-muted">(Optional)</small>
+      </h2>
+      <p class="text-center mb-5">
+        Registration is appreciated for headcount, but not mandatory.
+      </p>
+  
+      <form id="registrationForm" class="mx-auto" style="max-width: 600px;">
+        <div class="mb-3">
+          <label for="firstname" class="form-label fw-bold">First Name</label>
+          <input type="text" class="form-control" id="firstname" name="firstname" required>
+        </div>
+  
+        <div class="mb-3">
+          <label for="lastname" class="form-label fw-bold">Last Name</label>
+          <input type="text" class="form-control" id="lastname" name="lastname" required>
+        </div>
+  
+        <div class="mb-3">
+          <label for="email" class="form-label fw-bold">Email Address</label>
+          <input type="email" class="form-control" id="email" name="email" required>
+        </div>
+  
+        <div class="mb-4">
+          <label for="role" class="form-label fw-bold">Campus Role</label>
+          <select class="form-select" id="role" name="role" required>
+            <option value="" disabled selected>-- Select Role --</option>
+            <option value="student">Student</option>
+            <option value="faculty">Faculty</option>
+            <option value="staff">Staff</option>
+            <option value="alumni">Alumni</option>
+            <option value="industry">Industry Professional</option>
+            <option value="other">Other</option>
+          </select>
+        </div>
+          <!-- Hidden Question Field -->
+        <input type="hidden" id="question" name="question" value="This is the hidden question value">
+
+    
+        <div class="d-grid">
+          <button type="submit" class="btn btn-primary btn-lg">Submit Registration</button>
+        </div>
+      </form>
+  
+      <!-- Loading Spinner -->
+      <div id="loadingSpinner" class="text-center" style="display:none;">
+        <div class="spinner-border text-primary" role="status">
+          <span class="visually-hidden">Loading...</span>
+        </div>
+      </div>
+  
+    </div>
+  </section>
+  
+
+
+<!-- Keynote Section -->
+<section id="keynote" class="py-5 text-white" style="background-color: #1a1a1a;">
+    <div class="container">
+        <h2 class="text-center mb-5" style="font-weight: bold; text-transform: uppercase;">Keynote Speaker</h2>
+
+  
+      <div class="d-flex flex-column flex-md-row align-items-center gap-4">
+        <!-- Speaker Image -->
+        <div class="flex-shrink-0">
+          <img src="images/mark_roman.jpg" class="img-fluid" alt="Mark Roman" style="height: 300px; width: auto; object-fit: cover; border-radius: 10px;">
+        </div>
+  
+        <!-- Speaker Bio -->
+        <div>
+          <h3 style="margin-bottom: 1rem;">Mark Roman, <i>Info-Tech Group</i></h3>
+          <p style="line-height: 1.6;">
+            Mark Roman is the Managing Partner for Education and works with members throughout the higher education and K-12 sectors around the world. As a global Managing Partner, he is responsible for the delivery of Info-Tech services to members and the alignment of research with the education sector's needs.
+            <br><br>
+    
+            Mark has served on several boards in the education sector and has also run a successful IT strategy consulting firm specializing in education clients.
+          </p>
+          <p>Mark has an MBA from Queen's University, a B.Math (Computer Science) from the University of Waterloo, and he is a Project Management Professional. He has three children, five computers, and seven guitars, and in his remaining time, he is fascinated by military history.
+        </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+<!-- Sponsors Section with Logos -->
+<section id="sponsors" class="py-5 text-white" style="background-color: #003B5C;">
+    <div class="container text-center">
+        <h2 class="mb-4 animate__animated animate__fadeInDown" style="font-weight: bold; text-transform: uppercase;">Sponsors</h2>
+        <div class="row justify-content-center align-items-center">
+            <!-- Sponsor Logo 1 -->
+            <div class="col-6 col-md-4 mb-4 animate__animated animate__fadeInUp animate__delay-1s">
+                <img src="images/citytech.png" alt="City Tech" class="img-fluid" style="width: 200px;">
+            </div>
+            <!-- Sponsor Logo 2 -->
+            <div class="col-6 col-md-4 mb-4 animate__animated animate__fadeInUp animate__delay-1s">
+                <img src="images/microsoft.png" alt="Microsoft" class="img-fluid" style="width: 200px;">
+            </div>
+            <!-- Sponsor Logo 3 -->
+            <div class="col-6 col-md-4 mb-4 animate__animated animate__fadeInUp animate__delay-1s">
+                <img src="images/cisco_logo.png" alt="Cisco" class="img-fluid" style="width: 200px;">
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- Footer -->
+<footer class="bg-dark text-white text-center py-4">
+    <p>&copy; 2025 AI Symposium | All Rights Reserved</p>
+</footer>
+
+<!-- Bootstrap JS and dependencies (from CDN) -->
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+
+</body>
+</html>

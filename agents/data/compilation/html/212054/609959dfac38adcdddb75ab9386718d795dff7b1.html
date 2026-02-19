@@ -1,0 +1,833 @@
+
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head><meta name="viewport" content="width=device-width, initial-scale=1.0" /><!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-WR9V5K73');</script>
+<!-- End Google Tag Manager --><script>
+  window.TdxGtmContext = {"User":{"Id":0,"UID":"00000000-0000-0000-0000-000000000000","UserName":"","FullName":"Public User","AlertEmail":"publicuser@noreply.com","Role":"Experience User","HasTDNext":false,"StandardApplicationNames":null,"TicketApplicationNames":[],"AssetApplicationNames":[],"ClientPortalApplicationNames":[],"Type":"Technician","Analytics":{"Title":null,"Organization":null}},"Partition":{"Id":3150,"Name":"Drexel University Production"},"BillableEntity":{"Id":78,"Name":"Drexel University","SalesForceIdentifier":"0013600000EM48hAAD","GWMIID":"149bef90-aa72-4cdd-9592-d9d29dc5010a"},"Environment":{"ShortName":"PRD"}};
+</script><script src="/TDPortal/Content/Scripts/jquery/2.2.4/jquery.min.js?v=20260213000508"></script><script src="/TDPortal/Content/Scripts/jquery-migrate/1.4.1/jquery-migrate.min.js?v=20260213000508"></script><script src="/TDPortal/Content/Scripts/jquery-ui/1.13.2/jquery-ui-1.13.2.custom.timepicker.min.js?v=20260213000818"></script><link href="/TDPortal/Content/Styles/jquery-ui/1.13.2/jquery-ui.compiled.min.css?v=20260213000820" rel="stylesheet" type="text/css"  /><link href="/TDPortal/Content/bootstrap/3.4.1/dist/css/bootstrap.min.css?v=20260213000508" rel="stylesheet" type="text/css" id="lnkBootstrapCSS" /><script src="/TDPortal/Content/bootstrap/3.4.1/dist/js/bootstrap.min.js?v=20260213000508"></script><link href="/TDPortal/Content/FontAwesome/css/fontawesome.min.css?v=20260213000506" rel="stylesheet" type="text/css" id="lnkFontAwesome" /><link href="/TDPortal/Content/FontAwesome/css/solid.css?v=20260213000506" rel="stylesheet" type="text/css"  /><link href="/TDPortal/Content/FontAwesome/css/regular.css?v=20260213000506" rel="stylesheet" type="text/css"  /><link href="/TDPortal/Content/FontAwesome/css/brands.css?v=20260213000506" rel="stylesheet" type="text/css"  /><link href="/TDPortal/Content/FontAwesome/css/v4-shims.css?v=20260213000506" rel="stylesheet" type="text/css"  /><link href="/TDClient/Styles/bootstrap_custom.min.css?v=20260213000818" rel="stylesheet" type="text/css"  /><link href="/TDClient/Styles/TDStyles.min.css?v=20260213000820" rel="stylesheet" type="text/css"  /><link href="https://servicedesk.drexel.edu/TDPortal/BE/Style/78/TDClient/277?v=20251030140809" rel="stylesheet" type="text/css" /><script src="/TDPortal/Content/Scripts/tdx/dist/TDJSFramework.compiled.min.js?v=20260213000818"></script><script src="/TDPortal/Content/Scripts/tdx/dist/modalFocusTrap.min.js?v=20260213000816"></script><script src="/TDPortal/Content/Scripts/underscore/1.12.1/underscore-min.js?v=20260213000508"></script>
+<script src="/TDClient/Scripts/clientOS.min.js?v=20260213000810"></script>
+<script src="/TDClient/Scripts/collapseMe.min.js?v=20260213000810"></script>
+<script src="/TDClient/Scripts/tdsearchfilter.min.js?v=20260213000810"></script>
+<script src="/TDClient/Scripts/SiteSearch.min.js?v=20260213000810"></script>
+<script src="/TDPortal/Content/Scripts/tdx/dist/elasticsearchAutocomplete.min.js?v=20260213000816"></script>
+<link id="ctl00_ctl00_lnkFavicon" rel="icon" href="https://servicedesk.drexel.edu/TDPortal/BE/Icon/78/277?v=20250528204003" />
+
+  <script>
+
+      $(function () {
+        var masterUi = MasterUI({
+          isPostback: false,
+          baseUrl: '/TDClient/',
+          isTdGoogleAnalyticsEnabled: true,
+          isAuthenticated: false
+          });
+
+        $('#collapseMe').collapseMe({
+          toggleVisibilitySelector: '.navbar-toggle'
+        });
+
+        TeamDynamix.addRequiredFieldHelp();
+      });
+
+      // The sub-nav menu uses padding-top to position itself below the header bar and main navigation sections. When the
+      // window is resized, there is a chance that the content of these header or nav sections wraps, causing the height
+      // to change, potentially covering the sub-nav menu, which is obviously a big usability problem. This function
+      // listens for when the window size or orientation is changing (and also when the window first loads), and adjusts
+      // the padding so that the sub-nav menu appears in the correct location.
+      $(window).bind('load ready resize orientationchange', function () {
+        var headerHeight = $('#divMstrHeader').height();
+        $('#navShim').css({
+          "padding-top": headerHeight
+        });
+
+        $('#content').css({
+          "padding-top": headerHeight,
+          "margin-top": headerHeight * -1
+        });
+      });
+  </script>
+
+  
+  
+
+  
+
+  <script src="/TDPortal/Content/select2/v3/select2.min.js?v=20260213002344"></script><link href="/TDPortal/Content/select2/v3/select2.compiled.min.css?v=20260213002344" rel="stylesheet" type="text/css" id="lnkSelect2" />
+  <script src="/TDClient/Scripts/Share.min.js?v=20260213000504"></script>
+<script src="/TDClient/Scripts/attachmentHandler.min.js?v=20260213000818"></script>
+
+
+  <script>
+
+    function ToggleFavorite() {
+      __doPostBack('ctl00$ctl00$cpContent$cpContent$btnToggleFavorite', '');
+    }
+
+    function shareService() {
+      if ($('#ctl00_ctl00_cpContent_cpContent_shareRecipients').val().trim() === "") {
+        alert('You must first enter a valid email.');
+        $('#btnShare').progressButton('reset');
+      }
+      else {
+        __doPostBack('ctl00$ctl00$cpContent$cpContent$btnSendShare', '');
+      }
+    }
+
+    function closeShareModal() {
+      $('#divShareModal').modal('hide');
+      $('#btnShare').progressButton('reset');
+    }
+
+    function showHideCommentInput(show) {
+      var commentEditor = CKEDITOR.instances['ctl00_ctl00_cpContent_cpContent_txtComments_txtEditor_txtBody'];
+
+      if (show) {
+        $('#ctl00_ctl00_cpContent_cpContent_btnSaveComment').progressButton().progressButton('reset');
+        $('#divComment').show();
+        commentEditor.focus();
+        $("#luFeedCommentNotification").select2("val", null, true);
+        $('#btnComment').hide();
+      } else {
+        $('#divComment').hide();
+        commentEditor.setData('');
+        $("#luFeedCommentNotification").select2("val", null, true);
+        $('#btnComment').show();
+      }
+    }
+
+    $(function () {
+
+      var attachmentHandler = new TeamDynamix.AttachmentHandler({
+        containerSelector: '.js-service-attachments',
+        resultLabelSelector: '#ctl00_ctl00_cpContent_cpContent_lblResults_lblResults-label',
+        baseControllerUrl: '/TDClient/277/Portal/Shared/Attachments',
+        antiForgeryToken: 'eUJhLVQWc4v_fLyRrmQxglAxbuDOlZw5Oph-mJDRoanWvAF3FnqEnpQq1p34Ano1mdW3FnD0i1DZ4WGSdczv5syuvhA1:pgMX9LZItEK483ObgDVfs6A3Hzqs6C1t9AjZv9oP1KmfN2U4Uf12YRHAdlcc4KqaJmEZpqLN0EQDGFM7aGty8JimIfE1',
+        itemId: 10760,
+        componentId: 47,
+        feedId: 'serviceFeed'
+      });
+
+      $('#btnShare').on('click', function () {
+        shareService();
+      });
+
+      // Don't try and update the table styles if the user wanted to opt out.
+      $('#ctl00_ctl00_cpContent_cpContent_divDescription table:not(.SkipTableFixup)').each(function (table) {
+        var padding = $(this).attr('cellpadding');
+        var spacing = $(this).attr('cellspacing');
+
+        $(this).css("border-collapse", "separate");
+
+        if (spacing) {
+          $(this).css("border-spacing", spacing + "px");
+        }
+
+        $(this).find('td').each(function (cell) { $(this).css('padding', padding + 'px') });
+      });
+
+      
+
+    });
+
+    
+
+  </script>
+
+
+
+<meta property="og:title" content="ChatGPT Edu" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://servicedesk.drexel.edu/TDClient/277/Portal/Requests/ServiceDet?ID=10760" />
+<meta property="og:image" content="https://servicedesk.drexel.edu/TDPortal/BE/Logo/78/277" />
+<meta property="og:description" content="ChatGPT Edu is an institutionally managed version of ChatGPT provided by Drexel University through an enterprise agreement with OpenAI. It is designed to support teaching, learning, research, and administrative work while aligning with university security, privacy, and compliance requirements." />
+  <meta property="og:site_name" content="Drexel University - Services" />
+  <meta property="article:section" content="Software and Applications" />
+    <meta property="article:tag" content="ChatGPT" />
+    <meta property="article:tag" content="AI" /><title>
+	Service - ChatGPT Edu
+</title></head>
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WR9V5K73"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+<form method="post" action="/TDClient/277/Portal/Requests/ServiceDet?ID=10760" onsubmit="javascript:return WebForm_OnSubmit();" id="aspnetForm">
+<div class="aspNetHidden">
+<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
+<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="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" />
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['aspnetForm'];
+if (!theForm) {
+    theForm = document.aspnetForm;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script>
+
+
+<script src="/TDClient/WebResource.axd?d=pynGkmcFUV13He1Qd6_TZMSMQxVWLi4fik2rw1_u_hZsCNzwv5c621ov6_ZX_wzTt5vh-g2&amp;t=638901392248157332" type="text/javascript"></script>
+
+
+<script src="/TDClient/ScriptResource.axd?d=nv7asgRUU0tRmHNR2D6t1NXOAgTb3J37FC1L2PfbYYFmSPm-ANa7n6FP0x7BAsbHeL4jfY3ptd1q7zKKVI7DbuXZcwEoKOwj9WxCI1VrQlbWE1Trg1t1GmJDN43kQMJsB7X8tw2&amp;t=ffffffff93d1c106" type="text/javascript"></script>
+<script src="/TDClient/ScriptResource.axd?d=NJmAwtEo3Ipnlaxl6CMhvmVxW3-Ljsg_2Hna32smxrg-6ogyYAN3UTPsJQ8m1uwzn_kuf2Wpne6NSFmYui3h0wCQhJN3ZUiLTNkvhiIgZpq74-lKmofUPQGJ8own8RI2_mwAcmvlSj2WBnqwm5Wj4cyNvv81&amp;t=5c0e0825" type="text/javascript"></script>
+<script src="/TDClient/ScriptResource.axd?d=dwY9oWetJoJoVpgL6Zq8OLdGoo5BVWQ_Eo60QZTEhEcHeiVfwgY9tLCgzdZ5TRwvrwYEnOvujbNccOVLUfWtUg4HivSIsewg6JABxkBGEqVVV64eiRyCAsPDqh6tUioISUQKB74sWMO4Er2mHrWEIWs_sBM1&amp;t=5c0e0825" type="text/javascript"></script>
+<script src="/TDClient/WebResource.axd?d=xtfVMqdF1exC2MBVkOJwMveStDR5kg3dbZWgIXMXZmB1xXom6CcIrWFgHa7jsp4qJuFW2L5XShudyzlBsIO3JhCfiU5HmL2BDz__mCv9dznmBlEMS7LvcYg6wTdPTrAXIXI2CvtjwlnpZd-j4Zpsx2wG_uA1&amp;t=639065204200000000" type="text/javascript"></script>
+<script src="/TDClient/WebResource.axd?d=sp7vCoAo-SSYfpsQ1sYBBeEDnwCGxDYEwZCM0ler88yoVZIPDXMk1C3XF2L2L0xrbB8Rvhli51TswRlmPIOCZgaY58lKhPr-Pv1jTFJ1oUAu7x6RDtNFZUxbtxs3KYQGLK6FpPD5bKuB0e0NmS9HkAqRVks1&amp;t=639065204200000000" type="text/javascript"></script>
+<script src="/TDClient/WebResource.axd?d=icMURy63hv40LPPfq4rTvmm-RfB_YkC6rEEF_2QOO68q3TseXYNBetRKKgBXJ8mn2e8UIgCPiV23HaQUZbjySMHqSgmYZgLcYltBqwD2_EK8aQ08zBuqc3ZBVZITQrbtn6w46dRxFLibMIQg0Aho73rn8Rpxrzg5YMG_JR0UOrUR0wlZ0&amp;t=639065204200000000" type="text/javascript"></script>
+<script src="/TDClient/WebResource.axd?d=1HpFfNpwNihNfEP1lyJHvdPVqbv8KRoFH4-_ZORUgPOP-bqmmtIJRvFQc7828Vf59O_-fdBXcnwdv-hYp5RptPuHmMR0kGQM0_3rS4Z7sKfC7jy9Cc_8fyfcUWa8psszacEQlAXHPXmNwyRymbGSywEmhrE1&amp;t=639065204200000000" type="text/javascript"></script>
+<script type="text/javascript">
+//<![CDATA[
+function WebForm_OnSubmit() {
+CKEditor_TextBoxEncode('ctl00_ctl00_cpContent_cpContent_shareBody_txtBody', 0); if (typeof(ValidatorOnSubmit) == "function" && ValidatorOnSubmit() == false) return false;
+return true;
+}
+//]]>
+</script>
+
+<div class="aspNetHidden">
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="E24F3D79" />
+	<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="WQM4C57D40VDf0tTsGoQYdqF38TMUEnWh0/HTeYk5RBQTuKNnXX+2Wf1tukhM+9EnaBdtRSICEonJbxrwriPdPDWCcDaTGic/mhXi9A7ZNBjZu8pb7HnaDDxjth/n5wRqmcWFOBTmGe2wblAYVyc1oJ+nN4e8vm4cRzDJY9whvGZNb0iz0Rkw7glm0ams8FxE/DOmebuVYPb+2yBwKBPVw2k1Mc=" />
+</div>
+<script type="text/javascript">
+//<![CDATA[
+Sys.WebForms.PageRequestManager._initialize('ctl00$ctl00$smMain', 'aspnetForm', ['tctl00$ctl00$cpContent$cpContent$UpdatePanel2','','tctl00$ctl00$cpContent$cpContent$UpdatePanel1','','tctl00$ctl00$cpContent$cpContent$upShare','','tctl00$ctl00$cpContent$cpContent$lblResults$ctl00',''], ['ctl00$ctl00$cpContent$cpContent$btnToggleFavorite','','ctl00$ctl00$cpContent$cpContent$btnSendShare',''], [], 90, 'ctl00$ctl00');
+//]]>
+</script>
+
+<div id="ctl00_ctl00_upMain" style="display:none;">
+	
+    <div id="ctl00_ctl00_pbMain" class="progress-box-container"><div class="progress-box-body"><div class="well shadow"><h2 class="h4 gutter-top-none">Updating...</h2><div class="progress" style="margin-bottom: 0;"><div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuemin="0" aria-valuemax="100" style="width: 100%"></div></div></div></div></div>
+  
+</div>
+
+<header id="ctl00_ctl00_navHeader" role="banner">
+
+  <div id="divMstrHeader" class="master-header NoPrint" style="background-color: #fff;">
+
+  
+
+  <div class="logo-header-full hidden-xs">
+
+    
+    <div class="pull-left">
+      <a href="#mainContent" class="sr-only sr-only-focusable">Skip to main content</a>
+    </div>
+
+
+    <div id="ctl00_ctl00_divPageHeader" class="container logo-header clearfix" style="padding: 5px;">
+
+      <div id="divLogo" class="pull-left logo-container">
+
+        <a href="https://drexel.edu/"
+           target="_blank">
+          <img src="/TDPortal/BE/Logo/78/0" alt="Drexel University&#39;s Service Desk" class="js-logo img-responsive" />
+          <span class="sr-only">(opens in a new tab)</span>
+        </a>
+
+      </div>
+
+      <div class="master-header-right pull-right padding-top padding-bottom">
+
+        
+
+          <div class="pull-left topLevelSearch input-group">
+            <div id="SiteSearch-d231f75c002b433daafaf74067d28171" class="gutter-bottom input-group site-search" style="max-width: 400px;">
+  <div id="SiteSearch-dropdown-d231f75c002b433daafaf74067d28171" class="input-group-btn">
+    <button type="button" id="SiteSearch-filter-d231f75c002b433daafaf74067d28171" class="btn btn-default dropdown-toggle" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false" title="Filter your search by category" data-component="all">
+      <span class="fa-solid fa-solid fa-earth-americas"></span><span class="fa-solid fa-fw fa-nopad fa-caret-down" aria-hidden="true"></span>
+      <span class="sr-only">
+        Filter your search by category. Current category:
+        <span class="js-current-component">All</span>
+      </span>
+    </button>
+    <ul tabindex="-1" aria-label="Filter your search by category" role="menu" class="dropdown-menu" >
+      <li>
+        <a role="menuitem" href="javascript:void(0);" data-component-text="All" data-component="all" data-component-icon="fa-solid fa-earth-americas" title="Search all areas">
+          <span class="fa-solid fa-fw fa-nopad fa-earth-americas" aria-hidden="true"></span>
+          All
+        </a>
+      </li>
+
+      <li aria-hidden="true" class="divider"></li>
+
+        <li role="presentation">
+          <a role="menuitem" href="javascript:void(0);" data-component-text="Knowledge Base" data-component="kb" data-component-icon="fa-lightbulb" title="Search Knowledge Base">
+            <span class="fa-regular fa-fw fa-nopad fa-lightbulb" aria-hidden="true"></span>
+            Knowledge Base
+          </a>
+        </li>
+
+        <li role="presentation">
+          <a role="menuitem" href="javascript:void(0);" data-component-text="Service Catalog" data-component="sc" data-component-icon="fa-compass" title="Search Service Catalog">
+            <span class="fa-solid fa-fw fa-nopad fa-compass" aria-hidden="true"></span>
+            Service Catalog
+          </a>
+        </li>
+
+    </ul>
+  </div>
+
+  <label class="sr-only" for="SiteSearch-text-d231f75c002b433daafaf74067d28171">Search the client portal</label>
+
+  <input id="SiteSearch-text-d231f75c002b433daafaf74067d28171" type="text" class="form-control" autocomplete="off" placeholder="Search the client portal" title="To search for items with a specific tag, enter the # symbol followed by the name of the tag.
+To search for items using exact match, place double quotes around your text." />
+
+  <span class="input-group-btn">
+    <button id="SiteSearch-button-d231f75c002b433daafaf74067d28171" class="btn btn-default" type="button" title="Search">
+      <span class="fa-solid fa-fw fa-nopad fa-search blue" aria-hidden="true"></span>
+      <span class="sr-only">Search</span>
+    </button>
+  </span>
+</div>
+
+<script>
+  $(function() {
+    var siteSearch = new TeamDynamix.SiteSearch({
+      searchUrl: "/TDClient/277/Portal/Shared/Search",
+      autocompleteSearchUrl: '/TDClient/277/Portal/Shared/AutocompleteSearch',
+      autocompleteResultsPosition: 'fixed',
+      autocompleteResultsZIndex: 1000,
+      searchTextBoxSelector: '#SiteSearch-text-d231f75c002b433daafaf74067d28171',
+      searchComponentFilterButtonSelector: '#SiteSearch-filter-d231f75c002b433daafaf74067d28171',
+      searchButtonSelector: '#SiteSearch-button-d231f75c002b433daafaf74067d28171',
+      searchFilterDropdownSelector: '#SiteSearch-dropdown-d231f75c002b433daafaf74067d28171',
+      showKnowledgeBaseOption: true,
+      showServicesOption: true,
+      showForumsOption: false,
+      autoFocusSearch: false
+    });
+  });
+</script>
+          </div>
+
+        
+          <div title="Sign In" class="pull-right gutter-top-sm">
+            <a href="/TDClient/277/Portal/Login.aspx?ReturnUrl=%2fTDClient%2f277%2fPortal%2fRequests%2fServiceDet%3fID%3d10760">
+              Sign In
+            </a>
+          </div>
+        
+      </div>
+
+    </div>
+
+  </div>
+
+  <nav id="ctl00_ctl00_mainNav" class="navbar navbar-default themed tdbar" aria-label="Primary">
+    <div id="navContainer" class="container">
+
+      <div class="navbar-header">
+        <button type="button" class="pull-left navbar-toggle collapsed themed tdbar-button-anchored tdbar-toggle gutter-left" data-toggle="collapse" data-target=".navbar-collapse">
+          <span class="tdbar-button-anchored icon-bar"></span>
+          <span class="tdbar-button-anchored icon-bar"></span>
+          <span class="tdbar-button-anchored icon-bar"></span>
+          <span class="sr-only">Show Applications Menu</span>
+        </button>
+        <a class="navbar-brand hidden-sm hidden-md hidden-lg themed tdbar-button-anchored truncate-be" href="#">
+
+          Client Portal
+        </a>
+      </div>
+
+      <div id="td-navbar-collapse" class="collapse navbar-collapse">
+
+        <ul class="nav navbar-nav nav-collapsing" id="collapseMe">
+
+          
+            <li class="themed tdbar-button-anchored hidden-sm hidden-md hidden-lg">
+              <a href="/TDClient/277/Portal/Login.aspx?ReturnUrl=%2fTDClient%2f277%2fPortal%2fRequests%2fServiceDet%3fID%3d10760">Sign In</a>
+            </li>
+          
+            <li id="divSearch" class="themed tdbar-button-anchored hidden-sm hidden-md hidden-lg">
+              <a href="/TDClient/277/Portal/Shared/Search" title="search">Search</a>
+            </li>
+          
+              <li id="divDesktop5b52d12c-b3cc-4b6b-ae68-ec43efda9a89" class="themed tdbar-button-anchored">
+                <a href="/TDClient/277/Portal/Home/">Home</a>
+              </li>
+            
+
+          
+            <li id="divTDRequests" class="themed tdbar-button-anchored sr-focusable">
+              <a href="/TDClient/277/Portal/Requests/ServiceCatalog">Services</a>
+            </li>
+          
+            <li id="divTDKnowledgeBase" class="themed tdbar-button-anchored sr-focusable">
+              <a href="/TDClient/277/Portal/KB/">Knowledge Base</a>
+            </li>
+          
+
+          <li class="themed tdbar-button-anchored hidden-xs more-items-button" id="moreMenu">
+            <a data-toggle="dropdown" title="More Applications" href="javascript:;">
+              <span class="sr-only">More Applications</span>
+              <span class="fa-solid fa-ellipsis-h" aria-hidden="true"></span>
+            </a>
+            <ul class="dropdown-menu dropdown-menu-right themed tdbar" id="collapsed"></ul>
+          </li>
+
+        </ul>
+      </div>
+
+    </div>
+
+  </nav>
+
+  </div>
+
+  </header>
+
+
+
+<div id="navShim" class="hidden-xs hidden-sm"></div>
+<main role="main">
+  <div id="content">
+    <div id="mainContent" tabindex="-1"></div>
+    
+
+  
+    <nav id="divTabHeader" class="tdbar-sub NoPrint hidden-xs navbar-subnav" aria-label="Services">
+      <a href="#servicesContent" class="sr-only sr-only-focusable">Skip to Services content</a>
+      <div class="container clearfix">
+        <ul class="nav navbar-nav js-submenu" id="servicesSubMenu" style="margin-left: -15px;">
+
+          
+          <li>
+            <a href="/TDClient/277/Portal/Services/ServicesAtoZ">Services A-Z</a>
+          </li>
+          
+          <li>
+            <a href="/TDClient/277/Portal/Requests/ServiceCatalogSearch">Search <span class="sr-only">Services</span></a>
+          </li>
+
+        </ul>
+      </div>
+    </nav>
+
+  
+
+  <div class="container gutter-top">
+    <div id="servicesContent" tabindex="-1" style="outline:none;">
+      
+
+<span id="ctl00_ctl00_cpContent_cpContent_lblResults_ctl00" aria-live="polite" aria-atomic="true"><span id="ctl00_ctl00_cpContent_cpContent_lblResults_lblResults-label" class="red tdx-error-text"></span></span>
+<a id="ctl00_ctl00_cpContent_cpContent_btnSendShare" tabindex="-1" class="hidden" aria-hidden="true" href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$ctl00$cpContent$cpContent$btnSendShare&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))">Blank</a>
+
+<nav aria-label="Breadcrumb">
+  <ol class="breadcrumb">
+    <li><a href="ServiceCatalog">Service Catalog</a></li><li><a href="ServiceCatalog?CategoryID=1375">Desktop and Mobile Computing</a></li><li class="active"><a href="ServiceCatalog?CategoryID=1366">Software and Applications</a></li><li class="active">ChatGPT Edu</li>
+  </ol>
+</nav>
+
+
+
+<div class="row gutter-top">
+
+<div id="divMainContent" class="col-md-8">
+
+  <h1 class="wrap-text">
+    ChatGPT Edu
+  </h1>
+
+  <div id="ctl00_ctl00_cpContent_cpContent_divTags">
+    <span class="sr-only">Tags</span>
+    <span class="fa-solid fa-tags gray gutter-right-sm" aria-hidden="true" title="Tags"></span>
+    
+        <a href="/TDClient/277/Portal/Requests/ServiceCatalogSearch?SearchText=%23ChatGPT" id="ctl00_ctl00_cpContent_cpContent_rptTags_ctl00_ctl00_lnkDisplay" title="ChatGPT">ChatGPT</a>
+
+      
+        <span class="fa-solid fa-circle gray gutter-right-sm font-xs vert-middle" aria-hidden="true"></span>
+      
+        <a href="/TDClient/277/Portal/Requests/ServiceCatalogSearch?SearchText=%23AI" id="ctl00_ctl00_cpContent_cpContent_rptTags_ctl02_ctl00_lnkDisplay" title="AI">AI</a>
+
+      
+  </div>
+
+  
+
+  
+
+  <div id="ctl00_ctl00_cpContent_cpContent_divDescription" class="gutter-top ckeShim"><h2><strong><span style="color: #07294D">OVERVIEW OF SERVICE</span></strong></h2>
+
+<p>Drexel University ChatGPT is an institutionally supported artificial intelligence (AI) conversational service that assists members of the Drexel community with academic, research, teaching, and administrative tasks. The service enables users to generate and refine text, explore ideas, summarize information, and receive contextual explanations using natural language prompts.</p>
+
+<p>Drexel University ChatGPT is intended to enhance productivity and support learning while maintaining alignment with University policies, data protection requirements, and academic integrity standards.&nbsp;&nbsp;With ChatGPT Edu, Drexel data is not used to train the model, and enterprise-level security measures make it safer to use than personal accounts.&nbsp;</p>
+
+<p>Use of this service is governed by the <a href="https://drexel.edu/it/about/policies/" target="_blank">Acceptable Use Policy (IT-01)</a>&nbsp;<span aria-hidden="true" aria-label="icon" role="region" tabindex="-1"><span class="fa-solid fa-external-link " style="color: #000000"></span></span>and other applicable University policies.&nbsp;&nbsp;Guidance and policies on the appropriate use of Artificial Intelligence at Drexel University can be found <a href="https://drexel.edu/provost/ai/pedagogy-guidance" target="_blank">on the AI Guidance page</a>.&nbsp;<span aria-hidden="true" aria-label="icon" role="region" tabindex="-1"><span class="fa-solid fa-external-link " style="color: #000000"></span></span>&nbsp;Review to understand guidelines for responsible and effective AI use.&nbsp;</p>
+
+<h2><span style="color: #07294D"><strong>Description &amp; Features</strong></span></h2>
+
+<ul class="b">
+	<li>Access to the latest GPT-5.2 Instant model — optimized for fast, high-quality responses appropriate for everyday academic use (fast drafting, summarizing, brainstorming, etc.).</li>
+	<li>Secure educational workspace — Conversations and data in ChatGPT Edu aren’t used to train public OpenAI models.</li>
+	<li>Higher usage/message limits than the free consumer ChatGPT experience, allowing extended interactions for coursework, research, or multi-session tasks.</li>
+	<li>Brainstorming, drafting, and revision support for academic writing, reports, grant proposals, teaching materials, and administrative documents.</li>
+	<li>Integration with DrexelConnect&nbsp;providing SSO&nbsp;authentication.</li>
+</ul>
+
+<div class="alert alert-info" role="alert"><strong>Please be aware:</strong><br>
+ChatGPT responses may be inaccurate, incomplete, or biased and should not be treated as authoritative.&nbsp;&nbsp;Content generated by ChatGPT should always be validated and cited appropriately when used in academic or professional contexts.&nbsp;&nbsp;Members of the Drexel community are responsible for the content they submit or share, even if generated by AI.</div>
+
+<h2><strong><span style="color: #07294D">Who Can Use This Service</span></strong></h2>
+
+<p>The ChatGPT&nbsp;flagship model service is made available for use to:</p>
+
+<ul>
+	<li>Drexel-paid faculty</li>
+</ul>
+
+<p>Access is automatically provisioned based on an active Drexel affiliation and removed when that affiliation ends.</p>
+
+<h2><strong><span style="color: #07294D">Rates</span></strong></h2>
+
+<p>ChatGPT’s essential AI capabilities will be made available to Drexel Faculty at no extra cost. Stay tuned for additional information on Advanced AI features.&nbsp;</p>
+
+<h2><span style="color: #07294D"><strong>Getting Started</strong></span></h2>
+
+<ul>
+	<li>Login with your Drexel credentials using these <a href="https://servicedesk.drexel.edu/TDClient/277/Portal/KB/ArticleDet?ID=20185">step-by-step instructions</a>&nbsp;<span aria-hidden="true" aria-label="icon" role="region" tabindex="-1"><span class="fa-solid fa-external-link " style="color: #000000"></span></span></li>
+	<li>Check out ChatGPT’s two-part webinar series to learn best practices and get the most out of ChatGPT Edu
+	<ul>
+		<li><strong>ChatGPT 101</strong>: A Guide to Your AI Super Assistant&nbsp;(<a href="https://academy.openai.com/public/videos/chatgpt-101-a-guide-to-your-ai-superassistant-recording" target="_blank">Recording</a>&nbsp;<span aria-hidden="true" aria-label="icon" role="region" tabindex="-1"><span class="fa-solid fa-external-link " style="color: #000000"></span></span>)</li>
+		<li><strong>ChatGPT 102</strong>: Applying AI to do Your Best Work&nbsp;(<a href="https://academy.openai.com/en/public/videos/chatgpt-102-leveraging-ai-to-do-your-best-work-recording" target="_blank">Recording</a>&nbsp;<span aria-hidden="true" aria-label="icon" role="region" tabindex="-1"><span class="fa-solid fa-external-link " style="color: #000000"></span></span>)</li>
+	</ul>
+	</li>
+	<li>Review our <a href="https://servicedesk.drexel.edu/TDClient/277/Portal/KB/ArticleDet?ID=20188">Resources for Getting Started</a>&nbsp;<span aria-hidden="true" aria-label="icon" role="region" tabindex="-1"><span class="fa-solid fa-external-link " style="color: #000000"></span></span>or <a href="https://servicedesk.drexel.edu/TDClient/277/Portal/KB/ArticleDet?ID=20193" target="_blank">ChatGPT&nbsp;FAQ&nbsp;</a><span aria-hidden="true" aria-label="icon" role="region" tabindex="-1"><span class="fa-solid fa-external-link " style="color: #000000"></span></span> KB articles for additional info</li>
+</ul>
+
+<p style="text-align: center"><a class="btn btn-primary btn-lg" href="https://chatgpt.com" target="_blank">Access Drexel ChatGPT Edu Workspace</a></p>
+
+<div class="alert alert-info" role="alert"><strong>Please be aware:</strong>
+
+<ul>
+	<li>Access to Drexel University ChatGPT is removed when a user separates from the University and is no longer eligible for Drexel&nbsp;IT services.</li>
+	<li>Users should save any non-sensitive work products prior to account deactivation, as access cannot be restored once removed.</li>
+</ul>
+</div>
+
+<h2><span style="color: #07294D"><strong>Guidelines and Security Considerations</strong></span></h2>
+
+<p>Prior to entering Drexel's ChatGPT Edu workspace, please be advised:</p>
+
+<ul>
+	<li>ChatGPT Edu should be used primarily&nbsp;for <strong>teaching, learning, research, and University business</strong>.</li>
+	<li><strong>Do not enter sensitive information</strong> or data that&nbsp;Drexel must protect by law, contract, or policy as defined in the <a href="http://servicedesk.drexel.edu/TDClient/277/Portal/KB/ArticleDet?ID=20194">ChatGPT&nbsp;Edu&nbsp;Terms of Use</a>.&nbsp;<strong>Protected health information (PHI), </strong>especially,<strong> is strictly prohibited</strong> from being entered. When unsure whether information is sensitive, <strong>do not enter it</strong> and seek guidance.</li>
+	<li>For all university-related tasks, be sure to use your Drexel&nbsp;credentials to sign into the&nbsp;ChatGPT Edu workspace&nbsp;rather than a personal ChatGPT account. This ensures you have access to the university’s enhanced features, higher data privacy standards, and academic-focused optimizations—helping you get the most out of ChatGPT while keeping your work secure and aligned with university guidelines.</li>
+</ul>
+
+<h2><span style="color: #07294D"><strong>Help and Support</strong></span></h2>
+
+<p>Drexel University Information Technology provides support for:</p>
+
+<ul>
+	<li>Access and authentication issues</li>
+	<li>Service availability and outages</li>
+</ul>
+
+<p>For guidance and policy on the appropriate of Artificial Intelligence at Drexel University users should consult:</p>
+
+<ul>
+	<li>The Drexel University AI website&nbsp;<a href="https://drexel.edu/provost/ai/pedagogy-guidance" target="_blank">page on pedagogy and guidance</a>&nbsp;<span aria-hidden="true" aria-label="icon" role="region" tabindex="-1"><span class="fa-solid fa-external-link " style="color: #000000"></span></span></li>
+	<li>Course instructors or academic departments</li>
+</ul>
+
+<h2><span style="color: #07294D"><strong>Additional Resources</strong></span></h2>
+
+<ul>
+	<li><a href="https://help.openai.com/" target="_blank">OpenAI Help Center</a>&nbsp;<span aria-hidden="true" aria-label="icon" role="region" tabindex="-1"><span class="fa-solid fa-external-link " style="color: #000000"></span></span>– troubleshooting, product guides, and FAQs</li>
+	<li><a href="https://help.openai.com/en/articles/10128477-chatgpt-enterprise-edu-release-notes" target="_blank">ChatGPT Enterprise Release Notes</a>&nbsp;<span aria-hidden="true" aria-label="icon" role="region" tabindex="-1"><span class="fa-solid fa-external-link " style="color: #000000"></span></span>– latest product updates</li>
+	<li><a href="https://trust.openai.com/" target="_blank">Trust Center</a>&nbsp;<span aria-hidden="true" aria-label="icon" role="region" tabindex="-1"><span class="fa-solid fa-external-link " style="color: #000000"></span></span>– data handling and compliance details</li>
+	<li><a href="https://status.openai.com/" target="_blank">Status Page</a>&nbsp;<span aria-hidden="true" aria-label="icon" role="region" tabindex="-1"><span class="fa-solid fa-external-link " style="color: #000000"></span></span>– real-time uptime and incident updates</li>
+	<li><a href="https://academy.openai.com/" target="_blank">ChatGPT Academy</a>&nbsp;<span aria-hidden="true" aria-label="icon" role="region" tabindex="-1"><span class="fa-solid fa-external-link " style="color: #000000"></span></span>– Community for additional ChatGPT EDU resources and training</li>
+	<li>Teaching and Learning&nbsp;Center
+	<ul>
+		<li>Faculty: <a href="https://drexel.edu/teaching-and-learning/resources/teaching-tech/GAI-and-teaching" target="_blank">GAI&nbsp;and Teaching</a>&nbsp;<span aria-hidden="true" aria-label="icon" role="region" tabindex="-1"><span class="fa-solid fa-external-link " style="color: #000000"></span></span></li>
+		<li>Students: <a href="https://drexel.edu/teaching-and-learning/resources/teaching-tech/dragons-guide-to-gai">Dragon's Guide to GAI&nbsp;</a><span aria-hidden="true" aria-label="icon" role="region" tabindex="-1"><span class="fa-solid fa-external-link " style="color: #000000"></span></span></li>
+	</ul>
+	</li>
+	<li>Drexel&nbsp;University Libraries for <a href="http://libguides.library.drexel.edu/citing-gai">How to cite Generative AI usage</a> <span aria-hidden="true" aria-label="icon" role="region" tabindex="-1"><span class="fa-solid fa-external-link " style="color: #000000"></span></span></li>
+</ul></div>
+
+  
+
+  &nbsp;
+
+</div>
+
+<div id="divSidebar" class="col-md-4">
+
+  
+  
+      <span>
+        <a class="DetailAction " href="TicketRequests/NewForm?ID=PsHakIjzlwE_&amp;RequestorType=ServiceOffering">  <span class="fa-solid fa-fw" aria-hidden="true"></span>
+Request ChatGPT Support</a>
+      </span>
+    
+
+  <a id="ctl00_ctl00_cpContent_cpContent_btnToggleFavorite" tabindex="-1" class="hidden" aria-hidden="true" href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$ctl00$cpContent$cpContent$btnToggleFavorite&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))">Blank</a>
+
+  <div id="ctl00_ctl00_cpContent_cpContent_divKB" class="panel panel-default gutter-top">
+
+    <div class="panel-heading">
+      <h2 class="h3 panel-title">Related Articles (4)</h2>
+    </div>
+
+    <div class="panel-body">
+      
+          <div id="ctl00_ctl00_cpContent_cpContent_rptArticles_ctl00_ctlArticle_divContainer" class="gutter-top-sm gutter-bottom-lg">
+  <div class="clearfix">
+    <div class="pull-left font-md">
+      <a target="_blank" href="https://servicedesk.drexel.edu/TDClient/277/Portal/KB/ArticleDet?ID=20188">ChatGPT Edu Resources for Getting Started</a>
+    </div>
+  </div>
+  <div id="ctl00_ctl00_cpContent_cpContent_rptArticles_ctl00_ctlArticle_divSummary">
+    Collection of resources for getting started with ChatGPT Edu
+  </div>
+  
+</div>
+        
+          <div id="ctl00_ctl00_cpContent_cpContent_rptArticles_ctl01_ctlArticle_divContainer" class="gutter-top-sm gutter-bottom-lg">
+  <div class="clearfix">
+    <div class="pull-left font-md">
+      <a target="_blank" href="https://servicedesk.drexel.edu/TDClient/277/Portal/KB/ArticleDet?ID=20193">ChatGPT Frequently Asked Questions</a>
+    </div>
+  </div>
+  
+  
+</div>
+        
+          <div id="ctl00_ctl00_cpContent_cpContent_rptArticles_ctl02_ctlArticle_divContainer" class="gutter-top-sm gutter-bottom-lg">
+  <div class="clearfix">
+    <div class="pull-left font-md">
+      <a target="_blank" href="https://servicedesk.drexel.edu/TDClient/277/Portal/KB/ArticleDet?ID=20194">ChatGPT Terms of Use</a>
+    </div>
+  </div>
+  <div id="ctl00_ctl00_cpContent_cpContent_rptArticles_ctl02_ctlArticle_divSummary">
+    Terms of Use for ChatGPT
+  </div>
+  
+</div>
+        
+          <div id="ctl00_ctl00_cpContent_cpContent_rptArticles_ctl03_ctlArticle_divContainer" class="gutter-top-sm gutter-bottom-lg">
+  <div class="clearfix">
+    <div class="pull-left font-md">
+      <a target="_blank" href="https://servicedesk.drexel.edu/TDClient/277/Portal/KB/ArticleDet?ID=20185">Sign in to Drexel University&#39;s ChatGPT Edu Workspace</a>
+    </div>
+  </div>
+  <div id="ctl00_ctl00_cpContent_cpContent_rptArticles_ctl03_ctlArticle_divSummary">
+    This article provides step‑by‑step instructions for Drexel University users to access ChatGPT Edu using their Drexel credentials.
+  </div>
+  
+</div>
+        
+    </div>
+
+  </div>
+
+  <div id="ctl00_ctl00_cpContent_cpContent_divServiceOfferings" class="panel panel-default gutter-top">
+
+    <div class="panel-heading">
+      <h2 class="h3 panel-title">Service Offerings (1)</h2>
+    </div>
+
+    <div id="ctl00_ctl00_cpContent_cpContent_UpdatePanel1" aria-live="polite" aria-atomic="true">
+	
+
+        <div class="panel-body">
+          
+              <div class="gutter-bottom">
+                <strong>
+                  <a href="/TDClient/277/Portal/Requests/ServiceOfferingDet?ID=43">ChatGPT Support</a>
+                </strong>
+                <div class="gray">Drexel University Helpdesk provides support for access and authentication issues to the Drexel ChatGPT Edu workspace</div>
+              </div>
+            
+        </div>
+
+      
+</div>
+
+  </div>
+
+  <div id="divAttachments" class="js-service-attachments"></div>
+
+</div>
+
+</div>
+
+
+
+    </div>
+  </div>
+
+
+  </div>
+</main>
+
+
+
+<script type="text/javascript">
+//<![CDATA[
+setNavPosition('TDRequests');window.CKEDITOR_BASEPATH = 'https://servicedesk.drexel.edu/TDPortal/Content/ckeditor/';
+//]]>
+</script>
+<script src="https://servicedesk.drexel.edu/TDPortal/Content/ckeditor/ckeditor.js?t=C6HH5UF" type="text/javascript"></script>
+<script type="text/javascript">
+//<![CDATA[
+var CKEditor_Controls=[],CKEditor_Init=[];function CKEditor_TextBoxEncode(d,e){var f;if(typeof CKEDITOR=='undefined'||typeof CKEDITOR.instances[d]=='undefined'){f=document.getElementById(d);if(f)f.value=f.value.replace(/</g,'&lt;').replace(/>/g,'&gt;');}else{var g=CKEDITOR.instances[d];if(e&&(typeof Page_BlockSubmit=='undefined'||!Page_BlockSubmit)){g.destroy();f=document.getElementById(d);if(f)f.style.visibility='hidden';}else g.updateElement();}};(function(){if(typeof CKEDITOR!='undefined'){var d=document.getElementById('ctl00_ctl00_cpContent_cpContent_shareBody_txtBody');if(d)d.style.visibility='hidden';}var e=function(){var f=CKEditor_Controls,g=CKEditor_Init,h=window.pageLoad,i=function(){for(var j=f.length;j--;){var k=document.getElementById(f[j]);if(k&&k.value&&(k.value.indexOf('<')==-1||k.value.indexOf('>')==-1))k.value=k.value.replace(/&lt;/g,'<').replace(/&gt;/g,'>').replace(/&amp;/g,'&');}if(typeof CKEDITOR!='undefined')for(var j=0;j<g.length;j++)g[j].call(this);};window.pageLoad=function(j,k){if(k.get_isPartialLoad())setTimeout(i,0);if(h&&typeof h=='function')h.call(this,j,k);};if(typeof Page_ClientValidate=='function'&&typeof CKEDITOR!='undefined')Page_ClientValidate=CKEDITOR.tools.override(Page_ClientValidate,function(j){return function(){for(var k in CKEDITOR.instances){if(document.getElementById(k))CKEDITOR.instances[k].updateElement();}return j.apply(this,arguments);};});setTimeout(i,0);};if(typeof Sys!='undefined'&&typeof Sys.Application!='undefined')Sys.Application.add_load(e);if(window.addEventListener)window.addEventListener('load',e,false);else if(window.attachEvent)window.attachEvent('onload',e);})();CKEditor_Controls.push('ctl00_ctl00_cpContent_cpContent_shareBody_txtBody');
+CKEditor_Init.push(function(){if(typeof CKEDITOR.instances['ctl00_ctl00_cpContent_cpContent_shareBody_txtBody']!='undefined' || !document.getElementById('ctl00_ctl00_cpContent_cpContent_shareBody_txtBody')) return;CKEDITOR.replace('ctl00_ctl00_cpContent_cpContent_shareBody_txtBody',{"autoGrow_maxHeight" : 175, "autoGrow_minHeight" : 175, "contentsCss" : ['https://servicedesk.drexel.edu/TDPortal/Content/ckeditor/contents.css', '/TDPortal/Content/FontAwesome/css/fontawesome.min.css', '/TDPortal/Content/FontAwesome/css/brands.min.css', '/TDPortal/Content/FontAwesome/css/regular.min.css', '/TDPortal/Content/FontAwesome/css/solid.min.css', '/TDPortal/Content/FontAwesome/css/v4-shims.min.css'], "height" : "175", "htmlEncodeOutput" : true, "image_previewText" : " ", "removePlugins" : "magicline,devtools,templates,elementspath,fontawesome,youtube,uploadimage,simpleimage,remoteimageblocker", "title" : "Message", "toolbar" : "TDSimple"}); });
+
+var Page_ValidationActive = false;
+if (typeof(ValidatorOnLoad) == "function") {
+    ValidatorOnLoad();
+}
+
+function ValidatorOnSubmit() {
+    if (Page_ValidationActive) {
+        return ValidatorCommonOnSubmit();
+    }
+    else {
+        return true;
+    }
+}
+        Sys.Application.add_init(function() {
+    $create(Sys.UI._UpdateProgress, {"associatedUpdatePanelId":null,"displayAfter":500,"dynamicLayout":true}, null, null, $get("ctl00_ctl00_upMain"));
+});
+//]]>
+</script>
+</form>
+
+
+  
+  
+
+
+
+  <footer role="contentinfo">
+
+    <div class="master-footer">
+      <img style="margin: auto auto 3rem; display: block" src="https://servicedesk.drexel.edu/SBTDPortal/BE/Logo/78/0">
+<div style="background: #07294D; padding: 3rem 10px">
+
+<div style="text-align: center; color: #FFFFFF"><strong><a class="drexelLink" href="https://drexel.edu/" style="color: #FFFFFF; cursor: default; font-size: 1.5rem">Drexel University</a><br> 3141 Chestnut Street, Philadelphia, PA 19104, 215.895.2000<br>© All Rights Reserved</strong></div>
+</div>
+      
+    </div>
+
+  </footer>
+
+
+
+<script>
+
+    
+    
+
+      // Inject the Google Analytics isogram. This must happen here because it
+      // cannot be injected through an external javascript library.
+      (function (i, s, o, g, r, a, m) {
+        i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+          (i[r].q = i[r].q || []).push(arguments)
+        }, i[r].l = 1 * new Date(); a = s.createElement(o),
+          m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+      })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+    
+
+      // Per Incident #6707155. Need to focus on img. pseudo-class :focus-within is not supported in IE
+      (function ($) {
+        var $anchor = $('#divLogo a');
+        var $beLogo = $('#divLogo a img');
+
+        $anchor.focus(function () {
+          $beLogo.addClass('accessibility-focus-on-logo');
+        }).blur(function () {
+          $beLogo.removeClass('accessibility-focus-on-logo');
+        });
+
+        
+        
+          const queryParams = new URLSearchParams(window.location.search);
+          let showChatbot = true;
+          if (queryParams.has('nobot')) {
+            const nobotFlag = queryParams.get('nobot');
+            if (nobotFlag === '1' || nobotFlag === 'true') {
+              showChatbot = false;
+            }
+          }
+
+          if(showChatbot) {
+            $.ajax({
+              url: "/TDClient/277/Portal/Chatbots/GetScript",
+              type: "GET",
+              dataType: 'text',
+              success: function (data) {
+                
+                var jQueryAjaxSettingsCache = jQuery.ajaxSettings.cache;
+                jQuery.ajaxSettings.cache = true;
+                $(document.body).append(data);
+                jQuery.ajaxSettings.cache = jQueryAjaxSettingsCache;
+              }
+            });
+          }
+        
+
+        window.addEventListener("message", (event) => {
+
+          // Only accept events that come from the same origin
+          if (event.origin != window.location.origin) {
+            return;
+          }
+
+          switch (event.data.type) {
+
+            case "authenticate-using-popup":
+              handleAuthenticateUsingPopup(event.data.payload);
+              break;
+
+            case "authenticated-successfully":
+              handleAuthenticatedSuccessfully(event.data.payload);
+              break;
+
+            default:
+              break;
+          }
+
+        });
+
+        function handleAuthenticateUsingPopup(payload) {
+          let loginUrl = '/TDClient/277/Portal/Login.aspx';
+
+          if (payload.successCallbackUrl) {
+            loginUrl += '?SuccessCallbackUrl=' + payload.successCallbackUrl;
+          }
+
+          window.open(loginUrl, "_blank", "popup=1");
+        }
+
+        function handleAuthenticatedSuccessfully() {
+          event.source.close();
+          window.location.href = window.location.href;
+        }
+    })(jQuery);
+
+</script>
+
+</body>
+</html>

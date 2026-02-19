@@ -1,0 +1,383 @@
+<!DOCTYPE HTML> 
+<html lang="en-US">
+<head>
+<title>Industrial Electricity - Elect - 26ITP911P</title> <!--TITLE expression replaced with content page title-->
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="shortcut icon" href="data:image/x-icon;," type="image/x-icon"> 
+
+<link rel="stylesheet" type="text/css" href="/wconnect/ace/css/ACEweb.css" media="screen" />
+<link rel="stylesheet" type="text/css" href="/wconnect/ace/css/awDesign.css" media="screen" />
+<link rel="stylesheet" type="text/css" href="/wconnect/ace/css/awStyles.css" media="screen" />
+<link rel="stylesheet" type="text/css" href="/wconnect/ace/css/jquery-ui.css" media="screen" />
+<link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" media="screen"  />
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" type="text/css" href="/wconnect/ace/css/awPrint.css" media="print" />
+<link rel="stylesheet" type="text/css" media="screen and (max-width: 800px)" href="/wconnect/ace/css/awMobile.css" />
+  
+<link href="https://fonts.googleapis.com/css?family=Poppins:300i,400,600,700,800,900|Roboto:400,700" rel="stylesheet">
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.14.1/jquery-ui.min.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js" type="text/javascript"></script>
+<script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js" type="text/javascript"></script>
+<script src="/wconnect/Scripts/awjq.js" type="text/javascript"></script>
+<script src="/wconnect/scripts/ww.jquery.min.js" type="text/javascript" ></script>
+<script type="text/javascript">
+$(document).ready(function ()
+  {
+    // mobile menu toggle
+   $("#menu-icon").on("click", function(){
+		$('#menu').slideToggle();
+		$('#menu').toggleClass("active");
+	}); 
+		  
+	// keeps footer at bottom of page
+	$(window).resize(function(){ 
+        var footerHeight = $('footer').outerHeight();
+		var stickFooterPush = $('#push').height(footerHeight);	
+	$('#wrapper').css({'marginBottom':'-' + footerHeight + 'px'});
+    });		
+    $(window).resize();	
+})
+</script>
+
+
+<meta name="keywords" content="Industrial Electricity - Electrical Training, " />
+<meta name="description" content="" />
+<script type="text/javascript" src="/wconnect/scripts/jquery.responsiveTabs.min.js"></script>
+<script src="/wconnect/scripts/jquery.tablesorter.min.js" type="text/javascript"></script>
+<script type="text/javascript">
+$(document).ready(function ()
+{ 
+  var crseType = "Open"
+  if(crseType="Workshop")
+ {
+  var databaseType = 0;  
+  var crseCode = "26ITP911P";
+  
+  if (databaseType == 2)
+  {
+  var targetQuery = "awJSON.awp?target=GY0AOx9dBsyev7fRp0TsZrEiR9tm2WabAq57TC0jxoDE+Rveoku1jXHgQDdrHeGHHWmnfvvPDrVfG90xrmDP8lg/7Qet4mBm2jZ+CJXayjjjiaXrMvPL94w6YFzxCFdIqg1ll8bo760T4WcX8w6hBj39UC3tTWkyYRUEWTvgjE0GKHjpel2xAg6D2fELL/NHWmEYbpjJ6sutlXKIamYPGhQho8Wb9Q+O0r+aB4XT+NrM2TzUfWTpwWLwqF7EDruUur/B"
+  }
+ else
+  {
+  var targetQuery = "awJSON.awp?target=0TT8Ox9dBsyev7fRp0TsZrEiR9tm2WabAq57biEm1+zB7ArYqTvEZmu8+BTckQqnEa1N3X9+fbTg5qTwSVZGR4q/zwtoqPbfkTaoy8NiJXG2aBF9JVBPw3AXD4tcjWnff2OrFYrsL2FFyIaSNmMOkqFoJu6vWmv9ZGbiBC3iqTb2zmyZENnxQ/y8qFadwe2yo3Z13YQpYP30PTvwGVkAaTuWIA=="
+  }
+  $.getJSON(targetQuery+'&NParams='+crseCode, function(wksData) {
+	 if (wksData.Rows.length > 0)
+	 {
+		  var wksRows = '';
+		  var openTable = '<table class="awTable crsWks"><thead><tr><th>Title</th><th>Date</th><th>Time</th><th>Fee</th><th>Description</th></tr></thead><tbody>';
+		  var closeTable = '</tbody></table>';
+	 
+		$.each(wksData.Rows, function(index,aWks) {
+		wksRows += '<tr><td data-title="Title">'+aWks['wmtitle']+'</td><td data-title="Date">'+aWks['wkdate']+'</td><td data-title="Time">'+aWks['wmtime']+'</td><td data-title="Fee" class="number">$'+aWks['wmfeeamt'].toFixed(2)+'</td><td data-title="Description">'+aWks['cadesc']+'</td></tr>';
+        });
+		
+        $("#wksDetails").html(openTable+wksRows+closeTable);
+	 };
+     });
+	 
+	};
+	     
+  $('#crseInfo').responsiveTabs();  
+  $(".awTable").tablesorter({sortList:[[0,0]], widgets: ['zebra']});		
+ 
+   $(document).on("click", "#copyurl", function (e) {
+		$("body").append('<input id="copyURL" type="text" value="" />');
+		$("#copyURL").val(window.location.href).select();
+		document.execCommand("copy");
+		$("#copyURL").remove();            
+  });
+
+}) // end document ready
+</script>
+<link type="text/css" rel="stylesheet" href="/wconnect/ace/css/responsive-tabs.css" />
+
+</head>
+
+<body> 
+
+<div id="wrapper"><!--Page Wrapper-required for stickyfooter functionality-->
+<span class="awNoPrint hidden"><a href="#awContent">Skip to Content</a></span><!--Screen Reader Skip to Content link-->
+ 
+<nav id="topNav" class="awNoPrint">
+<div class="contWidth contPad">
+<ul id="left">
+<li id="menu-icon"><span class="fa fa-bars" aria-hidden="true" aria-label="Mobile Menu" title="Menu"></span></li>
+<li class="link"><a href="xpage.awp?&page=faq.htm"><span class="fa fa-question-circle" aria-hidden="true" aria-label="Registration FAQs"></span><span class="mbHide">Registration FAQs</span></a></li>
+<li class="link"><a href="xpage.awp?&page=contactus.htm"><span class="fa fa-comments" aria-hidden="true" aria-label="Contact Us"></span><span class="mbHide">Contact Us</span></a></li>
+</ul>
+<ul id="right">
+
+<li id="logon"><a href="UserLogon.awp?&target=xwelcome.htm"><span class="fa fa-sign-in" aria-hidden="true" aria-label="Log On" title="Log On"></span><span class="mbHide">Log On</span></a></li>
+<li id="signup"><a href="person.awp?&mode=NEWUSERSIGNUP"><span class="fa fa-user-plus fa-fw" aria-hidden="true" aria-label="Sign Up" title="Sign Up"></span><span class="mbHide">Sign Up</span></a></li>
+
+<li id="cart"><a href="javascript:toggleMe('para1')" class="cartlnk"><span class="fa fa-shopping-cart fa-fw" aria-hidden="true" aria-label="Cart Total"></span><span id="awCartTot"><span class="cartNum">0</span><span class="cartDollar">$0.00</span></span></a> <!-- Cart Items Display -->
+<div id="para1" style="display: none;">
+<div id="awCartSummary"></div>	<!-- Cart Click Box -->
+<a href="enrollmentcard.awp?&ShowDetails=ON" class="awButtons awLnkBtn viewCart red">View Cart</a>
+</div>
+</li> <!-- End Cart -->
+</ul>
+<div class="clrFloats"></div> 
+<div class="clrFloats"></div> 
+</div>
+</nav>
+
+<header>
+<div class="contWidth contPad">
+<div class="logo"><a href="https://www.auburncc.org/"><img style="display:marker" src="/wconnect/ace/images/logo.jpg" alt="Organization Logo" /></a>
+</div>
+<div class="search awNoPrint">
+<form action="QuickSearch.awp" method="post" class="srchBox">
+<input type="hidden" name="SearchScope" value="GROUP" /><label for="crseSrch" class="hidden">Enter Keyword</label><input type="text" name="txtTarget" id="crseSrch" class="srchField" value="Course Search" placeholder="Course Search" onfocus="clearDefault(this);" onblur="if(this.value=='') this.value='Course Search';" /><button type="submit" class="srchBtn" aria-label="Search"><span class="fa fa-search" aria-hidden="true"></span></button>
+<div class="clrFloats"></div> 
+</form> 
+<p class="advSrch"><a href="advancedsearch.awp">Advanced Search</a></p>
+</div> <!-- End Search -->
+<div class="clrFloats"></div> 
+</div>
+</header>
+
+<div id="awPageHeading">
+<div class="contWidth contPad">
+<h1>Online Registration</h1>
+</div>
+</div>
+
+<main id="contWrapper" class="contWidth"><!--ACEweb Content Wrapper-->
+
+<nav id="siteNav" class="awNoPrint">
+<ul id="menu">
+<li><a href="/wconnect/ace/home.htm">Registration Home</a></li>
+<li><a href="showgroups.awp">Courses</a></li>
+<li><a href="xpage.awp?&page=xwelcome.htm">My Account</a></li>
+<li><a href="XPage.awp?&Page=FAQ.htm">Registration FAQs</a></li>
+<li><a href="XPage.awp?&Page=contactus.htm">Contact Us</a></li>
+</ul>
+</nav>
+
+
+<div id="awContent">   <!-- start Content -->
+
+<h1 id="csH1">Industrial Electricity - Electrical Training</h1>
+
+
+
+<div class="csShare awNoPrint">
+<div class="a2a_kit a2a_kit_size_32 a2a_default_style">
+<a href="SendFriend.awp?Course=26ITP911P" title="Email Information to Friend" class="emailPage"><span class="fa-solid fa-envelope-open-text"></span><span class="mbHide">Email</span></a>
+<a href="javascript:window.print()" title="Print" class="printPage"><span class="fa-solid fa-print"></span><span class="mbHide">Print</span></a>
+<a href="#" id="copyurl" title="Copy Link" class="copyURL"><span class="fa-regular fa-clipboard"></span><span class="mbHide">Copy Link</span></a>
+<div class="a2a_kit a2a_default_style">
+    <a class="a2a_button_facebook" title="Share on Facebook" role="button" tabindex="0">
+        <span class="fa-brands fa-facebook-f"></span><span class="mbHide">Share</span>
+    </a>
+    <a class="a2a_button_twitter" title="Share on Twitter" role="button" tabindex="0">
+         <span class="fa-brands fa-twitter"></span><span class="mbHide">Tweet</span>
+    </a> 
+<script type="text/javascript" src="/wconnect/scripts/social.js"></script>
+
+
+  
+</div>
+</div>
+</div>
+
+<div class="csDetails">
+<table class="csDetailTable">
+<tr><th><span class="fa-regular fa-calendar fa-fw"></span> Dates:</th><td>July 28 - December 18, 2025</td></tr>
+<tr><th><span class="fa-regular fa-clock fa-fw"></span> Meets:</th><td>M, Tu, W and Th from 5:30 PM to 9:30 PM</td></tr>
+<tr><th><span class="fa-solid fa-location-crosshairs fa-fw"></span> Location:</th><td>Auburn Career Center                    1B</td></tr>
+
+<tr ><th><span class="fa-solid fa-dollar-sign fa-fw"></span> Cost:</th><td> $5,366.00 
+<span class="csEarlyBird"></span> <span class="csDepositMsg"></span></td></tr>
+</table> 
+
+<p class="status">Sorry, we are no longer accepting registrations for this course.  Please contact our office to find out if it will be rescheduled, or if alternative classes are available.</p>
+
+
+
+
+<!--required for  list -->
+</div>
+
+<div id="csEnroll"> 
+
+
+<div class="pblshNotice"><p></p></div>
+</div>
+
+<div id="crseInfo">
+<ul>
+<li><a href="#tab-1"><span class="fa-regular fa-file-lines fa-fw"></span>Description</a></li>
+<li><a href="#tab-2"><span class="fa-solid fa-dollar-sign fa-fw"></span>Fees</a></li>
+<li><a href="#tab-3"><span class="fa-solid fa-location-crosshairs fa-fw"></span>Location</a></li>
+<li><a href="#tab-4"><span class="fa-solid fa-chalkboard-user fa-fw"></span> Instructor</a></li>
+
+
+
+</ul>
+
+<div id="tab-1" class="sTab">
+<div class="csMaxWidth">
+
+
+
+<div id="csDesc">This course provides training in industrial electrical applications. Instruction consists of instructor-led classroom, online topics, and hands-on learning with equipment. OSHA 10-Hour General Industry Certification test is required before starting the program. Students are responsible to have a multi-meter and safety glasses prior to the start of class.<BR><BR>Modules: Core DC &amp; AC Topics, Electronic Relay Controls, Motor Controls and Programmable Logic Controller (PLC)<BR><BR>Certification: 10-Hour OSHA General Industry Certification<BR><BR>Monthly payment plan available.</div>
+
+
+</div>
+
+</div>
+
+<div id="tab-2" class="sTab"  >
+<table class="awCourseStatus" title="Course Information">
+<tr><th class="csLabels" scope="row">Fee:</th><td data-title="Fee"> $5,366.00</td></tr>
+<tr><th class="csLabels" scope="row">Hours:</th><td data-title="Hours">320.00</td></tr>
+
+</table>
+
+
+
+<p>  </p>
+<div id="feeBreakdown"><p><strong>Fee Breakdown</strong></p><table class="awTable" >
+<thead>
+
+<tr><th scope="col" >Category</th><th scope="col" >Description</th><th scope="col" >Amount</th></tr>
+</thead> 
+<tbody>
+<tr class="awAltRow" ><td class="text leftCol" data-title="Category" >Course Fee (Basic)</td><td class="text midCol" data-title="Description" >Tuition</td><td class="number rightCol" data-title="Amount" >$4,266.00</td></tr>
+<tr ><td class="text leftCol" data-title="Category" >Mandatory Fee</td><td class="text midCol" data-title="Description" >Registration Fee</td><td class="number rightCol" data-title="Amount" >$   45.00</td></tr>
+<tr class="awAltRow" ><td class="text leftCol" data-title="Category" >Mandatory Fee</td><td class="text midCol" data-title="Description" >OSHA Certification</td><td class="number rightCol" data-title="Amount" >$   40.00</td></tr>
+<tr ><td class="text leftCol" data-title="Category" >Mandatory Fee</td><td class="text midCol" data-title="Description" >Book Fee</td><td class="number rightCol" data-title="Amount" >$  275.00</td></tr>
+<tr class="awAltRow" ><td class="text leftCol" data-title="Category" >Mandatory Fee</td><td class="text midCol" data-title="Description" >Student Fees</td><td class="number rightCol" data-title="Amount" >$  250.00</td></tr>
+<tr ><td class="text leftCol" data-title="Category" >Mandatory Fee</td><td class="text midCol" data-title="Description" >Supply Fee</td><td class="number rightCol" data-title="Amount" >$  175.00</td></tr>
+<tr class="awAltRow" ><td class="text leftCol" data-title="Category" >Mandatory Fee</td><td class="text midCol" data-title="Description" >Tools</td><td class="number rightCol" data-title="Amount" >$   75.00</td></tr>
+<tr ><td class="text leftCol" data-title="Category" >Mandatory Fee</td><td class="text midCol" data-title="Description" >NC3</td><td class="number rightCol" data-title="Amount" >$   50.00</td></tr>
+<tr class="awAltRow" ><td class="text leftCol" data-title="Category" >Mandatory Fee</td><td class="text midCol" data-title="Description" >Online Program Charge</td><td class="number rightCol" data-title="Amount" >$  190.00</td></tr>
+</tbody>
+</table>
+</div>
+
+</div>
+<div id="tab-3" class="sTab">
+<p><strong>Auburn Career Center                    1B             </strong></p>
+8140 Auburn Road<br />
+Concord Twp., OH 44077
+
+</div>
+
+<div id="tab-4" class="sTab">
+<p><strong>Kelly Bean</strong></p><br /><p><strong>Keith Conn</strong></p><br /><p><strong>Richard LaForce</strong></p>
+</div>
+
+<div id="tab-5" class="sTab hidden" aria-hidden="true" >
+<table class="awTable" title="Session Details">
+<tHead>
+<tr>
+<th>Date</th>
+<th>Day</th>
+<th>Time</th>
+<th>Location</th>
+</tr>
+</tHead>
+<tBody>
+
+</tBody>
+</table>
+</div>
+
+
+
+<div id="tab-7" class="sTab hidden" aria-hidden="true">
+<p>You may also be interested in these related courses:</p>
+
+</div>
+
+</div> <!-- end tabs -->
+
+
+</div>  <!-- end contWidth -->	
+
+
+<div class="clrFloats"></div> 
+<div id="push"></div> <!-- required to push footer to bottom of page -->
+</main>
+
+</div><!--End Page Wrapper-->
+
+
+<footer>
+<div class="contWidth contPad">
+<div class="boxRow">
+<div class="fifth rightPad ftContact">
+<h2>Contact Us</h2>
+<p>Auburn Career Center</p>
+<p>8140 Auburn Rd.</p>
+<p>Painesville, OH 44077</p>
+<p>440-357-7542</p>
+<p><a class="emailURL" href="mailto:aoffice@auburncc.org">aoffice@auburncc.org</a></p>
+</div> <!-- end quarter -->
+
+<div class="fifth rightPad awNoPrint">
+<h2>About</h2>
+<p><a href="xpage.awp?&page=FAQ.htm">Registration FAQs</a></p>
+<p><a href="XPage.awp?&Page=contactus.htm">Contact Us</a></p>
+</div> <!-- end quarter -->
+
+<div class="fifth rightPad awNoPrint">
+<h2>Courses</h2>
+<p><a href="showgroups.awp">by Program</a></p>
+<p><a href="ShowSchedule.awp?&Mode=GROUP&Group=:FULL&Title=All+Courses">All Courses</a></p>
+</div> <!-- end quarter -->
+
+<div class="fifth rightPad awNoPrint">
+<h2>Students</h2>
+<p><a href="userlogon.awp?&target=xwelcome.htm">Log On</a></p>
+<p><a href="person.awp?&mode=NEWUSERSIGNUP">Sign Up</a></p>
+<p><a href="enrollmentcard.awp">My Cart</a></p>
+<p><a href="xpage.awp?&page=xwelcome.htm">My Account</a></p>
+<p><a href="ShowTranStatus.awp">My History</a></p>
+</div> <!-- end quarter -->
+
+<div class="fifth awNoPrint">
+<h2>Instructors</h2>
+<p><a href="instructor.awp">Access Rosters</a></p>
+<p><a href="/wconnect/ace/teaching.awp">Teach for us?</a></p>
+</div> <!-- end quarter -->
+
+<div class="clrFloats"></div>
+</div> <!-- end boxRow -->
+</div>  <!-- end contWidth -->
+<div id="awLink">
+<div class="contWidth contPad awNoPrint">
+<div class="social">
+<p><a href="https://www.facebook.com/auburncareercenter"><span class="fa fa-facebook-square" aria-hidden="true"></span><span class="hidden">Facebook</span></a>
+<a href="https://twitter.com/AuburnCareerCen"><span class="fa fa-twitter-square" aria-hidden="true"></span><span class="hidden">Twitter</span></a>
+<a href="https://www.instagram.com/explore/locations/10797211/auburn-career-center/"><span class="fa fa-instagram" aria-hidden="true"></span><span class="hidden">Instagram</span></a>
+<a href="https://www.linkedin.com/company/auburncareercenter"><span class="fa fa-linkedin-square" aria-hidden="true"></span><span class="hidden">LinkedIn</span></a>
+<a href="https://www.youtube.com/channel/UC2THWSuJ1a6e8GtciUaXAxw"><span class="fa fa-youtube" aria-hidden="true"></span><span class="hidden">YouTube</span></a></p>
+</div>
+<div id="powerAW">
+<p>powered by ACEweb from <a href="http://www.aceware.com">ACEware Systems, Inc.</a></p>
+<p><a href="XPage.awp?&Page=privacy.htm">Privacy</a><span class="fa fa-circle" aria-hidden="true"></span><a href="XPage.awp?&Page=sitemap.htm">Site Map</a></p>
+</div>
+<div class="clrFloats"></div>
+</div>
+</div>
+
+</footer>
+<script>
+awBulletins('.awp'); 
+
+var cartContents = {"Rows":[],"Count": 0}
+populateCartContents('.awp', cartContents)
+</script>
+
+
+</body>
+</html>
+

@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head id="Head1"><title>
+	Login to Student Portal
+</title>
+    <script src="../scripts/jquery.min.js"></script>
+    <link rel="shortcut icon" href="data:image/x-icon;," type="image/x-icon" /><meta name="viewport" content="width=device-width, initial-scale=1" /><meta name="apple-mobile-web-app-capable" content="yes" /><meta name="apple-touch-fullscreen" content="yes" />
+    <link href="Public/global/css/bootstrap.css" rel="stylesheet" />
+    <link href="Public/global/css/main.css" rel="stylesheet" />
+    <script src="Scripts/jquery.js"></script>
+    <script src="Scripts/jquery.min.js"></script>
+    <script src="Scripts/bootstrap.min.js"></script>
+    <script src="Scripts/ie_prevention.js"></script>
+    <script type="text/javascript">
+        function userType(utype) {
+            
+            var clientid = 'ContentPlaceholder_userType';
+            if (document.getElementById(clientid) != null) {
+                document.getElementById('ContentPlaceholder_userType').value = utype;
+            }
+          // window.PageMethods.getUserRoleType(utype);
+            var lnkAct = "https://cportal.carrington.edu/";
+            var lnkpwd = "https://cportal.carrington.edu/";
+            var lnkHome = "https://cportal.carrington.edu/";
+            var qstr = "ReturnUrl=%2f%3fwa%3dwsignin1.0%26wtrealm%3dhttps%253a%252f%252fcportal.carrington.edu%252f%26wct%3d2025-05-14T13%253a04%253a53Z%26wctx%3drm%253d0%2526id%253dpassive%2526ru%253dsecure%252fstudent%252fstuportal.aspx%26wreply%3dhttps%253a%252f%252fcportal.carrington.edu%252f%26AppType%3dPortal%26Role%3dSTUDENT&wa=wsignin1.0&wtrealm=https%3a%2f%2fcportal.carrington.edu%2f&wct=2025-05-14T13%3a04%3a53Z&wctx=rm%3d0%26id%3dpassive%26ru%3dsecure%2fstudent%2fstuportal.aspx&wreply=https%3a%2f%2fcportal.carrington.edu%2f&AppType=Portal&Role=STUDENT";
+            
+            if (utype === 'STUD') {
+                lnkAct = lnkAct + "Login/CreateLogin.aspx?" + qstr;
+                lnkpwd = lnkpwd + "secure/student/loginstu.aspx?nav=5";
+                lnkHome = lnkHome + "default.aspx";
+            } else if (utype === 'EMPL') {
+                lnkAct = lnkAct + "Employer/Reg/EmployerReg.aspx?" + qstr;
+                lnkpwd = lnkpwd + "secure/employer/loginemp.aspx?nav=5";
+            } else if (utype === 'APPL') {
+                lnkAct = "Account/CreateAccount.aspx?" + qstr;
+                lnkpwd = "Account/ApplyOnline_ForgotPassword.aspx?" + qstr;
+                lnkHome = lnkHome + "default.aspx?" + qstr;
+            } else {
+                if (document.getElementById('ContentPlaceholder_lnkCreateAcnt')) {
+                    document.getElementById('ContentPlaceholder_lnkCreateAcnt').style.display = "none";
+                }
+
+            }
+
+            if (document.getElementById('ContentPlaceholder_lnkCreateAcnt')) {
+                document.getElementById('ContentPlaceholder_lnkCreateAcnt').setAttribute("href", lnkAct);
+            }
+            if (document.getElementById('ContentPlaceholder_lnkBackToHome')) {
+                document.getElementById('ContentPlaceholder_lnkBackToHome').setAttribute("href", lnkHome);
+            }
+            var forgotPwdLinkId = 'ContentPlaceholder_lnkForgotpwd';
+            if (document.getElementById(forgotPwdLinkId)) {
+
+                document.getElementById(forgotPwdLinkId).setAttribute("href", lnkpwd);
+            }
+        }
+      
+        function CloseWindow() {
+            window.open('', '_self', '');
+            window.close();
+        }
+
+    </script>
+    <style>
+        .login_bg
+        {
+         background-color: #ffffff !important;
+        }
+    </style>
+
+
+    <style>
+        body {
+            margin: 0;
+            font-family: open_sansregular;
+        }
+    </style>
+    <script>
+        // ===== Scroll to Top ==== 
+        $(document)
+            .ready(function () {
+                $(window)
+                    .scroll(function () {
+                        if ($(this).scrollTop() >= 50) { // If page is scrolled more than 50px
+                            $('#return-to-top').fadeIn(200); // Fade in the arrow
+                        } else {
+                            $('#return-to-top').fadeOut(200); // Else fade out the arrow
+                        }
+                    });
+                $('#return-to-top')
+                    .click(function () { // When arrow is clicked
+                        $('body,html,#wrapper')
+                            .animate({
+                                scrollTop: 0 // Scroll to top of body
+                            },
+                                100);
+                    });
+            });
+    </script>
+    <link href='https://studentsts.carrington.edu/Public/global/css/bootstrap.css' rel='stylesheet'/> <link href='https://studentsts.carrington.edu/Public/global/css/main.css' rel='stylesheet'/><link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" /></head>
+
+<body class="login_bg">
+    <div id="wrapper">
+        <form method="post" action="./Login.aspx?ReturnUrl=%2f%3fwa%3dwsignin1.0%26wtrealm%3dhttps%253a%252f%252fcportal.carrington.edu%252f%26wct%3d2025-05-14T13%253a04%253a53Z%26wctx%3drm%253d0%2526id%253dpassive%2526ru%253dsecure%252fstudent%252fstuportal.aspx%26wreply%3dhttps%253a%252f%252fcportal.carrington.edu%252f%26AppType%3dPortal%26Role%3dSTUDENT&amp;wa=wsignin1.0&amp;wtrealm=https%3a%2f%2fcportal.carrington.edu%2f&amp;wct=2025-05-14T13%3a04%3a53Z&amp;wctx=rm%3d0%26id%3dpassive%26ru%3dsecure%2fstudent%2fstuportal.aspx&amp;wreply=https%3a%2f%2fcportal.carrington.edu%2f&amp;AppType=Portal&amp;Role=STUDENT" id="masterForm">
+<div class="aspNetHidden">
+<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
+<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUKMTcxNDU1Njk3Ng8WBB4FVVJMSUQCDx4IQ2FtcHVzSUQCAxYCZg9kFgRmD2QWAgIIDxYCHgRUZXh0Bb4BPGxpbmsgaHJlZj0naHR0cHM6Ly9zdHVkZW50c3RzLmNhcnJpbmd0b24uZWR1L1B1YmxpYy9nbG9iYWwvY3NzL2Jvb3RzdHJhcC5jc3MnIHJlbD0nc3R5bGVzaGVldCcvPiA8bGluayBocmVmPSdodHRwczovL3N0dWRlbnRzdHMuY2FycmluZ3Rvbi5lZHUvUHVibGljL2dsb2JhbC9jc3MvbWFpbi5jc3MnIHJlbD0nc3R5bGVzaGVldCcvPmQCAQ9kFgYCAw8WAh4HVmlzaWJsZWgWAgIBDxYCHgNzcmMFP2h0dHBzOi8vc3R1ZGVudHN0cy5jYXJyaW5ndG9uLmVkdS9wdWJsaWMvZ2xvYmFsL2ltYWdlcy9sb2dvLnBuZ2QCBw9kFgICAQ9kFgQCAQ8PFgIfAgUNU3R1ZGVudCBMb2dpbmRkAgkPZBYGAhMPDxYCHwIFywFUaGUgdXNlcm5hbWUgYW5kL29yIHBhc3N3b3JkIHlvdSBlbnRlcmVkIGlzIG5vdCBjb3JyZWN0LiBJZiB5b3UgZmVlbCB5b3UgaGF2ZSByZWFjaGVkIHRoaXMgbWVzc2FnZSBpbiBlcnJvciwgcGxlYXNlIGVtYWlsIGhlbHBAY2FycmluZ3Rvbi5lZHUgdG8gY3JlYXRlIGEgc3VwcG9ydCByZXF1ZXN0IG9yIHRyeSBhZ2FpbiBhdCBhIGxhdGVyIHRpbWUuICoqKmRkAhUPFgIfA2hkAhkPFgIfA2hkAgkPFgIfA2hkZI6ayFhWTo+nug/zTJ6nyZmGlgH+k+IDY7RAE+KcBvHm" />
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['masterForm'];
+if (!theForm) {
+    theForm = document.masterForm;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script>
+
+
+<script src="/WebResource.axd?d=IBzQOfCxoIQT0hKyj4U7hS_FogcC_bHT2xkxg5AjHAFHqL_LQClxaSiKoFNSwgKOo3CvAap2AnenI4FgHnzrt8g9JuQmAgCfUith3_BNwzY1&amp;t=638901284248157332" type="text/javascript"></script>
+
+
+<script src="/ScriptResource.axd?d=y2lHwfT1PGUL3RYbsb5oKbn_yBvV6Y7SvBDjPenn59zH3nUAs3wkc5sbA6piuw9SEvXWBuMphEuYy-aH6j6QolkAODgIDSgeGcVwgwXBd96BshO_fIXYsz2Am9WM6fsSxgKLEeCDQ2lswnHpdrZ2SXf5ZMc9JTkfizd1UdRRswo1&amp;t=5c0e0825" type="text/javascript"></script>
+<script type="text/javascript">
+//<![CDATA[
+var PageMethods = function() {
+PageMethods.initializeBase(this);
+this._timeout = 0;
+this._userContext = null;
+this._succeeded = null;
+this._failed = null;
+}
+PageMethods.prototype = {
+_get_path:function() {
+ var p = this.get_path();
+ if (p) return p;
+ else return PageMethods._staticInstance.get_path();},
+getUserRoleType:function(userrole,succeededCallback, failedCallback, userContext) {
+return this._invoke(this._get_path(), 'getUserRoleType',false,{userrole:userrole},succeededCallback,failedCallback,userContext); }}
+PageMethods.registerClass('PageMethods',Sys.Net.WebServiceProxy);
+PageMethods._staticInstance = new PageMethods();
+PageMethods.set_path = function(value) { PageMethods._staticInstance.set_path(value); }
+PageMethods.get_path = function() { return PageMethods._staticInstance.get_path(); }
+PageMethods.set_timeout = function(value) { PageMethods._staticInstance.set_timeout(value); }
+PageMethods.get_timeout = function() { return PageMethods._staticInstance.get_timeout(); }
+PageMethods.set_defaultUserContext = function(value) { PageMethods._staticInstance.set_defaultUserContext(value); }
+PageMethods.get_defaultUserContext = function() { return PageMethods._staticInstance.get_defaultUserContext(); }
+PageMethods.set_defaultSucceededCallback = function(value) { PageMethods._staticInstance.set_defaultSucceededCallback(value); }
+PageMethods.get_defaultSucceededCallback = function() { return PageMethods._staticInstance.get_defaultSucceededCallback(); }
+PageMethods.set_defaultFailedCallback = function(value) { PageMethods._staticInstance.set_defaultFailedCallback(value); }
+PageMethods.get_defaultFailedCallback = function() { return PageMethods._staticInstance.get_defaultFailedCallback(); }
+PageMethods.set_enableJsonp = function(value) { PageMethods._staticInstance.set_enableJsonp(value); }
+PageMethods.get_enableJsonp = function() { return PageMethods._staticInstance.get_enableJsonp(); }
+PageMethods.set_jsonpCallbackParameter = function(value) { PageMethods._staticInstance.set_jsonpCallbackParameter(value); }
+PageMethods.get_jsonpCallbackParameter = function() { return PageMethods._staticInstance.get_jsonpCallbackParameter(); }
+PageMethods.set_path("Login.aspx");
+PageMethods.getUserRoleType= function(userrole,onSuccess,onFailed,userContext) {PageMethods._staticInstance.getUserRoleType(userrole,onSuccess,onFailed,userContext); }
+//]]>
+</script>
+
+<div class="aspNetHidden">
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="C2EE9ABB" />
+	<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="/wEdAAZ3jKmwqXtCPdjrQnM9XOK+cNCipuWGSIjrY8qs3AGktldbCY6umz2CfZlQTA3Mn2kG4emBz11BfBTl0xH/U02suSFW7IKqltE8TMm2luGbiZCxonZ7cdLIfTTlL1/7EwXrOcUo7KhfgxnOHXkvo2BQ4Y7bXkaZGTQLwWqDjnR/wA==" />
+</div>
+
+            
+            
+
+
+            <div class="content">
+                <div class="container-fluid">
+
+                    
+                    
+    <div id="ContentPlaceholder_pnlLoginInfo">
+	
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-sm-9">
+                    <div class="row headerBar">
+                    </div>
+                </div>
+                <div class="col-sm-12 back_home">
+                </div>
+            </div>
+            <div class="row">
+                <div class="clearfix">
+
+                    <div class="col-md-6 col-md-push-3 login_box">
+                        <div class="">
+                            <div class="panel-body">
+                                <div class="">
+                                    <div class="col-xs-12 col-sm-8 col-md-9 col-lg-6 zeropad">
+                                      
+                                            <h2  class="loginbtn_text"><span id="ContentPlaceholder_lblLoginHead">Student Login</span></h2>
+                                        
+                                    </div>
+                                    <div class="col-xs-12 col-sm-4 col-md-3 col-lg-6 zeropad">
+                                        <div class="login_text" style="text-align:right">
+                                          <a id="ContentPlaceholder_lnkBackToHome" class="btn btn-sm btn-link backHome_text">Back to Home</a>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-lg-12 zeropad has-error">
+                                            <span id="ContentPlaceholder_Label4" class="control-label"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                 
+                                <div id="ContentPlaceholder_pnlLogin">
+		
+                                    <div class="">
+                                        <div class="panel panel-default panel-border">
+                                            <div class="panel-body form-horizontal login_panel">
+                                                <div class="row" style="display: none;">
+                                                    <div class="bg-info msg_tab">
+                                                        <i class="fa fa-sign-in" aria-hidden="true"></i>
+                                                        <span id="ContentPlaceholder_lblPleaseLogin"></span>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <span>
+                                                        <span id="ContentPlaceholder_lblRequired" class="control-label">Required Field</span>
+                                                    </span>
+                                                    <sup><i class="fa fa-star text-danger" aria-hidden="true"></i></sup>
+                                                    <div class="col-lg-12 zeropad has-error">
+                                                        
+                                                    </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <p class="col-sm-4 alignment">
+                                                        <label for="ContentPlaceholder_txtUserName" id="ContentPlaceholder_Label1" class="control-label">Username</label>
+                                                        <sup><i class="fa fa-star text-danger" aria-hidden="true"></i></sup>
+                                                    </p>
+                                                    <div class="col-sm-6">
+                                                        <input name="ctl00$ContentPlaceholder$txtUserName" type="text" id="ContentPlaceholder_txtUserName" class="form-control" aria-required="true" aria-label="Username" />
+                                                        
+                                                    </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <p class="col-sm-4 alignment">
+                                                        <label for="ContentPlaceholder_txtPassword" id="ContentPlaceholder_Label2" class="control-label" style="font-weight:bold;">Password</label>
+                                                        <sup><i class="fa fa-star text-danger" aria-hidden="true"></i></sup>
+                                                    </p>
+                                                    <div class="col-sm-6">
+                                                        <input name="ctl00$ContentPlaceholder$txtPassword" type="password" id="ContentPlaceholder_txtPassword" class="form-control" aria-required="true" aria-label="Password" />
+                                                        
+
+                                                        <div>
+                                                            <span>Password is case sensitive</span>
+                                                        </div>
+                                                        <div aria-live="assertive" role="alert" aria-relevant="additions">
+                                                        
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <div class="col-sm-12 center create_forgot">
+                                                        
+                                                        
+                                                        
+                                                      </div>
+
+                                                    <div class="col-sm-12 center">
+                                                        <input type="submit" name="ctl00$ContentPlaceholder$Button1" value="Login" onclick="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$ContentPlaceholder$Button1&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, false))" id="ContentPlaceholder_Button1" class="btn btn-primary btn-sm" />
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                
+	</div>
+                                
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+            <input name="ctl00$ContentPlaceholder$userType" type="hidden" id="ContentPlaceholder_userType" />
+        </div>
+    
+</div>
+<div id="divIE" class="modal fade " data-backdrop="static" data-keyboard="false" role="dialog" style="visibility: visible;">
+                     <div class="modal-dialog" id="modalIE" style="height: 80%" role="dialog">
+                        <div class="modal-content">
+                          
+                            <div class="modal-body">
+                                <img src="./Public/global/images/Browser-Not-Supported-3a-01.svg" id="ContentPlaceholder_imgIEPrev" title="To get the best experience while using our application,you will need to use Microsoft Edge or Google Chrome latest versions. Outdated browsers can expose your computer to a security risk." alt="To get the best experience while using our application,
+you will need to use Microsoft Edge or Google Chrome latest versions.
+                                    
+Outdated browsers can expose your computer to a security risk." />
+							<div style="text-align: right; margin-bottom:20px;padding:15px;padding-bottom:3px;padding-top:15px" >
+                                    <button type="button" onclick="CloseWindow()" class="btn btn-secondary" style="background-color:#6D6D6D;color:white;padding:4px 14px 4px 14px;border:0;font-size:14px;border-radius:0px;font-family:Verdana, sans-serif" >Close</button>
+
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+    <input type="hidden" name="ctl00$ContentPlaceholder$hdnBrowser" id="ContentPlaceholder_hdnBrowser" value="IE" />
+
+                    <a href="#wrapper" id="return-to-top">
+                        <i class="fa fa-arrow-up" aria-hidden="true"></i>
+                    </a>
+                </div>
+            </div>
+
+            
+
+        
+
+<script type="text/javascript">
+//<![CDATA[
+userType('STUD');//]]>
+</script>
+</form>
+    </div>
+</body>
+</html>

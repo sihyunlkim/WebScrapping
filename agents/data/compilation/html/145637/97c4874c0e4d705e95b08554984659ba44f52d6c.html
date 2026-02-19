@@ -1,0 +1,738 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-148919077-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-148919077-1');
+  </script>
+
+  <meta charset="UTF-8">
+  <title>CS 225 | Collaboration & Academic Integrity</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="base_url" content="/cs225/fa2024">
+
+  <link rel="apple-touch-icon" sizes="57x57" href="/cs225/fa2024/static/img/apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="/cs225/fa2024/static/img/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="/cs225/fa2024/static/img/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="/cs225/fa2024/static/img/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="/cs225/fa2024/static/img/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="/cs225/fa2024/static/img/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="/cs225/fa2024/static/img/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="/cs225/fa2024/static/img/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/cs225/fa2024/static/img/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="/cs225/fa2024/static/img/android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/cs225/fa2024/static/img/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="/cs225/fa2024/static/img/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/cs225/fa2024/static/img/favicon-16x16.png">
+<link rel="manifest" href="/cs225/fa2024/static/img/manifest.json">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/cs225/fa2024/static/img/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdn.rawgit.com/afeld/bootstrap-toc/v1.0.1/dist/bootstrap-toc.min.css">
+
+<link rel="stylesheet" href="/cs225/fa2024/static/css/main.css">
+<link rel="stylesheet" href="/cs225/fa2024/static/css/github-highlighting.css">
+
+<script src="https://code.jquery.com/jquery-3.4.0.min.js" integrity="sha256-BJeo0qm959uMBGb65z40ejJYGSgR7REI4+CW1fNKwOg=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<script src="https://cdn.rawgit.com/afeld/bootstrap-toc/v1.0.1/dist/bootstrap-toc.min.js"></script>
+<script defer type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML" defer></script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+            TeX: {
+                extensions: [ "AMSmath.js", "AMSsymbols.js" ]
+            },
+            tex2jax: {
+                inlineMath: [['\\(','\\)'], ['$$','$$']],
+                displayMath: [['\\[','\\]']]
+            },
+        });
+</script>
+
+<style>
+    svg.graph {
+        overflow: visible;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 10px;
+        display: block;
+        max-width: 95%;
+    }
+</style>
+
+<style>
+  /* Main items  */
+  .main-item {
+    border-top-left-radius: calc(1rem - 1px);
+    border-top-right-radius: calc(1rem - 1px);
+    border-bottom-left-radius: calc(1rem - 1px);
+    border-bottom-right-radius: calc(1rem - 1px);
+    background-size: cover;
+    padding: 10px
+  }
+
+  .main-item-mp {
+    background-image: url('/cs225/fa2024/assets/covers/default_mp.svg')
+  }
+
+  .main-item-lab {
+    background-image: url('/cs225/fa2024/assets/covers/default_lab.svg')
+  }
+
+  .main-item-resource {
+    background-image: url('/cs225/fa2024/assets/covers/notes.svg')
+  }
+
+  .main-item-final-project {
+    background-image: url('/cs225/fa2024/assets/covers/final_project.jpg')
+  }
+
+  .main-item-body {
+    width: 320px;
+    height: 180px;
+    padding: 20px;
+
+    display: flex;
+    border: none !important;
+    flex-direction: column;
+    justify-content: center;
+    background-color: rgba(255, 255, 255, 0.91) !important;
+  }
+
+  .main-item-body:hover, .main-item-body:active {
+    background-color: rgba(255, 255, 255, 0) !important;
+    background: transparent;
+    border: transparent;
+  }
+
+  .main-item-body:hover *, .main-item-body:active * {
+    -webkit-text-fill-color: white !important;
+    -webkit-background-clip: none !important;
+  }
+
+  .main-item-text {
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    background-size: cover;
+  }
+
+  .main-item-text-mp {
+    background-image: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url('/cs225/fa2024/assets/covers/default_mp.svg')
+  }
+
+  .main-item-text-lab {
+    background-image: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url('/cs225/fa2024/assets/covers/default_lab.svg')
+  }
+
+  .main-item-text-final-project {
+    background-image: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url('/cs225/fa2024/assets/covers/final_project.jpg')
+  }
+
+  .main-item-text-resource {
+    background-image: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url('/cs225/fa2024/assets/covers/notes.svg')
+  }
+</style>
+
+</head>
+<body class="mb-3">
+  <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+  <a class="navbar-brand mr-0 mr-md-2" href="/cs225/fa2024/">
+      <img src="/cs225/fa2024/static/img/UIUC_logo.png" alt="UIUC Logo" width="24" height="32" class="d-inline-block align-top mr-2">
+      CS 225
+  </a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbar">
+      <ul class="navbar-nav mr-auto">
+          <li class="nav-item ">
+            <a class="nav-link" href="/cs225/fa2024/pages/lectures.html">Lectures</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/cs225/fa2024/assignments/">Assignments</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/cs225/fa2024/exams/">Exams</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/cs225/fa2024/resources/">Resources</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/cs225/fa2024/pages/course_info.html">Course Info</a>
+          </li>
+          <!--
+          <li class="nav-item ">
+            <a class="nav-link" href="/cs225/fa2024/cs225/fa2024/pages/ec_project.html">EC Project</a>
+        -->
+      </li> 
+            <li class="nav-item ">
+              <a class="nav-link" href="/cs225/fa2024/pages/honors.html">Honors</a>
+        </li> 
+      </ul>
+      <div class="dropdown form-inline my-2 my-lg-0" align="right">
+        <div class="input-group w-100">
+          <input id="searchQuery" class="form-control bg-dark border-secondary text-white" oninput="search()" type="search" placeholder="Search page title" aria-label="Search" autocomplete="off">
+              <!--vertical margin-->
+              <div class="d-none dropdown-toggle" id="search-dropdown" data-toggle="dropdown" align="right"></div>
+            <!-- drop down -->
+              <div class="dropdown-menu mx-2" id="search-dropdown-content" align="right">
+                <div class="text-center">No result</div>
+              </div>
+          <div class="input-group-append">
+            <span class="input-group-text border border-secondary bg-secondary text-light"><i class="fas fa-search"></i></span>
+          </div>
+        </div>
+    </div>
+  </div>
+</nav>
+<script type="text/javascript" src=/cs225/fa2024/static/js/fuse.js></script>
+<script type="text/javascript">
+var list = [
+
+  
+
+  
+
+  
+
+  
+
+  
+    {
+      'title': "Assignments", 'url': "/cs225/fa2024/assignments/"
+    },
+  
+
+  
+
+  
+
+  
+
+  
+    {
+      'title': "Course Information", 'url': "/cs225/fa2024/pages/course_info.html"
+    },
+  
+
+  
+    {
+      'title': "Extra Credit Project", 'url': "/cs225/fa2024/pages/ec_project.html"
+    },
+  
+
+  
+
+  
+    {
+      'title': "Exams", 'url': "/cs225/fa2024/exams/"
+    },
+  
+
+  
+
+  
+
+  
+
+  
+    {
+      'title': "Home", 'url': "/cs225/fa2024/"
+    },
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    {
+      'title': "Lectures", 'url': "/cs225/fa2024/pages/lectures.html"
+    },
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    {
+      'title': "Resources", 'url': "/cs225/fa2024/resources/"
+    },
+  
+
+  
+    {
+      'title': "Student Artwork", 'url': "/cs225/fa2024/pages/student_artwork.html"
+    },
+  
+
+  
+
+  
+
+  
+
+
+ {
+   'title': 'Exam 0', 'url': '/cs225/fa2024/exams/exam0/'
+ },
+
+ {
+   'title': 'Exam 1', 'url': '/cs225/fa2024/exams/exam1/'
+ },
+
+ {
+   'title': 'Exam 2', 'url': '/cs225/fa2024/exams/exam2/'
+ },
+
+ {
+   'title': 'Exam 3', 'url': '/cs225/fa2024/exams/exam3/'
+ },
+
+ {
+   'title': 'Exam 4', 'url': '/cs225/fa2024/exams/exam4/'
+ },
+
+ {
+   'title': 'Exam 5', 'url': '/cs225/fa2024/exams/exam5/'
+ },
+
+ {
+   'title': 'Final Exam', 'url': '/cs225/fa2024/exams/final/'
+ },
+
+
+
+
+
+ {
+   'title': 'Testing with Catch - guide', 'url': '/cs225/fa2024/resources/catch/'
+ },
+
+ {
+   'title': 'Git in CS 225 - guide', 'url': '/cs225/fa2024/resources/course-git/'
+ },
+
+ {
+   'title': 'GDB - guide', 'url': '/cs225/fa2024/resources/gdb/'
+ },
+
+ {
+   'title': 'On Your Own Machine - guide', 'url': '/cs225/fa2024/resources/own-machine/'
+ },
+
+ {
+   'title': 'Simple Git Tutorial - guide', 'url': '/cs225/fa2024/resources/simple-git-tutorial/'
+ },
+
+ {
+   'title': 'Valgrind - guide', 'url': '/cs225/fa2024/resources/valgrind/'
+ },
+
+ {
+   'title': 'WSL Setup Instructions - guide', 'url': '/cs225/fa2024/resources/wsl/'
+ },
+
+
+
+ {
+   'title': 'Lab Schedule - info', 'url': '/cs225/fa2024/info/labs/'
+ },
+
+ {
+   'title': 'Office Hours - info', 'url': '/cs225/fa2024/info/office-hours/'
+ },
+
+ {
+   'title': 'Staff - info', 'url': '/cs225/fa2024/staff/'
+ },
+
+
+
+ {
+   'title': "lab_debug", 'url': '/cs225/fa2024/labs/debug/'
+ },
+
+ {
+   'title': "lab_memory", 'url': '/cs225/fa2024/labs/memory/'
+ },
+
+ {
+   'title': "lab_quacks", 'url': '/cs225/fa2024/labs/quacks/'
+ },
+
+ {
+   'title': "lab_bst", 'url': '/cs225/fa2024/labs/bst/'
+ },
+
+ {
+   'title': "lab_avl", 'url': '/cs225/fa2024/labs/avl/'
+ },
+
+ {
+   'title': "lab_btree", 'url': '/cs225/fa2024/labs/btree/'
+ },
+
+ {
+   'title': "lab_heaps", 'url': '/cs225/fa2024/labs/heaps/'
+ },
+
+ {
+   'title': "lab_huffman", 'url': '/cs225/fa2024/labs/huffman/'
+ },
+
+ {
+   'title': "lab_ml", 'url': '/cs225/fa2024/labs/ml/'
+ },
+
+ {
+   'title': "lab_flow", 'url': '/cs225/fa2024/labs/flow/'
+ },
+
+ {
+   'title': "lab_dict", 'url': '/cs225/fa2024/labs/dict/'
+ },
+
+ {
+   'title': "lab_hash", 'url': '/cs225/fa2024/labs/hash/'
+ },
+
+ {
+   'title': "lab_bloom", 'url': '/cs225/fa2024/labs/bloom/'
+ },
+
+
+
+ {
+   'title': 'mp_stickers', 'url': '/cs225/fa2024/mps/stickers/'
+ },
+
+ {
+   'title': 'mp_lists', 'url': '/cs225/fa2024/mps/lists/'
+ },
+
+ {
+   'title': 'mp_mosaics', 'url': '/cs225/fa2024/mps/mosaics/'
+ },
+
+ {
+   'title': 'mp_traversals', 'url': '/cs225/fa2024/mps/traversals/'
+ },
+
+ {
+   'title': 'mp_mazes', 'url': '/cs225/fa2024/mps/mazes/'
+ },
+
+ {
+   'title': 'mp_puzzle', 'url': '/cs225/fa2024/mps/puzzle/'
+ },
+
+
+
+ {
+   'title': "AVL Trees - note", 'url': '/cs225/fa2024/resources/avl-trees/'
+ },
+
+ {
+   'title': "BFS & DFS - note", 'url': '/cs225/fa2024/resources/bfs-dfs/'
+ },
+
+ {
+   'title': "Binary Search Trees - note", 'url': '/cs225/fa2024/resources/bst/'
+ },
+
+ {
+   'title': "B-Trees - note", 'url': '/cs225/fa2024/resources/btrees/'
+ },
+
+ {
+   'title': "Classes - note", 'url': '/cs225/fa2024/resources/classes/'
+ },
+
+ {
+   'title': "Dijkstra's Algorithm - note", 'url': '/cs225/fa2024/resources/dijkstra/'
+ },
+
+ {
+   'title': "Disjoint Sets - note", 'url': '/cs225/fa2024/resources/disjoint-sets/'
+ },
+
+ {
+   'title': "Hash Table - note", 'url': '/cs225/fa2024/resources/hashtable/'
+ },
+
+ {
+   'title': "Heaps - note", 'url': '/cs225/fa2024/resources/heaps/'
+ },
+
+ {
+   'title': "Inheritance - note", 'url': '/cs225/fa2024/resources/inheritance/'
+ },
+
+ {
+   'title': "Iterators - note", 'url': '/cs225/fa2024/resources/iterators/'
+ },
+
+ {
+   'title': "k-d Trees - note", 'url': '/cs225/fa2024/resources/kd-tree/'
+ },
+
+ {
+   'title': "Linked Lists - note", 'url': '/cs225/fa2024/resources/linked-lists/'
+ },
+
+ {
+   'title': "Minimum Spanning Tree - note", 'url': '/cs225/fa2024/resources/mst/'
+ },
+
+ {
+   'title': "Pointers and References - note", 'url': '/cs225/fa2024/resources/pointers-ref/'
+ },
+
+ {
+   'title': "Queues and Stacks - note", 'url': '/cs225/fa2024/resources/quacks/'
+ },
+
+ {
+   'title': "Stack and Heap Memory - note", 'url': '/cs225/fa2024/resources/stack-heap/'
+ },
+
+ {
+   'title': "Templates - note", 'url': '/cs225/fa2024/resources/templates/'
+ },
+
+ {
+   'title': "Trees - note", 'url': '/cs225/fa2024/resources/trees/'
+ },
+
+
+];
+
+//console.log(list);
+
+var options = {
+  shouldSort: true,
+  tokenize: true,
+  threshold: 0.5,
+  location: 0,
+  distance: 10,
+  maxPatternLength: 32,
+  minMatchCharLength: 1,
+  keys: [
+    'title'
+  ]
+};
+var fuse = new Fuse(list, options);
+
+function search(){
+  var searchQuery = $('#searchQuery').val();
+  var result = fuse.search(searchQuery);
+
+  var dropdown = $('#search-dropdown-content')
+  dropdown.empty()
+
+  let firstText = '';
+
+ for (let i = 0; i < result.length && i < 10; i += 1) {
+   var text = result[i].title;
+   dropdown.append(`<div class="dropdown-item redirect" data-url="${result[i].url}">${result[i].title}</div>`)
+ }
+
+ if (result.length > 0 || searchQuery.length > 0) {
+   $('#search-dropdown').dropdown('show')
+  } else {
+   $('#search-dropdown').dropdown('hide')
+ }
+  $(".redirect").click(redirect)
+}
+
+function redirect(event){
+  var url = $(event.target).data('url');
+  window.location.href = url;
+}
+
+$(() => {
+$(this).keypress(enterPress)
+})
+
+function enterPress(event){
+   var keyCode = (window.event) ? event.which : event.keyCode;
+  if(keyCode == 13){
+    event.preventDefault();
+    var firstChoice = $("#search-dropdown-content").children()[0];
+    if(firstChoice){ firstChoice.click(); }
+  }
+}
+
+</script>
+<!--
+Used to archive content (at end of semester):
+
+<div class="jumbotron m-0 p-4 pb-0 alert-info">
+  <h3>Archived Content</h3>
+  <div>
+      This website is an archive of the Spring 2019 semester of CS 225.<br>
+      <b>→ <a href="https://courses.engr.illinois.edu/cs225/">Click here to view the current semester.</a></b>
+  </div>
+</div>
+-->
+
+
+  <!--
+  <div class="jumbotron m-0 p-4 pb-0 alert-info">
+    <h3>Archived Content</h3>
+    <div>
+        This website is an archive of the Spring 2023 semester of CS 225.<br>
+        <b>→ <a href="https://courses.engr.illinois.edu/cs225/">Click here to view the current semester.</a></b>
+    </div>
+  </div>
+  -->
+
+  <article class="container py-4">
+    <a href="/cs225/fa2024/pages/course_info.html">Back to Course Info</a>
+    <header class="mb-4">
+        <h1 class="text-dark">Collaboration & Academic Integrity</h1>
+    </header>
+    <h2 id="overall-policy">Overall Policy</h2>
+
+<p>At this point in your academic career, you are responsible for knowing and understanding both the broader University of Illinois at Urbana-Champaign <a href="http://studentcode.illinois.edu/">Student Code</a> and the School of Computer Science’s <a href="https://cs.illinois.edu/academics/honor-code">Honor Code</a>. CS 225 generally follows both of these codes with our own interpretation on sanctions:</p>
+
+<ul>
+  <li>Any infraction of academic integrity on an MP will result in a 0 on that MP,
+regardless of when we notify you.</li>
+  <li>Each individual infraction of academic integrity on an MP will result in a 100 point
+penalty in your final course score. Note that this is different, and slightly
+less severe, than the suggested departmental policy.</li>
+  <li>Any form of cheating on exams is unacceptable. The penalty for cheating on an
+exam is an automatic zero on the exam and potentially an 100 point penalty.</li>
+  <li>Any infraction will result in a loss of all extra credit points for the semester.</li>
+  <li>Depending on the severity of the situation, multiple infractions may result in either multiple stacking 100 point penalties (in addition to zeroes on the assignments in question) or an immediate failure of the course.</li>
+</ul>
+
+<p>Please note that every violation of academic integrity will be reported to the department and will become a part of the offending student’s permanent record, even if he/she drops the class before the violation is discovered. Note also that students with academic integrity infractions are not eligible for grade replacement.</p>
+
+<h2 id="ai-coding-tools-generative-ai-policy">AI Coding Tools (Generative AI) Policy</h2>
+
+<p><strong>CS 225 does not permit the use of generative AI tools of any kind.</strong> The assignments in CS 225 are structured to teach you important concepts and develop skills. While you may think that using such tools is only supplemental to your learning, in practice it often teaches you far less than you realize. In a lot of ways, generative AI is akin to having access to ‘a friend’s solution’ (see below for why using your friends code is a poor idea!), except slightly worse because the resulting code may be nonsensical or the composite of multiple differing solutions.</p>
+
+<p>On a more practical level, please be aware that your code is checked for plagiarism and that multiple students relying on the same tools will often produce very similar solutions. At the same time, such tools are not allowed during the exam setting, and an over-reliance on such tools can leave you struggling to code independently on exams or result in less retention of knowledge for future classes.</p>
+
+<h2 id="collaboration-policy">Collaboration policy</h2>
+
+<p>Unless otherwise noted, all assignments are <strong>solo</strong> assignments.</p>
+
+<p>The point of an assignment is to learn things and develop skills. Therefore, you gain nothing if all you do is copy your friend’s code and turn that in, or if you and your friend each do a different half of the assignment. This will hurt you both in 225 (as you will struggle much more on the coding exam questions in the class) and also in your academic career (as 225 is a foundation for many advanced courses).</p>
+
+<p>A better way to collaborate would be to do as much on your own as you can, but to talk things over with others when you get stuck. Discussion and asking questions is always a good thing, but using those things as a crutch and not learning the material yourself is a bad thing. So your goal should always be to do as much on your own as you can, and to ask for hints in the right direction when you are completely stuck. This approach can take a bit longer than simply “asking someone for the answer”, but on the other hand, struggling through your own mistakes until you finally solve the problem will teach you the material far better than will someone simply telling you the solution.</p>
+
+<h3 id="can-i-post-code-on-piazzadiscord-if-i-have-problems">Can I post code on Piazza/Discord if I have problems?</h3>
+
+<p><strong>It is almost never okay to post your code on a public post.</strong> If it is code
+unrelated to the MP for clarification purposes, or maybe just a couple lines
+that does not give any information about your implementation then it should be
+fine. A better solution for more than ~5 lines of code is to submit your code
+on Prairielearn so course staff can see all of the necessary files and debug from
+that, then post a private question with your NetID and a description of your
+error/bug.</p>
+
+<h2 id="keep-implementation-details-out-of-your-discussions">Keep implementation details out of your discussions</h2>
+
+<p>One of the core course goals for CS 225 is to improve your ability to write code and one key aspect of this is training your ability to think creatively and produce a unique solution to open-ended problems. So while it is acceptable (and even encouraged) to talk about assignments with your peers, be aware that <strong>plagiarism can occur even if you do not directly share code!</strong></p>
+
+<p>To avoid this, consider carefully the context and intent behind the problem you are solving. In other words – what skill is the problem trying to teach you? Here are some loose examples: If you have not been given specific function headers or an assignment skeleton, it is not appropriate to give your headers to a friend (learning how to write your own functions ‘in your own style’ is important). Similarly if you made use of a helper function of your own design, you can suggest that your peer write a helper function but should not give your personal implementation. Keep in mind that there are manay ways to accomplish the same task and the goal of an assignment is not to lead everyone to the same conclusion. For example, if you think your solution is more efficient then your friends, feel free to point out where their inefficiency is (and/or offer leading questions about what alternatives might exist) but do not directly suggest your specific implementation.</p>
+
+<h2 id="code-sharing-policy-dont">Code Sharing Policy: Don’t!</h2>
+
+<p>In CS 225, all of the MPs are solo assignments. Each assignment has been crafted to be challenging but accessible and able to be completed.  In fact, many of the data structures that are fundamental to you having a complete understanding of data structures are introduced and learned through assignments.</p>
+
+<p>In some assignments, you create a sharable artifact at the end of the assignment (eg: an image).  We hope you will share these.  However, <strong>you should never share the source code</strong> for basic course assignments, even after the semester.</p>
+
+<h3 id="thought-1-interviewers-want-to-see-my-cs-225-code">Thought 1: Interviewers want to see my CS 225 code!</h3>
+
+<p><strong>FALSE</strong>.  Tech companies target UIUC because of the course work that everyone completes, allowing them to know that every student coming through UIUC is excellent.  Recruiters and interviewers <strong>are not interested</strong> in code that you <em>(and everyone else they talk to)</em> completed as part of a regular course assignment.  Instead, they are interested in projects written outside of regular coursework – which you should share! :)</p>
+
+<p>If you only talk and show off your course work, you’ll be telling a interviewer something they have heard many, many times before.</p>
+
+<h3 id="thought-2-sharing-my-code-helps-my-friends">Thought 2: Sharing my code helps my friends!</h3>
+
+<p><strong>FALSE</strong>.  Completing an MP gives you only a small amount of course credit.  Instead, the vast majority of course credit comes from exams that are crafted from the course assignments.  If you (or your friend) does not understand the code in the assignments, you (or your friend) will struggle on the exam and do far worse in the course than if you had a few small errors in your MP.</p>
+
+<p>If we find your code is used by another student, the University considers both of you in violation of your academic integrity.  <a href="https://cs.illinois.edu/academics/honor-code">You can read more about academic integrity here.</a></p>
+
+<!---
+## University policy about integrity violation
+
+By this point in your education, we expect you're familiar with what is and is
+not acceptable academic behavior.
+
+- Any form of cheating on exams is unacceptable. The penalty for cheating on an
+  exam is an automatic zero on the exam and a full letter grade drop
+- You may not use or refer to solutions written in past semesters or found
+  online.
+- You may not submit your code using another students netid to get around submission timeouts.
+
+
+- For MPs, we allow credited collaboration with a single partner on some MPs.
+  The MP write-ups give you detailed instructions for declaring your
+  collaborators. Each student is still responsible for committing code to their repository
+  for grading. You may only collaborate with students currently taking the
+  course. Do not ask for help from your roommate who took the class last
+  semester, or from your cousin's best friend's girlfriend who took the class
+  in 2006. Do not accept assistance from students not currently enrolled in the
+  class, even if they offer.
+- You may not receive help from anyone outside of course staff and your
+  credited MP partner for that MP. If you are struggling with an MP, course
+  staff will help you better than your friend can, and we won't have to talk to
+  you about an integrity violation.
+
+
+Keep in mind that despite our fairly loose policy, we will be testing your
+individual understanding of the MPs via the exams.
+
+In general we follow the [CS Department
+policy](https://cs.illinois.edu/academics/honor-code)
+on academic integrity, with the following notable exceptions:
+
+- Any infraction of academic integrity on an MP will result in a 0 on that MP,
+  regardless of when we notify you.
+- Any infraction of academic integrity on an MP will result in a 100 point
+  penalty in your final course score. Note that this is different, and slightly
+  less severe, than the suggested departmental policy.
+- Every violation of academic integrity will be reported to the department and
+  will become a part of the offending student's permanent record, even if
+  he/she drops the class before the violation is discovered. Note also that
+  students with academic integrity infractions are not eligible for grade
+  replacement.
+- There are no minor infractions. Do not sign in attendance for your friends.
+  Do not casually lay your scantron sheet face up on the table. Do not give a
+  friend a printout of your code. Do not ask someone who took the class in a
+  previous semester for help of any kind.
+--->
+
+</article>
+
+</body>
+</html>

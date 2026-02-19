@@ -1,0 +1,739 @@
+
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head><meta name="viewport" content="width=device-width, initial-scale=1.0" /><!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-WR9V5K73');</script>
+<!-- End Google Tag Manager --><script>
+  window.TdxGtmContext = {"User":{"Id":0,"UID":"00000000-0000-0000-0000-000000000000","UserName":"","FullName":"Public User","AlertEmail":"publicuser@noreply.com","Role":"Experience User","HasTDNext":false,"StandardApplicationNames":null,"TicketApplicationNames":[],"AssetApplicationNames":[],"ClientPortalApplicationNames":[],"Type":"Technician","Analytics":{"Title":null,"Organization":null}},"Partition":{"Id":3165,"Name":"University of Louisville Production"},"BillableEntity":{"Id":78,"Name":"University of Louisville","SalesForceIdentifier":"0013600000EM5EOAA1","GWMIID":"98119037-f7b6-4488-bf8a-14f2b0004d96"},"Environment":{"ShortName":"PRD"}};
+</script><script src="/TDPortal/Content/Scripts/jquery/2.2.4/jquery.min.js?v=20260213000508"></script><script src="/TDPortal/Content/Scripts/jquery-migrate/1.4.1/jquery-migrate.min.js?v=20260213000508"></script><script src="/TDPortal/Content/Scripts/jquery-ui/1.13.2/jquery-ui-1.13.2.custom.timepicker.min.js?v=20260213000818"></script><link href="/TDPortal/Content/Styles/jquery-ui/1.13.2/jquery-ui.compiled.min.css?v=20260213000820" rel="stylesheet" type="text/css"  /><link href="/TDPortal/Content/bootstrap/3.4.1/dist/css/bootstrap.min.css?v=20260213000508" rel="stylesheet" type="text/css" id="lnkBootstrapCSS" /><script src="/TDPortal/Content/bootstrap/3.4.1/dist/js/bootstrap.min.js?v=20260213000508"></script><link href="/TDPortal/Content/FontAwesome/css/fontawesome.min.css?v=20260213000506" rel="stylesheet" type="text/css" id="lnkFontAwesome" /><link href="/TDPortal/Content/FontAwesome/css/solid.css?v=20260213000506" rel="stylesheet" type="text/css"  /><link href="/TDPortal/Content/FontAwesome/css/regular.css?v=20260213000506" rel="stylesheet" type="text/css"  /><link href="/TDPortal/Content/FontAwesome/css/brands.css?v=20260213000506" rel="stylesheet" type="text/css"  /><link href="/TDPortal/Content/FontAwesome/css/v4-shims.css?v=20260213000506" rel="stylesheet" type="text/css"  /><link href="/TDClient/Styles/bootstrap_custom.min.css?v=20260213000818" rel="stylesheet" type="text/css"  /><link href="/TDClient/Styles/TDStyles.min.css?v=20260213000820" rel="stylesheet" type="text/css"  /><link href="https://service.louisville.edu/TDPortal/BE/Style/78/TDClient/277?v=20250918142029" rel="stylesheet" type="text/css" /><script src="/TDPortal/Content/Scripts/tdx/dist/TDJSFramework.compiled.min.js?v=20260213000818"></script><script src="/TDPortal/Content/Scripts/tdx/dist/modalFocusTrap.min.js?v=20260213000816"></script><script src="/TDPortal/Content/Scripts/underscore/1.12.1/underscore-min.js?v=20260213000508"></script>
+<script src="/TDClient/Scripts/clientOS.min.js?v=20260213000810"></script>
+<script src="/TDClient/Scripts/collapseMe.min.js?v=20260213000810"></script>
+<script src="/TDClient/Scripts/tdsearchfilter.min.js?v=20260213000810"></script>
+<script src="/TDClient/Scripts/SiteSearch.min.js?v=20260213000810"></script>
+<script src="/TDPortal/Content/Scripts/tdx/dist/elasticsearchAutocomplete.min.js?v=20260213000816"></script>
+
+
+  <script>
+
+      $(function () {
+        var masterUi = MasterUI({
+          isPostback: false,
+          baseUrl: '/TDClient/',
+          isTdGoogleAnalyticsEnabled: true,
+          isAuthenticated: false
+          });
+
+        $('#collapseMe').collapseMe({
+          toggleVisibilitySelector: '.navbar-toggle'
+        });
+
+        TeamDynamix.addRequiredFieldHelp();
+      });
+
+      // The sub-nav menu uses padding-top to position itself below the header bar and main navigation sections. When the
+      // window is resized, there is a chance that the content of these header or nav sections wraps, causing the height
+      // to change, potentially covering the sub-nav menu, which is obviously a big usability problem. This function
+      // listens for when the window size or orientation is changing (and also when the window first loads), and adjusts
+      // the padding so that the sub-nav menu appears in the correct location.
+      $(window).bind('load ready resize orientationchange', function () {
+        var headerHeight = $('#divMstrHeader').height();
+        $('#navShim').css({
+          "padding-top": headerHeight
+        });
+
+        $('#content').css({
+          "padding-top": headerHeight,
+          "margin-top": headerHeight * -1
+        });
+      });
+  </script>
+
+  
+  
+
+  
+
+  <script src="/TDPortal/Content/select2/v3/select2.min.js?v=20260213002344"></script><link href="/TDPortal/Content/select2/v3/select2.compiled.min.css?v=20260213002344" rel="stylesheet" type="text/css" id="lnkSelect2" />
+  <script src="/TDClient/Scripts/Share.min.js?v=20260213000504"></script>
+<script src="/TDClient/Scripts/attachmentHandler.min.js?v=20260213000818"></script>
+
+
+  <script>
+
+    function ToggleFavorite() {
+      __doPostBack('ctl00$ctl00$cpContent$cpContent$btnToggleFavorite', '');
+    }
+
+    function shareService() {
+      if ($('#ctl00_ctl00_cpContent_cpContent_shareRecipients').val().trim() === "") {
+        alert('You must first enter a valid email.');
+        $('#btnShare').progressButton('reset');
+      }
+      else {
+        __doPostBack('ctl00$ctl00$cpContent$cpContent$btnSendShare', '');
+      }
+    }
+
+    function closeShareModal() {
+      $('#divShareModal').modal('hide');
+      $('#btnShare').progressButton('reset');
+    }
+
+    function showHideCommentInput(show) {
+      var commentEditor = CKEDITOR.instances['ctl00_ctl00_cpContent_cpContent_txtComments_txtEditor_txtBody'];
+
+      if (show) {
+        $('#ctl00_ctl00_cpContent_cpContent_btnSaveComment').progressButton().progressButton('reset');
+        $('#divComment').show();
+        commentEditor.focus();
+        $("#luFeedCommentNotification").select2("val", null, true);
+        $('#btnComment').hide();
+      } else {
+        $('#divComment').hide();
+        commentEditor.setData('');
+        $("#luFeedCommentNotification").select2("val", null, true);
+        $('#btnComment').show();
+      }
+    }
+
+    $(function () {
+
+      var attachmentHandler = new TeamDynamix.AttachmentHandler({
+        containerSelector: '.js-service-attachments',
+        resultLabelSelector: '#ctl00_ctl00_cpContent_cpContent_lblResults_lblResults-label',
+        baseControllerUrl: '/TDClient/277/Portal/Shared/Attachments',
+        antiForgeryToken: 's_nZ1saiSe6iPOLKSUMh7n6YUW96ZRm0W5a0TGUJP0j7GzUC-TmeqtzTwPIKTpfaCrtLN03Ycbcknj8FNTe08zcHtqo1:Jb2cC2VCC1G6YDcAbMIc0szz1Abmy6qEIOR0T_Wm0uhxi7Cj51bJkc6MfzOcolAc1v1a8UzHOfyEBobM7eNZhGCzv5U1',
+        itemId: 10732,
+        componentId: 47,
+        feedId: 'serviceFeed'
+      });
+
+      $('#btnShare').on('click', function () {
+        shareService();
+      });
+
+      // Don't try and update the table styles if the user wanted to opt out.
+      $('#ctl00_ctl00_cpContent_cpContent_divDescription table:not(.SkipTableFixup)').each(function (table) {
+        var padding = $(this).attr('cellpadding');
+        var spacing = $(this).attr('cellspacing');
+
+        $(this).css("border-collapse", "separate");
+
+        if (spacing) {
+          $(this).css("border-spacing", spacing + "px");
+        }
+
+        $(this).find('td').each(function (cell) { $(this).css('padding', padding + 'px') });
+      });
+
+      
+
+    });
+
+    
+
+  </script>
+
+
+
+<meta property="og:title" content="AI / GenAI Tools" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://service.louisville.edu/TDClient/277/Portal/Requests/ServiceDet?ID=10732" />
+<meta property="og:image" content="https://service.louisville.edu/TDPortal/BE/Logo/78/277" />
+<meta property="og:description" content="We&#39;re responsible for innovative solutions and approaches to Artificial Intelligence (AI) and generative AI (GenAI) tools. Let us help you optimize, create efficiencies and empower your digital applications." />
+  <meta property="og:site_name" content="University of Louisville - Services" />
+  <meta property="article:section" content="Innovation and Continuous Improvement" />
+    <meta property="article:tag" content="request" /><title>
+	Service - AI / GenAI Tools
+</title></head>
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WR9V5K73"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+<form method="post" action="/TDClient/277/Portal/Requests/ServiceDet?ID=10732" onsubmit="javascript:return WebForm_OnSubmit();" id="aspnetForm">
+<div class="aspNetHidden">
+<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
+<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="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" />
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['aspnetForm'];
+if (!theForm) {
+    theForm = document.aspnetForm;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script>
+
+
+<script src="/TDClient/WebResource.axd?d=pynGkmcFUV13He1Qd6_TZMSMQxVWLi4fik2rw1_u_hZsCNzwv5c621ov6_ZX_wzTt5vh-g2&amp;t=638901392248157332" type="text/javascript"></script>
+
+
+<script src="/TDClient/ScriptResource.axd?d=nv7asgRUU0tRmHNR2D6t1NXOAgTb3J37FC1L2PfbYYFmSPm-ANa7n6FP0x7BAsbHeL4jfY3ptd1q7zKKVI7DbuXZcwEoKOwj9WxCI1VrQlbWE1Trg1t1GmJDN43kQMJsB7X8tw2&amp;t=ffffffff93d1c106" type="text/javascript"></script>
+<script src="/TDClient/ScriptResource.axd?d=NJmAwtEo3Ipnlaxl6CMhvmVxW3-Ljsg_2Hna32smxrg-6ogyYAN3UTPsJQ8m1uwzn_kuf2Wpne6NSFmYui3h0wCQhJN3ZUiLTNkvhiIgZpq74-lKmofUPQGJ8own8RI2_mwAcmvlSj2WBnqwm5Wj4cyNvv81&amp;t=5c0e0825" type="text/javascript"></script>
+<script src="/TDClient/ScriptResource.axd?d=dwY9oWetJoJoVpgL6Zq8OLdGoo5BVWQ_Eo60QZTEhEcHeiVfwgY9tLCgzdZ5TRwvrwYEnOvujbNccOVLUfWtUg4HivSIsewg6JABxkBGEqVVV64eiRyCAsPDqh6tUioISUQKB74sWMO4Er2mHrWEIWs_sBM1&amp;t=5c0e0825" type="text/javascript"></script>
+<script src="/TDClient/WebResource.axd?d=xtfVMqdF1exC2MBVkOJwMveStDR5kg3dbZWgIXMXZmB1xXom6CcIrWFgHa7jsp4qJuFW2L5XShudyzlBsIO3JhCfiU5HmL2BDz__mCv9dznmBlEMS7LvcYg6wTdPTrAXIXI2CvtjwlnpZd-j4Zpsx2wG_uA1&amp;t=639065204200000000" type="text/javascript"></script>
+<script src="/TDClient/WebResource.axd?d=sp7vCoAo-SSYfpsQ1sYBBeEDnwCGxDYEwZCM0ler88yoVZIPDXMk1C3XF2L2L0xrbB8Rvhli51TswRlmPIOCZgaY58lKhPr-Pv1jTFJ1oUAu7x6RDtNFZUxbtxs3KYQGLK6FpPD5bKuB0e0NmS9HkAqRVks1&amp;t=639065204200000000" type="text/javascript"></script>
+<script src="/TDClient/WebResource.axd?d=icMURy63hv40LPPfq4rTvmm-RfB_YkC6rEEF_2QOO68q3TseXYNBetRKKgBXJ8mn2e8UIgCPiV23HaQUZbjySMHqSgmYZgLcYltBqwD2_EK8aQ08zBuqc3ZBVZITQrbtn6w46dRxFLibMIQg0Aho73rn8Rpxrzg5YMG_JR0UOrUR0wlZ0&amp;t=639065204200000000" type="text/javascript"></script>
+<script src="/TDClient/WebResource.axd?d=1HpFfNpwNihNfEP1lyJHvdPVqbv8KRoFH4-_ZORUgPOP-bqmmtIJRvFQc7828Vf59O_-fdBXcnwdv-hYp5RptPuHmMR0kGQM0_3rS4Z7sKfC7jy9Cc_8fyfcUWa8psszacEQlAXHPXmNwyRymbGSywEmhrE1&amp;t=639065204200000000" type="text/javascript"></script>
+<script type="text/javascript">
+//<![CDATA[
+function WebForm_OnSubmit() {
+CKEditor_TextBoxEncode('ctl00_ctl00_cpContent_cpContent_shareBody_txtBody', 0); if (typeof(ValidatorOnSubmit) == "function" && ValidatorOnSubmit() == false) return false;
+return true;
+}
+//]]>
+</script>
+
+<div class="aspNetHidden">
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="E24F3D79" />
+	<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="yqn5YptXfYKY/+jJjYKXU8BqdTAzkapdoqo85K6Y0c+Ya9Odo7bqoXumYqZZEVPhewn52CGZLd6ZBFZLkqI1UZjb3cL/ud12uLaqJJcbZQlkLFaPzN9uQa1q5QinaWkpcj7UaA==" />
+</div>
+<script type="text/javascript">
+//<![CDATA[
+Sys.WebForms.PageRequestManager._initialize('ctl00$ctl00$smMain', 'aspnetForm', ['tctl00$ctl00$cpContent$cpContent$UpdatePanel2','','tctl00$ctl00$cpContent$cpContent$upShare','','tctl00$ctl00$cpContent$cpContent$lblResults$ctl00',''], ['ctl00$ctl00$cpContent$cpContent$btnToggleFavorite','','ctl00$ctl00$cpContent$cpContent$btnSendShare',''], [], 90, 'ctl00$ctl00');
+//]]>
+</script>
+
+<div id="ctl00_ctl00_upMain" style="display:none;">
+	
+    <div id="ctl00_ctl00_pbMain" class="progress-box-container"><div class="progress-box-body"><div class="well shadow"><h2 class="h4 gutter-top-none">Updating...</h2><div class="progress" style="margin-bottom: 0;"><div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuemin="0" aria-valuemax="100" style="width: 100%"></div></div></div></div></div>
+  
+</div>
+
+<header id="ctl00_ctl00_navHeader" role="banner">
+
+  <div id="divMstrHeader" class="master-header NoPrint" style="background-color: #fff;">
+
+  
+
+  <div class="logo-header-full hidden-xs">
+
+    
+    <div class="pull-left">
+      <a href="#mainContent" class="sr-only sr-only-focusable">Skip to main content</a>
+    </div>
+
+
+    <div id="ctl00_ctl00_divPageHeader" class="container logo-header clearfix" style="padding: 5px;">
+
+      <div id="divLogo" class="pull-left logo-container">
+
+        <a href="https://louisville.edu/"
+           target="_blank">
+          <img src="/TDPortal/BE/Logo/78/277" alt="University of Louisville Home Page" class="js-logo img-responsive" />
+          <span class="sr-only">(opens in a new tab)</span>
+        </a>
+
+      </div>
+
+      <div class="master-header-right pull-right padding-top padding-bottom">
+
+        
+
+          <div class="pull-left topLevelSearch input-group">
+            <div id="SiteSearch-e698a2b3eab142fca73204da55e20ec0" class="gutter-bottom input-group site-search" style="max-width: 400px;">
+  <div id="SiteSearch-dropdown-e698a2b3eab142fca73204da55e20ec0" class="input-group-btn">
+    <button type="button" id="SiteSearch-filter-e698a2b3eab142fca73204da55e20ec0" class="btn btn-default dropdown-toggle" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false" title="Filter your search by category" data-component="all">
+      <span class="fa-solid fa-solid fa-earth-americas"></span><span class="fa-solid fa-fw fa-nopad fa-caret-down" aria-hidden="true"></span>
+      <span class="sr-only">
+        Filter your search by category. Current category:
+        <span class="js-current-component">All</span>
+      </span>
+    </button>
+    <ul tabindex="-1" aria-label="Filter your search by category" role="menu" class="dropdown-menu" >
+      <li>
+        <a role="menuitem" href="javascript:void(0);" data-component-text="All" data-component="all" data-component-icon="fa-solid fa-earth-americas" title="Search all areas">
+          <span class="fa-solid fa-fw fa-nopad fa-earth-americas" aria-hidden="true"></span>
+          All
+        </a>
+      </li>
+
+      <li aria-hidden="true" class="divider"></li>
+
+        <li role="presentation">
+          <a role="menuitem" href="javascript:void(0);" data-component-text="Knowledge Base" data-component="kb" data-component-icon="fa-lightbulb" title="Search Knowledge Base">
+            <span class="fa-regular fa-fw fa-nopad fa-lightbulb" aria-hidden="true"></span>
+            Knowledge Base
+          </a>
+        </li>
+
+        <li role="presentation">
+          <a role="menuitem" href="javascript:void(0);" data-component-text="Service Catalog" data-component="sc" data-component-icon="fa-compass" title="Search Service Catalog">
+            <span class="fa-solid fa-fw fa-nopad fa-compass" aria-hidden="true"></span>
+            Service Catalog
+          </a>
+        </li>
+
+    </ul>
+  </div>
+
+  <label class="sr-only" for="SiteSearch-text-e698a2b3eab142fca73204da55e20ec0">Search the client portal</label>
+
+  <input id="SiteSearch-text-e698a2b3eab142fca73204da55e20ec0" type="text" class="form-control" autocomplete="off" placeholder="Search the client portal" title="To search for items with a specific tag, enter the # symbol followed by the name of the tag.
+To search for items using exact match, place double quotes around your text." />
+
+  <span class="input-group-btn">
+    <button id="SiteSearch-button-e698a2b3eab142fca73204da55e20ec0" class="btn btn-default" type="button" title="Search">
+      <span class="fa-solid fa-fw fa-nopad fa-search blue" aria-hidden="true"></span>
+      <span class="sr-only">Search</span>
+    </button>
+  </span>
+</div>
+
+<script>
+  $(function() {
+    var siteSearch = new TeamDynamix.SiteSearch({
+      searchUrl: "/TDClient/277/Portal/Shared/Search",
+      autocompleteSearchUrl: '/TDClient/277/Portal/Shared/AutocompleteSearch',
+      autocompleteResultsPosition: 'fixed',
+      autocompleteResultsZIndex: 1000,
+      searchTextBoxSelector: '#SiteSearch-text-e698a2b3eab142fca73204da55e20ec0',
+      searchComponentFilterButtonSelector: '#SiteSearch-filter-e698a2b3eab142fca73204da55e20ec0',
+      searchButtonSelector: '#SiteSearch-button-e698a2b3eab142fca73204da55e20ec0',
+      searchFilterDropdownSelector: '#SiteSearch-dropdown-e698a2b3eab142fca73204da55e20ec0',
+      showKnowledgeBaseOption: true,
+      showServicesOption: true,
+      showForumsOption: false,
+      autoFocusSearch: false
+    });
+  });
+</script>
+          </div>
+
+        
+          <div title="Sign In" class="pull-right gutter-top-sm">
+            <a href="/TDClient/277/Portal/Login.aspx?ReturnUrl=%2fTDClient%2f277%2fPortal%2fRequests%2fServiceDet%3fID%3d10732">
+              Sign In
+            </a>
+          </div>
+        
+      </div>
+
+    </div>
+
+  </div>
+
+  <nav id="ctl00_ctl00_mainNav" class="navbar navbar-default themed tdbar" aria-label="Primary">
+    <div id="navContainer" class="container">
+
+      <div class="navbar-header">
+        <button type="button" class="pull-left navbar-toggle collapsed themed tdbar-button-anchored tdbar-toggle gutter-left" data-toggle="collapse" data-target=".navbar-collapse">
+          <span class="tdbar-button-anchored icon-bar"></span>
+          <span class="tdbar-button-anchored icon-bar"></span>
+          <span class="tdbar-button-anchored icon-bar"></span>
+          <span class="sr-only">Show Applications Menu</span>
+        </button>
+        <a class="navbar-brand hidden-sm hidden-md hidden-lg themed tdbar-button-anchored truncate-be" href="#">
+
+          Client Portal
+        </a>
+      </div>
+
+      <div id="td-navbar-collapse" class="collapse navbar-collapse">
+
+        <ul class="nav navbar-nav nav-collapsing" id="collapseMe">
+
+          
+            <li class="themed tdbar-button-anchored hidden-sm hidden-md hidden-lg">
+              <a href="/TDClient/277/Portal/Login.aspx?ReturnUrl=%2fTDClient%2f277%2fPortal%2fRequests%2fServiceDet%3fID%3d10732">Sign In</a>
+            </li>
+          
+            <li id="divSearch" class="themed tdbar-button-anchored hidden-sm hidden-md hidden-lg">
+              <a href="/TDClient/277/Portal/Shared/Search" title="search">Search</a>
+            </li>
+          
+              <li id="divDesktop5b52d12c-b3cc-4b6b-ae68-ec43efda9a89" class="themed tdbar-button-anchored">
+                <a href="/TDClient/277/Portal/Home/">Home</a>
+              </li>
+            
+
+          
+            <li id="divTDRequests" class="themed tdbar-button-anchored sr-focusable">
+              <a href="/TDClient/277/Portal/Requests/ServiceCatalog">Services</a>
+            </li>
+          
+            <li id="divTDKnowledgeBase" class="themed tdbar-button-anchored sr-focusable">
+              <a href="/TDClient/277/Portal/KB/">Knowledge Base</a>
+            </li>
+          
+
+          <li class="themed tdbar-button-anchored hidden-xs more-items-button" id="moreMenu">
+            <a data-toggle="dropdown" title="More Applications" href="javascript:;">
+              <span class="sr-only">More Applications</span>
+              <span class="fa-solid fa-ellipsis-h" aria-hidden="true"></span>
+            </a>
+            <ul class="dropdown-menu dropdown-menu-right themed tdbar" id="collapsed"></ul>
+          </li>
+
+        </ul>
+      </div>
+
+    </div>
+
+  </nav>
+
+  </div>
+
+  </header>
+
+
+
+<div id="navShim" class="hidden-xs hidden-sm"></div>
+<main role="main">
+  <div id="content">
+    <div id="mainContent" tabindex="-1"></div>
+    
+
+  
+    <nav id="divTabHeader" class="tdbar-sub NoPrint hidden-xs navbar-subnav" aria-label="Services">
+      <a href="#servicesContent" class="sr-only sr-only-focusable">Skip to Services content</a>
+      <div class="container clearfix">
+        <ul class="nav navbar-nav js-submenu" id="servicesSubMenu" style="margin-left: -15px;">
+
+          
+          <li>
+            <a href="/TDClient/277/Portal/Services/ServicesAtoZ">Services A-Z</a>
+          </li>
+          
+          <li>
+            <a href="/TDClient/277/Portal/Requests/ServiceCatalogSearch">Search <span class="sr-only">Services</span></a>
+          </li>
+
+        </ul>
+      </div>
+    </nav>
+
+  
+
+  <div class="container gutter-top">
+    <div id="servicesContent" tabindex="-1" style="outline:none;">
+      
+
+<span id="ctl00_ctl00_cpContent_cpContent_lblResults_ctl00" aria-live="polite" aria-atomic="true"><span id="ctl00_ctl00_cpContent_cpContent_lblResults_lblResults-label" class="red tdx-error-text"></span></span>
+<a id="ctl00_ctl00_cpContent_cpContent_btnSendShare" tabindex="-1" class="hidden" aria-hidden="true" href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$ctl00$cpContent$cpContent$btnSendShare&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))">Blank</a>
+
+<nav aria-label="Breadcrumb">
+  <ol class="breadcrumb">
+    <li><a href="ServiceCatalog">Service Catalog</a></li><li><a href="ServiceCatalog?CategoryID=1367">IT Professional Services</a></li><li class="active"><a href="ServiceCatalog?CategoryID=1408">Innovation and Continuous Improvement</a></li><li class="active">AI / GenAI Tools</li>
+  </ol>
+</nav>
+
+
+
+<div class="row gutter-top">
+
+<div id="divMainContent" class="col-md-8">
+
+  <h1 class="wrap-text">
+    AI / GenAI Tools
+  </h1>
+
+  <div id="ctl00_ctl00_cpContent_cpContent_divTags">
+    <span class="sr-only">Tags</span>
+    <span class="fa-solid fa-tags gray gutter-right-sm" aria-hidden="true" title="Tags"></span>
+    
+        <a href="/TDClient/277/Portal/Requests/ServiceCatalogSearch?SearchText=%23request" id="ctl00_ctl00_cpContent_cpContent_rptTags_ctl00_ctl00_lnkDisplay" title="request">request</a>
+
+      
+  </div>
+
+  
+
+  
+
+  <div id="ctl00_ctl00_cpContent_cpContent_divDescription" class="gutter-top ckeShim"><h2>Coming Soon - Not Currently Available</h2>
+
+<p>The purpose of AI (Artificial Intelligence) and Generative AI Tool access request services is to provide the UofL&nbsp;community with a secure, compliant and supported process for requesting access to generative AI platforms and university-approved tools. These services ensure that AI tools are used responsibly, ethically and in alignment with institutional policies and academic goals.</p>
+
+<h2>Overview of Service</h2>
+
+<p>AI tools are managed by ITS and the IDD team. Access is granted based on eligibility, intended use and compliance with university guidelines for data privacy, security and responsible AI use. The service covers initial access requests, onboarding, training and ongoing support for approved AI and GenAI platforms.</p>
+
+<p><strong>Key Features:</strong></p>
+
+<ul>
+	<li>Online request process for generative AI tool access</li>
+	<li>Review and approval workflow to ensure responsible use</li>
+	<li>Integration with university identity management and authentication systems</li>
+	<li>Training and documentation for ethical and effective AI use</li>
+	<li>Support for troubleshooting, updates, and compliance questions</li>
+</ul>
+
+<p><strong>Benefits:</strong></p>
+
+<ul>
+	<li>Enables innovative teaching, research, and administrative applications</li>
+	<li>Ensures compliance with university, state, and federal regulations</li>
+	<li>Promotes responsible and ethical use of AI technologies</li>
+	<li>Provides support and guidance for maximizing AI benefits</li>
+	<li>Protects university data and intellectual property</li>
+</ul>
+
+<h2>Service Details</h2>
+
+<ul>
+	<li>
+	<p><strong>Core Activities:</strong></p>
+
+	<ul>
+		<li>Review and process access requests for generative AI platforms</li>
+		<li>Provide onboarding and training for approved users</li>
+		<li>Monitor usage and ensure compliance with university policies</li>
+		<li>Offer support for technical issues and responsible use questions</li>
+		<li>Update users on new features, guidelines and best practices</li>
+	</ul>
+	</li>
+	<li>
+	<p><strong>Associated Platforms:</strong><br>
+	University-approved generative AI tools and application&nbsp;portals</p>
+	</li>
+	<li>
+	<p><strong>Performance Metrics:</strong></p>
+
+	<ul>
+		<li>Request response and approval times</li>
+		<li>User satisfaction and feedback</li>
+		<li>Compliance with responsible AI use guidelines</li>
+		<li>Number of successful AI-enabled projects and initiatives</li>
+	</ul>
+	</li>
+</ul>
+
+<h2>Boundaries and Constraints</h2>
+
+<ul>
+	<li>Access is limited to approved university platforms and use cases.</li>
+	<li>Requests must include intended use, data sensitivity and compliance considerations.</li>
+	<li>Use of generative AI tools must comply with university data privacy, security and ethical guidelines.</li>
+	<li>Some tools or features may be restricted based on licensing or regulatory requirements.</li>
+</ul>
+
+<h2>Eligibility</h2>
+
+<p>All University of Louisville faculty, staff, students and research teams are eligible to request access, subject to review and approval.</p></div>
+
+  
+
+  &nbsp;
+
+</div>
+
+<div id="divSidebar" class="col-md-4">
+
+  <span id="ctl00_ctl00_cpContent_cpContent_lnkRequest">
+    <a class="DetailAction " href="TicketRequests/NewForm?ID=006a6dXQkHI_&amp;RequestorType=Service">  <span class="fa-solid fa-circle-right fa-fw" aria-hidden="true"></span>
+Request Service</a>
+  </span>
+  
+
+  <a id="ctl00_ctl00_cpContent_cpContent_btnToggleFavorite" tabindex="-1" class="hidden" aria-hidden="true" href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$ctl00$cpContent$cpContent$btnToggleFavorite&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))">Blank</a>
+
+  
+
+  
+
+  <div id="divAttachments" class="js-service-attachments"></div>
+
+</div>
+
+</div>
+
+
+
+    </div>
+  </div>
+
+
+  </div>
+</main>
+
+
+
+<script type="text/javascript">
+//<![CDATA[
+setNavPosition('TDRequests');window.CKEDITOR_BASEPATH = 'https://service.louisville.edu/TDPortal/Content/ckeditor/';
+//]]>
+</script>
+<script src="https://service.louisville.edu/TDPortal/Content/ckeditor/ckeditor.js?t=C6HH5UF" type="text/javascript"></script>
+<script type="text/javascript">
+//<![CDATA[
+var CKEditor_Controls=[],CKEditor_Init=[];function CKEditor_TextBoxEncode(d,e){var f;if(typeof CKEDITOR=='undefined'||typeof CKEDITOR.instances[d]=='undefined'){f=document.getElementById(d);if(f)f.value=f.value.replace(/</g,'&lt;').replace(/>/g,'&gt;');}else{var g=CKEDITOR.instances[d];if(e&&(typeof Page_BlockSubmit=='undefined'||!Page_BlockSubmit)){g.destroy();f=document.getElementById(d);if(f)f.style.visibility='hidden';}else g.updateElement();}};(function(){if(typeof CKEDITOR!='undefined'){var d=document.getElementById('ctl00_ctl00_cpContent_cpContent_shareBody_txtBody');if(d)d.style.visibility='hidden';}var e=function(){var f=CKEditor_Controls,g=CKEditor_Init,h=window.pageLoad,i=function(){for(var j=f.length;j--;){var k=document.getElementById(f[j]);if(k&&k.value&&(k.value.indexOf('<')==-1||k.value.indexOf('>')==-1))k.value=k.value.replace(/&lt;/g,'<').replace(/&gt;/g,'>').replace(/&amp;/g,'&');}if(typeof CKEDITOR!='undefined')for(var j=0;j<g.length;j++)g[j].call(this);};window.pageLoad=function(j,k){if(k.get_isPartialLoad())setTimeout(i,0);if(h&&typeof h=='function')h.call(this,j,k);};if(typeof Page_ClientValidate=='function'&&typeof CKEDITOR!='undefined')Page_ClientValidate=CKEDITOR.tools.override(Page_ClientValidate,function(j){return function(){for(var k in CKEDITOR.instances){if(document.getElementById(k))CKEDITOR.instances[k].updateElement();}return j.apply(this,arguments);};});setTimeout(i,0);};if(typeof Sys!='undefined'&&typeof Sys.Application!='undefined')Sys.Application.add_load(e);if(window.addEventListener)window.addEventListener('load',e,false);else if(window.attachEvent)window.attachEvent('onload',e);})();CKEditor_Controls.push('ctl00_ctl00_cpContent_cpContent_shareBody_txtBody');
+CKEditor_Init.push(function(){if(typeof CKEDITOR.instances['ctl00_ctl00_cpContent_cpContent_shareBody_txtBody']!='undefined' || !document.getElementById('ctl00_ctl00_cpContent_cpContent_shareBody_txtBody')) return;CKEDITOR.replace('ctl00_ctl00_cpContent_cpContent_shareBody_txtBody',{"autoGrow_maxHeight" : 175, "autoGrow_minHeight" : 175, "contentsCss" : ['https://service.louisville.edu/TDPortal/Content/ckeditor/contents.css', '/TDPortal/Content/FontAwesome/css/fontawesome.min.css', '/TDPortal/Content/FontAwesome/css/brands.min.css', '/TDPortal/Content/FontAwesome/css/regular.min.css', '/TDPortal/Content/FontAwesome/css/solid.min.css', '/TDPortal/Content/FontAwesome/css/v4-shims.min.css'], "height" : "175", "htmlEncodeOutput" : true, "image_previewText" : " ", "removePlugins" : "magicline,devtools,templates,elementspath,fontawesome,youtube,uploadimage,simpleimage,remoteimageblocker", "title" : "Message", "toolbar" : "TDSimple"}); });
+
+var Page_ValidationActive = false;
+if (typeof(ValidatorOnLoad) == "function") {
+    ValidatorOnLoad();
+}
+
+function ValidatorOnSubmit() {
+    if (Page_ValidationActive) {
+        return ValidatorCommonOnSubmit();
+    }
+    else {
+        return true;
+    }
+}
+        Sys.Application.add_init(function() {
+    $create(Sys.UI._UpdateProgress, {"associatedUpdatePanelId":null,"displayAfter":500,"dynamicLayout":true}, null, null, $get("ctl00_ctl00_upMain"));
+});
+//]]>
+</script>
+</form>
+
+
+  
+  
+
+
+
+  <footer role="contentinfo">
+
+    <div class="master-footer">
+      <div style="width: 100%; background-color: #AD0000; color: #FFFFFF" class="container-fluid">
+    <div class="container">
+        <div class="row" style="padding-top: 3.625rem; padding-bottom: 3.625rem">
+            <div class="col-sm-12 col-md-6" style="padding-left: 10px; padding-right: 0">
+                <img src="https://service.louisville.edu/TDPortal/Images/Viewer?fileName=4d43d600-4564-4225-aa55-bc413fbcd14c.png&amp;beidInt=78" alt="University of Louisville Logo" style="width: 100%; max-width: 291px; height: auto" class="js-logo img-responsive">
+            </div>
+            <div class="col-sm-12 col-md-6">
+                <div class="col-sm-12 col-md-6">
+                    <div>
+                        <h4 style="color: #FFFFFF; font-weight: 500">HelpDesk</h4>
+                        <p style="font-weight: 300">Phone: 502-852-7997</p>
+                        <p style="font-weight: 300">Monday-Thursday: 6am - 10pm</p>
+                        <p style="font-weight: 300">Friday: 6am- 5pm</p>
+                        <p style="font-weight: 300">Saturday: 7am - 5pm</p>
+                        <p style="font-weight: 300">Sunday: 10am - 10pm</p>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-6">
+                    <div>
+                        <h4 style="color: #FFFFFF; font-weight: 500">In-Person iTechConnect</h4>
+                        <p style="font-weight: 300">Miller Information Technology Center, Lower Level</p>
+                        <p style="font-weight: 300">Monday-Friday: 8am - 5pm</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+      
+    </div>
+
+  </footer>
+
+
+
+<script>
+
+    
+    
+
+      // Inject the Google Analytics isogram. This must happen here because it
+      // cannot be injected through an external javascript library.
+      (function (i, s, o, g, r, a, m) {
+        i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+          (i[r].q = i[r].q || []).push(arguments)
+        }, i[r].l = 1 * new Date(); a = s.createElement(o),
+          m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+      })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+    
+
+      // Per Incident #6707155. Need to focus on img. pseudo-class :focus-within is not supported in IE
+      (function ($) {
+        var $anchor = $('#divLogo a');
+        var $beLogo = $('#divLogo a img');
+
+        $anchor.focus(function () {
+          $beLogo.addClass('accessibility-focus-on-logo');
+        }).blur(function () {
+          $beLogo.removeClass('accessibility-focus-on-logo');
+        });
+
+        
+        
+          const queryParams = new URLSearchParams(window.location.search);
+          let showChatbot = true;
+          if (queryParams.has('nobot')) {
+            const nobotFlag = queryParams.get('nobot');
+            if (nobotFlag === '1' || nobotFlag === 'true') {
+              showChatbot = false;
+            }
+          }
+
+          if(showChatbot) {
+            $.ajax({
+              url: "/TDClient/277/Portal/Chatbots/GetScript",
+              type: "GET",
+              dataType: 'text',
+              success: function (data) {
+                
+                var jQueryAjaxSettingsCache = jQuery.ajaxSettings.cache;
+                jQuery.ajaxSettings.cache = true;
+                $(document.body).append(data);
+                jQuery.ajaxSettings.cache = jQueryAjaxSettingsCache;
+              }
+            });
+          }
+        
+
+        window.addEventListener("message", (event) => {
+
+          // Only accept events that come from the same origin
+          if (event.origin != window.location.origin) {
+            return;
+          }
+
+          switch (event.data.type) {
+
+            case "authenticate-using-popup":
+              handleAuthenticateUsingPopup(event.data.payload);
+              break;
+
+            case "authenticated-successfully":
+              handleAuthenticatedSuccessfully(event.data.payload);
+              break;
+
+            default:
+              break;
+          }
+
+        });
+
+        function handleAuthenticateUsingPopup(payload) {
+          let loginUrl = '/TDClient/277/Portal/Login.aspx';
+
+          if (payload.successCallbackUrl) {
+            loginUrl += '?SuccessCallbackUrl=' + payload.successCallbackUrl;
+          }
+
+          window.open(loginUrl, "_blank", "popup=1");
+        }
+
+        function handleAuthenticatedSuccessfully() {
+          event.source.close();
+          window.location.href = window.location.href;
+        }
+    })(jQuery);
+
+</script>
+
+</body>
+</html>

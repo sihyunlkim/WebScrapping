@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>DSC 291 Special Topics on Safety in Generative AI (Fall 2025)</title>
+<style>
+:root{
+--bg:#0b0c10;
+--card:#111317;
+--text:#e8eaed;
+--muted:#aab2bd;
+--accent:#6bc1ff;
+--accent-2:#9b9bff;
+--link:#64b5f6;
+--link-hover:#90caf9;
+--border:#22252b;
+}
+html,body{margin:0;background:var(--bg);color:var(--text);font:16px/1.55 system-ui,-apple-system,Segoe UI,Roboto,Inter,Helvetica,Arial,sans-serif}
+a{color:var(--link);text-decoration:none}
+a:hover{text-decoration:underline;color:var(--link-hover)}
+.wrap{max-width:1100px;margin:auto;padding:28px}
+header{display:flex;flex-wrap:wrap;gap:16px;align-items:flex-end;justify-content:space-between;margin-bottom:18px}
+h1{font-size:28px;letter-spacing:.2px;margin:0}
+.pill{display:inline-flex;gap:8px;align-items:center;background:linear-gradient(90deg,var(--accent),var(--accent-2));color:#0b0c10;padding:6px 10px;border-radius:999px;font-weight:600}
+.muted{color:var(--muted)}
+.grid{display:grid;gap:14px}
+@media(min-width:860px){.grid{grid-template-columns:1.2fr .8fr}}
+.card{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:16px}
+h2{font-size:20px;margin:0 0 8px}
+h3{font-size:17px;margin:12px 0 8px}
+.kvs{display:flex;flex-wrap:wrap;gap:10px}
+.kv{border:1px solid var(--border);border-radius:10px;padding:10px 12px}
+.kv b{display:block;font-size:12px;color:var(--muted);text-transform:uppercase;letter-spacing:.12em}
+.kv span{font-weight:600}
+/* table */
+table{width:100%;border-collapse:separate;border-spacing:0 10px}
+thead th{font-size:12px;text-transform:uppercase;letter-spacing:.12em;color:var(--muted);text-align:left;padding:0 10px}
+tbody tr{background:var(--card);border:1px solid var(--border)}
+tbody td{padding:12px 10px;vertical-align:top}
+tbody tr{border-radius:12px}
+tbody tr td:first-child{border-left:1px solid var(--border);border-radius:12px 0 0 12px}
+tbody tr td:last-child{border-right:1px solid var(--border);border-radius:0 12px 12px 0}
+details{border:1px solid var(--border);background:var(--card);border-radius:12px;padding:10px}
+details summary{cursor:pointer;font-weight:700}
+details[open]{outline:1px solid color-mix(in oklab, var(--accent) 40%, transparent)}
+.tag{display:inline-block;border:1px solid var(--border);border-radius:999px;padding:2px 8px;font-size:12px;color:var(--muted);margin-right:6px}
+.flex{display:flex;gap:10px;flex-wrap:wrap}
+.btn{background:transparent;color:var(--text);border:1px solid var(--border);padding:8px 10px;border-radius:10px;cursor:pointer}
+.btn:hover{border-color:color-mix(in oklab, var(--accent) 60%, var(--border))}
+.note{font-size:13px;color:var(--muted)}
+@media print{
+header .pill, .controls{display:none}
+body{background:#fff;color:#111}
+.card, details{background:#fff;border-color:#ddd}
+a{color:#000}
+}
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div>
+        <h1>DSC 291 Safety in Generative AI (Fall 2025)</h1>
+        <div class="muted">Quarter: Sep 30 → Dec 4, 2025 · Tue/Thu · 80 minutes each</div>
+      </div> 
+    </header>
+
+    <!-- Quick facts / easy-to-edit key values -->
+    <section class="grid">
+      <div class="card">
+        <h2>Course Overview</h2>
+        <div class="kvs">
+          <div class="kv"><b>Instructor:</b><span> Prof. Yu-Xiang Wang</span></div>
+          <div class="kv"><b>Teaching Assistants:</b><span> Yingyu Lin, Erchi Wang</span></div>
+           <div class="kv"><b>TA Office Hour:</b><span> Thursday 11-12am at HDSI 155 (EW),  Thursday 3-4 pm at HDSI 239 (YL)</span></div>
+          <div class="kv"><b>Lectures:</b><span> Tuesday and Thursday 9:30 AM - 10:50 AM at PCYNH 121</span></div>
+          <div class="kv"><b>Resources</b><span> 
+            [<a href="Lectures/syllabus.pdf">syllabus</a>, <a href="https://piazza.com/ucsd/fall2025/dsc291_fa25_b00/home" target="_blank">Piazza</a>, <a href="https://www.gradescope.com/courses/1145670" target="_blank">Gradescope</a>, <a href="https://canvas.ucsd.edu/courses/68953" target="_blank">Canvas</a> ]</span></div>
+
+<div class="kv"><b>Acknowledgments</b><span> 
+            <p>We gratefully acknowledge <a href="https://thinkingmachines.ai/"><strong>Thinking Machines</strong></a> for providing <a href="https://thinkingmachines.ai/tinker/">"Tinker"</a> access to the students. Their support partially enables the hands‑on homeworks, model finetuning training demos, and student projects at scale.</p>
+<p class="note">Sponsor recognition does not influence grading, content, or academic policies.</p>
+</span></div>
+        </div>
+
+
+
+
+      </div>
+      <div class="card">
+        <h2>Important Dates</h2>
+        <ul style="margin:0 0 6px 18px">
+          <li><b>Thu 9/25:</b> No class (instructor traveling)</li>
+          <li><b>Tue 11/11:</b> No class – Veterans Day</li>
+          <li><b>Thu 11/27:</b> No class – Thanksgiving</li>
+          <li><b>Tue 12/2:</b> No class – (NeurIPS)</li>
+          <li><b>Thu 12/4:</b> In-class Quiz</li>
+          <li><b> Mon 12/8</b> <a href="symposium_schedule.html">Mini-Symposium - Project presentations</a></li>
+        </ul>
+      </div>
+    </section>
+
+
+ <section class="grid" style="margin-top:14px">
+      <div class="card">
+                        <h2>Your weekly routines</h2>
+        <ul style="margin:0 0 0 18px">
+          <li><b>Lectures:</b> In-person attendance required.</li>
+          <li><b>Weekly homework</b> Done in group of 4. Due each saturday.</li>
+          <li><b>Readings: </b> Due before the Thursday lecture each week. You need to update a reading log (with one-paragraph summary of what you've read). </li> 
+        </ul>
+        <h2>Project Timeline</h2>
+        <ul style="margin:0 0 0 18px">
+          <li><b>Weeks 1–2:</b> team formation & idea brainstorming</li>
+          <li><b>Thu 10/30:</b> <b>Project Proposal Due</b> (2 pages)</li>
+          <li><b>Thu 11/20:</b> <b>Midterm Project Update</b> (5‑minute check‑in)</li>
+          <li><b>Mon 12/8:</b> <b>Final Presentation + Written Report Due</b></li>
+        </ul>
+
+      </div>
+      <div class="card">
+        <h2>Evaluation Breakdown</h2>
+        <ul style="margin:0 0 0 18px">
+          <li>5% Weekly reading log</li>
+          <li>5% Class Attendance / Participation</li>
+          <li>40% Homework (5% each, 8 total)</li>
+          <li>25% Project</li>
+          <li>25% Final Quiz</li>
+          <li><strong>Bonus 5%</strong> In-class presentation <strong>(limited spots — sign up early)</strong></li>
+        </ul>
+      </div>
+    </section>
+
+
+    <section class="card" style="margin-top:14px">
+      <div class="controls" style="display:flex;gap:8px;align-items:center;justify-content:space-between;margin-bottom:6px">
+        <h2 style="margin:0">Weekly Schedule</h2>
+        <div class="flex">
+          <button class="btn" onclick="toggleAll(true)">Open all</button>
+          <button class="btn" onclick="toggleAll(false)">Close all</button>
+          <button class="btn" onclick="window.print()">Print</button>
+        </div>
+      </div>
+
+     <details>
+        <summary>Pre‑Week · Thu 9/25/25 — No Lecture (instructor traveling)</summary>
+
+        <ul>
+
+          <li><b>Reading / videos:</b>  
+            [<a href="https://www.youtube.com/watch?v=QH6QqjIwv68" target="_blank" rel="noopener noreferrer">Hinton interview</a>,  
+            <a href="https://www.youtube.com/watch?v=5KmpT-BoVf4&t=1s" target="_blank" rel="noopener noreferrer">Tucker Carlson-Sam Altman</a>, 
+            <a href="https://www.youtube.com/watch?v=Wb_kOiid-vc" target="_blank" rel="noopener noreferrer">Davos AI Panel (LeCun, Russell and others)</a>
+          ] 
+          </li>
+        </ul>
+      </details>
+
+      <details data-start="2025-09-28" data-end="2025-10-02">
+        <summary>Week 1 · Foundations of GenAI (Tue 9/30, Thu 10/2)</summary>
+        <h3>Reading (due before Thursday lecture):</h3>
+        <ul>
+          <li><b>Required Reading:</b> <i><a href="https://arxiv.org/abs/2108.07258">The Foundation Model</a></i> (Read the intro and at least one subsection from Section 2, 3, 4, or 5.)</li>
+          <li><b>Optional Reading:</b> Sutton’s <i><a href="http://www.incompleteideas.net/IncIdeas/BitterLesson.html">The Bitter Lesson</a></i>; GPT‑2 <i><a href="https://cdn.openai.com/better-language-models/language_models_are_unsupervised_multitask_learners.pdf">Multitask Learners</a></i>; GPT‑3 <i><a href="https://arxiv.org/abs/2005.14165">Few‑Shot Learners</a></i>; <i><a href="https://arxiv.org/abs/2303.12712">Sparks of AGI</a></i>;  <i><a href="https://arxiv.org/abs/2206.07682">Emergent Abilities</a>; </i>; <i><a href="https://arxiv.org/abs/2304.15004">Are Emergent Abilities a Mirage?</a></i> </li>
+        </ul>
+        <h3>Tue 9/30 – Course Intro, Deep Learning Refresher [<a href="Lectures/Lecture1_intro.pdf">slides</a>]</h3>
+        <ul>
+          <li><b>Mini‑lecture:</b> Course overview, Deep Learning Basics .</li>
+          <li><b>Activities:</b> (1) discussion on AI safety videos, (2) vibe‑coding deep learning from scratch.</li>
+        </ul>
+        <h3>Thu 10/2 – Foundation Models & Emerging Abilities [<a href="Lectures/Lecture2.pdf">slides</a>]</h3>
+        <ul>
+          <li><b>Mini‑lecture:</b> zero‑shot, few‑shot / in‑context learning; emergence; prompt engineering (with math + coding).</li>
+          <li><b>Activities:</b> (1) groups explain one emerging ability from readings; (2) vibe‑code a simple in‑class game; (3) groups explain one potential vulnerability.</li>
+        </ul>
+        <h3>Homework (due Saturday):</h3>
+        <ul>
+          <li><b>HW1:</b> <a href="Homeworks/HW1_instruction.html">vibe‑code a ResNet image classifier (JAX/PyTorch) for MNIST.</a> [<a href="Homeworks/digit_classification_from_scratch.ipynb">code example in ipynb</a>]</li>
+        </ul>
+      </details>
+
+      <details data-start="2025-10-05" data-end="2025-10-09">
+        <summary>Week 2 · LLMs & Diffusion Models (Tue 10/7, Thu 10/9)</summary>
+        <h3>Reading (due before Thursday lecture):</h3>
+        <ul>
+          <li><b>Required:</b> <a href="https://jalammar.github.io/illustrated-transformer/">Illustrated Transformer</a>, <a href="https://model-spec.openai.com/2025-09-12.html">OpenAI “Spec”</a></li> 
+          <li><b>Optional:</b> <a href="https://cdn.openai.com/research-covers/language-unsupervised/language_understanding_paper.pdf">Original GPT paper</a>,  <a href="https://arxiv.org/abs/2203.02155">Instruction Finetuning of LLMs</a>, 
+            <a href="https://arxiv.org/abs/2501.12948">DeepSeek-R1</a>,  <a href="https://openai.com/index/teen-safety-freedom-and-privacy/">Altman statement on Teen Safety</a></li>
+        </ul>
+        <h3>Tue 10/7 – LLM Fundamentals, Pretraining [<a href="Lectures/Lecture3_llm.pdf"> slides </a>]</h3>
+        <ul>
+          <li><b>Mini‑lecture:</b> LLMs, attention mechanism, pretraining, scaling laws.</li>
+          <li><b>Discussion:</b> Building LLM from scratch</li>
+        </ul>
+        <h3>Thu 10/9 – Post‑Training & Safety Alignment [<a href="Lectures/Lecture4_alignment.pdf">slides</a>] </h3>
+        <ul>
+          <li><b>Mini‑lecture:</b> SFT, RLHF, safety alignment.</li>
+          <li><b>Student Presentation #1:</b> reflections on the GPT “Spec”.[<a href="Lectures/OpenAI_Specs.pdf">slides</a>]</li>
+        </ul>
+        <h3>Homework (due Saturday):</h3>
+        <ul>
+          <li><b>HW2:</b> <a href="Homeworks/HW2_instruction.html">vibe‑code a one‑layer Transformer (JAX/PyTorch) and train on movie‑review data.</a>[<a href="Homeworks/HW2_data.zip">data</a>]</li>
+        </ul>
+      </details>
+
+      <details data-start="2025-10-12" data-end="2025-10-16">
+        <summary>Week 3 · GenAI as Agents (Tue 10/14, Thu 10/16)</summary>
+        <h3>Reading (due before Thursday lecture):</h3>
+        <ul>
+          <li><b>Required:</b> <a href="https://arxiv.org/abs/2006.11239">Denoising Diffusion Model</a>, <a href="https://arxiv.org/abs/2306.06070">Towards a Generalist Agent for the Web</a>  </li>
+          <li><b>Optional:</b> <a href="https://arxiv.org/abs/2103.00020">CLIP Paper</a>, <a href="https://arxiv.org/abs/2011.13456">Score-based Generative Model and SDE</a>, <a href="https://arxiv.org/abs/2507.15855v3">“LLM Agent that won Gold Medal at IMO”</a>, <a href="https://arxiv.org/abs/2107.03374">Codex</a>, <a href="https://arxiv.org/abs/2203.07814">AlphaCode</a>, <a href="https://aima.cs.berkeley.edu/4th-ed/pdfs/newchap02.pdf">AIMA book Chapter 2: Intelligence Agent, Task Environment and Rationality</a>,  <a href="https://aclanthology.org/2024.emnlp-tutorials.3.pdf">ACL'24 Tutorial on Language Agents</a></li>
+        </ul>
+        <h3>Tue 10/14 – VAEs & Diffusion Models</h3>
+        <ul>
+          <li><b>Mini‑lecture:</b> VAE & diffusion architectures; training basics. [<a href="Lectures/Lecture5_diffusion.pdf">slides</a>]</li>
+          <li><b>Activity:</b> “Can you identify AI‑generated images?” (class game).</li>
+        </ul>
+        <h3>Thu 10/16 – LLM as Agents</h3>
+        <ul>
+          <li><b>Mini‑lecture:</b> AI agent → LLM agent; capabilities & risks. [<a href="Lectures/Lecture6_agents.pdf">slides</a>]</li>
+          <li><b>Discussion:</b> propose an LLM‑agent idea and share.</li>
+          <li><b>Student Presentations:</b> #2 Computer‑Use Agent [<a href="Lectures/Computer_Use_Agents.pdf">slides</a>]; #3 Coding Agent [<a href="Lectures/AlphaCode_presentation_sarthak.pdf">slides</a>].</li>
+        </ul>
+        <h3>Homework (due Saturday):</h3>
+        <ul>
+          <li><b>HW3:</b> <a href="Homeworks/HW3_instruction.html">vibe‑code a simple diffusion model to generate 1D data points.</a> [<a href="Homeworks/HW3_data_generator.ipynb">ipynb Notebook for Data Generation</a>]</li>
+        </ul>
+      </details>
+
+      <details data-start="2025-10-19" data-end="2025-10-23">
+        <summary>Week 4 · Inference‑Time Adversarial Attacks (Tue 10/21, Thu 10/23)</summary>
+        <h3>Reading (due before Thursday lecture):</h3>
+        <ul>
+          <li><b>Required:</b> <a href="https://arxiv.org/abs/2310.08419">Jailbreaking attack</a>; <a href="https://arxiv.org/pdf/2504.18575">prompt‑injection attack</a> </li>
+          <li><b>Optional:</b> <a href="https://arxiv.org/abs/1412.6572">Adversarial attack (Goodfellow et al 2014)</a>,  <a href="https://arxiv.org/abs/2404.16873">Adversarial prompting for LLMs</a>, <a href="https://arxiv.org/abs/1706.06083">Defense by Adversarial Training</a>, <a href="https://arxiv.org/abs/1902.02918">Defence by Randomized smoothing</a>, <a href="https://arxiv.org/abs/1711.00851">Certified Defense via Convex Outer Polytope</a>.</li>
+        </ul>
+        <h3>Tue 10/21 – Adversarial Attacks on Images</h3>
+        <ul>
+          <li><b>Mini‑lecture:</b> adversarial attacks on image classifiers; how/why they work. [<a href="Lectures/Lecture7_adversarial_examples.pdf">Slides</a>]</li>
+          <li><b>Experiment:</b> implement gradient‑descent attack in class.</li>
+          <li><b>Student Presentations:</b> #5 Randomized Smoothing [<a href="Lectures/Randomized_Smoothing_Keertana_Shweta.pdf">Slides</a>].</li>
+        </ul>
+        <h3>Thu 10/23 – Jailbreaking & Prompt Injection</h3>
+        <ul>
+          <li><b>Mini-Lecture:</b> jailbreaking and prompt-injection: attacks and defenses. [<a href="Lectures/Lecture8_jailbreaking.pdf">Slides</a>]</li>
+          <li><b>Student Presentations:</b> #6 Complexity of Jailbreaking attack in the wild [<a href="Lectures/Jailbreak_Conv_Comp.pdf">slides</a>]; #7 WASP: a benchmark for realistic prompt injection attacks [<a href="Lectures/WASP_presentation.pdf">slides</a>].</li>
+          <li><b>Experiment:</b>  jailbreak "TritonGPT".
+        </ul>
+        <h3>Homework (due Saturday):</h3>
+        <ul>
+          <li><b>HW4:</b> <a href="Homeworks/HW4_instruction.html">implement an adversarial attack against your MNIST ResNet.</a> </li>
+        </ul>
+      </details>
+
+      <details data-start="2025-10-26" data-end="2025-10-30">
+        <summary>Week 5 · Training/Post‑Training Time Attacks (Tue 10/28, Thu 10/30)</summary>
+        <h3>Reading (due before Thursday lecture):</h3>
+        <ul>
+          <li><b>Required:</b> <a href="https://arxiv.org/abs/2302.10149">Poisoning Web-Scale Training Datasets</a>  <a href="https://www.nature.com/articles/s41586-024-07566-y.pdf">AI Model Collapses when trained on recursively generated data</a> </li>
+          <li><b>Optional:</b> <b> Data Poisoning</b><a href="https://arxiv.org/abs/1804.00792">Poison Frogs: Data-Poisoning Attack </a>, <a href="https://arxiv.org/abs/1712.05526">Targeted Backdoor Attacks</a>, <a href="https://arxiv.org/abs/1905.05897">Clean-Label Data Poisoning</a>, <a href="https://arxiv.org/abs/2510.07192">LLM Data Poisoning</a>, <a href="https://arxiv.org/abs/2311.14455">Universal Jailbreak Backdoors (Poisoned HF)</a> , <a href="https://arxiv.org/abs/2305.00944">Poisoning During Instruction Tuning</a>, <a href="https://arxiv.org/abs/2310.03693">Fine-tuning Aligned LMs Compromises Safety</a>,<a href="https://arxiv.org/abs/2410.13722">Persistent Pre-Training Poisoning of LLMs</a>, <a href="https://arxiv.org/abs/2506.14913">Winter Soldier: Indirect Pre-Training Poisoning</a>.<br>
+<b> Model Collapse</b> 
+<a href="https://arxiv.org/abs/2307.01850">Self-Consuming Generative Models Go MAD </a>, <a href="https://arxiv.org/abs/2402.07712">Model Collapse Demystified: The Case of Regression</a>, <a href="https://arxiv.org/abs/2410.04840">Larger Models Amplify Model Collapse</a>, <a href="https://arxiv.org/abs/2404.01413"> Is Model Collapse Inevitable?</a>
+          </li>
+
+
+        </ul>
+        <h3>Tue 10/28 – Data Poisoning Attacks</h3>
+        <ul>
+          <li><b>Mini‑lecture:</b> threat models, feasibility, and harms of poisoning. [<a href="Lectures/Lecture9_data_poisoning.pdf">slides</a>]</li>
+          <li><b>Discussion:</b> preventing data poisoning (process & technical mitigations).</li>
+          <li><b>Student Presentations:</b>   #4 Adversarially Robust Training [<a href="Lectures/Robustness_training_bten_1.3.pdf">slides</a>]</li>
+        </ul>
+        <h3>Thu 10/30 – Model Collapse</h3>
+        <ul>
+          <li><b>Mini‑lecture:</b> data poisoning attacks (Part 2) and training on synthetic data [<a href="Lectures/Lecture10_model_collapse.pdf">slides</a>]</li>
+          <li><b>Student Presentations:</b> #8 Model Collapse [<a href="Lectures/model_collapse_jonah.pdf">slides</a>]; #9 Preventing Collapse. [<a href="Lectures/preventing_model_collapse_suraj.pdf">slides</a>]</li>
+        </ul>
+        <h3>Homework (due Saturday):</h3>
+        <ul>
+          <li><b>HW5:</b> <a href="Homeworks/HW5_instruction.html">Poison your ML models with a backdoor.</a>  [<a href="Homeworks/pikachu.png">pikachu.png</a>]</li>
+        </ul>
+      </details>
+
+      <details data-start="2025-11-02" data-end="2025-11-06">
+        <summary>Week 6 · Societal Risks (Tue 11/4, Thu 11/6)</summary>
+        <h3>Reading (due before Thursday lecture):</h3>
+        <ul>
+          <li><b>Required:</b> <a href="https://not-just-memorization.github.io/extracting-training-data-from-chatgpt.html">Extracting Training Data from ChatGPT</a>, Section 1 and a chosen subsection of Section 2 in <a href="https://arxiv.org/abs/2303.15715">Foundation Models and Fair Use</a>, <a href="https://yoshuabengio.org/2025/06/03/introducing-lawzero/">Law-Zero Initiative by Yoshua Bengio</a><br> </li>
+          <li><b>Optional:</b>   
+<b>Data Privacy risks</b>
+<a href="https://arxiv.org/abs/1610.05820">Membership Inference Attacks (2016)</a>,
+<a href="https://arxiv.org/abs/2402.07841">MIA on Large Language Models</a>, 
+<a href="https://arxiv.org/abs/2301.13188">Data Reconstruction from Diffusion Models</a>, 
+<a href="https://arxiv.org/abs/2012.07805">Extracting Training Data from LLMs</a>, 
+<a href="https://scholar.harvard.edu/files/salil/files/differential_privacy_primer_nontechnical_audience.pdf">Differential Privacy: Non-Technical Primer</a><br>
+
+<b>Copyright</b>
+<a href="https://law.stanford.edu/wp-content/uploads/2024/09/2024-09-30_How-Gerative-AI-Turns-Copyright-Upside-Down.pdf">How Generative AI Turns Copyright Upside Down</a>,
+<a href="https://nicholas.carlini.com/writing/2025/privacy-copyright-and-generative-models.html">Carlini blog: Privacy, Copyright & Generative AI</a>,
+<a href="https://arxiv.org/abs/2302.10870">Provable Copyright Protection</a>, 
+<a href="https://arxiv.org/abs/2305.14822">Can Copyright Be Reduced to Privacy?</a><br>
+
+<b>On Existential Risks</b>
+
+<a href="https://carnegiecouncil.org/media/podcast/20200219-future-artificial-intelligence-stuart-russell">The future of AI with Stuart Russell</a>,
+<a href="https://www.scientificamerican.com/article/ai-is-an-existential-threat-just-not-the-way-you-think/">Essay: AI is an existential-threat, just not the way you think</a>, 
+<a href="https://www.palladiummag.com/2025/01/31/the-failed-strategy-of-artificial-intelligence-doomers/">Essay: Failed Strategy of AI Doomers</a>, <a href="https://arxiv.org/abs/2507.11473">Chain-of-Thought Monitorability</a><br>
+
+           </li>
+        </ul>
+        <h3>Tue 11/4 – Data Privacy & Copyright</h3>
+        <ul>
+          <li><b>Mini‑lecture:</b> differential privacy. [<a href="Lectures/Lecture11_privacy.pdf">slides</a>]</li>
+          <li><b>Student Presentations:</b> #10 Privacy attack [<a href="Lectures/parjanya_privacy_attacks_llms.pdf">slides</a>]; #11 Does differential privacy solve copyright? [<a href="Lectures/privacy_and_copyright_tino.pdf">slides</a>]</li>
+        </ul>
+        <h3>Thu 11/6 – Existential Threats of AI</h3>
+        <ul>
+          <li><b>Mini‑lecture:</b> existential risk landscape. [<a href="Lectures/Lecture12_existential_risk.pdf">slides</a>] </li>
+          <li><b>AI Doomers vs Boomers.  Student presentations: </b> #12  AI is an existential threat and it's coming quicker than you think. [<a href="Lectures/ai_doomerism_derrick_yao.pdf">slides</a>]  </li>
+          <li><b>Discussion: What are your opinions (after learning how GenAI works)?</b>
+        </ul>
+        <h3>Homework (due Saturday):</h3>
+        <ul>
+          <li><b>HW6:</b> <a href="Homeworks/HW6_instruction.html">Membership Inference Attack.</a></li>
+        </ul>
+      </details>
+
+      <details data-start="2025-11-09" data-end="2025-11-13">
+        <summary>Week 7 · Deepfakes, Plagiarism & AI Detectors (Tue 11/11, Thu 11/13)</summary>
+        <h3>Reading (due before Thursday lecture):</h3>
+        <ul>
+          <li><b>Required:</b> <a href="https://arxiv.org/abs/1912.11035">CNN-generated images (GAN / DeepFake) are surprisingly easy to spot</a>, <a href="https://arxiv.org/abs/2301.11305">DetectGPT</a></li>
+          <li><b>Optional:</b>  
+             <b>Are AI Text Detectors reliable?</b> 
+            <a href="https://arxiv.org/abs/2412.05139">A practical examination of AI-Generated Text detectors for LLMs,</a>  <a href="https://arxiv.org/abs/2304.02819">GPT detectors are biased" </a>
+
+            <b> More work on AI Image detectors: </b>
+    <a href="https://arxiv.org/abs/2302.10174">static features with linear probing or kNN works more robustly</a>, <a href="https://arxiv.org/abs/2303.09295">Diffusion-Reconstruction Errors</a>,  <a href="https://arxiv.org/abs/2312.10461">Neighboring Pixel Relationships</a>, <a href="https://arxiv.org/abs/2312.00195">Using CLIP features</a>.  
+          </li>
+        </ul>
+        <h3>Tue 11/11 – Veterans Day</h3>
+        <ul><li><b>No class.</b></li></ul>
+        <h3>Thu 11/13 – AI Detectors</h3>
+        <ul>
+          <li><b>Mini‑lecture:</b> distinguishing AI from human text/media. [<a href="Lectures/Lecture13_ai_detectors.pdf">slides</a>]</li>
+          <li><b>Student Presentation:</b> #14 State-of-the-Art AI detectors. [<a href="Lectures/aldan_ai_detector_talk.pdf">slides</a>]</li>
+        </ul>
+        <h3>Homework (due Saturday):</h3>
+        <ul>
+          <li><b>HW7:</b> <a href="Homeworks/HW7_instruction.html">Build an AI classifier, and apply your adversarial attacks to break it.</a> [<a href="Homeworks/trump_fake.jpg">Test DeepFake Image</a>]</li>
+        </ul>
+      </details>
+
+      <details data-start="2025-11-16" data-end="2025-11-20">
+        <summary>Week 8 · Watermarking GenAI (Tue 11/18, Thu 11/20)</summary>
+        <h3>Reading (due before Thursday lecture):</h3>
+        <ul>
+          <li><b>Required:</b> <a href="https://arxiv.org/abs/2301.10226"> Paper by Kirchenbauer et al</a>;  <a href="https://scottaaronson.blog/?p=6823">Blog by Scott Aaronson</a></li>
+          <li><b>Optional:</b> <a href="https://arxiv.org/abs/2306.01953">"Invisible Watermarks are Provably Removable Using GenAI"</a>, <a href="https://arxiv.org/abs/2306.17439">Provable Robust Watermark</a>,  <a href="https://arxiv.org/abs/2306.04634">On the reliability of watemarks for LLMs</a>, <a href="https://arxiv.org/abs/2311.04378">Watermarking in the sand</a>, <a href="https://ai.meta.com/blog/stable-signature-watermarking-generative-ai/">Stable Signature (Image watermark by Meta)</a>, <a href="https://arxiv.org/abs/2411.18479">SoK: Watemarking for AI-Generated Content</a>,  <a href="https://www.nature.com/articles/s41586-024-08025-4">SynthID paper</a> </li>
+        </ul>
+        <h3>Tue 11/18 – Watermarking LLMs (Part 1)</h3>
+        <ul>
+          <li><b>Mini‑lecture:</b> history of watermarking; modern approaches. [<a href="Lectures/Lecture14_watermarking_part1.pdf">Slides</a>] </li>
+          <li><b>Discussion:</b> pros/cons; where watermarking fits in the safety stack.</li>
+          </ul>
+        <h3>Thu 11/20 – Watermarking LLMs (Part 2)</h3>
+        <ul>
+          <li><b>Mini‑lecture:</b> distortion-free watermarks. [<a href="Lectures/Lecture15_watermarking_part2.pdf">Slides</a>]</li>
+          <li><b>Student Presentation:</b> #15 "On the reliability of Watermarks for LLMs"     
+        </ul>
+        <h3>Homework (due Saturday):</h3>
+        <ul>
+          <li><b>HW8:</b> <a href="Homeworks/HW8_instruction.html"> "LLM" watermarking from scratch.</a> </li>
+        </ul>
+      </details>
+
+      <details data-start="2025-11-23" data-end="2025-11-27">
+        <summary>Week 9 · Watermarking LLMs (Part 3) and beyond (Tue 11/25, Thu 11/27)</summary>
+        <h3>Reading (due before Thursday lecture):</h3>
+        <ul>
+          <li><b>Required:</b> <a href="https://arxiv.org/abs/2302.03162">Protecting Language Generation Models via Invisible Watermarking</a>  </li>
+          <li><b>Optional:</b> 
+          <a href="https://arxiv.org/html/2508.21072v1"> First place solution to watermarking attack competition</a>, <a href="https://blog.genlaw.org/pdfs/genlaw_icml2024/27.pdf">What Lies Ahead for Generative AI Watermarking (Legal / Policy angle)</a>, <a href="https://arxiv.org/abs/2410.18861">Provably robust atermarks for Open-Source Language Models</a></li>
+        </ul>
+        <h3>Tue 11/25 – Beyond AI Content Watermarking</h3>
+        <ul>
+          <li><b>Mini‑lecture:</b> Undetectable watermarks and beyond [<a href="Lectures/Lecture16_watermarking_part3.pdf">slides</a>].</li>
+          <li><b>Student presentation:</b> 
+#16 "Watermarking in the Sand"  [<a href="Lectures/ben_watermarking_in_the_sand.pdf"> slides </a>]<br>
+            #17 Watermarked detected, but so what? Technical vs regulatory concerns  [<a href="Lectures/johndriscoll_watermarked_sowhat.pdf">slides</a>]</li>
+        </ul>
+        <h3>Thu 11/27 – Thanksgiving</h3>
+        <ul><li><b>No class.</b></li></ul>
+        <h3>Homework:</h3>
+        <ul>
+          <li>No new HW assigned due to the holiday (use time for projects).</li>
+        </ul>
+      </details>
+
+      <details data-start="2025-11-30" data-end="2025-12-04">
+        <summary>Week 10 · NeurIPS in San Diego (Tue 12/2, Thu 12/4)</summary>
+        <h3>Reading:</h3>
+        <ul>
+          <li>No readings assigned; focus on finalizing projects.</li>
+        </ul>
+        <h3>Tue 12/2 – Instructor at NeurIPS</h3>
+        <ul><li><b>No class.</b></li></ul>
+        <h3>Thu 12/4 – Quiz.</h3>
+                <ul><li><b>In-class closed-book quiz on the course materials. </b></li></ul>
+
+      </details>
+
+      <details data-start="2025-12-07" data-end="2025-12-13">
+        <summary>Week 11 Mini-Symposium on GenAI Safety (Exam Week,  Mon 12/8) ·  </summary>
+        <h3> <a href ="symposium_schedule.html">Mini-Symposium on GenAI Safety (Project Presentations) </a></h3>
+          <ul>
+            <li> Adam Dziedzic and Franziska giving keynote (CISPA Helmholtz Center for Information Security)</li>
+          <li>Team presentations: 15 minutes + 5 minutes Q&A each team.</li>
+        </ul>
+
+        <h3>Project report</h3>
+        <ul>
+          <li>Submit final report by the end of the day.</li>
+        </ul>
+      </details>
+    </section>
+
+
+
+
+   
+
+
+<script>
+  // Auto-open the "current" week in LOCAL time.
+  // Window = [data-start (Tue), next Sunday 00:00 after data-end (Thu))
+  // Robust: compares YYYYMMDD integers, avoids UTC parsing issues.
+
+  document.addEventListener('DOMContentLoaded', () => {
+    const weeks = Array.from(document.querySelectorAll('details[data-start][data-end]'));
+    if (!weeks.length) return;
+
+    // Convert Y,M,D to YYYYMMDD integer (local date only)
+    const serial = (y, m, d) => y * 10000 + m * 100 + d;
+
+    // Parse "YYYY-MM-DD" safely (no Date parsing)
+    const parseSerial = (iso) => {
+      const m = (iso || '').trim().match(/^(\d{4})-(\d{2})-(\d{2})$/);
+      if (!m) return NaN;
+      return serial(+m[1], +m[2], +m[3]);
+    };
+
+    // Compute the serial for the next Sunday after a given local Y-M-D
+    const nextSundaySerial = (y, m, d) => {
+      const dt = new Date(y, m - 1, d); // local
+      const dow = dt.getDay();          // 0=Sun,1=Mon,...,6=Sat
+      let add = (7 - dow) % 7;
+      if (add === 0) add = 7;           // if already Sunday, push to NEXT Sunday
+      const sun = new Date(y, m - 1, d + add);
+      return serial(sun.getFullYear(), sun.getMonth() + 1, sun.getDate());
+    };
+
+    // Today's local YYYYMMDD
+    const now = new Date();
+    const todayS = serial(now.getFullYear(), now.getMonth() + 1, now.getDate());
+
+    // Build and sort candidate windows
+    const items = weeks.map(el => {
+      const startISO = el.getAttribute('data-start');
+      const endISO   = el.getAttribute('data-end');
+      const startS   = parseSerial(startISO);
+      const endS     = parseSerial(endISO);
+
+      if (!Number.isFinite(startS) || !Number.isFinite(endS)) return null;
+
+      // Derive next Sunday (exclusive end of the "current week" window)
+      const y = +startISO.slice(0,4), m = +startISO.slice(5,7), d = +startISO.slice(8,10); // not used here but handy
+      const y2 = +endISO.slice(0,4),   m2 = +endISO.slice(5,7),  d2 = +endISO.slice(8,10);
+      const sundayExclusiveS = nextSundaySerial(y2, m2, d2);
+
+      return { el, startS, sundayExclusiveS };
+    })
+    .filter(Boolean)
+    .sort((a, b) => a.startS - b.startS);
+
+    // Close all first
+    weeks.forEach(d => d.open = false);
+
+    if (!items.length) return;
+
+    // Choose current window: [startS, sundayExclusiveS)
+    let chosen = items.find(x => todayS >= x.startS && todayS < x.sundayExclusiveS);
+
+    // Fallback: if before first start -> first; if after last Sunday -> last
+    if (!chosen) {
+      if (todayS < items[0].startS) chosen = items[0];
+      else chosen = items[items.length - 1];
+    }
+
+    chosen.el.open = true;
+  });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,1067 @@
+
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head><meta name="viewport" content="width=device-width, initial-scale=1.0" /><!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-WR9V5K73');</script>
+<!-- End Google Tag Manager --><script>
+  window.TdxGtmContext = {"User":{"Id":0,"UID":"00000000-0000-0000-0000-000000000000","UserName":"","FullName":"Public User","AlertEmail":"publicuser@noreply.com","Role":"Experience User","HasTDNext":false,"StandardApplicationNames":null,"TicketApplicationNames":[],"AssetApplicationNames":[],"ClientPortalApplicationNames":[],"Type":"Technician","Analytics":{"Title":null,"Organization":null}},"Partition":{"Id":39,"Name":"University of Delaware Production"},"BillableEntity":{"Id":2,"Name":"University of Delaware","SalesForceIdentifier":"0013600000EM5DZAA1","GWMIID":"da8d35af-8e79-4c92-8ba6-96e448896764"},"Environment":{"ShortName":"PRD"}};
+</script><script src="/TDPortal/Content/Scripts/jquery/2.2.4/jquery.min.js?v=20260213000508"></script><script src="/TDPortal/Content/Scripts/jquery-migrate/1.4.1/jquery-migrate.min.js?v=20260213000508"></script><script src="/TDPortal/Content/Scripts/jquery-ui/1.13.2/jquery-ui-1.13.2.custom.timepicker.min.js?v=20260213000818"></script><link href="/TDPortal/Content/Styles/jquery-ui/1.13.2/jquery-ui.compiled.min.css?v=20260213000820" rel="stylesheet" type="text/css"  /><link href="/TDPortal/Content/bootstrap/3.4.1/dist/css/bootstrap.min.css?v=20260213000508" rel="stylesheet" type="text/css" id="lnkBootstrapCSS" /><script src="/TDPortal/Content/bootstrap/3.4.1/dist/js/bootstrap.min.js?v=20260213000508"></script><link href="/TDPortal/Content/FontAwesome/css/fontawesome.min.css?v=20260213000506" rel="stylesheet" type="text/css" id="lnkFontAwesome" /><link href="/TDPortal/Content/FontAwesome/css/solid.css?v=20260213000506" rel="stylesheet" type="text/css"  /><link href="/TDPortal/Content/FontAwesome/css/regular.css?v=20260213000506" rel="stylesheet" type="text/css"  /><link href="/TDPortal/Content/FontAwesome/css/brands.css?v=20260213000506" rel="stylesheet" type="text/css"  /><link href="/TDPortal/Content/FontAwesome/css/v4-shims.css?v=20260213000506" rel="stylesheet" type="text/css"  /><link href="/TDClient/Styles/bootstrap_custom.min.css?v=20260213000818" rel="stylesheet" type="text/css"  /><link href="/TDClient/Styles/TDStyles.min.css?v=20260213000820" rel="stylesheet" type="text/css"  /><link href="https://services.udel.edu/TDPortal/BE/Style/2/TDClient/32?v=20250402122353" rel="stylesheet" type="text/css" /><script src="/TDPortal/Content/Scripts/tdx/dist/TDJSFramework.compiled.min.js?v=20260213000818"></script><script src="/TDPortal/Content/Scripts/tdx/dist/modalFocusTrap.min.js?v=20260213000816"></script><script src="/TDPortal/Content/Scripts/underscore/1.12.1/underscore-min.js?v=20260213000508"></script>
+<script src="/TDClient/Scripts/clientOS.min.js?v=20260213000810"></script>
+<script src="/TDClient/Scripts/collapseMe.min.js?v=20260213000810"></script>
+<script src="/TDClient/Scripts/tdsearchfilter.min.js?v=20260213000810"></script>
+<script src="/TDClient/Scripts/SiteSearch.min.js?v=20260213000810"></script>
+<script src="/TDPortal/Content/Scripts/tdx/dist/elasticsearchAutocomplete.min.js?v=20260213000816"></script>
+<link id="ctl00_ctl00_lnkFavicon" rel="icon" href="https://services.udel.edu/TDPortal/BE/Icon/2/32?v=20210427131326" />
+
+    
+    <script async src="//www.googletagmanager.com/gtag/js?id=G-2HC93Y759P"></script>
+    <script>
+
+      $(function () {
+
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        // Be sure to set the proper cookie domain to the customer's full subdomain when sending the pageview hit.
+        gtag('config', 'G-2HC93Y759P', { 'cookie_domain': 'services.udel.edu' });
+
+        });
+
+    </script>
+
+  
+
+  <script>
+
+      $(function () {
+        var masterUi = MasterUI({
+          isPostback: false,
+          baseUrl: '/TDClient/',
+          isTdGoogleAnalyticsEnabled: true,
+          isAuthenticated: false
+          });
+
+        $('#collapseMe').collapseMe({
+          toggleVisibilitySelector: '.navbar-toggle'
+        });
+
+        TeamDynamix.addRequiredFieldHelp();
+      });
+
+      // The sub-nav menu uses padding-top to position itself below the header bar and main navigation sections. When the
+      // window is resized, there is a chance that the content of these header or nav sections wraps, causing the height
+      // to change, potentially covering the sub-nav menu, which is obviously a big usability problem. This function
+      // listens for when the window size or orientation is changing (and also when the window first loads), and adjusts
+      // the padding so that the sub-nav menu appears in the correct location.
+      $(window).bind('load ready resize orientationchange', function () {
+        var headerHeight = $('#divMstrHeader').height();
+        $('#navShim').css({
+          "padding-top": headerHeight
+        });
+
+        $('#content').css({
+          "padding-top": headerHeight,
+          "margin-top": headerHeight * -1
+        });
+      });
+  </script>
+
+  
+  
+  
+  <script src="/TDPortal/Content/select2/v3/select2.min.js?v=20260213002344"></script><link href="/TDPortal/Content/select2/v3/select2.compiled.min.css?v=20260213002344" rel="stylesheet" type="text/css" id="lnkSelect2" />
+  <script src="/TDClient/Scripts/attachmentHandler.min.js?v=20260213000818"></script>
+
+  <style type="text/css">
+    .honey-pot-div {
+      display: none;
+    }
+  </style>
+
+  <script>
+    
+
+    function shareArticle() {
+      if ($('#ctl00_ctl00_cpContent_cpContent_shareRecipients').val().trim() === "") {
+        alert('You must first enter a valid email.');
+        $('#btnShare').progressButton('reset');
+      }
+      else {
+        __doPostBack('ctl00$ctl00$cpContent$cpContent$btnSendShare', '');
+      }
+    }
+
+    function closeShareModal() {
+      $('#divShareModal').modal('hide');
+      $('#btnShare').progressButton('reset');
+    }
+
+    function toggleFeedback(isHelpful) {
+      $('#divHelpfulComments').show();
+      $('#divHelpfulYesNo').hide();
+      $('#ctl00_ctl00_cpContent_cpContent_hdnIsHelpful').val(isHelpful);
+      $('#ctl00_ctl00_cpContent_cpContent_txtComments').focus();
+    }
+
+    function toggleFeedbackResult() {
+      $('#divWasHelpful, #divFeedbackRecorded, #divHelpfulComments, #divHelpfulYesNo').toggle();
+    }
+
+    // The following two functions were added as a result of ticket ID: 1392522. We are generating these buttons dynamically to
+    // prevent bots from clicking them and posting feedback on an article. Additionally, we have an input that is hidden from
+    // the user. If a bot enters text in that input, which it likely will (bots love filling out forms), then we don't accept the
+    // form submission
+    function generateFeedbackButtons() {
+      var $btnHelpfulYes = $('<button id="btnHelpfulYes" type="button" class="btn btn-primary gutter-left" onclick="toggleFeedback(1);">Yes</button>');
+      var $btnHelpfulNo = $('<button id="btnHelpfulNo" type="button" class="btn btn-primary gutter-left-sm" onclick="toggleFeedback(0);">No</button>');
+
+      $('#divWasHelpful').append($btnHelpfulYes);
+      $('#divWasHelpful').append($btnHelpfulNo);
+    }
+    function attemptAddFeedback(e) {
+      if ($('#honeyPot').val() !== '') {
+        e.preventDefault();
+        window.location.reload();
+      }
+    }
+
+    function cancelFeedback() {
+      $('#ctl00_ctl00_cpContent_cpContent_txtComments').val('');
+      $('#divHelpfulComments, #divHelpfulYesNo').toggle();
+    }
+
+    function confirmDeleteFeedback(id) {
+      if (confirm('Are you sure you want to delete this feedback? This cannot be undone.')) {
+        $('#ctl00_ctl00_cpContent_cpContent_hdnFeedbackID').val(id);
+        __doPostBack('ctl00$ctl00$cpContent$cpContent$btnDeleteFeedback', '');
+      }
+    }
+
+    function toggleAddressed(id, isAddressed) {
+      $('#ctl00_ctl00_cpContent_cpContent_hdnFeedbackID').val(id);
+      $('#ctl00_ctl00_cpContent_cpContent_hdnIsAddressed').val(isAddressed);
+      __doPostBack('ctl00$ctl00$cpContent$cpContent$btnToggleAddressed', '');
+    }
+
+    $(function () {
+      
+
+      generateFeedbackButtons();
+      $('[data-toggle="popover"]').popover();
+
+      var attachmentHandler = new TeamDynamix.AttachmentHandler({
+        containerSelector: '.js-article-attachments',
+        resultLabelSelector: '#ctl00_ctl00_cpContent_cpContent_lblResults_lblResults-label',
+        baseControllerUrl: '/TDClient/32/Portal/Shared/Attachments',
+        antiForgeryToken: 'x2Ear4g4VSOjHTBNpZVNFURGxIenPBzDtl376ZDPWxnPeEFy93KG0_bHf8p_tewc-uUcNCQOsSHFqOnvh_8jqhv8h8Q1:-v8Pi3nAdPKvn7OsJKLsyJ66EsqnoLbLDi9V_zTjYfuBJl1Z2lUoFlYZxkst0N9lc6pbFnoMAx-7_MamQBObrnjCFtY1',
+        itemId: 1150,
+        componentId: 26,
+        feedId: 'articleFeed',
+        readOnly: false
+      });
+
+      $('#btnShare').on('click', function () {
+        shareArticle();
+      });
+
+      // Don't try and update the table styles if the user wanted to opt out.
+      $('#ctl00_ctl00_cpContent_cpContent_divBody table:not(.SkipTableFixup)').each(function () {
+        var padding = $(this).attr('cellpadding');
+        var spacing = $(this).attr('cellspacing');
+
+        $(this).css("border-collapse", "separate");
+
+        if (spacing) {
+          $(this).css("border-spacing", spacing + "px");
+        }
+
+        $(this).find('td').each(function () { $(this).css('padding', padding + 'px') });
+      });
+
+      
+    });
+
+    
+  </script>
+
+
+
+<meta property="og:title" content="University Generative AI Services List" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://services.udel.edu/TDClient/32/Portal/KB/ArticleDet?ID=1150" />
+<meta property="og:image" content="https://services.udel.edu/TDPortal/BE/Logo/2/32" />
+<meta property="og:description" content="This article includes a list of generative AI tools/services available at the University." />
+  <meta property="og:site_name" content="University of Delaware - Knowledge Base" />
+  <meta property="article:section" content="Generative AI" />
+  <meta property="article:published_time" content="2024-09-30T03:51Z" />
+  <meta property="article:modified_time" content="2026-02-06T18:37Z" />
+    <meta property="article:tag" content="generative-ai" />
+    <meta property="article:tag" content="artificial-intelligence" />
+    <meta property="article:tag" content="ai" />
+    <meta property="article:tag" content="generativeaiproject" /><title>
+	Article - University Generative AI Se...
+</title></head>
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WR9V5K73"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+<form method="post" action="/TDClient/32/Portal/KB/ArticleDet?ID=1150" onsubmit="javascript:return WebForm_OnSubmit();" id="aspnetForm">
+<div class="aspNetHidden">
+<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
+<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="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" />
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['aspnetForm'];
+if (!theForm) {
+    theForm = document.aspnetForm;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script>
+
+
+<script src="/TDClient/WebResource.axd?d=pynGkmcFUV13He1Qd6_TZMSMQxVWLi4fik2rw1_u_hZsCNzwv5c621ov6_ZX_wzTt5vh-g2&amp;t=638901392248157332" type="text/javascript"></script>
+
+
+<script src="/TDClient/ScriptResource.axd?d=nv7asgRUU0tRmHNR2D6t1NXOAgTb3J37FC1L2PfbYYFmSPm-ANa7n6FP0x7BAsbHeL4jfY3ptd1q7zKKVI7DbuXZcwEoKOwj9WxCI1VrQlbWE1Trg1t1GmJDN43kQMJsB7X8tw2&amp;t=ffffffff93d1c106" type="text/javascript"></script>
+<script src="/TDClient/ScriptResource.axd?d=NJmAwtEo3Ipnlaxl6CMhvmVxW3-Ljsg_2Hna32smxrg-6ogyYAN3UTPsJQ8m1uwzn_kuf2Wpne6NSFmYui3h0wCQhJN3ZUiLTNkvhiIgZpq74-lKmofUPQGJ8own8RI2_mwAcmvlSj2WBnqwm5Wj4cyNvv81&amp;t=5c0e0825" type="text/javascript"></script>
+<script src="/TDClient/ScriptResource.axd?d=dwY9oWetJoJoVpgL6Zq8OLdGoo5BVWQ_Eo60QZTEhEcHeiVfwgY9tLCgzdZ5TRwvrwYEnOvujbNccOVLUfWtUg4HivSIsewg6JABxkBGEqVVV64eiRyCAsPDqh6tUioISUQKB74sWMO4Er2mHrWEIWs_sBM1&amp;t=5c0e0825" type="text/javascript"></script>
+<script src="/TDClient/WebResource.axd?d=xtfVMqdF1exC2MBVkOJwMveStDR5kg3dbZWgIXMXZmB1xXom6CcIrWFgHa7jsp4qJuFW2L5XShudyzlBsIO3JhCfiU5HmL2BDz__mCv9dznmBlEMS7LvcYg6wTdPTrAXIXI2CvtjwlnpZd-j4Zpsx2wG_uA1&amp;t=639065204200000000" type="text/javascript"></script>
+<script src="/TDClient/WebResource.axd?d=sp7vCoAo-SSYfpsQ1sYBBeEDnwCGxDYEwZCM0ler88yoVZIPDXMk1C3XF2L2L0xrbB8Rvhli51TswRlmPIOCZgaY58lKhPr-Pv1jTFJ1oUAu7x6RDtNFZUxbtxs3KYQGLK6FpPD5bKuB0e0NmS9HkAqRVks1&amp;t=639065204200000000" type="text/javascript"></script>
+<script src="/TDClient/WebResource.axd?d=icMURy63hv40LPPfq4rTvmm-RfB_YkC6rEEF_2QOO68q3TseXYNBetRKKgBXJ8mn2e8UIgCPiV23HaQUZbjySMHqSgmYZgLcYltBqwD2_EK8aQ08zBuqc3ZBVZITQrbtn6w46dRxFLibMIQg0Aho73rn8Rpxrzg5YMG_JR0UOrUR0wlZ0&amp;t=639065204200000000" type="text/javascript"></script>
+<script src="/TDClient/WebResource.axd?d=1HpFfNpwNihNfEP1lyJHvdPVqbv8KRoFH4-_ZORUgPOP-bqmmtIJRvFQc7828Vf59O_-fdBXcnwdv-hYp5RptPuHmMR0kGQM0_3rS4Z7sKfC7jy9Cc_8fyfcUWa8psszacEQlAXHPXmNwyRymbGSywEmhrE1&amp;t=639065204200000000" type="text/javascript"></script>
+<script type="text/javascript">
+//<![CDATA[
+function WebForm_OnSubmit() {
+CKEditor_TextBoxEncode('ctl00_ctl00_cpContent_cpContent_shareBody_txtBody', 0); if (typeof(ValidatorOnSubmit) == "function" && ValidatorOnSubmit() == false) return false;
+return true;
+}
+//]]>
+</script>
+
+<div class="aspNetHidden">
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="784CA02E" />
+</div>
+<script type="text/javascript">
+//<![CDATA[
+Sys.WebForms.PageRequestManager._initialize('ctl00$ctl00$smMain', 'aspnetForm', ['tctl00$ctl00$cpContent$cpContent$UpdatePanel1','','tctl00$ctl00$cpContent$cpContent$upFeedbackGrid','','tctl00$ctl00$cpContent$cpContent$lblResults$ctl00',''], ['ctl00$ctl00$cpContent$cpContent$btnSubmitComments','','ctl00$ctl00$cpContent$cpContent$btnToggleSubscribe','','ctl00$ctl00$cpContent$cpContent$btnToggleFavorite','','ctl00$ctl00$cpContent$cpContent$btnSendShare',''], [], 90, 'ctl00$ctl00');
+//]]>
+</script>
+
+<div id="ctl00_ctl00_upMain" style="display:none;">
+	
+    <div id="ctl00_ctl00_pbMain" class="progress-box-container"><div class="progress-box-body"><div class="well shadow"><h2 class="h4 gutter-top-none">Updating...</h2><div class="progress" style="margin-bottom: 0;"><div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuemin="0" aria-valuemax="100" style="width: 100%"></div></div></div></div></div>
+  
+</div>
+
+<header id="ctl00_ctl00_navHeader" role="banner">
+
+  <div id="divMstrHeader" class="master-header NoPrint" style="background-color: #fff;">
+
+  
+
+  <div class="logo-header-full hidden-xs">
+
+    
+    <div class="pull-left">
+      <a href="#mainContent" class="sr-only sr-only-focusable">Skip to main content</a>
+    </div>
+
+
+    <div id="ctl00_ctl00_divPageHeader" class="container logo-header clearfix" style="padding: 5px;">
+
+      <div id="divLogo" class="pull-left logo-container">
+
+        <a href="https://www.udel.edu/"
+           target="_blank">
+          <img src="/TDPortal/BE/Logo/2/0" alt="University of Delaware Home Page" class="js-logo img-responsive" />
+          <span class="sr-only">(opens in a new tab)</span>
+        </a>
+
+      </div>
+
+      <div class="master-header-right pull-right padding-top padding-bottom">
+
+        
+
+          <div class="pull-left topLevelSearch input-group">
+            <div id="SiteSearch-a01a1feb3ddd4b938bbcee9a8a6b0c5d" class="gutter-bottom input-group site-search" style="max-width: 400px;">
+  <div id="SiteSearch-dropdown-a01a1feb3ddd4b938bbcee9a8a6b0c5d" class="input-group-btn">
+    <button type="button" id="SiteSearch-filter-a01a1feb3ddd4b938bbcee9a8a6b0c5d" class="btn btn-default dropdown-toggle" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false" title="Filter your search by category" data-component="all">
+      <span class="fa-solid fa-solid fa-earth-americas"></span><span class="fa-solid fa-fw fa-nopad fa-caret-down" aria-hidden="true"></span>
+      <span class="sr-only">
+        Filter your search by category. Current category:
+        <span class="js-current-component">All</span>
+      </span>
+    </button>
+    <ul tabindex="-1" aria-label="Filter your search by category" role="menu" class="dropdown-menu" >
+      <li>
+        <a role="menuitem" href="javascript:void(0);" data-component-text="All" data-component="all" data-component-icon="fa-solid fa-earth-americas" title="Search all areas">
+          <span class="fa-solid fa-fw fa-nopad fa-earth-americas" aria-hidden="true"></span>
+          All
+        </a>
+      </li>
+
+      <li aria-hidden="true" class="divider"></li>
+
+        <li role="presentation">
+          <a role="menuitem" href="javascript:void(0);" data-component-text="Knowledge Base" data-component="kb" data-component-icon="fa-lightbulb" title="Search Knowledge Base">
+            <span class="fa-regular fa-fw fa-nopad fa-lightbulb" aria-hidden="true"></span>
+            Knowledge Base
+          </a>
+        </li>
+
+        <li role="presentation">
+          <a role="menuitem" href="javascript:void(0);" data-component-text="Service Catalog" data-component="sc" data-component-icon="fa-compass" title="Search Service Catalog">
+            <span class="fa-solid fa-fw fa-nopad fa-compass" aria-hidden="true"></span>
+            Service Catalog
+          </a>
+        </li>
+
+    </ul>
+  </div>
+
+  <label class="sr-only" for="SiteSearch-text-a01a1feb3ddd4b938bbcee9a8a6b0c5d">Search the client portal</label>
+
+  <input id="SiteSearch-text-a01a1feb3ddd4b938bbcee9a8a6b0c5d" type="text" class="form-control" autocomplete="off" placeholder="Search the client portal" title="To search for items with a specific tag, enter the # symbol followed by the name of the tag.
+To search for items using exact match, place double quotes around your text." />
+
+  <span class="input-group-btn">
+    <button id="SiteSearch-button-a01a1feb3ddd4b938bbcee9a8a6b0c5d" class="btn btn-default" type="button" title="Search">
+      <span class="fa-solid fa-fw fa-nopad fa-search blue" aria-hidden="true"></span>
+      <span class="sr-only">Search</span>
+    </button>
+  </span>
+</div>
+
+<script>
+  $(function() {
+    var siteSearch = new TeamDynamix.SiteSearch({
+      searchUrl: "/TDClient/32/Portal/Shared/Search",
+      autocompleteSearchUrl: '/TDClient/32/Portal/Shared/AutocompleteSearch',
+      autocompleteResultsPosition: 'fixed',
+      autocompleteResultsZIndex: 1000,
+      searchTextBoxSelector: '#SiteSearch-text-a01a1feb3ddd4b938bbcee9a8a6b0c5d',
+      searchComponentFilterButtonSelector: '#SiteSearch-filter-a01a1feb3ddd4b938bbcee9a8a6b0c5d',
+      searchButtonSelector: '#SiteSearch-button-a01a1feb3ddd4b938bbcee9a8a6b0c5d',
+      searchFilterDropdownSelector: '#SiteSearch-dropdown-a01a1feb3ddd4b938bbcee9a8a6b0c5d',
+      showKnowledgeBaseOption: true,
+      showServicesOption: true,
+      showForumsOption: false,
+      autoFocusSearch: false
+    });
+  });
+</script>
+          </div>
+
+        
+          <div title="Sign In" class="pull-right gutter-top-sm">
+            <a href="/TDClient/32/Portal/Login.aspx?ReturnUrl=%2fTDClient%2f32%2fPortal%2fKB%2fArticleDet%3fID%3d1150">
+              Sign In
+            </a>
+          </div>
+        
+      </div>
+
+    </div>
+
+  </div>
+
+  <nav id="ctl00_ctl00_mainNav" class="navbar navbar-default themed tdbar" aria-label="Primary">
+    <div id="navContainer" class="container">
+
+      <div class="navbar-header">
+        <button type="button" class="pull-left navbar-toggle collapsed themed tdbar-button-anchored tdbar-toggle gutter-left" data-toggle="collapse" data-target=".navbar-collapse">
+          <span class="tdbar-button-anchored icon-bar"></span>
+          <span class="tdbar-button-anchored icon-bar"></span>
+          <span class="tdbar-button-anchored icon-bar"></span>
+          <span class="sr-only">Show Applications Menu</span>
+        </button>
+        <a class="navbar-brand hidden-sm hidden-md hidden-lg themed tdbar-button-anchored truncate-be" href="#">
+
+          Client Portal
+        </a>
+      </div>
+
+      <div id="td-navbar-collapse" class="collapse navbar-collapse">
+
+        <ul class="nav navbar-nav nav-collapsing" id="collapseMe">
+
+          
+            <li class="themed tdbar-button-anchored hidden-sm hidden-md hidden-lg">
+              <a href="/TDClient/32/Portal/Login.aspx?ReturnUrl=%2fTDClient%2f32%2fPortal%2fKB%2fArticleDet%3fID%3d1150">Sign In</a>
+            </li>
+          
+            <li id="divSearch" class="themed tdbar-button-anchored hidden-sm hidden-md hidden-lg">
+              <a href="/TDClient/32/Portal/Shared/Search" title="search">Search</a>
+            </li>
+          
+              <li id="divDesktop7c0a8e2f-6198-4325-89f7-e67a0a8deddd" class="themed tdbar-button-anchored">
+                <a href="/TDClient/32/Portal/Home/">Service Portal Home</a>
+              </li>
+            
+
+          
+            <li id="divTDRequests" class="themed tdbar-button-anchored sr-focusable">
+              <a href="/TDClient/32/Portal/Requests/ServiceCatalog">Services</a>
+            </li>
+          
+            <li id="divTDKnowledgeBase" class="themed tdbar-button-anchored sr-focusable">
+              <a href="/TDClient/32/Portal/KB/">Knowledge Base</a>
+            </li>
+          
+
+          <li class="themed tdbar-button-anchored hidden-xs more-items-button" id="moreMenu">
+            <a data-toggle="dropdown" title="More Applications" href="javascript:;">
+              <span class="sr-only">More Applications</span>
+              <span class="fa-solid fa-ellipsis-h" aria-hidden="true"></span>
+            </a>
+            <ul class="dropdown-menu dropdown-menu-right themed tdbar" id="collapsed"></ul>
+          </li>
+
+        </ul>
+      </div>
+
+    </div>
+
+  </nav>
+
+  </div>
+
+  </header>
+
+
+
+<div id="navShim" class="hidden-xs hidden-sm"></div>
+<main role="main">
+  <div id="content">
+    <div id="mainContent" tabindex="-1"></div>
+    
+
+  <nav id="ctl00_ctl00_cpContent_divTabHeader" class="tdbar-sub NoPrint hidden-xs navbar-subnav" aria-label="Knowledge Base">
+      <a href="#kbContent" class="sr-only sr-only-focusable">Skip to Knowledge Base content</a>
+      <div class="container clearfix">
+        <ul class="nav navbar-nav js-submenu" id="kbSubMenu" style="margin-left: -15px;">
+          
+          <li>
+            <a href="/TDClient/32/Portal/KB/Search">Search <span class="sr-only">Articles</span></a>
+          </li>
+
+          
+          
+        </ul>
+      </div>
+    </nav>
+  
+
+  <div id="kbContent" class="container gutter-top gutter-bottom" tabindex="-1" style="outline:none;">
+    
+
+<input type="hidden" name="ctl00$ctl00$cpContent$cpContent$hdnFeedbackID" id="ctl00_ctl00_cpContent_cpContent_hdnFeedbackID" />
+<input type="hidden" name="ctl00$ctl00$cpContent$cpContent$hdnIsAddressed" id="ctl00_ctl00_cpContent_cpContent_hdnIsAddressed" />
+
+<span id="ctl00_ctl00_cpContent_cpContent_lblResults_ctl00" aria-live="polite" aria-atomic="true"><span id="ctl00_ctl00_cpContent_cpContent_lblResults_lblResults-label" class="red tdx-error-text"></span></span>
+
+<a id="ctl00_ctl00_cpContent_cpContent_btnSendShare" tabindex="-1" class="hidden" aria-hidden="true" href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$ctl00$cpContent$cpContent$btnSendShare&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))">Blank</a>
+
+<div class="clearfix">
+  <nav aria-label="Breadcrumb">
+    <ol class="breadcrumb pull-left">
+      <li><a href="/TDClient/32/Portal/KB/">Knowledge Base</a></li><li class="active"><a href="/TDClient/32/Portal/KB/?CategoryID=198">Generative AI</a></li><li class="active">University Generative AI Services List</li>
+    </ol>
+  </nav>
+  <span class="js-open-monitor" style="display: none;"></span>
+</div>
+
+
+
+<div class="row gutter-top">
+
+<div id="divMainContent" class="col-md-8">
+
+<h1 class="gutter-top" style="-ms-word-wrap: break-word; word-wrap: break-word;">
+  University Generative AI Services List
+</h1>
+
+<div id="ctl00_ctl00_cpContent_cpContent_divTags">
+  <span class="sr-only">Tags</span>
+  <span class="fa-solid fa-tags gray gutter-right-sm" aria-hidden="true" title="Tags"></span>
+  
+      <a href="/TDClient/32/Portal/KB/Search?SearchText=%2523generative-ai" id="ctl00_ctl00_cpContent_cpContent_rptTags_ctl00_TagControl1_lnkDisplay" title="generative-ai">generative-ai</a>
+
+    
+      <span class="fa-solid fa-circle gray gutter-right-sm font-xs vert-middle" aria-hidden="true"></span>
+    
+      <a href="/TDClient/32/Portal/KB/Search?SearchText=%2523artificial-intelligence" id="ctl00_ctl00_cpContent_cpContent_rptTags_ctl02_TagControl1_lnkDisplay" title="artificial-intelligence">artificial-intelligence</a>
+
+    
+      <span class="fa-solid fa-circle gray gutter-right-sm font-xs vert-middle" aria-hidden="true"></span>
+    
+      <a href="/TDClient/32/Portal/KB/Search?SearchText=%2523ai" id="ctl00_ctl00_cpContent_cpContent_rptTags_ctl04_TagControl1_lnkDisplay" title="ai">ai</a>
+
+    
+      <span class="fa-solid fa-circle gray gutter-right-sm font-xs vert-middle" aria-hidden="true"></span>
+    
+      <a href="/TDClient/32/Portal/KB/Search?SearchText=%2523generativeaiproject" id="ctl00_ctl00_cpContent_cpContent_rptTags_ctl06_TagControl1_lnkDisplay" title="generativeaiproject">generativeaiproject</a>
+
+    
+</div>
+
+
+
+<div id="ctl00_ctl00_cpContent_cpContent_divBody" class="gutter-top break-word ckeShim clearfix"><p dir="ltr"><a name="Top"></a>The University has existing contracts for services with Google and Microsoft that explicitly contain data security and privacy agreements. These companies provide free and paid access to generative AI services.</p>
+
+<p dir="ltr">Please use your UD account with approved versions of the software.<br>
+<em>Note: This applies to only Copilot or Gemini at the moment, but may change over time as we approve more applications.</em></p>
+
+<p dir="ltr">As more services become available, this list will be updated to reflect new vendors and their features.</p>
+
+<p dir="ltr"><big><a href="#Copilot">Microsoft Copilot</a><br>
+<a href="#Gemini">Google Gemini</a><br>
+<a href="#ZoomAI">Zoom AI Companion</a><br>
+<a href="#NotebookLM">NotebookLM</a></big></p>
+
+<h2 dir="ltr"><a name="Copilot"></a>Microsoft Copilot</h2>
+
+<h4 dir="ltr">Features included with your M365 license: (Currently Available -&nbsp;<a href="http://copilot.cloud.microsoft" target="_blank">http://copilot.cloud.microsoft</a>)</h4>
+
+<ul>
+	<li dir="ltr">
+	<p dir="ltr" role="presentation">Available through the CoPilot mobile application, and integrated within Windows OS.</p>
+	</li>
+	<li dir="ltr">
+	<p dir="ltr" role="presentation">Performance and Access: Access to GPT-4 and GPT-4 Turbo during non-peak times; may revert to GPT-3.5 during high demand.</p>
+	</li>
+	<li dir="ltr">
+	<p dir="ltr" role="presentation">Image Generation: 15 daily boosts for AI image generation.</p>
+	</li>
+	<li dir="ltr">
+	<p dir="ltr" role="presentation">Integration with Microsoft 365 Apps: No integration with Microsoft 365 apps; manual steps required to transfer output.</p>
+	</li>
+	<li dir="ltr">
+	<p dir="ltr" role="presentation">Advanced Features: Basic functionality; no custom GPT creation.</p>
+	</li>
+	<li dir="ltr">
+	<p dir="ltr" role="presentation">Use Case Scenarios: Suitable for users needing essential AI functionality&nbsp;with a web-based interface.</p>
+	</li>
+</ul>
+
+<h4 dir="ltr">Paid Version -&nbsp;Copilot for Microsoft 365</h4>
+
+<p dir="ltr">To purchase the paid version,&nbsp;please use the <a href="https://services.udel.edu/TDClient/32/Portal/Requests/ServiceDet?ID=114" target="_blank">Office 365 Additional Licenses form</a>. Note that Copilot&nbsp;for&nbsp;Microsoft 365 is only available to UD faculty and staff.</p>
+
+<ul>
+	<li dir="ltr">
+	<p dir="ltr" role="presentation">Performance and Access: Priority access to GPT-4 and GPT-4 Turbo, even during peak times.</p>
+	</li>
+	<li dir="ltr">
+	<p dir="ltr" role="presentation">Image Generation: 100 daily boosts for AI image generation with DALL-E 3.</p>
+	</li>
+	<li dir="ltr">
+	<p dir="ltr" role="presentation">Integration with Microsoft 365 Apps: Seamless integration with Word, Excel, PowerPoint, OneNote, and Outlook.</p>
+	</li>
+	<li dir="ltr">
+	<p dir="ltr" role="presentation">Advanced Features: Advanced capabilities, including creating custom Co-pilot GPTs with the GPT Builder.</p>
+	</li>
+	<li dir="ltr">
+	<p dir="ltr" role="presentation">Use Case Scenarios: Ideal for users with heavy Microsoft 365 app usage who need seamless integration and advanced features.</p>
+	</li>
+	<li dir="ltr">
+	<p dir="ltr" role="presentation">Pricing: Pricing is prorated, and can be provided with a quote prior to purchase.</p>
+	</li>
+</ul>
+
+<h3 dir="ltr" role="presentation">Shared Features:</h3>
+
+<ul>
+	<li dir="ltr">
+	<p dir="ltr" role="presentation">AI-Powered Assistance: Both versions offer access to OpenAI's GPT-4 and DALL-E 3, allowing users to generate text and images, upload images, summarize text, perform web searches, code creation, data analysis, and generate summaries or suggestions from files.</p>
+	</li>
+</ul>
+
+<p dir="ltr" role="presentation"><a href="#Top"><big>Top</big></a></p>
+
+<h2 dir="ltr" role="presentation"><a name="Gemini"></a>Google Gemini</h2>
+
+<h3 dir="ltr">Included with your Google Workspace license:&nbsp;(Currently Available -&nbsp;<a href="https://gemini.google.com/" target="_blank">https://gemini.google.com</a>)</h3>
+
+<ul>
+	<li dir="ltr">
+	<p dir="ltr" role="presentation">Core Capabilities: Strong foundational models, but may have some limitations.</p>
+	</li>
+	<li dir="ltr">
+	<p dir="ltr" role="presentation">Speed: Potentially slower or rate-limited under heavy loads.</p>
+	</li>
+	<li dir="ltr">
+	<p dir="ltr" role="presentation">Advanced Features: Limited access to the most advanced capabilities.</p>
+	</li>
+	<li dir="ltr">
+	<p dir="ltr" role="presentation">Support: General support with possibly longer wait times.</p>
+	</li>
+	<li dir="ltr">
+	<p dir="ltr" role="presentation">Usage Limits: May have stricter limits on usage and task complexity.</p>
+	</li>
+	<li dir="ltr">
+	<p dir="ltr" role="presentation">Integration: Limited integration with Google services.</p>
+	</li>
+</ul>
+
+<h3 dir="ltr" role="presentation">Limitations:</h3>
+
+<ul>
+	<li>For those under age 18, some features in Google Gemini, such as chat history, will not be available. Other features, such as generating images, may be restricted.</li>
+</ul>
+
+<h3 dir="ltr"><a name="GeminiPro"></a>Paid Version - Gemini Education Premium</h3>
+
+<p dir="ltr">To purchase the paid version, <a href="https://udapps.nss.udel.edu/webforms/embtform?wf_id=1115&amp;wf_ty=blank" target="_blank">submit a request via Webforms</a>. Under Order Information and Software Title, select "Google - Variable Pricing." Note that the Pro version of Gemini is only available to UD faculty and staff.</p>
+
+<p><a href="https://services.google.com/fh/files/misc/gfe_ai_offerings_free_vs_paid.pdf" target="_blank">Review this&nbsp;comparison document</a>&nbsp;that outlines the differences between the free version of Gemini and the features available with a Gemini Pro upgrade. This resource is maintained by Google and offers a clear overview of capabilities, limits, and added benefits to help you decide whether an upgrade is right for your needs.</p>
+
+<ul>
+	<li dir="ltr">
+	<p dir="ltr" role="presentation"><strong>Core Capabilities:</strong> Advanced reasoning, problem-solving, long-form content generation, and coding.</p>
+	</li>
+	<li dir="ltr">
+	<p dir="ltr" role="presentation"><strong>Speed: </strong>Prioritized for faster responses and efficient resource use.</p>
+	</li>
+	<li dir="ltr">
+	<p dir="ltr" role="presentation"><strong>Advanced Features:</strong>&nbsp;Inclusion of NotebookLM Plus. Exclusive access to Gemini Advanced with superior performance and the ability to interact with multiple file formats.</p>
+	</li>
+	<li dir="ltr">
+	<p dir="ltr" role="presentation"><strong>Support:</strong> Dedicated support with faster, personalized assistance.</p>
+	</li>
+	<li dir="ltr">
+	<p dir="ltr" role="presentation"><strong>Usage Limits:</strong> Higher limits or more flexibility in usage.</p>
+	</li>
+	<li dir="ltr">
+	<p dir="ltr" role="presentation"><strong>Integration: </strong>Deep integration with Google Workspace and other Google services such as Mail, Docs, and Slides.</p>
+	</li>
+</ul>
+
+<h3 dir="ltr">Shared Features:</h3>
+
+<ul>
+	<li dir="ltr">
+	<p dir="ltr" role="presentation">AI-Powered Assistance: Natural language understanding, text generation, web search, translation, summarization, question answering, upload and create images, and create code.</p>
+	</li>
+</ul>
+
+<p dir="ltr" role="presentation"><a href="#Top"><big>Top</big></a></p>
+
+<p dir="ltr" role="presentation"></p>
+
+<h2 dir="ltr"><a name="NotebookLM"></a>NotebookLM (Google)</h2>
+
+<p dir="ltr">NotebookLM is an AI-powered research and writing assistant designed to help you understand and synthesize information contained within your own documents. NotebookLM is like having AI for your restricted set of information.&nbsp;</p>
+
+<ul>
+	<li dir="ltr">
+	<p dir="ltr" role="presentation">NotebookLM is a Google core service and is part of UD Google workspace. You must be 18 years of age or older to use NotebookLM.</p>
+	</li>
+	<li dir="ltr">
+	<p dir="ltr" role="presentation">You can use NotebookLM from a web browser, or you can download and use the NotebookLM app on your Android or iOS devices.&nbsp;</p>
+	</li>
+	<li dir="ltr">
+	<p dir="ltr" role="presentation">AI is not trained on any data that is stored in an educational account. Uploads, queries, and responses in your account will not be reviewed by human reviewers.</p>
+	</li>
+	<li dir="ltr">
+	<p dir="ltr" role="presentation">NotebookLM is an evolving service that is subject to change, and includes some beta features that are not guaranteed to work as expected or to stay.</p>
+	</li>
+</ul>
+
+<h3 dir="ltr">Capabilities:</h3>
+
+<ul>
+	<li dir="ltr">
+	<p dir="ltr" role="presentation"><strong>Source Grounding: </strong>Analyzes and works exclusively with the documents, notes, and other sources (PDFs, Google Docs, text files, copied text, website URLs) you link or upload to a notebook.&nbsp;</p>
+	</li>
+	<li dir="ltr">
+	<p dir="ltr" role="presentation"><strong>Chat with your notebook: </strong>Answers questions based only on the information contained within your sources.</p>
+	</li>
+	<li dir="ltr">
+	<p dir="ltr" role="presentation"><strong>Summarization:</strong> Creates summaries of individual sources or synthesizes information across multiple sources, including audio summaries.</p>
+	</li>
+	<li dir="ltr">
+	<p dir="ltr" role="presentation"><strong>Idea Generation &amp; Brainstorming:</strong> Helps generate ideas, outlines, or different content formats (for example, emails, mind maps, scripts, and study guides) derived from your source material.</p>
+	</li>
+	<li dir="ltr">
+	<p dir="ltr" role="presentation"><strong>Audio Overview (beta): </strong>Creates a podcasts style overview based on your source data, and allows you to interact with the overview.</p>
+	</li>
+	<li dir="ltr">
+	<p dir="ltr" role="presentation"><strong>Citations: </strong>Automatically provides citations pointing to the specific passages in your sources that support its answers or generated text.</p>
+	</li>
+</ul>
+
+<h3 dir="ltr">Limitations:</h3>
+
+<ul>
+	<li dir="ltr">
+	<p dir="ltr" role="presentation">NotebookLM is currently available only to University faculty and staff. You also must be 18 years of age or older to use NotebookLM.</p>
+	</li>
+	<li dir="ltr">
+	<p dir="ltr" role="presentation"><strong>No General Web Knowledge:</strong> Does not access the live internet for general knowledge or real-time information beyond the specific website URLs you provide as sources. Its knowledge is strictly confined to the uploaded documents.</p>
+	</li>
+	<li dir="ltr">
+	<p dir="ltr" role="presentation"><strong>Source Dependency: </strong>Accuracy and usefulness are heavily dependent on the quality, clarity, and content of the source materials you provide. It cannot know what isn't in the sources.</p>
+	</li>
+	<li dir="ltr">
+	<p dir="ltr" role="presentation"><strong>Source Limits and Daily Limits: </strong>There is 100 notebook limit (up to 20 million words per notebook), each with up to 50 sources (up to 500K words each). You can have 50 chat queries and 3 audio generations per day. Note: these limits may evolve).</p>
+	</li>
+	<li dir="ltr">
+	<p dir="ltr" role="presentation"><strong>No External Actions: </strong>NotebookLM cannot perform actions outside the application, like sending emails, browse unrelated websites, or interact with other software.</p>
+	</li>
+</ul>
+
+<div dir="ltr">&nbsp;</div>
+
+<h3 dir="ltr">Paid Version - NotebookLM Plus (Google)</h3>
+
+<p dir="ltr">This is part of the <a href="#GeminiPro">Gemini paid license</a> (Gemini Education Premium) and includes the same core features as NotebookLM, but also includes:</p>
+
+<ul>
+	<li dir="ltr">
+	<p dir="ltr" role="presentation">Share “Chat-only” notebooks to viewers (viewers will not have access to your notebook sources).&nbsp;</p>
+	</li>
+	<li dir="ltr">
+	<p dir="ltr" role="presentation">Advanced chat settings (choose from different conversational styles, adjust length of responses).</p>
+	</li>
+	<li dir="ltr">
+	<p dir="ltr" role="presentation">Notebook usage analytics.</p>
+	</li>
+	<li dir="ltr">
+	<p dir="ltr" role="presentation">5x more usage vs the standard edition. (currently 500 notebooks and 300 sources per notebook).</p>
+	</li>
+</ul>
+
+<p dir="ltr">For more information and latest details, consult Google’s documentation: <a href="https://support.google.com/notebooklm">https://support.google.com/notebooklm</a></p>
+
+<p dir="ltr" role="presentation"><a href="#Top"><big>Top</big></a></p>
+
+<h2 dir="ltr" role="presentation"><a name="ZoomAI"></a>Zoom AI Companion</h2>
+
+<p dir="ltr"><a href="https://ats.udel.edu/conferencing/zoom/ai-companion-tools/" target="_blank">Zoom AI Companion</a> will be available to UD Zoom accounts on January 30th, 2025.&nbsp;</p>
+
+<p dir="ltr">Zoom AI Companion has two main components: (1) an in-meeting assistant that can generate automatic meeting summaries and allow real-time questions about the ongoing discussion, all aimed at improving meeting comprehension and follow-up actions, and (2) an out-of-meeting panel with a natural language prompt to serve as a virtual personal assistant, including helpful suggested prompts to get you started.&nbsp; You’ll have access to create smart recordings with highlighted chapters, assistance with whiteboards by generating content based on conversation topics, creating team chat summaries, and more. See this <a href="https://support.zoom.com/hc/en/article?id=zm_kb&amp;sysparm_article=KB0057623" target="_blank">page</a> for more information.&nbsp;</p>
+
+<p dir="ltr">Note: This AI integration will change the way meeting summaries are controlled. See this <a href="https://ats.udel.edu/conferencing/zoom/ai-companion-tools/" target="_blank">page</a> for instructions.&nbsp;</p>
+
+<p dir="ltr">Want to have some fun with Zoom AI Companion? Look for the Sparkle icon <img src="https://lh7-rt.googleusercontent.com/docsz/AD_4nXcQk6ul62oVuNluc3yjkTh3ihdByxgft0YDuKH6DTgRxtem9dvXwhFDV54L4PBJuI1162ZW3_gVtr6FCIrQ049CneruycrriUIHx7Ece2IhULqqsRe6ciwgf8O9qaQ1dEerdt9Ubg?key=rudcXbEjxyf3cjTF2K38PP5p" style="width: 30px; height: 25px; border-width: 1px; border-style: solid"> wherever you see it and click to discover the AI features that are available to you.</p>
+
+<p dir="ltr"><a href="#Top"><big>Top</big></a></p></div>
+
+<div id="ctl00_ctl00_cpContent_cpContent_divFeedback2" class="well gutter-top-lg">
+
+  <div class="row" id="divHelpfulYesNo">
+    <div class="col-sm-7">
+      
+        <div>
+          <a href="/TDClient/32/Portal/Login.aspx?ReturnUrl=%2fTDClient%2f32%2fPortal%2fKB%2fArticleDet%3fID%3d1150">Sign in to leave feedback</a>
+        </div>
+      
+    </div>
+    <div class="col-sm-5 text-right">
+      <div id="ctl00_ctl00_cpContent_cpContent_UpdatePanel1" aria-live="polite" aria-atomic="true">
+	
+          0 reviews
+        
+</div>
+    </div>
+  </div>
+
+  </div>
+
+
+
+<div class="tab-content gutter-top gutter-bottom">
+  
+  <div id="ctl00_ctl00_cpContent_cpContent_upFeedbackGrid">
+	
+        <a id="ctl00_ctl00_cpContent_cpContent_btnToggleAddressed" tabindex="-1" class="hidden" aria-hidden="true" href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$ctl00$cpContent$cpContent$btnToggleAddressed&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))">Blank</a>
+        <a id="ctl00_ctl00_cpContent_cpContent_btnDeleteFeedback" tabindex="-1" class="hidden" aria-hidden="true" href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$ctl00$cpContent$cpContent$btnDeleteFeedback&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))">Blank</a>
+        
+      
+</div>
+    
+    
+
+    
+</div>
+</div>
+
+<div class="col-md-4">
+
+
+
+    <a id="ctl00_ctl00_cpContent_cpContent_btnToggleSubscribe" tabindex="-1" class="hidden" aria-hidden="true" href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$ctl00$cpContent$cpContent$btnToggleSubscribe&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))">Blank</a>
+
+<a id="ctl00_ctl00_cpContent_cpContent_btnToggleFavorite" tabindex="-1" class="hidden" aria-hidden="true" href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$ctl00$cpContent$cpContent$btnToggleFavorite&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))">Blank</a>
+
+<a class="DetailAction print-article" href="/TDClient/32/Portal/KB/PrintArticle?ID=1150" rel="nofollow" target="_blank">  <span class="fa-solid fa-print fa-fw" aria-hidden="true"></span>
+Print Article</a>
+
+<div id="ctl00_ctl00_cpContent_cpContent_divKB" class="panel panel-default">
+
+  <div class="panel-heading">
+    <h2 class="h3 panel-title">Related Articles (2)</h2>
+  </div>
+
+  <div class="panel-body">
+    
+        <div id="ctl00_ctl00_cpContent_cpContent_rptArticles_ctl00_ctlArticle_divContainer" class="gutter-top-sm gutter-bottom-lg">
+  <div class="clearfix">
+    <div class="pull-left font-md">
+      <a target="_blank" href="https://services.udel.edu/TDClient/32/Portal/KB/ArticleDet?ID=1148">Directive for Appropriate Use of Generative Artificial Intelligence Tools and Services</a>
+    </div>
+  </div>
+  <div id="ctl00_ctl00_cpContent_cpContent_rptArticles_ctl00_ctlArticle_divSummary">
+    The University supports the responsible use of Generative Artificial Intelligence tools and services (collectively, “Generative AI”). However, these tools have notable limitations and present new risks that must be taken into consideration when using these technologies.
+  </div>
+  
+</div>
+      
+        <div id="ctl00_ctl00_cpContent_cpContent_rptArticles_ctl01_ctlArticle_divContainer" class="gutter-top-sm gutter-bottom-lg">
+  <div class="clearfix">
+    <div class="pull-left font-md">
+      <a target="_blank" href="https://services.udel.edu/TDClient/32/Portal/KB/ArticleDet?ID=1149">Guidelines and FAQs for Use of Generative Artificial Intelligence Tools at the University of Delaware</a>
+    </div>
+  </div>
+  <div id="ctl00_ctl00_cpContent_cpContent_rptArticles_ctl01_ctlArticle_divSummary">
+    This article provides basic information about generative AI tools and how they work so that users can better appreciate the inherent risks associated with them. The guidelines and FAQs also discuss important considerations for users of generative AI tools with the University’s systems, assets, and information.
+  </div>
+  
+</div>
+      
+  </div>
+
+</div>
+
+<div id="ctl00_ctl00_cpContent_cpContent_divRelatedServicesAndOfferings" class="panel panel-default">
+
+  <div class="panel-heading">
+    <h3 class="panel-title">Related Services / Offerings (1)</h3>
+  </div>
+
+  <div class="panel-body">
+    
+        <div class="gutter-top-sm gutter-bottom-lg">
+          <div class="clearfix">
+            <div class="pull-left font-md">
+              <a href="/TDClient/32/Portal/Requests/ServiceDet?ID=114">Office 365 Additional Licenses</a>
+            </div>
+          </div>
+          <div>
+            Purchase licenses The University of Delaware is participating in the Microsoft Office 365 for Education program
+          </div>
+        </div>
+      
+  </div>
+
+</div>
+
+<div id="divAttachments" class="js-article-attachments"></div>
+
+</div>
+
+</div>
+
+<div id="ctl00_ctl00_cpContent_cpContent_divProgress" style="display: none; z-index: 60;">
+  <div id="ctl00_ctl00_cpContent_cpContent_pbMain" class="progress-box-container"><div class="progress-box-body"><div class="well shadow"><h2 class="h4 gutter-top-none">Deleting...</h2><div class="progress" style="margin-bottom: 0;"><div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuemin="0" aria-valuemax="100" style="width: 100%"></div></div></div></div></div>
+</div>
+
+
+
+  </div>
+
+
+  </div>
+</main>
+
+
+
+<script type="text/javascript">
+//<![CDATA[
+setNavPosition('TDKnowledgeBase');window.CKEDITOR_BASEPATH = 'https://services.udel.edu/TDPortal/Content/ckeditor/';
+//]]>
+</script>
+<script src="https://services.udel.edu/TDPortal/Content/ckeditor/ckeditor.js?t=C6HH5UF" type="text/javascript"></script>
+<script type="text/javascript">
+//<![CDATA[
+var CKEditor_Controls=[],CKEditor_Init=[];function CKEditor_TextBoxEncode(d,e){var f;if(typeof CKEDITOR=='undefined'||typeof CKEDITOR.instances[d]=='undefined'){f=document.getElementById(d);if(f)f.value=f.value.replace(/</g,'&lt;').replace(/>/g,'&gt;');}else{var g=CKEDITOR.instances[d];if(e&&(typeof Page_BlockSubmit=='undefined'||!Page_BlockSubmit)){g.destroy();f=document.getElementById(d);if(f)f.style.visibility='hidden';}else g.updateElement();}};(function(){if(typeof CKEDITOR!='undefined'){var d=document.getElementById('ctl00_ctl00_cpContent_cpContent_shareBody_txtBody');if(d)d.style.visibility='hidden';}var e=function(){var f=CKEditor_Controls,g=CKEditor_Init,h=window.pageLoad,i=function(){for(var j=f.length;j--;){var k=document.getElementById(f[j]);if(k&&k.value&&(k.value.indexOf('<')==-1||k.value.indexOf('>')==-1))k.value=k.value.replace(/&lt;/g,'<').replace(/&gt;/g,'>').replace(/&amp;/g,'&');}if(typeof CKEDITOR!='undefined')for(var j=0;j<g.length;j++)g[j].call(this);};window.pageLoad=function(j,k){if(k.get_isPartialLoad())setTimeout(i,0);if(h&&typeof h=='function')h.call(this,j,k);};if(typeof Page_ClientValidate=='function'&&typeof CKEDITOR!='undefined')Page_ClientValidate=CKEDITOR.tools.override(Page_ClientValidate,function(j){return function(){for(var k in CKEDITOR.instances){if(document.getElementById(k))CKEDITOR.instances[k].updateElement();}return j.apply(this,arguments);};});setTimeout(i,0);};if(typeof Sys!='undefined'&&typeof Sys.Application!='undefined')Sys.Application.add_load(e);if(window.addEventListener)window.addEventListener('load',e,false);else if(window.attachEvent)window.attachEvent('onload',e);})();CKEditor_Controls.push('ctl00_ctl00_cpContent_cpContent_shareBody_txtBody');
+CKEditor_Init.push(function(){if(typeof CKEDITOR.instances['ctl00_ctl00_cpContent_cpContent_shareBody_txtBody']!='undefined' || !document.getElementById('ctl00_ctl00_cpContent_cpContent_shareBody_txtBody')) return;CKEDITOR.replace('ctl00_ctl00_cpContent_cpContent_shareBody_txtBody',{"autoGrow_maxHeight" : 175, "autoGrow_minHeight" : 175, "contentsCss" : ['https://services.udel.edu/TDPortal/Content/ckeditor/contents.css', '/TDPortal/Content/FontAwesome/css/fontawesome.min.css', '/TDPortal/Content/FontAwesome/css/brands.min.css', '/TDPortal/Content/FontAwesome/css/regular.min.css', '/TDPortal/Content/FontAwesome/css/solid.min.css', '/TDPortal/Content/FontAwesome/css/v4-shims.min.css'], "height" : "175", "htmlEncodeOutput" : true, "image_previewText" : " ", "removePlugins" : "magicline,devtools,templates,elementspath,fontawesome,youtube,uploadimage,simpleimage,remoteimageblocker", "title" : "Message", "toolbar" : "TDSimple"}); });
+
+var Page_ValidationActive = false;
+if (typeof(ValidatorOnLoad) == "function") {
+    ValidatorOnLoad();
+}
+
+function ValidatorOnSubmit() {
+    if (Page_ValidationActive) {
+        return ValidatorCommonOnSubmit();
+    }
+    else {
+        return true;
+    }
+}
+        Sys.Application.add_init(function() {
+    $create(Sys.UI._UpdateProgress, {"associatedUpdatePanelId":null,"displayAfter":500,"dynamicLayout":true}, null, null, $get("ctl00_ctl00_upMain"));
+});
+//]]>
+</script>
+</form>
+
+
+
+
+
+  <footer role="contentinfo">
+
+    <div class="master-footer">
+      <div style="width: 100%; margin-top: 40px; background-color: #FFFFFF; border-top: 3px solid #FFD300">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-2">
+                <a href="https://www.udel.edu"><img src="https://www.udel.edu/content/dam/udelImages/main/graphics/udelLogoImages/ud-monogram-2018.png" alt="You Dee" style="width: 129px; margin-top: -33px; margin-left: 5px"></a>
+            </div>    
+            
+            <div class="col-sm-10 hidden-xs">
+                <ul style="padding: 0; margin: 8px 5px 0 0; list-style: none; text-align: right">
+                    <li style="padding: 0; display: inline-block; margin: 0; width: 44px; height: 44px"><a href="https://www.instagram.com/udelaware" title="Instagram" target="_blank" rel="noopener noreferrer"><img src="https://www.udel.edu/content/dam/udelImages/main/graphics/socialIcons/instagram.png" alt="Instagram" style="height: 20px; margin: auto; display: block"></a></li>
+                    <li style="padding: 0; display: inline-block; margin: 0; width: 44px; height: 44px"><a href="https://www.facebook.com/udelaware" title="Facebook" target="_blank" rel="noopener noreferrer"><img src="https://www.udel.edu/content/dam/udelImages/main/graphics/socialIcons/facebook.png" alt="Facebook" style="height: 20px; margin: auto; display: block"></a></li>
+                    <li style="padding: 0; display: inline-block; margin: 0; width: 44px; height: 44px"><a href="https://www.linkedin.com/edu/school?id=18070" title="Linkedin" target="_blank" rel="noopener noreferrer"><img src="https://www.udel.edu/content/dam/udelImages/main/graphics/socialIcons/linkedin.png" alt="Linkedin" style="height: 20px; display: block"></a></li>
+                    <li style="padding: 0; display: inline-block; margin: 0; width: 44px; height: 44px"><a href="https://www.youtube.com/univdelaware" title="Youtube" target="_blank" rel="noopener noreferrer"><img src="https://www.udel.edu/content/dam/udelImages/main/graphics/socialIcons/youtube.png" alt="YouTube" style="height: 20px; margin: auto; display: block"></a></li>
+                    <li style="padding: 0; display: inline-block; margin: 0; width: 44px; height: 44px"><a href="https://twitter.com/UDelaware" title="Twitter" target="_blank" rel="noopener noreferrer"><img src="https://www.udel.edu/content/dam/udelImages/main/graphics/socialIcons/x.png" alt="Twitter" style="height: 20px; margin: auto; display: block"></a></li>
+                </ul>
+            </div> 
+
+        </div>
+    </div>
+    <div style="width: 100%; margin: 25px auto auto; background-color: #EEEEEE">
+        <div style="width: 80%; text-align: center; font-family: Arial; font-size: 10px; color: #000000; margin: auto; padding-right: 15px; padding-left: 15px">
+            <div style="padding: 8px 10px 10px 0; display: inline-block; margin: auto">©<span>2025</span> University of Delaware</div>
+            <div style="padding: 8px 10px 10px 0; display: inline-block; margin: auto"><a href="https://www.udel.edu/home/comments/">Comments</a></div>
+            <div style="padding: 8px 10px 10px 0; display: inline-block; margin: auto"><a href="https://www.udel.edu/home/legal-notices/">Legal Notices</a></div>
+            <div style="padding: 8px 10px 10px 0; display: inline-block; margin: auto"><a href="https://www.udel.edu/home/legal-notices/accessibility/">Accessibility Notice</a></div>
+        </div>
+    </div>
+</div>
+      
+    </div>
+
+  </footer>
+
+
+
+<script>
+
+    
+    
+
+      // Inject the Google Analytics isogram. This must happen here because it
+      // cannot be injected through an external javascript library.
+      (function (i, s, o, g, r, a, m) {
+        i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+          (i[r].q = i[r].q || []).push(arguments)
+        }, i[r].l = 1 * new Date(); a = s.createElement(o),
+          m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+      })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+    
+
+      // Per Incident #6707155. Need to focus on img. pseudo-class :focus-within is not supported in IE
+      (function ($) {
+        var $anchor = $('#divLogo a');
+        var $beLogo = $('#divLogo a img');
+
+        $anchor.focus(function () {
+          $beLogo.addClass('accessibility-focus-on-logo');
+        }).blur(function () {
+          $beLogo.removeClass('accessibility-focus-on-logo');
+        });
+
+        
+        
+          const queryParams = new URLSearchParams(window.location.search);
+          let showChatbot = true;
+          if (queryParams.has('nobot')) {
+            const nobotFlag = queryParams.get('nobot');
+            if (nobotFlag === '1' || nobotFlag === 'true') {
+              showChatbot = false;
+            }
+          }
+
+          if(showChatbot) {
+            $.ajax({
+              url: "/TDClient/32/Portal/Chatbots/GetScript",
+              type: "GET",
+              dataType: 'text',
+              success: function (data) {
+                
+                var jQueryAjaxSettingsCache = jQuery.ajaxSettings.cache;
+                jQuery.ajaxSettings.cache = true;
+                $(document.body).append(data);
+                jQuery.ajaxSettings.cache = jQueryAjaxSettingsCache;
+              }
+            });
+          }
+        
+
+        window.addEventListener("message", (event) => {
+
+          // Only accept events that come from the same origin
+          if (event.origin != window.location.origin) {
+            return;
+          }
+
+          switch (event.data.type) {
+
+            case "authenticate-using-popup":
+              handleAuthenticateUsingPopup(event.data.payload);
+              break;
+
+            case "authenticated-successfully":
+              handleAuthenticatedSuccessfully(event.data.payload);
+              break;
+
+            default:
+              break;
+          }
+
+        });
+
+        function handleAuthenticateUsingPopup(payload) {
+          let loginUrl = '/TDClient/32/Portal/Login.aspx';
+
+          if (payload.successCallbackUrl) {
+            loginUrl += '?SuccessCallbackUrl=' + payload.successCallbackUrl;
+          }
+
+          window.open(loginUrl, "_blank", "popup=1");
+        }
+
+        function handleAuthenticatedSuccessfully() {
+          event.source.close();
+          window.location.href = window.location.href;
+        }
+    })(jQuery);
+
+</script>
+
+</body>
+</html>

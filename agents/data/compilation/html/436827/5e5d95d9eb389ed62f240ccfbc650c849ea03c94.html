@@ -1,0 +1,262 @@
+<!DOCTYPE html><html lang="en">
+
+<head>
+    <meta charset="UTF-8" /><meta http-equiv="X-UA-Compatible" content="IE=edge" /><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" /><title>CAS - Central Authentication Service NetID Single Sign On</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+        <link rel="stylesheet" type="text/css" href="/cas/webjars/normalize.css/8.0.1/normalize-112272e51c80ffe5bd01becd2ce7d656.css" /><link rel="stylesheet" type="text/css" href="/cas/webjars/bootstrap/5.3.8/css/bootstrap-grid.min-895b9494c7178ac12ad9c56d81305665.css" /><link rel="stylesheet" type="text/css" href="/cas/webjars/material-components-web/14.0.0/dist/material-components-web.min-9da9033e8d04504fe54b3dbb1298fd78.css" /><link rel="stylesheet" type="text/css" href="/cas/webjars/mdi__font/7.4.47/css/materialdesignicons.min-2c83c4bce691e18f82409f87b2bf84e4.css" /><link rel="stylesheet" type="text/css" href="/cas/webjars/datatables/2.3.2/css/dataTables.dataTables-86c98d6ce5aa289ccf4492ac3a785fad.css" /><link rel="stylesheet" type="text/css" href="/cas/css/cas-c4e85de6f71bebe4376cac410f1c4171.css" /><link rel="stylesheet" type="text/css" href="/cas/css/custom-c14be2cfb07365fa4f0bb7715fedffae.css" /><link rel="shortcut icon" href="/cas/favicon-ca85a6da0bfd721283ee36001c41a9fd.ico" /></head>
+
+<body class="login mdc-typography">
+    <script type="text/javascript" src="/cas/webjars/jquery/3.7.1/jquery.min-2c872dbe60f4ba70fb85356113d8b35e.js"></script>
+<script type="text/javascript" src="/cas/webjars/datatables/2.3.2/js/dataTables-8e31487c41abe2938c55b5dcde42a604.js"></script>
+
+<script type="text/javascript" src="webjars.es5shim.js"></script>
+    <script type="text/javascript" src="webjars.cssVarsPonyfill.js"></script>
+    <script type="text/javascript" src="/cas/webjars/material-components-web/14.0.0/dist/material-components-web.min-3c99031127092dd1984f2e3aa6aeed8b.js"></script>
+<script type="text/javascript" src="/cas/js/cas-f3278c616ba552b47bd0f546bd46ed25.js"></script>
+<script type="text/javascript" src="/cas/js/material-2390ca2aa86b68d155ca43f80fb8d7a8.js"></script>
+<script type="text/javascript" src="/cas/js/custom-b6b53a0c3804875ee16516888b12823d.js"></script>
+<script>
+    if (typeof resourceLoadedSuccessfully === "function") {
+        resourceLoadedSuccessfully();
+    }
+    $(() => {
+        typeof cssVars === "function" && cssVars({onlyLegacy: true});
+    });
+    let trackGeoLocation = false;
+</script>
+
+<div>
+
+    <script>let countMessages = 0;</script>
+    <div
+            class="mdc-dialog cas-notification-dialog modal"
+            id="cas-notification-dialog" role="alertdialog"
+            aria-modal="true" aria-labelledby="notif-dialog-title"
+            aria-describedby="notif-dialog-content">
+        <div class="mdc-dialog__container modal-dialog">
+            <div class="mdc-dialog__surface modal-content">
+                <div class="mdc-dialog__content modal-body" id="notif-dialog-content">
+                    <div id="cookiesSupportedDiv" class="cas-notification-message mdc-typography--body1" style="display: none">
+                        <h3 class="mdc-typography--headline6 mdi mdi-alert-circle fas fa-exclamation-circle">Cookies Disabled</h3>
+                        <p class="text-wrap small">Your browser does not support cookies. The browser's ability to store or read cookies is essential for single sign-on to work. Please consult your browser settings and ensure cookie support is turned on.</p>
+                    </div>
+
+                </div>
+                <footer class="mdc-dialog__actions modal-footer">
+                    <button type="button" class="mdc-button mdc-button--raised mdc-dialog__button btn btn-primary"
+                            data-mdc-dialog-action="accept"
+                            data-mdc-dialog-button-default
+                            data-bs-dismiss="modal">
+                        <span class="mdc-button__label">OK</span>
+                    </button>
+                </footer>
+            </div>
+        </div>
+        <div class="mdc-dialog__scrim"></div>
+    </div>
+
+    <script type="text/javascript">
+        function supportsCookies() {
+            try {
+                document.cookie = 'testcookie=1';
+                let ret = document.cookie.indexOf('testcookie=') !== -1;
+                document.cookie = 'testcookie=1; expires=Thu, 01-Jan-1970 00:00:01 GMT';
+                return ret;
+            } catch (e) {
+                console.log(e);
+                return false;
+            }
+        }
+        document.addEventListener('DOMContentLoaded', () => {
+            if (!supportsCookies()) {
+                countMessages++;
+                window.jQuery('#cookiesSupportedDiv').show();
+            }
+
+            if (countMessages === 0) {
+                window.jQuery('#notifications-count').remove();
+                window.jQuery('#cas-notifications-menu').remove();
+            } else {
+                window.jQuery('#notifications-count').text(`(${countMessages})`)
+            }
+        });
+    </script>
+</div>
+
+    <div class="mdc-drawer-scrim"></div>
+
+    <div class="mdc-drawer-app-content mdc-top-app-bar--fixed-adjust d-flex justify-content-center">
+        <main id="main-content" class="container-lg py-4">
+            <div id="content" class="d-flex justify-content-center">
+  <div class="d-flex justify-content-center flex-md-row flex-column mdc-card mdc-card-content card flex-grow-1">
+
+    <!-- MAIN FORM --><section id="loginForm"
+             class="login-section login-form card-body">
+      <div id="focus" class="d-flex flex-column justify-content-between m-auto">
+
+    <div>
+      <div id="serviceui" class="mb-4">
+        <div class="d-flex align-items-center p-2">
+            <div id="servicedesc" class="ml-2">
+                <h5><i class="mdi mdi-web"></i>All HTTPS Services</h5>
+                <p>All HTTPS services</p>
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <div class="form-wrapper">
+      <!-- MAIN LOGIN FORM --><form method="post" id="fm1" action="login" onsubmit="loginFormSubmission();">
+        <!-- Optional SVG header --><div class="svg-container">
+          <svg id="Blue" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 504.01 105.23">
+            <path class="st0" d="M66.73,82.83c-6.8,1.99-13.77,4.48-22.24,4.48s-15.44-2.49-22.24-4.48V2.82H0v91.13c12.12,7.14,27.56,11.45,44.48,11.45s32.37-4.31,44.49-11.45V2.82h-22.25v80.01Z"></path><path class="st0" d="M170.85,22.41v14.77h22.25V11.28c-12.12-7.14-27.56-11.28-44.48-11.28s-32.2,4.15-44.32,11.28v82.83c12.11,6.97,27.55,11.12,44.32,11.12s32.36-4.15,44.48-11.12v-30.21h-22.25v18.92c-6.64,1.99-13.77,3.15-22.24,3.15s-15.44-1.15-22.08-3.15V22.41c6.64-2,13.62-3.16,22.08-3.16s15.6,1.16,22.24,3.16Z"></path><path class="st0" d="M208.84,11.13v82.99c12.13,6.97,27.56,11.12,44.49,11.12s32.37-4.15,44.48-11.12V11.13c-12.12-6.98-27.55-11.13-44.48-11.13s-32.36,4.15-44.49,11.13ZM275.58,82.83c-6.81,1.99-13.77,3.15-22.24,3.15s-15.43-1.15-22.24-3.15V22.41c6.81-2.16,13.78-3.16,22.24-3.16s15.44,1.16,22.24,3.16v60.41Z"></path><polygon class="st0" points="380.73 73.36 380.23 73.36 336.07 2.82 312.34 2.82 312.34 102.25 332.43 102.25 332.43 31.7 333.09 31.7 377.23 102.25 400.97 102.25 400.97 2.82 380.73 2.82 380.73 73.36"></polygon><polygon class="st0" points="483.78 73.36 483.28 73.36 439.13 2.82 415.39 2.82 415.39 102.25 435.48 102.25 435.48 31.7 436.13 31.7 480.28 102.25 504.03 102.25 504.03 2.82 483.78 2.82 483.78 73.36"></polygon>
+          </svg>
+        </div>
+
+        <h2 id="system">Single Sign On</h2>
+
+        <div id="login-form-controls">
+          <!-- SSO message (render only if there’s a real existing session) --><section class="cas-field form-group my-3" id="usernameSection">
+            <div class="input-wrap">
+              <input class="mdc-text-field__input form-control textfield" id="username"
+                     size="25" type="text"
+                     placeholder="NetID or UConn Email Address"
+                     accesskey="n"
+                     autocapitalize="none" spellcheck="false" autocomplete="off" required name="username" value="" /><label for="username"><span class="accesskey">N</span>etID or UConn Email Address</label>
+            </div>
+            <script type="text/javascript">
+              /*<![CDATA[*/
+              let username = "";
+              let disabled = false;
+              if (username != null && username !== '') {
+                $('#username').val(username);
+                if (disabled) { $('#usernameSection').hide(); }
+              }
+              /*]]>*/
+            </script>
+          </section>
+
+          <section class="cas-field form-group my-3 mdc-input-group form-group" id="passwordSection">
+            <div class="mdc-input-group-field mdc-input-group-field-append">
+              <div class="input-wrap">
+                <input class="mdc-text-field__input form-control pwd textfield"
+                       type="password" id="password" size="25"
+                       placeholder="Password"
+                       accesskey="p"
+                       autocomplete="off" required name="password" value="" /><label for="password"><span class="accesskey">P</span>assword</label>
+              </div>
+
+              <div class="mt-2">
+                <span id="help"><a href="https://netid.uconn.edu/reset_password.php">Forgot your password? </a></span>
+              </div>
+            </div>
+          </section>
+
+          <section class="cas-field form-group my-3">
+            </section>
+
+          <section class="cas-field">
+            <input type="hidden" name="execution" value="91a063f7-2be6-4b47-99e5-edde56bcca11_ZXlKaGJHY2lPaUpJVXpVeE1pSXNJblI1Y0NJNklrcFhWQ0lzSW10cFpDSTZJak0xT0RVeFltTTBMV1ZsTkRJdE5HVTJZaTFoWTJZMUxUVXdObVV6WWpNelpUVmxZeUo5Llo3TEdwTnl6VkZIeUU4dlJ5eDc0TzQ4aDNsMkFidmFNZmQ5WHlpdC1sR0REaXJ5ZG9aeGVpRl8wU2IwSTVhVHlpZnRidjAxU1dXSjFtV2VxZDB3T2V4ZXJGdVFUWjVSVTBIRHpPeE9NZWhaRUl3Vlk3dVJyLURCaUtlSXBjblN0QXVKUkZvOWNkNEZrb2hRRExWQ0lEejdaak5RbnV0ZGZ1Y1pLYXZzTFpuUjdJUk5uRUVEaDVFR3FTRkNpalNhMFRjeHllQWZFNC1qUV9zdEV1VTRkRFBGYzRWYWVCWHNIRkpEdTBzSHNJeUQtU0thdlFMUk1GMEI2c2QwRkJPV1ZaME1fQ0hMR2hCZ3ZCbEFUTjg4TEc0Y0x2MUNDbVM2VUZyZS1pWGNMdlNLOERHUHEzN0FheVFYNUo4c3NxLUg0QXJTY3piM1J1RFp6TXdfSTIxaTcwSUJ0bzlYSzdhZ2F4N19NMjEzYzR4UThoWm9NNjNWbkl3UUR6ektrWDVPcEs4SzZRMkc0c0oyQUhCb01vXzVobl9Ed09VQWRCMzNiaVZtNVJ6MWsxbmN6UTRyMlVGOWlVQzZ2V3BMY3hCLTc5TGV1OGRPenV2NlFqMy1xelRMcGJnUlFPNXpmYW9sWXdKeW1wcTNaMlJzRVFINTByWGxnUVNpNW1YMnhRcXBtdGpQVlJZdXJ4RmFLM2Z6QzkzSjNackk4RnNJRjZUYzM0MmZjM1hVeHZ3NXZhelBXcUhVdHFJLTJYMjY5ak1IQVZtZ1VZX29ia21CeXdOaXctM3Zfb2pjbmk0SHBySWktVE5ybDJnZmx3MFNBcm5YVXFYVHk4TlhvckN4UTZuZ1gzcko2YjY2OGxObmlXWmRCT2kxaDktUjZUS0w5bVdnby1qZlJzY0tMeHY4UHN6X3ZuSE5rMTZTV2VqMjQ2UFVxNE4xN3pkRzgtbzV0aWlWX1I5cmdZMWVzcHF3N0VnRElLbmxqUkR0ZjZjcmE4aHVRZ3J6TjRTNHA3V2lyeFRtYjF6bzFfcTB2S25VR18tRkwycnBIMXBiREpEUlZFdjdiMGJWMVJJVUN4LUtRNHJSYVNvLUFkNTV6M3NZYUt4NFdQMVV4Q0RtZjVKR01vR0lYb0lBVnpBeG1kbWNnSUdnTUFqai1TeEI0T21ndndSdC1NQnBKdDV6MHd4TEw3YlotVmtDTU44Y3E2TURLT3p0bkdPOHlqVTJYV21MekNJem43bzZJNm5xcDM1S0lVaWI2VDdqM0lFUC1PZk8wcjdfYlJiaF82M0YwNVpUay0yRnpULWVCVkgxS1ZnbXdjbHdHaDNsNXdsbk1xdDEzd1E1N3VHODNVUFZqaFpCU09rR1RvMXgtX3dOQ3RGcWNPQ1VuUWZCZnNoTTRGRDZ4Uk9GUEVLcE1ZelphUFg5TElMeTJtV0xkTk14d0QyZzRnSTFIai1DRXRvenQ4R3dKUjBPUlpUNmR0Y0oySVdWcnlVYWNRSWhTYU9adzEzU2UxTVdfZzgtLVFSNXJsOFlvOGpvd1JRSlN2bWY2c1doU2lzU2cwVk5tTmp5d1Q5Q3FucE50N0xaRkRVcFpyUHVwWXlsMjg1b0p6Tkp3THRSM1dLN0VSQXVkb3J3UlJRTnI5Unk5OFNXZVNubzRRbVFxR2VDYnVxdnFZZDltQ2tvZXJBcGJfSUxacG56VFVlRjdyT0RmcHhHd3RLd2gxZVRGSGFfaDBERl8tTzZKTFZyYjQ4d2hPeGl6clZHSU5GZFlWNnBzdE1yclRGemE4dkxsdWtHLVZSWVRZajZFR3R1NllHSWduaGstdWRGNnFVdzdPYmkxdnQta095YTJ6NzRmQVliLWlqOFE0R1hYYkFha3psbEZiV0pTUHRWR0lYSTZ5Y0hMTE1oN1d4VHh2akxiUFpfNF9TTS1ORlIyQmU4SUNLeDJNeHd5QXpjakF5aFMxaDlfSXVKSENmRlV5SEQxcHkxMk1mLVNYajgwemRKNUtWcHdsWlVuNG9STHNudkJZZmc0SXRDWXRFWjh5RjhtaG9lX2Fjbm5PZEozTzZqQTZWR2NwYlgxelpqcWhCU2lNVmk3Z0RsbGVsUmE1T1R4OHdxbmlxRTBmVTRTUzdSdzNZcUZEcl9yMTNDa3lBbEhIdXRwc0xYcTZBOXJxVU5nNUNrQk5qQnFyMEtFTThSVDllZU4wcXczYW5tWDhhZU9CNUFBcWx2SThlY3QxOVQ2X29HSWpHZkZUaW5iTkt6OW1na2FjWnZ6VktkaFVxS2RKaGlOcmk1S3U0WDZMVjZKSXUtMWtQaGZtY1Q3ZUhkVmJvdVB0dkVDTU9BdWJiRWVJc01iVkk0VXg1SkpyVDN3alo0LVYzdDRENDdfTVFWZ3VvMXIzZjUyYWREaGhTTldCSHp3Qmt0dUNaZkJEU29QaFFBeG1aTUVCamwzT19TRXlZSDFfbEN3NWlDRUNIb1JTVEZBLXRYajdNcFAyWkFraFJ2ams5V0JDOFBGWE5TWGFzSGhmMzlqNy1XNUxjZW56WGM4SW1zS3pwYTBqeEFEQ2xaWnVoc0R6eEluaUVSeEZYZ24wRzJnUlBQVEEyc2NCa0VDWDNYd21WUC0tTkdoOWl4cXpFQ2s3RGtndUJZeGNQTHpmajVyNjJWV1ViM3Q3MGlDeHNnQmR1dlBqTFFHWmZvNTdYZ0JkTjV5N21Vck9CRlV5b2VTclYwOTRkZDJMbTRQb2FmS3JIZVV4eENnZlVmbTNZUjJJZkhvNXJUYy1abGtOc2Y1NmpZa251bnJ2WFJmTlkxa0o2MF9rYVlidktleWhuSTZYOXhGZmlBelkzUTlCTTdDTHNLQnBzMlRNa19zU2pmYy10cVdJeERiUkxqMUNVTUdmSEZBM0YzaVhRd19mSGhEOW1vcXprbGRfbFBqcVhwVjZUaUo4OGlxNldCWkVvaUt5TmxhNl9SdGZxLXRsNC1Id3RVakMxUnZ3VFppZlVVVlJ3b1ZnQWFfZjRDU0dBLS1BVUhIUU1sdUktMnhHOThFNnI1Qk8wQlZxRThMRGxXdXZQS09ZZmtRdmtLcWRIZXVjNWQ0SGVDSzlFS2ZELTN5LXV0NFBBU28xcjZyZGRCeXBQWEpLSHgxUnZzS2hWdW1pV3NCLTJKM1c3MDRlSS1JLUFUVUR2SjJFajFBVVNsMjVfUThqWG5CcmhVcEVLVUFuZzVIVTRCZTNNU19DcDE4NUhVYUJnS3BydWw0d1JYN2pnTTAtNy1mc014dHhsNkhDUnZKam1xckk1ei1XYmVad0d2ZF91WDVWQm5HcGJMdzRoZl9HX19kbk1WcWgzb2Rlem1JSHQzQWlQa1FMMjc5aTM3cG5HQ0I2ZUwxQ2loRVdiRGdlZ2tPT1pTbVYxZFpMZy0tNGYyUDBpN2hUSVZDamszN3lORFhQb2hsdzRoS0ttLTl6MHZjTmI2NkRqc00tUlo1MHotLXVsYW5GMUZ5aHlNakZyOGZCUDhMcHNoS3cxNXYxMjZvWWlhdDloN2pRZm1hU0V0YjZaRGRkTzlpam9HQnRxM25MZFhHWkdRb3VoVEhuZ2l3bEVmSXdpLW40SFFaYjE5N1Rsdkh0TjlFNU5SS1ZJeldDU2hZVWg5WW9Kb2Mwc2dVTlBqWWliZ241NVNKaEhOVUowX0tjTnNVQnlEUmFTQlNXTEFXVFozNS1qTlJhc1dWMHBFT1JDN3gwa0hHczJ4elBYbUV3OUhxYS1ZODBEN1JaaVBtMDFBdm42UUhpMFI5cngtU0QyQkZlamd6cW50ZG0wOG9PRThvWU95TTlZTlE0RC1vdXZsQWJFeHpFcjJtZnVmNUtfSUEwa3BRS1I3WWU1ZEhWcmtuLS0xWVBNMGpBTmNaWVc1OEN0dUlhcmZmMnpodF9ibmNEV2FSSE9YaXhCZ3hrbThMaUtyUnBmbWFyU2FhWkpPUmFHRkVoNnh3b1lSb2dBX0RWS3k5RllvZVJIeUN0MXU3SDM4WjhDMS15akxGMmdwS2FGZFpBUmtTQk1KRURSNlk2V2NEZ0cyX2ZWWVV2MzByWENLVUNTYUlMTC1mN3pWbFNLcGN1bWVsMEUyM1VsZVZjOFN5OEROZ1hOWjh1SmpQUVJSbDdSdWpTR015S1phNS1GODQ0X2YzcjJqWFZnV1lPUk5ZdmFnUXBDYkhoOTdoTUx2OFJpc1lKSXZFVVNUSGxXVlZSWE53V011QVhPWnJDT0FHTnZlc0dTYkpzdWFGbkJSVDJUUEQ0N2x0ZTdzbUVHbFJHWnRmTWJsTF9aak9CUElUWjdyaUZhQ3V5Z0VJVDdQWmN4dFd5ejZJdHpsNXNSZUZncjN3Q0pGMkVJVWdOMW9GbXB5Vl9VNmtfOUV5ZkxrR1Z5Vk5wc1pYSE1QSV9YaW0tWWNzaDNvTzBiMnNtanAtWl9neUxUQTNwd051cTlzYXp5ZEU5X0p2Q2ZzX1Z3X0VfZnNMNkVURnFxUE1LY0J1RXF4SWdfZncyMG9MWlR3VERNYkFfNXhOSW5PY2R1YWlYTHFTSFd1ck1qdFM0Q1lxblZsZTl0ZjUwT0M4bkxTVVE3dk1XQ1hwYl9Ib1hHMnN3WTNQR01hdzJkVXhaMF9uc3FURzQwdjZ5ZEM0RHpDVkVDZVJOQkV4akZnSG5mZnFyaUdBajZ4eG1MaXZxMWtZaGxsYVcyaGQ4a3FOajBGdXZTMDdpZVM2OURwRFpNTkZqdk1oLTRpczAyek1LSnlLOGZTbFpwTTNFbDI4NG53Q3lBNUhOQmFkODBHMUxhRGd2S0QxUy1qZXRUclpHOTlrNU1GVHI5TTNZalR0N28xbmF2Q0RjTThJT2hlN1VIZUhwTFktVzZVQmpScGJvMS14eTRFZE01cHpNdHo0SzFXNmk2ajdxNG0yZVp3VEREdG5PZnBZX3ZOcVBCaHpQNzZILVhhdGRLSU5HMmdHR2pzaVE5TjR2N0xzSGpxcXpWMHhWTWlUbzZOa0taTzNHV25ZcWlLUE9nVW9PTXE3cmlQT3N3V2U5bjJkMG92b0NYQjNuc1BET1REd0lSLV9BTnBVZVNPcEVxeWxTMEhZX2hlREtGUW5aOE1vbzRvaC1mRDVOejBUSXMwZkVNYlh6NEd4eE1odVBsNGpIZER0b09IODRpMHRHb3c5eEttN3JYckttXzFMV2lxUmRMZjJlU204LWRNRmpmR1RCbFlKRTBpS0lVam5qWFhUUE5iZlVtNEcwcHlxMmZBb2xfSnVVUjA3SGJVaXlyczhlRTI3NkpyN2laZjl5R1R1eE9Ndy11Y0xBbjZQeU0xS1ZGQVNBNEJlTlRCTElrQmxSMlVyNUoxQ1A0TFR0S2F3VFlMUUlPZ2J1RTBROHY1dllqMzc1bFQyYXI5Zm5QRTNiSjJVUlRueUpwMjEybHVwZmFZOWtTSmJFdWtUakppaURUSHd4UjdKNm50VG4tWHIxdldrNHZQWlpvczhtOWNidmlORU1nMTdxWEk4TXhtMXRoWFV1Q1AzRnJtMEFPcXZvLTlKWkc5YUJYcHpCbFBnanVBMjZSSmFqQ3pfT1Bhc2Q0T2c0cXdPNTZrbEZseDhpSjRmMnZnQzVkTlB4eUlEVER1dzBIYkt1SWF4YVlBLW84bWpPdUp1ZkhMWmo5bG1oZGhqY0lLSFIycDJNMFRLdzNNQk1jaTVQX3BhVElkZjZZVlBxQlJuNmZ6RXFkOGQ4eDIwQkM4WXZ1V1ZBWEFpdndOSlFzNmgzdzk4YURjZDFaNjJkbjZJQVdBMzdiWkZDTXRaclZBellBM3lGRFltaW92TDJHZEM2NC05NVdxakJpdFZITTduMXdNX3NPbkE0dEw1bENfT0hwYmNCLWhOY3hfNW8tbkp1aEpTRW1fc3NrS2ZvS3l6WkJKeVR0aGs0VmRaak9mZUZudmxGbC1yeEx6T1N6NHdHeDlXTmV1RFJLV0ZQemVxci15WU9BeW90bWpFZFJxeFhONFR6ckVUM2NQTlNpTmpSVy1EY1hfMFYxTUh3enk4bHVSWmxxMllRVExZUWhPQjU3cnNUSWdQWHg3ZVRRVy1FMUFoMHNqV3VKekYxdkUzTnBSeFB0cTkwWlNYc0VIMlRtQzlCUDFjc215NTBMVEU5LWV3UXR6d1oxTEs4Nk1ESFNpamJJTTdaQjJxNFUyMHpCUnFVcmNWRWljejV5azVBaWJvQmxGX3J3Z0JzXzUtcGJZR0dkYUpXdnk3MmVNUEVZYnhJaG14YmFVWXBVSDAtQVk4ZlAtcW1kaFc1b2xZXzVGWmszNUNYd3E0TUVob29iNl82RGlvcHNXX3hWSUhuS0lGWlR3MHNac051NHlVS3Zfall5VTBNR2UwNHItVldzQVdXNmdsWWpCNld4LXpsZVk2elFDYUN0b0tLSkxnSDNzaXNMdjcxa0c4VURuaUd1dmlTbGVrNFZUaE9vRWdBSXktZ05JMW45REhUeXhmR2Q5cDEyX2ZIZ0Ric01nT2dIaGdPLUQ3RzJCYURCZVZNRDJFLTREQmg4Ri03WkhnZDB6QWRRaUpZNVAtaVYwSkN2SE03Q1R6QnlJVTJwdjRLVVRvWVEuSzNDMnE2UjhKYk43eHFUU19Wc3VYOEF6bW53dHZGclUtM0hxR2xrY0x5czViUi16eG1hazE2MGMtYlpWZTJVc084MmxjVE5qamFJOTVVeGR5SV9jU3c="/><input type="hidden" name="_eventId" value="submit"/><input type="hidden" name="geolocation"/><input type="hidden" name="deviceFingerprint"/><script type="text/javascript">
+              let client = new ClientJS();
+              let fingerprint = client.getFingerprint();
+              $('[name="deviceFingerprint"]').val(fingerprint);
+            </script>
+          </section>
+
+          <!-- Primary "Login" submit button --><!-- Editable Button --><button
+                class="mdc-button mdc-button--raised btn btn-primary btn-primary"
+                id="submitBtn"
+                name="submitBtn"
+                accesskey="l"
+                type="submit">
+            	<span class="mdc-button__label" / >Login</button>
+
+	<!-- END - Editable Button --></div>
+      </form>
+      <!-- END MAIN LOGIN FORM --><!-- Optional X509 and WebAuthn blocks --><div>
+        <div id="pmlinks" class="my-2">
+        <div>
+<!--            <br />
+            <span class="mdi mdi-account-question"></span>
+            <span th:utext="#{screen.pm.button.forgotpwd('https://pwd.example.org')}">Forgot your password?</span>
+        </div> --></div>
+
+        </div>
+
+      <!-- "On your way to ..." message --><p id="message" class="mt-3">On your way to... <span id="destination"></span></p>
+      <script>
+        var uri = encodeURIComponent(window.location.href);
+        uri = uri.split("%3F");
+        if (uri[1]) {
+          uri = (((((((uri[1]).replace('service%3D','')).replace('http%253A%252F%252F','')).replace('https%253A%252F%252F','')).replace('TARGET%3D','')).replace('https%253a%252f%252f','')).replace('http%253a%252f%252f','')).replace('https%3a%2f%2f','');
+          uri = (uri.split("%252F"))[0];
+          uri = (uri.split("%252"))[0];
+        } else {
+          uri = (uri[0].replace('https%3A%2F%2F','')).replace('%2Fcas%2Flogin','');
+          uri = (uri.split("%3B"))[0];
+        }
+        document.getElementById('destination').innerHTML = uri;
+      </script>
+
+      <!-- PROMO: External Identity Provider under the destination message --><div id="providerPromo" class="provider-promo mt-2">
+        <hr class="provider-promo-sep"/><!-- Updated: static text + "Learn more" hyperlink --><p class="provider-promo-text">
+          A new login experience that uses your uconn.edu Microsoft account is coming soon.
+          <a href="https://uconn.atlassian.net/wiki/x/AQC1hAY" target="_blank" rel="noopener">Learn more...</a>
+        </p>
+
+        <ul class="list-unstyled m-0 provider-promo-list">
+          <li class="login-provider-item">
+            <form method="post" id="formUConn-Entra" action="/cas/login"><input type="hidden" name="_csrf" value="6MHkMt1V0K3PPM6U6ne9bNPgjH8N7aibJQp1029Y3k56ezlW2_aHB-QxspXiDPry21qJX-bSoUc91J62QT5E5F9v5nxNGV8y"/>
+              <button class="mdc-button mdc-button--raised btn btn-primary d-block w-100 provider-promo-btn  mdc-button-azuread2"
+                      name="submitButton" type="submit"
+                      title="UConn-Entra azuread2"
+                      id="UConn-Entra"
+                      autoRedirectType="none" redirectUrl="clientredirect?client_name=UConn-Entra&amp;service=https%3A%2F%2Facademiccenter.averypoint.uconn.edu%2Fwp-login.php%3Fprivacy%3D2%26redirect_to%3Dhttps%253A%252F%252Facademiccenter.averypoint.uconn.edu%252Fmeet-our-tutors%252Favery-point-academic-center-staff%252F">
+                <span class="mdc-button__label">Try it today!</span>
+              </button>
+
+              <input type="hidden" name="client_name" value="UConn-Entra" /><input type="hidden" name="_eventId" value="delegatedAuthenticationRedirect" /><input type="hidden" name="execution" value="91a063f7-2be6-4b47-99e5-edde56bcca11_ZXlKaGJHY2lPaUpJVXpVeE1pSXNJblI1Y0NJNklrcFhWQ0lzSW10cFpDSTZJak0xT0RVeFltTTBMV1ZsTkRJdE5HVTJZaTFoWTJZMUxUVXdObVV6WWpNelpUVmxZeUo5Llo3TEdwTnl6VkZIeUU4dlJ5eDc0TzQ4aDNsMkFidmFNZmQ5WHlpdC1sR0REaXJ5ZG9aeGVpRl8wU2IwSTVhVHlpZnRidjAxU1dXSjFtV2VxZDB3T2V4ZXJGdVFUWjVSVTBIRHpPeE9NZWhaRUl3Vlk3dVJyLURCaUtlSXBjblN0QXVKUkZvOWNkNEZrb2hRRExWQ0lEejdaak5RbnV0ZGZ1Y1pLYXZzTFpuUjdJUk5uRUVEaDVFR3FTRkNpalNhMFRjeHllQWZFNC1qUV9zdEV1VTRkRFBGYzRWYWVCWHNIRkpEdTBzSHNJeUQtU0thdlFMUk1GMEI2c2QwRkJPV1ZaME1fQ0hMR2hCZ3ZCbEFUTjg4TEc0Y0x2MUNDbVM2VUZyZS1pWGNMdlNLOERHUHEzN0FheVFYNUo4c3NxLUg0QXJTY3piM1J1RFp6TXdfSTIxaTcwSUJ0bzlYSzdhZ2F4N19NMjEzYzR4UThoWm9NNjNWbkl3UUR6ektrWDVPcEs4SzZRMkc0c0oyQUhCb01vXzVobl9Ed09VQWRCMzNiaVZtNVJ6MWsxbmN6UTRyMlVGOWlVQzZ2V3BMY3hCLTc5TGV1OGRPenV2NlFqMy1xelRMcGJnUlFPNXpmYW9sWXdKeW1wcTNaMlJzRVFINTByWGxnUVNpNW1YMnhRcXBtdGpQVlJZdXJ4RmFLM2Z6QzkzSjNackk4RnNJRjZUYzM0MmZjM1hVeHZ3NXZhelBXcUhVdHFJLTJYMjY5ak1IQVZtZ1VZX29ia21CeXdOaXctM3Zfb2pjbmk0SHBySWktVE5ybDJnZmx3MFNBcm5YVXFYVHk4TlhvckN4UTZuZ1gzcko2YjY2OGxObmlXWmRCT2kxaDktUjZUS0w5bVdnby1qZlJzY0tMeHY4UHN6X3ZuSE5rMTZTV2VqMjQ2UFVxNE4xN3pkRzgtbzV0aWlWX1I5cmdZMWVzcHF3N0VnRElLbmxqUkR0ZjZjcmE4aHVRZ3J6TjRTNHA3V2lyeFRtYjF6bzFfcTB2S25VR18tRkwycnBIMXBiREpEUlZFdjdiMGJWMVJJVUN4LUtRNHJSYVNvLUFkNTV6M3NZYUt4NFdQMVV4Q0RtZjVKR01vR0lYb0lBVnpBeG1kbWNnSUdnTUFqai1TeEI0T21ndndSdC1NQnBKdDV6MHd4TEw3YlotVmtDTU44Y3E2TURLT3p0bkdPOHlqVTJYV21MekNJem43bzZJNm5xcDM1S0lVaWI2VDdqM0lFUC1PZk8wcjdfYlJiaF82M0YwNVpUay0yRnpULWVCVkgxS1ZnbXdjbHdHaDNsNXdsbk1xdDEzd1E1N3VHODNVUFZqaFpCU09rR1RvMXgtX3dOQ3RGcWNPQ1VuUWZCZnNoTTRGRDZ4Uk9GUEVLcE1ZelphUFg5TElMeTJtV0xkTk14d0QyZzRnSTFIai1DRXRvenQ4R3dKUjBPUlpUNmR0Y0oySVdWcnlVYWNRSWhTYU9adzEzU2UxTVdfZzgtLVFSNXJsOFlvOGpvd1JRSlN2bWY2c1doU2lzU2cwVk5tTmp5d1Q5Q3FucE50N0xaRkRVcFpyUHVwWXlsMjg1b0p6Tkp3THRSM1dLN0VSQXVkb3J3UlJRTnI5Unk5OFNXZVNubzRRbVFxR2VDYnVxdnFZZDltQ2tvZXJBcGJfSUxacG56VFVlRjdyT0RmcHhHd3RLd2gxZVRGSGFfaDBERl8tTzZKTFZyYjQ4d2hPeGl6clZHSU5GZFlWNnBzdE1yclRGemE4dkxsdWtHLVZSWVRZajZFR3R1NllHSWduaGstdWRGNnFVdzdPYmkxdnQta095YTJ6NzRmQVliLWlqOFE0R1hYYkFha3psbEZiV0pTUHRWR0lYSTZ5Y0hMTE1oN1d4VHh2akxiUFpfNF9TTS1ORlIyQmU4SUNLeDJNeHd5QXpjakF5aFMxaDlfSXVKSENmRlV5SEQxcHkxMk1mLVNYajgwemRKNUtWcHdsWlVuNG9STHNudkJZZmc0SXRDWXRFWjh5RjhtaG9lX2Fjbm5PZEozTzZqQTZWR2NwYlgxelpqcWhCU2lNVmk3Z0RsbGVsUmE1T1R4OHdxbmlxRTBmVTRTUzdSdzNZcUZEcl9yMTNDa3lBbEhIdXRwc0xYcTZBOXJxVU5nNUNrQk5qQnFyMEtFTThSVDllZU4wcXczYW5tWDhhZU9CNUFBcWx2SThlY3QxOVQ2X29HSWpHZkZUaW5iTkt6OW1na2FjWnZ6VktkaFVxS2RKaGlOcmk1S3U0WDZMVjZKSXUtMWtQaGZtY1Q3ZUhkVmJvdVB0dkVDTU9BdWJiRWVJc01iVkk0VXg1SkpyVDN3alo0LVYzdDRENDdfTVFWZ3VvMXIzZjUyYWREaGhTTldCSHp3Qmt0dUNaZkJEU29QaFFBeG1aTUVCamwzT19TRXlZSDFfbEN3NWlDRUNIb1JTVEZBLXRYajdNcFAyWkFraFJ2ams5V0JDOFBGWE5TWGFzSGhmMzlqNy1XNUxjZW56WGM4SW1zS3pwYTBqeEFEQ2xaWnVoc0R6eEluaUVSeEZYZ24wRzJnUlBQVEEyc2NCa0VDWDNYd21WUC0tTkdoOWl4cXpFQ2s3RGtndUJZeGNQTHpmajVyNjJWV1ViM3Q3MGlDeHNnQmR1dlBqTFFHWmZvNTdYZ0JkTjV5N21Vck9CRlV5b2VTclYwOTRkZDJMbTRQb2FmS3JIZVV4eENnZlVmbTNZUjJJZkhvNXJUYy1abGtOc2Y1NmpZa251bnJ2WFJmTlkxa0o2MF9rYVlidktleWhuSTZYOXhGZmlBelkzUTlCTTdDTHNLQnBzMlRNa19zU2pmYy10cVdJeERiUkxqMUNVTUdmSEZBM0YzaVhRd19mSGhEOW1vcXprbGRfbFBqcVhwVjZUaUo4OGlxNldCWkVvaUt5TmxhNl9SdGZxLXRsNC1Id3RVakMxUnZ3VFppZlVVVlJ3b1ZnQWFfZjRDU0dBLS1BVUhIUU1sdUktMnhHOThFNnI1Qk8wQlZxRThMRGxXdXZQS09ZZmtRdmtLcWRIZXVjNWQ0SGVDSzlFS2ZELTN5LXV0NFBBU28xcjZyZGRCeXBQWEpLSHgxUnZzS2hWdW1pV3NCLTJKM1c3MDRlSS1JLUFUVUR2SjJFajFBVVNsMjVfUThqWG5CcmhVcEVLVUFuZzVIVTRCZTNNU19DcDE4NUhVYUJnS3BydWw0d1JYN2pnTTAtNy1mc014dHhsNkhDUnZKam1xckk1ei1XYmVad0d2ZF91WDVWQm5HcGJMdzRoZl9HX19kbk1WcWgzb2Rlem1JSHQzQWlQa1FMMjc5aTM3cG5HQ0I2ZUwxQ2loRVdiRGdlZ2tPT1pTbVYxZFpMZy0tNGYyUDBpN2hUSVZDamszN3lORFhQb2hsdzRoS0ttLTl6MHZjTmI2NkRqc00tUlo1MHotLXVsYW5GMUZ5aHlNakZyOGZCUDhMcHNoS3cxNXYxMjZvWWlhdDloN2pRZm1hU0V0YjZaRGRkTzlpam9HQnRxM25MZFhHWkdRb3VoVEhuZ2l3bEVmSXdpLW40SFFaYjE5N1Rsdkh0TjlFNU5SS1ZJeldDU2hZVWg5WW9Kb2Mwc2dVTlBqWWliZ241NVNKaEhOVUowX0tjTnNVQnlEUmFTQlNXTEFXVFozNS1qTlJhc1dWMHBFT1JDN3gwa0hHczJ4elBYbUV3OUhxYS1ZODBEN1JaaVBtMDFBdm42UUhpMFI5cngtU0QyQkZlamd6cW50ZG0wOG9PRThvWU95TTlZTlE0RC1vdXZsQWJFeHpFcjJtZnVmNUtfSUEwa3BRS1I3WWU1ZEhWcmtuLS0xWVBNMGpBTmNaWVc1OEN0dUlhcmZmMnpodF9ibmNEV2FSSE9YaXhCZ3hrbThMaUtyUnBmbWFyU2FhWkpPUmFHRkVoNnh3b1lSb2dBX0RWS3k5RllvZVJIeUN0MXU3SDM4WjhDMS15akxGMmdwS2FGZFpBUmtTQk1KRURSNlk2V2NEZ0cyX2ZWWVV2MzByWENLVUNTYUlMTC1mN3pWbFNLcGN1bWVsMEUyM1VsZVZjOFN5OEROZ1hOWjh1SmpQUVJSbDdSdWpTR015S1phNS1GODQ0X2YzcjJqWFZnV1lPUk5ZdmFnUXBDYkhoOTdoTUx2OFJpc1lKSXZFVVNUSGxXVlZSWE53V011QVhPWnJDT0FHTnZlc0dTYkpzdWFGbkJSVDJUUEQ0N2x0ZTdzbUVHbFJHWnRmTWJsTF9aak9CUElUWjdyaUZhQ3V5Z0VJVDdQWmN4dFd5ejZJdHpsNXNSZUZncjN3Q0pGMkVJVWdOMW9GbXB5Vl9VNmtfOUV5ZkxrR1Z5Vk5wc1pYSE1QSV9YaW0tWWNzaDNvTzBiMnNtanAtWl9neUxUQTNwd051cTlzYXp5ZEU5X0p2Q2ZzX1Z3X0VfZnNMNkVURnFxUE1LY0J1RXF4SWdfZncyMG9MWlR3VERNYkFfNXhOSW5PY2R1YWlYTHFTSFd1ck1qdFM0Q1lxblZsZTl0ZjUwT0M4bkxTVVE3dk1XQ1hwYl9Ib1hHMnN3WTNQR01hdzJkVXhaMF9uc3FURzQwdjZ5ZEM0RHpDVkVDZVJOQkV4akZnSG5mZnFyaUdBajZ4eG1MaXZxMWtZaGxsYVcyaGQ4a3FOajBGdXZTMDdpZVM2OURwRFpNTkZqdk1oLTRpczAyek1LSnlLOGZTbFpwTTNFbDI4NG53Q3lBNUhOQmFkODBHMUxhRGd2S0QxUy1qZXRUclpHOTlrNU1GVHI5TTNZalR0N28xbmF2Q0RjTThJT2hlN1VIZUhwTFktVzZVQmpScGJvMS14eTRFZE01cHpNdHo0SzFXNmk2ajdxNG0yZVp3VEREdG5PZnBZX3ZOcVBCaHpQNzZILVhhdGRLSU5HMmdHR2pzaVE5TjR2N0xzSGpxcXpWMHhWTWlUbzZOa0taTzNHV25ZcWlLUE9nVW9PTXE3cmlQT3N3V2U5bjJkMG92b0NYQjNuc1BET1REd0lSLV9BTnBVZVNPcEVxeWxTMEhZX2hlREtGUW5aOE1vbzRvaC1mRDVOejBUSXMwZkVNYlh6NEd4eE1odVBsNGpIZER0b09IODRpMHRHb3c5eEttN3JYckttXzFMV2lxUmRMZjJlU204LWRNRmpmR1RCbFlKRTBpS0lVam5qWFhUUE5iZlVtNEcwcHlxMmZBb2xfSnVVUjA3SGJVaXlyczhlRTI3NkpyN2laZjl5R1R1eE9Ndy11Y0xBbjZQeU0xS1ZGQVNBNEJlTlRCTElrQmxSMlVyNUoxQ1A0TFR0S2F3VFlMUUlPZ2J1RTBROHY1dllqMzc1bFQyYXI5Zm5QRTNiSjJVUlRueUpwMjEybHVwZmFZOWtTSmJFdWtUakppaURUSHd4UjdKNm50VG4tWHIxdldrNHZQWlpvczhtOWNidmlORU1nMTdxWEk4TXhtMXRoWFV1Q1AzRnJtMEFPcXZvLTlKWkc5YUJYcHpCbFBnanVBMjZSSmFqQ3pfT1Bhc2Q0T2c0cXdPNTZrbEZseDhpSjRmMnZnQzVkTlB4eUlEVER1dzBIYkt1SWF4YVlBLW84bWpPdUp1ZkhMWmo5bG1oZGhqY0lLSFIycDJNMFRLdzNNQk1jaTVQX3BhVElkZjZZVlBxQlJuNmZ6RXFkOGQ4eDIwQkM4WXZ1V1ZBWEFpdndOSlFzNmgzdzk4YURjZDFaNjJkbjZJQVdBMzdiWkZDTXRaclZBellBM3lGRFltaW92TDJHZEM2NC05NVdxakJpdFZITTduMXdNX3NPbkE0dEw1bENfT0hwYmNCLWhOY3hfNW8tbkp1aEpTRW1fc3NrS2ZvS3l6WkJKeVR0aGs0VmRaak9mZUZudmxGbC1yeEx6T1N6NHdHeDlXTmV1RFJLV0ZQemVxci15WU9BeW90bWpFZFJxeFhONFR6ckVUM2NQTlNpTmpSVy1EY1hfMFYxTUh3enk4bHVSWmxxMllRVExZUWhPQjU3cnNUSWdQWHg3ZVRRVy1FMUFoMHNqV3VKekYxdkUzTnBSeFB0cTkwWlNYc0VIMlRtQzlCUDFjc215NTBMVEU5LWV3UXR6d1oxTEs4Nk1ESFNpamJJTTdaQjJxNFUyMHpCUnFVcmNWRWljejV5azVBaWJvQmxGX3J3Z0JzXzUtcGJZR0dkYUpXdnk3MmVNUEVZYnhJaG14YmFVWXBVSDAtQVk4ZlAtcW1kaFc1b2xZXzVGWmszNUNYd3E0TUVob29iNl82RGlvcHNXX3hWSUhuS0lGWlR3MHNac051NHlVS3Zfall5VTBNR2UwNHItVldzQVdXNmdsWWpCNld4LXpsZVk2elFDYUN0b0tLSkxnSDNzaXNMdjcxa0c4VURuaUd1dmlTbGVrNFZUaE9vRWdBSXktZ05JMW45REhUeXhmR2Q5cDEyX2ZIZ0Ric01nT2dIaGdPLUQ3RzJCYURCZVZNRDJFLTREQmg4Ri03WkhnZDB6QWRRaUpZNVAtaVYwSkN2SE03Q1R6QnlJVTJwdjRLVVRvWVEuSzNDMnE2UjhKYk43eHFUU19Wc3VYOEF6bW53dHZGclUtM0hxR2xrY0x5czViUi16eG1hazE2MGMtYlpWZTJVc084MmxjVE5qamFJOTVVeGR5SV9jU3c=" /></form>
+          </li>
+        </ul>
+      </div>
+
+      <script type="text/javascript">
+        /*<![CDATA[*/
+        var i = "One moment please...";
+        var j = "Login";
+        $(window).on('pageshow', function () {
+          $(':submit').prop('disabled', false);
+          $(':submit').attr('value', j);
+        });
+        $(document).ready(function () {
+          $("#fm1").submit(function () {
+            $(":submit").attr("disabled", true);
+            $(":submit").attr("value", i);
+            return true;
+          });
+        });
+        /*]]>*/
+      </script>
+    </div>
+  </div>
+    </section>
+
+    <!-- SEPARATE PROVIDERS PANEL (only when inline is OFF) --><span>
+      </span>
+
+    <!-- QR LOGIN (unchanged) --></div>
+</div>
+        </main>
+    </div>
+
+    <footer class="py-3 d-flex justify-content-center align-items-center cas-footer">
+    <span id="copyright" class="me-2 d-inline-block">Copyright &copy; 2005&ndash;2025 Apereo, Inc.</span>
+    <span id="poweredBy" class="px-3 d-inline-block">
+        <span>Powered by</span><a href="https://github.com/apereo/cas">Apereo CAS</a>
+    </span>
+    <code class="version">7.3.2 12/6/25, 4:50 AM</code>
+</footer>
+
+</body>
+
+</html>

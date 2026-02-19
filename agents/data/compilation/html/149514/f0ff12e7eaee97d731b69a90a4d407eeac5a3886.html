@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=E<dge"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>
+    Subjects - LibGuides at Trinity International University
+</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noarchive"/>
+
+<!-- favicon.twig -->
+<link rel="apple-touch-icon" sizes="180x180" href="//d2jv02qf7xgjwx.cloudfront.net/apps/common/favicon/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="//d2jv02qf7xgjwx.cloudfront.net/apps/common/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="//d2jv02qf7xgjwx.cloudfront.net/apps/common/favicon/favicon-16x16.png">
+<link rel="manifest" href="//d2jv02qf7xgjwx.cloudfront.net/apps/common/favicon/site.webmanifest">
+<link rel="mask-icon" href="//d2jv02qf7xgjwx.cloudfront.net/apps/common/favicon/safari-pinned-tab.svg" color="#5bbad5">
+<link rel="shortcut icon" href="//d2jv02qf7xgjwx.cloudfront.net/apps/common/favicon/favicon.ico">
+<meta name="msapplication-TileColor" content="#ffc40d">
+<meta name="msapplication-config" content="//d2jv02qf7xgjwx.cloudfront.net/apps/common/favicon/browserconfig.xml">
+<meta name="theme-color" content="#ffffff">
+<!-- !favicon.twig -->
+
+<link rel="stylesheet" href="https://static-assets-us.libguides.com/web/jquery/css/jquery-ui.min.css?2691"/>
+<link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="https://static-assets-us.libguides.com/web/css3.23.5/lg-public.min.css"/>
+<script src="https://static-assets-us.libguides.com/web/jquery/js/1.12.4_jquery.min.js"></script>
+<!-- js_include_fallback_lg.twig -->
+<script src="//code.jquery.com/ui/1.13.2/jquery-ui.min.js"></script>
+<script>jQuery.ui || document.write('<script src="https://static-assets-us.libguides.com/web/jquery/js/jquery-ui.min.js?2691">\x3C/script>');</script>
+<!-- !js_include_fallback_lg.twig -->
+    <script type="text/javascript" src="https://static-assets-us.libguides.com/web/js3.23.5/lg-public.min.js"></script>
+<meta name="google-site-verification" content="NyeXOw62XT4PYUHSaMY2oA36iKWa5JadRnQykBZindw" />
+<link rel="stylesheet" type="text/css" href="//s3.amazonaws.com/libapps/sites/4957/include/rolfing_20250403.css" media="screen"/>
+<link href="https://libapps.s3.amazonaws.com/customers/3000/images/favicon.ico" rel="shortcut icon" type"image/x-icon" />
+<style>
+.s-lg-rss-date {
+    display: none;
+}
+
+.s-ui-helptip {
+    display: none;
+}
+body {
+    background-color: #fff;
+    font-family: Open Sans, sans;
+}
+</style>
+
+
+
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-K83LTP4');</script>
+<!-- End Google Tag Manager -->
+
+<script>
+    var springStats = springStats || {};
+    springStats.saConfig = springStats.saConfig || {
+        site_id: 4957,
+        tracking_parameters: {"_st_site_id":4957},
+        tracking_server_host: "libguides-proc.springyaws.com"
+    };
+</script>
+<script  src="https://static-assets-us.libguides.com/web/js/sa.min.js?3116"></script>
+
+
+<script type="text/javascript">
+    jQuery(document).ready(function () {
+        loadSubjectGuides(0);
+    });
+
+    loadSubjectGuides = function (subject_id) {
+        var is_subject = (subject_id != 0);
+        const loadingText = '<div class="bold s-lib-color-lt-grey pad-top-med text-center">Loading...</div>';
+        jQuery("#s-lg-sb-content-guides").html(loadingText);
+        jQuery("#s-lg-sb-content-databases").html(loadingText);
+        jQuery("#s-lg-sb-experts-div").html(loadingText);
+
+        if (is_subject) {
+            jQuery.ajax({
+                url: "/sb_process.php",
+                dataType: "json",
+                data: {
+                    action: 540,
+                    subject_id: subject_id
+                },
+                success: function (response, textStatus) {
+                    if (response.errCode == 200) {
+                        jQuery("#s-lg-sb-content-guides").html(response.data.guides);
+                        jQuery("#s-lg-sb-content-databases").html(response.data.databases);
+                        jQuery("#s-lg-sb-experts-div").html(response.data.experts);
+                        jQuery("#s-lg-sb-content-blog-posts").html(response.data.blog_posts);
+                        jQuery("#s-lg-sb-content-er-courses").html(response.data.er_courses);
+                    }
+
+                    // Init popovers.
+                    springSpace.UI.xhrPopover();
+                    springSpace.UI.initPopOvers();
+                    jQuery(".az-bs-tooltip").tooltip();
+                },
+                error: function (jqXHR, textStatus, errorThrown) {
+                    springSpace.UI.error(errorThrown);
+                }
+            });
+        }
+    }
+
+    
+        jQuery(document).ready(function () {
+            springSpace.springTrack.trackPage({_st_type_id: '21'});
+        });
+</script>
+<style>
+    h2.muted {
+        font-size: 18px;
+    }
+</style>
+
+</head>
+
+<body class="s-lib-public-body">
+<a id="s-lg-public-skiplink" class="alert-info" href="#s-lib-public-main">Skip to Main Content</a>
+<!-- GOOGLE TAG MANAGER -->
+ <script>
+ (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-K83LTP4');
+ </script>
+<!-- END GOOGLE TAG MANAGER -->
+
+<!-- GOOGLE TAG MANAGER (noscript) -->
+ <noscript>
+    <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K83LTP4" height="0" width="0" style="display:none; visibility:hidden"></iframe>
+</noscript>
+<!-- END GOOGLE TAG MANAGER (noscript) -->
+
+<!-- NICHE ACADEMY PLUGIN -->
+ <script async src="https://my.nicheacademy.com/api/widgets/tiu"></script>
+<!-- NICHE ACADEMY PLUGIN ENDS -->
+
+<div class="noprint">
+    <div class="container-fluid" style="height:100px; background-color: #efeeed">
+        <h1 class="tiuheader" style="width: 100%" >
+            <!-- HEADER FOR DESKTOP -->
+             <div class="hidden-xs hidden-sm visible-md visible-lg" style="display: flex; justify-content: center">
+                <a href="https://library.tiu.edu/home"><img src="https://d2jv02qf7xgjwx.cloudfront.net/customers/3000/images/TEDS_Library_logo_3-color.png" style="padding: 10px; border: 0; height: 100px; " class="logo"></a>
+                <div class="header-menu" style="line-height: 75%">
+                    <p>&nbsp;</p>
+                    <div class="header-menu-large" style="width: 130px; font-size:22px; margin: auto; border-right: solid 1px #cfcecd; margin-top: 1px; padding-bottom: 10px; text-align: center">
+                        <a href="https://tiu.libcal.com/hours" class="header-hover" style="font-weight: normal">HOURS</a>
+                    </div>
+                    <div class="header-menu-large" style="width: 200px; top: -1px; margin: auto; text-align: center">
+                        <div class="dropdown">
+                            <button class="btn btn-default dropdown-toggle" type="button" id="menu1" data-toggle="dropdown" style="background-color: #efeeed; color: #13326b; font-size:22px; margin-top: -6px; border:0px; outline:0px; ">ACCOUNT&nbsp;&nbsp;<span class="fa fa-caret-down" style="color: #13326b50">
+                            </button>
+                            <ul class="dropdown-menu" role="menu" aria-labelledby="menu1" style="background-color: #fff;">
+                                <li role="presentation"  class="my-account-dropdown" style="font-size: 16px"><a role="menuitem" tabindex="-1" href="https://i-share-tiu.primo.exlibrisgroup.com/discovery/account?vid=01CARLI_TIU:CARLI_TIU&section=overview&lang=en" >TIU & I-Share</a></li>
+                                <li role="presentation" class="my-account-dropdown" style="font-size: 16px"><a role="menuitem" tabindex="-1" href="https://922.account.worldcat.org/profile/">WorldShare</a></li>
+                                <li role="presentation" class="my-account-dropdown" style="font-size: 16px"><a role="menuitem" tabindex="-1" href="https://papercut.tiu.edu/user">PaperCut Printing</a></li>
+                            </ul>
+                        </div>
+                    </div >
+                    <div class="header-menu-large" style="width:160px; font-size: 22px; margin: auto; border-left: solid 1px #cfcecd; border-right: solid 1px #cfcecd; padding-bottom: 10px; text-align: center">
+                        <a href="https://library.tiu.edu/contact" class="header-hover" style="font-weight: normal">CONTACT</a>
+                    </div>
+                    <div class="header-menu-large">
+                        <a href="https://library.tiu.edu/search" class="header hover"><img src="https://libapps.s3.amazonaws.com/customers/3000/images/magnifier.png" style="height: 20px; "></a>
+                    </div>
+                </div>
+            </div>
+            <!-- HEADER FOR DESKTOP ENDS --><!-- HEADER FOR DEVICES BEGINS-->
+             <div class="visible-xs visible-sm hidden-md hidden-lg">
+                <div class="container">
+                    <a href="https://library.tiu.edu/home"><img src="https://d2jv02qf7xgjwx.cloudfront.net/customers/3000/images/TEDS_Library_logo_3-color.png" class="logo" style="border: 0; height: 80px; margin-top: 10px; margin-bottom: -10px; margin-right: -50px; margin-left: -10px; float: left; z-index: 0"></a>
+                    <div class="dropdown" style="float: right; margin-top: 15px">
+                        <button class="btn-group dropdown-toggle" type="button" id="menu1" data-toggle="dropdown"  style="padding: 10px; float: right; border: none; background-color: transparent; color: #13326b; font-size: 50%; z-index:1" >Quick Info&nbsp;&nbsp;<span class="fa fa-caret-down" style="color: #13325b50"></button>
+                            <ul class="dropdown-menu" style="font-size: 12px; float: right; left:auto; right:0;">
+                                <li role="presentation" class="my-account-dropdown"><a role="menuitem" tabindex="-1" href="https://library.tiu.edu/hours">Hours & Map</a></li>
+                                <li role="presentation" class="my-account-dropdown"><a role="menuitem" tabindex="-1" href="https://i-share-tiu.primo.exlibrisgroup.com/discovery/account?vid=01CARLI_TIU:CARLI_TIU&section=overview&lang=en" >TIU &amp; I-Share Account</a></li>
+                                <li role="presentation" class="my-account-dropdown"><a role="menuitem" tabindex="-1" href="https://922.account.worldcat.org/profile/">WorldShare Account</a></li>
+                                <li role="presentation" class="my-account-dropdown"><a role="menuitem" tabindex="-1" href="https://papercut.tiu.edu/user">PaperCut Printing</a></li>
+                                <li role="presentation" class="my-account-dropdown"><a role="menuitem" tabindex="-1: href="https://library.tiu.edu/contact">Contact Us</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </h1>
+    </div>
+    <!-- HEADER FOR DEVICES ENDS --><!-- DROPDOWN MENU FOR ALL FORMATS -->
+     <nav class="navbar navbar-inverse" style="background-color: #13326b; z-index: 8; float: original; width: 100%">
+        <div class="container-fluid">
+            <ul class="nav navbar-nav" style="float: left; text-shadow: 1px 1px 1px #13326b">
+                <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#" style="color:white; font-size:140%; font-weight: normal">Welcome to Rolfing!&nbsp;&nbsp;<span class="fa fa-caret-down" style="color: #ffffff70; text-shadow: none"></span></a>
+                    <ul class="dropdown-menu" style="text-shadow: none; font-size: 16px">
+                        <li><a href="https://library.tiu.edu/librarypolicies">Mission &amp; Policies</a></li>
+                        <li><a href="https://library.tiu.edu/hours">Hours &amp; Map</a></li>
+                        <li><a href="https://library.tiu.edu/contact">Staff</a></li>
+                        <li><a href="https://library.tiu.edu/events">Events</a></li>
+                        <!--<li><a href="https://library.tiu.edu/libraryspaces">Library Spaces</a></li>-->
+                        <li><a href="https://library.tiu.edu/all-are-welcome">"All Are Welcome" Mural</a></li>
+                        <li><a href="https://library.tiu.edu/partners">Library Partners</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#" style="color:white; font-size:140%; font-weight: normal">Resources&nbsp;&nbsp;<span class="fa fa-caret-down" style="color: #ffffff70; text-shadow: none"></span></a>
+                    <ul class="dropdown-menu" style="text-shadow: none; font-size: 16px">
+                        <li><a href="https://library.tiu.edu/az.php">A-Z Databases</a></li>
+                        <li><a href="https://library.tiu.edu/c.php?g=298967&p=8717765">Ebooks & Audiobooks</a></li>
+                        <li><a href="https://library.tiu.edu/archives">Archives</a></li>
+                        <li><a href="https://library.tiu.edu/dissertations-theses-projects">Dissertations, Theses, & DMin Projects</a></li>
+                        <li><a href="https://library.tiu.edu/coursereserves">Course Reserves</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#" style="color:white; font-size:140%; font-weight: normal">Services&nbsp;&nbsp;<span class="fa fa-caret-down" style="color: #ffffff70; text-shadow: none"></span></a>
+                    <ul class="dropdown-menu" style="text-shadow: none; font-size: 16px">
+                        <li><a href="https://library.tiu.edu/academicsupport">Academic Support</a></li>
+                        <li><a href="https://library.tiu.edu/distance">Remote Students</a></li>
+                        <li><a href="https://library.tiu.edu/faculty">Faculty</a></li>
+                        <li><a href="https://library.tiu.edu/alumni">Alumni</a></li>
+                        <li><a href="https://library.tiu.edu/carrels">Carrels &amp; Shelves</a></li>
+                        <li><a href="https://library.tiu.edu/bookaroom">Study Rooms</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#" style="color:white; font-size:140%; font-weight: normal">Guides&nbsp;&nbsp;<span class="fa fa-caret-down" style="color: #ffffff70; text-shadow: none"></a>
+                    <ul class="dropdown-menu" style="text-shadow: none; font-size: 16px">
+                        <li><a href="https://library.tiu.edu/guides-tutorials">Guide List</a></li>
+                        <li><a href="https://library.tiu.edu/electronic">E-Resources & Accessibility</a></li>
+                        <li><a href="https://library.tiu.edu/seminaryresearch">Seminary Research</a></li>
+                        <li><a href="https://library.tiu.edu/ID5000">ID 5000</a></li>
+                        <li><a href="https://library.tiu.edu/ill">Interlibrary Loan & Doc Delivery</a></li>
+                        <li><a href="https://library.tiu.edu/academic-honesty">Plagiarism</a></li>
+                        <li><a href="https://library.tiu.edu/citationhelp">Citation & Formatting</a></li>
+                        <li><a href="https://library.tiu.edu/proquest">Submitting Major Works to ProQuest</a></li>
+                        <li><a href="https://library.tiu.edu/zotero">Zotero</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </nav>
+</div>
+<div id="s-lib-public-header" class="s-lib-header container s-lib-side-borders">
+    <nav id="s-lib-bc" aria-label="breadcrumb">
+        <ol id="s-lib-bc-list" class="breadcrumb"><li id="s-lib-bc-customer" class="breadcrumb-item"><a href="https://library.tiu.edu">Trinity International University</a></li><li id="s-lib-bc-site" class="breadcrumb-item"><a href="https://library.tiu.edu/">LibGuides</a></li><li id="s-lib-bc-page" class="active breadcrumb-item">Subjects</li></ol>
+    </nav>
+    <h1 id="s-lib-public-header-title">Subjects</h1>
+    <div id="s-lib-public-header-desc">Browse our best resources, organized by subject</div>
+</div>
+<div id="s-lib-public-nav" class="container s-lib-side-borders">
+    
+</div>
+<div id="s-lib-public-main" class="s-lib-main container s-lib-side-borders" tabindex="-1">
+    <section aria-label="Subject Search Bar">
+        <div id="s-lg-sb-search-bar" class="row">
+            <div id="sb-search-col-1" class="col-md-12 center">
+                <nav class="navbar navbar-default">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle pad-right-med" data-toggle="collapse"
+                    data-target="#s-lg-sb-nav-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+
+            <div id="s-lg-sb-label" class="navbar-brand">
+                <span id="s-lg-sb-count" class="badge" style="margin-left:10px;">31</span>
+                <span id="s-lg-sb-label-text">SUBJECTS</span>
+            </div>
+        </div>
+
+        <div class="collapse navbar-collapse" id="s-lg-sb-nav-1">
+            <div class="navbar-form navbar-left" role="search" style="margin-top:8px;">
+                <div class="form-group row">
+                    <div class="col-md-10" style="display:inline-block;">
+                        <label class="control-label sr-only" for="sel-guide-drop">Guide Subject Filter</label>
+                        <select name="sel-guide-drop" id="sel-guide-drop" class="form-control" style="width:100%;">
+                                                            <option selected value="">
+                                    Select a Subject...
+                                </option>
+                                                        <option value="sb.php?subject_id=61489" >
+                                    Archaeology
+                                </option>
+                            <option value="sb.php?subject_id=60298" >
+                                    Art
+                                </option>
+                            <option value="sb.php?subject_id=60270" >
+                                    Bioethics
+                                </option>
+                            <option value="sb.php?subject_id=60271" >
+                                    Biology
+                                </option>
+                            <option value="sb.php?subject_id=60272" >
+                                    Business
+                                </option>
+                            <option value="sb.php?subject_id=60273" >
+                                    Chemistry
+                                </option>
+                            <option value="sb.php?subject_id=60274" >
+                                    Christian Ministries
+                                </option>
+                            <option value="sb.php?subject_id=60275" >
+                                    Church History
+                                </option>
+                            <option value="sb.php?subject_id=60276" >
+                                    Communication
+                                </option>
+                            <option value="sb.php?subject_id=120564" >
+                                    Computer Science
+                                </option>
+                            <option value="sb.php?subject_id=60277" >
+                                    Counseling
+                                </option>
+                            <option value="sb.php?subject_id=120565" >
+                                    Criminal Justice
+                                </option>
+                            <option value="sb.php?subject_id=60278" >
+                                    Education
+                                </option>
+                            <option value="sb.php?subject_id=60279" >
+                                    Educational Studies
+                                </option>
+                            <option value="sb.php?subject_id=60280" >
+                                    English
+                                </option>
+                            <option value="sb.php?subject_id=60282" >
+                                    Graphic Design
+                                </option>
+                            <option value="sb.php?subject_id=60283" >
+                                    Health Sciences
+                                </option>
+                            <option value="sb.php?subject_id=60284" >
+                                    History
+                                </option>
+                            <option value="sb.php?subject_id=60285" >
+                                    Human Performance & Wellness
+                                </option>
+                            <option value="sb.php?subject_id=120567" >
+                                    Leadership
+                                </option>
+                            <option value="sb.php?subject_id=60286" >
+                                    Math
+                                </option>
+                            <option value="sb.php?subject_id=60287" >
+                                    Missions
+                                </option>
+                            <option value="sb.php?subject_id=60288" >
+                                    Music
+                                </option>
+                            <option value="sb.php?subject_id=60289" >
+                                    New Testament
+                                </option>
+                            <option value="sb.php?subject_id=60290" >
+                                    Old Testament
+                                </option>
+                            <option value="sb.php?subject_id=60291" >
+                                    Philosophy
+                                </option>
+                            <option value="sb.php?subject_id=60293" >
+                                    Psychology
+                                </option>
+                            <option value="sb.php?subject_id=60294" >
+                                    REACH
+                                </option>
+                            <option value="sb.php?subject_id=120566" >
+                                    Social & Interactive Media
+                                </option>
+                            <option value="sb.php?subject_id=60295" >
+                                    Sociology / Social Issues
+                                </option>
+                            <option value="sb.php?subject_id=60296" >
+                                    Theology
+                                </option>
+                                                    </select>
+                    </div>
+
+                    <div class="col-md-2 pad-left-none" style="display:inline-block;">
+                        <button type="button" class="btn btn-small btn-primary"
+                                onclick="window.location.href = '/' + (jQuery('#sel-guide-drop').val().replace(/^\/+/, ''));">
+                            Go
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>
+
+            </div>
+        </div>
+    </section>
+    <section aria-label="Content by Subject">
+        <div id="s-lg-sb-cols" class="row">
+            <div id="col1" class="col-md-8 center">
+            </div>
+            <div id="col2" class="col-md-4 center">
+                <div style="padding-top: 9px;"></div>
+                <div class="margin-bottom-xlg"><div class="s-lib-public-side-header"><h2 class="pad-bottom-sm">Search</h2></div><div class="txt pad-top-sm"><div class="margin-bottom-med">Search the full text of this site. Results will link to pages containing your terms; results from subject page searches are automatically filtered by that subject.</div></div><div class="input-append"><form role="search" method="GET" action="/srch.php"><label class="control-label sr-only" for="s-lg-guide-search">Guide Search Terms</label><input class="form-control" name="q" id="s-lg-guide-search" type="text" placeholder="Enter Search Words" maxlength="260"><button class="btn btn-info text-white" type="submit" style="margin-top:2px;" role="button">Search</button></form></div></div>
+            </div>
+        </div>
+    </section>
+</div>
+<div id="s-lib-footer-public" class="s-lib-footer footer container s-lib-side-borders"><div><div id="s-lib-footer-brand">Powered by Springshare.</div><div id="s-lib-footer-rights">All rights reserved.</div><div id="s-lib-footer-login-link"><a href="https://tiu.libapps.com/libapps/login.php?site_id=4957">Login to LibApps</a></div></div><div id="s-lib-footer-support-link"></div></div></div>
+
+<div id="s-lib-alert" title=""><div id="s-lib-alert-content"></div></div>
+<!-- popover.twig -->
+<div id="s-lib-popover-title" class="hide">
+    <span class="text-info">
+        <strong>title</strong>
+    </span>
+
+    <button type="button" id="popclose" class="close" onclick="jQuery('.s-lib-popover').popover('hide')">
+        &times;
+    </button>
+</div>
+
+<div id="s-lib-popover-content" class="hide">
+    <i class="fa fa-refresh fa-spin"></i> Loading...
+    <button class="btn btn-default btn-sm popclose" type="button">Close</button>
+</div>
+<!-- !popover.twig -->
+
+<!-- scroll_top.twig -->
+<div id="s-lib-scroll-top">
+    <a href="javascript:void(0);" onclick="jQuery('body').focus();" title="Back to Top"
+       aria-label="Back to Top">
+        <span class="fa-stack fa-lg" aria-hidden="true">
+            <i class="fa fa-square-o fa-stack-2x"></i>
+            <i class="fa fa-angle-double-up fa-stack-1x" style="position:relative; bottom:2px;"></i>
+        </span>
+    </a>
+</div>
+<!-- !scroll_top.twig -->
+
+
+
+<div class="no-print">
+
+<!-- Footer for desktop, laptop, and tablet version begins-->
+
+<div class="hidden-xs hidden-sm">
+
+     <div style="margin: auto; background-color: #efeeed; border-top: solid 1px #cfcecd">
+          <div style="margin-right: auto; margin-left: auto; padding-bottom: 10px; color: #13326b; line-height: 150%; text-align: center; border-bottom: solid 1px #cfcecd; width: 77%"
+               <p><br/><strong>Rolfing Library glorifies God and edifies the Trinity Evangelical Divinity School community by:</strong>
+               <br/>Providing access to quality resources • Fostering collaborative relationships in a warm and welcoming environment • Promoting lifelong learning</p>
+          </div>
+     </div>
+
+<div class="container-fluid" style="background-color: #efeeed; padding: 6px; font-size: 12px"><p style="line-height: 50%"> </p>
+     <div class="container" style="width:69%; margin-left: auto; margin-right: auto; ">
+          <div class="row">
+               <div class="col-md-3" align="center" style="width: 31%">
+                    <a href="https://library.tiu.edu/home" ><img src="https://d2jv02qf7xgjwx.cloudfront.net/customers/3000/images/TEDS_Library_logo_3-color.png" style="width: 65%; padding: 10px 5px 5px 5px">
+                    <p style="padding-top: 5px"><span style="line-height:75%"><a href="https://goo.gl/maps/aSbF371MmsPbQLMCA" class="library-footer-gray" style="font-weight: normal">2065 Half Day Road Bannockburn IL 60015</a></span>
+                    <br/><span style="line-height:75%"><a href="tel: 8473174000" class="library-footer-gray" style="font-weight: normal">847-317-4000</a> • <a href="mailto:library@tiu.edu" class="library-footer-gray" style="font-weight: normal">library@tiu.edu</a></span></p> 
+               </div>
+          <div class="col-md-3" style="margin-top: 5px; padding-top: 10px; padding-left: 30px; border-left: solid 1px #cfcecd; line-height: 160%; width: 23%">
+               <div style="color: #333333; padding-bottom: 6px; font-size: 15px; font-weight: bold; border-bottom: solid 1px #cfcecd; width: 80%">ABOUT ROLFING
+               </div>
+               <div style="padding-top: 6px">
+                    <span style="line-height:100%; font-size:11px">
+                    <a href="https://library.tiu.edu/librarypolicies" class="library-footer-gray" style="font-weight: normal">Policies</a>
+                    <br/><a href="https://library.tiu.edu/events" class="library-footer-gray" style="font-weight: normal">Events</a>
+                    <br/><a href="https://library.tiu.edu/library-info/jobs" class="library-footer-gray" style="font-weight: normal">Employment</a>
+                    <br/><a href="https://library.tiu.edu/policies/donations" class="library-footer-gray" style="font-weight: normal">Donations</a>
+                    <br/><a href="https://library.tiu.edu/search" class="library-footer-gray" style="font-weight: normal">Site Map</a><p style="line-height: 50%"> </p>
+               </div>
+          </div>
+          <div class="col-md-3" style="margin-top: 5px; padding-top: 10px; line-height: 160%; width: 23%">
+               <div style="color: #333333; padding-bottom: 6px; font-size: 15px; font-weight:bold; border-bottom: solid 1px #cfcecd; width: 80%">QUICK LINKS
+               </div> 
+               <div style="padding-top: 6px">
+                    <span style="line-height:130%; font-size:11px">
+                    <a href="https://library.tiu.edu/academicsupport" class="library-footer-gray" style="font-weight: normal">Academic Support</a>
+                    <br/><a href="https://library.tiu.edu/coursereserves" class="library-footer-gray" style="font-weight: normal">Course Reserves</a>
+                    <br/><a href="https://library.tiu.edu/login-help" class="library-footer-gray" style="font-weight: normal">Login Help</a>
+                    <br/><a href="https://docs.google.com/forms/d/e/1FAIpQLSdkSp6yUG2jWwlpmjAyyDVxSEYnevmO67lAf7Rypu61xI_-nA/viewform" class="library-footer-gray" style="font-weight: normal">Suggest a Resource</a>                                                                                
+                    <br/><a href="https://library.tiu.edu/policies/visiting-libraries" class="library-footer-gray" style="font-weight: normal">Visiting Other Libraries</a>
+</li>
+               </div>
+          </div>
+          <div class="col-md-3" style="margin-top: 5px; padding-top: 10px; line-height: 160%; width: 23%">
+               <div style="color: #333333; padding-bottom: 6px; font-size: 15px; font-weight: bold; border-bottom: solid 1px #cfcecd; width: 80%">EXTERNAL SITES
+               </div> 
+               <div style="padding-top: 6px">
+                    <span style="line-height:130%; font-size:11px; font-family: Open Sans, sans">
+                    <a href="https://www.teds.edu" class="library-footer-gray" style="font-weight: normal">Trinity Evangelical Divinity School</a>
+                    <br/><a href="https://my.tiu.edu" class="library-footer-gray" style="font-weight: normal">MyTIU</a>
+                    <br/><a href="https://canvas.tiu.edu" class="library-footer-gray" style="font-weight: normal">TEDS Canvas</a>
+                    <br/><a href="https://www.tiu.edu/law/library/" class="library-footer-gray" style="font-weight: normal">Trinity Law School Library</a>
+                    <br/><a href="https://papercut.tiu.edu/user" class="library-footer-gray" style="font-weight: normal">Papercut Printing</a>
+               </div>
+          </div>
+     </div>
+
+<br />
+
+     
+</div>
+</div>
+</div>
+<!--Footer for desktops, laptops, & tablets ends-->
+
+<!--Footer for mobile devices begins-->
+<div class="hidden-md hidden-lg">
+
+<div class="container-fluid" style="background-color: #efeeed; padding: 6px; border-top: solid 1px #cfcecd;" align="center">
+     <div align="center"; style="font-weight: 500; color: #13326b; line-height: 130%; font-size: 100%; border-bottom: solid 1px #cfcecd"><p><br/><strong>Rolfing Library glorifies God and edifies the Trinity International University community by:</strong> <br/>Providing access to quality resources • Fostering collaborative relationships in a warm and welcoming environment • Promoting lifelong learning</p>
+<p style="line-height: 30%"> </p>
+     </div>
+     <div align="center" style="border-bottom: solid 1px #cfcecd; margin-top: -10px; padding-bottom: 10px; width: 85%; margin-left: auto; margin-right: auto">
+          <br/><a href="https://library.tiu.edu"><img src="https://d2jv02qf7xgjwx.cloudfront.net/customers/3000/images/TEDS_Library_logo_3-color.png" width=55%></a>
+          <p style="line-height: 80%"> </p>
+          <span style="line-height:80%"><a href="https://goo.gl/maps/aSbF371MmsPbQLMCA" class="library-footer-gray">2065 Half Day Road • Bannockburn IL 60015</a></span> 
+          <br/><span style="line-height:80%"><a href="tel: 8473174000" class="library-footer-gray">847-317-4000</a> • <span style="line-height:80%"><a href="mailto:library@tiu.edu" class="library-footer-gray">library@tiu.edu</a></span>
+     </div>
+     <div align="center" style="width: 85%; margin-left: auto; margin-right: auto">
+          <ul class="nav navbar-nav">       
+          <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#" style="color: #85837e; font-size:120%">About Rolfing <span class="caret"></span></a>
+               <ul class="dropdown-menu">
+                    <li><a href="https://library.tiu.edu/librarypolicies">Policies</a></li>
+                    <li><a href="https://library.tiu.edu/events">Events</a></li>
+                    <li><a href="https://library.tiu.edu/library-info/jobs">Employment</a></li>
+                    <li><a href="https://library.tiu.edu/policies/donations">Donations</a></li>
+                    <li><a href="https://library.tiu.edu/search">Site Map</a></li>
+               </ul>
+          </li>
+          <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#" style="color: #85837e; font-size:120%">Quick Links <span class="caret"></span></a>
+               <ul class="dropdown-menu">
+                    <li><a href="https://library.tiu.edu/academicsupport">Academic Support</a></li>
+                    <li><a href="https://library.tiu.edu/coursereserves">Course Reserves</a></li>
+                    <li><a href="https://library.tiu.edu/login-help">Login Help</a></li>
+                    <li><a href="https://docs.google.com/forms/d/e/1FAIpQLSdkSp6yUG2jWwlpmjAyyDVxSEYnevmO67lAf7Rypu61xI_-nA/viewform">Suggest a Resource</a></li>                                                                               
+                    <li><a href="https://library.tiu.edu/policies/visiting-libraries">Visiting Other Libraries</a></li>
+               </ul>
+          </li>
+          <li class="dropdown" style="padding-bottom: 8px"><a class="dropdown-toggle" data-toggle="dropdown" href="#" style="color: #85837e; font-size:120%">External Links <span class="caret"></span></a>
+               <ul class="dropdown-menu">
+                    <li><a href="https://www.teds.edu">Trinity Evangelical Divinity School</a></li>
+                    <li><a href="https://my.tiu.edu">MyTIU</a></li>
+                    <li><a href="https://canvas.tiu.edu">TEDS Canvas</a></li>
+                    <li><a href="https://www.tiu.edu/law/library/">Trinity Law School Library</a></li>
+                    <li><a href="https://papercut.tiu.edu/user">Papercut Printing</a></li>
+               </ul>
+          </li>
+</div>
+<!--Footer for mobile devices ends-->
+
+<p>
+<!--Start of Zendesk Chat Script-->
+<script type="text/javascript">
+window.$zopim||(function(d,s){var z=$zopim=function(c){z._.push(c)},$=z.s=
+d.createElement(s),e=d.getElementsByTagName(s)[0];z.set=function(o){z.set.
+_.push(o)};z._=[];z.set._=[];$.async=!0;$.setAttribute("charset","utf-8");
+$.src="https://v2.zopim.com/?5bfilsunugwkPwbbtI45Lum9lq9d3avr";z.t=+new Date;$.
+type="text/javascript";e.parentNode.insertBefore($,e)})(document,"script");
+</script>
+<!--End of Zendesk Chat Script→
+</p>
+
+</span>
+</div>
+
+<!-- BEGIN: Analytics code --><script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-10777555-2', 'auto');
+  ga('send', 'pageview');
+
+</script><!-- END: Analytics code -->
+</body>
+</html>

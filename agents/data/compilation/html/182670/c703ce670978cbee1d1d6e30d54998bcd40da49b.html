@@ -1,0 +1,953 @@
+
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head><meta name="viewport" content="width=device-width, initial-scale=1.0" /><!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-WR9V5K73');</script>
+<!-- End Google Tag Manager --><script>
+  window.TdxGtmContext = {"User":{"Id":0,"UID":"00000000-0000-0000-0000-000000000000","UserName":"","FullName":"Public User","AlertEmail":"publicuser@noreply.com","Role":"Experience User","HasTDNext":false,"StandardApplicationNames":null,"TicketApplicationNames":[],"AssetApplicationNames":[],"ClientPortalApplicationNames":[],"Type":"Technician","Analytics":{"Title":null,"Organization":null}},"Partition":{"Id":1001,"Name":"Multi-Tenant 01 Production"},"BillableEntity":{"Id":323,"Name":"Dartmouth College","SalesForceIdentifier":"0013600000EM47QAAT","GWMIID":"daa0e478-66fd-4f3c-bef3-da59b37f3dbd"},"Environment":{"ShortName":"PRD"}};
+</script><script src="/TDPortal/Content/Scripts/jquery/2.2.4/jquery.min.js?v=20260213000508"></script><script src="/TDPortal/Content/Scripts/jquery-migrate/1.4.1/jquery-migrate.min.js?v=20260213000508"></script><script src="/TDPortal/Content/Scripts/jquery-ui/1.13.2/jquery-ui-1.13.2.custom.timepicker.min.js?v=20260213000818"></script><link href="/TDPortal/Content/Styles/jquery-ui/1.13.2/jquery-ui.compiled.min.css?v=20260213000820" rel="stylesheet" type="text/css"  /><link href="/TDPortal/Content/bootstrap/3.4.1/dist/css/bootstrap.min.css?v=20260213000508" rel="stylesheet" type="text/css" id="lnkBootstrapCSS" /><script src="/TDPortal/Content/bootstrap/3.4.1/dist/js/bootstrap.min.js?v=20260213000508"></script><link href="/TDPortal/Content/FontAwesome/css/fontawesome.min.css?v=20260213000506" rel="stylesheet" type="text/css" id="lnkFontAwesome" /><link href="/TDPortal/Content/FontAwesome/css/solid.css?v=20260213000506" rel="stylesheet" type="text/css"  /><link href="/TDPortal/Content/FontAwesome/css/regular.css?v=20260213000506" rel="stylesheet" type="text/css"  /><link href="/TDPortal/Content/FontAwesome/css/brands.css?v=20260213000506" rel="stylesheet" type="text/css"  /><link href="/TDPortal/Content/FontAwesome/css/v4-shims.css?v=20260213000506" rel="stylesheet" type="text/css"  /><link href="/TDClient/Styles/bootstrap_custom.min.css?v=20260213000818" rel="stylesheet" type="text/css"  /><link href="/TDClient/Styles/TDStyles.min.css?v=20260213000820" rel="stylesheet" type="text/css"  /><link href="https://services.dartmouth.edu/TDPortal/BE/Style/323/TDClient/1806?v=20200915105921" rel="stylesheet" type="text/css" /><script src="/TDPortal/Content/Scripts/tdx/dist/TDJSFramework.compiled.min.js?v=20260213000818"></script><script src="/TDPortal/Content/Scripts/tdx/dist/modalFocusTrap.min.js?v=20260213000816"></script><script src="/TDPortal/Content/Scripts/underscore/1.12.1/underscore-min.js?v=20260213000508"></script>
+<script src="/TDClient/Scripts/clientOS.min.js?v=20260213000810"></script>
+<script src="/TDClient/Scripts/collapseMe.min.js?v=20260213000810"></script>
+<script src="/TDClient/Scripts/tdsearchfilter.min.js?v=20260213000810"></script>
+<script src="/TDClient/Scripts/SiteSearch.min.js?v=20260213000810"></script>
+<script src="/TDPortal/Content/Scripts/tdx/dist/elasticsearchAutocomplete.min.js?v=20260213000816"></script>
+<link id="ctl00_ctl00_lnkFavicon" rel="icon" href="https://services.dartmouth.edu/TDPortal/BE/Icon/323/1806?v=20180809145413" />
+
+    
+    <script async src="//www.googletagmanager.com/gtag/js?id=G-FDKJ4M25RS"></script>
+    <script>
+
+      $(function () {
+
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        // Be sure to set the proper cookie domain to the customer's full subdomain when sending the pageview hit.
+        gtag('config', 'G-FDKJ4M25RS', { 'cookie_domain': 'services.dartmouth.edu' });
+
+        });
+
+    </script>
+
+  
+
+  <script>
+
+      $(function () {
+        var masterUi = MasterUI({
+          isPostback: false,
+          baseUrl: '/TDClient/',
+          isTdGoogleAnalyticsEnabled: true,
+          isAuthenticated: false
+          });
+
+        $('#collapseMe').collapseMe({
+          toggleVisibilitySelector: '.navbar-toggle'
+        });
+
+        TeamDynamix.addRequiredFieldHelp();
+      });
+
+      // The sub-nav menu uses padding-top to position itself below the header bar and main navigation sections. When the
+      // window is resized, there is a chance that the content of these header or nav sections wraps, causing the height
+      // to change, potentially covering the sub-nav menu, which is obviously a big usability problem. This function
+      // listens for when the window size or orientation is changing (and also when the window first loads), and adjusts
+      // the padding so that the sub-nav menu appears in the correct location.
+      $(window).bind('load ready resize orientationchange', function () {
+        var headerHeight = $('#divMstrHeader').height();
+        $('#navShim').css({
+          "padding-top": headerHeight
+        });
+
+        $('#content').css({
+          "padding-top": headerHeight,
+          "margin-top": headerHeight * -1
+        });
+      });
+  </script>
+
+  
+  
+  
+  <script src="/TDPortal/Content/select2/v3/select2.min.js?v=20260213002344"></script><link href="/TDPortal/Content/select2/v3/select2.compiled.min.css?v=20260213002344" rel="stylesheet" type="text/css" id="lnkSelect2" />
+  <script src="/TDClient/Scripts/attachmentHandler.min.js?v=20260213000818"></script>
+
+  <style type="text/css">
+    .honey-pot-div {
+      display: none;
+    }
+  </style>
+
+  <script>
+    
+
+    function shareArticle() {
+      if ($('#ctl00_ctl00_cpContent_cpContent_shareRecipients').val().trim() === "") {
+        alert('You must first enter a valid email.');
+        $('#btnShare').progressButton('reset');
+      }
+      else {
+        __doPostBack('ctl00$ctl00$cpContent$cpContent$btnSendShare', '');
+      }
+    }
+
+    function closeShareModal() {
+      $('#divShareModal').modal('hide');
+      $('#btnShare').progressButton('reset');
+    }
+
+    function toggleFeedback(isHelpful) {
+      $('#divHelpfulComments').show();
+      $('#divHelpfulYesNo').hide();
+      $('#ctl00_ctl00_cpContent_cpContent_hdnIsHelpful').val(isHelpful);
+      $('#ctl00_ctl00_cpContent_cpContent_txtComments').focus();
+    }
+
+    function toggleFeedbackResult() {
+      $('#divWasHelpful, #divFeedbackRecorded, #divHelpfulComments, #divHelpfulYesNo').toggle();
+    }
+
+    // The following two functions were added as a result of ticket ID: 1392522. We are generating these buttons dynamically to
+    // prevent bots from clicking them and posting feedback on an article. Additionally, we have an input that is hidden from
+    // the user. If a bot enters text in that input, which it likely will (bots love filling out forms), then we don't accept the
+    // form submission
+    function generateFeedbackButtons() {
+      var $btnHelpfulYes = $('<button id="btnHelpfulYes" type="button" class="btn btn-primary gutter-left" onclick="toggleFeedback(1);">Yes</button>');
+      var $btnHelpfulNo = $('<button id="btnHelpfulNo" type="button" class="btn btn-primary gutter-left-sm" onclick="toggleFeedback(0);">No</button>');
+
+      $('#divWasHelpful').append($btnHelpfulYes);
+      $('#divWasHelpful').append($btnHelpfulNo);
+    }
+    function attemptAddFeedback(e) {
+      if ($('#honeyPot').val() !== '') {
+        e.preventDefault();
+        window.location.reload();
+      }
+    }
+
+    function cancelFeedback() {
+      $('#ctl00_ctl00_cpContent_cpContent_txtComments').val('');
+      $('#divHelpfulComments, #divHelpfulYesNo').toggle();
+    }
+
+    function confirmDeleteFeedback(id) {
+      if (confirm('Are you sure you want to delete this feedback? This cannot be undone.')) {
+        $('#ctl00_ctl00_cpContent_cpContent_hdnFeedbackID').val(id);
+        __doPostBack('ctl00$ctl00$cpContent$cpContent$btnDeleteFeedback', '');
+      }
+    }
+
+    function toggleAddressed(id, isAddressed) {
+      $('#ctl00_ctl00_cpContent_cpContent_hdnFeedbackID').val(id);
+      $('#ctl00_ctl00_cpContent_cpContent_hdnIsAddressed').val(isAddressed);
+      __doPostBack('ctl00$ctl00$cpContent$cpContent$btnToggleAddressed', '');
+    }
+
+    $(function () {
+      
+
+      generateFeedbackButtons();
+      $('[data-toggle="popover"]').popover();
+
+      var attachmentHandler = new TeamDynamix.AttachmentHandler({
+        containerSelector: '.js-article-attachments',
+        resultLabelSelector: '#ctl00_ctl00_cpContent_cpContent_lblResults_lblResults-label',
+        baseControllerUrl: '/TDClient/1806/Portal/Shared/Attachments',
+        antiForgeryToken: 'CzJtPC8PWcxtI7IUSid8BQB56gUI-OtVQGaKUTTRo-iHowF7i9sReTzVuC1JetMxOgBuM6_4A-bE0rAW4OkRppHH_Kk1:4XOSRuvYPMl3eqIJsbC8UzEQfX2KWy8Kvr4sFmfq1g_p-IEK0GsUtxUzoGZ_I_2oRxZGpLZtV3dOM5HYSVoIRuuUdQ41',
+        itemId: 155837,
+        componentId: 26,
+        feedId: 'articleFeed',
+        readOnly: false
+      });
+
+      $('#btnShare').on('click', function () {
+        shareArticle();
+      });
+
+      // Don't try and update the table styles if the user wanted to opt out.
+      $('#ctl00_ctl00_cpContent_cpContent_divBody table:not(.SkipTableFixup)').each(function () {
+        var padding = $(this).attr('cellpadding');
+        var spacing = $(this).attr('cellspacing');
+
+        $(this).css("border-collapse", "separate");
+
+        if (spacing) {
+          $(this).css("border-spacing", spacing + "px");
+        }
+
+        $(this).find('td').each(function () { $(this).css('padding', padding + 'px') });
+      });
+
+      
+    });
+
+    
+  </script>
+
+
+
+<meta property="og:title" content="Using Generative AI at Dartmouth - Staff Overview" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://services.dartmouth.edu/TDClient/1806/Portal/KB/ArticleDet?ID=155837" />
+<meta property="og:image" content="https://services.dartmouth.edu/TDPortal/BE/Logo/323/1806" />
+<meta property="og:description" content="Please follow these initial guidelines on the use and procurement of generative artificial intelligence (AI) tools. Dartmouth supports responsible experimentation with generative AI tools, but there are important considerations to keep in mind when using these tools, including information securit..." />
+  <meta property="og:site_name" content="Dartmouth College - Knowledge Base" />
+  <meta property="article:section" content="Software and Solutions" />
+  <meta property="article:published_time" content="2023-12-04T20:24Z" />
+  <meta property="article:modified_time" content="2025-07-14T16:20Z" /><title>
+	Article - Using Generative AI at Dart...
+</title></head>
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WR9V5K73"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+<form method="post" action="/TDClient/1806/Portal/KB/ArticleDet?ID=155837" onsubmit="javascript:return WebForm_OnSubmit();" id="aspnetForm">
+<div class="aspNetHidden">
+<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
+<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="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" />
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['aspnetForm'];
+if (!theForm) {
+    theForm = document.aspnetForm;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script>
+
+
+<script src="/TDClient/WebResource.axd?d=pynGkmcFUV13He1Qd6_TZMSMQxVWLi4fik2rw1_u_hZsCNzwv5c621ov6_ZX_wzTt5vh-g2&amp;t=638901392248157332" type="text/javascript"></script>
+
+
+<script src="/TDClient/ScriptResource.axd?d=nv7asgRUU0tRmHNR2D6t1NXOAgTb3J37FC1L2PfbYYFmSPm-ANa7n6FP0x7BAsbHeL4jfY3ptd1q7zKKVI7DbuXZcwEoKOwj9WxCI1VrQlbWE1Trg1t1GmJDN43kQMJsB7X8tw2&amp;t=ffffffff93d1c106" type="text/javascript"></script>
+<script src="/TDClient/ScriptResource.axd?d=NJmAwtEo3Ipnlaxl6CMhvmVxW3-Ljsg_2Hna32smxrg-6ogyYAN3UTPsJQ8m1uwzn_kuf2Wpne6NSFmYui3h0wCQhJN3ZUiLTNkvhiIgZpq74-lKmofUPQGJ8own8RI2_mwAcmvlSj2WBnqwm5Wj4cyNvv81&amp;t=5c0e0825" type="text/javascript"></script>
+<script src="/TDClient/ScriptResource.axd?d=dwY9oWetJoJoVpgL6Zq8OLdGoo5BVWQ_Eo60QZTEhEcHeiVfwgY9tLCgzdZ5TRwvrwYEnOvujbNccOVLUfWtUg4HivSIsewg6JABxkBGEqVVV64eiRyCAsPDqh6tUioISUQKB74sWMO4Er2mHrWEIWs_sBM1&amp;t=5c0e0825" type="text/javascript"></script>
+<script src="/TDClient/WebResource.axd?d=xtfVMqdF1exC2MBVkOJwMveStDR5kg3dbZWgIXMXZmB1xXom6CcIrWFgHa7jsp4qJuFW2L5XShudyzlBsIO3JhCfiU5HmL2BDz__mCv9dznmBlEMS7LvcYg6wTdPTrAXIXI2CvtjwlnpZd-j4Zpsx2wG_uA1&amp;t=639065204200000000" type="text/javascript"></script>
+<script src="/TDClient/WebResource.axd?d=sp7vCoAo-SSYfpsQ1sYBBeEDnwCGxDYEwZCM0ler88yoVZIPDXMk1C3XF2L2L0xrbB8Rvhli51TswRlmPIOCZgaY58lKhPr-Pv1jTFJ1oUAu7x6RDtNFZUxbtxs3KYQGLK6FpPD5bKuB0e0NmS9HkAqRVks1&amp;t=639065204200000000" type="text/javascript"></script>
+<script src="/TDClient/WebResource.axd?d=icMURy63hv40LPPfq4rTvmm-RfB_YkC6rEEF_2QOO68q3TseXYNBetRKKgBXJ8mn2e8UIgCPiV23HaQUZbjySMHqSgmYZgLcYltBqwD2_EK8aQ08zBuqc3ZBVZITQrbtn6w46dRxFLibMIQg0Aho73rn8Rpxrzg5YMG_JR0UOrUR0wlZ0&amp;t=639065204200000000" type="text/javascript"></script>
+<script src="/TDClient/WebResource.axd?d=1HpFfNpwNihNfEP1lyJHvdPVqbv8KRoFH4-_ZORUgPOP-bqmmtIJRvFQc7828Vf59O_-fdBXcnwdv-hYp5RptPuHmMR0kGQM0_3rS4Z7sKfC7jy9Cc_8fyfcUWa8psszacEQlAXHPXmNwyRymbGSywEmhrE1&amp;t=639065204200000000" type="text/javascript"></script>
+<script type="text/javascript">
+//<![CDATA[
+function WebForm_OnSubmit() {
+CKEditor_TextBoxEncode('ctl00_ctl00_cpContent_cpContent_shareBody_txtBody', 0); if (typeof(ValidatorOnSubmit) == "function" && ValidatorOnSubmit() == false) return false;
+return true;
+}
+//]]>
+</script>
+
+<div class="aspNetHidden">
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="784CA02E" />
+</div>
+<script type="text/javascript">
+//<![CDATA[
+Sys.WebForms.PageRequestManager._initialize('ctl00$ctl00$smMain', 'aspnetForm', ['tctl00$ctl00$cpContent$cpContent$UpdatePanel1','','tctl00$ctl00$cpContent$cpContent$upFeedbackGrid','','tctl00$ctl00$cpContent$cpContent$lblResults$ctl00',''], ['ctl00$ctl00$cpContent$cpContent$btnSubmitComments','','ctl00$ctl00$cpContent$cpContent$btnToggleSubscribe','','ctl00$ctl00$cpContent$cpContent$btnToggleFavorite','','ctl00$ctl00$cpContent$cpContent$btnSendShare',''], [], 90, 'ctl00$ctl00');
+//]]>
+</script>
+
+<div id="ctl00_ctl00_upMain" style="display:none;">
+	
+    <div id="ctl00_ctl00_pbMain" class="progress-box-container"><div class="progress-box-body"><div class="well shadow"><h2 class="h4 gutter-top-none">Updating...</h2><div class="progress" style="margin-bottom: 0;"><div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuemin="0" aria-valuemax="100" style="width: 100%"></div></div></div></div></div>
+  
+</div>
+
+<header id="ctl00_ctl00_navHeader" role="banner">
+
+  <div id="divMstrHeader" class="master-header NoPrint" style="background-color: #fff;">
+
+  
+
+  <div class="logo-header-full hidden-xs">
+
+    
+    <div class="pull-left">
+      <a href="#mainContent" class="sr-only sr-only-focusable">Skip to main content</a>
+    </div>
+
+
+    <div id="ctl00_ctl00_divPageHeader" class="container logo-header clearfix" style="padding: 5px;">
+
+      <div id="divLogo" class="pull-left logo-container">
+
+        <a href="https://services.dartmouth.edu/"
+           target="_blank">
+          <img src="/TDPortal/BE/Logo/323/1806" alt="Dartmouth College Home Page" class="js-logo img-responsive" />
+          <span class="sr-only">(opens in a new tab)</span>
+        </a>
+
+      </div>
+
+      <div class="master-header-right pull-right padding-top padding-bottom">
+
+        
+
+          <div class="pull-left topLevelSearch input-group">
+            <div id="SiteSearch-9730e6354a8a46848c481b9101f27687" class="gutter-bottom input-group site-search" style="max-width: 400px;">
+  <div id="SiteSearch-dropdown-9730e6354a8a46848c481b9101f27687" class="input-group-btn">
+    <button type="button" id="SiteSearch-filter-9730e6354a8a46848c481b9101f27687" class="btn btn-default dropdown-toggle" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false" title="Filter your search by category" data-component="all">
+      <span class="fa-solid fa-solid fa-earth-americas"></span><span class="fa-solid fa-fw fa-nopad fa-caret-down" aria-hidden="true"></span>
+      <span class="sr-only">
+        Filter your search by category. Current category:
+        <span class="js-current-component">All</span>
+      </span>
+    </button>
+    <ul tabindex="-1" aria-label="Filter your search by category" role="menu" class="dropdown-menu" >
+      <li>
+        <a role="menuitem" href="javascript:void(0);" data-component-text="All" data-component="all" data-component-icon="fa-solid fa-earth-americas" title="Search all areas">
+          <span class="fa-solid fa-fw fa-nopad fa-earth-americas" aria-hidden="true"></span>
+          All
+        </a>
+      </li>
+
+      <li aria-hidden="true" class="divider"></li>
+
+        <li role="presentation">
+          <a role="menuitem" href="javascript:void(0);" data-component-text="Knowledge Base" data-component="kb" data-component-icon="fa-lightbulb" title="Search Knowledge Base">
+            <span class="fa-regular fa-fw fa-nopad fa-lightbulb" aria-hidden="true"></span>
+            Knowledge Base
+          </a>
+        </li>
+
+        <li role="presentation">
+          <a role="menuitem" href="javascript:void(0);" data-component-text="Service Catalog" data-component="sc" data-component-icon="fa-compass" title="Search Service Catalog">
+            <span class="fa-solid fa-fw fa-nopad fa-compass" aria-hidden="true"></span>
+            Service Catalog
+          </a>
+        </li>
+
+    </ul>
+  </div>
+
+  <label class="sr-only" for="SiteSearch-text-9730e6354a8a46848c481b9101f27687">Search the client portal</label>
+
+  <input id="SiteSearch-text-9730e6354a8a46848c481b9101f27687" type="text" class="form-control" autocomplete="off" placeholder="Search the client portal" title="To search for items with a specific tag, enter the # symbol followed by the name of the tag.
+To search for items using exact match, place double quotes around your text." />
+
+  <span class="input-group-btn">
+    <button id="SiteSearch-button-9730e6354a8a46848c481b9101f27687" class="btn btn-default" type="button" title="Search">
+      <span class="fa-solid fa-fw fa-nopad fa-search blue" aria-hidden="true"></span>
+      <span class="sr-only">Search</span>
+    </button>
+  </span>
+</div>
+
+<script>
+  $(function() {
+    var siteSearch = new TeamDynamix.SiteSearch({
+      searchUrl: "/TDClient/1806/Portal/Shared/Search",
+      autocompleteSearchUrl: '/TDClient/1806/Portal/Shared/AutocompleteSearch',
+      autocompleteResultsPosition: 'fixed',
+      autocompleteResultsZIndex: 1000,
+      searchTextBoxSelector: '#SiteSearch-text-9730e6354a8a46848c481b9101f27687',
+      searchComponentFilterButtonSelector: '#SiteSearch-filter-9730e6354a8a46848c481b9101f27687',
+      searchButtonSelector: '#SiteSearch-button-9730e6354a8a46848c481b9101f27687',
+      searchFilterDropdownSelector: '#SiteSearch-dropdown-9730e6354a8a46848c481b9101f27687',
+      showKnowledgeBaseOption: true,
+      showServicesOption: true,
+      showForumsOption: false,
+      autoFocusSearch: false
+    });
+  });
+</script>
+          </div>
+
+        
+          <div title="Sign In" class="pull-right gutter-top-sm">
+            <a href="/TDClient/1806/Portal/Login.aspx?ReturnUrl=%2fTDClient%2f1806%2fPortal%2fKB%2fArticleDet%3fID%3d155837">
+              Sign In
+            </a>
+          </div>
+        
+      </div>
+
+    </div>
+
+  </div>
+
+  <nav id="ctl00_ctl00_mainNav" class="navbar navbar-default themed tdbar" aria-label="Primary">
+    <div id="navContainer" class="container">
+
+      <div class="navbar-header">
+        <button type="button" class="pull-left navbar-toggle collapsed themed tdbar-button-anchored tdbar-toggle gutter-left" data-toggle="collapse" data-target=".navbar-collapse">
+          <span class="tdbar-button-anchored icon-bar"></span>
+          <span class="tdbar-button-anchored icon-bar"></span>
+          <span class="tdbar-button-anchored icon-bar"></span>
+          <span class="sr-only">Show Applications Menu</span>
+        </button>
+        <a class="navbar-brand hidden-sm hidden-md hidden-lg themed tdbar-button-anchored truncate-be" href="#">
+
+          ITC Services Portal
+        </a>
+      </div>
+
+      <div id="td-navbar-collapse" class="collapse navbar-collapse">
+
+        <ul class="nav navbar-nav nav-collapsing" id="collapseMe">
+
+          
+            <li class="themed tdbar-button-anchored hidden-sm hidden-md hidden-lg">
+              <a href="/TDClient/1806/Portal/Login.aspx?ReturnUrl=%2fTDClient%2f1806%2fPortal%2fKB%2fArticleDet%3fID%3d155837">Sign In</a>
+            </li>
+          
+            <li id="divSearch" class="themed tdbar-button-anchored hidden-sm hidden-md hidden-lg">
+              <a href="/TDClient/1806/Portal/Shared/Search" title="search">Search</a>
+            </li>
+          
+              <li id="divDesktop65156426-ba45-4404-9801-2496a2d85f14" class="themed tdbar-button-anchored">
+                <a href="/TDClient/1806/Portal/Home/">Home</a>
+              </li>
+            
+              <li id="divDesktop0846204b-dc5a-455f-84bc-c6956a077c29" class="themed tdbar-button-anchored">
+                <a href="/TDClient/1806/Portal/Home/?ID=0846204b-dc5a-455f-84bc-c6956a077c29">Faculty</a>
+              </li>
+            
+              <li id="divDesktop17beb5c2-26e9-4a4e-9031-daf94951726a" class="themed tdbar-button-anchored">
+                <a href="/TDClient/1806/Portal/Home/?ID=17beb5c2-26e9-4a4e-9031-daf94951726a">Staff</a>
+              </li>
+            
+              <li id="divDesktop0a40997f-a6cf-48f0-a995-303163d5afad" class="themed tdbar-button-anchored">
+                <a href="/TDClient/1806/Portal/Home/?ID=0a40997f-a6cf-48f0-a995-303163d5afad">Students</a>
+              </li>
+            
+              <li id="divDesktop393fee16-64c2-466c-826f-7b6a6b1ecece" class="themed tdbar-button-anchored">
+                <a href="/TDClient/1806/Portal/Home/?ID=393fee16-64c2-466c-826f-7b6a6b1ecece">Feedback</a>
+              </li>
+            
+
+          
+            <li id="divTDRequests" class="themed tdbar-button-anchored sr-focusable">
+              <a href="/TDClient/1806/Portal/Requests/ServiceCatalog">Services</a>
+            </li>
+          
+            <li id="divTDKnowledgeBase" class="themed tdbar-button-anchored sr-focusable">
+              <a href="/TDClient/1806/Portal/KB/">Knowledge Base</a>
+            </li>
+          
+
+          <li class="themed tdbar-button-anchored hidden-xs more-items-button" id="moreMenu">
+            <a data-toggle="dropdown" title="More Applications" href="javascript:;">
+              <span class="sr-only">More Applications</span>
+              <span class="fa-solid fa-ellipsis-h" aria-hidden="true"></span>
+            </a>
+            <ul class="dropdown-menu dropdown-menu-right themed tdbar" id="collapsed"></ul>
+          </li>
+
+        </ul>
+      </div>
+
+    </div>
+
+  </nav>
+
+  </div>
+
+  </header>
+
+
+
+<div id="navShim" class="hidden-xs hidden-sm"></div>
+<main role="main">
+  <div id="content">
+    <div id="mainContent" tabindex="-1"></div>
+    
+
+  <nav id="ctl00_ctl00_cpContent_divTabHeader" class="tdbar-sub NoPrint hidden-xs navbar-subnav" aria-label="Knowledge Base">
+      <a href="#kbContent" class="sr-only sr-only-focusable">Skip to Knowledge Base content</a>
+      <div class="container clearfix">
+        <ul class="nav navbar-nav js-submenu" id="kbSubMenu" style="margin-left: -15px;">
+          
+          <li>
+            <a href="/TDClient/1806/Portal/KB/Search">Search <span class="sr-only">Articles</span></a>
+          </li>
+
+          
+          
+        </ul>
+      </div>
+    </nav>
+  
+
+  <div id="kbContent" class="container gutter-top gutter-bottom" tabindex="-1" style="outline:none;">
+    
+
+<input type="hidden" name="ctl00$ctl00$cpContent$cpContent$hdnFeedbackID" id="ctl00_ctl00_cpContent_cpContent_hdnFeedbackID" />
+<input type="hidden" name="ctl00$ctl00$cpContent$cpContent$hdnIsAddressed" id="ctl00_ctl00_cpContent_cpContent_hdnIsAddressed" />
+
+<span id="ctl00_ctl00_cpContent_cpContent_lblResults_ctl00" aria-live="polite" aria-atomic="true"><span id="ctl00_ctl00_cpContent_cpContent_lblResults_lblResults-label" class="red tdx-error-text"></span></span>
+
+<a id="ctl00_ctl00_cpContent_cpContent_btnSendShare" tabindex="-1" class="hidden" aria-hidden="true" href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$ctl00$cpContent$cpContent$btnSendShare&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))">Blank</a>
+
+<div class="clearfix">
+  <nav aria-label="Breadcrumb">
+    <ol class="breadcrumb pull-left">
+      <li><a href="/TDClient/1806/Portal/KB/">Knowledge Base</a></li><li class="active"><a href="/TDClient/1806/Portal/KB/?CategoryID=15514">Software and Solutions</a></li><li class="active">Using Generative AI at Dartmouth - Staff Overview</li>
+    </ol>
+  </nav>
+  <span class="js-open-monitor" style="display: none;"></span>
+</div>
+
+
+
+<div class="row gutter-top">
+
+<div id="divMainContent" class="col-md-8">
+
+<h1 class="gutter-top" style="-ms-word-wrap: break-word; word-wrap: break-word;">
+  Using Generative AI at Dartmouth - Staff Overview
+</h1>
+
+
+
+
+
+<div id="ctl00_ctl00_cpContent_cpContent_divBody" class="gutter-top break-word ckeShim clearfix"><div class="alert alert-warning"><strong>Note:</strong> Generative AI tools should be used with care and in compliance with college policy. Please review the <a href="#Guidelines">Guidelines and Considerations</a> on this page for more information.</div>
+
+<div class="container-fluid">
+<div class="col-sm-7">
+<h3 style="text-align: center"><img alt="" src="https://services.dartmouth.edu/TDPortal/Images/Viewer?fileName=445f1b4b-722b-49e4-a815-5a2836b4fb8c.png&amp;beidInt=323" style="width: 100px; height: 100px; display: block; margin-left: auto; margin-right: auto">What is Generative AI?</h3>
+
+<p>Generative AI, short for Generative Artificial Intelligence, is a powerful branch of artificial intelligence that focuses on creating new content, whether it's text, images, audio, or more, often with a human-like touch of creativity. Unlike traditional AI, which typically performs predefined tasks, generative AI models have the ability to produce original and meaningful output without specific programming for every potential result.</p>
+</div>
+
+<div class="col-sm-5">
+<div style="background: #F7F7F7; border-radius: 10px">
+<p style="text-align: center"><br>
+<strong>Jump to:</strong><br>
+<a href="#tools">Generative AI Tools</a><br>
+<a href="#assist">How Can AI Assist in Your Work</a><br>
+<a href="#data-protection-requirements">Data Protection Requirements</a><br>
+<a href="#other-considerations">Other Considerations</a><br>
+<a href="#help">How to Get Help</a><br>
+<a href="#procure">How to Procure</a><br>
+&nbsp;</p>
+</div>
+</div>
+</div>
+
+<h2 style="text-align: center"><a name="tools"></a>Generative AI Tools</h2>
+
+<p style="text-align: center">There are many Generative AI tools available now, and many more coming out. Some AI tools are separate web-based applications that require signing up for a free or paid account, while others are embedded features in popular applications.</p>
+
+<div class="container-fluid">
+<div class="col-sm-6">
+<h3 style="text-align: center"><img alt="" src="https://services.dartmouth.edu/TDPortal/Images/Viewer?fileName=9fa4dccd-f45c-46f8-80d4-572d18207868.png&amp;beidInt=323" style="width: 100px; height: 100px; display: block; margin-left: auto; margin-right: auto">Common AI Tools</h3>
+
+<p style="text-align: center">Some of the popular Generative AI Tools you may find out in the wild. If you choose to use them, please review their terms of service for information on privacy and cost implications.</p>
+
+<p style="text-align: center"><strong>OpenAI:</strong> <a href="https://chat.openai.com/">ChatGPT</a>, <a href="https://openai.com/dall-e-2">DALL-E</a><br>
+<strong>Google:</strong> <a href="https://gemini.google.com/">Gemini</a>, <a href="https://workspace.google.com/solutions/ai/">Duet AI</a><br>
+<strong>Microsoft:</strong> <a href="https://www.bing.com/">Bing AI</a>, <a href="https://blogs.microsoft.com/blog/2023/03/16/introducing-microsoft-365-copilot-your-copilot-for-work/">365 Copilot</a></p>
+</div>
+
+<div class="col-sm-6">
+<h3 style="text-align: center"><img alt="" src="https://services.dartmouth.edu/TDPortal/Images/Viewer?fileName=0b882033-5ecd-41dc-a6ce-2f57b9cbbed0.png&amp;beidInt=323" style="width: 100px; height: 100px; display: block; margin-left: auto; margin-right: auto">Embedded AI</h3>
+
+<p style="text-align: center">Many of the software solutions you use already have started to embed generative AI features into their features.<br>
+<br>
+You may also find that these features require additional payment or licensing to use. Please consult with ITC for further information on activating these features.</p>
+</div>
+</div>
+
+<div class="alert alert-success" style="text-align: center"><strong>Dartmouth ITC does not currently provide any Generative AI tools outside of software applications with embedded features.</strong><br>
+If you need to procure a Generative AI product, please fill out an<a href="https://services.dartmouth.edu/TDClient/1806/Portal/Requests/ServiceDet?ID=51538"> ITC Rapid Review</a></div>
+
+<h2><a name="assist"></a>How Can AI Assist in Your Work</h2>
+
+<p>Generative AI can be a valuable tool to improve efficiency, streamline processes, and enhance decision-making. Remember to consider data privacy and security when implementing generative AI in your work, especially when dealing with sensitive information. Generative AI can provide a great jumping off point to start your projects, boost productivity and improve the quality of administrative work when integrated thoughtfully into your daily tasks.</p>
+
+<p>Dartmouth supports responsible experimentation with generative AI tools, but there are important considerations to keep in mind when using these tools. All Dartmouth community members must adhere to Dartmouth’s existing policies, including the <a href="https://policies.dartmouth.edu/policy/confidentiality-business-information">Confidentiality of Business Information Policy</a>, <a href="https://policies.dartmouth.edu/policy/dartmouth-information-security-policy">Dartmouth Information Security Policy</a>, and <a href="https://policies.dartmouth.edu/policy/nondiscrimination-and-anti-harassment-policy-and-resolution-procedures">Nondiscrimination and Anti-Harassment Policy and Resolution Procedures</a>.</p>
+
+<h3>Here are some ways AI can be used:</h3>
+
+<ul>
+	<li><strong>Document Generation</strong><br>
+	Use generative AI to automatically generate reports, memos, emails, or other written documents. Tools like GPT-3 can assist in composing professional and coherent text.</li>
+	<li><strong>Data Analysis</strong><br>
+	Employ AI-driven data analysis tools to process large datasets quickly and extract valuable insights. AI can help identify trends, anomalies, and patterns in data, aiding decision-making.</li>
+	<li><strong>Email Management</strong><br>
+	Use AI-based email classification and prioritization to automatically sort and categorize emails. This can help you focus on essential messages and reduce email overload.</li>
+	<li><strong>Scheduling</strong><br>
+	AI-powered scheduling assistants can analyze your calendar and suggest optimal meeting times, reducing scheduling conflicts and time spent on coordination.</li>
+	<li><strong>Chatbots for Support</strong><br>
+	Integrate AI-driven chatbots into your organization's website or messaging platforms to provide instant support and answer common questions from employees or clients.</li>
+	<li><strong>Proofreading and Editing</strong><br>
+	AI tools can assist in proofreading and editing documents for grammar, spelling, and style errors, ensuring that your written communications are polished and error-free.</li>
+	<li><strong>Expense Management</strong><br>
+	Automate expense reporting with AI tools that can extract data from receipts and categorize expenses, making the process more efficient and accurate.</li>
+	<li><strong>Task Automation</strong><br>
+	Implement AI-driven task automation for routine administrative tasks such as data entry, file organization, or form filling, freeing up your time for more strategic work.</li>
+	<li><strong>Language Translation</strong><br>
+	Utilize AI-powered translation tools to communicate with colleagues or clients in different languages, breaking down language barriers.</li>
+	<li><strong>Document Summarization</strong><br>
+	AI models can summarize lengthy documents or meeting transcripts, saving you time when reviewing and extracting key information.</li>
+	<li><strong>Virtual Meetings</strong><br>
+	AI can enhance virtual meetings by providing real-time language translation, transcription, and even automating meeting minutes.</li>
+	<li><strong>Knowledge Base Creation</strong><br>
+	Use generative AI to create and update internal knowledge bases, FAQs, and training materials, ensuring that information is always up-to-date.</li>
+</ul>
+
+<h2><a name="data-protection-requirements"></a>Data Protection Requirements</h2>
+
+<p><strong>Information shared with generative AI tools using default settings may not be private and could expose proprietary or sensitive information to unauthorized parties.&nbsp;</strong>ITC evaluates Generative AI (GAI) tools to ensure compatibility with Dartmouth's information security policies. <strong> </strong>Approved solutions must adhere to relevant security policies. Users are responsible for maintaining compliance when utilizing these approved tools.<br>
+&nbsp;<br>
+Data at Dartmouth is categorized into three tiers, based on the likelihood of being targeted by external parties and the potential impact on the organization if exposed. This classification determines the required level of data protection and helps in selecting appropriate GAI tools.</p>
+
+<p>Note:</p>
+
+<ul>
+	<li>Only approved GAI tools are authorized for handling of DISC 2+ data.</li>
+	<li>For DISC 2 data, contact ITC if your preferred tool is not listed.</li>
+	<li>For DISC 3 data, consult with ITC to ensure adequate security measures are in place.</li>
+</ul>
+
+<h4>Data Classification Process:</h4>
+
+<ol>
+	<li>Data Inventory: Catalog all data to be inputted into a GAI tool, including both analysis data and prompts for generating work products.</li>
+	<li>Output Classification: Continue to catalog all data outputs from the GAI tool, like data tables or email messages.</li>
+	<li>Classification Steps: For each cataloged item:
+	<ul>
+		<li>Likelihood: Rate the chance of a security breach or incident impacting the data (1: least likely, 3: most likely)</li>
+		<li>Impact: Evaluate the severity of the incident, considering financial, legal, reputational, operational and data integrity consequences (1: minimal impact, 3: major impact)</li>
+		<li>Classification: Add the numbers for likelihood and impact, divide by two and round down. The result will be a number from 1-3 and is this data’s DISC classification. &nbsp;</li>
+	</ul>
+	</li>
+	<li>Overall Classification: Determine the highest classification level among all data items. Use this to select a suitable GAI tool.</li>
+</ol>
+
+<h2><a name="other-considerations"></a>Other Considerations</h2>
+
+<h4 style="text-align: center"><img alt="" src="https://services.dartmouth.edu/TDPortal/Images/Viewer?fileName=aab6616d-ced1-44fc-8285-de2bf85760a4.png&amp;beidInt=323" style="width: 75px; height: 75px; display: block; margin-left: auto; margin-right: auto"></h4>
+
+<h4 style="text-align: center"><strong>Responsibility and Accuracy</strong></h4>
+
+<p>AI-generated content can be inaccurate, incomplete,&nbsp;misleading, entirely fabricated, or may contain copyrighted material due to its training bias. Review your AI-generated content before publication or use in institutional decision-making, ensuring alignment with Dartmouth’s values and mission. Additionally, consider the appropriateness of Generative AI for the intended use and prioritize privacy protection for all involved.&nbsp;</p>
+
+<p><strong>You are responsible for any content that you produce or publish that includes AI-generated material.&nbsp;</strong>This responsibility extends to assessing potential risks to individuals or the institution. Furthermore, be mindful of the ability to explain and justify Generative AI's decision-making process, maintaining transparency and accountability.</p>
+
+<hr>
+<h4 style="text-align: center"><img alt="" src="https://services.dartmouth.edu/TDPortal/Images/Viewer?fileName=c8c4a26c-5c06-473a-b658-2c04940bca3e.png&amp;beidInt=323" style="width: 75px; height: 75px; display: block; margin-left: auto; margin-right: auto"></h4>
+
+<h4 style="text-align: center"><strong>Adhere to Current Policies On Academic Integrity</strong></h4>
+
+<p>For those working with faculty or students, please review the relevant School’s student and faculty handbooks and policies (i.e., faculty handbooks and policies of the College, Geisel, Guarini, Tuck, and/or Thayer). It is important to remain compliant with specific rules, laws, regulations, including institutional policies and data use agreements.&nbsp;Ensure that the use of generative AI tools aligns with Dartmouth’s values and mission, and conduct a thorough assessment of the appropriateness of such tools for the intended use.</p>
+
+<p>We expect that Schools will be developing and updating their policies as we better understand the implications of using generative AI tools. You can find information about teaching with generative AI on <a href="https://dcal.dartmouth.edu/news/2023/03/how-do-i-teach-world-generative-ai">DCAL’s website</a>.&nbsp;In this evolving landscape, consider the privacy protection of all involved parties and remain vigilant about potential risks to individuals or the institution.</p>
+
+<hr>
+<h4 style="text-align: center"><img alt="" src="https://services.dartmouth.edu/TDPortal/Images/Viewer?fileName=2ff3dfac-823f-4d4d-ad8a-9140ff59d442.png&amp;beidInt=323" style="width: 75px; height: 75px; display: block; margin-left: auto; margin-right: auto"></h4>
+
+<h4 style="text-align: center"><strong>Be alert for AI-enabled phishing</strong></h4>
+
+<p>Generative AI has made it easier for malicious actors to create sophisticated scams at a far grander scale. Continue to <a href="https://services.dartmouth.edu/TDClient/1806/Portal/KB/?CategoryID=17841">follow security best practices</a> and report suspicious messages to <a href="mailto:phishing@dartmouth.edu">phishing@dartmouth.edu</a>.</p>
+
+<hr>
+<p><img alt="" src="https://services.dartmouth.edu/TDPortal/Images/Viewer?fileName=9f6556c4-d89f-4601-9e8a-acb3493c2e6d.png&amp;beidInt=323" style="width: 75px; height: 75px; display: block; margin-left: auto; margin-right: auto"></p>
+
+<h4 style="text-align: center"><strong>Connect with Dartmouth ITC before procuring generative AI tools</strong></h4>
+
+<p>Dartmouth is working to ensure that tools procured on behalf of Dartmouth have the appropriate privacy and security protections and provide the best use of Dartmouth’s funds.</p>
+
+<ul>
+	<li>If you have procured or are considering procuring generative AI tools or have questions, Please fill out a <a href="https://services.dartmouth.edu/TDClient/1806/Portal/Requests/ServiceDet?ID=51538"><strong>ITC Rapid Review</strong></a></li>
+	<li>All generative AI tools must be assessed for risk by Dartmouth’s Information Security and Data Protection team, please fill out a <a href="https://services.dartmouth.edu/TDClient/1806/Portal/Requests/ServiceDet?ID=51538"><strong>ITC Rapid Review</strong></a></li>
+</ul>
+
+<hr>
+<h3 style="text-align: center"><b>Coming soon</b></h3>
+
+<p style="text-align: center"><img alt="" src="https://services.dartmouth.edu/TDPortal/Images/Viewer?fileName=bf9cccea-843d-46b4-925f-4bfae29a4577.png&amp;beidInt=323" style="width: 75px; height: 75px; display: block; margin-left: auto; margin-right: auto"></p>
+
+<h4 style="text-align: center"><strong><span style="color: #A9A9A9">Pre-Approved Tools</span></strong></h4>
+
+<div class="table-responsive">
+<table class="table table-striped table-hover" style="width: 100%">
+	<thead>
+		<tr>
+			<th scope="col"><span style="color: #A9A9A9">Tool</span></th>
+			<th scope="col"><span style="color: #A9A9A9">Classification</span></th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td><span style="color: #A9A9A9">Example 1</span></td>
+			<td><span style="color: #A9A9A9">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span></td>
+		</tr>
+		<tr>
+			<td><span style="color: #A9A9A9">Example 2</span></td>
+			<td><span style="color: #A9A9A9">Quisque vel ante facilisis, hendrerit felis ullamcorper, porttitor nibh.</span></td>
+		</tr>
+	</tbody>
+</table>
+</div>
+
+<hr>
+<h2><a name="help"></a>How to Get Help</h2>
+
+<p>If you have questions or need help, please reach out to Client Technology Consulting.</p>
+
+<p><a class="btn btn-primary btn-lg" href="https://services.dartmouth.edu/TDClient/1806/Portal/Requests/TicketRequests/NewForm?ID=u~Xhs4my4DY_" target="_blank" type="button"><span aria-hidden="true"></span>Submit Ticket</a></p>
+
+<h2><a name="procure"></a>How to Procure</h2>
+
+<p>If you are looking to purchase or procure Generative AI tools, please work with Information, Technology and Consulting to ensure your software meets all the security and technology requirements of the institution.</p>
+
+<p><a class="btn btn-primary btn-lg" href="https://services.dartmouth.edu/TDClient/1806/Portal/Requests/ServiceDet?ID=51538" target="_blank" type="button"><span aria-hidden="true"></span>ITC Rapid Review</a></p></div>
+
+<div id="ctl00_ctl00_cpContent_cpContent_divFeedback2" class="well gutter-top-lg">
+
+  <div class="row" id="divHelpfulYesNo">
+    <div class="col-sm-7">
+      
+        <div>
+          <a href="/TDClient/1806/Portal/Login.aspx?ReturnUrl=%2fTDClient%2f1806%2fPortal%2fKB%2fArticleDet%3fID%3d155837">Sign in to leave feedback</a>
+        </div>
+      
+    </div>
+    <div class="col-sm-5 text-right">
+      <div id="ctl00_ctl00_cpContent_cpContent_UpdatePanel1" aria-live="polite" aria-atomic="true">
+	
+          100% helpful - 1 review
+        
+</div>
+    </div>
+  </div>
+
+  </div>
+
+
+
+<div class="tab-content gutter-top gutter-bottom">
+  
+  <div id="ctl00_ctl00_cpContent_cpContent_upFeedbackGrid">
+	
+        <a id="ctl00_ctl00_cpContent_cpContent_btnToggleAddressed" tabindex="-1" class="hidden" aria-hidden="true" href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$ctl00$cpContent$cpContent$btnToggleAddressed&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))">Blank</a>
+        <a id="ctl00_ctl00_cpContent_cpContent_btnDeleteFeedback" tabindex="-1" class="hidden" aria-hidden="true" href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$ctl00$cpContent$cpContent$btnDeleteFeedback&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))">Blank</a>
+        
+      
+</div>
+    
+    
+
+    
+</div>
+</div>
+
+<div class="col-md-4">
+
+
+
+    <a id="ctl00_ctl00_cpContent_cpContent_btnToggleSubscribe" tabindex="-1" class="hidden" aria-hidden="true" href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$ctl00$cpContent$cpContent$btnToggleSubscribe&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))">Blank</a>
+
+<a id="ctl00_ctl00_cpContent_cpContent_btnToggleFavorite" tabindex="-1" class="hidden" aria-hidden="true" href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$ctl00$cpContent$cpContent$btnToggleFavorite&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))">Blank</a>
+
+<a class="DetailAction print-article" href="/TDClient/1806/Portal/KB/PrintArticle?ID=155837" rel="nofollow" target="_blank">  <span class="fa-solid fa-print fa-fw" aria-hidden="true"></span>
+Print Article</a>
+
+
+
+
+
+<div id="divAttachments" class="js-article-attachments"></div>
+
+</div>
+
+</div>
+
+<div id="ctl00_ctl00_cpContent_cpContent_divProgress" style="display: none; z-index: 60;">
+  <div id="ctl00_ctl00_cpContent_cpContent_pbMain" class="progress-box-container"><div class="progress-box-body"><div class="well shadow"><h2 class="h4 gutter-top-none">Deleting...</h2><div class="progress" style="margin-bottom: 0;"><div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuemin="0" aria-valuemax="100" style="width: 100%"></div></div></div></div></div>
+</div>
+
+
+
+  </div>
+
+
+  </div>
+</main>
+
+
+
+<script type="text/javascript">
+//<![CDATA[
+setNavPosition('TDKnowledgeBase');window.CKEDITOR_BASEPATH = 'https://services.dartmouth.edu/TDPortal/Content/ckeditor/';
+//]]>
+</script>
+<script src="https://services.dartmouth.edu/TDPortal/Content/ckeditor/ckeditor.js?t=C6HH5UF" type="text/javascript"></script>
+<script type="text/javascript">
+//<![CDATA[
+var CKEditor_Controls=[],CKEditor_Init=[];function CKEditor_TextBoxEncode(d,e){var f;if(typeof CKEDITOR=='undefined'||typeof CKEDITOR.instances[d]=='undefined'){f=document.getElementById(d);if(f)f.value=f.value.replace(/</g,'&lt;').replace(/>/g,'&gt;');}else{var g=CKEDITOR.instances[d];if(e&&(typeof Page_BlockSubmit=='undefined'||!Page_BlockSubmit)){g.destroy();f=document.getElementById(d);if(f)f.style.visibility='hidden';}else g.updateElement();}};(function(){if(typeof CKEDITOR!='undefined'){var d=document.getElementById('ctl00_ctl00_cpContent_cpContent_shareBody_txtBody');if(d)d.style.visibility='hidden';}var e=function(){var f=CKEditor_Controls,g=CKEditor_Init,h=window.pageLoad,i=function(){for(var j=f.length;j--;){var k=document.getElementById(f[j]);if(k&&k.value&&(k.value.indexOf('<')==-1||k.value.indexOf('>')==-1))k.value=k.value.replace(/&lt;/g,'<').replace(/&gt;/g,'>').replace(/&amp;/g,'&');}if(typeof CKEDITOR!='undefined')for(var j=0;j<g.length;j++)g[j].call(this);};window.pageLoad=function(j,k){if(k.get_isPartialLoad())setTimeout(i,0);if(h&&typeof h=='function')h.call(this,j,k);};if(typeof Page_ClientValidate=='function'&&typeof CKEDITOR!='undefined')Page_ClientValidate=CKEDITOR.tools.override(Page_ClientValidate,function(j){return function(){for(var k in CKEDITOR.instances){if(document.getElementById(k))CKEDITOR.instances[k].updateElement();}return j.apply(this,arguments);};});setTimeout(i,0);};if(typeof Sys!='undefined'&&typeof Sys.Application!='undefined')Sys.Application.add_load(e);if(window.addEventListener)window.addEventListener('load',e,false);else if(window.attachEvent)window.attachEvent('onload',e);})();CKEditor_Controls.push('ctl00_ctl00_cpContent_cpContent_shareBody_txtBody');
+CKEditor_Init.push(function(){if(typeof CKEDITOR.instances['ctl00_ctl00_cpContent_cpContent_shareBody_txtBody']!='undefined' || !document.getElementById('ctl00_ctl00_cpContent_cpContent_shareBody_txtBody')) return;CKEDITOR.replace('ctl00_ctl00_cpContent_cpContent_shareBody_txtBody',{"autoGrow_maxHeight" : 175, "autoGrow_minHeight" : 175, "contentsCss" : ['https://services.dartmouth.edu/TDPortal/Content/ckeditor/contents.css', '/TDPortal/Content/FontAwesome/css/fontawesome.min.css', '/TDPortal/Content/FontAwesome/css/brands.min.css', '/TDPortal/Content/FontAwesome/css/regular.min.css', '/TDPortal/Content/FontAwesome/css/solid.min.css', '/TDPortal/Content/FontAwesome/css/v4-shims.min.css'], "height" : "175", "htmlEncodeOutput" : true, "image_previewText" : " ", "removePlugins" : "magicline,devtools,templates,elementspath,fontawesome,youtube,uploadimage,simpleimage,remoteimageblocker", "title" : "Message", "toolbar" : "TDSimple"}); });
+
+var Page_ValidationActive = false;
+if (typeof(ValidatorOnLoad) == "function") {
+    ValidatorOnLoad();
+}
+
+function ValidatorOnSubmit() {
+    if (Page_ValidationActive) {
+        return ValidatorCommonOnSubmit();
+    }
+    else {
+        return true;
+    }
+}
+        Sys.Application.add_init(function() {
+    $create(Sys.UI._UpdateProgress, {"associatedUpdatePanelId":null,"displayAfter":500,"dynamicLayout":true}, null, null, $get("ctl00_ctl00_upMain"));
+});
+//]]>
+</script>
+</form>
+
+
+
+
+
+  <footer role="contentinfo">
+
+    <div class="master-footer">
+      <table border="0" cellpadding="5" cellspacing="0" style="width: 100%; height: 75px; font-family: &quot;Segoe UI&quot;, Helvetica, Verdana, Arial, sans-serif">
+	<tbody>
+		<tr>
+                        <td style="font-size: small; width: 12%; font-family: verdana; text-align: center; color: #FFFFFF; background-color: #00693E"></td>
+			<td style="font-size: small; width: 38%; font-family: verdana; text-align: left; color: #FFFFFF; background-color: #00693E">
+<strong>Contact the Service Desk</strong>
+<br>
+<a href="tel:6036462999" style="color: #FFFFFF"><span aria-label="span widget" role="region" tabindex="-1">
+<span class="fa fa-phone" aria-hidden="true" style="color: #FFFFFF; margin: 0 5px 0 0">
+<br>
+</span>
+</span>603.646.2999
+</a>
+ Toll-Free:
+<a href="tel:18557642485" style="color: #FFFFFF">
+<span aria-label="span widget" role="region" tabindex="-1">
+</span>1.855.764.2485</a><span aria-label="span widget" role="region" tabindex="-1">
+<br>
+<span class="fa fa-globe" style="color: #FFFFFF; margin: 0 5px 0 0"><a style="color: #FFFFFF" href="https://services.dartmouth.edu"></a></span><a style="color: #FFFFFF" href="https://services.dartmouth.edu">services.dartmouth.edu</a></span><a style="color: #FFFFFF" href="https://services.dartmouth.edu">
+</a>
+</td>
+                        <td style="font-size: small; width: 38%; font-family: verdana; text-align: right; color: #FFFFFF; background-color: #00693E"><strong>Dartmouth Alumni Help Desk</strong><br><a href="tel:6036463202" style="color: #FFFFFF"><span aria-label="span widget" role="region" tabindex="-1"><span class="fa fa-phone" aria-hidden="true" style="color: #FFFFFF; margin: 0 5px 0 0"><br></span></span>603.646.3202</a> Toll-Free:<a href="tel:18552159024" style="color: #FFFFFF"><span aria-label="span widget" role="region" tabindex="-1"></span>1.855.215.9024</a><br><a href="mailto:alumni.help@dartmouth.edu" style="color: #FFFFFF"><span aria-label="span widget" role="region" tabindex="-1"><span class="fa fa-envelope" style="color: #FFFFFF; margin: 0 5px 0 10px"></span></span>alumni.help@dartmouth.edu</a></td>
+			<td style="font-size: small; width: 12%; font-family: verdana; text-align: center; color: #FFFFFF; background-color: #00693E"></td>
+		</tr>
+	</tbody>
+</table>
+      
+    </div>
+
+  </footer>
+
+
+
+<script>
+
+    
+    
+
+      // Inject the Google Analytics isogram. This must happen here because it
+      // cannot be injected through an external javascript library.
+      (function (i, s, o, g, r, a, m) {
+        i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+          (i[r].q = i[r].q || []).push(arguments)
+        }, i[r].l = 1 * new Date(); a = s.createElement(o),
+          m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+      })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+    
+
+      // Per Incident #6707155. Need to focus on img. pseudo-class :focus-within is not supported in IE
+      (function ($) {
+        var $anchor = $('#divLogo a');
+        var $beLogo = $('#divLogo a img');
+
+        $anchor.focus(function () {
+          $beLogo.addClass('accessibility-focus-on-logo');
+        }).blur(function () {
+          $beLogo.removeClass('accessibility-focus-on-logo');
+        });
+
+        
+        
+          const queryParams = new URLSearchParams(window.location.search);
+          let showChatbot = true;
+          if (queryParams.has('nobot')) {
+            const nobotFlag = queryParams.get('nobot');
+            if (nobotFlag === '1' || nobotFlag === 'true') {
+              showChatbot = false;
+            }
+          }
+
+          if(showChatbot) {
+            $.ajax({
+              url: "/TDClient/1806/Portal/Chatbots/GetScript",
+              type: "GET",
+              dataType: 'text',
+              success: function (data) {
+                
+                var jQueryAjaxSettingsCache = jQuery.ajaxSettings.cache;
+                jQuery.ajaxSettings.cache = true;
+                $(document.body).append(data);
+                jQuery.ajaxSettings.cache = jQueryAjaxSettingsCache;
+              }
+            });
+          }
+        
+
+        window.addEventListener("message", (event) => {
+
+          // Only accept events that come from the same origin
+          if (event.origin != window.location.origin) {
+            return;
+          }
+
+          switch (event.data.type) {
+
+            case "authenticate-using-popup":
+              handleAuthenticateUsingPopup(event.data.payload);
+              break;
+
+            case "authenticated-successfully":
+              handleAuthenticatedSuccessfully(event.data.payload);
+              break;
+
+            default:
+              break;
+          }
+
+        });
+
+        function handleAuthenticateUsingPopup(payload) {
+          let loginUrl = '/TDClient/1806/Portal/Login.aspx';
+
+          if (payload.successCallbackUrl) {
+            loginUrl += '?SuccessCallbackUrl=' + payload.successCallbackUrl;
+          }
+
+          window.open(loginUrl, "_blank", "popup=1");
+        }
+
+        function handleAuthenticatedSuccessfully() {
+          event.source.close();
+          window.location.href = window.location.href;
+        }
+    })(jQuery);
+
+</script>
+
+</body>
+</html>

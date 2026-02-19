@@ -1,0 +1,876 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head><meta charset="UTF-8"><script>if(navigator.userAgent.match(/MSIE|Internet Explorer/i)||navigator.userAgent.match(/Trident\/7\..*?rv:11/i)){var href=document.location.href;if(!href.match(/[?&]nowprocket/)){if(href.indexOf("?")==-1){if(href.indexOf("#")==-1){document.location.href=href+"?nowprocket=1"}else{document.location.href=href.replace("#","?nowprocket=1#")}}else{if(href.indexOf("#")==-1){document.location.href=href+"&nowprocket=1"}else{document.location.href=href.replace("#","&nowprocket=1#")}}}}</script><script>(()=>{class RocketLazyLoadScripts{constructor(){this.v="2.0.3",this.userEvents=["keydown","keyup","mousedown","mouseup","mousemove","mouseover","mouseenter","mouseout","mouseleave","touchmove","touchstart","touchend","touchcancel","wheel","click","dblclick","input","visibilitychange"],this.attributeEvents=["onblur","onclick","oncontextmenu","ondblclick","onfocus","onmousedown","onmouseenter","onmouseleave","onmousemove","onmouseout","onmouseover","onmouseup","onmousewheel","onscroll","onsubmit"]}async t(){this.i(),this.o(),/iP(ad|hone)/.test(navigator.userAgent)&&this.h(),this.u(),this.l(this),this.m(),this.k(this),this.p(this),this._(),await Promise.all([this.R(),this.L()]),this.lastBreath=Date.now(),this.S(this),this.P(),this.D(),this.O(),this.M(),await this.C(this.delayedScripts.normal),await this.C(this.delayedScripts.defer),await this.C(this.delayedScripts.async),this.F("domReady"),await this.T(),await this.j(),await this.I(),this.F("windowLoad"),await this.A(),window.dispatchEvent(new Event("rocket-allScriptsLoaded")),this.everythingLoaded=!0,this.lastTouchEnd&&await new Promise((t=>setTimeout(t,500-Date.now()+this.lastTouchEnd))),this.H(),this.F("all"),this.U(),this.W()}i(){this.CSPIssue=sessionStorage.getItem("rocketCSPIssue"),document.addEventListener("securitypolicyviolation",(t=>{this.CSPIssue||"script-src-elem"!==t.violatedDirective||"data"!==t.blockedURI||(this.CSPIssue=!0,sessionStorage.setItem("rocketCSPIssue",!0))}),{isRocket:!0})}o(){window.addEventListener("pageshow",(t=>{this.persisted=t.persisted,this.realWindowLoadedFired=!0}),{isRocket:!0}),window.addEventListener("pagehide",(()=>{this.onFirstUserAction=null}),{isRocket:!0})}h(){let t;function e(e){t=e}window.addEventListener("touchstart",e,{isRocket:!0}),window.addEventListener("touchend",(function i(o){Math.abs(o.changedTouches[0].pageX-t.changedTouches[0].pageX)<10&&Math.abs(o.changedTouches[0].pageY-t.changedTouches[0].pageY)<10&&o.timeStamp-t.timeStamp<200&&(o.target.dispatchEvent(new PointerEvent("click",{target:o.target,bubbles:!0,cancelable:!0,detail:1})),event.preventDefault(),window.removeEventListener("touchstart",e,{isRocket:!0}),window.removeEventListener("touchend",i,{isRocket:!0}))}),{isRocket:!0})}q(t){this.userActionTriggered||("mousemove"!==t.type||this.firstMousemoveIgnored?"keyup"===t.type||"mouseover"===t.type||"mouseout"===t.type||(this.userActionTriggered=!0,this.onFirstUserAction&&this.onFirstUserAction()):this.firstMousemoveIgnored=!0),"click"===t.type&&t.preventDefault(),this.savedUserEvents.length>0&&(t.stopPropagation(),t.stopImmediatePropagation()),"touchstart"===this.lastEvent&&"touchend"===t.type&&(this.lastTouchEnd=Date.now()),"click"===t.type&&(this.lastTouchEnd=0),this.lastEvent=t.type,this.savedUserEvents.push(t)}u(){this.savedUserEvents=[],this.userEventHandler=this.q.bind(this),this.userEvents.forEach((t=>window.addEventListener(t,this.userEventHandler,{passive:!1,isRocket:!0})))}U(){this.userEvents.forEach((t=>window.removeEventListener(t,this.userEventHandler,{passive:!1,isRocket:!0}))),this.savedUserEvents.forEach((t=>{t.target.dispatchEvent(new window[t.constructor.name](t.type,t))}))}m(){this.eventsMutationObserver=new MutationObserver((t=>{const e="return false";for(const i of t){if("attributes"===i.type){const t=i.target.getAttribute(i.attributeName);t&&t!==e&&(i.target.setAttribute("data-rocket-"+i.attributeName,t),i.target["rocket"+i.attributeName]=new Function("event",t),i.target.setAttribute(i.attributeName,e))}"childList"===i.type&&i.addedNodes.forEach((t=>{if(t.nodeType===Node.ELEMENT_NODE)for(const i of t.attributes)this.attributeEvents.includes(i.name)&&i.value&&""!==i.value&&(t.setAttribute("data-rocket-"+i.name,i.value),t["rocket"+i.name]=new Function("event",i.value),t.setAttribute(i.name,e))}))}})),this.eventsMutationObserver.observe(document,{subtree:!0,childList:!0,attributeFilter:this.attributeEvents})}H(){this.eventsMutationObserver.disconnect(),this.attributeEvents.forEach((t=>{document.querySelectorAll("[data-rocket-"+t+"]").forEach((e=>{e.setAttribute(t,e.getAttribute("data-rocket-"+t)),e.removeAttribute("data-rocket-"+t)}))}))}k(t){Object.defineProperty(HTMLElement.prototype,"onclick",{get(){return this.rocketonclick||null},set(e){this.rocketonclick=e,this.setAttribute(t.everythingLoaded?"onclick":"data-rocket-onclick","this.rocketonclick(event)")}})}S(t){function e(e,i){let o=e[i];e[i]=null,Object.defineProperty(e,i,{get:()=>o,set(s){t.everythingLoaded?o=s:e["rocket"+i]=o=s}})}e(document,"onreadystatechange"),e(window,"onload"),e(window,"onpageshow");try{Object.defineProperty(document,"readyState",{get:()=>t.rocketReadyState,set(e){t.rocketReadyState=e},configurable:!0}),document.readyState="loading"}catch(t){console.log("WPRocket DJE readyState conflict, bypassing")}}l(t){this.originalAddEventListener=EventTarget.prototype.addEventListener,this.originalRemoveEventListener=EventTarget.prototype.removeEventListener,this.savedEventListeners=[],EventTarget.prototype.addEventListener=function(e,i,o){o&&o.isRocket||!t.B(e,this)&&!t.userEvents.includes(e)||t.B(e,this)&&!t.userActionTriggered||e.startsWith("rocket-")||t.everythingLoaded?t.originalAddEventListener.call(this,e,i,o):t.savedEventListeners.push({target:this,remove:!1,type:e,func:i,options:o})},EventTarget.prototype.removeEventListener=function(e,i,o){o&&o.isRocket||!t.B(e,this)&&!t.userEvents.includes(e)||t.B(e,this)&&!t.userActionTriggered||e.startsWith("rocket-")||t.everythingLoaded?t.originalRemoveEventListener.call(this,e,i,o):t.savedEventListeners.push({target:this,remove:!0,type:e,func:i,options:o})}}F(t){"all"===t&&(EventTarget.prototype.addEventListener=this.originalAddEventListener,EventTarget.prototype.removeEventListener=this.originalRemoveEventListener),this.savedEventListeners=this.savedEventListeners.filter((e=>{let i=e.type,o=e.target||window;return"domReady"===t&&"DOMContentLoaded"!==i&&"readystatechange"!==i||("windowLoad"===t&&"load"!==i&&"readystatechange"!==i&&"pageshow"!==i||(this.B(i,o)&&(i="rocket-"+i),e.remove?o.removeEventListener(i,e.func,e.options):o.addEventListener(i,e.func,e.options),!1))}))}p(t){let e;function i(e){return t.everythingLoaded?e:e.split(" ").map((t=>"load"===t||t.startsWith("load.")?"rocket-jquery-load":t)).join(" ")}function o(o){function s(e){const s=o.fn[e];o.fn[e]=o.fn.init.prototype[e]=function(){return this[0]===window&&t.userActionTriggered&&("string"==typeof arguments[0]||arguments[0]instanceof String?arguments[0]=i(arguments[0]):"object"==typeof arguments[0]&&Object.keys(arguments[0]).forEach((t=>{const e=arguments[0][t];delete arguments[0][t],arguments[0][i(t)]=e}))),s.apply(this,arguments),this}}if(o&&o.fn&&!t.allJQueries.includes(o)){const e={DOMContentLoaded:[],"rocket-DOMContentLoaded":[]};for(const t in e)document.addEventListener(t,(()=>{e[t].forEach((t=>t()))}),{isRocket:!0});o.fn.ready=o.fn.init.prototype.ready=function(i){function s(){parseInt(o.fn.jquery)>2?setTimeout((()=>i.bind(document)(o))):i.bind(document)(o)}return t.realDomReadyFired?!t.userActionTriggered||t.fauxDomReadyFired?s():e["rocket-DOMContentLoaded"].push(s):e.DOMContentLoaded.push(s),o([])},s("on"),s("one"),s("off"),t.allJQueries.push(o)}e=o}t.allJQueries=[],o(window.jQuery),Object.defineProperty(window,"jQuery",{get:()=>e,set(t){o(t)}})}P(){const t=new Map;document.write=document.writeln=function(e){const i=document.currentScript,o=document.createRange(),s=i.parentElement;let n=t.get(i);void 0===n&&(n=i.nextSibling,t.set(i,n));const c=document.createDocumentFragment();o.setStart(c,0),c.appendChild(o.createContextualFragment(e)),s.insertBefore(c,n)}}async R(){return new Promise((t=>{this.userActionTriggered?t():this.onFirstUserAction=t}))}async L(){return new Promise((t=>{document.addEventListener("DOMContentLoaded",(()=>{this.realDomReadyFired=!0,t()}),{isRocket:!0})}))}async I(){return this.realWindowLoadedFired?Promise.resolve():new Promise((t=>{window.addEventListener("load",t,{isRocket:!0})}))}M(){this.pendingScripts=[];this.scriptsMutationObserver=new MutationObserver((t=>{for(const e of t)e.addedNodes.forEach((t=>{"SCRIPT"!==t.tagName||t.noModule||t.isWPRocket||this.pendingScripts.push({script:t,promise:new Promise((e=>{const i=()=>{const i=this.pendingScripts.findIndex((e=>e.script===t));i>=0&&this.pendingScripts.splice(i,1),e()};t.addEventListener("load",i,{isRocket:!0}),t.addEventListener("error",i,{isRocket:!0}),setTimeout(i,1e3)}))})}))})),this.scriptsMutationObserver.observe(document,{childList:!0,subtree:!0})}async j(){await this.J(),this.pendingScripts.length?(await this.pendingScripts[0].promise,await this.j()):this.scriptsMutationObserver.disconnect()}D(){this.delayedScripts={normal:[],async:[],defer:[]},document.querySelectorAll("script[type$=rocketlazyloadscript]").forEach((t=>{t.hasAttribute("data-rocket-src")?t.hasAttribute("async")&&!1!==t.async?this.delayedScripts.async.push(t):t.hasAttribute("defer")&&!1!==t.defer||"module"===t.getAttribute("data-rocket-type")?this.delayedScripts.defer.push(t):this.delayedScripts.normal.push(t):this.delayedScripts.normal.push(t)}))}async _(){await this.L();let t=[];document.querySelectorAll("script[type$=rocketlazyloadscript][data-rocket-src]").forEach((e=>{let i=e.getAttribute("data-rocket-src");if(i&&!i.startsWith("data:")){i.startsWith("//")&&(i=location.protocol+i);try{const o=new URL(i).origin;o!==location.origin&&t.push({src:o,crossOrigin:e.crossOrigin||"module"===e.getAttribute("data-rocket-type")})}catch(t){}}})),t=[...new Map(t.map((t=>[JSON.stringify(t),t]))).values()],this.N(t,"preconnect")}async $(t){if(await this.G(),!0!==t.noModule||!("noModule"in HTMLScriptElement.prototype))return new Promise((e=>{let i;function o(){(i||t).setAttribute("data-rocket-status","executed"),e()}try{if(navigator.userAgent.includes("Firefox/")||""===navigator.vendor||this.CSPIssue)i=document.createElement("script"),[...t.attributes].forEach((t=>{let e=t.nodeName;"type"!==e&&("data-rocket-type"===e&&(e="type"),"data-rocket-src"===e&&(e="src"),i.setAttribute(e,t.nodeValue))})),t.text&&(i.text=t.text),t.nonce&&(i.nonce=t.nonce),i.hasAttribute("src")?(i.addEventListener("load",o,{isRocket:!0}),i.addEventListener("error",(()=>{i.setAttribute("data-rocket-status","failed-network"),e()}),{isRocket:!0}),setTimeout((()=>{i.isConnected||e()}),1)):(i.text=t.text,o()),i.isWPRocket=!0,t.parentNode.replaceChild(i,t);else{const i=t.getAttribute("data-rocket-type"),s=t.getAttribute("data-rocket-src");i?(t.type=i,t.removeAttribute("data-rocket-type")):t.removeAttribute("type"),t.addEventListener("load",o,{isRocket:!0}),t.addEventListener("error",(i=>{this.CSPIssue&&i.target.src.startsWith("data:")?(console.log("WPRocket: CSP fallback activated"),t.removeAttribute("src"),this.$(t).then(e)):(t.setAttribute("data-rocket-status","failed-network"),e())}),{isRocket:!0}),s?(t.fetchPriority="high",t.removeAttribute("data-rocket-src"),t.src=s):t.src="data:text/javascript;base64,"+window.btoa(unescape(encodeURIComponent(t.text)))}}catch(i){t.setAttribute("data-rocket-status","failed-transform"),e()}}));t.setAttribute("data-rocket-status","skipped")}async C(t){const e=t.shift();return e?(e.isConnected&&await this.$(e),this.C(t)):Promise.resolve()}O(){this.N([...this.delayedScripts.normal,...this.delayedScripts.defer,...this.delayedScripts.async],"preload")}N(t,e){this.trash=this.trash||[];let i=!0;var o=document.createDocumentFragment();t.forEach((t=>{const s=t.getAttribute&&t.getAttribute("data-rocket-src")||t.src;if(s&&!s.startsWith("data:")){const n=document.createElement("link");n.href=s,n.rel=e,"preconnect"!==e&&(n.as="script",n.fetchPriority=i?"high":"low"),t.getAttribute&&"module"===t.getAttribute("data-rocket-type")&&(n.crossOrigin=!0),t.crossOrigin&&(n.crossOrigin=t.crossOrigin),t.integrity&&(n.integrity=t.integrity),t.nonce&&(n.nonce=t.nonce),o.appendChild(n),this.trash.push(n),i=!1}})),document.head.appendChild(o)}W(){this.trash.forEach((t=>t.remove()))}async T(){try{document.readyState="interactive"}catch(t){}this.fauxDomReadyFired=!0;try{await this.G(),document.dispatchEvent(new Event("rocket-readystatechange")),await this.G(),document.rocketonreadystatechange&&document.rocketonreadystatechange(),await this.G(),document.dispatchEvent(new Event("rocket-DOMContentLoaded")),await this.G(),window.dispatchEvent(new Event("rocket-DOMContentLoaded"))}catch(t){console.error(t)}}async A(){try{document.readyState="complete"}catch(t){}try{await this.G(),document.dispatchEvent(new Event("rocket-readystatechange")),await this.G(),document.rocketonreadystatechange&&document.rocketonreadystatechange(),await this.G(),window.dispatchEvent(new Event("rocket-load")),await this.G(),window.rocketonload&&window.rocketonload(),await this.G(),this.allJQueries.forEach((t=>t(window).trigger("rocket-jquery-load"))),await this.G();const t=new Event("rocket-pageshow");t.persisted=this.persisted,window.dispatchEvent(t),await this.G(),window.rocketonpageshow&&window.rocketonpageshow({persisted:this.persisted})}catch(t){console.error(t)}}async G(){Date.now()-this.lastBreath>45&&(await this.J(),this.lastBreath=Date.now())}async J(){return document.hidden?new Promise((t=>setTimeout(t))):new Promise((t=>requestAnimationFrame(t)))}B(t,e){return e===document&&"readystatechange"===t||(e===document&&"DOMContentLoaded"===t||(e===window&&"DOMContentLoaded"===t||(e===window&&"load"===t||e===window&&"pageshow"===t)))}static run(){(new RocketLazyLoadScripts).t()}}RocketLazyLoadScripts.run()})();</script>
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="format-detection" content="telephone=no">
+		<link rel="shortcut icon" type="image/png" href="https://www.cortiva.edu/wp-content/themes/cortiva/assets/images/favicon.png">
+	<meta name='robots' content='index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' />
+<!-- This site is tracked with the HandL UTM Grabber v3 (3.1.3) - https://www.utmgrabber.com/ --> 
+
+	<!-- This site is optimized with the Yoast SEO plugin v24.7 - https://yoast.com/wordpress/plugins/seo/ -->
+	<title>Sitemap - Cortiva Institute</title><link rel="preload" data-rocket-preload as="image" href="https://www.cortiva.edu/wp-content/smush-webp/sites/2/2024/04/cortiva-logo.png.webp" fetchpriority="high"><link rel="preload" data-rocket-preload as="style" href="https://www.cortiva.edu/wp-content/cache/perfmatters/www.cortiva.edu/fonts/d1dd847377c7.google-fonts.min.css" /><link rel="stylesheet" href="https://www.cortiva.edu/wp-content/cache/perfmatters/www.cortiva.edu/fonts/d1dd847377c7.google-fonts.min.css" media="print" onload="this.media='all'" /><noscript><link rel="stylesheet" href="https://www.cortiva.edu/wp-content/cache/perfmatters/www.cortiva.edu/fonts/d1dd847377c7.google-fonts.min.css" /></noscript>
+	<meta name="description" content="Quickly find what you&#039;re looking for on the Cortiva Institute website. Browse our sitemap for easy navigation." />
+	<link rel="canonical" href="https://www.cortiva.edu/sitemap/" />
+	<meta property="og:locale" content="en_US" />
+	<meta property="og:type" content="article" />
+	<meta property="og:title" content="Sitemap - Cortiva Institute" />
+	<meta property="og:description" content="Quickly find what you&#039;re looking for on the Cortiva Institute website. Browse our sitemap for easy navigation." />
+	<meta property="og:url" content="https://www.cortiva.edu/sitemap/" />
+	<meta property="og:site_name" content="Cortiva Institute" />
+	<meta property="article:modified_time" content="2025-03-16T21:43:21+00:00" />
+	<meta name="twitter:card" content="summary_large_image" />
+	<script type="application/ld+json" class="yoast-schema-graph">{"@context":"https://schema.org","@graph":[{"@type":"WebPage","@id":"https://www.cortiva.edu/sitemap/","url":"https://www.cortiva.edu/sitemap/","name":"Sitemap - Cortiva Institute","isPartOf":{"@id":"https://www.cortiva.edu/#website"},"datePublished":"2024-04-05T11:15:24+00:00","dateModified":"2025-03-16T21:43:21+00:00","description":"Quickly find what you're looking for on the Cortiva Institute website. Browse our sitemap for easy navigation.","breadcrumb":{"@id":"https://www.cortiva.edu/sitemap/#breadcrumb"},"inLanguage":"en-US","potentialAction":[{"@type":"ReadAction","target":["https://www.cortiva.edu/sitemap/"]}]},{"@type":"BreadcrumbList","@id":"https://www.cortiva.edu/sitemap/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.cortiva.edu/"},{"@type":"ListItem","position":2,"name":"Sitemap"}]},{"@type":"WebSite","@id":"https://www.cortiva.edu/#website","url":"https://www.cortiva.edu/","name":"Cortiva Institute","description":"Massage &amp; Beauty School","potentialAction":[{"@type":"SearchAction","target":{"@type":"EntryPoint","urlTemplate":"https://www.cortiva.edu/?s={search_term_string}"},"query-input":{"@type":"PropertyValueSpecification","valueRequired":true,"valueName":"search_term_string"}}],"inLanguage":"en-US"}]}</script>
+	<!-- / Yoast SEO plugin. -->
+
+
+<link rel='dns-prefetch' href='//cdnjs.cloudflare.com' />
+
+<link rel="alternate" type="text/calendar" title="Cortiva Institute &raquo; iCal Feed" href="https://www.cortiva.edu/events/?ical=1" />
+<style id='wp-img-auto-sizes-contain-inline-css' type='text/css'>
+img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
+/*# sourceURL=wp-img-auto-sizes-contain-inline-css */
+</style>
+<style id='classic-theme-styles-inline-css' type='text/css'>
+/*! This file is auto-generated */
+.wp-block-button__link{color:#fff;background-color:#32373c;border-radius:9999px;box-shadow:none;text-decoration:none;padding:calc(.667em + 2px) calc(1.333em + 2px);font-size:1.125em}.wp-block-file__button{background:#32373c;color:#fff;text-decoration:none}
+/*# sourceURL=/wp-includes/css/classic-themes.min.css */
+</style>
+<style id='akismet-widget-style-inline-css' type='text/css'>
+
+			.a-stats {
+				--akismet-color-mid-green: #357b49;
+				--akismet-color-white: #fff;
+				--akismet-color-light-grey: #f6f7f7;
+
+				max-width: 350px;
+				width: auto;
+			}
+
+			.a-stats * {
+				all: unset;
+				box-sizing: border-box;
+			}
+
+			.a-stats strong {
+				font-weight: 600;
+			}
+
+			.a-stats a.a-stats__link,
+			.a-stats a.a-stats__link:visited,
+			.a-stats a.a-stats__link:active {
+				background: var(--akismet-color-mid-green);
+				border: none;
+				box-shadow: none;
+				border-radius: 8px;
+				color: var(--akismet-color-white);
+				cursor: pointer;
+				display: block;
+				font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen-Sans', 'Ubuntu', 'Cantarell', 'Helvetica Neue', sans-serif;
+				font-weight: 500;
+				padding: 12px;
+				text-align: center;
+				text-decoration: none;
+				transition: all 0.2s ease;
+			}
+
+			/* Extra specificity to deal with TwentyTwentyOne focus style */
+			.widget .a-stats a.a-stats__link:focus {
+				background: var(--akismet-color-mid-green);
+				color: var(--akismet-color-white);
+				text-decoration: none;
+			}
+
+			.a-stats a.a-stats__link:hover {
+				filter: brightness(110%);
+				box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06), 0 0 2px rgba(0, 0, 0, 0.16);
+			}
+
+			.a-stats .count {
+				color: var(--akismet-color-white);
+				display: block;
+				font-size: 1.5em;
+				line-height: 1.4;
+				padding: 0 13px;
+				white-space: nowrap;
+			}
+		
+/*# sourceURL=akismet-widget-style-inline-css */
+</style>
+<link data-minify="1" rel='stylesheet' id='additional-style-css' href='https://www.cortiva.edu/wp-content/cache/min/2/wp-content/themes/cortiva/css/cortiva.css?ver=1769719320' type='text/css' media='all' />
+<link data-minify="1" rel='stylesheet' id='am_https-cdnjs-cloudflare-com-ajax-libs-fancybox-3-5-7-jquery-fancybox-min-css-css' href='https://www.cortiva.edu/wp-content/cache/min/2/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css?ver=1769719320' type='text/css' media='all' />
+
+
+<link rel='stylesheet' id='am_assets-css-slick-min-css-css' href='https://www.cortiva.edu/wp-content/themes/cortiva/assets/css/slick.min.css?ver=1713431788' type='text/css' media='all' />
+<link data-minify="1" rel='stylesheet' id='am_assets-css-slick-theme-min-css-css' href='https://www.cortiva.edu/wp-content/cache/background-css/2/www.cortiva.edu/wp-content/cache/min/2/wp-content/themes/cortiva/assets/css/slick-theme.min.css?ver=1769719320&wpr_t=1771361395' type='text/css' media='all' />
+<link rel='stylesheet' id='am_assets-css-style-min-css-css' href='https://www.cortiva.edu/wp-content/cache/background-css/2/www.cortiva.edu/wp-content/themes/cortiva/assets/css/style.min.css?ver=1713612118&wpr_t=1771361395' type='text/css' media='all' />
+<link data-minify="1" rel='stylesheet' id='am_style-css-css' href='https://www.cortiva.edu/wp-content/cache/min/2/wp-content/themes/cortiva/style.css?ver=1769719320' type='text/css' media='all' />
+<script type="rocketlazyloadscript" data-rocket-type="text/javascript" data-rocket-src="https://www.cortiva.edu/wp-includes/js/jquery/jquery.min.js?ver=3.7.1" id="jquery-core-js" data-rocket-defer defer></script>
+<script type="rocketlazyloadscript" data-rocket-type="text/javascript" data-rocket-src="https://www.cortiva.edu/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.4.1" id="jquery-migrate-js" data-rocket-defer defer></script>
+<script type="rocketlazyloadscript" data-minify="1" data-rocket-type="text/javascript" data-rocket-src="https://www.cortiva.edu/wp-content/cache/min/2/wp-content/plugins/handl-utm-grabber-v3/js/js.cookie.js?ver=1769719320" id="js.cookie-js" data-rocket-defer defer></script>
+<script type="text/javascript" id="handl-utm-grabber-js-extra">
+/* <![CDATA[ */
+var handl_utm = [];
+var handl_utm_all_params = ["utm_source","utm_medium","utm_term","utm_content","utm_campaign","first_utm_source","first_utm_medium","first_utm_term","first_utm_content","first_utm_campaign","fbclid","msclkid","gclid","handl_original_ref","handl_landing_page","handl_landing_page_base","handl_ip","handl_ref","handl_url","handl_ref_domain","handl_url_base","gaclientid","organic_source","organic_source_str","user_agent","traffic_source","first_traffic_source","handlID","_fbc","_fbp"];
+var handl_utm_cookie_duration = ["30","1"];
+var handl_utm_append_params = ["utm_source","utm_medium","utm_term","utm_content","utm_campaign","gclid"];
+var handl_utm_first_touch_params = ["utm_source","utm_medium","utm_term","utm_content","utm_campaign"];
+var handl_utm_session_cookies = 0;
+var handl_ajax = {"ajax_url":"https://www.cortiva.edu/wp-admin/admin-ajax.php","fb_capi_enabled":"0"};
+var handl_utm_custom_params = [];
+var handl_utm_dyo_logic = [];
+var handl_utm_predefined = [];
+//# sourceURL=handl-utm-grabber-js-extra
+/* ]]> */
+</script>
+<script type="rocketlazyloadscript" data-minify="1" data-rocket-type="text/javascript" data-rocket-src="https://www.cortiva.edu/wp-content/cache/min/2/wp-content/plugins/handl-utm-grabber-v3/js/handl-utm-grabber.js?ver=1769719320" id="handl-utm-grabber-js" data-rocket-defer defer></script>
+<script type="rocketlazyloadscript" data-minify="1" data-rocket-type="text/javascript" data-rocket-src="https://www.cortiva.edu/wp-content/cache/min/2/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js?ver=1769719320" id="am_https-cdnjs-cloudflare-com-ajax-libs-fancybox-3-5-7-jquery-fancybox-min-js-js" data-rocket-defer defer></script>
+<script type="rocketlazyloadscript" data-minify="1" data-rocket-type="text/javascript" data-rocket-src="https://www.cortiva.edu/wp-content/cache/min/2/wp-content/themes/cortiva/js/custom_script.js?ver=1769719320" id="custom-script-js" data-rocket-defer defer></script>
+<link rel="https://api.w.org/" href="https://www.cortiva.edu/wp-json/" /><link rel="alternate" title="JSON" type="application/json" href="https://www.cortiva.edu/wp-json/wp/v2/pages/1893" /><meta name="google-site-verification" content="FwUbXEmDDZUOxOQSMCxzue2BNj4xIG_NAD2VpVyGpbE" />
+<!-- Google tag (gtag.js) -->
+<script type="rocketlazyloadscript" async data-rocket-src="https://www.googletagmanager.com/gtag/js?id=G-DB1NTCKSBH"></script>
+<script type="rocketlazyloadscript">
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-DB1NTCKSBH');
+</script><style>.handl-hidden{display: none}</style><style>[class^="fieldset-handl_"]{display: none}</style><meta name="tec-api-version" content="v1"><meta name="tec-api-origin" content="https://www.cortiva.edu"><link rel="alternate" href="https://www.cortiva.edu/wp-json/tribe/events/v1/" />        <script type="rocketlazyloadscript" data-rocket-type="text/javascript">
+        var ajaxurl = 'https://www.cortiva.edu/wp-admin/admin-ajax.php';
+    </script>
+    <link rel="icon" href="https://www.cortiva.edu/wp-content/smush-webp/sites/2/2024/04/cropped-Favicon-Cortiva-150x150.png.webp" sizes="32x32" />
+<link rel="icon" href="https://www.cortiva.edu/wp-content/smush-webp/sites/2/2024/04/cropped-Favicon-Cortiva-300x300.png.webp" sizes="192x192" />
+<link rel="apple-touch-icon" href="https://www.cortiva.edu/wp-content/smush-webp/sites/2/2024/04/cropped-Favicon-Cortiva-300x300.png.webp" />
+<meta name="msapplication-TileImage" content="https://www.cortiva.edu/wp-content/uploads/sites/2/2024/04/cropped-Favicon-Cortiva-300x300.png" />
+		<style type="text/css" id="wp-custom-css">
+			/* Left-align images in blog posts */
+.single-post img {
+    display: block;
+    margin-left: 0;
+    margin-right: auto;
+}
+
+/* Force 100% width on mobile devices */
+@media only screen and (max-width: 768px) {
+    .single-post img {
+        width: 100% !important;
+        height: auto;
+    }
+}
+
+/* Remove dark gradient overlay on banner image (page ID 2310) */
+.page-id-2175 .banner-image::after {
+  content: none !important;
+  background: none !important;
+  display: none !important;
+  height: 0 !important;
+}
+
+/**
+ * Winning Split Test Additions 
+ */
+
+/* START - FA Badge on Forms*/
+
+.prism-form.template-21:before {
+    background: var(--wpr-bg-72221493-f5b6-41e1-a1a5-4c1719945838) no-repeat top center transparent;
+	content: "";
+	display: block;
+	height: 73px;
+	position: absolute;
+	right: 16px;
+	top: 0;
+	width: 120px;
+	background-size: contain;
+}
+
+.prism-form.template-21 span.title {
+	display: none;
+}
+
+.prism-form.template-21 .template-21-header:before {
+	content: "Next Step:\ARequest Info";
+	display: block;
+	text-align: left;
+	white-space: pre;
+}
+
+/* END - FA Badge on Forms*/		</style>
+		<noscript><style id="rocket-lazyload-nojs-css">.rll-youtube-player, [data-lazy-src]{display:none !important;}</style></noscript>    
+
+  <!-- begin Convert Experiences code--><script type="text/javascript" src="//cdn-4.convertexperiments.com/v1/js/10041833-100416834.js?environment=production"></script><!-- end Convert Experiences code -->
+
+  <!-- Google Tag Manager -->
+  <script type="rocketlazyloadscript">(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-PB49B3V');</script>
+  <!-- End Google Tag Manager -->
+
+  <script type="rocketlazyloadscript" data-rocket-type="text/javascript" data-rocket-src="//js.web-2-tel.com/org-sdk?identifier=3c592860-26bf-4115-5965-08db0ba37cbe" async></script>
+
+  <!-- 
+  Start of global snippet: Please do not remove
+  Place this snippet between the <head> and <style id="rocket-lazyrender-inline-css">[data-wpr-lazyrender] {content-visibility: auto;}</style><style id="wpr-lazyload-bg-container"></style><style id="wpr-lazyload-bg-exclusion"></style>
+<noscript>
+<style id="wpr-lazyload-bg-nostyle">.slick-loading .slick-list{--wpr-bg-43908c55-2419-4b43-8c6a-3c79ca50ec3c: url('https://www.cortiva.edu/wp-content/themes/cortiva/assets/css/ajax-loader.gif');}.career-cards__cards.two .card-item li:before{--wpr-bg-a1a72115-cf3d-4633-bb64-07707347935d: url('https://www.cortiva.edu/wp-content/themes/cortiva/assets/images/done_ring_round.svg');}.media-content__description li:before{--wpr-bg-9abed17a-064e-4f9a-93d8-f691a588e80e: url('https://www.cortiva.edu/wp-content/themes/cortiva/assets/images/done_ring_round.svg');}.error-404{--wpr-bg-bc506698-e30d-4cf8-b006-6596183641da: url('https://www.cortiva.edu/wp-content/themes/cortiva/assets/images/404.png\');}.page-template-testimonials .form{--wpr-bg-b8742237-3c30-4b2a-a1dc-4856303ffacd: url('https://www.cortiva.edu/wp-content/themes/cortiva/assets/images/form-back.png');}.prism-form.template-21:before{--wpr-bg-72221493-f5b6-41e1-a1a5-4c1719945838: url('https://www.cortiva.edu/wp-content/uploads/sites/2/2026/01/fin-aid-badge.png');}</style>
+</noscript>
+<script type="application/javascript">const rocket_pairs = [{"selector":".slick-loading .slick-list","style":".slick-loading .slick-list{--wpr-bg-43908c55-2419-4b43-8c6a-3c79ca50ec3c: url('https:\/\/www.cortiva.edu\/wp-content\/themes\/cortiva\/assets\/css\/ajax-loader.gif');}","hash":"43908c55-2419-4b43-8c6a-3c79ca50ec3c","url":"https:\/\/www.cortiva.edu\/wp-content\/themes\/cortiva\/assets\/css\/ajax-loader.gif"},{"selector":".career-cards__cards.two .card-item li","style":".career-cards__cards.two .card-item li:before{--wpr-bg-a1a72115-cf3d-4633-bb64-07707347935d: url('https:\/\/www.cortiva.edu\/wp-content\/themes\/cortiva\/assets\/images\/done_ring_round.svg');}","hash":"a1a72115-cf3d-4633-bb64-07707347935d","url":"https:\/\/www.cortiva.edu\/wp-content\/themes\/cortiva\/assets\/images\/done_ring_round.svg"},{"selector":".media-content__description li","style":".media-content__description li:before{--wpr-bg-9abed17a-064e-4f9a-93d8-f691a588e80e: url('https:\/\/www.cortiva.edu\/wp-content\/themes\/cortiva\/assets\/images\/done_ring_round.svg');}","hash":"9abed17a-064e-4f9a-93d8-f691a588e80e","url":"https:\/\/www.cortiva.edu\/wp-content\/themes\/cortiva\/assets\/images\/done_ring_round.svg"},{"selector":".error-404","style":".error-404{--wpr-bg-bc506698-e30d-4cf8-b006-6596183641da: url('https:\/\/www.cortiva.edu\/wp-content\/themes\/cortiva\/assets\/images\/404.png\\');}","hash":"bc506698-e30d-4cf8-b006-6596183641da","url":"https:\/\/www.cortiva.edu\/wp-content\/themes\/cortiva\/assets\/images\/404.png\\"},{"selector":".page-template-testimonials .form","style":".page-template-testimonials .form{--wpr-bg-b8742237-3c30-4b2a-a1dc-4856303ffacd: url('https:\/\/www.cortiva.edu\/wp-content\/themes\/cortiva\/assets\/images\/form-back.png');}","hash":"b8742237-3c30-4b2a-a1dc-4856303ffacd","url":"https:\/\/www.cortiva.edu\/wp-content\/themes\/cortiva\/assets\/images\/form-back.png"},{"selector":".prism-form.template-21","style":".prism-form.template-21:before{--wpr-bg-72221493-f5b6-41e1-a1a5-4c1719945838: url('https:\/\/www.cortiva.edu\/wp-content\/uploads\/sites\/2\/2026\/01\/fin-aid-badge.png');}","hash":"72221493-f5b6-41e1-a1a5-4c1719945838","url":"https:\/\/www.cortiva.edu\/wp-content\/uploads\/sites\/2\/2026\/01\/fin-aid-badge.png"}]; const rocket_excluded_pairs = [];</script><meta name="generator" content="WP Rocket 3.18.3" data-wpr-features="wpr_lazyload_css_bg_img wpr_delay_js wpr_defer_js wpr_minify_js wpr_lazyload_images wpr_automatic_lazy_rendering wpr_oci wpr_image_dimensions wpr_minify_css wpr_preload_links wpr_desktop" /></head> tags on every page of your site.
+  -->
+  <!-- Global site tag (gtag.js) - Google Marketing Platform -->
+  <script type="rocketlazyloadscript" async data-rocket-src="https://www.googletagmanager.com/gtag/js?id=DC-10570508"></script>
+  <script type="rocketlazyloadscript">
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'DC-10570508');
+  </script>
+  <!-- End of global snippet: Please do not remove -->
+
+<style id="wpr-lazyload-bg-container"></style><style id="wpr-lazyload-bg-exclusion"></style>
+<noscript>
+<style id="wpr-lazyload-bg-nostyle">.slick-loading .slick-list{--wpr-bg-43908c55-2419-4b43-8c6a-3c79ca50ec3c: url('https://www.cortiva.edu/wp-content/themes/cortiva/assets/css/ajax-loader.gif');}.career-cards__cards.two .card-item li:before{--wpr-bg-a1a72115-cf3d-4633-bb64-07707347935d: url('https://www.cortiva.edu/wp-content/themes/cortiva/assets/images/done_ring_round.svg');}.media-content__description li:before{--wpr-bg-9abed17a-064e-4f9a-93d8-f691a588e80e: url('https://www.cortiva.edu/wp-content/themes/cortiva/assets/images/done_ring_round.svg');}.error-404{--wpr-bg-bc506698-e30d-4cf8-b006-6596183641da: url('https://www.cortiva.edu/wp-content/themes/cortiva/assets/images/404.png\');}.page-template-testimonials .form{--wpr-bg-b8742237-3c30-4b2a-a1dc-4856303ffacd: url('https://www.cortiva.edu/wp-content/themes/cortiva/assets/images/form-back.png');}.prism-form.template-21:before{--wpr-bg-72221493-f5b6-41e1-a1a5-4c1719945838: url('https://www.cortiva.edu/wp-content/uploads/sites/2/2026/01/fin-aid-badge.png');}</style>
+</noscript>
+<script type="application/javascript">const rocket_pairs = [{"selector":".slick-loading .slick-list","style":".slick-loading .slick-list{--wpr-bg-43908c55-2419-4b43-8c6a-3c79ca50ec3c: url('https:\/\/www.cortiva.edu\/wp-content\/themes\/cortiva\/assets\/css\/ajax-loader.gif');}","hash":"43908c55-2419-4b43-8c6a-3c79ca50ec3c","url":"https:\/\/www.cortiva.edu\/wp-content\/themes\/cortiva\/assets\/css\/ajax-loader.gif"},{"selector":".career-cards__cards.two .card-item li","style":".career-cards__cards.two .card-item li:before{--wpr-bg-a1a72115-cf3d-4633-bb64-07707347935d: url('https:\/\/www.cortiva.edu\/wp-content\/themes\/cortiva\/assets\/images\/done_ring_round.svg');}","hash":"a1a72115-cf3d-4633-bb64-07707347935d","url":"https:\/\/www.cortiva.edu\/wp-content\/themes\/cortiva\/assets\/images\/done_ring_round.svg"},{"selector":".media-content__description li","style":".media-content__description li:before{--wpr-bg-9abed17a-064e-4f9a-93d8-f691a588e80e: url('https:\/\/www.cortiva.edu\/wp-content\/themes\/cortiva\/assets\/images\/done_ring_round.svg');}","hash":"9abed17a-064e-4f9a-93d8-f691a588e80e","url":"https:\/\/www.cortiva.edu\/wp-content\/themes\/cortiva\/assets\/images\/done_ring_round.svg"},{"selector":".error-404","style":".error-404{--wpr-bg-bc506698-e30d-4cf8-b006-6596183641da: url('https:\/\/www.cortiva.edu\/wp-content\/themes\/cortiva\/assets\/images\/404.png\\');}","hash":"bc506698-e30d-4cf8-b006-6596183641da","url":"https:\/\/www.cortiva.edu\/wp-content\/themes\/cortiva\/assets\/images\/404.png\\"},{"selector":".page-template-testimonials .form","style":".page-template-testimonials .form{--wpr-bg-b8742237-3c30-4b2a-a1dc-4856303ffacd: url('https:\/\/www.cortiva.edu\/wp-content\/themes\/cortiva\/assets\/images\/form-back.png');}","hash":"b8742237-3c30-4b2a-a1dc-4856303ffacd","url":"https:\/\/www.cortiva.edu\/wp-content\/themes\/cortiva\/assets\/images\/form-back.png"},{"selector":".prism-form.template-21","style":".prism-form.template-21:before{--wpr-bg-72221493-f5b6-41e1-a1a5-4c1719945838: url('https:\/\/www.cortiva.edu\/wp-content\/uploads\/sites\/2\/2026\/01\/fin-aid-badge.png');}","hash":"72221493-f5b6-41e1-a1a5-4c1719945838","url":"https:\/\/www.cortiva.edu\/wp-content\/uploads\/sites\/2\/2026\/01\/fin-aid-badge.png"}]; const rocket_excluded_pairs = [];</script></head>
+
+<body class="wp-singular page-template page-template-page-templates page-template-content-modules page-template-page-templatescontent-modules-php page page-id-1893 wp-theme-cortiva bodyclass-global tribe-no-js group-blog unknown">
+	<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PB49B3V"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+	<!-- Header -->
+	<header  class="header">
+		<div  class="container">
+			<nav class="header-nav">
+				<button class="hamburger d-sm-only" aria-label="Menu Toggler"><span></span></button>
+								<a href="https://www.cortiva.edu" class="header-logo">
+					<img width="150" height="46" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20150%2046'%3E%3C/svg%3E" alt="Cortiva Institute" class="header-logo-img" data-lazy-src="https://www.cortiva.edu/wp-content/smush-webp/sites/2/2024/04/cortiva-logo.png.webp"><noscript><img width="150" height="46" src="https://www.cortiva.edu/wp-content/uploads/sites/2/2024/04/cortiva-logo.png" alt="Cortiva Institute" class="header-logo-img"></noscript>
+				</a>
+				<ul id="menu-main-menu" class="header-nav__menu"><li id="menu-item-1187" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-1187"><a href="/programs/">Career Paths</a>
+<ul class="sub-menu">
+	<li id="menu-item-3100" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-3100"><a href="/programs/barber/">Barber</a></li>
+	<li id="menu-item-1643" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1643"><a href="/programs/cosmetologist/">Cosmetologist</a></li>
+	<li id="menu-item-1209" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1209"><a href="/programs/esthetician/">Esthetician</a></li>
+	<li id="menu-item-1211" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1211"><a href="/programs/makeup-artist-esthetician/">Makeup Artist &#038; Esthetician</a></li>
+	<li id="menu-item-1208" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1208"><a href="/programs/massage-therapist/">Massage Therapist</a></li>
+	<li id="menu-item-1213" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1213"><a href="/programs/nail-specialist/">Nail Specialist</a></li>
+	<li id="menu-item-1210" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1210"><a href="/programs/paramedical-esthetician/">Paramedical Esthetician</a></li>
+	<li id="menu-item-2378" class="menu-item menu-item-type-post_type menu-item-object-program menu-item-2378"><a href="https://www.cortiva.edu/programs/dual-programs/">Dual Programs</a></li>
+</ul>
+</li>
+<li id="menu-item-1188" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-1188"><a href="/locations/">Locations</a>
+<ul class="sub-menu">
+	<li id="menu-item-1214" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1214"><a href="/locations/arlington-tx/">Arlington, TX</a></li>
+	<li id="menu-item-1215" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1215"><a href="/locations/baltimore-md/">Baltimore, MD</a></li>
+	<li id="menu-item-1216" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1216"><a href="/locations/cromwell-ct/">Cromwell, CT</a></li>
+	<li id="menu-item-1217" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1217"><a href="/locations/king-of-prussia-pa/">King of Prussia, PA</a></li>
+	<li id="menu-item-1218" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1218"><a href="/locations/maitland-fl/">Maitland, FL</a></li>
+	<li id="menu-item-1220" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1220"><a href="/locations/st-petersburg-fl/">St. Petersburg, FL</a></li>
+</ul>
+</li>
+<li id="menu-item-2047" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2047"><a href="https://www.cortiva.edu/about-us/">About Us</a></li>
+<li id="menu-item-1190" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1190"><a href="/blog/">Blog</a></li>
+<li id="menu-item-2978" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-2978"><a href="https://www.cortiva.edu/blog/category/events/">Events</a></li>
+<li id="menu-item-1892" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1892"><a target="_blank" href="https://www.thespaatcortiva.com/">Visit Spa</a></li>
+</ul>				<div class="header-nav__right">
+										
+
+
+
+				<a class="btn header-nav__right__cta" href="https://www.thespaatcortiva.com/" target="_blank">
+			Visit Spa					</a>
+							
+
+
+
+				<a class="btn btn-primary header-nav__right__cta" href="https://www.cortiva.edu/contact/" target="_self">
+			Request Info					</a>
+							
+
+
+
+				<a class="btn btn-primary header-nav__right__mobile" href="/contact" target="_self">
+			Request Info					</a>
+										</div>
+			</nav>
+		</div>
+	</header>
+
+	<!-- Main -->
+	<main  class="main">
+
+            <section  class="request-form" id="form-block">
+                <div  class="container">
+                    
+ 
+                    
+ 
+                    
+ 
+ 
+						<p class="request-form__description a-up a-delay-1"			>
+				<h1>Sitemap Cortiva Institute</h1>					</p>
+			                    <div class="wsp-container"><h2 class="wsp-pages-title">Pages</h2>
+<ul class="wsp-pages-list">
+<li class="page_item page-item-2175"><a href="https://www.cortiva.edu/back-to-school-open-house/">2025 Back to School Open House</a></li>
+<li class="page_item page-item-729"><a href="https://www.cortiva.edu/about-us/">About us</a></li>
+<li class="page_item page-item-1663"><a href="https://www.cortiva.edu/admissions/">Admissions</a></li>
+<li class="page_item page-item-1822"><a href="https://www.cortiva.edu/arlington-net-price-calculator/">Arlington NET Price Calculator</a></li>
+<li class="page_item page-item-1827"><a href="https://www.cortiva.edu/baltimore-net-price-calculator/">Baltimore NET Price Calculator</a></li>
+<li class="page_item page-item-258"><a href="https://www.cortiva.edu/blog/">Blog</a></li>
+<li class="page_item page-item-807"><a href="https://www.cortiva.edu/career-services/">Career Services</a></li>
+<li class="page_item page-item-2509"><a href="https://www.cortiva.edu/csc/">Career Services &#8211; Orientation Survey</a></li>
+<li class="page_item page-item-2357"><a href="https://www.cortiva.edu/fall/">Choose YOU with Fall Classes 2024</a></li>
+<li class="page_item page-item-2023"><a href="https://www.cortiva.edu/closed-campuses/">Closed Campuses</a></li>
+<li class="page_item page-item-1319"><a href="https://www.cortiva.edu/consumer-information/">Consumer Information</a></li>
+<li class="page_item page-item-1473"><a href="https://www.cortiva.edu/contact/">Contact us</a></li>
+<li class="page_item page-item-1829"><a href="https://www.cortiva.edu/cromwell-net-price-calculator/">Cromwell NET Price Calculator</a></li>
+<li class="page_item page-item-1956"><a href="https://www.cortiva.edu/e-brochure-form/">E-Brochure Form</a></li>
+<li class="page_item page-item-2394"><a href="https://www.cortiva.edu/event-planner/">Event Planner</a></li>
+<li class="page_item page-item-1324"><a href="https://www.cortiva.edu/financial-aid/">Financial Aid</a></li>
+<li class="page_item page-item-1905"><a href="https://www.cortiva.edu/follow/">Follow Us on Social media</a></li>
+<li class="page_item page-item-2403"><a href="https://www.cortiva.edu/confirmation/">Form Confirmation Page</a></li>
+<li class="page_item page-item-142"><a href="https://www.cortiva.edu/">Homepage</a></li>
+<li class="page_item page-item-1833"><a href="https://www.cortiva.edu/king-of-prussia-net-price-calculator/">King of Prussia NET Price Calculator</a></li>
+<li class="page_item page-item-124"><a href="https://www.cortiva.edu/locations/">Locations</a></li>
+<li class="page_item page-item-1835"><a href="https://www.cortiva.edu/maitland-net-price-calculator/">Maitland NET Price Calculator</a></li>
+<li class="page_item page-item-2487"><a href="https://www.cortiva.edu/winter/">New Year = New Career!</a></li>
+<li class="page_item page-item-1831"><a href="https://www.cortiva.edu/pompano-beach-net-price-calculator/">Pompano Beach NET Price Calculator</a></li>
+<li class="page_item page-item-1317"><a href="https://www.cortiva.edu/privacy-policy/">Privacy Policy</a></li>
+<li class="page_item page-item-727"><a href="https://www.cortiva.edu/programs/">Programs</a></li>
+<li class="page_item page-item-2107"><a href="https://www.cortiva.edu/summer/">Radiate Success Summer 2024</a></li>
+<li class="page_item page-item-2173"><a href="https://www.cortiva.edu/event-confirmation/">RSVP Confirmed</a></li>
+<li class="page_item page-item-1893 current_page_item"><a href="https://www.cortiva.edu/sitemap/">Sitemap</a></li>
+<li class="page_item page-item-2673"><a href="https://www.cortiva.edu/spring/">Spring Into Success with Cortiva</a></li>
+<li class="page_item page-item-1837"><a href="https://www.cortiva.edu/st-petersburg-net-price-calculator/">St Petersburg NET Price Calculator</a></li>
+<li class="page_item page-item-1321"><a href="https://www.cortiva.edu/student-cares-grant/">Student Cares Grant</a></li>
+<li class="page_item page-item-786"><a href="https://www.cortiva.edu/testimonials/">Testimonials</a></li>
+<li class="page_item page-item-1903"><a href="https://www.cortiva.edu/thank-you/">Thank You</a></li>
+<li class="page_item page-item-1474"><a href="https://www.cortiva.edu/title-ix/">Title IX</a></li>
+</ul>
+<h2 class="wsp-posts-title">Posts by category</h2>
+<ul class="wsp-posts-list">
+	<li><strong class="wsp-category-title">Category: <a href="https://www.cortiva.edu/blog/category/cosmetology/">Cosmetology</a></strong>
+<ul class="wsp-posts-list">		<li class="wsp-post"><a href="https://www.cortiva.edu/blog/breaking-down-the-clean-beauty-movement-for-cosmetologists/">Breaking Down the Clean Beauty Movement for Cosmetologists</a></li>
+		<li class="wsp-post"><a href="https://www.cortiva.edu/blog/the-rise-of-personalized-beauty-services-for-every-client/">The Rise of Personalized Beauty Services for Every Client</a></li>
+		<li class="wsp-post"><a href="https://www.cortiva.edu/blog/how-to-excel-in-a-cosmetology-career-paths-salaries-and-growth-opportunities/">How to Excel in a Cosmetology Career: Paths, Salaries, and Growth Opportunities</a></li>
+		<li class="wsp-post"><a href="https://www.cortiva.edu/blog/exploring-the-world-of-esthetics-career-options-training-and-job-prospects/">Exploring the World of Esthetics: Career Options, Training, and Job Prospects</a></li>
+		<li class="wsp-post"><a href="https://www.cortiva.edu/blog/5-benefits-of-going-to-cosmetology-school/">5 Benefits of Going to Cosmetology School</a></li>
+		<li class="wsp-post"><a href="https://www.cortiva.edu/blog/dive-into-the-hottest-summer-nail-art-trends-of-2024/">Dive into the Hottest Summer Nail Art Trends of 2024</a></li>
+		<li class="wsp-post"><a href="https://www.cortiva.edu/blog/professional-treatments-demystified-understanding-facials-peels-and-microdermabrasion/">Professional Treatments Demystified: Understanding Facials, Peels, and Microdermabrasion</a></li>
+		<li class="wsp-post"><a href="https://www.cortiva.edu/blog/aging-gracefully-anti-aging-skincare-tips-and-techniques/">Aging Gracefully: Anti-Aging Skincare Tips and Techniques</a></li>
+		<li class="wsp-post"><a href="https://www.cortiva.edu/blog/tis-the-season-for-festive-fingertips-diy-christmas-nail-art/">&#8216;Tis the Season for Festive Fingertips: DIY Christmas Nail Art</a></li>
+</ul></li>
+	<li><strong class="wsp-category-title">Category: <a href="https://www.cortiva.edu/blog/category/events/">Events</a></strong>
+<ul class="wsp-posts-list">		<li class="wsp-post"><a href="https://www.cortiva.edu/blog/2026-superbowl-open-house/">Super Bowl Open House in Maitland, FL</a></li>
+		<li class="wsp-post"><a href="https://www.cortiva.edu/blog/stp-open-house-2025-11-15/">Open House &#038; Eye Makeup Class</a></li>
+		<li class="wsp-post"><a href="https://www.cortiva.edu/blog/halloween-spooktacular-decorating-contest/">Halloween Decorating Contest</a></li>
+		<li class="wsp-post"><a href="https://www.cortiva.edu/blog/halloween-spooktacular-fashion-show/">Halloween Fashion Show</a></li>
+		<li class="wsp-post"><a href="https://www.cortiva.edu/blog/season-of-success-kop-101425/">Free Classes in King of Prussia, PA</a></li>
+		<li class="wsp-post"><a href="https://www.cortiva.edu/blog/fall-open-house-2025-stp/">Fall Open House in St. Pete, FL</a></li>
+		<li class="wsp-post"><a href="https://www.cortiva.edu/blog/sept2025-open-house-stp/">Open House in St. Petersburg, FL</a></li>
+		<li class="wsp-post"><a href="https://www.cortiva.edu/blog/2025-summer-open-house-stp/">Summer Open House (STP)</a></li>
+		<li class="wsp-post"><a href="https://www.cortiva.edu/blog/2025-summer-open-house-kop/">Summer Open House (KOP)</a></li>
+		<li class="wsp-post"><a href="https://www.cortiva.edu/blog/massage-mixer-2025/">Mindful May Massage Mixer for Mental Health Awareness</a></li>
+		<li class="wsp-post"><a href="https://www.cortiva.edu/blog/spring-break-mini-classes-2025-04-19/">Spring Mini Classes (PA Only)</a></li>
+		<li class="wsp-post"><a href="https://www.cortiva.edu/blog/spring-break-mini-classes-2025-04-16/">Spring Mini Classes (CT &#038; MD)</a></li>
+		<li class="wsp-post"><a href="https://www.cortiva.edu/blog/spring-break-mini-classes-2025-03-22/">Spring Mini Classes (FL &#038; TX)</a></li>
+		<li class="wsp-post"><a href="https://www.cortiva.edu/blog/leap-into-your-new-career-2025/">Leap Into Your New Career</a></li>
+		<li class="wsp-post"><a href="https://www.cortiva.edu/blog/love-what-you-do-open-house/">Love What You Do Open House</a></li>
+		<li class="wsp-post"><a href="https://www.cortiva.edu/blog/new-year-open-house/">New Year Open House</a></li>
+		<li class="wsp-post"><a href="https://www.cortiva.edu/blog/2024-chill-and-chat/">Chill &amp; Chat at Cortiva</a></li>
+		<li class="wsp-post"><a href="https://www.cortiva.edu/blog/breakfast-tour-110824/">Breakfast Tour</a></li>
+		<li class="wsp-post"><a href="https://www.cortiva.edu/blog/free-halloween-makeup-class-102224/">Free Halloween Makeup Class</a></li>
+		<li class="wsp-post"><a href="https://www.cortiva.edu/blog/free-halloween-nails-class-102224/">Free Halloween Nail Art Class</a></li>
+		<li class="wsp-post"><a href="https://www.cortiva.edu/blog/summer-open-house-in-maitland-fl-071324/">Summer Open House at Our Maitland, FL Campus</a></li>
+</ul></li>
+	<li><strong class="wsp-category-title">Category: <a href="https://www.cortiva.edu/blog/category/general/">General</a></strong>
+<ul class="wsp-posts-list">		<li class="wsp-post"><a href="https://www.cortiva.edu/blog/understanding-hair-anatomy-how-stylists-enhance-hair-health/">Understanding Hair Anatomy: How Stylists Enhance Hair Health</a></li>
+		<li class="wsp-post"><a href="https://www.cortiva.edu/blog/the-science-behind-facials-what-makes-them-effective/">The Science Behind Facials: What Makes Them Effective?</a></li>
+		<li class="wsp-post"><a href="https://www.cortiva.edu/blog/essential-cosmetology-tools-every-beginner-should-own/">Essential Cosmetology Tools Every Beginner Should Own</a></li>
+		<li class="wsp-post"><a href="https://www.cortiva.edu/blog/5-wellness-trends-in-2024-whats-hot-in-health-and-wellness-this-year/">5 Wellness Trends in 2024: What&#8217;s Hot in Health and Wellness This Year</a></li>
+		<li class="wsp-post"><a href="https://www.cortiva.edu/blog/choosing-between-private-and-public-schools/">Private vs Public Schools as an Adult Learner Pursuing Beauty and Massage Training</a></li>
+		<li class="wsp-post"><a href="https://www.cortiva.edu/blog/trending-hairstyles-for-2024/">Trending Hairstyles for 2024</a></li>
+		<li class="wsp-post"><a href="https://www.cortiva.edu/blog/the-business-of-beauty-entrepreneurial-tips-for-cosmetologists/">The Business of Beauty: Entrepreneurial Tips for Cosmetologists</a></li>
+		<li class="wsp-post"><a href="https://www.cortiva.edu/blog/the-art-of-hair-coloring-techniques-every-cosmetologist-should-master/">The Art of Hair Coloring: Techniques Every Cosmetologist Should Master</a></li>
+		<li class="wsp-post"><a href="https://www.cortiva.edu/blog/skincare-secrets-from-cortivas-cosmetology-program-tips-for-a-radiant-complexion/">Skincare Secrets from Cortiva&#8217;s Cosmetology Program: Tips for a Radiant Complexion</a></li>
+		<li class="wsp-post"><a href="https://www.cortiva.edu/blog/innovations-in-nail-art-the-latest-techniques-and-designs/">Innovations in Nail Art: The Latest Techniques and Designs</a></li>
+		<li class="wsp-post"><a href="https://www.cortiva.edu/blog/exploring-specializations-in-cosmetology-from-hair-styling-to-makeup-artistry/">Exploring Specializations in Cosmetology: From Hair Styling to Makeup Artistry</a></li>
+		<li class="wsp-post"><a href="https://www.cortiva.edu/blog/the-role-of-massage-therapy-in-wellness-and-stress-reduction/">The Role of Massage Therapy in Wellness and Stress Reduction</a></li>
+		<li class="wsp-post"><a href="https://www.cortiva.edu/blog/the-science-of-skin-care-understanding-common-skin-conditions/">The Science of Skin Care: Understanding Common Skin Conditions</a></li>
+		<li class="wsp-post"><a href="https://www.cortiva.edu/blog/top-3-reasons-to-become-a-nail-specialist-in-texas/">Top 3 Reasons to Become a Nail Specialist in Texas</a></li>
+		<li class="wsp-post"><a href="https://www.cortiva.edu/blog/the-future-of-wellness-careers-what-to-expect-in-the-next-decade/">The Future of Wellness Careers: What to Expect in the Next Decade</a></li>
+		<li class="wsp-post"><a href="https://www.cortiva.edu/blog/maintaining-work-life-balance-as-a-massage-therapist-or-esthetician/">Maintaining Work-Life Balance as a Massage Therapist or Esthetician</a></li>
+		<li class="wsp-post"><a href="https://www.cortiva.edu/blog/choosing-the-right-massage-therapy-school-a-step-by-step-guide/">Choosing the Right Massage Therapy School: A Step-By-Step Guide</a></li>
+		<li class="wsp-post"><a href="https://www.cortiva.edu/blog/breaking-down-the-licensing-and-certification-process-for-estheticians/">Breaking Down the Licensing and Certification Process for Estheticians</a></li>
+		<li class="wsp-post"><a href="https://www.cortiva.edu/blog/not-a-fan-of-lipgloss-try-a-tinted-lip-oil/">Not A Fan of Lipgloss? Try A Tinted Lip Oil!</a></li>
+		<li class="wsp-post"><a href="https://www.cortiva.edu/blog/sfx-makeup-class-chainsaw-blood-cuts/">SFX Makeup Class: Chainsaw Blood &amp; Cuts</a></li>
+		<li class="wsp-post"><a href="https://www.cortiva.edu/blog/meet-james-bishop-guard-for-the-gw-colonials-at-our-back-to-school-open-house-in-baltimore-md/">Meet James Bishop, Guard for the GW Colonials, at our Back to School Open House in Baltimore, MD!</a></li>
+		<li class="wsp-post"><a href="https://www.cortiva.edu/blog/how-to-do-your-makeup-like-barbie/">How to Do Your Makeup Like Barbie</a></li>
+		<li class="wsp-post"><a href="https://www.cortiva.edu/blog/chemical-peels-and-what-they-do-for-your-skin/">Chemical Peels and What They Do for Your Skin</a></li>
+		<li class="wsp-post"><a href="https://www.cortiva.edu/blog/why-you-should-remove-dead-skin-from-your-face-and-how/">Why You Should Remove Dead Skin from Your Face and How</a></li>
+		<li class="wsp-post"><a href="https://www.cortiva.edu/blog/microneedling-vs-microdermabrasion/">Microneedling vs. Microdermabrasion</a></li>
+		<li class="wsp-post"><a href="https://www.cortiva.edu/blog/social-trends-to-grow-your-beauty-brand/">Social Trends to Grow Your Beauty Brand</a></li>
+		<li class="wsp-post"><a href="https://www.cortiva.edu/blog/why-our-hands-get-so-dry-in-the-winter-how-to-care-for-them/">Why Our Hands Get So Dry in the Winter &amp; How to Care for Them</a></li>
+		<li class="wsp-post"><a href="https://www.cortiva.edu/blog/how-to-give-a-hot-stone-massage/">How to Give a Hot Stone Massage</a></li>
+		<li class="wsp-post"><a href="https://www.cortiva.edu/blog/5-tips-for-healthier-nails/">5 Tips for Healthier Nails</a></li>
+		<li class="wsp-post"><a href="https://www.cortiva.edu/blog/what-separates-good-makeup-artists-from-great-ones/">What separates good makeup artists from great ones?</a></li>
+		<li class="wsp-post"><a href="https://www.cortiva.edu/blog/top-vitamins-and-supplements-to-add-to-your-skincare-routine/">Top Vitamins and Supplements to Add to Your Skincare Routine</a></li>
+		<li class="wsp-post"><a href="https://www.cortiva.edu/blog/relieve-neck-pain-with-a-trigger-point-massage/">Relieve Neck Pain with a Trigger Point Massage</a></li>
+		<li class="wsp-post"><a href="https://www.cortiva.edu/blog/how-to-grow-your-clientele-as-a-paramedical-esthetician/">How to Grow Your Clientele as a Paramedical Esthetician</a></li>
+		<li class="wsp-post"><a href="https://www.cortiva.edu/blog/classes-you-can-take-in-high-school-to-prepare-for-esthetician-school/">Classes you can Take in High School to Prepare for Esthetician School</a></li>
+		<li class="wsp-post"><a href="https://www.cortiva.edu/blog/5-outstanding-beauty-tips-that-only-take-minutes/">5 Outstanding Beauty Tips that Only Take Minutes</a></li>
+		<li class="wsp-post"><a href="https://www.cortiva.edu/blog/how-to-choose-the-best-eyelash-extensions-for-you/">How to Choose the Best Eyelash Extensions for You</a></li>
+		<li class="wsp-post"><a href="https://www.cortiva.edu/blog/care-tips-for-your-eyelash-extensions/">Care Tips for Your Eyelash Extensions</a></li>
+		<li class="wsp-post"><a href="https://www.cortiva.edu/blog/5-surprising-causes-of-dry-skin/">5 Surprising Causes of Dry Skin</a></li>
+		<li class="wsp-post"><a href="https://www.cortiva.edu/blog/does-waxing-remove-hair-permanently/">Does Waxing Remove Hair Permanently?</a></li>
+		<li class="wsp-post"><a href="https://www.cortiva.edu/blog/beauty-tech-the-future-of-innovations-in-cosmetology/">Beauty Tech: The Future of Innovations in Cosmetology</a></li>
+		<li class="wsp-post"><a href="https://www.cortiva.edu/blog/the-ultimate-summer-skincare-routine-in-5-simple-steps/">The Ultimate Summer Skincare Routine in 5 Simple Steps</a></li>
+		<li class="wsp-post"><a href="https://www.cortiva.edu/blog/compare-and-contrast-myofascial-release-and-massage/">Compare and Contrast: Myofascial Release and Massage</a></li>
+		<li class="wsp-post"><a href="https://www.cortiva.edu/blog/what-is-the-best-age-for-each-facial/">What Is the Best Age for Each Facial</a></li>
+		<li class="wsp-post"><a href="https://www.cortiva.edu/blog/5-spring-beauty-trends-to-try/">5 Spring Beauty Trends to Try</a></li>
+		<li class="wsp-post"><a href="https://www.cortiva.edu/blog/skin-types-and-care-for-each/">Skin Types and Care for Each</a></li>
+		<li class="wsp-post"><a href="https://www.cortiva.edu/blog/the-best-cruelty-free-beauty-wellness-products/">The Best Cruelty-Free Beauty &amp; Wellness Products</a></li>
+		<li class="wsp-post"><a href="https://www.cortiva.edu/blog/wellness-resolutions-for-the-new-year/">Wellness Resolutions for the New Year</a></li>
+		<li class="wsp-post"><a href="https://www.cortiva.edu/blog/top-beauty-trends-to-try-in-2022/">Top Beauty Trends to Try in 2022</a></li>
+		<li class="wsp-post"><a href="https://www.cortiva.edu/blog/tips-for-healthy-winter-skin/">Tips for Healthy Winter Skin</a></li>
+		<li class="wsp-post"><a href="https://www.cortiva.edu/blog/acne-types-and-treatments/">Acne: Types and Treatments</a></li>
+		<li class="wsp-post"><a href="https://www.cortiva.edu/blog/top-soft-skills-every-beauty-professional-needs-to-master/">Top Soft Skills Every Beauty Professional Needs to Master</a></li>
+		<li class="wsp-post"><a href="https://www.cortiva.edu/blog/the-basics-of-chemical-peels/">The Basics of Chemical Peels</a></li>
+		<li class="wsp-post"><a href="https://www.cortiva.edu/blog/can-a-beauty-blog-help-your-career-as-an-mua/">Can a Beauty Blog Help Your Career as an MUA?</a></li>
+		<li class="wsp-post"><a href="https://www.cortiva.edu/blog/how-skin-health-connects-to-overall-health/">How Skin Health Connects to Overall Health</a></li>
+		<li class="wsp-post"><a href="https://www.cortiva.edu/blog/how-to-stay-healthy-in-the-winter/">How to Stay Healthy in the Winter</a></li>
+		<li class="wsp-post"><a href="https://www.cortiva.edu/blog/how-to-reduce-holiday-stress/">How to Reduce Holiday Stress</a></li>
+		<li class="wsp-post"><a href="https://www.cortiva.edu/blog/what-facial-schedule-works-best/">What Facial Schedule Works Best?</a></li>
+		<li class="wsp-post"><a href="https://www.cortiva.edu/blog/extractions-101/">Extractions 101</a></li>
+		<li class="wsp-post"><a href="https://www.cortiva.edu/blog/how-to-help-your-clients-choose-the-right-facials/">How to Help Your Clients Choose the Right Facials</a></li>
+		<li class="wsp-post"><a href="https://www.cortiva.edu/blog/top-ways-to-get-a-better-nights-sleep/">Top Ways to Get a Better Night’s Sleep</a></li>
+		<li class="wsp-post"><a href="https://www.cortiva.edu/blog/helpful-tips-for-staying-healthy-this-fall/">Helpful Tips for Staying Healthy This Fall</a></li>
+		<li class="wsp-post"><a href="https://www.cortiva.edu/blog/how-to-recognize-and-properly-manage-your-stress/">How to Recognize and Properly Manage Your Stress</a></li>
+		<li class="wsp-post"><a href="https://www.cortiva.edu/blog/best-ways-to-boost-your-mental-health/">Best Ways to Boost Your Mental Health</a></li>
+		<li class="wsp-post"><a href="https://www.cortiva.edu/blog/how-anxiety-affects-your-body-and-how-to-overcome-it/">How Anxiety Affects Your Body and How to Overcome It</a></li>
+		<li class="wsp-post"><a href="https://www.cortiva.edu/blog/how-has-coronavirus-affected-cosmetology-schools/">How Has Coronavirus Affected Cosmetology Schools</a></li>
+		<li class="wsp-post"><a href="https://www.cortiva.edu/blog/how-the-beauty-industry-is-responding-to-coronavirus/">How the Beauty Industry Is Responding to Coronavirus</a></li>
+		<li class="wsp-post"><a href="https://www.cortiva.edu/blog/eco-friendly-beauty-tips/">Eco-Friendly Beauty Tips</a></li>
+		<li class="wsp-post"><a href="https://www.cortiva.edu/blog/getting-back-to-your-beauty-routine-after-covid/">Getting Back to Your Beauty Routine after COVID</a></li>
+		<li class="wsp-post"><a href="https://www.cortiva.edu/blog/top-essential-skills-you-will-only-learn-at-beauty-school/">Top Essential Skills You Will Only Learn at Beauty School</a></li>
+		<li class="wsp-post"><a href="https://www.cortiva.edu/blog/social-responsibilities-and-ethics-involved-in-the-beauty-industry/">Social Responsibilities and Ethics Involved in the Beauty Industry</a></li>
+		<li class="wsp-post"><a href="https://www.cortiva.edu/blog/what-exactly-is-affirmations-for-stress-relief/">What Exactly is Affirmations for Stress Relief</a></li>
+		<li class="wsp-post"><a href="https://www.cortiva.edu/blog/a-step-by-step-guide-to-succeeding-in-massage-therapy-school/">A Step-by-Step Guide to Succeeding in Massage Therapy School</a></li>
+		<li class="wsp-post"><a href="https://www.cortiva.edu/blog/top-considerations-when-choosing-a-professional-massage-therapy-school-in-baltimore/">Top Considerations When Choosing a Professional Massage Therapy School in Baltimore</a></li>
+		<li class="wsp-post"><a href="https://www.cortiva.edu/blog/cortiva-under-new-management/">Cortiva Under New Management</a></li>
+</ul></li>
+	<li><strong class="wsp-category-title">Category: <a href="https://www.cortiva.edu/blog/category/makeup/">Makeup</a></strong>
+<ul class="wsp-posts-list">		<li class="wsp-post"><a href="https://www.cortiva.edu/blog/the-rise-of-hair-sculpting-creative-techniques-every-stylist-should-know/">The Rise of Hair Sculpting: Creative Techniques Every Stylist Should Know</a></li>
+		<li class="wsp-post"><a href="https://www.cortiva.edu/blog/create-a-spook-tacular-halloween-makeup-look-in-8-easy-steps/">Create a Spook-tacular Halloween Makeup Look in 8 Easy Steps!</a></li>
+		<li class="wsp-post"><a href="https://www.cortiva.edu/blog/universally-flattering-makeup-products-for-the-summer/">Universally Flattering Makeup Products For The Summer</a></li>
+		<li class="wsp-post"><a href="https://www.cortiva.edu/blog/5-makeup-ideas-for-medium-skin-tones/">5 Makeup Ideas for Medium Skin Tones</a></li>
+		<li class="wsp-post"><a href="https://www.cortiva.edu/blog/mastering-color-theory-in-makeup-a-guide-for-future-students-of-cortiva-institute/">Mastering Color Theory in Makeup: A Guide for Future Students of Cortiva Institute</a></li>
+		<li class="wsp-post"><a href="https://www.cortiva.edu/blog/how-to-find-the-best-makeup-artist-for-your-wedding/">How to Find the Best Makeup Artist for Your Wedding</a></li>
+		<li class="wsp-post"><a href="https://www.cortiva.edu/blog/the-best-makeup-colors-for-your-skin-tone/">The Best Makeup Colors for Your Skin Tone</a></li>
+		<li class="wsp-post"><a href="https://www.cortiva.edu/blog/makeup-artist-faqs-training-career-options-salary/">Makeup Artist FAQs | Training, Career Options, &amp; Salary</a></li>
+		<li class="wsp-post"><a href="https://www.cortiva.edu/blog/2021-holiday-makeup-looks/">2021 Holiday Makeup Looks</a></li>
+		<li class="wsp-post"><a href="https://www.cortiva.edu/blog/in-demand-career-bridal-makeup-artists/">In-Demand Career: Bridal Makeup Artists</a></li>
+		<li class="wsp-post"><a href="https://www.cortiva.edu/blog/what-is-makeup-color-theory/">What Is Makeup Color Theory?</a></li>
+		<li class="wsp-post"><a href="https://www.cortiva.edu/blog/eye-catching-lash-trends-that-only-makeup-artists-can-do/">Eye-Catching Lash Trends That Only Makeup Artists Can Do</a></li>
+		<li class="wsp-post"><a href="https://www.cortiva.edu/blog/how-to-get-a-career-as-a-special-effects-makeup-artist/">How to Get a Career as a Special Effects Makeup Artist</a></li>
+		<li class="wsp-post"><a href="https://www.cortiva.edu/blog/do-you-need-certification-to-be-a-makeup-artist/">Do You Need Certification to Be a Makeup Artist?</a></li>
+		<li class="wsp-post"><a href="https://www.cortiva.edu/blog/how-to-become-a-special-effects-makeup-artist/">How to Become a Special Effects Makeup Artist</a></li>
+		<li class="wsp-post"><a href="https://www.cortiva.edu/blog/a-list-of-makeup-classes-beginners-should-expect-to-take/">A List of Makeup Classes Beginners Should Expect to Take</a></li>
+		<li class="wsp-post"><a href="https://www.cortiva.edu/blog/should-you-become-a-makeup-artist/">Should You Become a Makeup Artist?</a></li>
+		<li class="wsp-post"><a href="https://www.cortiva.edu/blog/makeup-trends-for-winter-2020-2021/">Makeup Trends for Winter 2020/2021</a></li>
+		<li class="wsp-post"><a href="https://www.cortiva.edu/blog/benefits-of-an-internship-while-taking-a-makeup-course/">Benefits of an Internship While Taking a Makeup Course</a></li>
+		<li class="wsp-post"><a href="https://www.cortiva.edu/blog/the-first-steps-to-becoming-a-makeup-artist/">The First Steps To Becoming a Makeup Artist</a></li>
+		<li class="wsp-post"><a href="https://www.cortiva.edu/blog/top-reasons-why-makeup-artists-should-incorporate-hair-styling/">Top Reasons Why Makeup Artists Should Incorporate Hair Styling</a></li>
+		<li class="wsp-post"><a href="https://www.cortiva.edu/blog/how-to-become-a-successful-makeup-artist/">How to Become a Successful Makeup Artist</a></li>
+		<li class="wsp-post"><a href="https://www.cortiva.edu/blog/importance-of-creativity-for-makeup-artists/">Importance of Creativity for Makeup Artists</a></li>
+		<li class="wsp-post"><a href="https://www.cortiva.edu/blog/how-to-keep-up-on-your-makeup-techniques-with-practice/">How to Keep Up on Your Makeup Techniques with Practice</a></li>
+		<li class="wsp-post"><a href="https://www.cortiva.edu/blog/top-industries-to-work-in-as-a-makeup-artist/">Top Industries to Work in as a Makeup Artist</a></li>
+		<li class="wsp-post"><a href="https://www.cortiva.edu/blog/what-are-the-next-steps-after-graduating-from-makeup-school/">What Are the Next Steps after Graduating from Makeup School?</a></li>
+		<li class="wsp-post"><a href="https://www.cortiva.edu/blog/benefits-of-enrolling-in-a-professional-makeup-course/">Benefits of Enrolling in a Professional Makeup Course</a></li>
+		<li class="wsp-post"><a href="https://www.cortiva.edu/blog/top-dos-and-donts-of-becoming-a-makeup-artist/">Top Dos and Don’ts of Becoming a Makeup Artist</a></li>
+		<li class="wsp-post"><a href="https://www.cortiva.edu/blog/tips-for-selecting-the-best-makeup-training-school/">Tips for Selecting the Best Makeup Training School</a></li>
+		<li class="wsp-post"><a href="https://www.cortiva.edu/blog/a-detailed-guide-to-different-types-of-makeup-courses/">A Detailed Guide to Different Types of Makeup Courses</a></li>
+		<li class="wsp-post"><a href="https://www.cortiva.edu/blog/top-reasons-to-become-a-makeup-artist/">Top Reasons to Become a Makeup Artist</a></li>
+		<li class="wsp-post"><a href="https://www.cortiva.edu/blog/top-reasons-you-should-become-a-makeup-artist/">Top Reasons You Should Become a Makeup Artist</a></li>
+		<li class="wsp-post"><a href="https://www.cortiva.edu/blog/tips-for-choosing-the-best-makeup-course/">Tips for Choosing the Best Makeup Course</a></li>
+		<li class="wsp-post"><a href="https://www.cortiva.edu/blog/the-importance-of-choosing-the-right-makeup-school/">The Importance of Choosing the Right Makeup School</a></li>
+		<li class="wsp-post"><a href="https://www.cortiva.edu/blog/top-tips-for-becoming-a-professional-makeup-artist/">Top Tips for Becoming a Professional Makeup Artist</a></li>
+</ul></li>
+	<li><strong class="wsp-category-title">Category: <a href="https://www.cortiva.edu/blog/category/massage/">Massage</a></strong>
+<ul class="wsp-posts-list">		<li class="wsp-post"><a href="https://www.cortiva.edu/blog/the-importance-of-anatomy-and-physiology-knowledge-for-massage-therapists/">The Importance of Anatomy and Physiology Knowledge for Massage Therapists</a></li>
+		<li class="wsp-post"><a href="https://www.cortiva.edu/blog/how-massage-therapy-supports-injury-recovery-and-physical-therapy/">How Massage Therapy Supports Injury Recovery and Physical Therapy</a></li>
+		<li class="wsp-post"><a href="https://www.cortiva.edu/blog/the-art-of-facial-massage-techniques-for-glowing-skin/">The Art of Facial Massage: Techniques for Glowing Skin</a></li>
+		<li class="wsp-post"><a href="https://www.cortiva.edu/blog/how-hot-stones-can-support-warmth-and-well-being/">How Hot Stones Can Support Warmth and Well-Being</a></li>
+		<li class="wsp-post"><a href="https://www.cortiva.edu/blog/healing-with-heat-alternative-therapies-and-hot-stone-massage/">Healing with Heat: Alternative Therapies and Hot Stone Massage</a></li>
+		<li class="wsp-post"><a href="https://www.cortiva.edu/blog/invest-in-your-future-go-to-massage-school/">Invest in Your Future: Go to Massage School</a></li>
+		<li class="wsp-post"><a href="https://www.cortiva.edu/blog/benefits-of-a-deep-tissue-massage/">Benefits of a Deep Tissue Massage</a></li>
+		<li class="wsp-post"><a href="https://www.cortiva.edu/blog/what-is-a-lymphatic-drainage-massage/">What Is a Lymphatic Drainage Massage?</a></li>
+		<li class="wsp-post"><a href="https://www.cortiva.edu/blog/how-a-thai-massage-can-benefit-you/">How a Thai Massage Can Benefit You</a></li>
+		<li class="wsp-post"><a href="https://www.cortiva.edu/blog/10-benefits-of-massage/">10 Benefits of Massage</a></li>
+		<li class="wsp-post"><a href="https://www.cortiva.edu/blog/will-a-scalp-and-head-massage-promote-hair-growth/">Will a Scalp and Head Massage Promote Hair Growth?</a></li>
+		<li class="wsp-post"><a href="https://www.cortiva.edu/blog/what-is-the-science-behind-massage-guns/">What is the Science Behind Massage Guns</a></li>
+		<li class="wsp-post"><a href="https://www.cortiva.edu/blog/how-massage-education-changes-the-quality-of-your-profession/">How Massage Education Changes the Quality of Your Profession</a></li>
+		<li class="wsp-post"><a href="https://www.cortiva.edu/blog/cortiva-shakes-things-up-with-health-tech-massage-training/">Cortiva Shakes Things Up with Health Tech Massage Training</a></li>
+		<li class="wsp-post"><a href="https://www.cortiva.edu/blog/massage-101-five-tips-to-getting-the-best-massage/">Massage 101: Five Tips to Getting the Best Massage</a></li>
+		<li class="wsp-post"><a href="https://www.cortiva.edu/blog/top-10-massage-modalities/">Top 10 Massage Modalities</a></li>
+		<li class="wsp-post"><a href="https://www.cortiva.edu/blog/how-massage-therapists-impact-health-and-wellness/">How Massage Therapists Impact Health and Wellness</a></li>
+		<li class="wsp-post"><a href="https://www.cortiva.edu/blog/how-long-does-massage-therapy-school-take/">How Long Does Massage Therapy School Take?</a></li>
+		<li class="wsp-post"><a href="https://www.cortiva.edu/blog/benefits-of-corporate-chair-massage-for-employees/">Benefits of Corporate Chair Massage for Employees</a></li>
+		<li class="wsp-post"><a href="https://www.cortiva.edu/blog/all-about-deep-tissue-massage-5-reasons-to-learn-it/">All About Deep Tissue Massage &amp; 5 Reasons to Learn It</a></li>
+		<li class="wsp-post"><a href="https://www.cortiva.edu/blog/how-to-become-a-massage-therapist/">How to Become a Massage Therapist</a></li>
+		<li class="wsp-post"><a href="https://www.cortiva.edu/blog/reasons-to-continue-your-education-as-a-professional-massage-therapist/">Reasons to Continue Your Education as a Professional Massage Therapist</a></li>
+		<li class="wsp-post"><a href="https://www.cortiva.edu/blog/the-pros-and-cons-of-online-school-for-massage-therapy/">The Pros and Cons of Online School for Massage Therapy</a></li>
+		<li class="wsp-post"><a href="https://www.cortiva.edu/blog/differences-between-swedish-deep-tissue-and-hot-stone-massage/">Differences between Swedish, Deep Tissue, and Hot Stone Massage</a></li>
+		<li class="wsp-post"><a href="https://www.cortiva.edu/blog/top-3-lesser-known-benefits-of-professional-massage/">Top 3 Lesser-Known Benefits of Professional Massage</a></li>
+		<li class="wsp-post"><a href="https://www.cortiva.edu/blog/how-to-study-massage-therapy-while-working-full-time/">How to Study Massage Therapy While Working Full-Time</a></li>
+		<li class="wsp-post"><a href="https://www.cortiva.edu/blog/the-benefits-of-summer-massage-therapy/">The Benefits of Summer Massage Therapy</a></li>
+		<li class="wsp-post"><a href="https://www.cortiva.edu/blog/updates-on-how-to-prevent-coronavirus-for-massage-therapists/">Updates on How to Prevent Coronavirus for Massage Therapists</a></li>
+		<li class="wsp-post"><a href="https://www.cortiva.edu/blog/an-overview-of-massage-therapy-certification/">An Overview of Massage Therapy Certification</a></li>
+		<li class="wsp-post"><a href="https://www.cortiva.edu/blog/impact-of-coronavirus-on-the-professional-massage-therapy-industry/">Impact of Coronavirus on the Professional Massage Therapy Industry</a></li>
+		<li class="wsp-post"><a href="https://www.cortiva.edu/blog/what-you-need-to-know-about-coronavirus-and-massage-therapy/">What You Need to Know about Coronavirus and Massage Therapy</a></li>
+		<li class="wsp-post"><a href="https://www.cortiva.edu/blog/5-interesting-facts-you-should-know-about-massage-school/">5 Interesting Facts You Should Know About Massage School</a></li>
+		<li class="wsp-post"><a href="https://www.cortiva.edu/blog/how-much-time-it-takes-to-become-a-professional-massage-therapist/">How Much Time It Takes to Become a Professional Massage Therapist</a></li>
+		<li class="wsp-post"><a href="https://www.cortiva.edu/blog/an-overview-of-swedish-massage-therapy/">An Overview of Swedish Massage Therapy</a></li>
+		<li class="wsp-post"><a href="https://www.cortiva.edu/blog/is-massage-therapy-school-worth-it/">Is Massage Therapy School Worth It?</a></li>
+		<li class="wsp-post"><a href="https://www.cortiva.edu/blog/what-do-i-need-to-know-about-massage-therapy-certification/">What Do I Need to Know About Massage Therapy Certification</a></li>
+		<li class="wsp-post"><a href="https://www.cortiva.edu/blog/best-ways-to-pay-for-massage-therapy-school/">Best Ways to Pay for Massage Therapy School</a></li>
+		<li class="wsp-post"><a href="https://www.cortiva.edu/blog/massage-school-vs-traditional-college/">Massage School vs. Traditional College</a></li>
+		<li class="wsp-post"><a href="https://www.cortiva.edu/blog/why-massage-students-should-learn-shiatsu/">Why Massage Students Should (Learn Shiatsu)</a></li>
+		<li class="wsp-post"><a href="https://www.cortiva.edu/blog/evaluating-the-cost-of-massage-school/">Evaluating the Cost of Massage School</a></li>
+		<li class="wsp-post"><a href="https://www.cortiva.edu/blog/why-massage-therapy-is-a-great-career-path/">Why Massage Therapy Is a Great Career Path</a></li>
+		<li class="wsp-post"><a href="https://www.cortiva.edu/blog/considerations-when-choosing-a-professional-massage-therapy-school-in-baltimore/">Considerations When Choosing a Professional Massage Therapy School in Baltimore</a></li>
+		<li class="wsp-post"><a href="https://www.cortiva.edu/blog/how-often-should-you-get-a-massage-for-anxiety/">How Often Should You Get a Massage for Anxiety?</a></li>
+		<li class="wsp-post"><a href="https://www.cortiva.edu/blog/what-are-massage-ce-classes/">What Are Massage CE Classes?</a></li>
+		<li class="wsp-post"><a href="https://www.cortiva.edu/blog/massage-license-vs-certification-whats-the-difference/">Massage License vs Certification: What’s the Difference?</a></li>
+		<li class="wsp-post"><a href="https://www.cortiva.edu/blog/benefits-of-getting-a-massage-therapy-certification/">Benefits of Getting a Massage Therapy Certification</a></li>
+		<li class="wsp-post"><a href="https://www.cortiva.edu/blog/top-reasons-to-attend-a-massage-therapy-school/">Top Reasons to Attend a Massage Therapy School</a></li>
+		<li class="wsp-post"><a href="https://www.cortiva.edu/blog/top-tips-for-ensuring-a-successful-massage-career/">Top Tips for Ensuring a Successful Massage Career</a></li>
+		<li class="wsp-post"><a href="https://www.cortiva.edu/blog/tips-for-choosing-the-best-massage-therapy-school/">Tips for Choosing the Best Massage Therapy School</a></li>
+		<li class="wsp-post"><a href="https://www.cortiva.edu/blog/things-you-must-know-before-becoming-a-professional-massage-therapist/">Things You Must Know Before Becoming a Professional Massage Therapist</a></li>
+		<li class="wsp-post"><a href="https://www.cortiva.edu/blog/reasons-to-choose-professional-massage-therapist-as-a-career/">Reasons to Choose Professional Massage Therapist as a Career</a></li>
+		<li class="wsp-post"><a href="https://www.cortiva.edu/blog/two-massage-industry-giants-partner-to-benefit-students/">Two Massage Industry Giants Partner to Benefit Students</a></li>
+</ul></li>
+	<li><strong class="wsp-category-title">Category: <a href="https://www.cortiva.edu/blog/category/nails/">Nails</a></strong>
+<ul class="wsp-posts-list">		<li class="wsp-post"><a href="https://www.cortiva.edu/blog/understanding-nail-shapes-choosing-the-best-style-for-clients/">Understanding Nail Shapes: Choosing the Best Style for Clients</a></li>
+		<li class="wsp-post"><a href="https://www.cortiva.edu/blog/the-importance-of-sanitation-in-nail-services-protecting-clients-and-yourself/">The Importance of Sanitation in Nail Services: Protecting Clients and Yourself</a></li>
+		<li class="wsp-post"><a href="https://www.cortiva.edu/blog/nail-trends-for-special-events-from-weddings-to-holidays/">Nail Trends for Special Events: From Weddings to Holidays</a></li>
+		<li class="wsp-post"><a href="https://www.cortiva.edu/blog/step-by-step-guide-to-perfect-gel-manicure-at-home/">Step-by-Step Guide to Perfect Gel Manicure at Home</a></li>
+		<li class="wsp-post"><a href="https://www.cortiva.edu/blog/natural-nail-care-tips-for-healthy-nails/">Natural Nail Care Tips for Healthy Nails</a></li>
+</ul></li>
+	<li><strong class="wsp-category-title">Category: <a href="https://www.cortiva.edu/blog/category/skincare/">Skincare</a></strong>
+<ul class="wsp-posts-list">		<li class="wsp-post"><a href="https://www.cortiva.edu/blog/why-skincare-education-is-the-foundation-of-a-successful-esthetics-career/">Why Skincare Education is the Foundation of a Successful Esthetics Career</a></li>
+		<li class="wsp-post"><a href="https://www.cortiva.edu/blog/latest-innovations-in-skincare-treatments-what-estheticians-need-to-know/">Latest Innovations in Skincare Treatments: What Estheticians Need to Know</a></li>
+		<li class="wsp-post"><a href="https://www.cortiva.edu/blog/red-light-therapy-vs-other-treatments-a-comparative-analysis-for-estheticians/">Red Light Therapy vs. Other Treatments: A Comparative Analysis for Estheticians</a></li>
+		<li class="wsp-post"><a href="https://www.cortiva.edu/blog/6-steps-to-prepare-yourself-for-your-facial/">6 Steps to Prepare Yourself For Your Facial</a></li>
+		<li class="wsp-post"><a href="https://www.cortiva.edu/blog/4-easy-steps-for-facial-treatment-after-care/">4 Easy Steps for Facial Treatment After-Care</a></li>
+		<li class="wsp-post"><a href="https://www.cortiva.edu/blog/unlock-the-power-of-meta-therapy-facial-treatments-for-aspiring-estheticians/">Unlock the Power of Meta Therapy Facial Treatments for Aspiring Estheticians</a></li>
+		<li class="wsp-post"><a href="https://www.cortiva.edu/blog/10-benefits-of-facials/">10 Benefits of Facials</a></li>
+		<li class="wsp-post"><a href="https://www.cortiva.edu/blog/10-benefits-of-waxing/">10 Benefits of Waxing</a></li>
+		<li class="wsp-post"><a href="https://www.cortiva.edu/blog/medical-esthetician-vs-skin-care-specialist/">Medical Esthetician vs. Skin Care Specialist</a></li>
+		<li class="wsp-post"><a href="https://www.cortiva.edu/blog/a-new-year-a-new-career-as-an-esthetician/">A New Year — A New Career as an Esthetician</a></li>
+		<li class="wsp-post"><a href="https://www.cortiva.edu/blog/skincare-tips-for-men/">Skincare Tips for Men</a></li>
+		<li class="wsp-post"><a href="https://www.cortiva.edu/blog/what-are-the-different-types-of-skin-care-careers/">What Are the Different Types of Skin Care Careers?</a></li>
+		<li class="wsp-post"><a href="https://www.cortiva.edu/blog/esthetician-vs-dermatologist-which-career-is-right-for-you/">Esthetician vs. Dermatologist: Which Career Is Right for You?</a></li>
+		<li class="wsp-post"><a href="https://www.cortiva.edu/blog/places-paramedical-estheticians-can-work-and-thrive-in/">Places Paramedical Estheticians Can Work and Thrive In</a></li>
+		<li class="wsp-post"><a href="https://www.cortiva.edu/blog/what-do-you-learn-in-esthetician-school-a-quick-course-guide/">What Do You Learn in Esthetician School: A Quick Course Guide</a></li>
+		<li class="wsp-post"><a href="https://www.cortiva.edu/blog/medical-esthetician-vs-esthetician-the-key-differences/">Medical Esthetician vs. Esthetician: The Key Differences</a></li>
+		<li class="wsp-post"><a href="https://www.cortiva.edu/blog/business-skills-youll-need-as-an-esthetician/">Business Skills You&#8217;ll Need as an Esthetician</a></li>
+		<li class="wsp-post"><a href="https://www.cortiva.edu/blog/are-natural-skincare-products-better/">Are Natural Skincare Products Better?</a></li>
+		<li class="wsp-post"><a href="https://www.cortiva.edu/blog/hair-removal-techniques-youll-learn-in-esthetician-training/">Hair Removal Techniques You&#8217;ll Learn in Esthetician Training</a></li>
+		<li class="wsp-post"><a href="https://www.cortiva.edu/blog/the-5-main-types-of-esthetician-specialties/">The 5 Main Types of Esthetician Specialties</a></li>
+		<li class="wsp-post"><a href="https://www.cortiva.edu/blog/top-skin-care-ingredients-to-know/">Top Skin Care Ingredients to Know</a></li>
+		<li class="wsp-post"><a href="https://www.cortiva.edu/blog/how-much-does-an-esthetician-make-in-a-year/">How Much Does an Esthetician Make in a Year</a></li>
+		<li class="wsp-post"><a href="https://www.cortiva.edu/blog/skin-care-tips-for-winter/">Skin Care Tips for Winter</a></li>
+		<li class="wsp-post"><a href="https://www.cortiva.edu/blog/whats-the-difference-between-a-cosmetologist-and-an-esthetician/">What’s the difference between a cosmetologist and an esthetician?</a></li>
+		<li class="wsp-post"><a href="https://www.cortiva.edu/blog/what-is-holistic-skin-care-training/">What Is Holistic Skin Care Training?</a></li>
+		<li class="wsp-post"><a href="https://www.cortiva.edu/blog/a-back-to-school-guide-for-skin-care-students-after-the-pandemic/">A Back-to-School Guide for Skin Care Students After the Pandemic</a></li>
+		<li class="wsp-post"><a href="https://www.cortiva.edu/blog/reasons-why-you-should-become-a-skin-care-specialist/">Reasons Why You Should Become a Skin Care Specialist</a></li>
+		<li class="wsp-post"><a href="https://www.cortiva.edu/blog/things-you-should-know-before-enrolling-for-esthetician-school/">Things You Should Know Before Enrolling for Esthetician School</a></li>
+		<li class="wsp-post"><a href="https://www.cortiva.edu/blog/skin-care-tips-during-covid-19/">Skin Care Tips During COVID-19</a></li>
+		<li class="wsp-post"><a href="https://www.cortiva.edu/blog/what-to-expect-from-esthetician-courses-in-school/">What to Expect from Esthetician Courses in School</a></li>
+		<li class="wsp-post"><a href="https://www.cortiva.edu/blog/understanding-different-stages-of-a-clients-skin/">Understanding Different Stages of a Client’s Skin</a></li>
+		<li class="wsp-post"><a href="https://www.cortiva.edu/blog/tips-for-a-successful-career-as-an-esthetician/">Tips for a Successful Career as an Esthetician</a></li>
+		<li class="wsp-post"><a href="https://www.cortiva.edu/blog/top-tips-for-choosing-the-right-skin-care-program/">Top Tips for Choosing the Right Skin Care Program</a></li>
+		<li class="wsp-post"><a href="https://www.cortiva.edu/blog/qualities-you-need-to-become-a-skincare-specialist/">Qualities You Need to Become a Skincare Specialist</a></li>
+		<li class="wsp-post"><a href="https://www.cortiva.edu/blog/the-benefits-of-being-a-professional-esthetician/">The Benefits of Being a Professional Esthetician</a></li>
+</ul></li>
+</ul>
+<h2 class="wsp-programs-title">Programs</h2>
+<ul class="wsp-programs-list">
+<li><a href="https://www.cortiva.edu/programs/barber/">Barber</a></li>
+<li><a href="https://www.cortiva.edu/programs/dual-programs/">Dual Programs</a></li>
+<li><a href="https://www.cortiva.edu/programs/makeup-artist-esthetician/">Makeup Artist &amp; Esthetician</a></li>
+<li><a href="https://www.cortiva.edu/programs/nail-specialist/">Nail Specialist</a></li>
+<li><a href="https://www.cortiva.edu/programs/cosmetologist/">Cosmetologist</a></li>
+<li><a href="https://www.cortiva.edu/programs/paramedical-esthetician/">Paramedical Esthetician</a></li>
+<li><a href="https://www.cortiva.edu/programs/esthetician/">Esthetician</a></li>
+<li><a href="https://www.cortiva.edu/programs/massage-therapist/">Massage Therapist</a></li>
+</ul>
+<h2 class="wsp-locations-title">Locations</h2>
+<ul class="wsp-locations-list">
+<li><a href="https://www.cortiva.edu/locations/st-petersburg-fl/">St. Petersburg, FL</a></li>
+<li><a href="https://www.cortiva.edu/locations/maitland-fl/">Maitland, FL</a></li>
+<li><a href="https://www.cortiva.edu/locations/king-of-prussia-pa/">King of Prussia, PA</a></li>
+<li><a href="https://www.cortiva.edu/locations/cromwell-ct/">Cromwell, CT</a></li>
+<li><a href="https://www.cortiva.edu/locations/baltimore-md/">Baltimore, MD</a></li>
+<li><a href="https://www.cortiva.edu/locations/arlington-tx/">Arlington, TX</a></li>
+</ul>
+</div>                </div>
+            </section>
+        </main>
+
+
+<footer data-wpr-lazyrender="1" class="footer">
+    <div  class="container">
+        <div  class="footer-top">
+            <div class="footer-logo a-up">
+                <a href="https://www.cortiva.edu">
+                    <img width="200" height="61" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20200%2061'%3E%3C/svg%3E" alt="Cortiva Institute" data-lazy-src="https://www.cortiva.edu/wp-content/smush-webp/sites/2/2024/04/cortiva-logo.png.webp"><noscript><img width="200" height="61" src="https://www.cortiva.edu/wp-content/uploads/sites/2/2024/04/cortiva-logo.png" alt="Cortiva Institute"></noscript>
+                </a>
+            </div>
+                        <ul class="footer-social_mobile footer-item--social">
+                                    <li class="footer-social__item">
+                        <a href="https://www.facebook.com/CortivaInstitute/" target="blank">
+                            <img width="24" height="24" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2024%2024'%3E%3C/svg%3E" alt="" data-lazy-src="https://www.cortiva.edu/wp-content/uploads/sites/2/2024/03/Facebook.svg"><noscript><img width="24" height="24" src="https://www.cortiva.edu/wp-content/uploads/sites/2/2024/03/Facebook.svg" alt=""></noscript>
+                        </a>
+                    </li>
+                                    <li class="footer-social__item">
+                        <a href="https://www.instagram.com/cortivainstitute/" target="blank">
+                            <img width="24" height="24" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2024%2024'%3E%3C/svg%3E" alt="" data-lazy-src="https://www.cortiva.edu/wp-content/uploads/sites/2/2024/03/Instagram.svg"><noscript><img width="24" height="24" src="https://www.cortiva.edu/wp-content/uploads/sites/2/2024/03/Instagram.svg" alt=""></noscript>
+                        </a>
+                    </li>
+                                    <li class="footer-social__item">
+                        <a href="https://www.tiktok.com/@cortivainstitute" target="blank">
+                            <img width="24" height="24" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2024%2024'%3E%3C/svg%3E" alt="" data-lazy-src="https://www.cortiva.edu/wp-content/uploads/sites/2/2024/03/tiktok.svg"><noscript><img width="24" height="24" src="https://www.cortiva.edu/wp-content/uploads/sites/2/2024/03/tiktok.svg" alt=""></noscript>
+                        </a>
+                    </li>
+                            </ul>
+                    </div>
+        <div  class="footer-main">
+            <div class="footer-item footer-item--location a-up a-delay-1">
+                
+ 
+ 
+						<div class="footer-item__time"			>
+				Admission Hours<br />
+Mon - Thurs: 9:00am - 8:00pm<br />
+Fri: 9:00am - 5:00pm					</div>
+			                                    <ul class="footer-item footer-location">
+                                                    <li class="location-item">
+                                <img width="16" height="16" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2016%2016'%3E%3C/svg%3E" alt="" data-lazy-src="https://www.cortiva.edu/wp-content/themes/cortiva/assets/images/location.svg"><noscript><img width="16" height="16" src="https://www.cortiva.edu/wp-content/themes/cortiva/assets/images/location.svg" alt=""></noscript>
+                                                                <a href="https://www.cortiva.edu/locations/arlington-tx/" class="footer-item__location">
+                                    Arlington, TX                                </a>
+                                                            </li>
+                                                    <li class="location-item">
+                                <img width="16" height="16" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2016%2016'%3E%3C/svg%3E" alt="" data-lazy-src="https://www.cortiva.edu/wp-content/themes/cortiva/assets/images/location.svg"><noscript><img width="16" height="16" src="https://www.cortiva.edu/wp-content/themes/cortiva/assets/images/location.svg" alt=""></noscript>
+                                                                <a href="https://www.cortiva.edu/locations/baltimore-md/" class="footer-item__location">
+                                    Baltimore, MD                                </a>
+                                                            </li>
+                                                    <li class="location-item">
+                                <img width="16" height="16" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2016%2016'%3E%3C/svg%3E" alt="" data-lazy-src="https://www.cortiva.edu/wp-content/themes/cortiva/assets/images/location.svg"><noscript><img width="16" height="16" src="https://www.cortiva.edu/wp-content/themes/cortiva/assets/images/location.svg" alt=""></noscript>
+                                                                <a href="https://www.cortiva.edu/locations/cromwell-ct/" class="footer-item__location">
+                                    Cromwell, CT                                </a>
+                                                            </li>
+                                                    <li class="location-item">
+                                <img width="16" height="16" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2016%2016'%3E%3C/svg%3E" alt="" data-lazy-src="https://www.cortiva.edu/wp-content/themes/cortiva/assets/images/location.svg"><noscript><img width="16" height="16" src="https://www.cortiva.edu/wp-content/themes/cortiva/assets/images/location.svg" alt=""></noscript>
+                                                                <a href="https://www.cortiva.edu/locations/king-of-prussia-pa/" class="footer-item__location">
+                                    King of Prussia, PA                                </a>
+                                                            </li>
+                                                    <li class="location-item">
+                                <img width="16" height="16" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2016%2016'%3E%3C/svg%3E" alt="" data-lazy-src="https://www.cortiva.edu/wp-content/themes/cortiva/assets/images/location.svg"><noscript><img width="16" height="16" src="https://www.cortiva.edu/wp-content/themes/cortiva/assets/images/location.svg" alt=""></noscript>
+                                                                <a href="https://www.cortiva.edu/locations/maitland-fl/" class="footer-item__location">
+                                    Maitland, FL                                </a>
+                                                            </li>
+                                                    <li class="location-item">
+                                <img width="16" height="16" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2016%2016'%3E%3C/svg%3E" alt="" data-lazy-src="https://www.cortiva.edu/wp-content/themes/cortiva/assets/images/location.svg"><noscript><img width="16" height="16" src="https://www.cortiva.edu/wp-content/themes/cortiva/assets/images/location.svg" alt=""></noscript>
+                                                                <a href="https://www.cortiva.edu/locations/st-petersburg-fl/" class="footer-item__location">
+                                    St. Petersburg, FL                                </a>
+                                                            </li>
+                                            </ul>
+                            </div>
+                        <div class="footer-item footer-item--menu a-up a-delay-1">
+                <ul id="menu-footer-menu" class="footer-menu"><li id="menu-item-1925" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1925"><a href="/programs/">Career Paths</a></li>
+<li id="menu-item-140" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-140"><a href="/about-us/">About us</a></li>
+<li id="menu-item-1927" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1927"><a href="/career-services/">Career Services</a></li>
+<li id="menu-item-1192" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1192"><a href="/title-ix/">Title IX</a></li>
+<li id="menu-item-1193" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1193"><a href="/consumer-information/">Consumer Information</a></li>
+<li id="menu-item-1195" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1195"><a href="/consumer-information/#campus-tuition-and-fees/">Tuition &#038; Fees</a></li>
+<li id="menu-item-1928" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1928"><a href="https://www.cortiva.edu/e-brochure-form/">Free eBrochure</a></li>
+<li id="menu-item-1194" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1194"><a href="/closed-compuses/">Closed Campuses</a></li>
+<li id="menu-item-1196" class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item menu-item-1196"><a href="/sitemap/" aria-current="page">Sitemap</a></li>
+</ul>            </div>
+                                    <ul class="footer-item footer-item--social footer-social_desktop a-up a-delay-1">
+                                    <li class="footer-social__item">
+                        <a href="https://www.facebook.com/CortivaInstitute/" target="blank">
+                            <img width="24" height="24" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2024%2024'%3E%3C/svg%3E" alt="" data-lazy-src="https://www.cortiva.edu/wp-content/uploads/sites/2/2024/03/Facebook.svg"><noscript><img width="24" height="24" src="https://www.cortiva.edu/wp-content/uploads/sites/2/2024/03/Facebook.svg" alt=""></noscript>
+                            Facebook                        </a>
+                    </li>
+                                    <li class="footer-social__item">
+                        <a href="https://www.instagram.com/cortivainstitute/" target="blank">
+                            <img width="24" height="24" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2024%2024'%3E%3C/svg%3E" alt="" data-lazy-src="https://www.cortiva.edu/wp-content/uploads/sites/2/2024/03/Instagram.svg"><noscript><img width="24" height="24" src="https://www.cortiva.edu/wp-content/uploads/sites/2/2024/03/Instagram.svg" alt=""></noscript>
+                            Instagram                        </a>
+                    </li>
+                                    <li class="footer-social__item">
+                        <a href="https://www.tiktok.com/@cortivainstitute" target="blank">
+                            <img width="24" height="24" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2024%2024'%3E%3C/svg%3E" alt="" data-lazy-src="https://www.cortiva.edu/wp-content/uploads/sites/2/2024/03/tiktok.svg"><noscript><img width="24" height="24" src="https://www.cortiva.edu/wp-content/uploads/sites/2/2024/03/tiktok.svg" alt=""></noscript>
+                            TikTok                        </a>
+                    </li>
+                            </ul>
+                    </div>
+                <div  class="footer-bottom">
+                        <p class="footer-copyright">&copy; 2026 by Cortiva Institute Massage Therapy &amp; Skincare Schools                                        <ul class="footer-cta">
+                                                                    <li class="footer-cta__item">
+                            <a href="/privacy-policy">Privacy Policy</a>
+                        </li>
+                                                            </ul>
+                    </div>
+    </div>
+</footer>
+
+<script type="speculationrules">
+{"prefetch":[{"source":"document","where":{"and":[{"href_matches":"/*"},{"not":{"href_matches":["/wp-*.php","/wp-admin/*","/wp-content/uploads/sites/2/*","/wp-content/*","/wp-content/plugins/*","/wp-content/themes/cortiva/*","/*\\?(.+)"]}},{"not":{"selector_matches":"a[rel~=\"nofollow\"]"}},{"not":{"selector_matches":".no-prefetch, .no-prefetch a"}}]},"eagerness":"conservative"}]}
+</script>
+    <script type="rocketlazyloadscript">window.addEventListener('DOMContentLoaded', function() {
+    document.addEventListener('HandL-After-Main-Function', () => {
+        if (typeof handl_utm_dyo_logic === 'object') {
+            handl_utm_dyo_logic.forEach(function(logic) {
+                let utmValue = Cookies.get(logic.utm_param);
+                if (checkCondition(utmValue, logic.operator, logic.utm_value)) {
+                    SetRefLink(logic.new_param, logic.new_value, true, 0);
+                }
+            });
+        }
+
+        // jQuery('.book-online-btn a').each(function(i, v) {
+        //     if (v.href !== undefined) {
+        //         let href = v.href.split('?')[0];
+        //         let params = getSearchParams(v.href);
+        //         handl_utm_dyo_logic.forEach(function(logic) {
+        //             let newParamValue = Cookies.get(logic.new_param);
+        //             if (newParamValue !== undefined) {
+        //                 params[logic.new_param] = newParamValue;
+        //             }
+        //         });
+        //         v.href = href + '?' + jQuery.param(params);
+        //     }
+        // });
+    });
+
+    function checkCondition(value, operator, compare) {
+        switch (operator) {
+            case 'equals':
+                return value === compare;
+            case 'not_equals':
+                return value !== compare;
+            case 'contains':
+                return value.indexOf(compare) !== -1;
+            case 'not_contains':
+                return value.indexOf(compare) === -1;
+            case 'starts_with':
+                return value.startsWith(compare);
+            case 'ends_with':
+                return value.endsWith(compare);
+            case 'regex':
+                return new RegExp(compare).test(value);
+            default:
+                return false;
+        }
+    }
+    });</script>
+    
+	<script type="rocketlazyloadscript">window.addEventListener('DOMContentLoaded', function() {
+	if (typeof MsCrmMkt !== 'undefined'){
+	    MsCrmMkt.MsCrmFormLoader.on("afterFormLoad", function(event) {
+			jQuery(event.formPlaceholder).find('input').each(function(id, field){
+			    var thiss = jQuery(field)			
+			    
+			    
+			    if ( typeof(thiss.attr('title')) != 'undefined' ){
+			        if (thiss.attr('title') != ''){
+			            //console.log('1',field,thiss.attr('title'))
+			            var param = thiss.attr('title').toLowerCase().replace(/\s+/g,'_')
+			            var cookie_value = ''
+					    if (param != '' && Cookies.get(param) && Cookies.get(param) != ''){
+					        cookie_value = Cookies.get(param)
+					    }
+                        
+                        if (cookie_value == ''){
+	                        var param = thiss.attr('placeholder').toLowerCase().replace(/\s+/g,'_')
+						    if (param != '' && Cookies.get(param) && Cookies.get(param) != ''){
+						        cookie_value = Cookies.get(param)
+						    }
+                        }
+                        
+                    	thiss.val(cookie_value)
+			        }else{
+			            //console.log('2',field,thiss.attr('title'))
+			        }
+				}else{
+			        //console.log('3',field,thiss.attr('title'))
+				}
+			})
+	//		handl_utm_all_params.forEach(function(param) {
+	//		    jQuery('input[title='+param+']').val(Cookies.get(param));
+	//		})
+		})
+	}
+	
+	});</script>		<script type="rocketlazyloadscript">
+		( function ( body ) {
+			'use strict';
+			body.className = body.className.replace( /\btribe-no-js\b/, 'tribe-js' );
+		} )( document.body );
+		</script>
+		<script type="rocketlazyloadscript"> /* <![CDATA[ */var tribe_l10n_datatables = {"aria":{"sort_ascending":": activate to sort column ascending","sort_descending":": activate to sort column descending"},"length_menu":"Show _MENU_ entries","empty_table":"No data available in table","info":"Showing _START_ to _END_ of _TOTAL_ entries","info_empty":"Showing 0 to 0 of 0 entries","info_filtered":"(filtered from _MAX_ total entries)","zero_records":"No matching records found","search":"Search:","all_selected_text":"All items on this page were selected. ","select_all_link":"Select all pages","clear_selection":"Clear Selection.","pagination":{"all":"All","next":"Next","previous":"Previous"},"select":{"rows":{"0":"","_":": Selected %d rows","1":": Selected 1 row"}},"datepicker":{"dayNames":["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],"dayNamesShort":["Sun","Mon","Tue","Wed","Thu","Fri","Sat"],"dayNamesMin":["S","M","T","W","T","F","S"],"monthNames":["January","February","March","April","May","June","July","August","September","October","November","December"],"monthNamesShort":["January","February","March","April","May","June","July","August","September","October","November","December"],"monthNamesMin":["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"nextText":"Next","prevText":"Prev","currentText":"Today","closeText":"Done","today":"Today","clear":"Clear"}};/* ]]> */ </script><script type="rocketlazyloadscript" data-rocket-type="text/javascript" id="rocket-browser-checker-js-after">
+/* <![CDATA[ */
+"use strict";var _createClass=function(){function defineProperties(target,props){for(var i=0;i<props.length;i++){var descriptor=props[i];descriptor.enumerable=descriptor.enumerable||!1,descriptor.configurable=!0,"value"in descriptor&&(descriptor.writable=!0),Object.defineProperty(target,descriptor.key,descriptor)}}return function(Constructor,protoProps,staticProps){return protoProps&&defineProperties(Constructor.prototype,protoProps),staticProps&&defineProperties(Constructor,staticProps),Constructor}}();function _classCallCheck(instance,Constructor){if(!(instance instanceof Constructor))throw new TypeError("Cannot call a class as a function")}var RocketBrowserCompatibilityChecker=function(){function RocketBrowserCompatibilityChecker(options){_classCallCheck(this,RocketBrowserCompatibilityChecker),this.passiveSupported=!1,this._checkPassiveOption(this),this.options=!!this.passiveSupported&&options}return _createClass(RocketBrowserCompatibilityChecker,[{key:"_checkPassiveOption",value:function(self){try{var options={get passive(){return!(self.passiveSupported=!0)}};window.addEventListener("test",null,options),window.removeEventListener("test",null,options)}catch(err){self.passiveSupported=!1}}},{key:"initRequestIdleCallback",value:function(){!1 in window&&(window.requestIdleCallback=function(cb){var start=Date.now();return setTimeout(function(){cb({didTimeout:!1,timeRemaining:function(){return Math.max(0,50-(Date.now()-start))}})},1)}),!1 in window&&(window.cancelIdleCallback=function(id){return clearTimeout(id)})}},{key:"isDataSaverModeOn",value:function(){return"connection"in navigator&&!0===navigator.connection.saveData}},{key:"supportsLinkPrefetch",value:function(){var elem=document.createElement("link");return elem.relList&&elem.relList.supports&&elem.relList.supports("prefetch")&&window.IntersectionObserver&&"isIntersecting"in IntersectionObserverEntry.prototype}},{key:"isSlowConnection",value:function(){return"connection"in navigator&&"effectiveType"in navigator.connection&&("2g"===navigator.connection.effectiveType||"slow-2g"===navigator.connection.effectiveType)}}]),RocketBrowserCompatibilityChecker}();
+//# sourceURL=rocket-browser-checker-js-after
+/* ]]> */
+</script>
+<script type="text/javascript" id="rocket-preload-links-js-extra">
+/* <![CDATA[ */
+var RocketPreloadLinksConfig = {"excludeUris":"/(?:.+/)?feed(?:/(?:.+/?)?)?$|/(?:.+/)?embed/|/(index.php/)?(.*)wp-json(/.*|$)|/refer/|/go/|/recommend/|/recommends/","usesTrailingSlash":"1","imageExt":"jpg|jpeg|gif|png|tiff|bmp|webp|avif|pdf|doc|docx|xls|xlsx|php","fileExt":"jpg|jpeg|gif|png|tiff|bmp|webp|avif|pdf|doc|docx|xls|xlsx|php|html|htm","siteUrl":"https://www.cortiva.edu","onHoverDelay":"100","rateThrottle":"3"};
+//# sourceURL=rocket-preload-links-js-extra
+/* ]]> */
+</script>
+<script type="rocketlazyloadscript" data-rocket-type="text/javascript" id="rocket-preload-links-js-after">
+/* <![CDATA[ */
+(function() {
+"use strict";var r="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(e){return typeof e}:function(e){return e&&"function"==typeof Symbol&&e.constructor===Symbol&&e!==Symbol.prototype?"symbol":typeof e},e=function(){function i(e,t){for(var n=0;n<t.length;n++){var i=t[n];i.enumerable=i.enumerable||!1,i.configurable=!0,"value"in i&&(i.writable=!0),Object.defineProperty(e,i.key,i)}}return function(e,t,n){return t&&i(e.prototype,t),n&&i(e,n),e}}();function i(e,t){if(!(e instanceof t))throw new TypeError("Cannot call a class as a function")}var t=function(){function n(e,t){i(this,n),this.browser=e,this.config=t,this.options=this.browser.options,this.prefetched=new Set,this.eventTime=null,this.threshold=1111,this.numOnHover=0}return e(n,[{key:"init",value:function(){!this.browser.supportsLinkPrefetch()||this.browser.isDataSaverModeOn()||this.browser.isSlowConnection()||(this.regex={excludeUris:RegExp(this.config.excludeUris,"i"),images:RegExp(".("+this.config.imageExt+")$","i"),fileExt:RegExp(".("+this.config.fileExt+")$","i")},this._initListeners(this))}},{key:"_initListeners",value:function(e){-1<this.config.onHoverDelay&&document.addEventListener("mouseover",e.listener.bind(e),e.listenerOptions),document.addEventListener("mousedown",e.listener.bind(e),e.listenerOptions),document.addEventListener("touchstart",e.listener.bind(e),e.listenerOptions)}},{key:"listener",value:function(e){var t=e.target.closest("a"),n=this._prepareUrl(t);if(null!==n)switch(e.type){case"mousedown":case"touchstart":this._addPrefetchLink(n);break;case"mouseover":this._earlyPrefetch(t,n,"mouseout")}}},{key:"_earlyPrefetch",value:function(t,e,n){var i=this,r=setTimeout(function(){if(r=null,0===i.numOnHover)setTimeout(function(){return i.numOnHover=0},1e3);else if(i.numOnHover>i.config.rateThrottle)return;i.numOnHover++,i._addPrefetchLink(e)},this.config.onHoverDelay);t.addEventListener(n,function e(){t.removeEventListener(n,e,{passive:!0}),null!==r&&(clearTimeout(r),r=null)},{passive:!0})}},{key:"_addPrefetchLink",value:function(i){return this.prefetched.add(i.href),new Promise(function(e,t){var n=document.createElement("link");n.rel="prefetch",n.href=i.href,n.onload=e,n.onerror=t,document.head.appendChild(n)}).catch(function(){})}},{key:"_prepareUrl",value:function(e){if(null===e||"object"!==(void 0===e?"undefined":r(e))||!1 in e||-1===["http:","https:"].indexOf(e.protocol))return null;var t=e.href.substring(0,this.config.siteUrl.length),n=this._getPathname(e.href,t),i={original:e.href,protocol:e.protocol,origin:t,pathname:n,href:t+n};return this._isLinkOk(i)?i:null}},{key:"_getPathname",value:function(e,t){var n=t?e.substring(this.config.siteUrl.length):e;return n.startsWith("/")||(n="/"+n),this._shouldAddTrailingSlash(n)?n+"/":n}},{key:"_shouldAddTrailingSlash",value:function(e){return this.config.usesTrailingSlash&&!e.endsWith("/")&&!this.regex.fileExt.test(e)}},{key:"_isLinkOk",value:function(e){return null!==e&&"object"===(void 0===e?"undefined":r(e))&&(!this.prefetched.has(e.href)&&e.origin===this.config.siteUrl&&-1===e.href.indexOf("?")&&-1===e.href.indexOf("#")&&!this.regex.excludeUris.test(e.href)&&!this.regex.images.test(e.href))}}],[{key:"run",value:function(){"undefined"!=typeof RocketPreloadLinksConfig&&new n(new RocketBrowserCompatibilityChecker({capture:!0,passive:!0}),RocketPreloadLinksConfig).init()}}]),n}();t.run();
+}());
+
+//# sourceURL=rocket-preload-links-js-after
+/* ]]> */
+</script>
+<script type="text/javascript" id="rocket_lazyload_css-js-extra">
+/* <![CDATA[ */
+var rocket_lazyload_css_data = {"threshold":"300"};
+//# sourceURL=rocket_lazyload_css-js-extra
+/* ]]> */
+</script>
+<script type="text/javascript" id="rocket_lazyload_css-js-after">
+/* <![CDATA[ */
+!function o(n,c,a){function u(t,e){if(!c[t]){if(!n[t]){var r="function"==typeof require&&require;if(!e&&r)return r(t,!0);if(s)return s(t,!0);throw(e=new Error("Cannot find module '"+t+"'")).code="MODULE_NOT_FOUND",e}r=c[t]={exports:{}},n[t][0].call(r.exports,function(e){return u(n[t][1][e]||e)},r,r.exports,o,n,c,a)}return c[t].exports}for(var s="function"==typeof require&&require,e=0;e<a.length;e++)u(a[e]);return u}({1:[function(e,t,r){"use strict";{const c="undefined"==typeof rocket_pairs?[]:rocket_pairs,a=(("undefined"==typeof rocket_excluded_pairs?[]:rocket_excluded_pairs).map(t=>{var e=t.selector;document.querySelectorAll(e).forEach(e=>{e.setAttribute("data-rocket-lazy-bg-"+t.hash,"excluded")})}),document.querySelector("#wpr-lazyload-bg-container"));var o=rocket_lazyload_css_data.threshold||300;const u=new IntersectionObserver(e=>{e.forEach(t=>{t.isIntersecting&&c.filter(e=>t.target.matches(e.selector)).map(t=>{var e;t&&((e=document.createElement("style")).textContent=t.style,a.insertAdjacentElement("afterend",e),t.elements.forEach(e=>{u.unobserve(e),e.setAttribute("data-rocket-lazy-bg-"+t.hash,"loaded")}))})})},{rootMargin:o+"px"});function n(){0<(0<arguments.length&&void 0!==arguments[0]?arguments[0]:[]).length&&c.forEach(t=>{try{document.querySelectorAll(t.selector).forEach(e=>{"loaded"!==e.getAttribute("data-rocket-lazy-bg-"+t.hash)&&"excluded"!==e.getAttribute("data-rocket-lazy-bg-"+t.hash)&&(u.observe(e),(t.elements||=[]).push(e))})}catch(e){console.error(e)}})}n(),function(){const r=window.MutationObserver;return function(e,t){if(e&&1===e.nodeType)return(t=new r(t)).observe(e,{attributes:!0,childList:!0,subtree:!0}),t}}()(document.querySelector("body"),n)}},{}]},{},[1]);
+//# sourceURL=rocket_lazyload_css-js-after
+/* ]]> */
+</script>
+<script type="rocketlazyloadscript" data-rocket-type="text/javascript" data-rocket-src="https://www.cortiva.edu/wp-includes/js/comment-reply.min.js?ver=6.9.1" id="comment-reply-js" async="async" data-wp-strategy="async" fetchpriority="low"></script>
+<script type="rocketlazyloadscript" data-rocket-type="text/javascript" data-rocket-src="https://www.cortiva.edu/wp-content/themes/cortiva/assets/js/libs.min.js?ver=1713448945" id="am_assets-js-libs-min-js-js" data-rocket-defer defer></script>
+<script type="rocketlazyloadscript" data-rocket-type="text/javascript" data-rocket-src="https://www.cortiva.edu/wp-content/themes/cortiva/assets/js/main.min.js?ver=1713592591" id="am_assets-js-main-min-js-js" data-rocket-defer defer></script>
+<script>window.lazyLoadOptions=[{elements_selector:"img[data-lazy-src],.rocket-lazyload",data_src:"lazy-src",data_srcset:"lazy-srcset",data_sizes:"lazy-sizes",class_loading:"lazyloading",class_loaded:"lazyloaded",threshold:300,callback_loaded:function(element){if(element.tagName==="IFRAME"&&element.dataset.rocketLazyload=="fitvidscompatible"){if(element.classList.contains("lazyloaded")){if(typeof window.jQuery!="undefined"){if(jQuery.fn.fitVids){jQuery(element).parent().fitVids()}}}}}},{elements_selector:".rocket-lazyload",data_src:"lazy-src",data_srcset:"lazy-srcset",data_sizes:"lazy-sizes",class_loading:"lazyloading",class_loaded:"lazyloaded",threshold:300,}];window.addEventListener('LazyLoad::Initialized',function(e){var lazyLoadInstance=e.detail.instance;if(window.MutationObserver){var observer=new MutationObserver(function(mutations){var image_count=0;var iframe_count=0;var rocketlazy_count=0;mutations.forEach(function(mutation){for(var i=0;i<mutation.addedNodes.length;i++){if(typeof mutation.addedNodes[i].getElementsByTagName!=='function'){continue}
+if(typeof mutation.addedNodes[i].getElementsByClassName!=='function'){continue}
+images=mutation.addedNodes[i].getElementsByTagName('img');is_image=mutation.addedNodes[i].tagName=="IMG";iframes=mutation.addedNodes[i].getElementsByTagName('iframe');is_iframe=mutation.addedNodes[i].tagName=="IFRAME";rocket_lazy=mutation.addedNodes[i].getElementsByClassName('rocket-lazyload');image_count+=images.length;iframe_count+=iframes.length;rocketlazy_count+=rocket_lazy.length;if(is_image){image_count+=1}
+if(is_iframe){iframe_count+=1}}});if(image_count>0||iframe_count>0||rocketlazy_count>0){lazyLoadInstance.update()}});var b=document.getElementsByTagName("body")[0];var config={childList:!0,subtree:!0};observer.observe(b,config)}},!1)</script><script data-no-minify="1" async src="https://www.cortiva.edu/wp-content/plugins/wp-rocket/assets/js/lazyload/17.8.3/lazyload.min.js"></script><script type="rocketlazyloadscript" data-rocket-type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "g82t66h167");
+</script>
+</body>
+</html>
+
+<!-- This website is like a Rocket, isn't it? Performance optimized by WP Rocket. Learn more: https://wp-rocket.me - Debug: cached@1771379395 -->

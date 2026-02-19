@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>Artificial Intelligence | Spring 2025-26 | UM Catalog</title>
+		<base href="https://catalog.olemiss.edu/">
+<meta content="IE=edge" http-equiv="X-UA-Compatible">
+<meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport">
+<link href="//use.typekit.net/rmt3wly.css" rel="stylesheet">
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+$(document).ready(function() {
+	
+	// Fix Skipnav links to they refer to the current page instead of being 
+	  $('a[href^="#"]').on('click', function(e) {
+		e.preventDefault();
+		const targetId = this.hash.substring(1);
+		const targetElement = document.getElementById(targetId);
+
+		if (targetElement) {
+		  targetElement.setAttribute('tabindex', '-1');
+		  targetElement.focus();
+
+		  $('html, body').animate({
+			scrollTop: $(targetElement).offset().top
+		  }, 300, function() {
+			$(targetElement).removeAttr('tabindex'); // Clean up tabindex after scrolling
+		  });
+		}
+	  });
+	
+	// Create two columns independent of anything else
+	var mainGrid = $('.wysiwyg-block');
+	var goWest = $('<div></div>').attr('id', 'goWest');
+	var goEast = $('<div></div>').attr('id', 'goEast');
+	
+	mainGrid.prepend(goWest).prepend(goEast);
+	
+	// Remove old skipnav links
+	$('a[href="#breadcrumbs"]').remove();
+	$('#breadcrumbs a[href="#main-content"]').remove();
+
+    // Get the original breadcrumb list
+    var breadcrumbsList = $('#breadcrumbs ul');
+    
+    // Create new 'ul' elements for the left and right columns
+    var leftBreadcrumbs = $('<ul></ul>').attr('id', 'breadcrumbs-left');
+    var rightBreadcrumbs = $('<ul></ul>').attr('id', 'breadcrumbs-right');
+    
+    // Move the first breadcrumb item to the left column
+    var firstBreadcrumb = breadcrumbsList.find('li:first-child');
+    firstBreadcrumb.appendTo(leftBreadcrumbs);  // Move the first breadcrumb item
+    
+    // Move the remaining breadcrumb items to the right column
+    breadcrumbsList.find('li').appendTo(rightBreadcrumbs);  // Move the rest
+    
+    // Append the new 'ul' elements to the correct sections (i.e. the grid layout)
+    leftBreadcrumbs.prependTo('#goWest');  // Append left breadcrumbs to the left column
+    rightBreadcrumbs.prependTo('#goEast');  // Append right breadcrumbs to the right column
+    
+	// Put main#main-content in left column
+	var mainContent = $('main#main-content');
+	mainContent.appendTo('#goWest');
+	
+	// Put .sidebar boxes in right column in correct order
+	var sidebarBox1 = $('aside.sidebar .box:nth-child(3)');
+	var sidebarBox2 = $('aside.sidebar .box:nth-child(1)');
+	var sidebarBox3 = $('aside.sidebar .box:nth-child(2)');
+	var sidebarBox4 = $('aside.sidebar .box:nth-child(4)');
+	sidebarBox1.appendTo('#goEast');
+	
+	$('.box form input[type="submit"]').attr("value","Go");
+
+	sidebarBox2.appendTo('#goEast');
+	sidebarBox3.appendTo('#goEast');
+    sidebarBox4.appendTo('main#main-content');
+		
+	
+  /* TOGGLE RIGHT COLUMN */
+    // 1. Create the checkbox toggle button
+    var toggleCheckbox = $('<div class="menu-toggle"><input type="checkbox" id="toggle-menu" class="toggle-checkbox" aria-label="Toggle menu"><label for="toggle-menu" class="toggle-btn"><span class="icon hamburger" aria-hidden="true"><i class="fa-solid fa-bars"></i></span><span class="icon close" aria-hidden="true" style="display: none;"><i class="fa-solid fa-xmark"></i></span><span class="sr-only">Menu</span></label></div>');
+
+    // 2. Insert the checkbox between Box 3 and Box 2
+    $('#goEast .box.listing').before(toggleCheckbox).css('display','none');
+
+    // 3. Style the checkbox to look like a hamburger and X
+    $('#toggle-menu').css({
+        'display': 'none'  // Hide the checkbox itself
+    });
+
+    // 4. Toggle visibility of Box 1 and Box 2 based on the checkbox state
+    $('#toggle-menu').change(function() {
+        if (this.checked) {
+            // If checked (X), show Box 1 and Box 2
+            $('#goEast .box.listing').stop(true, true).slideDown();
+            // Toggle the button's icon to X
+            $('.toggle-btn .hamburger').hide();
+            $('.toggle-btn .close').show();
+        } else {
+            // If unchecked (☰), hide Box 1 and Box 2
+            $('#goEast .box.listing').stop(true, true).slideUp();
+            // Toggle the button's icon to hamburger
+            $('.toggle-btn .hamburger').show();
+            $('.toggle-btn .close').hide();
+        }
+    });
+
+
+	// Get the text content of the breadcrumb link
+	var text = $('#breadcrumbs-left li a').text().trim();  // Use .trim() to remove extra spaces
+	console.log('Text content: "' + text + '"');  // Print text to check for any hidden characters
+
+	// Find the position of the word "Academic Calendar"
+	var calendarIndex = text.indexOf("Academic Catalog"); // Search for the full string
+	console.log('Index of "Academic Catalog":', calendarIndex);
+
+	// If "Academic Catalog" is found, split the text
+	if (calendarIndex !== -1) {
+		// Split the text at the space after "Academic Catalog"
+		var firstPart = text.substring(0, calendarIndex + "Academic Catalog".length);
+		console.log('First part:', firstPart);
+
+		var secondPart = text.substring(calendarIndex + "Academic Catalog".length).trim();
+		console.log('Second part:', secondPart);
+
+		// Update the content by wrapping the second part in a <span>
+		$('#breadcrumbs-left li a').html(firstPart + ' <span>' + secondPart + '</span>');
+	}
+
+	$('.box.menu').insertAfter('.box.listing h4');
+	
+	$('#goWest .box h4').insertBefore('#goWest .box');
+	
+// Group offices in Contacts block
+	$("#goWest h5").each(function() {
+		var $currentH5 = $(this); // Select the current <h5>
+		var $wrapper = $("<div class='h5-group'></div>"); // Create a new wrapper div
+
+		// Select the <h5> and all following <p> elements until the next <h5>
+		$currentH5.nextUntil("h5").addBack().wrapAll($wrapper);
+	});
+
+
+// Select the .school.listing element
+var $listing = $('.school.listing');
+
+// Create an array to hold the new wrappers
+var wrappers = [];
+
+// Loop through each h2 element
+$listing.find('h2').each(function() {
+    var $h2 = $(this);
+    var $nav = $h2.next('nav');  // Get the next sibling <nav> element
+
+    if ($nav.length) {  // Ensure the <nav> exists
+        // Create a wrapper div for each h2 + nav pair
+        var $wrapper = $('<div>').addClass('pair-wrapper');
+        
+        // Append the h2 and nav to the wrapper
+        $wrapper.append($h2).append($nav);
+        
+        // Add the wrapper to the array
+        wrappers.push($wrapper);
+    }
+});
+	
+    // Check if .footer-background doesn't already exist
+    if ($("footer .footer-background").length === 0) {
+      // Insert the .footer-background as the first child of the footer
+      $("footer").prepend('<div class="footer-background"></div>');
+    }
+
+// Now insert all wrappers into the DOM at once
+$listing.empty().append(wrappers);
+	
+	
+    var $tableWrapper = $(".mobile-table");
+    var $table = $tableWrapper.find("table");
+
+    // Create the scroll cue and append it
+    var $scrollCue = $("<div class='scroll-cue'></div>");
+    $tableWrapper.append($scrollCue);
+
+    // Check if the table is wider than its container
+    if ($table.outerWidth() > $tableWrapper.width()) {
+      $scrollCue.show(); // Show scroll cue if the table is too wide
+
+      // Add a pulsing animation
+      setInterval(function () {
+        $scrollCue.fadeOut(500).fadeIn(500);
+      }, 2000);
+    }
+
+});
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=IBM+Plex+Serif:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">	
+<link href="https://olemiss.edu/assets/js/dist/app.css" rel="stylesheet">
+<link href="https://olemiss.edu/assets/css/theme.css" rel="stylesheet">
+<link href="https://olemiss.edu/assets/css/subsite.css" rel="stylesheet">
+<link href="https://olemiss.edu/assets/fontawesome-pro-6.5.1-web/css/all.css" rel="stylesheet">
+<link href="https://olemiss.edu/assets/favicons/apple-touch-icon.png.orig" rel="apple-touch-icon" sizes="180x180">
+<link href="https://olemiss.edu/assets/favicons/favicon-32x32.png.orig" rel="icon" sizes="32x32" type="image/png">
+<link href="https://olemiss.edu/assets/favicons/favicon-16x16.png.orig" rel="icon" sizes="16x16" type="image/png">
+<link href="https://olemiss.edu/assets/favicons/favicon.ico.orig" rel="shortcut icon">
+
+<link rel="stylesheet" type="text/css" href="https://common.olemiss.edu/templates/cascade/catalog.css">
+
+		<link rel="stylesheet" type="text/css" href="/css/main.css?v=8">
+		<link rel="stylesheet" type="text/css" href="/css/print.css?v=1" media="print">
+		<link rel="stylesheet" href="https://common.olemiss.edu/_js/sweet-alert/sweet-alert.css">
+	</head>
+	<!--body id=""-->
+  	<body>
+		<!--a href="#breadcrumbs" class="skipnav">Skip UM navigation</a-->
+<div class="skip-link"> 
+	<a href="#main-menu" class="element-invisible element-focusable">Skip to main site navigation</a> 
+	<a href="#main-content" class="element-invisible element-focusable">Skip to main content</a>
+</div>
+<div class="page page--landing">
+    <header class="site-header site-header--scroll-up site-header--at-top">
+        <div class="site-header__sticky-container">
+            <div class="grid-container">
+                <div class="grid-x"> <a class="site-header__logo" href="/"> <img alt="University of Mississippi homepage" height="50" src="https://olemiss.edu/assets/images/new-lockup.webp" width="208"> </a>
+                    <div class="site-search">
+                        <button aria-controls="search-block-form" aria-expanded="true" aria-label="Search" aria-live="polite" class=" site-search__toggle" data-button-disable-at="-1 " data-button-enable-at="0" data-button-open-class="search-panel-open" data-button-open-class-element="" data-toggle-type="accordion" id="site-search--button-toggle" type="button"> </button>
+                        <div class="wysiwyg search-block-form" id="search-block-form"> <span class="search-label">Search</span>
+                            <div class="gcse-searchbox-only" data-resultsUrl="/search/"> </div>
+                        </div>
+                    </div>
+                    <button aria-controls="header-menus" aria-expanded="true" aria-haspopup="true" aria-label="Main Menu" aria-live="polite" class=" mobile-menu-button" data-button-disable-at="1025 " data-button-enable-at="0" data-button-open-class="mobile-menu-open" data-button-open-class-element="" data-toggle-type="menu" id="header-menus--button-toggle" type="button"> </button>
+                    <div aria-labelledby="header-menus--button-toggle" class="site-header__main" id="header-menus">
+                        <nav aria-label="Main Navigation" aria-live="polite" class="main-menu accessible-menu" data-menu-label="%s submenu" data-menu-link-text="%s Overview" id="main-menu">
+                            <ul class="menu">
+                                <li class="menu-item--expanded"> <a href="https://olemiss.edu/academics/index.php">Academics</a> </li>
+                                <li class="menu-item--expanded"> <a href="https://olemiss.edu/admissions/index.php">Admissions</a> </li>
+                                <li class="menu-item--expanded"> <a href="https://olemiss.edu/student-life/index.php">Student Life</a> </li>
+                                <li class="menu-item--expanded"> <a href="https://olemiss.edu/research/index.php">Research</a> </li>
+                                <li class="menu-item--expanded"> <a href="https://olemiss.edu/who-we-are/index.php">Who We Are</a> </li>
+                                <li class="menu-item--expanded"> <a href="https://olemiss.edu/athletics/index.php">Athletics</a> </li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="page-wrapper grid-container">
+        <div class="wysiwyg-block global-padding global-spacing global-padding--2xlarge global-padding--white global-spacing--2xlarge">
+			<div class="wysiwyg catalog"> 
+		<div id="breadcrumbs">
+			<!--a href="#main-content" class="skipnav">Skip catalog navigation</a-->
+<ul>
+<li><a href="/" title="Catalog home page">Academic Catalog Spring 2025-26</a></li>
+<li><a href="/disciplines/110102" title="Artificial Intelligence">Discipline: Artificial Intelligence</a></li>
+</ul>
+
+		</div>
+		<div id="content">
+			<main id="main-content">
+<h1>Artificial Intelligence</h1>
+
+<ul>
+<li><a href="https://catalog.olemiss.edu/csci-531">Csci 531: Artificial Intelligence</a></li>
+<li><a href="https://catalog.olemiss.edu/engr-662">Engr 662: Advanced Artificial Intelligence</a></li>
+<li><a href="https://catalog.olemiss.edu/engr-718">Engr 718: Coding for Error Code</a></li>
+</ul>
+
+
+				<div class="disclaimer">The policies and regulations contained in this online University of Mississippi Catalog are in effect for the current or selected semester. The catalog is not a contract, but rather a guide for the convenience of students. The University of Mississippi reserves the right to 1) change or withdraw courses; 2) change the fees, rules, and schedules for admission, registration, instruction, and graduation; and 3) change other regulations affecting the student body at any time. Implicit in each student’s enrollment with the university is an agreement to comply with university rules and regulations, which the university may modify to exercise properly its educational responsibility.</div>
+			</main>
+			<aside class="sidebar">
+				<div class="box menu">
+<ul>
+<li><a href="/select-catalog#/disciplines/110102" id="alternate-catalog">View this in another catalog</a></li>
+<li><a href="https://catalog.olemiss.edu/disciplines/110102.pdf">Printable PDF</a></li>
+</ul>
+
+				</div>
+
+				<div class="box listing">
+					<h4>Spring 2025-26 Catalog</h4>
+
+					<h5><a href="/select-catalog">Select a different catalog</a></h5>
+					<ul>
+						<li><a href="/schools">Schools</a></li>
+						<li><a href="/programs">Undergraduate Programs</a></li>
+						<li><a href="/graduate-school/programs">Graduate Programs</a></li>
+						<li><a href="/minors">All Minors</a></li>
+						<li><a href="/courses">All Courses</a> | <a href="/courses/A">A-Z Index</a></li>
+						<li><a href="/faculty">All Faculty</a></li>
+					</ul>
+					<ul>
+						<li><a href="/admission">Undergraduate Admission</a></li>
+						<li><a href="/graduate-school/admission">Graduate Admission</a></li>
+						<li><a href="/academics/regulations">Undergraduate Academic Regulations</a></li>
+						<li><a href="/fees-financial-aid">Fees &amp; Financial Aid Opportunities</a></li>
+						<li><a href="/academics/services">Academic Services</a></li>
+						<li><a href="/university/buildings">Campus Buildings</a></li>
+						<li><a href="/awards">Distinguished Faculty &amp; Staff Awards</a></li>
+						<li><a href="/university/administration">Administration and Faculty</a></li>
+					</ul>
+				</div>
+				<div class="box">
+					<h4>Search courses</h4>
+
+					<form method="GET" action="/courses/search">
+						<label for="CourseSearchTerms">Search courses by title, code, department, or description.</label>
+						<input type="search" name="search" id="CourseSearchTerms">
+						<input type="submit" value="Search">
+					</form>
+				</div>
+				<div class="box">
+					<h4>Contacts</h4>
+
+
+
+					<h5>Office of the Registrar</h5>
+					<p><a href="https://map.olemiss.edu/index.jsp?id=11257304" target="_blank">104 Martindale Student Services Center</a></p>
+					<p><a href="tel:662-915-7792">662-915-7792</a></p>
+					<p><a href="mailto:registrar@olemiss.edu">registrar@olemiss.edu</a></p>
+
+					<h5>Financial Aid</h5>
+					<p><a href="tel:1-800-891-4596">1-800-891-4596</a> (toll-free nationwide)</p>
+					<p><a href="mailto:finaid@olemiss.edu">finaid@olemiss.edu</a></p>
+
+					<h5 id="undergrad-info">Undergraduate Admissions</h5>
+					<p><a href="tel:662-915-7226">662-915-7226</a> or</p>
+					<p><a href="tel:1-800-653-6477">1-800-OLE-MISS</a> (toll-free in Mississippi)</p>
+					<p><a href="mailto:admissions@olemiss.edu">admissions@olemiss.edu</a></p>
+
+					<h5 id="graduate-info">Graduate Admissions</h5>
+					<p>PO Box 1848</p>
+					<p><a href="https://map.olemiss.edu/?id=562#!m/10000821" target="_blank">54 Galtney Lott Plaza, University, MS 38677-1848</a></p>
+					<p><a href="tel:662-915-7474">662-915-7474</a></p>
+					<p><a href="mailto:gschool@olemiss.edu">gschool@olemiss.edu</a></p>
+					<p><a href="https://gradapply.olemiss.edu/account" target="_blank">https://gradapply.olemiss.edu/account</a></p>
+
+					<script>
+						function isGraduate( url ) {
+							let gradProgramPrefixes = [
+								'c-','cbl','cert-eled-','cert-gift-','cert-se-','cml','da-','ed-s-','edd-',
+								'eds-','gc-','gcbm','gcds','gcoe','m-','m-ed-','ma-','mada','mat-','mba',
+								'mcj-','med-','med-','mfa-','mm-','mph','ms-','msw','mtda','phd-'
+							]
+							let gradProgramRegex = new RegExp( '^(' + gradProgramPrefixes.join('|') + ')' )
+							if( url.match( 'graduate-school' ) || url.split( '/' ).pop().match( gradProgramRegex )) {
+								return true
+							} else {
+								return false
+							}
+						}
+						$( document ).ready( function() {
+							if( isGraduate( $( location ).attr( "href" ))) {
+								$( '#undergrad-info' ).parent().hide()
+							}
+							else {
+								$( '#graduate-info' ).parent().hide()
+							}
+						})
+					</script>
+				</div>
+
+			</aside>
+		</div>
+</div>
+<footer class="site-footer global-padding text-margin-reset">
+	<div class="grid-container global-spacing--large">
+        <div class="footer-logos"> <a class="site-footer__logo-sec" href="/"><img alt="university logo" height="80" loading="lazy" src="https://test.olemiss.edu/assets/img/logo-sec.svg" width="259"></a> </div>
+        <div class="grid-x grid-margin-x">
+            <div class="cell initial-12 medium-3 large-3">
+                <div class="site-footer__contact-area">
+                    <ul class="icon-list site-footer__address">
+                        <li class="fal fa-map-marker-alt">
+                            <p>University, MS 38677  USA</p>
+                        </li>
+                        <li class="fal fa-phone">
+                            <p><a href="tel:662-915-7211">662-915-7211</a></p>
+                        </li>
+                    </ul>
+                    <ul class="icon-list global-spacing--small">
+                        <li> <a class="external" href="https://map.olemiss.edu/" target="_blank">Map and Parking</a> </li>
+                    </ul>
+                    <div class="site-footer__social-media">
+                        <h2 class="show-for-sr">Social Media Links</h2>
+                        <ul class="social-media">
+                            <li> <a aria-label="Opens in a new window" href="https://facebook.com/olemiss" target="_blank"> <span class="show-for-sr">Facebook</span> <em class="fab fa-facebook-square"></em> </a> </li>
+                            <li> <a aria-label="Opens in a new window" href="https://twitter.com/olemiss" target="_blank"> <span class="show-for-sr">Twitter</span> <em class="fab fa-twitter-square"></em> </a> </li>
+                            <li> <a aria-label="Opens in a new window" href="https://instagram.com/olemiss" target="_blank"> <span class="show-for-sr">Instagram</span> <em class="fab fa-instagram-square"></em> </a> </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="cell initial-12 medium-3">
+                <nav aria-label="Connect with Ole Miss" class="site-footer--links__pages">
+                    <ul>
+                        <li> <a class="external" href="https://my.olemiss.edu" target="_blank">myOleMiss</a> </li>
+                        <li> <a class="external" href="https://blackboard.olemiss.edu/" target="_blank">Blackboard</a> </li>
+                        <li> <a class="external" href="http://mail.go.olemiss.edu/" target="_blank">Student Email</a> </li>
+                        <li> <a class="external" href="https://office365.olemiss.edu/owa" target="_blank">Employee Email</a> </li>
+                        <li> <a class="external" href="https://careers.olemiss.edu/" target="_blank">Careers</a> </li>
+                        <li> <a class="external" href="http://ole-miss.bncollege.com/" target="_blank">Bookstore</a> </li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="grid-x medium-auto site-footer__info-area">
+                <div class="initial-12 medium-6">
+                    <nav aria-label="footer information menu" class="site-footer--links__utility">
+                        <h2 class="eyebrow">Information for</h2>
+                        <ul>
+                            <li> <a href="https://test.olemiss.edu/audience/admitted-students/index.php" target="_top">Admitted Students</a> </li>
+                            <li> <a href="https://test.olemiss.edu/audience/current-students/index.php" target="_top">Current Students</a> </li>
+                            <li> <a href="https://test.olemiss.edu/audience/faculty-and-staff/index.php" target="_top">Employees</a> </li>
+                            <li> <a href="https://test.olemiss.edu/audience/alumni/index.php" target="_top">Alumni</a> </li>
+                            <li> <a href="https://test.olemiss.edu/audience/parents-and-families/index.php" target="_top">Parents &amp; Families</a> </li>
+                            <li> <a href="https://test.olemiss.edu/audience/visitors/index.php" target="_top">Visitors</a> </li>
+                            <li> <a href="https://test.olemiss.edu/audience/oxford-community/index.php" target="_top">Oxford Community</a> </li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="initial-12 medium-auto">
+                    <nav aria-label="footer Campus menu" class="site-footer--links__campus">
+                        <h2 class="eyebrow">Regional Campuses</h2>
+                        <ul>
+                            <li> <a class="external" href="https://www.outreach.olemiss.edu/desoto/" target="_blank">DeSoto</a> </li>
+                            <li> <a class="external" href="http://www.outreach.olemiss.edu/tupelo/" target="_blank">Tupelo</a> </li>
+                            <li> <a class="external" href="http://www.outreach.olemiss.edu/booneville/" target="_blank">Booneville</a> </li>
+                            <li> <a class="external" href="http://www.outreach.olemiss.edu/grenada/" target="_blank">Grenada</a> </li>
+                            <li> <a class="external" href="http://www.outreach.olemiss.edu/rankin/" target="_blank">Rankin</a> </li>
+                            <li> <a class="external" href="https://umc.edu" target="_blank">UM Medical Center</a> </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+            <div class="cell grid-x initial-12 medium-12 site-footer__lower">
+                <div class="cell initial-12 medium-auto site-footer__copyright">
+                    <p class="small-text"><a href="https://olemiss.edu/info/copyright/">Copyright Â© 2023 The University of Mississippi. All Rights Reserved</a>.</p>
+                    <div class="site-footer__copyright-links"> <a class="external" href="https://policies.olemiss.edu/ShowDetails.jsp?istatPara=1&amp;policyObjidPara=10654991" target="_blank">Privacy Policies</a> <a href="https://test.olemiss.edu/info/eeo-statement/index.php" target="_top">EEO Statement</a> <a href="https://test.olemiss.edu/info/accessibility/index.php" target="_top">Accessibility</a> <a class="external" href="https://secure.ethicspoint.com/domain/media/en/gui/31500/index.html" target="_blank">Ethics Line</a> </div>
+                    <!--BE IXF: The following <div> block needs to be placed in the location where the link block will be displayed--> 
+                    <!--BE IXF: For your website, the location is   -->
+                    <div class="be-ix-link-block"><!--Link Block Target Div--></div>
+                    <!--BE IXF: end --> 
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+</div></div></div>
+
+
+		<script src="/js/main.js"></script>
+		<script src="https://common.olemiss.edu/_js/sweet-alert/sweet-alert.min.js"></script>
+	</body>
+</html>

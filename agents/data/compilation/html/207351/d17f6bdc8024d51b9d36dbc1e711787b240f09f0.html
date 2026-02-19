@@ -1,0 +1,768 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title aria-live="polite">Home - LibGuides at Oklahoma Panhandle State University</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex,nofollow,noarchive" />
+<!-- favicon.twig -->
+<link rel="apple-touch-icon" sizes="180x180" href="//d2jv02qf7xgjwx.cloudfront.net/apps/common/favicon/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="//d2jv02qf7xgjwx.cloudfront.net/apps/common/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="//d2jv02qf7xgjwx.cloudfront.net/apps/common/favicon/favicon-16x16.png">
+<link rel="manifest" href="//d2jv02qf7xgjwx.cloudfront.net/apps/common/favicon/site.webmanifest">
+<link rel="mask-icon" href="//d2jv02qf7xgjwx.cloudfront.net/apps/common/favicon/safari-pinned-tab.svg" color="#5bbad5">
+<link rel="shortcut icon" href="//d2jv02qf7xgjwx.cloudfront.net/apps/common/favicon/favicon.ico">
+<meta name="msapplication-TileColor" content="#ffc40d">
+<meta name="msapplication-config" content="//d2jv02qf7xgjwx.cloudfront.net/apps/common/favicon/browserconfig.xml">
+<meta name="theme-color" content="#ffffff">
+<!-- !favicon.twig -->
+
+
+<meta property="og:title" content="LibGuides">
+<meta property="og:description" content=" ">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://libguides.opsu.edu/">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@springshare">
+
+<link rel="stylesheet" href="https://static-assets-us.libguides.com/web/jquery/css/jquery-ui.min.css?2691" />
+<link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"/>
+
+<link rel="stylesheet" href="https://static-assets-us.libguides.com/web/css3.23.5/lg-public.min.css" />
+<script type="text/javascript" src="https://static-assets-us.libguides.com/web/jquery/js/1.12.4_jquery.min.js"></script>
+    <script src="//code.jquery.com/ui/1.13.2/jquery-ui.min.js"></script>
+    <script>
+        jQuery.ui ||
+        document.write('<script src="https://static-assets-us.libguides.com/web/jquery/js/jquery-ui.min.js?2691">\x3C/script>');
+    </script>
+
+<script type="text/javascript" src="https://static-assets-us.libguides.com/web/js3.23.5/lg-public.min.js"></script>
+<!-- BEGIN: CUSTOM HEAD JS/CSS -->
+<link rel="stylesheet" type="text/css" href="https://d2jv02qf7xgjwx.cloudfront.net/sites/10615/include/inviting_stylesheet_scoped.css">
+
+<style>
+/* ===== 1) Help-tip (popover trigger) ===== */
+.s-ui-helptip .btn.btn-link.btn-help-popover {
+  /* neutralize global .btn/.btn-link */
+  appearance: none !important;
+  -webkit-appearance: none !important;
+  background: transparent !important;
+  border: 0 !important;
+  padding: 0 !important;
+  box-shadow: none !important;
+
+  /* OPSU navy icon/link color */
+  color: #001F5B !important;
+  line-height: 1;
+}
+.s-ui-helptip .btn.btn-link.btn-help-popover .fa {
+  color: #001F5B !important;
+}
+.s-ui-helptip .btn.btn-link.btn-help-popover:hover,
+.s-ui-helptip .btn.btn-link.btn-help-popover:focus {
+  color: #6c757d !important;                  /* OPSU gray on hover */
+  text-decoration: none !important;
+}
+.s-ui-helptip .btn.btn-link.btn-help-popover:hover .fa,
+.s-ui-helptip .btn.btn-link.btn-help-popover:focus .fa {
+  color: #6c757d !important;
+}
+
+/* ===== 2) A–Z button + “All Guides” tab button ===== */
+/* A–Z button (right column) */
+a.s-lg-hp-btn-section.btn {
+  background-color: #001F5B !important;
+  border-color: #001F5B !important;
+  color: #fff !important;
+}
+a.s-lg-hp-btn-section.btn:hover,
+a.s-lg-hp-btn-section.btn:focus {
+  background-color: #33446f !important;       /* lighter navy hover */
+  border-color: #33446f !important;
+  color: #fff !important;
+}
+
+/* “ALL GUIDES” tab button at the top */
+#s-lg-index-all-btn .btn {
+  background-color: #001F5B !important;
+  border-color: #001F5B !important;
+  color: #fff !important;
+}
+#s-lg-index-all-btn .btn:hover,
+#s-lg-index-all-btn .btn:focus {
+  background-color: #33446f !important;
+  border-color: #33446f !important;
+  color: #fff !important;
+}
+
+/* ===== 3) Popover panel styling (colors/typography only) ===== */
+.popover {
+  border: 1px solid rgba(0,0,0,.15);
+  box-shadow: 0 0.5rem 1rem rgba(0,0,0,.15);
+  max-width: 420px;
+  z-index: 1060; /* above navs */
+}
+.popover .arrow::after { border-top-color: #fff; }
+
+.popover-header {
+  background-color: #001F5B !important;  /* OPSU navy */
+  color: #fff !important;
+  font-weight: 600 !important;
+  border-bottom: 1px solid rgba(0,0,0,.1) !important;
+}
+.popover-body {
+  background: #fff !important;
+  color: #212529 !important;
+  line-height: 1.5 !important;
+}
+
+/* keep links inside popovers tidy */
+.popover a,
+.popover a:hover,
+.popover a:focus {
+  background: transparent !important;
+  color: #0d6efd !important;
+  text-decoration: underline;
+  border: 0 !important;
+}
+/* ===== OPSU Fonts: Montserrat for headings, Poppins for body ===== */
+
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Poppins&display=swap');
+
+/* Global body text */
+body {
+  font-family: 'Poppins', sans-serif !important;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #212529;
+}
+
+/* Global headings */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Montserrat', sans-serif !important;
+  font-weight: 600;
+  color: #001F5B; /* OPSU navy */
+}
+
+/* ===== Ensure popovers match global font settings ===== */
+.popover-body {
+  font-family: 'Poppins', sans-serif !important;
+  font-size: 0.95rem;
+}
+
+.popover-header {
+  font-family: 'Montserrat', sans-serif !important;
+  font-weight: 600 !important;
+}
+
+</style>
+<!-- END: CUSTOM HEAD JS/CSS -->
+<script>var system = {"name":"LibGuides"};
+            springSpace.publicObj = new springSpace.public.Public({
+                constant: {
+                    PROCESSING: {},
+                    CONTENT: {}
+                },
+                system_name: system.name,
+                customer: {"name":"Oklahoma Panhandle State University"}
+            })
+            </script><!-- get_lg_session_status.twig -->
+<script>
+    springSpace.Session.CONST.ACTION_AUTH_SET_LG_SESSION_COOKIE = 750;
+
+    
+    callGetLGSessionStatus = function () {
+        springSpace.Session.auth_reload_script = window.location.href;
+        springSpace.Session.getLGSessionStatus({
+            url: "https://opsu.libapps.com/libapps/login_process/session",
+            data: {
+                app_id: 1,
+                domain: "libguides.opsu.edu",
+                site_id: 10615,
+                auth_reload: 0
+            }
+        })
+    }
+
+    jQuery(
+        function () {
+                                    callGetLGSessionStatus();
+                    }
+    );
+    </script>
+<!-- !get_lg_session_status.twig -->
+
+
+
+
+
+
+
+<script>
+    var springStats = springStats || {};
+    springStats.saConfig = springStats.saConfig || {
+        site_id: 10615,
+        tracking_parameters: {"_st_site_id":10615},
+        tracking_server_host: "libguides-proc.springyaws.com"
+    };
+</script>
+<script  src="https://static-assets-us.libguides.com/web/js/sa.min.js?3116"></script>
+
+<script>
+    var is_bootstrap5 = false; 
+    springSpace.Common = springSpace.Common || {};
+    springSpace.Common.constant = {
+        PROCESSING: {
+            ACTION_DISPLAY_POLL: 159
+        }
+    };
+    springSpace.publicObj.constant.PROCESSING.ACTION_LOAD_GUIDE_LIST = 170;
+    springSpace.publicObj.constant.CONTENT.HOME_GUIDES_TITLE = "Guides";
+    springSpace.publicObj.homeNavButtons = {"170":"ALL GUIDES","171":"BY GROUP","172":"BY SUBJECT","173":"BY TYPE","174":"BY OWNER"};
+
+    springSpace.publicObj.getCountType = function(action) {
+        var count_type = "";
+        switch (action) {
+            case 176:
+                count_type = "guidetype";
+                break;
+            case 177:
+                count_type = "group";
+                break;
+            case 178:
+                count_type = "owner";
+                break;
+        }
+        return count_type;
+    };
+
+    springSpace.publicObj.loadGuideCounts = function(config) {
+        jQuery.ajax({
+            url: "/index_process.php?action=" + config.action + "&site_id=" + config.site_id +
+                (config.group_id ? "&group_id=" + config.group_id : ""),
+            type: "GET",
+            dataType: "json",
+            success: function(response) {
+                if (response.errCode == 200) {
+                    var count_type = springSpace.publicObj.getCountType(config.action);
+                    jQuery.each(response.data, function(idx, elt) {
+                        jQuery("#s-lg-index-" + count_type + "-" + elt.id).show();
+                        jQuery("#s-lg-index-" + count_type + "-count-" + elt.id).html(elt.count);
+                    });
+                } else {
+                    springSpace.UI.notify({mode: "custom", msg: "Error loading guide counts."});
+                }
+            },
+            error: function() {
+                springSpace.UI.notify({mode: "custom", msg: "Error loading guide counts."});
+            }
+        });
+    };
+
+    var button_data = {"code":"g"};
+
+    springSpace.homepage = {
+        default_list_order: "a",
+        current_list: 170,
+        current_btn_id: "s-lg-index-all-btn",
+        current_num_cols: 1,
+        current_type_label: "",
+        current_button_code: button_data.code,
+        group_id: 0,
+        historyEdited: false,
+        initPushState: function() {
+            if (window.history && history.pushState) {
+                jQuery(window).bind("popstate", function() {
+                    if (springSpace.homepage.historyEdited) {
+                        var button_code = springSpace.Util.getQSParam({name: "b", qs: location.search});
+                        var guide_display_code = springSpace.Util.getQSParam({name: "d", qs: location.search});
+                        if (button_code === "") {
+                            button_code = "g";
+                        }
+                        springSpace.publicObj.loadHomepageList({
+                            nav: "back",
+                            action: springSpace.homepage.mapQSIdToActionId(button_code),
+                            group_id: springSpace.homepage.group_id,
+                            order: springSpace.homepage.mapQSIdToGuideSortId(guide_display_code),
+                            num_cols: 1,
+                            elt_id: "s-lg-index-list",
+                            button_id: springSpace.homepage.mapQSIdToButtonEltId(button_code),
+                            type_label: "Guides",
+                            display_sort: (springSpace.homepage.mapQSIdToButtonEltId(button_code) === "s-lg-index-all-btn")
+                        });
+                    }
+                });
+            }
+        },
+
+        mapQSIdToButtonEltId: function(qs_id) {
+            var button_ids = {
+                "g": "s-lg-index-all-btn",
+                "s": "s-lg-index-subject-btn",
+                "t": "s-lg-index-guidetype-btn",
+                "o": "s-lg-index-owner-btn",
+                "p": "s-lg-index-group-btn"
+            };
+            springSpace.Util.setObjProp(qs_id, "", button_ids);
+            return button_ids[qs_id];
+        },
+
+        mapQSIdToActionId: function(qs_id) {
+            var button_ids = {
+                "g": "170",
+                "s": "172",
+                "t": "173",
+                "o": "174",
+                "p": "171"
+            };
+            springSpace.Util.setObjProp(qs_id, "", button_ids);
+            return button_ids[qs_id];
+        },
+
+        mapButtonEltIdToQSId: function(btn_elt_id) {
+            var button_ids = {
+                "s-lg-index-all-btn": "g",
+                "s-lg-index-subject-btn": "s",
+                "s-lg-index-guidetype-btn": "t",
+                "s-lg-index-owner-btn": "o",
+                "s-lg-index-group-btn": "p"
+            };
+            springSpace.Util.setObjProp(btn_elt_id, "", button_ids);
+            return button_ids[btn_elt_id];
+        },
+
+        mapQSIdToGuideSortId: function(qs_id) {
+            var sort_ids = {
+                "a": "0",
+                "r": "2",
+                "p": "3"
+            };
+            springSpace.Util.setObjProp(qs_id, "", sort_ids);
+            return sort_ids[qs_id];
+        },
+
+        mapGuideSortIdToQSId: function(sort_id) {
+            var sort_ids = {
+                "0": "a",
+                "2": "r",
+                "3": "p"
+            };
+            springSpace.Util.setObjProp(sort_id, "", sort_ids);
+            return sort_ids[sort_id];
+        },
+
+        processPushState: function(config) {
+            if (history.pushState) {
+                if (config.nav !== "back" && config.nav !== "init") {
+                    var qs_config = (
+                        springSpace.homepage.current_button_code === "g" ?
+                        { button_code: springSpace.homepage.current_button_code, guide_display_code: springSpace.homepage.default_list_order } :
+                        { button_code: springSpace.homepage.current_button_code }
+                    );
+                    var url = location.pathname + springSpace.homepage.buildQS(qs_config);
+                    history.pushState({}, null, url);
+                }
+            }
+            springSpace.homepage.historyEdited = true;
+        },
+
+        buildQS: function(config) {
+            var params = {
+                b: springSpace.Util.setProp(config.button_code, ""),
+                d: springSpace.Util.setProp(config.guide_display_code, "")
+            };
+            if (params.b === "g") {
+                return "";
+            }
+            if (springSpace.homepage.group_id) {
+                params.group_id = springSpace.homepage.group_id;
+            }
+            var qs_params = [];
+            jQuery.each(params, function(idx, val) {
+                if (val !== "" && val !== "0") {
+                    qs_params.push(idx + "=" + encodeURIComponent(val));
+                }
+            });
+            return (qs_params.length == 0 ? "" : "?" + qs_params.join("&"));
+        }
+    };
+
+    jQuery(function() {
+        springSpace.homepage.initPushState();
+        jQuery("#s-lg-guide-search").val("");
+
+        springSpace.publicObj.loadHomepageList({
+            action: springSpace.homepage.current_list,
+            group_id: "0",
+            order: springSpace.homepage.mapQSIdToGuideSortId(springSpace.homepage.default_list_order),
+            num_cols: 1,
+            elt_id: "s-lg-index-list",
+            button_id: springSpace.homepage.current_btn_id,
+            type_label: "Guides",
+            display_sort: (springSpace.homepage.current_btn_id === "s-lg-index-all-btn"),
+            nav: "init"
+        });
+
+        jQuery("#s-lg-guide-order > option[value=" + springSpace.homepage.mapQSIdToGuideSortId(springSpace.homepage.default_list_order) + "]").prop("selected", true);
+
+        springSpace.publicObj.loadGuideCounts({
+            action: 176,
+            site_id: 10615,
+            group_id: 0
+        });
+
+        springSpace.publicObj.loadGuideCounts({
+            action: 177,
+            site_id: 10615
+        });
+
+        springSpace.publicObj.loadGuideCounts({
+            action: 178,
+            site_id: 10615,
+            group_id: 0
+        });
+    });
+
+    jQuery(function() {
+        
+        jQuery(document).ready(function () {
+            springSpace.springTrack.trackPage({_st_type_id: '11'});
+        });
+    });
+</script>
+
+
+
+
+</head>
+<body class="s-lib-public-body">
+    <a id="s-lg-public-skiplink" class="alert-info" href="#s-lib-public-main">Skip to Main Content</a>
+
+    <!-- BEGIN: Page Header -->
+    <!-- FontAwesome for accordion icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<style>
+  /* Define your custom colors */
+  :root {
+    --opsu-red: #CF0A2C;
+    --opsu-blue: #001F5B;
+    --opsu-gray: #B5B0AD;
+  }
+
+  /* Container styling similar to Tailwind's container and flex utilities */
+  #custom-header {
+    box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1), 0 4px 6px -4px rgba(0,0,0,0.1);
+    border-radius: 0.5rem; /* rounded-lg */
+    overflow: hidden;
+    background-color: white;
+  }
+
+  #custom-header > div {
+    max-width: 1200px; /* approximate container mx-auto max width */
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+  }
+
+  /* For medium+ screens, row layout */
+  @media (min-width: 768px) {
+    #custom-header > div {
+      flex-direction: row;
+    }
+  }
+
+  /* Logo container */
+  #custom-header img {
+    max-height: 4rem; /* 16 in Tailwind ~ 4rem */
+  }
+
+  @media (min-width: 768px) {
+    #custom-header img {
+      max-height: 5rem; /* 20 in Tailwind ~ 5rem */
+    }
+  }
+
+  /* Text container */
+  #custom-header .text-container {
+    color: var(--opsu-blue);
+    text-align: center;
+    margin-top: 1rem;
+  }
+
+  @media (min-width: 768px) {
+    #custom-header .text-container {
+      text-align: right;
+      margin-top: 0;
+    }
+  }
+
+  /* Heading */
+  #custom-header h1 {
+    font-size: 1.5rem; /* text-2xl */
+    font-weight: 700;
+    margin: 0;
+  }
+
+  @media (min-width: 768px) {
+    #custom-header h1 {
+      font-size: 1.875rem; /* text-3xl */
+    }
+  }
+
+  /* Subheading paragraph */
+  #custom-header p {
+    color: var(--opsu-gray);
+    font-size: 0.875rem; /* text-sm */
+    margin-top: 0.25rem;
+    margin-bottom: 0;
+  }
+
+  @media (min-width: 768px) {
+    #custom-header p {
+      font-size: 1rem; /* text-base */
+    }
+  }
+</style>
+
+<div id="custom-header">
+  <div>
+    <div>
+      <img src="https://opsu.b-cdn.net/app/uploads/2024/10/OPSU_LOGO_Horizontal.png" alt="OPSU Logo">
+    </div>
+    <div class="text-container">
+      <h1>Marvin E. McKee Library</h1>
+      <p>Research • Learn • Discover</p>
+    </div>
+  </div>
+</div>
+
+
+    <!-- END: Page Header -->
+
+    <!-- BEGIN: Content Header -->
+    <div id="s-lib-public-header" class="s-lib-header container s-lib-side-borders">
+        <nav id="s-lib-bc" aria-label="breadcrumb">
+            <ol id="s-lib-bc-list" class="breadcrumb"><li id="s-lib-bc-customer" class="breadcrumb-item"><a href="http://www.opsu.edu/Facilities/McKee_Library/">McKee Library</a></li><li id="s-lib-bc-site" class="breadcrumb-item"><a href="https://libguides.opsu.edu/">LibGuides</a></li><li id="s-lib-bc-page" class="active breadcrumb-item">Home</li></ol>
+        </nav>
+        <h1 id="s-lib-public-header-title"></h1>
+        <div id="s-lib-public-header-desc"></div>
+    </div>
+    <!-- END: Content Header -->
+
+    <!-- BEGIN: Nav Bar -->
+    <div id="s-lib-public-nav" class="container s-lib-side-borders">
+        
+    </div>
+    <!-- END: Nav Bar -->
+
+    <!-- BEGIN: content -->
+    <div id="s-lib-public-main" class="s-lib-main container s-lib-side-borders" tabindex="-1">
+        <div id="s-lg-index-cols" class="row">
+            <div id="col1" class="col-md-8 center">
+                <div class="clearfix">
+                    <div id="s-lg-hp-nav">
+                        <ul>
+                            <li>
+                                <ul class="nav nav-pills">
+                                    
+
+    <li id="s-lg-index-all-btn" class="s-lg-index-nav-btn active">
+        <button type="button" role="button" aria-pressed="true" class="btn"
+            onclick="springSpace.publicObj.loadHomepageList({
+                action: 170,
+                group_id: 0,
+                order: jQuery('#s-lg-guide-order').val(),
+                num_cols: 1,
+                elt_id: 's-lg-index-list',
+                button_id: 's-lg-index-all-btn',
+                display_sort: true
+            });">
+            ALL GUIDES
+        </button>
+    </li>
+
+
+
+            <li id="s-lg-index-group-btn" class="s-lg-index-nav-btn">
+            <button type="button" role="button" class="btn"
+                onclick="springSpace.publicObj.loadHomepageList({
+                    action: 171,
+                    group_id: 0,
+                    num_cols: 1,
+                    type_label: 'Groups',
+                    elt_id: 's-lg-index-list',
+                    button_id: 's-lg-index-group-btn'
+                });">
+                BY GROUP
+            </button>
+        </li>
+    
+
+
+    <li id="s-lg-index-subject-btn" class="s-lg-index-nav-btn">
+        <button type="button" role="button" class="btn"
+            onclick="springSpace.publicObj.loadHomepageList({
+                action: 172,
+                group_id: 0,
+                num_cols: 1,
+                type_label: 'Subjects',
+                elt_id: 's-lg-index-list',
+                button_id: 's-lg-index-subject-btn'
+            });">
+            BY SUBJECT
+        </button>
+    </li>
+
+
+
+    <li id="s-lg-index-guidetype-btn" class="s-lg-index-nav-btn">
+        <button type="button" role="button" class="btn"
+            onclick="springSpace.publicObj.loadHomepageList({
+                action: 173,
+                group_id: 0,
+                num_cols: 1,
+                type_label: 'Guide Types',
+                elt_id: 's-lg-index-list',
+                button_id: 's-lg-index-guidetype-btn'
+            });">
+            BY TYPE
+        </button>
+    </li>
+
+
+
+    <li id="s-lg-index-owner-btn" class="s-lg-index-nav-btn">
+        <button type="button" role="button" class="btn"
+            onclick="springSpace.publicObj.loadHomepageList({
+                action: 174,
+                group_id: 0,
+                num_cols: 1,
+                type_label: 'Guide Owners',
+                elt_id: 's-lg-index-list',
+                button_id: 's-lg-index-owner-btn'
+            });">
+            BY OWNER
+        </button>
+    </li>
+
+                                </ul>
+                            </li>
+                            <li id="s-lg-hp-nav-bottom">
+                                <div class="clearfix">
+                                    
+<form role="search" class="form-inline pull-right" action="/srch.php">
+        <span>Search:</span>
+    <div class="form-group">
+        <div class="s-lg-public-search-field">
+            <label class="control-label sr-only" for="s-lg-guide-search">Enter Search Words</label>
+            <div class="input-group">
+                <input
+                    type="text"
+                    id="s-lg-guide-search"
+                    name="q"
+                    class="form-control"
+                    maxlength="260"
+                    placeholder="Enter Search Words"
+                    aria-label="Enter Search Words"
+                />
+                <span class="input-group-btn">
+                    <button class="btn btn-default" type="submit">Search</button>
+                </span>
+            </div>
+        </div>
+    </div>
+</form>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    
+<div id="s-lg-guide-list-controls">
+    <div class="pull-left">
+        <h2 id="s-lg-index-list-header" class="muted"></h2>
+    </div>
+    <div class="pull-right muted">
+        <div class="form-inline" id="form-group-s-lg-guide-order">
+            <div class="form-group">
+                <label for="s-lg-guide-order">Display</label>
+                <select id="s-lg-guide-order" name="s-lg-guide-order" class="form-control">
+                    <option value="0">Alphabetically</option>
+                    <option value="3">By Popularity</option>
+                    <option value="2">Most Recent</option>
+                </select>
+            </div>
+            <button type="button" class="btn btn-default" onclick="springSpace.publicObj.loadHomepageList({
+                action: 170,
+                group_id: 0,
+                order: jQuery('#s-lg-guide-order').val(),
+                num_cols: 1,
+                elt_id: 's-lg-index-list',
+                button_id: 's-lg-index-all-btn',
+                display_sort: true,
+                type_label: springSpace.homepage.current_type_label
+            });">Go</button>
+        </div>
+    </div>
+</div>
+                </div>
+                <div id="s-lg-index-list" class="">
+                    
+                </div>
+            </div>
+
+            <div id="col2" class="col-md-4 center">
+                <div class="margin-bottom-xlg"><div class="s-lib-public-side-header"><h2 class="pad-bottom-sm">A-Z Database List</h2></div><div class="txt pad-top-sm">Full list of Databases the library subscribes to, including trial access.</div><a href="/az.php" class="btn text-white btn-info s-lg-hp-btn-section" role="button">Go to A-Z List</a></div>
+            </div>
+        </div>
+    </div>
+    <!-- END: content -->
+
+    <!-- BEGIN: Page Footer -->
+    <div id="s-lib-footer-public" class="s-lib-footer footer container s-lib-side-borders"><div><div id="s-lib-footer-brand">Powered by Springshare.</div><div id="s-lib-footer-rights">All rights reserved.</div><div id="s-lib-footer-login-link"><a href="https://opsu.libapps.com/libapps/login.php?site_id=10615">Login to LibApps</a></div></div><div id="s-lib-footer-support-link"></div></div></div>
+    <!-- END: Page Footer -->
+
+    <div id="s-lib-alert" title=""><div id="s-lib-alert-content"></div></div>
+    <!-- popover.twig -->
+<div id="s-lib-popover-title" class="hide">
+    <span class="text-info">
+        <strong>title</strong>
+    </span>
+
+    <button type="button" id="popclose" class="close" onclick="jQuery('.s-lib-popover').popover('hide')">
+        &times;
+    </button>
+</div>
+
+<div id="s-lib-popover-content" class="hide">
+    <i class="fa fa-refresh fa-spin"></i> Loading...
+    <button class="btn btn-default btn-sm popclose" type="button">Close</button>
+</div>
+<!-- !popover.twig -->
+
+    <!-- scroll_top.twig -->
+<div id="s-lib-scroll-top">
+    <a href="javascript:void(0);" onclick="jQuery('body').focus();" title="Back to Top"
+       aria-label="Back to Top">
+        <span class="fa-stack fa-lg" aria-hidden="true">
+            <i class="fa fa-square-o fa-stack-2x"></i>
+            <i class="fa fa-angle-double-up fa-stack-1x" style="position:relative; bottom:2px;"></i>
+        </span>
+    </a>
+</div>
+<!-- !scroll_top.twig -->
+
+
+    <!-- BEGIN: Custom Footer -->
+    
+
+
+    
+    <!-- END: Custom Footer -->
+</body>
+</html>

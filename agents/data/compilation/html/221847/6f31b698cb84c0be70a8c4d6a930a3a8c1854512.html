@@ -1,0 +1,955 @@
+
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head><meta name="viewport" content="width=device-width, initial-scale=1.0" /><!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-WR9V5K73');</script>
+<!-- End Google Tag Manager --><script>
+  window.TdxGtmContext = {"User":{"Id":0,"UID":"00000000-0000-0000-0000-000000000000","UserName":"","FullName":"Public User","AlertEmail":"publicuser@noreply.com","Role":"Experience User","HasTDNext":false,"StandardApplicationNames":null,"TicketApplicationNames":[],"AssetApplicationNames":[],"ClientPortalApplicationNames":[],"Type":"Technician","Analytics":{"Title":null,"Organization":null}},"Partition":{"Id":3068,"Name":"Tennessee Tech University Production"},"BillableEntity":{"Id":386,"Name":"Tennessee Tech University","SalesForceIdentifier":"0013600000EM54sAAD","GWMIID":"30e0c66e-2f51-4eea-a01f-445aa29cb11f"},"Environment":{"ShortName":"PRD"}};
+</script><script src="/TDPortal/Content/Scripts/jquery/2.2.4/jquery.min.js?v=20260213000508"></script><script src="/TDPortal/Content/Scripts/jquery-migrate/1.4.1/jquery-migrate.min.js?v=20260213000508"></script><script src="/TDPortal/Content/Scripts/jquery-ui/1.13.2/jquery-ui-1.13.2.custom.timepicker.min.js?v=20260213000818"></script><link href="/TDPortal/Content/Styles/jquery-ui/1.13.2/jquery-ui.compiled.min.css?v=20260213000820" rel="stylesheet" type="text/css"  /><link href="/TDPortal/Content/bootstrap/3.4.1/dist/css/bootstrap.min.css?v=20260213000508" rel="stylesheet" type="text/css" id="lnkBootstrapCSS" /><script src="/TDPortal/Content/bootstrap/3.4.1/dist/js/bootstrap.min.js?v=20260213000508"></script><link href="/TDPortal/Content/FontAwesome/css/fontawesome.min.css?v=20260213000506" rel="stylesheet" type="text/css" id="lnkFontAwesome" /><link href="/TDPortal/Content/FontAwesome/css/solid.css?v=20260213000506" rel="stylesheet" type="text/css"  /><link href="/TDPortal/Content/FontAwesome/css/regular.css?v=20260213000506" rel="stylesheet" type="text/css"  /><link href="/TDPortal/Content/FontAwesome/css/brands.css?v=20260213000506" rel="stylesheet" type="text/css"  /><link href="/TDPortal/Content/FontAwesome/css/v4-shims.css?v=20260213000506" rel="stylesheet" type="text/css"  /><link href="/TDClient/Styles/bootstrap_custom.min.css?v=20260213000818" rel="stylesheet" type="text/css"  /><link href="/TDClient/Styles/TDStyles.min.css?v=20260213000820" rel="stylesheet" type="text/css"  /><link href="https://services.tntech.edu/TDPortal/BE/Style/386/TDClient/1878?v=20251203203746" rel="stylesheet" type="text/css" /><script src="/TDPortal/Content/Scripts/tdx/dist/TDJSFramework.compiled.min.js?v=20260213000818"></script><script src="/TDPortal/Content/Scripts/tdx/dist/modalFocusTrap.min.js?v=20260213000816"></script><script src="/TDPortal/Content/Scripts/underscore/1.12.1/underscore-min.js?v=20260213000508"></script>
+<script src="/TDClient/Scripts/clientOS.min.js?v=20260213000810"></script>
+<script src="/TDClient/Scripts/collapseMe.min.js?v=20260213000810"></script>
+<script src="/TDClient/Scripts/tdsearchfilter.min.js?v=20260213000810"></script>
+<script src="/TDClient/Scripts/SiteSearch.min.js?v=20260213000810"></script>
+<script src="/TDPortal/Content/Scripts/tdx/dist/elasticsearchAutocomplete.min.js?v=20260213000816"></script>
+<link id="ctl00_ctl00_lnkFavicon" rel="icon" href="https://services.tntech.edu/TDPortal/BE/Icon/386/1878?v=20240116191401" />
+
+  <script>
+
+      $(function () {
+        var masterUi = MasterUI({
+          isPostback: false,
+          baseUrl: '/TDClient/',
+          isTdGoogleAnalyticsEnabled: true,
+          isAuthenticated: false
+          });
+
+        $('#collapseMe').collapseMe({
+          toggleVisibilitySelector: '.navbar-toggle'
+        });
+
+        TeamDynamix.addRequiredFieldHelp();
+      });
+
+      // The sub-nav menu uses padding-top to position itself below the header bar and main navigation sections. When the
+      // window is resized, there is a chance that the content of these header or nav sections wraps, causing the height
+      // to change, potentially covering the sub-nav menu, which is obviously a big usability problem. This function
+      // listens for when the window size or orientation is changing (and also when the window first loads), and adjusts
+      // the padding so that the sub-nav menu appears in the correct location.
+      $(window).bind('load ready resize orientationchange', function () {
+        var headerHeight = $('#divMstrHeader').height();
+        $('#navShim').css({
+          "padding-top": headerHeight
+        });
+
+        $('#content').css({
+          "padding-top": headerHeight,
+          "margin-top": headerHeight * -1
+        });
+      });
+  </script>
+
+  
+  
+  
+
+
+  <script>
+
+    function ReloadList() {
+      window.location.href = window.location.href;
+    }
+
+    function ToggleSubscribe() {
+      __doPostBack('ctl00$ctl00$cpContent$cpContent$btnToggleSubscribe', '');
+          }
+
+    // Adds ellipsis for long descriptions with long titles
+    $(function () {
+
+
+      
+
+      $('#ctl00_ctl00_cpContent_cpContent_txtCategorySearch').keyup(function (e) {
+        if (e.keyCode === 13) {
+          $('#ctl00_ctl00_cpContent_cpContent_btnCategorySearch').click()
+        }
+      });
+    });
+  </script>
+
+
+<meta property="og:title" content="Knowledge Base" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://services.tntech.edu/TDClient/1878/Portal/KB/" />
+<meta property="og:image" content="https://services.tntech.edu/TDPortal/BE/Logo/386/1878" />
+  <meta property="og:site_name" content="Tennessee Tech University" /><title>
+	Knowledge Base
+</title></head>
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WR9V5K73"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+<form method="post" action="/TDClient/1878/Portal/KB/" id="aspnetForm">
+<div class="aspNetHidden">
+<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
+<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="JS0d+/iOkC1FQekVFRWKwL3YjoQhzmy54N/herX0GUtToEvabiVg5vfmN5SI2t+vCl3fW9qvd+P8OTCfxYyiOvax1BLnWbPw5dvb6u1bai60pH5exXuvLftFEKDWpBWNytFC2ubSGtLH8gdXGJm0hCeAThRRauQkaMPS1N6cEYEuCe6k8+Knh7U6OnSyXUVDKeFWJANnj8RsknZl/oXZ7jJfKJYpbDhZvXi4mf/Z+ALiexi/Vbkse7PlMS5cgYY+pb0pofQKjIdbsjZQ+SruGgfzHCmd+1ihRV84H/YDd87+We4w+ky5K3jM2UAgzCswBkdEAMwycc+uwysyssga2fjexsOq/a+8XLdTRjMvCdt7nf2w" />
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['aspnetForm'];
+if (!theForm) {
+    theForm = document.aspnetForm;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script>
+
+
+<script src="/TDClient/WebResource.axd?d=pynGkmcFUV13He1Qd6_TZMSMQxVWLi4fik2rw1_u_hZsCNzwv5c621ov6_ZX_wzTt5vh-g2&amp;t=638901392248157332" type="text/javascript"></script>
+
+
+<script src="/TDClient/ScriptResource.axd?d=NJmAwtEo3Ipnlaxl6CMhvmVxW3-Ljsg_2Hna32smxrg-6ogyYAN3UTPsJQ8m1uwzn_kuf2Wpne6NSFmYui3h0wCQhJN3ZUiLTNkvhiIgZpq74-lKmofUPQGJ8own8RI2_mwAcmvlSj2WBnqwm5Wj4cyNvv81&amp;t=5c0e0825" type="text/javascript"></script>
+<script src="/TDClient/ScriptResource.axd?d=dwY9oWetJoJoVpgL6Zq8OLdGoo5BVWQ_Eo60QZTEhEcHeiVfwgY9tLCgzdZ5TRwvrwYEnOvujbNccOVLUfWtUg4HivSIsewg6JABxkBGEqVVV64eiRyCAsPDqh6tUioISUQKB74sWMO4Er2mHrWEIWs_sBM1&amp;t=5c0e0825" type="text/javascript"></script>
+<div class="aspNetHidden">
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="EA19DDCE" />
+	<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="4QNH/VosfjSohSvuvmFQqNRhSHh6WSRav1z92Nm1kx9Qrc1h9U/AtEAVI743NdQyQ1/pWVWLCSf9a++9AZyz0XNvs+5gmV1hdRFCeao44a8g+d3R" />
+</div>
+<script type="text/javascript">
+//<![CDATA[
+Sys.WebForms.PageRequestManager._initialize('ctl00$ctl00$smMain', 'aspnetForm', ['tctl00$ctl00$cpContent$cpContent$UpdatePanel3','','tctl00$ctl00$cpContent$cpContent$lblResults$ctl00',''], ['ctl00$ctl00$cpContent$cpContent$btnToggleSubscribe',''], [], 90, 'ctl00$ctl00');
+//]]>
+</script>
+
+<div id="ctl00_ctl00_upMain" style="display:none;">
+	
+    <div id="ctl00_ctl00_pbMain" class="progress-box-container"><div class="progress-box-body"><div class="well shadow"><h2 class="h4 gutter-top-none">Updating...</h2><div class="progress" style="margin-bottom: 0;"><div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuemin="0" aria-valuemax="100" style="width: 100%"></div></div></div></div></div>
+  
+</div>
+
+<header id="ctl00_ctl00_navHeader" role="banner">
+
+  <div id="divMstrHeader" class="master-header NoPrint" style="background-color: #fff;">
+
+  <script type="text/javascript" src="https://ai.ocelotbot.com/embed/standard/b3a8ed75-6d38-46a8-8fdc-94167c61413f"></script>
+  
+
+  <div class="logo-header-full hidden-xs">
+
+    
+    <div class="pull-left">
+      <a href="#mainContent" class="sr-only sr-only-focusable">Skip to main content</a>
+    </div>
+
+
+    <div id="ctl00_ctl00_divPageHeader" class="container logo-header clearfix" style="padding: 5px;">
+
+      <div id="divLogo" class="pull-left logo-container">
+
+        <a href="https://services.tntech.edu/"
+           target="_blank">
+          <img src="/TDPortal/BE/Logo/386/1878" alt="Tennessee Tech Self-Service Portal" class="js-logo img-responsive" />
+          <span class="sr-only">(opens in a new tab)</span>
+        </a>
+
+      </div>
+
+      <div class="master-header-right pull-right padding-top padding-bottom">
+
+        
+
+          <div class="pull-left topLevelSearch input-group">
+            <div id="SiteSearch-c6d4113db1ca4d9e96d4eb972e5548ab" class="gutter-bottom input-group site-search" style="max-width: 400px;">
+  <div id="SiteSearch-dropdown-c6d4113db1ca4d9e96d4eb972e5548ab" class="input-group-btn">
+    <button type="button" id="SiteSearch-filter-c6d4113db1ca4d9e96d4eb972e5548ab" class="btn btn-default dropdown-toggle" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false" title="Filter your search by category" data-component="all">
+      <span class="fa-solid fa-solid fa-earth-americas"></span><span class="fa-solid fa-fw fa-nopad fa-caret-down" aria-hidden="true"></span>
+      <span class="sr-only">
+        Filter your search by category. Current category:
+        <span class="js-current-component">All</span>
+      </span>
+    </button>
+    <ul tabindex="-1" aria-label="Filter your search by category" role="menu" class="dropdown-menu" >
+      <li>
+        <a role="menuitem" href="javascript:void(0);" data-component-text="All" data-component="all" data-component-icon="fa-solid fa-earth-americas" title="Search all areas">
+          <span class="fa-solid fa-fw fa-nopad fa-earth-americas" aria-hidden="true"></span>
+          All
+        </a>
+      </li>
+
+      <li aria-hidden="true" class="divider"></li>
+
+        <li role="presentation">
+          <a role="menuitem" href="javascript:void(0);" data-component-text="Knowledge Base" data-component="kb" data-component-icon="fa-lightbulb" title="Search Knowledge Base">
+            <span class="fa-regular fa-fw fa-nopad fa-lightbulb" aria-hidden="true"></span>
+            Knowledge Base
+          </a>
+        </li>
+
+        <li role="presentation">
+          <a role="menuitem" href="javascript:void(0);" data-component-text="Service Catalog" data-component="sc" data-component-icon="fa-compass" title="Search Service Catalog">
+            <span class="fa-solid fa-fw fa-nopad fa-compass" aria-hidden="true"></span>
+            Service Catalog
+          </a>
+        </li>
+
+    </ul>
+  </div>
+
+  <label class="sr-only" for="SiteSearch-text-c6d4113db1ca4d9e96d4eb972e5548ab">Search the client portal</label>
+
+  <input id="SiteSearch-text-c6d4113db1ca4d9e96d4eb972e5548ab" type="text" class="form-control" autocomplete="off" placeholder="Search the client portal" title="To search for items with a specific tag, enter the # symbol followed by the name of the tag.
+To search for items using exact match, place double quotes around your text." />
+
+  <span class="input-group-btn">
+    <button id="SiteSearch-button-c6d4113db1ca4d9e96d4eb972e5548ab" class="btn btn-default" type="button" title="Search">
+      <span class="fa-solid fa-fw fa-nopad fa-search blue" aria-hidden="true"></span>
+      <span class="sr-only">Search</span>
+    </button>
+  </span>
+</div>
+
+<script>
+  $(function() {
+    var siteSearch = new TeamDynamix.SiteSearch({
+      searchUrl: "/TDClient/1878/Portal/Shared/Search",
+      autocompleteSearchUrl: '/TDClient/1878/Portal/Shared/AutocompleteSearch',
+      autocompleteResultsPosition: 'fixed',
+      autocompleteResultsZIndex: 1000,
+      searchTextBoxSelector: '#SiteSearch-text-c6d4113db1ca4d9e96d4eb972e5548ab',
+      searchComponentFilterButtonSelector: '#SiteSearch-filter-c6d4113db1ca4d9e96d4eb972e5548ab',
+      searchButtonSelector: '#SiteSearch-button-c6d4113db1ca4d9e96d4eb972e5548ab',
+      searchFilterDropdownSelector: '#SiteSearch-dropdown-c6d4113db1ca4d9e96d4eb972e5548ab',
+      showKnowledgeBaseOption: true,
+      showServicesOption: true,
+      showForumsOption: false,
+      autoFocusSearch: false
+    });
+  });
+</script>
+          </div>
+
+        
+          <div title="Sign In" class="pull-right gutter-top-sm">
+            <a href="/TDClient/1878/Portal/Login.aspx?ReturnUrl=%2fTDClient%2f1878%2fPortal%2fKB%2f">
+              Sign In
+            </a>
+          </div>
+        
+      </div>
+
+    </div>
+
+  </div>
+
+  <nav id="ctl00_ctl00_mainNav" class="navbar navbar-default themed tdbar" aria-label="Primary">
+    <div id="navContainer" class="container">
+
+      <div class="navbar-header">
+        <button type="button" class="pull-left navbar-toggle collapsed themed tdbar-button-anchored tdbar-toggle gutter-left" data-toggle="collapse" data-target=".navbar-collapse">
+          <span class="tdbar-button-anchored icon-bar"></span>
+          <span class="tdbar-button-anchored icon-bar"></span>
+          <span class="tdbar-button-anchored icon-bar"></span>
+          <span class="sr-only">Show Applications Menu</span>
+        </button>
+        <a class="navbar-brand hidden-sm hidden-md hidden-lg themed tdbar-button-anchored truncate-be" href="#">
+
+          Self-Service Portal
+        </a>
+      </div>
+
+      <div id="td-navbar-collapse" class="collapse navbar-collapse">
+
+        <ul class="nav navbar-nav nav-collapsing" id="collapseMe">
+
+          
+            <li class="themed tdbar-button-anchored hidden-sm hidden-md hidden-lg">
+              <a href="/TDClient/1878/Portal/Login.aspx?ReturnUrl=%2fTDClient%2f1878%2fPortal%2fKB%2f">Sign In</a>
+            </li>
+          
+            <li id="divSearch" class="themed tdbar-button-anchored hidden-sm hidden-md hidden-lg">
+              <a href="/TDClient/1878/Portal/Shared/Search" title="search">Search</a>
+            </li>
+          
+              <li id="divDesktop627ac8fd-20ef-42af-8145-eaa34a8e1fed" class="themed tdbar-button-anchored">
+                <a href="/TDClient/1878/Portal/Home/">Home</a>
+              </li>
+            
+              <li id="divDesktopb588d0b6-d6de-4644-885f-712de10aabf8" class="themed tdbar-button-anchored">
+                <a href="/TDClient/1878/Portal/Home/?ID=b588d0b6-d6de-4644-885f-712de10aabf8">Training for Faculty & Staff</a>
+              </li>
+            
+              <li id="divDesktop01f1ea6a-1563-4279-9c18-dd5d6b840965" class="themed tdbar-button-anchored">
+                <a href="/TDClient/1878/Portal/Home/?ID=01f1ea6a-1563-4279-9c18-dd5d6b840965">How To Use the Portal</a>
+              </li>
+            
+
+          
+            <li id="divTDRequests" class="themed tdbar-button-anchored sr-focusable">
+              <a href="/TDClient/1878/Portal/Requests/ServiceCatalog">Services</a>
+            </li>
+          
+            <li id="divTDKnowledgeBase" class="themed tdbar-button-anchored sr-focusable">
+              <a href="/TDClient/1878/Portal/KB/">Knowledge Base</a>
+            </li>
+          
+
+          <li class="themed tdbar-button-anchored hidden-xs more-items-button" id="moreMenu">
+            <a data-toggle="dropdown" title="More Applications" href="javascript:;">
+              <span class="sr-only">More Applications</span>
+              <span class="fa-solid fa-ellipsis-h" aria-hidden="true"></span>
+            </a>
+            <ul class="dropdown-menu dropdown-menu-right themed tdbar" id="collapsed"></ul>
+          </li>
+
+        </ul>
+      </div>
+
+    </div>
+
+  </nav>
+
+  </div>
+
+  </header>
+
+
+
+<div id="navShim" class="hidden-xs hidden-sm"></div>
+<main role="main">
+  <div id="content">
+    <div id="mainContent" tabindex="-1"></div>
+    
+
+  <nav id="ctl00_ctl00_cpContent_divTabHeader" class="tdbar-sub NoPrint hidden-xs navbar-subnav" aria-label="Knowledge Base">
+      <a href="#kbContent" class="sr-only sr-only-focusable">Skip to Knowledge Base content</a>
+      <div class="container clearfix">
+        <ul class="nav navbar-nav js-submenu" id="kbSubMenu" style="margin-left: -15px;">
+          
+          <li>
+            <a href="/TDClient/1878/Portal/KB/Search">Search <span class="sr-only">Articles</span></a>
+          </li>
+
+          
+          
+        </ul>
+      </div>
+    </nav>
+  
+
+  <div id="kbContent" class="container gutter-top gutter-bottom" tabindex="-1" style="outline:none;">
+    
+
+  <span id="ctl00_ctl00_cpContent_cpContent_lblResults_ctl00" aria-live="polite" aria-atomic="true"><span id="ctl00_ctl00_cpContent_cpContent_lblResults_lblResults-label" class="red tdx-error-text"></span></span>
+
+  <div class="gutter-bottom">
+
+    <nav aria-label="Breadcrumb">
+      
+    </nav>
+
+    <h1>
+      
+      <span id="ctl00_ctl00_cpContent_cpContent_lblCategoryName">Knowledge Base</span>
+      
+    </h1>
+
+  </div>
+
+  <div class="row">
+
+    <div id="divCats" class="col-md-8">
+
+      
+
+      <h2>Categories (7)</h2>
+
+<div class="gutter-bottom">
+    <div class="media media-doubled border category-box category-box-collapsed" title="Accounts &amp; Email">
+      <div class="category-box-text-content">
+        <div class="media-left leftIcon">
+          <span class="gutter-top-sm media-object category-icon fa-solid fa-4x fa-fw" aria-hidden="true"
+                >
+@          </span>
+        </div>
+        <div class="media-body">
+          <h3 class="category-title">
+            <span class="category-title">
+              <a href="/TDClient/1878/Portal/KB/?CategoryID=22078">Accounts &amp; Email</a>
+            </span>
+          </h3>
+          <div class="category-box-description">
+            <small>
+              Articles about your Email, Microsoft MFA, and other account-related Information
+            </small>
+          </div>
+        </div>
+      </div>
+      <div class="category-box-button-container">
+        <a href="javascript:void(0);" role="button" class="no-underline category-box-button category-box-button-collapsed" onclick="toggleCategoryBox(this)">
+          <span class="sr-only">Expand</span>
+          <span class="fa-regular fa-2x fa-circle-down button-arrow" aria-hidden="true"></span>
+        </a>
+      </div>
+    </div>
+    <div class="media media-doubled border category-box category-box-collapsed" title="Computing Information">
+      <div class="category-box-text-content">
+        <div class="media-left leftIcon">
+          <span class="gutter-top-sm media-object category-icon fa-solid fa-4x fa-fw" aria-hidden="true"
+                >
+          </span>
+        </div>
+        <div class="media-body">
+          <h3 class="category-title">
+            <span class="category-title">
+              <a href="/TDClient/1878/Portal/KB/?CategoryID=19001">Computing Information</a>
+            </span>
+          </h3>
+          <div class="category-box-description">
+            <small>
+              Information on Tennessee Tech&#39;s Computer Labs, Peripherals, Troubleshooting tips and Hardware.
+            </small>
+          </div>
+        </div>
+      </div>
+      <div class="category-box-button-container">
+        <a href="javascript:void(0);" role="button" class="no-underline category-box-button category-box-button-collapsed" onclick="toggleCategoryBox(this)">
+          <span class="sr-only">Expand</span>
+          <span class="fa-regular fa-2x fa-circle-down button-arrow" aria-hidden="true"></span>
+        </a>
+      </div>
+    </div>
+    <div class="media media-doubled border category-box category-box-collapsed" title="Student Printing Information">
+      <div class="category-box-text-content">
+        <div class="media-left leftIcon">
+          <span class="gutter-top-sm media-object category-icon fa-solid fa-4x fa-fw" aria-hidden="true"
+                >
+          </span>
+        </div>
+        <div class="media-body">
+          <h3 class="category-title">
+            <span class="category-title">
+              <a href="/TDClient/1878/Portal/KB/?CategoryID=18584">Student Printing Information</a>
+            </span>
+          </h3>
+          <div class="category-box-description">
+            <small>
+              Information on how to use the printers located across campus, printing allotments, and fees.
+            </small>
+          </div>
+        </div>
+      </div>
+      <div class="category-box-button-container">
+        <a href="javascript:void(0);" role="button" class="no-underline category-box-button category-box-button-collapsed" onclick="toggleCategoryBox(this)">
+          <span class="sr-only">Expand</span>
+          <span class="fa-regular fa-2x fa-circle-down button-arrow" aria-hidden="true"></span>
+        </a>
+      </div>
+    </div>
+    <div class="media media-doubled border category-box category-box-collapsed" title="TechExpress Information">
+      <div class="category-box-text-content">
+        <div class="media-left leftIcon">
+          <span class="gutter-top-sm media-object category-icon fa-regular fa-4x fa-fw" aria-hidden="true"
+                >
+          </span>
+        </div>
+        <div class="media-body">
+          <h3 class="category-title">
+            <span class="category-title">
+              <a href="/TDClient/1878/Portal/KB/?CategoryID=21547">TechExpress Information</a>
+            </span>
+          </h3>
+          <div class="category-box-description">
+            <small>
+              Articles describing TechExpress and its characteristics
+            </small>
+          </div>
+        </div>
+      </div>
+      <div class="category-box-button-container">
+        <a href="javascript:void(0);" role="button" class="no-underline category-box-button category-box-button-collapsed" onclick="toggleCategoryBox(this)">
+          <span class="sr-only">Expand</span>
+          <span class="fa-regular fa-2x fa-circle-down button-arrow" aria-hidden="true"></span>
+        </a>
+      </div>
+    </div>
+    <div class="media media-doubled border category-box category-box-collapsed" title="Technology Checkout">
+      <div class="category-box-text-content">
+        <div class="media-left leftIcon">
+          <span class="gutter-top-sm media-object category-icon fa-solid fa-4x fa-fw" aria-hidden="true"
+                >
+          </span>
+        </div>
+        <div class="media-body">
+          <h3 class="category-title">
+            <span class="category-title">
+              <a href="/TDClient/1878/Portal/KB/?CategoryID=22177">Technology Checkout</a>
+            </span>
+          </h3>
+          <div class="category-box-description">
+            <small>
+              Information on Technology Checkout for student use.
+            </small>
+          </div>
+        </div>
+      </div>
+      <div class="category-box-button-container">
+        <a href="javascript:void(0);" role="button" class="no-underline category-box-button category-box-button-collapsed" onclick="toggleCategoryBox(this)">
+          <span class="sr-only">Expand</span>
+          <span class="fa-regular fa-2x fa-circle-down button-arrow" aria-hidden="true"></span>
+        </a>
+      </div>
+    </div>
+    <div class="media media-doubled border category-box category-box-collapsed" title="Technology Planning &amp; Purchasing">
+      <div class="category-box-text-content">
+        <div class="media-left leftIcon">
+          <span class="gutter-top-sm media-object category-icon fa-solid fa-4x fa-fw" aria-hidden="true"
+                >
+          </span>
+        </div>
+        <div class="media-body">
+          <h3 class="category-title">
+            <span class="category-title">
+              <a href="/TDClient/1878/Portal/KB/?CategoryID=22084">Technology Planning &amp; Purchasing</a>
+            </span>
+          </h3>
+          <div class="category-box-description">
+            <small>
+              Purchasing information regarding bundles, computer specifications for students, software pricing for home use, etc. Campus purchase planning.
+            </small>
+          </div>
+        </div>
+      </div>
+      <div class="category-box-button-container">
+        <a href="javascript:void(0);" role="button" class="no-underline category-box-button category-box-button-collapsed" onclick="toggleCategoryBox(this)">
+          <span class="sr-only">Expand</span>
+          <span class="fa-regular fa-2x fa-circle-down button-arrow" aria-hidden="true"></span>
+        </a>
+      </div>
+    </div>
+    <div class="media media-doubled border category-box category-box-collapsed" title="Wi-Fi &amp; Network Information">
+      <div class="category-box-text-content">
+        <div class="media-left leftIcon">
+          <span class="gutter-top-sm media-object category-icon fa-solid fa-4x fa-fw" aria-hidden="true"
+                >
+          </span>
+        </div>
+        <div class="media-body">
+          <h3 class="category-title">
+            <span class="category-title">
+              <a href="/TDClient/1878/Portal/KB/?CategoryID=18554">Wi-Fi &amp; Network Information</a>
+            </span>
+          </h3>
+          <div class="category-box-description">
+            <small>
+              Articles with information on connecting to the Network on campus wirelessly, through Ethernet, and with the VPN
+            </small>
+          </div>
+        </div>
+      </div>
+      <div class="category-box-button-container">
+        <a href="javascript:void(0);" role="button" class="no-underline category-box-button category-box-button-collapsed" onclick="toggleCategoryBox(this)">
+          <span class="sr-only">Expand</span>
+          <span class="fa-regular fa-2x fa-circle-down button-arrow" aria-hidden="true"></span>
+        </a>
+      </div>
+    </div>
+</div>
+<div class="clearfix"></div>
+
+<script>
+
+  $(function () {
+    function initCategoryBoxes() {
+      $('.category-box').each(function () {
+        $categoryBoxButtonContainer = $(this).find('.category-box-button-container');
+        $categoryBoxTextContent = $(this).find('.category-box-text-content');
+
+        if ($(this).find('.media-body').height() <= 91) {
+          $categoryBoxButtonContainer.hide();
+          $categoryBoxTextContent.removeClass('text-fade');
+        } else {
+          $categoryBoxButtonContainer.show();
+          if ($(this).find('.category-box-button-expanded').length == 0) {
+            $categoryBoxTextContent.addClass('text-fade');
+          }
+        }
+      });
+    }
+    $(window).resize(initCategoryBoxes).resize();
+  });
+
+  function toggleCategoryBox(button) {
+    $(button).toggleClass('category-box-button-collapsed').toggleClass('category-box-button-expanded');
+    $(button).parents('.media').toggleClass('category-box-expanded').toggleClass('category-box-collapsed');
+    $(button).parents('.media').children('.category-box-text-content').toggleClass('text-fade');
+    $(button).children('.fa-regular').toggleClass('fa-circle-down').toggleClass('fa-circle-up');
+
+    if ($(button).hasClass('category-box-button-expanded')) {
+      $(button).children('.sr-only').text('Collapse');
+      srAlert("category box collapsed");
+    } else {
+      $(button).children('.sr-only').text('Expand');
+      srAlert("category box expanded");
+    }
+  }
+</script>
+      <h2>Articles (1)</h2>
+
+<div class="gutter-bottom">
+    <div class="gutter-bottom-lg">
+      <h3 class="gutter-bottom-xs">
+
+
+        <a href="/TDClient/1878/Portal/KB/ArticleDet?ID=134558">
+          Getting Started with the Self-Service Portal
+        </a>
+      </h3>
+
+      <div class="gray">
+        This article will discuss how to access and get started with the Self-Service Portal (SSP).
+      </div>
+    </div>
+</div>
+      
+
+    </div>
+
+    <div id="divCatsSidebar" class="col-md-4">
+      
+
+
+  <a id="ctl00_ctl00_cpContent_cpContent_btnToggleSubscribe" tabindex="-1" class="hidden" aria-hidden="true" href="javascript:__doPostBack(&#39;ctl00$ctl00$cpContent$cpContent$btnToggleSubscribe&#39;,&#39;&#39;)">Blank</a>
+
+
+  <div id="ctl00_ctl00_cpContent_cpContent_UpdatePanel3" class="gutter-bottom-sm" aria-live="polite" aria-atomic="true">
+	
+        
+</div>
+
+    
+
+
+      <div id="ctl00_ctl00_cpContent_cpContent_divPopular" class="panel panel-default gutter-top">
+
+        <div class="panel-heading">
+          <h2 class="h3 panel-title" title="Most popular articles based upon total views">Popular Articles</h2>
+        </div>
+
+        <div class="panel-body">
+          <ul class="panel-list">
+            
+                <li class="gutter-bottom">
+                  <a href="/TDClient/1878/Portal/KB/ArticleDet?ID=130791">TechExpress</a>
+                </li>
+              
+                <li class="gutter-bottom">
+                  <a href="/TDClient/1878/Portal/KB/ArticleDet?ID=111666">Setting up your Tennessee Tech Account</a>
+                </li>
+              
+                <li class="gutter-bottom">
+                  <a href="/TDClient/1878/Portal/KB/ArticleDet?ID=114143">How to Forget a Wi-Fi Network</a>
+                </li>
+              
+                <li class="gutter-bottom">
+                  <a href="/TDClient/1878/Portal/KB/ArticleDet?ID=134119">How to Print to PDF in Windows</a>
+                </li>
+              
+                <li class="gutter-bottom">
+                  <a href="/TDClient/1878/Portal/KB/ArticleDet?ID=133404">How to Find Your Hostname</a>
+                </li>
+              
+          </ul>
+        </div>
+
+        <div class="panel-footer clearfix">
+          <a class="pull-right" href="/TDClient/1878/Portal/KB/PopularArticles">
+            View All Popular Articles
+            <span class="fa-solid fa-chevron-right"></span>
+          </a>
+        </div>
+      </div>
+
+      <div id="ctl00_ctl00_cpContent_cpContent_divRecent" class="panel panel-default gutter-top">
+
+        <div class="panel-heading">
+          <h2 class="h3 panel-title" title="Most recently modified articles">Recent Articles</h2>
+        </div>
+
+        <div class="panel-body">
+          <ul class="panel-list">
+            
+                <li class="gutter-bottom">
+                  <a href="/TDClient/1878/Portal/KB/ArticleDet?ID=133556">Student Technology Checkout</a>
+                </li>
+              
+                <li class="gutter-bottom">
+                  <a href="/TDClient/1878/Portal/KB/ArticleDet?ID=111946">Student Printing on Campus</a>
+                </li>
+              
+                <li class="gutter-bottom">
+                  <a href="/TDClient/1878/Portal/KB/ArticleDet?ID=134488">Enabling Dark Mode on Windows</a>
+                </li>
+              
+                <li class="gutter-bottom">
+                  <a href="/TDClient/1878/Portal/KB/ArticleDet?ID=133635">Clearing Your Browser Cache and Cookies</a>
+                </li>
+              
+                <li class="gutter-bottom">
+                  <a href="/TDClient/1878/Portal/KB/ArticleDet?ID=114143">How to Forget a Wi-Fi Network</a>
+                </li>
+              
+          </ul>
+        </div>
+
+        <div class="panel-footer clearfix">
+          <a class="pull-right" href="/TDClient/1878/Portal/KB/RecentArticles">
+            View All Recent Articles
+            <span class="fa-solid fa-chevron-right"></span>
+          </a>
+        </div>
+      </div>
+
+      <div class="gutter-top">
+        
+
+<div class="panel panel-default tag-list">
+
+  <div class="panel-heading">
+    <h2 class="h3 panel-title">
+      Popular Tags<span class="fa-solid fa-tags" aria-hidden="true"></span>
+    </h2>
+  </div>
+
+  <div class="panel-body">
+    <ul id="ctl00_ctl00_cpContent_cpContent_tags_ulTags" class="panel-list">
+      
+          <li class="gutter-bottom-sm">
+            <a href="/TDClient/1878/Portal/KB/Search?SearchText=%2523Email" rel="nofollow">Email</a> (10)
+          </li>
+        
+          <li class="gutter-bottom-sm">
+            <a href="/TDClient/1878/Portal/KB/Search?SearchText=%2523Printing" rel="nofollow">Printing</a> (8)
+          </li>
+        
+          <li class="gutter-bottom-sm">
+            <a href="/TDClient/1878/Portal/KB/Search?SearchText=%2523TechExpress" rel="nofollow">TechExpress</a> (8)
+          </li>
+        
+          <li class="gutter-bottom-sm">
+            <a href="/TDClient/1878/Portal/KB/Search?SearchText=%2523Windows" rel="nofollow">Windows</a> (8)
+          </li>
+        
+          <li class="gutter-bottom-sm">
+            <a href="/TDClient/1878/Portal/KB/Search?SearchText=%2523Check-Out" rel="nofollow">Check-Out</a> (7)
+          </li>
+        
+          <li class="gutter-bottom-sm">
+            <a href="/TDClient/1878/Portal/KB/Search?SearchText=%2523Helpdesk" rel="nofollow">Helpdesk</a> (7)
+          </li>
+        
+          <li class="gutter-bottom-sm">
+            <a href="/TDClient/1878/Portal/KB/Search?SearchText=%2523Technology" rel="nofollow">Technology</a> (7)
+          </li>
+        
+          <li class="gutter-bottom-sm">
+            <a href="/TDClient/1878/Portal/KB/Search?SearchText=%2523Mac" rel="nofollow">Mac</a> (5)
+          </li>
+        
+          <li class="gutter-bottom-sm">
+            <a href="/TDClient/1878/Portal/KB/Search?SearchText=%2523Account" rel="nofollow">Account</a> (4)
+          </li>
+        
+          <li class="gutter-bottom-sm">
+            <a href="/TDClient/1878/Portal/KB/Search?SearchText=%2523Camera" rel="nofollow">Camera</a> (4)
+          </li>
+        
+    </ul>
+
+    
+
+  </div>
+
+  <div class="panel-footer clearfix">
+    <div class="pull-right">
+      <a href="/TDClient/1878/Portal/Shared/BrowseTags?ItemID=0&ComponentID=26">
+        View All Tags
+        <span class="fa-solid fa-chevron-right" aria-hidden="true"></span>
+      </a>
+    </div>
+  </div>
+
+</div>
+      </div>
+
+      <div class="clearfix"></div>
+
+    </div>
+
+  </div>
+
+  <div class="clearfix"></div>
+
+
+  </div>
+
+
+  </div>
+</main>
+
+
+
+<script type="text/javascript">
+//<![CDATA[
+setNavPosition('TDKnowledgeBase');Sys.Application.add_init(function() {
+    $create(Sys.UI._UpdateProgress, {"associatedUpdatePanelId":null,"displayAfter":500,"dynamicLayout":true}, null, null, $get("ctl00_ctl00_upMain"));
+});
+//]]>
+</script>
+</form>
+
+
+
+
+
+  <footer role="contentinfo">
+
+    <div class="master-footer">
+      <div style="background-color: #3F4444; padding-bottom: 30px; border-top: 4px solid #FFDD00">
+<div class="container">
+    <div class="col-md-3" style="padding: 35px"><img class="img-fluid" src="https://services.tntech.edu/TDPortal/Images/Viewer?fileName=c529b038-7a42-44ed-9198-1c26ac898de9.png&amp;beidInt=386" title="Tennessee Tech University logo">
+		</div>
+	
+<div class="col-md-9" style="padding: 20px">
+	<div class="row">
+<p style="color: #FFFFFF; font-size: 0.9em">© 2025 Tennessee Tech University. All rights reserved.<br><br>Tennessee Tech does not condone and will not tolerate discrimination against any individual on the basis of race, religion, color, creed, sex, age, national origin, genetic information, disability, veteran status, and any other basis protected by federal and state civil rights law. Inquiries regarding the nondiscrimination policies should be directed to equity@tntech.edu.</p>
+		</div>
+	<div class="row">
+<ul class="nav navbar-nav nav-collapsing">
+<li class="themed tdbar-button-anchored sr-focusable"><a style="color: #FFDD00" href="https://www.tntech.edu/hr/nondiscrim.php">Non-Discrimination at Tennessee Tech</a></li>
+<li class="themed tdbar-button-anchored sr-focusable"><a style="color: #FFDD00" href="https://www.tntech.edu/disability/index.php">Services for Students with Disabilities</a></li>
+<li class="themed tdbar-button-anchored sr-focusable"><a style="color: #FFDD00" href="https://www.tntech.edu/privacy/index.php">Privacy Policy</a></li>
+<li class="themed tdbar-button-anchored sr-focusable"><a style="color: #FFDD00" href="https://services.tntech.edu/TDClient/1878/Portal/SiteMap">Site Map</a></li>
+</ul>    
+		</div>
+
+</div>
+</div>
+</div>
+      
+    </div>
+
+  </footer>
+
+
+
+<script>
+
+    
+    
+
+      // Inject the Google Analytics isogram. This must happen here because it
+      // cannot be injected through an external javascript library.
+      (function (i, s, o, g, r, a, m) {
+        i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+          (i[r].q = i[r].q || []).push(arguments)
+        }, i[r].l = 1 * new Date(); a = s.createElement(o),
+          m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+      })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+    
+
+      // Per Incident #6707155. Need to focus on img. pseudo-class :focus-within is not supported in IE
+      (function ($) {
+        var $anchor = $('#divLogo a');
+        var $beLogo = $('#divLogo a img');
+
+        $anchor.focus(function () {
+          $beLogo.addClass('accessibility-focus-on-logo');
+        }).blur(function () {
+          $beLogo.removeClass('accessibility-focus-on-logo');
+        });
+
+        
+        
+          const queryParams = new URLSearchParams(window.location.search);
+          let showChatbot = true;
+          if (queryParams.has('nobot')) {
+            const nobotFlag = queryParams.get('nobot');
+            if (nobotFlag === '1' || nobotFlag === 'true') {
+              showChatbot = false;
+            }
+          }
+
+          if(showChatbot) {
+            $.ajax({
+              url: "/TDClient/1878/Portal/Chatbots/GetScript",
+              type: "GET",
+              dataType: 'text',
+              success: function (data) {
+                
+                var jQueryAjaxSettingsCache = jQuery.ajaxSettings.cache;
+                jQuery.ajaxSettings.cache = true;
+                $(document.body).append(data);
+                jQuery.ajaxSettings.cache = jQueryAjaxSettingsCache;
+              }
+            });
+          }
+        
+
+        window.addEventListener("message", (event) => {
+
+          // Only accept events that come from the same origin
+          if (event.origin != window.location.origin) {
+            return;
+          }
+
+          switch (event.data.type) {
+
+            case "authenticate-using-popup":
+              handleAuthenticateUsingPopup(event.data.payload);
+              break;
+
+            case "authenticated-successfully":
+              handleAuthenticatedSuccessfully(event.data.payload);
+              break;
+
+            default:
+              break;
+          }
+
+        });
+
+        function handleAuthenticateUsingPopup(payload) {
+          let loginUrl = '/TDClient/1878/Portal/Login.aspx';
+
+          if (payload.successCallbackUrl) {
+            loginUrl += '?SuccessCallbackUrl=' + payload.successCallbackUrl;
+          }
+
+          window.open(loginUrl, "_blank", "popup=1");
+        }
+
+        function handleAuthenticatedSuccessfully() {
+          event.source.close();
+          window.location.href = window.location.href;
+        }
+    })(jQuery);
+
+</script>
+
+</body>
+</html>

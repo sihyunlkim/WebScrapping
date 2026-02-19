@@ -1,0 +1,1764 @@
+<!DOCTYPE html>
+<html itemscope="" itemtype="http://schema.org/WebPage" class="no-js" lang="en-US">
+	<head>
+        <meta charset="UTF-8" /><script type="text/javascript">(window.NREUM||(NREUM={})).init={ajax:{deny_list:["bam.nr-data.net"]},feature_flags:["soft_nav"]};(window.NREUM||(NREUM={})).loader_config={licenseKey:"NRJS-b4c8269f013f7d6a5c2",applicationID:"1020199742",browserID:"1103372172"};;/*! For license information please see nr-loader-rum-1.309.0.min.js.LICENSE.txt */
+(()=>{var e,t,r={163:(e,t,r)=>{"use strict";r.d(t,{j:()=>E});var n=r(384),i=r(1741);var a=r(2555);r(860).K7.genericEvents;const s="experimental.resources",o="register",c=e=>{if(!e||"string"!=typeof e)return!1;try{document.createDocumentFragment().querySelector(e)}catch{return!1}return!0};var d=r(2614),u=r(944),l=r(8122);const f="[data-nr-mask]",g=e=>(0,l.a)(e,(()=>{const e={feature_flags:[],experimental:{allow_registered_children:!1,resources:!1},mask_selector:"*",block_selector:"[data-nr-block]",mask_input_options:{color:!1,date:!1,"datetime-local":!1,email:!1,month:!1,number:!1,range:!1,search:!1,tel:!1,text:!1,time:!1,url:!1,week:!1,textarea:!1,select:!1,password:!0}};return{ajax:{deny_list:void 0,block_internal:!0,enabled:!0,autoStart:!0},api:{get allow_registered_children(){return e.feature_flags.includes(o)||e.experimental.allow_registered_children},set allow_registered_children(t){e.experimental.allow_registered_children=t},duplicate_registered_data:!1},browser_consent_mode:{enabled:!1},distributed_tracing:{enabled:void 0,exclude_newrelic_header:void 0,cors_use_newrelic_header:void 0,cors_use_tracecontext_headers:void 0,allowed_origins:void 0},get feature_flags(){return e.feature_flags},set feature_flags(t){e.feature_flags=t},generic_events:{enabled:!0,autoStart:!0},harvest:{interval:30},jserrors:{enabled:!0,autoStart:!0},logging:{enabled:!0,autoStart:!0},metrics:{enabled:!0,autoStart:!0},obfuscate:void 0,page_action:{enabled:!0},page_view_event:{enabled:!0,autoStart:!0},page_view_timing:{enabled:!0,autoStart:!0},performance:{capture_marks:!1,capture_measures:!1,capture_detail:!0,resources:{get enabled(){return e.feature_flags.includes(s)||e.experimental.resources},set enabled(t){e.experimental.resources=t},asset_types:[],first_party_domains:[],ignore_newrelic:!0}},privacy:{cookies_enabled:!0},proxy:{assets:void 0,beacon:void 0},session:{expiresMs:d.wk,inactiveMs:d.BB},session_replay:{autoStart:!0,enabled:!1,preload:!1,sampling_rate:10,error_sampling_rate:100,collect_fonts:!1,inline_images:!1,fix_stylesheets:!0,mask_all_inputs:!0,get mask_text_selector(){return e.mask_selector},set mask_text_selector(t){c(t)?e.mask_selector="".concat(t,",").concat(f):""===t||null===t?e.mask_selector=f:(0,u.R)(5,t)},get block_class(){return"nr-block"},get ignore_class(){return"nr-ignore"},get mask_text_class(){return"nr-mask"},get block_selector(){return e.block_selector},set block_selector(t){c(t)?e.block_selector+=",".concat(t):""!==t&&(0,u.R)(6,t)},get mask_input_options(){return e.mask_input_options},set mask_input_options(t){t&&"object"==typeof t?e.mask_input_options={...t,password:!0}:(0,u.R)(7,t)}},session_trace:{enabled:!0,autoStart:!0},soft_navigations:{enabled:!0,autoStart:!0},spa:{enabled:!0,autoStart:!0},ssl:void 0,user_actions:{enabled:!0,elementAttributes:["id","className","tagName","type"]}}})());var p=r(6154),m=r(9324);let h=0;const v={buildEnv:m.F3,distMethod:m.Xs,version:m.xv,originTime:p.WN},b={consented:!1},y={appMetadata:{},get consented(){return this.session?.state?.consent||b.consented},set consented(e){b.consented=e},customTransaction:void 0,denyList:void 0,disabled:!1,harvester:void 0,isolatedBacklog:!1,isRecording:!1,loaderType:void 0,maxBytes:3e4,obfuscator:void 0,onerror:void 0,ptid:void 0,releaseIds:{},session:void 0,timeKeeper:void 0,registeredEntities:[],jsAttributesMetadata:{bytes:0},get harvestCount(){return++h}},_=e=>{const t=(0,l.a)(e,y),r=Object.keys(v).reduce((e,t)=>(e[t]={value:v[t],writable:!1,configurable:!0,enumerable:!0},e),{});return Object.defineProperties(t,r)};var w=r(5701);const x=e=>{const t=e.startsWith("http");e+="/",r.p=t?e:"https://"+e};var R=r(7836),k=r(3241);const A={accountID:void 0,trustKey:void 0,agentID:void 0,licenseKey:void 0,applicationID:void 0,xpid:void 0},S=e=>(0,l.a)(e,A),T=new Set;function E(e,t={},r,s){let{init:o,info:c,loader_config:d,runtime:u={},exposed:l=!0}=t;if(!c){const e=(0,n.pV)();o=e.init,c=e.info,d=e.loader_config}e.init=g(o||{}),e.loader_config=S(d||{}),c.jsAttributes??={},p.bv&&(c.jsAttributes.isWorker=!0),e.info=(0,a.D)(c);const f=e.init,m=[c.beacon,c.errorBeacon];T.has(e.agentIdentifier)||(f.proxy.assets&&(x(f.proxy.assets),m.push(f.proxy.assets)),f.proxy.beacon&&m.push(f.proxy.beacon),e.beacons=[...m],function(e){const t=(0,n.pV)();Object.getOwnPropertyNames(i.W.prototype).forEach(r=>{const n=i.W.prototype[r];if("function"!=typeof n||"constructor"===n)return;let a=t[r];e[r]&&!1!==e.exposed&&"micro-agent"!==e.runtime?.loaderType&&(t[r]=(...t)=>{const n=e[r](...t);return a?a(...t):n})})}(e),(0,n.US)("activatedFeatures",w.B)),u.denyList=[...f.ajax.deny_list||[],...f.ajax.block_internal?m:[]],u.ptid=e.agentIdentifier,u.loaderType=r,e.runtime=_(u),T.has(e.agentIdentifier)||(e.ee=R.ee.get(e.agentIdentifier),e.exposed=l,(0,k.W)({agentIdentifier:e.agentIdentifier,drained:!!w.B?.[e.agentIdentifier],type:"lifecycle",name:"initialize",feature:void 0,data:e.config})),T.add(e.agentIdentifier)}},384:(e,t,r)=>{"use strict";r.d(t,{NT:()=>o,US:()=>l,Zm:()=>c,bQ:()=>u,dV:()=>d,pV:()=>f});var n=r(6154),i=r(1863),a=r(944),s=r(1910);const o={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net"};function c(){return n.gm.NREUM||(n.gm.NREUM={}),void 0===n.gm.newrelic&&(n.gm.newrelic=n.gm.NREUM),n.gm.NREUM}function d(){let e=c();return e.o||(e.o={ST:n.gm.setTimeout,SI:n.gm.setImmediate||n.gm.setInterval,CT:n.gm.clearTimeout,XHR:n.gm.XMLHttpRequest,REQ:n.gm.Request,EV:n.gm.Event,PR:n.gm.Promise,MO:n.gm.MutationObserver,FETCH:n.gm.fetch,WS:n.gm.WebSocket},(0,s.i)(...Object.values(e.o))),e}function u(e,t){let r=c();r.initializedAgents??={},t.initializedAt={ms:(0,i.t)(),date:new Date},r.initializedAgents[e]=t,2===Object.keys(r.initializedAgents).length&&(0,a.R)(69)}function l(e,t){c()[e]=t}function f(){return function(){let e=c();const t=e.info||{};e.info={beacon:o.beacon,errorBeacon:o.errorBeacon,...t}}(),function(){let e=c();const t=e.init||{};e.init={...t}}(),d(),function(){let e=c();const t=e.loader_config||{};e.loader_config={...t}}(),c()}},782:(e,t,r)=>{"use strict";r.d(t,{T:()=>n});const n=r(860).K7.pageViewTiming},860:(e,t,r)=>{"use strict";r.d(t,{$J:()=>u,K7:()=>c,P3:()=>d,XX:()=>i,Yy:()=>o,df:()=>a,qY:()=>n,v4:()=>s});const n="events",i="jserrors",a="browser/blobs",s="rum",o="browser/logs",c={ajax:"ajax",genericEvents:"generic_events",jserrors:i,logging:"logging",metrics:"metrics",pageAction:"page_action",pageViewEvent:"page_view_event",pageViewTiming:"page_view_timing",sessionReplay:"session_replay",sessionTrace:"session_trace",softNav:"soft_navigations",spa:"spa"},d={[c.pageViewEvent]:1,[c.pageViewTiming]:2,[c.metrics]:3,[c.jserrors]:4,[c.spa]:5,[c.ajax]:6,[c.sessionTrace]:7,[c.softNav]:8,[c.sessionReplay]:9,[c.logging]:10,[c.genericEvents]:11},u={[c.pageViewEvent]:s,[c.pageViewTiming]:n,[c.ajax]:n,[c.spa]:n,[c.softNav]:n,[c.metrics]:i,[c.jserrors]:i,[c.sessionTrace]:a,[c.sessionReplay]:a,[c.logging]:o,[c.genericEvents]:"ins"}},944:(e,t,r)=>{"use strict";r.d(t,{R:()=>i});var n=r(3241);function i(e,t){"function"==typeof console.debug&&(console.debug("New Relic Warning: https://github.com/newrelic/newrelic-browser-agent/blob/main/docs/warning-codes.md#".concat(e),t),(0,n.W)({agentIdentifier:null,drained:null,type:"data",name:"warn",feature:"warn",data:{code:e,secondary:t}}))}},1687:(e,t,r)=>{"use strict";r.d(t,{Ak:()=>d,Ze:()=>f,x3:()=>u});var n=r(3241),i=r(7836),a=r(3606),s=r(860),o=r(2646);const c={};function d(e,t){const r={staged:!1,priority:s.P3[t]||0};l(e),c[e].get(t)||c[e].set(t,r)}function u(e,t){e&&c[e]&&(c[e].get(t)&&c[e].delete(t),p(e,t,!1),c[e].size&&g(e))}function l(e){if(!e)throw new Error("agentIdentifier required");c[e]||(c[e]=new Map)}function f(e="",t="feature",r=!1){if(l(e),!e||!c[e].get(t)||r)return p(e,t);c[e].get(t).staged=!0,g(e)}function g(e){const t=Array.from(c[e]);t.every(([e,t])=>t.staged)&&(t.sort((e,t)=>e[1].priority-t[1].priority),t.forEach(([t])=>{c[e].delete(t),p(e,t)}))}function p(e,t,r=!0){const s=e?i.ee.get(e):i.ee,c=a.i.handlers;if(!s.aborted&&s.backlog&&c){if((0,n.W)({agentIdentifier:e,type:"lifecycle",name:"drain",feature:t}),r){const e=s.backlog[t],r=c[t];if(r){for(let t=0;e&&t<e.length;++t)m(e[t],r);Object.entries(r).forEach(([e,t])=>{Object.values(t||{}).forEach(t=>{t[0]?.on&&t[0].context()instanceof o.y&&!t[0].listeners(e).includes(t[1])&&t[0].on(e,t[1])})})}}s.isolatedBacklog||delete c[t],s.backlog[t]=null,s.emit("drain-"+t,[])}}function m(e,t){var r=e[1];Object.values(t[r]||{}).forEach(t=>{var r=e[0];if(t[0]===r){var n=t[1],i=e[3],a=e[2];n.apply(i,a)}})}},1738:(e,t,r)=>{"use strict";r.d(t,{U:()=>g,Y:()=>f});var n=r(3241),i=r(9908),a=r(1863),s=r(944),o=r(5701),c=r(3969),d=r(8362),u=r(860),l=r(4261);function f(e,t,r,a){const f=a||r;!f||f[e]&&f[e]!==d.d.prototype[e]||(f[e]=function(){(0,i.p)(c.xV,["API/"+e+"/called"],void 0,u.K7.metrics,r.ee),(0,n.W)({agentIdentifier:r.agentIdentifier,drained:!!o.B?.[r.agentIdentifier],type:"data",name:"api",feature:l.Pl+e,data:{}});try{return t.apply(this,arguments)}catch(e){(0,s.R)(23,e)}})}function g(e,t,r,n,s){const o=e.info;null===r?delete o.jsAttributes[t]:o.jsAttributes[t]=r,(s||null===r)&&(0,i.p)(l.Pl+n,[(0,a.t)(),t,r],void 0,"session",e.ee)}},1741:(e,t,r)=>{"use strict";r.d(t,{W:()=>a});var n=r(944),i=r(4261);class a{#e(e,...t){if(this[e]!==a.prototype[e])return this[e](...t);(0,n.R)(35,e)}addPageAction(e,t){return this.#e(i.hG,e,t)}register(e){return this.#e(i.eY,e)}recordCustomEvent(e,t){return this.#e(i.fF,e,t)}setPageViewName(e,t){return this.#e(i.Fw,e,t)}setCustomAttribute(e,t,r){return this.#e(i.cD,e,t,r)}noticeError(e,t){return this.#e(i.o5,e,t)}setUserId(e,t=!1){return this.#e(i.Dl,e,t)}setApplicationVersion(e){return this.#e(i.nb,e)}setErrorHandler(e){return this.#e(i.bt,e)}addRelease(e,t){return this.#e(i.k6,e,t)}log(e,t){return this.#e(i.$9,e,t)}start(){return this.#e(i.d3)}finished(e){return this.#e(i.BL,e)}recordReplay(){return this.#e(i.CH)}pauseReplay(){return this.#e(i.Tb)}addToTrace(e){return this.#e(i.U2,e)}setCurrentRouteName(e){return this.#e(i.PA,e)}interaction(e){return this.#e(i.dT,e)}wrapLogger(e,t,r){return this.#e(i.Wb,e,t,r)}measure(e,t){return this.#e(i.V1,e,t)}consent(e){return this.#e(i.Pv,e)}}},1863:(e,t,r)=>{"use strict";function n(){return Math.floor(performance.now())}r.d(t,{t:()=>n})},1910:(e,t,r)=>{"use strict";r.d(t,{i:()=>a});var n=r(944);const i=new Map;function a(...e){return e.every(e=>{if(i.has(e))return i.get(e);const t="function"==typeof e?e.toString():"",r=t.includes("[native code]"),a=t.includes("nrWrapper");return r||a||(0,n.R)(64,e?.name||t),i.set(e,r),r})}},2555:(e,t,r)=>{"use strict";r.d(t,{D:()=>o,f:()=>s});var n=r(384),i=r(8122);const a={beacon:n.NT.beacon,errorBeacon:n.NT.errorBeacon,licenseKey:void 0,applicationID:void 0,sa:void 0,queueTime:void 0,applicationTime:void 0,ttGuid:void 0,user:void 0,account:void 0,product:void 0,extra:void 0,jsAttributes:{},userAttributes:void 0,atts:void 0,transactionName:void 0,tNamePlain:void 0};function s(e){try{return!!e.licenseKey&&!!e.errorBeacon&&!!e.applicationID}catch(e){return!1}}const o=e=>(0,i.a)(e,a)},2614:(e,t,r)=>{"use strict";r.d(t,{BB:()=>s,H3:()=>n,g:()=>d,iL:()=>c,tS:()=>o,uh:()=>i,wk:()=>a});const n="NRBA",i="SESSION",a=144e5,s=18e5,o={STARTED:"session-started",PAUSE:"session-pause",RESET:"session-reset",RESUME:"session-resume",UPDATE:"session-update"},c={SAME_TAB:"same-tab",CROSS_TAB:"cross-tab"},d={OFF:0,FULL:1,ERROR:2}},2646:(e,t,r)=>{"use strict";r.d(t,{y:()=>n});class n{constructor(e){this.contextId=e}}},2843:(e,t,r)=>{"use strict";r.d(t,{G:()=>a,u:()=>i});var n=r(3878);function i(e,t=!1,r,i){(0,n.DD)("visibilitychange",function(){if(t)return void("hidden"===document.visibilityState&&e());e(document.visibilityState)},r,i)}function a(e,t,r){(0,n.sp)("pagehide",e,t,r)}},3241:(e,t,r)=>{"use strict";r.d(t,{W:()=>a});var n=r(6154);const i="newrelic";function a(e={}){try{n.gm.dispatchEvent(new CustomEvent(i,{detail:e}))}catch(e){}}},3606:(e,t,r)=>{"use strict";r.d(t,{i:()=>a});var n=r(9908);a.on=s;var i=a.handlers={};function a(e,t,r,a){s(a||n.d,i,e,t,r)}function s(e,t,r,i,a){a||(a="feature"),e||(e=n.d);var s=t[a]=t[a]||{};(s[r]=s[r]||[]).push([e,i])}},3878:(e,t,r)=>{"use strict";function n(e,t){return{capture:e,passive:!1,signal:t}}function i(e,t,r=!1,i){window.addEventListener(e,t,n(r,i))}function a(e,t,r=!1,i){document.addEventListener(e,t,n(r,i))}r.d(t,{DD:()=>a,jT:()=>n,sp:()=>i})},3969:(e,t,r)=>{"use strict";r.d(t,{TZ:()=>n,XG:()=>o,rs:()=>i,xV:()=>s,z_:()=>a});const n=r(860).K7.metrics,i="sm",a="cm",s="storeSupportabilityMetrics",o="storeEventMetrics"},4234:(e,t,r)=>{"use strict";r.d(t,{W:()=>a});var n=r(7836),i=r(1687);class a{constructor(e,t){this.agentIdentifier=e,this.ee=n.ee.get(e),this.featureName=t,this.blocked=!1}deregisterDrain(){(0,i.x3)(this.agentIdentifier,this.featureName)}}},4261:(e,t,r)=>{"use strict";r.d(t,{$9:()=>d,BL:()=>o,CH:()=>g,Dl:()=>_,Fw:()=>y,PA:()=>h,Pl:()=>n,Pv:()=>k,Tb:()=>l,U2:()=>a,V1:()=>R,Wb:()=>x,bt:()=>b,cD:()=>v,d3:()=>w,dT:()=>c,eY:()=>p,fF:()=>f,hG:()=>i,k6:()=>s,nb:()=>m,o5:()=>u});const n="api-",i="addPageAction",a="addToTrace",s="addRelease",o="finished",c="interaction",d="log",u="noticeError",l="pauseReplay",f="recordCustomEvent",g="recordReplay",p="register",m="setApplicationVersion",h="setCurrentRouteName",v="setCustomAttribute",b="setErrorHandler",y="setPageViewName",_="setUserId",w="start",x="wrapLogger",R="measure",k="consent"},5289:(e,t,r)=>{"use strict";r.d(t,{GG:()=>s,Qr:()=>c,sB:()=>o});var n=r(3878),i=r(6389);function a(){return"undefined"==typeof document||"complete"===document.readyState}function s(e,t){if(a())return e();const r=(0,i.J)(e),s=setInterval(()=>{a()&&(clearInterval(s),r())},500);(0,n.sp)("load",r,t)}function o(e){if(a())return e();(0,n.DD)("DOMContentLoaded",e)}function c(e){if(a())return e();(0,n.sp)("popstate",e)}},5607:(e,t,r)=>{"use strict";r.d(t,{W:()=>n});const n=(0,r(9566).bz)()},5701:(e,t,r)=>{"use strict";r.d(t,{B:()=>a,t:()=>s});var n=r(3241);const i=new Set,a={};function s(e,t){const r=t.agentIdentifier;a[r]??={},e&&"object"==typeof e&&(i.has(r)||(t.ee.emit("rumresp",[e]),a[r]=e,i.add(r),(0,n.W)({agentIdentifier:r,loaded:!0,drained:!0,type:"lifecycle",name:"load",feature:void 0,data:e})))}},6154:(e,t,r)=>{"use strict";r.d(t,{OF:()=>c,RI:()=>i,WN:()=>u,bv:()=>a,eN:()=>l,gm:()=>s,mw:()=>o,sb:()=>d});var n=r(1863);const i="undefined"!=typeof window&&!!window.document,a="undefined"!=typeof WorkerGlobalScope&&("undefined"!=typeof self&&self instanceof WorkerGlobalScope&&self.navigator instanceof WorkerNavigator||"undefined"!=typeof globalThis&&globalThis instanceof WorkerGlobalScope&&globalThis.navigator instanceof WorkerNavigator),s=i?window:"undefined"!=typeof WorkerGlobalScope&&("undefined"!=typeof self&&self instanceof WorkerGlobalScope&&self||"undefined"!=typeof globalThis&&globalThis instanceof WorkerGlobalScope&&globalThis),o=Boolean("hidden"===s?.document?.visibilityState),c=/iPad|iPhone|iPod/.test(s.navigator?.userAgent),d=c&&"undefined"==typeof SharedWorker,u=((()=>{const e=s.navigator?.userAgent?.match(/Firefox[/\s](\d+\.\d+)/);Array.isArray(e)&&e.length>=2&&e[1]})(),Date.now()-(0,n.t)()),l=()=>"undefined"!=typeof PerformanceNavigationTiming&&s?.performance?.getEntriesByType("navigation")?.[0]?.responseStart},6389:(e,t,r)=>{"use strict";function n(e,t=500,r={}){const n=r?.leading||!1;let i;return(...r)=>{n&&void 0===i&&(e.apply(this,r),i=setTimeout(()=>{i=clearTimeout(i)},t)),n||(clearTimeout(i),i=setTimeout(()=>{e.apply(this,r)},t))}}function i(e){let t=!1;return(...r)=>{t||(t=!0,e.apply(this,r))}}r.d(t,{J:()=>i,s:()=>n})},6630:(e,t,r)=>{"use strict";r.d(t,{T:()=>n});const n=r(860).K7.pageViewEvent},7699:(e,t,r)=>{"use strict";r.d(t,{It:()=>a,KC:()=>o,No:()=>i,qh:()=>s});var n=r(860);const i=16e3,a=1e6,s="SESSION_ERROR",o={[n.K7.logging]:!0,[n.K7.genericEvents]:!1,[n.K7.jserrors]:!1,[n.K7.ajax]:!1}},7836:(e,t,r)=>{"use strict";r.d(t,{P:()=>o,ee:()=>c});var n=r(384),i=r(8990),a=r(2646),s=r(5607);const o="nr@context:".concat(s.W),c=function e(t,r){var n={},s={},u={},l=!1;try{l=16===r.length&&d.initializedAgents?.[r]?.runtime.isolatedBacklog}catch(e){}var f={on:p,addEventListener:p,removeEventListener:function(e,t){var r=n[e];if(!r)return;for(var i=0;i<r.length;i++)r[i]===t&&r.splice(i,1)},emit:function(e,r,n,i,a){!1!==a&&(a=!0);if(c.aborted&&!i)return;t&&a&&t.emit(e,r,n);var o=g(n);m(e).forEach(e=>{e.apply(o,r)});var d=v()[s[e]];d&&d.push([f,e,r,o]);return o},get:h,listeners:m,context:g,buffer:function(e,t){const r=v();if(t=t||"feature",f.aborted)return;Object.entries(e||{}).forEach(([e,n])=>{s[n]=t,t in r||(r[t]=[])})},abort:function(){f._aborted=!0,Object.keys(f.backlog).forEach(e=>{delete f.backlog[e]})},isBuffering:function(e){return!!v()[s[e]]},debugId:r,backlog:l?{}:t&&"object"==typeof t.backlog?t.backlog:{},isolatedBacklog:l};return Object.defineProperty(f,"aborted",{get:()=>{let e=f._aborted||!1;return e||(t&&(e=t.aborted),e)}}),f;function g(e){return e&&e instanceof a.y?e:e?(0,i.I)(e,o,()=>new a.y(o)):new a.y(o)}function p(e,t){n[e]=m(e).concat(t)}function m(e){return n[e]||[]}function h(t){return u[t]=u[t]||e(f,t)}function v(){return f.backlog}}(void 0,"globalEE"),d=(0,n.Zm)();d.ee||(d.ee=c)},8122:(e,t,r)=>{"use strict";r.d(t,{a:()=>i});var n=r(944);function i(e,t){try{if(!e||"object"!=typeof e)return(0,n.R)(3);if(!t||"object"!=typeof t)return(0,n.R)(4);const r=Object.create(Object.getPrototypeOf(t),Object.getOwnPropertyDescriptors(t)),a=0===Object.keys(r).length?e:r;for(let s in a)if(void 0!==e[s])try{if(null===e[s]){r[s]=null;continue}Array.isArray(e[s])&&Array.isArray(t[s])?r[s]=Array.from(new Set([...e[s],...t[s]])):"object"==typeof e[s]&&"object"==typeof t[s]?r[s]=i(e[s],t[s]):r[s]=e[s]}catch(e){r[s]||(0,n.R)(1,e)}return r}catch(e){(0,n.R)(2,e)}}},8362:(e,t,r)=>{"use strict";r.d(t,{d:()=>a});var n=r(9566),i=r(1741);class a extends i.W{agentIdentifier=(0,n.LA)(16)}},8374:(e,t,r)=>{r.nc=(()=>{try{return document?.currentScript?.nonce}catch(e){}return""})()},8990:(e,t,r)=>{"use strict";r.d(t,{I:()=>i});var n=Object.prototype.hasOwnProperty;function i(e,t,r){if(n.call(e,t))return e[t];var i=r();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,t,{value:i,writable:!0,enumerable:!1}),i}catch(e){}return e[t]=i,i}},9324:(e,t,r)=>{"use strict";r.d(t,{F3:()=>i,Xs:()=>a,xv:()=>n});const n="1.309.0",i="PROD",a="CDN"},9566:(e,t,r)=>{"use strict";r.d(t,{LA:()=>o,bz:()=>s});var n=r(6154);const i="xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx";function a(e,t){return e?15&e[t]:16*Math.random()|0}function s(){const e=n.gm?.crypto||n.gm?.msCrypto;let t,r=0;return e&&e.getRandomValues&&(t=e.getRandomValues(new Uint8Array(30))),i.split("").map(e=>"x"===e?a(t,r++).toString(16):"y"===e?(3&a()|8).toString(16):e).join("")}function o(e){const t=n.gm?.crypto||n.gm?.msCrypto;let r,i=0;t&&t.getRandomValues&&(r=t.getRandomValues(new Uint8Array(e)));const s=[];for(var o=0;o<e;o++)s.push(a(r,i++).toString(16));return s.join("")}},9908:(e,t,r)=>{"use strict";r.d(t,{d:()=>n,p:()=>i});var n=r(7836).ee.get("handle");function i(e,t,r,i,a){a?(a.buffer([e],i),a.emit(e,t,r)):(n.buffer([e],i),n.emit(e,t,r))}}},n={};function i(e){var t=n[e];if(void 0!==t)return t.exports;var a=n[e]={exports:{}};return r[e](a,a.exports,i),a.exports}i.m=r,i.d=(e,t)=>{for(var r in t)i.o(t,r)&&!i.o(e,r)&&Object.defineProperty(e,r,{enumerable:!0,get:t[r]})},i.f={},i.e=e=>Promise.all(Object.keys(i.f).reduce((t,r)=>(i.f[r](e,t),t),[])),i.u=e=>"nr-rum-1.309.0.min.js",i.o=(e,t)=>Object.prototype.hasOwnProperty.call(e,t),e={},t="NRBA-1.309.0.PROD:",i.l=(r,n,a,s)=>{if(e[r])e[r].push(n);else{var o,c;if(void 0!==a)for(var d=document.getElementsByTagName("script"),u=0;u<d.length;u++){var l=d[u];if(l.getAttribute("src")==r||l.getAttribute("data-webpack")==t+a){o=l;break}}if(!o){c=!0;var f={296:"sha512-ZBBVWt6PVOQQpTGc/xzYP/zYs+pj6QnNTqG2pFYHQrwWdUi4/1lsIi9EaFcj4Ifn3O38eFqKr9dqSv/HftTqtA=="};(o=document.createElement("script")).charset="utf-8",i.nc&&o.setAttribute("nonce",i.nc),o.setAttribute("data-webpack",t+a),o.src=r,0!==o.src.indexOf(window.location.origin+"/")&&(o.crossOrigin="anonymous"),f[s]&&(o.integrity=f[s])}e[r]=[n];var g=(t,n)=>{o.onerror=o.onload=null,clearTimeout(p);var i=e[r];if(delete e[r],o.parentNode&&o.parentNode.removeChild(o),i&&i.forEach(e=>e(n)),t)return t(n)},p=setTimeout(g.bind(null,void 0,{type:"timeout",target:o}),12e4);o.onerror=g.bind(null,o.onerror),o.onload=g.bind(null,o.onload),c&&document.head.appendChild(o)}},i.r=e=>{"undefined"!=typeof Symbol&&Symbol.toStringTag&&Object.defineProperty(e,Symbol.toStringTag,{value:"Module"}),Object.defineProperty(e,"__esModule",{value:!0})},i.p="https://js-agent.newrelic.com/",(()=>{var e={374:0,840:0};i.f.j=(t,r)=>{var n=i.o(e,t)?e[t]:void 0;if(0!==n)if(n)r.push(n[2]);else{var a=new Promise((r,i)=>n=e[t]=[r,i]);r.push(n[2]=a);var s=i.p+i.u(t),o=new Error;i.l(s,r=>{if(i.o(e,t)&&(0!==(n=e[t])&&(e[t]=void 0),n)){var a=r&&("load"===r.type?"missing":r.type),s=r&&r.target&&r.target.src;o.message="Loading chunk "+t+" failed: ("+a+": "+s+")",o.name="ChunkLoadError",o.type=a,o.request=s,n[1](o)}},"chunk-"+t,t)}};var t=(t,r)=>{var n,a,[s,o,c]=r,d=0;if(s.some(t=>0!==e[t])){for(n in o)i.o(o,n)&&(i.m[n]=o[n]);if(c)c(i)}for(t&&t(r);d<s.length;d++)a=s[d],i.o(e,a)&&e[a]&&e[a][0](),e[a]=0},r=self["webpackChunk:NRBA-1.309.0.PROD"]=self["webpackChunk:NRBA-1.309.0.PROD"]||[];r.forEach(t.bind(null,0)),r.push=t.bind(null,r.push.bind(r))})(),(()=>{"use strict";i(8374);var e=i(8362),t=i(860);const r=Object.values(t.K7);var n=i(163);var a=i(9908),s=i(1863),o=i(4261),c=i(1738);var d=i(1687),u=i(4234),l=i(5289),f=i(6154),g=i(944),p=i(384);const m=e=>f.RI&&!0===e?.privacy.cookies_enabled;function h(e){return!!(0,p.dV)().o.MO&&m(e)&&!0===e?.session_trace.enabled}var v=i(6389),b=i(7699);class y extends u.W{constructor(e,t){super(e.agentIdentifier,t),this.agentRef=e,this.abortHandler=void 0,this.featAggregate=void 0,this.loadedSuccessfully=void 0,this.onAggregateImported=new Promise(e=>{this.loadedSuccessfully=e}),this.deferred=Promise.resolve(),!1===e.init[this.featureName].autoStart?this.deferred=new Promise((t,r)=>{this.ee.on("manual-start-all",(0,v.J)(()=>{(0,d.Ak)(e.agentIdentifier,this.featureName),t()}))}):(0,d.Ak)(e.agentIdentifier,t)}importAggregator(e,t,r={}){if(this.featAggregate)return;const n=async()=>{let n;await this.deferred;try{if(m(e.init)){const{setupAgentSession:t}=await i.e(296).then(i.bind(i,3305));n=t(e)}}catch(e){(0,g.R)(20,e),this.ee.emit("internal-error",[e]),(0,a.p)(b.qh,[e],void 0,this.featureName,this.ee)}try{if(!this.#t(this.featureName,n,e.init))return(0,d.Ze)(this.agentIdentifier,this.featureName),void this.loadedSuccessfully(!1);const{Aggregate:i}=await t();this.featAggregate=new i(e,r),e.runtime.harvester.initializedAggregates.push(this.featAggregate),this.loadedSuccessfully(!0)}catch(e){(0,g.R)(34,e),this.abortHandler?.(),(0,d.Ze)(this.agentIdentifier,this.featureName,!0),this.loadedSuccessfully(!1),this.ee&&this.ee.abort()}};f.RI?(0,l.GG)(()=>n(),!0):n()}#t(e,r,n){if(this.blocked)return!1;switch(e){case t.K7.sessionReplay:return h(n)&&!!r;case t.K7.sessionTrace:return!!r;default:return!0}}}var _=i(6630),w=i(2614),x=i(3241);class R extends y{static featureName=_.T;constructor(e){var t;super(e,_.T),this.setupInspectionEvents(e.agentIdentifier),t=e,(0,c.Y)(o.Fw,function(e,r){"string"==typeof e&&("/"!==e.charAt(0)&&(e="/"+e),t.runtime.customTransaction=(r||"http://custom.transaction")+e,(0,a.p)(o.Pl+o.Fw,[(0,s.t)()],void 0,void 0,t.ee))},t),this.importAggregator(e,()=>i.e(296).then(i.bind(i,3943)))}setupInspectionEvents(e){const t=(t,r)=>{t&&(0,x.W)({agentIdentifier:e,timeStamp:t.timeStamp,loaded:"complete"===t.target.readyState,type:"window",name:r,data:t.target.location+""})};(0,l.sB)(e=>{t(e,"DOMContentLoaded")}),(0,l.GG)(e=>{t(e,"load")}),(0,l.Qr)(e=>{t(e,"navigate")}),this.ee.on(w.tS.UPDATE,(t,r)=>{(0,x.W)({agentIdentifier:e,type:"lifecycle",name:"session",data:r})})}}class k extends e.d{constructor(e){var t;(super(),f.gm)?(this.features={},(0,p.bQ)(this.agentIdentifier,this),this.desiredFeatures=new Set(e.features||[]),this.desiredFeatures.add(R),(0,n.j)(this,e,e.loaderType||"agent"),t=this,(0,c.Y)(o.cD,function(e,r,n=!1){if("string"==typeof e){if(["string","number","boolean"].includes(typeof r)||null===r)return(0,c.U)(t,e,r,o.cD,n);(0,g.R)(40,typeof r)}else(0,g.R)(39,typeof e)},t),function(e){(0,c.Y)(o.Dl,function(t,r=!1){if("string"!=typeof t&&null!==t)return void(0,g.R)(41,typeof t);const n=e.info.jsAttributes["enduser.id"];r&&null!=n&&n!==t?(0,a.p)(o.Pl+"setUserIdAndResetSession",[t],void 0,"session",e.ee):(0,c.U)(e,"enduser.id",t,o.Dl,!0)},e)}(this),function(e){(0,c.Y)(o.nb,function(t){if("string"==typeof t||null===t)return(0,c.U)(e,"application.version",t,o.nb,!1);(0,g.R)(42,typeof t)},e)}(this),function(e){(0,c.Y)(o.d3,function(){e.ee.emit("manual-start-all")},e)}(this),function(e){(0,c.Y)(o.Pv,function(t=!0){if("boolean"==typeof t){if((0,a.p)(o.Pl+o.Pv,[t],void 0,"session",e.ee),e.runtime.consented=t,t){const t=e.features.page_view_event;t.onAggregateImported.then(e=>{const r=t.featAggregate;e&&!r.sentRum&&r.sendRum()})}}else(0,g.R)(65,typeof t)},e)}(this),this.run()):(0,g.R)(21)}get config(){return{info:this.info,init:this.init,loader_config:this.loader_config,runtime:this.runtime}}get api(){return this}run(){try{const e=function(e){const t={};return r.forEach(r=>{t[r]=!!e[r]?.enabled}),t}(this.init),n=[...this.desiredFeatures];n.sort((e,r)=>t.P3[e.featureName]-t.P3[r.featureName]),n.forEach(r=>{if(!e[r.featureName]&&r.featureName!==t.K7.pageViewEvent)return;if(r.featureName===t.K7.spa)return void(0,g.R)(67);const n=function(e){switch(e){case t.K7.ajax:return[t.K7.jserrors];case t.K7.sessionTrace:return[t.K7.ajax,t.K7.pageViewEvent];case t.K7.sessionReplay:return[t.K7.sessionTrace];case t.K7.pageViewTiming:return[t.K7.pageViewEvent];default:return[]}}(r.featureName).filter(e=>!(e in this.features));n.length>0&&(0,g.R)(36,{targetFeature:r.featureName,missingDependencies:n}),this.features[r.featureName]=new r(this)})}catch(e){(0,g.R)(22,e);for(const e in this.features)this.features[e].abortHandler?.();const t=(0,p.Zm)();delete t.initializedAgents[this.agentIdentifier]?.features,delete this.sharedAggregator;return t.ee.get(this.agentIdentifier).abort(),!1}}}var A=i(2843),S=i(782);class T extends y{static featureName=S.T;constructor(e){super(e,S.T),f.RI&&((0,A.u)(()=>(0,a.p)("docHidden",[(0,s.t)()],void 0,S.T,this.ee),!0),(0,A.G)(()=>(0,a.p)("winPagehide",[(0,s.t)()],void 0,S.T,this.ee)),this.importAggregator(e,()=>i.e(296).then(i.bind(i,2117))))}}var E=i(3969);class j extends y{static featureName=E.TZ;constructor(e){super(e,E.TZ),f.RI&&document.addEventListener("securitypolicyviolation",e=>{(0,a.p)(E.xV,["Generic/CSPViolation/Detected"],void 0,this.featureName,this.ee)}),this.importAggregator(e,()=>i.e(296).then(i.bind(i,9623)))}}new k({features:[R,T,j],loaderType:"lite"})})()})();</script>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="mobile-web-app-capable" content="yes">
+
+		<title>Hello world! | Center for Transnational Legal Studies | Georgetown Law</title>
+
+		<link rel="apple-touch-icon" sizes="57x57" href="https://www.law.georgetown.edu/ctls/wp-content/themes/georgetownlaw/georgetownlaw/images/favicons/apple-touch-icon-57x57.png?v=0.0.1">
+		<link rel="apple-touch-icon" sizes="60x60" href="https://www.law.georgetown.edu/ctls/wp-content/themes/georgetownlaw/georgetownlaw/images/favicons/apple-touch-icon-60x60.png?v=0.0.1">
+		<link rel="apple-touch-icon" sizes="72x72" href="https://www.law.georgetown.edu/ctls/wp-content/themes/georgetownlaw/georgetownlaw/images/favicons/apple-touch-icon-72x72.png?v=0.0.1">
+		<link rel="apple-touch-icon" sizes="76x76" href="https://www.law.georgetown.edu/ctls/wp-content/themes/georgetownlaw/georgetownlaw/images/favicons/apple-touch-icon-76x76.png?v=0.0.1">
+		<link rel="apple-touch-icon" sizes="114x114" href="https://www.law.georgetown.edu/ctls/wp-content/themes/georgetownlaw/georgetownlaw/images/favicons/apple-touch-icon-114x114.png?v=0.0.1">
+		<link rel="apple-touch-icon" sizes="120x120" href="https://www.law.georgetown.edu/ctls/wp-content/themes/georgetownlaw/georgetownlaw/images/favicons/apple-touch-icon-120x120.png?v=0.0.1">
+		<link rel="apple-touch-icon" sizes="144x144" href="https://www.law.georgetown.edu/ctls/wp-content/themes/georgetownlaw/georgetownlaw/images/favicons/apple-touch-icon-144x144.png?v=0.0.1">
+		<link rel="apple-touch-icon" sizes="152x152" href="https://www.law.georgetown.edu/ctls/wp-content/themes/georgetownlaw/georgetownlaw/images/favicons/apple-touch-icon-152x152.png?v=0.0.1">
+		<link rel="apple-touch-icon" sizes="180x180" href="https://www.law.georgetown.edu/ctls/wp-content/themes/georgetownlaw/georgetownlaw/images/favicons/apple-touch-icon-180x180.png?v=0.0.1">
+		<link rel="icon" type="image/png" sizes="32x32" href="https://www.law.georgetown.edu/ctls/wp-content/themes/georgetownlaw/georgetownlaw/images/favicons/favicon-32x32.png?v=0.0.1">
+		<link rel="icon" type="image/png" sizes="192x192" href="https://www.law.georgetown.edu/ctls/wp-content/themes/georgetownlaw/georgetownlaw/images/favicons/android-chrome-192x192.png?v=0.0.1">
+		<link rel="icon" type="image/png" sizes="16x16" href="https://www.law.georgetown.edu/ctls/wp-content/themes/georgetownlaw/georgetownlaw/images/favicons/favicon-16x16.png?v=0.0.1">
+		<link rel="manifest" href="https://www.law.georgetown.edu/ctls/wp-content/themes/georgetownlaw/georgetownlaw/images/favicons/manifest.json?v=0.0.1">
+		<link rel="mask-icon" href="https://www.law.georgetown.edu/ctls/wp-content/themes/georgetownlaw/georgetownlaw/images/favicons/safari-pinned-tab.svg?v=0.0.1" color="#ffffff">
+		<link rel="shortcut icon" href="https://www.law.georgetown.edu/ctls/wp-content/themes/georgetownlaw/georgetownlaw/images/favicons/favicon.ico?v=0.0.1">
+		<meta name="msapplication-TileColor" content="#ffffff">
+		<meta name="msapplication-TileImage" content="https://www.law.georgetown.edu/ctls/wp-content/themes/georgetownlaw/georgetownlaw/images/favicons/mstile-144x144.png?v=0.0.1">
+		<meta name="msapplication-config" content="https://www.law.georgetown.edu/ctls/wp-content/themes/georgetownlaw/georgetownlaw/images/favicons/browserconfig.xml?v=0.0.1">
+
+		<meta property="og:type" content="website">
+		<meta property="og:title" content="Hello world!">
+		<meta property="og:url" content="https://www.law.georgetown.edu/ctls/hello-world/">
+		<meta property="og:description" content=""> 
+		
+		<script src="https://www.law.georgetown.edu/ctls/wp-content/themes/georgetownlaw/georgetownlaw/js/modernizr.js"></script>
+		<!--  cx_LAP removing fast.fonts
+		  <link type="text/css" rel="stylesheet" href="//fast.fonts.net/cssapi/a947a827-b4e7-4494-9796-6dd378bd66f2.css"/> -->
+		<!-- cx_LAP adding link to adboe fonts -->
+		<link rel="stylesheet" href="https://use.typekit.net/cno2cpj.css">
+
+		<!--[if gt IE 8]><!-->
+			<link rel="stylesheet" href="https://www.law.georgetown.edu/ctls/wp-content/themes/georgetownlaw/georgetownlaw/css/site.css?v=1771273967">
+		<!--<![endif]-->
+		<!--[if IE 8]>
+			<script>var IE8 = true;</script>
+			<script src="https://www.law.georgetown.edu/ctls/wp-content/themes/georgetownlaw/georgetownlaw/js/site-ie8.js"></script>
+			<link rel="stylesheet" href="https://www.law.georgetown.edu/ctls/wp-content/themes/georgetownlaw/georgetownlaw/css/site-ie8.css">
+		<![endif]-->
+		<!--[if IE 9]>
+			<script>var IE9 = true;</script>
+			<script src="https://www.law.georgetown.edu/ctls/wp-content/themes/georgetownlaw/georgetownlaw/js/site-ie9.js"></script>
+			<link rel="stylesheet" href="https://www.law.georgetown.edu/ctls/wp-content/themes/georgetownlaw/georgetownlaw/css/site-ie9.css">
+		<![endif]-->
+		<!--[if lte IE 9]>
+			<link rel="stylesheet" href="https://www.law.georgetown.edu/ctls/wp-content/themes/georgetownlaw/georgetownlaw/css/site-ie.css">
+		<![endif]-->
+
+		<!-- Google Tag Manager -->
+		<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+		new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+		j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+		'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+		})(window,document,'script','dataLayer','GTM-WMV9WVD');</script>
+		<!-- End Google Tag Manager -->
+
+		<meta name='robots' content='max-image-preview:large' />
+<link rel='dns-prefetch' href='//www.law.georgetown.edu' />
+<link rel='dns-prefetch' href='//cdnjs.cloudflare.com' />
+<style id='wp-img-auto-sizes-contain-inline-css' type='text/css'>
+img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
+/*# sourceURL=wp-img-auto-sizes-contain-inline-css */
+</style>
+<link rel='stylesheet' id='tribe-events-pro-mini-calendar-block-styles-css' href='https://www.law.georgetown.edu/ctls/wp-content/plugins/events-calendar-pro/build/css/tribe-events-pro-mini-calendar-block.css?ver=7.7.12' type='text/css' media='all' />
+<style id='wp-emoji-styles-inline-css' type='text/css'>
+
+	img.wp-smiley, img.emoji {
+		display: inline !important;
+		border: none !important;
+		box-shadow: none !important;
+		height: 1em !important;
+		width: 1em !important;
+		margin: 0 0.07em !important;
+		vertical-align: -0.1em !important;
+		background: none !important;
+		padding: 0 !important;
+	}
+/*# sourceURL=wp-emoji-styles-inline-css */
+</style>
+<link rel='stylesheet' id='wp-block-library-css' href='https://www.law.georgetown.edu/ctls/wp-includes/css/dist/block-library/style.min.css?ver=6.9.1' type='text/css' media='all' />
+<style id='classic-theme-styles-inline-css' type='text/css'>
+/*! This file is auto-generated */
+.wp-block-button__link{color:#fff;background-color:#32373c;border-radius:9999px;box-shadow:none;text-decoration:none;padding:calc(.667em + 2px) calc(1.333em + 2px);font-size:1.125em}.wp-block-file__button{background:#32373c;color:#fff;text-decoration:none}
+/*# sourceURL=/wp-includes/css/classic-themes.min.css */
+</style>
+<style id='wp-block-accordion-inline-css' type='text/css'>
+.wp-block-accordion{box-sizing:border-box}
+/*# sourceURL=https://www.law.georgetown.edu/ctls/wp-includes/blocks/accordion/style.min.css */
+</style>
+<style id='wp-block-accordion-item-inline-css' type='text/css'>
+.wp-block-accordion-item.is-open>.wp-block-accordion-heading .wp-block-accordion-heading__toggle-icon{transform:rotate(45deg)}@media (prefers-reduced-motion:no-preference){.wp-block-accordion-item{transition:grid-template-rows .3s ease-out}.wp-block-accordion-item>.wp-block-accordion-heading .wp-block-accordion-heading__toggle-icon{transition:transform .2s ease-in-out}}
+/*# sourceURL=https://www.law.georgetown.edu/ctls/wp-includes/blocks/accordion-item/style.min.css */
+</style>
+<style id='wp-block-archives-inline-css' type='text/css'>
+.wp-block-archives{box-sizing:border-box}.wp-block-archives-dropdown label{display:block}
+/*# sourceURL=https://www.law.georgetown.edu/ctls/wp-includes/blocks/archives/style.min.css */
+</style>
+<style id='wp-block-avatar-inline-css' type='text/css'>
+.wp-block-avatar{line-height:0}.wp-block-avatar,.wp-block-avatar img{box-sizing:border-box}.wp-block-avatar.aligncenter{text-align:center}
+/*# sourceURL=https://www.law.georgetown.edu/ctls/wp-includes/blocks/avatar/style.min.css */
+</style>
+<style id='wp-block-button-inline-css' type='text/css'>
+.wp-block-button__link{align-content:center;box-sizing:border-box;cursor:pointer;display:inline-block;height:100%;text-align:center;word-break:break-word}.wp-block-button__link.aligncenter{text-align:center}.wp-block-button__link.alignright{text-align:right}:where(.wp-block-button__link){border-radius:9999px;box-shadow:none;padding:calc(.667em + 2px) calc(1.333em + 2px);text-decoration:none}.wp-block-button[style*=text-decoration] .wp-block-button__link{text-decoration:inherit}.wp-block-buttons>.wp-block-button.has-custom-width{max-width:none}.wp-block-buttons>.wp-block-button.has-custom-width .wp-block-button__link{width:100%}.wp-block-buttons>.wp-block-button.has-custom-font-size .wp-block-button__link{font-size:inherit}.wp-block-buttons>.wp-block-button.wp-block-button__width-25{width:calc(25% - var(--wp--style--block-gap, .5em)*.75)}.wp-block-buttons>.wp-block-button.wp-block-button__width-50{width:calc(50% - var(--wp--style--block-gap, .5em)*.5)}.wp-block-buttons>.wp-block-button.wp-block-button__width-75{width:calc(75% - var(--wp--style--block-gap, .5em)*.25)}.wp-block-buttons>.wp-block-button.wp-block-button__width-100{flex-basis:100%;width:100%}.wp-block-buttons.is-vertical>.wp-block-button.wp-block-button__width-25{width:25%}.wp-block-buttons.is-vertical>.wp-block-button.wp-block-button__width-50{width:50%}.wp-block-buttons.is-vertical>.wp-block-button.wp-block-button__width-75{width:75%}.wp-block-button.is-style-squared,.wp-block-button__link.wp-block-button.is-style-squared{border-radius:0}.wp-block-button.no-border-radius,.wp-block-button__link.no-border-radius{border-radius:0!important}:root :where(.wp-block-button .wp-block-button__link.is-style-outline),:root :where(.wp-block-button.is-style-outline>.wp-block-button__link){border:2px solid;padding:.667em 1.333em}:root :where(.wp-block-button .wp-block-button__link.is-style-outline:not(.has-text-color)),:root :where(.wp-block-button.is-style-outline>.wp-block-button__link:not(.has-text-color)){color:currentColor}:root :where(.wp-block-button .wp-block-button__link.is-style-outline:not(.has-background)),:root :where(.wp-block-button.is-style-outline>.wp-block-button__link:not(.has-background)){background-color:initial;background-image:none}
+/*# sourceURL=https://www.law.georgetown.edu/ctls/wp-includes/blocks/button/style.min.css */
+</style>
+<style id='wp-block-calendar-inline-css' type='text/css'>
+.wp-block-calendar{text-align:center}.wp-block-calendar td,.wp-block-calendar th{border:1px solid;padding:.25em}.wp-block-calendar th{font-weight:400}.wp-block-calendar caption{background-color:inherit}.wp-block-calendar table{border-collapse:collapse;width:100%}.wp-block-calendar table.has-background th{background-color:inherit}.wp-block-calendar table.has-text-color th{color:inherit}.wp-block-calendar :where(table:not(.has-text-color)){color:#40464d}.wp-block-calendar :where(table:not(.has-text-color)) td,.wp-block-calendar :where(table:not(.has-text-color)) th{border-color:#ddd}:where(.wp-block-calendar table:not(.has-background) th){background:#ddd}
+/*# sourceURL=https://www.law.georgetown.edu/ctls/wp-includes/blocks/calendar/style.min.css */
+</style>
+<style id='wp-block-categories-inline-css' type='text/css'>
+.wp-block-categories{box-sizing:border-box}.wp-block-categories.alignleft{margin-right:2em}.wp-block-categories.alignright{margin-left:2em}.wp-block-categories.wp-block-categories-dropdown.aligncenter{text-align:center}.wp-block-categories .wp-block-categories__label{display:block;width:100%}
+/*# sourceURL=https://www.law.georgetown.edu/ctls/wp-includes/blocks/categories/style.min.css */
+</style>
+<style id='wp-block-comment-author-name-inline-css' type='text/css'>
+.wp-block-comment-author-name{box-sizing:border-box}
+/*# sourceURL=https://www.law.georgetown.edu/ctls/wp-includes/blocks/comment-author-name/style.min.css */
+</style>
+<style id='wp-block-comment-content-inline-css' type='text/css'>
+.comment-awaiting-moderation{display:block;font-size:.875em;line-height:1.5}.wp-block-comment-content{box-sizing:border-box}
+/*# sourceURL=https://www.law.georgetown.edu/ctls/wp-includes/blocks/comment-content/style.min.css */
+</style>
+<style id='wp-block-comment-date-inline-css' type='text/css'>
+.wp-block-comment-date{box-sizing:border-box}
+/*# sourceURL=https://www.law.georgetown.edu/ctls/wp-includes/blocks/comment-date/style.min.css */
+</style>
+<style id='wp-block-comment-edit-link-inline-css' type='text/css'>
+.wp-block-comment-edit-link{box-sizing:border-box}
+/*# sourceURL=https://www.law.georgetown.edu/ctls/wp-includes/blocks/comment-edit-link/style.min.css */
+</style>
+<style id='wp-block-comment-reply-link-inline-css' type='text/css'>
+.wp-block-comment-reply-link{box-sizing:border-box}
+/*# sourceURL=https://www.law.georgetown.edu/ctls/wp-includes/blocks/comment-reply-link/style.min.css */
+</style>
+<style id='wp-block-comment-template-inline-css' type='text/css'>
+.wp-block-comment-template{box-sizing:border-box;list-style:none;margin-bottom:0;max-width:100%;padding:0}.wp-block-comment-template li{clear:both}.wp-block-comment-template ol{list-style:none;margin-bottom:0;max-width:100%;padding-left:2rem}.wp-block-comment-template.alignleft{float:left}.wp-block-comment-template.aligncenter{margin-left:auto;margin-right:auto;width:fit-content}.wp-block-comment-template.alignright{float:right}
+/*# sourceURL=https://www.law.georgetown.edu/ctls/wp-includes/blocks/comment-template/style.min.css */
+</style>
+<style id='wp-block-comments-inline-css' type='text/css'>
+.wp-block-post-comments{box-sizing:border-box}.wp-block-post-comments .alignleft{float:left}.wp-block-post-comments .alignright{float:right}.wp-block-post-comments .navigation:after{clear:both;content:"";display:table}.wp-block-post-comments .commentlist{clear:both;list-style:none;margin:0;padding:0}.wp-block-post-comments .commentlist .comment{min-height:2.25em;padding-left:3.25em}.wp-block-post-comments .commentlist .comment p{font-size:1em;line-height:1.8;margin:1em 0}.wp-block-post-comments .commentlist .children{list-style:none;margin:0;padding:0}.wp-block-post-comments .comment-author{line-height:1.5}.wp-block-post-comments .comment-author .avatar{border-radius:1.5em;display:block;float:left;height:2.5em;margin-right:.75em;margin-top:.5em;width:2.5em}.wp-block-post-comments .comment-author cite{font-style:normal}.wp-block-post-comments .comment-meta{font-size:.875em;line-height:1.5}.wp-block-post-comments .comment-meta b{font-weight:400}.wp-block-post-comments .comment-meta .comment-awaiting-moderation{display:block;margin-bottom:1em;margin-top:1em}.wp-block-post-comments .comment-body .commentmetadata{font-size:.875em}.wp-block-post-comments .comment-form-author label,.wp-block-post-comments .comment-form-comment label,.wp-block-post-comments .comment-form-email label,.wp-block-post-comments .comment-form-url label{display:block;margin-bottom:.25em}.wp-block-post-comments .comment-form input:not([type=submit]):not([type=checkbox]),.wp-block-post-comments .comment-form textarea{box-sizing:border-box;display:block;width:100%}.wp-block-post-comments .comment-form-cookies-consent{display:flex;gap:.25em}.wp-block-post-comments .comment-form-cookies-consent #wp-comment-cookies-consent{margin-top:.35em}.wp-block-post-comments .comment-reply-title{margin-bottom:0}.wp-block-post-comments .comment-reply-title :where(small){font-size:var(--wp--preset--font-size--medium,smaller);margin-left:.5em}.wp-block-post-comments .reply{font-size:.875em;margin-bottom:1.4em}.wp-block-post-comments input:not([type=submit]),.wp-block-post-comments textarea{border:1px solid #949494;font-family:inherit;font-size:1em}.wp-block-post-comments input:not([type=submit]):not([type=checkbox]),.wp-block-post-comments textarea{padding:calc(.667em + 2px)}:where(.wp-block-post-comments input[type=submit]){border:none}.wp-block-comments{box-sizing:border-box}
+/*# sourceURL=https://www.law.georgetown.edu/ctls/wp-includes/blocks/comments/style.min.css */
+</style>
+<style id='wp-block-comments-pagination-inline-css' type='text/css'>
+.wp-block-comments-pagination>.wp-block-comments-pagination-next,.wp-block-comments-pagination>.wp-block-comments-pagination-numbers,.wp-block-comments-pagination>.wp-block-comments-pagination-previous{font-size:inherit}.wp-block-comments-pagination .wp-block-comments-pagination-previous-arrow{display:inline-block;margin-right:1ch}.wp-block-comments-pagination .wp-block-comments-pagination-previous-arrow:not(.is-arrow-chevron){transform:scaleX(1)}.wp-block-comments-pagination .wp-block-comments-pagination-next-arrow{display:inline-block;margin-left:1ch}.wp-block-comments-pagination .wp-block-comments-pagination-next-arrow:not(.is-arrow-chevron){transform:scaleX(1)}.wp-block-comments-pagination.aligncenter{justify-content:center}
+/*# sourceURL=https://www.law.georgetown.edu/ctls/wp-includes/blocks/comments-pagination/style.min.css */
+</style>
+<link rel='stylesheet' id='wp-block-cover-css' href='https://www.law.georgetown.edu/ctls/wp-includes/blocks/cover/style.min.css?ver=6.9.1' type='text/css' media='all' />
+<style id='wp-block-file-inline-css' type='text/css'>
+.wp-block-file{box-sizing:border-box}.wp-block-file:not(.wp-element-button){font-size:.8em}.wp-block-file.aligncenter{text-align:center}.wp-block-file.alignright{text-align:right}.wp-block-file *+.wp-block-file__button{margin-left:.75em}:where(.wp-block-file){margin-bottom:1.5em}.wp-block-file__embed{margin-bottom:1em}:where(.wp-block-file__button){border-radius:2em;display:inline-block;padding:.5em 1em}:where(.wp-block-file__button):where(a):active,:where(.wp-block-file__button):where(a):focus,:where(.wp-block-file__button):where(a):hover,:where(.wp-block-file__button):where(a):visited{box-shadow:none;color:#fff;opacity:.85;text-decoration:none}
+/*# sourceURL=https://www.law.georgetown.edu/ctls/wp-includes/blocks/file/style.min.css */
+</style>
+<style id='wp-block-footnotes-inline-css' type='text/css'>
+.editor-styles-wrapper,.entry-content{counter-reset:footnotes}a[data-fn].fn{counter-increment:footnotes;display:inline-flex;font-size:smaller;text-decoration:none;text-indent:-9999999px;vertical-align:super}a[data-fn].fn:after{content:"[" counter(footnotes) "]";float:left;text-indent:0}
+/*# sourceURL=https://www.law.georgetown.edu/ctls/wp-includes/blocks/footnotes/style.min.css */
+</style>
+<link rel='stylesheet' id='wp-block-gallery-css' href='https://www.law.georgetown.edu/ctls/wp-includes/blocks/gallery/style.min.css?ver=6.9.1' type='text/css' media='all' />
+<style id='wp-block-heading-inline-css' type='text/css'>
+h1:where(.wp-block-heading).has-background,h2:where(.wp-block-heading).has-background,h3:where(.wp-block-heading).has-background,h4:where(.wp-block-heading).has-background,h5:where(.wp-block-heading).has-background,h6:where(.wp-block-heading).has-background{padding:1.25em 2.375em}h1.has-text-align-left[style*=writing-mode]:where([style*=vertical-lr]),h1.has-text-align-right[style*=writing-mode]:where([style*=vertical-rl]),h2.has-text-align-left[style*=writing-mode]:where([style*=vertical-lr]),h2.has-text-align-right[style*=writing-mode]:where([style*=vertical-rl]),h3.has-text-align-left[style*=writing-mode]:where([style*=vertical-lr]),h3.has-text-align-right[style*=writing-mode]:where([style*=vertical-rl]),h4.has-text-align-left[style*=writing-mode]:where([style*=vertical-lr]),h4.has-text-align-right[style*=writing-mode]:where([style*=vertical-rl]),h5.has-text-align-left[style*=writing-mode]:where([style*=vertical-lr]),h5.has-text-align-right[style*=writing-mode]:where([style*=vertical-rl]),h6.has-text-align-left[style*=writing-mode]:where([style*=vertical-lr]),h6.has-text-align-right[style*=writing-mode]:where([style*=vertical-rl]){rotate:180deg}
+/*# sourceURL=https://www.law.georgetown.edu/ctls/wp-includes/blocks/heading/style.min.css */
+</style>
+<link rel='stylesheet' id='wp-block-image-css' href='https://www.law.georgetown.edu/ctls/wp-includes/blocks/image/style.min.css?ver=6.9.1' type='text/css' media='all' />
+<style id='wp-block-latest-comments-inline-css' type='text/css'>
+ol.wp-block-latest-comments{box-sizing:border-box;margin-left:0}:where(.wp-block-latest-comments:not([style*=line-height] .wp-block-latest-comments__comment)){line-height:1.1}:where(.wp-block-latest-comments:not([style*=line-height] .wp-block-latest-comments__comment-excerpt p)){line-height:1.8}.has-dates :where(.wp-block-latest-comments:not([style*=line-height])),.has-excerpts :where(.wp-block-latest-comments:not([style*=line-height])){line-height:1.5}.wp-block-latest-comments .wp-block-latest-comments{padding-left:0}.wp-block-latest-comments__comment{list-style:none;margin-bottom:1em}.has-avatars .wp-block-latest-comments__comment{list-style:none;min-height:2.25em}.has-avatars .wp-block-latest-comments__comment .wp-block-latest-comments__comment-excerpt,.has-avatars .wp-block-latest-comments__comment .wp-block-latest-comments__comment-meta{margin-left:3.25em}.wp-block-latest-comments__comment-excerpt p{font-size:.875em;margin:.36em 0 1.4em}.wp-block-latest-comments__comment-date{display:block;font-size:.75em}.wp-block-latest-comments .avatar,.wp-block-latest-comments__comment-avatar{border-radius:1.5em;display:block;float:left;height:2.5em;margin-right:.75em;width:2.5em}.wp-block-latest-comments[class*=-font-size] a,.wp-block-latest-comments[style*=font-size] a{font-size:inherit}
+/*# sourceURL=https://www.law.georgetown.edu/ctls/wp-includes/blocks/latest-comments/style.min.css */
+</style>
+<style id='wp-block-latest-posts-inline-css' type='text/css'>
+.wp-block-latest-posts{box-sizing:border-box}.wp-block-latest-posts.alignleft{margin-right:2em}.wp-block-latest-posts.alignright{margin-left:2em}.wp-block-latest-posts.wp-block-latest-posts__list{list-style:none}.wp-block-latest-posts.wp-block-latest-posts__list li{clear:both;overflow-wrap:break-word}.wp-block-latest-posts.is-grid{display:flex;flex-wrap:wrap}.wp-block-latest-posts.is-grid li{margin:0 1.25em 1.25em 0;width:100%}@media (min-width:600px){.wp-block-latest-posts.columns-2 li{width:calc(50% - .625em)}.wp-block-latest-posts.columns-2 li:nth-child(2n){margin-right:0}.wp-block-latest-posts.columns-3 li{width:calc(33.33333% - .83333em)}.wp-block-latest-posts.columns-3 li:nth-child(3n){margin-right:0}.wp-block-latest-posts.columns-4 li{width:calc(25% - .9375em)}.wp-block-latest-posts.columns-4 li:nth-child(4n){margin-right:0}.wp-block-latest-posts.columns-5 li{width:calc(20% - 1em)}.wp-block-latest-posts.columns-5 li:nth-child(5n){margin-right:0}.wp-block-latest-posts.columns-6 li{width:calc(16.66667% - 1.04167em)}.wp-block-latest-posts.columns-6 li:nth-child(6n){margin-right:0}}:root :where(.wp-block-latest-posts.is-grid){padding:0}:root :where(.wp-block-latest-posts.wp-block-latest-posts__list){padding-left:0}.wp-block-latest-posts__post-author,.wp-block-latest-posts__post-date{display:block;font-size:.8125em}.wp-block-latest-posts__post-excerpt,.wp-block-latest-posts__post-full-content{margin-bottom:1em;margin-top:.5em}.wp-block-latest-posts__featured-image a{display:inline-block}.wp-block-latest-posts__featured-image img{height:auto;max-width:100%;width:auto}.wp-block-latest-posts__featured-image.alignleft{float:left;margin-right:1em}.wp-block-latest-posts__featured-image.alignright{float:right;margin-left:1em}.wp-block-latest-posts__featured-image.aligncenter{margin-bottom:1em;text-align:center}
+/*# sourceURL=https://www.law.georgetown.edu/ctls/wp-includes/blocks/latest-posts/style.min.css */
+</style>
+<style id='wp-block-list-inline-css' type='text/css'>
+ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:1.25em 2.375em}
+/*# sourceURL=https://www.law.georgetown.edu/ctls/wp-includes/blocks/list/style.min.css */
+</style>
+<style id='wp-block-loginout-inline-css' type='text/css'>
+.wp-block-loginout{box-sizing:border-box}
+/*# sourceURL=https://www.law.georgetown.edu/ctls/wp-includes/blocks/loginout/style.min.css */
+</style>
+<style id='wp-block-media-text-inline-css' type='text/css'>
+.wp-block-media-text{box-sizing:border-box;
+  /*!rtl:begin:ignore*/direction:ltr;
+  /*!rtl:end:ignore*/display:grid;grid-template-columns:50% 1fr;grid-template-rows:auto}.wp-block-media-text.has-media-on-the-right{grid-template-columns:1fr 50%}.wp-block-media-text.is-vertically-aligned-top>.wp-block-media-text__content,.wp-block-media-text.is-vertically-aligned-top>.wp-block-media-text__media{align-self:start}.wp-block-media-text.is-vertically-aligned-center>.wp-block-media-text__content,.wp-block-media-text.is-vertically-aligned-center>.wp-block-media-text__media,.wp-block-media-text>.wp-block-media-text__content,.wp-block-media-text>.wp-block-media-text__media{align-self:center}.wp-block-media-text.is-vertically-aligned-bottom>.wp-block-media-text__content,.wp-block-media-text.is-vertically-aligned-bottom>.wp-block-media-text__media{align-self:end}.wp-block-media-text>.wp-block-media-text__media{
+  /*!rtl:begin:ignore*/grid-column:1;grid-row:1;
+  /*!rtl:end:ignore*/margin:0}.wp-block-media-text>.wp-block-media-text__content{direction:ltr;
+  /*!rtl:begin:ignore*/grid-column:2;grid-row:1;
+  /*!rtl:end:ignore*/padding:0 8%;word-break:break-word}.wp-block-media-text.has-media-on-the-right>.wp-block-media-text__media{
+  /*!rtl:begin:ignore*/grid-column:2;grid-row:1
+  /*!rtl:end:ignore*/}.wp-block-media-text.has-media-on-the-right>.wp-block-media-text__content{
+  /*!rtl:begin:ignore*/grid-column:1;grid-row:1
+  /*!rtl:end:ignore*/}.wp-block-media-text__media a{display:block}.wp-block-media-text__media img,.wp-block-media-text__media video{height:auto;max-width:unset;vertical-align:middle;width:100%}.wp-block-media-text.is-image-fill>.wp-block-media-text__media{background-size:cover;height:100%;min-height:250px}.wp-block-media-text.is-image-fill>.wp-block-media-text__media>a{display:block;height:100%}.wp-block-media-text.is-image-fill>.wp-block-media-text__media img{height:1px;margin:-1px;overflow:hidden;padding:0;position:absolute;width:1px;clip:rect(0,0,0,0);border:0}.wp-block-media-text.is-image-fill-element>.wp-block-media-text__media{height:100%;min-height:250px;position:relative}.wp-block-media-text.is-image-fill-element>.wp-block-media-text__media>a{display:block;height:100%}.wp-block-media-text.is-image-fill-element>.wp-block-media-text__media img{height:100%;object-fit:cover;position:absolute;width:100%}@media (max-width:600px){.wp-block-media-text.is-stacked-on-mobile{grid-template-columns:100%!important}.wp-block-media-text.is-stacked-on-mobile>.wp-block-media-text__media{grid-column:1;grid-row:1}.wp-block-media-text.is-stacked-on-mobile>.wp-block-media-text__content{grid-column:1;grid-row:2}}
+/*# sourceURL=https://www.law.georgetown.edu/ctls/wp-includes/blocks/media-text/style.min.css */
+</style>
+<link rel='stylesheet' id='wp-block-navigation-css' href='https://www.law.georgetown.edu/ctls/wp-includes/blocks/navigation/style.min.css?ver=6.9.1' type='text/css' media='all' />
+<style id='wp-block-navigation-link-inline-css' type='text/css'>
+.wp-block-navigation .wp-block-navigation-item__label{overflow-wrap:break-word}.wp-block-navigation .wp-block-navigation-item__description{display:none}.link-ui-tools{outline:1px solid #f0f0f0;padding:8px}.link-ui-block-inserter{padding-top:8px}.link-ui-block-inserter__back{margin-left:8px;text-transform:uppercase}
+/*# sourceURL=https://www.law.georgetown.edu/ctls/wp-includes/blocks/navigation-link/style.min.css */
+</style>
+<style id='wp-block-page-list-inline-css' type='text/css'>
+.wp-block-navigation .wp-block-page-list{align-items:var(--navigation-layout-align,initial);background-color:inherit;display:flex;flex-direction:var(--navigation-layout-direction,initial);flex-wrap:var(--navigation-layout-wrap,wrap);justify-content:var(--navigation-layout-justify,initial)}.wp-block-navigation .wp-block-navigation-item{background-color:inherit}.wp-block-page-list{box-sizing:border-box}
+/*# sourceURL=https://www.law.georgetown.edu/ctls/wp-includes/blocks/page-list/style.min.css */
+</style>
+<style id='wp-block-post-author-inline-css' type='text/css'>
+.wp-block-post-author{box-sizing:border-box;display:flex;flex-wrap:wrap}.wp-block-post-author__byline{font-size:.5em;margin-bottom:0;margin-top:0;width:100%}.wp-block-post-author__avatar{margin-right:1em}.wp-block-post-author__bio{font-size:.7em;margin-bottom:.7em}.wp-block-post-author__content{flex-basis:0;flex-grow:1}.wp-block-post-author__name{margin:0}
+/*# sourceURL=https://www.law.georgetown.edu/ctls/wp-includes/blocks/post-author/style.min.css */
+</style>
+<style id='wp-block-post-author-biography-inline-css' type='text/css'>
+.wp-block-post-author-biography{box-sizing:border-box}
+/*# sourceURL=https://www.law.georgetown.edu/ctls/wp-includes/blocks/post-author-biography/style.min.css */
+</style>
+<style id='wp-block-post-author-name-inline-css' type='text/css'>
+.wp-block-post-author-name{box-sizing:border-box}
+/*# sourceURL=https://www.law.georgetown.edu/ctls/wp-includes/blocks/post-author-name/style.min.css */
+</style>
+<style id='wp-block-post-comments-count-inline-css' type='text/css'>
+.wp-block-post-comments-count{box-sizing:border-box}
+/*# sourceURL=https://www.law.georgetown.edu/ctls/wp-includes/blocks/post-comments-count/style.min.css */
+</style>
+<style id='wp-block-post-comments-form-inline-css' type='text/css'>
+:where(.wp-block-post-comments-form input:not([type=submit])),:where(.wp-block-post-comments-form textarea){border:1px solid #949494;font-family:inherit;font-size:1em}:where(.wp-block-post-comments-form input:where(:not([type=submit]):not([type=checkbox]))),:where(.wp-block-post-comments-form textarea){padding:calc(.667em + 2px)}.wp-block-post-comments-form{box-sizing:border-box}.wp-block-post-comments-form[style*=font-weight] :where(.comment-reply-title){font-weight:inherit}.wp-block-post-comments-form[style*=font-family] :where(.comment-reply-title){font-family:inherit}.wp-block-post-comments-form[class*=-font-size] :where(.comment-reply-title),.wp-block-post-comments-form[style*=font-size] :where(.comment-reply-title){font-size:inherit}.wp-block-post-comments-form[style*=line-height] :where(.comment-reply-title){line-height:inherit}.wp-block-post-comments-form[style*=font-style] :where(.comment-reply-title){font-style:inherit}.wp-block-post-comments-form[style*=letter-spacing] :where(.comment-reply-title){letter-spacing:inherit}.wp-block-post-comments-form :where(input[type=submit]){box-shadow:none;cursor:pointer;display:inline-block;overflow-wrap:break-word;text-align:center}.wp-block-post-comments-form .comment-form input:not([type=submit]):not([type=checkbox]):not([type=hidden]),.wp-block-post-comments-form .comment-form textarea{box-sizing:border-box;display:block;width:100%}.wp-block-post-comments-form .comment-form-author label,.wp-block-post-comments-form .comment-form-email label,.wp-block-post-comments-form .comment-form-url label{display:block;margin-bottom:.25em}.wp-block-post-comments-form .comment-form-cookies-consent{display:flex;gap:.25em}.wp-block-post-comments-form .comment-form-cookies-consent #wp-comment-cookies-consent{margin-top:.35em}.wp-block-post-comments-form .comment-reply-title{margin-bottom:0}.wp-block-post-comments-form .comment-reply-title :where(small){font-size:var(--wp--preset--font-size--medium,smaller);margin-left:.5em}
+/*# sourceURL=https://www.law.georgetown.edu/ctls/wp-includes/blocks/post-comments-form/style.min.css */
+</style>
+<style id='wp-block-buttons-inline-css' type='text/css'>
+.wp-block-buttons{box-sizing:border-box}.wp-block-buttons.is-vertical{flex-direction:column}.wp-block-buttons.is-vertical>.wp-block-button:last-child{margin-bottom:0}.wp-block-buttons>.wp-block-button{display:inline-block;margin:0}.wp-block-buttons.is-content-justification-left{justify-content:flex-start}.wp-block-buttons.is-content-justification-left.is-vertical{align-items:flex-start}.wp-block-buttons.is-content-justification-center{justify-content:center}.wp-block-buttons.is-content-justification-center.is-vertical{align-items:center}.wp-block-buttons.is-content-justification-right{justify-content:flex-end}.wp-block-buttons.is-content-justification-right.is-vertical{align-items:flex-end}.wp-block-buttons.is-content-justification-space-between{justify-content:space-between}.wp-block-buttons.aligncenter{text-align:center}.wp-block-buttons:not(.is-content-justification-space-between,.is-content-justification-right,.is-content-justification-left,.is-content-justification-center) .wp-block-button.aligncenter{margin-left:auto;margin-right:auto;width:100%}.wp-block-buttons[style*=text-decoration] .wp-block-button,.wp-block-buttons[style*=text-decoration] .wp-block-button__link{text-decoration:inherit}.wp-block-buttons.has-custom-font-size .wp-block-button__link{font-size:inherit}.wp-block-buttons .wp-block-button__link{width:100%}.wp-block-button.aligncenter{text-align:center}
+/*# sourceURL=https://www.law.georgetown.edu/ctls/wp-includes/blocks/buttons/style.min.css */
+</style>
+<style id='wp-block-post-comments-link-inline-css' type='text/css'>
+.wp-block-post-comments-link{box-sizing:border-box}
+/*# sourceURL=https://www.law.georgetown.edu/ctls/wp-includes/blocks/post-comments-link/style.min.css */
+</style>
+<style id='wp-block-post-content-inline-css' type='text/css'>
+.wp-block-post-content{display:flow-root}
+/*# sourceURL=https://www.law.georgetown.edu/ctls/wp-includes/blocks/post-content/style.min.css */
+</style>
+<style id='wp-block-post-date-inline-css' type='text/css'>
+.wp-block-post-date{box-sizing:border-box}
+/*# sourceURL=https://www.law.georgetown.edu/ctls/wp-includes/blocks/post-date/style.min.css */
+</style>
+<style id='wp-block-post-excerpt-inline-css' type='text/css'>
+:where(.wp-block-post-excerpt){box-sizing:border-box;margin-bottom:var(--wp--style--block-gap);margin-top:var(--wp--style--block-gap)}.wp-block-post-excerpt__excerpt{margin-bottom:0;margin-top:0}.wp-block-post-excerpt__more-text{margin-bottom:0;margin-top:var(--wp--style--block-gap)}.wp-block-post-excerpt__more-link{display:inline-block}
+/*# sourceURL=https://www.law.georgetown.edu/ctls/wp-includes/blocks/post-excerpt/style.min.css */
+</style>
+<style id='wp-block-post-featured-image-inline-css' type='text/css'>
+.wp-block-post-featured-image{margin-left:0;margin-right:0}.wp-block-post-featured-image a{display:block;height:100%}.wp-block-post-featured-image :where(img){box-sizing:border-box;height:auto;max-width:100%;vertical-align:bottom;width:100%}.wp-block-post-featured-image.alignfull img,.wp-block-post-featured-image.alignwide img{width:100%}.wp-block-post-featured-image .wp-block-post-featured-image__overlay.has-background-dim{background-color:#000;inset:0;position:absolute}.wp-block-post-featured-image{position:relative}.wp-block-post-featured-image .wp-block-post-featured-image__overlay.has-background-gradient{background-color:initial}.wp-block-post-featured-image .wp-block-post-featured-image__overlay.has-background-dim-0{opacity:0}.wp-block-post-featured-image .wp-block-post-featured-image__overlay.has-background-dim-10{opacity:.1}.wp-block-post-featured-image .wp-block-post-featured-image__overlay.has-background-dim-20{opacity:.2}.wp-block-post-featured-image .wp-block-post-featured-image__overlay.has-background-dim-30{opacity:.3}.wp-block-post-featured-image .wp-block-post-featured-image__overlay.has-background-dim-40{opacity:.4}.wp-block-post-featured-image .wp-block-post-featured-image__overlay.has-background-dim-50{opacity:.5}.wp-block-post-featured-image .wp-block-post-featured-image__overlay.has-background-dim-60{opacity:.6}.wp-block-post-featured-image .wp-block-post-featured-image__overlay.has-background-dim-70{opacity:.7}.wp-block-post-featured-image .wp-block-post-featured-image__overlay.has-background-dim-80{opacity:.8}.wp-block-post-featured-image .wp-block-post-featured-image__overlay.has-background-dim-90{opacity:.9}.wp-block-post-featured-image .wp-block-post-featured-image__overlay.has-background-dim-100{opacity:1}.wp-block-post-featured-image:where(.alignleft,.alignright){width:100%}
+/*# sourceURL=https://www.law.georgetown.edu/ctls/wp-includes/blocks/post-featured-image/style.min.css */
+</style>
+<style id='wp-block-post-navigation-link-inline-css' type='text/css'>
+.wp-block-post-navigation-link .wp-block-post-navigation-link__arrow-previous{display:inline-block;margin-right:1ch}.wp-block-post-navigation-link .wp-block-post-navigation-link__arrow-previous:not(.is-arrow-chevron){transform:scaleX(1)}.wp-block-post-navigation-link .wp-block-post-navigation-link__arrow-next{display:inline-block;margin-left:1ch}.wp-block-post-navigation-link .wp-block-post-navigation-link__arrow-next:not(.is-arrow-chevron){transform:scaleX(1)}.wp-block-post-navigation-link.has-text-align-left[style*="writing-mode: vertical-lr"],.wp-block-post-navigation-link.has-text-align-right[style*="writing-mode: vertical-rl"]{rotate:180deg}
+/*# sourceURL=https://www.law.georgetown.edu/ctls/wp-includes/blocks/post-navigation-link/style.min.css */
+</style>
+<style id='wp-block-post-template-inline-css' type='text/css'>
+.wp-block-post-template{box-sizing:border-box;list-style:none;margin-bottom:0;margin-top:0;max-width:100%;padding:0}.wp-block-post-template.is-flex-container{display:flex;flex-direction:row;flex-wrap:wrap;gap:1.25em}.wp-block-post-template.is-flex-container>li{margin:0;width:100%}@media (min-width:600px){.wp-block-post-template.is-flex-container.is-flex-container.columns-2>li{width:calc(50% - .625em)}.wp-block-post-template.is-flex-container.is-flex-container.columns-3>li{width:calc(33.33333% - .83333em)}.wp-block-post-template.is-flex-container.is-flex-container.columns-4>li{width:calc(25% - .9375em)}.wp-block-post-template.is-flex-container.is-flex-container.columns-5>li{width:calc(20% - 1em)}.wp-block-post-template.is-flex-container.is-flex-container.columns-6>li{width:calc(16.66667% - 1.04167em)}}@media (max-width:600px){.wp-block-post-template-is-layout-grid.wp-block-post-template-is-layout-grid.wp-block-post-template-is-layout-grid.wp-block-post-template-is-layout-grid{grid-template-columns:1fr}}.wp-block-post-template-is-layout-constrained>li>.alignright,.wp-block-post-template-is-layout-flow>li>.alignright{float:right;margin-inline-end:0;margin-inline-start:2em}.wp-block-post-template-is-layout-constrained>li>.alignleft,.wp-block-post-template-is-layout-flow>li>.alignleft{float:left;margin-inline-end:2em;margin-inline-start:0}.wp-block-post-template-is-layout-constrained>li>.aligncenter,.wp-block-post-template-is-layout-flow>li>.aligncenter{margin-inline-end:auto;margin-inline-start:auto}
+/*# sourceURL=https://www.law.georgetown.edu/ctls/wp-includes/blocks/post-template/style.min.css */
+</style>
+<style id='wp-block-post-terms-inline-css' type='text/css'>
+.wp-block-post-terms{box-sizing:border-box}.wp-block-post-terms .wp-block-post-terms__separator{white-space:pre-wrap}
+/*# sourceURL=https://www.law.georgetown.edu/ctls/wp-includes/blocks/post-terms/style.min.css */
+</style>
+<style id='wp-block-post-time-to-read-inline-css' type='text/css'>
+.wp-block-post-time-to-read{box-sizing:border-box}
+/*# sourceURL=https://www.law.georgetown.edu/ctls/wp-includes/blocks/post-time-to-read/style.min.css */
+</style>
+<style id='wp-block-post-title-inline-css' type='text/css'>
+.wp-block-post-title{box-sizing:border-box;word-break:break-word}.wp-block-post-title :where(a){display:inline-block;font-family:inherit;font-size:inherit;font-style:inherit;font-weight:inherit;letter-spacing:inherit;line-height:inherit;text-decoration:inherit}
+/*# sourceURL=https://www.law.georgetown.edu/ctls/wp-includes/blocks/post-title/style.min.css */
+</style>
+<style id='wp-block-query-pagination-inline-css' type='text/css'>
+.wp-block-query-pagination.is-content-justification-space-between>.wp-block-query-pagination-next:last-of-type{margin-inline-start:auto}.wp-block-query-pagination.is-content-justification-space-between>.wp-block-query-pagination-previous:first-child{margin-inline-end:auto}.wp-block-query-pagination .wp-block-query-pagination-previous-arrow{display:inline-block;margin-right:1ch}.wp-block-query-pagination .wp-block-query-pagination-previous-arrow:not(.is-arrow-chevron){transform:scaleX(1)}.wp-block-query-pagination .wp-block-query-pagination-next-arrow{display:inline-block;margin-left:1ch}.wp-block-query-pagination .wp-block-query-pagination-next-arrow:not(.is-arrow-chevron){transform:scaleX(1)}.wp-block-query-pagination.aligncenter{justify-content:center}
+/*# sourceURL=https://www.law.georgetown.edu/ctls/wp-includes/blocks/query-pagination/style.min.css */
+</style>
+<style id='wp-block-query-title-inline-css' type='text/css'>
+.wp-block-query-title{box-sizing:border-box}
+/*# sourceURL=https://www.law.georgetown.edu/ctls/wp-includes/blocks/query-title/style.min.css */
+</style>
+<style id='wp-block-query-total-inline-css' type='text/css'>
+.wp-block-query-total{box-sizing:border-box}
+/*# sourceURL=https://www.law.georgetown.edu/ctls/wp-includes/blocks/query-total/style.min.css */
+</style>
+<style id='wp-block-read-more-inline-css' type='text/css'>
+.wp-block-read-more{display:block;width:fit-content}.wp-block-read-more:where(:not([style*=text-decoration])){text-decoration:none}.wp-block-read-more:where(:not([style*=text-decoration])):active,.wp-block-read-more:where(:not([style*=text-decoration])):focus{text-decoration:none}
+/*# sourceURL=https://www.law.georgetown.edu/ctls/wp-includes/blocks/read-more/style.min.css */
+</style>
+<style id='wp-block-rss-inline-css' type='text/css'>
+ul.wp-block-rss.alignleft{margin-right:2em}ul.wp-block-rss.alignright{margin-left:2em}ul.wp-block-rss.is-grid{display:flex;flex-wrap:wrap;padding:0}ul.wp-block-rss.is-grid li{margin:0 1em 1em 0;width:100%}@media (min-width:600px){ul.wp-block-rss.columns-2 li{width:calc(50% - 1em)}ul.wp-block-rss.columns-3 li{width:calc(33.33333% - 1em)}ul.wp-block-rss.columns-4 li{width:calc(25% - 1em)}ul.wp-block-rss.columns-5 li{width:calc(20% - 1em)}ul.wp-block-rss.columns-6 li{width:calc(16.66667% - 1em)}}.wp-block-rss__item-author,.wp-block-rss__item-publish-date{display:block;font-size:.8125em}.wp-block-rss{box-sizing:border-box;list-style:none;padding:0}
+/*# sourceURL=https://www.law.georgetown.edu/ctls/wp-includes/blocks/rss/style.min.css */
+</style>
+<style id='wp-block-search-inline-css' type='text/css'>
+.wp-block-search__button{margin-left:10px;word-break:normal}.wp-block-search__button.has-icon{line-height:0}.wp-block-search__button svg{height:1.25em;min-height:24px;min-width:24px;width:1.25em;fill:currentColor;vertical-align:text-bottom}:where(.wp-block-search__button){border:1px solid #ccc;padding:6px 10px}.wp-block-search__inside-wrapper{display:flex;flex:auto;flex-wrap:nowrap;max-width:100%}.wp-block-search__label{width:100%}.wp-block-search.wp-block-search__button-only .wp-block-search__button{box-sizing:border-box;display:flex;flex-shrink:0;justify-content:center;margin-left:0;max-width:100%}.wp-block-search.wp-block-search__button-only .wp-block-search__inside-wrapper{min-width:0!important;transition-property:width}.wp-block-search.wp-block-search__button-only .wp-block-search__input{flex-basis:100%;transition-duration:.3s}.wp-block-search.wp-block-search__button-only.wp-block-search__searchfield-hidden,.wp-block-search.wp-block-search__button-only.wp-block-search__searchfield-hidden .wp-block-search__inside-wrapper{overflow:hidden}.wp-block-search.wp-block-search__button-only.wp-block-search__searchfield-hidden .wp-block-search__input{border-left-width:0!important;border-right-width:0!important;flex-basis:0;flex-grow:0;margin:0;min-width:0!important;padding-left:0!important;padding-right:0!important;width:0!important}:where(.wp-block-search__input){appearance:none;border:1px solid #949494;flex-grow:1;font-family:inherit;font-size:inherit;font-style:inherit;font-weight:inherit;letter-spacing:inherit;line-height:inherit;margin-left:0;margin-right:0;min-width:3rem;padding:8px;text-decoration:unset!important;text-transform:inherit}:where(.wp-block-search__button-inside .wp-block-search__inside-wrapper){background-color:#fff;border:1px solid #949494;box-sizing:border-box;padding:4px}:where(.wp-block-search__button-inside .wp-block-search__inside-wrapper) .wp-block-search__input{border:none;border-radius:0;padding:0 4px}:where(.wp-block-search__button-inside .wp-block-search__inside-wrapper) .wp-block-search__input:focus{outline:none}:where(.wp-block-search__button-inside .wp-block-search__inside-wrapper) :where(.wp-block-search__button){padding:4px 8px}.wp-block-search.aligncenter .wp-block-search__inside-wrapper{margin:auto}.wp-block[data-align=right] .wp-block-search.wp-block-search__button-only .wp-block-search__inside-wrapper{float:right}
+/*# sourceURL=https://www.law.georgetown.edu/ctls/wp-includes/blocks/search/style.min.css */
+</style>
+<style id='wp-block-site-logo-inline-css' type='text/css'>
+.wp-block-site-logo{box-sizing:border-box;line-height:0}.wp-block-site-logo a{display:inline-block;line-height:0}.wp-block-site-logo.is-default-size img{height:auto;width:120px}.wp-block-site-logo img{height:auto;max-width:100%}.wp-block-site-logo a,.wp-block-site-logo img{border-radius:inherit}.wp-block-site-logo.aligncenter{margin-left:auto;margin-right:auto;text-align:center}:root :where(.wp-block-site-logo.is-style-rounded){border-radius:9999px}
+/*# sourceURL=https://www.law.georgetown.edu/ctls/wp-includes/blocks/site-logo/style.min.css */
+</style>
+<style id='wp-block-site-tagline-inline-css' type='text/css'>
+.wp-block-site-tagline{box-sizing:border-box}
+/*# sourceURL=https://www.law.georgetown.edu/ctls/wp-includes/blocks/site-tagline/style.min.css */
+</style>
+<style id='wp-block-site-title-inline-css' type='text/css'>
+.wp-block-site-title{box-sizing:border-box}.wp-block-site-title :where(a){color:inherit;font-family:inherit;font-size:inherit;font-style:inherit;font-weight:inherit;letter-spacing:inherit;line-height:inherit;text-decoration:inherit}
+/*# sourceURL=https://www.law.georgetown.edu/ctls/wp-includes/blocks/site-title/style.min.css */
+</style>
+<style id='wp-block-tag-cloud-inline-css' type='text/css'>
+.wp-block-tag-cloud{box-sizing:border-box}.wp-block-tag-cloud.aligncenter{justify-content:center;text-align:center}.wp-block-tag-cloud a{display:inline-block;margin-right:5px}.wp-block-tag-cloud span{display:inline-block;margin-left:5px;text-decoration:none}:root :where(.wp-block-tag-cloud.is-style-outline){display:flex;flex-wrap:wrap;gap:1ch}:root :where(.wp-block-tag-cloud.is-style-outline a){border:1px solid;font-size:unset!important;margin-right:0;padding:1ch 2ch;text-decoration:none!important}
+/*# sourceURL=https://www.law.georgetown.edu/ctls/wp-includes/blocks/tag-cloud/style.min.css */
+</style>
+<style id='wp-block-term-count-inline-css' type='text/css'>
+.wp-block-term-count{box-sizing:border-box}
+/*# sourceURL=https://www.law.georgetown.edu/ctls/wp-includes/blocks/term-count/style.min.css */
+</style>
+<style id='wp-block-term-description-inline-css' type='text/css'>
+:where(.wp-block-term-description){box-sizing:border-box;margin-bottom:var(--wp--style--block-gap);margin-top:var(--wp--style--block-gap)}.wp-block-term-description p{margin-bottom:0;margin-top:0}
+/*# sourceURL=https://www.law.georgetown.edu/ctls/wp-includes/blocks/term-description/style.min.css */
+</style>
+<style id='wp-block-term-name-inline-css' type='text/css'>
+.wp-block-term-name{box-sizing:border-box}
+/*# sourceURL=https://www.law.georgetown.edu/ctls/wp-includes/blocks/term-name/style.min.css */
+</style>
+<style id='wp-block-term-template-inline-css' type='text/css'>
+.wp-block-term-template{box-sizing:border-box;list-style:none;margin-bottom:0;margin-top:0;max-width:100%;padding:0}
+/*# sourceURL=https://www.law.georgetown.edu/ctls/wp-includes/blocks/term-template/style.min.css */
+</style>
+<style id='wp-block-video-inline-css' type='text/css'>
+.wp-block-video{box-sizing:border-box}.wp-block-video video{height:auto;vertical-align:middle;width:100%}@supports (position:sticky){.wp-block-video [poster]{object-fit:cover}}.wp-block-video.aligncenter{text-align:center}.wp-block-video :where(figcaption){margin-bottom:1em;margin-top:.5em}
+/*# sourceURL=https://www.law.georgetown.edu/ctls/wp-includes/blocks/video/style.min.css */
+</style>
+<style id='wp-block-accordion-heading-inline-css' type='text/css'>
+.wp-block-accordion-heading__toggle{align-items:center;background:none;border:none;color:inherit;cursor:pointer;display:flex;font-family:inherit;font-size:inherit;font-style:inherit;font-weight:inherit;letter-spacing:inherit;line-height:inherit;overflow:hidden;padding:var(--wp--preset--spacing--20,1em) 0;text-align:inherit;text-decoration:inherit;text-transform:inherit;width:100%;word-spacing:inherit}.wp-block-accordion-heading__toggle:not(:focus-visible){outline:none}.wp-block-accordion-heading__toggle:hover .wp-block-accordion-heading__toggle-title{text-decoration:underline}.wp-block-accordion-heading__toggle-title{flex:1}.wp-block-accordion-heading__toggle-icon{align-items:center;display:flex;height:1.2em;justify-content:center;width:1.2em}
+/*# sourceURL=https://www.law.georgetown.edu/ctls/wp-includes/blocks/accordion-heading/style.min.css */
+</style>
+<style id='wp-block-accordion-panel-inline-css' type='text/css'>
+.wp-block-accordion-panel[aria-hidden=true],.wp-block-accordion-panel[inert]{display:none;margin-block-start:0}
+/*# sourceURL=https://www.law.georgetown.edu/ctls/wp-includes/blocks/accordion-panel/style.min.css */
+</style>
+<style id='wp-block-audio-inline-css' type='text/css'>
+.wp-block-audio{box-sizing:border-box}.wp-block-audio :where(figcaption){margin-bottom:1em;margin-top:.5em}.wp-block-audio audio{min-width:300px;width:100%}
+/*# sourceURL=https://www.law.georgetown.edu/ctls/wp-includes/blocks/audio/style.min.css */
+</style>
+<style id='wp-block-code-inline-css' type='text/css'>
+.wp-block-code{box-sizing:border-box}.wp-block-code code{
+  /*!rtl:begin:ignore*/direction:ltr;display:block;font-family:inherit;overflow-wrap:break-word;text-align:initial;white-space:pre-wrap
+  /*!rtl:end:ignore*/}
+/*# sourceURL=https://www.law.georgetown.edu/ctls/wp-includes/blocks/code/style.min.css */
+</style>
+<style id='wp-block-columns-inline-css' type='text/css'>
+.wp-block-columns{box-sizing:border-box;display:flex;flex-wrap:wrap!important}@media (min-width:782px){.wp-block-columns{flex-wrap:nowrap!important}}.wp-block-columns{align-items:normal!important}.wp-block-columns.are-vertically-aligned-top{align-items:flex-start}.wp-block-columns.are-vertically-aligned-center{align-items:center}.wp-block-columns.are-vertically-aligned-bottom{align-items:flex-end}@media (max-width:781px){.wp-block-columns:not(.is-not-stacked-on-mobile)>.wp-block-column{flex-basis:100%!important}}@media (min-width:782px){.wp-block-columns:not(.is-not-stacked-on-mobile)>.wp-block-column{flex-basis:0;flex-grow:1}.wp-block-columns:not(.is-not-stacked-on-mobile)>.wp-block-column[style*=flex-basis]{flex-grow:0}}.wp-block-columns.is-not-stacked-on-mobile{flex-wrap:nowrap!important}.wp-block-columns.is-not-stacked-on-mobile>.wp-block-column{flex-basis:0;flex-grow:1}.wp-block-columns.is-not-stacked-on-mobile>.wp-block-column[style*=flex-basis]{flex-grow:0}:where(.wp-block-columns){margin-bottom:1.75em}:where(.wp-block-columns.has-background){padding:1.25em 2.375em}.wp-block-column{flex-grow:1;min-width:0;overflow-wrap:break-word;word-break:break-word}.wp-block-column.is-vertically-aligned-top{align-self:flex-start}.wp-block-column.is-vertically-aligned-center{align-self:center}.wp-block-column.is-vertically-aligned-bottom{align-self:flex-end}.wp-block-column.is-vertically-aligned-stretch{align-self:stretch}.wp-block-column.is-vertically-aligned-bottom,.wp-block-column.is-vertically-aligned-center,.wp-block-column.is-vertically-aligned-top{width:100%}
+/*# sourceURL=https://www.law.georgetown.edu/ctls/wp-includes/blocks/columns/style.min.css */
+</style>
+<style id='wp-block-details-inline-css' type='text/css'>
+.wp-block-details{box-sizing:border-box}.wp-block-details summary{cursor:pointer}
+/*# sourceURL=https://www.law.georgetown.edu/ctls/wp-includes/blocks/details/style.min.css */
+</style>
+<style id='wp-block-embed-inline-css' type='text/css'>
+.wp-block-embed.alignleft,.wp-block-embed.alignright,.wp-block[data-align=left]>[data-type="core/embed"],.wp-block[data-align=right]>[data-type="core/embed"]{max-width:360px;width:100%}.wp-block-embed.alignleft .wp-block-embed__wrapper,.wp-block-embed.alignright .wp-block-embed__wrapper,.wp-block[data-align=left]>[data-type="core/embed"] .wp-block-embed__wrapper,.wp-block[data-align=right]>[data-type="core/embed"] .wp-block-embed__wrapper{min-width:280px}.wp-block-cover .wp-block-embed{min-height:240px;min-width:320px}.wp-block-embed{overflow-wrap:break-word}.wp-block-embed :where(figcaption){margin-bottom:1em;margin-top:.5em}.wp-block-embed iframe{max-width:100%}.wp-block-embed__wrapper{position:relative}.wp-embed-responsive .wp-has-aspect-ratio .wp-block-embed__wrapper:before{content:"";display:block;padding-top:50%}.wp-embed-responsive .wp-has-aspect-ratio iframe{bottom:0;height:100%;left:0;position:absolute;right:0;top:0;width:100%}.wp-embed-responsive .wp-embed-aspect-21-9 .wp-block-embed__wrapper:before{padding-top:42.85%}.wp-embed-responsive .wp-embed-aspect-18-9 .wp-block-embed__wrapper:before{padding-top:50%}.wp-embed-responsive .wp-embed-aspect-16-9 .wp-block-embed__wrapper:before{padding-top:56.25%}.wp-embed-responsive .wp-embed-aspect-4-3 .wp-block-embed__wrapper:before{padding-top:75%}.wp-embed-responsive .wp-embed-aspect-1-1 .wp-block-embed__wrapper:before{padding-top:100%}.wp-embed-responsive .wp-embed-aspect-9-16 .wp-block-embed__wrapper:before{padding-top:177.77%}.wp-embed-responsive .wp-embed-aspect-1-2 .wp-block-embed__wrapper:before{padding-top:200%}
+/*# sourceURL=https://www.law.georgetown.edu/ctls/wp-includes/blocks/embed/style.min.css */
+</style>
+<style id='wp-block-group-inline-css' type='text/css'>
+.wp-block-group{box-sizing:border-box}:where(.wp-block-group.wp-block-group-is-layout-constrained){position:relative}
+/*# sourceURL=https://www.law.georgetown.edu/ctls/wp-includes/blocks/group/style.min.css */
+</style>
+<style id='wp-block-math-inline-css' type='text/css'>
+.wp-block-math{overflow-x:auto;overflow-y:hidden}
+/*# sourceURL=https://www.law.georgetown.edu/ctls/wp-includes/blocks/math/style.min.css */
+</style>
+<style id='wp-block-paragraph-inline-css' type='text/css'>
+.is-small-text{font-size:.875em}.is-regular-text{font-size:1em}.is-large-text{font-size:2.25em}.is-larger-text{font-size:3em}.has-drop-cap:not(:focus):first-letter{float:left;font-size:8.4em;font-style:normal;font-weight:100;line-height:.68;margin:.05em .1em 0 0;text-transform:uppercase}body.rtl .has-drop-cap:not(:focus):first-letter{float:none;margin-left:.1em}p.has-drop-cap.has-background{overflow:hidden}:root :where(p.has-background){padding:1.25em 2.375em}:where(p.has-text-color:not(.has-link-color)) a{color:inherit}p.has-text-align-left[style*="writing-mode:vertical-lr"],p.has-text-align-right[style*="writing-mode:vertical-rl"]{rotate:180deg}
+/*# sourceURL=https://www.law.georgetown.edu/ctls/wp-includes/blocks/paragraph/style.min.css */
+</style>
+<style id='wp-block-preformatted-inline-css' type='text/css'>
+.wp-block-preformatted{box-sizing:border-box;white-space:pre-wrap}:where(.wp-block-preformatted.has-background){padding:1.25em 2.375em}
+/*# sourceURL=https://www.law.georgetown.edu/ctls/wp-includes/blocks/preformatted/style.min.css */
+</style>
+<style id='wp-block-pullquote-inline-css' type='text/css'>
+.wp-block-pullquote{box-sizing:border-box;margin:0 0 1em;overflow-wrap:break-word;padding:4em 0;text-align:center}.wp-block-pullquote blockquote,.wp-block-pullquote p{color:inherit}.wp-block-pullquote blockquote{margin:0}.wp-block-pullquote p{margin-top:0}.wp-block-pullquote p:last-child{margin-bottom:0}.wp-block-pullquote.alignleft,.wp-block-pullquote.alignright{max-width:420px}.wp-block-pullquote cite,.wp-block-pullquote footer{position:relative}.wp-block-pullquote .has-text-color a{color:inherit}.wp-block-pullquote.has-text-align-left blockquote{text-align:left}.wp-block-pullquote.has-text-align-right blockquote{text-align:right}.wp-block-pullquote.has-text-align-center blockquote{text-align:center}.wp-block-pullquote.is-style-solid-color{border:none}.wp-block-pullquote.is-style-solid-color blockquote{margin-left:auto;margin-right:auto;max-width:60%}.wp-block-pullquote.is-style-solid-color blockquote p{font-size:2em;margin-bottom:0;margin-top:0}.wp-block-pullquote.is-style-solid-color blockquote cite{font-style:normal;text-transform:none}.wp-block-pullquote :where(cite){color:inherit;display:block}
+/*# sourceURL=https://www.law.georgetown.edu/ctls/wp-includes/blocks/pullquote/style.min.css */
+</style>
+<style id='wp-block-quote-inline-css' type='text/css'>
+.wp-block-quote{box-sizing:border-box;overflow-wrap:break-word}.wp-block-quote.is-large:where(:not(.is-style-plain)),.wp-block-quote.is-style-large:where(:not(.is-style-plain)){margin-bottom:1em;padding:0 1em}.wp-block-quote.is-large:where(:not(.is-style-plain)) p,.wp-block-quote.is-style-large:where(:not(.is-style-plain)) p{font-size:1.5em;font-style:italic;line-height:1.6}.wp-block-quote.is-large:where(:not(.is-style-plain)) cite,.wp-block-quote.is-large:where(:not(.is-style-plain)) footer,.wp-block-quote.is-style-large:where(:not(.is-style-plain)) cite,.wp-block-quote.is-style-large:where(:not(.is-style-plain)) footer{font-size:1.125em;text-align:right}.wp-block-quote>cite{display:block}
+/*# sourceURL=https://www.law.georgetown.edu/ctls/wp-includes/blocks/quote/style.min.css */
+</style>
+<style id='wp-block-separator-inline-css' type='text/css'>
+@charset "UTF-8";.wp-block-separator{border:none;border-top:2px solid}:root :where(.wp-block-separator.is-style-dots){height:auto;line-height:1;text-align:center}:root :where(.wp-block-separator.is-style-dots):before{color:currentColor;content:"···";font-family:serif;font-size:1.5em;letter-spacing:2em;padding-left:2em}.wp-block-separator.is-style-dots{background:none!important;border:none!important}
+/*# sourceURL=https://www.law.georgetown.edu/ctls/wp-includes/blocks/separator/style.min.css */
+</style>
+<link rel='stylesheet' id='wp-block-social-links-css' href='https://www.law.georgetown.edu/ctls/wp-includes/blocks/social-links/style.min.css?ver=6.9.1' type='text/css' media='all' />
+<style id='wp-block-spacer-inline-css' type='text/css'>
+.wp-block-spacer{clear:both}
+/*# sourceURL=https://www.law.georgetown.edu/ctls/wp-includes/blocks/spacer/style.min.css */
+</style>
+<link rel='stylesheet' id='wp-block-table-css' href='https://www.law.georgetown.edu/ctls/wp-includes/blocks/table/style.min.css?ver=6.9.1' type='text/css' media='all' />
+<style id='wp-block-text-columns-inline-css' type='text/css'>
+.wp-block-text-columns,.wp-block-text-columns.aligncenter{display:flex}.wp-block-text-columns .wp-block-column{margin:0 1em;padding:0}.wp-block-text-columns .wp-block-column:first-child{margin-left:0}.wp-block-text-columns .wp-block-column:last-child{margin-right:0}.wp-block-text-columns.columns-2 .wp-block-column{width:50%}.wp-block-text-columns.columns-3 .wp-block-column{width:33.3333333333%}.wp-block-text-columns.columns-4 .wp-block-column{width:25%}
+/*# sourceURL=https://www.law.georgetown.edu/ctls/wp-includes/blocks/text-columns/style.min.css */
+</style>
+<style id='wp-block-verse-inline-css' type='text/css'>
+pre.wp-block-verse{overflow:auto;white-space:pre-wrap}:where(pre.wp-block-verse){font-family:inherit}
+/*# sourceURL=https://www.law.georgetown.edu/ctls/wp-includes/blocks/verse/style.min.css */
+</style>
+<style id='pdfemb-pdf-embedder-viewer-style-inline-css' type='text/css'>
+.wp-block-pdfemb-pdf-embedder-viewer{max-width:none}
+
+/*# sourceURL=https://www.law.georgetown.edu/ctls/wp-content/plugins/pdf-embedder/block/build/style-index.css */
+</style>
+<style id='global-styles-inline-css' type='text/css'>
+:root{--wp--preset--aspect-ratio--square: 1;--wp--preset--aspect-ratio--4-3: 4/3;--wp--preset--aspect-ratio--3-4: 3/4;--wp--preset--aspect-ratio--3-2: 3/2;--wp--preset--aspect-ratio--2-3: 2/3;--wp--preset--aspect-ratio--16-9: 16/9;--wp--preset--aspect-ratio--9-16: 9/16;--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgb(6,147,227) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgb(252,185,0) 0%,rgb(255,105,0) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgb(255,105,0) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--font-size--small: 13px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 36px;--wp--preset--font-size--x-large: 42px;--wp--preset--spacing--20: 0.44rem;--wp--preset--spacing--30: 0.67rem;--wp--preset--spacing--40: 1rem;--wp--preset--spacing--50: 1.5rem;--wp--preset--spacing--60: 2.25rem;--wp--preset--spacing--70: 3.38rem;--wp--preset--spacing--80: 5.06rem;--wp--preset--shadow--natural: 6px 6px 9px rgba(0, 0, 0, 0.2);--wp--preset--shadow--deep: 12px 12px 50px rgba(0, 0, 0, 0.4);--wp--preset--shadow--sharp: 6px 6px 0px rgba(0, 0, 0, 0.2);--wp--preset--shadow--outlined: 6px 6px 0px -3px rgb(255, 255, 255), 6px 6px rgb(0, 0, 0);--wp--preset--shadow--crisp: 6px 6px 0px rgb(0, 0, 0);}:where(.is-layout-flex){gap: 0.5em;}:where(.is-layout-grid){gap: 0.5em;}body .is-layout-flex{display: flex;}.is-layout-flex{flex-wrap: wrap;align-items: center;}.is-layout-flex > :is(*, div){margin: 0;}body .is-layout-grid{display: grid;}.is-layout-grid > :is(*, div){margin: 0;}:where(.wp-block-columns.is-layout-flex){gap: 2em;}:where(.wp-block-columns.is-layout-grid){gap: 2em;}:where(.wp-block-post-template.is-layout-flex){gap: 1.25em;}:where(.wp-block-post-template.is-layout-grid){gap: 1.25em;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}
+:where(.wp-block-post-template.is-layout-flex){gap: 1.25em;}:where(.wp-block-post-template.is-layout-grid){gap: 1.25em;}
+:where(.wp-block-term-template.is-layout-flex){gap: 1.25em;}:where(.wp-block-term-template.is-layout-grid){gap: 1.25em;}
+:where(.wp-block-columns.is-layout-flex){gap: 2em;}:where(.wp-block-columns.is-layout-grid){gap: 2em;}
+:root :where(.wp-block-pullquote){font-size: 1.5em;line-height: 1.6;}
+/*# sourceURL=global-styles-inline-css */
+</style>
+<link rel='stylesheet' id='simple-accessible-spoilers-style-css' href='https://www.law.georgetown.edu/ctls/wp-content/plugins/simple-accessible-spoilers/styles/simple-accessible-spoilers-default.css?ver=6.9.1' type='text/css' media='all' />
+<link rel='stylesheet' id='dashicons-css' href='https://www.law.georgetown.edu/ctls/wp-includes/css/dashicons.min.css?ver=6.9.1' type='text/css' media='all' />
+<link rel='stylesheet' id='__EPYT__style-css' href='https://www.law.georgetown.edu/ctls/wp-content/plugins/youtube-embed-plus/styles/ytprefs.min.css?ver=14.2.4' type='text/css' media='all' />
+<style id='__EPYT__style-inline-css' type='text/css'>
+
+                .epyt-gallery-thumb {
+                        width: 33.333%;
+                }
+                
+/*# sourceURL=__EPYT__style-inline-css */
+</style>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.8.3/jquery.min.js?ver=1.8.3" id="jquery-js"></script>
+<script type="text/javascript" src="https://www.law.georgetown.edu/ctls/wp-content/plugins/simple-accessible-spoilers/scripts/simple-accessible-spoilers-scripts.js?ver=1771273965" id="simple-accessible-spoilers-scripts-js"></script>
+<script type="text/javascript" id="__ytprefs__-js-extra">
+/* <![CDATA[ */
+var _EPYT_ = {"ajaxurl":"https://www.law.georgetown.edu/ctls/wp-admin/admin-ajax.php","security":"5322f215b1","gallery_scrolloffset":"20","eppathtoscripts":"https://www.law.georgetown.edu/ctls/wp-content/plugins/youtube-embed-plus/scripts/","eppath":"https://www.law.georgetown.edu/ctls/wp-content/plugins/youtube-embed-plus/","epresponsiveselector":"[\"iframe.__youtube_prefs_widget__\"]","epdovol":"1","version":"14.2.4","evselector":"iframe.__youtube_prefs__[src], iframe[src*=\"youtube.com/embed/\"], iframe[src*=\"youtube-nocookie.com/embed/\"]","ajax_compat":"","maxres_facade":"eager","ytapi_load":"light","pause_others":"","stopMobileBuffer":"1","facade_mode":"","not_live_on_channel":""};
+//# sourceURL=__ytprefs__-js-extra
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://www.law.georgetown.edu/ctls/wp-content/plugins/youtube-embed-plus/scripts/ytprefs.min.js?ver=14.2.4" id="__ytprefs__-js"></script>
+<link rel="https://api.w.org/" href="https://www.law.georgetown.edu/ctls/wp-json/" /><meta name="generator" content="WordPress 6.9.1" />
+<meta name="et-api-version" content="v1"><meta name="et-api-origin" content="https://www.law.georgetown.edu/ctls"><link rel="https://theeventscalendar.com/" href="https://www.law.georgetown.edu/ctls/wp-json/tribe/tickets/v1/" /><meta name="tec-api-version" content="v1"><meta name="tec-api-origin" content="https://www.law.georgetown.edu/ctls"><link rel="alternate" href="https://www.law.georgetown.edu/ctls/wp-json/tribe/events/v1/" />		<!--Customizer CSS--> 
+		<style type="text/css">
+					</style> 
+		<!--/Customizer CSS-->
+		<script type="text/javascript" src="//script.crazyegg.com/pages/scripts/0114/0195.js" async="async"></script><link rel="alternate" type="application/rss+xml" title="RSS" href="https://www.law.georgetown.edu/ctls/rsslatest.xml" />		<style type="text/css" id="wp-custom-css">
+			/*
+body {background: #000000;}
+.page_content{background: #f4f4f4;}
+*/
+/* DMH82 Fix contrast issue with A - Z menu */
+.directory_controls li.disabled span {
+    text-decoration: none;
+	  color: #122035;
+}
+		</style>
+			</head>
+
+	<body class="fs-grid theme_custom has_entity entity_child theme_default theme_page_down error404 wp-theme-georgetownlawgeorgetownlaw wp-child-theme-georgetownlawgeorgetownlaw-center tribe-no-js tec-no-tickets-on-recurring tec-no-rsvp-on-recurring tribe-theme-georgetownlawgeorgetownlaw">
+		<!-- Google Tag Manager (noscript) -->
+		<noscript aria-hidden="true"><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WMV9WVD" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+		<!-- End Google Tag Manager (noscript) -->
+		<section class="js-toggle js-alert alert js-bound" role="banner" style="display: none;" aria-hidden="true" aria-label="Alert">
+	<div class="alert_inner">
+		<div class="fs-row">
+			<div class="fs-cell">
+				<div class="alert_wrapper">
+					<button class="js-toggle_handle js-alert-close alert_close">
+						<span class="alert_close_label">
+							Close Alert
+							<svg class="symbol symbol_x_thin" alt="">
+								<use xlink:href="https://www.law.georgetown.edu/ctls/wp-content/themes/georgetownlaw/georgetownlaw/images/icons.svg#x_thin"></use>
+							</svg>
+						</span>
+					</button>
+					<header class="alert_header">
+						<span>Website Alert</span>
+					</header>
+					<div class="alert_body">
+						<div class="alert_description">
+							<div class="alert_title" id="website_alert_title"></div>
+							<p></p>
+							<a href="#" aria-labelledby="website_alert_title">
+								<span>Read Alert Information</span>
+								<svg class="symbol symbol_caret" aria-hidden="true">
+									<use xlink:href="https://www.law.georgetown.edu/ctls/wp-content/themes/georgetownlaw/georgetownlaw/images/icons.svg#caret"></use>
+								</svg>
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<!-- Page Wrapper -->
+<div class="page_wrapper js-navigation_push">
+	<!-- Header -->
+	<header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+		<!-- Skip-to-Content Link -->
+
+		<a href="#main_page_title" class="skip_link skip_link_main">Skip to Main Content</a>
+		<a href="#secondary_nav_lg" class="skip_link skip_link_utility">Skip to Utility Navigation</a>
+		<a href="#main_nav" class="skip_link skip_link_primary">Skip to Primary Navigation</a>		<div class="header_secondary_wrap_custom header_secondary_wrap_custom_desktop">
+			<div class="header_secondary_wrap_custom_inner">
+				<div class="fs-row">
+					<div class="fs-cell">
+						<div class="header_secondary_inner_custom">
+							<div class="logo_wrap_custom">
+								<h1 class="logo logo_custom" itemscope="" itemtype="http://schema.org/Organization">
+									<a class="logo_link" itemprop="url" href="https://www.law.georgetown.edu/" title="Georgetown Law">
+										<svg class="symbol symbol_logo_custom">
+											<use xlink:href="https://www.law.georgetown.edu/ctls/wp-content/themes/georgetownlaw/georgetownlaw/images/icons.svg#logo_custom"></use>
+										</svg>
+										<img class="logo_print" src="https://www.law.georgetown.edu/ctls/wp-content/themes/georgetownlaw/georgetownlaw/images/logo-print-custom.png" alt="Georgetown Law">
+										<meta content="https://www.law.georgetown.edu/ctls/wp-content/themes/georgetownlaw/georgetownlaw/images/logo-schema.png" itemprop="logo">
+									</a>
+								</h1>
+								<a href="https://www.law.georgetown.edu/ctls/" class="header_label_custom">Center for Transnational Legal Studies</a>
+							</div>
+
+							<div class="header_links_custom">
+																<a href="https://www.law.georgetown.edu/ctls/about-us/" class="header_link_custom">About Us: Why CTLS</a>
+																<a href="https://www.law.georgetown.edu/ctls/events/" class="header_link_custom">Events</a>
+																<a href="https://www.law.georgetown.edu/ctls/partner-schools/" class="header_link_custom">Partner Schools</a>
+																<a href="https://www.law.georgetown.edu/ctls/research/" class="header_link_custom">Research</a>
+															</div>
+						</div>
+						<div class="header_wrap">
+							<a class="js-nav_handle mobile_sidebar_handle" href="#mobile_sidebar">Menu</a>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			
+			<div class="entity_name">
+				<div class="fs-row">
+					<div class="fs-cell">
+						<div class="entity_name_inner">
+							<a href="https://www.law.georgetown.edu/ctls/" class="entity_name_link">Center for Transnational Legal Studies</a>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			
+			<div class="fs-row">
+				<div class="fs-cell">
+					<div class="header_main_wrap header_main_wrap_custom">
+												<nav id="main_nav" class="js-main-nav main_nav main_nav_lg" itemscope="" itemtype="http://schema.org/SiteNavigationElement">
+							<ul class="menu" aria-label="Main Site" role="menubar">
+								    							<li class="menu-item-main menu-item menu-item-type-post_type menu-item-object-page js-main-nav-1 " role="none">
+   									<a href="https://www.law.georgetown.edu/ctls/admissions/" role="menuitem">Admissions</a>
+   									        						</li>
+        						    							<li class="menu-item-main menu-item menu-item-type-post_type menu-item-object-page js-main-nav-2  menu-item-has-children" role="none">
+   									<a href="https://www.law.georgetown.edu/ctls/academics/" role="menuitem">Academics</a>
+   									    								<button class="js-swap main_nav_toggle" data-swap-target=".js-main-nav-2" data-swap-group="main_nav" aria-expanded="false" aria-haspopup="true" aria-label="Academics">
+    									Expand Navigation    									<span aria-hidden="true">
+    										<svg class="symbol symbol_caret">
+												<use xlink:href="https://www.law.georgetown.edu/ctls/wp-content/themes/georgetownlaw/georgetownlaw/images/icons.svg#caret"></use>
+											</svg>
+										</span>
+									</button>
+    	        					<ul class="sub-menu" role="menu">
+    	        								        		    	        <li class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item" role="none">
+											<a href="https://www.law.georgetown.edu/ctls/academics/courses/">
+												Current Courses												<span class="menu_item_child_icon" aria-hidden="true">
+													<svg class="symbol symbol_caret">
+														<use xlink:href="https://www.law.georgetown.edu/ctls/wp-content/themes/georgetownlaw/georgetownlaw/images/icons.svg#caret"></use>
+													</svg>
+												</span>
+											</a>
+        								</li>
+        										        		    	        <li class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item" role="none">
+											<a href="https://www.law.georgetown.edu/ctls/academics/past-courses/">
+												Past Courses												<span class="menu_item_child_icon" aria-hidden="true">
+													<svg class="symbol symbol_caret">
+														<use xlink:href="https://www.law.georgetown.edu/ctls/wp-content/themes/georgetownlaw/georgetownlaw/images/icons.svg#caret"></use>
+													</svg>
+												</span>
+											</a>
+        								</li>
+        										        		    	        <li class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item" role="none">
+											<a href="https://www.law.georgetown.edu/ctls/academics/academic-honors/">
+												Academic Honors												<span class="menu_item_child_icon" aria-hidden="true">
+													<svg class="symbol symbol_caret">
+														<use xlink:href="https://www.law.georgetown.edu/ctls/wp-content/themes/georgetownlaw/georgetownlaw/images/icons.svg#caret"></use>
+													</svg>
+												</span>
+											</a>
+        								</li>
+        										        		    	        <li class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item" role="none">
+											<a href="https://www.law.georgetown.edu/ctls/academics/mooting-experience/">
+												Mooting Experience												<span class="menu_item_child_icon" aria-hidden="true">
+													<svg class="symbol symbol_caret">
+														<use xlink:href="https://www.law.georgetown.edu/ctls/wp-content/themes/georgetownlaw/georgetownlaw/images/icons.svg#caret"></use>
+													</svg>
+												</span>
+											</a>
+        								</li>
+        										        		    	        <li class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item" role="none">
+											<a href="https://www.law.georgetown.edu/ctls/academics/requesting-a-transcript/">
+												Requesting a Transcript												<span class="menu_item_child_icon" aria-hidden="true">
+													<svg class="symbol symbol_caret">
+														<use xlink:href="https://www.law.georgetown.edu/ctls/wp-content/themes/georgetownlaw/georgetownlaw/images/icons.svg#caret"></use>
+													</svg>
+												</span>
+											</a>
+        								</li>
+        								        							</ul>
+        							        						</li>
+        						    							<li class="menu-item-main menu-item menu-item-type-post_type menu-item-object-page js-main-nav-3  menu-item-has-children" role="none">
+   									<a href="https://www.law.georgetown.edu/ctls/our-faculty/" role="menuitem">Our Faculty</a>
+   									    								<button class="js-swap main_nav_toggle" data-swap-target=".js-main-nav-3" data-swap-group="main_nav" aria-expanded="false" aria-haspopup="true" aria-label="Our Faculty">
+    									Expand Navigation    									<span aria-hidden="true">
+    										<svg class="symbol symbol_caret">
+												<use xlink:href="https://www.law.georgetown.edu/ctls/wp-content/themes/georgetownlaw/georgetownlaw/images/icons.svg#caret"></use>
+											</svg>
+										</span>
+									</button>
+    	        					<ul class="sub-menu" role="menu">
+    	        								        		    	        <li class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item" role="none">
+											<a href="https://www.law.georgetown.edu/ctls/staff/">
+												Past Faculty												<span class="menu_item_child_icon" aria-hidden="true">
+													<svg class="symbol symbol_caret">
+														<use xlink:href="https://www.law.georgetown.edu/ctls/wp-content/themes/georgetownlaw/georgetownlaw/images/icons.svg#caret"></use>
+													</svg>
+												</span>
+											</a>
+        								</li>
+        										        		    	        <li class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item" role="none">
+											<a href="https://www.law.georgetown.edu/ctls/our-faculty/in-memoriam/">
+												In Memoriam												<span class="menu_item_child_icon" aria-hidden="true">
+													<svg class="symbol symbol_caret">
+														<use xlink:href="https://www.law.georgetown.edu/ctls/wp-content/themes/georgetownlaw/georgetownlaw/images/icons.svg#caret"></use>
+													</svg>
+												</span>
+											</a>
+        								</li>
+        								        							</ul>
+        							        						</li>
+        						    							<li class="menu-item-main menu-item menu-item-type-post_type menu-item-object-page js-main-nav-4  menu-item-has-children" role="none">
+   									<a href="https://www.law.georgetown.edu/ctls/student-life/" role="menuitem">Student Life</a>
+   									    								<button class="js-swap main_nav_toggle" data-swap-target=".js-main-nav-4" data-swap-group="main_nav" aria-expanded="false" aria-haspopup="true" aria-label="Student Life">
+    									Expand Navigation    									<span aria-hidden="true">
+    										<svg class="symbol symbol_caret">
+												<use xlink:href="https://www.law.georgetown.edu/ctls/wp-content/themes/georgetownlaw/georgetownlaw/images/icons.svg#caret"></use>
+											</svg>
+										</span>
+									</button>
+    	        					<ul class="sub-menu" role="menu">
+    	        								        		    	        <li class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item" role="none">
+											<a href="https://www.law.georgetown.edu/ctls/student-life/disability-services/">
+												Accessibility Services												<span class="menu_item_child_icon" aria-hidden="true">
+													<svg class="symbol symbol_caret">
+														<use xlink:href="https://www.law.georgetown.edu/ctls/wp-content/themes/georgetownlaw/georgetownlaw/images/icons.svg#caret"></use>
+													</svg>
+												</span>
+											</a>
+        								</li>
+        										        		    	        <li class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item" role="none">
+											<a href="https://www.law.georgetown.edu/ctls/student-life/alumni/">
+												Alumni												<span class="menu_item_child_icon" aria-hidden="true">
+													<svg class="symbol symbol_caret">
+														<use xlink:href="https://www.law.georgetown.edu/ctls/wp-content/themes/georgetownlaw/georgetownlaw/images/icons.svg#caret"></use>
+													</svg>
+												</span>
+											</a>
+        								</li>
+        										        		    	        <li class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item" role="none">
+											<a href="https://www.law.georgetown.edu/ctls/student-life/health-and-safety/">
+												Health and Safety												<span class="menu_item_child_icon" aria-hidden="true">
+													<svg class="symbol symbol_caret">
+														<use xlink:href="https://www.law.georgetown.edu/ctls/wp-content/themes/georgetownlaw/georgetownlaw/images/icons.svg#caret"></use>
+													</svg>
+												</span>
+											</a>
+        								</li>
+        										        		    	        <li class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item" role="none">
+											<a href="https://www.law.georgetown.edu/ctls/student-life/other-services/">
+												Other Services												<span class="menu_item_child_icon" aria-hidden="true">
+													<svg class="symbol symbol_caret">
+														<use xlink:href="https://www.law.georgetown.edu/ctls/wp-content/themes/georgetownlaw/georgetownlaw/images/icons.svg#caret"></use>
+													</svg>
+												</span>
+											</a>
+        								</li>
+        										        		    	        <li class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item" role="none">
+											<a href="https://www.law.georgetown.edu/ctls/student-life/student-housing/">
+												Student Housing												<span class="menu_item_child_icon" aria-hidden="true">
+													<svg class="symbol symbol_caret">
+														<use xlink:href="https://www.law.georgetown.edu/ctls/wp-content/themes/georgetownlaw/georgetownlaw/images/icons.svg#caret"></use>
+													</svg>
+												</span>
+											</a>
+        								</li>
+        										        		    	        <li class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item" role="none">
+											<a href="https://www.law.georgetown.edu/ctls/student-life/travelling-abroad/">
+												Travelling Abroad												<span class="menu_item_child_icon" aria-hidden="true">
+													<svg class="symbol symbol_caret">
+														<use xlink:href="https://www.law.georgetown.edu/ctls/wp-content/themes/georgetownlaw/georgetownlaw/images/icons.svg#caret"></use>
+													</svg>
+												</span>
+											</a>
+        								</li>
+        								        							</ul>
+        							        						</li>
+        						        					</ul>
+						</nav>
+						
+						<a class="site_search_handle" href="">
+							<span class="site_search_handle_label">Search</span>
+							<span class="site_search_handle_icon">
+								<svg class="symbol symbol_search">
+									<use xlink:href="https://www.law.georgetown.edu/ctls/wp-content/themes/georgetownlaw/georgetownlaw/images/icons.svg#search"></use>
+								</svg>
+							</span>
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</header>
+	<!-- END: Header -->
+
+	<!-- Sticky Header -->
+	<div class="js-toggle js-nav_block nav_block_custom nav_block" aria-hidden="true">
+		<div class="js-nav_block_inner nav_block_inner">
+			<div class="fs-row">
+				<div class="fs-cell">
+										<nav class="js-main-nav main_nav main_nav_lg" itemscope itemtype="http://schema.org/SiteNavigationElement">
+						<ul class="menu" role="menubar" aria-label="Consistent Main Site">
+							    						<li class="menu-item menu-item-type-post_type menu-item-object-page js-main-nav-1 " role="none">
+   								<a href="https://www.law.georgetown.edu/ctls/admissions/" role="menuitem">Admissions</a>
+   								        					</li>
+        					    						<li class="menu-item menu-item-type-post_type menu-item-object-page js-main-nav-2  menu-item-has-children" role="none">
+   								<a href="https://www.law.georgetown.edu/ctls/academics/" role="menuitem">Academics</a>
+   								    							<button class="js-swap main_nav_toggle" data-swap-target=".js-main-nav-2" data-swap-group="main_nav" aria-haspopup="true" aria-expanded="false">
+    								Expand Navigation    								<span>
+    									<svg class="symbol symbol_caret" aria-hidden="true">
+											<use xlink:href="https://www.law.georgetown.edu/ctls/wp-content/themes/georgetownlaw/georgetownlaw/images/icons.svg#caret"></use>
+										</svg>
+									</span>
+								</button>
+    	        				<ul class="sub-menu" role="menu">
+    	        							        		            <li class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item">
+										<a href="https://www.law.georgetown.edu/ctls/academics/courses/">
+											Current Courses											<span class="menu_item_child_icon" aria-hidden="true">
+												<svg class="symbol symbol_caret">
+													<use xlink:href="https://www.law.georgetown.edu/ctls/wp-content/themes/georgetownlaw/georgetownlaw/images/icons.svg#caret"></use>
+												</svg>
+											</span>
+										</a>
+        							</li>
+        									        		            <li class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item">
+										<a href="https://www.law.georgetown.edu/ctls/academics/past-courses/">
+											Past Courses											<span class="menu_item_child_icon" aria-hidden="true">
+												<svg class="symbol symbol_caret">
+													<use xlink:href="https://www.law.georgetown.edu/ctls/wp-content/themes/georgetownlaw/georgetownlaw/images/icons.svg#caret"></use>
+												</svg>
+											</span>
+										</a>
+        							</li>
+        									        		            <li class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item">
+										<a href="https://www.law.georgetown.edu/ctls/academics/academic-honors/">
+											Academic Honors											<span class="menu_item_child_icon" aria-hidden="true">
+												<svg class="symbol symbol_caret">
+													<use xlink:href="https://www.law.georgetown.edu/ctls/wp-content/themes/georgetownlaw/georgetownlaw/images/icons.svg#caret"></use>
+												</svg>
+											</span>
+										</a>
+        							</li>
+        									        		            <li class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item">
+										<a href="https://www.law.georgetown.edu/ctls/academics/mooting-experience/">
+											Mooting Experience											<span class="menu_item_child_icon" aria-hidden="true">
+												<svg class="symbol symbol_caret">
+													<use xlink:href="https://www.law.georgetown.edu/ctls/wp-content/themes/georgetownlaw/georgetownlaw/images/icons.svg#caret"></use>
+												</svg>
+											</span>
+										</a>
+        							</li>
+        									        		            <li class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item">
+										<a href="https://www.law.georgetown.edu/ctls/academics/requesting-a-transcript/">
+											Requesting a Transcript											<span class="menu_item_child_icon" aria-hidden="true">
+												<svg class="symbol symbol_caret">
+													<use xlink:href="https://www.law.georgetown.edu/ctls/wp-content/themes/georgetownlaw/georgetownlaw/images/icons.svg#caret"></use>
+												</svg>
+											</span>
+										</a>
+        							</li>
+        							        						</ul>
+        						        					</li>
+        					    						<li class="menu-item menu-item-type-post_type menu-item-object-page js-main-nav-3  menu-item-has-children" role="none">
+   								<a href="https://www.law.georgetown.edu/ctls/our-faculty/" role="menuitem">Our Faculty</a>
+   								    							<button class="js-swap main_nav_toggle" data-swap-target=".js-main-nav-3" data-swap-group="main_nav" aria-haspopup="true" aria-expanded="false">
+    								Expand Navigation    								<span>
+    									<svg class="symbol symbol_caret" aria-hidden="true">
+											<use xlink:href="https://www.law.georgetown.edu/ctls/wp-content/themes/georgetownlaw/georgetownlaw/images/icons.svg#caret"></use>
+										</svg>
+									</span>
+								</button>
+    	        				<ul class="sub-menu" role="menu">
+    	        							        		            <li class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item">
+										<a href="https://www.law.georgetown.edu/ctls/staff/">
+											Past Faculty											<span class="menu_item_child_icon" aria-hidden="true">
+												<svg class="symbol symbol_caret">
+													<use xlink:href="https://www.law.georgetown.edu/ctls/wp-content/themes/georgetownlaw/georgetownlaw/images/icons.svg#caret"></use>
+												</svg>
+											</span>
+										</a>
+        							</li>
+        									        		            <li class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item">
+										<a href="https://www.law.georgetown.edu/ctls/our-faculty/in-memoriam/">
+											In Memoriam											<span class="menu_item_child_icon" aria-hidden="true">
+												<svg class="symbol symbol_caret">
+													<use xlink:href="https://www.law.georgetown.edu/ctls/wp-content/themes/georgetownlaw/georgetownlaw/images/icons.svg#caret"></use>
+												</svg>
+											</span>
+										</a>
+        							</li>
+        							        						</ul>
+        						        					</li>
+        					    						<li class="menu-item menu-item-type-post_type menu-item-object-page js-main-nav-4  menu-item-has-children" role="none">
+   								<a href="https://www.law.georgetown.edu/ctls/student-life/" role="menuitem">Student Life</a>
+   								    							<button class="js-swap main_nav_toggle" data-swap-target=".js-main-nav-4" data-swap-group="main_nav" aria-haspopup="true" aria-expanded="false">
+    								Expand Navigation    								<span>
+    									<svg class="symbol symbol_caret" aria-hidden="true">
+											<use xlink:href="https://www.law.georgetown.edu/ctls/wp-content/themes/georgetownlaw/georgetownlaw/images/icons.svg#caret"></use>
+										</svg>
+									</span>
+								</button>
+    	        				<ul class="sub-menu" role="menu">
+    	        							        		            <li class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item">
+										<a href="https://www.law.georgetown.edu/ctls/student-life/disability-services/">
+											Accessibility Services											<span class="menu_item_child_icon" aria-hidden="true">
+												<svg class="symbol symbol_caret">
+													<use xlink:href="https://www.law.georgetown.edu/ctls/wp-content/themes/georgetownlaw/georgetownlaw/images/icons.svg#caret"></use>
+												</svg>
+											</span>
+										</a>
+        							</li>
+        									        		            <li class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item">
+										<a href="https://www.law.georgetown.edu/ctls/student-life/alumni/">
+											Alumni											<span class="menu_item_child_icon" aria-hidden="true">
+												<svg class="symbol symbol_caret">
+													<use xlink:href="https://www.law.georgetown.edu/ctls/wp-content/themes/georgetownlaw/georgetownlaw/images/icons.svg#caret"></use>
+												</svg>
+											</span>
+										</a>
+        							</li>
+        									        		            <li class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item">
+										<a href="https://www.law.georgetown.edu/ctls/student-life/health-and-safety/">
+											Health and Safety											<span class="menu_item_child_icon" aria-hidden="true">
+												<svg class="symbol symbol_caret">
+													<use xlink:href="https://www.law.georgetown.edu/ctls/wp-content/themes/georgetownlaw/georgetownlaw/images/icons.svg#caret"></use>
+												</svg>
+											</span>
+										</a>
+        							</li>
+        									        		            <li class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item">
+										<a href="https://www.law.georgetown.edu/ctls/student-life/other-services/">
+											Other Services											<span class="menu_item_child_icon" aria-hidden="true">
+												<svg class="symbol symbol_caret">
+													<use xlink:href="https://www.law.georgetown.edu/ctls/wp-content/themes/georgetownlaw/georgetownlaw/images/icons.svg#caret"></use>
+												</svg>
+											</span>
+										</a>
+        							</li>
+        									        		            <li class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item">
+										<a href="https://www.law.georgetown.edu/ctls/student-life/student-housing/">
+											Student Housing											<span class="menu_item_child_icon" aria-hidden="true">
+												<svg class="symbol symbol_caret">
+													<use xlink:href="https://www.law.georgetown.edu/ctls/wp-content/themes/georgetownlaw/georgetownlaw/images/icons.svg#caret"></use>
+												</svg>
+											</span>
+										</a>
+        							</li>
+        									        		            <li class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item">
+										<a href="https://www.law.georgetown.edu/ctls/student-life/travelling-abroad/">
+											Travelling Abroad											<span class="menu_item_child_icon" aria-hidden="true">
+												<svg class="symbol symbol_caret">
+													<use xlink:href="https://www.law.georgetown.edu/ctls/wp-content/themes/georgetownlaw/georgetownlaw/images/icons.svg#caret"></use>
+												</svg>
+											</span>
+										</a>
+        							</li>
+        							        						</ul>
+        						        					</li>
+        					        				</ul>
+					</nav>
+										<a class="site_search_handle" href="">
+						<span class="site_search_handle_label">Search</span>
+						<span class="site_search_handle_icon">
+							<svg class="symbol symbol_search">
+								<use xlink:href="https://www.law.georgetown.edu/ctls/wp-content/themes/georgetownlaw/georgetownlaw/images/icons.svg#search"></use>
+							</svg>
+						</span>
+					</a>
+
+						<div class="logo_wrap_custom">
+						<h1 class="logo logo_custom" itemscope itemtype="http://schema.org/Organization">
+							<a class="logo_link" itemprop="url" href="/" title="Georgetown Law">
+								<svg class="symbol symbol_logo">
+									<use xlink:href="https://www.law.georgetown.edu/ctls/wp-content/themes/georgetownlaw/georgetownlaw/images/icons.svg#logo"></use>
+								</svg>
+								<span>Georgetown Law</span>
+							</a>
+							<meta content="https://www.law.georgetown.edu/ctls/wp-content/themes/georgetownlaw/georgetownlaw/images/logo-schema.png" itemprop="logo">
+							<img class="logo_print" src="https://www.law.georgetown.edu/ctls/wp-content/themes/georgetownlaw/georgetownlaw/images/src/icons/logo.svg" alt="Georgetown Law">
+						</h1>
+					</div>
+
+					<a class="js-nav_handle mobile_sidebar_handle" href="#mobile_sidebar">Menu</a>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Page -->
+	<main class="page">
+		<!-- Page Feature -->
+		<div class="page_feature">
+					</div>
+		<!-- END: Page Feature -->
+<div class="page_content">
+	<div class="fs-row">
+		<div class="fs-cell fs-lg-12">
+			<div class="main_content" id="main_content" itemprop="mainContentOfPage">
+				<div class="page_header">
+					<div class="breadcrumb_nav"> 	<div class="breadcrumb_list" itemscope="" itemtype="http://schema.org/BreadcrumbList">
+		<div class="breadcrumb_item" itemscope="" itemprop="itemListElement" itemtype="http://schema.org/ListItem">
+			<a class="breadcrumb_link" href="https://www.law.georgetown.edu/ctls/" itemprop="item">
+				<span class="breadcrumb_name" itemprop="name">
+					<svg class="symbol symbol_home" aria-hidden="true">
+						<use xlink:href="https://www.law.georgetown.edu/ctls/wp-content/themes/georgetownlaw/georgetownlaw/images/icons.svg#home"></use>
+					</svg>
+					Home
+				</span>
+			</a>
+			<meta itemprop="position" content="1">
+		</div>
+				<div class="breadcrumb_item" itemscope="" itemprop="itemListElement" itemtype="http://schema.org/ListItem">
+			<span class="breadcrumb_label" itemprop="item">
+				<span class="breadcrumb_name" itemprop="name">Page Not Found</span>
+			</span>
+			<meta itemprop="position" content="2">
+		</div>
+			</div>
+</div>
+					<div class="page_intro">
+						<h1 class="page_title" id="main_page_title">Page Not Found</h1>
+						<p class="intro_text">The page you tried to access was not found. You may use the site search below or go back to the homepage. For additional concerns or questions please contact us.</p>
+					</div>
+				</div>
+				<div class="in_content_callouts">
+					<div class="site_search_results">
+	<div class="fs-row">
+		<div class="fs-cell">
+			<div class="site_search_wrapper">
+				<script>
+					var gsc_Callback = function() {   
+						document.getElementsByClassName('gsc-search-button gsc-search-button-v2')[0].ariaLabel = "Search Icon"; 
+					};					
+					window.__gcse = {   callback: gsc_Callback }; 					
+					(function()
+					{
+						var cx = '008355105946167973810:21jp5_vk6si';
+						var gcse = document.createElement('script');
+						gcse.type = 'text/javascript';
+						gcse.async = true;
+						gcse.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') +
+							'//cse.google.com/cse.js?cx=' + cx;
+						gcse.autoSearchOnLoad = true;
+						var s = document.getElementsByTagName('script')[0];
+						s.parentNode.insertBefore(gcse, s);
+					} )();
+				</script>
+				<gcse:search></gcse:search>
+				<noscript>
+					<div class="typography">
+						<p>The site search requires a JavaScript enabled browser. You can also search the site using <a href="//www.google.com/#q=site:www.law.georgetown.edu">Google</a>.</p>
+					</div>
+				</noscript>
+			</div>
+		</div>
+	</div>
+</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+			</main>
+			<!-- Footer -->
+			<footer class="footer" id="footer" itemscope itemtype="http://schema.org/WPFooter">
+				<div class="fs-row">
+					<div class="fs-cell">
+						<div class="footer_top">
+							<nav class="footer_nav" itemscope="" itemtype="http://schema.org/SiteNavigationElement" aria-label="Footer">
+								<div class="footer_nav_list">
+																		<div class="footer_nav_item" itemprop="url">
+										<a class="footer_nav_link" href="https://www.law.georgetown.edu/about/visit-campus" itemprop="name"  aria-label="Visit Our Campus - Georgetown Law">
+											Visit Our Campus											<span class="icon">
+												<svg class="symbol symbol_caret" aria-hidden="true">
+													<use xlink:href="https://www.law.georgetown.edu/ctls/wp-content/themes/georgetownlaw/georgetownlaw/images/icons.svg#caret"></use>
+												</svg>
+											</span>
+										</a>
+									</div>
+																		<div class="footer_nav_item" itemprop="url">
+										<a class="footer_nav_link" href="https://www.law.georgetown.edu/about/" itemprop="name"  aria-label="About - Georgetown Law">
+											About											<span class="icon">
+												<svg class="symbol symbol_caret" aria-hidden="true">
+													<use xlink:href="https://www.law.georgetown.edu/ctls/wp-content/themes/georgetownlaw/georgetownlaw/images/icons.svg#caret"></use>
+												</svg>
+											</span>
+										</a>
+									</div>
+																		<div class="footer_nav_item" itemprop="url">
+										<a class="footer_nav_link" href="https://secure.advancement.georgetown.edu/s/1686/18/giving.aspx?sid=1686&gid=4&pgid=3975&cid=5816&dids=42.43.25.44.611.144&bledit=1&sort=1&unit=8&appealcode=wgl001" itemprop="name"  aria-label="Make a Gift - Georgetown Law">
+											Make a Gift											<span class="icon">
+												<svg class="symbol symbol_caret" aria-hidden="true">
+													<use xlink:href="https://www.law.georgetown.edu/ctls/wp-content/themes/georgetownlaw/georgetownlaw/images/icons.svg#caret"></use>
+												</svg>
+											</span>
+										</a>
+									</div>
+																		<div class="footer_nav_item" itemprop="url">
+										<a class="footer_nav_link" href="https://accessibility.georgetown.edu" itemprop="name"  aria-label="Accessibility - Georgetown Law">
+											Accessibility											<span class="icon">
+												<svg class="symbol symbol_caret" aria-hidden="true">
+													<use xlink:href="https://www.law.georgetown.edu/ctls/wp-content/themes/georgetownlaw/georgetownlaw/images/icons.svg#caret"></use>
+												</svg>
+											</span>
+										</a>
+									</div>
+																		<div class="footer_nav_item" itemprop="url">
+										<a class="footer_nav_link" href="https://www.law.georgetown.edu/admissions-aid/aba-required-disclosures" itemprop="name"  aria-label="ABA Required Disclosure - Georgetown Law">
+											ABA Required Disclosure											<span class="icon">
+												<svg class="symbol symbol_caret" aria-hidden="true">
+													<use xlink:href="https://www.law.georgetown.edu/ctls/wp-content/themes/georgetownlaw/georgetownlaw/images/icons.svg#caret"></use>
+												</svg>
+											</span>
+										</a>
+									</div>
+																	</div>
+							</nav>
+							<div class="social_nav" itemscope="" itemtype="http://schema.org/Organization">
+								<meta itemprop="url" content="http://www.law.georgetown.edu">
+								<div class="social_nav_header">
+									<h2 class="social_nav_title">Social Navigation</h2>
+								</div>
+								<div class="social_nav_list">
+																		<div class="social_nav_item">
+										<a class="social_nav_link" href="https://www.facebook.com/georgetownlaw" target="_blank" itemprop="sameAs" aria-label="Georgetown Law on Facebook">
+											<span class="icon">
+												<svg class="symbol symbol_facebook">
+													<use xlink:href="https://www.law.georgetown.edu/ctls/wp-content/themes/georgetownlaw/georgetownlaw/images/icons.svg#facebook"></use>
+												</svg>
+											</span>
+											<span class="label">Facebook</span>
+										</a>
+									</div>
+																		<div class="social_nav_item">
+										<a class="social_nav_link" href="https://twitter.com/georgetownlaw" target="_blank" itemprop="sameAs" aria-label="Georgetown Law on X">
+											<span class="icon">
+												<svg class="symbol symbol_x">
+													<use xlink:href="https://www.law.georgetown.edu/ctls/wp-content/themes/georgetownlaw/georgetownlaw/images/icons.svg#x"></use>
+												</svg>
+											</span>
+											<span class="label">X</span>
+										</a>
+									</div>
+																		<div class="social_nav_item">
+										<a class="social_nav_link" href="https://www.linkedin.com/school/georgetownlaw" target="_blank" itemprop="sameAs" aria-label="Georgetown Law on LinkedIn">
+											<span class="icon">
+												<svg class="symbol symbol_linkedin">
+													<use xlink:href="https://www.law.georgetown.edu/ctls/wp-content/themes/georgetownlaw/georgetownlaw/images/icons.svg#linkedin"></use>
+												</svg>
+											</span>
+											<span class="label">LinkedIn</span>
+										</a>
+									</div>
+																		<div class="social_nav_item">
+										<a class="social_nav_link" href="https://www.youtube.com/user/GeorgetownLawChannel" target="_blank" itemprop="sameAs" aria-label="Georgetown Law on YouTube">
+											<span class="icon">
+												<svg class="symbol symbol_youtube">
+													<use xlink:href="https://www.law.georgetown.edu/ctls/wp-content/themes/georgetownlaw/georgetownlaw/images/icons.svg#youtube"></use>
+												</svg>
+											</span>
+											<span class="label">YouTube</span>
+										</a>
+									</div>
+																		<div class="social_nav_item">
+										<a class="social_nav_link" href="https://www.instagram.com/georgetownlawofficial/" target="_blank" itemprop="sameAs" aria-label="Georgetown Law on Instagram">
+											<span class="icon">
+												<svg class="symbol symbol_instagram">
+													<use xlink:href="https://www.law.georgetown.edu/ctls/wp-content/themes/georgetownlaw/georgetownlaw/images/icons.svg#instagram"></use>
+												</svg>
+											</span>
+											<span class="label">Instagram</span>
+										</a>
+									</div>
+																	</div>
+							</div>
+						</div>
+						<div class="footer_bottom">
+							<div class="logo_footer" aria-hidden="true">
+								<svg class="symbol symbol_wordmark_building" alt="">
+									<use xlink:href="https://www.law.georgetown.edu/ctls/wp-content/themes/georgetownlaw/georgetownlaw/images/icons.svg#wordmark_building"></use>
+								</svg>
+							</div>
+							<div class="footer_address" itemscope itemtype="http://schema.org/PostalAddress">
+								<span class="footer_address_name" itemprop="name">Georgetown Law</span>
+								<span class="footer_address_street" itemprop="streetAddress">600 New Jersey Avenue NW</span>
+								<span class="footer_address_city" itemprop="addressLocality">Washington</span>
+								<span class="footer_address_state" itemprop="addressRegion">DC</span>
+								<span class="footer_address_zip" itemprop="postalCode">20001</span><br>
+								<a class="footer_address_phone" itemprop="telephone" href="tel:+12026629000">202.662.9000</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</footer>
+			<!-- END: Footer -->
+		</div>
+		<!-- END: page_wrapper -->
+		<nav class="js-navigation mobile_sidebar" aria-label="Mobile Sidebar" id="mobile_sidebar" hidden data-navigation-handle=".js-nav_handle" data-navigation-content=".js-navigation_push" data-navigation-options='{"type": "overlay", "gravity": "right"}'>
+			<h1 class="logo logo_mobile" itemscope itemtype="http://schema.org/Organization">
+				<a class="logo_link" itemprop="url" href="https://www.law.georgetown.edu/">
+					<svg class="symbol symbol_logo">
+						<use xlink:href="https://www.law.georgetown.edu/ctls/wp-content/themes/georgetownlaw/georgetownlaw/images/icons.svg#logo"></use>
+					</svg>
+					<span>Georgetown Law</span>
+				</a>
+				<meta content="https://www.law.georgetown.edu/ctls/wp-content/themes/georgetownlaw/georgetownlaw/images/logo-schema.png" itemprop="logo">
+				<img class="logo_print" src="https://www.law.georgetown.edu/ctls/wp-content/themes/georgetownlaw/georgetownlaw/images/logo-print.png" alt="">
+			</h1>
+			<div class="mobile_sidebar_handle_close_wrap">
+				<a class="js-nav_handle mobile_sidebar_handle_close" href="#mobile_sidebar">Close</a>
+				<span>
+					<svg class="symbol symbol_x_thin" alt="">
+						<use xlink:href="https://www.law.georgetown.edu/ctls/wp-content/themes/georgetownlaw/georgetownlaw/images/icons.svg#x_thin"></use>
+					</svg>
+				</span>
+			</div>
+			<div class="site_search" id="search" itemscope itemtype="http://schema.org/WebSite" role="search">
+				<meta itemprop="url" content="//www.law.georgetown.edu">
+				<form class="site_search_form" action="" itemprop="potentialAction" itemscope itemtype="http://schema.org/SearchAction">
+					<meta itemprop="target" content="https://www.law.georgetown.edu/search?q={search_term_string}">
+					<label class="site_search_label" for="search_term_string">Search</label>
+					<input class="site_search_input" itemprop="query-input" type="text" id="search_term_string" name="q" placeholder="Enter keyword, program, etc." required>
+					<button class="site_search_button" type="submit" title="submit" aria-label="submit">
+						<span>submit</span>
+						<span class="site_search_handle_icon">
+							<svg class="symbol symbol_search">
+								<use xlink:href="https://www.law.georgetown.edu/ctls/wp-content/themes/georgetownlaw/georgetownlaw/images/icons.svg#search"></use>
+							</svg>
+						</span>
+					</button>
+				</form>
+			</div>
+						<nav class="js-main-nav main_nav main_nav_sm" itemscope itemtype="http://schema.org/SiteNavigationElement" aria-label="Mobile Site">
+				<ul class="menu" role="menubar" aria-label="Mobile Site">
+										<li class="menu-item menu-item-type-post_type menu-item-object-page js-main-nav-1 " role="none">
+						<a href="https://www.law.georgetown.edu/ctls/admissions/" role="menuitem">Admissions</a>
+											</li>
+										<li class="menu-item menu-item-type-post_type menu-item-object-page js-main-nav-2  menu-item-has-children" role="none">
+						<a href="https://www.law.georgetown.edu/ctls/academics/" role="menuitem">Academics</a>
+												<button class="js-swap main_nav_toggle" data-swap-target=".js-main-nav-2" data-swap-group="main_nav" aria-expanded="false" aria-haspopup="true" aria-label="Academics">
+							<span class="expand_label">Expand Navigation</span>
+							<span aria-hidden="true">
+								<svg class="symbol symbol_caret">
+									<use xlink:href="https://www.law.georgetown.edu/ctls/wp-content/themes/georgetownlaw/georgetownlaw/images/icons.svg#caret"></use>
+								</svg>
+							</span>
+						</button>
+        				<ul class="sub-menu" role="menu">
+        					        		            <li class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item" role="none">
+								<a href="https://www.law.georgetown.edu/ctls/academics/courses/">
+									Current Courses									<span class="menu_item_child_icon" aria-hidden="true">
+										<svg class="symbol symbol_caret">
+											<use xlink:href="https://www.law.georgetown.edu/ctls/wp-content/themes/georgetownlaw/georgetownlaw/images/icons.svg#caret"></use>
+										</svg>
+									</span>
+								</a>
+							</li>
+							        		            <li class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item" role="none">
+								<a href="https://www.law.georgetown.edu/ctls/academics/past-courses/">
+									Past Courses									<span class="menu_item_child_icon" aria-hidden="true">
+										<svg class="symbol symbol_caret">
+											<use xlink:href="https://www.law.georgetown.edu/ctls/wp-content/themes/georgetownlaw/georgetownlaw/images/icons.svg#caret"></use>
+										</svg>
+									</span>
+								</a>
+							</li>
+							        		            <li class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item" role="none">
+								<a href="https://www.law.georgetown.edu/ctls/academics/academic-honors/">
+									Academic Honors									<span class="menu_item_child_icon" aria-hidden="true">
+										<svg class="symbol symbol_caret">
+											<use xlink:href="https://www.law.georgetown.edu/ctls/wp-content/themes/georgetownlaw/georgetownlaw/images/icons.svg#caret"></use>
+										</svg>
+									</span>
+								</a>
+							</li>
+							        		            <li class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item" role="none">
+								<a href="https://www.law.georgetown.edu/ctls/academics/mooting-experience/">
+									Mooting Experience									<span class="menu_item_child_icon" aria-hidden="true">
+										<svg class="symbol symbol_caret">
+											<use xlink:href="https://www.law.georgetown.edu/ctls/wp-content/themes/georgetownlaw/georgetownlaw/images/icons.svg#caret"></use>
+										</svg>
+									</span>
+								</a>
+							</li>
+							        		            <li class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item" role="none">
+								<a href="https://www.law.georgetown.edu/ctls/academics/requesting-a-transcript/">
+									Requesting a Transcript									<span class="menu_item_child_icon" aria-hidden="true">
+										<svg class="symbol symbol_caret">
+											<use xlink:href="https://www.law.georgetown.edu/ctls/wp-content/themes/georgetownlaw/georgetownlaw/images/icons.svg#caret"></use>
+										</svg>
+									</span>
+								</a>
+							</li>
+													</ul>
+											</li>
+										<li class="menu-item menu-item-type-post_type menu-item-object-page js-main-nav-3  menu-item-has-children" role="none">
+						<a href="https://www.law.georgetown.edu/ctls/our-faculty/" role="menuitem">Our Faculty</a>
+												<button class="js-swap main_nav_toggle" data-swap-target=".js-main-nav-3" data-swap-group="main_nav" aria-expanded="false" aria-haspopup="true" aria-label="Our Faculty">
+							<span class="expand_label">Expand Navigation</span>
+							<span aria-hidden="true">
+								<svg class="symbol symbol_caret">
+									<use xlink:href="https://www.law.georgetown.edu/ctls/wp-content/themes/georgetownlaw/georgetownlaw/images/icons.svg#caret"></use>
+								</svg>
+							</span>
+						</button>
+        				<ul class="sub-menu" role="menu">
+        					        		            <li class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item" role="none">
+								<a href="https://www.law.georgetown.edu/ctls/staff/">
+									Past Faculty									<span class="menu_item_child_icon" aria-hidden="true">
+										<svg class="symbol symbol_caret">
+											<use xlink:href="https://www.law.georgetown.edu/ctls/wp-content/themes/georgetownlaw/georgetownlaw/images/icons.svg#caret"></use>
+										</svg>
+									</span>
+								</a>
+							</li>
+							        		            <li class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item" role="none">
+								<a href="https://www.law.georgetown.edu/ctls/our-faculty/in-memoriam/">
+									In Memoriam									<span class="menu_item_child_icon" aria-hidden="true">
+										<svg class="symbol symbol_caret">
+											<use xlink:href="https://www.law.georgetown.edu/ctls/wp-content/themes/georgetownlaw/georgetownlaw/images/icons.svg#caret"></use>
+										</svg>
+									</span>
+								</a>
+							</li>
+													</ul>
+											</li>
+										<li class="menu-item menu-item-type-post_type menu-item-object-page js-main-nav-4  menu-item-has-children" role="none">
+						<a href="https://www.law.georgetown.edu/ctls/student-life/" role="menuitem">Student Life</a>
+												<button class="js-swap main_nav_toggle" data-swap-target=".js-main-nav-4" data-swap-group="main_nav" aria-expanded="false" aria-haspopup="true" aria-label="Student Life">
+							<span class="expand_label">Expand Navigation</span>
+							<span aria-hidden="true">
+								<svg class="symbol symbol_caret">
+									<use xlink:href="https://www.law.georgetown.edu/ctls/wp-content/themes/georgetownlaw/georgetownlaw/images/icons.svg#caret"></use>
+								</svg>
+							</span>
+						</button>
+        				<ul class="sub-menu" role="menu">
+        					        		            <li class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item" role="none">
+								<a href="https://www.law.georgetown.edu/ctls/student-life/disability-services/">
+									Accessibility Services									<span class="menu_item_child_icon" aria-hidden="true">
+										<svg class="symbol symbol_caret">
+											<use xlink:href="https://www.law.georgetown.edu/ctls/wp-content/themes/georgetownlaw/georgetownlaw/images/icons.svg#caret"></use>
+										</svg>
+									</span>
+								</a>
+							</li>
+							        		            <li class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item" role="none">
+								<a href="https://www.law.georgetown.edu/ctls/student-life/alumni/">
+									Alumni									<span class="menu_item_child_icon" aria-hidden="true">
+										<svg class="symbol symbol_caret">
+											<use xlink:href="https://www.law.georgetown.edu/ctls/wp-content/themes/georgetownlaw/georgetownlaw/images/icons.svg#caret"></use>
+										</svg>
+									</span>
+								</a>
+							</li>
+							        		            <li class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item" role="none">
+								<a href="https://www.law.georgetown.edu/ctls/student-life/health-and-safety/">
+									Health and Safety									<span class="menu_item_child_icon" aria-hidden="true">
+										<svg class="symbol symbol_caret">
+											<use xlink:href="https://www.law.georgetown.edu/ctls/wp-content/themes/georgetownlaw/georgetownlaw/images/icons.svg#caret"></use>
+										</svg>
+									</span>
+								</a>
+							</li>
+							        		            <li class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item" role="none">
+								<a href="https://www.law.georgetown.edu/ctls/student-life/other-services/">
+									Other Services									<span class="menu_item_child_icon" aria-hidden="true">
+										<svg class="symbol symbol_caret">
+											<use xlink:href="https://www.law.georgetown.edu/ctls/wp-content/themes/georgetownlaw/georgetownlaw/images/icons.svg#caret"></use>
+										</svg>
+									</span>
+								</a>
+							</li>
+							        		            <li class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item" role="none">
+								<a href="https://www.law.georgetown.edu/ctls/student-life/student-housing/">
+									Student Housing									<span class="menu_item_child_icon" aria-hidden="true">
+										<svg class="symbol symbol_caret">
+											<use xlink:href="https://www.law.georgetown.edu/ctls/wp-content/themes/georgetownlaw/georgetownlaw/images/icons.svg#caret"></use>
+										</svg>
+									</span>
+								</a>
+							</li>
+							        		            <li class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item" role="none">
+								<a href="https://www.law.georgetown.edu/ctls/student-life/travelling-abroad/">
+									Travelling Abroad									<span class="menu_item_child_icon" aria-hidden="true">
+										<svg class="symbol symbol_caret">
+											<use xlink:href="https://www.law.georgetown.edu/ctls/wp-content/themes/georgetownlaw/georgetownlaw/images/icons.svg#caret"></use>
+										</svg>
+									</span>
+								</a>
+							</li>
+													</ul>
+											</li>
+									</ul>
+			</nav>
+						<nav class="js-secondary-nav secondary_nav secondary_nav_dd" itemscope="" itemtype="http://schema.org/SiteNavigationElement">
+				<ul class="menu" role="menubar" aria-label="Mobile Secondary">
+									    <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children js-secondary-nav-1" role="none">
+				    	<a href="https://www.law.georgetown.edu/ctls/about-us/" role="menuitem">
+				    		About Us: Why CTLS						</a>
+											</li>
+									    <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children js-secondary-nav-2" role="none">
+				    	<a href="https://www.law.georgetown.edu/ctls/events/" role="menuitem">
+				    		Events						</a>
+											</li>
+									    <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children js-secondary-nav-3" role="none">
+				    	<a href="https://www.law.georgetown.edu/ctls/partner-schools/" role="menuitem">
+				    		Partner Schools						</a>
+											</li>
+									    <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children js-secondary-nav-4" role="none">
+				    	<a href="https://www.law.georgetown.edu/ctls/research/" role="menuitem">
+				    		Research						</a>
+											</li>
+									</ul>
+			</nav>
+			<nav class="js-secondary-nav secondary_nav secondary_nav_sm" itemscope itemtype="http://schema.org/SiteNavigationElement">
+				<ul class="menu" aria-label="secondary footer" role="menubar">
+										<li class="menu-item menu-item-type-post_type menu-item-object-page" role="none">
+	        			<a href="https://www.law.georgetown.edu/about/visit-campus">Visit Our Campus</a>
+					</li>
+										<li class="menu-item menu-item-type-post_type menu-item-object-page" role="none">
+	        			<a href="https://www.law.georgetown.edu/about/">About</a>
+					</li>
+										<li class="menu-item menu-item-type-post_type menu-item-object-page" role="none">
+	        			<a href="https://secure.advancement.georgetown.edu/s/1686/18/giving.aspx?sid=1686&gid=4&pgid=3975&cid=5816&dids=42.43.25.44.611.144&bledit=1&sort=1&unit=8&appealcode=wgl001">Make a Gift</a>
+					</li>
+										<li class="menu-item menu-item-type-post_type menu-item-object-page" role="none">
+	        			<a href="https://accessibility.georgetown.edu">Accessibility</a>
+					</li>
+										<li class="menu-item menu-item-type-post_type menu-item-object-page" role="none">
+	        			<a href="https://www.law.georgetown.edu/admissions-aid/aba-required-disclosures">ABA Required Disclosure</a>
+					</li>
+									</ul>
+			</nav>
+		</nav>
+
+		
+<div class="js-menu menu takeover_menu" id="menu" aria-label="Site Menu">
+	<div class="menu_banner">
+		<div class="menu_banner_grid">
+			<div class="menu_banner_grid_item is_search">
+				
+<div class="header_search">
+	<div class="header_search_grid">
+		<div class="header_search_grid_item is_form">
+			<form class="header_search_form js-header-search-form js-header-search-form-menu" method="get" action="https://www.law.georgetown.edu//search" itemprop="potentialAction" itemscope itemtype="http://schema.org/SearchAction">
+				<meta itemprop="target" content="https://www.law.georgetown.edu//search?q={q}">
+				
+				<div class="header_search_input_wrap">
+					<input type="search" class="header_search_input js-menu-search-input" name="q" id="q" placeholder="Enter keyword, program, etc." aria-label="Enter keyword, program, etc. for search">
+
+					<button type="submit" class="header_search_icon" aria-label="Search">
+						<span aria-hidden="true">
+	<svg
+		class="icon icon_search"
+			>
+		<use xlink:href="https://www.law.georgetown.edu/ctls/wp-content/themes/georgetownlaw/georgetownlaw/images/icons.svg?v=1771273967#search"></use>
+	</svg>
+</span>
+					</button>
+				</div>
+			</form>
+		</div>
+
+		<div class="header_search_grid_item is_trigger">
+			<button
+				type="button"
+				class="header_search_trigger_btn js-swap"
+				data-swap-target=".js-header-search-form-menu"
+				aria-label="Search"
+								data-swap-active="true"
+							>
+					<span aria-hidden="true">
+	<svg
+		class="icon icon_search"
+			>
+		<use xlink:href="https://www.law.georgetown.edu/ctls/wp-content/themes/georgetownlaw/georgetownlaw/images/icons.svg?v=1771273967#search"></use>
+	</svg>
+</span>
+			</button>
+		</div>
+	</div>
+</div>			</div>
+
+			<div class="menu_banner_grid_item is_close">
+				<button type="button" class="menu_close_btn js-swap js-btn-close" data-swap-linked="menu" data-swap-target=".menu">
+					<div class="menu_close_btn_inner">
+						<span class="menu_close_btn_label">Close</span>
+						<span class="menu_close_btn_icon">
+							<span aria-hidden="true">
+	<svg
+		class="icon icon_menu_close"
+			>
+		<use xlink:href="https://www.law.georgetown.edu/ctls/wp-content/themes/georgetownlaw/georgetownlaw/images/icons.svg?v=1771273967#menu_close"></use>
+	</svg>
+</span>
+						</span>
+					</div>
+				</button>
+			</div>
+		</div>
+	</div>
+
+	<div class="menu_content">
+		<div class="menu_grid">
+			<div class="menu_grid_item is_gap_nav_one"></div>
+
+			<div class="menu_grid_item is_nav_one">
+				<nav class="menu_simple_nav">
+					<h2 class="menu_simple_nav_title" id="menu_simple_resources_for">
+						Resources For
+					</h2>
+
+					<ul class="menu_simple_nav_list" aria-labelledby="menu_simple_resources_for">
+												<li>
+							<a href="https://www.law.georgetown.edu/ctls/about-us/">About Us: Why CTLS</a>
+						</li>
+												<li>
+							<a href="https://www.law.georgetown.edu/ctls/events/">Events</a>
+						</li>
+												<li>
+							<a href="https://www.law.georgetown.edu/ctls/partner-schools/">Partner Schools</a>
+						</li>
+												<li>
+							<a href="https://www.law.georgetown.edu/ctls/research/">Research</a>
+						</li>
+											</ul>
+				</nav>
+			</div>
+
+			<div class="menu_grid_item is_nav_two">
+				<nav class="menu_simple_nav">
+					<h2 class="menu_simple_nav_title"  id="menu_simple_helpful_links">
+						Helpful Links
+					</h2>
+
+					<ul class="menu_simple_nav_list" aria-labelledby="menu_simple_helpful_links">
+											</ul>
+				</nav>
+			</div>
+
+			<div class="menu_grid_item is_gap_nav_two"></div>
+			
+			<div class="menu_grid_item is_nav_main">
+				<div class="menu_accordion_wrap">
+					
+<nav id="main_nav" class="js-accordion menu_accordion" id="accordion_accordion-1">
+		<div id="accordion-1_title" class="menu_accordion_title visually_hide">Main Menu</div>
+
+	<ul class="menu_accordion_items" aria-labelledby="accordion-1_title">
+				<li class="js-accordion-item js-accordion-item-accordion-1-0 menu_accordion_item">
+			<div class="main_accordion_item_inner">
+				<a href="https://www.law.georgetown.edu/admissions-aid/" class="menu_accordion_item_link">
+				Admissions & Aid				</a>
+
+								<button class="js-accordion-trigger js-swap menu_accordion_trigger" id="js-accordion-trigger-accordion-1-0" data-swap-target=".js-accordion-item-accordion-1-0" data-swap-group="accordion_group_accordion-1" data-swap-options='{"collapse": true}' aria-label="Admissions &amp; Aid">
+					<span class="menu_accordion_trigger_icon"></span>
+				</button>
+							</div>
+
+						<div class="js-accordion-content js-accordion-content-accordion-1-0 menu_accordion_content" id="js-accordion-item-accordion-1-0">
+				<div class="menu_accordion_link_grid">
+										<div class="menu_accordion_link_grid_item">
+						<a href="https://www.law.georgetown.edu/admissions-aid/jd-admissions/" class="menu_accordion_link">
+							J.D. Admissions						</a>
+					</div>
+										<div class="menu_accordion_link_grid_item">
+						<a href="https://www.law.georgetown.edu/admissions-aid/graduate-admissions/" class="menu_accordion_link">
+							Graduate Admissions						</a>
+					</div>
+										<div class="menu_accordion_link_grid_item">
+						<a href="https://www.law.georgetown.edu/admissions-aid/financial-aid/" class="menu_accordion_link">
+							Financial Aid						</a>
+					</div>
+										<div class="menu_accordion_link_grid_item">
+						<a href="https://www.law.georgetown.edu/admissions-aid/international-students/" class="menu_accordion_link">
+							International Student Services						</a>
+					</div>
+										<div class="menu_accordion_link_grid_item">
+						<a href="https://www.law.georgetown.edu/admissions-aid/early-outreach-initiative/" class="menu_accordion_link">
+							Early Outreach Initiative						</a>
+					</div>
+										<div class="menu_accordion_link_grid_item">
+						<a href="https://www.law.georgetown.edu/admissions-aid/connect-with-georgetown-law/" class="menu_accordion_link">
+							Connect with Georgetown Law						</a>
+					</div>
+										<div class="menu_accordion_link_grid_item">
+						<a href="https://www.law.georgetown.edu/admissions-aid/office-of-admissions/" class="menu_accordion_link">
+							Office of Admissions						</a>
+					</div>
+										<div class="menu_accordion_link_grid_item">
+						<a href="https://www.law.georgetown.edu/admissions-aid/admitted-students9/" class="menu_accordion_link">
+							Admitted Students						</a>
+					</div>
+									</div>
+			</div>
+					</li>
+				<li class="js-accordion-item js-accordion-item-accordion-1-1 menu_accordion_item">
+			<div class="main_accordion_item_inner">
+				<a href="https://www.law.georgetown.edu/academics/" class="menu_accordion_item_link">
+				Academics				</a>
+
+								<button class="js-accordion-trigger js-swap menu_accordion_trigger" id="js-accordion-trigger-accordion-1-1" data-swap-target=".js-accordion-item-accordion-1-1" data-swap-group="accordion_group_accordion-1" data-swap-options='{"collapse": true}' aria-label="Academics">
+					<span class="menu_accordion_trigger_icon"></span>
+				</button>
+							</div>
+
+						<div class="js-accordion-content js-accordion-content-accordion-1-1 menu_accordion_content" id="js-accordion-item-accordion-1-1">
+				<div class="menu_accordion_link_grid">
+										<div class="menu_accordion_link_grid_item">
+						<a href="https://www.law.georgetown.edu/academics/courses-areas-study/" class="menu_accordion_link">
+							Courses & Areas of Study						</a>
+					</div>
+										<div class="menu_accordion_link_grid_item">
+						<a href="https://www.law.georgetown.edu/academics/jd-program/" class="menu_accordion_link">
+							J.D. Program						</a>
+					</div>
+										<div class="menu_accordion_link_grid_item">
+						<a href="https://www.law.georgetown.edu/academics/llm-degree-programs" class="menu_accordion_link">
+							LL.M. Degree Programs						</a>
+					</div>
+										<div class="menu_accordion_link_grid_item">
+						<a href="https://www.law.georgetown.edu/academics/transnational-programs/" class="menu_accordion_link">
+							Transnational Programs						</a>
+					</div>
+										<div class="menu_accordion_link_grid_item">
+						<a href="https://www.law.georgetown.edu/academics/sjd-degree/" class="menu_accordion_link">
+							S.J.D. Degree						</a>
+					</div>
+										<div class="menu_accordion_link_grid_item">
+						<a href="https://www.law.georgetown.edu/academics/certificates-of-specialization/" class="menu_accordion_link">
+							Certificates of Specialization						</a>
+					</div>
+										<div class="menu_accordion_link_grid_item">
+						<a href="https://www.law.georgetown.edu/academics/academic-resources/" class="menu_accordion_link">
+							Academic Resources						</a>
+					</div>
+										<div class="menu_accordion_link_grid_item">
+						<a href="https://www.law.georgetown.edu/academics/lifelong-learning/" class="menu_accordion_link">
+							Lifelong Learning						</a>
+					</div>
+									</div>
+			</div>
+					</li>
+				<li class="js-accordion-item js-accordion-item-accordion-1-2 menu_accordion_item">
+			<div class="main_accordion_item_inner">
+				<a href="https://www.law.georgetown.edu/experiential-learning/" class="menu_accordion_item_link">
+				Experiential Learning				</a>
+
+								<button class="js-accordion-trigger js-swap menu_accordion_trigger" id="js-accordion-trigger-accordion-1-2" data-swap-target=".js-accordion-item-accordion-1-2" data-swap-group="accordion_group_accordion-1" data-swap-options='{"collapse": true}' aria-label="Experiential Learning">
+					<span class="menu_accordion_trigger_icon"></span>
+				</button>
+							</div>
+
+						<div class="js-accordion-content js-accordion-content-accordion-1-2 menu_accordion_content" id="js-accordion-item-accordion-1-2">
+				<div class="menu_accordion_link_grid">
+										<div class="menu_accordion_link_grid_item">
+						<a href="https://www.law.georgetown.edu/experiential-learning/clinics/" class="menu_accordion_link">
+							Clinics						</a>
+					</div>
+										<div class="menu_accordion_link_grid_item">
+						<a href="https://www.law.georgetown.edu/experiential-learning/pro-bono-community-service/" class="menu_accordion_link">
+							Pro Bono & Community Service						</a>
+					</div>
+										<div class="menu_accordion_link_grid_item">
+						<a href="https://www.law.georgetown.edu/experiential-learning/externships/" class="menu_accordion_link">
+							Externships						</a>
+					</div>
+										<div class="menu_accordion_link_grid_item">
+						<a href="https://www.law.georgetown.edu/experiential-learning/simulations/" class="menu_accordion_link">
+							Simulations						</a>
+					</div>
+										<div class="menu_accordion_link_grid_item">
+						<a href="https://www.law.georgetown.edu/experiential-learning/practicum-courses/" class="menu_accordion_link">
+							Practicums						</a>
+					</div>
+										<div class="menu_accordion_link_grid_item">
+						<a href="https://www.law.georgetown.edu/experiential-learning/centers-institutes/" class="menu_accordion_link">
+							Centers & Institutes						</a>
+					</div>
+										<div class="menu_accordion_link_grid_item">
+						<a href="https://www.law.georgetown.edu/experiential-learning/law-journals/" class="menu_accordion_link">
+							Law Journals						</a>
+					</div>
+									</div>
+			</div>
+					</li>
+				<li class="js-accordion-item js-accordion-item-accordion-1-3 menu_accordion_item">
+			<div class="main_accordion_item_inner">
+				<a href="https://www.law.georgetown.edu/faculty-research/" class="menu_accordion_item_link">
+				Faculty & Research				</a>
+
+							</div>
+
+					</li>
+				<li class="js-accordion-item js-accordion-item-accordion-1-4 menu_accordion_item">
+			<div class="main_accordion_item_inner">
+				<a href="https://www.law.georgetown.edu/your-life-career/" class="menu_accordion_item_link">
+				Your Life & Career				</a>
+
+								<button class="js-accordion-trigger js-swap menu_accordion_trigger" id="js-accordion-trigger-accordion-1-4" data-swap-target=".js-accordion-item-accordion-1-4" data-swap-group="accordion_group_accordion-1" data-swap-options='{"collapse": true}' aria-label="Your Life &amp; Career">
+					<span class="menu_accordion_trigger_icon"></span>
+				</button>
+							</div>
+
+						<div class="js-accordion-content js-accordion-content-accordion-1-4 menu_accordion_content" id="js-accordion-item-accordion-1-4">
+				<div class="menu_accordion_link_grid">
+										<div class="menu_accordion_link_grid_item">
+						<a href="https://www.law.georgetown.edu/your-life-career/career-exploration-professional-development/" class="menu_accordion_link">
+							Career Exploration & Professional Development						</a>
+					</div>
+										<div class="menu_accordion_link_grid_item">
+						<a href="https://www.law.georgetown.edu/your-life-career/diversity-inclusion/" class="menu_accordion_link">
+							Diversity & Inclusion						</a>
+					</div>
+										<div class="menu_accordion_link_grid_item">
+						<a href="https://www.law.georgetown.edu/your-life-career/health-fitness/" class="menu_accordion_link">
+							Health & Fitness						</a>
+					</div>
+										<div class="menu_accordion_link_grid_item">
+						<a href="https://www.law.georgetown.edu/your-life-career/spiritual-life/" class="menu_accordion_link">
+							Spiritual Life						</a>
+					</div>
+										<div class="menu_accordion_link_grid_item">
+						<a href="https://www.law.georgetown.edu/your-life-career/housing/" class="menu_accordion_link">
+							Housing						</a>
+					</div>
+										<div class="menu_accordion_link_grid_item">
+						<a href="https://www.law.georgetown.edu/your-life-career/campus-services/" class="menu_accordion_link">
+							Campus Services						</a>
+					</div>
+										<div class="menu_accordion_link_grid_item">
+						<a href="https://www.law.georgetown.edu/your-life-career/activities-organizations/" class="menu_accordion_link">
+							Activities & Organizations						</a>
+					</div>
+									</div>
+			</div>
+					</li>
+			</ul>
+</nav>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+		<script>
+			var WWW_ROOT = "https://www.law.georgetown.edu/";
+			var STATIC_ROOT = "https://www.law.georgetown.edu/ctls/wp-content/themes/georgetownlaw/georgetownlaw/";
+			var ajaxurl = "https://www.law.georgetown.edu/ctls/wp-admin/admin-ajax.php";
+
+			if ((typeof window.$) === "undefined") {
+				window.$ = window.jQuery;
+			}
+        </script>
+		<script src="https://www.law.georgetown.edu/ctls/wp-content/themes/georgetownlaw/georgetownlaw/js/site.js?v=1771273967"></script>
+		<script type="speculationrules">
+{"prefetch":[{"source":"document","where":{"and":[{"href_matches":"/ctls/*"},{"not":{"href_matches":["/ctls/wp-*.php","/ctls/wp-admin/*","/ctls/wp-content/uploads/sites/33/*","/ctls/wp-content/*","/ctls/wp-content/plugins/*","/ctls/wp-content/themes/georgetownlaw/georgetownlaw-center/*","/ctls/wp-content/themes/georgetownlaw/georgetownlaw/*","/ctls/*\\?(.+)"]}},{"not":{"selector_matches":"a[rel~=\"nofollow\"]"}},{"not":{"selector_matches":".no-prefetch, .no-prefetch a"}}]},"eagerness":"conservative"}]}
+</script>
+		<script>
+		( function ( body ) {
+			'use strict';
+			body.className = body.className.replace( /\btribe-no-js\b/, 'tribe-js' );
+		} )( document.body );
+		</script>
+		<script> /* <![CDATA[ */var tribe_l10n_datatables = {"aria":{"sort_ascending":": activate to sort column ascending","sort_descending":": activate to sort column descending"},"length_menu":"Show _MENU_ entries","empty_table":"No data available in table","info":"Showing _START_ to _END_ of _TOTAL_ entries","info_empty":"Showing 0 to 0 of 0 entries","info_filtered":"(filtered from _MAX_ total entries)","zero_records":"No matching records found","search":"Search:","all_selected_text":"All items on this page were selected. ","select_all_link":"Select all pages","clear_selection":"Clear Selection.","pagination":{"all":"All","next":"Next","previous":"Previous"},"select":{"rows":{"0":"","_":": Selected %d rows","1":": Selected 1 row"}},"datepicker":{"dayNames":["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],"dayNamesShort":["Sun","Mon","Tue","Wed","Thu","Fri","Sat"],"dayNamesMin":["S","M","T","W","T","F","S"],"monthNames":["January","February","March","April","May","June","July","August","September","October","November","December"],"monthNamesShort":["January","February","March","April","May","June","July","August","September","October","November","December"],"monthNamesMin":["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"nextText":"Next","prevText":"Prev","currentText":"Today","closeText":"Done","today":"Today","clear":"Clear"},"registration_prompt":"There is unsaved attendee information. Are you sure you want to continue?"};/* ]]> */ </script><script type="text/javascript" src="https://www.law.georgetown.edu/ctls/wp-content/plugins/event-tickets/common/build/js/user-agent.js?ver=da75d0bdea6dde3898df" id="tec-user-agent-js"></script>
+<script type="text/javascript" src="https://www.law.georgetown.edu/ctls/wp-content/plugins/youtube-embed-plus/scripts/fitvids.min.js?ver=14.2.4" id="__ytprefsfitvids__-js"></script>
+		<script type="text/javascript">
+			var visualizerUserInteractionEvents = [
+				"scroll",
+				"mouseover",
+				"keydown",
+				"touchmove",
+				"touchstart"
+			];
+
+			visualizerUserInteractionEvents.forEach(function(event) {
+				window.addEventListener(event, visualizerTriggerScriptLoader, { passive: true });
+			});
+
+			function visualizerTriggerScriptLoader() {
+				visualizerLoadScripts();
+				visualizerUserInteractionEvents.forEach(function(event) {
+					window.removeEventListener(event, visualizerTriggerScriptLoader, { passive: true });
+				});
+			}
+
+			function visualizerLoadScripts() {
+				document.querySelectorAll("script[data-visualizer-script]").forEach(function(elem) {
+					jQuery.getScript( elem.getAttribute("data-visualizer-script") )
+					.done( function( script, textStatus ) {
+						elem.setAttribute("src", elem.getAttribute("data-visualizer-script"));
+						elem.removeAttribute("data-visualizer-script");
+						setTimeout( function() {
+							visualizerRefreshChart();
+						} );
+					} );
+				});
+			}
+
+			function visualizerRefreshChart() {
+				jQuery( '.visualizer-front:not(.visualizer-chart-loaded)' ).resize();
+				if ( jQuery( 'div.viz-facade-loaded:not(.visualizer-lazy):empty' ).length > 0 ) {
+					visualizerUserInteractionEvents.forEach( function( event ) {
+						window.addEventListener( event, function() {
+							jQuery( '.visualizer-front:not(.visualizer-chart-loaded)' ).resize();
+						}, { passive: true } );
+					} );
+				}
+			}
+		</script>
+			        <script type="text/javascript">
+            /* <![CDATA[ */
+           document.querySelectorAll("ul.nav-menu").forEach(
+               ulist => { 
+                    if (ulist.querySelectorAll("li").length == 0) {
+                        ulist.style.display = "none";
+
+                                            } 
+                }
+           );
+            /* ]]> */
+        </script>
+        <script id="wp-emoji-settings" type="application/json">
+{"baseUrl":"https://s.w.org/images/core/emoji/17.0.2/72x72/","ext":".png","svgUrl":"https://s.w.org/images/core/emoji/17.0.2/svg/","svgExt":".svg","source":{"concatemoji":"https://www.law.georgetown.edu/ctls/wp-includes/js/wp-emoji-release.min.js?ver=6.9.1"}}
+</script>
+<script type="module">
+/* <![CDATA[ */
+/*! This file is auto-generated */
+const a=JSON.parse(document.getElementById("wp-emoji-settings").textContent),o=(window._wpemojiSettings=a,"wpEmojiSettingsSupports"),s=["flag","emoji"];function i(e){try{var t={supportTests:e,timestamp:(new Date).valueOf()};sessionStorage.setItem(o,JSON.stringify(t))}catch(e){}}function c(e,t,n){e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(t,0,0);t=new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data);e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(n,0,0);const a=new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data);return t.every((e,t)=>e===a[t])}function p(e,t){e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(t,0,0);var n=e.getImageData(16,16,1,1);for(let e=0;e<n.data.length;e++)if(0!==n.data[e])return!1;return!0}function u(e,t,n,a){switch(t){case"flag":return n(e,"\ud83c\udff3\ufe0f\u200d\u26a7\ufe0f","\ud83c\udff3\ufe0f\u200b\u26a7\ufe0f")?!1:!n(e,"\ud83c\udde8\ud83c\uddf6","\ud83c\udde8\u200b\ud83c\uddf6")&&!n(e,"\ud83c\udff4\udb40\udc67\udb40\udc62\udb40\udc65\udb40\udc6e\udb40\udc67\udb40\udc7f","\ud83c\udff4\u200b\udb40\udc67\u200b\udb40\udc62\u200b\udb40\udc65\u200b\udb40\udc6e\u200b\udb40\udc67\u200b\udb40\udc7f");case"emoji":return!a(e,"\ud83e\u1fac8")}return!1}function f(e,t,n,a){let r;const o=(r="undefined"!=typeof WorkerGlobalScope&&self instanceof WorkerGlobalScope?new OffscreenCanvas(300,150):document.createElement("canvas")).getContext("2d",{willReadFrequently:!0}),s=(o.textBaseline="top",o.font="600 32px Arial",{});return e.forEach(e=>{s[e]=t(o,e,n,a)}),s}function r(e){var t=document.createElement("script");t.src=e,t.defer=!0,document.head.appendChild(t)}a.supports={everything:!0,everythingExceptFlag:!0},new Promise(t=>{let n=function(){try{var e=JSON.parse(sessionStorage.getItem(o));if("object"==typeof e&&"number"==typeof e.timestamp&&(new Date).valueOf()<e.timestamp+604800&&"object"==typeof e.supportTests)return e.supportTests}catch(e){}return null}();if(!n){if("undefined"!=typeof Worker&&"undefined"!=typeof OffscreenCanvas&&"undefined"!=typeof URL&&URL.createObjectURL&&"undefined"!=typeof Blob)try{var e="postMessage("+f.toString()+"("+[JSON.stringify(s),u.toString(),c.toString(),p.toString()].join(",")+"));",a=new Blob([e],{type:"text/javascript"});const r=new Worker(URL.createObjectURL(a),{name:"wpTestEmojiSupports"});return void(r.onmessage=e=>{i(n=e.data),r.terminate(),t(n)})}catch(e){}i(n=f(s,u,c,p))}t(n)}).then(e=>{for(const n in e)a.supports[n]=e[n],a.supports.everything=a.supports.everything&&a.supports[n],"flag"!==n&&(a.supports.everythingExceptFlag=a.supports.everythingExceptFlag&&a.supports[n]);var t;a.supports.everythingExceptFlag=a.supports.everythingExceptFlag&&!a.supports.flag,a.supports.everything||((t=a.source||{}).concatemoji?r(t.concatemoji):t.wpemoji&&t.twemoji&&(r(t.twemoji),r(t.wpemoji)))});
+//# sourceURL=https://www.law.georgetown.edu/ctls/wp-includes/js/wp-emoji-loader.min.js
+/* ]]> */
+</script>
+	<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"NRJS-b4c8269f013f7d6a5c2","applicationID":"1020199742","transactionName":"NQcANUpSD0VQURcPVgxNIwJMWg5YHgZTUg==","queueTime":0,"applicationTime":1090,"atts":"GUADQwJIHEs=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>

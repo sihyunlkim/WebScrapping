@@ -1,0 +1,624 @@
+<!DOCTYPE html><html lang="en"><head><meta http-equiv="X-UA-Compatible" content="IE=Edge" /><meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title aria-live="polite">Home - LibGuides at CLC Library</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noarchive" />
+<!-- favicon.twig -->
+<link rel="apple-touch-icon" sizes="180x180" href="//d2jv02qf7xgjwx.cloudfront.net/apps/common/favicon/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="//d2jv02qf7xgjwx.cloudfront.net/apps/common/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="//d2jv02qf7xgjwx.cloudfront.net/apps/common/favicon/favicon-16x16.png">
+<link rel="manifest" href="//d2jv02qf7xgjwx.cloudfront.net/apps/common/favicon/site.webmanifest">
+<link rel="mask-icon" href="//d2jv02qf7xgjwx.cloudfront.net/apps/common/favicon/safari-pinned-tab.svg" color="#5bbad5">
+<link rel="shortcut icon" href="//d2jv02qf7xgjwx.cloudfront.net/apps/common/favicon/favicon.ico">
+<meta name="msapplication-TileColor" content="#ffc40d">
+<meta name="msapplication-config" content="//d2jv02qf7xgjwx.cloudfront.net/apps/common/favicon/browserconfig.xml">
+<meta name="theme-color" content="#ffffff">
+<!-- !favicon.twig -->
+
+
+<meta property="og:title" content="LibGuides">
+<meta property="og:description" content=" ">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://researchguides.clcillinois.edu/">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@springshare">
+
+<link rel="stylesheet" href="https://static-assets-us.libguides.com/web/jquery/css/jquery-ui.min.css?2691" />
+<link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"/>
+
+<link rel="stylesheet" href="https://static-assets-us.libguides.com/web/css3.23.5/lg-public.min.css" />
+<script type="text/javascript" src="https://static-assets-us.libguides.com/web/jquery/js/1.12.4_jquery.min.js"></script>
+    <script src="//code.jquery.com/ui/1.13.2/jquery-ui.min.js"></script>
+    <script>
+        jQuery.ui ||
+        document.write('<script src="https://static-assets-us.libguides.com/web/jquery/js/jquery-ui.min.js?2691">\x3C/script>');
+    </script>
+
+<script type="text/javascript" src="https://static-assets-us.libguides.com/web/js3.23.5/lg-public.min.js"></script>
+<!-- BEGIN: CUSTOM HEAD JS/CSS -->
+<link rel="stylesheet" type="text/css" href="//libapps.s3.amazonaws.com/sites/67/include/standard.css">
+
+<style>
+.dropdown-menu{
+    font-size: 14px;
+}
+
+#s-lg-guide-name
+{display:none;}
+
+</style><style>#s-lg-index-list-header {display:none; }#s-lg-hp-nav-bottom {display:none; }#s-lg-hp-nav {display:none; }#s-lg-guide-list-controls {display:none; }#s-lg-guide-order {display:none; }.control-label {display:none; }   #s-lib-bc {display:none;}</style>
+<!-- END: CUSTOM HEAD JS/CSS -->
+<script>var system = {"name":"LibGuides"};
+            springSpace.publicObj = new springSpace.public.Public({
+                constant: {
+                    PROCESSING: {},
+                    CONTENT: {}
+                },
+                system_name: system.name,
+                customer: {"name":"CLC Library"}
+            })
+            </script><!-- get_lg_session_status.twig -->
+<script>
+    springSpace.Session.CONST.ACTION_AUTH_SET_LG_SESSION_COOKIE = 750;
+
+    
+    callGetLGSessionStatus = function () {
+        springSpace.Session.auth_reload_script = window.location.href;
+        springSpace.Session.getLGSessionStatus({
+            url: "https://clcillinois.libapps.com/libapps/login_process/session",
+            data: {
+                app_id: 1,
+                domain: "researchguides.clcillinois.edu",
+                site_id: 67,
+                auth_reload: 0
+            }
+        })
+    }
+
+    jQuery(
+        function () {
+                                    callGetLGSessionStatus();
+                    }
+    );
+    </script>
+<!-- !get_lg_session_status.twig -->
+
+
+
+
+
+
+
+<script>
+    var springStats = springStats || {};
+    springStats.saConfig = springStats.saConfig || {
+        site_id: 67,
+        tracking_parameters: {"_st_site_id":67},
+        tracking_server_host: "libguides-proc.springyaws.com"
+    };
+</script>
+<script  src="https://static-assets-us.libguides.com/web/js/sa.min.js?3116"></script>
+
+<script>
+    var is_bootstrap5 = false; 
+    springSpace.Common = springSpace.Common || {};
+    springSpace.Common.constant = {
+        PROCESSING: {
+            ACTION_DISPLAY_POLL: 159
+        }
+    };
+    springSpace.publicObj.constant.PROCESSING.ACTION_LOAD_GUIDE_LIST = 170;
+    springSpace.publicObj.constant.CONTENT.HOME_GUIDES_TITLE = "Guides";
+    springSpace.publicObj.homeNavButtons = {"170":"All Videos","171":"BY GROUP","172":"BY SUBJECT","173":"BY TYPE","174":"BY OWNER"};
+
+    springSpace.publicObj.getCountType = function(action) {
+        var count_type = "";
+        switch (action) {
+            case 176:
+                count_type = "guidetype";
+                break;
+            case 177:
+                count_type = "group";
+                break;
+            case 178:
+                count_type = "owner";
+                break;
+        }
+        return count_type;
+    };
+
+    springSpace.publicObj.loadGuideCounts = function(config) {
+        jQuery.ajax({
+            url: "/index_process.php?action=" + config.action + "&site_id=" + config.site_id +
+                (config.group_id ? "&group_id=" + config.group_id : ""),
+            type: "GET",
+            dataType: "json",
+            success: function(response) {
+                if (response.errCode == 200) {
+                    var count_type = springSpace.publicObj.getCountType(config.action);
+                    jQuery.each(response.data, function(idx, elt) {
+                        jQuery("#s-lg-index-" + count_type + "-" + elt.id).show();
+                        jQuery("#s-lg-index-" + count_type + "-count-" + elt.id).html(elt.count);
+                    });
+                } else {
+                    springSpace.UI.notify({mode: "custom", msg: "Error loading guide counts."});
+                }
+            },
+            error: function() {
+                springSpace.UI.notify({mode: "custom", msg: "Error loading guide counts."});
+            }
+        });
+    };
+
+    var button_data = {"code":"g"};
+
+    springSpace.homepage = {
+        default_list_order: "a",
+        current_list: 170,
+        current_btn_id: "s-lg-index-all-btn",
+        current_num_cols: 1,
+        current_type_label: "",
+        current_button_code: button_data.code,
+        group_id: 19443,
+        historyEdited: false,
+        initPushState: function() {
+            if (window.history && history.pushState) {
+                jQuery(window).bind("popstate", function() {
+                    if (springSpace.homepage.historyEdited) {
+                        var button_code = springSpace.Util.getQSParam({name: "b", qs: location.search});
+                        var guide_display_code = springSpace.Util.getQSParam({name: "d", qs: location.search});
+                        if (button_code === "") {
+                            button_code = "g";
+                        }
+                        springSpace.publicObj.loadHomepageList({
+                            nav: "back",
+                            action: springSpace.homepage.mapQSIdToActionId(button_code),
+                            group_id: springSpace.homepage.group_id,
+                            order: springSpace.homepage.mapQSIdToGuideSortId(guide_display_code),
+                            num_cols: 1,
+                            elt_id: "s-lg-index-list",
+                            button_id: springSpace.homepage.mapQSIdToButtonEltId(button_code),
+                            type_label: "Guides",
+                            display_sort: (springSpace.homepage.mapQSIdToButtonEltId(button_code) === "s-lg-index-all-btn")
+                        });
+                    }
+                });
+            }
+        },
+
+        mapQSIdToButtonEltId: function(qs_id) {
+            var button_ids = {
+                "g": "s-lg-index-all-btn",
+                "s": "s-lg-index-subject-btn",
+                "t": "s-lg-index-guidetype-btn",
+                "o": "s-lg-index-owner-btn",
+                "p": "s-lg-index-group-btn"
+            };
+            springSpace.Util.setObjProp(qs_id, "", button_ids);
+            return button_ids[qs_id];
+        },
+
+        mapQSIdToActionId: function(qs_id) {
+            var button_ids = {
+                "g": "170",
+                "s": "172",
+                "t": "173",
+                "o": "174",
+                "p": "171"
+            };
+            springSpace.Util.setObjProp(qs_id, "", button_ids);
+            return button_ids[qs_id];
+        },
+
+        mapButtonEltIdToQSId: function(btn_elt_id) {
+            var button_ids = {
+                "s-lg-index-all-btn": "g",
+                "s-lg-index-subject-btn": "s",
+                "s-lg-index-guidetype-btn": "t",
+                "s-lg-index-owner-btn": "o",
+                "s-lg-index-group-btn": "p"
+            };
+            springSpace.Util.setObjProp(btn_elt_id, "", button_ids);
+            return button_ids[btn_elt_id];
+        },
+
+        mapQSIdToGuideSortId: function(qs_id) {
+            var sort_ids = {
+                "a": "0",
+                "r": "2",
+                "p": "3"
+            };
+            springSpace.Util.setObjProp(qs_id, "", sort_ids);
+            return sort_ids[qs_id];
+        },
+
+        mapGuideSortIdToQSId: function(sort_id) {
+            var sort_ids = {
+                "0": "a",
+                "2": "r",
+                "3": "p"
+            };
+            springSpace.Util.setObjProp(sort_id, "", sort_ids);
+            return sort_ids[sort_id];
+        },
+
+        processPushState: function(config) {
+            if (history.pushState) {
+                if (config.nav !== "back" && config.nav !== "init") {
+                    var qs_config = (
+                        springSpace.homepage.current_button_code === "g" ?
+                        { button_code: springSpace.homepage.current_button_code, guide_display_code: springSpace.homepage.default_list_order } :
+                        { button_code: springSpace.homepage.current_button_code }
+                    );
+                    var url = location.pathname + springSpace.homepage.buildQS(qs_config);
+                    history.pushState({}, null, url);
+                }
+            }
+            springSpace.homepage.historyEdited = true;
+        },
+
+        buildQS: function(config) {
+            var params = {
+                b: springSpace.Util.setProp(config.button_code, ""),
+                d: springSpace.Util.setProp(config.guide_display_code, "")
+            };
+            if (params.b === "g") {
+                return "";
+            }
+            if (springSpace.homepage.group_id) {
+                params.group_id = springSpace.homepage.group_id;
+            }
+            var qs_params = [];
+            jQuery.each(params, function(idx, val) {
+                if (val !== "" && val !== "0") {
+                    qs_params.push(idx + "=" + encodeURIComponent(val));
+                }
+            });
+            return (qs_params.length == 0 ? "" : "?" + qs_params.join("&"));
+        }
+    };
+
+    jQuery(function() {
+        springSpace.homepage.initPushState();
+        jQuery("#s-lg-guide-search").val("");
+
+        springSpace.publicObj.loadHomepageList({
+            action: springSpace.homepage.current_list,
+            group_id: "19443",
+            order: springSpace.homepage.mapQSIdToGuideSortId(springSpace.homepage.default_list_order),
+            num_cols: 1,
+            elt_id: "s-lg-index-list",
+            button_id: springSpace.homepage.current_btn_id,
+            type_label: "Guides",
+            display_sort: (springSpace.homepage.current_btn_id === "s-lg-index-all-btn"),
+            nav: "init"
+        });
+
+        jQuery("#s-lg-guide-order > option[value=" + springSpace.homepage.mapQSIdToGuideSortId(springSpace.homepage.default_list_order) + "]").prop("selected", true);
+
+        springSpace.publicObj.loadGuideCounts({
+            action: 176,
+            site_id: 67,
+            group_id: 19443
+        });
+
+        springSpace.publicObj.loadGuideCounts({
+            action: 177,
+            site_id: 67
+        });
+
+        springSpace.publicObj.loadGuideCounts({
+            action: 178,
+            site_id: 67,
+            group_id: 19443
+        });
+    });
+
+    jQuery(function() {
+        
+        jQuery(document).ready(function () {
+            springSpace.springTrack.trackPage({_st_type_id: '11',_st_group_id: '19443'});
+        });
+    });
+</script>
+
+
+
+</head><body class="s-lib-public-body">
+		<a id="s-lg-public-skiplink" class="alert-info" href="#s-lib-public-main">Skip to Main Content</a>
+        <!-- BEGIN: Page Header -->
+            <meta name="viewport" content="width=device-width" />
+<div id="header-clc">
+<div id="coll" class="col-md-8-center">
+<div class="clearfix">
+<div class="container">
+<div class="row">
+<script src="https://clcillinois.libanswers.com/load_chat.php?hash=771d5739a67a7579d56af1099be70745"></script>  <div id="libchat_771d5739a67a7579d56af1099be70745"></div> 
+<p></p><p>
+
+<h2 class="headertext"><a class="header" href="https://researchguides.clcillinois.edu/libraryhome">CLC Library</a> | 
+<a class="header" href="http://www.clcillinois.edu"> College of Lake County</a></h2> </p>
+
+</div>
+</div>
+
+
+<div class="logo-clc"></div>
+<div class="logo-library">
+</div>
+</div>
+
+<div id="col2" class="col-md4-center">
+<div class="clearfix">
+</div>
+</div>
+</div>
+</div>
+
+<nav class="navbar navbar-custom" role="navigation">  
+<div class="container-fluid">    
+<!-- Brand and toggle get grouped for better mobile display -->    
+<div class="navbar-header">      
+<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#LG-collapse">        
+<span class="sr-only">Toggle navigation</span>       
+<span class="icon-bar"></span>        
+<span class="icon-bar"></span>        
+
+<span class="icon-bar"></span>      
+</button>      
+<a class="navbar-brand" href="https://researchguides.clcillinois.edu/libraryhome">
+<i class="fa fa-home" aria-hidden="true"></i>
+<span class="sr-only">Library Home</span></a>
+   
+</div>    
+ 
+<!-- Collect the nav links, forms, and other content for toggling -->    
+<div class="collapse navbar-collapse" id="LG-collapse">      
+<ul class="nav navbar-nav navbar-left">        
+
+<!---extra links <li><a href="#">Link 1</a></li>        <li><a href="#">Link 2</a></li> --->      
+
+<li class="dropdown">          
+<a href="#" class="dropdown-toggle" data-toggle="dropdown">I Want To...<b class="caret"></b></a>          
+
+<ul class="dropdown-menu">            
+<li><a href="http://researchguides.clcillinois.edu/catalog">Find Books, Videos, and More...</a></li>            
+<li><a href="http://researchguides.clcillinois.edu/az.php">Find Articles/Journals/Eresources</a></li>
+<li><a href="https://researchguides.clcillinois.edu/er.php">Find Items on Reserve</a></li>
+                        
+<li class="divider"></li>        
+ <li><a href="https://clcillinois.instructure.com/">Login to Canvas</a></li>    
+<li><a href="http://researchguides.clcillinois.edu/cite">Cite a Source</a></li>                        
+<li><a href="https://researchguides.clcillinois.edu/topicvideo">Find a Topic</a></li>          </ul>         </li>     
+
+<li class="dropdown">          
+<a href="#" class="dropdown-toggle" data-toggle="dropdown">Get Help<b class="caret"></b></a>          
+<ul class="dropdown-menu">            
+<li><a href="https://clcillinois.libanswers.com/">Chat With Us</a></li>            
+<li><a href="https://clcillinois.libanswers.com/form.php?queue_id=2467">Email Us</a></li>      
+<li><a href="http://researchguides.clcillinois.edu/departmentphones">Call Us</a></li>                                    
+<li><a href="http://clcillinois.libcal.com/appointments/">Make an Appointment</a></li>  </ul>         </li>     </ul>      
+
+<ul class="nav navbar-nav navbar-right">        
+<li><a href="https://i-share-clc.alma.exlibrisgroup.com/discovery/account?vid=01CARLI_CLC:CARLI_CLC&section=loans">Your Account</a></li>               
+<li class="dropdown">          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Services<b class="caret"></b></a>          
+<ul class="dropdown-menu">            
+<li><a href="http://clcillinois.libcal.com/reserve/studyrooms">Book a Study Room</a></li>
+<li><a href="https://clcillinois.libanswers.com/faq/378333">Borrow from Other Libraries</a></li>
+<li><a href="http://researchguides.clcillinois.edu/print">Print, Copy, Scan</a></li>
+<li><a href="https://clcprint.clcillinois.edu/MyPrintCenter/">Mobile Printing</a></li>
+<li class="divider"></li>               
+<li><a href="http://researchguides.clcillinois.edu/faculty">For Faculty</a></li>
+<li><a href="https://clcillinois.libanswers.com/search/?t=0&adv=1&topics=Guests">For Guests</a></li>  
+                   </ul>        </li>      </ul>    
+
+</div>
+<!-- /.navbar-collapse -->  
+</div><!-- /.container-fluid -->
+</nav>
+        <!-- END: Page Header -->
+        <!-- BEGIN: Content Header -->
+        <div id="s-lib-public-header" class="s-lib-header container s-lib-side-borders">
+            <div id="s-lib-bc">
+                <ol id="s-lib-bc-list" class="breadcrumb"><li id="s-lib-bc-customer" class="breadcrumb-item"><a href="https://researchguides.clcillinois.edu/libraryhome">CLC Library</a></li><li id="s-lib-bc-site" class="breadcrumb-item"><a href="https://researchguides.clcillinois.edu/">LibGuides</a></li><li id="s-lib-bc-group" class="breadcrumb-item"><a href="https://researchguides.clcillinois.edu/instructionvideos">CLC Library Instruction Videos</a></li><li id="s-lib-bc-page" class="active breadcrumb-item">Home</li></ol>
+            </div>
+            <h1 id="s-lib-public-header-title">
+</h1>
+            <div id="s-lib-public-header-desc">
+</div>
+        </div>
+        <!-- END: Content Header -->
+        <!-- BEGIN: Nav Bar -->
+        <div id="s-lib-public-nav" class="container s-lib-side-borders">
+            
+        </div>
+        <!-- END: Nav Bar -->
+        <!-- BEGIN: content -->
+        <div id="s-lib-public-main" class="s-lib-main container s-lib-side-borders">
+            <div  id="s-lg-index-cols"  class="row">
+                <div  id="col1"  class="col-md-8 center">
+                    <div class="clearfix">
+                        <div id="s-lg-hp-nav"> 
+                            <ul>
+                                <li>
+                                    <ul class="nav nav-pills">
+                                        
+
+    <li id="s-lg-index-all-btn" class="s-lg-index-nav-btn active">
+        <button type="button" role="button" aria-pressed="true" class="btn"
+            onclick="springSpace.publicObj.loadHomepageList({
+                action: 170,
+                group_id: 19443,
+                order: jQuery('#s-lg-guide-order').val(),
+                num_cols: 1,
+                elt_id: 's-lg-index-list',
+                button_id: 's-lg-index-all-btn',
+                display_sort: true
+            });">
+            All Videos
+        </button>
+    </li>
+
+
+                                        
+
+    
+
+                                        
+
+    <li id="s-lg-index-subject-btn" class="s-lg-index-nav-btn">
+        <button type="button" role="button" class="btn"
+            onclick="springSpace.publicObj.loadHomepageList({
+                action: 172,
+                group_id: 19443,
+                num_cols: 1,
+                type_label: 'Subjects',
+                elt_id: 's-lg-index-list',
+                button_id: 's-lg-index-subject-btn'
+            });">
+            BY SUBJECT
+        </button>
+    </li>
+
+
+                                        
+
+    <li id="s-lg-index-guidetype-btn" class="s-lg-index-nav-btn">
+        <button type="button" role="button" class="btn"
+            onclick="springSpace.publicObj.loadHomepageList({
+                action: 173,
+                group_id: 19443,
+                num_cols: 1,
+                type_label: 'Guide Types',
+                elt_id: 's-lg-index-list',
+                button_id: 's-lg-index-guidetype-btn'
+            });">
+            BY TYPE
+        </button>
+    </li>
+
+
+                                        
+
+    <li id="s-lg-index-owner-btn" class="s-lg-index-nav-btn">
+        <button type="button" role="button" class="btn"
+            onclick="springSpace.publicObj.loadHomepageList({
+                action: 174,
+                group_id: 19443,
+                num_cols: 1,
+                type_label: 'Guide Owners',
+                elt_id: 's-lg-index-list',
+                button_id: 's-lg-index-owner-btn'
+            });">
+            BY OWNER
+        </button>
+    </li>
+
+                                    </ul>
+                                </li>
+                                <li id="s-lg-hp-nav-bottom">
+                                    <div class="clearfix">
+                                        
+<form role="search" class="form-inline pull-right" action="/srch.php">
+            <input type="hidden" name="group_id" value="19443">
+        <span>Search:</span>
+    <div class="form-group">
+        <div class="s-lg-public-search-field">
+            <label class="control-label sr-only" for="s-lg-guide-search">Search this Group</label>
+            <div class="input-group">
+                <input
+                    type="text"
+                    id="s-lg-guide-search"
+                    name="q"
+                    class="form-control"
+                    maxlength="260"
+                    placeholder="Search this Group"
+                    aria-label="Search this Group"
+                />
+                <span class="input-group-btn">
+                    <button class="btn btn-default" type="submit">Search</button>
+                </span>
+            </div>
+        </div>
+    </div>
+</form>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        
+<div id="s-lg-guide-list-controls">
+    <div class="pull-left">
+        <h2 id="s-lg-index-list-header" class="muted"></h2>
+    </div>
+    <div class="pull-right muted">
+        <div class="form-inline" id="form-group-s-lg-guide-order">
+            <div class="form-group">
+                <label for="s-lg-guide-order">Display</label>
+                <select id="s-lg-guide-order" name="s-lg-guide-order" class="form-control">
+                    <option value="0">Alphabetically</option>
+                    <option value="3">By Popularity</option>
+                    <option value="2">Most Recent</option>
+                </select>
+            </div>
+            <button type="button" class="btn btn-default" onclick="springSpace.publicObj.loadHomepageList({
+                action: 170,
+                group_id: 19443,
+                order: jQuery('#s-lg-guide-order').val(),
+                num_cols: 1,
+                elt_id: 's-lg-index-list',
+                button_id: 's-lg-index-all-btn',
+                display_sort: true,
+                type_label: springSpace.homepage.current_type_label
+            });">Go</button>
+        </div>
+    </div>
+</div>
+                    </div>
+                    <div id="s-lg-index-list" class="">
+                        Loading...
+                    </div>
+                </div>
+                <div  id="col2"  class="col-md-4 center">
+                    
+<br>
+<div class="s-lib-public-side-header">
+
+<h2 class="pad-bottom-sm">Get Help Now
+
+
+
+</h2>
+</div><br>
+<div align="center" >
+<div id="libchat_23f82ec8e5eadfc4d389a5c022b1be7a">&nbsp;</div>
+<script type="text/javascript" src="https://v2.libanswers.com/load_chat.php?hash=23f82ec8e5eadfc4d389a5c022b1be7a"></script>
+</div>
+
+
+                </div>
+            </div>
+        </div>
+        <!-- END: content -->
+        <!-- BEGIN: Page Footer -->
+        <div id="s-lib-footer-public" class="s-lib-footer footer container s-lib-side-borders"><div><div id="s-lib-footer-brand">Powered by Springshare.</div><div id="s-lib-footer-rights">All rights reserved.</div><div id="s-lib-footer-login-link"><a href="https://clcillinois.libapps.com/libapps/login.php?site_id=67">Login to LibApps</a></div></div><div id="s-lib-footer-support-link"></div></div></div>
+        <!-- END: Page Footer -->
+        <div id="s-lib-alert" title="">
+                            <div id="s-lib-alert-content"></div>
+                       </div>        
+                <div id="s-lib-popover-title" class="hide">
+                    <span class="text-info"><strong>title</strong></span> 
+                    <button type="button" id="popclose" class="close" onclick="jQuery('.s-lib-popover').popover('hide')">&times;</button> 
+                </div>
+                <div id="s-lib-popover-content" class="hide"><i class="fa fa-refresh fa-spin"></i> Loading...
+                    <button class="btn btn-default btn-sm popclose" type="button">Close</button>
+                </div>        
+			<div id="s-lib-scroll-top" title="Back to Top">
+				<span class="fa-stack fa-lg">
+				  <i class="fa fa-square-o fa-stack-2x"></i>
+				  <i class="fa fa-angle-double-up fa-stack-1x" style="position:relative; bottom:2px;"></i>
+				</span>
+			</div>        <!-- BEGIN: Custom Footer -->
+        
+<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet"><!-- // --><div class="container">	<hr>        <div class="text-center center-block">                            <a href="https://www.facebook.com/CLCLibrary"><i id="social" class="fa fa-facebook-square fa-3x social-fb" aria-hidden="true"></i><span class="sr-only">Facebook</span></a>            	<a href="https://www.instagram.com/clclibraries"><i id="social" class="fa fa-instagram fa-3x social-ig" aria-hidden="true"></i><span class="sr-only">Instagram</span></a>            <a href="https://clcillinois.libanswers.com/form.php?queue_id=2467"><i id="social" class="fa fa-envelope-square fa-3x social-em" aria-hidden="true"></i><span class="sr-only">Email Us</span></a></div> </div><div class="container text-center">    <hr />  <div class="row">    <div class="col-lg-12">      <div class="col-md-3">        <ul class="nav nav-pills nav-stacked">          <li><a href="http://researchguides.clcillinois.edu/catalog">Find Books and More</a></li>          <li><a href="http://researchguides.clcillinois.edu/az.php">Find Articles/Journals/Eresources</a></li>        </ul>      </div>      <div class="col-md-3">        <ul class="nav nav-pills nav-stacked">          <li><a href="https://clcillinois.libcal.com/">Book a Study Room</a></li>          <li><a href="https://clcillinois.libanswers.com/">Get Help</a></li>        </ul>      </div>      <div class="col-md-3">        <ul class="nav nav-pills nav-stacked">          <li><a href="http://researchguides.clcillinois.edu/cite">Cite a Source</a></li>          <li><a href="https://i-share-clc.alma.exlibrisgroup.com/discovery/account?vid=01CARLI_CLC:CARLI_CLC§ion=loans">Your Account</a></li>                  </ul>      </div>      <div class="col-md-3">        <ul class="nav nav-pills nav-stacked">          <li><a href="http://researchguides.clcillinois.edu/staff_directory">Staff Directory</a></li>          <li><a href="http://researchguides.clcillinois.edu/hours">Hours </a></li>    </li>    </ul>      </div>      </div>    <hr>                       <br><br>   <br><div class="row">    <div class="col-sm-4"></div>    <div class="col-sm-4">Reference Desk: 847.543.2071</div>    <div class="col-sm-4"></div>  </div><div class="row">    <div class="col-sm-4"></div>    <div class="col-sm-4">Circulation Desk: 847.543.2619</div>    <div class="col-sm-4"></div>  </div>   <div class="row">    <div class="col-sm-4"></div>    <div class="col-sm-4"><a href="https://researchguides.clcillinois.edu/libraryhome">CLC Library</a></div>    <div class="col-sm-4"></div>  </div></div><div class="row">    <div class="col-sm-4"></div>    <div class="col-sm-4"><a href="https://clcillinois.libapps.com/libapps/">Staff Login to LibApps</a></div>    <div class="col-sm-4"></div>  </div></div>
+
+        <!-- END: Custom Footer -->
+	</body></html>

@@ -1,0 +1,379 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+	<title>The Rockefeller University &raquo; Office of Sponsored Programs Administration</title>
+	<link type="text/css" rel="stylesheet" href="/sr-pd/css/nav.css" media="all" />
+	<link type="text/css" rel="stylesheet" href="/sr-pd/css/templateStyle2012.css" media="all" />
+	<link type="text/css" rel="stylesheet" href="/sr-pd/css/department.css" media="all" />
+    
+
+	
+	<!--[if IE]>
+		<link type="text/css" rel="stylesheet" href="/sr-pd/css/ie.css" media="all" />
+	<![endif]-->
+	
+	<!--[if IE 6]>
+		<link type="text/css" rel="stylesheet" href="/sr-pd/css/ie6.css" media="all" />
+	<![endif]-->	
+
+	<!--[if IE 7]>
+		<link type="text/css" rel="stylesheet" href="/sr-pd/css/ie7.css" media="all" />
+	<![endif]-->	
+	
+	<link type="text/css" rel="stylesheet" href="/sr-pd/css/print.css" media="print" />	
+	
+
+	<!--<script type="text/javascript" src="/sr-pd/js/jquery/jquery_core.js"></script>	-->
+	<script type="text/javascript" src="/sr-pd/funding/js/jquery-ui-1.8.18.custom/js/jquery-1.7.1.min.js"></script>	
+	<script type="text/javascript" src="/sr-pd/js/jquery/plugins/jquery.niftycube.js"></script>
+	<script type="text/javascript" src="/sr-pd/js/ru.js"></script>		
+    
+    <script language="javascript" type="text/javascript" src="/sr-pd/js/sr-pd.js"></script>
+	<script language="javascript" type="text/javascript" src="/js/scrollButtons.js"></script>
+
+
+	 <meta name="keywords" content="boilerplate, data, sharing"> 	
+
+
+
+<!-- Global site tag (gtag.js) - Google Analytics --> <script async src="https://www.googletagmanager.com/gtag/js?id=G-J2J6M9VPF5"></script> <script> window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'G-J2J6M9VPF5'); </script><script>var RU_GA_ID = 'G-J2J6M9VPF5';</script>
+
+
+</head>
+
+		
+
+
+
+<body>
+<!-- wrapper start -->
+<div id="wrapper">	
+   <div id="skip-to-content"><a href="#content">Skip to Main Content</a></div>	
+	
+	<div id="header">
+		<ul id="quickLinks">
+			<li><a href="/calendar">Calendar</a></li><li><a href="https://ph.rockefeller.edu/">Directory</a></li><li class="lastQL"><a href="/insideHR/career.php">Employment</a></li>
+       	</ul>
+
+       	
+		<form action="https://search.rockefeller.edu" method="get" name="gs" id="mainSearch">
+			<label for="q" class="ADA-only">Search The Rockefeller University Site</label><input type="text" name="q" value="Search" class="search defaultValue" />
+			<input type="image" src="/sr-pd/images/static/go.gif" width="32" height="18" alt="Search" style="vertical-align: bottom;" />
+		</form>
+		
+      <a href="https://giveandjoin.rockefeller.edu/donate" id="donate">Donate</a>
+
+		<p>Tuesday, February 17, 2026</p>		
+		<a href="/"><img src="/sr-pd/images/static/headerRU.gif" width="445" height="45" alt="The Rockefeller University" /></a>
+
+		<h1>
+			<a href="/sr-pd">Office of Sponsored Programs Administration</a>
+			<a href="?printer=1" id="printerFriendly"><img src="/sr-pd/images/static/print.gif" width="18" height="18" alt="printer icon" /></a>
+		</h1>		
+	</div>	
+
+		
+	
+	
+				
+		<script>
+		
+
+// add functions to onload w/out overwriting existing functions
+function addLoadEvent(func) {
+        var oldonload = window.onload;
+        if(typeof window.onload != 'function') {
+                window.onload = func;
+        } else {
+                window.onload = function() {
+                        oldonload();
+                        func();
+                }
+        }
+}
+function sizeBoxes() { // size each row of divs to one w/ most content in that row
+        if(!document.getElementById) return false;
+        var general = document.getElementById('general'); // get divs
+        var deadlines = document.getElementById('deadlines');
+        var SR = document.getElementById('SR');
+        var PD = document.getElementById('PD');
+
+        var row1 = getTallest(general,deadlines); // get largest height for each row
+        //row1 += 10;     // add some spacing
+        var row2 = getTallest(SR,PD);
+        //row2 += 30;
+
+        if(row1 > 240) { // row 1 heights
+                general.style.height = row1+"px";
+                deadlines.style.height = row1+"px";
+        } else {
+                general.style.height = "240px";
+                deadlines.style.height = "240px";
+        }
+        if(row2 > 240) { // row 2 heights
+                SR.style.height = row2+"px";
+                PD.style.height = row2+"px";
+                //PD.style.height = (row2 - 3)+"px"; // subtract 3px so corner image lines up
+        } else {
+                SR.style.height = "200px";
+                PD.style.height = "200px";
+        }
+}
+function getTallest(one, two) { // get largest div height for the two divs in each row
+        divs = new Array(2);
+        divs[0] = one.offsetHeight;
+        divs[1] = two.offsetHeight;
+        divs.sort(function(a,b){return b - a}) // sort in descending numerical order
+        return divs[0]; // return tallest height
+}
+
+
+
+
+// remove default value from Search SR-PD input on focus
+function defaultClear() {
+        if(!document.getElementById) return false;
+        var input = document.getElementById('searchSRPD');
+        input.onfocus = function() {
+                var default_value = 'Search SR-PD'
+                if(this.value == default_value) this.value = "";
+        }
+        input.onblur = function() {
+                if(this.value == "") this.value = "Search SR-PD";
+        }
+}
+
+addLoadEvent(defaultClear);
+                </script>
+                
+
+
+
+
+<!--  Begin nav  -->
+		<div id="nav" class="">
+		<ul class="menu">
+			<li id="firstNavCol"><a href="/sr-pd/index.php?page=index">About</a></li>
+			<li><a href="/sr-pd/index.php?page=News">News</a></li>		
+			<li><a href="/sr-pd/index.php?page=Tips__Corner">Tips</a></li>	
+                        <li><a href="/sr-pd/index.php?page=InfoEd_FAQ">InfoEd FAQ</a></li>
+	    <li><a href="/sr-pd/index.php?page=SR-PDSpotlight">Spotlight</a></li>	
+            <li><a href="/sr-pd/index.php?page=forms">Forms & E-Tools</a></li>	
+            <li><a href="/sr-pd/index.php?page=institutional-data">Administrative Data</a></li>	
+            <li><a href="/sr-pd/funding">Funding Database</a></li>	
+                        <li><a href="/sr-pd/index.php?page=boilerplates">Boilerplates & Examples</a></li>
+            <li><a href="/sr-pd/index.php?page=specialist">Your SPO</a></li>	
+            <li><a href="/sr-pd/index.php?page=contact-us">Contact Us</a></li>	
+			
+			<li style="padding-left: 0; padding: 20px 0 0 6px;">
+                                <a href="https://rasgrants.rockefeller.edu/" target="_blank"><img src="/sr-pd/images/ras-grants.gif" alt="RAS-Grants log-in button" width="145" height="40" /></a>
+				<!--<a href="https://spas.rockefeller.edu"><img src="/sr-pd/images/infoEdroll.jpg" alt="infoEd log-in button" width="145" height="40" /></a>-->
+			</li>
+			<li style="padding: 0px 0px 0px 45px; font-weight:normal;">
+				Use RUNET login
+			</li>
+			
+			<li>
+			<br /><br />
+        
+      <div class='navCalendarDiv' onClick='location.href="/sr-pd/funding/calendar.php"'><a href='/sr-pd/funding/calendar.php' style='text-decoration: none;cursor: pointer;margin:0px;padding:0px;width:100%;'><table cellspacing='0' cellpadding='0' border='0' width='100%' class='navCalendarTitle'>
+					<td align='center'>
+						<b>February 2026</b>
+				  </td>
+				</table>
+				
+				<table cellspacing='0' cellpadding='0' border='0' width='100%' class='navCalendar'><tr class='navCalendarDayOfWeek'>
+            <td width='40' align='center'>Su</td>
+            <td width='40' align='center'>Mo</td>
+            <td width='40' align='center'>Tu</td>
+            <td width='40' align='center'>We</td>
+            <td width='40' align='center'>Th</td>
+            <td width='40' align='center'>Fr</td>
+            <td width='40' align='center'>Sa</td>
+        </tr><td align='center' class='navCalendarSatOrSun'>
+                				1
+                			</td><td align='center' class='navCalendarDay'>
+                				2
+                			</td><td align='center' class='navCalendarDay'>
+                				3
+                			</td><td align='center' class='navCalendarDay'>
+                				4
+                			</td><td align='center' class='navCalendarDay'>
+                				5
+                			</td><td align='center' class='navCalendarDay'>
+                				6
+                			</td><td align='center' class='navCalendarSatOrSun'>
+                				7
+                			</td></tr><td align='center' class='navCalendarSatOrSun'>
+                				8
+                			</td><td align='center' class='navCalendarDay'>
+                				9
+                			</td><td align='center' class='navCalendarDay'>
+                				10
+                			</td><td align='center' class='navCalendarDay'>
+                				11
+                			</td><td align='center' class='navCalendarDay'>
+                				12
+                			</td><td align='center' class='navCalendarDay'>
+                				13
+                			</td><td align='center' class='navCalendarSatOrSun'>
+                				14
+                			</td></tr><td align='center' class='navCalendarSatOrSun'>
+                				15
+                			</td><td align='center' class='navCalendarDay'>
+                				16
+                			</td><td align='center' class='navCalendarDay'>
+                				<b>17</b>
+                  		</td><td align='center' class='navCalendarDay'>
+                				18
+                			</td><td align='center' class='navCalendarDay'>
+                				19
+                			</td><td align='center' class='navCalendarDay'>
+                				20
+                			</td><td align='center' class='navCalendarSatOrSun'>
+                				21
+                			</td></tr><td align='center' class='navCalendarSatOrSun'>
+                				22
+                			</td><td align='center' class='navCalendarDay'>
+                				23
+                			</td><td align='center' class='navCalendarDay'>
+                				24
+                			</td><td align='center' class='navCalendarDay'>
+                				25
+                			</td><td align='center' class='navCalendarDay'>
+                				26
+                			</td><td align='center' class='navCalendarDay'>
+                				27
+                			</td><td align='center' class='navCalendarSatOrSun'>
+                				28
+                			</td></tr></table></a></div>			</li>
+			
+			<li>
+				<br /><br />
+            
+        <table cellspacing="0" cellpadding="0" border="0" style="background-color:#c8d5dd; margin:2px;" width="165px">
+    	
+    		<tr><td style="padding-bottom:2px;" align="center"><b><font color="#000000">Most Visited</font></b></td></tr>
+    		    			    			<tr>
+    				<td align="left" style="padding:3px;background-color:#ffffff;">
+    				 <a href="/sr-pd/index.php?page=PostdocPrograms" title="Postdoctoral Programs" style='text-decoration: none;cursor: pointer;margin:0px;padding:0px;width:100%;'>Postdoctoral Prog...</a>
+    				</td>
+    			</tr>
+    			    			<tr>
+    				<td align="left" style="padding:3px;background-color:#ffffff;">
+    				 <a href="/sr-pd/index.php?page=TipsArchive" title="TIPs Archive" style='text-decoration: none;cursor: pointer;margin:0px;padding:0px;width:100%;'>TIPs Archive</a>
+    				</td>
+    			</tr>
+    			    			<tr>
+    				<td align="left" style="padding:3px;background-color:#ffffff;">
+    				 <a href="/sr-pd/index.php?page=fundingopp" title="Grant Seeking Resources" style='text-decoration: none;cursor: pointer;margin:0px;padding:0px;width:100%;'>Grant Seeking Res...</a>
+    				</td>
+    			</tr>
+    			    			<tr>
+    				<td align="left" style="padding:3px;background-color:#ffffff;">
+    				 <a href="/sr-pd/index.php?page=COVID_Funding_Opps" title="COVID Funding Opportunities" style='text-decoration: none;cursor: pointer;margin:0px;padding:0px;width:100%;'>COVID Funding Opp...</a>
+    				</td>
+    			</tr>
+    			    			<tr>
+    				<td align="left" style="padding:3px;background-color:#ffffff;">
+    				 <a href="/sr-pd/index.php?page=NIH_Modular_Budget_Justification_Guidelines" title="NIH Modular Budget Justification Guidelines" style='text-decoration: none;cursor: pointer;margin:0px;padding:0px;width:100%;'>NIH Modular Budge...</a>
+    				</td>
+    			</tr>
+    			    			<tr>
+    				<td align="left" style="padding:3px;background-color:#ffffff;">
+    				 <a href="/sr-pd/index.php?page=nihformsq" title="NIH Application Forms" style='text-decoration: none;cursor: pointer;margin:0px;padding:0px;width:100%;'>NIH Application F...</a>
+    				</td>
+    			</tr>
+    			    			<tr>
+    				<td align="left" style="padding:3px;background-color:#ffffff;">
+    				 <a href="/sr-pd/index.php?page=Consortium-ContractualArrangements" title="Consortium and Contractual Arrangements" style='text-decoration: none;cursor: pointer;margin:0px;padding:0px;width:100%;'>Consortium and Co...</a>
+    				</td>
+    			</tr>
+    			    		    		</table>
+			</li>
+			    </ul>
+        
+            
+	</div>
+
+<!--  End nav -->
+
+
+<!-- content start -->	
+<div id="content">	
+	<div id="contentTop">&nbsp;</div>
+						
+										
+												<form id="searchForm" action="https://search.rockefeller.edu" method="get" style="padding: 0px; margin: 0px;">
+										          <input type="text" name="q" value="Search OSPA" id="searchSRPD">
+															<input type="submit" value="Go" id="submitSearchSRPD" />
+										  	</form>
+
+										
+	
+<br/>
+
+		 		
+			<div id="editor-container" style="width:690px;">
+			<script>
+function win2() {
+    win = window.open("","Window1","menubar=no,width=460,height=360");
+    win.document.writeln("Recorded factual material commonly accepted in the scientific community as necessary to document and support research findings. This does not mean summary statistics or tables; rather, it means the data on which summary statistics and tables are based. For the purposes of this policy, final research data do not include laboratory notebooks, partial datasets, preliminary analyses, drafts of scientific papers, plans for future research, peer review reports, communications with colleagues, or physical objects, such as gels or laboratory specimens.");
+}
+</script><p class="MsoNormal" style="text-align: center;"><span class="contentTitle">Data Sharing/Management Plan</span></p>
+<p class="MsoNormal"><em><em>Our boilerplates and sample text for selected application sections may be used as a starting point for your applications, and should be modified to meet sponsor's requirements and to align with your proposed research plan.</em></em></p>
+<p>Data sharing is essential for expedited translation of research results into knowledge, products, and procedures to improve human health.&nbsp;Responsive data sharing/management plans will present details driven by the specific project being proposed.&nbsp;</p>
+<p class="MsoNormal">Investigators are encouraged to read <strong>NIH <a href="https://sharing.nih.gov/data-management-and-sharing-policy/planning-and-budgeting-for-data-management-and-sharing/writing-a-data-management-and-sharing-plan#after">data sharing plan examples</a></strong>, whether or not your application is to the NIH. <em><br /></em></p>
+<p><span class="contentSubtitle">NIH Data Sharing</span><span class="contentSubtitle"> Policy<br /></span><strong><em>New <a href="https://grants.nih.gov/grants/guide/notice-files/NOT-OD-21-013.html">NIH Policy for Data Management and Sharing</a> (DMS) effective on January 25, 2023</em></strong><br />The DMS Policy applies to all NIH research, funded or conducted in whole or in part by NIH, that results in the generation of scientific data. Note that the DMS Policy does not apply to research and other activities that do not generate scientific data, for example: research training, fellowships, infrastructure development, and non-research activities. See <a href="https://sharing.nih.gov/data-management-and-sharing-policy/about-data-management-and-sharing-policies/research-covered-under-the-data-management-sharing-policy#research-covered-by-the-2023-data-management-&amp;-sharing-policy">Research Covered Under the Data Management &amp; Sharing Policy</a> for more details.<br /><br />DMS Plans should describe how data will be managed and appropriately shared. See <a href="https://sharing.nih.gov/data-management-and-sharing-policy/planning-and-budgeting-for-data-management-and-sharing/writing-a-data-management-and-sharing-plan">Writing a Data Management &amp; Sharing Plan</a> for details, sample Plans, and an optional format page which includes <a href="https://sharing.nih.gov/data-management-and-sharing-policy/planning-and-budgeting-for-data-management-and-sharing/writing-a-data-management-and-sharing-plan#elements-to-include-in-a-data-management-and-sharing-plan">six elements recommended</a> to be included in a Data Management and Sharing Plan. Guidance on <a href="https://sharing.nih.gov/data-management-and-sharing-policy/planning-and-budgeting-for-data-management-and-sharing">planning and budgeting</a> and <a href="https://sharing.nih.gov/data-management-and-sharing-policy/sharing-scientific-data/selecting-a-data-repository">selecting a data repository</a> are available on the NIH Scientific Data Sharing website. <br /><br /><em>NIH DMS Resources</em></p>
+<ul>
+<li><a href="https://sharing.nih.gov/data-management-and-sharing-policy/about-data-management-and-sharing-policies/data-management-and-sharing-policy-overview">DMS Policy Overview</a></li>
+<li><a href="https://sharing.nih.gov/faqs#/data-management-and-sharing-policy.htm">DMS Policy FAQs</a></li>
+<li><a href="https://sharing.nih.gov/about/learning">Learning Resources</a> including 2-part webinar series on DMS Policy<em><br /></em></li>
+</ul>
+<p><em>RU Markus Library Resources</em></p>
+<ul>
+<li><a href="https://rocku.hosted.panopto.com/Panopto/Pages/Sessions/List.aspx#folderID=%2273570be5-06f9-4afd-a3f5-af2d0131e7fe%22">NIH DMS seminar series</a></li>
+<li><a href="https://markus-library.libguides.com/newNIHDMSPolicy">Libguides for DMS policy</a></li>
+<li><a href="https://dmptool.org/">DMPTool</a> includes RU guidance to assist in creating DMS plans</li>
+</ul>
+<p><br /><span class="contentSubtitle">NSF</span> <span class="contentSubtitle">Data Management</span><span class="contentSubtitle"> Plan</span>&nbsp; <br />The PI and the institution will adhere to the <a href="http://www.nsf.gov/bfa/dias/policy/dmp.jsp">NSF policy</a> for data management on all NSF proposals and awards. The PI will share the primary data, samples, physical collections and other supporting materials created/gathered in their NSF-supported research project with the research community <em>[customize this statement to your own data produced by your study]</em>. The dissemination of the data will be as cost-effective as possible, and will be made available at the lowest cost feasible to the PI and the project. <span style="color: #333333;">The project team</span> is committed to sharing data and samples&nbsp;<em>[customize this statement to your own data produced by your study]</em> within a reasonable time following publication of research results.&nbsp;If any intellectual property involving commercialization efforts occurs, the PI will work towards making the technology widely available to the research community. The data will be archived using a secure environment with easy-to-retrieve capabilities <em>[describe your specific plans for archiving study data, e.g. project website, public repository, restricted access facility, other].</em><br /><br /><span style="font-style: italic;">Specific NSF data management plan requirements by Directorate, Division, or Program, are on </span><a style="font-style: italic;" href="http://www.nsf.gov/bfa/dias/policy/dmp.jsp">NSF Data Sharing Policy</a><span style="font-style: italic;"> website.<br /></span></p>
+<p><span style="font-style: italic;"><span class="contentSubtitle">Other Sponsors<br /><span class="body"><span style="font-style: italic;"><span class="contentSubtitle"><span class="body">American Heart Association (AHA)</span></span></span>: Investigators submitting applications to AHA due on or after July 1, 2014 must include a data sharing plan.&nbsp;</span></span></span><span style="font-style: italic;"><span class="contentSubtitle"><span class="body"><a href="https://professional.heart.org/en/research-programs/aha-research-policies-and-awardee-hub/open-science-policy-statements-for-aha-funded-research"> More&gt;&gt;</a>&nbsp;</span></span><br /></span></p>
+<p><span class="contentSubtitle">IP Management</span><br /><em>Regardless of sponsor, the following may be used when intellectual property or other commercialization matters apply: </em>We are committed to ensuring that the resulting research tools are freely shared with the research community. In addition, opportunities for technology transfer through commercialization will be explored as appropriate.&nbsp; The PI will work with the Rockefeller University's <a href="http://www.rockefeller.edu/techtransfer/">Office of Technology Transfer</a> (RU OTT) to manage resulting intellectual property. RU OTT serves faculty, staff and students by commercializing inventions, ideas and software developed at the University to ensure that new knowledge generated by this project is effectively disseminated.</p>
+<p><em>RU's OTT contributed to this text. </em><span class="body"><br /><br /><span class="contentSubtitle">Software and Code Sharing Plan</span><br />This plan establishes Rockefeller's expectations that all Rockefeller investigators make available software and source code that are developed and modified to achieve the goals of the [<em>insert project title</em>].</span></p>
+<p><span class="body">Consisent with its goals to [<em>state project's goals</em>], Rockefeller investigators must take all reasonable steps to make software and source codes developed or derived pursuant to these goals, available to other academic and nonprofit scientists for research purposes after their publication through a simple site license agreement unless either:</span><br />- the software and source codes, along with a simple site licence agreement, will be posted on Rockefeller's website at [<em>provide web address</em>], or<br />- the software and source code can be obtained from third parties on reasonable terms.</p>
+<p>Investigators are expected to respond promptly to all reasonable requests for software (and source code) they have authored, and should generally accomodate reasonable requests within 30 days. If this timeframe is impractical, the investigators should communicate promptly with the requestor about when the request will be fulfilled.</p>
+<p><em>This plan was developed by the Bioinformatics Team of the RU CTSA grant in conjunction with OTT and OGC.</em><br /><br /><br /><span class="contentSubtitle">Other Sharing Plans/Resources<br /></span><a href="http://www2.rockefeller.edu/sr-pd/index.php?page=DisseminatingNewResources">Disseminating Newly Developed Knowledge</a> (Tools, Reagents, and Techniques) <br /><a href="http://www2.rockefeller.edu/sr-pd/index.php?page=ModelOrganismSharingPlan">Model Organism Sharing Plan</a><span class="contentSubtitle">&nbsp;<br /></span>The Rockefeller University's <a href="https://www.rockefeller.edu/technology-transfer/">Office of Technology Transfer</a><a href="http://www.icpsr.umich.edu/icpsrweb/content/datamanagement/dmp/resources.html"><br />Data Management Plan Guidelines</a> Inter-University Consortium for Political &amp; Social Research <br /><a href="http://www.nlm.nih.gov/cde/">NIH Common Data Elements (CDE) Resource Portal</a> <br /><a href="https://www.nsf.gov/pubs/2022/nsf22055/nsf22055.jsp?WT.mc_ev=click&amp;WT.mc_id=USNSF_34&amp;utm_medium=email&amp;utm_source=govdelivery">NSF&nbsp;Effective Practices for Making Research Data Discoverable and Citable (Data Sharing)</a>&nbsp;&nbsp; <br /><br />&nbsp;</p>
+<p style="text-align: center;"><a href="mailto:sr-pd@rockefeller.edu">We value your comments and rely on your feedback to improve our services</a>.</p>
+<p>&nbsp;</p>
+			</div>
+			
+	<div style="clear:both;"></div>
+<p id="contentBottom"></p>
+	</div>
+<!-- content end -->
+
+<!-- footer start -->
+   <div id="footer">
+         <div id="footer-btns">
+            <a href="http://www.facebook.com/rockefelleruniversity" target="_blank"><img src="/sr-pd/images/static/btn-med-fb.gif" width="32" height="32" alt="Facebook" /></a>
+            <a href="http://www.twitter.com/rockefelleruniv" target="_blank"><img src="/sr-pd/images/static/btn-med-twitter.gif" width="32" height="32" alt="Twitter" /></a>
+            <a href="http://www.youtube.com/rockefelleruniv" target="_blank"><img src="/sr-pd/images/static/btn-med-youtube.gif" width="32" height="32" alt="YouTube" /></a>
+            <a href="https://www.linkedin.com/company/rockefeller-university/careers" target="_blank"><img src="//www.rockefeller.edu/images/static/btn-med-linkedin.gif" width="32" height="32" alt="LinkedIn"></a>
+            <a href="https://instagram.com/rockefelleruniv/" target="_blank"><img src="/images/static/btn-med-instagram.gif" width="32" height="32" alt="Instagram" /></a>
+            <a href="https://inside.rockefeller.edu" id="footer-inside-link"><img src="/sr-pd/images/static/inside.gif" /></a>
+         </div>
+      <p>
+            The Rockefeller University  |  1230 York Avenue, New York, NY 10065  |  212-327-8000<br />
+         Copyright &copy; 2004&ndash;2026         The Rockefeller University. All rights reserved.  <br />
+         <a href="http://www.rockefeller.edu/about/contact">Contact</a> |
+         <a href="http://www.rockefeller.edu/about/comments">Comments</a> |
+         <a href="http://www.rockefeller.edu/about/sitemap">Site Map</a> |
+         <a href="http://www.rockefeller.edu/about/dmca">Copyright Complaints</a>
+      </p>
+   </div><!-- footer end -->
+
+	</div>
+</body>
+</html>

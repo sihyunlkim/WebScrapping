@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head profile="http://www.w3.org/1999/xhtml/vocab">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><script type="text/javascript">(window.NREUM||(NREUM={})).init={ajax:{deny_list:["bam.nr-data.net"]},feature_flags:["soft_nav"]};(window.NREUM||(NREUM={})).loader_config={licenseKey:"4e34bbaf17",applicationID:"4513637",browserID:"4513646"};;/*! For license information please see nr-loader-rum-1.309.0.min.js.LICENSE.txt */
+(()=>{var e,t,r={163:(e,t,r)=>{"use strict";r.d(t,{j:()=>E});var n=r(384),i=r(1741);var a=r(2555);r(860).K7.genericEvents;const s="experimental.resources",o="register",c=e=>{if(!e||"string"!=typeof e)return!1;try{document.createDocumentFragment().querySelector(e)}catch{return!1}return!0};var d=r(2614),u=r(944),l=r(8122);const f="[data-nr-mask]",g=e=>(0,l.a)(e,(()=>{const e={feature_flags:[],experimental:{allow_registered_children:!1,resources:!1},mask_selector:"*",block_selector:"[data-nr-block]",mask_input_options:{color:!1,date:!1,"datetime-local":!1,email:!1,month:!1,number:!1,range:!1,search:!1,tel:!1,text:!1,time:!1,url:!1,week:!1,textarea:!1,select:!1,password:!0}};return{ajax:{deny_list:void 0,block_internal:!0,enabled:!0,autoStart:!0},api:{get allow_registered_children(){return e.feature_flags.includes(o)||e.experimental.allow_registered_children},set allow_registered_children(t){e.experimental.allow_registered_children=t},duplicate_registered_data:!1},browser_consent_mode:{enabled:!1},distributed_tracing:{enabled:void 0,exclude_newrelic_header:void 0,cors_use_newrelic_header:void 0,cors_use_tracecontext_headers:void 0,allowed_origins:void 0},get feature_flags(){return e.feature_flags},set feature_flags(t){e.feature_flags=t},generic_events:{enabled:!0,autoStart:!0},harvest:{interval:30},jserrors:{enabled:!0,autoStart:!0},logging:{enabled:!0,autoStart:!0},metrics:{enabled:!0,autoStart:!0},obfuscate:void 0,page_action:{enabled:!0},page_view_event:{enabled:!0,autoStart:!0},page_view_timing:{enabled:!0,autoStart:!0},performance:{capture_marks:!1,capture_measures:!1,capture_detail:!0,resources:{get enabled(){return e.feature_flags.includes(s)||e.experimental.resources},set enabled(t){e.experimental.resources=t},asset_types:[],first_party_domains:[],ignore_newrelic:!0}},privacy:{cookies_enabled:!0},proxy:{assets:void 0,beacon:void 0},session:{expiresMs:d.wk,inactiveMs:d.BB},session_replay:{autoStart:!0,enabled:!1,preload:!1,sampling_rate:10,error_sampling_rate:100,collect_fonts:!1,inline_images:!1,fix_stylesheets:!0,mask_all_inputs:!0,get mask_text_selector(){return e.mask_selector},set mask_text_selector(t){c(t)?e.mask_selector="".concat(t,",").concat(f):""===t||null===t?e.mask_selector=f:(0,u.R)(5,t)},get block_class(){return"nr-block"},get ignore_class(){return"nr-ignore"},get mask_text_class(){return"nr-mask"},get block_selector(){return e.block_selector},set block_selector(t){c(t)?e.block_selector+=",".concat(t):""!==t&&(0,u.R)(6,t)},get mask_input_options(){return e.mask_input_options},set mask_input_options(t){t&&"object"==typeof t?e.mask_input_options={...t,password:!0}:(0,u.R)(7,t)}},session_trace:{enabled:!0,autoStart:!0},soft_navigations:{enabled:!0,autoStart:!0},spa:{enabled:!0,autoStart:!0},ssl:void 0,user_actions:{enabled:!0,elementAttributes:["id","className","tagName","type"]}}})());var p=r(6154),m=r(9324);let h=0;const v={buildEnv:m.F3,distMethod:m.Xs,version:m.xv,originTime:p.WN},b={consented:!1},y={appMetadata:{},get consented(){return this.session?.state?.consent||b.consented},set consented(e){b.consented=e},customTransaction:void 0,denyList:void 0,disabled:!1,harvester:void 0,isolatedBacklog:!1,isRecording:!1,loaderType:void 0,maxBytes:3e4,obfuscator:void 0,onerror:void 0,ptid:void 0,releaseIds:{},session:void 0,timeKeeper:void 0,registeredEntities:[],jsAttributesMetadata:{bytes:0},get harvestCount(){return++h}},_=e=>{const t=(0,l.a)(e,y),r=Object.keys(v).reduce((e,t)=>(e[t]={value:v[t],writable:!1,configurable:!0,enumerable:!0},e),{});return Object.defineProperties(t,r)};var w=r(5701);const x=e=>{const t=e.startsWith("http");e+="/",r.p=t?e:"https://"+e};var R=r(7836),k=r(3241);const A={accountID:void 0,trustKey:void 0,agentID:void 0,licenseKey:void 0,applicationID:void 0,xpid:void 0},S=e=>(0,l.a)(e,A),T=new Set;function E(e,t={},r,s){let{init:o,info:c,loader_config:d,runtime:u={},exposed:l=!0}=t;if(!c){const e=(0,n.pV)();o=e.init,c=e.info,d=e.loader_config}e.init=g(o||{}),e.loader_config=S(d||{}),c.jsAttributes??={},p.bv&&(c.jsAttributes.isWorker=!0),e.info=(0,a.D)(c);const f=e.init,m=[c.beacon,c.errorBeacon];T.has(e.agentIdentifier)||(f.proxy.assets&&(x(f.proxy.assets),m.push(f.proxy.assets)),f.proxy.beacon&&m.push(f.proxy.beacon),e.beacons=[...m],function(e){const t=(0,n.pV)();Object.getOwnPropertyNames(i.W.prototype).forEach(r=>{const n=i.W.prototype[r];if("function"!=typeof n||"constructor"===n)return;let a=t[r];e[r]&&!1!==e.exposed&&"micro-agent"!==e.runtime?.loaderType&&(t[r]=(...t)=>{const n=e[r](...t);return a?a(...t):n})})}(e),(0,n.US)("activatedFeatures",w.B)),u.denyList=[...f.ajax.deny_list||[],...f.ajax.block_internal?m:[]],u.ptid=e.agentIdentifier,u.loaderType=r,e.runtime=_(u),T.has(e.agentIdentifier)||(e.ee=R.ee.get(e.agentIdentifier),e.exposed=l,(0,k.W)({agentIdentifier:e.agentIdentifier,drained:!!w.B?.[e.agentIdentifier],type:"lifecycle",name:"initialize",feature:void 0,data:e.config})),T.add(e.agentIdentifier)}},384:(e,t,r)=>{"use strict";r.d(t,{NT:()=>o,US:()=>l,Zm:()=>c,bQ:()=>u,dV:()=>d,pV:()=>f});var n=r(6154),i=r(1863),a=r(944),s=r(1910);const o={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net"};function c(){return n.gm.NREUM||(n.gm.NREUM={}),void 0===n.gm.newrelic&&(n.gm.newrelic=n.gm.NREUM),n.gm.NREUM}function d(){let e=c();return e.o||(e.o={ST:n.gm.setTimeout,SI:n.gm.setImmediate||n.gm.setInterval,CT:n.gm.clearTimeout,XHR:n.gm.XMLHttpRequest,REQ:n.gm.Request,EV:n.gm.Event,PR:n.gm.Promise,MO:n.gm.MutationObserver,FETCH:n.gm.fetch,WS:n.gm.WebSocket},(0,s.i)(...Object.values(e.o))),e}function u(e,t){let r=c();r.initializedAgents??={},t.initializedAt={ms:(0,i.t)(),date:new Date},r.initializedAgents[e]=t,2===Object.keys(r.initializedAgents).length&&(0,a.R)(69)}function l(e,t){c()[e]=t}function f(){return function(){let e=c();const t=e.info||{};e.info={beacon:o.beacon,errorBeacon:o.errorBeacon,...t}}(),function(){let e=c();const t=e.init||{};e.init={...t}}(),d(),function(){let e=c();const t=e.loader_config||{};e.loader_config={...t}}(),c()}},782:(e,t,r)=>{"use strict";r.d(t,{T:()=>n});const n=r(860).K7.pageViewTiming},860:(e,t,r)=>{"use strict";r.d(t,{$J:()=>u,K7:()=>c,P3:()=>d,XX:()=>i,Yy:()=>o,df:()=>a,qY:()=>n,v4:()=>s});const n="events",i="jserrors",a="browser/blobs",s="rum",o="browser/logs",c={ajax:"ajax",genericEvents:"generic_events",jserrors:i,logging:"logging",metrics:"metrics",pageAction:"page_action",pageViewEvent:"page_view_event",pageViewTiming:"page_view_timing",sessionReplay:"session_replay",sessionTrace:"session_trace",softNav:"soft_navigations",spa:"spa"},d={[c.pageViewEvent]:1,[c.pageViewTiming]:2,[c.metrics]:3,[c.jserrors]:4,[c.spa]:5,[c.ajax]:6,[c.sessionTrace]:7,[c.softNav]:8,[c.sessionReplay]:9,[c.logging]:10,[c.genericEvents]:11},u={[c.pageViewEvent]:s,[c.pageViewTiming]:n,[c.ajax]:n,[c.spa]:n,[c.softNav]:n,[c.metrics]:i,[c.jserrors]:i,[c.sessionTrace]:a,[c.sessionReplay]:a,[c.logging]:o,[c.genericEvents]:"ins"}},944:(e,t,r)=>{"use strict";r.d(t,{R:()=>i});var n=r(3241);function i(e,t){"function"==typeof console.debug&&(console.debug("New Relic Warning: https://github.com/newrelic/newrelic-browser-agent/blob/main/docs/warning-codes.md#".concat(e),t),(0,n.W)({agentIdentifier:null,drained:null,type:"data",name:"warn",feature:"warn",data:{code:e,secondary:t}}))}},1687:(e,t,r)=>{"use strict";r.d(t,{Ak:()=>d,Ze:()=>f,x3:()=>u});var n=r(3241),i=r(7836),a=r(3606),s=r(860),o=r(2646);const c={};function d(e,t){const r={staged:!1,priority:s.P3[t]||0};l(e),c[e].get(t)||c[e].set(t,r)}function u(e,t){e&&c[e]&&(c[e].get(t)&&c[e].delete(t),p(e,t,!1),c[e].size&&g(e))}function l(e){if(!e)throw new Error("agentIdentifier required");c[e]||(c[e]=new Map)}function f(e="",t="feature",r=!1){if(l(e),!e||!c[e].get(t)||r)return p(e,t);c[e].get(t).staged=!0,g(e)}function g(e){const t=Array.from(c[e]);t.every(([e,t])=>t.staged)&&(t.sort((e,t)=>e[1].priority-t[1].priority),t.forEach(([t])=>{c[e].delete(t),p(e,t)}))}function p(e,t,r=!0){const s=e?i.ee.get(e):i.ee,c=a.i.handlers;if(!s.aborted&&s.backlog&&c){if((0,n.W)({agentIdentifier:e,type:"lifecycle",name:"drain",feature:t}),r){const e=s.backlog[t],r=c[t];if(r){for(let t=0;e&&t<e.length;++t)m(e[t],r);Object.entries(r).forEach(([e,t])=>{Object.values(t||{}).forEach(t=>{t[0]?.on&&t[0].context()instanceof o.y&&!t[0].listeners(e).includes(t[1])&&t[0].on(e,t[1])})})}}s.isolatedBacklog||delete c[t],s.backlog[t]=null,s.emit("drain-"+t,[])}}function m(e,t){var r=e[1];Object.values(t[r]||{}).forEach(t=>{var r=e[0];if(t[0]===r){var n=t[1],i=e[3],a=e[2];n.apply(i,a)}})}},1738:(e,t,r)=>{"use strict";r.d(t,{U:()=>g,Y:()=>f});var n=r(3241),i=r(9908),a=r(1863),s=r(944),o=r(5701),c=r(3969),d=r(8362),u=r(860),l=r(4261);function f(e,t,r,a){const f=a||r;!f||f[e]&&f[e]!==d.d.prototype[e]||(f[e]=function(){(0,i.p)(c.xV,["API/"+e+"/called"],void 0,u.K7.metrics,r.ee),(0,n.W)({agentIdentifier:r.agentIdentifier,drained:!!o.B?.[r.agentIdentifier],type:"data",name:"api",feature:l.Pl+e,data:{}});try{return t.apply(this,arguments)}catch(e){(0,s.R)(23,e)}})}function g(e,t,r,n,s){const o=e.info;null===r?delete o.jsAttributes[t]:o.jsAttributes[t]=r,(s||null===r)&&(0,i.p)(l.Pl+n,[(0,a.t)(),t,r],void 0,"session",e.ee)}},1741:(e,t,r)=>{"use strict";r.d(t,{W:()=>a});var n=r(944),i=r(4261);class a{#e(e,...t){if(this[e]!==a.prototype[e])return this[e](...t);(0,n.R)(35,e)}addPageAction(e,t){return this.#e(i.hG,e,t)}register(e){return this.#e(i.eY,e)}recordCustomEvent(e,t){return this.#e(i.fF,e,t)}setPageViewName(e,t){return this.#e(i.Fw,e,t)}setCustomAttribute(e,t,r){return this.#e(i.cD,e,t,r)}noticeError(e,t){return this.#e(i.o5,e,t)}setUserId(e,t=!1){return this.#e(i.Dl,e,t)}setApplicationVersion(e){return this.#e(i.nb,e)}setErrorHandler(e){return this.#e(i.bt,e)}addRelease(e,t){return this.#e(i.k6,e,t)}log(e,t){return this.#e(i.$9,e,t)}start(){return this.#e(i.d3)}finished(e){return this.#e(i.BL,e)}recordReplay(){return this.#e(i.CH)}pauseReplay(){return this.#e(i.Tb)}addToTrace(e){return this.#e(i.U2,e)}setCurrentRouteName(e){return this.#e(i.PA,e)}interaction(e){return this.#e(i.dT,e)}wrapLogger(e,t,r){return this.#e(i.Wb,e,t,r)}measure(e,t){return this.#e(i.V1,e,t)}consent(e){return this.#e(i.Pv,e)}}},1863:(e,t,r)=>{"use strict";function n(){return Math.floor(performance.now())}r.d(t,{t:()=>n})},1910:(e,t,r)=>{"use strict";r.d(t,{i:()=>a});var n=r(944);const i=new Map;function a(...e){return e.every(e=>{if(i.has(e))return i.get(e);const t="function"==typeof e?e.toString():"",r=t.includes("[native code]"),a=t.includes("nrWrapper");return r||a||(0,n.R)(64,e?.name||t),i.set(e,r),r})}},2555:(e,t,r)=>{"use strict";r.d(t,{D:()=>o,f:()=>s});var n=r(384),i=r(8122);const a={beacon:n.NT.beacon,errorBeacon:n.NT.errorBeacon,licenseKey:void 0,applicationID:void 0,sa:void 0,queueTime:void 0,applicationTime:void 0,ttGuid:void 0,user:void 0,account:void 0,product:void 0,extra:void 0,jsAttributes:{},userAttributes:void 0,atts:void 0,transactionName:void 0,tNamePlain:void 0};function s(e){try{return!!e.licenseKey&&!!e.errorBeacon&&!!e.applicationID}catch(e){return!1}}const o=e=>(0,i.a)(e,a)},2614:(e,t,r)=>{"use strict";r.d(t,{BB:()=>s,H3:()=>n,g:()=>d,iL:()=>c,tS:()=>o,uh:()=>i,wk:()=>a});const n="NRBA",i="SESSION",a=144e5,s=18e5,o={STARTED:"session-started",PAUSE:"session-pause",RESET:"session-reset",RESUME:"session-resume",UPDATE:"session-update"},c={SAME_TAB:"same-tab",CROSS_TAB:"cross-tab"},d={OFF:0,FULL:1,ERROR:2}},2646:(e,t,r)=>{"use strict";r.d(t,{y:()=>n});class n{constructor(e){this.contextId=e}}},2843:(e,t,r)=>{"use strict";r.d(t,{G:()=>a,u:()=>i});var n=r(3878);function i(e,t=!1,r,i){(0,n.DD)("visibilitychange",function(){if(t)return void("hidden"===document.visibilityState&&e());e(document.visibilityState)},r,i)}function a(e,t,r){(0,n.sp)("pagehide",e,t,r)}},3241:(e,t,r)=>{"use strict";r.d(t,{W:()=>a});var n=r(6154);const i="newrelic";function a(e={}){try{n.gm.dispatchEvent(new CustomEvent(i,{detail:e}))}catch(e){}}},3606:(e,t,r)=>{"use strict";r.d(t,{i:()=>a});var n=r(9908);a.on=s;var i=a.handlers={};function a(e,t,r,a){s(a||n.d,i,e,t,r)}function s(e,t,r,i,a){a||(a="feature"),e||(e=n.d);var s=t[a]=t[a]||{};(s[r]=s[r]||[]).push([e,i])}},3878:(e,t,r)=>{"use strict";function n(e,t){return{capture:e,passive:!1,signal:t}}function i(e,t,r=!1,i){window.addEventListener(e,t,n(r,i))}function a(e,t,r=!1,i){document.addEventListener(e,t,n(r,i))}r.d(t,{DD:()=>a,jT:()=>n,sp:()=>i})},3969:(e,t,r)=>{"use strict";r.d(t,{TZ:()=>n,XG:()=>o,rs:()=>i,xV:()=>s,z_:()=>a});const n=r(860).K7.metrics,i="sm",a="cm",s="storeSupportabilityMetrics",o="storeEventMetrics"},4234:(e,t,r)=>{"use strict";r.d(t,{W:()=>a});var n=r(7836),i=r(1687);class a{constructor(e,t){this.agentIdentifier=e,this.ee=n.ee.get(e),this.featureName=t,this.blocked=!1}deregisterDrain(){(0,i.x3)(this.agentIdentifier,this.featureName)}}},4261:(e,t,r)=>{"use strict";r.d(t,{$9:()=>d,BL:()=>o,CH:()=>g,Dl:()=>_,Fw:()=>y,PA:()=>h,Pl:()=>n,Pv:()=>k,Tb:()=>l,U2:()=>a,V1:()=>R,Wb:()=>x,bt:()=>b,cD:()=>v,d3:()=>w,dT:()=>c,eY:()=>p,fF:()=>f,hG:()=>i,k6:()=>s,nb:()=>m,o5:()=>u});const n="api-",i="addPageAction",a="addToTrace",s="addRelease",o="finished",c="interaction",d="log",u="noticeError",l="pauseReplay",f="recordCustomEvent",g="recordReplay",p="register",m="setApplicationVersion",h="setCurrentRouteName",v="setCustomAttribute",b="setErrorHandler",y="setPageViewName",_="setUserId",w="start",x="wrapLogger",R="measure",k="consent"},5289:(e,t,r)=>{"use strict";r.d(t,{GG:()=>s,Qr:()=>c,sB:()=>o});var n=r(3878),i=r(6389);function a(){return"undefined"==typeof document||"complete"===document.readyState}function s(e,t){if(a())return e();const r=(0,i.J)(e),s=setInterval(()=>{a()&&(clearInterval(s),r())},500);(0,n.sp)("load",r,t)}function o(e){if(a())return e();(0,n.DD)("DOMContentLoaded",e)}function c(e){if(a())return e();(0,n.sp)("popstate",e)}},5607:(e,t,r)=>{"use strict";r.d(t,{W:()=>n});const n=(0,r(9566).bz)()},5701:(e,t,r)=>{"use strict";r.d(t,{B:()=>a,t:()=>s});var n=r(3241);const i=new Set,a={};function s(e,t){const r=t.agentIdentifier;a[r]??={},e&&"object"==typeof e&&(i.has(r)||(t.ee.emit("rumresp",[e]),a[r]=e,i.add(r),(0,n.W)({agentIdentifier:r,loaded:!0,drained:!0,type:"lifecycle",name:"load",feature:void 0,data:e})))}},6154:(e,t,r)=>{"use strict";r.d(t,{OF:()=>c,RI:()=>i,WN:()=>u,bv:()=>a,eN:()=>l,gm:()=>s,mw:()=>o,sb:()=>d});var n=r(1863);const i="undefined"!=typeof window&&!!window.document,a="undefined"!=typeof WorkerGlobalScope&&("undefined"!=typeof self&&self instanceof WorkerGlobalScope&&self.navigator instanceof WorkerNavigator||"undefined"!=typeof globalThis&&globalThis instanceof WorkerGlobalScope&&globalThis.navigator instanceof WorkerNavigator),s=i?window:"undefined"!=typeof WorkerGlobalScope&&("undefined"!=typeof self&&self instanceof WorkerGlobalScope&&self||"undefined"!=typeof globalThis&&globalThis instanceof WorkerGlobalScope&&globalThis),o=Boolean("hidden"===s?.document?.visibilityState),c=/iPad|iPhone|iPod/.test(s.navigator?.userAgent),d=c&&"undefined"==typeof SharedWorker,u=((()=>{const e=s.navigator?.userAgent?.match(/Firefox[/\s](\d+\.\d+)/);Array.isArray(e)&&e.length>=2&&e[1]})(),Date.now()-(0,n.t)()),l=()=>"undefined"!=typeof PerformanceNavigationTiming&&s?.performance?.getEntriesByType("navigation")?.[0]?.responseStart},6389:(e,t,r)=>{"use strict";function n(e,t=500,r={}){const n=r?.leading||!1;let i;return(...r)=>{n&&void 0===i&&(e.apply(this,r),i=setTimeout(()=>{i=clearTimeout(i)},t)),n||(clearTimeout(i),i=setTimeout(()=>{e.apply(this,r)},t))}}function i(e){let t=!1;return(...r)=>{t||(t=!0,e.apply(this,r))}}r.d(t,{J:()=>i,s:()=>n})},6630:(e,t,r)=>{"use strict";r.d(t,{T:()=>n});const n=r(860).K7.pageViewEvent},7699:(e,t,r)=>{"use strict";r.d(t,{It:()=>a,KC:()=>o,No:()=>i,qh:()=>s});var n=r(860);const i=16e3,a=1e6,s="SESSION_ERROR",o={[n.K7.logging]:!0,[n.K7.genericEvents]:!1,[n.K7.jserrors]:!1,[n.K7.ajax]:!1}},7836:(e,t,r)=>{"use strict";r.d(t,{P:()=>o,ee:()=>c});var n=r(384),i=r(8990),a=r(2646),s=r(5607);const o="nr@context:".concat(s.W),c=function e(t,r){var n={},s={},u={},l=!1;try{l=16===r.length&&d.initializedAgents?.[r]?.runtime.isolatedBacklog}catch(e){}var f={on:p,addEventListener:p,removeEventListener:function(e,t){var r=n[e];if(!r)return;for(var i=0;i<r.length;i++)r[i]===t&&r.splice(i,1)},emit:function(e,r,n,i,a){!1!==a&&(a=!0);if(c.aborted&&!i)return;t&&a&&t.emit(e,r,n);var o=g(n);m(e).forEach(e=>{e.apply(o,r)});var d=v()[s[e]];d&&d.push([f,e,r,o]);return o},get:h,listeners:m,context:g,buffer:function(e,t){const r=v();if(t=t||"feature",f.aborted)return;Object.entries(e||{}).forEach(([e,n])=>{s[n]=t,t in r||(r[t]=[])})},abort:function(){f._aborted=!0,Object.keys(f.backlog).forEach(e=>{delete f.backlog[e]})},isBuffering:function(e){return!!v()[s[e]]},debugId:r,backlog:l?{}:t&&"object"==typeof t.backlog?t.backlog:{},isolatedBacklog:l};return Object.defineProperty(f,"aborted",{get:()=>{let e=f._aborted||!1;return e||(t&&(e=t.aborted),e)}}),f;function g(e){return e&&e instanceof a.y?e:e?(0,i.I)(e,o,()=>new a.y(o)):new a.y(o)}function p(e,t){n[e]=m(e).concat(t)}function m(e){return n[e]||[]}function h(t){return u[t]=u[t]||e(f,t)}function v(){return f.backlog}}(void 0,"globalEE"),d=(0,n.Zm)();d.ee||(d.ee=c)},8122:(e,t,r)=>{"use strict";r.d(t,{a:()=>i});var n=r(944);function i(e,t){try{if(!e||"object"!=typeof e)return(0,n.R)(3);if(!t||"object"!=typeof t)return(0,n.R)(4);const r=Object.create(Object.getPrototypeOf(t),Object.getOwnPropertyDescriptors(t)),a=0===Object.keys(r).length?e:r;for(let s in a)if(void 0!==e[s])try{if(null===e[s]){r[s]=null;continue}Array.isArray(e[s])&&Array.isArray(t[s])?r[s]=Array.from(new Set([...e[s],...t[s]])):"object"==typeof e[s]&&"object"==typeof t[s]?r[s]=i(e[s],t[s]):r[s]=e[s]}catch(e){r[s]||(0,n.R)(1,e)}return r}catch(e){(0,n.R)(2,e)}}},8362:(e,t,r)=>{"use strict";r.d(t,{d:()=>a});var n=r(9566),i=r(1741);class a extends i.W{agentIdentifier=(0,n.LA)(16)}},8374:(e,t,r)=>{r.nc=(()=>{try{return document?.currentScript?.nonce}catch(e){}return""})()},8990:(e,t,r)=>{"use strict";r.d(t,{I:()=>i});var n=Object.prototype.hasOwnProperty;function i(e,t,r){if(n.call(e,t))return e[t];var i=r();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,t,{value:i,writable:!0,enumerable:!1}),i}catch(e){}return e[t]=i,i}},9324:(e,t,r)=>{"use strict";r.d(t,{F3:()=>i,Xs:()=>a,xv:()=>n});const n="1.309.0",i="PROD",a="CDN"},9566:(e,t,r)=>{"use strict";r.d(t,{LA:()=>o,bz:()=>s});var n=r(6154);const i="xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx";function a(e,t){return e?15&e[t]:16*Math.random()|0}function s(){const e=n.gm?.crypto||n.gm?.msCrypto;let t,r=0;return e&&e.getRandomValues&&(t=e.getRandomValues(new Uint8Array(30))),i.split("").map(e=>"x"===e?a(t,r++).toString(16):"y"===e?(3&a()|8).toString(16):e).join("")}function o(e){const t=n.gm?.crypto||n.gm?.msCrypto;let r,i=0;t&&t.getRandomValues&&(r=t.getRandomValues(new Uint8Array(e)));const s=[];for(var o=0;o<e;o++)s.push(a(r,i++).toString(16));return s.join("")}},9908:(e,t,r)=>{"use strict";r.d(t,{d:()=>n,p:()=>i});var n=r(7836).ee.get("handle");function i(e,t,r,i,a){a?(a.buffer([e],i),a.emit(e,t,r)):(n.buffer([e],i),n.emit(e,t,r))}}},n={};function i(e){var t=n[e];if(void 0!==t)return t.exports;var a=n[e]={exports:{}};return r[e](a,a.exports,i),a.exports}i.m=r,i.d=(e,t)=>{for(var r in t)i.o(t,r)&&!i.o(e,r)&&Object.defineProperty(e,r,{enumerable:!0,get:t[r]})},i.f={},i.e=e=>Promise.all(Object.keys(i.f).reduce((t,r)=>(i.f[r](e,t),t),[])),i.u=e=>"nr-rum-1.309.0.min.js",i.o=(e,t)=>Object.prototype.hasOwnProperty.call(e,t),e={},t="NRBA-1.309.0.PROD:",i.l=(r,n,a,s)=>{if(e[r])e[r].push(n);else{var o,c;if(void 0!==a)for(var d=document.getElementsByTagName("script"),u=0;u<d.length;u++){var l=d[u];if(l.getAttribute("src")==r||l.getAttribute("data-webpack")==t+a){o=l;break}}if(!o){c=!0;var f={296:"sha512-ZBBVWt6PVOQQpTGc/xzYP/zYs+pj6QnNTqG2pFYHQrwWdUi4/1lsIi9EaFcj4Ifn3O38eFqKr9dqSv/HftTqtA=="};(o=document.createElement("script")).charset="utf-8",i.nc&&o.setAttribute("nonce",i.nc),o.setAttribute("data-webpack",t+a),o.src=r,0!==o.src.indexOf(window.location.origin+"/")&&(o.crossOrigin="anonymous"),f[s]&&(o.integrity=f[s])}e[r]=[n];var g=(t,n)=>{o.onerror=o.onload=null,clearTimeout(p);var i=e[r];if(delete e[r],o.parentNode&&o.parentNode.removeChild(o),i&&i.forEach(e=>e(n)),t)return t(n)},p=setTimeout(g.bind(null,void 0,{type:"timeout",target:o}),12e4);o.onerror=g.bind(null,o.onerror),o.onload=g.bind(null,o.onload),c&&document.head.appendChild(o)}},i.r=e=>{"undefined"!=typeof Symbol&&Symbol.toStringTag&&Object.defineProperty(e,Symbol.toStringTag,{value:"Module"}),Object.defineProperty(e,"__esModule",{value:!0})},i.p="https://js-agent.newrelic.com/",(()=>{var e={374:0,840:0};i.f.j=(t,r)=>{var n=i.o(e,t)?e[t]:void 0;if(0!==n)if(n)r.push(n[2]);else{var a=new Promise((r,i)=>n=e[t]=[r,i]);r.push(n[2]=a);var s=i.p+i.u(t),o=new Error;i.l(s,r=>{if(i.o(e,t)&&(0!==(n=e[t])&&(e[t]=void 0),n)){var a=r&&("load"===r.type?"missing":r.type),s=r&&r.target&&r.target.src;o.message="Loading chunk "+t+" failed: ("+a+": "+s+")",o.name="ChunkLoadError",o.type=a,o.request=s,n[1](o)}},"chunk-"+t,t)}};var t=(t,r)=>{var n,a,[s,o,c]=r,d=0;if(s.some(t=>0!==e[t])){for(n in o)i.o(o,n)&&(i.m[n]=o[n]);if(c)c(i)}for(t&&t(r);d<s.length;d++)a=s[d],i.o(e,a)&&e[a]&&e[a][0](),e[a]=0},r=self["webpackChunk:NRBA-1.309.0.PROD"]=self["webpackChunk:NRBA-1.309.0.PROD"]||[];r.forEach(t.bind(null,0)),r.push=t.bind(null,r.push.bind(r))})(),(()=>{"use strict";i(8374);var e=i(8362),t=i(860);const r=Object.values(t.K7);var n=i(163);var a=i(9908),s=i(1863),o=i(4261),c=i(1738);var d=i(1687),u=i(4234),l=i(5289),f=i(6154),g=i(944),p=i(384);const m=e=>f.RI&&!0===e?.privacy.cookies_enabled;function h(e){return!!(0,p.dV)().o.MO&&m(e)&&!0===e?.session_trace.enabled}var v=i(6389),b=i(7699);class y extends u.W{constructor(e,t){super(e.agentIdentifier,t),this.agentRef=e,this.abortHandler=void 0,this.featAggregate=void 0,this.loadedSuccessfully=void 0,this.onAggregateImported=new Promise(e=>{this.loadedSuccessfully=e}),this.deferred=Promise.resolve(),!1===e.init[this.featureName].autoStart?this.deferred=new Promise((t,r)=>{this.ee.on("manual-start-all",(0,v.J)(()=>{(0,d.Ak)(e.agentIdentifier,this.featureName),t()}))}):(0,d.Ak)(e.agentIdentifier,t)}importAggregator(e,t,r={}){if(this.featAggregate)return;const n=async()=>{let n;await this.deferred;try{if(m(e.init)){const{setupAgentSession:t}=await i.e(296).then(i.bind(i,3305));n=t(e)}}catch(e){(0,g.R)(20,e),this.ee.emit("internal-error",[e]),(0,a.p)(b.qh,[e],void 0,this.featureName,this.ee)}try{if(!this.#t(this.featureName,n,e.init))return(0,d.Ze)(this.agentIdentifier,this.featureName),void this.loadedSuccessfully(!1);const{Aggregate:i}=await t();this.featAggregate=new i(e,r),e.runtime.harvester.initializedAggregates.push(this.featAggregate),this.loadedSuccessfully(!0)}catch(e){(0,g.R)(34,e),this.abortHandler?.(),(0,d.Ze)(this.agentIdentifier,this.featureName,!0),this.loadedSuccessfully(!1),this.ee&&this.ee.abort()}};f.RI?(0,l.GG)(()=>n(),!0):n()}#t(e,r,n){if(this.blocked)return!1;switch(e){case t.K7.sessionReplay:return h(n)&&!!r;case t.K7.sessionTrace:return!!r;default:return!0}}}var _=i(6630),w=i(2614),x=i(3241);class R extends y{static featureName=_.T;constructor(e){var t;super(e,_.T),this.setupInspectionEvents(e.agentIdentifier),t=e,(0,c.Y)(o.Fw,function(e,r){"string"==typeof e&&("/"!==e.charAt(0)&&(e="/"+e),t.runtime.customTransaction=(r||"http://custom.transaction")+e,(0,a.p)(o.Pl+o.Fw,[(0,s.t)()],void 0,void 0,t.ee))},t),this.importAggregator(e,()=>i.e(296).then(i.bind(i,3943)))}setupInspectionEvents(e){const t=(t,r)=>{t&&(0,x.W)({agentIdentifier:e,timeStamp:t.timeStamp,loaded:"complete"===t.target.readyState,type:"window",name:r,data:t.target.location+""})};(0,l.sB)(e=>{t(e,"DOMContentLoaded")}),(0,l.GG)(e=>{t(e,"load")}),(0,l.Qr)(e=>{t(e,"navigate")}),this.ee.on(w.tS.UPDATE,(t,r)=>{(0,x.W)({agentIdentifier:e,type:"lifecycle",name:"session",data:r})})}}class k extends e.d{constructor(e){var t;(super(),f.gm)?(this.features={},(0,p.bQ)(this.agentIdentifier,this),this.desiredFeatures=new Set(e.features||[]),this.desiredFeatures.add(R),(0,n.j)(this,e,e.loaderType||"agent"),t=this,(0,c.Y)(o.cD,function(e,r,n=!1){if("string"==typeof e){if(["string","number","boolean"].includes(typeof r)||null===r)return(0,c.U)(t,e,r,o.cD,n);(0,g.R)(40,typeof r)}else(0,g.R)(39,typeof e)},t),function(e){(0,c.Y)(o.Dl,function(t,r=!1){if("string"!=typeof t&&null!==t)return void(0,g.R)(41,typeof t);const n=e.info.jsAttributes["enduser.id"];r&&null!=n&&n!==t?(0,a.p)(o.Pl+"setUserIdAndResetSession",[t],void 0,"session",e.ee):(0,c.U)(e,"enduser.id",t,o.Dl,!0)},e)}(this),function(e){(0,c.Y)(o.nb,function(t){if("string"==typeof t||null===t)return(0,c.U)(e,"application.version",t,o.nb,!1);(0,g.R)(42,typeof t)},e)}(this),function(e){(0,c.Y)(o.d3,function(){e.ee.emit("manual-start-all")},e)}(this),function(e){(0,c.Y)(o.Pv,function(t=!0){if("boolean"==typeof t){if((0,a.p)(o.Pl+o.Pv,[t],void 0,"session",e.ee),e.runtime.consented=t,t){const t=e.features.page_view_event;t.onAggregateImported.then(e=>{const r=t.featAggregate;e&&!r.sentRum&&r.sendRum()})}}else(0,g.R)(65,typeof t)},e)}(this),this.run()):(0,g.R)(21)}get config(){return{info:this.info,init:this.init,loader_config:this.loader_config,runtime:this.runtime}}get api(){return this}run(){try{const e=function(e){const t={};return r.forEach(r=>{t[r]=!!e[r]?.enabled}),t}(this.init),n=[...this.desiredFeatures];n.sort((e,r)=>t.P3[e.featureName]-t.P3[r.featureName]),n.forEach(r=>{if(!e[r.featureName]&&r.featureName!==t.K7.pageViewEvent)return;if(r.featureName===t.K7.spa)return void(0,g.R)(67);const n=function(e){switch(e){case t.K7.ajax:return[t.K7.jserrors];case t.K7.sessionTrace:return[t.K7.ajax,t.K7.pageViewEvent];case t.K7.sessionReplay:return[t.K7.sessionTrace];case t.K7.pageViewTiming:return[t.K7.pageViewEvent];default:return[]}}(r.featureName).filter(e=>!(e in this.features));n.length>0&&(0,g.R)(36,{targetFeature:r.featureName,missingDependencies:n}),this.features[r.featureName]=new r(this)})}catch(e){(0,g.R)(22,e);for(const e in this.features)this.features[e].abortHandler?.();const t=(0,p.Zm)();delete t.initializedAgents[this.agentIdentifier]?.features,delete this.sharedAggregator;return t.ee.get(this.agentIdentifier).abort(),!1}}}var A=i(2843),S=i(782);class T extends y{static featureName=S.T;constructor(e){super(e,S.T),f.RI&&((0,A.u)(()=>(0,a.p)("docHidden",[(0,s.t)()],void 0,S.T,this.ee),!0),(0,A.G)(()=>(0,a.p)("winPagehide",[(0,s.t)()],void 0,S.T,this.ee)),this.importAggregator(e,()=>i.e(296).then(i.bind(i,2117))))}}var E=i(3969);class j extends y{static featureName=E.TZ;constructor(e){super(e,E.TZ),f.RI&&document.addEventListener("securitypolicyviolation",e=>{(0,a.p)(E.xV,["Generic/CSPViolation/Detected"],void 0,this.featureName,this.ee)}),this.importAggregator(e,()=>i.e(296).then(i.bind(i,9623)))}}new k({features:[R,T,j],loaderType:"lite"})})()})();</script>
+<link rel="shortcut icon" href="https://academicprograms.calpoly.edu/sites/all/themes/cpstandard_r/common/images_html/favicon.ico" type="image/vnd.microsoft.icon" />
+<meta http-equiv="content-language" content="en" />
+<meta charset="UTF-8" />
+<meta name="viewport" content="initial-scale=1" />
+<meta name="description" content="Online Teaching &amp; Learning Policy   Preamble Over the course of the last two decades, online education internationally, nationally, and in California has expanded rapidly with institutions of higher education investing time, energy, and resources into developing comprehensive offerings for students at the course and degree level." />
+<link rel="canonical" href="https://academicprograms.calpoly.edu/content/elearning" />
+<meta property="og:site_name" content="Academic Programs and Planning" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://academicprograms.calpoly.edu/content/elearning" />
+<meta property="og:title" content="Online Teaching and Learning | Academic Programs and Planning" />
+<meta property="og:description" content="Online Teaching &amp; Learning Policy   Preamble Over the course of the last two decades, online education internationally, nationally, and in California has expanded rapidly with institutions of higher education investing time, energy, and resources into developing comprehensive offerings for students at the course and degree level." />
+<meta name="dcterms.title" content="Online Teaching and Learning | Academic Programs and Planning" />
+<meta name="dcterms.description" content="Online Teaching &amp; Learning Policy   Preamble Over the course of the last two decades, online education internationally, nationally, and in California has expanded rapidly with institutions of higher education investing time, energy, and resources into developing comprehensive offerings for students at the course and degree level." />
+<meta name="dcterms.type" content="Text" />
+<meta name="dcterms.format" content="text/html" />
+  <title>Online Teaching and Learning - Academic Programs and Planning - Cal Poly, San Luis Obispo</title>
+  <style type="text/css" media="all">
+@import url("https://academicprograms.calpoly.edu/modules/system/system.base.css?t7h89c");
+@import url("https://academicprograms.calpoly.edu/modules/system/system.menus.css?t7h89c");
+@import url("https://academicprograms.calpoly.edu/modules/system/system.messages.css?t7h89c");
+@import url("https://academicprograms.calpoly.edu/modules/system/system.theme.css?t7h89c");
+</style>
+<style type="text/css" media="all">
+@import url("https://academicprograms.calpoly.edu/modules/aggregator/aggregator.css?t7h89c");
+@import url("https://academicprograms.calpoly.edu/modules/comment/comment.css?t7h89c");
+@import url("https://academicprograms.calpoly.edu/modules/field/theme/field.css?t7h89c");
+@import url("https://academicprograms.calpoly.edu/modules/node/node.css?t7h89c");
+@import url("https://academicprograms.calpoly.edu/modules/search/search.css?t7h89c");
+@import url("https://academicprograms.calpoly.edu/modules/user/user.css?t7h89c");
+@import url("https://academicprograms.calpoly.edu/sites/all/modules/views/css/views.css?t7h89c");
+@import url("https://academicprograms.calpoly.edu/sites/all/modules/ckeditor/css/ckeditor.css?t7h89c");
+</style>
+<style type="text/css" media="all">
+@import url("https://academicprograms.calpoly.edu/sites/all/modules/ctools/css/ctools.css?t7h89c");
+@import url("https://academicprograms.calpoly.edu/sites/all/modules/tableofcontents/tableofcontents.css?t7h89c");
+</style>
+<link type="text/css" rel="stylesheet" href="//fonts.googleapis.com/css?family=Open+Sans:400,600%7CVollkorn:400italic,400" media="all" />
+<style type="text/css" media="all">
+@import url("https://academicprograms.calpoly.edu/sites/all/themes/cpstandard_r/common/css/cp_style.min.css?t7h89c");
+@import url("https://academicprograms.calpoly.edu/sites/all/themes/cpstandard_r/common/css/font-awesome.min.css?t7h89c");
+@import url("https://academicprograms.calpoly.edu/sites/all/themes/cpstandard_r/common/css/jquery-ui.min.css?t7h89c");
+@import url("https://academicprograms.calpoly.edu/sites/all/themes/cpstandard_r/css/cp_custom.css?t7h89c");
+@import url("https://academicprograms.calpoly.edu/sites/all/themes/cpstandard_r/css/honeypot.css?t7h89c");
+</style>
+<style type="text/css" media="print">
+@import url("https://academicprograms.calpoly.edu/sites/all/themes/cpstandard_r/common/css/cp_print.min.css?t7h89c");
+</style>
+  <script type="text/javascript" src="https://academicprograms.calpoly.edu/sites/academicprograms.calpoly.edu/files/js/js_YD9ro0PAqY25gGWrTki6TjRUG8TdokmmxjfqpNNfzVU.js"></script>
+<script type="text/javascript" src="https://academicprograms.calpoly.edu/sites/academicprograms.calpoly.edu/files/js/js_-zpHfuGV_8VVwgRhy2PKeQaVJAtxKrM3J3ALmgmc1PQ.js"></script>
+<script type="text/javascript" src="https://academicprograms.calpoly.edu/sites/academicprograms.calpoly.edu/files/js/js_Koy9SwiUJmXG6zyo7C_1eqnqg3wjiLSjat9vhI0EoTw.js"></script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+jQuery.extend(Drupal.settings, {"basePath":"\/","pathPrefix":"","setHasJsCookie":0,"ajaxPageState":{"theme":"cpstandard_r","theme_token":"qxSikTbkRrIei8BFZ9nMPe9XvbY2Zor51i0dX6YTCfw","js":{"misc\/jquery.js":1,"misc\/jquery-extend-3.4.0.js":1,"misc\/jquery-html-prefilter-3.5.0-backport.js":1,"misc\/jquery.once.js":1,"misc\/drupal.js":1,"sites\/all\/modules\/tableofcontents\/jquery.scrollTo-min.js":1,"sites\/all\/modules\/tableofcontents\/jquery.localscroll-min.js":1,"sites\/all\/modules\/tableofcontents\/tableofcontents.js":1,"sites\/all\/themes\/cpstandard_r\/common\/js\/jquery-1.11.3.min.js":1,"sites\/all\/themes\/cpstandard_r\/common\/js\/jquery-ui.min.js":1,"sites\/all\/themes\/cpstandard_r\/common\/js\/noconflict.js":1,"sites\/all\/themes\/cpstandard_r\/common\/js\/calpoly.min.js":1,"sites\/all\/themes\/cpstandard_r\/common\/js\/_accordion.js":1},"css":{"modules\/system\/system.base.css":1,"modules\/system\/system.menus.css":1,"modules\/system\/system.messages.css":1,"modules\/system\/system.theme.css":1,"modules\/aggregator\/aggregator.css":1,"modules\/comment\/comment.css":1,"modules\/field\/theme\/field.css":1,"modules\/node\/node.css":1,"modules\/search\/search.css":1,"modules\/user\/user.css":1,"sites\/all\/modules\/views\/css\/views.css":1,"sites\/all\/modules\/ckeditor\/css\/ckeditor.css":1,"sites\/all\/modules\/ctools\/css\/ctools.css":1,"sites\/all\/modules\/tableofcontents\/tableofcontents.css":1,"\/\/fonts.googleapis.com\/css?family=Open+Sans:400,600%7CVollkorn:400italic,400":1,"sites\/all\/themes\/cpstandard_r\/common\/css\/cp_style.min.css":1,"sites\/all\/themes\/cpstandard_r\/common\/css\/font-awesome.min.css":1,"sites\/all\/themes\/cpstandard_r\/common\/css\/jquery-ui.min.css":1,"sites\/all\/themes\/cpstandard_r\/css\/cp_custom.css":1,"sites\/all\/themes\/cpstandard_r\/css\/honeypot.css":1,"sites\/all\/themes\/cpstandard_r\/common\/css\/cp_print.min.css":1}},"tableOfContents":{"boxSettings":{"hideText":"hide","showText":"show"}}});
+//--><!]]>
+</script>
+  <!-- Global Site Tag (gtag.js) - Google Analytics --> 
+<!-- Google Analytics - contact Cal Poly University Marketing for access to GA data --> 
+<!-- GTM / Contact UCM -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start': new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src= 'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f); })(window,document,'script','dataLayer','GTM-TKZNRR2');</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-CY2GPTVZY7"></script>
+<script>window.dataLayer = window.dataLayer || []; function gtag() {window.dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'G-CY2GPTVZY7'); </script>
+<!-- End GA gtag -->
+<!-- Slate / Contact SEM -->
+<script async="async" src="https://connect.calpoly.edu/ping">/**/</script>
+<!-- End Slate -->
+</head>
+
+<body class="html not-front not-logged-in no-sidebars page-node page-node- page-node-1190 node-type-page" >
+    <!--Header Content for Analytics-->
+  <div id="header-blocks" class="region region-header-content">
+        <div id="block-block-11" class="block block-block " >
+  <h2>IRA</h2>
+<p><!-- Add your analytics script here e.g. Google Analytics --><!-- If you don't want to use analytics, just ignore this block --></p>
+
+<h3>Forms</h3>
+
+<ul><li><a href="//content-calpoly-edu.s3.amazonaws.com/academicprograms/1/documents/ira/IRA_cont_recog_form.docx"><strong>New</strong> IRA Recognition Request</a></li>
+	<li><a href="//content-calpoly-edu.s3.amazonaws.com/academicprograms/1/documents/ira/IRA_new_%20recog_budget.xls"><strong>New</strong> IRA Budget Proposal</a></li>
+	<li><a href="//content-calpoly-edu.s3.amazonaws.com/academicprograms/1/documents/ira/IRA_cont_recog_form.doc"><strong>Continuing</strong> IRA Recognition Request</a></li>
+	<li><a href="//content-calpoly-edu.s3.amazonaws.com/academicprograms/1/documents/ira/IRA_cont_recog_budget_form.xls"><strong>Continuing</strong> IRA Budget Proposal</a></li>
+</ul></div>
+
+<div id="block-block-7" class="block block-block " >
+var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-48720098-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();</div>
+
+  </div>
+
+<div id="wrapper">
+  
+  <header>
+    <div id="accessibilityNav"><ul><li><a href="#topH1" id="skip" title="skip to content">Skip to Content</a></li><li><a href="https://www.calpoly.edu/help.html" id="helpLink" title="help">?</a></li></ul></div>    <div id="audienceNav"><ul><li><a href="http://www.calpoly.edu/student/enrolled.html">Current Students</a></li>
+<li><a href="http://admissions.calpoly.edu/">Prospective Students</a></li>
+<li><a href="http://www.calpoly.edu/student/parents.html">Parents</a></li>
+<li><a href="http://www.calpoly.edu/business-community.html">Business Community</a></li>
+<li><a href="http://www.calpoly.edu/faculty-staff/faculty-staff.html">Faculty &amp; Staff</a></li>
+<li><a href="http://alumni.calpoly.edu/">Alumni</a></li>
+</ul></div>    <hr>
+    <div id="myCalPolyNav"><a href="https://my.calpoly.edu" id="login" title="my CalPoly login">my CalPoly login</a></div>    <div id="utilityNav"><ul><li id="quicklinks"><span title="" class="nolink" tabindex="0">Quick Links</span>
+<ul id="quicklinksdropdown"><li class="darkGreen"><a href="http://ge.calpoly.edu/" tabindex="1">General Education</a></li>
+</ul></li>
+<li id="maps"><a href="http://maps.calpoly.edu/" title="Maps">Maps</a></li>
+<li id="searchli"><div id="search"><form method="get" title="Search Form" action="https://www.calpoly.edu/search/?q=">
+	<div>
+		<input id="searchField" type="text" maxlength="256" placeholder="Search" title="Search this site" name="q" alt="Search Text" />
+		<input id="searchSubmit" type="image" name="submit" title="Submit Search Query" alt="Go" src="/sites/all/themes/cpstandard_r/common/images_html/header/search-arrow.png" />
+	</div>
+</form></div></li></ul></div>          
+    <div id="headerContent">
+      <div id="headerTop">
+        <div id="cplogo">
+          <a href="https://www.calpoly.edu/" >
+            <img title="Go to Cal Poly Home" alt="Cal Poly" src="/sites/all/themes/cpstandard_r/common/images_html/header/cplogo.svg">
+          </a>
+        </div>
+
+        <div id="mobileNavDept">
+          <div id="mobileIcons">
+          </div>
+        </div>
+      </div>
+
+      <div id="mobileNav">
+        <ul id="mobileMenu" style="display: none;">
+        </ul>
+        <ul id="mobileSearch" style="display: none;"><li id="searchli"><div id="search"><form method="get" title="Search Form" action="https://www.calpoly.edu/search/?q=">
+	<div>
+		<input id="searchField" type="text" maxlength="256" placeholder="Search" title="Search this site" name="q" alt="Search Text" />
+		<input id="searchSubmit" type="image" name="submit" title="Submit Search Query" alt="Go" src="/sites/all/themes/cpstandard_r/common/images_html/header/search-arrow.png" />
+	</div>
+</form></div></li></ul>
+      </div><!-- end #mobileNav -->
+
+      <div id="headerBottom">
+        <div id="deptName"><h2><a href="/">Academic Programs and Planning</a></h2><h3></h3></div>
+      </div>
+    </div>
+        </header>
+
+  <nav>
+    <ul id="cpUl" class="cpStandardNav"><li><a href="/content/academicpolicies/index">Academic Policies</a></li>
+<li><a href="/assessment">Assessment</a></li>
+<li><a href="https://academicprograms.calpoly.edu/content/IRA/index">IRAs</a></li>
+<li><a href="/content/academicpolicies/new-degrees">Program Development</a></li>
+<li><a href="https://academicprograms.calpoly.edu/program-modification">Program Modification</a></li>
+<li><a href="https://academicprograms.calpoly.edu/program-review">Program Review</a></li>
+<li><a href="https://academicprograms.calpoly.edu/contact">Staff</a></li>
+</ul>  </nav>
+
+  
+  
+  <!-- Old Breadcrumb Processing -->
+    <div id="breadcrumb">Online Teaching and Learning</div>
+      
+    <main id="mainColFull">
+      <a id="topH1"></a>
+                  <div id="contentLine"></div>            
+      <!-- Old Page Title Processing
+              <h1 class="page-title"></h1>
+            -->
+      
+      <div id="mainLeftFull"><div id="contentHeader"><h1 class="page-title">Online Teaching and Learning</h1></div>    <div id="block-system-main" class="block block-system " >
+
+<div class="field field-name-body field-type-text-with-summary field-label-hidden"><div class="field-items"><div class="field-item even" property="content:encoded"><p><span><span><b><span>Online Teaching &amp; Learning Policy</span></b></span></span></p>
+
+<p class="MsoBodyText"> </p>
+
+<p><span><span><b><span><span>Preamble</span></span></b></span></span></p>
+
+<p class="MsoBodyText"><span><span><span><span>Over the course of the last two decades, online education internationally, nationally, and in California has expanded rapidly with institutions of higher education investing time, energy, and resources into developing comprehensive offerings for students at the course and degree level.</span></span></span></span></p>
+
+<p class="MsoBodyText"><span><span><span><span>With advances in technology coupled with growing need for flexibility in higher education, both hybrid and fully online courses have become more prevalent at Cal Poly. With that prevalence has come the need to update the curriculum approval process, remove the e-Learning Addendum, and more fully integrate the review of online modalities into the regular process of curricular <span>review.</span></span></span></span></span></p>
+
+<p class="MsoBodyText"><span><span><span><span>The Online Teaching &amp; Learning Task Force was convened to address the concerns that have been brought by faculty from across the university as well as by the Academic Senate Curriculum Committee, with the hope that this resolution will serve to standardize the process for all modalities while at the same time ensuring accountability and rigor in the offering of online education through development of new policies, continuation or refinement of existing policies, and policy recommendations supporting existing policy.</span></span></span></span></p>
+
+<p class="MsoBodyText"> </p>
+
+<p><strong><span><span><span><span>Modality <span>Designations</span></span></span></span></span></strong></p>
+
+<p><span><span><span>One of the first targeted areas was to establish clear definitions related to <b><i><u>modalities</u> </i></b>(i.e., methods of delivery) for online teaching and learning instruction. This is not to be confused with modes of delivery, as Cal Poly officially has six recognized <b><i><u>modes</u> </i></b>of delivery to include: <i>lecture, lab, activity, discussion, seminar, </i>and <i>supervision</i>.</span></span></span></p>
+
+<p><span><span><span>With our standing as one of 23 universities in the California State University (CSU), and considering the CSU’s stated commitment to online education through the CSU Fully Online Course Match program, it is natural to look to others in the system and the CSU Academic Senate to aid in that goal of defining the associated modalities involved with online instruction. The CSU Academic Senate approved AS-3169-14/AA (Rev): <i>Designation and Compilation of Course Modalities </i>on May 16, 2014. Therefore, the following CSU course modality (i.e., methods of delivery) definitions shall be adopted with the additional caveat that updates to these definitions be made in step with the CSU Academic Senate (exact wording is included first with additional explanatory details provided in italics to aid understanding related to each modality):</span></span></span></p>
+
+<p><span><span><span><b><span>A. Face-to-Face Course, Traditional (FT) </span></b><span>- Instruction occurs in real time (synchronously), with student(s) and faculty present in the same location.</span></span></span></span></p>
+
+<p><span><span><i><span>Note. The FT modality does not prohibit or limit technology-mediated instruction and may include a range of technological and online enhancements (e.g., integration of a learning management system to post the syllabus and assignments, flipped design with lecture material online to enhance active learning in the classroom, etc.). However, scheduled in-person face-to- face class sessions are not normally replaced with online activities.</span></i></span></span></p>
+
+<p><span><span><span><b><span>B. Face-to-Face Course, Online (FO) </span></b><span>- Instruction occurs in real time (synchronously), with student(s) and faculty present via technology (e.g., television, tele-conference, video-conference, or chat).</span></span></span></span></p>
+
+<p><span><span><i><span>Note. Instruction is conducted solely online in the FO modality without any in-person meetings for orientation, exams, etc. For the FO modality,100% of the course activities take place online. The difference between FO and RO is the synchronous delivery method and the need for scheduling of set meeting times.</span></i></span></span></p>
+
+<p><span><span><span><b><span>C. Local Course, Online (LO) </span></b><span>- Instruction occurs over the Internet (asynchronously). Scheduled face-to-face meetings may be required for orientation and student evaluation. <i>Note. “Student evaluation” refers mainly to student assessments such as midterm and final exams but may also include course/instructor evaluations. For the LO modality, in-person face-to-face meetings do not exceed twenty-five percent (25%) of the course activities.</i></span></span></span></span></p>
+
+<p><span><span><span><b><span>D. Remote Course, Online (RO) </span></b><span>- Instruction occurs over the Internet (asynchronously). Students do not need to be on campus for any portion of coursework.</span></span></span></span></p>
+
+<p><span><span><i><span>Note. Instruction is conducted with students and instructors working at separate times and in different physical locations. For the RO modality, 100% of the course activities take place online. The difference between RO and FO is the asynchronous delivery method without the need for scheduling of any set meeting times.</span></i></span></span></p>
+
+<p><span><span><span><b><span>E. Hybrid Course (HY) </span></b><span>– A course offering that combines FT and FO/LO/RO. To be considered hybrid, a course will meet via FO/LO/RO for roughly 25%-75% of class <span>sessions.</span></span></span></span></span></p>
+
+<p><span><span><i><span>Note. Instruction using a blend of traditional and online methods. Online sessions may or may not occur in real time (synchronous). For the HY modality, at least 25% of the course activities take place online.</span></i></span></span></p>
+
+<p><span><span><span><b><span>F. Flexible Course (FL) </span></b><span>- Course allows for more than one modality; students choose the modality (or modalities) suiting their needs from instructor-identified options.</span></span></span></span></p>
+
+<p class="MsoBodyText"><span><span><span><span>New course proposals and course modifications shall specify the mode and modality, which establishes the expected contact hours or their equivalent (see “Credit Hours” section of resolution below for policy recommendations).</span></span></span></span></p>
+
+<p class="MsoBodyText"> </p>
+
+<p><strong><span><span><span><span>Credit <span>Hours</span></span></span></span></span></strong></p>
+
+<p class="MsoBodyText"><span><span><span><span>In compliance with federal and WSCUC requirements as well as CSU Coded Memo AA-2011-14, Cal Poly has a credit hour policy requiring the following:</span></span></span></span></p>
+
+<p><span><span><span><span>1. One hour of classroom or direct faculty instruction and a minimum of two hours of out- of-class student work each week for ten to twelve weeks for one quarter hour of credit; or</span></span></span></span></p>
+
+<p><span><span><span><span>2. At least an equivalent amount of work for other academic activities as established by the institution, including laboratory work, internships, practica, studio work, and other academic work leading to the award of credit hours.</span></span></span></span></p>
+
+<p class="MsoBodyText"><span><span><span><span>In practice, this means that, for each unit of credit, a FT course in lecture/seminar mode shall engage the student for one hour of classroom or direct faculty instruction and a minimum of two hours of out-of-class student work each week, for a total of 30 hours each quarter. For each unit of credit, a FT course in activity mode requires two hours of instruction and one hour of out-of- class work, while a FT course in laboratory mode requires three hours of instruction and no out- of-class work.</span></span></span></span></p>
+
+<p class="MsoBodyText"><span><span><span><span>In courses with modalities that include online instruction (FO, LO, RO, HY, &amp; FL), direct faculty instruction takes the place of classroom time, and a credit hour may be measured by an equivalent amount of direct instruction (e.g., text-based learning modules, asynchronous screencast lectures, lecture transcripts, recorded podcasts, assigned videos, faculty-mediated asynchronous or synchronous discussions, quizzes/exams, etc.). The equivalent for out-of-class work is very similar to that provided in the FT modality (e.g., assigned reading, homework problems, non-faculty mediated discussion board posts, individual/group projects, papers, service-learning, etc.). Proposals for online courses should address these credit-hour requirements, assuring that the courses in their proposed modes and modalities will entail the equivalent hours of instruction or out-of-class work.</span></span></span></span></p>
+
+<p class="MsoBodyText"> </p>
+
+<p><strong><span><span><span><span>Faculty Responsibility for Curricular and Quality <span>Control</span></span></span></span></span></strong></p>
+
+<p class="MsoBodyText"><span><span><span><span>Cal Poly faculty have the collective and exclusive responsibility for determining the pedagogies, instructional methods, and best practices most appropriate for their instructional modules, courses, and academic programs (pursuant to administrative assurance of resources).</span></span></span></span></p>
+
+<p class="MsoBodyText"><span><span><span><span>At the department and program level, faculty with expertise in their respective disciplines are empowered to make decisions regarding the curriculum and present such decisions to the college and university levels for further review and approval. These decisions include those regarding the appropriate mode and modality for instruction.</span></span></span></span></p>
+
+<p class="MsoBodyText"><span><span><span><span>For each of the listed modalities defined previously, a corresponding code shall be developed in the Cal Poly online curriculum system in conjunction with the Registrar’s Office and with the intention that the modality be populated accordingly to inform students in advance of the modality being offered.</span></span></span></span></p>
+
+<p class="MsoBodyText"><span><span><span><span>For approval of all new courses moving forward, these modalities shall be integrated into the approval process with accompanying questions being required irrespective of the modality that is <span>chosen.</span></span></span></span></span></p>
+
+<p class="MsoBodyText"><span><span><span><span>In lieu of an eLearning Addendum (see “Removal of eLearning Addendum” section of resolution), the following standardized questions shall be included under the current Course Delivery and Resources section in all new course proposals and course modifications (note that course learning objectives or CLOs are required for all new course proposals, and course modifications shall include a question as to whether or not CLOs are being adequately addressed if a course modality is being added and/or changed):</span></span></span></span></p>
+
+<p><span><span><span><span>1. What is the primary modality in which the course is intended to be <span>taught?</span></span></span></span></span></p>
+
+<p><span><span><span><span>2. Indicate other modalities in which the course is intended to be <span>taught.</span></span></span></span></span></p>
+
+<p class="MsoBodyText"> </p>
+
+<p class="MsoBodyText"><span><span><i><span>Note. All modalities that are defined above will be populated and defined <span>here.</span></span></i></span></span></p>
+
+<p><span><span><i><span>These questions shall replace the current two questions that are nearly identical in wording but with options for In-Person, Hybrid, Online, and Other.</span></i></span></span></p>
+
+<p class="MsoBodyText"><span><span><span><span>The following questions shall be included in the Cal Poly course management system (with any modifications agreed on by the Academic Senate Curriculum Committee in conjunction with the Registrar’s Office):</span></span></span></span></p>
+
+<p><span><span><span>To maintain accreditation standards and quality curricular control, please answer the following questions about direct instruction and out-of-class work (or its equivalent for online): <i>Note. Hours estimate should be on a weekly basis.</i></span></span></span></p>
+
+<p><span><span><span><span>1. Hours of face-to-face instruction (<i>may include instruction through web-conferencing software such as Zoom, Skype, Microsoft Teams, or its equivalent</i>):</span></span></span></span></p>
+
+<p><span><span><span><span>2. Briefly describe planned methods of direct instruction face-to-face (<i>e.g., lecture, discussion, small group problem-solving, videos, demonstrations, etc.</i>):</span></span></span></span></p>
+
+<p><span><span><span><span>3. Hours of direct instruction <span>online:</span></span></span></span></span></p>
+
+<p><span><span><span><span>4. Briefly describe planned methods of direct instruction online (<i>e.g., text-based learning modules, asynchronous screencast lectures, lecture transcripts, recorded podcasts, assigned videos, faculty-mediated asynchronous or synchronous discussions, quizzes/exams, etc.</i>):</span></span></span></span></p>
+
+<p><span><span><span><span>5. Hours of out-of-class work or its equivalent for<span> online:</span></span></span></span></span></p>
+
+<p><span><span><span><span>6. Briefly describe planned methods for engaging students in out-of-class work or its equivalent for online (<i>e.g., assigned reading, homework problems, non-faculty mediated discussion board posts, individual/group projects, papers, service-learning, <span>etc</span></i><span>.):</span></span></span></span></span></p>
+
+<p class="MsoBodyText"> </p>
+
+<p class="MsoBodyText"><span><span><span><span>In addition, course proposal and course modification forms shall include the following for all <span>modalities:</span></span></span></span></span></p>
+
+<p><span><span><span><span>1. Include the course learning objectives (CLOs) and assessment methods designed to measure attainment of CLOs.</span></span></span></span></p>
+
+<p><span><span><span><span>2. Please include a list of measures that will be employed to ensure academic integrity in the assessment of students’ attainment of the CLOs.</span></span></span></span></p>
+
+<p><span><span><span><span>3. Indicate the names of faculty members who will initially teach the course, and if one (or more) of the online modalities (FO, RO, LO, HY, &amp; FL) are being proposed, please briefly provide their prior online experience and/or training.</span></span></span></span></p>
+
+<p class="MsoBodyText"> </p>
+
+<p class="MsoBodyText"><span><span><span><span>It should be noted that courses and their accompanying modes and modalities are approved at the university level, not the faculty who propose and/or teach the courses. Departments should carefully consider those who are assigned to teach any course but particularly those within the online modalities due to the specialized skills required.</span></span></span></span></p>
+
+<p class="MsoBodyText"><span><span><span><span>Faculty who are assigned to teach and/or develop courses with online modalities (FO, RO, LO, HY, &amp; FL) are <b><i><u>strongly encouraged</u> </i></b>to either have prior online pedagogical experience and/or engage in appropriate training.</span></span></span></span></p>
+
+<p class="MsoBodyText"><span><span><span><span>There are various offerings of online education training and certification, and opportunities for engagement change rapidly. Rather than endorse any one set of criteria or standard, we recommend that faculty consult with Cal Poly’s Center for Teaching, Learning &amp; Technology (CTLT) and the California State University’s (CSU) Quality Assurance Program (including the associated “Core 24” objectives) for the latest in professional development related to online education (applies to both initial and ongoing development of online modalities).</span></span></span></span></p>
+
+<p class="MsoBodyText"><span><span><span><span>Cal Poly’s Center for Teaching, Learning &amp; Technology is currently located at: </span></span></span></span><br /><span><span><span><span><a href="https://ctlt.calpoly.edu/"><span><span>https://ctlt.calpoly.edu</span></span></a><u><span><span>/</span></span></u></span></span></span></span></p>
+
+<p class="MsoBodyText"><span><span><span><span>California State University’s (CSU) Quality Assurance Program is currently located at: <a href="http://courseredesign.csuprojects.org/wp/qualityassurance"><span><span>http://courseredesign.csuprojects.org/wp/qualityassurance</span></span></a><u><span><span>/</span></span></u></span></span></span></span></p>
+
+<p class="MsoBodyText"> </p>
+
+<p><strong><span><span><span><span>Removal of eLearning <span>Addendum</span></span></span></span></span></strong></p>
+
+<p class="MsoBodyText"><span><span><span><span>Previously, new course proposals involving online education and course modifications that involved a change in the modality beyond the 51% threshold of contact time (i.e., face-to-face) required an additional eLearning Addendum. The eLearning Addendum shall be removed from the course approval and course modification process. However, <u>any change in the modality</u> (defined previously above) of an existing course from the modality or modalities listed in the original course proposal shall require a course modification.</span></span></span></span></p>
+
+<p class="MsoBodyText"> </p>
+
+<p><strong><span><span><span><span><span>Accessibility</span></span></span></span></span></strong></p>
+
+<p><span><span><span>For all courses, irrespective of modality, course materials shall be accessible and comply with state and federal laws and guidelines. Instructors offering courses in online modalities are required to make sure all course materials are accessible. <i>For example, videos include closed captions, documents are created with accessibility features such as Word Styles and PDF tags, and materials posted on Canvas are accessible</i>.</span></span></span></p>
+
+<p class="MsoBodyText"><span><span><span><span>Additionally, instructors are encouraged to utilize SensusAccess, a free software tool available to Cal Poly students, staff and instructors, that can provide alternative formats of electronic materials, such as converting a PDF file to MP3 format. Cal Poly will soon be integrating Blackboard ALLY into the Canvas LMS. ALLY will identify inaccessible course content within the LMS and provide guidance to fix issues. ALLY provides alternative formats of course materials, similar to SensusAccess, and includes translations to other languages as well.</span></span></span></span></p>
+
+<p class="MsoBodyText"><span><span><span><span>As technology and standards evolve, instructors utilizing technology-mediated instruction in any capacity are highly encouraged to maintain currency in accessibility standards and utilize the appropriate means/methods to ensure equitable access for all students.</span></span></span></span></p>
+
+<p class="MsoBodyText"><span><span><span><span>For more information, see the California State University Board of Trustees Policy on Disability Support and Accommodations; Executive Order (EO) 1111 that is currently located at: <a href="https://calstate.policystat.com/policy/6590867/latest"><span><span>https://calstate.policystat.com/policy/6590867/latest</span></span></a><u><span><span>/</span></span></u></span></span></span></span></p>
+
+<p class="MsoBodyText"> </p>
+
+<p class="MsoBodyText"><strong><span><span><span><span>University Resource <span>Responsibilities</span></span></span></span></span></strong></p>
+
+<p class="MsoBodyText"><span><span><span><span>Information Technology Services (ITS), Robert E. Kennedy Library, CTLT, and other university agencies may be called upon to provide necessary resources and services for the successful implementation of online education courses and programs.</span></span></span></span></p>
+
+<p class="MsoBodyText"><span><span><span><span>These resources and services <span>include:</span></span></span></span></span></p>
+
+<p><span><span><span><b><i><span>1. Student Training</span></i></b><span>. Where applicable, the University will provide training in online education technology and use to students through web-based resources and virtual <span>instruction.</span></span></span></span></span></p>
+
+<p><span><span><span><b><i><span>2. Faculty Training</span></i></b><span>. Where applicable, the University will provide training in the use of online education technologies and pedagogy to faculty through face-to-face workshops (if feasible), web-based resources, and virtual instruction.</span></span></span></span></p>
+
+<p><span><span><span><b><i><span>3. Technical Support</span></i></b><span>. Where applicable, the University will provide help desk services, account maintenance, software and hardware assistance, etc., as needed to support online education courses and programs.</span></span></span></span></p>
+
+<p><span><span><span><b><i><span>4. Testing Services</span></i></b><span>. Where applicable, the University will provide access to appropriate test proctoring services either via a physical location and/or virtual means aligned with best practices as defined by the California State University’s (CSU) Quality Assurance Program. These testing services should include adequate safeguards designed to aid faculty in ensuring academic integrity for online education courses and programs.<b><i> </i></b></span></span></span></span></p>
+
+<p><span><span><span><b><i><span>5. Information and Facility Services</span></i></b><span>. The University will provide adequate access to library resources, laboratories, facilities, and equipment appropriate to online education courses and programs.</span></span></span></span></p>
+
+<p><span><span><span><b><i><span>6. Student Services</span></i></b><span>. The University will provide adequate access to the range of student services appropriate to support online education courses and programs, including admissions, financial aid, academic advising, and placement and counseling.</span></span></span></span></p>
+
+<p><span><span><span><b><i><span>7. Student Evaluations. </span></i></b><span>The University should collaborate with faculty to develop and deploy student evaluation tools for online education courses that are consistent with the Unit 3 Collective Bargaining Agreement.</span></span></span></span></p>
+
+<p class="MsoBodyText"> </p>
+
+<p><strong><span><span><span><span>Assessment of Online Education Courses and <span>Programs</span></span></span></span></span></strong></p>
+
+<p class="MsoBodyText"><span><span><span><span>Criteria for assessing the quality and efficacy of online education-based instruction shall be developed by the academic units from which the instruction originates. Online education courses, sections, and programs shall be held to the same standards as traditional classroom instruction when reviewed by department, college, and university program review committees.</span></span></span></span></p>
+
+<p class="MsoBodyText"><span><span><span><span>Program review committees shall evaluate the educational effectiveness of online education courses (including assessments of student-based learning outcomes, student retention, and student satisfaction), and when appropriate, determine comparability to courses taught only in a face-to-face traditional classroom modality. This process shall also be used to assure the conformity of online education courses and programs to prevailing online education quality standards, and as standards evolve, the appropriate standards for quality online teaching and learning should be utilized for assessment. Ultimately, online education courses and programs shall be consistent with the educational missions and strategic plans of the department, college, and university. </span></span></span></span></p>
+
+<p class="MsoBodyText"> </p>
+
+<p class="MsoBodyText"><span><span><b><span><span>Contracting and the Use of Outside <span>Resources</span></span></span></b></span></span></p>
+
+<p class="MsoBodyText"><span><span><span><span>The University shall not agree to a contract with any private or public entity to deliver or receive online education courses or programs for academic credit without the prior approval of the relevant department and college. In addition, all such contracts shall be in compliance with the relevant University policies and guidelines. The impetus for such a contract shall originate with the Cal Poly faculty, who would decide whether there is an instructional need and how best to fill it. As part of its review of online education-based courses within the scope of this policy document, the Academic Senate Curriculum Committee in conjunction with ITS shall determine the suitability of hosting course materials on non-university facilities.</span></span></span></span></p>
+
+<p class="MsoBodyText"> </p>
+
+<p class="MsoBodyText"><strong><span><span><span><span>Intellectual Property <span>Rights</span></span></span></span></span></strong></p>
+
+<p class="MsoBodyText"><span><span><span><span>Faculty with questions about intellectual property rights related to online modalities should consult the latest Intellectual Property Policy at Cal Poly that is currently located at: <a href="https://research.calpoly.edu/policyIP"><span><span><span>https://research.calpoly.edu/policyIP</span></span></span></a></span></span></span></span></p>
+
+<p class="MsoBodyText"> </p>
+
+<p class="MsoBodyText"><strong><span><span><span><span><span>Admissions</span></span></span></span></span></strong></p>
+
+<p class="MsoBodyText"><span><span><span><span>Admissions criteria for online education-based courses shall be the same as for traditional face- to-face courses. Agencies providing funding for online education courses or programs shall not acquire any privileges regarding the admission standards, academic continuation standards, or degree requirements for students or faculty.</span></span></span></span></p>
+
+<p class="MsoBodyText"> </p>
+
+<p class="MsoBodyText"><strong><span><span><span><span>Course Descriptions and Advertising <span>Guidelines</span></span></span></span></span></strong></p>
+
+<p class="MsoBodyText"><span><span><span><span>Faculty and students have a right to know the modalities and technological requirements of each course, program, and degree offered by the University. This information shall be communicated to students in all relevant communications. Publicized descriptions of online education courses shall note the modality according to the definitions listed <span>above.</span></span></span></span></span></p>
+
+<p class="MsoBodyText"> </p>
+
+<p class="MsoBodyText"><strong><span><span><span><span>Online Education Course and Program<span> Funding</span></span></span></span></span></strong></p>
+
+<p class="MsoBodyText"><span><span><span><span>Funding sources for the development of online education courses and programs shall be explicitly stated in all online education-based course and program proposals. Funding sources may include any combination of grants, self-support, private contributions, and state support. The originating department shall develop the funding source proposal through traditional means and shall make a recommendation to the Academic Senate as to the suitability and viability of the proposed funding source. If applicable, such proposals shall include funding for the services of an instructional designer.</span></span></span></span></p>
+
+<p class="MsoBodyText"> </p>
+
+<p class="MsoBodyText"><strong><span><span><span><span>Use of Online Education Technologies is <span>Optional</span></span></span></span></span></strong></p>
+
+<p class="MsoBodyText"><span><span><span><span>Nothing in this resolution nor these policies shall imply that online education is a preferred or required method of instruction. Implementation of these policies shall comply with existing campus policies and collective bargaining agreements where applicable (e.g., workload and faculty rights). It should also be explicitly noted that faculty may not be required to teach more students in an online modality than they would be assigned to teach in a face-to-face <span>modality.</span></span></span></span></span></p>
+
+<p class="MsoBodyText"><span><span><span><span>This resolution is not meant to restrict or rigidly control the general use of technology-mediated instruction in the classroom.</span></span></span></span></p>
+
+<p class="MsoBodyText"> </p>
+
+<p class="MsoBodyText"><strong><span><span><span><span>Applicability of <span>Resolution</span></span></span></span></span></strong></p>
+
+<p class="MsoBodyText"><span><span><span><span>This resolution and associated policies shall apply to all new and existing credit-bearing courses and programs offered by Cal Poly. </span></span></span></span></p>
+
+<p class="MsoBodyText"> </p>
+
+<p class="MsoBodyText"><span><span><b><span><span>Summary of Policies and Policy Recommendations Established in <span>Resolution</span></span></span></b></span></span></p>
+
+<p class="MsoBodyText"><span><span><span><span>As stated, this resolution rescinds AS 750-12 and provides for the following policies and policy recommendations (in summary, the following is not meant to supersede the full explanations provided herein):</span></span></span></span></p>
+
+<p><span><span><i><span>New <span>Policy</span></span></i></span></span></p>
+
+<ul><li><span><span><span><span>Course modality (i.e., methods of delivery) designations approved by the California State University (CSU) Academic Senate shall be adopted with the additional caveat that updates to these definitions be made in step with the CSU Academic Senate.</span></span></span></span>
+
+	<ul><li><span><span><span><span>For each of the modalities, a corresponding code shall be developed in the Cal Poly online curriculum system in conjunction with the Registrar’s Office and with the intention that the modality be populated accordingly to inform students in advance of the modality being offered.</span></span></span></span></li>
+		<li><span><span><span><span>For approval of all new courses moving forward, the course modalities shall be integrated into the approval process with accompanying questions being required irrespective of the modality that is chosen.</span></span></span></span></li>
+		<li><span><span><span><span>The exact questions (i.e., fields) to be included in the Cal Poly course management system have been provided in this resolution with any modifications agreed on by the Academic Senate Curriculum Committee in conjunction with the Registrar’s Office.</span></span></span></span></li>
+	</ul></li>
+	<li><span><span><span><span>New course proposals and course modifications shall specify the mode and modality, which establishes the expected contact hours or their equivalent.</span></span></span></span></li>
+	<li><span><span><span><span>The eLearning Addendum shall be removed from the course approval and course modification process.</span></span></span></span></li>
+	<li><span><span><span><u><span>Any change in the modality</span></u> <span>of an existing course from the modality or modalities listed in the original course proposal shall require a course modification.</span></span></span></span></li>
+</ul><p> </p>
+
+<p><span><span><i><span>Recommendations Supporting New or Existing <span>Policies</span></span></i></span></span></p>
+
+<ul><li><span><span><span><span>Proposals for online courses should address credit-hour requirements, assuring that the courses in their proposed modes and modalities will entail the equivalent hours of instruction or out-of-class work.</span></span></span></span></li>
+	<li><span><span><span><span> Faculty who are assigned to teach and/or develop courses with online modalities are <b><i><u>strongly encouraged</u> </i></b>to either have prior online pedagogical experience and/or engage in appropriate training.</span></span></span></span><br />
+	 </li>
+</ul><p><span><span><i><span>Continuation of and/or Support for Existing <span>Policy</span></span></i></span></span></p>
+
+<ul><li><span><span><span><span>For all courses, irrespective of modality, course materials shall be accessible and comply with state and federal laws and guidelines. Instructors offering courses in online modalities are required to make sure all course materials are accessible.</span></span></span></span></li>
+	<li><span><span><span><span>The University shall not agree to a contract with any private or public entity to deliver or receive online education courses or programs for academic credit without the prior approval of the relevant department and college</span></span></span></span></li>
+	<li><span><span><span><span>Admissions criteria for online education-based courses shall be the same as for traditional face-to-face courses. Agencies providing funding for online education courses or programs shall not acquire any privileges regarding the admission standards, academic continuation standards, or degree requirements for students or faculty.</span></span></span></span></li>
+	<li><span><span><span><span>Faculty and students have a right to know the modalities and technological requirements of each course, program, and degree offered by the University. This information shall be communicated to students in all relevant communications. Publicized descriptions of online education courses shall note the modality according to the definitions listed in this <span>resolution.</span></span></span></span></span></li>
+	<li><span><span><span><span>Funding sources for the development of online education courses and programs shall be explicitly stated in all online education-based course and program proposals. Funding sources may include any combination of grants, self-support, private contributions, and state support. The originating department shall develop the funding source proposal through traditional means and shall make a recommendation to the Academic Senate as to the suitability and viability of the proposed funding source. If applicable, such proposals shall include funding for the services of an instructional designer.</span></span></span></span></li>
+	<li><span><span><span><span>Nothing in this resolution nor these policies shall imply that online education is a preferred or required method of instruction. Implementation of these policies shall comply with existing campus policies and collective bargaining agreements where applicable (e.g., workload and faculty rights). It should also be explicitly noted that faculty may not be required to teach more students in an online modality than they would be assigned to teach in a face-to-face modality.</span></span></span></span>
+	<ul><li><span><span><span><span>This resolution is not meant to restrict or rigidly control the general use of technology-mediated instruction in the classroom.</span></span></span></span></li>
+	</ul></li>
+</ul><p> </p>
+
+<p><strong>Source:</strong></p>
+
+<p><strong>Academic Senate Resolution</strong>: AS-896-20 "<a href="https://content-calpoly-edu.s3.amazonaws.com/academicprograms/1/documents/Policies/AS-896-20%20Resolution%20on%20Online%20Teaching%20and%20Learning.pdf" target="_blank">Resolution on Online Teaching &amp; Learning</a>" (PDF)<strong>. </strong>Adopted 19 May 2020.</p>
+
+<p> </p>
+
+<p><strong>Reference:</strong></p>
+
+<p><strong>Office of the Registrar Website: </strong>Course Policies and Guidelines: <a href="https://registrar.calpoly.edu/course-policies-guidelines#Propose%20a%20Course%20to%20be%20Taught%20Online" target="_blank">"Propose a Course to be Taught Online"</a>.</p>
+
+<p> </p>
+
+<p><em>Updated: 7/8/2025</em></p>
+
+<p> </p></div></div></div></div>
+
+<h2 id="relatedLinksTitle">Related Content</h2><div id="relatedLinksBottom"></div></div>
+      <div class="clear"></div>
+          </main>
+
+    <div class="clear"></div>
+
+    <section class="widgets">    <div class="widget">
+        <h2>Office Contact</h2>
+  			<p><strong>Academic Programs and Planning </strong><br />
+1 Grand Avenue<br />
+Chase Hall (Building 115), 2nd Floor<br />
+San Luis Obispo, CA 93407 </p>
+
+<p><strong>Main Number</strong> <br />
+(805) 756-2246</p>
+
+<p><strong>General Email</strong>: <br /><a href="mailto:acadprog@calpoly.edu">acadprog@calpoly.edu</a></p>	</div>
+<div class="widget">
+        <h2>CSU Initiatives</h2>
+  			<ul><li>
+	<p><a href="/cal-poly-associate-degree-transfer">Associate Degree for Transfer</a></p>
+	</li>
+	<li>
+	<p><a href="https://academicprograms.calpoly.edu/ira-news-and-awards">G</a><a href="https://www2.calstate.edu/graduation-initiative-2025">raduation Initiative 2025</a></p>
+	</li>
+</ul>	</div>
+<div class="widget">
+        <h2>Other AIP Websites</h2>
+  			<ul><li><a href="http://ctlt.calpoly.edu" target="_blank"><span><span><span>Center for Teaching, Learning and Technology  </span></span></span></a></li>
+	<li><a href="https://international.calpoly.edu/">International Center</a></li>
+	<li><a href="http://civic.calpoly.edu" target="_blank">Service Learning Program</a></li>
+	<li><a href="http://honors.calpoly.edu" target="_blank">University Honors Program</a></li>
+</ul>	</div>
+</section>    
+  <footer>
+        
+      <ul id="footer_links">
+        <li><a href="https://www.calpoly.edu/">CP Home</a></li>
+        <li><a href="https://myportal.calpoly.edu/s/directory">Directory</a></li>
+        <li><a href="https://maps.calpoly.edu/">Campus Maps &amp; Directions</a></li>
+        <li><a href="https://www.bkstr.com/calpolystore">University Store</a></li>
+        <li><a href="https://registrar.calpoly.edu/acad_cal/">Calendar</a></li>
+        <li><a href="https://afd.calpoly.edu/hr/job-opportunities/">Employment</a></li>
+        <li><a href="https://policy.calpoly.edu/">Campus Policies</a></li>
+        <li><a href="https://www.calpoly.edu/contact/">Contact Us</a></li>
+      </ul>
+
+<div id="getPlugins">
+      <ul>
+        <li><a href="https://www.calpoly.edu/privacy/">Privacy Notice</a></li>
+        <li><a href="https://accessibility.calpoly.edu/website-accessibility-statement">Web Accessibility Statement</a></li>
+        <li><a href="https://crco.calpoly.edu/content/title-ix">Title IX</a></li>
+      </ul>
+</div>
+
+<div id="footer_deptinfo">
+  <p>&#169; 2026 California Polytechnic State University &nbsp;<img src="/sites/all/themes/cpstandard_r/common/images_html/footer/footer_separator.jpg" alt="" height="10" width="1" />&nbsp; San Luis Obispo, California 93407<br>Phone: 805-756-1111</p>
+</div>
+
+      </footer>
+
+      <div class="clear"></div>
+</div>
+
+<div id="closure-blocks" class="region region-closure">
+    <div id="block-block-8" class="block block-block " >
+<p><br /><!-- Add your analytics script here e.g. CrazyEgg --><!-- If you don't want to use analytics, just ignore this block --></p></div>
+
+</div>
+  <script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"4e34bbaf17","applicationID":"4513637","transactionName":"YldTYBRYXUVVURdZXFsdZEYPFlpYUFcbHkNdQg==","queueTime":0,"applicationTime":267,"atts":"ThBQFlxCTks=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+
+<script>(function trackOutbounds(){var hitCallbackHandler=function(url,win){if(win){window.open(url,win)}else{window.location.href=url}};var addEvent=function(el,eventName,handler){if(el.addEventListener){el.addEventListener(eventName,handler)}else{el.attachEvent('on'+eventName,function(){handler.call(el)})}}
+if(document.getElementsByTagName){var el=document.getElementsByTagName('a');var getDomain=document.domain.split('.').reverse()[1]+'.'+document.domain.split('.').reverse()[0];for(var i=0;i<el.length;i++){var href=(typeof(el[i].getAttribute('href'))=='string')?el[i].getAttribute('href'):'';var myDomain=href.match(getDomain);if((href.match(/^(https?:|\/\/)/i)&&!myDomain)||href.match(/^mailto\:/i)){addEvent(el[i],'click',function(e){var url=this.getAttribute('href'),win=(typeof(this.getAttribute('target'))=='string')?this.getAttribute('target'):'';console.log("add event",url);ga('send','event','outbound','click',url,{'hitCallback':hitCallbackHandler(url,win)},{'nonInteraction':1});e.preventDefault()})}}}})();</script>
+</html>

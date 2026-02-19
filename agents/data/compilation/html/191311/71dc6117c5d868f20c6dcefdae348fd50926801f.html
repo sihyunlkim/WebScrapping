@@ -1,0 +1,785 @@
+
+
+
+
+
+    
+    	
+        <!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>GIA</title>
+	<!-- Typekit -->
+	<script src="//use.typekit.net/mpt7xca.js"></script>
+	<script>try{Typekit.load();}catch(e){}</script>
+	
+	<link href="/css/global-styles.css" media="all" rel="stylesheet" type="text/css" />	
+	
+	<script src='//use.typekit.net/mpt7xca.js' type='text/javascript'></script>
+	<script type='text/javascript'>try{Typekit.load();}catch(e){}</script>
+	<!-- Page Specific Stylesheets -->
+	<link href="/css/homepage.css" media="screen" rel="stylesheet" type="text/css" />
+
+	<style>
+		.section-title {
+		    color: #232122;
+		    font-family: "freight-sans-pro",sans-serif;
+		    font-style: normal;
+		    font-weight: 700;
+		    letter-spacing: 0.1em;
+		    line-height: 1.2em;
+		    margin-bottom: 16px;
+		    text-align: left;
+		    text-transform: uppercase;
+		}
+		ul {
+		    border-bottom: medium none;
+		    padding-bottom: 0;
+		
+		}
+		ul li {
+		box-sizing: border-box;
+		    float: left;
+		    line-height: 29px;
+		    text-align: left;
+		
+		}
+		li {
+		float: left;
+		    margin-right: 30px;
+		    width: 156px;
+		}
+		li a {
+		    display: block;
+		color: #0477aa;
+		}
+		li a:hover {
+		    background: #f1f1f1 none repeat scroll 0 0;
+		}
+		p {
+		    margin-bottom: 40px;
+		    margin-top: 20px;
+		}
+		div.inner {
+		    margin-left: 150px;
+		    margin-top: 40px;
+		}
+		input.icon-search {
+		    background-image: url("/img/encyclopedia/gem-encyc-sprite.png");
+		    background-position: 10px -272px;
+		    background-repeat: no-repeat;
+		    padding-left: 35px;
+		}
+		.search-box input {
+		    padding-right: 5px;
+		    vertical-align: top;
+		    width: 154px;
+		}
+		input.text-active[type="text"] {
+		    color: #444;
+		}
+		input[type="text"] {
+		    background-clip: padding-box;
+		    border: 1px solid #e8e8e8;
+		    border-radius: 2px;
+		    color: #666;
+		    font-family: Helvetica, Arial, sans-serif;
+		    font-size: 15px;
+		    font-style: normal;
+		    height: 35px;
+		    letter-spacing: 0;
+		    line-height: 18px;
+		
+		}
+		button {
+		    background-color: #f1f1f1;
+		    border: 0 none;
+		    border-radius: 4px;
+		    color: #202020;
+		    cursor: pointer;
+		    display: inline-block;
+		    font-family: "freight-sans-pro",sans-serif;
+		    font-size: 12px;
+		    font-style: normal;
+		    font-weight: 700;
+		    letter-spacing: 1px;
+		    line-height: 18px;
+		    margin: 0;
+		    padding: 10px 13px;
+		    text-transform: uppercase;
+		}
+		
+		button span {
+		    display: inline-block;
+		    line-height: 13px;
+		    padding: 0;
+		    position: relative;
+		    top: -1px;
+		}
+	</style>
+
+	<link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon" />
+	<script src="/js/plugins/modernizr.js" type="text/javascript"></script>
+	
+	<script src="/js/custom-forms.js" type="text/javascript"></script>
+	
+	<!-- jQuery carouFredSel -->
+	<script src="//cdnjs.cloudflare.com/ajax/libs/jquery.caroufredsel/6.1.0/jquery.carouFredSel.packed.js"></script>
+	<script>window.jQuery.fn.carouFredSel || document.write('<script src="/js/plugins/jquery.carouFredSel-6.1.0.min.js"><\/script>')</script>
+	<script src="/js/slideshowFred.js" type="text/javascript"></script>
+	
+	<!-- jQuery Validate -->
+	<script src="//ajax.aspnetcdn.com/ajax/jquery.validate/1.11.0/jquery.validate.min.js"></script>
+	<script src="//ajax.aspnetcdn.com/ajax/jquery.validate/1.11.0/additional-methods.min.js"></script>
+	<script>window.jQuery.fn.validate || document.write('<script src="/js/plugins/jquery.validate.min.js"><\/script><script src="/js/plugins/validate.additional-methods.min.js"><\/script>')</script>
+	
+	<!-- Brightcove -->
+	<script src="//admin.brightcove.com/js/BrightcoveExperiences.js"></script>
+	
+	<script src="/js/global-scripts.js" type="text/javascript"></script>
+	<script type="text/javascript">
+		$( document ).ready(function() {
+			var locale_404;
+			if(window.location.href.indexOf("/CN/") > -1) {
+				locale_404 = "zh_CN";
+			}
+			else if(window.location.href.indexOf("/UK-EN/") > -1) {
+				locale_404 = "en_GB";
+			}
+			else if(window.location.href.indexOf("/ja_JP/") > -1) {
+				locale_404 = "ja_JP";
+			}
+			else {
+				locale_404 = "en_US";
+			}
+		});
+	</script>
+
+	<style type="text/css">
+		body {
+			text-align: center;
+			background: #fff;
+		}	
+
+		.container {
+			width: 972px;
+			margin: 0 auto;
+			padding-top: 150px;
+		}
+		.logo {
+			text-align: center;
+			padding-top: 15px;
+			margin-bottom: 35px;
+		}
+
+       .logo img {
+			margin: 0 auto;
+		}
+
+        h2 {
+			width: 406px;
+			height: 68px;
+			display: inline;
+            font-family: 'din-condensed-web',sans-serif;   
+            font-style: bold;
+            font-size: 60px;
+            font-weight: 400;
+            letter-spacing: -2px;
+            line-height: 1em;
+            margin-bottom: 40px;
+            margin: 0px 0px 15px;
+            padding: 15px 0px;
+			background-position: 0 0;
+			text-indent: -99999px;
+            background-image: url('/img/global/separator.png');
+            background-repeat: no-repeat;
+            background-position: center bottom;
+		}
+
+		p {
+			font-family: Helvetica, Arial, sans-serif;
+			font-size: 15px;
+			letter-spacing: 0;
+			line-height: 70px;
+			color: #666666;
+			font-style: normal;
+		}
+
+		p a {
+			color: #0477aa;
+			text-decoration: none;
+		}
+
+		p a:hover {
+			text-decoration: underline;
+		}
+	</style>
+	
+    <!-- Data Layer for GTM -->
+    <script type="text/javascript">
+      dataLayer = [{
+       'siteSection': 'Maintenance Page',
+       'siteSubSection': 'Error Page',
+       'articleGemstone': '',
+       'articleAudience': '',
+       'pageType': '404',
+       'breadcrumb': ''
+      }];
+    </script>  
+    <!-- End Data Layer for GTM -->
+    
+
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-TZ67BQ');</script>
+<!-- End Google Tag Manager -->
+
+
+    
+</head>
+<body>
+
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TZ67BQ"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
+	<div class="container">
+		<div class="logo">
+			<a href=''><img alt="GIA" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMoAAABECAYAAADA36oAAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyRpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYxIDY0LjE0MDk0OSwgMjAxMC8xMi8wNy0xMDo1NzowMSAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNS4xIE1hY2ludG9zaCIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDo0RDc1MDE1MTdERTYxMUUyOTA5MEI5MUNERDk5QTE2NCIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDo0RDc1MDE1MjdERTYxMUUyOTA5MEI5MUNERDk5QTE2NCI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOjRENzUwMTRGN0RFNjExRTI5MDkwQjkxQ0REOTlBMTY0IiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjRENzUwMTUwN0RFNjExRTI5MDkwQjkxQ0REOTlBMTY0Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+Vl1RLgAAFMpJREFUeNrsXUty4lzSzarwvPStwHL0P7e8AosVGI96CJ78U8wKbFYAnvYEGPbIYgXIK7C8gA7LKyjVCqp16ZOl41t6I/yoTxlBAEJcvfLk++YVeWf6978mTt7nnnp6L/r58+dvr6/vAIxr+jxM38b08z2DBr/31NO709c3AIafvhgMN2YbPp+nrwn2c9M3n8BhADWiceb94+rpvejoQOC4Td8W//z/uwSb5um2EJ+NeWWY/gzfXYDjIn3FBjzp9wggSUjzGOBM8d1L37x0/FX/CHv6VBoFGkHpOH1t8dkHAIxZZfZZGCaHhnjBPhOAwuw3BJBC7Oey1oEfs8W+ecfuqacPbXptIekFADBMvcT3jWF6gOWBTKuIwPQAbeMCBC75LfofDyDiAMBYgdRTTx8SKAQMAXNvyccI4KhP8FmYwbG/+iAhTC8Pn4WAYkB2qiacmmPktxgw/ui1S08fWaPcUxQrhoa4B9Pf0X5DMHhIvseafufPM9Is5vM3+v8aYBJLs4SIkpltN/1j7endgWJJbMP4Jop1D0a+IxNpBOBEYHaBCXUHBv9G47jYlsAM25lfqbN+i++GBvB9fAKXS5pqCXPuoX+sPXVNX1oAZQtmXEDSn0uWC5lCmxhmvoLUj7B9m2N+1aEEY5jxni1AqvZYYFxzHifYxxz7KQXbon/MPTUhk2C0qU14eA3pPQLDPkGz+ACJAkG1idn+mMP4D7RfQprIgebw6LsPkLBpdiNZpOwBJl8MsIygbU76x95TF1QLKJogTKVzCMd8JFkEKgbzemDYAMB4tBx3A6owHSMqOVRoHdchAA4ly8EoQM4A2qV1LLNflB4rxjhjHDv+DA/lH8euQ77Y7pr+8xLHPbsW3ivz/DfpPVrtOZbhtdH/uScJeGidjhnWNr3glzwTKM6hWbYk5SekGVxi/BkAxuMNwQgB/mMu9MH4JPQbJywVNGMcR8cPAKAYx3oiEC9IGxl/Z/DBHrCLczvF+bp0XVUUkbB4Ue29L5hyANqG3hTU6TnfknVx1vbY6Thj8qt/4N4aPn8wAKylUYwkThl1hQe7JF9jhpOMJAsH64OcKkDA5GY/P912RqbRSrK8yTn+OyFwGGa/Sf8zBWjM9wUy/xOAhH0jBtEPvFz4Nx8FHEPrPNuQVzA+a2XzgG8bjuvChN2nOPUKz/WtaET8aPjvtqWAuAA/b/E+V75Kfw+OKjSJZs9D/FlpjJv6BCZf0s2dqgMNTTTEjVPJJ/ifSJa19+j/ykCXCgTKxm+M1oHmWeG4Ph5ugtcUPs43RMGMyRUi56PaJXgHgNzI6wLQQ5FP742YJgWWeT5/NTznnVBUE+WN7+vQEjiTNkAB/20KAkm7lERVeHgNZD2CUYcYcGWZThraPSOQXONGm5eD7T6ZTE9g2hBSaEDa4Q43wKB8TSaY+hxDo+VgTs1Iomg0TGvDdttRIbDFjQzf8EE6MA2eSxhOhZC5lpOU4b7kvfC7SuukZrSwNRkTJn1dCZUKFdDsPUBiaRMlByZUG+L79Y2eTVLLR4GZc0zOtPoDQyvCNTAMTZXBMfk1RqpfGale4cz/5hvB7DMXf27GwPZHAHaBY45zHPoAwJwC7B7OMXwjkHg4pyKbfwUmi/eQphMSPr8BMB170MF1zEno5AHqy3sgBBrvuYvrhuk1V7/bXFO67SeEkwHj7KjE5BIyuyYwhZThNMrlMUiISbeISC0QCYvg60RNLkCjVKZKOD2ngCJwDrRRQr8LgWUGjRSRzW3OJaFgQXgo0ICJlwW2/i4nBDNnH4lv7keASM28Aye8iH580IBXkebwDYiaCKB03yT9zwv5Kepr7apIzFhfCoDiEFodAkBEEky1yxlHpyiqNUq3X+aMPcQJOOSLzBH1WmGfbVGUChouyAOdpVkS69wDgMecf3SoKBhU/7Lg5wAgSQ5w3KXFPF1pFI0qHUxrtTyv55KAyCI9r2nLZ3dBroQJiCxKTS84vxp20wcwkCx/kkCTRMrckO6DijHvFVyGsaENdpEGON1D7HNZ5XTDD5pg34i04bX6TPj9ATdgnKMBuza3HotAkt70ywMzD4PljwUKNPZ9mb+RntdfXR7zKIeRh2QiJDC/LsFwLClnllSvY0rskEq+zCgnlDiSrHiyKjqV2M6mCSVjbPURXDCPQwEKD6aaB+0Ud/DwNDJXFBk6eIjaON8Aqyd/No2q+Mxoh30TkExfLSaL4LhPgNgxpMkIUjkB44V2DRVyHVXqLgaTjuEf+LbzLll+ZlhVMm+0kdFgpE2GZF9qiDRGNEzzMAmuaQvQxh3dyyKfRBA+Td6IiTTy90cWh1Iual8wtQcKmE9DkFOS9j6kvMuMaEymJg0gwJRGVV/A3FrBH0okSxg+AEQzqVkybzQhImFLhI4jgELBmeBatNzBXM9VV1OJYQoU3YfVG4dPA/mzaVxzPx+g6tb0gtmlEnFD4bIFbH41K1YI2WrZhSmzn4Dx4hpgCeX3XMZlzn63Da5jQsEGhyJf44Ibu6ppKtaleQ0J/yaECE78BwNllCMYhiV8Me0UKJIzzRbbVtACXNe1M9NSgGjEKrYKEEdvcccocLCrNYN/YhKMPgIDWlYTgGEV/Am0jweAXTYNXVuRkiLJFe0bBm5J644FwUcxu+xMfAwgDEu0T7dAQfQpAgpfJEsysiMckDYxTLfJiXKdSnESrFMyoDCBAZzTmpKjIlnGe4zz0RKXc7qxATThPv5D2Xz9zXswVIsar8+qTe5MjiMFUFjAc5059Ue2M58y2wyOfAht4tNJ6IPXit1Run9i2foacTlYFhz+jUa2QpIux5A4sVYBAPxa58XSaLrvpK4aEaZQejqkEx+QBvVLwNUNUJCPuLAOpqXuZ+nv360TCyTLsYQlvkihJsBFn1qMZsZ7koKEItGDfWMQcn4BABLLDPHwvoIQMJ8dTGF2YKbctYiA+RWSvQfK4Zz4gLLvgRQneRtn6gujXpCsa0jlBTm71ykzPYOZQjCjg+9ThGZrnwD6cpkL+i7ZHHeVyjpf3gD20Ry3aUtVBABMw4tHTYASkI1keZSs44uW6buItLW5kRclvyU9bx/U7NpwAKNCa+zdzuor+yiSdW/U6boLeuAq4TWv0ig0DCf/MUcyJJKVl6zkdbm9Yfr7hs27XUTRXDUnaXsMcKomMEnTkz3K7svMrqjn7YM58UmO37FpoI3aAQV5iFuYJdfETE90Ak81GSQPJNclqjGhsV1LEieQ+tsGYNFk4yCHaS8B/hDgPDbXbfUnq/vwHNlvglNP7bVJkGPmBiVafJ/y+/8BBQw4wcsBE4WSJecm5CxrBv4MDFnmh3ikSeZkBoXEuFomo40qHiTr8RUSI3oWWL7VsGeX1Bxcb+CjZBXPLl6qHa871CY9HdaJL8pNrRqArRlQEF41TH8C7RHjPZCcSUKm6FCbaheEVbV0wgFYWJMMrUiV+kUxHHs16+IcR1mLNJlJkwIH+5g0FGuUENuuKQpmbvpJ39bo0zjxcUlual0WeNknU8/hYYcYbQygrEnyRsTsvjr0JWM78roERQsY1WSJybb0ML3XK4gkqQYwwYUN+VV5NywkAOn7D5JELkmXCBG2D+94U/ODPDL38oW+n+IeX/0B3VtGNbXJbiozqhLcEqe+VQLyCIWH8xz1VlS/VFUFG9EF+hZwHJLiL+TEm3zMMTG3U2Lm6Ky+MubmzixMW5yfgu0YETazbf3Bl5FISFufS72krivVU3k/kxOf65/kAGleop3aAQVZ7RkewqlkDSMuwMzaPPvVrEA4/2EJUIY5kt4nXyGGxlEt8yJZiDi2AKZJQ0deTwOQAtNLSBPG5NNod8sb63wfDhCl8rscTGc0Wrb7Vvbr5vLpnPgaGjIoAUrrTP0RmTARnOV7yaqFFTQe+SjKgKd5c+ABvDz15+dIO36/yfmtjOmKysjNecdWXoSXo7iTbIbl7JBaxETGDlVej9KNMun52Z14J0fYbmrel1A6ztRrZt6BgzuxfBU3h6EnsPmfStR6CDW3smznPDrGvnGOM/bN8jH0Qt0SFbw7Z7PCF4FFr0kXKNpAgxiTz2jMaYuEYx0N5Mlhy1j+5FzNOO/ZYsblXpq+Tab+iKQ52/VrfD+G5F7CLJMak7MU+eZCK5tkYzbiWLLu9bx91+Rbj0mN9OKSEpcJjm/Cw1r675F/Nc+RNj72rZ14RDl71W4X0td7taW8bPpNh2NPGwMFjDilGqxHyTLm52y+UBm9j4hR3lySwBRL4oQWMNduyKFPCFBxDnjUBHSs4MF1mUOH48yY4SmZqHNVAgoGzIR6FLegsMIX8Xt+b2V2+Qf2vRo79V9zBpiTuaLSPoHUdWDTqynjlEzXXcEE8iVrIaqOuUa2RpKfuBtagFLwjCiyUXQDXCuL7xPQtZBzCq15IfvVZFVNt/W6nGX3NyLbidfi2yavMrO0cab+iCTxkiJOU4pKaX+jsWTtUbU3a1kx4R00wA2Y8tpi3liymjLWCt9xjDN53WnjGmBb5R0T4NBWM2bWpc6l15s+AGCv6VzMOM9NzS4rwlJlDnQ2y+5vok2cHP9kpm2DGo5V1tKokVOv1cOxZG09tVv9VrKkoU82tyL8EmaVn1eHRWP6ZEKx9I7ldT0WN7fT2rAEc0pcsllnJddzid9j+p9HDKvA1HNbg4lbaRVkiKvMtjEefk/tnfhVy7Huqpz6xqaXyY8gRxJRWI5LRXYFimhzGuL7I0npPFqQZook64Zi/n9pZ8QxrhYueiSJ1V+ZlWiwXW9kmIaXlkMYkTl3B5B8Q8Pv1Z4TzNYVvzsl96enaic+2CPEHjQ8Vj0fhUrhY3ndOHsgvy8H50qWY8m1BwGEK8kKLA0AdB5LUhABm0gWVp1g/ooHp/u2wInX7aYO7R65HFbhlzgPbXU6B+iXDUv4i4RB1YO86X2V1k78uu14CAEHXWj7r5aN70La6pLVOuX2OwFkTFpFzbWY1pSXHC1xBWbfljEVtNpAX5J1qUxsMy0n+rRjWorC3VDQYSvZIjExvbv7SntIu1mNXe97KDR34lGRsA9tKrT9sBFQUEV8C6nNSzRomDgihlgSCFwwokfNvW0ArCRbKuKZOt5LgYZwMEPxF0iKNBD6eV2g9P8B2z0CgDbsdqEVA9Jqg4ZtkYrAspDqfImHlqc91XfiVx08m1WFxp80AkqOva/aRU0nowI1U+7T/A3NTRjmfMEksDzn/go+x671KMr1nRzmNwh/BlC1T3BRqE/9GBctigIGsmQl/Fp8uYQEuW8zWauCrmqYYEbV9/5KfSd+3dHYQYUA8xoDBVqBm0Zo1EubX//ajlovcxIvcM4XUJ9FkbAFTKgEYz0Tol1okXsC36Coa712msS+2p9Lz58nZ40k63O1kiwsve0SLLCHBzXAMseaI38CdSlsbMneZU+0u4bH/o2+VJhA2jVc7fALOMYqmQ1znFHTiSH5BoW5Cew7L5AiMUyjsv+yg39pBSOWFIDwJatQnsFEO3RHefXFnBpSbq8lIOD8bkt2GezbCaaim30nCwkVXMdVl022K3Iqhk7K6r++loBETRX1Tc5xoO8AhDbs3mojOsmy6XdlCTxrVuWKAHJV1ewBx5mC0XytDMhZG8V85pmOS/hRt4cECqTgQKrzKzsTc9+53G9Ax29wjJuG5tIhtMpNK40CJ1knC8WStVvVEpQr8mVeLU2Xs1y2u2/XeHsMaLswZ2k69YNuEJTYwPx6kWzC08GXqKP1z+tEVVTjNcoZVCxa1JVG2Up5zdpfB9CKxuw66/h5uJK/lF2t+1V3nXlVvyvJFkBVG1U1SSw5PXzRFyxBVOpXrsSYQBqSpmUbtGfwjskss+q75KyUReemmiSGH2UXUP5qndoFcBsywlLqF/mFEE7mPXfNdph3uoZjmYl3to+dD7A/VxyjtYmE8R9z7s1BFihKj3dfIbgSgOW3e3ZUAyRaTKh/vicTKyKfxTCEmVZrtyq9y3FwHYpOGSf+SrLO+Gswt2Npp5m8LpJ06biqSXRuy5NkjSTUTLzBPvJWIIEpZs7jhOa8+xV/8cm3khql/EW06AAk8xq+lglOJGDupMHY6s+6RZGoAzQ431QAZReRTY89tbV7nVWB1ZnXyU7PktV6aYTMl2y6ruDzNM+80cVG0UxCiyZPyFzazWHh/Qo03IQ0mStZGPiaTEPtxq9dIQdvCZISE0Dn/Xcdoo6g8VdtzKEGgYhKUzI9/kmHY7dak7GlhszVMpUaxTJ/biVblIdXog0pKqZtUo2Tv9tuASaS1421p/AzXDD8hsaMrGjXWLKS/V8XQabNC5mCS4y/oPk2rrwzwZSa0oNTwJxLFuqua6Jp88CoiUQvC0Sk53R5oOveZ+y4o3Mwk+0GLcBaP7RHKwVrqPgUoFhINtfEh1TfWGo7hgkWNlxnXse8kNfr2od0jIi0WkDaT6X29LP27IJ/w1I6lp4OTj9//pTGPoplO09pietnMOwPyUrpF3g/p+8qMef4n/o2D6RhVBKqVjmWrPML00p+b34XEoCG+t04/QgcXHzWB9Z3w/841CpZBAbUHllTyYodzxDFcMgc00lf+rmp+bPCfzyYWXMyr1TiajDgFGAJDp1Y7OnvpVG+thxrBN/jzIpucURMW+mMJWuKrQA6k6xMZkaaYUERriuywVX7zCmSxROuzPkcAxzm5XVQPt9TT3sDZUrRKDWFvhHT30nWOC9GJGZLUaohfY7Ij9Gu9qfk95wK9eGic5hA21yxmYas/ln/aHt6d6BYJe+nAI5K+AQ+hjJ9QD5LhO2aIHwp+Lymzxsy17T9TwRNpSX8AzbpUCLTL+TT07trFKYZRZU80iiqKRwCTSRZ+yOdPOURoNh/YQd/QZrIBTAi9VEQSTvpza2ePixQchJ4dmn8CwHJlax2TNdF0RITX7ICyXPJOsEYLfIDvodDGm1ga7lei/T0kTUKM+vCAklAvkyk+0iWxV9LNjnnnBz0MQA0BYA0/6LgUWD0vkhPnw8oFkXyusujlscLtEqCDiiaJHyARrjDbwl+CwmIK6k3P72nnjqlo0MNnGMGXZGZFlkMz0saGI3zreB/8t61Wj319G7UO+E9fSQyCUf79V8BBgDX6H1RwpJWjwAAAABJRU5ErkJggg=="></a>
+		</div>
+		<h2>404 - PAGE NOT FOUND</h2>
+		<!-- locale: en_US -->
+		<p>The page you are trying to reach is unavailable. <a href=''>Return to the homepage</a>.</p>
+
+           <form action='/sites/SearchPost.jsp' class='search-box' id='global-header-form' method='POST'>
+               <input type="hidden" value="en_US" id="pageLocale" name="pageLocale">
+               
+                   <input class="search-page-input" type="hidden" name="pagename" value="GIA/Wrapper" />
+		        <input class="search-page-input" type="hidden" name="childpagename" value="GIA/Page/SearchResults" />
+		        <input class="search-page-input" type="hidden" name="c" value="Page" />
+		        <input class="search-page-input" type="hidden" name="cid" value="1495237805113" />
+               
+               
+               
+               
+            <input id="search-value" class='icon-search' name='reportno' placeholder='Keyword or Report No.' type='text' disabled="disabled"/>
+            <button class="noprint" id="global-search-form-submit" class='submit-button' type='submit'>
+              <span>Go</span>
+            </button>
+        </form>
+		
+		<div class="inner">
+			<p class="section-title freight-bold">Suggested Topics</p>
+			<ul class='clearfix'>
+				
+				
+					
+						
+						
+						<li >
+							<a href='/search/articles?subject=Assembled Stone'>Assembled Stone</a>
+						</li>
+						
+					
+				
+					
+						
+						
+						<li >
+							<a href='/search/articles?subject=Carat Weight'>Carat Weight</a>
+						</li>
+						
+					
+				
+					
+						
+						
+						<li >
+							<a href='/search/articles?subject=Care'>Care</a>
+						</li>
+						
+					
+				
+					
+						
+						
+							
+						
+						<li class="end-row">
+							<a href='/search/articles?subject=Chemical Composition'>Chemical Composition</a>
+						</li>
+						
+					
+				
+					
+						
+						
+						<li >
+							<a href='/search/articles?subject=Clarity'>Clarity</a>
+						</li>
+						
+					
+				
+					
+						
+						
+						<li >
+							<a href='/search/articles?subject=Color'>Color</a>
+						</li>
+						
+					
+				
+					
+						
+						
+						<li >
+							<a href='/search/articles?subject=Conference Reports'>Conference Reports</a>
+						</li>
+						
+					
+				
+					
+						
+						
+							
+						
+						<li class="end-row">
+							<a href='/search/articles?subject=Crystal structure'>Crystal structure</a>
+						</li>
+						
+					
+				
+					
+						
+						
+						<li >
+							<a href='/search/articles?subject=Cut'>Cut</a>
+						</li>
+						
+					
+				
+					
+						
+						
+						<li >
+							<a href='/search/articles?subject=Design'>Design</a>
+						</li>
+						
+					
+				
+					
+						
+						
+						<li >
+							<a href='/search/articles?subject=Education'>Education</a>
+						</li>
+						
+					
+				
+					
+						
+						
+							
+						
+						<li class="end-row">
+							<a href='/search/articles?subject=Enhancement'>Enhancement</a>
+						</li>
+						
+					
+				
+					
+						
+						
+						<li >
+							<a href='/search/articles?subject=Faceting'>Faceting</a>
+						</li>
+						
+					
+				
+					
+						
+						
+						<li >
+							<a href='/search/articles?subject=Fashion'>Fashion</a>
+						</li>
+						
+					
+				
+					
+						
+						
+						<li >
+							<a href='/search/articles?subject=Folklore'>Folklore</a>
+						</li>
+						
+					
+				
+					
+						
+						
+							
+						
+						<li class="end-row">
+							<a href='/search/articles?subject=Formation'>Formation</a>
+						</li>
+						
+					
+				
+					
+						
+						
+						<li >
+							<a href='/search/articles?subject=Gemology'>Gemology</a>
+						</li>
+						
+					
+				
+					
+						
+						
+						<li >
+							<a href='/search/articles?subject=Geographic Origin'>Geographic Origin</a>
+						</li>
+						
+					
+				
+					
+						
+						
+						<li >
+							<a href='/search/articles?subject=Geology'>Geology</a>
+						</li>
+						
+					
+				
+					
+						
+						
+							
+						
+						<li class="end-row">
+							<a href='/search/articles?subject=Grading'>Grading</a>
+						</li>
+						
+					
+				
+					
+						
+						
+						<li >
+							<a href='/search/articles?subject=History'>History</a>
+						</li>
+						
+					
+				
+					
+						
+						
+						<li >
+							<a href='/search/articles?subject=Identification'>Identification</a>
+						</li>
+						
+					
+				
+					
+						
+						
+						<li >
+							<a href='/search/articles?subject=Imitations'>Imitations</a>
+						</li>
+						
+					
+				
+					
+						
+						
+							
+						
+						<li class="end-row">
+							<a href='/search/articles?subject=Inclusions'>Inclusions</a>
+						</li>
+						
+					
+				
+					
+						
+						
+						<li >
+							<a href='/search/articles?subject=Instrumentation'>Instrumentation</a>
+						</li>
+						
+					
+				
+					
+						
+						
+						<li >
+							<a href='/search/articles?subject=Jewelry'>Jewelry</a>
+						</li>
+						
+					
+				
+					
+						
+						
+						<li >
+							<a href='/search/articles?subject=Localities'>Localities</a>
+						</li>
+						
+					
+				
+					
+						
+						
+							
+						
+						<li class="end-row">
+							<a href='/search/articles?subject=Manufacturing'>Manufacturing</a>
+						</li>
+						
+					
+				
+					
+						
+						
+						<li >
+							<a href='/search/articles?subject=Material properties'>Material properties</a>
+						</li>
+						
+					
+				
+					
+						
+						
+						<li >
+							<a href='/search/articles?subject=Metals'>Metals</a>
+						</li>
+						
+					
+				
+					
+						
+						
+						<li >
+							<a href='/search/articles?subject=Mineralogy'>Mineralogy</a>
+						</li>
+						
+					
+				
+					
+						
+						
+							
+						
+						<li class="end-row">
+							<a href='/search/articles?subject=Mining'>Mining</a>
+						</li>
+						
+					
+				
+					
+						
+						
+						<li >
+							<a href='/search/articles?subject=Miscellaneous'>Miscellaneous</a>
+						</li>
+						
+					
+				
+					
+						
+						
+						<li >
+							<a href='/search/articles?subject=Ongoing Research'>Ongoing Research</a>
+						</li>
+						
+					
+				
+					
+						
+						
+						<li >
+							<a href='/search/articles?subject=Optical Effects'>Optical Effects</a>
+						</li>
+						
+					
+				
+					
+						
+						
+							
+						
+						<li class="end-row">
+							<a href='/search/articles?subject=Optical Properties'>Optical Properties</a>
+						</li>
+						
+					
+				
+					
+						
+						
+						<li >
+							<a href='/search/articles?subject=Organics'>Organics</a>
+						</li>
+						
+					
+				
+					
+						
+						
+						<li >
+							<a href='/search/articles?subject=Other Research Publications'>Other Research Publications</a>
+						</li>
+						
+					
+				
+					
+						
+						
+						<li >
+							<a href='/search/articles?subject=Physical properties'>Physical properties</a>
+						</li>
+						
+					
+				
+					
+						
+						
+							
+						
+						<li class="end-row">
+							<a href='/search/articles?subject=Precious Metals'>Precious Metals</a>
+						</li>
+						
+					
+				
+					
+						
+						
+						<li >
+							<a href='/search/articles?subject=Pricing'>Pricing</a>
+						</li>
+						
+					
+				
+					
+						
+						
+						<li >
+							<a href='/search/articles?subject=Quality Factors'>Quality Factors</a>
+						</li>
+						
+					
+				
+					
+						
+						
+						<li >
+							<a href='/search/articles?subject=Recent Findings'>Recent Findings</a>
+						</li>
+						
+					
+				
+					
+						
+						
+							
+						
+						<li class="end-row">
+							<a href='/search/articles?subject=Simulants'>Simulants</a>
+						</li>
+						
+					
+				
+					
+						
+						
+						<li >
+							<a href='/search/articles?subject=Synthesis Process'>Synthesis Process</a>
+						</li>
+						
+					
+				
+					
+						
+						
+						<li >
+							<a href='/search/articles?subject=Synthetics'>Synthetics</a>
+						</li>
+						
+					
+				
+					
+						
+						
+						<li >
+							<a href='/search/articles?subject=Techniques'>Techniques</a>
+						</li>
+						
+					
+				
+					
+						
+						
+							
+						
+						<li class="end-row">
+							<a href='/search/articles?subject=Technology'>Technology</a>
+						</li>
+						
+					
+				
+					
+						
+						
+						<li >
+							<a href='/search/articles?subject=Tools'>Tools</a>
+						</li>
+						
+					
+				
+					
+						
+						
+						<li >
+							<a href='/search/articles?subject=Trade'>Trade</a>
+						</li>
+						
+					
+				
+					
+						
+						
+						<li >
+							<a href='/search/articles?subject=Travel'>Travel</a>
+						</li>
+						
+					
+				
+					
+						
+						
+							
+						
+						<li class="end-row">
+							<a href='/search/articles?subject=Treatment Process'>Treatment Process</a>
+						</li>
+						
+					
+				
+			</ul>
+		</div>
+	</div>
+<script type="text/javascript"  src="/y58KDE337kaQWa0y-w/t65E4zaS9Q/C3RlDCcC/PxBx/CydEKTYNAg?v=5499c06c-5944-4881-038a-4ff95d0e1730" defer></script><script type="text/javascript"  src="/y58KDE337kaQWa0y-w/t65E4zaS9Q/C3RlDCcC/PxBx/CydEKTYNAg?v=105c28a4-12eb-47bd-e0a4-7416c0306874" defer></script></body>
+</html>
+
+
+    
+
+
+

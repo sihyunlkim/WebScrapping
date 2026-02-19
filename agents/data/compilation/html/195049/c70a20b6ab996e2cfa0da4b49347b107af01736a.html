@@ -1,0 +1,358 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+	<title>The Rockefeller University &raquo; Office of Sponsored Programs Administration</title>
+	<link type="text/css" rel="stylesheet" href="/sr-pd/css/nav.css" media="all" />
+	<link type="text/css" rel="stylesheet" href="/sr-pd/css/templateStyle2012.css" media="all" />
+	<link type="text/css" rel="stylesheet" href="/sr-pd/css/department.css" media="all" />
+    
+
+	
+	<!--[if IE]>
+		<link type="text/css" rel="stylesheet" href="/sr-pd/css/ie.css" media="all" />
+	<![endif]-->
+	
+	<!--[if IE 6]>
+		<link type="text/css" rel="stylesheet" href="/sr-pd/css/ie6.css" media="all" />
+	<![endif]-->	
+
+	<!--[if IE 7]>
+		<link type="text/css" rel="stylesheet" href="/sr-pd/css/ie7.css" media="all" />
+	<![endif]-->	
+	
+	<link type="text/css" rel="stylesheet" href="/sr-pd/css/print.css" media="print" />	
+	
+
+	<!--<script type="text/javascript" src="/sr-pd/js/jquery/jquery_core.js"></script>	-->
+	<script type="text/javascript" src="/sr-pd/funding/js/jquery-ui-1.8.18.custom/js/jquery-1.7.1.min.js"></script>	
+	<script type="text/javascript" src="/sr-pd/js/jquery/plugins/jquery.niftycube.js"></script>
+	<script type="text/javascript" src="/sr-pd/js/ru.js"></script>		
+    
+    <script language="javascript" type="text/javascript" src="/sr-pd/js/sr-pd.js"></script>
+	<script language="javascript" type="text/javascript" src="/js/scrollButtons.js"></script>
+
+
+	 <meta name="keywords" content="model organism sharing"> 	
+
+
+
+<!-- Global site tag (gtag.js) - Google Analytics --> <script async src="https://www.googletagmanager.com/gtag/js?id=G-J2J6M9VPF5"></script> <script> window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'G-J2J6M9VPF5'); </script><script>var RU_GA_ID = 'G-J2J6M9VPF5';</script>
+
+
+</head>
+
+		
+
+
+
+<body>
+<!-- wrapper start -->
+<div id="wrapper">	
+   <div id="skip-to-content"><a href="#content">Skip to Main Content</a></div>	
+	
+	<div id="header">
+		<ul id="quickLinks">
+			<li><a href="/calendar">Calendar</a></li><li><a href="https://ph.rockefeller.edu/">Directory</a></li><li class="lastQL"><a href="/insideHR/career.php">Employment</a></li>
+       	</ul>
+
+       	
+		<form action="https://search.rockefeller.edu" method="get" name="gs" id="mainSearch">
+			<label for="q" class="ADA-only">Search The Rockefeller University Site</label><input type="text" name="q" value="Search" class="search defaultValue" />
+			<input type="image" src="/sr-pd/images/static/go.gif" width="32" height="18" alt="Search" style="vertical-align: bottom;" />
+		</form>
+		
+      <a href="https://giveandjoin.rockefeller.edu/donate" id="donate">Donate</a>
+
+		<p>Tuesday, February 17, 2026</p>		
+		<a href="/"><img src="/sr-pd/images/static/headerRU.gif" width="445" height="45" alt="The Rockefeller University" /></a>
+
+		<h1>
+			<a href="/sr-pd">Office of Sponsored Programs Administration</a>
+			<a href="?printer=1" id="printerFriendly"><img src="/sr-pd/images/static/print.gif" width="18" height="18" alt="printer icon" /></a>
+		</h1>		
+	</div>	
+
+		
+	
+	
+				
+		<script>
+		
+
+// add functions to onload w/out overwriting existing functions
+function addLoadEvent(func) {
+        var oldonload = window.onload;
+        if(typeof window.onload != 'function') {
+                window.onload = func;
+        } else {
+                window.onload = function() {
+                        oldonload();
+                        func();
+                }
+        }
+}
+function sizeBoxes() { // size each row of divs to one w/ most content in that row
+        if(!document.getElementById) return false;
+        var general = document.getElementById('general'); // get divs
+        var deadlines = document.getElementById('deadlines');
+        var SR = document.getElementById('SR');
+        var PD = document.getElementById('PD');
+
+        var row1 = getTallest(general,deadlines); // get largest height for each row
+        //row1 += 10;     // add some spacing
+        var row2 = getTallest(SR,PD);
+        //row2 += 30;
+
+        if(row1 > 240) { // row 1 heights
+                general.style.height = row1+"px";
+                deadlines.style.height = row1+"px";
+        } else {
+                general.style.height = "240px";
+                deadlines.style.height = "240px";
+        }
+        if(row2 > 240) { // row 2 heights
+                SR.style.height = row2+"px";
+                PD.style.height = row2+"px";
+                //PD.style.height = (row2 - 3)+"px"; // subtract 3px so corner image lines up
+        } else {
+                SR.style.height = "200px";
+                PD.style.height = "200px";
+        }
+}
+function getTallest(one, two) { // get largest div height for the two divs in each row
+        divs = new Array(2);
+        divs[0] = one.offsetHeight;
+        divs[1] = two.offsetHeight;
+        divs.sort(function(a,b){return b - a}) // sort in descending numerical order
+        return divs[0]; // return tallest height
+}
+
+
+
+
+// remove default value from Search SR-PD input on focus
+function defaultClear() {
+        if(!document.getElementById) return false;
+        var input = document.getElementById('searchSRPD');
+        input.onfocus = function() {
+                var default_value = 'Search SR-PD'
+                if(this.value == default_value) this.value = "";
+        }
+        input.onblur = function() {
+                if(this.value == "") this.value = "Search SR-PD";
+        }
+}
+
+addLoadEvent(defaultClear);
+                </script>
+                
+
+
+
+
+<!--  Begin nav  -->
+		<div id="nav" class="">
+		<ul class="menu">
+			<li id="firstNavCol"><a href="/sr-pd/index.php?page=index">About</a></li>
+			<li><a href="/sr-pd/index.php?page=News">News</a></li>		
+			<li><a href="/sr-pd/index.php?page=Tips__Corner">Tips</a></li>	
+                        <li><a href="/sr-pd/index.php?page=InfoEd_FAQ">InfoEd FAQ</a></li>
+	    <li><a href="/sr-pd/index.php?page=SR-PDSpotlight">Spotlight</a></li>	
+            <li><a href="/sr-pd/index.php?page=forms">Forms & E-Tools</a></li>	
+            <li><a href="/sr-pd/index.php?page=institutional-data">Administrative Data</a></li>	
+            <li><a href="/sr-pd/funding">Funding Database</a></li>	
+                        <li><a href="/sr-pd/index.php?page=boilerplates">Boilerplates & Examples</a></li>
+            <li><a href="/sr-pd/index.php?page=specialist">Your SPO</a></li>	
+            <li><a href="/sr-pd/index.php?page=contact-us">Contact Us</a></li>	
+			
+			<li style="padding-left: 0; padding: 20px 0 0 6px;">
+                                <a href="https://rasgrants.rockefeller.edu/" target="_blank"><img src="/sr-pd/images/ras-grants.gif" alt="RAS-Grants log-in button" width="145" height="40" /></a>
+				<!--<a href="https://spas.rockefeller.edu"><img src="/sr-pd/images/infoEdroll.jpg" alt="infoEd log-in button" width="145" height="40" /></a>-->
+			</li>
+			<li style="padding: 0px 0px 0px 45px; font-weight:normal;">
+				Use RUNET login
+			</li>
+			
+			<li>
+			<br /><br />
+        
+      <div class='navCalendarDiv' onClick='location.href="/sr-pd/funding/calendar.php"'><a href='/sr-pd/funding/calendar.php' style='text-decoration: none;cursor: pointer;margin:0px;padding:0px;width:100%;'><table cellspacing='0' cellpadding='0' border='0' width='100%' class='navCalendarTitle'>
+					<td align='center'>
+						<b>February 2026</b>
+				  </td>
+				</table>
+				
+				<table cellspacing='0' cellpadding='0' border='0' width='100%' class='navCalendar'><tr class='navCalendarDayOfWeek'>
+            <td width='40' align='center'>Su</td>
+            <td width='40' align='center'>Mo</td>
+            <td width='40' align='center'>Tu</td>
+            <td width='40' align='center'>We</td>
+            <td width='40' align='center'>Th</td>
+            <td width='40' align='center'>Fr</td>
+            <td width='40' align='center'>Sa</td>
+        </tr><td align='center' class='navCalendarSatOrSun'>
+                				1
+                			</td><td align='center' class='navCalendarDay'>
+                				2
+                			</td><td align='center' class='navCalendarDay'>
+                				3
+                			</td><td align='center' class='navCalendarDay'>
+                				4
+                			</td><td align='center' class='navCalendarDay'>
+                				5
+                			</td><td align='center' class='navCalendarDay'>
+                				6
+                			</td><td align='center' class='navCalendarSatOrSun'>
+                				7
+                			</td></tr><td align='center' class='navCalendarSatOrSun'>
+                				8
+                			</td><td align='center' class='navCalendarDay'>
+                				9
+                			</td><td align='center' class='navCalendarDay'>
+                				10
+                			</td><td align='center' class='navCalendarDay'>
+                				11
+                			</td><td align='center' class='navCalendarDay'>
+                				12
+                			</td><td align='center' class='navCalendarDay'>
+                				13
+                			</td><td align='center' class='navCalendarSatOrSun'>
+                				14
+                			</td></tr><td align='center' class='navCalendarSatOrSun'>
+                				15
+                			</td><td align='center' class='navCalendarDay'>
+                				16
+                			</td><td align='center' class='navCalendarDay'>
+                				<b>17</b>
+                  		</td><td align='center' class='navCalendarDay'>
+                				18
+                			</td><td align='center' class='navCalendarDay'>
+                				19
+                			</td><td align='center' class='navCalendarDay'>
+                				20
+                			</td><td align='center' class='navCalendarSatOrSun'>
+                				21
+                			</td></tr><td align='center' class='navCalendarSatOrSun'>
+                				22
+                			</td><td align='center' class='navCalendarDay'>
+                				23
+                			</td><td align='center' class='navCalendarDay'>
+                				24
+                			</td><td align='center' class='navCalendarDay'>
+                				25
+                			</td><td align='center' class='navCalendarDay'>
+                				26
+                			</td><td align='center' class='navCalendarDay'>
+                				27
+                			</td><td align='center' class='navCalendarSatOrSun'>
+                				28
+                			</td></tr></table></a></div>			</li>
+			
+			<li>
+				<br /><br />
+            
+        <table cellspacing="0" cellpadding="0" border="0" style="background-color:#c8d5dd; margin:2px;" width="165px">
+    	
+    		<tr><td style="padding-bottom:2px;" align="center"><b><font color="#000000">Most Visited</font></b></td></tr>
+    		    			    			<tr>
+    				<td align="left" style="padding:3px;background-color:#ffffff;">
+    				 <a href="/sr-pd/index.php?page=PostdocPrograms" title="Postdoctoral Programs" style='text-decoration: none;cursor: pointer;margin:0px;padding:0px;width:100%;'>Postdoctoral Prog...</a>
+    				</td>
+    			</tr>
+    			    			<tr>
+    				<td align="left" style="padding:3px;background-color:#ffffff;">
+    				 <a href="/sr-pd/index.php?page=TipsArchive" title="TIPs Archive" style='text-decoration: none;cursor: pointer;margin:0px;padding:0px;width:100%;'>TIPs Archive</a>
+    				</td>
+    			</tr>
+    			    			<tr>
+    				<td align="left" style="padding:3px;background-color:#ffffff;">
+    				 <a href="/sr-pd/index.php?page=fundingopp" title="Grant Seeking Resources" style='text-decoration: none;cursor: pointer;margin:0px;padding:0px;width:100%;'>Grant Seeking Res...</a>
+    				</td>
+    			</tr>
+    			    			<tr>
+    				<td align="left" style="padding:3px;background-color:#ffffff;">
+    				 <a href="/sr-pd/index.php?page=COVID_Funding_Opps" title="COVID Funding Opportunities" style='text-decoration: none;cursor: pointer;margin:0px;padding:0px;width:100%;'>COVID Funding Opp...</a>
+    				</td>
+    			</tr>
+    			    			<tr>
+    				<td align="left" style="padding:3px;background-color:#ffffff;">
+    				 <a href="/sr-pd/index.php?page=NIH_Modular_Budget_Justification_Guidelines" title="NIH Modular Budget Justification Guidelines" style='text-decoration: none;cursor: pointer;margin:0px;padding:0px;width:100%;'>NIH Modular Budge...</a>
+    				</td>
+    			</tr>
+    			    			<tr>
+    				<td align="left" style="padding:3px;background-color:#ffffff;">
+    				 <a href="/sr-pd/index.php?page=nihformsq" title="NIH Application Forms" style='text-decoration: none;cursor: pointer;margin:0px;padding:0px;width:100%;'>NIH Application F...</a>
+    				</td>
+    			</tr>
+    			    			<tr>
+    				<td align="left" style="padding:3px;background-color:#ffffff;">
+    				 <a href="/sr-pd/index.php?page=Consortium-ContractualArrangements" title="Consortium and Contractual Arrangements" style='text-decoration: none;cursor: pointer;margin:0px;padding:0px;width:100%;'>Consortium and Co...</a>
+    				</td>
+    			</tr>
+    			    		    		</table>
+			</li>
+			    </ul>
+        
+            
+	</div>
+
+<!--  End nav -->
+
+
+<!-- content start -->	
+<div id="content">	
+	<div id="contentTop">&nbsp;</div>
+						
+										
+												<form id="searchForm" action="https://search.rockefeller.edu" method="get" style="padding: 0px; margin: 0px;">
+										          <input type="text" name="q" value="Search OSPA" id="searchSRPD">
+															<input type="submit" value="Go" id="submitSearchSRPD" />
+										  	</form>
+
+										
+	
+<br/>
+
+		 		
+			<div id="editor-container" style="width:690px;">
+			<p class="MsoNormal" style="text-align: center;"><span class="contentTitle">Model Organism Sharing Plan <br /></span></p>
+<p class="MsoNormal" style="font-style: italic;">Our boilerplates and sample text for selected application sections may be used as a starting point for your applications, and should be modified to meet sponsor's requirements and to align with your proposed research plan.&nbsp; <br /><br />This boilerplate addresses the NIH requirement for Sharing of Model Organisms for Biomedical Research, effective October 1, 2004. <a href="https://sharing.nih.gov/other-sharing-policies/model-organism-sharing-policy">More&gt;&gt;</a> <span class="body"><br /></span></p>
+<p class="MsoNormal">Following the characterization and peer-reviewed publication of the <span style="font-style: italic;">[state organism to be generated]</span>, these model organisms will be freely distributed to investigators at academic institutions for non-commercial research. If appropriate, the recipient investigators will provide written assurance and evidence that the model organisms will be used solely in accord with their local IACUC review; that model organisms will not be further distributed by the recipient without consent of the PI and Rockefeller University; and will not be used for commercial purposes.</p>
+<p class="MsoNormal">Requests from for-profit corporations to use the developed model organisms commercially will be negotiated by our institution's technology transfer office. All licensing shall be subject to distribution pursuant to Rockefeller University's policies and procedures on royalty income. The technology transfer office will report any invention disclosure submitted to them to the appropriate Federal Agency. At the request of the funding agency, we will make the model organisms available to any relevant Resource Centers.</p>
+<p class="MsoNormal">Rockefeller University and the PI will adhere to the NIH Grants Policy on Sharing of Unique Research Resources including the <a href="http://grants.nih.gov/grants/policy/model_organism/model_organism_brochure.pdf">Sharing of Biomedical Research Resources: Principles and Guidelines for Recipients of NIH Grants and Contracts</a>. Materials will be made available as soon as possible after publication, with terms driven by a <a href="http://www.ott.nih.gov/forms-model-agreements#MTACTA">Simple Letter Agreement</a> or <a href="https://www.techtransfer.nih.gov/resources#MTACTA">Material Transfer Agreement</a> forms. This assures that research resources developed become readily available to the research community for further research, development, and application for the public benefit.</p>
+<p>Should any intellectual property arise which requires a patent for commercial development to occur, the PI and TT office will ensure that the technology remains widely available to the research community in accordance with NIH policies.<br /><br /><span class="contentSubtitle">Useful Links</span><br /><a href="https://sharing.nih.gov/other-sharing-policies/model-organism-sharing-policy">NIH Model Organisms for Biomedical Research</a> (list of organisms that require a plan)<br /> <a href="https://sharing.nih.gov/other-sharing-policies/model-organism-sharing-policy">NIH Policy on Sharing of Model Organisms for Biomedical Research</a> <br /> <a href="http://grants.nih.gov/grants/policy/model_organism/model_organisms_faqs.htm">NIH Sharing of Model Organisms FAQs</a><br /> <a href="https://www.niaid.nih.gov/research/sharing-model-organisms">NIAID Sample plans for sharing model organisms </a></p>
+<p>&nbsp;</p>
+<p style="text-align: center;"><a href="mailto:sr-pd@rockefeller.edu">We value your comments and rely on your feedback to improve our services</a>.</p>
+<p class="MsoNormal">&nbsp;</p>
+			</div>
+			
+	<div style="clear:both;"></div>
+<p id="contentBottom"></p>
+	</div>
+<!-- content end -->
+
+<!-- footer start -->
+   <div id="footer">
+         <div id="footer-btns">
+            <a href="http://www.facebook.com/rockefelleruniversity" target="_blank"><img src="/sr-pd/images/static/btn-med-fb.gif" width="32" height="32" alt="Facebook" /></a>
+            <a href="http://www.twitter.com/rockefelleruniv" target="_blank"><img src="/sr-pd/images/static/btn-med-twitter.gif" width="32" height="32" alt="Twitter" /></a>
+            <a href="http://www.youtube.com/rockefelleruniv" target="_blank"><img src="/sr-pd/images/static/btn-med-youtube.gif" width="32" height="32" alt="YouTube" /></a>
+            <a href="https://www.linkedin.com/company/rockefeller-university/careers" target="_blank"><img src="//www.rockefeller.edu/images/static/btn-med-linkedin.gif" width="32" height="32" alt="LinkedIn"></a>
+            <a href="https://instagram.com/rockefelleruniv/" target="_blank"><img src="/images/static/btn-med-instagram.gif" width="32" height="32" alt="Instagram" /></a>
+            <a href="https://inside.rockefeller.edu" id="footer-inside-link"><img src="/sr-pd/images/static/inside.gif" /></a>
+         </div>
+      <p>
+            The Rockefeller University  |  1230 York Avenue, New York, NY 10065  |  212-327-8000<br />
+         Copyright &copy; 2004&ndash;2026         The Rockefeller University. All rights reserved.  <br />
+         <a href="http://www.rockefeller.edu/about/contact">Contact</a> |
+         <a href="http://www.rockefeller.edu/about/comments">Comments</a> |
+         <a href="http://www.rockefeller.edu/about/sitemap">Site Map</a> |
+         <a href="http://www.rockefeller.edu/about/dmca">Copyright Complaints</a>
+      </p>
+   </div><!-- footer end -->
+
+	</div>
+</body>
+</html>

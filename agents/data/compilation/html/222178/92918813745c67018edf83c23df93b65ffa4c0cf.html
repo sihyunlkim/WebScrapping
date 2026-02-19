@@ -1,0 +1,747 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <link rel="shortcut icon" href="https://library.acu.edu.au/assets/ACUPublic/img/favicon.ico?v=0.1.8" />
+    
+<title>GenAI at ACU - AI basics - Library guides at Australian Catholic University</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noarchive" />
+<link rel="shortcut icon" href="https://library.acu.edu.au/assets/ACUPublic/img/favicon.ico?v=0.1.8" />
+
+
+<!-- public_metadata.twig -->
+
+    <!-- auto generated dublin core metadata -->
+    <meta name="DC.Title" content="Library guides: AI basics: GenAI at ACU"/>
+    <meta name="DC.Creator" content="Sarah Beltrame"/>
+    <meta name="DC.Subject" content=""/>
+    <meta name="DC.Description" content="We delve into the fascinating realm of GenAI and how you might apply it responsibly to your studies at ACU."/>
+    <meta name="DC.Publishers" content="Australian Catholic University"/>
+    <meta name="DC.Rights" content="Copyright Australian Catholic University 2026"/>
+    <meta name="DC.Language" content="en"/>
+    <meta name="DC.Identifier" content="https://libguides.acu.edu.au/ai-basics/genai-acu"/>
+    <meta name="DC.Date.Created" content="Jul 16, 2024"/>
+    <meta name="DC.Date.Modified" content="Jan 28, 2026"/>
+    
+
+<meta property="og:title" content="Library guides: AI basics: GenAI at ACU">
+<meta property="og:description" content="We delve into the fascinating realm of GenAI and how you might apply it responsibly to your studies at ACU.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://libguides.acu.edu.au/ai-basics/genai-acu">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@springshare">
+
+
+
+<link rel="stylesheet" href="https://static-assets-au.libguides.com/web/jquery/css/jquery-ui.min.css?2691" />
+
+<link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"/>
+
+<link rel="stylesheet" type="text/css" href="https://static-assets-au.libguides.com/web/slick-1.8.1/slick/slick.css">
+<link rel="stylesheet" type="text/css" href="https://static-assets-au.libguides.com/web/slick-1.8.1/slick/slick-theme.css">
+
+    <link rel="stylesheet" href="https://static-assets-au.libguides.com/web/css3.23.5/lg-public.min.css" />
+
+<script type="text/javascript" src="https://static-assets-au.libguides.com/web/jquery/js/1.12.4_jquery.min.js"></script>
+<script>
+    jQuery(document).ready(function () {
+        jQuery(".dropdown-toggle").on("click", function(e){
+            jQuery(this).siblings("ul.s-lg-subtab-ul.dropdown-menu").toggle();
+        });
+                        var s_lg_guide_name = jQuery('#s-lg-guide-name');
+        if (s_lg_guide_name.length) {
+            if (jQuery.trim(s_lg_guide_name.text()) === '') {
+                s_lg_guide_name.remove();
+            }
+        }
+    });
+</script>
+
+    <script src="//code.jquery.com/ui/1.13.2/jquery-ui.min.js"></script>
+    <script>
+        jQuery.ui ||
+        document.write('<script src="https://static-assets-au.libguides.com/web/jquery/js/jquery-ui.min.js?2691">\x3C/script>');
+    </script>
+
+    <script type="text/javascript" src="https://static-assets-au.libguides.com/web/js3.23.5/lg-public.min.js"></script>
+<style> .s-lib-box {border-color: #cccccc;
+                border-width: 0px;
+                box-shadow: none;
+                border-radius: 0;
+                background-color: #ffffff;
+            }
+            .s-lib-box-std .s-lib-box-title {background-color: #ffffff; background-image: none;color: #3c1053;
+                border-bottom: 0px solid #cccccc;
+            }
+            .s-lib-box .s-lib-box-title {background-color: #ffffff; background-image: none;color: #3c1053;
+                border-bottom: 0px solid #cccccc;
+                border-radius: 0;
+            }
+            .s-lib-box .s-lg-box-footer {
+                border-radius: 0;
+            }</style><link rel="stylesheet" type="text/css" href="https://d329ms1y997xa5.cloudfront.net/sites/335/include/Libguides_2025_v10.css">
+<link rel="stylesheet" type="text/css" href="https://d329ms1y997xa5.cloudfront.net/sites/335/include/Buttons_v4.css">
+<script src="https://acu-au.libanswers.com/load_chat.php?hash=8ac5b87f7691450d3678e68c9b7287c7"></script>
+<script type="text/javascript" src="https://d329ms1y997xa5.cloudfront.net/sites/335/include/Flipcard_script.js"></script>
+<link rel="stylesheet" type="text/css" href="https://d329ms1y997xa5.cloudfront.net/sites/335/include/ACU_edit_flip_cards_v8.css">
+<script src="https://acu.h5p.com/js/h5p-resizer.js" charset="UTF-8">
+
+<script type="text/javascript">
+/* Script from Higher degree students and early career researchers guide. */
+/* Open a specific accordion panel because it is or contains an anchor link specified by the target. @param {string} target ID of link to expose. (may be an accordion body or a child of an accordion) */
+function triggerTargetedCollapse (target, rewriteLocation) {
+  var wrapper = target
+  var parents
+  if (!$(wrapper)) {
+    console.error('can\'t find wrapper ID')
+  }
+
+  if (!$(wrapper).hasClass('collapse')) {
+    if ($(wrapper).hasClass('panel-heading')) {
+      parents = $(wrapper).parent()
+      parents = $(parents).find('.collapse')
+      wrapper = $(parents)[0]
+    } else if ($(wrapper).hasClass('panel')) {
+      parents = $(wrapper).find('.collapse')
+      wrapper = $(parents)[0]
+    } else {
+      parents = $(wrapper).parents('.collapse')
+      if ($(parents).length > 0) {
+        wrapper = $(parents)[0]
+      } else {
+        window.location.hash = target
+        return
+      }
+    }
+  }
+  if (!$(wrapper).hasClass('in')) {
+    $(wrapper).collapse()
+  }
+  if (!rewriteLocation) {
+    window.location.hash = target
+  }
+}
+
+/* open an accordion from an anchor in URL.*/
+function URLhashOpensAccordion () {
+  var target = window.location.hash.substr(1)
+
+  if (typeof target === 'string') {
+    target = target.replace(/[&?=].*$/, '')
+    if (target !== '') {
+      triggerTargetedCollapse('#' + target, false)
+    }
+  }
+}
+
+$(document).ready(function () {
+	URLhashOpensAccordion()
+})
+</script><link rel="stylesheet" type="text/css" href="https://d329ms1y997xa5.cloudfront.net/sites/335/include/Check_list_style.css">
+<script type="text/javascript" src="https://d329ms1y997xa5.cloudfront.net/sites/335/include/Check_list_script.js"></script>
+<link rel="stylesheet" type="text/css" href="https://d329ms1y997xa5.cloudfront.net/sites/335/include/Accordion_styling_2025.css">
+<style>
+#s-lib-bc-page {
+  display: none;
+}
+</style>
+<style>
+p.clear {
+  clear: both;
+}
+.checklist {
+  font-family: inherit;
+  max-width: 1000px;
+  margin: auto;
+  padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+.btn-plain {
+	color: #252320;
+	font-weight: bold;
+	background-color: #fff;
+	border: 1px solid #ccc;
+	border-radius: 1px;
+	font-size: 0.9em;
+}
+.btn-plain:hover {
+	color: #fff;
+	background-color: #747474;
+	text-decoration: underline;
+}
+
+.btn-plain:focus {
+	color: #fff;
+	background-color: #747474;
+	text-decoration: underline;
+}
+.btn-plain:active {
+	color: #fff;
+	background-color: #252320;
+	text-decoration: underline;
+}
+
+.btn-worker:focus-visible {
+    color: #fff !important;
+    border-color: #ed0c00;
+    background-color: #ed0c00;
+    transition: 0.2s;
+}
+
+</style>
+<script>
+function toggleChecked(checkbox) {
+  const item = checkbox.closest('.checklist-item');
+  if (checkbox.checked) {
+    item.classList.add('checked');
+  } else {
+    item.classList.remove('checked');
+  }
+}
+
+function clearAllCheckboxes() {
+  const checkboxes = document.querySelectorAll('.checklist input[type="checkbox"]');
+  checkboxes.forEach(cb => {
+    cb.checked = false;
+    cb.closest('.checklist-item').classList.remove('checked');
+  });
+}
+</script><script>
+    var springStats = springStats || {};
+    springStats.saConfig = springStats.saConfig || {
+        site_id: 335,
+        tracking_parameters: {"_st_guide_id":970868,"_st_page_id":7061565,"_st_site_id":335},
+        tracking_server_host: "libguides-proc-au.springyaws.com"
+    };
+</script>
+<script  src="https://static-assets-au.libguides.com/web/js/sa.min.js?3116"></script>
+<script>
+			springSpace.Common = springSpace.Common || { };
+			springSpace.Common.constant = {
+					PROCESSING: {
+						ACTION_DISPLAY_POLL: 159
+					}
+			};
+			springSpace.Common.baseURL = "https://libguides.acu.edu.au/";
+			
+			handleScroll=function() {
+                if (false) {
+					var target_elt = "#s-lg-page-section-7061565";
+					jQuery("html, body").animate({ scrollTop: jQuery(target_elt).offset().top }, 750);
+					if (jQuery(this).scrollTop() > 220) {
+						jQuery("#s-lib-scroll-top").fadeIn(750);
+					}
+				}
+			}
+	   </script>
+        <script>
+            // Enable tooltips.
+            jQuery(function () {
+                try {
+                    springSpace.UI.initPopOvers(false);
+                    jQuery(".az-bs-tooltip").tooltip();
+                } catch (e) { }
+            });
+        jQuery(document).ready(function () {
+            springSpace.springTrack.trackPage({_st_type_id: '1',_st_group_id: '21814',_st_guide_id: '970868',_st_page_id: '7061565'});
+        });
+            jQuery(document).ready(function() {
+                handleScroll();
+            });
+        </script><!-- BEGIN: Analytics code --><!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-HKPC0LTBS8"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-HKPC0LTBS8');
+</script><!-- END: Analytics code -->
+    </head>
+<body class="s-lg-guide-body">
+    <a id="s-lg-public-skiplink" class="alert-info" href="#s-lg-guide-main">Skip to Main Content</a>
+    
+    <header>
+	<div class="custom-header" id="la-header">
+		<nav class="navbar navbar-default">
+		  <div class="container">
+			<!-- Brand and toggle get grouped for better mobile display -->
+			<div class="navbar-header">
+			  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#acu-navbar-collapse-1" aria-expanded="false">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			  </button>
+			  <a class="navbar-brand" href="https://acu.edu.au/"><img class="img-responsive" src="//libapps-au.s3-ap-southeast-2.amazonaws.com/sites/335/include/ACU-LOGO_RGB_Full-colour_reverse.svg"><span class="sr-only">ACU Home</span></a>
+			</div>
+
+			<!-- Collect the nav links, forms, and other content for toggling -->
+			<div class="collapse navbar-collapse" id="acu-navbar-collapse-1">
+			  <ul class="nav navbar-nav navbar-right">
+				<li><a href="https://library.acu.edu.au/">Library home</a></li>
+				<li><a href="https://library.acu.edu.au/services-and-support/study/library-guides">Library guides</a></li>
+				<li><a href="https://libguides.acu.edu.au/az/databases">Databases A-Z</a></li>
+				<li><a href="https://library.acu.edu.au/research/library-search">Library search</a></li>
+				<li><a href="https://library.acu.edu.au/our-library/contact-us">Contact us</a></li>
+			  </ul>
+			</div><!-- /.navbar-collapse -->
+		  </div><!-- /.container-fluid -->
+		</nav>
+	</div>
+</header>
+
+    <div id="s-lg-guide-header" class="container s-lib-header s-lib-side-borders">
+        <nav id="s-lib-bc" aria-label="breadcrumb">
+            <ol id="s-lib-bc-list" class="breadcrumb"><li id="s-lib-bc-customer" class="breadcrumb-item"><a href="https://library.acu.edu.au/">ACU Library</a></li><li id="s-lib-bc-site" class="breadcrumb-item"><a href="https://libguides.acu.edu.au/">Library guides</a></li><li id="s-lib-bc-group" class="breadcrumb-item"><a href="https://libguides.acu.edu.au/ai">AI</a></li><li id="s-lib-bc-guide" class="breadcrumb-item"><a href="https://libguides.acu.edu.au/ai-basics">AI basics</a></li><li id="s-lib-bc-page" class="active breadcrumb-item">GenAI at ACU</li></ol>
+        </nav>
+        <div class="pull-right">
+            <div id="s-lg-guide-header-search">
+                
+<div id="s-lg-guide-search-box">
+    <form role="search" id="s-lg-guide-search-form" action="https://libguides.acu.edu.au/srch.php" method="GET">
+        <div class="input-group input-group-sm">
+            <input 
+                type="text" 
+                id="s-lg-guide-search-terms" 
+                name="q" 
+                class="form-control"
+                maxlength="260" 
+                placeholder="Search this Guide">
+                
+            <label class="sr-only" for="s-lg-guide-search-terms">Search this Guide</label>
+
+                            <input type="hidden" name="guide_id" value="970868">
+            
+            
+            <span class="input-group-btn">
+                <button class="btn btn-default" type="submit">
+                    Search
+                </button>
+            </span>
+        </div>
+    </form>
+</div>
+
+            </div>
+            
+        </div>
+        <div id="s-lg-guide-header-info">
+            <h1 id="s-lg-guide-name">AI basics</h1>
+            <div id="s-lg-guide-desc-container">
+                <span id="s-lg-guide-description">We delve into the fascinating realm of GenAI and how you might apply it responsibly to your studies at ACU.</span>
+            </div>
+        </div>
+    </div>
+
+    <div id="s-lg-guide-tabs-title-bar" class="container s-lib-side-borders"></div>
+
+    <div id="s-lg-side-nav-content" class="container s-lib-side-borders pad-top-med">
+        <div class="row">
+            <div class="col-md-3 s-lg-tabs-side pad-bottom-med">
+                <div id="s-lg-tabs-container">
+                    <div id="s-lg-guide-tabs" role="navigation" aria-label="Guide Pages">
+                        <ul class="nav nav-pills nav-stacked split-button-nav">
+                            
+
+
+    <li class="">
+        <a title="" class="" 
+           href="https://libguides.acu.edu.au/ai-basics/home" 
+            
+            
+           >
+            <span>What is GenAI</span>
+            
+        </a>
+        
+    </li>
+
+
+
+    <li class="active">
+        <a title="" class="active" 
+           href="https://libguides.acu.edu.au/ai-basics/genai-acu" 
+            
+            
+           >
+            <span>GenAI at ACU</span>
+            
+        </a>
+        <ul class="list-group s-lg-boxnav"><li class="list-group-item"><a href="#s-lg-box-22779450">Academic Integrity</a></li><li class="list-group-item"><a href="#s-lg-box-22779447">Using AI at ACU</a></li></ul>
+    </li>
+
+
+
+    <li class="">
+        <a title="" class="" 
+           href="https://libguides.acu.edu.au/ai-basics/copyright" 
+            
+            
+           >
+            <span>AI and Copyright</span>
+            
+        </a>
+        
+    </li>
+
+
+
+    <li class="">
+        <a title="" class="" 
+           href="https://libguides.acu.edu.au/ai-basics/legal" 
+            
+            
+           >
+            <span>Legal and Ethical Obligations of AI</span>
+            
+        </a>
+        
+    </li>
+
+
+
+    <li class="">
+        <a title="" class="" 
+           href="https://libguides.acu.edu.au/ai-basics/using" 
+            
+            
+           >
+            <span>Using GenAI</span>
+            
+        </a>
+        
+    </li>
+
+
+
+    <li class="">
+        <a title="" class="" 
+           href="https://libguides.acu.edu.au/ai-basics/limitations" 
+            
+            
+           >
+            <span>GenAI Limitations</span>
+            
+        </a>
+        
+    </li>
+
+
+
+    <li class="">
+        <a title="" class="" 
+           href="https://libguides.acu.edu.au/ai-basics/referencing" 
+            
+            
+           >
+            <span>Referencing AI</span>
+            
+        </a>
+        
+    </li>
+
+
+
+    <li class="">
+        <a title="" class="" 
+           href="https://libguides.acu.edu.au/ai-basics/checklist" 
+            
+            
+           >
+            <span>AI Checklist</span>
+            
+        </a>
+        
+    </li>
+
+
+
+    <li class="">
+        <a title="" class="" 
+           href="https://libguides.acu.edu.au/ai-hub/home" 
+            
+            
+           >
+            <span>Return to AI Hub</span>
+            
+        </a>
+        
+    </li>
+
+                        </ul>
+                        <div class="s-lg-row margin-top-med"><div id="s-lg-col-0"><div class="s-lg-col-boxes"></div></div></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-9">
+                <div class="s-lg-tab-content">
+                    <div id="s-lg-guide-main" class="tab-pane active" tabindex="-1">
+                        <div class="row s-lg-row"><div id="s-lg-col-1" class="col-md-12"><div class="s-lg-col-boxes"><div id="s-lg-box-wrapper-26697203" class="s-lg-box-wrapper-26697203">
+
+
+    <div id="s-lg-box-22779450-container" class="s-lib-box-container">
+        <div id="s-lg-box-22779450" class="s-lib-box s-lib-box-std">
+                            <h2 class="s-lib-box-title">
+                    Academic Integrity
+                                    </h2>
+                        <div id="s-lg-box-collapse-22779450" >
+                <div class="s-lib-box-content">
+                    <div id="s-lg-content-51911234" class="  clearfix">
+    <h3>How is academic integrity applied to GenAI at ACU?</h3>
+
+<p>At Australian Catholic University (ACU), the responsible use of Generative AI (GenAI) is guided by our commitment to academic integrity and ethical practice. Whether you&#39;re a student completing assessments or a staff member engaged in teaching, research, or professional work, it&#39;s important to understand how GenAI fits within ACU&rsquo;s policies.</p>
+
+<p>GenAI may be permitted in some contexts, but its use must be explicitly allowed- particularly in assessment tasks. Always refer to your unit outline or tutor&rsquo;s instructions. If GenAI use is not clearly authorised, it should not be used.</p>
+
+<p>Any content generated by GenAI must be critically evaluated and appropriately acknowledged. It should support your learning or work, not replace your own intellectual contribution. The final output- whether an assignment, publication, or teaching material- must reflect your own analysis and understanding.</p>
+
+<p>ACU&rsquo;s&nbsp;<a href="https://www.acu.edu.au/handbook/handbook-2024/policies-and-general-information/student-academic-integrity-and-misconduct">Student Academic Integrity and Misconduct Policy</a> outlines expectations for students, while the <a href="https://policy.acu.edu.au/document/view.php?id=428">Principles for Use of Artificial Intelligence in Teaching, Research &amp; Research Training</a> provide guidance for staff. These documents emphasise ethical, human-centred AI adoption and the importance of transparency, privacy, and fairness.</p>
+
+
+    </div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+</div><div id="s-lg-box-wrapper-26697200" class="s-lg-box-wrapper-26697200">
+
+
+    <div id="s-lg-box-22779447-container" class="s-lib-box-container">
+        <div id="s-lg-box-22779447" class="s-lib-box s-lib-box-std">
+                            <h2 class="s-lib-box-title">
+                    Using AI at ACU
+                                    </h2>
+                        <div id="s-lg-box-collapse-22779447" >
+                <div class="s-lib-box-content">
+                    <div id="s-lg-content-51911229" class="  clearfix">
+    <h3>General principles of using AI tools for your study</h3>
+
+<p>When using Generative AI (GenAI) tools at ACU, your final output must be your own original work and analysis. GenAI can support your learning or work, but it should not replace your intellectual contribution.</p>
+
+<p>You are expected to understand the limitations of GenAI, critically evaluate its outputs, and clearly acknowledge how you&rsquo;ve used it. Ethical use of AI also means respecting privacy, avoiding bias, and following ACU&rsquo;s policies on academic integrity and responsible technology use.</p>
+
+<p>Click on the flip cards below to learn some of the risks and limitations of GenAI.</p>
+
+
+    </div><div id="s-lg-content-51970944" class="  clearfix">
+    <div class="cards-wrapper purple">
+<div class="card-container">
+<div class="card" role="flipcard" tabindex="0">
+<div class="card-side front">
+<div class="card-content has-image has-text"><!-- CHANGE IMAGE FOR FRONT CARD 1 HERE -->
+<div class="card-content-image" style="background-image: url('https://d329ms1y997xa5.cloudfront.net/customers/324/images/Authorship_icon.png');">&nbsp;</div>
+<!-- CHANGE TEXT FOR FRONT CARD 1 HERE -->
+
+<div class="card-content-text">Authorship</div>
+</div>
+</div>
+
+<div class="card-side back">
+<div class="card-content has-text"><!-- CHANGE TEXT FOR BACK CARD 1 HERE -->
+<div class="card-content-text">AI tools can draw on a wide range of materials without providing accurate sources of authorship.</div>
+</div>
+</div>
+</div>
+</div>
+<!-- END OF CARD 1 -->
+
+<div class="card-container">
+<div class="card" role="flipcard" tabindex="0">
+<div class="card-side front">
+<div class="card-content has-image has-text"><!-- CHANGE IMAGE FOR FRONT CARD 2 HERE -->
+<div class="card-content-image" style="background-image: url('https://d329ms1y997xa5.cloudfront.net/customers/324/images/Target_icon.png');">&nbsp;</div>
+<!-- CHANGE TEXT FOR FRONT CARD 2 HERE -->
+
+<div class="card-content-text">Accuracy</div>
+</div>
+</div>
+
+<div class="card-side back">
+<div class="card-content has-text"><!-- CHANGE TEXT FOR BACK CARD 2 HERE -->
+<div class="card-content-text">GenAI tools can generate inaccurate, biased and out-of-date information.</div>
+</div>
+</div>
+</div>
+</div>
+<!-- END OF CARD 2 -->
+
+<div class="card-container">
+<div class="card" role="flipcard" tabindex="0">
+<div class="card-side front">
+<div class="card-content has-image has-text"><!-- CHANGE IMAGE FOR FRONT CARD 3 HERE -->
+<div class="card-content-image" style="background-image: url('https://d329ms1y997xa5.cloudfront.net/customers/324/images/Writing_icon.png');">&nbsp;</div>
+<!-- CHANGE TEXT FOR FRONT CARD 3 HERE -->
+
+<div class="card-content-text">Writing Skills</div>
+</div>
+</div>
+
+<div class="card-side back">
+<div class="card-content has-text"><!-- CHANGE TEXT FOR BACK CARD 3 HERE -->
+<div class="card-content-text">Being able to evaluate the credibility of your sources is an essential aspect of academic writing.</div>
+</div>
+</div>
+</div>
+</div>
+<!-- END OF CARD 3 --></div>
+
+    </div><div id="s-lg-content-51973592" class="  clearfix">
+    <!-- Text version button ACU worker --><!-- Change two instances of "example" to be unique to the page -->
+<p><button class="btn-worker" data-target="#example" data-toggle="collapse">Text version</button></p>
+
+<div class="collapse" id="example"><!--- Edit content here --->
+<h4>Authorship</h4>
+
+<p>AI tools can draw on a wide range of materials without providing accurate sources of authorship.</p>
+
+<h4>Accuracy</h4>
+
+<p>GenAI tools can generate inaccurate, biased and out-of-date information.</p>
+
+<h4>Writing Skills</h4>
+
+<p>Being able to evaluate the credibility of your sources is an essential aspect of academic writing.</p>
+</div>
+<!-- Text version button ends -->
+
+
+
+    </div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+</div></div></div></div>
+                    </div>
+                </div>
+                <ul id="s-lg-page-prevnext" class="pager ">
+    <li class="previous">
+        <a class="page-link" href="https://libguides.acu.edu.au/ai-basics/home">&lt;&lt; <strong>Previous:</strong> What is GenAI</a>
+    </li>
+    <li class="next">
+        <a class="page-link" href="https://libguides.acu.edu.au/ai-basics/copyright"><strong>Next:</strong> AI and Copyright &gt;&gt;</a>
+    </li>
+</ul>
+
+
+            </div>
+        </div>
+    </div>
+
+    <div id="s-lib-footer-public" class="s-lib-footer footer container s-lib-side-borders">
+        <div id="s-lg-guide-header-meta" class="pad-top-sm pad-left-med clearfix">
+            <ul id="s-lg-guide-header-attributes">
+                <li id="s-lg-guide-header-updated" class="s-lg-h-separator">
+                    <span class="s-lg-guide-label">Last Updated:</span> <span class="s-lg-text-greyout">Jan 28, 2026 11:32 AM</span>
+                </li>
+                <li id="s-lg-guide-header-url" class="s-lg-h-separator">
+                    <span class="s-lg-guide-label">URL:</span> <span class="s-lg-text-greyout">https://libguides.acu.edu.au/ai-basics</span>
+                </li>
+                <li id="s-lg-guide-print-url">
+                    <a href="javascript: window.print();"><i class="fa fa-print" aria-hidden="true" title="Print Page"></i> Print Page</a>
+                </li>
+            </ul>
+            <div id="s-lib-footer-login-link" class="pull-right pad-right-med">
+                <a href="https://acu-au.libapps.com/libapps/login.php?site_id=335&target64=L2xpYmd1aWRlcy9hZG1pbl9jLnBocD9nPTk3MDg2OCZwPTcwNjE1NjU=">Login to LibApps</a>
+            </div>
+        </div>
+        <div class="pad-bottom-sm clearfix">
+            <div id="s-lib-footer-support-link" class="pull-right pad-right-med">
+                <a href="https://acu-au.libwizard.com/f/report-problem">Report a problem</a>
+            </div>
+            <div id="s-lg-guide-header-subjects" class="pad-top-sm pad-left-med pad-right-med pull-left">
+                
+            </div>
+            <div id="s-lg-guide-header-tags" class="pad-top-sm pad-left-med">
+                
+            </div>
+        </div>
+    </div>
+
+    <!-- scroll_top.twig -->
+<div id="s-lib-scroll-top">
+    <a href="javascript:void(0);" onclick="jQuery('body').focus();" title="Back to Top"
+       aria-label="Back to Top">
+        <span class="fa-stack fa-lg" aria-hidden="true">
+            <i class="fa fa-square-o fa-stack-2x"></i>
+            <i class="fa fa-angle-double-up fa-stack-1x" style="position:relative; bottom:2px;"></i>
+        </span>
+    </a>
+</div>
+<!-- !scroll_top.twig -->
+
+    <div id="s-lib-alert" title=""><div id="s-lib-alert-content"></div></div>
+            
+<footer>
+	<div class="custom-footer" id="la-footer">
+		<section class="ask-acu-panel ask-acu-purple">
+			<div class="container">				
+				<div class="row ">
+						<div class="col-md-4 askacu">
+							<h2>Contact the Library</h2> 
+							<a href="https://library.acu.edu.au/our-library/contact-us" class="arrow--link arrow-link--purple">Contact us →</a> 
+						</div>
+						<div class="col-md-8">
+							<div class="row">
+								<div class=" col-md-6 ask-right-section"> 
+									<span class="icon icon-Chat-Buble3"><img src="https://libapps-au.s3-ap-southeast-2.amazonaws.com/sites/335/include/Live_chat.svg" alt=""></span>
+									<h2>Live chat with Library</h2>
+									<p>Chat to our team for real-time
+										<br>answers to your questions. </p> 
+										<a href="https://acu-au.libanswers.com/chat/widget/8ac5b87f7691450d3678e68c9b7287c7" onclick="window.open(this.href, 'ACU Chat','left=20,top=20,width=500,height=500,toolbar=0,resizable=0'); return false;">Chat with us →</a> </div>
+								<div class=" col-md-6 ask-right-section"> 
+									<span class="icon icon-Question-Mark"><img src="https://libapps-au.s3-ap-southeast-2.amazonaws.com/sites/335/include/Ask_your_lib.svg" alt=""></span>
+									<h2>Book a librarian</h2>
+									<p> Get answers to all your
+										<br>questions. </p> 
+										<a href="https://library.acu.edu.au/our-library/contact-us/book-a-librarian">Make an appointment →</a>
+
+								</div>
+							</div>
+							<div class="row line-divider">
+								<div class="col-md-12 col-lg-4"> <span class="icon icon-Mail"><img src="https://libapps-au.s3-ap-southeast-2.amazonaws.com/sites/335/include/email.svg" alt=""></span> <a href="https://acu-au.libanswers.com/">Email a librarian</a> </div>
+<div class="col-md-12 col-lg-4"> <span class="icon icon-Mail"><img src="https://libapps-au.s3-ap-southeast-2.amazonaws.com/sites/335/include/Reportaproblem.svg" alt=""></span> <a href="https://acu-au.libwizard.com/f/report-problem">Report a problem</a> </div>
+								<div class="col-md-12 col-lg-4"> <span class="icon icon-Note-Pencil-1"><img src="https://libapps-au.s3-ap-southeast-2.amazonaws.com/sites/335/include/feedback_white.svg" alt=""></span> <a href="https://acu-au.libwizard.com/f/feedback">Feedback</a> </div>
+							</div>
+						</div>
+					</div>
+			</div>
+		</section>
+		<section class="lower-footer">
+			<div class="container">
+				<div class="row footer-quick-links ">
+					<div class="col-md-12 col-lg-5">
+						<ul>
+							<li><a href="https://www.acu.edu.au/accessibility">Accessibility</a></li>
+							<li><a href="https://www.acu.edu.au/disclaimer">Disclaimer</a></li>
+							<li><a href="https://www.acu.edu.au/privacy">Privacy</a></li>
+							<li><a href="https://www.acu.edu.au/emergency-and-safety">Emergency and safety</a></li>
+						</ul>
+					</div>
+					<div class="col-md-12 col-lg-7">
+						<p class="disclaimer"> <a title="Copyright" class="copyright" href="https://www.acu.edu.au/copyright" >Copyright</a>  ©Australian Catholic University 1998-2026 ABN 15050192660 CRICOS Reg 00004G RTO 3578 </p>
+					</div>
+				</div>
+				<div class="row ">
+					<div class="col-md-12 col-lg-12 text-center">
+						<p class="disclaimer">Australian Catholic University acknowledges the traditional custodians of the lands on which we live and work, and we pay our respects to Elders both past and present.
+						</p>
+					</div>
+				</div>
+			
+			</div>
+		</section>
+	</div>
+</footer>
+<div id="libchat_8ac5b87f7691450d3678e68c9b7287c7"></div>
+
+        
+    </body>
+</html>

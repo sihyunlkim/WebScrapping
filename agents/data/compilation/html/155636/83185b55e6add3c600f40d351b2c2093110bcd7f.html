@@ -1,0 +1,651 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+
+    <title></title>
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="referrer" content="no-referrer-when-downgrade">
+    <!-- THIS SCRIPT NEEDS TO BE LOADED FIRST BEFORE wforms.js -->
+    <script type="text/javascript" data-for="FA__DOMContentLoadedEventDispatch" src="https://ottawauniversity.tfaforms.net/js/FA__DOMContentLoadedEventDispatcher.js" defer></script>
+                        <style>
+                    .captcha {
+                        padding-bottom: 1em !important;
+                    }
+                    .wForm .captcha .oneField {
+                        margin: 0;
+                        padding: 0;
+                    }
+                </style>
+                <script type="text/javascript">
+                    // initialize our variables
+                    var captchaReady = 0;
+                    var wFORMSReady = 0;
+                    var isConditionalSubmitEnabled = false;
+
+                    // when wForms is loaded call this
+                    var wformsReadyCallback = function () {
+                        // using this var to denote if wForms is loaded
+                        wFORMSReady = 1;
+                        isConditionalSubmitEnabled = document.getElementById('submit_button').hasAttribute('data-condition');
+                        // call our recaptcha function which is dependent on both
+                        // wForms and an async call to google
+                        // note the meat of this function wont fire until both
+                        // wFORMSReady = 1 and captchaReady = 1
+                        onloadCallback();
+                    }
+                    var gCaptchaReadyCallback = function() {
+                        // using this var to denote if captcha is loaded
+                        captchaReady = 1;
+                        isConditionalSubmitEnabled = document.getElementById('submit_button').hasAttribute('data-condition');
+                        // call our recaptcha function which is dependent on both
+                        // wForms and an async call to google
+                        // note the meat of this function wont fire until both
+                        // wFORMSReady = 1 and captchaReady = 1
+                        onloadCallback();
+                    };
+
+                    // add event listener to fire when wForms is fully loaded
+                    document.addEventListener("wFORMSLoaded", wformsReadyCallback);
+
+                    var enableSubmitButton = function() {
+                        var submitButton = document.getElementById('submit_button');
+                        var explanation = document.getElementById('disabled-explanation');
+                        var isConditionalSubmitConditionMet = wFORMS.behaviors.condition.isConditionalSubmitConditionMet;
+                        if (
+                            submitButton != null &&
+                            (isConditionalSubmitEnabled && isConditionalSubmitConditionMet) ||
+                            !isConditionalSubmitEnabled
+                        )
+                        {
+                            submitButton.removeAttribute('disabled');
+                            if (explanation != null) {
+                                explanation.style.display = 'none';
+                            }
+                        }
+                    };
+                    var disableSubmitButton = function() {
+                        var submitButton = document.getElementById('submit_button');
+                        var explanation = document.getElementById('disabled-explanation');
+                        if (submitButton != null) {
+                            submitButton.disabled = true;
+                            if (explanation != null) {
+                                explanation.style.display = 'block';
+                            }
+                        }
+                    };
+
+                    // call this on both captcha async complete and wforms fully
+                    // initialized since we can't be sure which will complete first
+                    // and we need both done for this to function just check that they are
+                    // done to fire the functionality
+                    var onloadCallback = function () {
+                        // if our captcha is ready (async call completed)
+                        // and wFORMS is completely loaded then we are ready to add
+                        // the captcha to the page
+                        if (captchaReady && wFORMSReady) {
+                            // Prevent both concurrent and sequential executions
+                            if (window.isCreatingCaptcha || window.hasCaptchaRendered) {
+                                return;
+                            }
+                            window.isCreatingCaptcha = true;
+
+                            try {
+                                var submitButton = document.getElementById('submit_button');
+                                var formContainer = submitButton.closest('form') || submitButton.closest('.wFormContainer');
+                                var faCaptcha = null;
+
+                                if (formContainer) {
+                                    faCaptcha = formContainer.querySelector('#google-captcha');
+                                }
+
+                                // Also check if captcha was appended to body as fallback (look for FA-specific structure)
+                                if (!faCaptcha) {
+                                    var bodyCaptchas = document.querySelectorAll('body > #google-captcha');
+                                    for (var i = 0; i < bodyCaptchas.length; i++) {
+                                        // Verify it's a FormAssembly captcha by checking for specific structure
+                                        if (bodyCaptchas[i].querySelector('.captcha .oneField .g-recaptcha')) {
+                                            faCaptcha = bodyCaptchas[i];
+                                            break;
+                                        }
+                                    }
+                                }
+
+                                if (faCaptcha) { 
+                                    if (faCaptcha.parentNode) {
+                                        faCaptcha.parentNode.removeChild(faCaptcha);
+                                    } 
+                                }
+
+                            // Now create a new captcha container
+                            var captchaContainer = document.createElement('div');
+                            captchaContainer.id = 'google-captcha';
+                            
+                            var captchaDiv = document.createElement('div');
+                            captchaDiv.className = 'captcha';
+                            
+                            var oneFieldDiv = document.createElement('div');
+                            oneFieldDiv.className = 'oneField';
+                            
+                            var recaptchaElement = document.createElement('div');
+                            recaptchaElement.id = 'g-recaptcha-render-div';
+                            recaptchaElement.className = 'g-recaptcha';
+                            
+                            var errorDiv = document.createElement('div');
+                            errorDiv.className = 'g-captcha-error';
+                            
+                            var helpDiv = document.createElement('div');
+                            helpDiv.className = 'captchaHelp';
+                            helpDiv.innerHTML = 'reCAPTCHA helps prevent automated form spam.<br>';
+                            
+                            var disabledDiv = document.createElement('div');
+                            disabledDiv.id = 'disabled-explanation';
+                            disabledDiv.className = 'captchaHelp';
+                            disabledDiv.style.display = 'block';
+                            disabledDiv.innerHTML = 'The submit button will be disabled until you complete the CAPTCHA.';
+                            
+                            oneFieldDiv.appendChild(recaptchaElement);
+                            oneFieldDiv.appendChild(errorDiv);
+                            oneFieldDiv.appendChild(document.createElement('br'));
+                            captchaDiv.appendChild(oneFieldDiv);
+                            captchaDiv.appendChild(helpDiv);
+                            captchaDiv.appendChild(disabledDiv);
+                            captchaContainer.appendChild(document.createElement('br'));
+                            captchaContainer.appendChild(captchaDiv);
+                            
+                            if (submitButton && submitButton.parentNode) {
+                                submitButton.parentNode.insertBefore(captchaContainer, submitButton);
+                            } else {
+                                // Fallback: append to body if submit button not found.
+                                document.body.appendChild(captchaContainer);
+                            }
+                        } finally {
+                            window.isCreatingCaptcha = false;
+                        }
+                            
+                            grecaptcha.enterprise.render('g-recaptcha-render-div', {
+                                'sitekey': '6LfMg_EaAAAAAMhDNLMlgqDChzmtYHlx1yU2y7GI',
+                                'theme': 'light',
+                                'size': 'normal',
+                                'callback': 'enableSubmitButton',
+                                'expired-callback': 'disableSubmitButton'
+                            });
+                            window.hasCaptchaRendered = true;
+                            var oldRecaptchaCheck = parseInt('1');
+                            if (oldRecaptchaCheck === -1) {
+                                var standardCaptcha = document.getElementById("tfa_captcha_text");
+                                standardCaptcha = standardCaptcha.parentNode.parentNode.parentNode;
+                                standardCaptcha.parentNode.removeChild(standardCaptcha);
+                            }
+
+                            if (!wFORMS.instances['paging']) {
+                                document.getElementById("g-recaptcha-render-div").parentNode.parentNode.parentNode.style.display = "block";
+                                //document.getElementById("g-recaptcha-render-div").parentNode.parentNode.parentNode.removeAttribute("hidden");
+                            }
+                            document.getElementById("g-recaptcha-render-div").getAttributeNode('id').value = 'tfa_captcha_text';
+
+                            var captchaError = '';
+                            if (captchaError == '1') {
+                                var errMsgText = 'The CAPTCHA was not completed successfully.';
+                                var errMsgDiv = document.createElement('div');
+                                errMsgDiv.id = "tfa_captcha_text-E";
+                                errMsgDiv.className = "err errMsg";
+                                errMsgDiv.innerText = errMsgText;
+                                var loc = document.querySelector('.g-captcha-error');
+                                loc.insertBefore(errMsgDiv, loc.childNodes[0]);
+
+                                /* See wFORMS.behaviors.paging.applyTo for origin of this code */
+                                if (wFORMS.instances['paging']) {
+                                    var b = wFORMS.instances['paging'][0];
+                                    var pp = base2.DOM.Element.querySelector(document, wFORMS.behaviors.paging.CAPTCHA_ERROR);
+                                    if (pp) {
+                                        var lastPage = 1;
+                                        for (var i = 1; i < 100; i++) {
+                                            if (b.behavior.isLastPageIndex(i)) {
+                                                lastPage = i;
+                                                break;
+                                            }
+                                        }
+                                        b.jumpTo(lastPage);
+                                    }
+                                }
+                            }
+                        }
+                    }
+                </script>
+                                    <script src='https://www.google.com/recaptcha/enterprise.js?onload=gCaptchaReadyCallback&render=explicit&hl=en_US' async
+                        defer></script>
+                <script type="text/javascript">
+                    document.addEventListener("DOMContentLoaded", function() {
+                        var warning = document.getElementById("javascript-warning");
+                        if (warning != null) {
+                            warning.parentNode.removeChild(warning);
+                        }
+                        var oldRecaptchaCheck = parseInt('1');
+                        if (oldRecaptchaCheck !== -1) {
+                            var explanation = document.getElementById('disabled-explanation');
+                            var submitButton = document.getElementById('submit_button');
+                            if (submitButton != null) {
+                                submitButton.disabled = true;
+                                if (explanation != null) {
+                                    explanation.style.display = 'block';
+                                }
+                            }
+                        }
+                    });
+                </script>
+                <script type="text/javascript">
+        document.addEventListener("FA__DOMContentLoaded", function(){
+            const FORM_TIME_START = Math.floor((new Date).getTime()/1000);
+            let formElement = document.getElementById("tfa_0");
+            if (null === formElement) {
+                formElement = document.getElementById("0");
+            }
+            let appendJsTimerElement = function(){
+                let formTimeDiff = Math.floor((new Date).getTime()/1000) - FORM_TIME_START;
+                let cumulatedTimeElement = document.getElementById("tfa_dbCumulatedTime");
+                if (null !== cumulatedTimeElement) {
+                    let cumulatedTime = parseInt(cumulatedTimeElement.value);
+                    if (null !== cumulatedTime && cumulatedTime > 0) {
+                        formTimeDiff += cumulatedTime;
+                    }
+                }
+                let jsTimeInput = document.createElement("input");
+                jsTimeInput.setAttribute("type", "hidden");
+                jsTimeInput.setAttribute("value", formTimeDiff.toString());
+                jsTimeInput.setAttribute("name", "tfa_dbElapsedJsTime");
+                jsTimeInput.setAttribute("id", "tfa_dbElapsedJsTime");
+                jsTimeInput.setAttribute("autocomplete", "off");
+                if (null !== formElement) {
+                    formElement.appendChild(jsTimeInput);
+                }
+            };
+            if (null !== formElement) {
+                if(formElement.addEventListener){
+                    formElement.addEventListener('submit', appendJsTimerElement, false);
+                } else if(formElement.attachEvent){
+                    formElement.attachEvent('onsubmit', appendJsTimerElement);
+                }
+            }
+        });
+    </script>
+
+    <link href="https://ottawauniversity.tfaforms.net/dist/form-builder/5.0.0/wforms-layout.css?v=ac0235b4f2f78be583f3f68141d3a089a5407c55" rel="stylesheet" type="text/css" />
+
+    <link href="https://ottawauniversity.tfaforms.net/uploads/themes/theme-32.css" rel="stylesheet" type="text/css" />
+    <link href="https://ottawauniversity.tfaforms.net/dist/form-builder/5.0.0/wforms-jsonly.css?v=ac0235b4f2f78be583f3f68141d3a089a5407c55" rel="alternate stylesheet" title="This stylesheet activated by javascript" type="text/css" />
+    <script type="text/javascript" src="https://ottawauniversity.tfaforms.net/wForms/3.11/js/wforms.js?v=ac0235b4f2f78be583f3f68141d3a089a5407c55"></script>
+    <script type="text/javascript">
+        if(wFORMS.behaviors.prefill) wFORMS.behaviors.prefill.skip = true;
+    </script>
+    <script type="text/javascript" src="https://ottawauniversity.tfaforms.net/wForms/3.11/js/localization-en_US.js?v=ac0235b4f2f78be583f3f68141d3a089a5407c55"></script>
+
+            
+    
+    </head>
+<body class="default wFormWebPage" >
+
+
+    <div id="tfaContent">
+        <div class="wFormContainer" style="max-width: 900px; width: auto;">
+    <div class="wFormHeader"></div>
+    <style type="text/css">
+                #tfa_11,
+                *[id^="tfa_11["] {
+                    width: 196px !important;
+                }
+                #tfa_11-D,
+                *[id^="tfa_11["][class~="field-container-D"] {
+                    width: auto !important;
+                }
+            
+                #tfa_13,
+                *[id^="tfa_13["] {
+                    width: 101px !important;
+                }
+                #tfa_13-D,
+                *[id^="tfa_13["][class~="field-container-D"] {
+                    width: auto !important;
+                }
+            
+                #tfa_158,
+                *[id^="tfa_158["] {
+                    width: 141px !important;
+                }
+                #tfa_158-D,
+                *[id^="tfa_158["][class~="field-container-D"] {
+                    width: auto !important;
+                }
+            
+                #tfa_163,
+                *[id^="tfa_163["] {
+                    width: 160px !important;
+                }
+                #tfa_163-D,
+                *[id^="tfa_163["][class~="field-container-D"] {
+                    width: auto !important;
+                }
+            
+                #tfa_155,
+                *[id^="tfa_155["] {
+                    width: 323px !important;
+                }
+                #tfa_155-D,
+                *[id^="tfa_155["][class~="field-container-D"] {
+                    width: auto !important;
+                }
+            
+                #tfa_155-L,
+                label[id^="tfa_155["] {
+                    width: 323px !important;
+                    min-width: 0px;
+                }
+            
+                #tfa_172,
+                *[id^="tfa_172["] {
+                    width: 104px !important;
+                }
+                #tfa_172-D,
+                *[id^="tfa_172["][class~="field-container-D"] {
+                    width: auto !important;
+                }
+            
+                #tfa_173,
+                *[id^="tfa_173["] {
+                    width: 100px !important;
+                }
+                #tfa_173-D,
+                *[id^="tfa_173["][class~="field-container-D"] {
+                    width: auto !important;
+                }
+            
+                #tfa_174,
+                *[id^="tfa_174["] {
+                    width: 103px !important;
+                }
+                #tfa_174-D,
+                *[id^="tfa_174["][class~="field-container-D"] {
+                    width: auto !important;
+                }
+            
+                #tfa_176,
+                *[id^="tfa_176["] {
+                    width: 190px !important;
+                }
+                #tfa_176-D,
+                *[id^="tfa_176["][class~="field-container-D"] {
+                    width: auto !important;
+                }
+            </style><div class=""><div class="wForm" id="338-WRPR" data-language="en_US" dir="ltr">
+<div class="codesection" id="code-338"><script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-TJMJQ4');</script>
+</div>
+<form method="post" action="https://ottawauniversity.tfaforms.net/api_v2/workflow/processor" class="hintsBelow labelsAbove" id="338">
+<div class="htmlSection" id="tfa_175"><div class="htmlContent" id="tfa_175-HTML"><img style="max-width: 100%;" alt="Ottawa University Header Image" src="https://ottawauniversity.tfaforms.net/forms/get_image/1/z4GZRpUmvziQs9wG8vKsO7Jg9uoegyhQRfLsPVjX96ecFdB2DYxPDOPwR77FnaZS-Walz-TetrickFormBanner.png"></div></div>
+<div id="tfa_180" class="section group"><div class="htmlSection" id="tfa_182"><div class="htmlContent" id="tfa_182-HTML"><div style="font-size:150%;"><span><b>Earn Your Degree Online - </b></span><b>
+  <span style="color:#B32317"><i>Flexible, Affordable, Respected</i></span></b></div></div></div></div>
+<fieldset id="tfa_1" class="section inline">
+<legend id="tfa_1-L"><b>Contact Information</b></legend>
+<div class="oneField field-container-D    " id="tfa_2-D">
+<label id="tfa_2-L" class="label preField reqMark" for="tfa_2">First Name</label><br><div class="inputWrapper"><input aria-required="true" type="text" id="tfa_2" name="tfa_2" value="" title="First Name" class="calc-FirstName required"></div>
+</div>
+<div class="oneField field-container-D    " id="tfa_3-D">
+<label id="tfa_3-L" class="label preField reqMark" for="tfa_3">Last Name</label><br><div class="inputWrapper"><input aria-required="true" type="text" id="tfa_3" name="tfa_3" value="" title="Last Name" class="calc-LastName required"></div>
+</div>
+<div class="oneField field-container-D    " id="tfa_5-D">
+<label id="tfa_5-L" class="label preField reqMark" for="tfa_5">Email</label><br><div class="inputWrapper"><input aria-required="true" type="text" id="tfa_5" name="tfa_5" value="" title="Email" class="validate-email calc-Email required"></div>
+</div>
+<div class="oneField field-container-D    " id="tfa_7-D">
+<label id="tfa_7-L" class="label preField reqMark" for="tfa_7">U.S. Citizenship Status</label><br><div class="inputWrapper"><select aria-required="true" id="tfa_7" name="tfa_7" title="U.S. Citizenship Status" class="calc-Citizen required"><option value="">Please select...</option>
+<option value="tfa_8" id="tfa_8" data-conditionals="#tfa_11,#tfa_13,#tfa_6" class="calcval-1">I am a U.S. citizen or national</option>
+<option value="tfa_9" id="tfa_9" data-conditionals="#tfa_11,#tfa_13,#tfa_6" class="calcval-2">I have a Green Card</option>
+<option value="tfa_10" id="tfa_10" class="calcval-3">I am an international student</option></select></div>
+</div>
+<div class="oneField field-container-D    " id="tfa_6-D">
+<label id="tfa_6-L" class="label preField reqMark" for="tfa_6">Mobile Phone</label><br><div class="inputWrapper"><input aria-required="true" type="text" id="tfa_6" name="tfa_6" value="" autoformat="###-###-####" data-condition="`#tfa_8` OR `#tfa_9`" title="Mobile Phone" class="calc-Phone required"></div>
+</div>
+<div class="oneField field-container-D    " id="tfa_11-D">
+<label id="tfa_11-L" class="label preField reqMark" for="tfa_11">State/Territory</label><br><div class="inputWrapper"><select aria-required="true" id="tfa_11" name="tfa_11" data-condition="`#tfa_8` OR `#tfa_9`" title="State/Territory" class="calc-State required"><option value="">Please select...</option>
+<option value="tfa_14" id="tfa_14" class="calcval-1">AL - Alabama</option>
+<option value="tfa_15" id="tfa_15" class="calcval-1">AK - Alaska</option>
+<option value="tfa_16" id="tfa_16" class="calcval-1">AS - American Samoa</option>
+<option value="tfa_17" id="tfa_17" class="calcval-1">AZ - Arizona</option>
+<option value="tfa_18" id="tfa_18" class="calcval-1">AR - Arkansas</option>
+<option value="tfa_19" id="tfa_19" class="calcval-1">AA - Armed Forces Americas</option>
+<option value="tfa_20" id="tfa_20" class="calcval-1">AE - Armed Forces Europe/Africa/Middle East</option>
+<option value="tfa_21" id="tfa_21" class="calcval-1">AP - Armed Forces Pacific</option>
+<option value="tfa_22" id="tfa_22" class="calcval-1">CA - California</option>
+<option value="tfa_23" id="tfa_23" class="calcval-1">CO - Colorado</option>
+<option value="tfa_24" id="tfa_24" class="calcval-1">CT - Connecticut</option>
+<option value="tfa_25" id="tfa_25" class="calcval-1">DE - Delaware</option>
+<option value="tfa_26" id="tfa_26" class="calcval-1">DC - District of Columbia</option>
+<option value="tfa_27" id="tfa_27" class="calcval-1">FL - Florida</option>
+<option value="tfa_28" id="tfa_28" class="calcval-1">GA - Georgia</option>
+<option value="tfa_29" id="tfa_29" class="calcval-1">GU - Guam</option>
+<option value="tfa_30" id="tfa_30" class="calcval-1">HI - Hawaii</option>
+<option value="tfa_31" id="tfa_31" class="calcval-1">ID - Idaho</option>
+<option value="tfa_32" id="tfa_32" class="calcval-1">IL - Illinois</option>
+<option value="tfa_33" id="tfa_33" class="calcval-1">IN - Indiana</option>
+<option value="tfa_34" id="tfa_34" class="calcval-1">IA - Iowa</option>
+<option value="tfa_35" id="tfa_35" class="calcval-1">KS - Kansas</option>
+<option value="tfa_36" id="tfa_36" class="calcval-1">KY - Kentucky</option>
+<option value="tfa_37" id="tfa_37" class="calcval-1">LA - Louisiana</option>
+<option value="tfa_38" id="tfa_38" class="calcval-1">ME - Maine</option>
+<option value="tfa_39" id="tfa_39" class="calcval-1">MD - Maryland</option>
+<option value="tfa_40" id="tfa_40" class="calcval-1">MA - Massachusetts</option>
+<option value="tfa_41" id="tfa_41" class="calcval-1">MI - Michigan</option>
+<option value="tfa_42" id="tfa_42" class="calcval-1">MN - Minnesota</option>
+<option value="tfa_43" id="tfa_43" class="calcval-1">MS - Mississippi</option>
+<option value="tfa_44" id="tfa_44" class="calcval-1">MO - Missouri</option>
+<option value="tfa_45" id="tfa_45" class="calcval-1">MT - Montana</option>
+<option value="tfa_46" id="tfa_46" class="calcval-1">NE - Nebraska</option>
+<option value="tfa_47" id="tfa_47" class="calcval-1">NV - Nevada</option>
+<option value="tfa_48" id="tfa_48" class="calcval-1">NH - New Hampshire</option>
+<option value="tfa_49" id="tfa_49" class="calcval-1">NJ - New Jersey</option>
+<option value="tfa_50" id="tfa_50" class="calcval-1">NM - New Mexico</option>
+<option value="tfa_51" id="tfa_51" class="calcval-1">NY - New York</option>
+<option value="tfa_52" id="tfa_52" class="calcval-1">NC - North Carolina</option>
+<option value="tfa_53" id="tfa_53" class="calcval-1">ND - North Dakota</option>
+<option value="tfa_54" id="tfa_54" class="calcval-1">MP - Northern Mariana Islands</option>
+<option value="tfa_55" id="tfa_55" class="calcval-1">OH - Ohio</option>
+<option value="tfa_56" id="tfa_56" class="calcval-1">OK - Oklahoma</option>
+<option value="tfa_57" id="tfa_57" class="calcval-1">OR - Oregon</option>
+<option value="tfa_58" id="tfa_58" class="calcval-1">PA - Pennsylvania</option>
+<option value="tfa_59" id="tfa_59" class="calcval-1">PR - Puerto Rico</option>
+<option value="tfa_60" id="tfa_60" class="calcval-1">RI - Rhode Island</option>
+<option value="tfa_61" id="tfa_61" class="calcval-1">SC - South Carolina</option>
+<option value="tfa_62" id="tfa_62" class="calcval-1">SD - South Dakota</option>
+<option value="tfa_63" id="tfa_63" class="calcval-1">TN - Tennessee</option>
+<option value="tfa_64" id="tfa_64" class="calcval-1">TX - Texas</option>
+<option value="tfa_65" id="tfa_65" class="calcval-1">VI - U.S. Virgin Islands</option>
+<option value="tfa_66" id="tfa_66" class="calcval-1">UT - Utah</option>
+<option value="tfa_67" id="tfa_67" class="calcval-1">VT - Vermont</option>
+<option value="tfa_68" id="tfa_68" class="calcval-1">VA - Virginia</option>
+<option value="tfa_69" id="tfa_69" class="calcval-1">WA - Washington</option>
+<option value="tfa_70" id="tfa_70" class="calcval-1">WV - West Virginia</option>
+<option value="tfa_71" id="tfa_71" class="calcval-1">WI - Wisconsin</option>
+<option value="tfa_72" id="tfa_72" class="calcval-1">WY - Wyoming</option></select></div>
+</div>
+<div class="oneField field-container-D    " id="tfa_13-D">
+<label id="tfa_13-L" class="label preField reqMark" for="tfa_13">ZIP Code</label><br><div class="inputWrapper"><input aria-required="true" type="text" id="tfa_13" name="tfa_13" value="" autoformat="#####" data-condition="`#tfa_8` OR `#tfa_9`" title="ZIP Code" class="calc-ZIP required"></div>
+</div>
+</fieldset>
+<div class="htmlSection" id="tfa_183"><div class="htmlContent" id="tfa_183-HTML"></div></div>
+<fieldset id="tfa_75" class="section inline">
+<legend id="tfa_75-L"><b>Program Information</b></legend>
+<div class="oneField field-container-D    " id="tfa_158-D">
+<label id="tfa_158-L" class="label preField reqMark" for="tfa_158">Potential Start Year</label><br><div class="inputWrapper"><select aria-required="true" id="tfa_158" name="tfa_158" title="Potential Start Year" class="calc-Year required"><option value="">Please select...</option>
+<option value="tfa_159" id="tfa_159" class="calcval-1">2025</option>
+<option value="tfa_160" id="tfa_160" class="calcval-1">2026</option>
+<option value="tfa_161" id="tfa_161" class="calcval-1">2027</option>
+<option value="tfa_162" id="tfa_162" class="calcval-1">2028</option></select></div>
+</div>
+<div class="oneField field-container-D    " id="tfa_163-D">
+<label id="tfa_163-L" class="label preField reqMark" for="tfa_163">Potential Start Term</label><br><div class="inputWrapper"><select aria-required="true" id="tfa_163" name="tfa_163" title="Potential Start Term" class="calc-Term required"><option value="">Please select...</option>
+<option value="tfa_164" id="tfa_164" class="calcval-1">Spring 1 (January)</option>
+<option value="tfa_165" id="tfa_165" class="calcval-1">Spring 2 (March)</option>
+<option value="tfa_166" id="tfa_166" class="calcval-1">Summer 1 (May)</option>
+<option value="tfa_167" id="tfa_167" class="calcval-1">Summer 2 (July)</option>
+<option value="tfa_168" id="tfa_168" class="calcval-1">Fall 1 (August)</option>
+<option value="tfa_169" id="tfa_169" class="calcval-1">Fall 2 (October)</option></select></div>
+</div>
+<div class="oneField field-container-D    " id="tfa_76-D">
+<label id="tfa_76-L" class="label preField reqMark" for="tfa_76">Level of Study</label><br><div class="inputWrapper"><select aria-required="true" id="tfa_76" name="tfa_76" title="Level of Study" class="calc-Level required"><option value="">Please select...</option>
+<option value="tfa_77" id="tfa_77" data-conditionals="#tfa_80" class="calcval-1">Bachelors Degree or Teacher Certification</option>
+<option value="tfa_78" id="tfa_78" data-conditionals="#tfa_112" class="calcval-1">Masters Degree or Graduate Certificate</option>
+<option value="tfa_79" id="tfa_79" data-conditionals="#tfa_154" class="calcval-1">Doctoral Degree</option></select></div>
+</div>
+<div class="oneField field-container-D    " id="tfa_80-D">
+<label id="tfa_80-L" class="label preField reqMark" for="tfa_80">Undergraduate Program of Interest</label><br><div class="inputWrapper"><select aria-required="true" id="tfa_80" name="tfa_80" data-condition="`#tfa_77`" title="Undergraduate Program of Interest" class="calc-UNDG required"><option value="">Please select...</option>
+<option value="tfa_81" id="tfa_81" class="calcval-1">Accounting</option>
+<option value="tfa_82" id="tfa_82" class="calcval-1">Addiction Counseling</option>
+<option value="tfa_83" id="tfa_83" class="calcval-1">Business Administration</option>
+<option value="tfa_84" id="tfa_84" class="calcval-1">Business Economics</option>
+<option value="tfa_85" id="tfa_85" class="calcval-1">Communication</option>
+<option value="tfa_86" id="tfa_86" class="calcval-1">Computer Science Technology</option>
+<option value="tfa_87" id="tfa_87" class="calcval-1">Curriculum and Instruction - Elementary</option>
+<option value="tfa_88" id="tfa_88" class="calcval-1">Curriculum and Instruction - Secondary</option>
+<option value="tfa_89" id="tfa_89" class="calcval-1">Elementary Education</option>
+<option value="tfa_90" id="tfa_90" class="calcval-1">English</option>
+<option value="tfa_91" id="tfa_91" class="calcval-1">Finance</option>
+<option value="tfa_92" id="tfa_92" class="calcval-1">Health Care Management - Clinical</option>
+<option value="tfa_93" id="tfa_93" class="calcval-1">Health Care Management - Non-Clinical</option>
+<option value="tfa_94" id="tfa_94" class="calcval-1">History</option>
+<option value="tfa_95" id="tfa_95" class="calcval-1">Human and Social Services</option>
+<option value="tfa_96" id="tfa_96" class="calcval-1">Human Resources</option>
+<option value="tfa_97" id="tfa_97" class="calcval-1">Leadership and Management</option>
+<option value="tfa_98" id="tfa_98" class="calcval-1">Management of Information Systems</option>
+<option value="tfa_99" id="tfa_99" class="calcval-1">Mathematics</option>
+<option value="tfa_100" id="tfa_100" data-conditionals="#tfa_155" class="calcval-1">Nursing</option>
+<option value="tfa_101" id="tfa_101" class="calcval-1">Nursing - Prelicensure</option>
+<option value="tfa_102" id="tfa_102" class="calcval-1">Psychology</option>
+<option value="tfa_104" id="tfa_104" class="calcval-1">Secondary Education - English</option>
+<option value="tfa_105" id="tfa_105" class="calcval-1">Secondary Education - History</option>
+<option value="tfa_106" id="tfa_106" class="calcval-1">Secondary Education - Mathematics</option>
+<option value="tfa_107" id="tfa_107" class="calcval-1">Secondary Education - Music Choral</option>
+<option value="tfa_108" id="tfa_108" class="calcval-1">Secondary Education - Music Instrumental</option>
+<option value="tfa_109" id="tfa_109" class="calcval-1">Teacher Certification</option>
+<option value="tfa_110" id="tfa_110" class="calcval-1">Undeclared</option>
+<option value="tfa_111" id="tfa_111" class="calcval-1">Non-Degree Seeking</option></select></div>
+</div>
+<div class="oneField field-container-D    " id="tfa_155-D">
+<label id="tfa_155-L" class="label preField " for="tfa_155">Will you be in a Nursing concurrent enrollment program (CEP)?&nbsp; If unsure, leave blank.</label><br><div class="inputWrapper"><select id="tfa_155" name="tfa_155" data-condition="`#tfa_100`" title="Will you be in a Nursing concurrent enrollment program (CEP)?  If unsure, leave blank." class=""><option value="">Please select...</option>
+<option value="tfa_156" id="tfa_156" class="">CEP</option>
+<option value="tfa_157" id="tfa_157" class="">Midpoint</option>
+<option value="tfa_170" id="tfa_170" class="">No / Unsure</option></select></div>
+</div>
+<div class="oneField field-container-D    " id="tfa_112-D">
+<label id="tfa_112-L" class="label preField reqMark" for="tfa_112">Graduate Program of Interest</label><br><div class="inputWrapper"><select aria-required="true" id="tfa_112" name="tfa_112" data-condition="`#tfa_78`" title="Graduate Program of Interest" class="calc-GRAD required"><option value="">Please select...</option>
+<option value="tfa_113" id="tfa_113" class="calcval-1">Education Specialist in School Psychology</option>
+<option value="tfa_114" id="tfa_114" class="calcval-1">Executive MBA - Business Data Analytics</option>
+<option value="tfa_115" id="tfa_115" class="calcval-1">Executive MBA - Health Care</option>
+<option value="tfa_116" id="tfa_116" class="calcval-1">Executive MBA - IT</option>
+<option value="tfa_117" id="tfa_117" class="calcval-1">Executive MBA - Operational Effectiveness</option>
+<option value="tfa_118" id="tfa_118" class="calcval-1">Graduate Certificate - Addiction Counseling</option>
+<option value="tfa_119" id="tfa_119" class="calcval-1">Graduate Certificate - Behavioral Health Counseling</option>
+<option value="tfa_120" id="tfa_120" class="calcval-1">Graduate Certificate - Christian/Spiritual Counseling</option>
+<option value="tfa_121" id="tfa_121" class="calcval-1">Graduate Certificate - Computer Science</option>
+<option value="tfa_122" id="tfa_122" class="calcval-1">Graduate Certificate - Expressive Arts Therapy</option>
+<option value="tfa_123" id="tfa_123" class="calcval-1">Graduate Certificate - Gerocounseling</option>
+<option value="tfa_124" id="tfa_124" class="calcval-1">Graduate Certificate - Health Care Management</option>
+<option value="tfa_125" id="tfa_125" class="calcval-1">Graduate Certificate - Treatment of Trauma, Abuse, and Deprivation</option>
+<option value="tfa_126" id="tfa_126" class="calcval-1">Master of Accountancy</option>
+<option value="tfa_127" id="tfa_127" class="calcval-1">MA in Counseling</option>
+<option value="tfa_128" id="tfa_128" class="calcval-1">MA in Education - Curriculum and Instruction</option>
+<option value="tfa_130" id="tfa_130" class="calcval-1">MA in Education - Elementary Education</option>
+<option value="tfa_131" id="tfa_131" class="calcval-1">MA in Education - Elementary Education Unified</option>
+<option value="tfa_132" id="tfa_132" class="calcval-1">MA in Education - School Counseling</option>
+<option value="tfa_133" id="tfa_133" class="calcval-1">MA in Education - Secondary Education</option>
+<option value="tfa_134" id="tfa_134" class="calcval-1">MA in Human Resources</option>
+<option value="tfa_135" id="tfa_135" class="calcval-1">MA in Leadership</option>
+<option value="tfa_136" id="tfa_136" class="calcval-1">MA in Leadership - Population Health/Management</option>
+<option value="tfa_137" id="tfa_137" class="calcval-1">MA in Leadership - School Business Operations</option>
+<option value="tfa_138" id="tfa_138" class="calcval-1">MA in Leadership - Strategic Innovation</option>
+<option value="tfa_139" id="tfa_139" class="calcval-1">MBA - Accounting</option>
+<option value="tfa_140" id="tfa_140" class="calcval-1">MBA - Business Data Analytics</option>
+<option value="tfa_141" id="tfa_141" class="calcval-1">MBA - Computer Science</option>
+<option value="tfa_142" id="tfa_142" class="calcval-1">MBA - Finance</option>
+<option value="tfa_143" id="tfa_143" class="calcval-1">MBA - Human Resources</option>
+<option value="tfa_144" id="tfa_144" class="calcval-1">MBA - Leadership Development</option>
+<option value="tfa_145" id="tfa_145" class="calcval-1">MBA - Population Health/Health Care</option>
+<option value="tfa_146" id="tfa_146" class="calcval-1">MBA - School Business Operations</option>
+<option value="tfa_147" id="tfa_147" class="calcval-1">MBA - Strategic Innovation</option>
+<option value="tfa_148" id="tfa_148" class="calcval-1">MS in Addiction Counseling</option>
+<option value="tfa_149" id="tfa_149" class="calcval-1">MS in Computer Science - AI and Machine Learning</option>
+<option value="tfa_150" id="tfa_150" class="calcval-1">MS in Computer Science - Cybersecurity</option>
+<option value="tfa_151" id="tfa_151" class="calcval-1">MS in Nursing</option>
+<option value="tfa_152" id="tfa_152" class="calcval-1">MS in Physician Assistant Studies</option>
+<option value="tfa_153" id="tfa_153" class="calcval-1">Non-Degree Seeking</option></select></div>
+</div>
+<div class="oneField field-container-D    " id="tfa_154-D">
+<label id="tfa_154-L" class="label preField reqMark" for="tfa_154">Doctoral Program of Interest</label><br><div class="inputWrapper"><input aria-required="true" type="text" id="tfa_154" name="tfa_154" value="Doctor of Business Administration" default="Doctor of Business Administration" readonly data-wforms-nooverwrite="disabled" data-condition="`#tfa_79`" title="Doctoral Program of Interest" class="calc-DOC required"></div>
+</div>
+</fieldset>
+<fieldset id="tfa_73" class="section inline wf-acl-hidden">
+<legend id="tfa_73-L">Processing Information</legend>
+<div class="oneField field-container-D    " id="tfa_74-D">
+<label id="tfa_74-L" class="label preField " for="tfa_74">Selected Campus</label><br><div class="inputWrapper"><input type="text" id="tfa_74" name="tfa_74" value="OU Online" default="OU Online" title="Selected Campus" class=""></div>
+</div>
+<div class="oneField field-container-D    " id="tfa_172-D">
+<label id="tfa_172-L" class="label preField " for="tfa_172">Source</label><br><div class="inputWrapper"><input type="text" id="tfa_172" name="tfa_172" value="Paid Search" default="Paid Search" title="Source" class=""></div>
+</div>
+<div class="oneField field-container-D    " id="tfa_173-D">
+<label id="tfa_173-L" class="label preField " for="tfa_173">Source Detail</label><br><div class="inputWrapper"><input type="text" id="tfa_173" name="tfa_173" value="PPC" default="PPC" title="Source Detail" class=""></div>
+</div>
+<div class="oneField field-container-D    " id="tfa_174-D">
+<label id="tfa_174-L" class="label preField " for="tfa_174">Source Name</label><br><div class="inputWrapper"><input type="text" id="tfa_174" name="tfa_174" value="Walz Tetrick" default="Walz Tetrick" title="Source Name" class=""></div>
+</div>
+<div class="oneField field-container-D    " id="tfa_179-D">
+<label id="tfa_179-L" class="label preField " for="tfa_179">Source URL or Other</label><br><div class="inputWrapper"><input type="text" id="tfa_179" name="tfa_179" value="" title="Source URL or Other" class=""></div>
+</div>
+<div class="oneField field-container-D    " id="tfa_176-D">
+<label id="tfa_176-L" class="label preField " for="tfa_176">Required Fields Complete</label><br><div class="inputWrapper"><input type="text" id="tfa_176" name="tfa_176" value="" readonly data-conditionals="#submit_button,#tfa_177" title="Required Fields Complete" class="formula=if(Citizen&lt;3&amp;&amp;(FirstName==0||LastName==0||Email==0||Citizen==0||Phone==0||State==0||ZIP==0||Year==0||Term==0||Level==0||(UNDG==0&amp;&amp;GRAD==0&amp;&amp;DOC==0))){0}else{if(Citizen==3&amp;&amp;(FirstName==0||LastName==0||Email==0||Year==0||Term==0||Level==0||(UNDG==0&amp;&amp;GRAD==0&amp;&amp;DOC==0))){0}else{1}}; readonly"></div>
+</div>
+</fieldset>
+<div class="htmlSection" id="tfa_185"><div class="htmlContent" id="tfa_185-HTML"><p>For more information, please visit <a target="_blank" href="https://www.ottawa.edu">www.ottawa.edu</a>.</p></div></div>
+<div class="htmlSection" id="tfa_184"><div class="htmlContent" id="tfa_184-HTML"><img src="https://ottawauniversity.tfaforms.net/forms/get_image/1/DqggLa46MeI8aCFylmVviFFe6xJMdqiBGQDddariklWf31dP7FuEG5tmM19HirT4-FooterWTA.png" alt="Ottawa University Footer Image" style="max-width: 100%;"></div></div>
+<div id="tfa_177" class="section group" data-condition="`#tfa_176,equals,0`"><div class="htmlSection" id="tfa_178"><div class="htmlContent" id="tfa_178-HTML"><p style="color:#B32317">You are missing required fields. Complete all required fields to submit.</p></div></div></div>
+<div class="htmlSection" id="tfa_171"><div class="htmlContent" id="tfa_171-HTML">By submitting my information, I consent to Ottawa University contacting me about educational services using automated calls, prerecorded voice messages, SMS/text messages or email at the information provided above. Message and data rates may apply. Reply STOP to opt out of further SMS messaging. Consent is not required to receive services, and I may opt out of any services at any given time. I consent to the University’s mobile terms and conditions, and Privacy Statements, including the European Supplement.</div></div>
+<div class="actions" id="338-A" data-contentid="submit_button">
+<div id="google-captcha" style="display: none">
+<br><div class="captcha">
+<div class="oneField">
+<div class="g-recaptcha" id="g-recaptcha-render-div"></div>
+<div class="g-captcha-error"></div>
+<br>
+</div>
+<div class="captchaHelp">reCAPTCHA helps prevent automated form spam.<br>
+</div>
+<div id="disabled-explanation" class="captchaHelp" style="display: none">The submit button will be disabled until you complete the CAPTCHA.</div>
+</div>
+</div>
+<input type="submit" data-label="Submit" class="primaryAction" id="submit_button" value="Submit" data-condition="`#tfa_176,equals,1`" data-conditional-mode="hidden">
+</div>
+<div style="clear:both"></div>
+<input type="hidden" value="276-7d918bb60d034f609e259f8a95c96bdc" name="tfa_dbCounters" id="tfa_dbCounters" autocomplete="off"><input type="hidden" value="338" name="tfa_dbFormId" id="tfa_dbFormId"><input type="hidden" value="" name="tfa_dbResponseId" id="tfa_dbResponseId"><input type="hidden" value="3e0c0db301282a379df868a06f4b03ea" name="tfa_dbControl" id="tfa_dbControl"><input type="hidden" value="" name="tfa_dbWorkflowSessionUuid" id="tfa_dbWorkflowSessionUuid"><input type="hidden" value="1771418944" name="tfa_dbTimeStarted" id="tfa_dbTimeStarted" autocomplete="off"><input type="hidden" value="48" name="tfa_dbVersionId" id="tfa_dbVersionId"><input type="hidden" value="" name="tfa_switchedoff" id="tfa_switchedoff">
+</form>
+</div></div><div class="wFormFooter"><p class="supportInfo"><br></p></div>
+  <p class="supportInfo" >
+      </p>
+ </div>
+
+<script
+    id="analytics-collector-script"
+    type="text/javascript"
+    src="https://ottawauniversity.tfaforms.net/dist/analytics/data-collector.ea0143fb98dd18ec8dc0.js"
+    data-customer-id="1205"
+    data-endpoint="https://analytics.formassembly.com/v1/traces"
+></script>
+
+    </div>
+
+        <script src='https://ottawauniversity.tfaforms.net/js/iframe_message_helper_internal.js?v=2'></script>
+
+</body>
+</html>

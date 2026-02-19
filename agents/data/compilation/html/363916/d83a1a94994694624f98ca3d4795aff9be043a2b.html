@@ -1,0 +1,1686 @@
+
+<!DOCTYPE html>
+<html lang="en" data-ng-app="qlApp">
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description"
+	content="QuickLaunch SSO is an enterprise-class single sign-on (SSO) solution that offers one-click secure access to all of enterprise applications with single password.">
+<meta name="keywords"
+	content="QuickLaunch SSO, QuickLaunch Single Sign On, cost effective single sign on, Identity Management System SSO, ERP / Student Information System SSO, Learning Management System SSO, Library Management System SSO, Email and Calendaring SSO">
+<title>QuickLaunch</title>
+<link rel="shortcut icon"
+	href="/admin/resources/images/shot-icon.ico"
+	type="image/x-icon" />
+	
+
+
+
+<meta http-equiv="X-UA-Compatible" content="IE=Edge, chrome=1" />
+
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate"/>
+<meta http-equiv="Pragma" content="no-cache"/>
+<meta http-equiv="Expires" content="0"/>
+
+
+
+
+
+
+
+<script src="/admin/resources/js/jquery.js?v=v8.51.5_06February2026"></script>
+
+<script src="/admin/resources/js/lib/popper.min.js?v=v8.51.5_06February2026"></script>
+<script src="/admin/resources/js/jquery-ui-1.10.3.min.js?v=v8.51.5_06February2026"></script>
+<script src="/admin/resources/js/jquery-radial-progress-bar/radial-progress-bar.js?v=v8.51.5_06February2026"></script>
+
+
+<script src="/admin/resources/js/crypto-js.min.js?v=v8.51.5_06February2026" type="text/javascript"></script>
+<script src="/admin/resources/rest/idp/lib/a_0_x_12_7817.js?v=v8.51.5_06February2026" type="text/javascript"></script>
+<script src="/admin/resources/rest/idp/lib/a_0_x_12_7897.js?v=v8.51.5_06February2026" type="text/javascript"></script>
+
+
+<!-- Bootstrap -->
+
+<script src="/admin/resources/js/bootstrap.min.js?v=v8.51.5_06February2026"></script>
+<script src="/admin/resources/js/leftPanel.js?v=v8.51.5_06February2026"></script>
+<!-- Angular JS -->
+
+
+<script src="/admin/resources/js/global.functions.js?v=v8.51.5_06February2026"></script>
+ 
+
+<script src="/admin/resources/js/angular/angular-min.js?v=v8.51.5_06February2026"></script>
+<script src="/admin/resources/js/angular/angular-route.js?v=v8.51.5_06February2026"></script>
+<script src="/admin/resources/js/angular/angular-animate.min.js?v=v8.51.5_06February2026"></script>
+<script src="/admin/resources/js/angular/angular-drag-and-drop-lists.min.js?v=v8.51.5_06February2026"></script>
+<script src="/admin/resources/js/angular/angular-bootstrap-toggle.min.js?v=v8.51.5_06February2026"></script>
+
+
+<script src="/admin/resources/js/angular/angularjs-dropdown-multiselect.min.js?v=v8.51.5_06February2026" type="text/javascript"></script>
+
+<script src="/admin/resources/js/bootstrap-multiselect.js?v=v8.51.5_06February2026" type="text/javascript"></script>
+
+<!-- SessionInactivity Imports  -->
+<script src="/admin/resources/js/angular/angular-idle.js?v=v8.51.5_06February2026"></script>
+<!--  -->
+<script src="/admin/resources/js/angular/ngDraggable.js?v=v8.51.5_06February2026"></script>
+<script src="/admin/resources/js/d3.min.js?v=v8.51.5_06February2026"></script>
+<script src="/admin/resources/js/angular/angular-charts.min.js?v=v8.51.5_06February2026"></script>
+<!-- Google Charts -->
+<script src="https://www.gstatic.com/charts/loader.js?v=v8.51.5_06February2026"></script>
+
+<script src="/admin/resources/js/angular/angular-sanitize.min.js?v=v8.51.5_06February2026"></script>
+
+<script src="/admin/resources/js/angular/select.min.js?v=v8.51.5_06February2026" type="text/javascript"></script>
+<script src="/admin/resources/js/angular/ui-bootstrap-tpls-0.11.0.js?v=v8.51.5_06February2026"></script>
+<script src="/admin/resources/js/jquery.blockUI.js?v=v8.51.5_06February2026"></script>
+<script src="/admin/resources/js/textAngular.min.js?v=v8.51.5_06February2026"></script>
+<script src="/admin/resources/js/angular/ng-img-crop.js?v=v8.51.5_06February2026"></script>
+<script src="/admin/resources/js/angular/lodash.min.js?v=v8.51.5_06February2026"></script>
+<script src="/admin/resources/js/angular/restangular.min.js?v=v8.51.5_06February2026"></script>
+
+<!-- Json Export -->
+<script src="/admin/resources/js/json-export-excel.min.js?v=v8.51.5_06February2026"></script>
+<script src="/admin/resources/js/FileSaver.min.js?v=v8.51.5_06February2026"></script>
+
+<script src="/admin/resources/js/xlsx.full.min.js?v=v8.51.5_06February2026" type="text/javascript"></script>
+
+
+
+
+
+<script src="/admin/resources/js/angular/bootstrap-colorpicker-module.min.js?v=v8.51.5_06February2026"></script>
+
+
+<script src="/admin/resources/js/pageguide.min.js?v=v8.51.5_06February2026"></script>
+<script src="/admin/resources/js/jquery-watch.min.js?v=v8.51.5_06February2026"></script>
+<script src="/admin/resources/js/ql/dynamichelp.js?v=v8.51.5_06February2026"></script>
+<script src="/admin/resources/js/jquery.lineProgressbar.min.js?v=v8.51.5_06February2026"></script>
+
+<script src="/admin/resources/js/jQuery.inputSliderRange.min.js?v=v8.51.5_06February2026"></script>
+
+<script src="/admin/resources/js/angular-jsoneditor.js?v=v8.51.5_06February2026"></script>
+
+
+<!-- <script src="https://www.google.com/recaptcha/api.js?onload=vcRecaptchaApiLoaded&render=explicit" async defer></script> -->
+<script src="/admin/resources/js/angular-recaptcha.min.js?v=v8.51.5_06February2026"></script>
+
+<!-- Password Manager Files Start (Since it child module to ql it should come before ql)-->
+
+  <script src="/admin/resources/js/ql/passwordManager/pwmsAppWithoutLogin.js?v=v8.51.5_06February2026"></script>
+
+
+<script src="/admin/resources/js/ql/passwordManager/services/pwms.core.service.js?v=v8.51.5_06February2026"></script>
+<script src="/admin/resources/js/ql/passwordManager/services/pwms.directory.service.js?v=v8.51.5_06February2026"></script>
+<script src="/admin/resources/js/ql/passwordManager/services/pwms.first.time.user.service.js?v=v8.51.5_06February2026"></script>
+<script src="/admin/resources/js/ql/passwordManager/controllers/pwms.directory.controller.js?v=v8.51.5_06February2026"></script>
+<script src="/admin/resources/js/ql/passwordManager/controllers/pwms.password.verification.controller.js?v=v8.51.5_06February2026"></script>
+<script src="/admin/resources/js/ql/passwordManager/controllers/pwms.password.customization.controller.js?v=v8.51.5_06February2026"></script>
+<script src="/admin/resources/js/ql/passwordManager/controllers/pwms.password.UserNotification.controller.js?v=v8.51.5_06February2026"></script>
+<script src="/admin/resources/js/ql/passwordManager/controllers/pwms.emailconfig.controller.js?v=v8.51.5_06February2026"></script>
+<script src="/admin/resources/js/ql/passwordManager/controllers/pwms.reports.controller.js?v=v8.51.5_06February2026"></script>
+<script src="/admin/resources/js/ql/passwordManager/controllers/pwms.delete.bulk.userdetails.controller.js?v=v8.51.5_06February2026"></script>
+<script src="/admin/resources/js/ql/passwordManager/services/pwms.delete.bulk.userdetails.service.js?v=v8.51.5_06February2026"></script>
+<script src="/admin/resources/js/ql/passwordManager/controllers/pwms.domain.mapping.controller.js?v=v8.51.5_06February2026"></script>
+<script src="/admin/resources/js/ql/passwordManager/controllers/pwms.reports.lockedusers.controller.js?v=v8.51.5_06February2026"></script>
+<script src="/admin/resources/js/ql/passwordManager/controllers/pwms.reports.disabledusers.controller.js?v=v8.51.5_06February2026"></script>
+<script src="/admin/resources/js/ql/passwordManager/controllers/pwms.report.drilldownreport.controller.js?v=v8.51.5_06February2026"></script>
+<script src="/admin/resources/js/ql/passwordManager/controllers/pwms.reports.configuredaccounts.controller.js?v=v8.51.5_06February2026"></script>
+<script src="/admin/resources/js/ql/passwordManager/controllers/pwms.firsttimeuserconfiguration.controller.js?v=v8.51.5_06February2026"></script>
+<script src="/admin/resources/js/ql/passwordManager/controllers/pwms.addOrEditFTU.controller.js?v=v8.51.5_06February2026"></script>
+<script src="/admin/resources/js/ql/passwordManager/controllers/pwms.helpdesk.controller.js?v=v8.51.5_06February2026"></script>
+<script src="/admin/resources/js/ql/passwordManager/controllers/pwms.helpdesk.insights.controller.js?v=v8.51.5_06February2026"></script>
+<script src="/admin/resources/js/ql/passwordManager/controllers/pwms.helpdesk.insights.hrmodule.controller.js?v=v8.51.5_06February2026"></script>
+<script src="/admin/resources/js/ql/passwordManager/controllers/pwms.helpdeskConfigurationController.js?v=v8.51.5_06February2026"></script>
+<script src="/admin/resources/js/ql/passwordManager/controllers/pwms.clear.userdetails.controller.js?v=v8.51.5_06February2026"></script>
+<script src="/admin/resources/js/ql/passwordManager/controllers/pwms.clear.all.userdetails.controller.js?v=v8.51.5_06February2026"></script>
+<script src="/admin/resources/js/ql/passwordManager/controllers/pwms.clear.single.userdetails.controller.js?v=v8.51.5_06February2026"></script>
+<!--<script src="/admin/resources/js/ql/passwordManager/controllers/pwms.delete.bulk.userdetails.controller.js?v=v8.51.5_06February2026"></script>-->
+<script src="/admin/resources/js/notify.min.js"></script>
+<script src="/admin/resources/js/ql/passwordManager/controllers/pwms.AttributeRetrievalConfiguration.Controller.js?v=v8.51.5_06February2026"></script>
+<script src="/admin/resources/js/ql/passwordManager/controllers/pwms.addOrEditAttributeRetrieval.controller.js?v=v8.51.5_06February2026"></script>
+<script src="/admin/resources/js/ql/passwordManager/controllers/pwms.helpdesk.reporting.controller.js?v=v8.51.5_06February2026"></script>
+<!-- Password Manager Files End -->
+
+<!-- Insights File Starts -->
+<script src="/admin/resources/js/ql/insights/insightsApp.js?v=v8.51.5_06February2026"></script>
+<script src="/admin/resources/js/ql/insights/controllers/insights.smsreporting.superadmin.controller.js?v=v8.51.5_06February2026"></script>
+<script src="/admin/resources/js/ql/insights/controllers/insights.smsreporting.tenant.controller.js?v=v8.51.5_06February2026"></script>
+<script src="/admin/resources/js/ql/insights/controllers/insights.blockedUserApi.controller.js?v=v8.51.5_06February2026"></script>
+<script src="/admin/resources/js/ql/insights/controllers/insights.home.controller.js?v=v8.51.5_06February2026"></script>
+<script src="/admin/resources/js/ql/insights/services/insights.core.service.js?v=v8.51.5_06February2026"></script>
+<script src="/admin/resources/js/ql/insights/controllers/insights.reports.controller.js?v=v8.51.5_06February2026"></script>
+<script src="/admin/resources/js/ql/insights/services/insights.reports.service.js?v=v8.51.5_06February2026"></script>
+<script src="/admin/resources/js/ql/insights/controllers/insights.nameduser.reports.controller.js?v=v8.51.5_06February2026"></script>
+<script src="/admin/resources/js/ql/insights/controllers/insights.activesession.reports.controller.js?v=v8.51.5_06February2026"></script>
+<script src="/admin/resources/js/ql/insights/controllers/insights.appusages.reports.controller.js?v=v8.51.5_06February2026"></script>
+<script src="/admin/resources/js/ql/insights/controllers/insights.browerusages.reports.controller.js?v=v8.51.5_06February2026"></script>
+<script src="/admin/resources/js/ql/insights/controllers/insights.activeusers.drilldown.reports.controller.js?v=v8.51.5_06February2026"></script>
+<script src="/admin/resources/js/ql/insights/controllers/pwms.insights.reports.controller.js?v=v8.51.5_06February2026"></script>
+<script src="/admin/resources/js/ql/insights/controllers/pwms.reports.drilldownreport.controller.js?v=v8.51.5_06February2026"></script>
+<script src="/admin/resources/js/ql/insights/controllers/pwms.report.drilldown.configuredaccounts.controller.js?v=v8.51.5_06February2026"></script>
+<script src="/admin/resources/js/ql/insights/controllers/insights.userlogin.drilldown.reports.controller.js?v=v8.51.5_06February2026"></script>
+<script src="/admin/resources/js/ql/insights/controllers/insights.loginfailure.drilldown.reports.controller.js?v=v8.51.5_06February2026"></script>
+<script src="/admin/resources/js/ql/insights/controllers/insights.unlockuser.drilldown.reports.controller.js?v=v8.51.5_06February2026"></script>
+<script src="/admin/resources/js/ql/insights/controllers/insights.bruteforce.unlock.reports.controller.js?v=v8.51.5_06February2026"></script>
+<script src="/admin/resources/js/ql/insights/controllers/insights.bruteforce.locked.reports.controller.js?v=v8.51.5_06February2026"></script>
+<!-- Insights files End -->
+
+<!-- Sku Manager files Start-->
+<script src="/admin/resources/js/ql/sku/skuManagerApp.js?v=v8.51.5_06February2026"></script>
+
+<script src="/admin/resources/js/ql/sku/controllers/sku.inventory.controller.js?v=v8.51.5_06February2026"></script>
+<script src="/admin/resources/js/ql/sku/controllers/sku.channel.controller.js?v=v8.51.5_06February2026"></script>
+<script src="/admin/resources/js/ql/sku/controllers/sku.channel.price.matrix.controller.js?v=v8.51.5_06February2026"></script>
+<script src="/admin/resources/js/ql/sku/controllers/sku.plan.controller.js?v=v8.51.5_06February2026"></script>
+<script src="/admin/resources/js/ql/sku/controllers/sku.contract.controller.js?v=v8.51.5_06February2026"></script>
+<script src="/admin/resources/js/ql/sku/controllers/sku.customer.controller.js?v=v8.51.5_06February2026"></script>
+<script src="/admin/resources/js/ql/sku/controllers/addClaim.controller.js?v=v8.51.5_06February2026"></script>
+<!--<script src="/admin/resources/js/ql/sku/controllers/sku.formula.controller.js?v=v8.51.5_06February2026"></script>-->
+
+<script src="/admin/resources/js/ql/sku/controllers/sku.update.inventory.controller.js?v=v8.51.5_06February2026"></script>
+<script src="/admin/resources/js/ql/sku/controllers/sku.customer.update.controller.js?v=v8.51.5_06February2026"></script>
+<script src="/admin/resources/js/ql/sku/controllers/sku.updateplan.controller.js?v=v8.51.5_06February2026"></script>
+<script src="/admin/resources/js/ql/sku/controllers/sku.update.contract.controller.js?v=v8.51.5_06February2026"></script>
+
+<script src="/admin/resources/js/ql/sku/service/sku.common.service.js?v=v8.51.5_06February2026"></script>
+<script src="/admin/resources/js/ql/sku/service/sku.inventory.service.js?v=v8.51.5_06February2026"></script>
+<script src="/admin/resources/js/ql/sku/service/sku.channel.service.js?v=v8.51.5_06February2026"></script>
+<script src="/admin/resources/js/ql/sku/service/sku.channel.price.matrix.service.js?v=v8.51.5_06February2026"></script>
+<script src="/admin/resources/js/ql/sku/service/sku.plan.service.js?v=v8.51.5_06February2026"></script>
+<script src="/admin/resources/js/ql/sku/service/sku.customer.service.js?v=v8.51.5_06February2026"></script>
+<script src="/admin/resources/js/ql/sku/service/sku.contract.service.js?v=v8.51.5_06February2026"></script>
+<script src="/admin/resources/js/ql/sku/service/sku.pdf.service.js?v=v8.51.5_06February2026"></script>
+
+
+<script src="/admin/resources/js/pdfmake.min.js?v=v8.51.5_06February2026" type="text/javascript"></script>
+
+<script src="/admin/resources/js/vfs_fonts.js?v=v8.51.5_06February2026" type="text/javascript"></script>
+
+<script src="/admin/resources/js/ngStorage.js?v=v8.51.5_06February2026" type="text/javascript"></script>
+
+
+
+<!-- Sku Manager files End -->
+
+
+<!-- QL Angular App -->
+<script src="/admin/resources/js/ql/ql.js?v=v8.51.5_06February2026"></script>
+<script src="/admin/resources/js/ql/qlcontrollers.js?v=v8.51.5_06February2026"></script>
+<script src="/admin/resources/js/ql/qlservices.js?v=v8.51.5_06February2026"></script>
+
+<script src="/admin/resources/js/ql/Registration/registrationcontroller.js?v=v8.51.5_06February2026"></script>
+<script src="/admin/resources/js/ql/Registration/registrationservice.js?v=v8.51.5_06February2026"></script>
+<script src="/admin/resources/js/ql/Registration/selectAppsController.js?v=v8.51.5_06February2026"></script>
+<script src="/admin/resources/js/ql/Registration/selectAppsService.js?v=v8.51.5_06February2026"></script>
+
+<script src="/admin/resources/js/ql/ChangePasswordForTenant/changepasswordcontroller.js?v=v8.51.5_06February2026"></script>
+
+<script src="/admin/resources/js/ql/Registration/RegistrationDirective/countryvalidationdirective.js?v=v8.51.5_06February2026"></script>
+<script src="/admin/resources/js/ql/Registration/RegistrationDirective/emailvalidationdirective.js?v=v8.51.5_06February2026"></script>
+<script src="/admin/resources/js/ql/Registration/RegistrationDirective/passwordvalidationdirective.js?v=v8.51.5_06February2026"></script>
+<script src="/admin/resources/js/ql/Registration/RegistrationDirective/phonevalidationdirective.js?v=v8.51.5_06February2026"></script>
+<script src="/admin/resources/js/ql/Registration/RegistrationDirective/loginValidationDirective.js?v=v8.51.5_06February2026"></script>
+<script src="/admin/resources/js/ql/directoryConfiguration/directoryConfigurationController.js?v=v8.51.5_06February2026"></script>
+<script src="/admin/resources/js/ql/domainListConfiguration/domainConfigurationController.js?v=v8.51.5_06February2026"></script>
+<script src="/admin/resources/js/ql/domainListConfiguration/domainConfigurationService.js?v=v8.51.5_06February2026"></script>
+<script src="/admin/resources/js/ql/directoryConfiguration/directoryConfigurationService.js?v=v8.51.5_06February2026"></script>
+<script src="/admin/resources/js/ql/branding/brandingcontroller.js?v=v8.51.5_06February2026"></script>
+<script src="/admin/resources/js/ql/branding/tenantpreferenceservice.js?v=v8.51.5_06February2026"></script>
+<script src="/admin/resources/js/ql/myApps/myAppsController.js?v=v8.51.5_06February2026"></script>
+<script src="/admin/resources/js/ql/myApps/applicationDefinitionService.js?v=v8.51.5_06February2026"></script>
+<script src="/admin/resources/js/ql/myApps/ratingService.js?v=v8.51.5_06February2026"></script>
+<script src="/admin/resources/js/ql/categoryManagement/unCategorizedAppsController.js?v=v8.51.5_06February2026"></script>
+<script src="/admin/resources/js/ql/categoryManagement/categoryEditController.js?v=v8.51.5_06February2026"></script>
+<script src="/admin/resources/js/ql/categoryManagement/categoryCreateController.js?v=v8.51.5_06February2026"></script>
+<script src="/admin/resources/js/ql/categoryManagement/categoriesConfigController.js?v=v8.51.5_06February2026"></script>
+<script src="/admin/resources/js/ql/categoryManagement/categoryListMenuController.js?v=v8.51.5_06February2026"></script>
+<script src="/admin/resources/js/ql/themeConfiguration/themeConfigurationEditContoller.js?v=v8.51.5_06February2026"></script>
+<script src="/admin/resources/js/ql/themeConfiguration/themeConfigurationController.js?v=v8.51.5_06February2026"></script>
+<script src="/admin/resources/js/ql/themeConfiguration/themeConfigurationService.js?v=v8.51.5_06February2026"></script>
+<script src="/admin/resources/js/ql/hostNameConfiguration/hostNameConfigController.js?v=v8.51.5_06February2026"></script>
+
+<script src="/admin/resources/js/jasny-bootstrap.min.js?v=v8.51.5_06February2026"></script>
+<script src="/admin/resources/js/angular/dirPagination.js?v=v8.51.5_06February2026"></script>
+<script src="/admin/resources/js/ql/textConfiguration/textconfigcontroller.js?v=v8.51.5_06February2026"></script>
+<script src="/admin/resources/js/ql/textConfiguration/carrierController.js?v=v8.51.5_06February2026"></script>
+<script src="/admin/resources/js/ql/password-policy/passwordpolicycontroller.js?v=v8.51.5_06February2026"></script>
+<script src="/admin/resources/js/ql/password-policy/password.policy.create.edit.controller.js?v=v8.51.5_06February2026"></script>
+<script src="/admin/resources/js/ql/cart/cartcontroller.js?v=v8.51.5_06February2026"></script>
+<script src="/admin/resources/js/ql/cart/cartservice.js?v=v8.51.5_06February2026"></script>
+<script src="/admin/resources/js/ql/channelPartner/channelpartner.controller.js?v=v8.51.5_06February2026"></script>
+<script src="/admin/resources/js/ql/channelPartner/channelpartner.tenant.controller.js?v=v8.51.5_06February2026"></script>
+<script src="/admin/resources/js/ql/channelPartner/channelpartner.service.js?v=v8.51.5_06February2026"></script>
+<script src="/admin/resources/js/ql/supportPlan/supportplan.controller.js?v=v8.51.5_06February2026"></script>
+<script src="/admin/resources/js/ql/supportPlan/supportplan.service.js?v=v8.51.5_06February2026"></script>
+<script src="/admin/resources/js/ql/platform/trustedDeviceController.js?v=v8.51.5_06February2026"></script>
+<script src="/admin/resources/js/ql/themeConfiguration/prelogin.theme.add.edit.controller.js?v=v8.51.5_06February2026"></script>
+<script src="/admin/resources/js/ql/applicationDocument/application.document.service.js?v=v8.51.5_06February2026"></script>
+<script src="/admin/resources/js/ql/applicationDocument/application.document.list.controller.js?v=v8.51.5_06February2026"></script>
+<script src="/admin/resources/js/ql/applicationDocument/application.document.add.edit.controller.js?v=v8.51.5_06February2026"></script>
+<script src="/admin/resources/js/ql/applicationDocument/application.document.read.controller.js?v=v8.51.5_06February2026"></script>
+<script src="/admin/resources/js/ql/onboardingLeftMenu/onboarding.left.menu.controller.js?v=v8.51.5_06February2026"></script>
+<script src="/admin/resources/js/ql/onboardingLeftMenu/add.users.controller.js?v=v8.51.5_06February2026"></script>
+<script src="/admin/resources/js/ql/onboardingLeftMenu/setupSecurity.controller.js?v=v8.51.5_06February2026"></script>
+<script src="/admin/resources/js/ql/common-service/file.upload.service.js?v=v8.51.5_06February2026"></script>
+<script src="/admin/resources/js/ql/platform/services/platform.rbac.service.js?v=v8.51.5_06February2026"></script>
+<script src="/admin/resources/js/ql/platform/rbac.permissions.chart.controller.js?v=v8.51.5_06February2026"></script>
+<script src="/admin/resources/js/ql/platform/invite-admins/invite.admin.list.controller.js?v=v8.51.5_06February2026"></script>
+<script src="/admin/resources/js/ql/platform/invite-admins/invite.admin.controller.js?v=v8.51.5_06February2026"></script>
+<script src="/admin/resources/js/ql/passwordManager/controllers/pwms.panoramaPro.helpdesk.controller.js?v=v8.51.5_06February2026"></script>
+<script src="/admin/resources/js/ql/passwordManager/controllers/pwms.panoramaPro.helpdesk.insights.controller.js?v=v8.51.5_06February2026"></script>
+<script src="/admin/resources/js/ql/passwordManager/controllers/pwms.panoramaPro.helpdeskConfigurationController.js?v=v8.51.5_06February2026"></script>
+
+
+<script src="/admin/resources/js/ql/license.users.controller.js?v=v8.51.5_06February2026"></script>
+
+<!-- AdminLTE App -->
+<script src="/admin/resources/js/AdminLTE/app.js?v=v8.51.5_06February2026"></script>
+
+<script src="/admin/resources/js/plugins/select/select.min.js?v=v8.51.5_06February2026"></script>
+
+<link href="/admin/resources/css/select/select.min.css?v=v8.51.5_06February2026" rel="stylesheet" type="text/css" />
+
+
+<!-- QLv5 New -->
+<link href="/admin/resources/css/bootstrap.min.css?v=v8.51.5_06February2026" rel="stylesheet" type="text/css" />
+<link href="/admin/resources/css/style_upgrade.css?v=v8.51.5_06February2026" rel="stylesheet" type="text/css" />
+<link href="/admin/resources/css/signin.css?v=v8.51.5_06February2026" rel="stylesheet" type="text/css" />
+<link href="/admin/resources/css/ql-admin.css?v=v8.51.5_06February2026" rel="stylesheet" type="text/css" />
+<link href="/admin/resources/css/top-menu.css?v=v8.51.5_06February2026" rel="stylesheet" type="text/css" />
+<link href="/admin/resources/css/font-awesome/css/font-awesome.min.css?v=v8.51.5_06February2026" rel="stylesheet" type="text/css" />
+<!-- Jquery Charts -->
+<link href="/admin/resources/css/jquery.lineProgressbar.min.css?v=v8.51.5_06February2026" rel="stylesheet" type="text/css" />
+<link href="/admin/resources/css/daterangepicker/daterangepicker.css?v=v8.51.5_06February2026" rel="stylesheet" type="text/css" />
+
+<link href="/admin/resources/fonts/fonts.min.css?v=v8.51.5_06February2026" rel="stylesheet">
+<link href="/admin/resources/css/bootstrap-tour.min.css?v=v8.51.5_06February2026" rel="stylesheet" type="text/css" />
+<link href="/admin/resources/css/style.css?v=v8.51.5_06February2026" rel="stylesheet" type="text/css" />
+<link href="/admin/resources/css/utility.css?v=v8.51.5_06February2026" rel="stylesheet" type="text/css" />
+
+<link href="/admin/resources/css/animate.css?v=v8.51.5_06February2026" rel="stylesheet" type="text/css" />
+<link href="/admin/resources/css/angular-bootstrap-toogle/angular-bootstrap-toggle.min.css?v=v8.51.5_06February2026" rel="stylesheet">
+
+<link href="/admin/resources/css/ngImgCropFullExtended/ng-img-crop.css?v=v8.51.5_06February2026" rel="stylesheet" type="text/css" />
+<link href="/admin/resources/css/colorpicker/colorpicker.min.css?v=v8.51.5_06February2026" rel="stylesheet" type="text/css" />
+<link href="/admin/resources/css/angular-block-ui.min.css?v=v8.51.5_06February2026" rel="stylesheet" type="text/css" />
+
+<link href="/admin/resources/css/custom-loader.css?v=v8.51.5_06February2026" rel="stylesheet" type="text/css" />
+<link href="/admin/resources/css/dashboard.css?v=v8.51.5_06February2026" rel="stylesheet" type="text/css" />
+<link href="/admin/resources/css/old-theme.css?v=v8.51.5_06February2026" rel="stylesheet" type="text/css" />
+<link href="/admin/resources/css/select.css?v=v8.51.5_06February2026" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" href="/admin/resources/css/select2.css?v=v8.51.5_06February2026"/>
+
+<link href="/admin/resources/css/selectize.default.css?v=v8.51.5_06February2026"  rel="stylesheet" type="text/css"/>
+
+<link href="/admin/resources/css/bootstrap-multiselect.css?v=v8.51.5_06February2026" rel="stylesheet" type="text/css"/>
+
+
+<!-- Insights CSS files Start -->
+<link href="/admin/resources/css/sms-reporting-super-admin.css?v=v8.51.5_06February2026" rel="stylesheet" type="text/css" />
+<!-- Insights CSS files Start -->
+
+<!-- User Management CSS files -->
+<link href="/admin/resources/css/userManagement.css?v=v8.51.5_06February2026" rel="stylesheet" type="text/css" />
+<!-- User Management CSS files -->
+
+
+
+<link href="/admin/resources/css/datatables/datatables.min.css?v=v8.51.5_06February2026"  rel="stylesheet" type="text/css">
+<!-- Multi factor authentication -->			
+<script src="/admin/resources/js/ql/multiFactorAuthentication/mfaApp.js?v=v8.51.5_06February2026"></script>			
+<script src="/admin/resources/js/ql/multiFactorAuthentication/controller/mfa.auth.methods.controller.js?v=v8.51.5_06February2026"></script>
+<script src="/admin/resources/js/ql/multiFactorAuthentication/controller/mfa.sso.policy.controller.js?v=v8.51.5_06February2026"></script>
+<script src="/admin/resources/js/ql/multiFactorAuthentication/controller/mfa.pwms.policy.controller.js?v=v8.51.5_06February2026"></script>
+<script src="/admin/resources/js/ql/multiFactorAuthentication/controller/mfa.sso.policy.add.edit.controller.js?v=v8.51.5_06February2026"></script>
+<script src="/admin/resources/js/ql/multiFactorAuthentication/controller/mfa.pwms.policy.add.edit.controller.js?v=v8.51.5_06February2026"></script>
+<script src="/admin/resources/js/ql/multiFactorAuthentication/controller/mfa.app.policy.add.edit.controller.js?v=v8.51.5_06February2026"></script>
+<script src="/admin/resources/js/ql/multiFactorAuthentication/controller/mfa.user.roles.controller.js?v=v8.51.5_06February2026"></script>
+<script src="/admin/resources/js/ql/multiFactorAuthentication/controller/mfa.whitelist.ip.controller.js?v=v8.51.5_06February2026"></script>
+<script src="/admin/resources/js/ql/multiFactorAuthentication/controller/mfa.whitelist.ip.add.edit.controller.js?v=v8.51.5_06February2026"></script>
+<script src="/admin/resources/js/ql/multiFactorAuthentication/controller/mfa.setInvalidOtpLimit.controller.js?v=v8.51.5_06February2026"></script>
+
+
+
+
+
+
+
+<!-- Local Claim  -->
+<script src="/admin/resources/js/ql/claim/localclaim.controller.js?v=v8.51.5_06February2026"></script>
+<script src="/admin/resources/js/ql/claim/localclaim.service.js?v=v8.51.5_06February2026"></script>
+<script src="/admin/resources/js/ql/claim/claimmapping.controller.js?v=v8.51.5_06February2026"></script>
+<script src="/admin/resources/js/ql/claim/claimmapping.service.js?v=v8.51.5_06February2026"></script>
+
+<script src="/admin/resources/js/ql/claim/claim.transformation.service.js?v=v8.51.5_06February2026"></script>
+<script src="/admin/resources/js/ql/claim/claim.transformation.controller.js?v=v8.51.5_06February2026"></script>
+<!-- End Local Claim -->
+
+<!-- OIDC Claim Start-->
+<script src="/admin/resources/js/ql/claim/oidc.service.js?v=v8.51.5_06February2026"></script>
+<script src="/admin/resources/js/ql/claim/oidc.scope.controller.js?v=v8.51.5_06February2026"></script>
+<script src="/admin/resources/js/ql/claim/oidc.scope.config.controller.js?v=v8.51.5_06February2026"></script>
+<script src="/admin/resources/js/ql/claim/oidc.externalclaim.controller.js?v=v8.51.5_06February2026"></script>
+<!-- OIDC Claim End-->
+
+<!-- Iam import starts -->
+<script src="/admin/resources/js/ql/iam/iamApp.js?v=v8.51.5_06February2026"></script>
+<script src="/admin/resources/js/ql/iam/controller/iamConnectorController.js?v=v8.51.5_06February2026"></script>
+<script src="/admin/resources/js/ql/iam/service/iam.core.service.js?v=v8.51.5_06February2026"></script>
+<!-- Iam  import ends-->
+
+<!-- Analytics import starts -->
+<script src="/admin/resources/js/ql/analytics/analyticsApp.js?v=v8.51.5_06February2026"></script>
+<script src="/admin/resources/js/ql/analytics/controller/analyticsController.js?v=v8.51.5_06February2026"></script>
+<script src="/admin/resources/js/ql/analytics/service/analytics.core.service.js?v=v8.51.5_06February2026"></script>
+<!-- Analytics  import ends-->
+
+
+<script src="/admin/resources/js/plugins/bootstrap-tour/bootstrap-tour.min.js?v=v8.51.5_06February2026"></script>
+<script src="/admin/resources/js/plugins/daterangepicker/moment.min.js?v=v8.51.5_06February2026"></script>
+<script src="/admin/resources/js/plugins/daterangepicker/daterangepicker.js?v=v8.51.5_06February2026"></script>
+
+
+
+
+
+<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+  <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js?v=v8.51.5_06February2026"></script>
+  <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js?v=v8.51.5_06February2026"></script>
+<![endif]-->
+
+<script src="https://maps.googleapis.com/maps/api/js?v=3&key=AIzaSyC38u1Z_gpSu9dXe9RF6DfyyUJbF-b1erw"></script>
+
+<link href="/admin/resources/css/config_doc.css?v=v8.51.5_06February2026" rel="stylesheet" type="text/css" />
+
+
+
+
+<!-- Upgrade Plan  -->
+<script src="/admin/resources/js/ql/upgradeplan/upgradeplanservice.js?v=v8.51.5_06February2026"></script>
+<script src="/admin/resources/js/ql/upgradeplan/upgradeplan.js?v=v8.51.5_06February2026"></script>
+<script src="/admin/resources/js/ql/upgradeplan/upgradeplanprice.js?v=v8.51.5_06February2026"></script>
+<script src="/admin/resources/js/ql/upgradeplan/upgradeplancheckout.js?v=v8.51.5_06February2026"></script>
+
+<!-- License import starts -->
+<script src="/admin/resources/js/ql/license/licenseApp.js?v=v8.51.5_06February2026"></script>
+<script src="/admin/resources/js/ql/license/service/license.core.service.js?v=v8.51.5_06February2026"></script>
+<script src="/admin/resources/js/ql/license/controller/admin.license.controller.js?v=v8.51.5_06February2026"></script>
+<script src="/admin/resources/js/ql/license/service/admin.license.service.js?v=v8.51.5_06February2026"></script>
+<script src="/admin/resources/js/ql/license/controller/tenant.license.controller.js?v=v8.51.5_06February2026"></script>
+<script src="/admin/resources/js/ql/license/controller/tenant.license.dm.controller.js?v=v8.51.5_06February2026"></script>
+<script src="/admin/resources/js/ql/license/service/tenant.license.service.js?v=v8.51.5_06February2026"></script>
+<!-- License  import ends-->
+
+<!--  Start Data-tables library   -->
+<script src="/admin/resources/js/angular/angular-datatables.min.js?v=v8.51.5_06February2026"></script>
+
+
+
+
+
+
+<script src="/admin/resources/js/angular/datatables.min.js?v=v8.51.5_06February2026" type="text/javascript"></script>
+
+<script src="/admin/resources/js/angular/input.js?v=v8.51.5_06February2026" type="text/javascript"></script>
+
+
+
+<!--  End Data-tables library   -->
+
+<!-- Start my-billing import -->
+<script src="/admin/resources/js/ql/myBilling/myBillingApp.js?v=v8.51.5_06February2026"></script>
+<script src="/admin/resources/js/ql/myBilling/myBilling.controller.js?v=v8.51.5_06February2026"></script>
+<script src="/admin/resources/js/ql/myBilling/myBilling.service.js?v=v8.51.5_06February2026"></script>
+<!-- End my-billing import -->
+
+<!-- Start release-notes import -->
+<script src="/admin/resources/js/ql/release/releaseInfoApp.js?v=v8.51.5_06February2026"></script>
+<script src="/admin/resources/js/ql/release/controller/release.info.controller.js?v=v8.51.5_06February2026"></script>
+<script src="/admin/resources/js/ql/release/service/release.info.service.js?v=v8.51.5_06February2026"></script>
+<!-- End release-notes import -->
+
+<!-- Start term-and-conditions import -->
+<script src="/admin/resources/js/ql/termandconditions/termAndConditionsApp.js?v=v8.51.5_06February2026"></script>
+<script src="/admin/resources/js/ql/termandconditions/controller/termandconditions.controller.js?v=v8.51.5_06February2026"></script>
+<script src="/admin/resources/js/ql/termandconditions/controller/user.termandconditions.controller.js?v=v8.51.5_06February2026"></script>
+<!-- End term-and-conditions import -->
+
+<!-- JS multiple email  -->
+
+<script src="/admin/resources/js/ng-tags-input.min.js?v=v8.51.5_06February2026" type="text/javascript"></script>
+<script src="/admin/resources/js/bootstrap.fd.js?v=v8.51.5_06February2026"></script>
+
+<!-- Start rate-limiter-api import -->
+<script src="/admin/resources/js/ql/rateLimiter/rateLimiterApp.js?v=v8.51.5_06February2026"></script>
+<script src="/admin/resources/js/ql/rateLimiter/controller/rate.limiter.controller.js?v=v8.51.5_06February2026"></script>
+<script src="/admin/resources/js/ql/rateLimiter/service/rate.limiter.service.js?v=v8.51.5_06February2026"></script>
+<!-- End rate-limiter-api import -->
+
+
+<!-- Start Ql-api import -->
+<script src="/admin/resources/js/ql/rateLimiter/controller/ql.api.controller.js?v=v8.51.5_06February2026"></script>
+<!-- End Ql-Api import -->
+
+<!-- Start api-usage import -->
+<script src="/admin/resources/js/ql/rateLimiter/controller/api.usage.controller.js?v=v8.51.5_06February2026"></script>
+<!-- End api-usage import -->
+
+<script src="/admin/resources/js/ql/clearUserLogController.js?v=v8.51.5_06February2026"></script>
+<script src="/admin/resources/js/ql/tenantHeartbeat/IpToPingController.js?v=v8.51.5_06February2026"></script>
+
+<!-- Start for tenant list import -->
+
+<!-- End tenant list import  -->
+
+<!-- Start for inventory-data-import -->
+<script src="/admin/resources/js/ql/license/controller/inventory.dm.controller.js?v=v8.51.5_06February2026"></script><!-- End for inventory-data-import -->
+
+<!-- User-Store import starts -->
+<script src="/admin/resources/js/ql/userStore/userStoreApp.js?v=v8.51.5_06February2026"></script>
+<script src="/admin/resources/js/ql/userStore/controller/user.store.controller.js?v=v8.51.5_06February2026"></script>
+<script src="/admin/resources/js/ql/userStore/controller/user.store.users.controller.js?v=v8.51.5_06February2026"></script>
+<script src="/admin/resources/js/ql/userStore/controller/user.store.groups.controller.js?v=v8.51.5_06February2026"></script>
+<script src="/admin/resources/js/ql/userStore/service/user.store.service.js?v=v8.51.5_06February2026"></script>
+<script src="/admin/resources/js/ql/userStore/service/user.store.user.service.js?v=v8.51.5_06February2026"></script>
+<script src="/admin/resources/js/ql/userStore/service/user.store.group.service.js?v=v8.51.5_06February2026"></script>
+<script src="/admin/resources/js/ql/userStore/service/user.store.http.services.js?v=v8.51.5_06February2026"></script>
+<!-- User-Store import ends-->
+
+
+
+
+
+<script src="/admin/resources/js/lib/index.js?v=v8.51.5_06February2026"></script>
+<script src="/admin/resources/js/lib/xy.js?v=v8.51.5_06February2026"></script>
+<script src="/admin/resources/js/lib/animated.js?v=v8.51.5_06February2026"></script>
+
+</head>
+<body class="login-bg sign-account">
+	<div data-ng-controller="SignUpctrl" class="page-content" data-ng-cloak>
+		<img data-ng-src="{{oAuthLogoutUrl}}" alt="quick launch logout" style="display: none"> <!-- Just to ensure that OAuth logout is called and any stale session is cleared out -->
+		<div class="container">
+			<div class="row">
+				<div class="col-md-7 col-sm-6 col-xs-12">
+					<div class="logo">
+						<img data-ng-cloak src="/admin/resources/images/logo-white.png" width="170" alt="quick launch logo">
+					</div>
+					
+					<div id="contentCarousel" class="carousel slide mrg-T50" data-ride="carousel">
+					  <!-- Indicators -->
+					  <ol class="carousel-indicators">
+					    <li data-target="#contentCarousel" data-slide-to="0" class="active"></li>
+					    <li data-target="#contentCarousel" data-slide-to="1"></li>
+					    <li data-target="#contentCarousel" data-slide-to="2"></li>
+					    <li data-target="#contentCarousel" data-slide-to="3"></li>
+						  <li data-target="#contentCarousel" data-slide-to="4"></li>
+					  </ol>
+					  <!-- Wrapper for slides -->
+					  <div class="carousel-inner">
+					    <div class="item active">
+					      <div class="carousel-caption">
+					        <h1 class="mrg-B20 font-wn400">Single Sign-On, <br>Identity Provider<br>& Mobile-First Security</h1>
+							  <h5>One-click Access to All Your Apps. Anytime, Anywhere, Any Device</h5>
+					      </div>
+					    </div>
+					    <div class="item">
+					      <div class="carousel-caption">
+					        <h1 class="mrg-B20 font-wn400">Self Service</h1>
+							  <h5>Enhance Your Security and Reduce Help Desk Calls by 80%</h5>
+					      </div>
+					    </div>
+					    <div class="item">
+					      <div class="carousel-caption">
+					        <h1 class="mrg-B20 font-wn400">Adaptive Multi-Factor <br>Authentication</h1>
+							  <h5>Detect High-Risk Logins to Trigger the Right Security Action</h5>
+
+					      </div>
+					    </div>
+					    <div class="item">
+					      <div class="carousel-caption">
+					        <h1 class="mrg-B20 font-wn400">User Self-Registration</h1>
+							<h5>Enable User Self Registration Process and Say Goodbye to Default Passwords</h5>
+					      </div>
+					    </div>
+						  <div class="item">
+							  <div class="carousel-caption">
+								  <h1 class="mrg-B20 font-wn400">Identity Lifecycle Management</h1>
+								  <h5>Streamline User Provisioning from SIS/ERP to Directory/LMS</h5>
+							  </div>
+						  </div>
+					  </div>
+					</div>
+					
+					<div class="create-link mrg-T50">
+						<h6>Don’t have an account? <a href="/admin/registration" class="text-white text-link">Create one now</a></h6>
+					</div>
+				</div>
+				<div class="col-md-5 col-sm-6 col-xs-12">
+					<div id="loginbox"
+					class="login-form-section">
+					<div class="form-section">
+						 <h3 class="logIn-head mrg-T0">Log In</h3>
+						<form id="loginForm"
+							action="/admin/j_spring_security_check;jsessionid=B00AE9E7F3F253E1B958C4E65333EB5D" novalidate
+							class="form-horizontal" method="POST" name="loginForm" ng-class="{'submitted': submitted}"  onsubmit="return false;">
+							<input type="hidden" id="redirectUriId" name="redirectTo" value=""/>
+							
+							<div class="validation-section">
+								<div ng-if="hideError == true && !mfaEnabled">
+								
+								</div>
+								<div ng-if="isUserValidated == false" id="login-alert" class="validation-messages">
+										{{errorMessage}}
+									</div>
+									<div ng-if="isEmailValid == false" id="login-alert" class="validation-messages">
+										Email is invalid
+									</div>
+								<div class="validation-messages" aria-hidden="true" ng-show="loginForm.username.$dirty && loginForm.username.$invalid && (email == null || email == '')" >
+						            <span ng-show="loginForm.username.$error.required" class="required-alert">Email is required</span>
+	     						</div>
+								<div class="validation-messages" aria-hidden="true" ng-show="loginForm.password.$dirty && loginForm.password.$invalid && (password == null || password == '')">
+						            <span ng-show="loginForm.password.$error.required" class="required-alert">Password is required</span>
+	     						</div> 
+     						</div>
+							<div data-ng-class="{ 'has-error': (loginForm.username.$error.required && (signUpForm.username.$dirty || submit))}">								
+								<div class="form-group login-input" ng-hide="mfaEnabled">
+  									<label class="label-newUI">Email</label>
+									<input title="Username" id="login-username" type="text" placeholder="Enter email"
+										class="form-control usericon inputText" name="username"  data-ng-model="email"
+										required data-ng-keyup="$event.keyCode==13" ng-blur="checkValidEmail()"/>
+        						</div>
+								<div class="form-group login-input" ng-hide="mfaEnabled">
+									<label class="label-newUI" >Password</label>
+									<input title="Password" id="login-password" type="password" placeholder="Enter password"
+										   class="form-control passwordicon inputText" name="password" required
+										   data-ng-model="password" data-ng-enter="logIn()">
+								</div>
+        						<div class="form-group login-input" ng-show="mfaEnabled">
+									<label class="label-newUI">Enter authenticator code</label>
+										<input title="MFA" id="totp" type="password" class="form-control" name="totp"
+											   placeholder="{{totpDefault}}" required="required" data-ng-model="totp" maxlength="6">
+
+								</div>
+								<span ng-if="!mfaEnabled" class="forgot-link"><a href="/admin/forgot-password">Forgot password</a></span>
+							</div>
+							<button id="submitButton" class="btn mrg-B50 login-btn btn-submit" data-ng-click="logIn();checkingForNullTotp();" >Log In</button>
+							<p class="create-ac"></p>
+						</form>
+						<div class="des">
+							<h6>Welcome to Quicklaunch! By logging in, you acknowledge and accept our <a href="https://quicklaunch.io/terms-and-conditions" target="_blank" class="text-white text-link">Terms and Conditions</a>, helping us maintain a positive environment for everyone.</h6>
+						</div>
+					</div>
+				</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script>
+		window.clearSession();
+		$(document).ready(function() {
+			$('html').removeAttr('style');
+			$('body').removeAttr('style');
+			setTimeout(function () {
+				var inputUsername = document.getElementById("login-username").value;
+				var inputPassword = document.getElementById("login-password").value;
+				if (inputUsername != null && inputUsername != "" && inputPassword != null && inputPassword != "") {
+					$("#submitButton").removeAttr("disabled");
+				}
+			}, 500);
+		});
+		
+		document.getElementById("login-username").focus();
+		
+	</script>
+	
+	<!-- Delete confirmation template -->
+<script type="text/ng-template" id="templates/deleteConfirmation.html">
+<div class="deleteConfirmation" ng-show = "setDelete()">
+<div ng-hide="isDeleting" >
+ <button type="button" class="btn btn-danger btn-xs" ng-click="startDelete()"><i class="fa fa-trash-o"></i> Delete</button>
+</div>
+<div ng-show="isDeleting">
+<button type="button" class="btn btn-default btn-xs" ng-click="cancel()">Abort deletion</button>
+<button type="button" class="btn btn-danger btn-xs"  ng-click="confirm()"><i class="fa fa-trash-o"></i>Confirm</button>
+</div>
+</div>
+</script>
+<!--  Pagination Link Template -->
+<script type="text/ng-template" id="templates/dirPagination.html">
+<ul class="pagination" ng-if="1 < pages.length">
+    <li ng-if="boundaryLinks" ng-class="{ disabled : pagination.current == 1 }">
+        <a href="" ng-click="setCurrent(1)">&laquo;</a>
+    </li>
+    <li ng-if="directionLinks" ng-class="{ disabled : pagination.current == 1 }" class="ng-scope">
+        <a href="" ng-click="setCurrent(pagination.current - 1)" class="ng-binding"><</a>
+    </li>
+    <li ng-repeat="pageNumber in pages track by $index" ng-class="{ active : pagination.current == pageNumber, disabled : pageNumber == '...' }">
+        <a href="" ng-click="setCurrent(pageNumber)">{{ pageNumber }}</a>
+    </li>
+
+    <li ng-if="directionLinks" ng-class="{ disabled : pagination.current == pagination.last }" class="ng-scope">
+        <a href="" ng-click="setCurrent(pagination.current + 1)" class="ng-binding">></a>
+    </li>
+    <li ng-if="boundaryLinks"  ng-class="{ disabled : pagination.current == pagination.last }">
+        <a href="" ng-click="setCurrent(pagination.last)">&raquo;</a>
+    </li>
+</ul>
+</script>
+<script type="text/ng-template" id="paginationLinks.html">
+<div class="text-center">
+   <dir-pagination-controls boundary-links="true" on-page-change="pageChanged(newPage)"></dir-pagination-controls>
+</div>
+</script>
+
+<!-- Set the contextpath in a global variable -->
+<script>
+var contextPath = "/admin";
+	var superOrPreviousSuper = false;
+</script>
+<!-- Set the user's role in the javascript variable for subsequent usages -->
+
+
+<!--  Pagination Link Template -->
+<script type="text/ng-template" id="paginationSearch.html">
+<div class="row">
+<span class="pull-right" style="margin-top:5px;">
+    <div class="col-xs-6">
+        <label for="search">Search:</label>
+            <input ng-model="q" id="search" class="form-control" placeholder="Filter text">
+        </div>
+        <div class="col-xs-6">
+              <label for="search">Items Per Page:</label>
+              <input type="number" min="1" max="25" class="form-control" ng-model="pageSize">
+        </div>
+    </span>
+</div> 
+</script>
+<script type="text/ng-template" id="warning-dialog.html">
+    <div class="ql-modal ql-delete-confirmation-modal d-flex align-center justify-content-center">
+        <div class="modal-md">
+            <div class="modal-body">
+                <div class="confirmation-container">
+                    <div class="icon-circle-warning">
+                        <svg width="44" height="44" viewBox="0 0 44 44" fill="none">
+                            <path d="M44 22C44 34.1503 34.1503 44 22 44C9.84974 44 0 34.1503 0 22C0 9.84974 9.84974 0 22 0C34.1503 0 44 9.84974 44 22Z" fill="#FFA242"/>
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M22 11.55C22.9113 11.55 23.65 12.2887 23.65 13.2V21.3165L28.6667 26.3333C29.3111 26.9776 29.3111 28.0224 28.6667 28.6667C28.0224 29.3111 26.9776 29.3111 26.3333 28.6667L20.8333 23.1667C20.5238 22.8573 20.35 22.4376 20.35 22V13.2C20.35 12.2887 21.0887 11.55 22 11.55Z" fill="white"/>
+                        </svg>
+                    </div>
+                    <div ng-if="sessionTimeoutTitleMsg != null && sessionTimeoutTitleMsg != '' ">
+                        <h4 class="mrg-B15">{{sessionTimeoutTitleMsg}}</h4>
+                    </div>
+                    <div ng-if="sessionTimeoutTitleMsg === null || sessionTimeoutTitleMsg === '' ">
+                        <h4 class="mrg-B15">Session Timeout Warning</h4>
+                    </div>
+
+                    <div idle-countdown="countdown" ng-if="SessionInactivityWarningMsg != null && SessionInactivityWarningMsg != '' ">
+                        <p class="text-center"><b>{{countdown | secondsToTime}}</b> seconds(s)<br>{{SessionInactivityWarningMsg}} </p>
+                    </div>
+
+                    <div idle-countdown="countdown" ng-if="SessionInactivityWarningMsg === null || SessionInactivityWarningMsg === '' ">
+                        <p class="text-center"><b>{{countdown | secondsToTime}}</b> seconds(s)<br> Your session will expire soon. </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <style>
+        .modal-content {
+            border-radius: 24px;
+            background: #FFF;
+            box-shadow: 0px 0px 64px 0px rgba(0, 0, 0, 0.05);
+            border: 0;
+        }
+    </style>
+
+
+</script>
+
+<script type="text/ng-template" id="timedout-dialog.html">
+  <div class="modal-header">
+   <h3>You've Timed Out!</h3>
+  </div>
+  <div class="modal-body">
+ </div>
+</script>
+<!-- Modal dialog opens at the time of tenant deletion -->
+<script type="text/ng-template" id="deleteTenantConfirmation.html">
+<div class="modal-content"> 
+<div class="modal-header">
+        <button type="button" ng-click="closeDialog()" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        
+    </div>
+<p class="text-center"><img src="/admin/resources/img/notification-icon.png" alt="" /></p>
+<h4 class="modal-title text-center">Please confirm</h4>
+    <div class="modal-body">
+        <p align="center">Are you sure, you want to delete tenant? Changes can not be recovered!</p>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-primary" ng-click="deleteUserInfo()">Delete</button>
+<button type="button" class="btn btn-primary gray" data-dismiss="modal" ng-click="closeDialog()">Cancel</button>
+    </div>
+</div>
+<style>
+ 
+.modal-content{ z-index:999;}
+.modal-footer{ text-align:center; border:0px;}
+.modal-header{ border-bottom:0px;}
+.modal-header h4{ text-align:center; font-weight:400; font-size:23px;}
+.modal-body.contentarea{ padding:10px; font-size:16px; font-weight:300;}
+.ui-dialog-overlay{border-width: 0px; margin: 0px; padding: 0px; position: absolute; top: 0px; left: 0px; width: 1349px; height:100%; z-index:99; background-color:#000; opacity:0.7;}
+</style>
+</script>
+<script type="text/ng-template" id="textEditor.html">
+<div class="modal-content bgnone"> 
+<div class="modal-header">
+        <button type="button" ng-click="closeDialog()" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4 class="modal-title">App Description</h4>
+    </div>
+    <div class="modal-body">
+        <div text-angular="text-angular" ng-model="description" ta-disabled="disabled" ta-toolbar-class="btn-toolbar" ta-toolbar-group-class="btn-group" ta-toolbar-button-class="btn btn-default" ta-toolbar-active-button-class="btn-info"></div>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-success" ng-click="updateDesc(description)">Update</button>
+<button type="button" class="btn btn-primary" data-dismiss="modal" ng-click="closeDialog()">Cancel</button>
+    </div>
+</div>
+<style>
+.modal-content{ z-index:999;}
+.modal-footer{ text-align:center; border:0px;}
+.modal-header{ border-bottom:0px;}
+.modal-header h4{ text-align:center; font-weight:400; font-size:23px;}
+.modal-body.contentarea{ padding:10px; font-size:16px; font-weight:300;}
+.ui-dialog-overlay{border-width: 0px; margin: 0px; padding: 0px; position: absolute; top: 0px; left: 0px; width: 1349px; height:100%; z-index:99; background-color:#000; opacity:0.7;}
+
+</style>
+</script>
+
+
+
+<script type="text/ng-template" id="crop-tool.html">
+    <div class="ql-modal" role="dialog" data-backdrop="static" data-keyboard="false">
+        <div class="modal-content themeLogoStng">
+            <div class="modal-header">
+                <div class="ql-modal-header">
+                    <h5>Crop Image</h5>
+                    <a class="close-icon" ng-click="closeDialog()" class="close" data-dismiss="modal" aria-hidden="true">
+                        <svg width="14" height="15" viewBox="0 0 14 15" fill="none">
+                            <path d="M13 1.23666L1 13.2483M1 1.23666L13 13.2483" stroke="black" stroke-width="2"
+                                  stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-sm-9">
+                        <div align="center" class="cropArea">
+                            <img-crop image="imageToCrop" area-type="rectangle" result-image="croppedImage" area-min-size="64" area-init-is-relative-to-image="true" result-image-size="{w: originalImageWidth, h: originalImageHeight}" result-image-quality="1.0"></img-crop>
+                        </div>
+                    </div>
+                    <div class="col-sm-3">
+                        <div class="cropedImgView">
+                            <div class="crop-img"><img ng-src="{{croppedImage}}" /></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="qlSecondaryBtn btn-cancel" data-dismiss="modal" aria-label="Close" ng-click="closeDialog()">Close</button>
+                <button type="button" class="btn qlPrimaryBtn" ng-click="saveChanges(croppedImage)">Save</button>
+            </div>
+        </div>
+    </div>
+<style>
+.crop-img img{width: 100px; height: 100px}
+/*.cropArea{ background: #E4E4E4; overflow: hidden; width:500px; height:350px; }*/
+/*.modal-content{ z-index:999; width:900px; height:500px;}*/
+.modal-footer{ text-align:center; border:0px;}
+.modal-header h4{ text-align:center; font-weight:400; font-size:20px; color: #475467;}
+.modal-body.contentarea{ padding:10px; font-size:16px; font-weight:300;}
+.modal-header .close{position: absolute; right: 15px; font-size: 40px; top: 15px;}
+.ui-dialog-overlay{border-width: 0px; margin: 0px; padding: 0px; position: absolute; top: 0px; left: 0px; width: 1349px; height:100%; z-index:99; background-color:#000; opacity:0.7;}
+/* New NSS Css Start */
+.modal-content{ z-index:999; width:100%; height:auto; border-radius: 10px;}
+.cropArea{ background: #E4E4E4; overflow: hidden; width:100%; min-height:400px; border-radius: 10px; border:1px solid #d1d1d1; display: flex; align-items: center; justify-content: center; position: relative}
+.cropArea img-crop{ height: 100%; width: 100%; position: absolute}
+img-crop.fixed-height canvas{ display: flex; justify-content: center; align-items: center; position: absolute;}
+.cropedImgView h2{font-size: 16px; margin-top: 0px; color:#475467;}
+.crop-img{background-color: #f5f5f5; display: flex; align-items: center; border: 1px solid #d1d1d1;  padding: 5px; border-radius: 5px; justify-content: center;}
+.crop-img img{width: 100%; height: 100%;}
+/* New NSS Css End */
+</style>
+</script>
+<script type="text/ng-template" id="categoryDesc.html">
+<div class="modal-content"> 
+	<div class="modal-header">
+        <button type="button" ng-click="closeDialog()" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4 class="modal-title">{{categoryName}} Description</h4>
+    </div>
+    <div class="modal-body">
+        <div text-angular="text-angular" ng-model="description" ta-toolbar="[]"></div>
+    </div>
+</div>
+<style>
+.modal-content{ z-index:999;}
+.modal-footer{ text-align:center; border:0px;}
+.modal-header{ border-bottom:0px;}
+.modal-header h4{ text-align:center; font-weight:400; font-size:23px;}
+.modal-body.contentarea{ padding:10px; font-size:16px; font-weight:300;}
+.ui-dialog-overlay{border-width: 0px; margin: 0px; padding: 0px; position: absolute; top: 0px; left: 0px; width: 1349px; height:100%; z-index:99; background-color:#000; opacity:0.7;}
+</style>
+</script>
+<script type="text/ng-template" id="configuration-guide.html">
+<div class="modal-content" style="overflow: auto;">
+	<div class="modal-header">
+		<a style="position: relative;right: 20px;top: -10px;" type="button" target="_blank" ng-href="#/application/document/read/{{documentToRead.id}}" class="close" data-dismiss="modal" aria-hidden="true"><span class="fa fa-window-maximize"></span></a>
+        <button type="button" ng-click="closeDialog()" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4 class="modal-title">{{documentToRead.name}}</h4>
+    </div>
+    <div class="modal-body" ng-bind-html="documentToRead.html">
+        
+    </div>
+</div>
+</script>
+<script type="text/ng-template" id="view-more.html">
+<div class="modal-content aboutapp" style="background-color:#f5f5f5 !important;"> 
+<div class="app-box">
+				  <div class="alert alert-danger" ng-if="!isDocumented">Configuration guide not available for this App.</div>
+                  <div class="appicon myApp-image"><img ng-src="{{app.icon}}" class="img-responsive"/></div>
+                  <div class="app-head text-center">
+                    <p><span rating ng-model="app.averageRating" max="5" readonly="true"></span> <span class="rating-icon"></span></p>
+                    <h3 class="heading-section mrg-T0">{{app.name}}</h3>
+                  </div>
+				 </div>
+
+        	<div class="clr"></div>
+			<div class="app-description text-center">
+                <div class="inner-des">
+                	<h4 ng-bind-html="app.description"></h4>
+                </div>
+				<!--<button class="btn btn-gray btn-width-sm" type="button" data-dismiss="modal" ng-click="closeDialog()">Close</button>-->
+				<button ng-if="isRegistrationProcess" class="btn btn-blue btn-width-sm" ng-click="select()">click to Select</button>
+               
+             </div>
+<div class="clr"></div>
+<div class="app-description text-center" ng-hide="isRegistrationProcess">
+                <!--<h3 style="color: #1585d5;">Review:</h3>-->
+                <div class="">
+               <button ng-click="writeReview()" type="button" class="btn btn-primary btn-width-xl">Write a review</button>
+			   <a id="config-guide" style="display: none;" type="button" target="_blank" class="close" data-dismiss="modal" aria-hidden="true"></a>
+			   <button ng-click="configurationGuide()" type="button" class="btn btn-primary btn-width-xl">Configuration Guide</button>
+               <br>
+<br></div></div>
+
+<div class="clr"></div>
+<!--<div class="app-description app-box" ng-hide="isRegistrationProcess || highest.length == 0">
+                <h3 style="color: #1585d5;">Top Rated:</h3>
+
+<div class="top-rated">
+<ul>
+	<li class="col-md-6" ng-repeat="rating in highest | orderBy:'-rate'">
+		<div class="appicon"><img ng-src="{{rating.tenant.icon}}" class="img-responsive"/></div>
+                  <div class="app-head">
+                    <h4>{{rating.tenant.userName}}</h4>
+                    <p><span rating ng-model="rating.rate" max="5" readonly="true"></span></p>
+<p>{{rating.comments}}</p>
+                  </div>
+</li>
+</ul>
+</div>
+</div>-->
+</div>
+<style>
+.editor-height{height: 134px;}
+</style>
+</script>
+<script type="text/ng-template" id="write-a-review.html">
+
+<div class="modal-content aboutapp">
+<button type="button" ng-click="closeDialog()" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+<div class="app-box">
+                  <div class="appicon myApp-image"><img ng-src="{{app.icon}}" class="img-responsive"/></div>
+                  <div class="app-head text-center">
+                    <h3>{{app.name}}</h3>
+                    <p><span rating ng-model="app.averageRating" max="5" readonly="true"></span></p>
+                  </div>
+                </div>
+        <div class="clr"></div>
+
+<div class="app-description">
+                <h3>Review</h3>
+                <div class="inner-des">
+               <p><textarea class="form-control" ng-model="apprating.comments" placeholder="Any Comments..."></textarea></p>
+				<p>
+<span class="popup-rating" rating ng-model="apprating.rate" on-hover="hoveringOver(value, app.id)" max="5" readonly="false"></span>
+<span class="label" ng-class="{'label-warning': percent<30, 'label-info': percent>=30 && percent<70, 'label-success': percent>=70}" ng-show="showPercent == true">{{rateInfo}}</span></p>             
+
+<div class="text-center">
+        <button type="button" class="btn btn-success btn-primary" ng-click="rateTheApp(apprating.rate, apprating.comments)" ng-disabled="apprating.rate == null || apprating.rate ==''">Rate</button>
+		<button type="button" class="btn btn-primary btn-primary gray" data-dismiss="modal" ng-click="closeDialog()">Cancel</button>
+<br><br>
+</div>
+
+</div></div>
+
+
+
+<div class="modal-content" style="display:none;"> 
+	
+    <div class="modal-body" style="display:none;">
+        <div class="app-icon-rate">
+			<img  style="width: 80px; height=80px"/><span style="width:40px; height:50px; margin-left: 5px;">{{app.name}}</span><br>
+            <span ng-show="app.name.length > 12" style="width:40px; height:50px; margin-left: 5px;"></span>
+            <span ng-show="app.name.length <= 12" style="width:40px; height:50px; margin-left: 5px;"></span><br>			
+            
+		</div>
+		<div class="text-area" style="display:none;">
+			<textarea ng-model="apprating.comments" style="width: 400px; height: 250px; margin-right: 40px; clear: left;" placeholder="Any Comments..."></textarea><br><br>
+			<span style="font-size: 32px; top:10px;" rating ng-model="apprating.rate" on-hover="hoveringOver(value, app.id)" max="5" readonly="false"></span>
+			<span class="label" ng-class="{'label-warning': percent<30, 'label-info': percent>=30 && percent<70, 'label-success': percent>=70}" ng-show="showPercent == true">{{rateInfo}}</span>
+		</div>
+    </div>
+
+</div>
+
+</script>
+<script type="text/ng-template" id="deleteCategoryConfirmation.html">
+<div class="modal-content"> 
+<div class="modal-header">
+        <button type="button" ng-click="closeDialog()" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+       
+    </div>
+   <p class="text-center"><img src="/admin/resources/img/notification-icon.png" alt="" /></p>        
+   <h4 class="modal-title text-center">Please confirm</h4>
+    <div class="modal-body">
+        <p align="center">Are you sure, you want to delete a category? It can not be recovered!</p>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-primary" ng-click="deleteCategory()">Delete</button>
+<button type="button" class="btn btn-primary gray" data-dismiss="modal" ng-click="closeDialog()">Cancel</button>
+    </div>
+</div>
+<style>
+.modal-content{ z-index:999;}
+.modal-footer{ text-align:center; border:0px;}
+.modal-header{ border-bottom:0px;}
+.modal-header h4{ text-align:center; font-weight:400; font-size:23px;}
+.modal-body.contentarea{ padding:10px; font-size:16px; font-weight:300;}
+.ui-dialog-overlay{border-width: 0px; margin: 0px; padding: 0px; position: absolute; top: 0px; left: 0px; width: 1349px; height:100%; z-index:99; background-color:#000; opacity:0.7;}
+</style>
+</script>
+
+<script type="text/ng-template" id="deleteCategoryIssue.html">
+<div class="modal-content"> 
+<div class="modal-header">
+        <button type="button" ng-click="closeDialog()" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+       
+    </div>
+   <p class="text-center"><img src="/admin/resources/img/notification-icon.png" alt="" /></p>        
+   <h4 class="modal-title text-center">Can't Delete</h4>
+    <div class="modal-body">
+        <p align="center">This category can't be deleted as it is used as super category.</p>
+    </div>
+    <div class="modal-footer">
+	<button type="button" class="btn btn-primary gray" data-dismiss="modal" ng-click="closeDialog()">Cancel</button>
+    </div>
+</div>
+<style>
+.modal-content{ z-index:999;}
+.modal-footer{ text-align:center; border:0px;}
+.modal-header{ border-bottom:0px;}
+.modal-header h4{ text-align:center; font-weight:400; font-size:23px;}
+.modal-body.contentarea{ padding:10px; font-size:16px; font-weight:300;}
+.ui-dialog-overlay{border-width: 0px; margin: 0px; padding: 0px; position: absolute; top: 0px; left: 0px; width: 1349px; height:100%; z-index:99; background-color:#000; opacity:0.7;}
+</style>
+</script>
+
+<script type="text/ng-template" id="deleteTheme.html">
+    <div class="comm-modal-header modal-md">
+        <div class="modal-content text-center">
+            <div class="modal-header pad-T20 pad-B20">
+                <img src="../resources/images/prompt.png" width="65">
+            </div>
+            <div class="modal-body">
+                <h4 class="modal-title font-23 text-center">Please confirm</h4><br>
+                <p>Are you sure, you want to delete Theme? Changes can not be recovered!</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary btn-width-sm" data-dismiss="modal" ng-click="cancel()">Cancel</button>
+                <button type="button" ng-class="{'disabled': !hasDeletePermission()}" class="btn btn-primary btn-width-sm" ng-click="confirm()">Delete</button>
+            </div>
+            <br>
+        </div>
+    </div>
+<style>
+.modal-content{ z-index:999;}
+.modal-footer{ text-align:center; border:0px;}
+.modal-header{ border-bottom:0px;}
+.modal-header h4{ text-align:center; font-weight:400; font-size:23px;}
+.modal-body.contentarea{ padding:10px; font-size:16px; font-weight:300;}
+.ui-dialog-overlay{border-width: 0px; margin: 0px; padding: 0px; position: absolute; top: 0px; left: 0px; width: 1349px; height:100%; z-index:99; background-color:#000; opacity:0.7;}
+</style>
+</script>
+
+<script type="text/ng-template" id="app-store.html">
+<div class="modal-content select-appstore"> 
+	<!--<button type="button" ng-click="closeDialog()" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>-->
+	<div class="clearfix">
+		<div ng-if="(hasRole('ROLE_ADMIN'))" class="col-md-4"> <br>
+		  <div class="myApps-list" ng-cloak>
+				<div class="input-group">
+					<input class="form-control" id="app-store-search-string" type="text" placeholder="Search apps" ng-model="appPoolSearchString" ng-enter="loadAppPoolOnSearch(appPoolSearchString)" ng-click="manageSearchStringForAppPoolOnClick()" ng-blur="manageSearchStringForAppPoolOnBlur()"/>
+					 <span class="input-group-addon"><i class="fa fa-search"></i></span>
+				</div>	
+		<ul>
+			<li><a href="" ng-click="loadAllApps();welcomeNotification=false;"><span class="list-type-icon"></span> All Apps <span> ({{allApplicationTotalModal }})</span></a></li>
+			<li ng-repeat="cat in primaryCategoryArray | orderBy:'displayOrder'" ng-cloak ng-class="{ 'hasSubCategory': checkForSuperCategory(cat)} " >
+				<div ng-if="cat.superCategory == null" ng-cloak class="dropdown">
+					<a class="head dropdown-toggle" ng-hide="cat.appsCount==null || cat.appsCount==0" data-toggle="dropdown"
+						ng-class="{ 'disable': cat.enabled == true && cat.appsCount == 0}" ng-click="countTotalSuperCategoryApps(cat)!=0?loadAppPool(cat.id):false"><span class="list-type-icon"><i class="fa fa-angle-right"></i><i class="fa fa-angle-down"></i></span> {{cat.categoryName}}<span> ({{cat.appsCount}})</span>
+					</a>
+					<ul class="dropdown-menu">
+						<li ng-repeat="cat1 in secondaryCategory" ng-cloak>
+							<div ng-if="cat.appsCount == 0">
+								<div ng-if="cat1.superCategory != null && cat1.superCategory.categoryName==cat.categoryName">
+									<a href="javascript:void(0);" class="cat-listing  dropdown-menu-button" ng-hide="cat1.appsCount==null || cat1.appsCount==0" 
+									ng-class="{ 'disable': cat1.enabled && cat1.appsCount == 0 }" ng-click="loadAppPool(cat1.id)"><span class="list-type-icon"><i class="fa fa-square"></i></span> {{cat1.categoryName}}<span> ({{cat1.appsCount}})</span></a>
+								</div>
+							</div>
+							<div ng-if="cat.appsCount != 0" ng-cloak>
+								<div ng-if="cat1.superCategory != null && cat1.superCategory.categoryName==cat.categoryName">
+									<a href="javascript:void(0);" class="cat-listing mrg-L15 dropdown-menu-button" ng-hide="cat1.appsCount!=null && cat1.appsCount==0" 
+									ng-class="{ 'disable': cat1.enabled && cat1.appsCount == 0 }" ng-click="loadAppPool(cat1.id)"><span class="list-type-icon"><i class="fa fa-square"></i></span> {{cat1.categoryName}}<span> ({{cat1.appsCount}})</span></a>								
+								</div>
+							</div>
+							<ul>
+								<li ng-repeat="cat2 in tertiaryCategory" ng-cloak>
+								<div ng-if="cat.appsCount == 0">
+									<div ng-if="(cat2.superCategory != null && cat2.superCategory.categoryName == cat1.categoryName)&&(cat1.superCategory != null && cat1.superCategory.categoryName==cat.categoryName)">
+										<a  href="javascript:void(0);" class="cat-listing mrg-L15 dropdown-menu-button" ng-hide="cat2.appsCount ==null || cat2.appsCount==0" 
+										ng-class="{ 'disable': cat2.enabled == true && cat2.appsCount == 0}" ng-click="loadAppPool(cat2.id)"><span class="list-type-icon"><i class="fa fa-circle"></i></span> {{cat2.categoryName}}<span> ({{cat2.appsCount}})</span></a>									
+									</div>
+								</div>
+								<div ng-if="cat.appsCount != 0" ng-cloak>
+									<div ng-if="(cat2.superCategory != null && cat2.superCategory.categoryName == cat1.categoryName)&&(cat1.superCategory != null && cat1.superCategory.categoryName==cat.categoryName)">
+										<a  href="javascript:void(0);" class="cat-listing mrg-L30 dropdown-menu-button" ng-hide="cat2.appsCount==null || cat2.appsCount==0" 
+										ng-class="{ 'disable': cat2.enabled == true && cat2.appsCount == 0}" ng-click="loadAppPool(cat2.id)"><span class="list-type-icon"><i class="fa fa-circle"></i></span> {{cat2.categoryName}}<span> ({{cat2.appsCount}})</span></a>									
+									</div>
+								</div>
+							</li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+			</li>
+		</ul>
+	</div>
+		</div>
+		<div ng-class="{'col-md-8 border-L1 pad-R0':  (hasRole('ROLE_ADMIN')), 'col-md-12 allapp-admin pad-R0':  (hasRole('ROLE_SUPER'))}">
+			<div class="row mrg-R0">
+				<div class="my-apps-right clearfix">
+					<div class="col-xs-8">
+						<h4>Cant find an application? </h4>
+						<h5>If our App Store is missing an app, you can create it yourself.</h5> 
+					</div>
+					<div class="col-xs-4">
+						<a class="btn btn-secondary pull-right mrg-T15" href="#/appdefadd" ng-click="closeDialog()">Create New App</a>
+					</div>
+				</div>
+				<div class="clearfix">
+					<div class="col-md-6">   
+						<div class="selected-app-count pull-left">Selected Apps <span>{{selectedApps.length}}</span></div>
+					</div>
+					<div class="col-md-6">
+						<span ng-show="showMyAppsNoOfRecords" class="pull-right items-per-page pad-T8">Items Per Page:
+							<select ng-model="appPoolNoOfRecords" ng-change="appPoolNoOfRecordsChange(appPoolNoOfRecords)">
+								<option value="6">6</option>
+								<option value="9">9</option>
+								<option value="12">12</option>
+								<option value="16">16</option>
+								<option value="20">20</option>
+								<option value="28">28</option>
+								<option value="40">40</option>
+								<option value="60">60</option>
+							</select>
+						</span>
+					</div>
+				</div><br>
+				<div class="clr"></div>
+				<div class="text-center" ng-if="appPool.length == 0 && (hasRole('ROLE_SUPER'))">No data found</div>
+				<button class="text-center btn btn-warning btn-primary cntrbtn" ng-if="appPool.length == 0 && (hasRole('ROLE_ADMIN')) && whileSearch" ng-click="requestApp()">Request An Application</button>
+				<ul class="ql-my-apps">   
+					<li id="app-list-pop-up" class="col-md-4 col-xs-4" dir-paginate="appdef in appPool | itemsPerPage: appPoolNoOfRecords" pagination-id="cust_add_app" total-items="appPoolCount">
+						<div class="myApp-content text-center zoomIn animated" id="thumbnail{{appdef.id}}">
+							<div class="myApp-image">
+								<img ng-click="addToSelectedApps(appdef)" class="img-responsive" ng-src="{{appdef.icon}}" popover="{{appdef.name}}" popover-placement="top" title="{{appdef.name}}"/>
+								<p class="img-description selected-app selectedAppIconClass" ng-click="removeFromSelectedApps(appdef.id);toggleRemoved(appdef.id)"><img class="selectedAppIconImg" src="/admin/resources/images/selectedAppIcon.png" alt="img selected">Click to Remove</p>
+								<div class="img-description-layer">
+									<p class="img-description unselected-app" ng-show="setSelectFlagOnPageChange(appdef.id)" ng-click="addToSelectedApps(appdef.id);toggleSelected(appdef.id)">Click to Add</p>
+									<p class="img-description selected-app selectedAppIconClass" ng-click="removeFromSelectedApps(appdef.id);toggleRemoved(appdef.id)"><img class="selectedAppIconImg" src="/admin/resources/images/selectedAppIcon.png" alt="img selected">Click to Remove</p>
+								</div>
+							</div>
+							<div class="myApp-desc">
+								<h5 Class="myApp-name" ng-show="appdef.name.length > 12" ng-click="removeFromSelectedApps(appdef)"> {{appdef.name | limitTo: 12}}..</h5>
+								<h5 Class="myApp-name" ng-show="appdef.name.length <= 12" ng-click="removeFromSelectedApps(appdef)"> {{appdef.name}}</h5>
+								<h5 Class="myApp-star" id="rating{{appdef.id}}" rating ng-model="appdef.averageRating" max="max" readonly="true" ></h5>
+							</div>
+						</div>
+					</li>
+				</ul>    
+				<div class="clr"></div>
+				<div class="text-center" ng-if="appPool.length != 0">
+				   <dir-pagination-controls on-page-change="pageChangedAppPool(newPageNumber)"
+					pagination-id="cust_add_app"></dir-pagination-controls>
+				</div> 
+				<!-- <button type="button" class="btn btn-primary gray cntrbtn" data-dismiss="modal" ng-click="closeDialog()">Cancel</button> -->
+				<div class="cust_cont clearfix">
+					<div class="col-sm-12" ng-if="selectedApps.length > 0">
+						<button type="button" class="btn btn-primary-main btn-width-sm pull-right" data-dismiss="modal" ng-click="add()">Add</button><br>
+					</div>
+				</div>
+				<br>
+			</div>
+		</div>
+	</div>
+	<div class="clr"></div>
+</div>
+</script>
+<script type="text/ng-template" id="delete-confirmation.html">
+<div class="modal-content"> 
+<div class="modal-header">
+        <button type="button" ng-click="closeDialog()" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+
+    </div>
+<p class="text-center"><img src="/admin/resources/img/notification-icon.png" alt="" /></p>        
+<h4 class="modal-title text-center">Please confirm</h4>
+    <div class="modal-body">
+        <p align="center">Are you sure, you want to delete Application? It can not be recovered!</p>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-primary" ng-click="ok()">Delete</button>
+<button type="button" class="btn btn-primary gray" data-dismiss="modal" ng-click="closeDialog()">Cancel</button>
+    </div>
+</div>
+<style>
+.modal-content{ z-index:999;}
+.modal-footer{ text-align:center; border:0px;}
+.modal-header{ border-bottom:0px;}
+.modal-header h4{ text-align:center; font-weight:400; font-size:23px;}
+.modal-body.contentarea{ padding:10px; font-size:16px; font-weight:300;}
+.ui-dialog-overlay{border-width: 0px; margin: 0px; padding: 0px; position: absolute; top: 0px; left: 0px; width: 1349px; height:100%; z-index:99; background-color:#000; opacity:0.7;}
+</style>
+</script>
+<script type="text/ng-template" id="request-app.html">
+<div class="modal-content requestapp">
+        <button type="button" ng-click="closeDialog()" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h3 class="modal-title">Request app</h3>
+    <div class="modal-body">
+        <form>
+            <div class="form-group"><input class="form-control" type="text" placeholder="Name" ng-model="applicationRequest.applicationName" /></div>
+            <div class="form-group"><input class="form-control" type="text" placeholder="URL" ng-model="applicationRequest.applicationURL" /></div>
+            <div class="form-group"><input class="form-control" type="textarea" placeholder="Description" ng-model="applicationRequest.applicationDescription" /></div>
+            <div class="form-group"><input class="form-control" type="text" placeholder="Test Username" ng-model="applicationRequest.testUsername" /></div>
+            <div class="form-group"><input class="form-control" type="text" placeholder="Test Password" ng-model="applicationRequest.testPassword" /></div>
+        </form>
+    <button type="button" class="btn btn-primary signup-btn" ng-disabled="applicationRequest.applicationName == null || applicationRequest.applicationURL == null || applicationRequest.testUsername == null || applicationRequest.testPassword == null" ng-click="request(applicationRequest)">Submit</button>
+    </div>
+    
+    
+    
+</div>
+<style>
+
+</style>
+</script>
+
+<script type="text/ng-template" id="request-theme.html">
+<div class="modal-content"> 
+<div class="modal-header">
+        <button type="button" ng-click="closeDialog()" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4 class="modal-title">Request Theme</h4>
+    </div>
+    <div class="modal-body col-md-12">
+        <form>
+			<div class="col-md-6">
+			<div class="form-group">
+			<label >Sample Theme Pic</label><span><font size="2" color="red">&nbsp;*</font></span>
+			<div class="clr"></div>
+			<div class="fileinput-preview thumbnail col-md-5 theme-thumb" data-trigger="fileinput"> <img class="img-responsive" ng-src="{{themeRequest.themePic}}" alt=""> </div>
+			
+            <input ng-model="themeRequest.themePic" id="themePicToUpload" type="file" onchange="angular.element(this).scope().convertThemePicToBase64()" style="height:auto;">
+			</div>
+			</div>
+			<div class="col-md-6">
+			<div class="form-group">
+			<label >Theme Name</label><span><font size="2" color="red">&nbsp;*</font></span>
+            <input type="text" class="form-control" placeholder="Name" ng-model="themeRequest.themeName" />
+			</div>
+			<div class="form-group">
+			<label >Theme Description</label><span><font size="2" color="red">&nbsp;*</font></span>
+			<textarea class="form-control" placeholder="Description" ng-model="themeRequest.themeDescription" />
+			</div>
+			</div>
+			
+        </form>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-danger orange" ng-disabled="themeRequest.themeName == null || themeRequest.themeDescription == null || themeRequest.themePic == null " ng-click="saveThemeConfiguration()">Submit</button>
+    </div>
+</div>
+<style>
+.modal-content{ z-index:999;}
+.modal-footer{ text-align:center; border:0px;}
+.modal-header{ border-bottom:0px;}
+.modal-header h4{ text-align:center; font-weight:400; font-size:23px;}
+.modal-body.contentarea{ padding:10px; font-size:16px; font-weight:300;}
+.ui-dialog-overlay{border-width: 0px; margin: 0px; padding: 0px; position: absolute; top: 0px; left: 0px; width: 1349px; height:100%; z-index:99; background-color:#000; opacity:0.7;}
+</style>
+</script>
+<script type="text/ng-template" id="deleteHostNameConfirmation.html">
+<div class="modal-content"> 
+<div class="modal-header">
+        <button type="button" ng-click="closeDialog()" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+		<p class="text-center"><img src="/admin/resources/img/notification-icon.png" alt="" /></p>
+        <h4 class="modal-title text-center">Please confirm</h4>
+    </div>
+    <div class="modal-body">
+        <p align="center">Are you sure, you want to delete HostName request? Changes can not be recovered!</p>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-primary" ng-click="deleteHostName()">Delete</button>
+<button type="button" class="btn btn-primary gray" data-dismiss="modal" ng-click="closeDialog()">Cancel</button>
+    </div>
+</div>
+<style>
+.modal-content{ z-index:999;}
+.modal-footer{ text-align:center; border:0px;}
+.modal-header{ border-bottom:0px;}
+.modal-header h4{ text-align:center; font-weight:400; font-size:23px;}
+.modal-body.contentarea{ padding:10px; font-size:16px; font-weight:300;}
+.ui-dialog-overlay{border-width: 0px; margin: 0px; padding: 0px; position: absolute; top: 0px; left: 0px; width: 1349px; height:100%; z-index:99; background-color:#000; opacity:0.7;}
+</style>
+</script>
+<script type="text/ng-template" id="deleteThemeConfirmation.html">
+<div class="modal-content"> 
+<div class="modal-header">
+        <button type="button" ng-click="closeDialog()" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+		
+    </div>
+<p class="text-center"><img src="/admin/resources/img/notification-icon.png" alt="" /></p>
+        <h4 class="modal-title text-center">Please confirm</h4>
+    <div class="modal-body">
+        <p align="center">Are you sure, you want to delete new theme request? Changes can not be recovered!</p>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-primary" ng-click="deleteTheme()">Delete</button>
+<button type="button" class="btn btn-primary gray" data-dismiss="modal" ng-click="closeDialog()">Cancel</button>
+    </div>
+</div>
+<style>
+.modal-content{ z-index:999;}
+.modal-footer{ text-align:center; border:0px;}
+.modal-header{ border-bottom:0px;}
+.modal-header h4{ text-align:center; font-weight:400; font-size:23px;}
+.modal-body.contentarea{ padding:10px; font-size:16px; font-weight:300;}
+.ui-dialog-overlay{border-width: 0px; margin: 0px; padding: 0px; position: absolute; top: 0px; left: 0px; width: 1349px; height:100%; z-index:99; background-color:#000; opacity:0.7;}
+</style>
+</script>
+
+<script type="text/ng-template" id="deleteDomainName.html">
+<div class="modal-content"> 
+<div class="modal-header">
+        <button type="button" ng-click="closeDialog()" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+</div>
+<p class="text-center"><img src="/admin/resources/img/notification-icon.png" alt="" /></p>
+
+       <h4 class="modal-title text-center">Please confirm</h4>
+
+    <div class="modal-body">
+        <p align="center">Are you sure, you want to delete the Domain? Changes can not be recovered!</p>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-primary" ng-click="confirm()">Delete</button>
+<button type="button" class="btn btn-primary gray" data-dismiss="modal" ng-click="closeDialog()">Cancel</button>
+    </div>
+</div>
+<style>
+.modal-content{ z-index:999;}
+.modal-footer{ text-align:center; border:0px;}
+.modal-header{ border-bottom:0px;}
+.modal-header h4{ text-align:center; font-weight:400; font-size:23px;}
+.modal-body.contentarea{ padding:10px; font-size:16px; font-weight:300;}
+.ui-dialog-overlay{border-width: 0px; margin: 0px; padding: 0px; position: absolute; top: 0px; left: 0px; width: 1349px; height:100%; z-index:99; background-color:#000; opacity:0.7;}
+</style>
+</script>
+
+<script type="text/ng-template" id="deleteApplicationRequest.html">
+<div class="modal-content"> 
+<div class="modal-header">
+        <button type="button" ng-click="closeDialog()" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+</div>
+<p class="text-center"><img src="/admin/resources/img/notification-icon.png" alt="" /></p>
+
+       <h4 class="modal-title text-center">Please confirm</h4>
+
+    <div class="modal-body">
+        <p align="center">Are you sure, you want to delete an Application Request? Changes can not be recovered!</p>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-primary" ng-click="deleteApplicationRequest()">Delete</button>
+<button type="button" class="btn btn-primary gray" data-dismiss="modal" ng-click="closeDialog()">Cancel</button>
+    </div>
+</div>
+<style>
+.modal-content{ z-index:999;}
+.modal-footer{ text-align:center; border:0px;}
+.modal-header{ border-bottom:0px;}
+.modal-header h4{ text-align:center; font-weight:400; font-size:23px;}
+.modal-body.contentarea{ padding:10px; font-size:16px; font-weight:300;}
+.ui-dialog-overlay{border-width: 0px; margin: 0px; padding: 0px; position: absolute; top: 0px; left: 0px; width: 1349px; height:100%; z-index:99; background-color:#000; opacity:0.7;}
+</style>
+</script>
+<script type="text/ng-template" id="deleteDirectory.html" role="dialog">
+    <div class="ql-modal ql-delete-confirmation-modal d-flex align-center justify-content-center">
+        <div class="modal-md">
+            <div class="modal-body">
+                <div class="confirmation-container">
+                    <div class="icon-circle">
+                        <svg width="39" height="44" viewBox="0 0 39 44" fill="none">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M10.6548 3.96464C15.118 1.32155 17.3496 5.99262e-08 19.8 0C22.2504 -5.99262e-08 24.482 1.32155 28.9452 3.96464L30.4548 4.85861C34.918 7.50171 37.1496 8.82325 38.3748 11C39.6 13.1767 39.6 15.8198 39.6 21.1061V22.8939C39.6 28.1802 39.6 30.8233 38.3748 33C37.1496 35.1767 34.918 36.4982 30.4548 39.1413L28.9452 40.0354C24.482 42.6785 22.2504 44 19.8 44C17.3496 44 15.118 42.6785 10.6548 40.0354L9.14522 39.1413C4.68204 36.4982 2.45045 35.1767 1.22523 33C0 30.8233 0 28.1802 0 22.8939V21.1061C0 15.8198 0 13.1767 1.22523 11C2.45045 8.82325 4.68204 7.50171 9.14522 4.85861L10.6548 3.96464ZM22 30.8C22 32.0151 21.015 33 19.8 33C18.585 33 17.6 32.0151 17.6 30.8C17.6 29.5849 18.585 28.6 19.8 28.6C21.015 28.6 22 29.5849 22 30.8ZM19.8 9.35C20.7113 9.35 21.45 10.0887 21.45 11V24.2C21.45 25.1112 20.7113 25.85 19.8 25.85C18.8887 25.85 18.15 25.1112 18.15 24.2V11C18.15 10.0887 18.8887 9.35 19.8 9.35Z" fill="#FF5757"></path>
+                        </svg>
+                    </div>
+                    <h4 class="mrg-B15">Warning: Critical Impact on User Access</h4>
+                    <p class="text-center">Deleting this user store will disrupt all associated users, groups, and policies. Critical features like Account Activation, Login, and Recovery will immediately stop working. This action cannot be undone and will require complete reconfiguration to restore access.</p>
+
+                    <p class="font-wn500">Are you absolutely sure you want to proceed?</p>
+                </div>
+            </div>
+            <div class="modal-footer justify-content-center">
+                <button type="button" class="qlSecondaryBtn btn-cancel" data-dismiss="modal" ng-click="closeDialog()">
+                    Cancel
+                </button>
+                <button type="button" class="qlPrimaryBtn btn-delete"
+                        ng-click="delete(vm.dirIdToDelete)">Yes, delete it
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <style>
+    .modal-content{z-index:999;}
+    .modal-footer{ text-align:center; border:0px;}
+    .modal-header{ border-bottom:0px;}
+    .modal-header h4{ text-align:center; font-weight:400; font-size:23px;}
+    .modal-body.contentarea{ padding:10px; font-size:16px; font-weight:300;}
+    .ui-dialog-overlay{border-width: 0px; margin: 0px; padding: 0px; position: absolute; top: 0px; left: 0px; width: 1349px; height:100%; z-index:99; background-color:#000; opacity:0.7;}
+    </style>
+</script>
+
+<script type="text/ng-template" id="deleteSecurityQuestionForOneUser.html">
+<div class="modal-content"> 
+<div class="modal-header">
+        <button type="button" ng-click="closeDialog()" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+</div>
+<p class="text-center"><img src="/admin/resources/img/notification-icon.png" alt="" /></p>
+
+       <h4 class="modal-title text-center">Please confirm</h4>
+
+    <div class="modal-body">
+        <p align="center">Are you sure, you want to delete security question? Changes can not be recovered!</p>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-primary" ng-click="deleteSecurityQuestion(userId)">Delete</button>
+		<button type="button" class="btn btn-primary gray" data-dismiss="modal" ng-click="closeDialog()">Cancel</button>
+    </div>
+</div>
+<style>
+.modal-content{ z-index:999;}
+.modal-footer{ text-align:center; border:0px;}
+.modal-header{ border-bottom:0px;}
+.modal-header h4{ text-align:center; font-weight:400; font-size:23px;}
+.modal-body.contentarea{ padding:10px; font-size:16px; font-weight:300;}
+.ui-dialog-overlay{border-width: 0px; margin: 0px; padding: 0px; position: absolute; top: 0px; left: 0px; width: 1349px; height:100%; z-index:99; background-color:#000; opacity:0.7;}
+</style>
+</script>
+
+<script type="text/ng-template" id="deleteSecurityQuestionForAllUser.html">
+<div class="modal-content"> 
+<div class="modal-header">
+        <button type="button" ng-click="closeDialog()" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+</div>
+<p class="text-center"><img src="/admin/resources/img/notification-icon.png" alt="" /></p>
+
+       <h4 class="modal-title text-center">Please confirm</h4>
+
+    <div class="modal-body">
+        <p align="center">Are you sure, you want to delete all the user security question and answer ? Changes can not be recovered!</p>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-primary" ng-click="deleteAllSecurityQuestion()">Delete</button>
+<button type="button" class="btn btn-primary gray" data-dismiss="modal" ng-click="closeDialog()">Cancel</button>
+    </div>
+</div>
+<style>
+.modal-content{ z-index:999;}
+.modal-footer{ text-align:center; border:0px;}
+.modal-header{ border-bottom:0px;}
+.modal-header h4{ text-align:center; font-weight:400; font-size:23px;}
+.modal-body.contentarea{ padding:10px; font-size:16px; font-weight:300;}
+.ui-dialog-overlay{border-width: 0px; margin: 0px; padding: 0px; position: absolute; top: 0px; left: 0px; width: 1349px; height:100%; z-index:99; background-color:#000; opacity:0.7;}
+</style>
+</script>
+<script type="text/ng-template" id="deleteQuestionAndAnswerAttribute.html">
+<div class="modal-content"> 
+<div class="modal-header">
+        <button type="button" ng-click="closeDialog()" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+</div>
+<p class="text-center"><img src="/admin/resources/img/notification-icon.png" alt="" /></p>
+
+       <h4 class="modal-title text-center">Please confirm</h4>
+
+    <div class="modal-body">
+        <p align="center">Are you sure, you want to delete this attribute ? Changes can not be recovered!</p>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-primary" ng-click="delete(vm.IdToDelete)">Delete</button>
+<button type="button" class="btn btn-primary gray" data-dismiss="modal" ng-click="closeDialog()">Cancel</button>
+    </div>
+</div>
+<style>
+.modal-content{ z-index:999;}
+.modal-footer{ text-align:center; border:0px;}
+.modal-header{ border-bottom:0px;}
+.modal-header h4{ text-align:center; font-weight:400; font-size:23px;}
+.modal-body.contentarea{ padding:10px; font-size:16px; font-weight:300;}
+.ui-dialog-overlay{border-width: 0px; margin: 0px; padding: 0px; position: absolute; top: 0px; left: 0px; width: 1349px; height:100%; z-index:99; background-color:#000; opacity:0.7;}
+</style>
+</script>
+
+
+<script type="text/ng-template" id="deletePolicy.html">
+    <div class="modal-content">
+        <div class="ql-modal ql-delete-confirmation-modal">
+            <div class="modal-body">
+                <div class="confirmation-container text-center">
+                    <div class="icon-circle">
+                        <svg width="39" height="44" viewBox="0 0 39 44" fill="none">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M10.6548 3.96464C15.118 1.32155 17.3496 5.99262e-08 19.8 0C22.2504 -5.99262e-08 24.482 1.32155 28.9452 3.96464L30.4548 4.85861C34.918 7.50171 37.1496 8.82325 38.3748 11C39.6 13.1767 39.6 15.8198 39.6 21.1061V22.8939C39.6 28.1802 39.6 30.8233 38.3748 33C37.1496 35.1767 34.918 36.4982 30.4548 39.1413L28.9452 40.0354C24.482 42.6785 22.2504 44 19.8 44C17.3496 44 15.118 42.6785 10.6548 40.0354L9.14522 39.1413C4.68204 36.4982 2.45045 35.1767 1.22523 33C0 30.8233 0 28.1802 0 22.8939V21.1061C0 15.8198 0 13.1767 1.22523 11C2.45045 8.82325 4.68204 7.50171 9.14522 4.85861L10.6548 3.96464ZM22 30.8C22 32.0151 21.015 33 19.8 33C18.585 33 17.6 32.0151 17.6 30.8C17.6 29.5849 18.585 28.6 19.8 28.6C21.015 28.6 22 29.5849 22 30.8ZM19.8 9.35C20.7113 9.35 21.45 10.0887 21.45 11V24.2C21.45 25.1112 20.7113 25.85 19.8 25.85C18.8887 25.85 18.15 25.1112 18.15 24.2V11C18.15 10.0887 18.8887 9.35 19.8 9.35Z" fill="#FF5757"/>
+                        </svg>
+                    </div>
+                    <h4 class="mrg-B15">Please Confirm</h4>
+                    <p>Are you sure, you want to delete this policy ? Changes can not be recovered!</p>
+                </div>
+            </div>
+            <div class="modal-footer justify-content-center">
+                <button type="button" class="qlSecondaryBtn btn-cancel" data-dismiss="modal" ng-click="closeDialog()">Cancel</button>
+                <button type="button" class="qlPrimaryBtn" ng-click="delete(vm.IdToDelete)">Delete</button>
+            </div>
+        </div>
+    </div>
+</script>
+
+
+
+
+<script type="text/ng-template" id="disablingMFA.html">		
+    <div class="modal-content comm-modal-header">
+        <div class="modal-header pad-T20 pad-B20 text-center">
+            <img src="../resources/images/prompt.png" width="65">
+        </div>
+        <div class="modal-body contentarea">
+            <h4 class="modal-title font-23 text-center">Please confirm</h4><br>
+            <p align="center">Disabling configuration will auto disable corresponding policies.Policies can't be auto enabled.</p>
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-secondary btn-width-sm" data-dismiss="modal" ng-click="closeDialog()">Cancel</button>
+            <button type="button" class="btn btn-primary btn-width-sm" ng-click="disableMFASelection()">Disable</button>
+        </div><br>
+    </div>
+</script>
+
+
+
+
+<script type="text/ng-template" id="disableEndUserMFASelection.html">		
+<div class="modal-content comm-modal-header">
+    <div class="modal-header pad-T20 pad-B20 text-center">
+        <img src="../resources/images/prompt.png" width="65">
+    </div>
+    <div class="modal-body contentarea">
+        <h4 class="modal-title font-23 text-center">Please confirm</h4><br>
+        <p align="center">Default policy will be assigned to all user roles. Do you wish to continue?</p>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-secondary btn-width-sm" data-dismiss="modal" ng-click="closeDialog()">Cancel</button>
+        <button type="button" class="btn btn-primary btn-width-sm" ng-click="disableRoleBasedMFA()">Disable</button>
+    </div><br>
+</div>
+</script>
+
+
+
+<script type="text/ng-template" id="pinVerificationModal">		
+<div class="modal-new">
+	<div class="modal-content">
+<div ng-show="pinVerifyWindow">
+		<div class="modal-header text-center">
+			<h4 class="heading-section"><strong>Verify your account</strong></h4>
+		</div>
+		<div class="modal-body">
+			<div >
+				<p class="verify-txt text-center" ng-show="pinSendMessage" style="color:green">The security code has been sent successfully to your registered email address</p>
+				<p class="verify-txt text-center" ng-show="resend" style="color:green">The security code has been resent successfully to your registered email address</p>
+				<div class="alert alert-danger" ng-show="wrongpin && !(pinExpire)">Invalid verification Code</div>
+				<div class="form-group" style="width:85%;margin:35px auto;">
+					<input type="text" ng-model="enterpin" class="form-control" placeholder="Enter your Verification Code" maxlength="4" ng-click="setPinStatus()" />
+					<div class="error-msg" ng-show="pinExpire">Verification code expired please click on Resend</div>
+				</div>
+			</div>
+						
+		</div>
+		<div class="modal-footer text-center">
+			<button class="btn btn-gray btn-width-sm" type="button" data-dismiss="modal" ng-click="closeDialog()">Close</button>
+			<button class="btn btn-blue btn-width-sm" type="button" ng-click="pinverify(enterpin)" >Verify</button> <br><br>
+			<a ng-click="resendPin()">Resend Verification Code</a><br><br>
+		</div>	
+</div>
+<div ng-show="!pinVerifyWindow">
+				<div class="modal-header text-center">
+					<h4 class="heading-section"><strong> Your account has been created.</strong></h4>
+				</div>
+				<div class="successfully modal-body">
+					<p align="center"><img ng-src="/admin/resources/img/succesfully.png" /></p> 
+						<p align="center">You will be redirected to login screen automatically in {{timer}} sec,<br>
+						<a ng-click="redirectToLogin()"> Click Here </a> to login now.
+					</p>
+				</div>
+			</div>					
+	</div>
+</div>
+</script>
+
+
+<script type="text/ng-template" id="disablingMFAPolicies.html">		
+    <div class="modal-content">
+        <div class="ql-modal ql-delete-confirmation-modal">
+            <div class="modal-body">
+                <div class="confirmation-container text-center">
+                    <div class="icon-circle">
+                        <svg width="39" height="44" viewBox="0 0 39 44" fill="none">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M10.6548 3.96464C15.118 1.32155 17.3496 5.99262e-08 19.8 0C22.2504 -5.99262e-08 24.482 1.32155 28.9452 3.96464L30.4548 4.85861C34.918 7.50171 37.1496 8.82325 38.3748 11C39.6 13.1767 39.6 15.8198 39.6 21.1061V22.8939C39.6 28.1802 39.6 30.8233 38.3748 33C37.1496 35.1767 34.918 36.4982 30.4548 39.1413L28.9452 40.0354C24.482 42.6785 22.2504 44 19.8 44C17.3496 44 15.118 42.6785 10.6548 40.0354L9.14522 39.1413C4.68204 36.4982 2.45045 35.1767 1.22523 33C0 30.8233 0 28.1802 0 22.8939V21.1061C0 15.8198 0 13.1767 1.22523 11C2.45045 8.82325 4.68204 7.50171 9.14522 4.85861L10.6548 3.96464ZM22 30.8C22 32.0151 21.015 33 19.8 33C18.585 33 17.6 32.0151 17.6 30.8C17.6 29.5849 18.585 28.6 19.8 28.6C21.015 28.6 22 29.5849 22 30.8ZM19.8 9.35C20.7113 9.35 21.45 10.0887 21.45 11V24.2C21.45 25.1112 20.7113 25.85 19.8 25.85C18.8887 25.85 18.15 25.1112 18.15 24.2V11C18.15 10.0887 18.8887 9.35 19.8 9.35Z" fill="#FF5757"/>
+                        </svg>
+                    </div>
+                    <h4 class="mrg-B15">Please confirm</h4>
+                    <p>Are you sure you want to disable role-based MFA. All saved policies will get disabled!</p>
+                </div>
+            </div>
+            <div class="modal-footer justify-content-center">
+                <button type="button" class="qlSecondaryBtn btn-cancel" data-dismiss="modal" ng-click="closeDialog()">Cancel</button>
+                <button type="button" class="qlPrimaryBtn" ng-click="disableMFAPolicies()">Disable</button>
+            </div>
+        </div>
+    </div>
+</script>
+
+
+<script>
+$(document).ready(function(){
+	$(document).on('click', '.dropdown-menu-button', function (e) {
+	    e.stopPropagation()
+	});
+});
+</script>
+
+<script type="text/ng-template" id="termsAndConditionForSignUp.html">		
+<div class="modal-new">
+<div class="modal-content">
+				<div class="modal-header text-center">
+					<h4 class="heading-section"><strong>Terms & Conditions</strong></h4>
+				</div>
+				<div class="modal-body heading-section" style="height: 360px;overflow: auto;">
+					<p>BY ACCEPTING THESE TERMS OF SERVICE OR OTHERWISE USING THE
+ SERVICE (AS DEFINED BELOW), YOU AGREE TO THE TERMS AND CONDITIONS IN
+ THESE TERMS OF SERVICE. IF YOU ARE ENTERING INTO THESE TERMS OF
+ SERVICE AS AN INDIVIDUAL, THE TERM "YOU" REFERS TO YOU. IF YOU ARE
+ ENTERING INTO THIS AGREEMENT ON BEHALF OF A COMPANY OR OTHER LEGAL
+ ENTITY, YOU REPRESENT THAT YOU HAVE THE AUTHORITY TO BIND SUCH ENTITY
+ AND ITS AFFILIATES TO THESE TERMS AND CONDITIONS, IN WHICH CASE THE
+ TERM "YOU" SHALL REFER TO SUCH ENTITY. IF YOU DO NOT HAVE SUCH
+ AUTHORITY, OR IF YOU DO NOT AGREE WITH THESE TERMS AND CONDITIONS,
+ YOU MUST NOT ACCEPT THESE TERMS OF SERVICE AND MAY NOT USE THE
+ SERVICE</p>
+ <p><b><u>Scope</u></b></p>
+ <p>These Terms of Service shall apply to your use of the web-based
+ Single Sign-On services provided by QuickLaunch Single Sign-On
+ ("QuickLaunch SSO", and such services, the "Service"). These Terms of
+ Service represent the parties' entire understanding regarding the
+ Service and shall control over any different or additional terms of
+ any purchase order or other non-QuickLaunch SSO ordering document.</p>
+ <p><b><u>Modifications</u></b></p>
+ <p>QuickLaunch SSO reserves the right to update and change these
+ Terms of Service from time to time without notice. Any new features
+ that augment or enhance the current Service, including the release of
+ new tools and resources, shall be subject to these Terms of Service.
+ Continued use of the Service after any such changes shall constitute
+ your consent to such changes. You can review the most current version
+ of these Terms of Service at any time at
+ https://www.quicklaunchsso.com/terms.</p>
+				</div>
+				<div class="modal-footer text-center">
+					<button class="btn btn-gray btn-width-sm" type="button" data-dismiss="modal" ng-click="closeDialog()">Close</button>
+				</div>
+			</div>
+</div>
+<style>
+	.modal-body ul {list-style: none; padding-left: 0;}
+	.modal-dialog {margin-top: 50px !important;}
+</style>
+</script>
+</body>
+
+
+</html>

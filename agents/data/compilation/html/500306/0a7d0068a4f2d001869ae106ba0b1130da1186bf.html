@@ -1,0 +1,967 @@
+<!DOCTYPE html>
+<html lang="en-US" class="no-js">
+	<head>
+		<meta charset="UTF-8" />
+<script type="text/javascript">
+/* <![CDATA[ */
+var gform;gform||(document.addEventListener("gform_main_scripts_loaded",function(){gform.scriptsLoaded=!0}),document.addEventListener("gform/theme/scripts_loaded",function(){gform.themeScriptsLoaded=!0}),window.addEventListener("DOMContentLoaded",function(){gform.domLoaded=!0}),gform={domLoaded:!1,scriptsLoaded:!1,themeScriptsLoaded:!1,isFormEditor:()=>"function"==typeof InitializeEditor,callIfLoaded:function(o){return!(!gform.domLoaded||!gform.scriptsLoaded||!gform.themeScriptsLoaded&&!gform.isFormEditor()||(gform.isFormEditor()&&console.warn("The use of gform.initializeOnLoaded() is deprecated in the form editor context and will be removed in Gravity Forms 3.1."),o(),0))},initializeOnLoaded:function(o){gform.callIfLoaded(o)||(document.addEventListener("gform_main_scripts_loaded",()=>{gform.scriptsLoaded=!0,gform.callIfLoaded(o)}),document.addEventListener("gform/theme/scripts_loaded",()=>{gform.themeScriptsLoaded=!0,gform.callIfLoaded(o)}),window.addEventListener("DOMContentLoaded",()=>{gform.domLoaded=!0,gform.callIfLoaded(o)}))},hooks:{action:{},filter:{}},addAction:function(o,r,e,t){gform.addHook("action",o,r,e,t)},addFilter:function(o,r,e,t){gform.addHook("filter",o,r,e,t)},doAction:function(o){gform.doHook("action",o,arguments)},applyFilters:function(o){return gform.doHook("filter",o,arguments)},removeAction:function(o,r){gform.removeHook("action",o,r)},removeFilter:function(o,r,e){gform.removeHook("filter",o,r,e)},addHook:function(o,r,e,t,n){null==gform.hooks[o][r]&&(gform.hooks[o][r]=[]);var d=gform.hooks[o][r];null==n&&(n=r+"_"+d.length),gform.hooks[o][r].push({tag:n,callable:e,priority:t=null==t?10:t})},doHook:function(r,o,e){var t;if(e=Array.prototype.slice.call(e,1),null!=gform.hooks[r][o]&&((o=gform.hooks[r][o]).sort(function(o,r){return o.priority-r.priority}),o.forEach(function(o){"function"!=typeof(t=o.callable)&&(t=window[t]),"action"==r?t.apply(null,e):e[0]=t.apply(null,e)})),"filter"==r)return e[0]},removeHook:function(o,r,t,n){var e;null!=gform.hooks[o][r]&&(e=(e=gform.hooks[o][r]).filter(function(o,r,e){return!!(null!=n&&n!=o.tag||null!=t&&t!=o.priority)}),gform.hooks[o][r]=e)}});
+/* ]]> */
+</script>
+
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<script>(function(html){html.className = html.className.replace(/\bno-js\b/,'js')})(document.documentElement);</script>
+<meta name='robots' content='index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' />
+    <!-- Start VWO Common Smartcode -->
+    <script data-jetpack-boost="ignore" type='text/javascript'>
+        var _vwo_clicks = 10;
+    </script>
+    <!-- End VWO Common Smartcode -->
+        <!-- Start VWO Async SmartCode -->
+    <link rel="preconnect" href="https://dev.visualwebsiteoptimizer.com" />
+    <script data-jetpack-boost="ignore" type='text/javascript' id='vwoCode'>
+        /* Fix: wp-rocket (application/ld+json) */
+        window._vwo_code || (function () {
+            var w=window,
+            d=document;
+            var account_id=643145,
+            version=2.2,
+            settings_tolerance=2000,
+            library_tolerance=2500,
+            use_existing_jquery=true,
+            platform='web',
+            hide_element='body',
+            hide_element_style='opacity:0 !important;filter:alpha(opacity=0) !important;background:none !important';
+            /* DO NOT EDIT BELOW THIS LINE */
+            if(f=!1,v=d.querySelector('#vwoCode'),cc={},-1<d.URL.indexOf('__vwo_disable__')||w._vwo_code)return;try{var e=JSON.parse(localStorage.getItem('_vwo_'+account_id+'_config'));cc=e&&'object'==typeof e?e:{}}catch(e){}function r(t){try{return decodeURIComponent(t)}catch(e){return t}}var s=function(){var e={combination:[],combinationChoose:[],split:[],exclude:[],uuid:null,consent:null,optOut:null},t=d.cookie||'';if(!t)return e;for(var n,i,o=/(?:^|;\s*)(?:(_vis_opt_exp_(\d+)_combi=([^;]*))|(_vis_opt_exp_(\d+)_combi_choose=([^;]*))|(_vis_opt_exp_(\d+)_split=([^:;]*))|(_vis_opt_exp_(\d+)_exclude=[^;]*)|(_vis_opt_out=([^;]*))|(_vwo_global_opt_out=[^;]*)|(_vwo_uuid=([^;]*))|(_vwo_consent=([^;]*)))/g;null!==(n=o.exec(t));)try{n[1]?e.combination.push({id:n[2],value:r(n[3])}):n[4]?e.combinationChoose.push({id:n[5],value:r(n[6])}):n[7]?e.split.push({id:n[8],value:r(n[9])}):n[10]?e.exclude.push({id:n[11]}):n[12]?e.optOut=r(n[13]):n[14]?e.optOut=!0:n[15]?e.uuid=r(n[16]):n[17]&&(i=r(n[18]),e.consent=i&&3<=i.length?i.substring(0,3):null)}catch(e){}return e}();function i(){var e=function(){if(w.VWO&&Array.isArray(w.VWO))for(var e=0;e<w.VWO.length;e++){var t=w.VWO[e];if(Array.isArray(t)&&('setVisitorId'===t[0]||'setSessionId'===t[0]))return!0}return!1}(),t='a='+account_id+'&u='+encodeURIComponent(w._vis_opt_url||d.URL)+'&vn='+version+'&ph=1'+('undefined'!=typeof platform?'&p='+platform:'')+'&st='+w.performance.now();e||((n=function(){var e,t=[],n={},i=w.VWO&&w.VWO.appliedCampaigns||{};for(e in i){var o=i[e]&&i[e].v;o&&(t.push(e+'-'+o+'-1'),n[e]=!0)}if(s&&s.combination)for(var r=0;r<s.combination.length;r++){var a=s.combination[r];n[a.id]||t.push(a.id+'-'+a.value)}return t.join('|')}())&&(t+='&c='+n),(n=function(){var e=[],t={};if(s&&s.combinationChoose)for(var n=0;n<s.combinationChoose.length;n++){var i=s.combinationChoose[n];e.push(i.id+'-'+i.value),t[i.id]=!0}if(s&&s.split)for(var o=0;o<s.split.length;o++)t[(i=s.split[o]).id]||e.push(i.id+'-'+i.value);return e.join('|')}())&&(t+='&cc='+n),(n=function(){var e={},t=[];if(w.VWO&&Array.isArray(w.VWO))for(var n=0;n<w.VWO.length;n++){var i=w.VWO[n];if(Array.isArray(i)&&'setVariation'===i[0]&&i[1]&&Array.isArray(i[1]))for(var o=0;o<i[1].length;o++){var r,a=i[1][o];a&&'object'==typeof a&&(r=a.e,a=a.v,r&&a&&(e[r]=a))}}for(r in e)t.push(r+'-'+e[r]);return t.join('|')}())&&(t+='&sv='+n)),s&&s.optOut&&(t+='&o='+s.optOut);var n=function(){var e=[],t={};if(s&&s.exclude)for(var n=0;n<s.exclude.length;n++){var i=s.exclude[n];t[i.id]||(e.push(i.id),t[i.id]=!0)}return e.join('|')}();return n&&(t+='&e='+n),s&&s.uuid&&(t+='&id='+s.uuid),s&&s.consent&&(t+='&consent='+s.consent),w.name&&-1<w.name.indexOf('_vis_preview')&&(t+='&pM=true'),w.VWO&&w.VWO.ed&&(t+='&ed='+w.VWO.ed),t}code={nonce:v&&v.nonce,use_existing_jquery:function(){return'undefined'!=typeof use_existing_jquery?use_existing_jquery:void 0},library_tolerance:function(){return'undefined'!=typeof library_tolerance?library_tolerance:void 0},settings_tolerance:function(){return cc.sT||settings_tolerance},hide_element_style:function(){return'{'+(cc.hES||hide_element_style)+'}'},hide_element:function(){return performance.getEntriesByName('first-contentful-paint')[0]?'':'string'==typeof cc.hE?cc.hE:hide_element},getVersion:function(){return version},finish:function(e){var t;f||(f=!0,(t=d.getElementById('_vis_opt_path_hides'))&&t.parentNode.removeChild(t),e&&((new Image).src='https://dev.visualwebsiteoptimizer.com/ee.gif?a='+account_id+e))},finished:function(){return f},addScript:function(e){var t=d.createElement('script');t.type='text/javascript',e.src?t.src=e.src:t.text=e.text,v&&t.setAttribute('nonce',v.nonce),d.getElementsByTagName('head')[0].appendChild(t)},load:function(e,t){t=t||{};var n=new XMLHttpRequest;n.open('GET',e,!0),n.withCredentials=!t.dSC,n.responseType=t.responseType||'text',n.onload=function(){if(t.onloadCb)return t.onloadCb(n,e);200===n.status?_vwo_code.addScript({text:n.responseText}):_vwo_code.finish('&e=loading_failure:'+e)},n.onerror=function(){if(t.onerrorCb)return t.onerrorCb(e);_vwo_code.finish('&e=loading_failure:'+e)},n.send()},init:function(){var e,t=this.settings_tolerance();w._vwo_settings_timer=setTimeout(function(){_vwo_code.finish()},t),'body'!==this.hide_element()?(n=d.createElement('style'),e=(t=this.hide_element())?t+this.hide_element_style():'',t=d.getElementsByTagName('head')[0],n.setAttribute('id','_vis_opt_path_hides'),v&&n.setAttribute('nonce',v.nonce),n.setAttribute('type','text/css'),n.styleSheet?n.styleSheet.cssText=e:n.appendChild(d.createTextNode(e)),t.appendChild(n)):(n=d.getElementsByTagName('head')[0],(e=d.createElement('div')).style.cssText='z-index: 2147483647 !important;position: fixed !important;left: 0 !important;top: 0 !important;width: 100% !important;height: 100% !important;background: white !important;',e.setAttribute('id','_vis_opt_path_hides'),e.classList.add('_vis_hide_layer'),n.parentNode.insertBefore(e,n.nextSibling));var n='https://dev.visualwebsiteoptimizer.com/j.php?'+i();-1!==w.location.search.indexOf('_vwo_xhr')?this.addScript({src:n}):this.load(n+'&x=true',{l:1})}};w._vwo_code=code;code.init();})();
+    </script>
+    <!-- End VWO Async SmartCode -->
+    	<link rel="preload" href="https://arizonacollege.edu/wp-content/themes/arizona-college/dist/fonts/Montserrat/Montserrat-VariableFont_wght.woff2" as="font" type="font/woff2" crossorigin>
+	
+	<!-- This site is optimized with the Yoast SEO Premium plugin v26.5 (Yoast SEO v26.7) - https://yoast.com/wordpress/plugins/seo/ -->
+	<title>Learn More About Our Nursing Program - Arizona College of Nursing</title>
+	<meta name="description" content="Begin your journey on a new career path with a BSN Degree from an Accredited school like Arizona College of Nursing." />
+	<link rel="canonical" href="https://arizonacollege.edu/nursing-school-info/" />
+	<meta property="og:locale" content="en_US" />
+	<meta property="og:type" content="article" />
+	<meta property="og:title" content="Nursing Information" />
+	<meta property="og:description" content="Begin your journey on a new career path with a BSN Degree from an Accredited school like Arizona College of Nursing." />
+	<meta property="og:url" content="https://arizonacollege.edu/nursing-school-info/" />
+	<meta property="og:site_name" content="Arizona College of Nursing" />
+	<meta property="article:publisher" content="https://www.facebook.com/ArizonaCollegeofNursing" />
+	<meta property="article:modified_time" content="2025-12-03T17:01:00+00:00" />
+	<meta property="og:image" content="https://arizonacollege.edu/wp-content/uploads/2025/08/Nursing-school-BSN-program-student-with-laptop.jpg" />
+	<meta property="og:image:width" content="963" />
+	<meta property="og:image:height" content="642" />
+	<meta property="og:image:type" content="image/jpeg" />
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:site" content="@ArizonaCollege" />
+	<meta name="twitter:label1" content="Est. reading time" />
+	<meta name="twitter:data1" content="4 minutes" />
+	<script type="application/ld+json" class="yoast-schema-graph">{"@context":"https://schema.org","@graph":[{"@type":"WebPage","@id":"https://arizonacollege.edu/nursing-school-info/","url":"https://arizonacollege.edu/nursing-school-info/","name":"Learn More About Our Nursing Program - Arizona College of Nursing","isPartOf":{"@id":"https://arizonacollege.edu/#website"},"primaryImageOfPage":{"@id":"https://arizonacollege.edu/nursing-school-info/#primaryimage"},"image":{"@id":"https://arizonacollege.edu/nursing-school-info/#primaryimage"},"thumbnailUrl":"https://arizonacollege.edu/wp-content/uploads/2025/08/Nursing-school-BSN-program-student-with-laptop.jpg?w=963","datePublished":"2025-08-19T17:56:19+00:00","dateModified":"2025-12-03T17:01:00+00:00","description":"Begin your journey on a new career path with a BSN Degree from an Accredited school like Arizona College of Nursing.","breadcrumb":{"@id":"https://arizonacollege.edu/nursing-school-info/#breadcrumb"},"inLanguage":"en-US","potentialAction":[{"@type":"ReadAction","target":["https://arizonacollege.edu/nursing-school-info/"]}]},{"@type":"ImageObject","inLanguage":"en-US","@id":"https://arizonacollege.edu/nursing-school-info/#primaryimage","url":"https://arizonacollege.edu/wp-content/uploads/2025/08/Nursing-school-BSN-program-student-with-laptop.jpg","contentUrl":"https://arizonacollege.edu/wp-content/uploads/2025/08/Nursing-school-BSN-program-student-with-laptop.jpg","width":963,"height":642,"caption":"Nursing school BSN program student with laptop"},{"@type":"BreadcrumbList","@id":"https://arizonacollege.edu/nursing-school-info/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://arizonacollege.edu/"},{"@type":"ListItem","position":2,"name":"Nursing Information"}]},{"@type":"WebSite","@id":"https://arizonacollege.edu/#website","url":"https://arizonacollege.edu/","name":"Arizona College of Nursing","description":"Nursing School and Healthcare Education","publisher":{"@id":"https://arizonacollege.edu/#organization"},"potentialAction":[{"@type":"SearchAction","target":{"@type":"EntryPoint","urlTemplate":"https://arizonacollege.edu/?s={search_term_string}"},"query-input":{"@type":"PropertyValueSpecification","valueRequired":true,"valueName":"search_term_string"}}],"inLanguage":"en-US"},{"@type":"Organization","@id":"https://arizonacollege.edu/#organization","name":"Arizona College of Nursing","url":"https://arizonacollege.edu/","logo":{"@type":"ImageObject","inLanguage":"en-US","@id":"https://arizonacollege.edu/#/schema/logo/image/","url":"https://arizonacollege.edu/wp-content/uploads/2025/07/logo-az-college-nursing.svg?w=1024","contentUrl":"https://arizonacollege.edu/wp-content/uploads/2025/07/logo-az-college-nursing.svg?w=1024","width":"1024","height":"1024","caption":"Arizona College of Nursing"},"image":{"@id":"https://arizonacollege.edu/#/schema/logo/image/"},"sameAs":["https://www.facebook.com/ArizonaCollegeofNursing","https://x.com/ArizonaCollege","https://www.instagram.com/arizonacollegeofnursing/","https://www.linkedin.com/school/arizonacollege/","https://www.youtube.com/@arizonacollegeofnursing","https://www.tiktok.com/@arizonacollegeofnursing"]}]}</script>
+	<!-- / Yoast SEO Premium plugin. -->
+
+
+<link rel='dns-prefetch' href='//cdn.parsely.com' />
+<link rel='dns-prefetch' href='//stats.wp.com' />
+<link rel="alternate" type="application/rss+xml" title="Arizona College of Nursing &raquo; Feed" href="https://arizonacollege.edu/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Arizona College of Nursing &raquo; Comments Feed" href="https://arizonacollege.edu/comments/feed/" />
+<link rel="alternate" title="oEmbed (JSON)" type="application/json+oembed" href="https://arizonacollege.edu/wp-json/oembed/1.0/embed?url=https%3A%2F%2Farizonacollege.edu%2Fnursing-school-info%2F" />
+<link rel="alternate" title="oEmbed (XML)" type="text/xml+oembed" href="https://arizonacollege.edu/wp-json/oembed/1.0/embed?url=https%3A%2F%2Farizonacollege.edu%2Fnursing-school-info%2F&#038;format=xml" />
+<style id='wp-img-auto-sizes-contain-inline-css'>
+img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
+/*# sourceURL=wp-img-auto-sizes-contain-inline-css */
+</style>
+<style id='arizona-college-azc-logo-style-inline-css'>
+.wp-block-arizona-college-azc-logo{display:-webkit-box;display:-ms-flexbox;display:flex}.wp-block-arizona-college-azc-logo.aligncenter{-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center}
+
+/*# sourceURL=https://arizonacollege.edu/wp-content/themes/arizona-college/dist/blocks/azc-logo/index.css */
+</style>
+<style id='wp-block-paragraph-inline-css'>
+.is-small-text{font-size:.875em}.is-regular-text{font-size:1em}.is-large-text{font-size:2.25em}.is-larger-text{font-size:3em}.has-drop-cap:not(:focus):first-letter{float:left;font-size:8.4em;font-style:normal;font-weight:100;line-height:.68;margin:.05em .1em 0 0;text-transform:uppercase}body.rtl .has-drop-cap:not(:focus):first-letter{float:none;margin-left:.1em}p.has-drop-cap.has-background{overflow:hidden}:root :where(p.has-background){padding:1.25em 2.375em}:where(p.has-text-color:not(.has-link-color)) a{color:inherit}p.has-text-align-left[style*="writing-mode:vertical-lr"],p.has-text-align-right[style*="writing-mode:vertical-rl"]{rotate:180deg}
+/*# sourceURL=https://arizonacollege.edu/wp-includes/blocks/paragraph/style.min.css */
+</style>
+<style id='arizona-college-menu-item-style-inline-css'>
+.wp-block-arizona-college-menu-item>p{margin-bottom:0;margin-top:0}
+
+/*# sourceURL=https://arizonacollege.edu/wp-content/themes/arizona-college/dist/blocks/azc-menu-item/index.css */
+</style>
+<style id='wp-block-group-inline-css'>
+.wp-block-group{box-sizing:border-box}:where(.wp-block-group.wp-block-group-is-layout-constrained){position:relative}
+/*# sourceURL=https://arizonacollege.edu/wp-includes/blocks/group/style.min.css */
+</style>
+<style id='wp-block-image-inline-css'>
+.wp-block-image>a,.wp-block-image>figure>a{display:inline-block}.wp-block-image img{box-sizing:border-box;height:auto;max-width:100%;vertical-align:bottom}@media not (prefers-reduced-motion){.wp-block-image img.hide{visibility:hidden}.wp-block-image img.show{animation:show-content-image .4s}}.wp-block-image[style*=border-radius] img,.wp-block-image[style*=border-radius]>a{border-radius:inherit}.wp-block-image.has-custom-border img{box-sizing:border-box}.wp-block-image.aligncenter{text-align:center}.wp-block-image.alignfull>a,.wp-block-image.alignwide>a{width:100%}.wp-block-image.alignfull img,.wp-block-image.alignwide img{height:auto;width:100%}.wp-block-image .aligncenter,.wp-block-image .alignleft,.wp-block-image .alignright,.wp-block-image.aligncenter,.wp-block-image.alignleft,.wp-block-image.alignright{display:table}.wp-block-image .aligncenter>figcaption,.wp-block-image .alignleft>figcaption,.wp-block-image .alignright>figcaption,.wp-block-image.aligncenter>figcaption,.wp-block-image.alignleft>figcaption,.wp-block-image.alignright>figcaption{caption-side:bottom;display:table-caption}.wp-block-image .alignleft{float:left;margin:.5em 1em .5em 0}.wp-block-image .alignright{float:right;margin:.5em 0 .5em 1em}.wp-block-image .aligncenter{margin-left:auto;margin-right:auto}.wp-block-image :where(figcaption){margin-bottom:1em;margin-top:.5em}.wp-block-image.is-style-circle-mask img{border-radius:9999px}@supports ((-webkit-mask-image:none) or (mask-image:none)) or (-webkit-mask-image:none){.wp-block-image.is-style-circle-mask img{border-radius:0;-webkit-mask-image:url('data:image/svg+xml;utf8,<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><circle cx="50" cy="50" r="50"/></svg>');mask-image:url('data:image/svg+xml;utf8,<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><circle cx="50" cy="50" r="50"/></svg>');mask-mode:alpha;-webkit-mask-position:center;mask-position:center;-webkit-mask-repeat:no-repeat;mask-repeat:no-repeat;-webkit-mask-size:contain;mask-size:contain}}:root :where(.wp-block-image.is-style-rounded img,.wp-block-image .is-style-rounded img){border-radius:9999px}.wp-block-image figure{margin:0}.wp-lightbox-container{display:flex;flex-direction:column;position:relative}.wp-lightbox-container img{cursor:zoom-in}.wp-lightbox-container img:hover+button{opacity:1}.wp-lightbox-container button{align-items:center;backdrop-filter:blur(16px) saturate(180%);background-color:#5a5a5a40;border:none;border-radius:4px;cursor:zoom-in;display:flex;height:20px;justify-content:center;opacity:0;padding:0;position:absolute;right:16px;text-align:center;top:16px;width:20px;z-index:100}@media not (prefers-reduced-motion){.wp-lightbox-container button{transition:opacity .2s ease}}.wp-lightbox-container button:focus-visible{outline:3px auto #5a5a5a40;outline:3px auto -webkit-focus-ring-color;outline-offset:3px}.wp-lightbox-container button:hover{cursor:pointer;opacity:1}.wp-lightbox-container button:focus{opacity:1}.wp-lightbox-container button:focus,.wp-lightbox-container button:hover,.wp-lightbox-container button:not(:hover):not(:active):not(.has-background){background-color:#5a5a5a40;border:none}.wp-lightbox-overlay{box-sizing:border-box;cursor:zoom-out;height:100vh;left:0;overflow:hidden;position:fixed;top:0;visibility:hidden;width:100%;z-index:100000}.wp-lightbox-overlay .close-button{align-items:center;cursor:pointer;display:flex;justify-content:center;min-height:40px;min-width:40px;padding:0;position:absolute;right:calc(env(safe-area-inset-right) + 16px);top:calc(env(safe-area-inset-top) + 16px);z-index:5000000}.wp-lightbox-overlay .close-button:focus,.wp-lightbox-overlay .close-button:hover,.wp-lightbox-overlay .close-button:not(:hover):not(:active):not(.has-background){background:none;border:none}.wp-lightbox-overlay .lightbox-image-container{height:var(--wp--lightbox-container-height);left:50%;overflow:hidden;position:absolute;top:50%;transform:translate(-50%,-50%);transform-origin:top left;width:var(--wp--lightbox-container-width);z-index:9999999999}.wp-lightbox-overlay .wp-block-image{align-items:center;box-sizing:border-box;display:flex;height:100%;justify-content:center;margin:0;position:relative;transform-origin:0 0;width:100%;z-index:3000000}.wp-lightbox-overlay .wp-block-image img{height:var(--wp--lightbox-image-height);min-height:var(--wp--lightbox-image-height);min-width:var(--wp--lightbox-image-width);width:var(--wp--lightbox-image-width)}.wp-lightbox-overlay .wp-block-image figcaption{display:none}.wp-lightbox-overlay button{background:none;border:none}.wp-lightbox-overlay .scrim{background-color:#fff;height:100%;opacity:.9;position:absolute;width:100%;z-index:2000000}.wp-lightbox-overlay.active{visibility:visible}@media not (prefers-reduced-motion){.wp-lightbox-overlay.active{animation:turn-on-visibility .25s both}.wp-lightbox-overlay.active img{animation:turn-on-visibility .35s both}.wp-lightbox-overlay.show-closing-animation:not(.active){animation:turn-off-visibility .35s both}.wp-lightbox-overlay.show-closing-animation:not(.active) img{animation:turn-off-visibility .25s both}.wp-lightbox-overlay.zoom.active{animation:none;opacity:1;visibility:visible}.wp-lightbox-overlay.zoom.active .lightbox-image-container{animation:lightbox-zoom-in .4s}.wp-lightbox-overlay.zoom.active .lightbox-image-container img{animation:none}.wp-lightbox-overlay.zoom.active .scrim{animation:turn-on-visibility .4s forwards}.wp-lightbox-overlay.zoom.show-closing-animation:not(.active){animation:none}.wp-lightbox-overlay.zoom.show-closing-animation:not(.active) .lightbox-image-container{animation:lightbox-zoom-out .4s}.wp-lightbox-overlay.zoom.show-closing-animation:not(.active) .lightbox-image-container img{animation:none}.wp-lightbox-overlay.zoom.show-closing-animation:not(.active) .scrim{animation:turn-off-visibility .4s forwards}}@keyframes show-content-image{0%{visibility:hidden}99%{visibility:hidden}to{visibility:visible}}@keyframes turn-on-visibility{0%{opacity:0}to{opacity:1}}@keyframes turn-off-visibility{0%{opacity:1;visibility:visible}99%{opacity:0;visibility:visible}to{opacity:0;visibility:hidden}}@keyframes lightbox-zoom-in{0%{transform:translate(calc((-100vw + var(--wp--lightbox-scrollbar-width))/2 + var(--wp--lightbox-initial-left-position)),calc(-50vh + var(--wp--lightbox-initial-top-position))) scale(var(--wp--lightbox-scale))}to{transform:translate(-50%,-50%) scale(1)}}@keyframes lightbox-zoom-out{0%{transform:translate(-50%,-50%) scale(1);visibility:visible}99%{visibility:visible}to{transform:translate(calc((-100vw + var(--wp--lightbox-scrollbar-width))/2 + var(--wp--lightbox-initial-left-position)),calc(-50vh + var(--wp--lightbox-initial-top-position))) scale(var(--wp--lightbox-scale));visibility:hidden}}
+/*# sourceURL=https://arizonacollege.edu/wp-includes/blocks/image/style.min.css */
+</style>
+<style id='wp-block-button-inline-css'>
+.wp-block-button__link{align-content:center;box-sizing:border-box;cursor:pointer;display:inline-block;height:100%;text-align:center;word-break:break-word}.wp-block-button__link.aligncenter{text-align:center}.wp-block-button__link.alignright{text-align:right}:where(.wp-block-button__link){border-radius:9999px;box-shadow:none;padding:calc(.667em + 2px) calc(1.333em + 2px);text-decoration:none}.wp-block-button[style*=text-decoration] .wp-block-button__link{text-decoration:inherit}.wp-block-buttons>.wp-block-button.has-custom-width{max-width:none}.wp-block-buttons>.wp-block-button.has-custom-width .wp-block-button__link{width:100%}.wp-block-buttons>.wp-block-button.has-custom-font-size .wp-block-button__link{font-size:inherit}.wp-block-buttons>.wp-block-button.wp-block-button__width-25{width:calc(25% - var(--wp--style--block-gap, .5em)*.75)}.wp-block-buttons>.wp-block-button.wp-block-button__width-50{width:calc(50% - var(--wp--style--block-gap, .5em)*.5)}.wp-block-buttons>.wp-block-button.wp-block-button__width-75{width:calc(75% - var(--wp--style--block-gap, .5em)*.25)}.wp-block-buttons>.wp-block-button.wp-block-button__width-100{flex-basis:100%;width:100%}.wp-block-buttons.is-vertical>.wp-block-button.wp-block-button__width-25{width:25%}.wp-block-buttons.is-vertical>.wp-block-button.wp-block-button__width-50{width:50%}.wp-block-buttons.is-vertical>.wp-block-button.wp-block-button__width-75{width:75%}.wp-block-button.is-style-squared,.wp-block-button__link.wp-block-button.is-style-squared{border-radius:0}.wp-block-button.no-border-radius,.wp-block-button__link.no-border-radius{border-radius:0!important}:root :where(.wp-block-button .wp-block-button__link.is-style-outline),:root :where(.wp-block-button.is-style-outline>.wp-block-button__link){border:2px solid;padding:.667em 1.333em}:root :where(.wp-block-button .wp-block-button__link.is-style-outline:not(.has-text-color)),:root :where(.wp-block-button.is-style-outline>.wp-block-button__link:not(.has-text-color)){color:currentColor}:root :where(.wp-block-button .wp-block-button__link.is-style-outline:not(.has-background)),:root :where(.wp-block-button.is-style-outline>.wp-block-button__link:not(.has-background)){background-color:initial;background-image:none}
+/*# sourceURL=https://arizonacollege.edu/wp-includes/blocks/button/style.min.css */
+</style>
+<style id='wp-block-buttons-inline-css'>
+.wp-block-buttons{box-sizing:border-box}.wp-block-buttons.is-vertical{flex-direction:column}.wp-block-buttons.is-vertical>.wp-block-button:last-child{margin-bottom:0}.wp-block-buttons>.wp-block-button{display:inline-block;margin:0}.wp-block-buttons.is-content-justification-left{justify-content:flex-start}.wp-block-buttons.is-content-justification-left.is-vertical{align-items:flex-start}.wp-block-buttons.is-content-justification-center{justify-content:center}.wp-block-buttons.is-content-justification-center.is-vertical{align-items:center}.wp-block-buttons.is-content-justification-right{justify-content:flex-end}.wp-block-buttons.is-content-justification-right.is-vertical{align-items:flex-end}.wp-block-buttons.is-content-justification-space-between{justify-content:space-between}.wp-block-buttons.aligncenter{text-align:center}.wp-block-buttons:not(.is-content-justification-space-between,.is-content-justification-right,.is-content-justification-left,.is-content-justification-center) .wp-block-button.aligncenter{margin-left:auto;margin-right:auto;width:100%}.wp-block-buttons[style*=text-decoration] .wp-block-button,.wp-block-buttons[style*=text-decoration] .wp-block-button__link{text-decoration:inherit}.wp-block-buttons.has-custom-font-size .wp-block-button__link{font-size:inherit}.wp-block-buttons .wp-block-button__link{width:100%}.wp-block-button.aligncenter{text-align:center}
+/*# sourceURL=https://arizonacollege.edu/wp-includes/blocks/buttons/style.min.css */
+</style>
+<style id='wp-block-columns-inline-css'>
+.wp-block-columns{box-sizing:border-box;display:flex;flex-wrap:wrap!important}@media (min-width:782px){.wp-block-columns{flex-wrap:nowrap!important}}.wp-block-columns{align-items:normal!important}.wp-block-columns.are-vertically-aligned-top{align-items:flex-start}.wp-block-columns.are-vertically-aligned-center{align-items:center}.wp-block-columns.are-vertically-aligned-bottom{align-items:flex-end}@media (max-width:781px){.wp-block-columns:not(.is-not-stacked-on-mobile)>.wp-block-column{flex-basis:100%!important}}@media (min-width:782px){.wp-block-columns:not(.is-not-stacked-on-mobile)>.wp-block-column{flex-basis:0;flex-grow:1}.wp-block-columns:not(.is-not-stacked-on-mobile)>.wp-block-column[style*=flex-basis]{flex-grow:0}}.wp-block-columns.is-not-stacked-on-mobile{flex-wrap:nowrap!important}.wp-block-columns.is-not-stacked-on-mobile>.wp-block-column{flex-basis:0;flex-grow:1}.wp-block-columns.is-not-stacked-on-mobile>.wp-block-column[style*=flex-basis]{flex-grow:0}:where(.wp-block-columns){margin-bottom:1.75em}:where(.wp-block-columns.has-background){padding:1.25em 2.375em}.wp-block-column{flex-grow:1;min-width:0;overflow-wrap:break-word;word-break:break-word}.wp-block-column.is-vertically-aligned-top{align-self:flex-start}.wp-block-column.is-vertically-aligned-center{align-self:center}.wp-block-column.is-vertically-aligned-bottom{align-self:flex-end}.wp-block-column.is-vertically-aligned-stretch{align-self:stretch}.wp-block-column.is-vertically-aligned-bottom,.wp-block-column.is-vertically-aligned-center,.wp-block-column.is-vertically-aligned-top{width:100%}
+/*# sourceURL=https://arizonacollege.edu/wp-includes/blocks/columns/style.min.css */
+</style>
+<style id='wp-block-search-inline-css'>
+.wp-block-search__button{margin-left:10px;word-break:normal}.wp-block-search__button.has-icon{line-height:0}.wp-block-search__button svg{height:1.25em;min-height:24px;min-width:24px;width:1.25em;fill:currentColor;vertical-align:text-bottom}:where(.wp-block-search__button){border:1px solid #ccc;padding:6px 10px}.wp-block-search__inside-wrapper{display:flex;flex:auto;flex-wrap:nowrap;max-width:100%}.wp-block-search__label{width:100%}.wp-block-search.wp-block-search__button-only .wp-block-search__button{box-sizing:border-box;display:flex;flex-shrink:0;justify-content:center;margin-left:0;max-width:100%}.wp-block-search.wp-block-search__button-only .wp-block-search__inside-wrapper{min-width:0!important;transition-property:width}.wp-block-search.wp-block-search__button-only .wp-block-search__input{flex-basis:100%;transition-duration:.3s}.wp-block-search.wp-block-search__button-only.wp-block-search__searchfield-hidden,.wp-block-search.wp-block-search__button-only.wp-block-search__searchfield-hidden .wp-block-search__inside-wrapper{overflow:hidden}.wp-block-search.wp-block-search__button-only.wp-block-search__searchfield-hidden .wp-block-search__input{border-left-width:0!important;border-right-width:0!important;flex-basis:0;flex-grow:0;margin:0;min-width:0!important;padding-left:0!important;padding-right:0!important;width:0!important}:where(.wp-block-search__input){appearance:none;border:1px solid #949494;flex-grow:1;font-family:inherit;font-size:inherit;font-style:inherit;font-weight:inherit;letter-spacing:inherit;line-height:inherit;margin-left:0;margin-right:0;min-width:3rem;padding:8px;text-decoration:unset!important;text-transform:inherit}:where(.wp-block-search__button-inside .wp-block-search__inside-wrapper){background-color:#fff;border:1px solid #949494;box-sizing:border-box;padding:4px}:where(.wp-block-search__button-inside .wp-block-search__inside-wrapper) .wp-block-search__input{border:none;border-radius:0;padding:0 4px}:where(.wp-block-search__button-inside .wp-block-search__inside-wrapper) .wp-block-search__input:focus{outline:none}:where(.wp-block-search__button-inside .wp-block-search__inside-wrapper) :where(.wp-block-search__button){padding:4px 8px}.wp-block-search.aligncenter .wp-block-search__inside-wrapper{margin:auto}.wp-block[data-align=right] .wp-block-search.wp-block-search__button-only .wp-block-search__inside-wrapper{float:right}
+/*# sourceURL=https://arizonacollege.edu/wp-includes/blocks/search/style.min.css */
+</style>
+<style id='wp-block-heading-inline-css'>
+h1:where(.wp-block-heading).has-background,h2:where(.wp-block-heading).has-background,h3:where(.wp-block-heading).has-background,h4:where(.wp-block-heading).has-background,h5:where(.wp-block-heading).has-background,h6:where(.wp-block-heading).has-background{padding:1.25em 2.375em}h1.has-text-align-left[style*=writing-mode]:where([style*=vertical-lr]),h1.has-text-align-right[style*=writing-mode]:where([style*=vertical-rl]),h2.has-text-align-left[style*=writing-mode]:where([style*=vertical-lr]),h2.has-text-align-right[style*=writing-mode]:where([style*=vertical-rl]),h3.has-text-align-left[style*=writing-mode]:where([style*=vertical-lr]),h3.has-text-align-right[style*=writing-mode]:where([style*=vertical-rl]),h4.has-text-align-left[style*=writing-mode]:where([style*=vertical-lr]),h4.has-text-align-right[style*=writing-mode]:where([style*=vertical-rl]),h5.has-text-align-left[style*=writing-mode]:where([style*=vertical-lr]),h5.has-text-align-right[style*=writing-mode]:where([style*=vertical-rl]),h6.has-text-align-left[style*=writing-mode]:where([style*=vertical-lr]),h6.has-text-align-right[style*=writing-mode]:where([style*=vertical-rl]){rotate:180deg}
+/*# sourceURL=https://arizonacollege.edu/wp-includes/blocks/heading/style.min.css */
+</style>
+<style id='arizona-college-campus-locations-style-inline-css'>
+:root{--header-height:102px;--admin-bar-height:0px;--rv-header-height:calc(var(--admin-bar-height, 0px) + var(--header-height, 102px))}:root .admin-bar{--admin-bar-height:32px}@media(max-width:782px){:root .admin-bar{--admin-bar-height:46px}}@media(min-width:1920px){:root{--wp--custom--layout--content-size:74vw!important}}.wp-block-arizona-college-campus-locations__title{color:var(--titleColor,var(--wp--preset--color--navy-blue));font-size:1.25rem;margin-top:0}.wp-block-arizona-college-campus-locations__location .wp-block-arizona-college-campus-locations__location-link{background:hsla(0,0%,100%,0);color:var(--linkColor,var(--wp--preset--color--navy-blue-75));display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:justify!important;-ms-flex-pack:justify!important;justify-content:space-between!important;padding:.75rem 0;-webkit-text-decoration:none;text-decoration:none;text-transform:none;-webkit-transition:background-color .2s ease,.2s ease;transition:background-color .2s ease,.2s ease;width:100%}.wp-block-arizona-college-campus-locations__location .wp-block-arizona-college-campus-locations__location-link svg{-webkit-transition:-webkit-transform .2s ease;transition:-webkit-transform .2s ease;transition:transform .2s ease;transition:transform .2s ease,-webkit-transform .2s ease}.wp-block-arizona-college-campus-locations__location .wp-block-arizona-college-campus-locations__location-link svg rect{fill:var(--iconBackground,var(--wp--preset--color--grey-light))}.wp-block-arizona-college-campus-locations__location .wp-block-arizona-college-campus-locations__location-link svg path{fill:var(--iconColor,var(--wp--preset--color--navy-blue-75))}.wp-block-arizona-college-campus-locations__location .wp-block-arizona-college-campus-locations__location-link:hover{background:hsla(0,0%,100%,.5);color:var(--linkHoverColor,var(--wp--preset--color--navy-blue));padding:.75rem;-webkit-text-decoration:underline;text-decoration:underline}.wp-block-arizona-college-campus-locations__location .wp-block-arizona-college-campus-locations__location-link:hover svg{-webkit-transform:rotate(45deg);transform:rotate(45deg)}.wp-block-arizona-college-campus-locations__location .wp-block-arizona-college-campus-locations__location-link:hover svg rect{fill:var(--iconHoverBackground,var(--wp--preset--color--navy-blue))}.wp-block-arizona-college-campus-locations__location .wp-block-arizona-college-campus-locations__location-link:hover svg path{fill:var(--iconHoverColor,var(--wp--preset--color--white))}.wp-block-arizona-college-campus-locations--has-image,.wp-block-arizona-college-campus-locations--has-image+.wp-block-arizona-college-campus-locations{display:grid;grid-gap:2.5rem;gap:2.5rem}.wp-block-arizona-college-campus-locations--has-image .wp-block-arizona-college-campus-locations__image{margin:0 auto;max-width:100%}@media(min-width:781px){.wp-block-arizona-college-campus-locations--has-image,.wp-block-arizona-college-campus-locations--has-image+.wp-block-arizona-college-campus-locations{gap:8.875rem;grid-template-columns:40% auto}.wp-block-arizona-college-campus-locations--has-image+.wp-block-arizona-college-campus-locations>*{grid-column:2}.wp-block-arizona-college-campus-locations--has-image .wp-block-arizona-college-campus-locations__image{margin:0;position:sticky;top:calc(var(--header-height) + var(--admin-bar-height) + 2.2rem)}}@media(min-width:781px)and (min-width:1000px){.wp-block-arizona-college-campus-locations--has-image .wp-block-arizona-college-campus-locations__image{top:calc(var(--header-height) + var(--admin-bar-height) + 3rem)}}@media(min-width:781px)and (min-width:1460px){.wp-block-arizona-college-campus-locations--has-image .wp-block-arizona-college-campus-locations__image{top:calc(var(--header-height) + var(--admin-bar-height) + 4rem)}}.wp-block-arizona-college-campus-locations--view-list .wp-block-arizona-college-campus-locations__location+.wp-block-arizona-college-campus-locations__location{border-top:1px solid var(--separatorColor,rgba(58,67,74,.12))}@media(min-width:781px){.wp-block-arizona-college-campus-locations--view-two-column .wp-block-arizona-college-campus-locations__list{-webkit-columns:2;-moz-columns:2;columns:2;gap:2.4rem}}@media(max-width:781px){.wp-block-arizona-college-campus-locations{margin-top:0;-webkit-margin-before:0!important;margin-block-start:0!important}.wp-block-arizona-college-campus-locations__title{margin-bottom:0}.wp-block-arizona-college-campus-locations__locations-wrapper.active{background:#fff;position:relative}.wp-block-arizona-college-campus-locations__locations-wrapper.active .wp-block-arizona-college-campus-locations__list{position:relative}}
+
+/*# sourceURL=https://arizonacollege.edu/wp-content/themes/arizona-college/dist/blocks/campus-locations/index.css */
+</style>
+<style id='wp-emoji-styles-inline-css'>
+
+	img.wp-smiley, img.emoji {
+		display: inline !important;
+		border: none !important;
+		box-shadow: none !important;
+		height: 1em !important;
+		width: 1em !important;
+		margin: 0 0.07em !important;
+		vertical-align: -0.1em !important;
+		background: none !important;
+		padding: 0 !important;
+	}
+/*# sourceURL=wp-emoji-styles-inline-css */
+</style>
+<style id='wp-block-library-inline-css'>
+:root{--wp-block-synced-color:#7a00df;--wp-block-synced-color--rgb:122,0,223;--wp-bound-block-color:var(--wp-block-synced-color);--wp-editor-canvas-background:#ddd;--wp-admin-theme-color:#007cba;--wp-admin-theme-color--rgb:0,124,186;--wp-admin-theme-color-darker-10:#006ba1;--wp-admin-theme-color-darker-10--rgb:0,107,160.5;--wp-admin-theme-color-darker-20:#005a87;--wp-admin-theme-color-darker-20--rgb:0,90,135;--wp-admin-border-width-focus:2px}@media (min-resolution:192dpi){:root{--wp-admin-border-width-focus:1.5px}}.wp-element-button{cursor:pointer}:root .has-very-light-gray-background-color{background-color:#eee}:root .has-very-dark-gray-background-color{background-color:#313131}:root .has-very-light-gray-color{color:#eee}:root .has-very-dark-gray-color{color:#313131}:root .has-vivid-green-cyan-to-vivid-cyan-blue-gradient-background{background:linear-gradient(135deg,#00d084,#0693e3)}:root .has-purple-crush-gradient-background{background:linear-gradient(135deg,#34e2e4,#4721fb 50%,#ab1dfe)}:root .has-hazy-dawn-gradient-background{background:linear-gradient(135deg,#faaca8,#dad0ec)}:root .has-subdued-olive-gradient-background{background:linear-gradient(135deg,#fafae1,#67a671)}:root .has-atomic-cream-gradient-background{background:linear-gradient(135deg,#fdd79a,#004a59)}:root .has-nightshade-gradient-background{background:linear-gradient(135deg,#330968,#31cdcf)}:root .has-midnight-gradient-background{background:linear-gradient(135deg,#020381,#2874fc)}:root{--wp--preset--font-size--normal:16px;--wp--preset--font-size--huge:42px}.has-regular-font-size{font-size:1em}.has-larger-font-size{font-size:2.625em}.has-normal-font-size{font-size:var(--wp--preset--font-size--normal)}.has-huge-font-size{font-size:var(--wp--preset--font-size--huge)}.has-text-align-center{text-align:center}.has-text-align-left{text-align:left}.has-text-align-right{text-align:right}.has-fit-text{white-space:nowrap!important}#end-resizable-editor-section{display:none}.aligncenter{clear:both}.items-justified-left{justify-content:flex-start}.items-justified-center{justify-content:center}.items-justified-right{justify-content:flex-end}.items-justified-space-between{justify-content:space-between}.screen-reader-text{border:0;clip-path:inset(50%);height:1px;margin:-1px;overflow:hidden;padding:0;position:absolute;width:1px;word-wrap:normal!important}.screen-reader-text:focus{background-color:#ddd;clip-path:none;color:#444;display:block;font-size:1em;height:auto;left:5px;line-height:normal;padding:15px 23px 14px;text-decoration:none;top:5px;width:auto;z-index:100000}html :where(.has-border-color){border-style:solid}html :where([style*=border-top-color]){border-top-style:solid}html :where([style*=border-right-color]){border-right-style:solid}html :where([style*=border-bottom-color]){border-bottom-style:solid}html :where([style*=border-left-color]){border-left-style:solid}html :where([style*=border-width]){border-style:solid}html :where([style*=border-top-width]){border-top-style:solid}html :where([style*=border-right-width]){border-right-style:solid}html :where([style*=border-bottom-width]){border-bottom-style:solid}html :where([style*=border-left-width]){border-left-style:solid}html :where(img[class*=wp-image-]){height:auto;max-width:100%}:where(figure){margin:0 0 1em}html :where(.is-position-sticky){--wp-admin--admin-bar--position-offset:var(--wp-admin--admin-bar--height,0px)}@media screen and (max-width:600px){html :where(.is-position-sticky){--wp-admin--admin-bar--position-offset:0px}}
+
+/*# sourceURL=wp-block-library-inline-css */
+</style>
+<link rel='stylesheet' id='all-css-0' href='https://arizonacollege.edu/wp-includes/blocks/cover/style.min.css?m=1770142565g' type='text/css' media='all' />
+<style id='wp-block-list-inline-css'>
+ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:1.25em 2.375em}
+/*# sourceURL=https://arizonacollege.edu/wp-includes/blocks/list/style.min.css */
+</style>
+<link rel='stylesheet' id='all-css-2' href='https://arizonacollege.edu/wp-includes/blocks/navigation/style.min.css?m=1770142566g' type='text/css' media='all' />
+<style id='wp-block-navigation-link-inline-css'>
+.wp-block-navigation .wp-block-navigation-item__label{overflow-wrap:break-word}.wp-block-navigation .wp-block-navigation-item__description{display:none}.link-ui-tools{outline:1px solid #f0f0f0;padding:8px}.link-ui-block-inserter{padding-top:8px}.link-ui-block-inserter__back{margin-left:8px;text-transform:uppercase}
+/*# sourceURL=https://arizonacollege.edu/wp-includes/blocks/navigation-link/style.min.css */
+</style>
+<style id='wp-block-separator-inline-css'>
+@charset "UTF-8";.wp-block-separator{border:none;border-top:2px solid}:root :where(.wp-block-separator.is-style-dots){height:auto;line-height:1;text-align:center}:root :where(.wp-block-separator.is-style-dots):before{color:currentColor;content:"···";font-family:serif;font-size:1.5em;letter-spacing:2em;padding-left:2em}.wp-block-separator.is-style-dots{background:none!important;border:none!important}
+/*# sourceURL=https://arizonacollege.edu/wp-includes/blocks/separator/style.min.css */
+</style>
+<style id='wp-block-social-links-inline-css'>
+.wp-block-social-links{background:none;box-sizing:border-box;margin-left:0;padding-left:0;padding-right:0;text-indent:0}.wp-block-social-links .wp-social-link a,.wp-block-social-links .wp-social-link a:hover{border-bottom:0;box-shadow:none;text-decoration:none}.wp-block-social-links .wp-social-link svg{height:1em;width:1em}.wp-block-social-links .wp-social-link span:not(.screen-reader-text){font-size:.65em;margin-left:.5em;margin-right:.5em}.wp-block-social-links.has-small-icon-size{font-size:16px}.wp-block-social-links,.wp-block-social-links.has-normal-icon-size{font-size:24px}.wp-block-social-links.has-large-icon-size{font-size:36px}.wp-block-social-links.has-huge-icon-size{font-size:48px}.wp-block-social-links.aligncenter{display:flex;justify-content:center}.wp-block-social-links.alignright{justify-content:flex-end}.wp-block-social-link{border-radius:9999px;display:block}@media not (prefers-reduced-motion){.wp-block-social-link{transition:transform .1s ease}}.wp-block-social-link{height:auto}.wp-block-social-link a{align-items:center;display:flex;line-height:0}.wp-block-social-link:hover{transform:scale(1.1)}.wp-block-social-links .wp-block-social-link.wp-social-link{display:inline-block;margin:0;padding:0}.wp-block-social-links .wp-block-social-link.wp-social-link .wp-block-social-link-anchor,.wp-block-social-links .wp-block-social-link.wp-social-link .wp-block-social-link-anchor svg,.wp-block-social-links .wp-block-social-link.wp-social-link .wp-block-social-link-anchor:active,.wp-block-social-links .wp-block-social-link.wp-social-link .wp-block-social-link-anchor:hover,.wp-block-social-links .wp-block-social-link.wp-social-link .wp-block-social-link-anchor:visited{color:currentColor;fill:currentColor}:where(.wp-block-social-links:not(.is-style-logos-only)) .wp-social-link{background-color:#f0f0f0;color:#444}:where(.wp-block-social-links:not(.is-style-logos-only)) .wp-social-link-amazon{background-color:#f90;color:#fff}:where(.wp-block-social-links:not(.is-style-logos-only)) .wp-social-link-bandcamp{background-color:#1ea0c3;color:#fff}:where(.wp-block-social-links:not(.is-style-logos-only)) .wp-social-link-behance{background-color:#0757fe;color:#fff}:where(.wp-block-social-links:not(.is-style-logos-only)) .wp-social-link-bluesky{background-color:#0a7aff;color:#fff}:where(.wp-block-social-links:not(.is-style-logos-only)) .wp-social-link-codepen{background-color:#1e1f26;color:#fff}:where(.wp-block-social-links:not(.is-style-logos-only)) .wp-social-link-deviantart{background-color:#02e49b;color:#fff}:where(.wp-block-social-links:not(.is-style-logos-only)) .wp-social-link-discord{background-color:#5865f2;color:#fff}:where(.wp-block-social-links:not(.is-style-logos-only)) .wp-social-link-dribbble{background-color:#e94c89;color:#fff}:where(.wp-block-social-links:not(.is-style-logos-only)) .wp-social-link-dropbox{background-color:#4280ff;color:#fff}:where(.wp-block-social-links:not(.is-style-logos-only)) .wp-social-link-etsy{background-color:#f45800;color:#fff}:where(.wp-block-social-links:not(.is-style-logos-only)) .wp-social-link-facebook{background-color:#0866ff;color:#fff}:where(.wp-block-social-links:not(.is-style-logos-only)) .wp-social-link-fivehundredpx{background-color:#000;color:#fff}:where(.wp-block-social-links:not(.is-style-logos-only)) .wp-social-link-flickr{background-color:#0461dd;color:#fff}:where(.wp-block-social-links:not(.is-style-logos-only)) .wp-social-link-foursquare{background-color:#e65678;color:#fff}:where(.wp-block-social-links:not(.is-style-logos-only)) .wp-social-link-github{background-color:#24292d;color:#fff}:where(.wp-block-social-links:not(.is-style-logos-only)) .wp-social-link-goodreads{background-color:#eceadd;color:#382110}:where(.wp-block-social-links:not(.is-style-logos-only)) .wp-social-link-google{background-color:#ea4434;color:#fff}:where(.wp-block-social-links:not(.is-style-logos-only)) .wp-social-link-gravatar{background-color:#1d4fc4;color:#fff}:where(.wp-block-social-links:not(.is-style-logos-only)) .wp-social-link-instagram{background-color:#f00075;color:#fff}:where(.wp-block-social-links:not(.is-style-logos-only)) .wp-social-link-lastfm{background-color:#e21b24;color:#fff}:where(.wp-block-social-links:not(.is-style-logos-only)) .wp-social-link-linkedin{background-color:#0d66c2;color:#fff}:where(.wp-block-social-links:not(.is-style-logos-only)) .wp-social-link-mastodon{background-color:#3288d4;color:#fff}:where(.wp-block-social-links:not(.is-style-logos-only)) .wp-social-link-medium{background-color:#000;color:#fff}:where(.wp-block-social-links:not(.is-style-logos-only)) .wp-social-link-meetup{background-color:#f6405f;color:#fff}:where(.wp-block-social-links:not(.is-style-logos-only)) .wp-social-link-patreon{background-color:#000;color:#fff}:where(.wp-block-social-links:not(.is-style-logos-only)) .wp-social-link-pinterest{background-color:#e60122;color:#fff}:where(.wp-block-social-links:not(.is-style-logos-only)) .wp-social-link-pocket{background-color:#ef4155;color:#fff}:where(.wp-block-social-links:not(.is-style-logos-only)) .wp-social-link-reddit{background-color:#ff4500;color:#fff}:where(.wp-block-social-links:not(.is-style-logos-only)) .wp-social-link-skype{background-color:#0478d7;color:#fff}:where(.wp-block-social-links:not(.is-style-logos-only)) .wp-social-link-snapchat{background-color:#fefc00;color:#fff;stroke:#000}:where(.wp-block-social-links:not(.is-style-logos-only)) .wp-social-link-soundcloud{background-color:#ff5600;color:#fff}:where(.wp-block-social-links:not(.is-style-logos-only)) .wp-social-link-spotify{background-color:#1bd760;color:#fff}:where(.wp-block-social-links:not(.is-style-logos-only)) .wp-social-link-telegram{background-color:#2aabee;color:#fff}:where(.wp-block-social-links:not(.is-style-logos-only)) .wp-social-link-threads{background-color:#000;color:#fff}:where(.wp-block-social-links:not(.is-style-logos-only)) .wp-social-link-tiktok{background-color:#000;color:#fff}:where(.wp-block-social-links:not(.is-style-logos-only)) .wp-social-link-tumblr{background-color:#011835;color:#fff}:where(.wp-block-social-links:not(.is-style-logos-only)) .wp-social-link-twitch{background-color:#6440a4;color:#fff}:where(.wp-block-social-links:not(.is-style-logos-only)) .wp-social-link-twitter{background-color:#1da1f2;color:#fff}:where(.wp-block-social-links:not(.is-style-logos-only)) .wp-social-link-vimeo{background-color:#1eb7ea;color:#fff}:where(.wp-block-social-links:not(.is-style-logos-only)) .wp-social-link-vk{background-color:#4680c2;color:#fff}:where(.wp-block-social-links:not(.is-style-logos-only)) .wp-social-link-wordpress{background-color:#3499cd;color:#fff}:where(.wp-block-social-links:not(.is-style-logos-only)) .wp-social-link-whatsapp{background-color:#25d366;color:#fff}:where(.wp-block-social-links:not(.is-style-logos-only)) .wp-social-link-x{background-color:#000;color:#fff}:where(.wp-block-social-links:not(.is-style-logos-only)) .wp-social-link-yelp{background-color:#d32422;color:#fff}:where(.wp-block-social-links:not(.is-style-logos-only)) .wp-social-link-youtube{background-color:red;color:#fff}:where(.wp-block-social-links.is-style-logos-only) .wp-social-link{background:none}:where(.wp-block-social-links.is-style-logos-only) .wp-social-link svg{height:1.25em;width:1.25em}:where(.wp-block-social-links.is-style-logos-only) .wp-social-link-amazon{color:#f90}:where(.wp-block-social-links.is-style-logos-only) .wp-social-link-bandcamp{color:#1ea0c3}:where(.wp-block-social-links.is-style-logos-only) .wp-social-link-behance{color:#0757fe}:where(.wp-block-social-links.is-style-logos-only) .wp-social-link-bluesky{color:#0a7aff}:where(.wp-block-social-links.is-style-logos-only) .wp-social-link-codepen{color:#1e1f26}:where(.wp-block-social-links.is-style-logos-only) .wp-social-link-deviantart{color:#02e49b}:where(.wp-block-social-links.is-style-logos-only) .wp-social-link-discord{color:#5865f2}:where(.wp-block-social-links.is-style-logos-only) .wp-social-link-dribbble{color:#e94c89}:where(.wp-block-social-links.is-style-logos-only) .wp-social-link-dropbox{color:#4280ff}:where(.wp-block-social-links.is-style-logos-only) .wp-social-link-etsy{color:#f45800}:where(.wp-block-social-links.is-style-logos-only) .wp-social-link-facebook{color:#0866ff}:where(.wp-block-social-links.is-style-logos-only) .wp-social-link-fivehundredpx{color:#000}:where(.wp-block-social-links.is-style-logos-only) .wp-social-link-flickr{color:#0461dd}:where(.wp-block-social-links.is-style-logos-only) .wp-social-link-foursquare{color:#e65678}:where(.wp-block-social-links.is-style-logos-only) .wp-social-link-github{color:#24292d}:where(.wp-block-social-links.is-style-logos-only) .wp-social-link-goodreads{color:#382110}:where(.wp-block-social-links.is-style-logos-only) .wp-social-link-google{color:#ea4434}:where(.wp-block-social-links.is-style-logos-only) .wp-social-link-gravatar{color:#1d4fc4}:where(.wp-block-social-links.is-style-logos-only) .wp-social-link-instagram{color:#f00075}:where(.wp-block-social-links.is-style-logos-only) .wp-social-link-lastfm{color:#e21b24}:where(.wp-block-social-links.is-style-logos-only) .wp-social-link-linkedin{color:#0d66c2}:where(.wp-block-social-links.is-style-logos-only) .wp-social-link-mastodon{color:#3288d4}:where(.wp-block-social-links.is-style-logos-only) .wp-social-link-medium{color:#000}:where(.wp-block-social-links.is-style-logos-only) .wp-social-link-meetup{color:#f6405f}:where(.wp-block-social-links.is-style-logos-only) .wp-social-link-patreon{color:#000}:where(.wp-block-social-links.is-style-logos-only) .wp-social-link-pinterest{color:#e60122}:where(.wp-block-social-links.is-style-logos-only) .wp-social-link-pocket{color:#ef4155}:where(.wp-block-social-links.is-style-logos-only) .wp-social-link-reddit{color:#ff4500}:where(.wp-block-social-links.is-style-logos-only) .wp-social-link-skype{color:#0478d7}:where(.wp-block-social-links.is-style-logos-only) .wp-social-link-snapchat{color:#fff;stroke:#000}:where(.wp-block-social-links.is-style-logos-only) .wp-social-link-soundcloud{color:#ff5600}:where(.wp-block-social-links.is-style-logos-only) .wp-social-link-spotify{color:#1bd760}:where(.wp-block-social-links.is-style-logos-only) .wp-social-link-telegram{color:#2aabee}:where(.wp-block-social-links.is-style-logos-only) .wp-social-link-threads{color:#000}:where(.wp-block-social-links.is-style-logos-only) .wp-social-link-tiktok{color:#000}:where(.wp-block-social-links.is-style-logos-only) .wp-social-link-tumblr{color:#011835}:where(.wp-block-social-links.is-style-logos-only) .wp-social-link-twitch{color:#6440a4}:where(.wp-block-social-links.is-style-logos-only) .wp-social-link-twitter{color:#1da1f2}:where(.wp-block-social-links.is-style-logos-only) .wp-social-link-vimeo{color:#1eb7ea}:where(.wp-block-social-links.is-style-logos-only) .wp-social-link-vk{color:#4680c2}:where(.wp-block-social-links.is-style-logos-only) .wp-social-link-whatsapp{color:#25d366}:where(.wp-block-social-links.is-style-logos-only) .wp-social-link-wordpress{color:#3499cd}:where(.wp-block-social-links.is-style-logos-only) .wp-social-link-x{color:#000}:where(.wp-block-social-links.is-style-logos-only) .wp-social-link-yelp{color:#d32422}:where(.wp-block-social-links.is-style-logos-only) .wp-social-link-youtube{color:red}.wp-block-social-links.is-style-pill-shape .wp-social-link{width:auto}:root :where(.wp-block-social-links .wp-social-link a){padding:.25em}:root :where(.wp-block-social-links.is-style-logos-only .wp-social-link a){padding:0}:root :where(.wp-block-social-links.is-style-pill-shape .wp-social-link a){padding-left:.6666666667em;padding-right:.6666666667em}.wp-block-social-links:not(.has-icon-color):not(.has-icon-background-color) .wp-social-link-snapchat .wp-block-social-link-label{color:#000}
+/*# sourceURL=https://arizonacollege.edu/wp-includes/blocks/social-links/style.min.css */
+</style>
+<style id='arizona-college-carousel-style-inline-css'>
+:root{--header-height:102px;--admin-bar-height:0px;--rv-header-height:calc(var(--admin-bar-height, 0px) + var(--header-height, 102px))}:root .admin-bar{--admin-bar-height:32px}@media(max-width:782px){:root .admin-bar{--admin-bar-height:46px}}@media(min-width:1920px){:root{--wp--custom--layout--content-size:74vw!important}}.wp-block-arizona-college-carousel{padding-left:0!important;padding-right:0!important}.wp-block-arizona-college-carousel__heading{display:grid;grid-template-columns:1fr 200px;-webkit-box-align:end;-ms-flex-align:end;align-items:end;margin-bottom:2rem}.wp-block-arizona-college-carousel__heading-content{grid-column:1}.wp-block-arizona-college-carousel__heading-navigation{grid-column:2}.wp-block-arizona-college-carousel__heading--no-title{grid-template-columns:1fr}.wp-block-arizona-college-carousel__heading--no-title .wp-block-arizona-college-carousel__heading-navigation{grid-column:1}.wp-block-arizona-college-carousel__heading--no-navigation{grid-template-columns:1fr}@media(max-width:641px){.wp-block-arizona-college-carousel__heading{gap:1rem;grid-template-columns:1}.wp-block-arizona-college-carousel__heading .wp-block-arizona-college-carousel__heading-content,.wp-block-arizona-college-carousel__heading .wp-block-arizona-college-carousel__heading-navigation{grid-column-end:span 2}.wp-block-arizona-college-carousel__heading .wp-block-arizona-college-carousel__heading-content{max-width:100%}.wp-block-arizona-college-carousel__heading .wp-block-arizona-college-carousel__heading-navigation{grid-row:2}}.wp-block-arizona-college-carousel__title{color:var(--wp--preset--color--yellow);margin-top:0}.wp-block-arizona-college-carousel .wp-block-arizona-college-carousel__items{display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:nowrap;flex-wrap:nowrap}.wp-block-arizona-college-carousel .wp-block-arizona-college-carousel__items>*{-webkit-box-flex:0;-ms-flex:0 0 100%;flex:0 0 100%}@media(min-width:781.02px){.wp-block-arizona-college-carousel--slides-2 .wp-block-arizona-college-carousel__items>*,.wp-block-arizona-college-carousel--slides-3 .wp-block-arizona-college-carousel__items>*,.wp-block-arizona-college-carousel--slides-4 .wp-block-arizona-college-carousel__items>*,.wp-block-arizona-college-carousel--slides-5 .wp-block-arizona-college-carousel__items>*{-webkit-box-flex:0;-ms-flex:0 0 calc(50% - 12px);flex:0 0 calc(50% - 12px)}}@media(min-width:1000.02px){.wp-block-arizona-college-carousel--slides-3 .wp-block-arizona-college-carousel__items>*,.wp-block-arizona-college-carousel--slides-4 .wp-block-arizona-college-carousel__items>*,.wp-block-arizona-college-carousel--slides-5 .wp-block-arizona-college-carousel__items>*{-webkit-box-flex:0;-ms-flex:0 0 calc(33.333% - 16px);flex:0 0 calc(33.333% - 16px)}}@media(min-width:1460.02px){.wp-block-arizona-college-carousel--slides-4 .wp-block-arizona-college-carousel__items>*,.wp-block-arizona-college-carousel--slides-5 .wp-block-arizona-college-carousel__items>*{-webkit-box-flex:0;-ms-flex:0 0 calc(25% - 18px);flex:0 0 calc(25% - 18px)}}@media(min-width:1600.02px){.wp-block-arizona-college-carousel--slides-5 .wp-block-arizona-college-carousel__items>*{-webkit-box-flex:0;-ms-flex:0 0 calc(20% - 19.2px);flex:0 0 calc(20% - 19.2px)}}.wp-block-arizona-college-carousel--type-overflow .wp-block-arizona-college-carousel__items{width:80%}.wp-block-arizona-college-carousel--type-contained{overflow:hidden}.wp-block-arizona-college-carousel.has-light-background .wp-block-arizona-college-carousel__title{color:var(--wp--preset--color--navy-blue)}.wp-block-arizona-college-carousel.has-light-background p{color:var(--wp--preset--color--dark-grey)}.wp-block-arizona-college-carousel-item{height:inherit}.wp-block-arizona-college-carousel-item__content,.wp-block-arizona-college-carousel-item__content>.wp-block-arizona-college-card-item{height:100%}.wp-block-arizona-college-carousel-item__testimonial{background:var(--wp--preset--color--blue-25);border-radius:8px;display:-webkit-box;display:-ms-flexbox;display:flex;height:100%;padding:2.25rem 3.75rem;-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-direction:column;flex-direction:column}.wp-block-arizona-college-carousel-item__testimonial-content{-webkit-box-flex:1;-ms-flex-positive:1;flex-grow:1}.wp-block-arizona-college-carousel-item__testimonial-byline{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-align:center;-ms-flex-align:center;align-items:center;gap:1.5rem;margin-top:1rem}.wp-block-arizona-college-carousel-item__testimonial-image{-webkit-box-flex:0;-ms-flex:0 0 5rem;flex:0 0 5rem}.wp-block-arizona-college-carousel-item__testimonial-image img{border-radius:50%;height:5rem;-o-object-fit:cover;object-fit:cover;width:5rem}.wp-block-arizona-college-carousel-item__testimonial-author{font-size:1.25rem;font-weight:500}.wp-block-arizona-college-carousel-item__testimonial-job{display:block;font-size:.875rem}.wp-block-arizona-college-carousel-item__testimonial-quote svg{color:var(--wp--preset--color--blue);height:3rem;width:3rem}@media(max-width:991.98px){.wp-block-arizona-college-carousel-item__testimonial{padding:2rem}}@media(max-width:499.98px){.wp-block-arizona-college-carousel--type-overflow .wp-block-arizona-college-carousel__items{width:95%}.wp-block-arizona-college-carousel-item__testimonial{padding:1.5rem}.wp-block-arizona-college-carousel-item__testimonial-byline{gap:1rem}.wp-block-arizona-college-carousel-item__testimonial-image{-webkit-box-flex:0;-ms-flex:0 0 3.75rem;flex:0 0 3.75rem}.wp-block-arizona-college-carousel-item__testimonial-image img{height:3.75rem;width:3.75rem}}
+
+/*# sourceURL=https://arizonacollege.edu/wp-content/themes/arizona-college/dist/blocks/carousel/index.css */
+</style>
+<style id='arizona-college-hero-style-inline-css'>
+:root{--header-height:102px;--admin-bar-height:0px;--rv-header-height:calc(var(--admin-bar-height, 0px) + var(--header-height, 102px))}:root .admin-bar{--admin-bar-height:32px}@media(max-width:782px){:root .admin-bar{--admin-bar-height:46px}}@media(min-width:1920px){:root{--wp--custom--layout--content-size:74vw!important}}header:has(.azc-announcement-bar)~main .wp-block-arizona-college-hero__wrapper>.wp-block-cover__inner-container{padding-top:calc(var(--admin-bar-height, 0px) + 6.375rem)}.wp-block-arizona-college-hero{max-width:100%;padding-left:0!important;padding-right:0!important;position:relative;width:100%}.wp-block-arizona-college-hero:has(.wp-block-arizona-college-cta-card) .wp-block-arizona-college-hero__inner{padding-bottom:0!important}.wp-block-arizona-college-hero__wrapper{display:grid;grid-template-columns:100%;padding:0}.wp-block-arizona-college-hero__wrapper>*{grid-column:1;grid-row:1}.wp-block-arizona-college-hero__wrapper>.wp-block-cover__inner-container{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-direction:column;flex-direction:column;-webkit-box-align:center;-ms-flex-align:center;align-items:center;height:100%;padding-top:calc(var(--admin-bar-height, 0px) + 4.8125rem)}@media(max-width:782px){.wp-block-arizona-college-hero__wrapper>.wp-block-cover__inner-container{padding-top:calc(var(--admin-bar-height, 0px) + 3rem)}}.wp-block-arizona-college-hero__inner{padding-bottom:3.125rem!important}.wp-block-arizona-college-hero__hero-bars-graphic{height:100%!important;left:var(--heroBarsXPosition,0);-o-object-fit:cover;object-fit:cover;-o-object-position:100% 0;object-position:100% 0;position:absolute!important;right:0;top:0;width:100%;z-index:-1}.wp-block-arizona-college-hero--no-hero-bars .wp-block-arizona-college-hero__hero-bars-graphic{display:none!important}.wp-block-arizona-college-hero .wp-block-cover__image-background{left:auto;opacity:var(--coverImageOpacity,1);width:var(--coverImageWidth,50%);z-index:-1}.wp-block-arizona-college-hero:not(.wp-block-arizona-college-hero--no-image-masks) .wp-block-arizona-college-hero__hero-bars-graphic{-webkit-mask-image:-webkit-gradient(linear,left bottom,left top,from(transparent),color-stop(25%,#000));-webkit-mask-image:linear-gradient(0deg,transparent,#000 25%);mask-image:-webkit-gradient(linear,left bottom,left top,from(transparent),color-stop(25%,#000));mask-image:linear-gradient(0deg,transparent,#000 25%)}.wp-block-arizona-college-hero:not(.wp-block-arizona-college-hero--no-image-masks) .wp-block-cover__image-background{-webkit-mask-composite:source-in,xor;mask-composite:intersect;-webkit-mask-image:-webkit-gradient(linear,left top,right top,from(transparent),color-stop(60%,#000)),-webkit-gradient(linear,left bottom,left top,from(transparent),color-stop(60%,#000));-webkit-mask-image:linear-gradient(90deg,transparent,#000 60%),linear-gradient(0deg,transparent,#000 60%);mask-image:-webkit-gradient(linear,left top,right top,from(transparent),color-stop(60%,#000)),-webkit-gradient(linear,left bottom,left top,from(transparent),color-stop(60%,#000));mask-image:linear-gradient(90deg,transparent,#000 60%),linear-gradient(0deg,transparent,#000 60%)}.wp-block-arizona-college-hero.wp-block-arizona-college-hero--apply-spacing-to-columns .wp-block-arizona-college-hero__wrapper>.wp-block-cover__inner-container{padding-top:0}.wp-block-arizona-college-hero.wp-block-arizona-college-hero--apply-spacing-to-columns .wp-block-arizona-college-hero__wrapper>.wp-block-cover__inner-container>.wp-block-columns>.wp-block-column{padding-top:calc(var(--admin-bar-height, 0px) + var(--header-height, 102px))}.wp-block-arizona-college-hero.wp-block-arizona-college-hero--apply-spacing-to-columns.wp-block-arizona-college-hero--is-slim .wp-block-arizona-college-hero__wrapper>.wp-block-cover__inner-container>.wp-block-columns>.wp-block-column{padding-top:calc(var(--admin-bar-height, 0px) + var(--header-height, 102px) + 2rem)}.wp-block-arizona-college-hero--is-slim .wp-block-arizona-college-hero__wrapper{min-height:auto}.wp-block-arizona-college-hero--is-slim .wp-block-arizona-college-hero__inner{padding-bottom:0!important;padding-top:0!important}@media(max-width:780.98px){.wp-block-arizona-college-hero.wp-block-arizona-college-hero--apply-spacing-to-columns .wp-block-arizona-college-hero__wrapper>.wp-block-cover__inner-container,.wp-block-arizona-college-hero.wp-block-arizona-college-hero--apply-spacing-to-columns .wp-block-arizona-college-hero__wrapper>.wp-block-cover__inner-container>.wp-block-columns>.wp-block-column:not(:first-child){padding-top:0}}@media(max-width:991.98px){.wp-block-arizona-college-hero__wrapper .wp-block-arizona-college-hero__inner{text-align:center}.wp-block-arizona-college-hero__wrapper .wp-block-arizona-college-hero__inner .wp-block-buttons,.wp-block-arizona-college-hero__wrapper .wp-block-arizona-college-hero__inner .wp-block-group{-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;text-align:center}.wp-block-arizona-college-hero.wp-block-arizona-college-hero--apply-spacing-to-columns .wp-block-arizona-college-hero__wrapper>.wp-block-cover__inner-container>.wp-block-columns.azc-columns-stack-early>.wp-block-column:not(:first-child){padding-top:0}.wp-block-arizona-college-hero:not(.wp-block-arizona-college-hero--keep-bg-mobile) .wp-block-cover__image-background{display:none!important}.wp-block-arizona-college-hero--keep-bg-mobile .wp-block-arizona-college-hero__wrapper>.wp-block-cover__inner-container{padding-top:15vh!important}.wp-block-arizona-college-hero--keep-bg-mobile .wp-block-cover__image-background{height:50vh;width:100%}}
+
+/*# sourceURL=https://arizonacollege.edu/wp-content/themes/arizona-college/dist/blocks/hero/index.css */
+</style>
+<style id='global-styles-inline-css'>
+:root{--wp--preset--aspect-ratio--square: 1;--wp--preset--aspect-ratio--4-3: 4/3;--wp--preset--aspect-ratio--3-4: 3/4;--wp--preset--aspect-ratio--3-2: 3/2;--wp--preset--aspect-ratio--2-3: 2/3;--wp--preset--aspect-ratio--16-9: 16/9;--wp--preset--aspect-ratio--9-16: 9/16;--wp--preset--color--black: #000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--color--dark-grey: #3a434a;--wp--preset--color--medium-grey: #d8d8d8;--wp--preset--color--grey-light: #f5f5f5;--wp--preset--color--navy-grey-light: #e2e6ea;--wp--preset--color--navy-blue: #002F5F;--wp--preset--color--dark-navy-blue: #0B2346;--wp--preset--color--blue-midnight: #2c4770;--wp--preset--color--navy-blue-100: #0F2E5C;--wp--preset--color--navy-blue-75: #486284;--wp--preset--color--navy-blue-50: #8395ac;--wp--preset--color--blue-accessible: #377ca8;--wp--preset--color--blue: #469dd5;--wp--preset--color--blue-75: #65b5e0;--wp--preset--color--blue-50: #91cce9;--wp--preset--color--blue-25: #c6e7f3;--wp--preset--color--yellow: #f5ca52;--wp--preset--color--yellow-75: #f8d776;--wp--preset--color--yellow-50: #f9e4a1;--wp--preset--color--yellow-25: #fdf1cf;--wp--preset--color--yellow-10: #fdf9ec;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgb(6,147,227) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgb(252,185,0) 0%,rgb(255,105,0) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgb(255,105,0) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--font-size--small: 0.875rem;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 36px;--wp--preset--font-size--x-large: 42px;--wp--preset--font-size--extra-small: 0.6875rem;--wp--preset--font-size--normal: clamp(1rem, 1.41vw, 1.125rem);--wp--preset--font-family--montserrat: Montserrat, Montserrat-Fallback, sans-serif;--wp--preset--spacing--20: 0.44rem;--wp--preset--spacing--30: 0.67rem;--wp--preset--spacing--40: 1rem;--wp--preset--spacing--50: 1.5rem;--wp--preset--spacing--60: 2.25rem;--wp--preset--spacing--70: 3.38rem;--wp--preset--spacing--80: 5.06rem;--wp--preset--shadow--natural: 6px 6px 9px rgba(0, 0, 0, 0.2);--wp--preset--shadow--deep: 12px 12px 50px rgba(0, 0, 0, 0.4);--wp--preset--shadow--sharp: 6px 6px 0px rgba(0, 0, 0, 0.2);--wp--preset--shadow--outlined: 6px 6px 0px -3px rgb(255, 255, 255), 6px 6px rgb(0, 0, 0);--wp--preset--shadow--crisp: 6px 6px 0px rgb(0, 0, 0);--wp--custom--typography--font-family: Montserrat, Montserrat-Fallback, sans-serif;--wp--custom--layout--content-size: 1420px;--wp--custom--size--base: 1rem;}:root { --wp--style--global--content-size: var(--wp--custom--layout--content-size);--wp--style--global--wide-size: 100%; }:where(body) { margin: 0; }.wp-site-blocks > .alignleft { float: left; margin-right: 2em; }.wp-site-blocks > .alignright { float: right; margin-left: 2em; }.wp-site-blocks > .aligncenter { justify-content: center; margin-left: auto; margin-right: auto; }:where(.wp-site-blocks) > * { margin-block-start: 24px; margin-block-end: 0; }:where(.wp-site-blocks) > :first-child { margin-block-start: 0; }:where(.wp-site-blocks) > :last-child { margin-block-end: 0; }:root { --wp--style--block-gap: 24px; }:root :where(.is-layout-flow) > :first-child{margin-block-start: 0;}:root :where(.is-layout-flow) > :last-child{margin-block-end: 0;}:root :where(.is-layout-flow) > *{margin-block-start: 24px;margin-block-end: 0;}:root :where(.is-layout-constrained) > :first-child{margin-block-start: 0;}:root :where(.is-layout-constrained) > :last-child{margin-block-end: 0;}:root :where(.is-layout-constrained) > *{margin-block-start: 24px;margin-block-end: 0;}:root :where(.is-layout-flex){gap: 24px;}:root :where(.is-layout-grid){gap: 24px;}.is-layout-flow > .alignleft{float: left;margin-inline-start: 0;margin-inline-end: 2em;}.is-layout-flow > .alignright{float: right;margin-inline-start: 2em;margin-inline-end: 0;}.is-layout-flow > .aligncenter{margin-left: auto !important;margin-right: auto !important;}.is-layout-constrained > .alignleft{float: left;margin-inline-start: 0;margin-inline-end: 2em;}.is-layout-constrained > .alignright{float: right;margin-inline-start: 2em;margin-inline-end: 0;}.is-layout-constrained > .aligncenter{margin-left: auto !important;margin-right: auto !important;}.is-layout-constrained > :where(:not(.alignleft):not(.alignright):not(.alignfull)){max-width: var(--wp--style--global--content-size);margin-left: auto !important;margin-right: auto !important;}.is-layout-constrained > .alignwide{max-width: var(--wp--style--global--wide-size);}body .is-layout-flex{display: flex;}.is-layout-flex{flex-wrap: wrap;align-items: center;}.is-layout-flex > :is(*, div){margin: 0;}body .is-layout-grid{display: grid;}.is-layout-grid > :is(*, div){margin: 0;}body{padding-top: 0px;padding-right: 0px;padding-bottom: 0px;padding-left: 0px;}a:where(:not(.wp-element-button)){text-decoration: underline;}:root :where(.wp-element-button, .wp-block-button__link){background-color: #32373c;border-width: 0;color: #fff;font-family: inherit;font-size: inherit;font-style: inherit;font-weight: inherit;letter-spacing: inherit;line-height: inherit;padding-top: calc(0.667em + 2px);padding-right: calc(1.333em + 2px);padding-bottom: calc(0.667em + 2px);padding-left: calc(1.333em + 2px);text-decoration: none;text-transform: inherit;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-dark-grey-color{color: var(--wp--preset--color--dark-grey) !important;}.has-medium-grey-color{color: var(--wp--preset--color--medium-grey) !important;}.has-grey-light-color{color: var(--wp--preset--color--grey-light) !important;}.has-navy-grey-light-color{color: var(--wp--preset--color--navy-grey-light) !important;}.has-navy-blue-color{color: var(--wp--preset--color--navy-blue) !important;}.has-dark-navy-blue-color{color: var(--wp--preset--color--dark-navy-blue) !important;}.has-blue-midnight-color{color: var(--wp--preset--color--blue-midnight) !important;}.has-navy-blue-100-color{color: var(--wp--preset--color--navy-blue-100) !important;}.has-navy-blue-75-color{color: var(--wp--preset--color--navy-blue-75) !important;}.has-navy-blue-50-color{color: var(--wp--preset--color--navy-blue-50) !important;}.has-blue-accessible-color{color: var(--wp--preset--color--blue-accessible) !important;}.has-blue-color{color: var(--wp--preset--color--blue) !important;}.has-blue-75-color{color: var(--wp--preset--color--blue-75) !important;}.has-blue-50-color{color: var(--wp--preset--color--blue-50) !important;}.has-blue-25-color{color: var(--wp--preset--color--blue-25) !important;}.has-yellow-color{color: var(--wp--preset--color--yellow) !important;}.has-yellow-75-color{color: var(--wp--preset--color--yellow-75) !important;}.has-yellow-50-color{color: var(--wp--preset--color--yellow-50) !important;}.has-yellow-25-color{color: var(--wp--preset--color--yellow-25) !important;}.has-yellow-10-color{color: var(--wp--preset--color--yellow-10) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-dark-grey-background-color{background-color: var(--wp--preset--color--dark-grey) !important;}.has-medium-grey-background-color{background-color: var(--wp--preset--color--medium-grey) !important;}.has-grey-light-background-color{background-color: var(--wp--preset--color--grey-light) !important;}.has-navy-grey-light-background-color{background-color: var(--wp--preset--color--navy-grey-light) !important;}.has-navy-blue-background-color{background-color: var(--wp--preset--color--navy-blue) !important;}.has-dark-navy-blue-background-color{background-color: var(--wp--preset--color--dark-navy-blue) !important;}.has-blue-midnight-background-color{background-color: var(--wp--preset--color--blue-midnight) !important;}.has-navy-blue-100-background-color{background-color: var(--wp--preset--color--navy-blue-100) !important;}.has-navy-blue-75-background-color{background-color: var(--wp--preset--color--navy-blue-75) !important;}.has-navy-blue-50-background-color{background-color: var(--wp--preset--color--navy-blue-50) !important;}.has-blue-accessible-background-color{background-color: var(--wp--preset--color--blue-accessible) !important;}.has-blue-background-color{background-color: var(--wp--preset--color--blue) !important;}.has-blue-75-background-color{background-color: var(--wp--preset--color--blue-75) !important;}.has-blue-50-background-color{background-color: var(--wp--preset--color--blue-50) !important;}.has-blue-25-background-color{background-color: var(--wp--preset--color--blue-25) !important;}.has-yellow-background-color{background-color: var(--wp--preset--color--yellow) !important;}.has-yellow-75-background-color{background-color: var(--wp--preset--color--yellow-75) !important;}.has-yellow-50-background-color{background-color: var(--wp--preset--color--yellow-50) !important;}.has-yellow-25-background-color{background-color: var(--wp--preset--color--yellow-25) !important;}.has-yellow-10-background-color{background-color: var(--wp--preset--color--yellow-10) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-dark-grey-border-color{border-color: var(--wp--preset--color--dark-grey) !important;}.has-medium-grey-border-color{border-color: var(--wp--preset--color--medium-grey) !important;}.has-grey-light-border-color{border-color: var(--wp--preset--color--grey-light) !important;}.has-navy-grey-light-border-color{border-color: var(--wp--preset--color--navy-grey-light) !important;}.has-navy-blue-border-color{border-color: var(--wp--preset--color--navy-blue) !important;}.has-dark-navy-blue-border-color{border-color: var(--wp--preset--color--dark-navy-blue) !important;}.has-blue-midnight-border-color{border-color: var(--wp--preset--color--blue-midnight) !important;}.has-navy-blue-100-border-color{border-color: var(--wp--preset--color--navy-blue-100) !important;}.has-navy-blue-75-border-color{border-color: var(--wp--preset--color--navy-blue-75) !important;}.has-navy-blue-50-border-color{border-color: var(--wp--preset--color--navy-blue-50) !important;}.has-blue-accessible-border-color{border-color: var(--wp--preset--color--blue-accessible) !important;}.has-blue-border-color{border-color: var(--wp--preset--color--blue) !important;}.has-blue-75-border-color{border-color: var(--wp--preset--color--blue-75) !important;}.has-blue-50-border-color{border-color: var(--wp--preset--color--blue-50) !important;}.has-blue-25-border-color{border-color: var(--wp--preset--color--blue-25) !important;}.has-yellow-border-color{border-color: var(--wp--preset--color--yellow) !important;}.has-yellow-75-border-color{border-color: var(--wp--preset--color--yellow-75) !important;}.has-yellow-50-border-color{border-color: var(--wp--preset--color--yellow-50) !important;}.has-yellow-25-border-color{border-color: var(--wp--preset--color--yellow-25) !important;}.has-yellow-10-border-color{border-color: var(--wp--preset--color--yellow-10) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}.has-extra-small-font-size{font-size: var(--wp--preset--font-size--extra-small) !important;}.has-normal-font-size{font-size: var(--wp--preset--font-size--normal) !important;}.has-montserrat-font-family{font-family: var(--wp--preset--font-family--montserrat) !important;}
+/*# sourceURL=global-styles-inline-css */
+</style>
+
+<style id='if-so-public-dummy-inline-css'>
+        .lds-dual-ring {
+          display: inline-block;
+          width: 16px;
+          height: 16px;
+        }
+        .lds-dual-ring:after {
+          content: " ";
+          display: block;
+          width: 16px;
+          height: 16px;
+          margin: 0px;
+          border-radius: 50%;
+          border: 3px solid #000;
+          border-color: #000 transparent #000 transparent;
+          animation: lds-dual-ring 1.2s linear infinite;
+        }
+        @keyframes lds-dual-ring {
+          0% {
+            transform: rotate(0deg);
+          }
+          100% {
+            transform: rotate(360deg);
+          }
+        }
+        /*loader 2*/
+        .ifso-logo-loader {
+            font-size: 20px;
+            width: 64px;
+            font-family: sans-serif;
+            position: relative;
+            height: auto;
+            font-weight: 800;
+        }
+        .ifso-logo-loader:before {
+            content: '';
+            position: absolute;
+            left: 30%;
+            top: 36%;
+            width: 14px;
+            height: 22px;
+            clip-path: polygon(100% 50%, 0 0, 0 100%);
+            background: #fd5b56;
+            animation: spinAndMoveArrow 2s infinite;
+            height: 9px;
+            width: 7px;
+        }
+        .ifso-logo-loader:after {
+            content: "If So";
+            word-spacing: 12px;
+        }
+        @keyframes spinAndMoveArrow {
+                40% {
+                    transform: rotate(360deg);
+                }
+    
+                60% {
+                    transform: translateX(-5px);
+                }
+    
+                80% {
+                    transform: translateX(5px);
+                }
+    
+                100% {
+                    transform: translateX(0);
+                }
+        }
+        /*Loader 3 - default content*/
+        .ifso-default-content-loader{
+            display:inline-block;
+        }
+        
+/*# sourceURL=if-so-public-dummy-inline-css */
+</style>
+<link rel='stylesheet' id='all-css-36' href='https://arizonacollege.edu/_static/??-eJylzkEKAjEMBdAL6YTq4KzEs9ROpgbatCTRYTy9peDKlbrM579PYK37UNiQDeyGGRW80LOwb3FKGBFmUoOgCov04jy0YwdfQF2ponywmu6RWCGKf5BtS5HcRlTRtLPur14pDJn4N95fayTXwg3pn0tvfslnN01uHA/ueHoBvT56cQ==' type='text/css' media='all' />
+<script type="text/javascript" src="https://arizonacollege.edu/_static/??-eJzTLy/QzcxLzilNSS3WzwKiwtLUokoopZebmaeXVayjj0+Rbm5melFiSSqy4uT8vJLUvBL9gpzS9My8Yn2ggrLMksq0/KJcJAOAqvPzoNrsc20Nzc0NDE2MTM3MswDBezdX" ></script><script type="text/javascript" id="gform_gravityforms-js-extra">
+/* <![CDATA[ */
+var gf_global = {"gf_currency_config":{"name":"U.S. Dollar","symbol_left":"$","symbol_right":"","symbol_padding":"","thousand_separator":",","decimal_separator":".","decimals":2,"code":"USD"},"base_url":"https://arizonacollege.edu/wp-content/plugins/gravityforms","number_formats":[],"spinnerUrl":"https://arizonacollege.edu/wp-content/plugins/gravityforms/images/spinner.svg","version_hash":"d47a829a1712d12881c674ac992b2382","strings":{"newRowAdded":"New row added.","rowRemoved":"Row removed","formSaved":"The form has been saved.  The content contains the link to return and complete the form."}};
+var gf_global = {"gf_currency_config":{"name":"U.S. Dollar","symbol_left":"$","symbol_right":"","symbol_padding":"","thousand_separator":",","decimal_separator":".","decimals":2,"code":"USD"},"base_url":"https://arizonacollege.edu/wp-content/plugins/gravityforms","number_formats":[],"spinnerUrl":"https://arizonacollege.edu/wp-content/plugins/gravityforms/images/spinner.svg","version_hash":"d47a829a1712d12881c674ac992b2382","strings":{"newRowAdded":"New row added.","rowRemoved":"Row removed","formSaved":"The form has been saved.  The content contains the link to return and complete the form."}};
+var gform_i18n = {"datepicker":{"days":{"monday":"Mo","tuesday":"Tu","wednesday":"We","thursday":"Th","friday":"Fr","saturday":"Sa","sunday":"Su"},"months":{"january":"January","february":"February","march":"March","april":"April","may":"May","june":"June","july":"July","august":"August","september":"September","october":"October","november":"November","december":"December"},"firstDay":1,"iconText":"Select date"}};
+var gf_legacy_multi = {"5":""};
+var gform_gravityforms = {"strings":{"invalid_file_extension":"This type of file is not allowed. Must be one of the following:","delete_file":"Delete this file","in_progress":"in progress","file_exceeds_limit":"File exceeds size limit","illegal_extension":"This type of file is not allowed.","max_reached":"Maximum number of files reached","unknown_error":"There was a problem while saving the file on the server","currently_uploading":"Please wait for the uploading to complete","cancel":"Cancel","cancel_upload":"Cancel this upload","cancelled":"Cancelled","error":"Error","message":"Message"},"vars":{"images_url":"https://arizonacollege.edu/wp-content/plugins/gravityforms/images"}};
+//# sourceURL=gform_gravityforms-js-extra
+/* ]]> */
+</script>
+<script type="text/javascript" id="gform_gravityforms-js-before">
+/* <![CDATA[ */
+
+//# sourceURL=gform_gravityforms-js-before
+/* ]]> */
+</script>
+<script type="text/javascript" defer='defer' src="https://arizonacollege.edu/wp-content/plugins/gravityforms/js/gravityforms.min.js?ver=2.9.25" id="gform_gravityforms-js"></script>
+<script type="text/javascript" src="https://arizonacollege.edu/wp-content/plugins/gravityforms/assets/js/dist/utils.min.js?m=1770391627g" ></script><script type="text/javascript" id="if-so-js-before">
+/* <![CDATA[ */
+    var nonce = "faf641d79d";//compat
+    var ifso_nonce = "faf641d79d";
+    var ajaxurl = "https://arizonacollege.edu/wp-admin/admin-ajax.php";
+    var ifso_page_url = window.location.href;
+    var isAnalyticsOn = true;
+    var isPageVisitedOn = 0;
+    var isVisitCountEnabled = 0;
+    var referrer_for_pageload = document.referrer;
+    var ifso_attrs_for_ajax = ["ga4","the_content"];
+//# sourceURL=if-so-js-before
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://arizonacollege.edu/wp-content/plugins/if-so/public/js/if-so-public.js?ver=1.9.6" id="if-so-js"></script>
+<link rel="https://api.w.org/" href="https://arizonacollege.edu/wp-json/" /><link rel="alternate" title="JSON" type="application/json" href="https://arizonacollege.edu/wp-json/wp/v2/pages/1354" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://arizonacollege.edu/xmlrpc.php?rsd" />
+<meta name="generator" content="WordPress 6.9.1" />
+<link rel='shortlink' href='https://arizonacollege.edu/?p=1354' />
+	<style>img#wpstats{display:none}</style>
+				<script>
+			window.dataLayer = window.dataLayer || [];
+		</script>
+		
+<!-- Meta Pixel Code -->
+<script type='text/javascript'>
+!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+document,'script','https://connect.facebook.net/en_US/fbevents.js');
+</script>
+<!-- End Meta Pixel Code -->
+<script type='text/javascript'>var url = window.location.origin + '?ob=open-bridge';
+            fbq('set', 'openbridge', '546949455423291', url);
+fbq('init', '546949455423291', {}, {
+    "agent": "wordpress-6.9.1-4.1.5"
+})</script><script type='text/javascript'>
+    fbq('track', 'PageView', []);
+  </script><style class='wp-fonts-local' type='text/css'>
+@font-face{font-family:Montserrat;font-style:normal;font-weight:100 900;font-display:swap;src:url('https://arizonacollege.edu/wp-content/themes/arizona-college/dist/fonts/Montserrat/Montserrat-VariableFont_wght.woff2') format('woff2'), url('https://arizonacollege.edu/wp-content/themes/arizona-college/dist/fonts/Montserrat/Montserrat-VariableFont_wght.ttf') format('truetype');}
+</style>
+<link rel="icon" href="https://arizonacollege.edu/wp-content/uploads/2025/10/cropped-Nursing-School-Shield-Logo-1.webp?w=32" sizes="32x32" />
+<link rel="icon" href="https://arizonacollege.edu/wp-content/uploads/2025/10/cropped-Nursing-School-Shield-Logo-1.webp?w=192" sizes="192x192" />
+<link rel="apple-touch-icon" href="https://arizonacollege.edu/wp-content/uploads/2025/10/cropped-Nursing-School-Shield-Logo-1.webp?w=180" />
+<meta name="msapplication-TileImage" content="https://arizonacollege.edu/wp-content/uploads/2025/10/cropped-Nursing-School-Shield-Logo-1.webp?w=270" />
+	<style id='core-block-supports-inline-css'>
+.wp-elements-50be3af31684f5d110688435ec70217e a:where(:not(.wp-element-button)){color:var(--wp--preset--color--dark-grey);}.wp-container-core-group-is-layout-19a3e464{flex-wrap:nowrap;gap:var(--wp--preset--spacing--40);justify-content:center;}.wp-container-core-buttons-is-layout-30af2ff6{justify-content:flex-end;}.wp-container-core-columns-is-layout-28f84493{flex-wrap:nowrap;}.wp-container-core-group-is-layout-80fb368b > .alignfull{margin-right:calc(var(--wp--preset--spacing--30) * -1);margin-left:calc(var(--wp--preset--spacing--30) * -1);}.wp-elements-2184cd191632690590ec823ef3a80bd8 a:where(:not(.wp-element-button)){color:var(--wp--preset--color--navy-blue-75);}.wp-container-core-buttons-is-layout-3655d5c7{flex-wrap:nowrap;flex-direction:column;align-items:flex-start;}.wp-container-core-buttons-is-layout-2dea860b{flex-wrap:nowrap;flex-direction:column;align-items:flex-start;}.wp-container-core-buttons-is-layout-fe9cc265{flex-direction:column;align-items:flex-start;}.wp-container-core-columns-is-layout-1756ad5a{flex-wrap:nowrap;}.wp-elements-a4552b9d54fa71218affc0c887ffe0ec a:where(:not(.wp-element-button)){color:var(--wp--preset--color--dark-grey);}.wp-container-core-columns-is-layout-7fc3d43a{flex-wrap:nowrap;gap:2em var(--wp--preset--spacing--40);}.wp-container-core-group-is-layout-51ce9fa2 > .alignfull{margin-right:calc(0px * -1);margin-left:calc(0px * -1);}.wp-elements-1e5bdc7fc04c39b4e6ad72f8b5577151 a:where(:not(.wp-element-button)){color:var(--wp--preset--color--white);}.wp-elements-ca71da7a96bfd77d7223f9a7372150a0 a:where(:not(.wp-element-button)){color:var(--wp--preset--color--navy-blue);}.wp-container-core-group-is-layout-aa7c7fe3 > .alignfull{margin-right:calc(var(--wp--preset--spacing--50) * -1);margin-left:calc(var(--wp--preset--spacing--50) * -1);}.wp-container-core-columns-is-layout-f5a44f5b{flex-wrap:nowrap;gap:2em var(--wp--preset--spacing--70);}.wp-elements-4bfc415a8329ef17b258d678532744e7 a:where(:not(.wp-element-button)){color:var(--wp--preset--color--dark-grey);}.wp-elements-03d82596087d28d309dc897bd1cfeec8 a:where(:not(.wp-element-button)){color:var(--wp--preset--color--navy-blue);}.wp-elements-a676ee773ebba6d9d3c9b4f83861e6c2 a:where(:not(.wp-element-button)){color:var(--wp--preset--color--navy-blue);}.wp-elements-0d37528d138d0d8eaebf2daeba5da0ec a:where(:not(.wp-element-button)){color:var(--wp--preset--color--navy-blue);}.wp-elements-32a58deec27c1c1a3e32515ce890296a a:where(:not(.wp-element-button)){color:var(--wp--preset--color--navy-blue);}.wp-elements-514bfaec02d8435bc74d1b2f464681c2 a:where(:not(.wp-element-button)){color:var(--wp--preset--color--dark-grey);}.wp-elements-68146eff6944c65150cc8aee694bac09 a:where(:not(.wp-element-button)){color:var(--wp--preset--color--navy-blue);}.wp-elements-4d73c79efd0e9812957c20a71f8b98ee a:where(:not(.wp-element-button)){color:var(--wp--preset--color--dark-grey);}.wp-elements-916b76d87aeffbe7d056376302cf23eb a:where(:not(.wp-element-button)){color:var(--wp--preset--color--navy-blue);}.wp-elements-4e0ce1e8bb106dc40a17528e9610016d a:where(:not(.wp-element-button)){color:var(--wp--preset--color--navy-blue);}.wp-elements-f62ce0ca9e434e136c21bebc8f2ff141 a:where(:not(.wp-element-button)){color:var(--wp--preset--color--navy-blue);}.wp-elements-3d6d58c0ed1d964deb1b06a683b0f2a9 a:where(:not(.wp-element-button)){color:var(--wp--preset--color--navy-blue);}.wp-container-core-group-is-layout-2bef61ab > :where(:not(.alignleft):not(.alignright):not(.alignfull)){max-width:80rem;margin-left:auto !important;margin-right:auto !important;}.wp-container-core-group-is-layout-2bef61ab > .alignwide{max-width:80rem;}.wp-container-core-group-is-layout-2bef61ab .alignfull{max-width:none;}.wp-elements-c093aa6749735328493a8233d22a60da a:where(:not(.wp-element-button)){color:var(--wp--preset--color--dark-grey);}.wp-elements-401544a85175507ab2b9f336b26963df a:where(:not(.wp-element-button)){color:var(--wp--preset--color--dark-grey);}.wp-elements-4ac3d7f8632b62af62abc77c6263244c a:where(:not(.wp-element-button)){color:var(--wp--preset--color--navy-blue);}.wp-elements-0ff98e3caa6844bf67519e5210e58631 a:where(:not(.wp-element-button)){color:var(--wp--preset--color--dark-grey);}.wp-container-core-social-links-is-layout-fcb05f6e{flex-wrap:nowrap;gap:0.5em var(--wp--preset--spacing--40);justify-content:flex-end;}.wp-elements-9088f8ee8ef6a07ddba34cd195763e34 a:where(:not(.wp-element-button)){color:var(--wp--preset--color--navy-blue);}.wp-container-core-buttons-is-layout-a89b3969{justify-content:center;}.wp-container-core-columns-is-layout-f0342b05{flex-wrap:nowrap;}.wp-elements-d86463e82af4776161b57ff859782298 a:where(:not(.wp-element-button)){color:var(--wp--preset--color--navy-blue-100);}.wp-elements-1f6fbe7b65e1d6a9244033e7bdcefea7 a:where(:not(.wp-element-button)){color:var(--wp--preset--color--navy-blue-100);}.wp-elements-88275fe4845dbf6f5dc2eb913f8bd836 a:where(:not(.wp-element-button)){color:var(--wp--preset--color--navy-blue-100);}.wp-container-core-navigation-is-layout-4b827052{gap:0;flex-direction:column;align-items:flex-start;}.wp-elements-30b7c5c5f467b8e0c55397c737de38a1 a:where(:not(.wp-element-button)){color:var(--wp--preset--color--navy-blue-100);}.wp-elements-dfc799f1adb67fe5bd2afca247bfda55 a:where(:not(.wp-element-button)){color:var(--wp--preset--color--navy-blue-100);}.wp-container-core-navigation-is-layout-9d59fe93{gap:var(--wp--preset--spacing--40);}.wp-container-core-group-is-layout-cb46ffcb{flex-wrap:nowrap;justify-content:space-between;}.wp-elements-d12de58eda0ebe92eeefedfacc5283d6 a:where(:not(.wp-element-button)){color:var(--wp--preset--color--dark-grey);}.wp-container-core-group-is-layout-23441af8{flex-wrap:nowrap;justify-content:center;}.wp-container-core-group-is-layout-cc9ecf56 > .alignfull{margin-right:calc(var(--wp--preset--spacing--50) * -1);margin-left:calc(var(--wp--preset--spacing--50) * -1);}
+/*# sourceURL=core-block-supports-inline-css */
+</style>
+
+</head>
+	<body class="wp-singular page-template page-template-templates page-template-page-landing page-template-templatespage-landing-php page page-id-1354 wp-theme-arizona-college">
+				<!-- Google Tag Manager (noscript) -->
+		<noscript>
+			<iframe
+				src="https://www.googletagmanager.com/ns.html?id=GTM-NCCT3M"
+				height="0"
+				width="0"
+				style="display:none;visibility:hidden"
+			></iframe>
+		</noscript>
+		<!-- End Google Tag Manager (noscript) -->
+		
+<!-- Meta Pixel Code -->
+<noscript>
+<img height="1" width="1" style="display:none" alt="fbpx"
+src="https://www.facebook.com/tr?id=546949455423291&ev=PageView&noscript=1" />
+</noscript>
+<!-- End Meta Pixel Code -->
+		
+<a class="skip-link screen-reader-text" href="#main-content">Skip to main content</a>
+<a class="skip-link screen-reader-text" href="#main-menu">Skip to main menu</a>
+<a class="skip-link screen-reader-text" href="#footer">Skip to footer</a>
+		<header class="rv-header rv-container--fluid hide-announcement-bar hide-announcement-bar-mobile azc-hide-campus-location-tag">
+		
+<div id="landing-page-header" class="wp-block-group has-white-background-color has-background azc-has-section-radius is-layout-constrained wp-block-group-is-layout-constrained">
+<div class="wp-block-columns alignwide landing-page-notice-bar has-blue-background-color has-background azc-has-section-radius is-layout-flex wp-container-core-columns-is-layout-1756ad5a wp-block-columns-is-layout-flex" style="padding-top:7px;padding-bottom:7px">
+<div class="wp-block-column is-layout-flow wp-block-column-is-layout-flow"><p class="has-text-align-center has-white-color has-text-color">Up to $10,000 scholarships available at our Phoenix &amp; Tempe campuses.</p>
+</div>
+</div>
+
+
+
+<div class="wp-block-group has-dark-grey-color has-text-color has-link-color wp-elements-a4552b9d54fa71218affc0c887ffe0ec is-layout-constrained wp-container-core-group-is-layout-51ce9fa2 wp-block-group-is-layout-constrained" style="margin-top:0;margin-bottom:0;padding-top:var(--wp--preset--spacing--30);padding-right:0;padding-bottom:var(--wp--preset--spacing--30);padding-left:0">
+<div class="wp-block-columns are-vertically-aligned-center menu-columns azc-columns-nowrap azc-columns-justify-content-center is-layout-flex wp-container-core-columns-is-layout-7fc3d43a wp-block-columns-is-layout-flex">
+<div class="wp-block-column is-vertically-aligned-center is-layout-flow wp-block-column-is-layout-flow">
+<div class="wp-block-arizona-college-azc-logo">
+						<a href="https://arizonacollege.edu/">
+				<img src="https://arizonacollege.edu/wp-content/uploads/2025/07/logo-az-college-nursing.svg" alt="logo-az-college-nursing" class="rv-logo" />
+			</a>
+			</div>
+</div>
+
+
+
+<div class="wp-block-column is-vertically-aligned-center azc-campus-location-tag--wrapper is-layout-flow wp-block-column-is-layout-flow" id="site-menu"><p class="has-text-align-center azc-campus-location-tag">Phoenix &amp; Tempe Campuses</p>
+</div>
+
+
+
+<div class="wp-block-column is-vertically-aligned-center site-header-last-column is-layout-flow wp-block-column-is-layout-flow"><p class="wp-block-arizona-college-start-date has-text-align-right">
+	Classes begin March 2nd</p>
+</div>
+</div>
+</div>
+</div>
+		</header>
+
+	<main id="main-content" class="rv-page-landing">
+		<div
+	style="--heroBarsXPosition: -15%;--coverImageWidth: 50%;--coverImageOpacity: 50%" class="alignfull wp-block-arizona-college-hero--apply-spacing-to-columns wp-block-arizona-college-hero--is-slim wp-block-arizona-college-hero">
+	
+
+<div class="wp-block-cover is-light wp-block-arizona-college-hero__wrapper has-white-color has-text-color has-link-color wp-elements-1e5bdc7fc04c39b4e6ad72f8b5577151" style="min-height:50px;aspect-ratio:unset;"><img decoding="async" width="963" height="642" fetchpriority="high" class="wp-block-cover__image-background wp-image-572 size-large" alt="Nursing school BSN program student with laptop" src="https://arizonacollege.edu/wp-content/uploads/2025/08/Nursing-school-BSN-program-student-with-laptop.jpg?w=963" style="object-position:26% 17%" data-object-fit="cover" data-object-position="26% 17%" srcset="https://arizonacollege.edu/wp-content/uploads/2025/08/Nursing-school-BSN-program-student-with-laptop.jpg 963w, https://arizonacollege.edu/wp-content/uploads/2025/08/Nursing-school-BSN-program-student-with-laptop.jpg?resize=300,200 300w, https://arizonacollege.edu/wp-content/uploads/2025/08/Nursing-school-BSN-program-student-with-laptop.jpg?resize=768,512 768w" sizes="(max-width: 963px) 100vw, 963px" /><span aria-hidden="true" class="wp-block-cover__background has-dark-navy-blue-background-color has-background-dim-0 has-background-dim"></span><div class="wp-block-cover__inner-container is-layout-flow wp-block-cover-is-layout-flow">
+<figure class="wp-block-image wp-block-arizona-college-hero__hero-bars-graphic"><img decoding="async" fetchpriority="high" fetchpriority="high" src="https://arizonacollege.edu/wp-content/themes/arizona-college/assets/svg/hero-bars.svg" alt=""/></figure>
+
+
+
+<div class="wp-block-columns are-vertically-aligned-center wp-block-arizona-college-hero__inner azc-columns-justify-content-flex-start azc-columns-stack-early azc-has-section-spacing azc-section-spacing--large azc-has-section-horizontal-spacing is-layout-flex wp-container-core-columns-is-layout-f5a44f5b wp-block-columns-is-layout-flex">
+<div class="wp-block-column is-vertically-aligned-center is-layout-flow wp-block-column-is-layout-flow" style="flex-basis:55%">
+<h1 class="wp-block-heading wp-block-arizona-college-hero__title" id="h-take-the-first-step-into-nursing">Take the First Step Into <mark style="background-color:rgba(0, 0, 0, 0)" class="has-inline-color has-yellow-color">Nursing</mark></h1>
+
+
+
+<p class="wp-block-arizona-college-hero__description">Become a Nurse Faster With No Prerequisite Coursework</p>
+
+
+
+<ul class="wp-block-list azc-list-advanced-style azc-list-advanced-style--filled">
+<li>Complete your BSN in just 3 years with classes starting about every 8 weeks</li>
+
+
+
+<li>Gain hands-on experience through advanced simulation facilities and clinical rotations.</li>
+
+
+
+<li>Receive personalized attention in small class sizes with dedicated instructor support.</li>
+</ul>
+</div>
+
+
+
+<div class="wp-block-column is-vertically-aligned-center is-layout-flow wp-block-column-is-layout-flow" style="flex-basis:33%">
+<div class="wp-block-group is-style-default has-white-background-color has-background azc-has-section-radius azc-has-form-on-white is-layout-constrained wp-container-core-group-is-layout-aa7c7fe3 wp-block-group-is-layout-constrained" style="padding-top:var(--wp--preset--spacing--40);padding-right:var(--wp--preset--spacing--50);padding-bottom:var(--wp--preset--spacing--20);padding-left:var(--wp--preset--spacing--50)">
+<h5 class="wp-block-heading has-text-align-center has-navy-blue-color has-text-color has-link-color wp-elements-ca71da7a96bfd77d7223f9a7372150a0"><strong>Fill the Form Below to Connect With Our Admissions</strong> <strong>Team </strong></h5>
+
+
+
+                <div class='gf_browser_unknown gform_wrapper gravity-theme gform-theme--no-framework request-info-form_wrapper' data-form-theme='gravity-theme' data-form-index='0' id='gform_wrapper_5' >
+                        <div class='gform_heading'>
+                            <p class='gform_description'></p>
+							<p class='gform_required_legend'></p>
+                        </div><form method='post' enctype='multipart/form-data'  id='gform_5' class='request-info-form' action='/nursing-school-info/' data-formid='5' novalidate>
+                        <div class='gform-body gform_body'><div id='gform_fields_5' class='gform_fields top_label form_sublabel_below description_below validation_below'><div id="field_5_32" class="gfield gfield--type-honeypot gform_validation_container field_sublabel_below gfield--has-description field_description_below field_validation_below gfield_visibility_visible"  ><label class='gfield_label gform-field-label' for='input_5_32'>URL</label><div class='ginput_container'><input name='input_32' id='input_5_32' type='text' value='' autocomplete='new-password'/></div><div class='gfield_description' id='gfield_description_5_32'>This field is for validation purposes and should be left unchanged.</div></div><div id="field_5_1" class="gfield gfield--type-text gfield--input-type-text require_alpha_num gfield_contains_required field_sublabel_below gfield--no-description field_description_below field_validation_below gfield_visibility_visible"  ><label class='gfield_label gform-field-label' for='input_5_1'>First name<span class="gfield_required"><span class="gfield_required gfield_required_asterisk">*</span></span></label><div class='ginput_container ginput_container_text'><input name='input_1' id='input_5_1' type='text' value='' class='large'     aria-required="true" aria-invalid="false"   /></div></div><div id="field_5_2" class="gfield gfield--type-text gfield--input-type-text require_alpha_num gfield_contains_required field_sublabel_below gfield--no-description field_description_below field_validation_below gfield_visibility_visible"  ><label class='gfield_label gform-field-label' for='input_5_2'>Last name<span class="gfield_required"><span class="gfield_required gfield_required_asterisk">*</span></span></label><div class='ginput_container ginput_container_text'><input name='input_2' id='input_5_2' type='text' value='' class='large'     aria-required="true" aria-invalid="false"   /></div></div><div id="field_5_4" class="gfield gfield--type-email gfield--input-type-email gfield_contains_required field_sublabel_below gfield--no-description field_description_below field_validation_below gfield_visibility_visible"  ><label class='gfield_label gform-field-label' for='input_5_4'>Email<span class="gfield_required"><span class="gfield_required gfield_required_asterisk">*</span></span></label><div class='ginput_container ginput_container_email'>
+                            <input name='input_4' id='input_5_4' type='email' value='' class='large'    aria-required="true" aria-invalid="false"  />
+                        </div></div><div id="field_5_13" class="gfield gfield--type-phone gfield--input-type-phone gfield_contains_required field_sublabel_below gfield--no-description field_description_below field_validation_below gfield_visibility_visible"  ><label class='gfield_label gform-field-label' for='input_5_13'>Phone<span class="gfield_required"><span class="gfield_required gfield_required_asterisk">*</span></span></label><div class='ginput_container ginput_container_phone'><input name='input_13' id='input_5_13' type='tel' value='' class='large'   aria-required="true" aria-invalid="false"   /></div></div><div id="field_5_3" class="gfield gfield--type-text gfield--input-type-text zipcode gfield_contains_required field_sublabel_below gfield--no-description field_description_below field_validation_below gfield_visibility_visible"  ><label class='gfield_label gform-field-label' for='input_5_3'>Zip Code<span class="gfield_required"><span class="gfield_required gfield_required_asterisk">*</span></span></label><div class='ginput_container ginput_container_text'><input name='input_3' id='input_5_3' type='text' value='' class='large'     aria-required="true" aria-invalid="false"   /></div></div><div id="field_5_20" class="gfield gfield--type-select gfield--input-type-select field_sublabel_below gfield--no-description field_description_below field_validation_below gfield_visibility_hidden"  ><div class="admin-hidden-markup"><i class="gform-icon gform-icon--hidden" aria-hidden="true" title="This field is hidden when viewing the form"></i><span>This field is hidden when viewing the form</span></div><label class='gfield_label gform-field-label' for='input_5_20'>programs</label><div class='ginput_container ginput_container_select'><select name='input_20' id='input_5_20' class='large gfield_select'     aria-invalid="false" ><option value='' >Program</option><option value='BSN' selected='selected'>Nursing</option></select></div></div><div id="field_5_15" class="gfield gfield--type-hidden gfield--input-type-hidden gform_hidden field_sublabel_below gfield--no-description field_description_below field_validation_below gfield_visibility_visible"  ><div class='ginput_container ginput_container_text'><input name='input_15' id='input_5_15' type='hidden' class='gform_hidden'  aria-invalid="false" value='false' /></div></div><div id="field_5_16" class="gfield gfield--type-hidden gfield--input-type-hidden gform_hidden field_sublabel_below gfield--no-description field_description_below field_validation_below gfield_visibility_visible"  ><div class='ginput_container ginput_container_text'><input name='input_16' id='input_5_16' type='hidden' class='gform_hidden'  aria-invalid="false" value='false' /></div></div><div id="field_5_14" class="gfield gfield--type-hidden gfield--input-type-hidden gform_hidden field_sublabel_below gfield--no-description field_description_below field_validation_below gfield_visibility_visible"  ><div class='ginput_container ginput_container_text'><input name='input_14' id='input_5_14' type='hidden' class='gform_hidden'  aria-invalid="false" value='' /></div></div><div id="field_5_17" class="gfield gfield--type-hidden gfield--input-type-hidden gform_hidden field_sublabel_below gfield--no-description field_description_below field_validation_below gfield_visibility_visible"  ><div class='ginput_container ginput_container_text'><input name='input_17' id='input_5_17' type='hidden' class='gform_hidden'  aria-invalid="false" value='' /></div></div><div id="field_5_18" class="gfield gfield--type-hidden gfield--input-type-hidden gform_hidden field_sublabel_below gfield--no-description field_description_below field_validation_below gfield_visibility_visible"  ><div class='ginput_container ginput_container_text'><input name='input_18' id='input_5_18' type='hidden' class='gform_hidden'  aria-invalid="false" value='' /></div></div><div id="field_5_19" class="gfield gfield--type-hidden gfield--input-type-hidden gform_hidden field_sublabel_below gfield--no-description field_description_below field_validation_below gfield_visibility_visible"  ><div class='ginput_container ginput_container_text'><input name='input_19' id='input_5_19' type='hidden' class='gform_hidden'  aria-invalid="false" value='' /></div></div><div id="field_5_22" class="gfield gfield--type-hidden gfield--input-type-hidden gform_hidden field_sublabel_below gfield--no-description field_description_below field_validation_below gfield_visibility_visible"  ><div class='ginput_container ginput_container_text'><input name='input_22' id='input_5_22' type='hidden' class='gform_hidden'  aria-invalid="false" value='' /></div></div><div id="field_5_23" class="gfield gfield--type-hidden gfield--input-type-hidden gform_hidden field_sublabel_below gfield--no-description field_description_below field_validation_below gfield_visibility_visible"  ><div class='ginput_container ginput_container_text'><input name='input_23' id='input_5_23' type='hidden' class='gform_hidden'  aria-invalid="false" value='' /></div></div><div id="field_5_24" class="gfield gfield--type-hidden gfield--input-type-hidden gform_hidden field_sublabel_below gfield--no-description field_description_below field_validation_below gfield_visibility_visible"  ><div class='ginput_container ginput_container_text'><input name='input_24' id='input_5_24' type='hidden' class='gform_hidden'  aria-invalid="false" value='' /></div></div><div id="field_5_25" class="gfield gfield--type-hidden gfield--input-type-hidden gform_hidden field_sublabel_below gfield--no-description field_description_below field_validation_below gfield_visibility_visible"  ><div class='ginput_container ginput_container_text'><input name='input_25' id='input_5_25' type='hidden' class='gform_hidden'  aria-invalid="false" value='' /></div></div><div id="field_5_26" class="gfield gfield--type-hidden gfield--input-type-hidden gform_hidden field_sublabel_below gfield--no-description field_description_below field_validation_below gfield_visibility_visible"  ><div class='ginput_container ginput_container_text'><input name='input_26' id='input_5_26' type='hidden' class='gform_hidden'  aria-invalid="false" value='' /></div></div><div id="field_5_27" class="gfield gfield--type-hidden gfield--input-type-hidden gform_hidden field_sublabel_below gfield--no-description field_description_below field_validation_below gfield_visibility_visible"  ><div class='ginput_container ginput_container_text'><input name='input_27' id='input_5_27' type='hidden' class='gform_hidden'  aria-invalid="false" value='' /></div></div><div id="field_5_28" class="gfield gfield--type-hidden gfield--input-type-hidden gfield--width-full gform_hidden field_sublabel_below gfield--no-description field_description_below field_validation_below gfield_visibility_visible"  ><div class='ginput_container ginput_container_text'><input name='input_28' id='input_5_28' type='hidden' class='gform_hidden'  aria-invalid="false" value='' /></div></div><div id="field_5_29" class="gfield gfield--type-hidden gfield--input-type-hidden gfield--width-full gform_hidden field_sublabel_below gfield--no-description field_description_below field_validation_below gfield_visibility_visible"  ><div class='ginput_container ginput_container_text'><input name='input_29' id='input_5_29' type='hidden' class='gform_hidden'  aria-invalid="false" value='' /></div></div><div id="field_5_30" class="gfield gfield--type-hidden gfield--input-type-hidden gfield--width-full gform_hidden field_sublabel_below gfield--no-description field_description_below field_validation_below gfield_visibility_visible"  ><div class='ginput_container ginput_container_text'><input name='input_30' id='input_5_30' type='hidden' class='gform_hidden'  aria-invalid="false" value='' /></div></div><div id="field_5_31" class="gfield gfield--type-textarea gfield--input-type-textarea gfield--width-full field_sublabel_below gfield--no-description field_description_below field_validation_below gfield_visibility_hidden"  ><div class="admin-hidden-markup"><i class="gform-icon gform-icon--hidden" aria-hidden="true" title="This field is hidden when viewing the form"></i><span>This field is hidden when viewing the form</span></div><label class='gfield_label gform-field-label' for='input_5_31'>Full Source URL</label><div class='ginput_container ginput_container_textarea'><textarea name='input_31' id='input_5_31' class='textarea large'      aria-invalid="false"   rows='10' cols='50'>https://arizonacollege.edu/nursing-school-info/</textarea></div></div></div></div>
+        <div class='gform-footer gform_footer top_label'> <div class="disclaimer-text">
+				By submitting this form, you consent to Arizona College/Arizona College of Nursing contacting you regarding our educational programs at the phone number and email provided, including automated technology. I understand that consent is not a condition of enrollment. Message and data rates may apply. You may opt out at any time by texting STOP to 31258. You can also access our <a href="/privacy-policies/" style="text-decoration: underline">Privacy Policy</a> &amp; <a href="/terms-of-use/" style="text-decoration: underline">Terms of Use</a>.
+			</div>
+			<button id="gform_submit_button_5" type="submit" class="gform_button button" onclick="gform.submission.handleButtonClick(this);" data-submission-type="submit">
+				<span>Request Info</span>
+				<svg class="rv-icon--chevron-right" width="34" height="34" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<rect width="34" height="34" rx="17" fill="currentcolor"/>
+					<path d="M14.9998 21.9999C14.802 21.9999 14.6087 21.9412 14.4443 21.8313C14.2799 21.7214 14.1518 21.5653 14.0761 21.3826C14.0004 21.1999 13.9806 20.9988 14.0192 20.8049C14.0578 20.6109 14.153 20.4328 14.2928 20.2929L17.5858 16.9999L14.2928 13.7069C14.1106 13.5183 14.0098 13.2657 14.0121 13.0035C14.0144 12.7413 14.1196 12.4905 14.305 12.3051C14.4904 12.1197 14.7412 12.0145 15.0034 12.0122C15.2656 12.01 15.5182 12.1108 15.7068 12.2929L19.7068 16.2929C19.8943 16.4804 19.9996 16.7348 19.9996 16.9999C19.9996 17.2651 19.8943 17.5194 19.7068 17.7069L15.7068 21.7069C15.5193 21.8945 15.265 21.9999 14.9998 21.9999Z" fill="white" class="icon--knockout" />
+				</svg>
+			</button> 
+            <input type='hidden' class='gform_hidden' name='gform_submission_method' data-js='gform_submission_method_5' value='postback' />
+            <input type='hidden' class='gform_hidden' name='gform_theme' data-js='gform_theme_5' id='gform_theme_5' value='gravity-theme' />
+            <input type='hidden' class='gform_hidden' name='gform_style_settings' data-js='gform_style_settings_5' id='gform_style_settings_5' value='{&quot;theme&quot;:&quot;gravity-theme&quot;,&quot;inputPrimaryColor&quot;:&quot;#204ce5&quot;}' />
+            <input type='hidden' class='gform_hidden' name='is_submit_5' value='1' />
+            <input type='hidden' class='gform_hidden' name='gform_submit' value='5' />
+            
+            <input type='hidden' class='gform_hidden' name='gform_unique_id' value='' />
+            <input type='hidden' class='gform_hidden' name='state_5' value='WyJbXSIsIjM4YjNlZGJjNTUwYjNlODU0ZmNkNGQ1MDc5MWFjZWE2Il0=' />
+            <input type='hidden' autocomplete='off' class='gform_hidden' name='gform_target_page_number_5' id='gform_target_page_number_5' value='0' />
+            <input type='hidden' autocomplete='off' class='gform_hidden' name='gform_source_page_number_5' id='gform_source_page_number_5' value='1' />
+            <input type='hidden' name='gform_field_values' value='' />
+            
+        </div>
+                        <p style="display: none !important;" class="akismet-fields-container" data-prefix="ak_"><label>&#916;<textarea name="ak_hp_textarea" cols="45" rows="8" maxlength="100"></textarea></label><input type="hidden" id="ak_js_1" name="ak_js" value="96"/><script>document.getElementById( "ak_js_1" ).setAttribute( "value", ( new Date() ).getTime() );</script></p></form>
+                        </div><script type="text/javascript">
+/* <![CDATA[ */
+ gform.initializeOnLoaded( function() {gformInitSpinner( 5, 'https://arizonacollege.edu/wp-content/plugins/gravityforms/images/spinner.svg', true );jQuery('#gform_ajax_frame_5').on('load',function(){var contents = jQuery(this).contents().find('*').html();var is_postback = contents.indexOf('GF_AJAX_POSTBACK') >= 0;if(!is_postback){return;}var form_content = jQuery(this).contents().find('#gform_wrapper_5');var is_confirmation = jQuery(this).contents().find('#gform_confirmation_wrapper_5').length > 0;var is_redirect = contents.indexOf('gformRedirect(){') >= 0;var is_form = form_content.length > 0 && ! is_redirect && ! is_confirmation;var mt = parseInt(jQuery('html').css('margin-top'), 10) + parseInt(jQuery('body').css('margin-top'), 10) + 100;if(is_form){jQuery('#gform_wrapper_5').html(form_content.html());if(form_content.hasClass('gform_validation_error')){jQuery('#gform_wrapper_5').addClass('gform_validation_error');} else {jQuery('#gform_wrapper_5').removeClass('gform_validation_error');}setTimeout( function() { /* delay the scroll by 50 milliseconds to fix a bug in chrome */  }, 50 );if(window['gformInitDatepicker']) {gformInitDatepicker();}if(window['gformInitPriceFields']) {gformInitPriceFields();}var current_page = jQuery('#gform_source_page_number_5').val();gformInitSpinner( 5, 'https://arizonacollege.edu/wp-content/plugins/gravityforms/images/spinner.svg', true );jQuery(document).trigger('gform_page_loaded', [5, current_page]);window['gf_submitting_5'] = false;}else if(!is_redirect){var confirmation_content = jQuery(this).contents().find('.GF_AJAX_POSTBACK').html();if(!confirmation_content){confirmation_content = contents;}jQuery('#gform_wrapper_5').replaceWith(confirmation_content);jQuery(document).trigger('gform_confirmation_loaded', [5]);window['gf_submitting_5'] = false;wp.a11y.speak(jQuery('#gform_confirmation_message_5').text());}else{jQuery('#gform_5').append(contents);if(window['gformRedirect']) {gformRedirect();}}jQuery(document).trigger("gform_pre_post_render", [{ formId: "5", currentPage: "current_page", abort: function() { this.preventDefault(); } }]);        if (event && event.defaultPrevented) {                return;        }        const gformWrapperDiv = document.getElementById( "gform_wrapper_5" );        if ( gformWrapperDiv ) {            const visibilitySpan = document.createElement( "span" );            visibilitySpan.id = "gform_visibility_test_5";            gformWrapperDiv.insertAdjacentElement( "afterend", visibilitySpan );        }        const visibilityTestDiv = document.getElementById( "gform_visibility_test_5" );        let postRenderFired = false;        function triggerPostRender() {            if ( postRenderFired ) {                return;            }            postRenderFired = true;            gform.core.triggerPostRenderEvents( 5, current_page );            if ( visibilityTestDiv ) {                visibilityTestDiv.parentNode.removeChild( visibilityTestDiv );            }        }        function debounce( func, wait, immediate ) {            var timeout;            return function() {                var context = this, args = arguments;                var later = function() {                    timeout = null;                    if ( !immediate ) func.apply( context, args );                };                var callNow = immediate && !timeout;                clearTimeout( timeout );                timeout = setTimeout( later, wait );                if ( callNow ) func.apply( context, args );            };        }        const debouncedTriggerPostRender = debounce( function() {            triggerPostRender();        }, 200 );        if ( visibilityTestDiv && visibilityTestDiv.offsetParent === null ) {            const observer = new MutationObserver( ( mutations ) => {                mutations.forEach( ( mutation ) => {                    if ( mutation.type === 'attributes' && visibilityTestDiv.offsetParent !== null ) {                        debouncedTriggerPostRender();                        observer.disconnect();                    }                });            });            observer.observe( document.body, {                attributes: true,                childList: false,                subtree: true,                attributeFilter: [ 'style', 'class' ],            });        } else {            triggerPostRender();        }    } );} ); 
+/* ]]&gt; */
+</script>
+</div>
+</div>
+</div>
+</div></div>
+
+</div>
+
+
+
+<div class="wp-block-group alignwide azc-image-left-section has-dark-grey-color has-white-background-color has-text-color has-background has-link-color azc-has-section-radius wp-elements-4bfc415a8329ef17b258d678532744e7 is-layout-constrained wp-block-group-is-layout-constrained">
+<div class="wp-block-columns is-layout-flex wp-container-core-columns-is-layout-28f84493 wp-block-columns-is-layout-flex">
+<div class="wp-block-column is-layout-flow wp-block-column-is-layout-flow">
+<h2 class="wp-block-heading has-navy-blue-color has-text-color has-link-color wp-elements-03d82596087d28d309dc897bd1cfeec8" id="h-nursing-jobs-are-in-high-demand">Nursing Jobs Are In High Demand</h2>
+
+
+
+<p>Begin your journey on a new career path that is both rewarding and growing! According to the BLS, employment in healthcare occupations is expected to grow 6% nationwide from 2023 to 2033**. With a BSN Degree from an accredited school like Arizona College of Nursing, you will be setting yourself up for a wide range of opportunities and future success.</p>
+</div>
+</div>
+
+
+
+<div class="wp-block-columns azc-image-left-section--row azc-columns-justify-content-space-between is-layout-flex wp-container-core-columns-is-layout-28f84493 wp-block-columns-is-layout-flex">
+<div class="wp-block-column azc-image-left-section--image-column is-layout-flow wp-block-column-is-layout-flow" style="flex-basis:40%">
+<figure class="wp-block-image alignleft size-full"><img loading="lazy" decoding="async" width="1500" height="1000" src="https://arizonacollege.edu/wp-content/uploads/2025/08/BSN-Program-3.jpg" alt="Nursing career RNs at medical office." class="wp-image-1144" srcset="https://arizonacollege.edu/wp-content/uploads/2025/08/BSN-Program-3.jpg 1500w, https://arizonacollege.edu/wp-content/uploads/2025/08/BSN-Program-3.jpg?resize=300,200 300w, https://arizonacollege.edu/wp-content/uploads/2025/08/BSN-Program-3.jpg?resize=768,512 768w, https://arizonacollege.edu/wp-content/uploads/2025/08/BSN-Program-3.jpg?resize=1024,683 1024w" sizes="auto, (max-width: 1500px) 100vw, 1500px" /></figure>
+</div>
+
+
+
+<div class="wp-block-column azc-image-left-section--content-column is-layout-flow wp-block-column-is-layout-flow" style="flex-basis:60%">
+<h3 class="wp-block-heading has-navy-blue-color has-text-color has-link-color wp-elements-a676ee773ebba6d9d3c9b4f83861e6c2" id="h-63-720-132-680-salary-range">$63,720 – $132,680 Salary Range*</h3>
+
+
+
+<p>*2023 median annual wage for Registered Nurses in the United States.<br><small><em>Source:&nbsp;<a href="https://www.onetonline.org/link/localwages/29-1141.00?st=">https://www.onetonline.org/link/localwages/</a></em></small></p>
+
+
+
+<h3 class="wp-block-heading has-navy-blue-color has-text-color has-link-color wp-elements-0d37528d138d0d8eaebf2daeba5da0ec" id="h-6-job-growth">6% Job Growth</h3>
+
+
+
+<p>The job outlook for Registered Nurses is expected to grow 6% nationwide from 2023 to 2033**</p>
+
+
+
+<h3 class="wp-block-heading has-navy-blue-color has-text-color has-link-color wp-elements-32a58deec27c1c1a3e32515ce890296a" id="h-197-200-new-jobs">197,200 New Jobs</h3>
+
+
+
+<p>Employment opportunities for RN’s are projected to add 197,200 new jobs in the U.S. from 2023 to 2033**<br><small><em>**Source:<a aria-label="Opens in a new tab" href="https://www.bls.gov/ooh/healthcare/registered-nurses.htm#tab-1" target="_blank" rel="noreferrer noopener">&nbsp;https://www.bls.gov/ooh/healthcare/registered-nurses.htm#tab-1</a></em></small><br><br></p>
+</div>
+</div>
+</div>
+
+
+
+<div class="wp-block-group alignwide azc-image-right-section has-dark-grey-color has-grey-light-background-color has-text-color has-background has-link-color azc-has-section-radius wp-elements-514bfaec02d8435bc74d1b2f464681c2 is-layout-constrained wp-block-group-is-layout-constrained">
+<div class="wp-block-columns azc-image-right-section--row azc-columns-justify-content-space-between is-layout-flex wp-container-core-columns-is-layout-28f84493 wp-block-columns-is-layout-flex">
+<div class="wp-block-column azc-image-right-section--content-column is-layout-flow wp-block-column-is-layout-flow" style="flex-basis:60%">
+<h2 class="wp-block-heading has-navy-blue-color has-text-color has-link-color wp-elements-68146eff6944c65150cc8aee694bac09" id="h-earn-more-with-your-bsn-degree">Earn More With Your BSN Degree</h2>
+
+
+
+<p>The median salary for registered nurses (RN) in 2023 was $86,070*, earning more than 40% higher than an LPN role. Licensed Practical Nurse (LPN) earned $59,730* as a median salary in 2023.</p>
+
+
+
+<p>Earning a BSN degree enables you to become a registered nurse (RN), and make more money per year. This degree is an investment in your future that can pay off for years to come.</p>
+
+
+
+<p><em>*<a aria-label="Opens in a new tab" href="https://www.bls.gov/ooh/healthcare/registered-nurses.htm#tab-5" target="_blank" rel="noreferrer noopener">Registered Nurse</a>&nbsp;and&nbsp;<a aria-label="Opens in a new tab" href="https://www.bls.gov/ooh/healthcare/licensed-practical-and-licensed-vocational-nurses.htm" target="_blank" rel="noreferrer noopener">Licensed Practical Nurse</a>&nbsp;salary statistics are sourced from the National Bureau of Labor Statistics (BLS). All statistics represent nationwide data for the U.S.</em></p>
+</div>
+
+
+
+<div class="wp-block-column azc-image-right-section--image-column is-layout-flow wp-block-column-is-layout-flow" style="flex-basis:40%">
+<figure class="wp-block-image alignright size-full"><img loading="lazy" decoding="async" width="1350" height="901" src="https://arizonacollege.edu/wp-content/uploads/2025/09/Nursing-Students-in-Nurse-Course.webp" alt="" class="wp-image-2063" srcset="https://arizonacollege.edu/wp-content/uploads/2025/09/Nursing-Students-in-Nurse-Course.webp 1350w, https://arizonacollege.edu/wp-content/uploads/2025/09/Nursing-Students-in-Nurse-Course.webp?resize=300,200 300w, https://arizonacollege.edu/wp-content/uploads/2025/09/Nursing-Students-in-Nurse-Course.webp?resize=768,513 768w, https://arizonacollege.edu/wp-content/uploads/2025/09/Nursing-Students-in-Nurse-Course.webp?resize=1024,683 1024w" sizes="auto, (max-width: 1350px) 100vw, 1350px" /></figure>
+</div>
+</div>
+</div>
+
+
+
+<div class="wp-block-group alignwide has-dark-grey-color has-grey-light-background-color has-text-color has-background has-link-color azc-has-section-radius wp-elements-4d73c79efd0e9812957c20a71f8b98ee is-layout-constrained wp-block-group-is-layout-constrained">
+<h2 class="wp-block-heading has-text-align-center has-navy-blue-color has-text-color has-link-color wp-elements-916b76d87aeffbe7d056376302cf23eb" id="h-career-options-with-a-bsn-degree">Career Options with a BSN Degree</h2>
+
+
+
+<p class="has-text-align-left">Students who graduate with a BSN degree have multiple career paths ahead of them. Nurses can work in schools, research labs, med-spas, patients’ homes, community centers and their own home office. In a hospital setting, nurses specialize in a variety of areas like OB/GYN, orthopedics, pediatrics, surgery, and more. Listed below are just some of the opportunities available to you after graduating.</p>
+
+
+
+<div class="wp-block-group rv-block-patterns-icons-animated is-layout-constrained wp-container-core-group-is-layout-2bef61ab wp-block-group-is-layout-constrained">
+<div class="wp-block-columns is-layout-flex wp-container-core-columns-is-layout-28f84493 wp-block-columns-is-layout-flex">
+<div class="wp-block-column has-white-background-color has-background azc-has-section-radius is-layout-flow wp-block-column-is-layout-flow" style="padding-top:var(--wp--preset--spacing--40);padding-right:var(--wp--preset--spacing--40);padding-bottom:var(--wp--preset--spacing--40);padding-left:var(--wp--preset--spacing--40)">
+<figure class="wp-block-image aligncenter size-full"><img decoding="async" src="https://arizonacollege.edu/wp-content/uploads/2025/09/WEB_HOSPITAL.svg" alt="" class="wp-image-2546"/></figure>
+
+
+
+<h4 class="wp-block-heading has-text-align-center has-navy-blue-color has-text-color has-link-color wp-elements-4e0ce1e8bb106dc40a17528e9610016d" id="h-hospital-based-patient-care-roles">Hospital-Based Patient Care Roles</h4>
+
+
+
+<p class="has-text-align-center">Hospital RN, ER Nurse, ICU Nurse, Labor and Delivery Nurse, Pediatric Nurse.<br></p>
+</div>
+
+
+
+<div class="wp-block-column has-white-background-color has-background azc-has-section-radius is-layout-flow wp-block-column-is-layout-flow" style="padding-top:var(--wp--preset--spacing--40);padding-right:var(--wp--preset--spacing--40);padding-bottom:var(--wp--preset--spacing--40);padding-left:var(--wp--preset--spacing--40)">
+<figure class="wp-block-image aligncenter size-full"><img decoding="async" src="https://arizonacollege.edu/wp-content/uploads/2025/09/WEB_NewStudents-1.svg" alt="" class="wp-image-2128"/></figure>
+
+
+
+<h4 class="wp-block-heading has-text-align-center has-navy-blue-color has-text-color has-link-color wp-elements-f62ce0ca9e434e136c21bebc8f2ff141" id="h-community-and-public-health-roles">Community and Public Health Roles</h4>
+
+
+
+<p class="has-text-align-center">Public Health Nurse, School Nurse, Home Health Nurse, Occupational Health Nurse</p>
+</div>
+
+
+
+<div class="wp-block-column has-white-background-color has-background azc-has-section-radius is-layout-flow wp-block-column-is-layout-flow" style="padding-top:var(--wp--preset--spacing--40);padding-right:var(--wp--preset--spacing--40);padding-bottom:var(--wp--preset--spacing--40);padding-left:var(--wp--preset--spacing--40)">
+<figure class="wp-block-image aligncenter size-full"><img decoding="async" src="https://arizonacollege.edu/wp-content/uploads/2025/09/WEB_READING.svg" alt="" class="wp-image-1913"/></figure>
+
+
+
+<h4 class="wp-block-heading has-text-align-center has-navy-blue-color has-text-color has-link-color wp-elements-3d6d58c0ed1d964deb1b06a683b0f2a9" id="h-specialized-and-advanced-roles">Specialized and Advanced Roles</h4>
+
+
+
+<p class="has-text-align-center">Travel Nurse, Forensic Nurse, Informatics Nurse</p>
+</div>
+</div>
+</div>
+</div>
+
+
+
+<div class="wp-block-group alignwide has-dark-grey-color has-text-color has-link-color azc-group-hide-overflow azc-has-section-radius wp-elements-c093aa6749735328493a8233d22a60da is-layout-constrained wp-block-group-is-layout-constrained" style="padding-bottom:var(--wp--preset--spacing--50)">
+<div
+class="wp-block-arizona-college-carousel--slides-2 wp-block-arizona-college-carousel--type-contained  wp-block-arizona-college-carousel" data-slides-per-view="2" data-space-between="">
+			<div class="wp-block-arizona-college-carousel__heading wp-block-arizona-college-carousel__heading--no-navigation">
+							<div class="wp-block-arizona-college-carousel__heading-content">
+											<h2 class="wp-block-arizona-college-carousel__title">
+							Hear From Our Students						</h2>
+					
+									</div>
+			
+					</div>
+	
+	<div class="wp-block-arizona-college-carousel__items">
+		
+									
+<div id="post-1354" class="wp-block-arizona-college-carousel-item post-1354 page type-page status-publish hentry">
+	<div class="wp-block-arizona-college-carousel-item__content">
+		<div class="wp-block-arizona-college-carousel-item__testimonial">
+			<span class="wp-block-arizona-college-carousel-item__testimonial-quote">
+				
+<svg role="presentation" class="rv-icon-quote" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+	<path d="M9 23H1C0.44775 23 0 22.5527 0 22V12C0 6.95605 1.89014 3.61719 5.61768 2.07568C6.12793 1.86572 6.7124 2.10742 6.92432 2.61768C7.13526 3.12842 6.89258 3.71289 6.38233 3.92432C3.67383 5.04395 2.24365 7.36328 2.02881 11H9C9.55225 11 10 11.4478 10 12V22C10 22.5527 9.55225 23 9 23Z" fill="currentcolor"/>
+	<path d="M23 23H15C14.4477 23 14 22.5527 14 22V12C14 6.95605 15.8901 3.61719 19.6177 2.07568C20.1265 1.86572 20.7124 2.10742 20.9243 2.61767C21.1353 3.12841 20.8926 3.71288 20.3823 3.92431C17.6738 5.04395 16.2437 7.36328 16.0288 11H23C23.5522 11 24 11.4478 24 12V22C24 22.5527 23.5522 23 23 23Z" fill="currentcolor"/>
+</svg>
+			</span>
+
+			<div class="wp-block-arizona-college-carousel-item__testimonial-content">
+				<!-- wp:paragraph -->
+<p>If you are doubting whether you can become a nurse, the Arizona College teachers and staff will show you that you absolutely can. Every teacher is dedicated to mentoring and supporting students as much as possible.</p>
+<!-- /wp:paragraph -->			</div>
+
+			<div class="wp-block-arizona-college-carousel-item__testimonial-byline">
+									<div class="wp-block-arizona-college-carousel-item__testimonial-image">
+						<img loading="lazy" decoding="async" width="150" height="150" src="https://arizonacollege.edu/wp-content/uploads/2025/08/Liezel-Milad-Nursing-School-testimonial.webp?w=150&amp;h=150&amp;crop=1" class="attachment-thumbnail size-thumbnail" alt="Liezel Milad BSN Program Nursing School testimonial" srcset="https://arizonacollege.edu/wp-content/uploads/2025/08/Liezel-Milad-Nursing-School-testimonial.webp 675w, https://arizonacollege.edu/wp-content/uploads/2025/08/Liezel-Milad-Nursing-School-testimonial.webp?resize=150,150 150w, https://arizonacollege.edu/wp-content/uploads/2025/08/Liezel-Milad-Nursing-School-testimonial.webp?resize=300,300 300w" sizes="auto, (max-width: 150px) 100vw, 150px" />					</div>
+				
+				<div class="wp-block-arizona-college-carousel-item__testimonial-author">
+					Liezel Milad											<span class="wp-block-arizona-college-carousel-item__testimonial-job">
+							BSN Program						</span>
+									</div>
+			</div>
+		</div>
+	</div>
+</div>
+							
+<div id="post-1354" class="wp-block-arizona-college-carousel-item post-1354 page type-page status-publish hentry">
+	<div class="wp-block-arizona-college-carousel-item__content">
+		<div class="wp-block-arizona-college-carousel-item__testimonial">
+			<span class="wp-block-arizona-college-carousel-item__testimonial-quote">
+				
+<svg role="presentation" class="rv-icon-quote" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+	<path d="M9 23H1C0.44775 23 0 22.5527 0 22V12C0 6.95605 1.89014 3.61719 5.61768 2.07568C6.12793 1.86572 6.7124 2.10742 6.92432 2.61768C7.13526 3.12842 6.89258 3.71289 6.38233 3.92432C3.67383 5.04395 2.24365 7.36328 2.02881 11H9C9.55225 11 10 11.4478 10 12V22C10 22.5527 9.55225 23 9 23Z" fill="currentcolor"/>
+	<path d="M23 23H15C14.4477 23 14 22.5527 14 22V12C14 6.95605 15.8901 3.61719 19.6177 2.07568C20.1265 1.86572 20.7124 2.10742 20.9243 2.61767C21.1353 3.12841 20.8926 3.71288 20.3823 3.92431C17.6738 5.04395 16.2437 7.36328 16.0288 11H23C23.5522 11 24 11.4478 24 12V22C24 22.5527 23.5522 23 23 23Z" fill="currentcolor"/>
+</svg>
+			</span>
+
+			<div class="wp-block-arizona-college-carousel-item__testimonial-content">
+				<!-- wp:paragraph -->
+<p>The teachers and administration of Arizona College really do care about us. In my first month, the Dean had a 1-on-1 meeting with me to see how I was feeling. I don’t think I could find that level of support anywhere else.</p>
+<!-- /wp:paragraph -->			</div>
+
+			<div class="wp-block-arizona-college-carousel-item__testimonial-byline">
+									<div class="wp-block-arizona-college-carousel-item__testimonial-image">
+						<img loading="lazy" decoding="async" width="150" height="150" src="https://arizonacollege.edu/wp-content/uploads/2025/08/IsabellaBerryPhoto-1.jpg?w=150&amp;h=150&amp;crop=1" class="attachment-thumbnail size-thumbnail" alt="BSN Graduate Isabella Berry" srcset="https://arizonacollege.edu/wp-content/uploads/2025/08/IsabellaBerryPhoto-1.jpg 750w, https://arizonacollege.edu/wp-content/uploads/2025/08/IsabellaBerryPhoto-1.jpg?resize=150,150 150w, https://arizonacollege.edu/wp-content/uploads/2025/08/IsabellaBerryPhoto-1.jpg?resize=300,300 300w" sizes="auto, (max-width: 150px) 100vw, 150px" />					</div>
+				
+				<div class="wp-block-arizona-college-carousel-item__testimonial-author">
+					Isabella Berry											<span class="wp-block-arizona-college-carousel-item__testimonial-job">
+							BSN Program						</span>
+									</div>
+			</div>
+		</div>
+	</div>
+</div>
+							
+<div id="post-1354" class="wp-block-arizona-college-carousel-item post-1354 page type-page status-publish hentry">
+	<div class="wp-block-arizona-college-carousel-item__content">
+		<div class="wp-block-arizona-college-carousel-item__testimonial">
+			<span class="wp-block-arizona-college-carousel-item__testimonial-quote">
+				
+<svg role="presentation" class="rv-icon-quote" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+	<path d="M9 23H1C0.44775 23 0 22.5527 0 22V12C0 6.95605 1.89014 3.61719 5.61768 2.07568C6.12793 1.86572 6.7124 2.10742 6.92432 2.61768C7.13526 3.12842 6.89258 3.71289 6.38233 3.92432C3.67383 5.04395 2.24365 7.36328 2.02881 11H9C9.55225 11 10 11.4478 10 12V22C10 22.5527 9.55225 23 9 23Z" fill="currentcolor"/>
+	<path d="M23 23H15C14.4477 23 14 22.5527 14 22V12C14 6.95605 15.8901 3.61719 19.6177 2.07568C20.1265 1.86572 20.7124 2.10742 20.9243 2.61767C21.1353 3.12841 20.8926 3.71288 20.3823 3.92431C17.6738 5.04395 16.2437 7.36328 16.0288 11H23C23.5522 11 24 11.4478 24 12V22C24 22.5527 23.5522 23 23 23Z" fill="currentcolor"/>
+</svg>
+			</span>
+
+			<div class="wp-block-arizona-college-carousel-item__testimonial-content">
+				<!-- wp:paragraph -->
+<p>I knew someone that went to Arizona College, and she’s an amazing nurse. And I was like, Hey, she’s an amazing nurse. I’m going to go to that school. Taking the leap definitely has been worth it. If I had not done this, I would not be in the position that I’m in now.</p>
+<!-- /wp:paragraph -->			</div>
+
+			<div class="wp-block-arizona-college-carousel-item__testimonial-byline">
+									<div class="wp-block-arizona-college-carousel-item__testimonial-image">
+						<img loading="lazy" decoding="async" width="150" height="150" src="https://arizonacollege.edu/wp-content/uploads/2025/10/BSN-Nursing-Schools-in-Milwaukee-WI.webp?w=150&amp;h=150&amp;crop=1" class="attachment-thumbnail size-thumbnail" alt="BSN Nursing School in Milwaukee WI" srcset="https://arizonacollege.edu/wp-content/uploads/2025/10/BSN-Nursing-Schools-in-Milwaukee-WI.webp 1000w, https://arizonacollege.edu/wp-content/uploads/2025/10/BSN-Nursing-Schools-in-Milwaukee-WI.webp?resize=150,150 150w, https://arizonacollege.edu/wp-content/uploads/2025/10/BSN-Nursing-Schools-in-Milwaukee-WI.webp?resize=300,300 300w, https://arizonacollege.edu/wp-content/uploads/2025/10/BSN-Nursing-Schools-in-Milwaukee-WI.webp?resize=768,768 768w" sizes="auto, (max-width: 150px) 100vw, 150px" />					</div>
+				
+				<div class="wp-block-arizona-college-carousel-item__testimonial-author">
+					Araneth Ellison-Smith											<span class="wp-block-arizona-college-carousel-item__testimonial-job">
+							BSN Program						</span>
+									</div>
+			</div>
+		</div>
+	</div>
+</div>
+						</div>
+
+	<div class="ac-swiper-navigation ac-swiper-navigation-dark ac-swiper-navigation--x-right ac-swiper-navigation--y-bottom">
+	<div class="ac-swiper-navigation-prev swiper-button-prev">
+		<svg class="ac-icon transform-rotate-180" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+	<path d="M17.0003 12.0013C17.0002 12.2063 16.937 12.4063 16.8193 12.5743L9.81934 22.5743C9.66393 22.7827 9.43346 22.9224 9.17678 22.9638C8.9201 23.0052 8.6574 22.945 8.44437 22.7959C8.23134 22.6469 8.08473 22.4207 8.03562 22.1654C7.98652 21.9101 8.03879 21.6457 8.18133 21.4283L14.7793 12.0013L8.17933 2.57428C8.03678 2.35685 7.98452 2.09245 8.03362 1.83713C8.08273 1.58182 8.22933 1.35567 8.44237 1.20662C8.6554 1.05758 8.9181 0.997362 9.17478 1.03874C9.43146 1.08012 9.66193 1.21984 9.81733 1.42828L16.8173 11.4283C16.9357 11.596 16.9996 11.796 17.0003 12.0013Z" fill="currentColor"/>
+</svg>
+	</div>
+	<div class="ac-swiper-navigation-next swiper-button-next">
+		<svg class="ac-icon " xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+	<path d="M17.0003 12.0013C17.0002 12.2063 16.937 12.4063 16.8193 12.5743L9.81934 22.5743C9.66393 22.7827 9.43346 22.9224 9.17678 22.9638C8.9201 23.0052 8.6574 22.945 8.44437 22.7959C8.23134 22.6469 8.08473 22.4207 8.03562 22.1654C7.98652 21.9101 8.03879 21.6457 8.18133 21.4283L14.7793 12.0013L8.17933 2.57428C8.03678 2.35685 7.98452 2.09245 8.03362 1.83713C8.08273 1.58182 8.22933 1.35567 8.44237 1.20662C8.6554 1.05758 8.9181 0.997362 9.17478 1.03874C9.43146 1.08012 9.66193 1.21984 9.81733 1.42828L16.8173 11.4283C16.9357 11.596 16.9996 11.796 17.0003 12.0013Z" fill="currentColor"/>
+</svg>
+	</div>
+</div>
+</div>
+</div>
+
+
+
+<div class="wp-block-group alignwide azc-image-right-section has-dark-grey-color has-grey-light-background-color has-text-color has-background has-link-color azc-has-section-radius wp-elements-401544a85175507ab2b9f336b26963df is-layout-constrained wp-block-group-is-layout-constrained">
+<div class="wp-block-columns azc-image-right-section--row azc-columns-justify-content-space-between is-layout-flex wp-container-core-columns-is-layout-28f84493 wp-block-columns-is-layout-flex">
+<div class="wp-block-column azc-image-right-section--content-column is-layout-flow wp-block-column-is-layout-flow" style="flex-basis:60%">
+<h2 class="wp-block-heading has-navy-blue-color has-text-color has-link-color wp-elements-4ac3d7f8632b62af62abc77c6263244c">Your Nursing Dream Can Start Now</h2>
+
+
+
+<p>Our nursing school is designed with one goal: to prepare you for a successful career in the health sciences as a registered nurse (RN). We strive for academic excellence through classroom teaching, hands-on simulations, and training in real-world healthcare environments to give you the nursing skills you need.</p>
+
+
+
+<p>Connect with one of our academic advisors by filling out the form below to learn more about your eligibility for transferring credits, financial aid options, and available scholarships.</p>
+
+
+
+<div class="wp-block-buttons is-layout-flex wp-block-buttons-is-layout-flex">
+<div class="wp-block-button rv-button-has-icon rv-modal--item-trigger" data-modal-id="form-popover"><a role="button" class="wp-block-button__link wp-element-button">Learn More
+<svg class="rv-icon--chevron-right" width="34" height="34" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+	<rect width="34" height="34" rx="17" fill="currentcolor"/>
+	<path d="M14.9998 21.9999C14.802 21.9999 14.6087 21.9412 14.4443 21.8313C14.2799 21.7214 14.1518 21.5653 14.0761 21.3826C14.0004 21.1999 13.9806 20.9988 14.0192 20.8049C14.0578 20.6109 14.153 20.4328 14.2928 20.2929L17.5858 16.9999L14.2928 13.7069C14.1106 13.5183 14.0098 13.2657 14.0121 13.0035C14.0144 12.7413 14.1196 12.4905 14.305 12.3051C14.4904 12.1197 14.7412 12.0145 15.0034 12.0122C15.2656 12.01 15.5182 12.1108 15.7068 12.2929L19.7068 16.2929C19.8943 16.4804 19.9996 16.7348 19.9996 16.9999C19.9996 17.2651 19.8943 17.5194 19.7068 17.7069L15.7068 21.7069C15.5193 21.8945 15.265 21.9999 14.9998 21.9999Z" fill="white" class="icon--knockout" />
+</svg>
+</a></div>
+</div>
+</div>
+
+
+
+<div class="wp-block-column azc-image-right-section--image-column is-layout-flow wp-block-column-is-layout-flow" style="flex-basis:40%">
+<figure class="wp-block-image alignright size-full"><img loading="lazy" decoding="async" width="1200" height="800" src="https://arizonacollege.edu/wp-content/uploads/2025/08/BSN-Program-Nursing-Students-at-AZCN.webp" alt="BSN Program Nursing Students at AZCN" class="wp-image-1467" srcset="https://arizonacollege.edu/wp-content/uploads/2025/08/BSN-Program-Nursing-Students-at-AZCN.webp 1200w, https://arizonacollege.edu/wp-content/uploads/2025/08/BSN-Program-Nursing-Students-at-AZCN.webp?resize=300,200 300w, https://arizonacollege.edu/wp-content/uploads/2025/08/BSN-Program-Nursing-Students-at-AZCN.webp?resize=768,512 768w, https://arizonacollege.edu/wp-content/uploads/2025/08/BSN-Program-Nursing-Students-at-AZCN.webp?resize=1024,683 1024w" sizes="auto, (max-width: 1200px) 100vw, 1200px" /></figure>
+</div>
+</div>
+</div>
+	</main>
+
+		<footer id="footer" class="rv-footer rv-container--fluid">
+			
+<div id="landing-page-footer" class="wp-block-group has-dark-grey-color has-white-background-color has-text-color has-background has-link-color azc-has-section-radius wp-elements-d12de58eda0ebe92eeefedfacc5283d6 is-layout-constrained wp-container-core-group-is-layout-cc9ecf56 wp-block-group-is-layout-constrained" style="margin-top:var(--wp--preset--spacing--50);margin-bottom:var(--wp--preset--spacing--50);padding-top:var(--wp--preset--spacing--50);padding-right:var(--wp--preset--spacing--50);padding-bottom:var(--wp--preset--spacing--50);padding-left:var(--wp--preset--spacing--50)">
+<div class="wp-block-columns are-vertically-aligned-center menu-columns azc-columns-justify-content-center azc-columns-stack-early is-layout-flex wp-container-core-columns-is-layout-28f84493 wp-block-columns-is-layout-flex">
+<div class="wp-block-column is-vertically-aligned-center is-layout-flow wp-block-column-is-layout-flow">
+<div class="wp-block-arizona-college-azc-logo">
+						<a href="https://arizonacollege.edu/">
+				<img src="https://arizonacollege.edu/wp-content/uploads/2025/07/logo-az-college-nursing.svg" alt="logo-az-college-nursing" class="rv-logo" />
+			</a>
+			</div>
+</div>
+
+
+
+<div class="wp-block-column is-vertically-aligned-center landing-page-footer-links is-layout-flow wp-block-column-is-layout-flow" style="flex-basis:60%">
+<div class="wp-block-group is-content-justification-center is-nowrap is-layout-flex wp-container-core-group-is-layout-23441af8 wp-block-group-is-layout-flex">
+<p class="has-text-align-center"><a href="https://arizonacollege.edu/ccpa-compliance/" data-type="page" data-id="1306">CCPA Compliance</a></p>
+
+
+
+<p class="has-text-align-center"><a href="https://arizonacollege.edu/terms-of-use/" data-type="page" data-id="1402">Terms of Use</a></p>
+
+
+
+<p class="has-text-align-center"><a href="https://arizonacollege.edu/privacy-policies/" data-type="page" data-id="3">Privacy Policy</a></p>
+
+
+
+<p class="has-text-align-center"><a href="https://arizonacollege.edu/accessibility/" data-type="page" data-id="14565">Accessibility</a></p>
+</div>
+</div>
+
+
+
+<div class="wp-block-column is-vertically-aligned-center site-header-last-column is-layout-flow wp-block-column-is-layout-flow">
+<p class="has-small-font-size">© 2025 All Rights Reserved</p>
+</div>
+</div>
+</div>
+
+
+
+<div class="wp-block-arizona-college-form-popover rv-modal--item" id="form-popover"><div class="rv-modal--item-content-wrapper"><div class="rv-modal--item-trigger rv-modal--item-content-overlay rv-modal--item-content-overlay--solid rv-modal--item-close"></div><div><div class="rv-modal--item-close-wrapper"><button type="button" class="rv-modal--item-close rv-modal--item-trigger" aria-label="Close" data-modal-id="form-popover"></button></div>
+<h2 class="wp-block-heading has-text-align-center has-yellow-color has-text-color" id="h-request-more-information">Request More Information</h2>
+
+
+
+                <div class='gf_browser_unknown gform_wrapper gravity-theme gform-theme--no-framework request-info-form_wrapper' data-form-theme='gravity-theme' data-form-index='0' id='gform_wrapper_3'><div id='gf_3' class='gform_anchor'></div>
+                        <div class='gform_heading'>
+							<p class='gform_required_legend'></p>
+                        </div><form method='post' enctype='multipart/form-data' id='gform_3' class='request-info-form' action='/nursing-school-info/#gf_3' data-formid='3' novalidate>
+                        <div class='gform-body gform_body'><div id='gform_fields_3' class='gform_fields top_label form_sublabel_below description_below validation_below'><div id="field_3_35" class="gfield gfield--type-honeypot gform_validation_container field_sublabel_below gfield--has-description field_description_below field_validation_below gfield_visibility_visible"><label class='gfield_label gform-field-label' for='input_3_35'>Instagram</label><div class='ginput_container'><input name='input_35' id='input_3_35' type='text' value='' autocomplete='new-password' /></div><div class='gfield_description' id='gfield_description_3_35'>This field is for validation purposes and should be left unchanged.</div></div><div id="field_3_1" class="gfield gfield--type-text gfield--input-type-text require_alpha_num gfield_contains_required field_sublabel_below gfield--no-description field_description_below field_validation_below gfield_visibility_visible"><label class='gfield_label gform-field-label' for='input_3_1'>First name<span class="gfield_required"><span class="gfield_required gfield_required_asterisk">*</span></span></label><div class='ginput_container ginput_container_text'><input name='input_1' id='input_3_1' type='text' value='' class='large' /></div></div><div id="field_3_2" class="gfield gfield--type-text gfield--input-type-text require_alpha_num gfield_contains_required field_sublabel_below gfield--no-description field_description_below field_validation_below gfield_visibility_visible"><label class='gfield_label gform-field-label' for='input_3_2'>Last name<span class="gfield_required"><span class="gfield_required gfield_required_asterisk">*</span></span></label><div class='ginput_container ginput_container_text'><input name='input_2' id='input_3_2' type='text' value='' class='large' /></div></div><div id="field_3_4" class="gfield gfield--type-email gfield--input-type-email gfield_contains_required field_sublabel_below gfield--no-description field_description_below field_validation_below gfield_visibility_visible"><label class='gfield_label gform-field-label' for='input_3_4'>Email<span class="gfield_required"><span class="gfield_required gfield_required_asterisk">*</span></span></label><div class='ginput_container ginput_container_email'>
+                            <input name='input_4' id='input_3_4' type='email' value='' class='large' />
+                        </div></div><div id="field_3_13" class="gfield gfield--type-phone gfield--input-type-phone gfield_contains_required field_sublabel_below gfield--no-description field_description_below field_validation_below gfield_visibility_visible"><label class='gfield_label gform-field-label' for='input_3_13'>Phone<span class="gfield_required"><span class="gfield_required gfield_required_asterisk">*</span></span></label><div class='ginput_container ginput_container_phone'><input name='input_13' id='input_3_13' type='tel' value='' class='large' /></div></div><div id="field_3_3" class="gfield gfield--type-text gfield--input-type-text zipcode gfield_contains_required field_sublabel_below gfield--no-description field_description_below field_validation_below gfield_visibility_visible"><label class='gfield_label gform-field-label' for='input_3_3'>Zip Code<span class="gfield_required"><span class="gfield_required gfield_required_asterisk">*</span></span></label><div class='ginput_container ginput_container_text'><input name='input_3' id='input_3_3' type='text' value='' class='large' /></div></div><div id="field_3_24" class="gfield gfield--type-select gfield--input-type-select nursing-dd gfield_contains_required field_sublabel_below gfield--no-description field_description_below field_validation_below gfield_visibility_visible"><label class='gfield_label gform-field-label' for='input_3_24'>Program<span class="gfield_required"><span class="gfield_required gfield_required_asterisk">*</span></span></label><div class='ginput_container ginput_container_select'><select name='input_24' id='input_3_24' class='large gfield_select'><option value='BSN' selected='selected'>Select Program</option></select></div></div><div id="field_3_7" class="gfield gfield--type-select gfield--input-type-select nursing-dd gfield_contains_required field_sublabel_below gfield--no-description field_description_below field_validation_below gfield_visibility_visible"><label class='gfield_label gform-field-label' for='input_3_7'>Program<span class="gfield_required"><span class="gfield_required gfield_required_asterisk">*</span></span></label><div class='ginput_container ginput_container_select'><select name='input_7' id='input_3_7' class='large gfield_select'><option value='' selected='selected'></option><option value='BSN'>Nursing</option></select></div></div><div id="field_3_23" class="gfield gfield--type-select gfield--input-type-select gfield_contains_required field_sublabel_below gfield--no-description field_description_below field_validation_below gfield_visibility_visible"><label class='gfield_label gform-field-label' for='input_3_23'>Program<span class="gfield_required"><span class="gfield_required gfield_required_asterisk">*</span></span></label><div class='ginput_container ginput_container_select'><select name='input_23' id='input_3_23' class='large gfield_select'><option value=''></option><option value='BSN'>Nursing</option><option value='PH'>Medical Assistant with Phlebotomy</option><option value='PT'>Pharmacy Technician</option><option value='DA'>Dental Assistant</option><option value='MT'>Massage Therapy</option><option value='MBC'>Medical Billing and Coding</option><option value='HCA'>Health Care Administration</option></select></div></div><div id="field_3_15" class="gfield gfield--type-hidden gfield--input-type-hidden gform_hidden field_sublabel_below gfield--no-description field_description_below field_validation_below gfield_visibility_visible"><div class='ginput_container ginput_container_text'><input name='input_15' id='input_3_15' type='hidden' class='gform_hidden' value='false' /></div></div><div id="field_3_16" class="gfield gfield--type-hidden gfield--input-type-hidden gform_hidden field_sublabel_below gfield--no-description field_description_below field_validation_below gfield_visibility_visible"><div class='ginput_container ginput_container_text'><input name='input_16' id='input_3_16' type='hidden' class='gform_hidden' value='false' /></div></div><div id="field_3_14" class="gfield gfield--type-hidden gfield--input-type-hidden gform_hidden field_sublabel_below gfield--no-description field_description_below field_validation_below gfield_visibility_visible"><div class='ginput_container ginput_container_text'><input name='input_14' id='input_3_14' type='hidden' class='gform_hidden' value='' /></div></div><div id="field_3_17" class="gfield gfield--type-hidden gfield--input-type-hidden gform_hidden field_sublabel_below gfield--no-description field_description_below field_validation_below gfield_visibility_visible"><div class='ginput_container ginput_container_text'><input name='input_17' id='input_3_17' type='hidden' class='gform_hidden' value='' /></div></div><div id="field_3_18" class="gfield gfield--type-hidden gfield--input-type-hidden gform_hidden field_sublabel_below gfield--no-description field_description_below field_validation_below gfield_visibility_visible"><div class='ginput_container ginput_container_text'><input name='input_18' id='input_3_18' type='hidden' class='gform_hidden' value='' /></div></div><div id="field_3_19" class="gfield gfield--type-hidden gfield--input-type-hidden gform_hidden field_sublabel_below gfield--no-description field_description_below field_validation_below gfield_visibility_visible"><div class='ginput_container ginput_container_text'><input name='input_19' id='input_3_19' type='hidden' class='gform_hidden' value='' /></div></div><div id="field_3_25" class="gfield gfield--type-hidden gfield--input-type-hidden gform_hidden field_sublabel_below gfield--no-description field_description_below field_validation_below gfield_visibility_visible"><div class='ginput_container ginput_container_text'><input name='input_25' id='input_3_25' type='hidden' class='gform_hidden' value='' /></div></div><div id="field_3_26" class="gfield gfield--type-hidden gfield--input-type-hidden gform_hidden field_sublabel_below gfield--no-description field_description_below field_validation_below gfield_visibility_visible"><div class='ginput_container ginput_container_text'><input name='input_26' id='input_3_26' type='hidden' class='gform_hidden' value='' /></div></div><div id="field_3_27" class="gfield gfield--type-hidden gfield--input-type-hidden gform_hidden field_sublabel_below gfield--no-description field_description_below field_validation_below gfield_visibility_visible"><div class='ginput_container ginput_container_text'><input name='input_27' id='input_3_27' type='hidden' class='gform_hidden' value='' /></div></div><div id="field_3_28" class="gfield gfield--type-hidden gfield--input-type-hidden gform_hidden field_sublabel_below gfield--no-description field_description_below field_validation_below gfield_visibility_visible"><div class='ginput_container ginput_container_text'><input name='input_28' id='input_3_28' type='hidden' class='gform_hidden' value='' /></div></div><div id="field_3_29" class="gfield gfield--type-hidden gfield--input-type-hidden gform_hidden field_sublabel_below gfield--no-description field_description_below field_validation_below gfield_visibility_visible"><div class='ginput_container ginput_container_text'><input name='input_29' id='input_3_29' type='hidden' class='gform_hidden' value='' /></div></div><div id="field_3_30" class="gfield gfield--type-hidden gfield--input-type-hidden gform_hidden field_sublabel_below gfield--no-description field_description_below field_validation_below gfield_visibility_visible"><div class='ginput_container ginput_container_text'><input name='input_30' id='input_3_30' type='hidden' class='gform_hidden' value='' /></div></div><div id="field_3_31" class="gfield gfield--type-hidden gfield--input-type-hidden gfield--width-full gform_hidden field_sublabel_below gfield--no-description field_description_below field_validation_below gfield_visibility_visible"><div class='ginput_container ginput_container_text'><input name='input_31' id='input_3_31' type='hidden' class='gform_hidden' value='' /></div></div><div id="field_3_32" class="gfield gfield--type-hidden gfield--input-type-hidden gfield--width-full gform_hidden field_sublabel_below gfield--no-description field_description_below field_validation_below gfield_visibility_visible"><div class='ginput_container ginput_container_text'><input name='input_32' id='input_3_32' type='hidden' class='gform_hidden' value='' /></div></div><div id="field_3_33" class="gfield gfield--type-hidden gfield--input-type-hidden gfield--width-full gform_hidden field_sublabel_below gfield--no-description field_description_below field_validation_below gfield_visibility_visible"><div class='ginput_container ginput_container_text'><input name='input_33' id='input_3_33' type='hidden' class='gform_hidden' value='' /></div></div><div id="field_3_34" class="gfield gfield--type-textarea gfield--input-type-textarea gfield--width-full field_sublabel_below gfield--no-description field_description_below field_validation_below gfield_visibility_hidden"><div class="admin-hidden-markup"><i class="gform-icon gform-icon--hidden" aria-hidden="true" title="This field is hidden when viewing the form"></i><span>This field is hidden when viewing the form</span></div><label class='gfield_label gform-field-label' for='input_3_34'>Full Source URL</label><div class='ginput_container ginput_container_textarea'><textarea name='input_34' id='input_3_34' class='textarea large' rows='10' cols='50'>https://arizonacollege.edu/nursing-school-info/</textarea></div></div></div></div>
+        <div class='gform-footer gform_footer top_label'> <div class="disclaimer-text">
+				By submitting this form, you consent to Arizona College/Arizona College of Nursing contacting you regarding our educational programs at the phone number and email provided, including automated technology. I understand that consent is not a condition of enrollment. Message and data rates may apply. You may opt out at any time by texting STOP to 31258. You can also access our <a href="/privacy-policies/" style="text-decoration: underline">Privacy Policy</a> &amp; <a href="/terms-of-use/" style="text-decoration: underline">Terms of Use</a>.
+			</div>
+			<button id="gform_submit_button_3" type="submit" class="gform_button button" onclick="gform.submission.handleButtonClick(this);" data-submission-type="submit">
+				<span>Request Info</span>
+				<svg class="rv-icon--chevron-right" width="34" height="34" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<rect width="34" height="34" rx="17" fill="currentcolor" />
+					<path d="M14.9998 21.9999C14.802 21.9999 14.6087 21.9412 14.4443 21.8313C14.2799 21.7214 14.1518 21.5653 14.0761 21.3826C14.0004 21.1999 13.9806 20.9988 14.0192 20.8049C14.0578 20.6109 14.153 20.4328 14.2928 20.2929L17.5858 16.9999L14.2928 13.7069C14.1106 13.5183 14.0098 13.2657 14.0121 13.0035C14.0144 12.7413 14.1196 12.4905 14.305 12.3051C14.4904 12.1197 14.7412 12.0145 15.0034 12.0122C15.2656 12.01 15.5182 12.1108 15.7068 12.2929L19.7068 16.2929C19.8943 16.4804 19.9996 16.7348 19.9996 16.9999C19.9996 17.2651 19.8943 17.5194 19.7068 17.7069L15.7068 21.7069C15.5193 21.8945 15.265 21.9999 14.9998 21.9999Z" fill="white" class="icon--knockout" />
+				</svg>
+			</button> <input type='hidden' name='gform_ajax' value='form_id=3&amp;title=&amp;description=&amp;tabindex=0&amp;theme=gravity-theme&amp;styles={&quot;inputPrimaryColor&quot;:&quot;#204ce5&quot;}&amp;hash=91cd14cd931dc22576f0b3c3bbefa67f' />
+            <input type='hidden' class='gform_hidden' name='gform_submission_method' data-js='gform_submission_method_3' value='iframe' />
+            <input type='hidden' class='gform_hidden' name='gform_theme' data-js='gform_theme_3' id='gform_theme_3' value='gravity-theme' />
+            <input type='hidden' class='gform_hidden' name='gform_style_settings' data-js='gform_style_settings_3' id='gform_style_settings_3' value='{&quot;inputPrimaryColor&quot;:&quot;#204ce5&quot;}' />
+            <input type='hidden' class='gform_hidden' name='is_submit_3' value='1' />
+            <input type='hidden' class='gform_hidden' name='gform_submit' value='3' />
+            
+            <input type='hidden' class='gform_hidden' name='gform_unique_id' value='' />
+            <input type='hidden' class='gform_hidden' name='state_3' value='WyJbXSIsIjM4YjNlZGJjNTUwYjNlODU0ZmNkNGQ1MDc5MWFjZWE2Il0=' />
+            <input type='hidden' autocomplete='off' class='gform_hidden' name='gform_target_page_number_3' id='gform_target_page_number_3' value='0' />
+            <input type='hidden' autocomplete='off' class='gform_hidden' name='gform_source_page_number_3' id='gform_source_page_number_3' value='1' />
+            <input type='hidden' name='gform_field_values' value='' />
+            
+        </div>
+                        <p class="akismet-fields-container" data-prefix="ak_"><label>&#916;<textarea name="ak_hp_textarea" cols="45" rows="8" maxlength="100"></textarea></label><input type="hidden" id="ak_js_3" name="ak_js" value="193" /><script>document.getElementById( "ak_js_3" ).setAttribute( "value", ( new Date() ).getTime() );</script></p></form>
+                        </div>
+		                
+		                <script type="text/javascript">
+/* <![CDATA[ */
+ gform.initializeOnLoaded( function() {gformInitSpinner( 3, 'https://arizonacollege.edu/wp-content/plugins/gravityforms/images/spinner.svg', true );jQuery('#gform_ajax_frame_3').on('load',function(){var contents = jQuery(this).contents().find('*').html();var is_postback = contents.indexOf('GF_AJAX_POSTBACK') >= 0;if(!is_postback){return;}var form_content = jQuery(this).contents().find('#gform_wrapper_3');var is_confirmation = jQuery(this).contents().find('#gform_confirmation_wrapper_3').length > 0;var is_redirect = contents.indexOf('gformRedirect(){') >= 0;var is_form = form_content.length > 0 && ! is_redirect && ! is_confirmation;var mt = parseInt(jQuery('html').css('margin-top'), 10) + parseInt(jQuery('body').css('margin-top'), 10) + 100;if(is_form){form_content.find('form').css('opacity', 0);jQuery('#gform_wrapper_3').html(form_content.html());if(form_content.hasClass('gform_validation_error')){jQuery('#gform_wrapper_3').addClass('gform_validation_error');} else {jQuery('#gform_wrapper_3').removeClass('gform_validation_error');}setTimeout( function() { /* delay the scroll by 50 milliseconds to fix a bug in chrome */ jQuery(document).scrollTop(jQuery('#gform_wrapper_3').offset().top - mt); }, 50 );if(window['gformInitDatepicker']) {gformInitDatepicker();}if(window['gformInitPriceFields']) {gformInitPriceFields();}var current_page = jQuery('#gform_source_page_number_3').val();gformInitSpinner( 3, 'https://arizonacollege.edu/wp-content/plugins/gravityforms/images/spinner.svg', true );jQuery(document).trigger('gform_page_loaded', [3, current_page]);window['gf_submitting_3'] = false;}else if(!is_redirect){var confirmation_content = jQuery(this).contents().find('.GF_AJAX_POSTBACK').html();if(!confirmation_content){confirmation_content = contents;}jQuery('#gform_wrapper_3').replaceWith(confirmation_content);jQuery(document).scrollTop(jQuery('#gf_3').offset().top - mt);jQuery(document).trigger('gform_confirmation_loaded', [3]);window['gf_submitting_3'] = false;wp.a11y.speak(jQuery('#gform_confirmation_message_3').text());}else{jQuery('#gform_3').append(contents);if(window['gformRedirect']) {gformRedirect();}}jQuery(document).trigger("gform_pre_post_render", [{ formId: "3", currentPage: "current_page", abort: function() { this.preventDefault(); } }]);        if (event && event.defaultPrevented) {                return;        }        const gformWrapperDiv = document.getElementById( "gform_wrapper_3" );        if ( gformWrapperDiv ) {            const visibilitySpan = document.createElement( "span" );            visibilitySpan.id = "gform_visibility_test_3";            gformWrapperDiv.insertAdjacentElement( "afterend", visibilitySpan );        }        const visibilityTestDiv = document.getElementById( "gform_visibility_test_3" );        let postRenderFired = false;        function triggerPostRender() {            if ( postRenderFired ) {                return;            }            postRenderFired = true;            gform.core.triggerPostRenderEvents( 3, current_page );            if ( visibilityTestDiv ) {                visibilityTestDiv.parentNode.removeChild( visibilityTestDiv );            }        }        function debounce( func, wait, immediate ) {            var timeout;            return function() {                var context = this, args = arguments;                var later = function() {                    timeout = null;                    if ( !immediate ) func.apply( context, args );                };                var callNow = immediate && !timeout;                clearTimeout( timeout );                timeout = setTimeout( later, wait );                if ( callNow ) func.apply( context, args );            };        }        const debouncedTriggerPostRender = debounce( function() {            triggerPostRender();        }, 200 );        if ( visibilityTestDiv && visibilityTestDiv.offsetParent === null ) {            const observer = new MutationObserver( ( mutations ) => {                mutations.forEach( ( mutation ) => {                    if ( mutation.type === 'attributes' && visibilityTestDiv.offsetParent !== null ) {                        debouncedTriggerPostRender();                        observer.disconnect();                    }                });            });            observer.observe( document.body, {                attributes: true,                childList: false,                subtree: true,                attributeFilter: [ 'style', 'class' ],            });        } else {            triggerPostRender();        }    } );} ); 
+/* ]]> */
+</script>
+</div></div></div>
+
+			<div class="rv-footer__scripts">
+				<script type="speculationrules">
+{"prefetch":[{"source":"document","where":{"and":[{"href_matches":"/*"},{"not":{"href_matches":["/wp-*.php","/wp-admin/*","/wp-content/uploads/*","/wp-content/*","/wp-content/plugins/*","/wp-content/themes/arizona-college/*","/*\\?(.+)"]}},{"not":{"selector_matches":"a[rel~=\"nofollow\"]"}},{"not":{"selector_matches":".no-prefetch, .no-prefetch a"}}]},"eagerness":"conservative"}]}
+</script>
+		<script>
+			(function () {
+				var gtmId = "GTM-NCCT3M";
+				var dataLayerName = 'dataLayer';
+
+				var inject = function () {
+					window[dataLayerName] = window[dataLayerName] || [];
+					window[dataLayerName].push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' });
+
+					var firstScript = document.getElementsByTagName('script')[0];
+					var gtmScript = document.createElement('script');
+					var dl = (dataLayerName !== 'dataLayer') ? '&l=' + dataLayerName : '';
+
+					gtmScript.async = true;
+					gtmScript.src = 'https://www.googletagmanager.com/gtm.js?id=' + gtmId + dl;
+					firstScript.parentNode.insertBefore(gtmScript, firstScript);
+				};
+
+				// Hard defer: wait until everything is loaded.
+				if (document.readyState === 'complete') {
+					inject();
+					return;
+				}
+
+				window.addEventListener('load', function () {
+					// Optional: push injection even later when the browser is idle.
+					if ('requestIdleCallback' in window) {
+						window.requestIdleCallback(inject, { timeout: 2000 });
+						return;
+					}
+
+					window.setTimeout(inject, 1);
+				});
+			})();
+		</script>
+				<div class="floating-cta" id="floating-cta">
+			<div class="wp-block-buttons is-content-justification-center is-layout-flex wp-block-buttons-is-layout-flex">
+				<div class="wp-block-button rv-button-has-icon">
+					<a class="wp-block-button__link wp-element-button rv-modal--item-trigger rv-role-button" href="#" data-modal-id="form-popover">
+						Get started now						
+<svg role="presentation" class="rv-icon--chevron-right" width="34" height="34" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+	<rect width="34" height="34" rx="17" fill="currentcolor"/>
+	<path d="M14.9998 21.9999C14.802 21.9999 14.6087 21.9412 14.4443 21.8313C14.2799 21.7214 14.1518 21.5653 14.0761 21.3826C14.0004 21.1999 13.9806 20.9988 14.0192 20.8049C14.0578 20.6109 14.153 20.4328 14.2928 20.2929L17.5858 16.9999L14.2928 13.7069C14.1106 13.5183 14.0098 13.2657 14.0121 13.0035C14.0144 12.7413 14.1196 12.4905 14.305 12.3051C14.4904 12.1197 14.7412 12.0145 15.0034 12.0122C15.2656 12.01 15.5182 12.1108 15.7068 12.2929L19.7068 16.2929C19.8943 16.4804 19.9996 16.7348 19.9996 16.9999C19.9996 17.2651 19.8943 17.5194 19.7068 17.7069L15.7068 21.7069C15.5193 21.8945 15.265 21.9999 14.9998 21.9999Z" fill="white" class="icon--knockout" />
+</svg>
+					</a>
+				</div>
+			</div>
+		</div>
+		    <!-- Meta Pixel Event Code -->
+    <script type='text/javascript'>
+        document.addEventListener( 'wpcf7mailsent', function( event ) {
+        if( "fb_pxl_code" in event.detail.apiResponse){
+            eval(event.detail.apiResponse.fb_pxl_code);
+        }
+        }, false );
+    </script>
+    <!-- End Meta Pixel Event Code -->
+        <div id='fb-pxl-ajax-code'></div><script type="text/javascript" src="https://arizonacollege.edu/_static/??/wp-includes/js/dist/dom-ready.min.js,/wp-includes/js/dist/hooks.min.js?m=1770142567j" ></script><script type="text/javascript" src="https://arizonacollege.edu/wp-includes/js/dist/i18n.min.js?ver=c26c3dc7bed366793375" id="wp-i18n-js"></script>
+<script type="text/javascript" id="wp-i18n-js-after">
+/* <![CDATA[ */
+wp.i18n.setLocaleData( { 'text direction\u0004ltr': [ 'ltr' ] } );
+//# sourceURL=wp-i18n-js-after
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://arizonacollege.edu/wp-includes/js/dist/a11y.min.js?ver=cb460b4676c94bd228ed" id="wp-a11y-js"></script>
+<script type="text/javascript" id="gform_gravityforms_theme-js-extra">
+/* <![CDATA[ */
+var gform_theme_config = {"common":{"form":{"honeypot":{"version_hash":"d47a829a1712d12881c674ac992b2382"},"ajax":{"ajaxurl":"https://arizonacollege.edu/wp-admin/admin-ajax.php","ajax_submission_nonce":"a08b3a3e4c","i18n":{"step_announcement":"Step %1$s of %2$s, %3$s","unknown_error":"There was an unknown error processing your request. Please try again."}},"product_meta":{"5":null},"pagination":{"5":""}}},"hmr_dev":"","public_path":"https://arizonacollege.edu/wp-content/plugins/gravityforms/assets/js/dist/","config_nonce":"c4e1a95920"};
+//# sourceURL=gform_gravityforms_theme-js-extra
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://arizonacollege.edu/_static/??-eJydzMEKwjAMgOEXco2FwdhBfJayxplq0pqkk7294s2TIPzX/4NnG5YqjuLQ7n0lMVg1beT7pSoblHePjroHTnbDTNK6ByYJxQ7w605m6B8kkzlsKLnq4Fdk/NewRam5fSFnPsVpiuMY5/lYXjMdUBM=" ></script><script type="text/javascript" id="wp-parsely-loader-js-before">
+/* <![CDATA[ */
+window.wpParselySiteId = 'arizonacollege.edu';
+//# sourceURL=wp-parsely-loader-js-before
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://arizonacollege.edu/wp-content/mu-plugins/wp-parsely-3.22/build/loader.js?ver=ecf94842061bea03d54b" id="wp-parsely-loader-js"></script>
+<script type="text/javascript" data-parsely-site="arizonacollege.edu" src="https://cdn.parsely.com/keys/arizonacollege.edu/p.js?ver=3.22.0" id="parsely-cfg"></script>
+<script type="text/javascript" src="https://arizonacollege.edu/_static/??-eJyVy1sOQDAQQNENYVJEv8RaGgZt+srMRMPqiRXwe3MPlFzPKQpGAdkxIIMhe6Vonuw9bgiLZQHHsNL7LY3jCr6zjcxh5VwTBf5JudiM9KApjEpr1fet6gZ3Ay3RQqw=" ></script><script type="text/javascript" id="jetpack-stats-js-before">
+/* <![CDATA[ */
+_stq = window._stq || [];
+_stq.push([ "view", {"v":"ext","blog":"243775167","post":"1354","tz":"-7","srv":"arizonacollege.edu","hp":"vip","j":"1:15.5-beta"} ]);
+_stq.push([ "clickTrackerInit", "243775167", "1354" ]);
+//# sourceURL=jetpack-stats-js-before
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://stats.wp.com/e-202608.js" id="jetpack-stats-js" defer="defer" data-wp-strategy="defer"></script>
+<script type="text/javascript" id="gform_conditional_logic-js-extra">
+/* <![CDATA[ */
+var gf_legacy = {"is_legacy":""};
+var gf_legacy = {"is_legacy":""};
+//# sourceURL=gform_conditional_logic-js-extra
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://arizonacollege.edu/_static/??/wp-content/themes/arizona-college/dist/blocks/carousel/view.js,/wp-content/plugins/gravityforms/js/conditional_logic.min.js?m=1771442136j" ></script><script id="wp-emoji-settings" type="application/json">
+{"baseUrl":"https://s.w.org/images/core/emoji/17.0.2/72x72/","ext":".png","svgUrl":"https://s.w.org/images/core/emoji/17.0.2/svg/","svgExt":".svg","source":{"concatemoji":"https://arizonacollege.edu/wp-includes/js/wp-emoji-release.min.js?ver=6.9.1"}}
+</script>
+<script type="module">
+/* <![CDATA[ */
+/*! This file is auto-generated */
+const a=JSON.parse(document.getElementById("wp-emoji-settings").textContent),o=(window._wpemojiSettings=a,"wpEmojiSettingsSupports"),s=["flag","emoji"];function i(e){try{var t={supportTests:e,timestamp:(new Date).valueOf()};sessionStorage.setItem(o,JSON.stringify(t))}catch(e){}}function c(e,t,n){e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(t,0,0);t=new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data);e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(n,0,0);const a=new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data);return t.every((e,t)=>e===a[t])}function p(e,t){e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(t,0,0);var n=e.getImageData(16,16,1,1);for(let e=0;e<n.data.length;e++)if(0!==n.data[e])return!1;return!0}function u(e,t,n,a){switch(t){case"flag":return n(e,"\ud83c\udff3\ufe0f\u200d\u26a7\ufe0f","\ud83c\udff3\ufe0f\u200b\u26a7\ufe0f")?!1:!n(e,"\ud83c\udde8\ud83c\uddf6","\ud83c\udde8\u200b\ud83c\uddf6")&&!n(e,"\ud83c\udff4\udb40\udc67\udb40\udc62\udb40\udc65\udb40\udc6e\udb40\udc67\udb40\udc7f","\ud83c\udff4\u200b\udb40\udc67\u200b\udb40\udc62\u200b\udb40\udc65\u200b\udb40\udc6e\u200b\udb40\udc67\u200b\udb40\udc7f");case"emoji":return!a(e,"\ud83e\u1fac8")}return!1}function f(e,t,n,a){let r;const o=(r="undefined"!=typeof WorkerGlobalScope&&self instanceof WorkerGlobalScope?new OffscreenCanvas(300,150):document.createElement("canvas")).getContext("2d",{willReadFrequently:!0}),s=(o.textBaseline="top",o.font="600 32px Arial",{});return e.forEach(e=>{s[e]=t(o,e,n,a)}),s}function r(e){var t=document.createElement("script");t.src=e,t.defer=!0,document.head.appendChild(t)}a.supports={everything:!0,everythingExceptFlag:!0},new Promise(t=>{let n=function(){try{var e=JSON.parse(sessionStorage.getItem(o));if("object"==typeof e&&"number"==typeof e.timestamp&&(new Date).valueOf()<e.timestamp+604800&&"object"==typeof e.supportTests)return e.supportTests}catch(e){}return null}();if(!n){if("undefined"!=typeof Worker&&"undefined"!=typeof OffscreenCanvas&&"undefined"!=typeof URL&&URL.createObjectURL&&"undefined"!=typeof Blob)try{var e="postMessage("+f.toString()+"("+[JSON.stringify(s),u.toString(),c.toString(),p.toString()].join(",")+"));",a=new Blob([e],{type:"text/javascript"});const r=new Worker(URL.createObjectURL(a),{name:"wpTestEmojiSupports"});return void(r.onmessage=e=>{i(n=e.data),r.terminate(),t(n)})}catch(e){}i(n=f(s,u,c,p))}t(n)}).then(e=>{for(const n in e)a.supports[n]=e[n],a.supports.everything=a.supports.everything&&a.supports[n],"flag"!==n&&(a.supports.everythingExceptFlag=a.supports.everythingExceptFlag&&a.supports[n]);var t;a.supports.everythingExceptFlag=a.supports.everythingExceptFlag&&!a.supports.flag,a.supports.everything||((t=a.source||{}).concatemoji?r(t.concatemoji):t.wpemoji&&t.twemoji&&(r(t.twemoji),r(t.wpemoji)))});
+//# sourceURL=https://arizonacollege.edu/wp-includes/js/wp-emoji-loader.min.js
+/* ]]> */
+</script>
+<script type="text/javascript">
+/* <![CDATA[ */
+ gform.initializeOnLoaded( function() { jQuery(document).on('gform_post_render', function(event, formId, currentPage){if(formId == 5) {jQuery('#input_5_3').mask('99999').bind('keypress', function(e){if(e.which == 13){jQuery(this).blur();} } );} } );jQuery(document).on('gform_post_conditional_logic', function(event, formId, fields, isInit){} ) } ); 
+/* ]]> */
+</script>
+<script type="text/javascript">
+/* <![CDATA[ */
+ gform.initializeOnLoaded( function() {jQuery(document).trigger("gform_pre_post_render", [{ formId: "5", currentPage: "1", abort: function() { this.preventDefault(); } }]);        if (event && event.defaultPrevented) {                return;        }        const gformWrapperDiv = document.getElementById( "gform_wrapper_5" );        if ( gformWrapperDiv ) {            const visibilitySpan = document.createElement( "span" );            visibilitySpan.id = "gform_visibility_test_5";            gformWrapperDiv.insertAdjacentElement( "afterend", visibilitySpan );        }        const visibilityTestDiv = document.getElementById( "gform_visibility_test_5" );        let postRenderFired = false;        function triggerPostRender() {            if ( postRenderFired ) {                return;            }            postRenderFired = true;            gform.core.triggerPostRenderEvents( 5, 1 );            if ( visibilityTestDiv ) {                visibilityTestDiv.parentNode.removeChild( visibilityTestDiv );            }        }        function debounce( func, wait, immediate ) {            var timeout;            return function() {                var context = this, args = arguments;                var later = function() {                    timeout = null;                    if ( !immediate ) func.apply( context, args );                };                var callNow = immediate && !timeout;                clearTimeout( timeout );                timeout = setTimeout( later, wait );                if ( callNow ) func.apply( context, args );            };        }        const debouncedTriggerPostRender = debounce( function() {            triggerPostRender();        }, 200 );        if ( visibilityTestDiv && visibilityTestDiv.offsetParent === null ) {            const observer = new MutationObserver( ( mutations ) => {                mutations.forEach( ( mutation ) => {                    if ( mutation.type === 'attributes' && visibilityTestDiv.offsetParent !== null ) {                        debouncedTriggerPostRender();                        observer.disconnect();                    }                });            });            observer.observe( document.body, {                attributes: true,                childList: false,                subtree: true,                attributeFilter: [ 'style', 'class' ],            });        } else {            triggerPostRender();        }    } ); 
+/* ]]> */
+</script>
+<script type="text/javascript">
+/* <![CDATA[ */
+ gform.initializeOnLoaded( function() { jQuery(document).on('gform_post_render', function(event, formId, currentPage){if(formId == 3) {gf_global["number_formats"][3] = {"1":{"price":false,"value":false},"2":{"price":false,"value":false},"4":{"price":false,"value":false},"13":{"price":false,"value":false},"3":{"price":false,"value":false},"8":{"price":false,"value":false},"24":{"price":false,"value":false},"7":{"price":false,"value":false},"23":{"price":false,"value":false},"15":{"price":false,"value":false},"16":{"price":false,"value":false},"14":{"price":false,"value":false},"17":{"price":false,"value":false},"18":{"price":false,"value":false},"19":{"price":false,"value":false},"25":{"price":false,"value":false},"26":{"price":false,"value":false},"27":{"price":false,"value":false},"28":{"price":false,"value":false},"29":{"price":false,"value":false},"30":{"price":false,"value":false},"31":{"price":false,"value":false},"32":{"price":false,"value":false},"33":{"price":false,"value":false},"34":{"price":false,"value":false}};if(window['jQuery']){if(!window['gf_form_conditional_logic'])window['gf_form_conditional_logic'] = new Array();window['gf_form_conditional_logic'][3] = { logic: { 24: {"field":{"actionType":"show","logicType":"all","rules":[{"fieldId":"3","operator":"is","value":""},{"fieldId":"3","operator":"is","value":"_____"}],"enabled":true},"nextButton":null,"section":null},7: {"field":{"actionType":"show","logicType":"any","rules":[{"fieldId":"3","operator":">","value":"86999"},{"fieldId":"3","operator":"<","value":"85000"}],"enabled":true},"nextButton":null,"section":null},23: {"field":{"actionType":"show","logicType":"any","rules":[{"fieldId":"3","operator":"starts_with","value":"85"},{"fieldId":"3","operator":"starts_with","value":"86"}],"enabled":true},"nextButton":null,"section":null} }, dependents: { 24: [24],7: [7],23: [23] }, animation: 0, defaults: {"8":"","24":"BSN","7":"","23":"","15":"false","16":"false","34":"https:\/\/arizonacollege.edu\/nursing-school-info\/"}, fields: {"1":[],"2":[],"4":[],"13":[],"3":[24,7,23],"8":[],"24":[],"7":[],"23":[],"15":[],"16":[],"14":[],"17":[],"18":[],"19":[],"25":[],"26":[],"27":[],"28":[],"29":[],"30":[],"31":[],"32":[],"33":[],"34":[]} }; if(!window['gf_number_format'])window['gf_number_format'] = 'decimal_dot';jQuery(document).ready(function(){gform.utils.trigger({ event: 'gform/conditionalLogic/init/start', native: false, data: { formId: 3, fields: null, isInit: true } });window['gformInitPriceFields']();gf_apply_rules(3, [24,7,23], true);jQuery('#gform_wrapper_3').show();jQuery('#gform_wrapper_3 form').css('opacity', '');jQuery(document).trigger('gform_post_conditional_logic', [3, null, true]);gform.utils.trigger({ event: 'gform/conditionalLogic/init/end', native: false, data: { formId: 3, fields: null, isInit: true } });} );} jQuery('#input_3_3').mask('99999').bind('keypress', function(e){if(e.which == 13){jQuery(this).blur();} } );} } );jQuery(document).on('gform_post_conditional_logic', function(event, formId, fields, isInit){} ) } ); 
+/* ]]> */
+</script>
+<script type="text/javascript">
+/* <![CDATA[ */
+ gform.initializeOnLoaded( function() {jQuery(document).trigger("gform_pre_post_render", [{ formId: "3", currentPage: "1", abort: function() { this.preventDefault(); } }]);        if (event && event.defaultPrevented) {                return;        }        const gformWrapperDiv = document.getElementById( "gform_wrapper_3" );        if ( gformWrapperDiv ) {            const visibilitySpan = document.createElement( "span" );            visibilitySpan.id = "gform_visibility_test_3";            gformWrapperDiv.insertAdjacentElement( "afterend", visibilitySpan );        }        const visibilityTestDiv = document.getElementById( "gform_visibility_test_3" );        let postRenderFired = false;        function triggerPostRender() {            if ( postRenderFired ) {                return;            }            postRenderFired = true;            gform.core.triggerPostRenderEvents( 3, 1 );            if ( visibilityTestDiv ) {                visibilityTestDiv.parentNode.removeChild( visibilityTestDiv );            }        }        function debounce( func, wait, immediate ) {            var timeout;            return function() {                var context = this, args = arguments;                var later = function() {                    timeout = null;                    if ( !immediate ) func.apply( context, args );                };                var callNow = immediate && !timeout;                clearTimeout( timeout );                timeout = setTimeout( later, wait );                if ( callNow ) func.apply( context, args );            };        }        const debouncedTriggerPostRender = debounce( function() {            triggerPostRender();        }, 200 );        if ( visibilityTestDiv && visibilityTestDiv.offsetParent === null ) {            const observer = new MutationObserver( ( mutations ) => {                mutations.forEach( ( mutation ) => {                    if ( mutation.type === 'attributes' && visibilityTestDiv.offsetParent !== null ) {                        debouncedTriggerPostRender();                        observer.disconnect();                    }                });            });            observer.observe( document.body, {                attributes: true,                childList: false,                subtree: true,                attributeFilter: [ 'style', 'class' ],            });        } else {            triggerPostRender();        }    } ); 
+/* ]]> */
+</script>
+			</div>
+		</footer>
+	</body>
+</html>

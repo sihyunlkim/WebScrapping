@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Site Protection - Verification Required</title>
+    <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f8f9fa;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        .container {
+            max-width: 600px;
+            padding: 2rem;
+            background-color: white;
+            border-radius: 0.5rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        .logo {
+            margin-bottom: 1.5rem;
+        }
+        h1 {
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+            color: #2c3e50;
+        }
+        p {
+            margin-bottom: 1.5rem;
+            color: #5d6778;
+        }
+        .turnstile-container {
+            display: flex;
+            justify-content: center;
+            margin: 1.5rem 0;
+        }
+        .success-text {
+            display: none;
+            margin-top: 1rem;
+            color: #28a745;
+            font-weight: 500;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="logo">
+            <!-- Optional: Add your site logo here -->
+            <!-- <img src="/static/logo.png" alt="Site Logo" width="150"> -->
+        </div>
+        <h1>Verification Required</h1>
+        <p>Please complete the security check below to access this website. This helps us protect our site from automated bots.</p>
+        
+        <form id="turnstile-form" method="post" action="/turnstile/verify/">
+            <input type="hidden" name="csrfmiddlewaretoken" value="gx3jjLlgGnRQOsyJamhqPNVEfZiG9NE6KTYokrhqwE3K7PIEJ4aweR5MSOmRdn8r">
+            <input type="hidden" name="next" value="/research/teaching/research-instruction-courses/academic-integrity/">
+            
+            <div class="turnstile-container">
+                <div class="cf-turnstile" 
+                     data-sitekey="0x4AAAAAABT-T2BlCZyXPGa9" 
+                     data-callback="onTurnstileSuccess"
+                     data-mode="non-interactive"
+                     data-appearance="always"
+                     data-theme="auto"
+                     data-language="auto"
+                     data-size="normal"></div>
+            </div>
+            
+            <p id="success-message" class="success-text">Verification successful! Redirecting...</p>
+        </form>
+    </div>
+
+    <script>
+        function onTurnstileSuccess(token) {
+            // Get the form element
+            const form = document.getElementById('turnstile-form');
+            
+            // Create a hidden input for the token if it doesn't exist
+            let tokenInput = document.querySelector('input[name="cf-turnstile-response"]');
+            if (!tokenInput) {
+                tokenInput = document.createElement('input');
+                tokenInput.type = 'hidden';
+                tokenInput.name = 'cf-turnstile-response';
+                form.appendChild(tokenInput);
+            }
+            
+            // Set the token value
+            tokenInput.value = token;
+            
+            // Show success message
+            document.getElementById('success-message').style.display = 'block';
+            
+            // Submit the form after a short delay to show the success message
+            setTimeout(() => {
+                form.submit();
+            }, 1000);
+        }
+    </script>
+</body>
+</html>

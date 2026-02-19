@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en_US">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>WUST Helpdesk Portal</title>
+    <meta name="description" content="customer support platform">
+    <meta name="keywords" content="osTicket, Customer support system, support ticket system">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/assets/default/css/bootstrap.min.css?0375588" media="screen"/>
+	<link rel="stylesheet" href="/css/osticket.css?0375588" media="screen"/>
+    <link rel="stylesheet" href="/assets/default/css/print.css?0375588" media="print"/>
+    <link rel="stylesheet" href="/css/typeahead.css?0375588"
+         media="screen" />
+    <link type="text/css" href="/css/ui-lightness/jquery-ui-1.13.2.custom.min.css?0375588"
+        rel="stylesheet" media="screen" />
+       <link rel="stylesheet" href="/css/jquery-ui-timepicker-addon.css?0375588" media="all"/>
+    <link rel="stylesheet" href="/css/thread.css?0375588" media="screen"/>
+    <link rel="stylesheet" href="/css/redactor.css?0375588" media="screen"/>
+      <link type="text/css" rel="stylesheet" href="/assets/default/fontawesome/css/fontawesome-all.min.css?0375588"/>
+    <link type="text/css" rel="stylesheet" href="/css/flags.css?0375588"/>
+    <link type="text/css" rel="stylesheet" href="/css/rtl.css?0375588"/>
+    <link type="text/css" rel="stylesheet" href="/css/select2.min.css?0375588"/>
+    <!-- Favicons -->
+    <link rel="icon" type="image/png" href="/images/oscar-favicon-32x32.png?0375588" sizes="32x32" />
+    <link rel="icon" type="image/png" href="/images/oscar-favicon-16x16.png?0375588" sizes="16x16" />
+    <script type="text/javascript" src="/js/jquery-3.7.0.min.js?0375588"></script>
+    <script type="text/javascript" src="/js/jquery-ui-1.13.2.custom.min.js?0375588"></script>
+    <script type="text/javascript" src="/js/jquery-ui-timepicker-addon.js?0375588"></script>
+    <script src="/js/osticket.js?0375588"></script>
+    <script type="text/javascript" src="/js/filedrop.field.js?0375588"></script>
+    <script src="/js/bootstrap-typeahead.js?0375588"></script>
+    <script type="text/javascript" src="/js/redactor.min.js?0375588"></script>
+    <script type="text/javascript" src="/js/redactor-plugins.js?0375588"></script>
+    <script type="text/javascript" src="/js/redactor-osticket.js?0375588"></script>
+    <script type="text/javascript" src="/js/select2.min.js?0375588"></script>
+    <script type="text/javascript" src="/js/fabric.min.js?0375588"></script>
+    <link rel="stylesheet" href="/assets/default/css/mtheme.css?0375588" media="screen"/>
+     <script type="text/javascript" src="/assets/default/js/bootstrap.min.js?0375588"></script>
+     <script type="text/javascript" src="/assets/default/js/custom.js?0375588"></script>
+    
+	<meta name="csrf_token" content="d83de74c54e967607a997a92ed35f7dc0762703c" />
+</head>
+<body>
+    <div class="container">
+            <div class="row logotop">
+            <div class="col-sm-6">
+            <a id="logo" href="/index.php"
+            title="Support Center">
+                <span class="valign-helper"></span>
+                <img src="/logo.php?=0375588" border=0 alt="">
+            </a>
+            </div> <div class="col-sm-6">
+                
+                
+            </div>
+        </div>
+   </div>    
+  <nav role="navigation" class="navbar navbar-inverse">
+
+    <div class="container">
+        <div class="navbar-header">
+            <button aria-controls="navbar" aria-expanded="false" data-target="#navbar" data-toggle="collapse" class="navbar-toggle collapsed" type="button">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+             <!--                 <label class="welcome-user">Welcome Guest </label> -->
+                 <label class="welcome-user">Welcome Guest </label>
+                            </div>
+        <div class="navbar-collapse collapse" id="navbar" aria-expanded="false" style="height: 1px;">
+            <ul class="nav navbar-nav navbar-right head-menu">
+                                    
+            <li><a class=" home" href="/index.php">Support Center Home</a></li>
+<li><a class="active new" href="/open.php">Open a New Ticket</a></li>
+<li><a class=" status" href="/view.php">Check Ticket Status</a></li>
+        
+           
+                                  <li><a href="/login.php">Sign In</a></li>
+                            </ul>
+
+        </div><!--/.navbar-collapse -->
+    </div>
+</nav>   
+        <div class="container">
+
+        
+         <div class="row">
+<div class="col-md-12">    
+<h1>Open a New Ticket</h1>
+<p>Please fill in the form below to open a new ticket.</p>
+<form id="ticketForm" method="post" action="open.php" enctype="multipart/form-data" class="form-horizontal">
+  <input type="hidden" name="__CSRFToken__" value="d83de74c54e967607a997a92ed35f7dc0762703c" />  <input type="hidden" name="a" value="open">
+  <table>
+
+    <div class="form-header" style="margin-bottom:0.5em">
+    <h3>Contact Information</h3>
+    <div><p>Please note that a valid email address from one of the following domains is required to submit a ticket or register for an account: <strong>@wust.edu</strong>, <strong>@mail.wust.edu</strong>, <strong>@studentva.wust.edu</strong>, <strong>@student.wust.edu</strong>, <strong>@alumni.wust.edu</strong>, or <strong>@research.wust.edu</strong>.</p></div>
+    <hr>
+    </div>
+      <div class="form-group">
+
+
+                            <label class="control-label col-sm-2"  for="b08c47ddd7ffed"><span class="required">
+                Full Name                               <span class="error">*</span>
+            </span>            <br/></label>
+                  <div class="col-sm-10">
+              <input class="form-control" type="text"
+            id="_b08c47ddd7ffed"
+             size="40" maxlength="64" placeholder=""            name="b08c47ddd7ffed"
+            value=""/>
+         </div>
+  </div>
+          <div class="form-group">
+
+
+                            <label class="control-label col-sm-2"  for="b25b67cef2ab91"><span class="required">
+                WUST Email Address                               <span class="error">*</span>
+            </span>            <br/></label>
+                  <div class="col-sm-10">
+              <input class="form-control" type="email"
+            id="_b25b67cef2ab91"
+             size="40" maxlength="64" placeholder=""            name="b25b67cef2ab91"
+            value=""/>
+         </div>
+  </div>
+          <div class="form-group">
+
+
+                            <label class="control-label col-sm-2"  for="4c6cebb0183f9c"><span class="">
+                Phone Number               </span>            <br/></label>
+                  <div class="col-sm-10">
+             <div class="form-inline">
+        <input class="form-control" id="_4c6cebb0183f9c" type="tel" name="4c6cebb0183f9c" value=""/> </div>
+  </div>
+        </div></div>
+<hr/>
+            <div class="form-group">
+                    <label class="control-label col-sm-2"> Help Topic*&nbsp;</label>
+<div class="col-sm-10">
+            <select class="form-control" id="topicId" name="topicId" onchange="javascript:
+                    var data = $(':input[name]', '#dynamic-form').serialize();
+                    $.ajax(
+                      'ajax.php/form/help-topic/' + this.value,
+                      {
+                        data: data,
+                        dataType: 'json',
+                        success: function(json) {
+                          $('#dynamic-form').empty().append(json.html);
+                          $(document.head).append(json.media);
+                        }
+                      });">
+                <option value="" selected="selected">&mdash; Select a Help Topic &mdash;</option>
+                <option value="1" >General Inquiry</option><option value="2" >IT Support (Canvas, Populi, Email, G2M, Office365)</option><option value="28" >Slate Support</option><option value="29" >TimelyCare Support</option><option value="23" >JBLearning</option><option value="22" >Other Technical Issue</option><option value="30" >WUST Student Group</option><option value="25" >Payment</option><option value="24" >Security Issue</option><option value="26" >Website</option><option value="15" >Helpdesk Existing Account Activation</option><option value="21" >Staff Support</option>            </select>
+    <font class="error"></font></div></div>
+
+    <div id="dynamic-form">
+            </div>
+<table>
+    <tbody>
+    
+    </tbody>
+  </table>
+<hr/>
+  <p class="buttons" style="text-align:center;">
+        <input class="btn btn-success" type="submit" value="Create Ticket">
+        <input class="btn btn-warning" type="reset" name="reset" value="Reset">
+        <input class="btn btn-danger" type="button" name="cancel" value="Cancel" onclick="javascript:
+            $('.richtext').each(function() {
+                var redactor = $(this).data('redactor');
+                if (redactor && redactor.opts.draftDelete)
+                    redactor.plugin.draft.deleteDraft();
+            });
+            window.location.href='index.php';">
+  </p>
+
+</form>
+  <br><br>
+   </div>
+  </div>    </div>
+    <footer class="footer">
+    <div id="footer">
+        <div class="container">
+
+            <div class="navbar-right copy-right">
+                Copyright &copy; 2026 Washington University of Science and Technology (WUST) - All rights reserved.            </div>
+        </div>
+    </div>
+</footer>
+
+<div id="overlay"></div>
+<div id="loading">
+    <h4>Please Wait!</h4>
+    <p>Please wait... it will take a second!</p>
+</div>
+<script type="text/javascript">
+    getConfig().resolve({"html_thread":true,"lang":"en_US","short_lang":"en","has_rtl":false,"primary_language":"en-US","secondary_languages":[],"path":"\/"});
+</script>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-GPWYTW4HCY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-GPWYTW4HCY');
+</script>
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015" integrity="sha512-ZpsOmlRQV6y907TI0dKBHq9Md29nnaEIPlkf84rnaERnq6zvWvPUqr2ft8M1aS28oN72PdrCzSjY4U6VaAw1EQ==" data-cf-beacon='{"version":"2024.11.0","token":"b8aff089983b4d32a008a6b70af5f68a","r":1,"server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
+</body>
+</html>

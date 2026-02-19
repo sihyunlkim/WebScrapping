@@ -1,0 +1,919 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head><meta http-equiv="X-UA-Compatible" content="IE=EDGE" /><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" /><title>
+	Public | myPBA | myPBA
+</title><base href="https://my.pba.edu/ICS/">
+<script type="text/javascript">
+    window.jenzabar = {};
+    jenzabar.userSettings = {
+        culture:    'en-US',
+        language:   'en',
+        dateFormat: 'm/d/yy'
+    };
+    window.userSettings = jenzabar.userSettings;
+
+    jenzabar.jicsVersion = {
+        text: {
+	        version: '?v=' + '2025.1.0'
+        }
+    }
+    jenzabar.siteSettings = {
+        textEditorSettings: {
+            customAudioMinutesLimit: 5,
+            customVideoMinutesLimit: 5
+        },
+        text: {
+            more: 'More'
+        }
+    };
+</script>
+
+<!-- BEGIN Html Head Elements -->
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.7/handlebars.min.js"></script>
+<script src="//stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jqueryui/1.13.2/jquery-ui.min.js"></script>
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.bundle.min.js"></script>
+  <script type="text/javascript" src="//cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@0.3.0"></script>
+<link rel="stylesheet" type="text/css" href="/ICS/UI/Common/Styles/jQuery/jquery-ui.custom.css" />
+<link href="//fonts.googleapis.com/css?family=Open+Sans:400,600,700" rel="stylesheet" type="text/css">
+<link href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="//stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+<script type="text/javascript" src="portlets/cus/ics/BCProxyLogin/Scripts/ProxyLogin.js"></script>
+			<link type="text/css" rel="stylesheet" href="portlets/cus/ics/BCProxyLogin/Styles/ProxyLoginStyles.css" />
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/signalr.js/2.4.3/jquery.signalR.min.js?v=2025.1.0"></script>
+<script type="text/javascript" src="/ICS/signalr/hubs?v=2025.1.0"></script>
+<script type="text/javascript" src="/ICS/UI/Common/Scripts/tinymce/plugins/moxiemanager/js/moxman.loader.min.js?v=2025.1.0"></script>
+<!-- END Html Head Elements -->
+
+<link href="/ICS/UI/Common/Styles/css/site-bundle.css?v=TFtOHsXFl8Vblh1bw_wfIB0WPjuLn6qMGsTVo93UJHE1" rel="stylesheet"/>
+
+
+<link href="/ICS/Portlets/ICS/SearchResultsPortlet/Styles/SearchResultsPortletStyle.css" type="text/css" rel="stylesheet" />
+
+<link rel="stylesheet" type="text/css" media="print" href="/ICS/UI/Common/Styles/print.css" />
+
+
+<script type="text/javascript" src="/ICS/UI/Common/Scripts/jcsfl.js"></script>
+<script src="/ICS/UI/Common/Scripts/site-bundle.js?v=A2fQgZEqNEreaFQK9bann7d6vgKBS5XbWsBUwSSNhvg1"></script>
+
+
+<!-- BEGIN Html Head Elements After JICS JS Framework -->
+<script type="text/javascript" src="/ICS/UI/Common/Scripts/SignalRManager.js?v=2025.1.0"></script>
+<script type="text/javascript" src="/ICS/UI/Common/Scripts/LayoutManager.js?v=2025.1.0"></script>
+<!-- END Html Head Elements After JICS JS Framework -->
+
+<script type="text/javascript" src="/ICS/UI/Common/Scripts/Globalization.js.aspx?id=8659790fcae44454aaf16f2d28a1f36b"></script>
+<!--[if IE]>
+<style type="text/css" media="all">@import url( UI/Common/Styles/IEOnly.css );</style>
+<script type="text/javascript" language="JavaScript" src="UI/Common/Scripts/IEOnly.js"></SCRIPT>
+<![endif]-->
+<script type="text/javascript">
+    window.Portal =
+    {
+        url: 'https://my.pba.edu/ICS/',
+        uid: null,
+    };
+</script>
+
+
+<script type="text/javascript">
+    $.extend(window.Portal,{
+        timeout: 20,
+        SessionMonitor: JCSL.JICS.get_session_monitor()
+        
+    });
+</script>
+
+<script type="text/javascript">
+    jQuery(function () {
+        jenzabar.framework.timeoutWarning.create(true);
+    });
+</script>
+<script type="text/javascript" language="javascript">
+
+    $.connection.portalHub.client.sendLoginWarning = function (userId) {
+        let id = "b0b00000-c542-4d2a-86e6-55ebbbcd85da";
+        if (id === userId) {
+            alert("Your username has been used to authenticate in another browser.  If you are not responsible for this login, your account may be compromised!  Contact an administrator for assistance.");
+        }
+    }
+
+</script><link rel="stylesheet" type="text/css" href="/ICS/UI/Themes/Pacifica/style.css?v=1&u=02%2f18%2f2026+06%3a25%3a31" />
+<script type="text/javascript" src="/ICS/UI/Themes/Pacifica/js/javascript.js?v=1"></script>
+
+<style id="customCssImport_custom" type="text/css" media="all">
+	@import url( /ICS/StaticPages/GetFile.aspx?target=be7884da-8f42-4016-b362-9c70b7f95a83);
+</style>
+<link rel="Shortcut Icon" href="favicon.ico" type="image/x-icon">
+<style id="customHead_custom" type="text/css" media="all">
+	@import url( /ICS/ClientConfig/HtmlContent/custom-bundle.css?v=);
+</style>
+</head>
+<body onload="doLoad();" >
+	<div id="siteWrapper" class="custom-grid">
+		<form name="MAINFORM" method="post" action="/ICS/?tool=search&amp;query=provost" id="MAINFORM" enctype="multipart/form-data" autocomplete="off">
+<div class="aspNetHidden">
+<input type="hidden" name="_scriptManager_HiddenField" id="_scriptManager_HiddenField" value="" />
+<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
+<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="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" />
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['MAINFORM'];
+if (!theForm) {
+    theForm = document.MAINFORM;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script>
+
+
+<script src="/ICS/WebResource.axd?d=pynGkmcFUV13He1Qd6_TZFGIX3iO5Hy3d3gKv1Z4pNGf_O3ciAfhxlPbiKWzen-9aN3SaTG36c5yEQaLVq7TxQ2&amp;t=638901392248157332" type="text/javascript"></script>
+
+
+<script type="text/javascript">
+//<![CDATA[
+$(function() {jenzabar.framework.login.initializeForPossibleRedirect({continueButton: $('#siteNavBar_welcomeBackBarLoggedOut_JicsLoginRedirectContinue'),userNameSection: $('.init-user-username-section'),standardLoginFields: $('.init-user-password-section, .forgot-password-link, .init-user-login-btn'),userNameField: $('#userName'),passwordField: $('#password'),userLoginSection: $('#user-login-section'),simpleLoginButton: $('#jics-login-redirect-simple-button'),showStandardFieldsSection: $('#jics-login-show-standard-fields-section'),showStandardFieldsButton: $('#jics-login-show-standard-fields-button'),simpleLogin: $('.js-simple-login') },{"pleaseWaitForRedirect":"Please wait...","redirectModalTitle":"Login","checkingUserNameAccessibility":"Please wait for the login process to continue.","errorOccurred":"An unexpected error occurred during login. Try again, or contact an administrator for assistance."},{"authenticationMethodId":"9c0882f2-900f-495b-8fbb-47ee8db448cc","isLoginDisplayedInline":false,"isRedirectedForLogin":true,"loginUrl":"/ICS/StaticPages/SAML/ServiceProvider/Request.aspx?RelayState=%2fICS%2f%3ftool%3dsearch%26query%3dprovost&methodId=9c0882f2-900f-495b-8fbb-47ee8db448cc"});});(function( pi, $) {pi.PageID = '';pi.DisplayName = '';pi.PageURL = '';pi.IsCustomizing ='';pi.IsShowingPortlet = '';}(window.PageInfo = window.PageInfo || {}, PageInfo));try {window.PageInfo.PageID = '2126a4ce-f347-4430-a4b6-70fc99f4f8cd';window.PageInfo.DisplayName = 'Public';window.PageInfo.PageURL = '/ICS/Public.jnz';window.PageInfo.IsCustomizing ='False';window.PageInfo.IsShowingPortlet = 'False';window.PageInfo.IsReadOnly = 'False';}catch(ex){ console.error(ex);}//]]>
+</script>
+
+<script src="/ICS/ScriptResource.axd?d=x6wALODbMJK5e0eRC_p1LR8Giiz8vz70tCJhH_zF9Xq771hv8CCZuVvdQO9OSYOZjopKAIpc3DLzTyEmB50NtNTbWVhZCd8v09Ohn0t9r4mOsigW6pInE1YByNCng7WH0&amp;t=245582f9" type="text/javascript"></script>
+<script src="/ICS/ScriptResource.axd?d=P5lTttoqSeZXoYRLQMIScEtH4e3JPmmpJfvWMG6XiX5NXs_PLHIOhI1MWjis7DfTNY14mRgG6ePS81HVlCuUFT5e6hj41gcVf8wPnXB8tOpyDwvfJ6EwrwBk7fx1ErYo0&amp;t=245582f9" type="text/javascript"></script>
+<div class="aspNetHidden">
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="38ABEAAB" />
+</div>
+			<script type="text/javascript">
+//<![CDATA[
+Sys.WebForms.PageRequestManager._initialize('_scriptManager', 'MAINFORM', [], [], [], 90, '');
+//]]>
+</script>
+
+			<input name="___BrowserRefresh" type="hidden" id="___BrowserRefresh" value="b50a7c48-030d-4496-b5b0-e98c4ef9557f" />
+			
+			<header>
+				<a href="#content" class="skip-navigation sr-only-focusable">Skip to content</a>
+				
+
+<div class="site-header-container">
+    <div class="mobile-fixed-container"></div>
+    <div id="sitemasthead">
+        <div>
+            
+                <button id="main-nav-btn" class="btn btn-no-bg-hover-color-content-one glyphicons glyphicons-menu-hamburger main-nav-btn" type="button" data-toggle="collapse" data-target="#hamburger-menu-section" aria-expanded="false" aria-controls="hamburger-menu-section"><span class="sr-only">main navigation</span></button>
+                
+<div id="welcomeBackBar" class="main-nav-submenu-container">
+	<div id="siteNavBar_welcomeBackBarLoggedOut_welcomeBackBarLoggedOut">
+		<button id="siteNavBar_welcomeBackBarLoggedOut_loginToggle" class="btn login-btn" type="button" data-toggle="collapse" data-target="#user-login-section" aria-expanded="false" aria-controls="user-login-section"><span>Login</span></button>
+		<div id="user-login-section" aria-label="Login" class="collapse user-login form-inline">
+			<div class="input-group init-user-username-section">
+				<span class="input-group-addon glyphicons glyphicons-user"></span>
+				<label id="siteNavBar_welcomeBackBarLoggedOut_UserNameLabel" for="userName" class="sr-only">Username</label>
+				<input type="text" name="userName" id="userName" placeholder="Username" class="form-control user-name" autocomplete="username" value="" />
+			</div>
+			<div class="input-group init-user-password-section">
+				<span class="input-group-addon glyphicons glyphicons-asterisk"></span>
+				<label id="siteNavBar_welcomeBackBarLoggedOut_PasswordLabel" for="password" class="sr-only">Password</label>
+				<input type="password" name="password" id="password" placeholder="Password" class="form-control user-password" autocomplete="off" />
+			</div>
+			<input type="submit" name="siteNavBar$welcomeBackBarLoggedOut$ButtonLogin" value="Login" id="siteNavBar_welcomeBackBarLoggedOut_ButtonLogin" class="btn btn-sm btn-block btn-primary init-user-login-btn" />
+			<button id="siteNavBar_welcomeBackBarLoggedOut_JicsLoginRedirectContinue" type="button" class="btn btn-sm btn-block btn-primary init-user-login-continue-btn">Continue</button>
+			<div id="siteNavBar_welcomeBackBarLoggedOut_JicsSimpleLogin">
+				<div id="siteNavBar_welcomeBackBarLoggedOut_JicsLoginRedirectSimple">
+					<div id="jics-login-redirect-simple" class="jics-login-redirect-simple">
+						<button id="jics-login-redirect-simple-button" type="button" class="btn btn-sm btn-block btn-primary init-user-login-continue-btn jics-login-redirect-simple-button">
+							Login
+						</button>
+					</div>
+					<div id="siteNavBar_welcomeBackBarLoggedOut_AlternativeLogin">
+						<div id="jics-login-show-standard-fields-section" class="jics-login-show-standard-fields-section">
+							<span id="jics-login-show-standard-fields-text" class="jics-login-show-standard-fields-text">
+								Need to login via a different method? 
+							</span>
+							<button id="jics-login-show-standard-fields-button" type="button" class="btn link-btn color-content-one jics-login-show-standard-fields-button" aria-labelledby="jics-login-show-standard-fields-text jics-login-show-standard-fields-button">
+								Login Here
+							</button>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+			
+		</div>
+	</div>
+</div>
+
+
+<script type="text/javascript">
+    jQuery(document).ready(function ($) {
+	    if (searchBox !== null && searchBox !== undefined) {
+		    searchBox.searchPanel = 'siteNavBar_searchBox_searchPanel';
+		    searchBox.textBox = 'siteNavBar_searchBox_tbSearch';
+		    searchBox.button = 'siteNavBar_searchBox_lbSearch';
+		    searchBox.userId = "b0b00000-c542-4d2a-86e6-55ebbbcd85da";
+		    searchBox.autoCompleteSelect = function(event, ui) {
+			    $("#" + searchBox.textBox).val(ui.item.value);
+			    __doPostBack('siteNavBar$searchBox$lbSearch','');
+		    };
+		    searchBox.initAutoComplete();
+		    $('#siteNavBar_searchBox_lbSearch').keypress(function(e) {
+			    var key = e.which;
+			    if (key === 32 || key === 13) {
+				    if (searchBox.searchClick()) {
+					    window.location.href = this.href;
+				    }
+				    return false;
+			    }
+		    });
+
+		    // Hack needed to comply with A11y
+		    $('#siteNavBar_searchBox_searchPanel').removeAttr('onkeypress');
+		    $('#siteNavBar_searchBox_tbSearch').keypress(function (e) {
+			    return WebForm_FireDefaultButton(e, searchBox.button);
+		    });
+	    }
+    });
+ </script>
+
+<span role="search">
+	<button id="siteNavBar_searchBox_SearchButton" class="btn btn-no-bg-hover-color-content-one glyphicons glyphicons-search search-btn" type="button" data-toggle="collapse" data-target="#search-section" aria-expanded="false" aria-controls="search-section">
+		<span class="sr-only">
+			Search
+		</span>
+	</button>
+</span>
+
+<div id="searchAutoCompleteResults" class="searchAutoComplete"> </div>
+
+<div id="siteNavBar_searchBox_searchPanel" class="search-panel" onkeypress="javascript:return WebForm_FireDefaultButton(event, &#39;siteNavBar_searchBox_lbSearch&#39;)">
+	
+    <div id="siteNavBar_searchBox_divSideBarContainer">
+        <div id="search-section" aria-label="Search" class="search-section collapse popover fade bottom">
+            <div class="arrow" style="left: 90%;"></div>
+            <div class="popover-content form-wrapper">
+                <div class="form-group"> 
+                    <label for="siteNavBar_searchBox_tbSearch" id="siteNavBar_searchBox_lblForSearch" class="sr-only">Search</label>
+                    <input name="siteNavBar$searchBox$tbSearch" type="text" id="siteNavBar_searchBox_tbSearch" class="search-input global-search-input form-control" placeholder="Search..." onfocus="return searchBox.cleardefault();" onblur="return searchBox.restoredefault();" />
+               </div>
+                <a onclick="return searchBox.validate();" id="siteNavBar_searchBox_lbSearch" class="btn btn-sm btn-block btn-primary init-search-btn" role="button" href="javascript:__doPostBack(&#39;siteNavBar$searchBox$lbSearch&#39;,&#39;&#39;)">Search</a>
+            </div>
+        </div>
+    </div>
+
+</div><h1 id="logo-heading">
+<a class="site-logo-link" href=".">
+	<img class="site-logo" src="/ICS/icsfs/MyPBA-Logo.png?target=f030c8f8-9db6-4a27-87d7-bcafd53d99dc" alt="Logo"/>
+</a>
+</h1>
+<script>
+	$(function () {
+		$('#top-nav-bar').attr("aria-label", "Site tabs");
+	});
+</script>
+<nav id="top-nav-bar" class="top-nav-bar navbar navbar-default navbar-fixed-top">
+	<div class="nav-container">
+		<div id="header-tabs" class="link-scroll vertical-menu super-menu">
+			<div class="collapse h-menu" id="hamburger-menu-section">
+				
+						<ul id="main-nav" class="nav navbar-nav no-margin">
+					
+						<li class="tabs tab_Home firstTab selected">
+							<a href="/ICS/">
+								Home
+							</a>
+						</li>
+					
+						<li class="tabs tab_New_Students lastTab">
+							<a href="/ICS/New_Students/">
+								New Students
+							</a>
+						</li>
+					
+						</ul>
+					
+			</div>
+		</div>
+	</div>
+</nav>
+
+        </div>
+    </div>
+</div>
+			</header>
+			
+<div id="mainCrumbs" class="main-crumbs" role="navigation" aria-label="Site breadcrumb">
+	<span class="breadcrumbs-title text-bold">You are here:</span>
+	<span class="crumbs">
+		<ul id="youAreHere" class="breadcrumbs-container">
+			 <li><a href="./?tool=search&query=provost">Search</a></li> 
+			
+		</ul>
+	</span>
+</div>
+
+			
+			
+			<div id="mainLayout" class="main-layout">
+				<div class="container-fluid">
+					<div class="row">
+						
+									
+									
+									
+						<div id="portlets" role="main" class="col-md-12 mobile-padding-horizontal-none">
+							
+							
+
+<script type="text/javascript">
+    $( document ).ready(function() {
+        $(`[id*="pageOpenMoxieManager"]`).click(function () {
+            // Below we check every 200ms if the MoxieManager dialog is opened yet, then move keyboard focus if it is.
+            // We have to do this check because MoxieManager removed the 'onopen' option from the moxman.browse() function...
+            let intervalIndex = 0;
+            let interval = setInterval(function () {
+                let createButton = $($(`.moxman-reset .moxman-i-create`)[0].parentElement.parentElement);
+                if (createButton.length === 1) {
+                    createButton.focus();
+                    clearInterval(interval);
+                } else if (createButton.length === 0 && intervalIndex === 20000) { // We will stop trying to shift focus after 20 seconds.
+                    console.log("Error: Keyboard focus could not be shifted to the MoxieManager window");
+                    clearInterval(interval);
+                }
+                intervalIndex = intervalIndex + 200;
+            }, 200);
+        });
+    });
+</script>
+
+<div id="PageBar_pageTitle" class="page-title page-title-bar">
+    <h2 class="sr-only">Search features</h2>
+</div>
+<div id="PageBar_pageTitleButtons" class="page-title-btn">
+    
+    
+    
+    <a href="https://jenzabarhelp.jenzabar.com/ews/help/JICS/Base/released/en/free-form-content.html" id="PageBar_helpButton" tabindex="0" class="btn btn-no-bg-hover-color-content-one glyphicons glyphicons-question-sign" role="button" title="Help" target="blank">
+        <span aria-hidden="true" class="sr-only">Help</span>
+    </a>
+</div>
+
+
+							
+							<span id="content" tabindex="-1"></span>
+							<div id="portlet-grid" class="portlet-grid one_column"><div class="row"><div class="portlet-column col-md-12 mobile-padding-horizontal-none" ><div class="portlet" style="z-index:0;"><div class="portlet-header-bar"><h3>Search Results</h3></div><div class="portlet-padding SearchResultsPortlet">
+
+<script>
+    jQuery(function ($) {
+        // Setup Search Help
+        var searchTips = $('#search-tips');
+        searchTips.on('click', function (e) {
+            e.preventDefault();
+            $('.SearchResultsPortlet .search-help-content-container').slideToggle(400, function () {
+                setTimeout(function () {
+                        var trimStr = document.querySelector('.show-hide-label');
+
+                        trimStr.innerText === 'Show search tips'
+                            ? $('.SearchResultsPortlet .show-hide-label').text('Hide search tips')
+                            : $('.SearchResultsPortlet .show-hide-label').text('Show search tips');
+                        if ($('.search-help-content-container').is(':visible')) {
+                            searchTips.attr('aria-expanded', 'true');
+                        } else {
+                            searchTips.attr('aria-expanded', 'false');
+                        }
+                    },
+                    500);
+                
+            });
+
+            
+        });
+    });
+</script>
+
+<div class="pSection">
+    <div class="row">
+        <div class="col-md-12">
+            <button id="slideout-right-toggle-btn" class="btn btn-sm btn-primary slideout-toggle-btn float-right" type="button" aria-controls="slideout-wrapper" aria-expanded="false">
+                <span id="glyphicon-toggle" class="glyphicons glyphicons-chevron-left glyphicon-toggle float-left"></span>
+                Search filter
+            </button>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-12 col-md-8 col-lg-10">
+            <div class="row">
+                <div class="col-xs-12">
+                    <div id="resultsbox" class="search-header">
+                        <span id="CP_V_ResultsForSearchLabel" class="searchResultsText">Results for <span class="searchHelpHighlight">provost</span></span>
+                        
+	                    
+                    </div>
+                    <!-- Search Help -->
+                    
+<div class="search-help">
+    <div class="search-help-link">
+        <button id="search-tips" class="show-hide-label link-btn" type="button" aria-expanded="false" aria-controls="search-help-container">
+            Show search tips
+        </button>
+    </div>
+    <div class="search-help-content-container">
+        <div class="gray-top-wedge default-bottom-border">
+        </div>
+        <div class="search-help-content secondary-background">
+            <li class="searchHelpBullet">Results will be returned that contain all of the terms entered. For example searching for <span class="searchHelpHighlight black text-bold">bus schedule</span> would return anything that contains both <span class="searchHelpHighlight black text-bold">bus</span> and <span class="searchHelpHighlight black text-bold">schedule</span> in any order but not only bus or schedule by themselves.</li><li class="searchHelpBullet">Searching while you are within a course or group will return results found within that course or group.  If there are no results within the course or group you will be shown results for your term from everywhere.</li><li class="searchHelpBullet">You can use <span class="searchHelpHighlight black text-bold">+</span> or <span class="searchHelpHighlight black text-bold">-</span> to include or exclude search results. For example, the search <span class="searchHelpHighlight black text-bold">+schedule -bus</span> will return results that contain the word <span class="searchHelpHighlight black text-bold">schedule</span> but not the word <span class="searchHelpHighlight black text-bold">bus</span>.</li><li class="searchHelpBullet">Put a word or phrase in quotes to find exact matches. Searching for <span class="searchHelpHighlight black text-bold">"bus schedule"</span> will search for the exact phrase <span class="searchHelpHighlight black text-bold">bus schedule</span> with no other words between those two.</li><li class="searchHelpBullet">You can add <span class="searchHelpHighlight black text-bold">*</span> at the end of a term to find results that start with that term.  Searching for <span class="searchHelpHighlight black text-bold">book*</span> will return results for <span class="searchHelpHighlight black text-bold">book</span>, <span class="searchHelpHighlight black text-bold">books</span>, <span class="searchHelpHighlight black text-bold">bookmark</span>, and <span class="searchHelpHighlight black text-bold">bookmarks</span>. (You can also add <span class="searchHelpHighlight black text-bold">*</span> in the middle of a term)</li><li class="searchHelpBullet">Common words such as <span class="searchHelpHighlight black text-bold">and</span>, <span class="searchHelpHighlight black text-bold">the</span> and <span class="searchHelpHighlight black text-bold">of</span> are excluded from the search. To force them to be included, put a <span class="searchHelpHighlight black text-bold">+</span> in front of them.</li><li class="searchHelpBullet">The characters  <span class="searchHelpHighlight black text-bold">&& || ! ( ) { } [ ] ^ ~ * ? : \</span>  have special functions and aren’t searched for. If you need to find results that include one of those, you can put a <span class="searchHelpHighlight black text-bold">\</span> in front of it and it will be searched for like a regular character. For example <span class="searchHelpHighlight black text-bold">Abbott \& Costello</span> or <span class="searchHelpHighlight black text-bold">Who’s on first\?</span></li>
+        </div>
+    </div>
+
+</div>
+
+                </div>
+            </div>
+            <!-- Search Everywhere -->
+            
+            <!-- Did you mean -->
+            
+            <!-- Top Paging -->
+            
+            <!-- No Exact Results -->
+            <div class="row">
+                <div class="col-xs-12">
+                    
+                </div>
+            </div>
+            <!-- Search Results -->
+            
+                    
+
+<div class="search-result-item default-bottom-border" id="_parentdiv">
+    <div id="CP_V__resultsRepeater_ctl00_SearchResultsItemDisplay_divIcon" class="search-results-icon ">
+        
+        <span></span>
+    </div>
+    <div class="search-results-details">
+        <a id="CP_V__resultsRepeater_ctl00_SearchResultsItemDisplay__lnkResultLink" class="search-results-title-no-link">Cloe Belle <span class='search-result-highlight primary-alternate-background-one'>Provost</span></a>
+        
+        <div id="CP_V__resultsRepeater_ctl00_SearchResultsItemDisplay_descriptionDiv" class="search-results-description">
+            <span id="CP_V__resultsRepeater_ctl00_SearchResultsItemDisplay__description"><a class='extrapadding' href="javascript:UserInfoWin = window.open('/ICS/Portlets/ICS/MyProfileSettingsPortlet/Views/MyInfoPopup.aspx?UserID=fe98ecfe-376d-4bc5-a965-c3200644d0a2', 'UserInfoWin', 'height=500,width=550,toolbar=no,status=no,scrollbars=yes,location=no,menubar=no,resizable=yes,directories=no'); preventDefaultEvent(event);"><span class='glyphicons glyphicons-info-sign'></span><span class='sr-only'>User Info</span></a> <a href="javascript:UserInfoWin = window.open('/ICS/Portlets/ICS/MyProfileSettingsPortlet/Views/MyInfoPopup.aspx?UserID=fe98ecfe-376d-4bc5-a965-c3200644d0a2', 'UserInfoWin', 'height=500,width=550,toolbar=no,status=no,scrollbars=yes,location=no,menubar=no,resizable=yes,directories=no'); preventDefaultEvent(event);">More Info</a><br /></span>
+        </div>
+        <div id="CP_V__resultsRepeater_ctl00_SearchResultsItemDisplay_breakcrumbDiv" class="search-results-description">
+            
+        </div>
+    </div>
+    <div style="clear: both"></div>
+</div>
+
+                
+                    
+
+<div class="search-result-item default-bottom-border" id="_parentdiv">
+    <div id="CP_V__resultsRepeater_ctl01_SearchResultsItemDisplay_divIcon" class="search-results-icon ">
+        
+        <span></span>
+    </div>
+    <div class="search-results-details">
+        <a id="CP_V__resultsRepeater_ctl01_SearchResultsItemDisplay__lnkResultLink" class="search-results-title-no-link">Ella Rose <span class='search-result-highlight primary-alternate-background-one'>Provost</span></a>
+        
+        <div id="CP_V__resultsRepeater_ctl01_SearchResultsItemDisplay_descriptionDiv" class="search-results-description">
+            <span id="CP_V__resultsRepeater_ctl01_SearchResultsItemDisplay__description"><a class='extrapadding' href="javascript:UserInfoWin = window.open('/ICS/Portlets/ICS/MyProfileSettingsPortlet/Views/MyInfoPopup.aspx?UserID=ea5c544b-d365-4589-8dcb-9e90cae21090', 'UserInfoWin', 'height=500,width=550,toolbar=no,status=no,scrollbars=yes,location=no,menubar=no,resizable=yes,directories=no'); preventDefaultEvent(event);"><span class='glyphicons glyphicons-info-sign'></span><span class='sr-only'>User Info</span></a> <a href="javascript:UserInfoWin = window.open('/ICS/Portlets/ICS/MyProfileSettingsPortlet/Views/MyInfoPopup.aspx?UserID=ea5c544b-d365-4589-8dcb-9e90cae21090', 'UserInfoWin', 'height=500,width=550,toolbar=no,status=no,scrollbars=yes,location=no,menubar=no,resizable=yes,directories=no'); preventDefaultEvent(event);">More Info</a><br /></span>
+        </div>
+        <div id="CP_V__resultsRepeater_ctl01_SearchResultsItemDisplay_breakcrumbDiv" class="search-results-description">
+            
+        </div>
+    </div>
+    <div style="clear: both"></div>
+</div>
+
+                
+                    
+
+<div class="search-result-item default-bottom-border" id="_parentdiv">
+    <div id="CP_V__resultsRepeater_ctl02_SearchResultsItemDisplay_divIcon" class="search-results-icon ">
+        
+        <span></span>
+    </div>
+    <div class="search-results-details">
+        <a id="CP_V__resultsRepeater_ctl02_SearchResultsItemDisplay__lnkResultLink" class="search-results-title-no-link">Emily Ann <span class='search-result-highlight primary-alternate-background-one'>Provost</span></a>
+        
+        <div id="CP_V__resultsRepeater_ctl02_SearchResultsItemDisplay_descriptionDiv" class="search-results-description">
+            <span id="CP_V__resultsRepeater_ctl02_SearchResultsItemDisplay__description"><a class='extrapadding' href="javascript:UserInfoWin = window.open('/ICS/Portlets/ICS/MyProfileSettingsPortlet/Views/MyInfoPopup.aspx?UserID=4f947860-2846-4d86-ac43-6beba6ca6fe0', 'UserInfoWin', 'height=500,width=550,toolbar=no,status=no,scrollbars=yes,location=no,menubar=no,resizable=yes,directories=no'); preventDefaultEvent(event);"><span class='glyphicons glyphicons-info-sign'></span><span class='sr-only'>User Info</span></a> <a href="javascript:UserInfoWin = window.open('/ICS/Portlets/ICS/MyProfileSettingsPortlet/Views/MyInfoPopup.aspx?UserID=4f947860-2846-4d86-ac43-6beba6ca6fe0', 'UserInfoWin', 'height=500,width=550,toolbar=no,status=no,scrollbars=yes,location=no,menubar=no,resizable=yes,directories=no'); preventDefaultEvent(event);">More Info</a><br /></span>
+        </div>
+        <div id="CP_V__resultsRepeater_ctl02_SearchResultsItemDisplay_breakcrumbDiv" class="search-results-description">
+            
+        </div>
+    </div>
+    <div style="clear: both"></div>
+</div>
+
+                
+                    
+
+<div class="search-result-item default-bottom-border" id="_parentdiv">
+    <div id="CP_V__resultsRepeater_ctl03_SearchResultsItemDisplay_divIcon" class="search-results-icon ">
+        
+        <span></span>
+    </div>
+    <div class="search-results-details">
+        <a id="CP_V__resultsRepeater_ctl03_SearchResultsItemDisplay__lnkResultLink" class="search-results-title-no-link">Grace Kay <span class='search-result-highlight primary-alternate-background-one'>Provost</span></a>
+        
+        <div id="CP_V__resultsRepeater_ctl03_SearchResultsItemDisplay_descriptionDiv" class="search-results-description">
+            <span id="CP_V__resultsRepeater_ctl03_SearchResultsItemDisplay__description"><a class='extrapadding' href="javascript:UserInfoWin = window.open('/ICS/Portlets/ICS/MyProfileSettingsPortlet/Views/MyInfoPopup.aspx?UserID=0b748b96-4ea7-4caa-8780-742be17db743', 'UserInfoWin', 'height=500,width=550,toolbar=no,status=no,scrollbars=yes,location=no,menubar=no,resizable=yes,directories=no'); preventDefaultEvent(event);"><span class='glyphicons glyphicons-info-sign'></span><span class='sr-only'>User Info</span></a> <a href="javascript:UserInfoWin = window.open('/ICS/Portlets/ICS/MyProfileSettingsPortlet/Views/MyInfoPopup.aspx?UserID=0b748b96-4ea7-4caa-8780-742be17db743', 'UserInfoWin', 'height=500,width=550,toolbar=no,status=no,scrollbars=yes,location=no,menubar=no,resizable=yes,directories=no'); preventDefaultEvent(event);">More Info</a><br /></span>
+        </div>
+        <div id="CP_V__resultsRepeater_ctl03_SearchResultsItemDisplay_breakcrumbDiv" class="search-results-description">
+            
+        </div>
+    </div>
+    <div style="clear: both"></div>
+</div>
+
+                
+                    
+
+<div class="search-result-item default-bottom-border" id="_parentdiv">
+    <div id="CP_V__resultsRepeater_ctl04_SearchResultsItemDisplay_divIcon" class="search-results-icon ">
+        
+        <span></span>
+    </div>
+    <div class="search-results-details">
+        <a id="CP_V__resultsRepeater_ctl04_SearchResultsItemDisplay__lnkResultLink" class="search-results-title-no-link">Heather Lynn <span class='search-result-highlight primary-alternate-background-one'>Provost</span></a>
+        
+        <div id="CP_V__resultsRepeater_ctl04_SearchResultsItemDisplay_descriptionDiv" class="search-results-description">
+            <span id="CP_V__resultsRepeater_ctl04_SearchResultsItemDisplay__description"><a class='extrapadding' href="javascript:UserInfoWin = window.open('/ICS/Portlets/ICS/MyProfileSettingsPortlet/Views/MyInfoPopup.aspx?UserID=1cafc1a2-7167-4c32-9e38-05948fb032f8', 'UserInfoWin', 'height=500,width=550,toolbar=no,status=no,scrollbars=yes,location=no,menubar=no,resizable=yes,directories=no'); preventDefaultEvent(event);"><span class='glyphicons glyphicons-info-sign'></span><span class='sr-only'>User Info</span></a> <a href="javascript:UserInfoWin = window.open('/ICS/Portlets/ICS/MyProfileSettingsPortlet/Views/MyInfoPopup.aspx?UserID=1cafc1a2-7167-4c32-9e38-05948fb032f8', 'UserInfoWin', 'height=500,width=550,toolbar=no,status=no,scrollbars=yes,location=no,menubar=no,resizable=yes,directories=no'); preventDefaultEvent(event);">More Info</a><br /></span>
+        </div>
+        <div id="CP_V__resultsRepeater_ctl04_SearchResultsItemDisplay_breakcrumbDiv" class="search-results-description">
+            
+        </div>
+    </div>
+    <div style="clear: both"></div>
+</div>
+
+                
+                    
+
+<div class="search-result-item default-bottom-border" id="_parentdiv">
+    <div id="CP_V__resultsRepeater_ctl05_SearchResultsItemDisplay_divIcon" class="search-results-icon ">
+        
+        <span></span>
+    </div>
+    <div class="search-results-details">
+        <a id="CP_V__resultsRepeater_ctl05_SearchResultsItemDisplay__lnkResultLink" class="search-results-title" href="/ICS/Departments/Provost_Office/"><span class='search-result-highlight primary-alternate-background-one'>Provost</span> Office</a>
+        
+        
+        <div id="CP_V__resultsRepeater_ctl05_SearchResultsItemDisplay_breakcrumbDiv" class="search-results-description">
+            <span id="CP_V__resultsRepeater_ctl05_SearchResultsItemDisplay__locationInfo" class="search-results-breadcrumb-link">page in <a href='/ICS/Departments/Provost_Office/'><span class='search-result-highlight primary-alternate-background-one'>Provost</span> Office</a></span>
+        </div>
+    </div>
+    <div style="clear: both"></div>
+</div>
+
+                
+                    
+
+<div class="search-result-item default-bottom-border" id="_parentdiv">
+    <div id="CP_V__resultsRepeater_ctl06_SearchResultsItemDisplay_divIcon" class="search-results-icon ">
+        
+        <span></span>
+    </div>
+    <div class="search-results-details">
+        <a id="CP_V__resultsRepeater_ctl06_SearchResultsItemDisplay__lnkResultLink" class="search-results-title" href="/ICS/Departments/Faculty_Development/Office_of_Faculty_Development.jnz?portlet=Custom_Content">Contact Information</a>
+        
+        <div id="CP_V__resultsRepeater_ctl06_SearchResultsItemDisplay_descriptionDiv" class="search-results-description">
+            <span id="CP_V__resultsRepeater_ctl06_SearchResultsItemDisplay__description">The Associate <span class='search-result-highlight primary-alternate-background-one'>Provost</span>, Dr. Nathan Lane, is the Director of Faculty Development. The Office of the Associate <span class='search-result-highlight primary-alternate-background-one'>Provost</span> is located on the third floor of the Warren Library, inside Administration Suite 309.
+
+
+Warren Library, Office 312Phone: 561-803-2754Email: nathan_lane@pba.edu
+ 
+ 
+
+
+</span>
+        </div>
+        <div id="CP_V__resultsRepeater_ctl06_SearchResultsItemDisplay_breakcrumbDiv" class="search-results-description">
+            <span id="CP_V__resultsRepeater_ctl06_SearchResultsItemDisplay__locationInfo" class="search-results-breadcrumb-link">other content in <a href='/ICS/Departments/Faculty_Development/Office_of_Faculty_Development.jnz?portlet=Custom_Content'>Contact Information</a> in <a href='/ICS/Departments/Faculty_Development/'>Faculty Development </a></span>
+        </div>
+    </div>
+    <div style="clear: both"></div>
+</div>
+
+                
+                    
+
+<div class="search-result-item default-bottom-border" id="_parentdiv">
+    <div id="CP_V__resultsRepeater_ctl07_SearchResultsItemDisplay_divIcon" class="search-results-icon ">
+        
+        <span></span>
+    </div>
+    <div class="search-results-details">
+        <a id="CP_V__resultsRepeater_ctl07_SearchResultsItemDisplay__lnkResultLink" class="search-results-title" href="/ICS/Departments/Accreditation_and__Assessment/Faculty_Credentialing.jnz?portlet=Faculty_Credentialing_Process">Faculty Credentialing Process</a>
+        
+        <div id="CP_V__resultsRepeater_ctl07_SearchResultsItemDisplay_descriptionDiv" class="search-results-description">
+            <span id="CP_V__resultsRepeater_ctl07_SearchResultsItemDisplay__description">... time curriculum faculty positions must insure official copies of transcripts and any related licensures, certifications, etc. are submitted to the Office of the <span class='search-result-highlight primary-alternate-background-one'>Provost</span> (Office of Accreditation.... Unofficial transcripts and other related licensures, certifications, etc. must be included in the application packet which is forwarded by the dean to the <span class='search-result-highlight primary-alternate-background-one'>Provost</span> during the justification for hire stage... <span class='search-result-highlight primary-alternate-background-one'>Provost</span> Office sends a copy of the Recommendation for Hire and the unofficial transcripts to the Office of Accreditation, Assessment, and Research for review and addition to the Faculty Credentialing...</span>
+        </div>
+        <div id="CP_V__resultsRepeater_ctl07_SearchResultsItemDisplay_breakcrumbDiv" class="search-results-description">
+            <span id="CP_V__resultsRepeater_ctl07_SearchResultsItemDisplay__locationInfo" class="search-results-breadcrumb-link">other content in <a href='/ICS/Departments/Accreditation_and__Assessment/Faculty_Credentialing.jnz?portlet=Faculty_Credentialing_Process'>Faculty Credentialing Process</a> in <a href='/ICS/Departments/Accreditation_and__Assessment/'>Accreditation and  Assessment</a></span>
+        </div>
+    </div>
+    <div style="clear: both"></div>
+</div>
+
+                
+                    
+
+<div class="search-result-item default-bottom-border" id="_parentdiv">
+    <div id="CP_V__resultsRepeater_ctl08_SearchResultsItemDisplay_divIcon" class="search-results-icon ">
+        
+        <span></span>
+    </div>
+    <div class="search-results-details">
+        <a id="CP_V__resultsRepeater_ctl08_SearchResultsItemDisplay__lnkResultLink" class="search-results-title" href="/ICS/Departments/Accreditation_and__Assessment/Faculty_Credentialing.jnz?portlet=Credential_Documents">Credential Documents</a>
+        
+        <div id="CP_V__resultsRepeater_ctl08_SearchResultsItemDisplay_descriptionDiv" class="search-results-description">
+            <span id="CP_V__resultsRepeater_ctl08_SearchResultsItemDisplay__description">...Official Transcripts
+Official transcripts documenting all undergraduate and graduate work must be on file in the Office of the <span class='search-result-highlight primary-alternate-background-one'>Provost</span> (Accreditation, Assessment, and Research). Official transcripts are required from each institution as soon as possible but no later than the beginning of the second semester of teaching. Failure to provide official transcripts by the deadline will result... to carolanne_brown@pba.edu. 
+If assistance is needed, please confer with the School Dean or with the Office of the <span class='search-result-highlight primary-alternate-background-one'>Provost</span>.  (Faculty Handbook – Chapter 17)
+International Transcripts
+All foreign credentials...</span>
+        </div>
+        <div id="CP_V__resultsRepeater_ctl08_SearchResultsItemDisplay_breakcrumbDiv" class="search-results-description">
+            <span id="CP_V__resultsRepeater_ctl08_SearchResultsItemDisplay__locationInfo" class="search-results-breadcrumb-link">other content in <a href='/ICS/Departments/Accreditation_and__Assessment/Faculty_Credentialing.jnz?portlet=Credential_Documents'>Credential Documents</a> in <a href='/ICS/Departments/Accreditation_and__Assessment/'>Accreditation and  Assessment</a></span>
+        </div>
+    </div>
+    <div style="clear: both"></div>
+</div>
+
+                
+                    
+
+<div class="search-result-item default-bottom-border" id="_parentdiv">
+    <div id="CP_V__resultsRepeater_ctl09_SearchResultsItemDisplay_divIcon" class="search-results-icon ">
+        
+        <span></span>
+    </div>
+    <div class="search-results-details">
+        <a id="CP_V__resultsRepeater_ctl09_SearchResultsItemDisplay__lnkResultLink" class="search-results-title" href="/ICS/Departments/Accreditation_and__Assessment/What_is_assessment.jnz?portlet=Assessment_FAQ">Assessment FAQ</a>
+        
+        <div id="CP_V__resultsRepeater_ctl09_SearchResultsItemDisplay_descriptionDiv" class="search-results-description">
+            <span id="CP_V__resultsRepeater_ctl09_SearchResultsItemDisplay__description">...What is assessment?
+Assessment is the method of "closing the loop" on planning in a systematic cycle. According to one definition, assessment if "the maximum and review of evidence representing levels of performance, accomplishment and knowledge."
+Who does assessment?
+All areas of the University, including administrative units, academic administrative offices, and academic programs, complete assessment each year and submit reports for a cycle of review outlined in the Annual Planning and Assessment Plan. All assessment is reviewed by the SACSCOC Liaison in the Office of the <span class='search-result-highlight primary-alternate-background-one'>Provost</span>...</span>
+        </div>
+        <div id="CP_V__resultsRepeater_ctl09_SearchResultsItemDisplay_breakcrumbDiv" class="search-results-description">
+            <span id="CP_V__resultsRepeater_ctl09_SearchResultsItemDisplay__locationInfo" class="search-results-breadcrumb-link">other content in <a href='/ICS/Departments/Accreditation_and__Assessment/What_is_assessment.jnz?portlet=Assessment_FAQ'>Assessment FAQ</a> in <a href='/ICS/Departments/Accreditation_and__Assessment/'>Accreditation and  Assessment</a></span>
+        </div>
+    </div>
+    <div style="clear: both"></div>
+</div>
+
+                
+                    
+
+<div class="search-result-item default-bottom-border" id="_parentdiv">
+    <div id="CP_V__resultsRepeater_ctl10_SearchResultsItemDisplay_divIcon" class="search-results-icon ">
+        
+        <span></span>
+    </div>
+    <div class="search-results-details">
+        <a id="CP_V__resultsRepeater_ctl10_SearchResultsItemDisplay__lnkResultLink" class="search-results-title" href="/ICS/Departments/Accreditation_and__Assessment/Home.jnz?portlet=AAR_Staff">AAR Staff</a>
+        
+        <div id="CP_V__resultsRepeater_ctl10_SearchResultsItemDisplay_descriptionDiv" class="search-results-description">
+            <span id="CP_V__resultsRepeater_ctl10_SearchResultsItemDisplay__description">...Carolanne Brown (32050), Assistant <span class='search-result-highlight primary-alternate-background-one'>Provost</span>, supervises the department of Accreditation, Assessment, and Research and functions as the SACSCOC liaison for Palm Beach Atlantic University. Other duties include:
+
+Supervising the collection of annual university assessment data for program learning outcomes from the academic area, and operational objectives from the non-academic units
+Coordinating... for assisting the Assistant <span class='search-result-highlight primary-alternate-background-one'>Provost</span> with various reporting efforts required for SACSCOC accreditation activities and coordinating the General Education assessments every semester. Other duties include...</span>
+        </div>
+        <div id="CP_V__resultsRepeater_ctl10_SearchResultsItemDisplay_breakcrumbDiv" class="search-results-description">
+            <span id="CP_V__resultsRepeater_ctl10_SearchResultsItemDisplay__locationInfo" class="search-results-breadcrumb-link">other content in <a href='/ICS/Departments/Accreditation_and__Assessment/Home.jnz?portlet=AAR_Staff'>AAR Staff</a> in <a href='/ICS/Departments/Accreditation_and__Assessment/'>Accreditation and  Assessment</a></span>
+        </div>
+    </div>
+    <div style="clear: both"></div>
+</div>
+
+                
+                    
+
+<div class="search-result-item default-bottom-border" id="_parentdiv">
+    <div id="CP_V__resultsRepeater_ctl11_SearchResultsItemDisplay_divIcon" class="search-results-icon ">
+        
+        <span></span>
+    </div>
+    <div class="search-results-details">
+        <a id="CP_V__resultsRepeater_ctl11_SearchResultsItemDisplay__lnkResultLink" class="search-results-title" href="/ICS/Departments/Accreditation_and__Assessment/What_is_assessment.jnz?portlet=Annual_Planning_and_Assessment_Plan">Annual Planning and Assessment Plan</a>
+        
+        <div id="CP_V__resultsRepeater_ctl11_SearchResultsItemDisplay_descriptionDiv" class="search-results-description">
+            <span id="CP_V__resultsRepeater_ctl11_SearchResultsItemDisplay__description">...– The Assistant <span class='search-result-highlight primary-alternate-background-one'>Provost</span> and faculty on the SACSCOC Coordinating Council will review the unit goals and summary narratives for the previous academic year and provide feedback to colleagues. 
+Prior Year...</span>
+        </div>
+        <div id="CP_V__resultsRepeater_ctl11_SearchResultsItemDisplay_breakcrumbDiv" class="search-results-description">
+            <span id="CP_V__resultsRepeater_ctl11_SearchResultsItemDisplay__locationInfo" class="search-results-breadcrumb-link">other content in <a href='/ICS/Departments/Accreditation_and__Assessment/What_is_assessment.jnz?portlet=Annual_Planning_and_Assessment_Plan'>Annual Planning and Assessment Plan</a> in <a href='/ICS/Departments/Accreditation_and__Assessment/'>Accreditation and  Assessment</a></span>
+        </div>
+    </div>
+    <div style="clear: both"></div>
+</div>
+
+                
+                    
+
+<div class="search-result-item default-bottom-border" id="_parentdiv">
+    <div id="CP_V__resultsRepeater_ctl12_SearchResultsItemDisplay_divIcon" class="search-results-icon ">
+        
+        <span></span>
+    </div>
+    <div class="search-results-details">
+        <a id="CP_V__resultsRepeater_ctl12_SearchResultsItemDisplay__lnkResultLink" class="search-results-title" href="/ICS/Departments/Public_Safety/CLERY_CRIME_STATISTICS.jnz?portlet=Campus_Crime_Statistics">Campus Crime Statistics</a>
+        
+        <div id="CP_V__resultsRepeater_ctl12_SearchResultsItemDisplay_descriptionDiv" class="search-results-description">
+            <span id="CP_V__resultsRepeater_ctl12_SearchResultsItemDisplay__description">... significant responsibility for student and campus activities:
+
+Student Development
+Residential Life
+Student Activities
+Wellness Center
+Athletics Department
+Human Resources
+<span class='search-result-highlight primary-alternate-background-one'>Provost</span> Office...</span>
+        </div>
+        <div id="CP_V__resultsRepeater_ctl12_SearchResultsItemDisplay_breakcrumbDiv" class="search-results-description">
+            <span id="CP_V__resultsRepeater_ctl12_SearchResultsItemDisplay__locationInfo" class="search-results-breadcrumb-link">other content in <a href='/ICS/Departments/Public_Safety/CLERY_CRIME_STATISTICS.jnz?portlet=Campus_Crime_Statistics'>Campus Crime Statistics</a> in <a href='/ICS/Departments/Public_Safety/'>Public Safety</a></span>
+        </div>
+    </div>
+    <div style="clear: both"></div>
+</div>
+
+                
+                    
+
+<div class="search-result-item default-bottom-border" id="_parentdiv">
+    <div id="CP_V__resultsRepeater_ctl13_SearchResultsItemDisplay_divIcon" class="search-results-icon ">
+        
+        <span></span>
+    </div>
+    <div class="search-results-details">
+        <a id="CP_V__resultsRepeater_ctl13_SearchResultsItemDisplay__lnkResultLink" class="search-results-title" href="/ICS/Departments/Accreditation_and__Assessment/Substantive_Change.jnz?portlet=Substantive_Change_Procedure">Substantive Change Procedure</a>
+        
+        <div id="CP_V__resultsRepeater_ctl13_SearchResultsItemDisplay_descriptionDiv" class="search-results-description">
+            <span id="CP_V__resultsRepeater_ctl13_SearchResultsItemDisplay__description">... will work with deans, and deans will function as the faculty liaison before the office of the <span class='search-result-highlight primary-alternate-background-one'>Provost</span> and President. Before this work begins it will be necessary for those tasked with conceptualizing...</span>
+        </div>
+        <div id="CP_V__resultsRepeater_ctl13_SearchResultsItemDisplay_breakcrumbDiv" class="search-results-description">
+            <span id="CP_V__resultsRepeater_ctl13_SearchResultsItemDisplay__locationInfo" class="search-results-breadcrumb-link">other content in <a href='/ICS/Departments/Accreditation_and__Assessment/Substantive_Change.jnz?portlet=Substantive_Change_Procedure'>Substantive Change Procedure</a> in <a href='/ICS/Departments/Accreditation_and__Assessment/'>Accreditation and  Assessment</a></span>
+        </div>
+    </div>
+    <div style="clear: both"></div>
+</div>
+
+                
+            <!-- Bottom Paging -->
+            <div class="row pagingContainerSearch">
+                <div class="col-xs-12">
+                    
+                </div>
+            </div>
+        </div>
+        <div id="slideout-wrapper" class="col-sm-4 col-lg-2 slideout-wrapper closed">
+            <div class="slideout-body">
+                
+<script language="javascript">
+    jQuery(document).ready(function () {
+        searchControlBoxOnLoad();
+    });
+    function searchControlBoxOnLoad() {
+
+        var searchParam = getQueryStringVariable("query");
+
+        var show = false;
+        var whereParam = getQueryStringVariable("where");
+        if (whereParam != null) {
+            var dd = document.getElementById("CP_V_SearchResultsSidebar_ddlWhere");
+            for (var i = 0; i < dd.options.length; i++) {
+                if (dd.options[i].value === whereParam) {
+                    dd.selectedIndex = i;
+                    break;
+                }
+            }
+        }
+        var includeparam = getQueryStringVariable("includePastFutureCourses");
+        if (includeparam != null) {
+            var cb = document.getElementById("CP_V_SearchResultsSidebar_cbIncludePast");
+            cb.checked = true;
+        }
+    }
+</script>
+
+<div id="CP_V_SearchResultsSidebar_highlightdiv" class="highlight-on highlightdiv primary-alternate-background-one default-border">
+    <a id="CP_V_SearchResultsSidebar_hlHighlight" class="color-content-two" href="/ICS/?tool=search&amp;query=provost&amp;highlighting=off">
+        <span class="glyphicons glyphicons-pencil highlight"></span>Highlighting
+        <span id="CP_V_SearchResultsSidebar_lblHighlight">on</span></a>
+</div>
+
+
+        <div>
+            <span class="search-results-labels">What</span>
+        </div>
+        <ul class="search-content-filters portlet-style-override">
+    
+        <li id="CP_V_SearchResultsSidebar_rptWhat_ctl01_dvItem" class="sf-everything transparent-border primary-hover-state">
+            <a id="CP_V_SearchResultsSidebar_rptWhat_ctl01_aLink" class="color-background-one override-hover-state selected" href="/ICS/?tool=search&amp;query=provost"><span id="CP_V_SearchResultsSidebar_rptWhat_ctl01_ItemIcon" class="primary glyphicons glyphicons-paperclip"></span>Everything</a>
+        </li>
+    
+        <li id="CP_V_SearchResultsSidebar_rptWhat_ctl02_dvItem" class="sf-people sf-group-top transparent-border primary-hover-state">
+            <a id="CP_V_SearchResultsSidebar_rptWhat_ctl02_aLink" class="body-text" href="/ICS/?tool=search&amp;query=provost&amp;what=People"><span id="CP_V_SearchResultsSidebar_rptWhat_ctl02_ItemIcon" class="glyphicons glyphicons-user"></span>People</a>
+        </li>
+    
+        <li id="CP_V_SearchResultsSidebar_rptWhat_ctl03_dvItem" class="sf-pages transparent-border primary-hover-state">
+            <a id="CP_V_SearchResultsSidebar_rptWhat_ctl03_aLink" class="body-text" href="/ICS/?tool=search&amp;query=provost&amp;what=Pages"><span id="CP_V_SearchResultsSidebar_rptWhat_ctl03_ItemIcon" class="custom-icon icon-unread-post"></span>Pages</a>
+        </li>
+    
+        <li id="CP_V_SearchResultsSidebar_rptWhat_ctl04_dvItem" class="sf-blogs sf-group-top transparent-border primary-hover-state">
+            <a id="CP_V_SearchResultsSidebar_rptWhat_ctl04_aLink" class="body-text" href="/ICS/?tool=search&amp;query=provost&amp;what=Blogs"><span id="CP_V_SearchResultsSidebar_rptWhat_ctl04_ItemIcon" class="glyphicons glyphicons-blog"></span>Blogs</a>
+        </li>
+    
+        <li id="CP_V_SearchResultsSidebar_rptWhat_ctl05_dvItem" class="sf-calendars transparent-border primary-hover-state">
+            <a id="CP_V_SearchResultsSidebar_rptWhat_ctl05_aLink" class="body-text" href="/ICS/?tool=search&amp;query=provost&amp;what=Calendars"><span id="CP_V_SearchResultsSidebar_rptWhat_ctl05_ItemIcon" class="glyphicons glyphicons-calendar"></span>Calendars</a>
+        </li>
+    
+        <li id="CP_V_SearchResultsSidebar_rptWhat_ctl06_dvItem" class="sf-forms transparent-border primary-hover-state">
+            <a id="CP_V_SearchResultsSidebar_rptWhat_ctl06_aLink" class="body-text" href="/ICS/?tool=search&amp;query=provost&amp;what=Forms"><span id="CP_V_SearchResultsSidebar_rptWhat_ctl06_ItemIcon" class="glyphicons glyphicons-table"></span>Forms</a>
+        </li>
+    
+        <li id="CP_V_SearchResultsSidebar_rptWhat_ctl07_dvItem" class="sf-forums transparent-border primary-hover-state">
+            <a id="CP_V_SearchResultsSidebar_rptWhat_ctl07_aLink" class="body-text" href="/ICS/?tool=search&amp;query=provost&amp;what=Forums"><span id="CP_V_SearchResultsSidebar_rptWhat_ctl07_ItemIcon" class="glyphicons glyphicons-conversation"></span>Forums</a>
+        </li>
+    
+        <li id="CP_V_SearchResultsSidebar_rptWhat_ctl08_dvItem" class="sf-other transparent-border primary-hover-state">
+            <a id="CP_V_SearchResultsSidebar_rptWhat_ctl08_aLink" class="body-text" href="/ICS/?tool=search&amp;query=provost&amp;what=CustomContent"><span id="CP_V_SearchResultsSidebar_rptWhat_ctl08_ItemIcon" class="glyphicons glyphicons-newspaper"></span>Other Content</a>
+        </li>
+    
+        <li id="CP_V_SearchResultsSidebar_rptWhat_ctl09_dvItem" class="sf-resources transparent-border primary-hover-state">
+            <a id="CP_V_SearchResultsSidebar_rptWhat_ctl09_aLink" class="body-text" href="/ICS/?tool=search&amp;query=provost&amp;what=Resources"><span id="CP_V_SearchResultsSidebar_rptWhat_ctl09_ItemIcon" class="glyphicons glyphicons-sort"></span>Resources</a>
+        </li>
+    
+        </ul>
+    
+<p class="suggest-hint d-inline-block color-content-two">
+    Click on a content type above to refine your results.
+</p>
+
+            </div>
+        </div>
+    </div>
+</div></div></div>
+</div></div></div>
+							<div class="portletsFoot containerFoot"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="container-fluid footer-wrapper primary">
+				<div class="row no-margin-r no-margin-l">
+					<div class="col-md-12"><footer><div id="foot" class="footer-links"><a target="_blank" href="/ICS/ClientConfig/HtmlContent/Privacy.html" >Privacy policy</a><a target="_blank" href="/ICS/ClientConfig/HtmlContent/AboutUs.html" >About us</a><a target="_blank" href="/ICS/ClientConfig/HtmlContent/ContactUs.html" >Contact us</a><a href="/ICS/?tool=CampusDirectory"  accesskey="">Campus directory</a><span id="copyright">  Powered by Jenzabar. v2025.1</span></div></footer></div>
+				</div>
+			</div>
+			
+
+<!-- DO NOT EDIT BELOW THIS LINE -->
+<!-- Mainstay Web Chat -->
+<script>window.admitHubBot = {botToken: "abe29e3c41c044a0a", collegeId: "b30a5b2e15374ef3a"};</script>
+<script async src="https://webbot.mainstay.com/static/js/webchat.js"></script>
+<link rel="stylesheet" type="text/css" href="https://webbot.mainstay.com/static/css/webchat.css">
+<!-- DO NOT EDIT ABOVE THIS LINE -->
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-VYPYLR6YYC"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-VYPYLR6YYC');
+</script>
+		
+
+<script type="text/javascript">
+//<![CDATA[
+window.PageInfo.IsCustomizing ='True';(function() {var fn = function() {$get("_scriptManager_HiddenField").value = '';Sys.Application.remove_init(fn);};Sys.Application.add_init(fn);})();//]]>
+</script>
+</form>
+	</div>
+<script type="text/javascript">
+	$(function() {
+		$("#youAreHere a:last").attr("aria-current", "page");
+
+		jenzabar.framework.accessibleSidebarMenu.init();
+		jenzabar.framework.accessibleSearchMenu.init();
+		jenzabar.framework.accessibleLoginMenu.init();
+		jenzabar.framework.accessibleHamburgerMenu.init();
+	});
+</script>
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015" integrity="sha512-ZpsOmlRQV6y907TI0dKBHq9Md29nnaEIPlkf84rnaERnq6zvWvPUqr2ft8M1aS28oN72PdrCzSjY4U6VaAw1EQ==" data-cf-beacon='{"rayId":"9cfd2a105c64b41e","version":"2025.9.1","serverTiming":{"name":{"cfExtPri":true,"cfEdge":true,"cfOrigin":true,"cfL4":true,"cfSpeedBrain":true,"cfCacheStatus":true}},"token":"1c569ba8f1dd4833bada8e7f4d1fec80","b":1}' crossorigin="anonymous"></script>
+</body>
+</html>

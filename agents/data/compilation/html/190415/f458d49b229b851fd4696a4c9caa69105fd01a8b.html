@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+	<html lang="en-US" prefix="og: https://ogp.me/ns# fb: https://ogp.me/ns/fb#">
+	<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<title>Log In &lsaquo; Research &amp; Innovation &#8212; WordPress</title>
+	<meta name='robots' content='max-image-preview:large, noindex, noarchive' />
+<script type="text/javascript" src="https://blogs.cornell.edu/ovpri/wp-includes/js/jquery/jquery.min.js?ver=1638659054" id="jquery-core-js"></script>
+<script type="text/javascript" src="https://blogs.cornell.edu/ovpri/wp-includes/js/jquery/jquery-migrate.min.js?ver=1004745813" id="jquery-migrate-js"></script>
+<link rel='stylesheet' id='dashicons-css' href='https://blogs.cornell.edu/ovpri/wp-includes/css/dashicons.min.css?ver=1314880393' type='text/css' media='all' />
+<link rel='stylesheet' id='buttons-css' href='https://blogs.cornell.edu/ovpri/wp-includes/css/buttons.min.css?ver=937428281' type='text/css' media='all' />
+<link rel='stylesheet' id='forms-css' href='https://blogs.cornell.edu/ovpri/wp-admin/css/forms.min.css?ver=9850710' type='text/css' media='all' />
+<link rel='stylesheet' id='l10n-css' href='https://blogs.cornell.edu/ovpri/wp-admin/css/l10n.min.css?ver=341910899' type='text/css' media='all' />
+<link rel='stylesheet' id='login-css' href='https://blogs.cornell.edu/ovpri/wp-admin/css/login.min.css?ver=1131762019' type='text/css' media='all' />
+	<style type="text/css">
+	#loginform-shibboleth {margin-bottom: 20px; text-align: center; overflow: auto; }
+	#loginform {display: none; margin: 0}
+	#shibboleth-guest-login-wrapper {margin-top: 10px;}
+	</style>
+	<script type="text/javascript">
+		(function($) {
+			$(document).ready(function() {
+				$('#loginform-shibboleth').insertBefore("#loginform").show();
+				$('#shibboleth-guest-login').click(function(){
+					var loginform = $('#loginform');
+					var nav = $('#nav');
+					var wrapper = $('#shibboleth-guest-login-wrapper');
+					if(loginform.css('display') == 'block') {
+						loginform.slideUp();
+						nav.hide();
+						wrapper.slideDown();
+					} else {
+						loginform.slideDown();
+						nav.show();
+						wrapper.slideUp();
+						loginform.find('#user_pass').prop('disabled', false);
+					}
+				})
+				if ($('#login_error').length > 0) {
+					$('#loginform').slideDown();
+					$('#nav').show();
+					$('#shibboleth-guest-login-wrapper').slideUp();
+				}
+			});
+		})(jQuery);
+	</script>
+		<meta name='referrer' content='strict-origin-when-cross-origin' />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="icon" href="https://bpb-us-e1.wpmucdn.com/blogs.cornell.edu/dist/f/10678/files/2021/10/square-old-seal-250x250.png" sizes="32x32" />
+<link rel="icon" href="https://bpb-us-e1.wpmucdn.com/blogs.cornell.edu/dist/f/10678/files/2021/10/square-old-seal-250x250.png" sizes="192x192" />
+<link rel="apple-touch-icon" href="https://bpb-us-e1.wpmucdn.com/blogs.cornell.edu/dist/f/10678/files/2021/10/square-old-seal-250x250.png" />
+<meta name="msapplication-TileImage" content="https://bpb-us-e1.wpmucdn.com/blogs.cornell.edu/dist/f/10678/files/2021/10/square-old-seal-480x480.png" />
+	</head>
+	<body class="login no-js login-action-login wp-core-ui  locale-en-us">
+	<script type="text/javascript">
+/* <![CDATA[ */
+document.body.className = document.body.className.replace('no-js','js');
+/* ]]> */
+</script>
+
+				<h1 class="screen-reader-text">Log In</h1>
+			<div id="login">
+		<h1 role="presentation" class="wp-login-logo"><a href="https://blogs.cornell.edu/">Research &amp; Innovation</a></h1>
+	<div id="login-message" class="notice notice-info message"><p><strong>Authorization Required</strong>: This site may only be viewed by administrators.</p></div>
+		<form name="loginform" id="loginform" action="https://blogs.cornell.edu/ovpri/wp-login.php" method="post">
+			<p>
+				<label for="user_login">Username or Email Address</label>
+				<input type="text" name="log" id="user_login" aria-describedby="login-message" class="input" value="" size="20" autocapitalize="off" autocomplete="username" required="required" />
+			</p>
+
+			<div class="user-pass-wrap">
+				<label for="user_pass">Password</label>
+				<div class="wp-pwd">
+					<input type="password" name="pwd" id="user_pass" aria-describedby="login-message" class="input password-input" value="" size="20" autocomplete="current-password" spellcheck="false" required="required" />
+					<button type="button" class="button button-secondary wp-hide-pw hide-if-no-js" data-toggle="0" aria-label="Show password">
+						<span class="dashicons dashicons-visibility" aria-hidden="true"></span>
+					</button>
+				</div>
+			</div>
+						<p class="forgetmenot"><input name="rememberme" type="checkbox" id="rememberme" value="forever"  /> <label for="rememberme">Remember Me</label></p>
+			<p class="submit">
+				<input type="submit" name="wp-submit" id="wp-submit" class="button button-primary button-large" value="Log In" />
+									<input type="hidden" name="redirect_to" value="https://blogs.cornell.edu/ovpri/generative-ai-in-academic-research/" />
+									<input type="hidden" name="testcookie" value="1" />
+			</p>
+		</form>
+
+					<p id="nav">
+				<a class="wp-login-lost-password" href="https://blogs.cornell.edu/ovpri/wp-login.php?action=lostpassword">Lost your password?</a>			</p>
+			<script type="text/javascript">
+/* <![CDATA[ */
+function wp_attempt_focus() {setTimeout( function() {try {d = document.getElementById( "user_login" );d.focus(); d.select();} catch( er ) {}}, 200);}
+wp_attempt_focus();
+if ( typeof wpOnload === 'function' ) { wpOnload() }
+/* ]]> */
+</script>
+		<p id="backtoblog">
+			<a href="https://blogs.cornell.edu/ovpri/">&larr; Go to Research &amp; Innovation</a>		</p>
+			</div>
+				<div class="language-switcher">
+				<form id="language-switcher" method="get">
+
+					<label for="language-switcher-locales">
+						<span class="dashicons dashicons-translation" aria-hidden="true"></span>
+						<span class="screen-reader-text">
+							Language						</span>
+					</label>
+
+					<select name="wp_lang" id="language-switcher-locales"><option value="en_US" lang="en" data-installed="1">English (United States)</option>
+<option value="ar" lang="ar" data-installed="1">العربية</option>
+<option value="ary" lang="ar" data-installed="1">العربية المغربية</option>
+<option value="as" lang="as" data-installed="1">অসমীয়া</option>
+<option value="az" lang="az" data-installed="1">Azərbaycan dili</option>
+<option value="azb" lang="az" data-installed="1">گؤنئی آذربایجان</option>
+<option value="bel" lang="be" data-installed="1">Беларуская мова</option>
+<option value="bg_BG" lang="bg" data-installed="1">Български</option>
+<option value="bn" lang="" data-installed="1">bn</option>
+<option value="bn_BD" lang="bn" data-installed="1">বাংলা</option>
+<option value="bo" lang="bo" data-installed="1">བོད་ཡིག</option>
+<option value="bs_BA" lang="bs" data-installed="1">Bosanski</option>
+<option value="ca" lang="ca" data-installed="1">Català</option>
+<option value="ceb" lang="ceb" data-installed="1">Cebuano</option>
+<option value="ckb" lang="ku" data-installed="1">كوردی‎</option>
+<option value="cs_CZ" lang="cs" data-installed="1">Čeština</option>
+<option value="cy" lang="cy" data-installed="1">Cymraeg</option>
+<option value="da_DK" lang="da" data-installed="1">Dansk</option>
+<option value="de_CH" lang="de" data-installed="1">Deutsch (Schweiz)</option>
+<option value="de_CH_informal" lang="de" data-installed="1">Deutsch (Schweiz, Du)</option>
+<option value="de_DE" lang="de" data-installed="1">Deutsch</option>
+<option value="de_DE_formal" lang="de" data-installed="1">Deutsch (Sie)</option>
+<option value="dzo" lang="dz" data-installed="1">རྫོང་ཁ</option>
+<option value="el" lang="el" data-installed="1">Ελληνικά</option>
+<option value="en_AU" lang="en" data-installed="1">English (Australia)</option>
+<option value="en_CA" lang="en" data-installed="1">English (Canada)</option>
+<option value="en_GB" lang="en" data-installed="1">English (UK)</option>
+<option value="en_NZ" lang="en" data-installed="1">English (New Zealand)</option>
+<option value="en_ZA" lang="en" data-installed="1">English (South Africa)</option>
+<option value="eo" lang="eo" data-installed="1">Esperanto</option>
+<option value="es_AR" lang="es" data-installed="1">Español de Argentina</option>
+<option value="es_CL" lang="es" data-installed="1">Español de Chile</option>
+<option value="es_CO" lang="es" data-installed="1">Español de Colombia</option>
+<option value="es_CR" lang="es" data-installed="1">Español de Costa Rica</option>
+<option value="es_ES" lang="es" data-installed="1">Español</option>
+<option value="es_GT" lang="es" data-installed="1">Español de Guatemala</option>
+<option value="es_MX" lang="es" data-installed="1">Español de México</option>
+<option value="es_PE" lang="es" data-installed="1">Español de Perú</option>
+<option value="es_VE" lang="es" data-installed="1">Español de Venezuela</option>
+<option value="et" lang="et" data-installed="1">Eesti</option>
+<option value="eu" lang="eu" data-installed="1">Euskara</option>
+<option value="fa_IR" lang="fa" data-installed="1">فارسی</option>
+<option value="fi" lang="fi" data-installed="1">Suomi</option>
+<option value="fo" lang="" data-installed="1">fo</option>
+<option value="fr_BE" lang="fr" data-installed="1">Français de Belgique</option>
+<option value="fr_CA" lang="fr" data-installed="1">Français du Canada</option>
+<option value="fr_FR" lang="fr" data-installed="1">Français</option>
+<option value="fur" lang="fur" data-installed="1">Friulian</option>
+<option value="gd" lang="gd" data-installed="1">Gàidhlig</option>
+<option value="gl_ES" lang="gl" data-installed="1">Galego</option>
+<option value="gu" lang="gu" data-installed="1">ગુજરાતી</option>
+<option value="haz" lang="haz" data-installed="1">هزاره گی</option>
+<option value="he_IL" lang="he" data-installed="1">עִבְרִית</option>
+<option value="hi_IN" lang="hi" data-installed="1">हिन्दी</option>
+<option value="hr" lang="hr" data-installed="1">Hrvatski</option>
+<option value="hu_HU" lang="hu" data-installed="1">Magyar</option>
+<option value="hy" lang="hy" data-installed="1">Հայերեն</option>
+<option value="id_ID" lang="id" data-installed="1">Bahasa Indonesia</option>
+<option value="is_IS" lang="is" data-installed="1">Íslenska</option>
+<option value="it_IT" lang="it" data-installed="1">Italiano</option>
+<option value="ja" lang="ja" data-installed="1">日本語</option>
+<option value="jv_ID" lang="jv" data-installed="1">Basa Jawa</option>
+<option value="ka_GE" lang="ka" data-installed="1">ქართული</option>
+<option value="kab" lang="kab" data-installed="1">Taqbaylit</option>
+<option value="kk" lang="kk" data-installed="1">Қазақ тілі</option>
+<option value="km" lang="km" data-installed="1">ភាសាខ្មែរ</option>
+<option value="ko_KR" lang="ko" data-installed="1">한국어</option>
+<option value="lo" lang="lo" data-installed="1">ພາສາລາວ</option>
+<option value="lt_LT" lang="lt" data-installed="1">Lietuvių kalba</option>
+<option value="lv" lang="lv" data-installed="1">Latviešu valoda</option>
+<option value="mk_MK" lang="mk" data-installed="1">Македонски јазик</option>
+<option value="ml_IN" lang="ml" data-installed="1">മലയാളം</option>
+<option value="mn" lang="mn" data-installed="1">Монгол</option>
+<option value="mr" lang="mr" data-installed="1">मराठी</option>
+<option value="ms_MY" lang="ms" data-installed="1">Bahasa Melayu</option>
+<option value="my_MM" lang="my" data-installed="1">ဗမာစာ</option>
+<option value="nb_NO" lang="nb" data-installed="1">Norsk bokmål</option>
+<option value="ne_NP" lang="ne" data-installed="1">नेपाली</option>
+<option value="nl_BE" lang="nl" data-installed="1">Nederlands (België)</option>
+<option value="nl_NL" lang="nl" data-installed="1">Nederlands</option>
+<option value="nl_NL_formal" lang="nl" data-installed="1">Nederlands (Formeel)</option>
+<option value="nn_NO" lang="nn" data-installed="1">Norsk nynorsk</option>
+<option value="oci" lang="oc" data-installed="1">Occitan</option>
+<option value="pa_IN" lang="pa" data-installed="1">ਪੰਜਾਬੀ</option>
+<option value="pl_PL" lang="pl" data-installed="1">Polski</option>
+<option value="ps" lang="ps" data-installed="1">پښتو</option>
+<option value="pt_BR" lang="pt" data-installed="1">Português do Brasil</option>
+<option value="pt_PT" lang="pt" data-installed="1">Português</option>
+<option value="pt_PT_ao90" lang="pt" data-installed="1">Português (AO90)</option>
+<option value="rhg" lang="rhg" data-installed="1">Ruáinga</option>
+<option value="ro_RO-nodia" lang="" data-installed="1">ro_RO-nodia</option>
+<option value="ro_RO" lang="ro" data-installed="1">Română</option>
+<option value="ru_RU" lang="ru" data-installed="1">Русский</option>
+<option value="sah" lang="sah" data-installed="1">Сахалыы</option>
+<option value="si_LK" lang="si" data-installed="1">සිංහල</option>
+<option value="sk_SK" lang="sk" data-installed="1">Slovenčina</option>
+<option value="sl_SI" lang="sl" data-installed="1">Slovenščina</option>
+<option value="sq" lang="sq" data-installed="1">Shqip</option>
+<option value="sr_CS" lang="" data-installed="1">sr_CS</option>
+<option value="sr_RS" lang="sr" data-installed="1">Српски језик</option>
+<option value="su_ID" lang="" data-installed="1">su_ID</option>
+<option value="sv_SE" lang="sv" data-installed="1">Svenska</option>
+<option value="sw" lang="sw" data-installed="1">Kiswahili</option>
+<option value="szl" lang="szl" data-installed="1">Ślōnskŏ gŏdka</option>
+<option value="ta_IN" lang="ta" data-installed="1">தமிழ்</option>
+<option value="tah" lang="ty" data-installed="1">Reo Tahiti</option>
+<option value="te" lang="te" data-installed="1">తెలుగు</option>
+<option value="th-continents-cities" lang="" data-installed="1">th-continents-cities</option>
+<option value="th-ms" lang="" data-installed="1">th-ms</option>
+<option value="th" lang="th" data-installed="1">ไทย</option>
+<option value="tl" lang="tl" data-installed="1">Tagalog</option>
+<option value="tr_TR" lang="tr" data-installed="1">Türkçe</option>
+<option value="tt_RU" lang="tt" data-installed="1">Татар теле</option>
+<option value="ug_CN" lang="ug" data-installed="1">ئۇيغۇرچە</option>
+<option value="uk" lang="uk" data-installed="1">Українська</option>
+<option value="ur" lang="ur" data-installed="1">اردو</option>
+<option value="uz_UZ" lang="uz" data-installed="1">O‘zbekcha</option>
+<option value="vi" lang="vi" data-installed="1">Tiếng Việt</option>
+<option value="vi_VN" lang="" data-installed="1">vi_VN</option>
+<option value="wordpress-continents-cities-sq" lang="" data-installed="1">wordpress-continents-cities-sq</option>
+<option value="zh_CN" lang="zh" data-installed="1">简体中文</option>
+<option value="zh_HK" lang="zh" data-installed="1">香港中文</option>
+<option value="zh_TW" lang="zh" data-installed="1">繁體中文</option></select>
+					
+											<input type="hidden" name="redirect_to" value="https://blogs.cornell.edu/ovpri/generative-ai-in-academic-research/" />
+					
+					
+						<input type="submit" class="button" value="Change">
+
+					</form>
+				</div>
+			
+		<form id="loginform-shibboleth" >
+		<div class="newsociallogins">
+			<p style="font-size: 1.4em;"><b>Sign in to your site:</b></p><br/>
+			<p>
+			<a href="https://blogs.cornell.edu/Shibboleth.sso/Login?target=https%3A%2F%2Fblogs.cornell.edu%2Fwp-login.php%3Faction%3Dshibboleth%26redirect_to%3Dhttps%253A%252F%252Fblogs.cornell.edu%252Fovpri%252Fgenerative-ai-in-academic-research%252F" style="float: none;margin-bottom: 20px;min-width: 80%;" class="button-primary">
+				Use my Cornell NetID			</a><br/>
+		</p>
+			</div>
+		<p id="shibboleth-guest-login-wrapper">(<a href="#" id="shibboleth-guest-login">Guest login here</a>)</p>
+	</form>
+	<script type="text/javascript" src="https://blogs.cornell.edu/ovpri/wp-includes/js/clipboard.min.js?ver=1088900104" id="clipboard-js"></script>
+<script type="text/javascript" id="zxcvbn-async-js-extra">
+/* <![CDATA[ */
+var _zxcvbnSettings = {"src":"https://blogs.cornell.edu/ovpri/wp-includes/js/zxcvbn.min.js"};
+//# sourceURL=zxcvbn-async-js-extra
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://blogs.cornell.edu/ovpri/wp-includes/js/zxcvbn-async.min.js?ver=755021578" id="zxcvbn-async-js"></script>
+<script type="text/javascript" src="https://blogs.cornell.edu/ovpri/wp-includes/js/dist/hooks.min.js?ver=617358892" id="wp-hooks-js"></script>
+<script type="text/javascript" src="https://blogs.cornell.edu/ovpri/wp-includes/js/dist/i18n.min.js?ver=866855395" id="wp-i18n-js"></script>
+<script type="text/javascript" id="wp-i18n-js-after">
+/* <![CDATA[ */
+wp.i18n.setLocaleData( { 'text direction\u0004ltr': [ 'ltr' ] } );
+//# sourceURL=wp-i18n-js-after
+/* ]]> */
+</script>
+<script type="text/javascript" id="password-strength-meter-js-extra">
+/* <![CDATA[ */
+var pwsL10n = {"unknown":"Password strength unknown","short":"Very weak","bad":"Weak","good":"Medium","strong":"Strong","mismatch":"Mismatch"};
+//# sourceURL=password-strength-meter-js-extra
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://blogs.cornell.edu/ovpri/wp-admin/js/password-strength-meter.min.js?ver=944600732" id="password-strength-meter-js"></script>
+<script type="text/javascript" src="https://blogs.cornell.edu/ovpri/wp-includes/js/underscore.min.js?ver=898058815" id="underscore-js"></script>
+<script type="text/javascript" id="wp-util-js-extra">
+/* <![CDATA[ */
+var _wpUtilSettings = {"ajax":{"url":"/ovpri/wp-admin/admin-ajax.php"}};
+//# sourceURL=wp-util-js-extra
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://blogs.cornell.edu/ovpri/wp-includes/js/wp-util.min.js?ver=308058978" id="wp-util-js"></script>
+<script type="text/javascript" src="https://blogs.cornell.edu/ovpri/wp-includes/js/dist/dom-ready.min.js?ver=999460937" id="wp-dom-ready-js"></script>
+<script type="text/javascript" src="https://blogs.cornell.edu/ovpri/wp-includes/js/dist/a11y.min.js?ver=1222548941" id="wp-a11y-js"></script>
+<script type="text/javascript" id="user-profile-js-extra">
+/* <![CDATA[ */
+var userProfileL10n = {"user_id":"0","nonce":"d1fe48a4b2"};
+//# sourceURL=user-profile-js-extra
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://blogs.cornell.edu/ovpri/wp-admin/js/user-profile.min.js?ver=1823649802" id="user-profile-js"></script>
+	</body>
+	</html>

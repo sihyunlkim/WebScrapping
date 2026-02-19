@@ -1,0 +1,321 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>Page Not Found</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="x-ua-compatible" content="IE=edge" />
+    <style>
+        :root {
+            --ink: #111827;
+            --ink-dim: #6b7280;
+            --bg: #f8fafc;
+            --panel: #ffffff;
+            --border: #e5e7eb;
+            --brand: #6d28d9;
+            --brand-ink: #ffffff;
+            --link: #6d28d9;
+            --link-ink: #ffffff;
+            --shadow: 0 10px 25px rgba(0,0,0,.08);
+            --radius: 14px;
+        }
+
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --ink: #e5e7eb;
+                --ink-dim: #9ca3af;
+                --bg: #0b1020;
+                --panel: #0f172a;
+                --border: #1f2a44;
+                --link: #93c5fd;
+                --link-ink: #0b1020;
+                --shadow: 0 10px 25px rgba(0,0,0,.35);
+            }
+        }
+
+        html, body {
+            height: 100%;
+        }
+
+        body {
+            margin: 0;
+            font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+            color: var(--ink);
+            background: radial-gradient(1200px 700px at 20% -10%, rgba(109,40,217,.08), transparent 60%), radial-gradient(900px 600px at 120% 30%, rgba(109,40,217,.08), transparent 60%), var(--bg);
+        }
+
+        .wrap {
+            max-width: 720px;
+            margin: 10vh auto 0;
+            padding: 0 20px 8vh;
+            line-height: 1.6;
+        }
+
+        .panel {
+            background: var(--panel);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            padding: 22px;
+        }
+
+        .head {
+            display: flex;
+            align-items: center;
+            gap: .75rem;
+            margin-bottom: .35rem;
+        }
+
+        .badge {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 34px;
+            height: 34px;
+            border-radius: 10px;
+            background: var(--brand);
+            color: var(--brand-ink);
+            font-weight: 700;
+            font-size: .95rem;
+            letter-spacing: .5px;
+        }
+
+        h1 {
+            font-size: clamp(1.35rem, 2.6vw, 1.9rem);
+            margin: 0;
+        }
+
+        .muted {
+            color: var(--ink-dim);
+        }
+
+        .status {
+            display: flex;
+            align-items: center;
+            gap: .6rem;
+            margin-top: 1rem;
+            padding: .9rem 1rem;
+            border: 1px dashed var(--border);
+            border-radius: 10px;
+            background: color-mix(in oklab, var(--panel), transparent 85%);
+        }
+
+        .spinner {
+            width: 1rem;
+            height: 1rem;
+            flex: 0 0 auto;
+            border-radius: 50%;
+            border: 2px solid var(--border);
+            border-top-color: var(--brand);
+            animation: spin 900ms linear infinite;
+        }
+
+        @keyframes spin {
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            .spinner {
+                animation: none;
+                border-top-color: var(--border);
+            }
+        }
+
+        .actions {
+            display: flex;
+            gap: .6rem;
+            flex-wrap: wrap;
+            margin-top: .75rem;
+        }
+
+        .btn, .link {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: .5rem;
+            padding: .6rem .9rem;
+            border-radius: 10px;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .btn {
+            background: var(--link);
+            color: var(--link-ink);
+            border: 1px solid transparent;
+        }
+
+        .link {
+            background: transparent;
+            color: var(--link);
+            border: 1px solid var(--border);
+        }
+
+        code {
+            background: color-mix(in oklab, var(--panel), #000 8%);
+            padding: .12rem .35rem;
+            border-radius: 6px;
+            border: 1px solid var(--border);
+            color: #333;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        .reveal {
+            opacity: 0;
+            transform: translateY(4px);
+        }
+
+            .reveal.show {
+                opacity: 1;
+                transform: none;
+                transition: opacity .25s ease, transform .25s ease;
+            }
+    </style>
+</head>
+<body>
+    <main class="wrap" aria-labelledby="nf-title">
+        <section class="panel" aria-live="polite">
+
+            <div id="nf-title" class="head hidden">
+                <span class="badge" aria-hidden="true">404</span>
+                <!-- Title is hidden until we confirm missing -->
+                <h1>We can’t find that page.</h1>
+            </div>
+            <!-- Initial state -->
+            <p id="status" class="status" role="status">
+                <span class="spinner" aria-hidden="true"></span>
+                <span>Checking for redirect…</span>
+            </p>
+
+            <!-- Fallback, revealed only after lookup fails -->
+            <div id="fallback" class="hidden reveal" aria-live="polite">
+                <p class="muted mt-2">Page not found for <code id="req-url"></code>. You can:</p>
+                <div class="actions">
+                    <a id="home-link" href="/" class="btn">Go to the homepage</a>
+                    <a href="javascript:history.back()" class="link">Go back</a>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script>
+        (function () {
+            // CONFIG: if your redirects live elsewhere, change this path
+            const REDIRECTS_JSON_PATH = "/redirects.json";
+
+            const titleEl = document.getElementById("nf-title");
+            const reqEl = document.getElementById("req-url");
+            const statusEl = document.getElementById("status");
+            const fallbackEl = document.getElementById("fallback");
+            const homeLink = document.getElementById("home-link");
+
+            const originalHref = window.location.href;
+            const origin = window.location.origin;
+
+            // Initial UI state — show only status; hide any "can't find" wording
+            if (titleEl) titleEl.classList.add("hidden");
+            if (fallbackEl) fallbackEl.classList.add("hidden");
+            if (statusEl) statusEl.textContent = "Checking for redirect…";
+
+            function normalizePath(p) {
+                try {
+                    const url = new URL(p, origin);
+                    let path = url.pathname;
+                    if (path.length > 1 && path.endsWith("/")) path = path.slice(0, -1);
+                    return path.toLowerCase();
+                } catch {
+                    let path = (p || "/");
+                    if (path.length > 1 && path.endsWith("/")) path = path.slice(0, -1);
+                    return path.toLowerCase();
+                }
+            }
+
+            const current = new URL(originalHref);
+            const pathOnly = normalizePath(current.pathname);
+            const pathPlusQuery = (current.search ? pathOnly + current.search : pathOnly);
+            if (reqEl) reqEl.textContent = current.pathname + current.search;
+
+            // Try to match rules:
+            // - Exact path
+            // - Exact path + query
+            // - Prefix wildcard (from ends with /*) with remainder appended to "to" and preserves ?query#hash
+            function tryMatch(rules) {
+                const map = Object.create(null);
+
+                for (const r of rules) {
+                    if (!r || !r.from || !r.to) continue;
+                    let key = r.from.trim();
+                    if (!key.endsWith("/*")) {
+                        key = normalizePath(key);
+                        map[key] = r.to;
+                    }
+                }
+
+                if (map[pathOnly]) return map[pathOnly];
+                if (map[pathPlusQuery]) return map[pathPlusQuery];
+
+                for (const r of rules) {
+                    const from = (r.from || "").trim().toLowerCase();
+                    if (from.endsWith("/*")) {
+                        const base = from.slice(0, -2); // remove "/*"
+                        const candidate = pathOnly;
+                        if (candidate === base || candidate.startsWith(base + "/")) {
+                            const remainder = candidate.length > base.length
+                                ? candidate.slice(base.length + 1)
+                                : "";
+                            const to = r.to.endsWith("/") ? r.to : (r.to + "/");
+                            return to + remainder + current.search + current.hash;
+                        }
+                    }
+                }
+                return null;
+            }
+
+            function safeRedirect(target) {
+                try {
+                    const resolved = new URL(target, origin).href;
+                    if (statusEl) statusEl.textContent = "Redirect found. Taking you there…";
+                    // replace() so the broken URL isn’t kept in history
+                    window.location.replace(resolved);
+                } catch {
+                    showFallback();
+                }
+            }
+
+            function showFallback() {
+                if (statusEl) statusEl.classList.add("hidden");
+                if (titleEl) titleEl.classList.remove("hidden");
+                if (fallbackEl) {
+                    fallbackEl.classList.remove("hidden");
+                    fallbackEl.classList.add("show");
+                }
+                if (homeLink) homeLink.href = "/";
+            }
+
+            // Fetch the redirects JSON (no-store so updates apply immediately)
+            fetch(REDIRECTS_JSON_PATH, { cache: "no-store" })
+                .then(resp => {
+                    if (!resp.ok) throw new Error("redirects.json not found");
+                    return resp.json();
+                })
+                .then(rules => {
+                    if (!Array.isArray(rules)) throw new Error("redirects.json must be an array");
+                    const match = tryMatch(rules);
+                    if (match) {
+                        safeRedirect(match);
+                    } else {
+                        showFallback();
+                    }
+                })
+                .catch(() => {
+                    showFallback();
+                });
+        })();
+    </script>
+
+</body>
+</html>

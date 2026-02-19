@@ -1,0 +1,2698 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Highlights - Learning Commons at Delaware County Community College</title>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+            <link rel="shortcut icon" type="image/jpg" href="https://d2jv02qf7xgjwx.cloudfront.net/customers/548/images/Favicon1.png"/>
+
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"/>
+
+    
+    <link rel="stylesheet" href="https://static-assets-us.libguides.com/web/css3.23.5/lg-public-bs5.min.css"/>
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap"/>
+
+            <script>setTimeout(function() { 
+
+//Toggle mobile menu
+const toggle = document.querySelector(".toggle");
+const menu = document.querySelector(".navmenu");
+ 
+/* Toggle mobile menu */
+function toggleMenu() {
+    if (menu.classList.contains("active")) {
+        menu.classList.remove("active");
+         
+         // adds the menu (hamburger) icon
+        toggle.querySelector("a").innerHTML = "<span class='fa fa-bars'></span>";
+    } else {
+        menu.classList.add("active");
+         
+        // adds the close (x) icon
+        toggle.querySelector("a").innerHTML = "<span class='fa fa-times'></span>";
+    }
+}
+ 
+/* Event Listener- when the user clicks, it will run the above function*/
+toggle.addEventListener("click", toggleMenu, false);
+toggle.addEventListener("keypress", toggleMenu, false);
+
+//Submenu dropdown
+const items = document.querySelectorAll(".nav-item");
+ 
+/* Activate Submenu */
+function toggleItem() {
+  if (this.classList.contains("submenu-active")) {
+    this.classList.remove("submenu-active");
+  } else if (menu.querySelector(".submenu-active")) {
+    menu.querySelector(".submenu-active").classList.remove("submenu-active");
+    this.classList.add("submenu-active");
+  } else {
+    this.classList.add("submenu-active");
+  }
+}
+ 
+/* Event Listeners */
+for (let item of items) {
+    if (item.querySelector(".submenu")) {
+      item.addEventListener("click", toggleItem, false);
+      item.addEventListener("keypress", toggleItem, false);
+    }   
+}
+
+//Close submenu from anywhere on page
+function closeSubmenu(e) {
+  let isClickInside = menu.contains(e.target);
+ 
+  if (!isClickInside && menu.querySelector(".submenu-active")) {
+    menu.querySelector(".submenu-active").classList.remove("submenu-active");
+  }
+}
+ 
+/* Event listener */
+document.addEventListener("click", closeSubmenu, false);
+
+}, 500);
+
+/* Contact Us telephone tooltip */
+$(function () {
+  $('[data-toggle="tooltip"]').tooltip()
+})
+</script><!-- BEGIN: Analytics code --><!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-2CCKJQ1N8B"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-2CCKJQ1N8B');
+</script><!-- END: Analytics code -->
+    
+    <script src="https://static-assets-us.libguides.com/web/jquery/js/jquery-3.7.0.min.js"></script>
+    <script src="https://static-assets-us.libguides.com/web/js3.23.5/lg-public-bs5.min.js"></script>
+    <script>var springSpace = springSpace || {}</script>
+
+    
+    <link rel="stylesheet" href="/lookfeel.css">
+
+            <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300&display=swap" rel="stylesheet"> 
+
+<link rel="stylesheet" type="text/css" href="https://d2jv02qf7xgjwx.cloudfront.net/sites/559/include/Bootstrap_5_Header-Footer-1.css">
+<link rel="stylesheet" type="text/css" href="https://d2jv02qf7xgjwx.cloudfront.net/sites/559/include/Bootstrap_5_AZ_Lists.css">
+<link rel="stylesheet" type="text/css" href="https://d2jv02qf7xgjwx.cloudfront.net/sites/559/include/Bootstrap_5_Redesign_Homepage_Body.css">
+
+<style>
+#s-ui-cc-msg a{ /*Link in privacy alert*/
+color: #BAD3E9;
+text-decoration: underline dotted;
+  text-decoration-color: currentColor; /* ensures it matches the text color */
+  text-underline-offset: 2px; /* improves readability */
+}
+
+/*-----Breadcrumb customization----*/
+li#s-lib-bc-group {
+	display: none;
+}
+#s-lib-bc .breadcrumb{
+	text-transform: uppercase;
+	background-color: transparent;
+	margin-bottom: .7rem;
+}
+
+#s-lib-bc .breadcrumb a{
+	color: #104E8B;
+	font-family: 'Merriweather', serif;
+	text-decoration: underline dotted #104E8B;
+}
+
+#s-lib-bc .breadcrumb > .active {
+	color: #333;
+	font-family: 'Merriweather', serif;
+	font-weight: bold;
+}
+/*-----Page Title----*/
+#s-lib-public-header{
+	padding-left: 5%;
+}
+
+#s-lib-public-header-desc{ /*-----inline style is overriding this----*/
+	white-space: normal;
+}
+
+#s-lib-public-header-title h1 {
+	font-size: 2em;
+	text-align: left;
+	padding-top: 5px;
+	color: #104E8B;
+}	
+
+
+
+/*-----Main Body----*/
+#s-lib-public-main{
+	padding-left:5%;
+}
+
+/*-----Dropdown Section----*/
+.navbar {
+    box-shadow: -2px 5px 7px -3px rgba(78, 67, 60, 0.3);
+}
+#az-search-col-1>nav{
+	background-color: #f8f8f8;
+	border-color: #e7e7e7;
+	margin-bottom: 1rem;
+}
+#s-lg-az-filters {
+padding-top: 1rem;
+padding-bottom: 1rem;
+}
+
+#s-lg-az-filter-cols div.row{
+	padding-top: 0px;
+	padding-bottom: 0px;
+}
+
+#s-lg-az-filter-cols div.row>div {
+    border: 2px solid #e5eaee;
+}
+
+/*-----AZ Resource Lists-----*/
+#s-lg-az-result-count {
+display: none;
+}
+
+/*-----AZ Index----*/
+.s-lib-az-main {
+	padding-left: 5%;
+	padding-right: 5%; 
+}
+
+#s-lg-az-cols {
+	padding-top: 20px;
+}
+
+#s-lg-az-index button{
+	font-size: 1.5rem;
+	font-family: 'Open Sans';
+	padding: 0 10px;
+}
+#s-lg-az-results .s-lg-az-result-title {
+	font-size: 1.2em;
+}
+
+.az-item {
+font-family: 'Open Sans', sans-serif;
+font-size: 1.2em;
+}
+
+.mt-3 {
+font-family: 'Arial', sans serif;
+}
+.az-item h4{
+font-family: 'Merriweather', Georgia, serif;
+}
+
+.az-item a:hover{
+ text-decoration: underline dotted #104E8B;
+}
+
+.az-description-short, .az-description {
+font-family: 'Roboto', Arial, sans-serif;
+}
+
+/*-----Database Entries----*/
+.s-lg-db-panel-title {
+	font-size: 1.5rem;
+}
+
+/*------Side Panels--------*/
+#s-lg-az-popular h5, #s-lg-az-trials h5 {
+	font-family: 'Merriweather', Georgia, serif;
+	font-size: 1rem;
+}
+
+#s-lg-az-popular, #s-lg-az-trials, .accordion-item {
+	background-color: #FFF;
+}
+
+.me-2 a:hover{
+ text-decoration: underline dotted #104E8B;
+}
+
+ #s-lg-az-trials .az-description {
+	 color: #000;
+ }
+ 
+#s-lg-az-trials h4,  .accordion-header {
+	 	font-family: 'Merriweather', Georgia, serif;
+	font-size: 1.2rem;
+ }
+ 
+ .az-public-collapsible-box .accordion-item {
+	 border: none;
+ }
+
+.az-public-collapsible-box h4.accordion-header>button{
+	background-color: #FFF;
+	font-weight: normal;
+	font-size: 1.25rem;
+}	
+
+/*------------Contact Box---------------*/
+.accordion-header {
+	border-bottom: 1px solid #F7CF2D;
+
+}
+.accordion-body .fa{
+	color: #005392;
+}
+
+.accordion-body a{
+	color: #005392;
+	font-family: 'Open Sans', sans-serif;
+	font-size: 1.16em;
+	font-weight: bold;
+}
+
+#contact-panel > .fa{
+	padding-right: 30px;
+}
+
+.contactlib{
+display: grid;
+grid-template-columns: 1fr 3fr;
+}
+
+.link-column a{
+align-self: center;
+}
+
+.link-column{
+padding-bottom: 40px;
+padding-top: 10px;
+}
+
+.phonetip + .tooltip > .tooltip-inner {
+background-color: #104E8B;
+  color: #fff;
+    font-family: Arial,Helvetica,Verdana;
+text-align: center;
+font-size: 1.4em;
+}
+
+.phonetip + .tooltip.right > .tooltip-arrow {
+    border-right: 5px solid #104E8B;
+  }
+
+/*-----Chat Buttons------*/
+
+#libchat_956c8e3160e47c2d3b8047438041c29f button, #libchat_08475a9866af363caaacf7a6b3f2a9a3 button {
+color: #005392;
+	font-family: 'Open Sans', sans-serif;
+	font-size: 1.16em;
+	font-weight: bold;
+}
+
+#libchat_08475a9866af363caaacf7a6b3f2a9a3 button, #libchat_956c8e3160e47c2d3b8047438041c29f button {
+	padding: 16px 0px;
+}
+
+.s-la-widget .btn-fullWidth{
+width: 100%;
+padding: 20px;
+font-family: 'Open Sans', sans-serif;
+font-size: 1.16em;
+}
+
+.s-la-widget label{
+    font-size: 1.2em;
+}
+
+/*-------Additional Field Labels------*/
+.az-configured-fields-label {
+    color: #000;
+    font-family: 'Merriweather', Georgia, serif;
+    font-size: 1.1rem;
+}
+
+.az-item button.az-toggle {
+	color: #000;
+	font-family: 'Open Sans', Arial, sans-serif;
+	font-size: 1rem;
+}
+	
+</style>
+
+
+
+    
+    <script src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.6/moment.min.js"></script><script>
+                getQueryStringValue = function(qs, key) {
+                    if (typeof qs !== "string" || qs === "" || typeof key !== "string" || key === "") { 
+                        return null; 
+                    }
+                    
+                    var trimmedQs = qs.replace(/^\?/i, "");
+                    var arr = trimmedQs.split("&");
+                    for (var i = 0; i < arr.length; i++) {
+                        var pair = arr[i].split("=");
+                        if (pair[0] === key) {
+                            return (typeof pair[1] === "undefined") ? "" : decodeURIComponent(pair[1]);
+                        }
+                    }
+                    
+                    return "";
+                }
+            
+                receiveImageManagerMessage = function (e) {
+                    if (typeof e.data == "string") {
+                        var data = JSON.parse(e.data);
+            
+                        if (window.CKEDITOR && data.source == "image_manager_popup.php") {
+                            var func = getQueryStringValue(data.qs, "CKEditorFuncNum");
+                            if (func == null) { func = 0; }
+                            if (data.url.indexOf("//") === 0) {
+                                data.url = "https:"+data.url;
+                            }
+                            CKEDITOR.tools.callFunction(func, data.url);
+                        }
+                    }
+                }
+            </script><script>
+                        jQuery(function() {
+                            window.addEventListener(
+                                "message",
+                                function(e){
+                                    if (e.data == "refresh"){
+                                        location.reload();
+                                    }
+                                    else {
+                                        receiveImageManagerMessage(e);    
+                                    }
+                                }
+                            );
+                            
+                            // For AZ sharing.
+                            springSpace.publicObj = new springSpace.public.Public({
+                                constant: {
+                                    PROCESSING: {
+
+                                    },
+                                    CONTENT: {
+                                    }
+                                }
+                            });
+                        });
+                            //  Add discussion board methods and properties to springSpace.
+                            springSpace.blogs = {
+                                guide_id: 0,
+                                page_id: 0,
+                                view_mode: 2,
+                                account_id: 0,
+                                thread: {
+                                    id: 0,
+                                    locked: 0
+                                },
+                                main: {
+                                    // Elt id of container element for main discussion listing.
+                                    container_id: "s-lg-blog-content",
+                                    // Id of tag for list filtering.
+                                    tag_id: 0
+                                },
+                                form: {
+                                    init: false,        // Initialized
+                                    open: false        // Displayed
+                                },
+                                
+                                cancelPost: function(type) {
+                                    jQuery("#s-lg-discform").slideUp(200, function() {
+                                        if (type == 1) {
+                                            jQuery("#s-lg-discform").remove();
+                                        }
+                                    });
+
+                                    if (jQuery("#s-lg-disc-add-button").length) {
+                                        jQuery("#s-lg-disc-add-button").html("<i class=\"fa fa-caret-right spin-left\"></i>&nbsp;&nbsp;Add New Post");
+                                    }
+
+                                    // Reset the form open flag.
+                                    springSpace.blogs.form.open = false;
+                                },
+                                
+                                newPost: function() {
+                                    if ( springSpace.blogs.form.init == false) {
+                                        jQuery("#s-lg-disc-add-button").html("<i class=\"fa fa-caret-right spin-right\"></i>&nbsp;&nbsp;Add New Post");
+                                        if (CKEDITOR.instances.editor_content) {
+                                            CKEDITOR.instances.editor_content.removeAllListeners();
+                                            CKEDITOR.instances.editor_content.destroy();
+                                        }
+                                        if (!CKEDITOR.instances.editor_content) {
+                                            CKEDITOR.replace( "editor_content", {
+                                                customConfig: "../js3.23.5/ckeditor-latest/config.js",
+                                                height: "285px",
+                                                allowedContent: true,
+                                                image_previewText: " ",
+                                                filebrowserBrowseUrl: "/0",
+                                                filebrowserWindowWidth: 845,
+                                                filebrowserWindowHeight: 700,
+                                                format_tags: "p;h3;h4;h5;h6;pre",
+                                                on: {
+                                                    blur: function( evt ) {
+                                                        // IE hack for form buttons being unclickable after editor reload.
+                                                        // Resizing seems to undo some z-index or overlay issues.
+                                                        if (CKEDITOR.env.ie) {
+                                                          CKEDITOR.instances.editor_content.resize( "100%", "284", true);
+                                                          CKEDITOR.instances.editor_content.resize( "100%", "285", true);
+                                                        }
+                                                    },
+                                                    focus: function( evt ) {
+                                                        // IE hack for form buttons being unclickable after editor reload.
+                                                        // Resizing seems to undo some z-index or overlay issues.
+                                                        if (CKEDITOR.env.ie) {
+                                                            CKEDITOR.instances.editor_content.resize( "100%", "284", true);
+                                                            CKEDITOR.instances.editor_content.resize( "100%", "285", true);
+                                                        }
+                                                    },
+                                                    instanceReady: function (ev) {
+                                                        ev.editor.dataProcessor.htmlFilter.addRules({
+                                                            elements: {
+                                                                img: function (element) {
+                                                                    element.attributes.loading = "lazy";
+                                                                }
+                                                            }
+                                                        });
+                                                        if (ev.editor.contextMenu) {
+                                                            ev.editor.removeMenuItem("paste");
+                                                        }
+                                                    }
+                                                }
+                                            });
+                                        }
+
+                                        jQuery("#s-lg-discform").slideDown(350);
+                                        
+                                        springSpace.adminObj.initSubjectMulitselect("#tags");
+                                        
+                                        springSpace.blogs.form.init = true;
+                                        // Re-init popovers
+                                        if ( springSpace.UI.initHelpPopOvers ) {
+                                            springSpace.UI.initHelpPopOvers();
+                                        }
+                                    } else {
+                                        // Turn the caret down and show the content.
+                                        jQuery("#s-lg-disc-add-button").html("<i class=\"fa fa-caret-right spin-right\"></i>&nbsp;&nbsp;Add New Post");
+                                        jQuery("#s-lg-discform").slideDown(350);
+                                        if (CKEDITOR.env.ie) {
+                                            CKEDITOR.instances.editor_content.resize( "100%", "284", true);
+                                            CKEDITOR.instances.editor_content.resize( "100%", "285", true);
+                                        }
+                                    }
+
+                                    // Set form open flag.
+                                    springSpace.blogs.form.open = true;
+
+                                    // Focus title field.
+                                    jQuery("#title").focus();
+                                },
+                                
+                                saveNewPost: function(config) {
+                                    springSpace.Util.setObjProp("draft", false, config);
+
+                                    if (!springSpace.blogs.validateForm()) {
+                                        return false;
+                                    } 
+                                
+                                    springSpace.UI.changeButtonStatus({
+                                        clicked_text: "Create New Post...",
+                                        status: "clicked",
+                                        button: jQuery("#s-lg-btn-edit-post")
+                                    });
+
+                                    CKEDITOR.instances.editor_content.updateElement();
+
+                                    jQuery("#created").val(moment(jQuery("#created").data("DateTimePicker").viewDate().valueOf()).utc().format("YYYY-MM-DD HH:mm:ss"));
+
+                                    if (config.draft) {
+                                        jQuery("#published").val(0);
+                                    } else {
+                                        jQuery("#published").val(1);
+                                    }
+
+                                    // get the text from the RTE or HTML editor and validate it.
+                                    var meta_content = ( CKEDITOR.instances["editor_content"].getData() || jQuery("#editor_content").val() );
+
+                                    springSpace.htmlParser = new springSpace.tagParser.SpringshareTagParser({
+                                        data: meta_content
+                                    });
+
+                                    if (!springSpace.htmlParser.parse()) {
+                                        springSpace.UI.changeButtonStatus({button: jQuery("#s-lg-btn-edit-post"), status: "active"});
+                                        return false;
+                                    }
+
+                                    jQuery("#s-lg-discform").ajaxForm({
+                                        dataType:  "json",
+                                        complete: function(xhr) {
+                                            var data = jQuery.parseJSON(xhr.responseText);
+
+                                            if ( data.errCode == 200 ) {
+                                                springSpace.UI.notify({msg: "Success!", duration: 4000});
+
+                                                window.location.href = "";
+
+                                                // Reset form init flag.
+                                                springSpace.blogs.form.init = false;
+                                                CKEDITOR.instances.editor_content.removeAllListeners();
+                                                CKEDITOR.instances.editor_content.destroy();
+                                            } else {
+                                                springSpace.UI.notify({msg: "No success! Err: " + data.errText + " (" + data.errCode + ")", duration: 4000});
+                                                springSpace.UI.changeButtonStatus({button: jQuery("#s-lg-btn-edit-post"), status: "active"});
+                                            }
+                                        },
+                                        error: function() {
+                                            springSpace.UI.notify({msg: "No success!", duration: 4000});
+                                        }
+                                    });
+                                    
+                                    jQuery("#s-lg-discform").submit();
+                                },
+                                
+                                savePost: function(config) {
+                                    springSpace.Util.setObjProp("type", "", config);
+                                    springSpace.Util.setObjProp("callback", function(){}, config);
+                                    springSpace.Util.setObjProp("draft", false, config);
+
+                                    if ( !springSpace.blogs.validateForm(config.type) ) {
+                                        return false;
+                                    } else {
+                                        springSpace.UI.changeButtonStatus({
+                                            clicked_text: "Saving...",
+                                            status: "clicked",
+                                            button: jQuery("#s-lg-btn-edit-post, #s-lib-alert-btn-first")
+                                        });
+
+                                        CKEDITOR.instances.editor_content.updateElement();
+
+                                        if (springSpace.blogs.view_mode == 2) {
+                                            url = "/blogs_process.php";
+                                        } else {
+                                            url = "https://dccc.libapps.com/libguides/blogs_process.php";
+                                        }
+
+                                        if (jQuery("#created").length) {
+                                            jQuery("#created").val(moment(jQuery("#created").data("DateTimePicker").viewDate().valueOf()).utc().format("YYYY-MM-DD HH:mm:ss"));
+                                        }
+
+
+                                        if (jQuery("#published").length) {
+                                            if (config.draft) {
+                                                jQuery("#published").val(0);
+                                            } else {
+                                                jQuery("#published").val(1);
+                                            }
+                                        }
+
+                                        xhr = jQuery.ajax({
+                                            url: url,
+                                            type: "POST",
+                                            cache: false,
+                                            dataType: "json",
+                                            data: jQuery("#s-lg-discform").serialize(),
+                                            success: function(response, textStatus, jqXHR) {
+                                                if ( response.errCode == 200 ) {
+                                                    config.callback();
+                                                    springSpace.UI.notify({msg: "Success!", duration: 4000});
+                                                } else {
+                                                    springSpace.UI.notify({msg: "No success!", duration: 4000});
+                                                }
+                                                springSpace.UI.changeButtonStatus({
+                                                    conf_text: "Done",
+                                                    status: "conf",
+                                                    button: jQuery("#s-lg-btn-edit-post")
+                                                });
+                                            },
+                                            error: function (jqXHR, textStatus, errorThrown) {
+                                            }
+                                        });
+                                    }
+                                },
+                                
+                                publishNow: function(post_id) {
+                                    if (springSpace.blogs.view_mode == 2) {
+                                        url = "/blogs_process.php";
+                                    } else {
+                                        url = "https://dccc.libapps.com/libguides/blogs_process.php";
+                                    }
+
+                                    xhr = jQuery.ajax({
+                                        url: url,
+                                        type: "POST",
+                                        cache: false,
+                                        dataType: "json",
+                                        data: {
+                                            post_id: post_id,
+                                            action: 827
+                                        },
+                                        success: function(response, textStatus, jqXHR) {
+                                                if ( response.errCode == 200 ) {
+                                                    springSpace.UI.notify({msg: "Published!", duration: 4000});
+                                                    springSpace.blogs.loadMain({});
+                                                } else {
+                                                    springSpace.UI.notify({msg: "Error: Not published", duration: 4000});
+                                                }
+                                        },
+                                        error: function (jqXHR, textStatus, errorThrown) {
+
+                                        }
+                                    });
+                                },
+                                
+                                validateForm: function(type) {
+                                    valid = true;
+
+                                    if (type != "reply") {
+                                        if (jQuery("#title").val().length == 0) {
+                                            springSpace.UI.alert({
+                                                height: 200,
+                                                width: 300,
+                                                title: "Title Required",
+                                                content: "The discussion must have a title.",
+                                                buttons: {
+                                                    Okay: function() {
+                                                        springSpace.UI.closeAlert();
+                                                    }
+                                                }
+                                            });
+                                            valid = false;
+                                        } else {
+                                            valid = true;
+                                        }
+                                    }
+
+                                    if (CKEDITOR.instances.editor_content.getData().length == 0) {
+                                        springSpace.UI.alert({
+                                            height: 200,
+                                            width: 300,
+                                            title: "Content Required",
+                                            content: "The post must have content.",
+                                            buttons: {
+                                                Okay: function() {
+                                                    springSpace.UI.closeAlert();
+                                                }
+                                            }
+                                        });
+                                        valid = false;
+                                    }
+                                    return valid;
+                                },
+                                
+                                displayEditPost: function(config) {
+                                    springSpace.Util.setObjProp("view_mode", "2", config);
+                                    var pop_height = ( config.type == "reply" ? 500 : 600 );
+                                    if (springSpace.blogs.view_mode == 2) {
+                                        url = "/blogs_process.php";
+                                    } else {
+                                        url = "https://dccc.libapps.com/libguides/blogs_process.php";
+                                    }
+                                    springSpace.UI.alert({
+                                        height: pop_height,
+                                        width: 800,
+                                        title: "Edit Post",
+                                        url: url,
+                                        data: {
+                                            action: 820,
+                                            post_id: config.post_id,
+                                            thread_id: config.thread_id,
+                                            view_mode: config.view_mode,
+                                            is_comment: config.is_comment ?? 0,
+                                            script_name: "/route_libguides_public.php"
+                                        },
+                                        buttons: {
+                                            "Save": function(evt) {
+                                                springSpace.blogs.savePost({
+                                                    type: config.type,
+                                                    callback: function() {
+                                                        // Close alert and reload thread.
+                                                        springSpace.UI.closeAlert();
+                                                        springSpace.blogs.loadThread({
+                                                            thread_id: config.thread_id,
+                                                            view_mode: config.view_mode,
+                                                            guide_id: config.guide_id
+                                                        });
+                                                    }
+                                                });
+                                            },
+                                            "Cancel": function() {
+                                                springSpace.UI.closeAlert();
+                                            }
+                                        }
+                                    });
+                                },
+                                
+                                displayNotificationOptions: function(config) {
+                                    springSpace.UI.alert({
+                                        height: 350,
+                                        width: 800,
+                                        title: "Blog Activity Notifications",
+                                        url: "blogs_process.php?action=822&guide_id="+springSpace.blogs.guide_id+"&account_id="+springSpace.blogs.account_id,
+
+                                        buttons: {
+                                            Save: function(evt) {
+                                                // Disable the button
+                                                springSpace.UI.changeSaveButtonStatus({
+                                                    status: "saving",
+                                                    clicked_text: "Saving...",
+                                                    button: evt.target
+                                                });
+
+                                                xhr = jQuery.ajax({
+                                                    url: "blogs_process.php",
+                                                    type: "POST",
+                                                    data: jQuery("#s-lg-notification-opts").serialize(),
+                                                    dataType: "json",
+                                                    cache: false,
+                                                    success: function(response, textStatus, jqXHR) {
+                                                        if ( response.errCode == 200 ) {
+                                                            springSpace.UI.notify({msg: "Success!", duration: 4000});
+                                                            springSpace.UI.closeAlert();
+                                                        } else {
+                                                            springSpace.UI.notify({msg: "No success!", duration: 4000});
+                                                            springSpace.UI.closeAlert();
+                                                        }
+                                                    },
+                                                    error: function (jqXHR, textStatus, errorThrown) {
+                                                        springSpace.UI.error(errorThrown);
+                                                    }
+                                                });
+                                            },
+                                            Cancel: function(evt) {
+                                                springSpace.UI.closeAlert();
+                                            }
+                                        }
+                                    });
+                                },
+                                
+                                newReply: function(config) {
+                                    var e = config.this;
+
+                                    if ( !jQuery("#s-lg-discform").length ) {
+                                        springSpace.Util.setObjProp("guide_id", 0, config);
+                                        springSpace.Util.setObjProp("account_id", 0, config);
+                                        springSpace.Util.setObjProp("thread_id", 0, config);
+
+                                        if (springSpace.blogs.view_mode == 2) {
+                                            url = "/blogs_process.php";
+                                        } else {
+                                            url = "https://dccc.libapps.com/libguides/blogs_process.php";
+                                        }
+
+                                        if (springSpace.blogs.thread.id == 0 ) {
+                                            springSpace.blogs.thread.id = jQuery(config.this).data("thread_id");
+                                        }
+
+                                        xhr = jQuery.ajax({
+                                            url: url,
+                                            dataType: "json",
+                                            cache: false,
+                                            data: {
+                                                action: 821,
+                                                time: 1771425434,
+                                                guide_id: springSpace.blogs.guide_id,
+                                                thread_id: springSpace.blogs.thread.id,
+                                                account_id: config.account_id,
+                                                view_mode: springSpace.blogs.view_mode,
+                                                type: "reply",
+                                                script_name: "/route_libguides_public.php"
+                                            },
+                                            success: function(response, textStatus, jqXHR) {
+                                                if ( response.errCode == 200 ) {
+                                                    // Load elt container with rendered content.
+                                                    if ( jQuery(e).data("parent") != "") {
+                                                        // Display form after this comment.
+                                                        jQuery("#comment-"+jQuery(e).data("parent")).after(response.data.html);
+                                                        jQuery("#s-lg-discform").append("<input type='hidden' id='parent_id' name='parent_id' value='" + jQuery(e).data("parent") + "'>");
+                                                    } else {
+                                                        // Display form after this link.
+                                                        jQuery(e).after(response.data.html);
+                                                        jQuery("#s-lg-discform").append("<input type='hidden' id='parent_id' name='parent_id' value='" + springSpace.blogs.thread.id + "'>");
+                                                    }
+
+                                                    // Added thread_id to form.
+                                                    jQuery("#s-lg-discform").append("<input type='hidden' id='thread_id' name='thread_id' value='" + springSpace.blogs.thread.id + "'>");
+
+                                                    if (jQuery("#parent_id").val() !== jQuery("#thread_id").val()) {
+                                                        jQuery("#s-lg-btn-edit-post").html("Post Reply");
+                                                    }
+
+                                                    CKEDITOR.replace( "editor_content", {
+                                                        customConfig: "../js3.23.5/ckeditor-latest/config.js",
+                                                        height: "285px",
+                                                        allowedContent: true,
+                                                        image_previewText: " ",
+                                                        filebrowserBrowseUrl: "/0",
+                                                        filebrowserWindowWidth: 845,
+                                                        filebrowserWindowHeight: 700,
+                                                        format_tags: "p;h3;h4;h5;h6;pre",
+                                                        removePlugins: "sourcearea",
+                                                        on: {
+                                                            instanceReady: function (ev) {
+                                                                ev.editor.dataProcessor.htmlFilter.addRules({
+                                                                    elements: {
+                                                                        img: function (element) {
+                                                                            element.attributes.loading = "lazy";
+                                                                        }
+                                                                    }
+                                                                });
+                                                                if (ev.editor.contextMenu) {
+                                                                    ev.editor.removeMenuItem("paste");
+                                                                }
+                                                            }
+                                                        }
+                                                    });
+
+                                                    // Re-init the popovers on the reply form
+                                                    if ( springSpace.UI.initHelpPopOvers ) {
+                                                        springSpace.UI.initHelpPopOvers();
+                                                    }
+
+                                                    jQuery("#s-lg-discform").slideDown(200);
+                                                    
+                                                    springSpace.adminObj.initSubjectMulitselect("#tags");
+                                                } else {
+                                                    springSpace.UI.notify({msg: "Could not load the form. Please try again.", duration: 4000});
+                                                }
+                                            },
+                                            error: function (jqXHR, textStatus, errorThrown) {
+                                                springSpace.UI.notify({msg: "Could not load the form.", duration: 4000});
+                                            }
+                                        });
+                                    } else if (jQuery("#s-lg-discform input[name=parent_id]").val() == jQuery(e).data("parent")){
+
+                                    } else {
+                                        jQuery("#s-lg-discform").slideUp(200, function() {
+                                            jQuery("#s-lg-discform").remove();
+                                            newReply({this: e, type: "reply"});
+                                        });
+                                    }
+                                },
+                                
+                                createReply: function() {
+                                    springSpace.UI.changeButtonStatus({
+                                        clicked_text: "Creating Comment...",
+                                        status: "clicked",
+                                        button: jQuery("#s-lg-btn-edit-post")
+                                    });
+
+                                    CKEDITOR.instances.editor_content.updateElement();
+
+                                    // get the text from the RTE or HTML editor and validate it.
+                                    var meta_content = ( CKEDITOR.instances["editor_content"].getData() || jQuery("#editor_content").val() );
+
+                                    springSpace.htmlParser = new springSpace.tagParser.SpringshareTagParser({
+                                        data: meta_content
+                                    });
+
+                                    if ( !springSpace.htmlParser.parse() ) {
+                                        springSpace.UI.changeButtonStatus({button: jQuery("#s-lg-btn-edit-post"), status: "active"});
+
+                                        return false;
+                                    }
+
+                                    jQuery("#s-lg-discform").ajaxForm({
+                                        dataType:  "json",
+                                        complete: function(xhr) {
+                                            var data = jQuery.parseJSON(xhr.responseText);
+
+                                            if ( data.errCode == 200 ) {
+                                                springSpace.UI.notify({msg: "Success!", duration: 4000});
+
+                                                // Reload thread
+                                                springSpace.blogs.loadThread({
+                                                    thread_id: springSpace.blogs.thread.id,
+                                                    view_mode: springSpace.blogs.view_mode,
+                                                    guide_id: jQuery("#s-lg-discform input[name=guide_id]").val()
+                                                });
+                                            } else {
+                                                springSpace.UI.notify({msg: "No success!", duration: 4000});
+                                            }
+                                        },
+                                        error: function() {
+                                            springSpace.UI.notify({msg: "No success!", duration: 4000});
+                                        }
+                                    });
+                                    jQuery("#s-lg-discform").submit();
+                                },
+                                
+                                deletePost: function(ids,toplevel, thread_id) {
+                                    springSpace.blogs.thread.id = thread_id;
+                                    children = ids.split(",");
+                                    post_id = children[0];
+                                    label = "Delete this post and " + parseInt(children.length-1).toString() + " replies";
+
+                                    if (toplevel && children.length == 1) {
+                                        springSpace.UI.alert({
+                                            height: 200,
+                                            width: 350,
+                                            title: "Delete Confirmation",
+                                            content: "<!-- help_inline_text.twig -->\n<div id=\"s-lib-help-id-336\" class=\"s-lib-help-text\" style=\"\">Just making sure you're sure that you really want to delete this content. <strong>There is no undo,<\/strong> and we cannot recover deleted posts for you.<\/div>\n<!-- !help_inline_text.twig -->\n<br><label class=\"checkbox\" style=\"margin-bottom:0;margin-top:0;\"><input type=\"checkbox\"  style=\"position:relative;margin-left:0px;\"  onchange=\"jQuery('#s-lib-alert-btn-first').prop('disabled', !jQuery(this).prop('checked'))\"> I understand that this cannot be undone.<\/label>",
+                                            load_callback: function() {
+                                                // Set focus to Cancel button
+                                                springSpace.UI.getAlertButton({name: "Cancel - Close call!"}).focus();
+                                            },
+                                            buttons: {
+                                                "Delete it - I mean it!": function(evt) {
+                                                    springSpace.UI.changeButtonStatus({
+                                                        clicked_text: "Deleting...",
+                                                        status: "clicked",
+                                                        button: evt.target
+                                                    });
+
+                                                    if (springSpace.blogs.view_mode == 2) {
+                                                        url = "/blogs_process.php";
+                                                    } else {
+                                                        url = "https://dccc.libapps.com/libguides/blogs_process.php";
+                                                    }
+
+                                                    xhr = jQuery.ajax({
+                                                        url: url,
+                                                        type: "POST",
+                                                        dataType: "json",
+                                                        cache: false,
+                                                        data: {
+                                                            action: 810,
+                                                            time: 1771425434,
+                                                            view_mode: 2,
+                                                            pids: children.join(),
+                                                            pres: 0,
+                                                            return: "",
+                                                            thread_id: thread_id
+                                                        },
+                                                        success: function(response, textStatus, jqXHR) {
+                                                            if ( response.errCode == 200 ) {
+                                                                springSpace.UI.closeAlert();
+                                                                springSpace.UI.notify({msg: "Success!", duration: 4000});
+
+                                                                // Reload.
+                                                                springSpace.blogs.deletePostReturn({
+                                                                    toplevel: toplevel,
+                                                                    thread_id: springSpace.blogs.thread.id
+                                                                });
+                                                            } else {
+
+                                                            }
+                                                        },
+                                                        error: function (jqXHR, textStatus, errorThrown) {
+
+                                                        }
+                                                    });
+                                                },
+                                                "Cancel - Close call!": function() {
+                                                    springSpace.UI.closeAlert();
+                                                }
+                                            }
+                                        });
+                                    } else if (children.length > 1) {
+                                        springSpace.UI.alert({
+                                            height: 320,
+                                            width: 300,
+                                            title: "Delete Discussion",
+                                            content: "<strong>Warning:</strong> This will delete the post / replies forever. If you're sure you want to proceed, select an option below and click Delete.<br><br><div><label class=\"radio-inline\"><input tabindex=\"-1\" type=\"radio\" name=\"s-lg-discussion-delete\" value=\"0\">Delete the post and all "+parseInt(children.length-1).toString()+" replies.</label><br><label class=\"radio-inline\"><input checked=\"checked\" type=\"radio\" name=\"s-lg-discussion-delete\" value=\"1\">Delete only this post, but keep its "+parseInt(children.length-1).toString()+" replies. This post's content will be replaced with a message that the post was deleted.</label></div><br><label class=\"checkbox\" style=\"margin-bottom:0;margin-top:0;\"><input type=\"checkbox\"  style=\"position:relative;margin-left:0px;\"  onchange=\"jQuery('#s-lib-alert-btn-first').prop('disabled', !jQuery(this).prop('checked'))\"> I understand that this cannot be undone.</label>",
+                                            buttons: {
+                                                Delete: function(evt){
+                                                    value = jQuery("input[name=s-lg-discussion-delete]:checked").val();
+                                                    jQuery("#comment-"+children[0]).data("delete-type",value);
+
+                                                    springSpace.UI.changeButtonStatus({
+                                                        clicked_text: "Deleting...",
+                                                        status: "clicked",
+                                                        button: evt.target
+                                                    });
+
+                                                    if (springSpace.blogs.view_mode == 2) {
+                                                        url = "/blogs_process.php";
+                                                    } else {
+                                                        url = "https://dccc.libapps.com/libguides/blogs_process.php";
+                                                    }
+                                                    xhr = jQuery.ajax({
+                                                        url: url,
+                                                        type: "POST",
+                                                        dataType: "json",
+                                                        cache: false,
+                                                        data: {
+                                                            action: 810,
+                                                            time: 1771425434,
+                                                            view_mode: 2,
+                                                            pids: children.join(),
+                                                            pres: jQuery("#comment-"+children[0]).data("delete-type"),
+                                                            return: "",
+                                                            thread_id: thread_id
+                                                        },
+                                                        success: function(response, textStatus, jqXHR) {
+                                                            if ( response.errCode == 200 ) {
+                                                                springSpace.UI.closeAlert();
+                                                                springSpace.UI.notify({msg: "Success!", duration: 4000});
+                                                                springSpace.blogs.deletePostReturn({
+                                                                    toplevel: toplevel,
+                                                                    thread_id: springSpace.blogs.thread.id
+                                                                });
+                                                            } else {
+
+                                                            }
+                                                        },
+                                                        error: function (jqXHR, textStatus, errorThrown) {
+
+                                                        }
+                                                    });
+                                                },
+                                                Cancel: function() {
+                                                    springSpace.UI.closeAlert();
+                                                }
+                                            }
+                                        });
+                                    } else {
+                                        springSpace.UI.alert({
+                                            height: 215,
+                                            width: 300,
+                                            title: "Delete Post",
+                                            content: "<!-- help_inline_text.twig -->\n<div id=\"s-lib-help-id-336\" class=\"s-lib-help-text\" style=\"\">Just making sure you're sure that you really want to delete this content. <strong>There is no undo,<\/strong> and we cannot recover deleted posts for you.<\/div>\n<!-- !help_inline_text.twig -->\n<br><label class=\"checkbox\" style=\"margin-bottom:0;margin-top:0;\"><input type=\"checkbox\"  style=\"position:relative;margin-left:0px;\"  onchange=\"jQuery('#s-lib-alert-btn-first').prop('disabled', !jQuery(this).prop('checked'))\"> I understand that this cannot be undone.<\/label>",
+                                            buttons: {
+                                                Delete: function(evt){
+                                                    springSpace.UI.changeButtonStatus({
+                                                        clicked_text: "Deleting...",
+                                                        status: "clicked",
+                                                        button: evt.target
+                                                    });
+
+                                                    if (springSpace.blogs.view_mode == 2) {
+                                                        url = "/blogs_process.php";
+                                                    } else {
+                                                        url = "https://dccc.libapps.com/libguides/blogs_process.php";
+                                                    }
+
+                                                    xhr = jQuery.ajax({
+                                                        url: url,
+                                                        type: "POST",
+                                                        dataType: "json",
+                                                        cache: false,
+                                                        data: {
+                                                            action: 810,
+                                                            time: 1771425434,
+                                                            view_mode: 2,
+                                                            pids: post_id,
+                                                            return: "",
+                                                            thread_id: thread_id
+                                                        },
+                                                        success: function(response, textStatus, jqXHR) {
+                                                            if ( response.errCode == 200 ) {
+                                                                springSpace.UI.closeAlert();
+                                                                springSpace.UI.notify({msg: "Success!", duration: 4000});
+
+                                                                springSpace.blogs.deletePostReturn({
+                                                                    toplevel: toplevel,
+                                                                    thread_id: springSpace.blogs.thread.id
+                                                                });
+                                                            } else {
+
+                                                            }
+                                                        },
+                                                        error: function (jqXHR, textStatus, errorThrown) {
+
+                                                        }
+                                                    });
+                                                },
+                                                Cancel: function() {
+                                                    springSpace.UI.closeAlert();
+                                                }
+                                            }
+                                        });
+                                    }
+
+                                    jQuery("#s-lib-alert-btn-first").prop("disabled", true);
+                                },
+                                
+                                deleteComments: function(ids,toplevel, post_id) {
+                                    springSpace.blogs.thread.id = post_id;
+                                    children = ids.split(",");
+                                    label = "Delete this post and " + parseInt(children.length-1).toString() + " replies";
+
+                                    if (toplevel && children.length == 1) {
+                                        springSpace.UI.alert({
+                                            height: 200,
+                                            width: 350,
+                                            title: "Delete Confirmation",
+                                            content: "<!-- help_inline_text.twig -->\n<div id=\"s-lib-help-id-336\" class=\"s-lib-help-text\" style=\"\">Just making sure you're sure that you really want to delete this content. <strong>There is no undo,<\/strong> and we cannot recover deleted posts for you.<\/div>\n<!-- !help_inline_text.twig -->\n<br><label class=\"checkbox\" style=\"margin-bottom:0;margin-top:0;\"><input type=\"checkbox\"  style=\"position:relative;margin-left:0px;\"  onchange=\"jQuery('#s-lib-alert-btn-first').prop('disabled', !jQuery(this).prop('checked'))\"> I understand that this cannot be undone.<\/label>",
+                                            load_callback: function() {
+                                                // Set focus to Cancel button
+                                                springSpace.UI.getAlertButton({name: "Cancel - Close call!"}).focus();
+                                            },
+                                            buttons: {
+                                                "Delete it - I mean it!": function(evt) {
+                                                    springSpace.UI.changeButtonStatus({
+                                                        clicked_text: "Deleting...",
+                                                        status: "clicked",
+                                                        button: evt.target
+                                                    });
+
+                                                    if (springSpace.blogs.view_mode == 2) {
+                                                        url = "/blogs_process.php";
+                                                    } else {
+                                                        url = "https://dccc.libapps.com/libguides/blogs_process.php";
+                                                    }
+
+                                                    xhr = jQuery.ajax({
+                                                        url: url,
+                                                        type: "POST",
+                                                        dataType: "json",
+                                                        cache: false,
+                                                        data: {
+                                                            action: 1003,
+                                                            time: 1771425434,
+                                                            view_mode: 2,
+                                                            pids: children.join(),
+                                                            pres: 0,
+                                                            return: "",
+                                                            post_id: post_id
+                                                        },
+                                                        success: function(response, textStatus, jqXHR) {
+                                                            if ( response.errCode == 200 ) {
+                                                                springSpace.UI.closeAlert();
+                                                                springSpace.UI.notify({msg: "Success!", duration: 4000});
+
+                                                                // Reload.
+                                                                springSpace.blogs.deletePostReturn({
+                                                                    toplevel: toplevel,
+                                                                    thread_id: springSpace.blogs.thread.id
+                                                                });
+                                                            }
+                                                        },
+                                                        error: function (jqXHR, textStatus, errorThrown) {
+
+                                                        }
+                                                    });
+                                                },
+                                                "Cancel - Close call!": function() {
+                                                    springSpace.UI.closeAlert();
+                                                }
+                                            }
+                                        });
+                                    } else if (children.length > 1) {
+                                        springSpace.UI.alert({
+                                            height: 320,
+                                            width: 300,
+                                            title: "Delete Discussion",
+                                            content: "<strong>Warning:</strong> This will delete the post / replies forever. If you're sure you want to proceed, select an option below and click Delete.<br><br><div><label class=\"radio-inline\"><input tabindex=\"-1\" type=\"radio\" name=\"s-lg-discussion-delete\" value=\"0\">Delete the post and all "+parseInt(children.length-1).toString()+" replies.</label><br><label class=\"radio-inline\"><input checked=\"checked\" type=\"radio\" name=\"s-lg-discussion-delete\" value=\"1\">Delete only this post, but keep its "+parseInt(children.length-1).toString()+" replies. This post's content will be replaced with a message that the post was deleted.</label></div><br><label class=\"checkbox\" style=\"margin-bottom:0;margin-top:0;\"><input type=\"checkbox\"  style=\"position:relative;margin-left:0px;\"  onchange=\"jQuery('#s-lib-alert-btn-first').prop('disabled', !jQuery(this).prop('checked'))\"> I understand that this cannot be undone.</label>",
+                                            buttons: {
+                                                Delete: function(evt){
+                                                    value = jQuery("input[name=s-lg-discussion-delete]:checked").val();
+                                                    jQuery("#comment-"+children[0]).data("delete-type",value);
+
+                                                    springSpace.UI.changeButtonStatus({
+                                                        clicked_text: "Deleting...",
+                                                        status: "clicked",
+                                                        button: evt.target
+                                                    });
+
+                                                    if (springSpace.blogs.view_mode == 2) {
+                                                        url = "/blogs_process.php";
+                                                    } else {
+                                                        url = "https://dccc.libapps.com/libguides/blogs_process.php";
+                                                    }
+                                                    xhr = jQuery.ajax({
+                                                        url: url,
+                                                        type: "POST",
+                                                        dataType: "json",
+                                                        cache: false,
+                                                        data: {
+                                                            action: 1003,
+                                                            time: 1771425434,
+                                                            view_mode: 2,
+                                                            pids: children.join(),
+                                                            pres: jQuery("#comment-"+children[0]).data("delete-type"),
+                                                            return: "",
+                                                            post_id: post_id
+                                                        },
+                                                        success: function(response, textStatus, jqXHR) {
+                                                            if ( response.errCode == 200 ) {
+                                                                springSpace.UI.closeAlert();
+                                                                springSpace.UI.notify({msg: "Success!", duration: 4000});
+                                                                springSpace.blogs.deletePostReturn({
+                                                                    toplevel: toplevel,
+                                                                    thread_id: springSpace.blogs.thread.id
+                                                                });
+                                                            }
+                                                        },
+                                                        error: function (jqXHR, textStatus, errorThrown) {
+
+                                                        }
+                                                    });
+                                                },
+                                                Cancel: function() {
+                                                    springSpace.UI.closeAlert();
+                                                }
+                                            }
+                                        });
+                                    } else {
+                                        springSpace.UI.alert({
+                                            height: 215,
+                                            width: 300,
+                                            title: "Delete Post",
+                                            content: "<!-- help_inline_text.twig -->\n<div id=\"s-lib-help-id-336\" class=\"s-lib-help-text\" style=\"\">Just making sure you're sure that you really want to delete this content. <strong>There is no undo,<\/strong> and we cannot recover deleted posts for you.<\/div>\n<!-- !help_inline_text.twig -->\n<br><label class=\"checkbox\" style=\"margin-bottom:0;margin-top:0;\"><input type=\"checkbox\"  style=\"position:relative;margin-left:0px;\"  onchange=\"jQuery('#s-lib-alert-btn-first').prop('disabled', !jQuery(this).prop('checked'))\"> I understand that this cannot be undone.<\/label>",
+                                            buttons: {
+                                                Delete: function(evt){
+                                                    springSpace.UI.changeButtonStatus({
+                                                        clicked_text: "Deleting...",
+                                                        status: "clicked",
+                                                        button: evt.target
+                                                    });
+
+                                                    if (springSpace.blogs.view_mode == 2) {
+                                                        url = "/blogs_process.php";
+                                                    } else {
+                                                        url = "https://dccc.libapps.com/libguides/blogs_process.php";
+                                                    }
+
+                                                    xhr = jQuery.ajax({
+                                                        url: url,
+                                                        type: "POST",
+                                                        dataType: "json",
+                                                        cache: false,
+                                                        data: {
+                                                            action: 1003,
+                                                            time: 1771425434,
+                                                            view_mode: 2,
+                                                            pids: post_id,
+                                                            return: "",
+                                                            post_id: post_id
+                                                        },
+                                                        success: function(response, textStatus, jqXHR) {
+                                                            if ( response.errCode == 200 ) {
+                                                                springSpace.UI.closeAlert();
+                                                                springSpace.UI.notify({msg: "Success!", duration: 4000});
+
+                                                                springSpace.blogs.deletePostReturn({
+                                                                    toplevel: toplevel,
+                                                                    thread_id: springSpace.blogs.thread.id
+                                                                });
+                                                            } else {
+
+                                                            }
+                                                        },
+                                                        error: function (jqXHR, textStatus, errorThrown) {
+
+                                                        }
+                                                    });
+                                                },
+                                                Cancel: function() {
+                                                    springSpace.UI.closeAlert();
+                                                }
+                                            }
+                                        });
+                                    }
+
+                                    jQuery("#s-lib-alert-btn-first").prop("disabled", true);
+                                },
+                                
+                                /**
+                                 *  Either reload thread or reload the main dicussion
+                                 *  board if a top-level post was deleted.
+                                 */
+                                
+                                deletePostReturn: function(config) {
+                                    if ( config.toplevel ) {
+                                        // Load main discussion list.
+                                        springSpace.blogs.loadMain({});
+                                    } else {
+                                        // Reload the thread.
+                                        springSpace.blogs.loadThread({thread_id: config.thread_id, view_mode: springSpace.blogs.view_mode});
+                                    }
+                                },
+                                
+                                loadContent: function(config) {
+                                    springSpace.Util.setObjProp("params", [], config);
+                                    springSpace.Util.setObjProp("t", 0, config.params);
+                                    springSpace.Util.setObjProp("action", "", config);
+
+                                    if ( config.params.t !== 0 && config.params.t !== "0" && config.params.t !== "" && parseInt(config.params.t) > 0 ) {
+                                        springSpace.blogs.thread.id = config.params.t;
+                                        springSpace.blogs.loadThread({
+                                            thread_id: config.params.t,
+                                            view_mode: springSpace.blogs.view_mode,
+                                            action: config.action
+                                        });
+                                    } else {
+                                        springSpace.blogs.loadMain({
+                                            view_mode: springSpace.blogs.view_mode,
+                                            action: config.action
+                                        });
+                                    }
+                                },
+                                
+                                loadThread: function(config) {
+                                    springSpace.Util.setObjProp("thread_id", 0, config);
+                                    springSpace.Util.setObjProp("guide_id", 0, config);
+                                    springSpace.Util.setObjProp("page_id", 0, config);
+                                    springSpace.Util.setObjProp("action", "", config);
+                                    springSpace.Util.setObjProp("container_id", springSpace.blogs.main.container_id, config);
+                                    springSpace.Util.setObjProp("slug", "", config);
+                                    springSpace.Util.setObjProp("comments", false, config);
+
+                                    if (springSpace.blogs.view_mode == 2) {
+                                        url = "/blogs_process.php";
+                                    } else {
+                                        url = "https://dccc.libapps.com/libguides/blogs_process.php";
+                                    }
+
+                                    xhr = jQuery.ajax({
+                                        url: url,
+                                        dataType: "json",
+                                        cache: false,
+                                        data: {
+                                            action: 818,
+                                            time: 1771425434,
+                                            view_mode: config.view_mode,
+                                            thread_id: config.thread_id,
+                                            guide_id: config.guide_id,
+                                            page_id: config.page_id
+                                        },
+                                        success: function(response, textStatus, jqXHR) {
+                                            if ( response.errCode == 200 ) {
+                                                // Scroll to the top
+                                                window.scrollTo(0,0);
+
+                                                // Load elt container with rendered thread content.
+                                                jQuery("#" + config.container_id).html(response.data.html);
+
+                                                if (config.comments) {
+                                                    jQuery("#comments")[0].scrollIntoView();
+                                                }
+
+                                                if (springSpace.blogs.view_mode == 2) {
+                                                    // Update dynamic URL.
+                                                    springSpace.dynURL.updateHistory({
+                                                        params: {
+                                                            g: springSpace.Util.getQSParam({name: "g", qs: location.search}),
+                                                            p: springSpace.Util.getQSParam({name: "p", qs: location.search}),
+                                                            t: springSpace.Util.setProp(config.thread_id, ""),
+                                                            tag_id: springSpace.Util.setProp(springSpace.blogs.main.tag_id, "")
+                                                        },
+                                                        action: config.action,
+                                                        slug: response.data.slug,
+                                                        hash: (config.comments ? "comments" : "")
+                                                    });
+                                                }
+
+                                                // Keep track of the currently loaded thread.
+                                                springSpace.blogs.thread.id = config.thread_id;
+
+                                            } else {
+                                                springSpace.UI.notify({msg: "Could not load thread. Please try again.", duration: 4000});
+                                            }
+                                        },
+                                        error: function (jqXHR, textStatus, errorThrown) {
+                                            springSpace.UI.notify({msg: "Could not load the thread.", duration: 4000});
+                                        }
+                                    });
+                                },
+                                
+                                loadMain: function(config) {
+                                    springSpace.Util.setObjProp("container_id", springSpace.blogs.main.container_id, config);
+                                    springSpace.Util.setObjProp("tag_id", 0, config);
+                                    springSpace.Util.setObjProp("action", "", config);
+                                    springSpace.Util.setObjProp("slug", "", config);
+                                    springSpace.Util.setObjProp("archive", 0, config);
+                                    springSpace.Util.setObjProp("view_mode", springSpace.blogs.view_mode, config);
+                                    springSpace.Util.setObjProp("page", 1, config);
+
+                                    if (config.archive != 0 && location.href.match(/[g][=]\d+/) == null) {
+                                        config.slug = location.pathname;
+                                        if (config.slug.substring(config.slug.length-1) != "/") {
+                                            config.slug += "/";
+                                        }
+                                        if (location.pathname.match(/\/\d{4}[-]\d{2}\/?$/) !== null) {
+                                            config.slug = config.slug.slice(0,-8);
+                                        }
+                                        year = config.archive.substring(0,4);
+                                        month = config.archive.substring(4,7);
+                                        config.slug += year + "-" + (month.length == 1 ? "0"+month : month);
+                                    }
+
+                                    if (config.archive != 0 && location.pathname == "/libguides/blog.php") {
+                                        config.slug = location.pathname + "?archive=" + config.archive
+                                    }
+
+                                    // Update tag_id for use with springSpace.blogs methods.
+                                    springSpace.blogs.main.tag_id = config.tag_id;
+
+                                    if (springSpace.blogs.view_mode == 2) {
+                                        url = "/blogs_process.php";
+                                    } else {
+                                        url = "https://dccc.libapps.com/libguides/blogs_process.php";
+                                    }
+
+                                    xhr = jQuery.ajax({
+                                        url: url,
+                                        dataType: "json",
+                                        cache: false,
+                                        data: {
+                                            action: 817,
+                                            time: 1771425434,
+                                            archive: config.archive,
+                                            view_mode: config.view_mode,
+                                            guide_id: springSpace.blogs.guide_id,
+                                            page_id: springSpace.blogs.page_id,
+                                            script_name: "/route_libguides_public.php",
+                                            tag_id: springSpace.blogs.main.tag_id,
+                                            return_qs: window.location.href,
+                                            page: config.page
+                                        },
+                                        success: function(response, textStatus, jqXHR) {
+
+                                            if ( response.errCode == 200 ) {
+                                                // Clear currently loaded thread.
+                                                springSpace.blogs.thread.id = 0;
+
+                                                // Load elt container with rendered thread content.
+                                                jQuery("#" + config.container_id).html(response.data.html);
+
+                                                // Toggle View all discussions link on right-side bar.
+                                                if ( springSpace.blogs.main.tag_id > 0 ) {
+                                                    jQuery("#s-lg-all-disc-link").show();
+                                                } else {
+                                                    jQuery("#s-lg-all-disc-link").hide();
+                                                }
+
+                                                // Udpate dynamic URL.
+                                                springSpace.dynURL.updateHistory({
+                                                    params: {
+                                                        g: springSpace.Util.getQSParam({name: "g", qs: location.search}),
+                                                        p: springSpace.Util.getQSParam({name: "p", qs: location.search}),
+                                                        t: springSpace.Util.setProp(config.thread_id, ""),
+                                                        tag_id: springSpace.Util.setProp(springSpace.blogs.main.tag_id, ""),
+                                                        archive: springSpace.Util.setProp(config.archive, "")
+                                                    },
+                                                    action: config.action,
+                                                    slug: config.slug
+                                                });
+
+                                                // Re-init popovers
+                                                if ( springSpace.UI.initHelpPopOvers ) {
+                                                    springSpace.UI.initHelpPopOvers();
+                                                }
+                                            } else {
+                                                springSpace.UI.notify({msg: "Could not load main listing. Please try again.", duration: 4000});
+                                            }
+                                        },
+                                        error: function (jqXHR, textStatus, errorThrown) {
+                                            springSpace.UI.notify({msg: "Could not load the main listing.", duration: 4000});
+                                        }
+                                    });
+                                },
+                                
+                                loadForm: function(config) {
+                                    if ( springSpace.blogs.form.open ) {
+                                        // If the form is open and we click on the header, close it.
+                                        springSpace.blogs.cancelPost();
+                                    } else {
+                                        if ( springSpace.blogs.form.init ) {
+                                            // If the form is closed but has been initialized (not submitted), just re-open it.
+                                            springSpace.blogs.newPost();
+                                        } else {
+                                            // If the form is closed but has been submitted, refresh it.
+                                            springSpace.Util.setObjProp("container_id", "s-lg-discform-container", config);
+                                            springSpace.Util.setObjProp("account_id", 0, config);
+
+                                            if (springSpace.blogs.view_mode == 2) {
+                                                url = "/blogs_process.php";
+                                            } else {
+                                                url = "https://dccc.libapps.com/libguides/blogs_process.php";
+                                            }
+
+                                            xhr = jQuery.ajax({
+                                                url: url,
+                                                dataType: "json",
+                                                cache: false,
+                                                data: {
+                                                    action: 821,
+                                                    time: 1771425434,
+                                                    guide_id: springSpace.blogs.guide_id,
+                                                    thread_id: springSpace.blogs.thread.id,
+                                                    account_id: config.account_id,
+                                                    view_mode: springSpace.blogs.view_mode,
+                                                    type: config.type,
+                                                    script_name: "/route_libguides_public.php"
+                                                },
+                                                success: function(response, textStatus, jqXHR) {
+                                                    if ( response.errCode == 200 ) {
+                                                        // Load elt container with rendered content.
+                                                        jQuery("#" + config.container_id).html(response.data.html);
+
+                                                        // Init the form.
+                                                        springSpace.blogs.newPost();
+                                                    } else {
+                                                        springSpace.UI.notify({msg: "Could not load the form. Please try again.", duration: 4000});
+                                                    }
+                                                },
+                                                error: function (jqXHR, textStatus, errorThrown) {
+                                                    springSpace.UI.notify({msg: "Could not load the form.", duration: 4000});
+                                                }
+                                            });
+                                        }
+                                    }
+                                },
+                                
+                                notifyToggle: function() {
+                                    springSpace.UI.notify({mode: "load"});
+
+                                    if (springSpace.blogs.view_mode == 2) {
+                                        url = "/blogs_process.php";
+                                    } else {
+                                        url = "https://dccc.libapps.com/libguides/blogs_process.php";
+                                    }
+
+                                    jQuery.ajax({
+                                        url: url,
+                                        method: "post",
+                                        dataType: "json",
+                                        cache: false,
+                                        data: {
+                                            action: 812,
+                                            thread_id: springSpace.blogs.thread.id,
+                                            view_mode: springSpace.blogs.view_mode
+                                        },
+                                        cache: false,
+                                        success: function(response, textStatus, jqXHR) {
+                                            if ( response.errCode == 200 ) {
+                                                if ( response.data.status ) {
+                                                    if ( response.data.notify == "off" ) {
+                                                        springSpace.UI.notify({msg: "Email notifications have been turned OFF.", duration: 4000});
+                                                    } else {
+                                                        springSpace.UI.notify({msg: "Email notifications have been turned ON.", duration: 4000});
+                                                    }
+
+                                                    // Refresh thread.
+                                                    springSpace.blogs.loadThread({
+                                                        thread_id: springSpace.blogs.thread.id,
+                                                        view_mode: springSpace.blogs.view_mode
+                                                    });
+                                                } else {
+                                                    springSpace.UI.notify({msg: "Could not update notification status. Please try again.", duration: 4000});
+                                                }
+                                            } else {
+                                                springSpace.UI.notify({msg: "Could not update notification status. Please try again.", duration: 4000});
+                                            }
+                                        },
+                                        error: function (jqXHR, textStatus, errorThrown) {
+                                            springSpace.UI.notify({msg: "Error: " + errorThrown, duration: 4000});
+                                        }
+                                    });
+                                },
+                                
+                                lockToggle: function() {
+                                    springSpace.UI.notify({mode: "load"});
+
+                                    if (springSpace.blogs.view_mode == 2) {
+                                        url = "/blogs_process.php";
+                                    } else {
+                                        url = "https://dccc.libapps.com/libguides/blogs_process.php";
+                                    }
+
+                                    jQuery.ajax({
+                                        url: url,
+                                        method: "post",
+                                        dataType: "json",
+                                        cache: false,
+                                        data: {
+                                            action: 813,
+                                            thread_id: springSpace.blogs.thread.id,
+                                            view_mode: springSpace.blogs.view_mode
+                                        },
+                                        cache: false,
+                                        success: function(response, textStatus, jqXHR) {
+                                            if ( response.errCode == 200 ) {
+                                                if ( response.data.status ) {
+                                                    // Check the status when the thread was loaded and set the link text to reflect the new status.
+                                                    if ( jQuery("#s-lg-lock-toggle").data("locked") == "0" ) {
+                                                        springSpace.UI.notify({msg: "The discussion has been closed.", duration: 4000});
+                                                    } else {
+                                                        springSpace.UI.notify({msg: "The discussion has been re-opened.", duration: 4000});
+                                                    }
+
+                                                    // Refresh thread.
+                                                    springSpace.blogs.loadThread({
+                                                        thread_id: springSpace.blogs.thread.id,
+                                                        view_mode: springSpace.blogs.view_mode
+                                                    });
+
+                                                    // Toggle link data property.
+                                                    jQuery("#s-lg-lock-toggle").data("locked", ( jQuery("#s-lg-lock-toggle").data("locked") == "1" ? "0" : "1" ));
+
+                                                    // Update locked status of current discussion/thread.
+                                                    springSpace.blogs.thread.locked = jQuery("#s-lg-lock-toggle").data("locked");
+                                                } else {
+                                                    springSpace.UI.notify({msg: "Could not update lock status. Please try again.", duration: 4000});
+                                                }
+                                            } else {
+                                                springSpace.UI.notify({msg: "Could not update lock status. Please try again.", duration: 4000});
+                                            }
+                                        },
+                                        error: function (jqXHR, textStatus, errorThrown) {
+                                            springSpace.UI.notify({msg: "Error: " + errorThrown, duration: 4000});
+                                        }
+                                    });
+                                },
+                                
+                                postAnswerStats: function(config) {
+                                    springSpace.UI.notify({mode: "load"});
+
+                                    if (springSpace.blogs.view_mode == 2) {
+                                        url = "/blogs_process.php";
+                                    } else {
+                                        url = "https://dccc.libapps.com/libguides/blogs_process.php";
+                                    }
+
+                                    jQuery.ajax({
+                                        url: url,
+                                        method: "post",
+                                        dataType: "json",
+                                        cache: false,
+                                        data: {
+                                            action: 811,
+                                            post_id: config.post_id,
+                                            thread_id: springSpace.blogs.thread.id,
+                                            view_mode: springSpace.blogs.view_mode,
+                                            remove: config.remove
+                                        },
+                                        cache: false,
+                                        success: function(response, textStatus, jqXHR) {
+                                            if ( response.errCode == 200 ) {
+                                                config.callback();
+                                            } else {
+                                                springSpace.UI.notify({msg: "Could not update answer status. Please try again.", duration: 4000});
+                                            }
+                                        },
+                                        error: function (jqXHR, textStatus, errorThrown) {
+                                            springSpace.UI.notify({msg: "Error: " + errorThrown, duration: 4000});
+                                        }
+                                    });
+                                },
+                                
+                                markHelpful: function(config) {
+                                    springSpace.UI.notify({mode: "load"});
+
+                                    springSpace.blogs.postAnswerStats({
+                                        post_id: config.post_id,
+                                        remove: config.remove,
+                                        callback: function() {
+                                            springSpace.UI.notify({msg: "Success!", duration: 4000});
+
+                                            // Refresh thread.
+                                            springSpace.blogs.loadThread({
+                                                thread_id: springSpace.blogs.thread.id,
+                                                view_mode: springSpace.blogs.view_mode
+                                            });
+                                        }
+                                    });
+                                },
+                                
+                                markAnswer: function(config) {
+                                    if ( config.remove ) {
+                                        springSpace.UI.notify({mode: "load"});
+
+                                        springSpace.blogs.postAnswerStats({
+                                            post_id: config.post_id,
+                                            remove: config.remove,
+                                            callback: function() {
+                                                springSpace.UI.notify({msg: "Success!", duration: 4000});
+
+                                                // Refresh thread.
+                                                springSpace.blogs.loadThread({
+                                                    thread_id: springSpace.blogs.thread.id,
+                                                    view_mode: springSpace.blogs.view_mode
+                                                });
+                                            }
+                                        });
+                                    } else {
+                                        var dialog = "Click <strong>OK</strong> to select this answer as the Best Answer.";
+
+                                        // Add checkbox to close discussions if it is not already.
+                                        if ( springSpace.blogs.thread.locked == 0 ) {
+                                            dialog += "<br><label class=\"checkbox\"><input type=\"checkbox\" id=\"s-lg-disc-answer-close\" style=\"position:relative;margin-left:0px\"/> Close this Discussion to further replies.</label>";
+                                        }
+
+                                        springSpace.UI.alert({
+                                            height: 200,
+                                            width: 300,
+                                            title: "Best Answer",
+                                            content: dialog,
+                                            buttons: {
+                                                "OK" : function(evt) {
+                                                    springSpace.UI.notify({mode: "load"});
+                                                    springSpace.UI.changeButtonStatus({
+                                                        clicked_text: "Saving...",
+                                                        status: "clicked",
+                                                        button: evt.target
+                                                    });
+                                                    springSpace.UI.notify({mode: "load"});
+
+                                                    if (springSpace.blogs.view_mode == 2) {
+                                                        url = "/blogs_process.php";
+                                                    } else {
+                                                        url = "https://dccc.libapps.com/libguides/blogs_process.php";
+                                                    }
+
+                                                    jQuery.ajax({
+                                                        url: url,
+                                                        method: "post",
+                                                        dataType: "json",
+                                                        cache: false,
+                                                        data: {
+                                                            action: 811,
+                                                            post_id: config.post_id,
+                                                            thread_id: springSpace.blogs.thread.id,
+                                                            view_mode: springSpace.blogs.view_mode,
+                                                            close: ( jQuery("#s-lg-disc-answer-close").prop("checked") ? 1 : 0 )
+                                                        },
+                                                        cache: false,
+                                                        success: function(response, textStatus, jqXHR) {
+                                                            if ( response.errCode == 200 ) {
+                                                                springSpace.UI.closeAlert();
+                                                                springSpace.UI.notify({msg: "Success!", duration: 4000});
+
+                                                                // Refresh thread.
+                                                                springSpace.blogs.loadThread({
+                                                                    thread_id: springSpace.blogs.thread.id,
+                                                                    view_mode: springSpace.blogs.view_mode
+                                                                });
+                                                            } else {
+                                                                springSpace.UI.notify({msg: "Could not update answer status. Please try again.", duration: 4000});
+                                                            }
+                                                        },
+                                                        error: function (jqXHR, textStatus, errorThrown) {
+                                                            springSpace.UI.notify({msg: "Error: " + errorThrown, duration: 4000});
+                                                        }
+                                                    });
+                                                },
+                                                "Cancel" : function() {
+                                                    springSpace.UI.closeAlert();
+                                                }
+                                            }
+                                        });
+                                    }
+                                },
+                                
+                                saveMailingList: function(config) {
+                                    springSpace.UI.notify({mode: "load"});
+                                    jQuery("#form-msg-email").html("").toggle(false);
+                                    if (config.email.trim() == "") {
+                                        jQuery("#form-msg-email").html("Provided email address is invalid.").toggle(true);
+                                        springSpace.UI.notifyStop();
+                                        return;
+                                    }
+
+                                    if (springSpace.blogs.view_mode == 2) {
+                                        url = "/blogs_process.php";
+                                    } else {
+                                        url = "https://dccc.libapps.com/libguides/blogs_process.php";
+                                    }
+
+                                    jQuery.ajax({
+                                        url: url,
+                                        method: "post",
+                                        dataType: "json",
+                                        cache: false,
+                                        data: {
+                                            action: 824,
+                                            email: config.email,
+                                            guide_id: config.guide_id,
+                                            site_id: config.site_id
+                                        },
+                                        cache: false,
+                                        success: function(response, textStatus, jqXHR) {
+                                            if ( response.errCode == 200 ) {
+                                                if (response.data.status == "invalid") {
+                                                    jQuery("#form-msg-email").html("Provided email address is invalid.").toggle(true);
+                                                    springSpace.UI.notifyStop();
+                                                } else {
+                                                    springSpace.UI.notify({msg: "Please check your email for the verification link. You must click the link in the email to confirm your subscription", duration: 6000});
+                                                }
+                                            } else {
+                                                springSpace.UI.error("Provided email address is invalid.")
+                                            }
+                                        },
+                                        error: function (jqXHR, textStatus, errorThrown) {
+                                            springSpace.UI.error("Error: " + errorThrown)
+                                        }
+                                    });
+                                },
+                                patronLoginLink: function () {
+                                    window.location.href = "https://dccc.libapps.com/libapps/login.php?mode=1&public=1&target=" + encodeURIComponent(window.location.href) + "&site_id=559";
+                                },
+                                patronLoginLinkOnKeyup: function () {
+                                    if (event.code == "Space" || event.code == "Enter" || event.code == "NumpadEnter") {
+                                        this.patronLoginLink();
+                                    }
+                                },
+                                manageAccountLink: function() {
+                                    window.location.href = "https://dccc.libapps.com/libapps/patron.php?return_url=" + encodeURIComponent(window.location.href) + "&site_id=559";
+                                },
+                                patronLogoutLink: function() {
+                                    window.location.href = "https://dccc.libapps.com/libapps/logout.php?mode=1&return_url=" + encodeURIComponent(window.location.href) + "&site_id=559";
+                                },
+                                sharePost: function(post_id) {
+                                    springSpace.UI.alert({
+                                        title: "Share",
+                                        height: 450,
+                                        width: 500,
+                                        url: "blogs_process.php",
+                                        data: {
+                                            action: 828,
+                                            post_id: post_id
+                                        },
+                                        buttons: {
+                                            Close: function() {
+                                                springSpace.UI.closeAlert();
+                                            }
+                                        },
+                                        button_class_ok: "btn-default"
+                                    });
+                                },
+                                publishLabels: function() {
+                                    if (jQuery("#pub_opt").val() == 1) {
+                                        publishDate = new Date(jQuery("#created").val());
+                                        if (publishDate.getTime() > Date.now() ) {
+                                            jQuery("#s-lg-btn-edit-post").html("Schedule Post");
+                                        } else {
+                                            jQuery("#s-lg-btn-edit-post").html("Save Post");
+                                        }
+                                        jQuery("#form-group-created").show();
+                                    } else {
+                                        jQuery("#form-group-created").hide();
+                                        jQuery("#s-lg-btn-edit-post").html("Publish Post");
+                                    }
+                                },
+                                search: function(guide_id) {
+                                    if (springSpace.blogs.view_mode == 2) {
+                                        url = "/blogs_process.php";
+                                    } else {
+                                        url = "https://dccc.libapps.com/libguides/blogs_process.php";
+                                    }
+
+                                    xhr = jQuery.ajax({
+                                        url: url,
+                                        type: "GET",
+                                        cache: false,
+                                        dataType: "json",
+                                        data: {
+                                            query: jQuery("#s-lg-blog-search-q").val(),
+                                            action: 829,
+                                            guide_id: guide_id
+                                        },
+                                        success: function(response, textStatus, jqXHR) {
+                                            if ( response.errCode == 200 ) {
+                                                jQuery("#s-lg-blog-posts").html(response.data.results);
+                                            } else {
+                                                springSpace.UI.notify({msg: "Error: Try again", duration: 4000});
+                                            }
+                                        },
+                                        error: function (jqXHR, textStatus, errorThrown) {
+
+                                        }
+                                    });
+                                }
+                            };
+                        </script>
+    <!-- get_lg_session_status.twig -->
+<script>
+    springSpace.Session.CONST.ACTION_AUTH_SET_LG_SESSION_COOKIE = 750;
+
+    
+    callGetLGSessionStatus = function () {
+        springSpace.Session.auth_reload_script = window.location.href;
+        springSpace.Session.getLGSessionStatus({
+            url: "https://dccc.libapps.com/libapps/login_process/session",
+            data: {
+                app_id: 1,
+                domain: "learningcommons.dccc.edu",
+                site_id: 559,
+                auth_reload: 1
+            }
+        })
+    }
+
+    jQuery(
+        function () {
+                        springSpace.Session.auth_reload_script = "top.window.location.pathname + top.window.location.search";
+                                    callGetLGSessionStatus();
+                    }
+    );
+    </script>
+<!-- !get_lg_session_status.twig -->
+
+</head>
+
+<body class=" blog-single-post page-has-sidebar">
+
+    <header>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300&display=swap" rel="stylesheet"> 
+<!--------Springshare automatically includes <header> tags, no need for one--------------->
+<div id="dccclib-banner" role="banner">
+<!--------Announcements--------------->
+<!-----<div id="banner-alert">
+<div class="region-text">
+<h4><span class="fa fa-bullhorn fa-2" aria-hidden="true"></span> New Look!</h4>
+<p>We've launched our redesigned Learning Commons website. Our <a href="https://learningcommons.dccc.edu/home">former site</a> remains available until 12/16/2022.</p>
+</div>
+</div>----->
+<!--------End--------------->
+      <nav class="help-nav" role="navigation" aria-label="Top navigation">
+        <ul class="topnavmenu desktop">
+          <li class="help-link topnavitem primary">
+					  <a href="https://delccc.ent.sirsi.net/client/en_US/dccc/search/patronlogin/http:$002f$002fdelccc.ent.sirsi.net$002fclient$002fdccc$002fsearch$002faccount$003f"><span class="fa fa-book fa-fw" aria-hidden="true"></span>Renew Library Items</a></li>			
+				 <li class="help-link topnavitem">
+					 	<a href="https://learningcommons.dccc.edu/researching-citing-instruction/ask-a-librarian"><span class="fa fa-comments fa-fw" aria-hidden="true"></span>Ask a Librarian</a></li>
+					<li class="help-link topnavitem">
+						<a href="https://dccc.libanswers.com/"><span class="fa fa-life-ring" aria-hidden="true""></span>Help</a></li>
+         </ul>
+      </nav>
+			<nav class="lcnavbar" role="navigation" aria-label="Primary navigation">
+              <ul class="navmenu">
+					<div class="lc-logo">
+            <div class="logo navbar-logo"><a href="https://www.dccc.edu/">
+			        <img src="https://libapps.s3.amazonaws.com/customers/548/images/DCCC_logo_crop.png" alt="DCCC logo">
+              </a></div>
+            <div class="logo mobile-logo"><a href="https://www.dccc.edu/">
+			        <img src="https://libapps.s3.amazonaws.com/customers/548/images/mobile-logo-flame.png" alt="DCCC logo">
+              </a></div>
+            <div class="logo-separator"></div>
+            <div class="logo-title">
+              <a href="https://learningcommons.dccc.edu">Learning Commons</a></div>
+              </div>                 
+						<li class="nav-item submenu first">
+							<a tabindex="0" aria-haspopup="true" aria-expanded="false">Researching, Citing & Instruction</a>
+              <ul class="submenu">
+                <li class="subitem"><a href="https://learningcommons.dccc.edu/researching-citing-instruction/overview">Overview</a></li>
+                <li class="subitem"><a href="https://learningcommons.dccc.edu/researching-citing-instruction/find-research ">Finding Research</a></li>
+                <li class="subitem"><a href="https://learningcommons.dccc.edu/researching-citing-instruction/ask-a-librarian">Ask a Librarian</a></li>
+                <li class="subitem"><a href="https://learningcommons.dccc.edu/researching-citing-instruction/citation-help">Citation Help</a></li>
+                <li class="subitem"><a href="https://learningcommons.dccc.edu/researching-citing-instruction/learning">Learning Information Literacy</a></li>
+                <li class="subitem"><a href="https://learningcommons.dccc.edu/researching-citing-instruction/collection">Library Collection</a></li>
+              </ul>
+            </li>  
+            
+						<li class="nav-item submenu">
+              <a tabindex="0" aria-haspopup="true" aria-expanded="false">Tutoring & Writing Support</a>
+              <ul class="submenu">
+                <li class="subitem"><a href="https://learningcommons.dccc.edu/tutoring-and-writing/overview">Overview</a></li>
+                <li class="subitem"><a href="https://learningcommons.dccc.edu/tutoring-and-writing/how-to-schedule-tutor">How to Schedule with a Tutor</a></li>
+                <li class="subitem"><a href="https://learningcommons.dccc.edu/tutoring-and-writing/tutor-schedules">Tutor Schedules</a></li>
+				<li class="subitem"><a href="https://learningcommons.dccc.edu/researching-citing-instruction/citation-help">Citation Help</a></li>
+                <li class="subitem"><a href="https://learningcommons.dccc.edu/tutoring-and-writing/become-a-tutor">How to Become a Tutor</a></li>
+<li class="subitem"><a href="https://learningcommons.dccc.edu/tutoring-resources">Tutoring Resources</a></li>
+              </ul>
+            </li>  
+           
+            <li class="nav-item submenu">
+							<a tabindex="0" aria-haspopup="true" aria-expanded="false">Services & Requests</a>
+              <ul class="submenu">
+                <li class="subitem"><a href="https://learningcommons.dccc.edu/services-and-requests/overview">Overview</a></li>
+                    <li class="subitem"><a href="https://learningcommons.dccc.edu/services-and-requests/list-of-services-and-tools">List of Services and Tools</a></li>
+                <li class="subitem"><a href="https://learningcommons.dccc.edu/services-and-requests/requests">Request Forms</a></li>
+                <li class="subitem"><a href="https://learningcommons.dccc.edu/services-and-requests/reservations">Study Room Reservations</a></li>
+                <li class="subitem"><a href="https://learningcommons.dccc.edu/services-and-requests/course-reserves">Course & Textbook Reserves</a></li>
+              </ul>
+            </li>  
+    <li class="help-mobile button first">
+					  	  	<a href="https://delccc.ent.sirsi.net/client/en_US/dccc/search/patronlogin/http:$002f$002fdelccc.ent.sirsi.net$002fclient$002fdccc$002fsearch$002faccount$003f"><span class="fa fa-book fa-fw" aria-hidden="true"></span>Renew Library Items</a></li>	
+					  	  <li class="help-mobile button">
+					  	  	<a href="https://learningcommons.dccc.edu/researching-citing-instruction/ask-a-librarian"><span class="fa fa-comments fa-fw" aria-hidden="true"></span>Ask a Librarian</a></li>
+					  	  <li class="help-mobile button">
+                    <a href="https://dccc.libanswers.com/"><span class="fa fa-life-ring" aria-hidden="true""></span>Help</a></li>
+            
+            <li class="toggle"><a href="#"><span class="fa fa-bars"></span></a></li>
+					</ul>
+       
+			</nav>
+	</div>
+    </header>
+
+<div id="s-lib-public-header" class="blog-breadcrumbs s-lib-header container s-lib-side-borders">
+    <nav id="s-lib-bc" aria-label="breadcrumb"><ol id="s-lib-bc-list" class="breadcrumb"><li id="s-lib-bc-customer" class="breadcrumb-item"><a href="https://www.dccc.edu">Delaware County Community College</a></li><li id="s-lib-bc-site" class="breadcrumb-item"><a href="https://learningcommons.dccc.edu/">Learning Commons</a></li><li id="s-lib-bc-blogs" class="active breadcrumb-item">Blogs</li><li id="s-lib-bc-blog-name" class="breadcrumb-item"><a href="/blogs/system">Highlights</a></li></ol></nav>
+</div>
+    <div class="container  mb-16">
+        <div class="w-100">
+            <div class="position-relative d-flex justify-content-between align-items-center">
+    <div class="blog-public-custom-menu-icon-container bg-white">
+        <button class="blog-public-custom-menu-icon">
+            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none'%3E%3Cpath opacity='0.3' d='M16.05 2H7.95C4.66391 2 2 4.66391 2 7.95V16.05C2 19.3361 4.66391 22 7.95 22H16.05C19.3361 22 22 19.3361 22 16.05V7.95C22 4.66391 19.3361 2 16.05 2Z' fill='black'/%3E%3Cpath d='M17.9201 8.66992H6.08008C5.88117 8.66992 5.6904 8.5909 5.54975 8.45025C5.4091 8.3096 5.33008 8.11883 5.33008 7.91992C5.33008 7.72101 5.4091 7.53024 5.54975 7.38959C5.6904 7.24894 5.88117 7.16992 6.08008 7.16992H17.9201C18.119 7.16992 18.3098 7.24894 18.4504 7.38959C18.5911 7.53024 18.6701 7.72101 18.6701 7.91992C18.6701 8.11883 18.5911 8.3096 18.4504 8.45025C18.3098 8.5909 18.119 8.66992 17.9201 8.66992Z' fill='black'/%3E%3Cpath d='M17.9201 12.6699H6.08008C5.88117 12.6699 5.6904 12.5909 5.54975 12.4503C5.4091 12.3096 5.33008 12.1188 5.33008 11.9199C5.33008 11.721 5.4091 11.5302 5.54975 11.3896C5.6904 11.2489 5.88117 11.1699 6.08008 11.1699H17.9201C18.119 11.1699 18.3098 11.2489 18.4504 11.3896C18.5911 11.5302 18.6701 11.721 18.6701 11.9199C18.6701 12.1188 18.5911 12.3096 18.4504 12.4503C18.3098 12.5909 18.119 12.6699 17.9201 12.6699Z' fill='black'/%3E%3Cpath d='M17.9201 16.7197H6.08008C5.88117 16.7197 5.6904 16.6407 5.54975 16.5001C5.4091 16.3594 5.33008 16.1686 5.33008 15.9697C5.33008 15.7708 5.4091 15.58 5.54975 15.4394C5.6904 15.2987 5.88117 15.2197 6.08008 15.2197H17.9201C18.119 15.2197 18.3098 15.2987 18.4504 15.4394C18.5911 15.58 18.6701 15.7708 18.6701 15.9697C18.6701 16.1686 18.5911 16.3594 18.4504 16.5001C18.3098 16.6407 18.119 16.7197 17.9201 16.7197Z' fill='black'/%3E%3C/svg%3E" alt="hamburger menu">
+        </button>
+    </div>
+</div>            
+
+<div id="sort_by_container" class="d-flex align-items-center gap-3 mb-4 d-none">
+    <span class="blog-public-custom-posts-count-paragraph">Showing  of  Results</span>
+    <select id="select_sort_by" name="sortBy" class="blog-public-custom-select-sort-by form-select" aria-label="Sort by select">
+        <option value="relevance">Relevance</option>
+        <option value="title">Alphabetical</option>
+        <option selected value="date">Most Recent</option>
+    </select>
+</div>            <div class="d-flex justify-content-between gap-5 w-full">
+                <div class="posts-skeleton d-none py-2">
+    <div class="card-body mb-4">
+        <p class="d-flex flex-column gap-4 card-text placeholder-glow">
+            <span class="skeleton-paragraph placeholder bg-secondary fs-3 w-100"></span>
+            <span class="skeleton-paragraph placeholder bg-secondary w-50"></span>
+            <span class="placeholder bg-secondary skeleton-image-container w-100"></span>
+            <span class="placeholder bg-secondary skeleton-text-container w-100"></span>
+            <span class="skeleton-paragraph placeholder bg-secondary  w-25"></span>
+        </p>
+    </div>
+    <div class="card-body mb-4">
+        <p class="d-flex flex-column gap-4 card-text placeholder-glow">
+            <span class="skeleton-paragraph placeholder bg-secondary fs-3 w-100"></span>
+            <span class="skeleton-paragraph placeholder bg-secondary w-50"></span>
+            <span class="placeholder bg-secondary skeleton-image-container w-100"></span>
+            <span class="placeholder bg-secondary skeleton-text-container w-100"></span>
+            <span class="skeleton-paragraph placeholder bg-secondary w-25"></span>
+        </p>
+    </div>
+    <div class="card-body mb-4">
+        <p class="d-flex flex-column gap-4 card-text placeholder-glow">
+            <span class="skeleton-paragraph placeholder bg-secondary fs-3 w-100"></span>
+            <span class="skeleton-paragraph placeholder bg-secondary w-50"></span>
+            <span class="placeholder bg-secondary skeleton-image-container w-100"></span>
+            <span class="placeholder bg-secondary skeleton-text-container w-100"></span>
+            <span class="skeleton-paragraph placeholder bg-secondary w-25"></span>
+        </p>
+    </div>
+    <div class="card-body mb-4">
+        <p class="d-flex flex-column gap-4 card-text placeholder-glow">
+            <span class="skeleton-paragraph placeholder bg-secondary fs-3 w-100"></span>
+            <span class="skeleton-paragraph placeholder bg-secondary w-50"></span>
+            <span class="placeholder bg-secondary skeleton-image-container w-100"></span>
+            <span class="placeholder bg-secondary skeleton-text-container w-100"></span>
+            <span class="skeleton-paragraph placeholder bg-secondary w-25"></span>
+        </p>
+    </div>
+    <div class="card-body mb-4">
+        <p class="d-flex flex-column gap-4 card-text placeholder-glow">
+            <span class="skeleton-paragraph placeholder bg-secondary fs-3 w-100"></span>
+            <span class="skeleton-paragraph placeholder bg-secondary w-50"></span>
+            <span class="placeholder bg-secondary skeleton-image-container w-100"></span>
+            <span class="placeholder bg-secondary skeleton-text-container w-100"></span>
+            <span class="skeleton-paragraph placeholder bg-secondary w-25"></span>
+        </p>
+    </div>
+    <div class="card-body mb-4">
+        <p class="d-flex flex-column gap-4 card-text placeholder-glow">
+            <span class="skeleton-paragraph placeholder bg-secondary fs-3 w-100"></span>
+            <span class="skeleton-paragraph placeholder bg-secondary w-50"></span>
+            <span class="placeholder bg-secondary skeleton-image-container w-100"></span>
+            <span class="placeholder bg-secondary skeleton-text-container w-100"></span>
+            <span class="skeleton-paragraph placeholder bg-secondary w-25"></span>
+        </p>
+    </div>
+</div>                <main id="post_container" class="d-flex flex-column post w-100">
+                    
+
+
+<div class="mb-4">
+    <h1 class="post-title fs-4 fw-bold lh-sm">
+        Artificial Intelligence (AI) and Research - Learn More
+    </h1>
+</div>
+<div class="d-flex flex-wrap align-items-center gap-2 gap-sm-4 mb-4">
+    <div class="d-flex align-items-center gap-2">
+        <div class="blog-public-custom-calendar-icon me-sm-2"></div>
+        <span class="date-user-subjects-text text-secondary">10/07/2024</span>
+    </div>
+            <div class="d-flex align-items-center gap-2">
+                            <img class="fs-2 rounded-circle" height="26" width="26" src="//d2jv02qf7xgjwx.cloudfront.net/accounts/139339/profiles/133309/mobile-logo-flame-small.png" alt="">
+                        <span class="date-user-subjects-text text-secondary">Andrea Rodgers</span>
+        </div>
+        <div class="date-user-subjects-text d-flex gap-2">
+        <div class="blog-public-custom-subjects-icon me-sm-2 flex-shrink-0"></div>
+        <div class="subjects-container d-flex flex-wrap align-items-center gap-2">
+                    <span class="date-user-subjects-text text-secondary">No Subjects</span>
+                </div>
+    </div>
+</div>
+    <div class="post-image-container mb-4">
+        <img src="https://libapps-priv-us.s3.amazonaws.com/sites/559/blog_posts/144875/ecbaacb3-eb51-4eee-a4ce-5cae5e74377e?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&amp;X-Amz-Security-Token=IQoJb3JpZ2luX2VjEJ%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaCXVzLWVhc3QtMSJGMEQCICK5d%2BFDQA3gzZz9s2mD5XV7C2jzcSgao3g5qz32UBkzAiBlV56eT%2BX9TCsRd7miSB4M71uo4IPB59QTSTC9RtEa8iqVAghoEAAaDDgyODk4NTI5NTk2NyIMHJsAYMFoHa%2FP6OOEKvIBT7FxMJF8uGDf2lUffWbui%2Bmm1Br0BApaxoZ3ItHlUoDij60TvAZ84rcTu5Co3GTNDpBfElhjKGDblQtg9csBu4FL7nU%2BvhcRxevdkYjSMSO2TuxoclILhOxJcfATxXYojpUQYFSOSaPonlXv0ieivZxLX9R0gBPBTZ6SfSFugU5B8jWzzad8cc8eA7YsL05z0emi5WaQ9wi%2BjMgbg6EOzf8MvjSmxaDaYKbYxUiJkXzZNRqFcYcZkL8CxFWzGPUrb1yLNBREwHzFSNcf6T9N4Aug7ymGfZqg4okzQeeXSwOLigyKfGE4EMICBjjK8%2FRG4Zcwmp3XzAY6ngFNtmw%2B4Bb9zEiYxt%2F%2Fe985xlxDcES7mKAr87%2FUlWou5l6GlbmpwafnTsfTYLHq1ZQ3EfOe4VGGSZP1hJKZSa2v8K9lcsY2EnzvR1cRbbYXwOlqdXq2QxLlWmq8I5JwG7mLYhxusNyl0VwAM%2B6%2F25to0bCm1nG3wmc2lCGGwNt6CNDc2D6t3AUX0exfn7femuZYsG4AN3%2BU5Us%2BRZosGQ%3D%3D&amp;X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=ASIA4CA27YRP4VPM2IAL%2F20260218%2Fus-east-1%2Fs3%2Faws4_request&amp;X-Amz-Date=20260218T143714Z&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Expires=600&amp;X-Amz-Signature=7c92a1f4855988c848c36634c5ed26b72469c73a4a46cf1062ccd549d0821479" class="w-100 h-full rounded-4" alt="A&#x20;smartphone&#x20;screen&#x20;displaying&#x20;the&#x20;&quot;About&quot;&#x20;page&#x20;of&#x20;the&#x20;OpenAI&#x20;website,&#x20;which&#x20;describes&#x20;their&#x20;mission&#x20;to&#x20;ensure&#x20;artificial&#x20;general&#x20;intelligence&#x20;benefits&#x20;humanity.">
+    </div>
+<div class="ck-content post-content text-break mb-5">
+    <p><span style="font-size:14px;">The </span><a href="https://learningcommons.dccc.edu/artificial_intelligence"><span style="font-size:14px;">Artificial Intelligence (AI)&nbsp;guide</span></a><span style="font-size:14px;"> is a brand new resource&nbsp;created by DCCC Library Services to help you navigate the basics of AI and its use as a research tool. The new guide contains information on:</span></p><ul><li><a href="https://learningcommons.dccc.edu/artificial_intelligence/definitions">What Is Artificial Intelligence?</a></li><li><a href="https://learningcommons.dccc.edu/artificial_intelligence/use">AI Uses and Limitations</a></li><li><a href="https://learningcommons.dccc.edu/artificial_intelligence/prompting">How To Prompt AI</a></li><li><a href="https://learningcommons.dccc.edu/artificial_intelligence/evaluating">Evaluating AI Tools and Output</a></li><li><a href="https://learningcommons.dccc.edu/artificial_intelligence/citing">Creating AI Citations</a></li><li><a href="https://learningcommons.dccc.edu/artificial_intelligence/resources">Resources and Additional Reading</a></li></ul><p>We hope the DCCC community finds this guide informative and&nbsp;helpful.</p><p>If you have specific questions about AI and research, <a href="https://learningcommons.dccc.edu/researching-citing-instruction/ask-a-librarian">just ask</a>!</p><p>Library Services is happy to present to courses on best practices in using AI for research help. <a href="https://dccc.libcal.com/appointments/IL-requests">Sign up for a session</a>, or make a <a href="https://dccc.libcal.com/appointments/research-appointments">one-on-one appointment</a> with a DCCC librarian to learn more about AI.</p>
+</div>
+
+<div id="comments_section" class="blog-post-comments">
+    </div>
+
+<div class="d-flex flex-column flex-sm-row justify-content-between mb-5">
+    <div class="d-flex align-items-center gap-2 mb-2 mb-sm-0">
+        <div class="blog-public-custom-tags-icon"></div>
+                    <span class="date-user-subjects-text text-secondary">No Tags</span>
+            </div>
+    </div>
+                </main>
+                
+
+
+    
+<aside id="sidebar" class="blog-public-custom-sidebar d-none">
+    <div class="icon-sidebar-close d-flex justify-content-end">
+        <button id="icon_sidebar_close" type="button" class="sidebar-icon-close p-4 btn-close d-md-none" aria-label="Close"></button>
+    </div>
+    <div class="sidebar sidebar-search-scrollbar d-flex flex-column overflow-auto">
+        
+        
+                                    
+
+<div class="sidebar-section-container mt-5 mt-md-0 px-md-0 px-2 pt-3 pt-md-0">
+    <h2 class="mb-4">Subscribe</h2>
+    <p class="mb-2">Stay tuned with our latest news! Subscribe now and get notified when a new post is uploaded.</p>
+    <div class="w-100">
+        <form class="form-subscription">
+            <div class="d-flex flex-column gap-1">
+                <p class="fs-7">Email</p>
+                <input id="input_subscribe" class="subscription-input" type="text" placeholder="Enter your email address" aria-label="Enter Email to Subscribe"/>
+                <p class="d-none subscribe-input-error">Provided email address is invalid.</p>
+            </div>
+            <button class="button-subscribe d-flex align-items-center justify-content-center btn btn-primary w-100" type="submit">Subscribe</button>
+        </form>
+
+    </div>
+</div>                                                
+
+<div class="sidebar-section-container px-md-0 sidebar-top-container search-input">
+    <h2 class="mb-4">Search Blog</h2>
+    <form id="sidebar_form_home_page" class="d-flex align-items-center">
+        <div class="search-icon-container">
+            <img height="18" width="18" src="/web/assets/media/icons/duotune/general/gen004.svg" alt="dots-icon">
+        </div>
+        <input id="search_input_home_page" type="text" aria-label="Search Blog" value="" placeholder="Search"
+               maxlength="260" class="input-search-container input-search form-control form-control-solid"/>
+    </form>
+</div>
+                                                                    
+
+<div id="sidebar_recent_posts" class="sidebar-section-container px-md-0 px-2">
+    <h2 class="mb-4">Recent Posts</h2>
+    <div class="d-flex flex-column gap-4">
+                                    <div class="d-flex align-items-center">
+                                        <div class="d-flex flex-column gap-1 m-0 overflow-hidden">
+                        <a href="https://learningcommons.dccc.edu/blogs/system/Event-Is-Data-Privacy-Possible-in-the-Digital-Age" class="fw-semibold">Event: Is Data Privacy Possible in the Digital Age?</a>
+                        <p class="blog-public-custom-line-clamp-2">Save the Date!Is Data Privacy Possible in the Digital Age?A Q &amp; A session with Penn State University Associate Librarian Sarah Hartman-CaverlyIn a world where our personal information is constantly tracked, stored, and analyzed, is true data privacy still possible?Date: Wednesday, February 25, 12:20 p.m. - 1:15 p.m.Location: Marple Campus, Rm. 2246 + Zoom (Register here)Join us for a thought-provoking interview with Sarah Hartman-Caverly, a leading expert in digital privacy as we explore the evolving landscape of surveillance, user rights, and the technologies shaping our online lives.&nbsp;Learn how to keep your data safe—and what you give up in the process—in today’s hyper-connected age.We hope you can join us to learn more about this timely topic. Questions? Contact library@dccc.edu.Speaker Bio: Sarah Hartman-Caverly is an associate librarian with Penn State University Libraries at Penn State Berks, where she supports student and faculty research in the Engineering, Business, and Computing division. Her research examines the compatibility of human and machine autonomy from the perspective of intellectual freedom, including privacy, artificial intelligence, surveillance, and censorship. She is co-author of the forthcoming Privacy Literacy Field Guide (Bloomsbury, 2026), lead editor of Practicing Privacy Literacy in Academic Libraries (ACRL, 2023), and project director of the National Forum for Privacy Literacy Standards and Competencies. She co-curates the award-winning Digital Shred Privacy Literacy Toolkit and her privacy work has been recognized by the Association of College and Research Libraries and EDUCAUSE. Sarah is honored to be returning to DCCC where her privacy education work started more than a decade ago. Outside of the library, Sarah is a wife and mom of two and enjoys edible gardening and trail running. Sarah earned her MS Library and Information Science and MS Information Systems from Drexel University and BA Anthropology from Haverford College.Learn More about the Next-Gen Digital Literacy SeriesThe series was recently featured in the Delaware County Community College student newspaper, The Communitarian. Read the story here....</p>
+                    </div>
+                </div>
+                            <div class="d-flex align-items-center">
+                                        <div class="d-flex flex-column gap-1 m-0 overflow-hidden">
+                        <a href="https://learningcommons.dccc.edu/blogs/system/From-Reconstruction-to-Civil-Rights-Discovering-Stories-in-ProQuests-Black-Freedom-Stru" class="fw-semibold">From Reconstruction to Civil Rights: Discovering Stories in ProQuest’s Black Freedom Struggle Database</a>
+                        <p class="blog-public-custom-line-clamp-2">The Black Freedom Struggle digital archive provides over 3,000 primary source documents dedicated to the African-American fight against racial injustice in the United States.Its twofold goal is to enable a deeper understanding of the influential people who have pursued this quest for freedom while likewise providing information about the harsh, often violent, opposition they faced. From slavery and the abolitionist movement to Black Lives Matter and contemporary police brutality, this database focuses on six key subjects (eras) to support students and scholars better understand this critical piece of American history:Slavery and the Abolitionist Movement (1790-1860);Civil War and Reconstruction (1861-1877);The Jim Crow Era to the Great Depression (1878-1932);The New Deal and World War II (1933-1945);The Civil Rights and Black Power Movements (1946-1975);The Contemporary Era (1976-2000s).Primary sources include newspaper and periodical articles, census information, official government documents, laws, and even FBI reports for an eye-opening reflection on the history and legacy of racial injustice in America.To access, visit learningcommons.dccc.edu/blackfreedomstruggle, or Library Services' A-Z Database List....</p>
+                    </div>
+                </div>
+                            <div class="d-flex align-items-center">
+                                        <div class="d-flex flex-column gap-1 m-0 overflow-hidden">
+                        <a href="https://learningcommons.dccc.edu/blogs/system/Witnessing-History-Discovering-MLK-through-the-EBONY-Archives" class="fw-semibold">Witnessing History: Discovering MLK through the EBONY Archives</a>
+                        <p class="blog-public-custom-line-clamp-2">Explore hundreds of articles on Dr. Martin Luther King Jr., featured across more than 800 issues available.The EBONY Archives offers a powerful window into the life and legacy of Dr. Martin Luther King Jr., documenting his leadership through contemporary articles, interviews, and photography. It provides students and researchers with essential primary sources that capture how Dr. King’s work and impact were represented in the Black press, adding depth and cultural context to civil rights studies.--Text copy provided by POWER LibraryEBONY Archives is provided in part by Library Services and Technology Act (LSTA) funds from the U.S. Institute of Museum and Library Services and through the Commonwealth of Pennsylvania’s Library Access funds administered by the Pennsylvania Department of Education, Office of Commonwealth Libraries.&nbsp;To access, visit learningcommons.dccc.edu/ebony-magazine-archive, or Library Services' A-Z Database List....</p>
+                    </div>
+                </div>
+                            <div class="d-flex align-items-center">
+                                        <div class="d-flex flex-column gap-1 m-0 overflow-hidden">
+                        <a href="https://learningcommons.dccc.edu/blogs/system/Event-Counting-What-Counts-Why-Public-Data-Matters-Nov-12" class="fw-semibold">Event: Counting What Counts: Why Public Data Matters, Nov. 12</a>
+                        <p class="blog-public-custom-line-clamp-2">Save the Date!Counting What Counts: Why Public Data MattersA Q &amp; A session with economist Dr. Laura M. CrispinWhat can free government data reveal about students’ lives—and what happens when it vanishes? Hear from St. Joe’s&nbsp;Dr. Laura M. Crispin&nbsp;who’s turning numbers into stories.Date:&nbsp;Wednesday, November 12, 12:20p.m. -1:15 p.m.UPDATE!!!! Location:&nbsp;Marple Campus, Rm. 2246 (Small Auditorium) + Zoom (Register here)The U.S. government is one of the world’s largest collectors of data on health, education, money, the environment, outer space, and more. Because it’s public, anyone—including you—can explore it to answer questions, spark ideas, and make smart decisions.As an economist, Dr. Laura M. Crispin uses government data to uncover stories about working high school and college students, bullying, and more. She’ll share how open access to public information fuels her research and what we lose when that data disappears.We hope you can join us to learn more about this timely topic. Questions? Contact&nbsp;library@dccc.edu....</p>
+                    </div>
+                </div>
+                        </div>
+</div>                                                <div id="sidebar_single_archives" class="sidebar-section-container sidebar-archive px-md-0 px-2">
+    <h2 class="mb-4">Archives</h2>
+    <p class="mb-2">Search archives</p>
+    <div class="border dropdown w-100">
+        <button class="d-flex align-items-center justify-content-between btn w-100" type="button"
+                data-bs-toggle="dropdown" aria-expanded="false" aria-label="Search archives">
+            Filter by month
+            <span class="archives-dropdown"></span>
+        </button>
+        <ul class="dropdown-menu w-100">
+                            <li>
+                    <a href="/blogs/system?created[]=2026-02"
+                       class="dropdown-item dropdown-item btn btn-link d-flex justify-content-between archives-list">February 2026
+                        <span>2</span>
+                    </a>
+                </li>
+                            <li>
+                    <a href="/blogs/system?created[]=2026-01"
+                       class="dropdown-item dropdown-item btn btn-link d-flex justify-content-between archives-list">January 2026
+                        <span>1</span>
+                    </a>
+                </li>
+                            <li>
+                    <a href="/blogs/system?created[]=2025-11"
+                       class="dropdown-item dropdown-item btn btn-link d-flex justify-content-between archives-list">November 2025
+                        <span>1</span>
+                    </a>
+                </li>
+                            <li>
+                    <a href="/blogs/system?created[]=2025-10"
+                       class="dropdown-item dropdown-item btn btn-link d-flex justify-content-between archives-list">October 2025
+                        <span>1</span>
+                    </a>
+                </li>
+                            <li>
+                    <a href="/blogs/system?created[]=2025-04"
+                       class="dropdown-item dropdown-item btn btn-link d-flex justify-content-between archives-list">April 2025
+                        <span>1</span>
+                    </a>
+                </li>
+                            <li>
+                    <a href="/blogs/system?created[]=2025-03"
+                       class="dropdown-item dropdown-item btn btn-link d-flex justify-content-between archives-list">March 2025
+                        <span>1</span>
+                    </a>
+                </li>
+                            <li>
+                    <a href="/blogs/system?created[]=2025-02"
+                       class="dropdown-item dropdown-item btn btn-link d-flex justify-content-between archives-list">February 2025
+                        <span>2</span>
+                    </a>
+                </li>
+                            <li>
+                    <a href="/blogs/system?created[]=2025-01"
+                       class="dropdown-item dropdown-item btn btn-link d-flex justify-content-between archives-list">January 2025
+                        <span>1</span>
+                    </a>
+                </li>
+                            <li>
+                    <a href="/blogs/system?created[]=2024-11"
+                       class="dropdown-item dropdown-item btn btn-link d-flex justify-content-between archives-list">November 2024
+                        <span>1</span>
+                    </a>
+                </li>
+                            <li>
+                    <a href="/blogs/system?created[]=2024-10"
+                       class="dropdown-item dropdown-item btn btn-link d-flex justify-content-between archives-list">October 2024
+                        <span>2</span>
+                    </a>
+                </li>
+                            <li>
+                    <a href="/blogs/system?created[]=2024-09"
+                       class="dropdown-item dropdown-item btn btn-link d-flex justify-content-between archives-list">September 2024
+                        <span>3</span>
+                    </a>
+                </li>
+                            <li>
+                    <a href="/blogs/system?created[]=2024-08"
+                       class="dropdown-item dropdown-item btn btn-link d-flex justify-content-between archives-list">August 2024
+                        <span>1</span>
+                    </a>
+                </li>
+                            <li>
+                    <a href="/blogs/system?created[]=2024-06"
+                       class="dropdown-item dropdown-item btn btn-link d-flex justify-content-between archives-list">June 2024
+                        <span>1</span>
+                    </a>
+                </li>
+                            <li>
+                    <a href="/blogs/system?created[]=2024-04"
+                       class="dropdown-item dropdown-item btn btn-link d-flex justify-content-between archives-list">April 2024
+                        <span>1</span>
+                    </a>
+                </li>
+                            <li>
+                    <a href="/blogs/system?created[]=2024-02"
+                       class="dropdown-item dropdown-item btn btn-link d-flex justify-content-between archives-list">February 2024
+                        <span>1</span>
+                    </a>
+                </li>
+                            <li>
+                    <a href="/blogs/system?created[]=2024-01"
+                       class="dropdown-item dropdown-item btn btn-link d-flex justify-content-between archives-list">January 2024
+                        <span>1</span>
+                    </a>
+                </li>
+                            <li>
+                    <a href="/blogs/system?created[]=2023-10"
+                       class="dropdown-item dropdown-item btn btn-link d-flex justify-content-between archives-list">October 2023
+                        <span>2</span>
+                    </a>
+                </li>
+                            <li>
+                    <a href="/blogs/system?created[]=2023-09"
+                       class="dropdown-item dropdown-item btn btn-link d-flex justify-content-between archives-list">September 2023
+                        <span>2</span>
+                    </a>
+                </li>
+                            <li>
+                    <a href="/blogs/system?created[]=2023-05"
+                       class="dropdown-item dropdown-item btn btn-link d-flex justify-content-between archives-list">May 2023
+                        <span>1</span>
+                    </a>
+                </li>
+                            <li>
+                    <a href="/blogs/system?created[]=2023-04"
+                       class="dropdown-item dropdown-item btn btn-link d-flex justify-content-between archives-list">April 2023
+                        <span>1</span>
+                    </a>
+                </li>
+                            <li>
+                    <a href="/blogs/system?created[]=2023-03"
+                       class="dropdown-item dropdown-item btn btn-link d-flex justify-content-between archives-list">March 2023
+                        <span>2</span>
+                    </a>
+                </li>
+                            <li>
+                    <a href="/blogs/system?created[]=2023-01"
+                       class="dropdown-item dropdown-item btn btn-link d-flex justify-content-between archives-list">January 2023
+                        <span>1</span>
+                    </a>
+                </li>
+                            <li>
+                    <a href="/blogs/system?created[]=2022-11"
+                       class="dropdown-item dropdown-item btn btn-link d-flex justify-content-between archives-list">November 2022
+                        <span>2</span>
+                    </a>
+                </li>
+                            <li>
+                    <a href="/blogs/system?created[]=2022-10"
+                       class="dropdown-item dropdown-item btn btn-link d-flex justify-content-between archives-list">October 2022
+                        <span>2</span>
+                    </a>
+                </li>
+                            <li>
+                    <a href="/blogs/system?created[]=2022-02"
+                       class="dropdown-item dropdown-item btn btn-link d-flex justify-content-between archives-list">February 2022
+                        <span>1</span>
+                    </a>
+                </li>
+                    </ul>
+    </div>
+</div>                                                                                    </div>
+</aside>
+
+
+    <script>
+        document.getElementById('sidebar_form_single_post_page')?.addEventListener('submit', (e) => {
+            e.preventDefault();
+
+            if ((typeof previewBlogPost !== 'undefined') && previewBlogPost) {
+                return;
+            }
+
+            window.location.href = `/blogs/system?s=${document.getElementById('search_input_search_page').value}`;
+        });
+
+        var element = document.querySelector('.blog-public-custom-menu-icon-container');
+        if (element && window.innerWidth <= 767) {
+            var headerHeight = document.querySelector('header')?.offsetHeight ?? 0;
+            window.addEventListener('scroll', () => {
+                if(window.scrollY >= headerHeight){
+                    element.classList.add('blog-public-custom-menu-icon-container-float');
+                } else {
+                    element.classList.remove('blog-public-custom-menu-icon-container-float');
+                }
+            });
+        }
+    </script>
+            </div>
+        </div>
+    </div>
+    
+
+<div id="alert_danger" class="blog-public-custom-alert-danger alert alert-danger" role="alert"></div>
+<div id="s-lib-footer-public" class="container s-lib-footer footer s-lib-side-borders">
+    <div>
+        <div id="s-lib-footer-brand">
+            Powered by Springshare.
+        </div>
+        <div id="s-lib-footer-rights">
+            All rights reserved.
+        </div>
+        <div id="s-lib-footer-login-link">
+            <a href="https://dccc.libapps.com/libapps/login.php?site_id=559">Login to LibApps</a>
+        </div>
+    </div>
+    <div>
+        <div id="s-lib-footer-support-link">
+            <a href="https://dccc.libanswers.com/">Report a problem.</a>
+        </div>
+    </div>
+</div>
+<nav class="nav-content">
+	<h2 class="role">Table of Contents</h2>
+			<div id="toc-container">
+				<div id="s-lib-public-main" class="s-lib-main container s-lib-side-borders">    
+					<div id="toc-panels">
+						<div  id="s-lg-index-cols"  class="row">
+						<!--Start TOC 1-->
+							<div class="col-sm-12 col-md-4 col-lg-4">
+								<div class="panel panel-default panel-1">
+									<div class="toc-panel">
+										<h3>About Us</h3>
+											<ul>
+												<li><a href="https://learningcommons.dccc.edu/blog">News & Announcements</a></li>
+												<li><a href="https://learningcommons.dccc.edu/about-us/lc-staff-and-faculty-directory">Learning Commons Staff Directory</a></li>
+												<li><a href="https://learningcommons.dccc.edu/about-us/by-the-numbers">By the Numbers</a></li>
+                                                                                                <li><a href="https://learningcommons.dccc.edu/about-us/overview">More About Us</a></li>
+											</ul>
+									</div>
+								</div>
+							</div>
+						<!--End of TOC 1-->
+						<!--Start of TOC 2-->
+							<div class="col-sm-12 col-md-4 col-lg-4">
+								<div class="panel panel-default panel-2">
+									<div class="toc-panel">
+										<h3>Using the Learning Commons</h3>
+											<ul>
+												<li><a href="https://learningcommons.dccc.edu/about-us/hours">Hours</a></li>
+												<li><a href="https://learningcommons.dccc.edu/services-and-requests/course-reserves">Course Reserves</a></li>
+												<li><a href="https://learningcommons.dccc.edu/about-us/technology">Technology</a></li>
+												<li><a href="https://learningcommons.dccc.edu/about-us/guidelines-and-procedures">Guidelines & Procedures</a></li>
+											</ul>
+									</div>
+								</div>
+							</div>
+						<!--End of TOC 2-->
+						<!--Start of TOC 3-->
+							<div class="col-sm-12 col-md-4 col-lg-4">
+								<div class="panel panel-default panel-3">
+									<div class="toc-panel">
+										<h3>Spaces & Places</h3>
+											<ul>
+												<li><a href="https://learningcommons.dccc.edu/about-us/lc-locations">Learning Commons Locations</a></li>
+												<li><a href="https://learningcommons.dccc.edu/about-us/help-desks">Help Desks</a></li>
+												<li><a href="https://learningcommons.dccc.edu/about-us/study-rooms">Study rooms</a></li>
+												<li><a href="https://learningcommons.dccc.edu/about-us/spaces-and-places">More Spaces & Places</a></li>
+											</ul>
+									</div>
+								</div>
+							</div>
+						<!--End of TOC 3-->
+						</div>
+						<div  id="s-lg-index-cols"  class="row">
+						<!--Start TOC 4-->
+							<div class="col-sm-12 col-md-4 col-lg-4">
+								<div class="panel panel-default panel-1">
+									<div class="toc-panel">
+										<h3>Researching, Citing & Instruction</h3>
+											<ul>
+												<li><a href="https://learningcommons.dccc.edu/researching-citing-instruction/find-research">Finding Research</a></li>
+												<li><a href="https://learningcommons.dccc.edu/researching-citing-instruction/citation-help">Citation Help</a></li>
+												<li><a href="https://learningcommons.dccc.edu/researching-citing-instruction/Learning">Learning Information Literacy</a></li>
+												<li><a href="https://learningcommons.dccc.edu/researching-citing-instruction/overview">More Researching, Citing & Instruction</a></li>
+											</ul>
+									</div>
+								</div>
+							</div>
+						<!--End of TOC 4-->
+						<!--Start of TOC 5-->
+							<div class="col-sm-12 col-md-4 col-lg-4">
+								<div class="panel panel-default panel-2">
+									<div class="toc-panel">
+										<h3>Tutoring & Writing Support</h3>
+											<ul>
+												<li><a href="https://learningcommons.dccc.edu/tutoring-and-writing/tutor-schedules">Tutor Schedules</a></li>
+												<li><a href="https://learningcommons.dccc.edu/tutoring-and-writing/how-to-schedule-tutor">How to Schedule a Tutor</a></li>
+												<li><a href="https://learningcommons.dccc.edu/tutoring-and-writing/connect2success">Schedule a Tutor using Connect2Success </a></li>
+												<li><a href="https://learningcommons.dccc.edu/tutoring-and-writing/overview">More Tutoring & Writing Support</a></li>
+											</ul>
+									</div>
+								</div>
+							</div>
+						<!--End of TOC 5-->
+						<!--Start of TOC 6-->
+							<div class="col-sm-12 col-md-4 col-lg-4">
+								<div class="panel panel-default panel-33">
+									<div class="toc-panel">
+										<h3>Services & Requests</h3>
+											<ul>
+												<li><a href="https://dccc.libcal.com/appointments/laptoploanprogram">Laptop Loan Requests</a></li>
+												<li><a href="https://learningcommons.dccc.edu/services-and-requests/requests">Request Forms</a></li>
+												<li><a href="https://learningcommons.dccc.edu/services-and-requests/reservations">Study Room Reservations</a></li>
+												<li><a href="https://learningcommons.dccc.edu/services-and-requests/overview">More Services & Requests</a></li>
+											</ul>
+									</div>
+								</div>
+							</div>
+						<!--End of TOC 6-->
+						</div>
+					</div>	
+				</div>
+			</div>
+	</nav>
+	
+<footer class="footer-content">
+	<h2 class="role">Footer</h2>
+			<div id="footer-container">
+				<div id="s-lib-public-main" class="s-lib-main container s-lib-side-borders">    
+					<div id="footer-panels">
+						<!--Start Footer Row 1-->
+						<div  id="s-lg-index-cols"  class="row">
+						<!--Start Column 1-->
+							<div class="footer-links col-sm-12 col-md-10 col-lg-10">
+								<div class="panel panel-default">
+									<div class="footer-panel">
+											<ul class="dccc-links">
+												<li><a href="https://www.dccc.edu/">Delaware County Community College</a></li>
+												<li><a href="https://www.dccc.edu/about/about-college/policies-procedures/notice-non-discrimination">Notice of Non-Discrimination</a></li>
+												<li><span class="fa fa-lock" aria-hidden="true"></span><a href="https://dccc.libapps.com/libapps/login.php?site_id=559">Login to LibApps </a></li>
+												<li><a href="https://learningcommons.dccc.edu/staff-intranet">Staff Intranet</a></li>
+											</ul>
+									</div>
+								</div>
+							</div>
+						<!--End of Column 1-->
+						<!--Start of Column 2-->
+							<div class="col-sm-2 col-md-2 col-lg-2">
+								<div class="panel panel-default">
+									<div class="column-panel">
+											<ul class="social-icons">
+												<li><a class="icon-fb" href="https://www.facebook.com/DELCOLearningCommons" aria-label="DELCOLearningCommons on Facebook" target="_blank"></a></li>
+												<li><a class="icon-x" href="https://twitter.com/DLearncomm" aria-label="DLearncomm on X" target="_blank"><img alt="DLearncomm on X" src="https://libapps.s3.amazonaws.com/customers/548/images/X-logo-white.png"></a></li>
+<li><a class="icon-ig" href="https://www.instagram.com/dlearncomm/" aria-label="DLearncomm on Instagram" target="_blank"></a></li>
+											</ul>
+									</div>
+								</div>
+							</div><!--End of Column 1-->
+						</div><!--End of Row 1-->		
+						<div  id="s-lg-index-cols"  class="row"><!--Start of Footer Row 2-->
+						<!--Start of Column 1-->
+							<div class="col-sm-12 col-md-10 col-lg-10">
+								<div class="panel panel-default">
+									<div class="address column-panel">
+									<ul class="dccc-links">	
+									<li>901 S. Media Line Rd, Media, PA 19063 - Copyright 2023 All rights reserved</li>
+									</ul>
+									</div>
+								</div>
+							</div>
+						<!--End of Column 1-->
+						</div><!--End of Row 2-->
+					</div>
+				</div>	
+			</div>
+</footer>
+
+
+    <script src="https://dccc.libanswers.com/load_chat.php?hash=956c8e3160e47c2d3b8047438041c29f"></script>
+<script src="https://dccc.libanswers.com/load_chat.php?hash=08475a9866af363caaacf7a6b3f2a9a3"></script>
+
+</body>
+
+	<script src="https://dccc.libanswers.com/load_chat.php?hash=4443f1ab652b72b00f5e77c63773604b1f0c9cb67656506f9ee2da1bb88ef1f1"></script>
+
+<script>
+    var springStats = springStats || {};
+    springStats.saConfig = springStats.saConfig || {
+        site_id: 559,
+        tracking_parameters: {"_st_content_id":144875,"_st_site_id":559},
+        tracking_server_host: "libguides-proc.springyaws.com"
+    };
+</script>
+<script  src="https://static-assets-us.libguides.com/web/js/sa.min.js?3116"></script>
+
+<script>
+    jQuery(function () {
+        springSpace.springTrack.trackBlog({_st_type_id: '26',_st_post_id: '144875'});
+    });
+</script>
+
+<script>
+    const blogId = '1440';
+    const blogSettingsId = '1480';
+    const blogType = 'config';
+    const blogDomain = window.location.origin;
+    const blogSlug = 'system';
+    const authMethod = '3';
+    const authMethodLibAuth = '2';
+    const authMethodPatron = '3';
+    const libAuthLoginLink = '';
+	const sidebarExists = true;
+    const sidebar = document.querySelector('#sidebar');
+    const sidebarSingleArchives = document.querySelector('#sidebar_single_archives');
+    const sidebarTopContainerSingle = document.querySelectorAll('.sidebar-top-container-single');
+    const buttonSidebarSeeMoreCategories  = document.querySelector('.see-more-toggle-single');
+    const blogAlertDuration = 3000;
+    const commentSubmitButtons = document.querySelectorAll('.comments-form-submit-button');
+    const commentReloadCaptchaButtons = document.querySelectorAll('.button-reload-captcha');
+    const isCommentingModeration = '' === '1';
+    const functionalityDisabledOnPreview = 'This functionality is not available on preview';
+    const pagePathBlogManagement = '/libguides/admin/blogs';
+    const alertElement = document.querySelector('.blog-public-custom-alert-danger');
+    const isCaptcha = '' === '1';
+    const fieldRequired = 'Field is required.';
+    const incorrectMail = 'Provided email address is invalid.';
+    const incorrectCaptcha = 'Incorrect captcha value, please try again';
+    const subscriptionSuccessMessage = 'Thank you for subscribing. Please check your email to verify and confirm your subscription.';
+    const characterLimit = 'Maximum character limit is 1000';
+    const labelShowing = '';
+    const labelOf = '';
+    const labelResults = '';
+    const labelSeeMore = 'See more';
+    const labelSeeLess = 'See less';
+    const labelShowMore = '';
+    const labelShowLess = '';
+    const labelComments = 'Comments';
+    const labelLoadMoreReplies = 'Load More Replies';
+    const labelReply = 'Reply';
+    const labelAnonymous = 'Anonymous';
+    const labelLoadMoreComments = 'Load More Comments';
+    const labelUpdateComment = 'Update Comment';
+    const labelDeleteComment = 'Delete Comment';
+    const labelEditComment = 'Edit comment';
+    const deletedCommentText = '[Deleted]';
+    const labelCommentSubmittedForApproval = 'Comment submitted for approval.';
+    const trackingRecordSubscribe = function () {
+        springSpace.springTrack.trackBlog({_st_type_id: '45'});
+    };
+    const trackingRecordCommentAdd = function (postId, commentId) {
+        springSpace.springTrack.trackBlog({_st_type_id: '44',_st_post_id: '144875',_st_blog_post_comment_id: commentId});
+    }
+    const trackingRecordCommentLike = function (id, postId) {
+        springSpace.springTrack.trackBlog({_st_type_id: '42',_st_post_id: '144875',_st_blog_post_comment_id: id});
+    }
+    const trackingRecordCommentUnlike = function (id, postId) {
+        springSpace.springTrack.trackBlog({_st_type_id: '43',_st_post_id: '144875',_st_blog_post_comment_id: id});
+    }
+    let isMobileView = document.body.clientWidth < 768;
+    let previewBlogPost = false;
+
+    const blogInstance = new springSpace.blogPublic.BlogPublic();
+
+    document.addEventListener('DOMContentLoaded', function () {
+        blogInstance.initializeSinglePostView();
+    });
+    window.addEventListener("resize", () => {
+        blogInstance.handleSinglePostResize();
+    });
+    blogInstance.registerBlogPageListeners();
+</script>
+
+</html>

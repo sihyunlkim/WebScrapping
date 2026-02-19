@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Home - Provost's Operational Efficiency Toolkit</title>
+    <meta name="description"
+        content="POET is a collection of tools offered by the Provost's Office to help streamline operations, foster collaboration, and empower academic decisionmaking at UConn.">
+    <link rel="stylesheet" href="https://use.typekit.net/nyu4feu.css">
+    <link rel="preload" as="style" href="https://poet.provost.uconn.edu/build/assets/app-0Az0F6qH.css" /><link rel="stylesheet" href="https://poet.provost.uconn.edu/build/assets/app-0Az0F6qH.css" data-navigate-track="reload" />    
+    <link rel="stylesheet" href="/banner.css">
+    
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    
+
+    <link rel="stylesheet" type="text/css" href="https://unpkg.com/trix@2.0.8/dist/trix.css">
+    <script type="text/javascript" src="https://unpkg.com/trix@2.0.8/dist/trix.umd.min.js"></script>
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-QE4M6Q4PTD"></script>
+    <script src="https://unpkg.com/htmx.org@2.0.4"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'G-QE4M6Q4PTD');
+    </script>
+
+<!-- Livewire Styles --><style >[wire\:loading][wire\:loading], [wire\:loading\.delay][wire\:loading\.delay], [wire\:loading\.inline-block][wire\:loading\.inline-block], [wire\:loading\.inline][wire\:loading\.inline], [wire\:loading\.block][wire\:loading\.block], [wire\:loading\.flex][wire\:loading\.flex], [wire\:loading\.table][wire\:loading\.table], [wire\:loading\.grid][wire\:loading\.grid], [wire\:loading\.inline-flex][wire\:loading\.inline-flex] {display: none;}[wire\:loading\.delay\.none][wire\:loading\.delay\.none], [wire\:loading\.delay\.shortest][wire\:loading\.delay\.shortest], [wire\:loading\.delay\.shorter][wire\:loading\.delay\.shorter], [wire\:loading\.delay\.short][wire\:loading\.delay\.short], [wire\:loading\.delay\.default][wire\:loading\.delay\.default], [wire\:loading\.delay\.long][wire\:loading\.delay\.long], [wire\:loading\.delay\.longer][wire\:loading\.delay\.longer], [wire\:loading\.delay\.longest][wire\:loading\.delay\.longest] {display: none;}[wire\:offline][wire\:offline] {display: none;}[wire\:dirty]:not(textarea):not(input):not(select) {display: none;}:root {--livewire-progress-bar-color: #2299dd;}[x-cloak] {display: none !important;}[wire\:cloak] {display: none !important;}</style>
+</head>
+
+
+<body class="bg-light position-relative">
+    <div class="d-print-none">
+        <div id="uc-header">
+    <div id="uconn-banner" class="alternative">
+        <div id="uconn-header-container" class="blue">
+            <div class="row-container container">
+                <div class="row-fluid">
+                    <div id="home-link-container">
+                        <a id="home-link" href="https://uconn.edu/">
+                            <span id="wordmark" aria-hidden="false">UConn</span>
+                        </a>
+                        <a id="home-link" href="https://uconn.edu/">
+                            <span class="no-css">University of Connecticut school of</span>
+                            <span id="university-of-connecticut">University of Connecticut</span>
+                        </a>
+                    </div>
+
+                    <div id="button-container">
+                        <div class="icon-container" id="icon-container-search">
+                            <a id="uconn-search" class="btn" href="https://uconn.edu/search">
+                                <span class="no-css">Search University of Connecticut</span>
+
+                                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="20"
+                                    viewBox="0 0 32 32" aria-hidden="true" class="banner-icon">
+                                    <title>Search UConn</title>
+                                    <path
+                                        d="M28.072 24.749l-6.046-6.046c0.912-1.499 1.437-3.256 1.437-5.139 0-5.466-4.738-10.203-10.205-10.203-5.466 0-9.898 4.432-9.898 9.898 0 5.467 4.736 10.205 10.203 10.205 1.818 0 3.52-0.493 4.984-1.349l6.078 6.080c0.597 0.595 1.56 0.595 2.154 0l1.509-1.507c0.594-0.595 0.378-1.344-0.216-1.938zM6.406 13.258c0-3.784 3.067-6.853 6.851-6.853 3.786 0 7.158 3.373 7.158 7.158s-3.067 6.853-6.853 6.853-7.157-3.373-7.157-7.158z">
+                                    </path>
+                                </svg>
+                            </a>
+                            <div id="uconn-search-tooltip" style="z-index: 99999 !important"></div>
+                        </div>
+
+                        <div class="icon-container" id="icon-container-az">
+                            <a class="btn" id="uconn-az" href="https://uconn.edu/az"
+                                aria-haspopup="true" aria-controls="a-z-popup" aria-expanded="false">
+                                <span class="no-css">A to Z Index</span>
+
+                                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="20"
+                                    viewBox="0 0 32 32" aria-hidden="true" class="banner-icon">
+                                    <title>UConn A to Z Index</title>
+                                    <path
+                                        d="M5.345 8.989h3.304l4.944 13.974h-3.167l-0.923-2.873h-5.147l-0.946 2.873h-3.055l4.989-13.974zM5.152 17.682h3.579l-1.764-5.499-1.815 5.499zM13.966 14.696h5.288v2.56h-5.288v-2.56zM20.848 20.496l7.147-9.032h-6.967v-2.474h10.597v2.341l-7.244 9.165h7.262v2.466h-10.798v-2.466h0.004z">
+                                    </path>
+                                </svg>
+                            </a>
+                            <div id="uconn-az-tooltip" style="z-index: 99999 !important"></div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>        <header>
+                        <div class="text-black">
+                <div class="container d-flex align-items-center justify-content-between"
+                    style="padding-top:30px;padding-bottom:30px;">
+                    <div>
+                        <p class="header-level-two">
+                            <a href="https://provost.uconn.edu/" class="link-offset-2">
+                                Office of the Provost
+                            </a>
+                        </p>
+                        <h1 class="header-level-one">
+                            <a href="/" class="link-offset-1">
+                                Provost's Operational Efficiency Toolkit
+                            </a>
+                        </h1>
+                    </div>
+                    <!-- Navigation Menu -->
+                    <nav class="navbar navbar-expand-lg">
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#provostToolsMainNav" aria-controls="provostToolsMainNav"
+                            aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="provostToolsMainNav">
+                            <ul class="navbar-nav ms-auto">
+                                                                    <li class="nav-item dropdown">
+                                        <a href="#" class="nav-link dropdown-toggle" role="button"
+                                            data-bs-toggle="dropdown" aria-expanded="false">
+                                            Available Tools
+                                        </a>
+                                        <ul class="dropdown-menu">
+                                            <li>
+                                                <a href="https://poet.provost.uconn.edu/faculty/salary"
+                                                    class="dropdown-item">
+                                                    Faculty Salary Tables
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="https://poet.provost.uconn.edu/projects"
+                                                    class="dropdown-item">
+                                                    Decision Maker
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </li>
+
+                                    <li class="nav-item">
+                                        
+                                        <a href="https://poet.provost.uconn.edu/contact" class="nav-link">Contact</a>
+                                    </li>
+
+                                    <li class="nav-item">
+                                        
+                                                                                    <a href="https://poet.provost.uconn.edu/login" class="nav-link">Login</a>
+                                                                            </li>
+                                                            </ul>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </header>
+    </div>
+
+
+    <main class="curved-main">
+        <div class="main-content">
+
+
+                <div>
+        <div class="hero text-center text-white py-5">
+            <div class="container">
+                <h1>Welcome to 
+
+              <abbr title="Provost's Operational Efficiency Toolkit">POET</abbr>
+                </h1>
+                <h2>The Provost's Operational Efficiency Toolkit</h2>
+            </div>
+        </div>
+
+        <div class="content-wrap">
+            <div class="container">
+
+                <div id="tools" class="row mt-5">
+
+                    <div class="col-sm-6 col-lg-3 mb-4">
+                        <div class="card">
+                            <div class="card-header">
+                                <span class="badge bg-success">Available Now</span>
+
+                            </div>
+                            <div class="card-body">
+                                <i class="material-icons">paid</i> <br>
+
+
+                                <h3>Faculty Salary Tables</h3>
+
+                                <p>Salary data for faculty within the AAUP, in accordance with the annual Provost Fund
+                                    Guidance.</p>
+
+                                <a href="https://poet.provost.uconn.edu/faculty/salary" class="tool-link">
+                                    View Salary Tables &raquo;
+                                </a>
+
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="col-sm-6 col-lg-3 mb-4">
+                        <div class="card">
+                            <div class="card-header">
+                                <span class="badge bg-black">Submissions Closed</span>
+                            </div>
+                            <div class="card-body">
+                                <i class="material-icons">content_paste</i>
+
+                                <h3>Annual Budget Hearing Questionnaire</h3>
+
+                                <p>Streamlined submission tool that creates an outline for annual budget hearing meetings.
+                                </p>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    
+                    <div class="col-sm-6 col-lg-3 mb-4">
+                        <div class="card">
+                            <div class="card-header">
+                                <span class="badge bg-testing">In Testing</span>
+                            </div>
+                            <div class="card-body">
+                                <i class="material-icons">apartment</i>
+                                <h3>Academic Space Needs Dashboard</h3>
+                                <p>Forecasting tools for teaching and research space requirements.</p>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    
+                    <div class="col-sm-6 col-lg-3 mb-4">
+
+                        <div class="card">
+                            <div class="card-header">
+                                <span class="badge badge-warning">Beta</span>
+                            </div>
+                            <div class="card-body">
+                                <i class="material-icons">trending_up</i>
+                                <h3>Strategic Decision-making Tool</h3>
+                                <p>Tool to assist units in prioritizing their projects in alignment with their organizational priorities.</p>
+                            </div>
+
+                            <div class="card-footer">
+                                <a 
+                                href="https://poet.provost.uconn.edu/projects"
+                                class="tool-link">Learn More &raquo;</a>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    
+                    <div class="col-sm-6 col-lg-3 mb-4">
+                        <div class="card">
+                            <div class="card-header">
+                                <span class="badge bg-testing">In Testing</span>
+                            </div>
+                            <div class="card-body">
+                                <i class="material-icons">account_balance</i>
+                                <h3>Financial Commitment Tracker</h3>
+                                <p>A tool to help units keep track of their financial commitments.</p>
+                            </div>
+
+                        </div>
+                    </div>
+
+
+                    
+
+                    <div class="col-sm-6 col-lg-3 mb-4">
+                        <div class="card">
+                            <div class="card-header">
+                                <span class="badge bg-inprogress">In Development</span>
+                            </div>
+                            <div class="card-body">
+                                <i class="material-icons">engineering</i>
+                                <h3>Department Simulation Tool</h3>
+                                <p>Modeling departmental operational needs based on student plans of study and progress toward degree.</p>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    
+                    <div class="col-sm-6 col-lg-3 mb-4">
+                        <div class="card">
+                            <div class="card-header">
+                                <span class="badge bg-inprogress">In Development</span>
+                            </div>
+                            <div class="card-body">
+                                <i class="material-icons">forum</i>
+                                <h3>Crowdsourced Ideas Forum</h3>
+                                <p>A platform for UConn faculty, staff, and students to share ideas, upvote suggestions, and engage in discussions that will help us decide what to build next.</p>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    
+                    <div class="col-sm-6 col-lg-3 mb-4">
+                        <div class="card">
+                            <div class="card-header">
+                                <span class="badge bg-ideation">In Ideation</span>
+                            </div>
+                            <div class="card-body">
+                                <i class="material-icons">school</i>
+                                <h3>Minimum Class Size Dashboard</h3>
+                                <p>Tool to support units in decisions around low enrollment course offerings and exemption requests.                </p>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    
+                    <div class="col-sm-6 col-lg-3 mb-4">
+                        <div class="card">
+                            <div class="card-header">
+                                <span class="badge bg-ideation">In Ideation</span>
+                            </div>
+                            <div class="card-body">
+                                <i class="material-icons">people</i>
+                                <h3>Faculty Hiring Request Form</h3>
+                                <p>Streamlined submission tool for annual faculty hiring requests.     </p>
+                            </div>
+
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // equalize card heights in #tools
+        document.addEventListener('DOMContentLoaded', function() {
+            function equalizeCardHeights() {
+            var cards = document.querySelectorAll('.card');
+            var maxHeight = 0;
+
+            cards.forEach(function(card) {
+                card.style.height = 'auto'; // Reset height
+                if (card.offsetHeight > maxHeight) {
+                maxHeight = card.offsetHeight;
+                }
+            });
+
+            cards.forEach(function(card) {
+                card.style.height = maxHeight + 'px';
+            });
+            }
+
+            equalizeCardHeights();
+            window.addEventListener('resize', equalizeCardHeights);
+        });
+        
+    </script>
+
+        </div>
+    </main>
+    <footer class="text-primary d-block w-100 py-4 d-print-none">
+        <div class="container">
+            <div class="d-flex w-100 flex-column flex-md-row justify-content-center align-items-center">
+                <a class="p-4 link-dark link-underline-opacity-0 link-underline-opacity-100-hover"
+                    href="https://uconn.edu/">© 2026 University of Connecticut</a>
+                <a class="p-4 link-dark link-underline-opacity-0 link-underline-opacity-100-hover"
+                    href="http://uconn.edu/disclaimers-privacy-copyright/">Disclaimers, Privacy &amp; Copyright</a>
+                <a class="p-4 link-dark link-underline-opacity-0 link-underline-opacity-100-hover"
+                    href="https://accessibility.uconn.edu/">Accessibility</a>
+                <a href="#" class="p-4 link-dark link-underline-opacity-0 link-underline-opacity-100-hover">
+                    
+                    <img style="position: relative; top:-2px;" src="https://poet.provost.uconn.edu/images/i3blue-48.png" alt="i3 logo"
+                        width="20">
+                    Powered by <abbr title="Internal Insights & Innovation"><span class="i3-mark">i3</span></abbr>
+
+                </a>
+            </div>
+        </div>
+    </footer>
+    <link rel="modulepreload" href="https://poet.provost.uconn.edu/build/assets/app-Dpe2SOiz.js" /><script type="module" src="https://poet.provost.uconn.edu/build/assets/app-Dpe2SOiz.js" data-navigate-track="reload"></script>
+    <script type='text/javascript' src='https://ucommobjectstorage.blob.core.windows.net/cookie-jar/cookie-notification.js'>
+    </script>
+    <noscript>
+        <p>Our websites may use cookies to personalize and enhance your experience. By continuing without changing your
+            cookie settings, you agree to this collection. For more information, please see our <a
+                href="https://privacy.uconn.edu/university-website-notice/" target="_blank">University Websites
+                Privacy Notice</a>.</p>
+    </noscript>
+
+    
+<!-- Livewire Scripts -->
+<script src="/livewire/livewire.js?id=df3a17f2"   data-csrf="lmK17FcTyVJJW1UyYlEu4qFHeZrC1OxO4m2j2PYz" data-update-uri="/livewire/update" data-navigate-once="true"></script>
+</body>
+
+</html>

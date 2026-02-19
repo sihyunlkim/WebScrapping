@@ -1,0 +1,690 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head><meta http-equiv="X-UA-Compatible" content="IE=EDGE" /><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" /><title>
+	IT Help Desk | Portal | JICS
+</title><base href="https://myportal.madonna.edu/ICS/">
+<script type="text/javascript">
+    window.jenzabar = {};
+    jenzabar.userSettings = {
+        culture:    'en-US',
+        language:   'en',
+        dateFormat: 'm/d/yy'
+    };
+    window.userSettings = jenzabar.userSettings;
+
+    jenzabar.jicsVersion = {
+        text: {
+	        version: '?v=' + '2025.1.0'
+        }
+    }
+    jenzabar.siteSettings = {
+        textEditorSettings: {
+            customAudioMinutesLimit: 5,
+            customVideoMinutesLimit: 5
+        },
+        text: {
+            more: 'More'
+        }
+    };
+</script>
+
+<!-- BEGIN Html Head Elements -->
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.7/handlebars.min.js"></script>
+<script src="//stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jqueryui/1.13.2/jquery-ui.min.js"></script>
+<link rel="stylesheet" type="text/css" href="/ICS/UI/Common/Styles/jQuery/jquery-ui.custom.css" />
+<link href="//fonts.googleapis.com/css?family=Open+Sans:400,600,700" rel="stylesheet" type="text/css">
+<link href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="//stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/signalr.js/2.4.3/jquery.signalR.min.js?v=2025.1.0"></script>
+<script type="text/javascript" src="/ICS/signalr/hubs?v=2025.1.0"></script>
+<!-- END Html Head Elements -->
+
+<link href="/ICS/UI/Common/Styles/css/site-bundle.css?v=TFtOHsXFl8Vblh1bw_wfIB0WPjuLn6qMGsTVo93UJHE1" rel="stylesheet"/>
+
+
+
+<link rel="stylesheet" type="text/css" media="print" href="/ICS/UI/Common/Styles/print.css" />
+
+
+<script type="text/javascript" src="/ICS/UI/Common/Scripts/jcsfl.js"></script>
+<script src="/ICS/UI/Common/Scripts/site-bundle.js?v=A2fQgZEqNEreaFQK9bann7d6vgKBS5XbWsBUwSSNhvg1"></script>
+
+
+<!-- BEGIN Html Head Elements After JICS JS Framework -->
+<script type="text/javascript" src="/ICS/UI/Common/Scripts/SignalRManager.js?v=2025.1.0"></script>
+<script type="text/javascript" src="/ICS/UI/Common/Scripts/LayoutManager.js?v=2025.1.0"></script>
+<!-- END Html Head Elements After JICS JS Framework -->
+
+<script type="text/javascript" src="/ICS/UI/Common/Scripts/Globalization.js.aspx?id=8659790fcae44454aaf16f2d28a1f36b"></script>
+<!--[if IE]>
+<style type="text/css" media="all">@import url( UI/Common/Styles/IEOnly.css );</style>
+<script type="text/javascript" language="JavaScript" src="UI/Common/Scripts/IEOnly.js"></SCRIPT>
+<![endif]-->
+<script type="text/javascript">
+    window.Portal =
+    {
+        url: 'https://myportal.madonna.edu/ICS/',
+        uid: null,
+    };
+</script>
+
+
+<script type="text/javascript">
+    $.extend(window.Portal,{
+        timeout: 20,
+        SessionMonitor: JCSL.JICS.get_session_monitor()
+        
+    });
+</script>
+
+<script type="text/javascript">
+    jQuery(function () {
+        jenzabar.framework.timeoutWarning.create(true);
+    });
+</script>
+<script type="text/javascript" language="javascript">
+
+    $.connection.portalHub.client.sendLoginWarning = function (userId) {
+        let id = "b0b00000-c542-4d2a-86e6-55ebbbcd85da";
+        if (id === userId) {
+            alert("Your username has been used to authenticate in another browser.  If you are not responsible for this login, your account may be compromised!  Contact an administrator for assistance.");
+        }
+    }
+
+</script><link rel="stylesheet" type="text/css" href="/ICS/UI/Themes/Atlantica/style.css?v=1&u=02%2f18%2f2026+08%3a04%3a09" />
+<script type="text/javascript" src="/ICS/UI/Themes/Atlantica/js/javascript.js?v=1"></script>
+
+<style id="customCssImport_custom" type="text/css" media="all">
+	@import url( /ICS/StaticPages/GetFile.aspx?target=be7884da-8f42-4016-b362-9c70b7f95a83);
+</style>
+<link rel="Shortcut Icon" href="favicon.ico" type="image/x-icon">
+</head>
+<body onload="doLoad();" >
+	<div id="siteWrapper" class="custom-grid">
+		<form name="MAINFORM" method="post" action="/ICS/Student_Help/" id="MAINFORM" enctype="multipart/form-data" autocomplete="off">
+<div class="aspNetHidden">
+<input type="hidden" name="_scriptManager_HiddenField" id="_scriptManager_HiddenField" value="" />
+<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
+<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="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" />
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['MAINFORM'];
+if (!theForm) {
+    theForm = document.MAINFORM;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script>
+
+
+<script src="/ICS/WebResource.axd?d=pynGkmcFUV13He1Qd6_TZBXuObSTJstoiRIXnnP1-vZlEYzk6U75Lvz-1WA9ZsTt_R75tKNTbj1A59xjFN3JkA2&amp;t=638901392248157332" type="text/javascript"></script>
+
+
+<script type="text/javascript">
+//<![CDATA[
+$(function() {jenzabar.framework.login.initializeForPossibleRedirect({continueButton: $('#siteNavBar_welcomeBackBarLoggedOut_JicsLoginRedirectContinue'),userNameSection: $('.init-user-username-section'),standardLoginFields: $('.init-user-password-section, .forgot-password-link, .init-user-login-btn'),userNameField: $('#userName'),passwordField: $('#password'),userLoginSection: $('#user-login-section'),simpleLoginButton: $('#jics-login-redirect-simple-button'),showStandardFieldsSection: $('#jics-login-show-standard-fields-section'),showStandardFieldsButton: $('#jics-login-show-standard-fields-button'),simpleLogin: $('.js-simple-login') },{"pleaseWaitForRedirect":"Please wait...","redirectModalTitle":"Login","checkingUserNameAccessibility":"Please wait for the login process to continue.","errorOccurred":"An unexpected error occurred during login. Try again, or contact an administrator for assistance."},{"authenticationMethodId":"8a5649cb-74e1-49e4-a941-bb4b843ff212","isLoginDisplayedInline":false,"isRedirectedForLogin":true,"loginUrl":"/ICS/StaticPages/SAML/ServiceProvider/Request.aspx?RelayState=%2fICS%2fStudent_Help%2f&methodId=8a5649cb-74e1-49e4-a941-bb4b843ff212"});});(function( pi, $) {pi.PageID = '';pi.DisplayName = '';pi.PageURL = '';pi.IsCustomizing ='';pi.IsShowingPortlet = '';}(window.PageInfo = window.PageInfo || {}, PageInfo));try {window.PageInfo.PageID = '184ca064-8f36-4371-a6ef-2f28db81b315';window.PageInfo.DisplayName = 'IT Help Desk';window.PageInfo.PageURL = '/ICS/Student_Help/IT_Help_Desk.jnz';window.PageInfo.IsCustomizing ='False';window.PageInfo.IsShowingPortlet = 'False';window.PageInfo.IsReadOnly = 'False';}catch(ex){ console.error(ex);}//]]>
+</script>
+
+<script src="/ICS/ScriptResource.axd?d=x6wALODbMJK5e0eRC_p1LZnBs7Y9gBZ7YgXwuEHHWqfmaS_Cj86k5HREubbSWJXxh3D-HHbzNwq9lyKgIlkeNY51YOljeA5kDiSfepIV1bguH4PPvd2Y6QNehVJAbD_J0&amp;t=245582f9" type="text/javascript"></script>
+<script src="/ICS/ScriptResource.axd?d=P5lTttoqSeZXoYRLQMIScLZkop4vnaZtntj4hgtYezsU11EGpOqV6wBWzYlxFRPwDB0Qb7uyfd-F5EFfW3LNjuOgBwpQs8xh9B9-GHE6jjdPMGu8Bp3-lv3XYnjHzooB0&amp;t=245582f9" type="text/javascript"></script>
+<div class="aspNetHidden">
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="38ABEAAB" />
+</div>
+			<script type="text/javascript">
+//<![CDATA[
+Sys.WebForms.PageRequestManager._initialize('_scriptManager', 'MAINFORM', [], [], [], 90, '');
+//]]>
+</script>
+
+			<input name="___BrowserRefresh" type="hidden" id="___BrowserRefresh" value="6831e018-6fb0-4803-82ca-82d8970fb38a" />
+			
+			<header>
+				<a href="#content" class="skip-navigation sr-only-focusable">Skip to content</a>
+				
+
+<div class="site-header-container">
+    <div class="mobile-fixed-container"></div>
+    <div id="sitemasthead">
+        <div>
+            
+                <button id="main-nav-btn" class="btn btn-no-bg-hover-color-content-one glyphicons glyphicons-menu-hamburger main-nav-btn" type="button" data-toggle="collapse" data-target="#hamburger-menu-section" aria-expanded="false" aria-controls="hamburger-menu-section"><span class="sr-only">main navigation</span></button>
+                <h1 id="logo-heading">
+<a class="site-logo-link" href=".">
+	<img class="site-logo" src="/ICS/icsfs/logo.png?target=f9f6a060-6a58-42fb-bbae-db05db44bd41" alt="logo"/>
+</a>
+</h1>
+<div id="welcomeBackBar" class="main-nav-submenu-container">
+	<div id="siteNavBar_welcomeBackBarLoggedOut_welcomeBackBarLoggedOut">
+		<button id="siteNavBar_welcomeBackBarLoggedOut_loginToggle" class="btn login-btn" type="button" data-toggle="collapse" data-target="#user-login-section" aria-expanded="false" aria-controls="user-login-section"><span>Login</span></button>
+		<div id="user-login-section" aria-label="Login" class="collapse user-login form-inline">
+			<div class="input-group init-user-username-section">
+				<span class="input-group-addon glyphicons glyphicons-user"></span>
+				<label id="siteNavBar_welcomeBackBarLoggedOut_UserNameLabel" for="userName" class="sr-only">Username</label>
+				<input type="text" name="userName" id="userName" placeholder="Username" class="form-control user-name" autocomplete="username" value="" />
+			</div>
+			<div class="input-group init-user-password-section">
+				<span class="input-group-addon glyphicons glyphicons-asterisk"></span>
+				<label id="siteNavBar_welcomeBackBarLoggedOut_PasswordLabel" for="password" class="sr-only">Password</label>
+				<input type="password" name="password" id="password" placeholder="Password" class="form-control user-password" autocomplete="off" />
+			</div>
+			<input type="submit" name="siteNavBar$welcomeBackBarLoggedOut$ButtonLogin" value="Login" id="siteNavBar_welcomeBackBarLoggedOut_ButtonLogin" class="btn btn-sm btn-block btn-primary init-user-login-btn" />
+			<button id="siteNavBar_welcomeBackBarLoggedOut_JicsLoginRedirectContinue" type="button" class="btn btn-sm btn-block btn-primary init-user-login-continue-btn">Continue</button>
+			<div id="siteNavBar_welcomeBackBarLoggedOut_JicsSimpleLogin">
+				<div id="siteNavBar_welcomeBackBarLoggedOut_JicsLoginRedirectSimple">
+					<div id="jics-login-redirect-simple" class="jics-login-redirect-simple">
+						<button id="jics-login-redirect-simple-button" type="button" class="btn btn-sm btn-block btn-primary init-user-login-continue-btn jics-login-redirect-simple-button">
+							Login
+						</button>
+					</div>
+					<div id="siteNavBar_welcomeBackBarLoggedOut_AlternativeLogin">
+						<div id="jics-login-show-standard-fields-section" class="jics-login-show-standard-fields-section">
+							<span id="jics-login-show-standard-fields-text" class="jics-login-show-standard-fields-text">
+								Need to login via a different method? 
+							</span>
+							<button id="jics-login-show-standard-fields-button" type="button" class="btn link-btn color-content-one jics-login-show-standard-fields-button" aria-labelledby="jics-login-show-standard-fields-text jics-login-show-standard-fields-button">
+								Login Here
+							</button>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+			<a onclick="preventDefaultEvent(event, ValidateLoginUserName());" id="siteNavBar_welcomeBackBarLoggedOut_ForgotPasswordLink" class="forgot-password-link margin-t-md" tabindex="0" href="javascript:__doPostBack(&#39;siteNavBar$welcomeBackBarLoggedOut$ForgotPasswordLink&#39;,&#39;&#39;)">Create or Reset Password</a>
+		</div>
+	</div>
+</div>
+
+
+<script type="text/javascript">
+    jQuery(document).ready(function ($) {
+	    if (searchBox !== null && searchBox !== undefined) {
+		    searchBox.searchPanel = 'siteNavBar_searchBox_searchPanel';
+		    searchBox.textBox = 'siteNavBar_searchBox_tbSearch';
+		    searchBox.button = 'siteNavBar_searchBox_lbSearch';
+		    searchBox.userId = "b0b00000-c542-4d2a-86e6-55ebbbcd85da";
+		    searchBox.autoCompleteSelect = function(event, ui) {
+			    $("#" + searchBox.textBox).val(ui.item.value);
+			    __doPostBack('siteNavBar$searchBox$lbSearch','');
+		    };
+		    searchBox.initAutoComplete();
+		    $('#siteNavBar_searchBox_lbSearch').keypress(function(e) {
+			    var key = e.which;
+			    if (key === 32 || key === 13) {
+				    if (searchBox.searchClick()) {
+					    window.location.href = this.href;
+				    }
+				    return false;
+			    }
+		    });
+
+		    // Hack needed to comply with A11y
+		    $('#siteNavBar_searchBox_searchPanel').removeAttr('onkeypress');
+		    $('#siteNavBar_searchBox_tbSearch').keypress(function (e) {
+			    return WebForm_FireDefaultButton(e, searchBox.button);
+		    });
+	    }
+    });
+ </script>
+
+<span role="search">
+	<button id="siteNavBar_searchBox_SearchButton" class="btn btn-no-bg-hover-color-content-one glyphicons glyphicons-search search-btn" type="button" data-toggle="collapse" data-target="#search-section" aria-expanded="false" aria-controls="search-section">
+		<span class="sr-only">
+			Search
+		</span>
+	</button>
+</span>
+
+<div id="searchAutoCompleteResults" class="searchAutoComplete"> </div>
+
+<div id="siteNavBar_searchBox_searchPanel" class="search-panel" onkeypress="javascript:return WebForm_FireDefaultButton(event, &#39;siteNavBar_searchBox_lbSearch&#39;)">
+	
+    <div id="siteNavBar_searchBox_divSideBarContainer">
+        <div id="search-section" aria-label="Search" class="search-section collapse popover fade bottom">
+            <div class="arrow" style="left: 90%;"></div>
+            <div class="popover-content form-wrapper">
+                <div class="form-group"> 
+                    <label for="siteNavBar_searchBox_tbSearch" id="siteNavBar_searchBox_lblForSearch" class="sr-only">Search</label>
+                    <input name="siteNavBar$searchBox$tbSearch" type="text" id="siteNavBar_searchBox_tbSearch" class="search-input global-search-input form-control" placeholder="Search..." onfocus="return searchBox.cleardefault();" onblur="return searchBox.restoredefault();" />
+               </div>
+                <a onclick="return searchBox.validate();" id="siteNavBar_searchBox_lbSearch" class="btn btn-sm btn-block btn-primary init-search-btn" role="button" href="javascript:__doPostBack(&#39;siteNavBar$searchBox$lbSearch&#39;,&#39;&#39;)">Search</a>
+            </div>
+        </div>
+    </div>
+
+</div>
+<script>
+	$(function () {
+		$('#top-nav-bar').attr("aria-label", "Site tabs");
+	});
+</script>
+<nav id="top-nav-bar" class="top-nav-bar navbar navbar-default navbar-fixed-top">
+	<div class="nav-container">
+		<div id="header-tabs" class="link-scroll horizontal-slide">
+			<div class="collapse h-menu" id="hamburger-menu-section">
+				
+						<ul id="main-nav" class="nav navbar-nav no-margin">
+					
+						<li class="tabs tab_Home firstTab">
+							<a href="/ICS/">
+								Home
+							</a>
+						</li>
+					
+						<li class="tabs tab_Student_Help selected lastTab">
+							<a href="/ICS/Student_Help/">
+								Student Help
+							</a>
+						</li>
+					
+						</ul>
+					
+			</div>
+		</div>
+	</div>
+</nav>
+
+        </div>
+    </div>
+</div>
+			</header>
+			
+<div id="mainCrumbs" class="main-crumbs" role="navigation" aria-label="Site breadcrumb">
+	<span class="breadcrumbs-title text-bold">You are here:</span>
+	<span class="crumbs">
+		<ul id="youAreHere" class="breadcrumbs-container">
+			 <li><a href="/ICS/Student_Help/">Student Help</a></li>  <li><a href="/ICS/Student_Help/IT_Help_Desk.jnz">IT Help Desk</a></li> 
+			
+		</ul>
+	</span>
+</div>
+
+			
+			
+			<div id="mainLayout" class="main-layout">
+				<div class="container-fluid">
+					<div class="row">
+						
+						<nav aria-label="Site pages">
+							<div id="sideBar" aria-label="Sidebar links" class="col-md-2 mobile-padding-horizontal-none sidebar">
+								<div id="sidebar-slide-menu-container" class="slide-menu-right">
+									
+									<div id="thisContext" class="side-section"><span class="sidebar-link-title"><a href="/ICS/Student_Help/"  accesskey="">Student Help</a></span><div class="navbar navbar-default"><ul id="contextPages" class="nav nav-pills nav-stacked"><li class="slide-menu-toggle-btns-wrapper"><ul id="slide-menu-toggle-btns" class="nav nav-pills nav-stacked slide-menu-toggle-btns"><li class="active"><a id="menu-links-tab" data-toggle="tab" href="#menu-links" aria-expanded="true" aria-controls="menu-links">Menu</a></li><li><a id="quick-links-tab" data-toggle="tab" href="#quick-links" aria-expanded="false" aria-controls="quick-links">Quick Links</a></li></ul></li><li id="menu-links" class="menu-links tab-pane fade in active"><ul id="this-context-pages" class="nav nav-pills nav-stacked" aria-label="Page menu "><li><a href="/ICS/Student_Help/Blackboard.jnz" >Blackboard</a></li><li class="current-page"><button id="page-portlets-label" type="button" class="page-portlets sub-nav" data-toggle="collapse" data-target="#pagePortlets" aria-expanded="false" aria-controls="pagePortlets">IT Help Desk<span class="glyphicons glyphicons-chevron-down"></span></button><ul id="pagePortlets" class="nav nav-pills nav-stacked sub-nav collapse" aria-labelledby="page-portlets-label"><li><a href="/ICS/Student_Help/IT_Help_Desk.jnz?portlet=Free-form_Content_2" >Accessing @my.madonna.edu Email</a></li><li><a href="/ICS/Student_Help/IT_Help_Desk.jnz?portlet=Free-form_Content_2020-04-23T14-57-08-447" >Madonna Bookstore Information</a></li><li><a href="/ICS/Student_Help/IT_Help_Desk.jnz?portlet=Free-form_Content_1" >Campus Safety - Rave Guardian</a></li><li><a href="/ICS/Student_Help/IT_Help_Desk.jnz?portlet=IT_Help_Desk" >IT Help Desk</a></li><li><a href="/ICS/Student_Help/IT_Help_Desk.jnz?portlet=Free-form_Content_2021-05-28T12-28-24-645" >Single Sign-On for Blackboard Learn</a></li></ul></li><li><a href="/ICS/Student_Help/Microsoft_Office.jnz" >Microsoft Office</a></li><li><a href="/ICS/Student_Help/Mobile_Devices.jnz" >Mobile Devices</a></li><li><a href="/ICS/Student_Help/MY_Portal.jnz" >MY Portal</a></li><li><a href="/ICS/Student_Help/Email.jnz" >Student Email</a></li><li><a href="/ICS/Student_Help/Cengage_-Mindtap.jnz" >Cengage -Mindtap</a></li></ul></li><li id="quick-links" class="quick-links tab-pane fade"><span class="sidebar-link-title">Quick Links</span><ul id="quick-links-menu" class="nav nav-pills nav-stacked"><li class="sidebar-quick-link"><a class="anchor-contains-icon" target="_blank" href="https://madonna.blackboard.com/" title="Blackboard">Blackboard Learn<span class="glyphicons glyphicons-link sidebar-icon-link"></span></a></li><li class="sidebar-quick-link"><a class="anchor-contains-icon" target="_blank" href="https://myportal.madonna.edu/ICS/Student_Help/IT_Help_Desk.jnz?portlet=Free-form_Content_2020-04-23T14-57-08-447" title="Bookstore">Bookstore<span class="glyphicons glyphicons-link sidebar-icon-link"></span></a></li><li class="sidebar-quick-link"><a class="anchor-contains-icon" target="_blank" href="https://madonna.presence.io/" title="Campus Life">Campus Life<span class="glyphicons glyphicons-link sidebar-icon-link"></span></a></li><li class="sidebar-quick-link"><a class="anchor-contains-icon" href="https://myportal.madonna.edu/ICS/Home.jnz?portlet=Free-form_Content_2019-02-07T16-36-38-521" title="Campus Parking Policy for Students">Campus Parking Policy for Students<span class="glyphicons glyphicons-link sidebar-icon-link"></span></a></li><li class="sidebar-quick-link"><a class="anchor-contains-icon" target="_blank" href="https://www.madonna.edu/resources/campus-safety/" title="Campus Safety">Campus Safety<span class="glyphicons glyphicons-link sidebar-icon-link"></span></a></li><li class="sidebar-quick-link"><a class="anchor-contains-icon" target="_blank" href="https://www.madonna.edu/resources/registrar/academic-planning-guides-catalogs/" title="Catalogs (Bulletins)">Catalogs (Bulletins)<span class="glyphicons glyphicons-link sidebar-icon-link"></span></a></li><li class="sidebar-quick-link"><a class="anchor-contains-icon" target="_blank" href="https://ww3.madonna.edu/cdirectory_2/info.php" title="Directory">Directory<span class="glyphicons glyphicons-link sidebar-icon-link"></span></a></li><li class="sidebar-quick-link"><a class="anchor-contains-icon" target="_blank" href="https://www.getrave.com/login/madonna" title="Emergency Alert System">Emergency Alert System<span class="glyphicons glyphicons-link sidebar-icon-link"></span></a></li><li class="sidebar-quick-link"><a class="anchor-contains-icon" target="_blank" href="https://ww3.madonna.edu/pdf/Emergency_Response_Procedures_2021.pdf" title="Emergency Response Procedures">Emergency Response Procedures<span class="glyphicons glyphicons-link sidebar-icon-link"></span></a></li><li class="sidebar-quick-link"><a class="anchor-contains-icon" target="_blank" href="https://portal.office.com/" title="Faculty/Staff Email at O365">Faculty/Staff Email at O365<span class="glyphicons glyphicons-link sidebar-icon-link"></span></a></li><li class="sidebar-quick-link"><a class="anchor-contains-icon" target="_blank" href="https://www.madonna.edu/tuition-and-financial-aid/" title="Financial Aid ">Financial Aid <span class="glyphicons glyphicons-link sidebar-icon-link"></span></a></li><li class="sidebar-quick-link"><a class="anchor-contains-icon" target="_blank" href="https://library.madonna.edu/" title="Library">Library<span class="glyphicons glyphicons-link sidebar-icon-link"></span></a></li><li class="sidebar-quick-link"><a class="anchor-contains-icon" target="_blank" href="https://netpartner.madonna.edu/netpartnerstudent/logon.aspx" title="MY Financial Aid">MY Financial Aid<span class="glyphicons glyphicons-link sidebar-icon-link"></span></a></li><li class="sidebar-quick-link"><a class="anchor-contains-icon" target="_blank" href="https://www.madonna.edu/resources/registrar/" title="Registrar's Office">Registrar's Office<span class="glyphicons glyphicons-link sidebar-icon-link"></span></a></li><li class="sidebar-quick-link"><a class="anchor-contains-icon" target="_blank" href="https://www.madonna.edu/resources/residence-life/" title="Residence Life">Residence Life<span class="glyphicons glyphicons-link sidebar-icon-link"></span></a></li><li class="sidebar-quick-link"><a class="anchor-contains-icon" target="_blank" href="https://www.madonna.edu/resources/student-accounts/" title="Student Accounts">Student Accounts<span class="glyphicons glyphicons-link sidebar-icon-link"></span></a></li><li class="sidebar-quick-link"><a class="anchor-contains-icon" target="_blank" href="https://www.outlook.com/my.madonna.edu" title="Student Email Login">Student Email<span class="glyphicons glyphicons-link sidebar-icon-link"></span></a></li><li class="sidebar-quick-link"><a class="anchor-contains-icon" target="_blank" href="https://www.madonna.edu/pdf/academics/Student-Handbook.pdf" title="Student Handbook">Student Handbook<span class="glyphicons glyphicons-link sidebar-icon-link"></span></a></li><li class="sidebar-quick-link"><a class="anchor-contains-icon" target="_blank" href="https://madonna.mywconline.com/" title="WC Online">WC Online<span class="glyphicons glyphicons-link sidebar-icon-link"></span></a></li><li class="sidebar-quick-link"><a class="anchor-contains-icon" href="https://madonna-edu.zoom.us/" title="Video Conferencing">Zoom<span class="glyphicons glyphicons-link sidebar-icon-link"></span></a></li></ul></li></ul></div></div>
+									
+									
+									<div class="sideBarFoot containerFoot"></div>
+								</div>
+								<button id="sidebar-slide-menu-button" class="slide-menu-btn mobile-hide nsn is-closed" type="button" aria-expanded="false">
+									<span class="sidebar-slide-btn-icon glyphicons glyphicons-chevron-right">
+										<span class="sr-only">Sidebar</span>
+									</span>
+								</button>
+							</div>
+						</nav>
+						
+						<div id="portlets" role="main" class="col-md-10 mobile-padding-horizontal-none">
+							
+							
+
+<script type="text/javascript">
+    $( document ).ready(function() {
+        $(`[id*="pageOpenMoxieManager"]`).click(function () {
+            // Below we check every 200ms if the MoxieManager dialog is opened yet, then move keyboard focus if it is.
+            // We have to do this check because MoxieManager removed the 'onopen' option from the moxman.browse() function...
+            let intervalIndex = 0;
+            let interval = setInterval(function () {
+                let createButton = $($(`.moxman-reset .moxman-i-create`)[0].parentElement.parentElement);
+                if (createButton.length === 1) {
+                    createButton.focus();
+                    clearInterval(interval);
+                } else if (createButton.length === 0 && intervalIndex === 20000) { // We will stop trying to shift focus after 20 seconds.
+                    console.log("Error: Keyboard focus could not be shifted to the MoxieManager window");
+                    clearInterval(interval);
+                }
+                intervalIndex = intervalIndex + 200;
+            }, 200);
+        });
+    });
+</script>
+
+<div id="PageBar_pageTitle" class="page-title page-title-bar">
+    <h2><a href="/ICS/Student_Help/" id="contextName">Student Help</a></h2>
+</div>
+<div id="PageBar_pageTitleButtons" class="page-title-btn">
+    
+    
+    <button id="PageBar_btnPrintView" class="btn btn-no-bg-hover-color-content-one glyphicons glyphicons-print" type="button" onclick="window.print(); return false;">
+        <span class="sr-only">Send to Printer</span>
+    </button>
+    
+</div>
+
+
+							
+							<span id="content" tabindex="-1"></span>
+							<div id="portlet-grid" class="portlet-grid two_column_even"><div class="row"><div class="portlet-column col-md-6"><div id="pg0_CustomContentPortlet" class="portlet pt_CustomContentPortlet pi_Free_form_Content_2" style="z-index:5;"><div class="portlet-header-bar"><h3><a href="/ICS/Student_Help/IT_Help_Desk.jnz?portlet=Free-form_Content_2" title="Go to main Accessing @my.madonna.edu Email screen">Accessing @my.madonna.edu Email</a></h3><div class="portlet-help-wrapper"> <a class="btn btn-no-bg-hover-color-content-one help" target="blank" href="https://jenzabarhelp.jenzabar.com/ews/help/JICS/Base/released/en/free-form-content.html" title="Get help using 'Accessing @my.madonna.edu Email'"><span aria-hidden="true" class="glyphicons glyphicons-question-sign"></span><span class="sr-only">Get help using 'Accessing @my.madonna.edu Email'</span></a></div></div><div class="portlet-padding">
+<SCRIPT language="javascript">
+<!--
+    function ConfirmDelete(msg) {
+        return confirm(msg);
+    }
+//-->
+</SCRIPT>
+
+
+<link rel="stylesheet" type="text/css" property="stylesheet" href="/ICS/UI/Common/Styles/lightbox.css" />
+<script src="/ICS/UI/Common/Scripts/jquery.lightbox.js"></script>
+<script>
+    $(document).ready(function() { LoadLightboxValues();});    
+	function LoadLightboxValues() 
+	{
+	    $(".lightbox").lightbox(
+	        {
+	            fileLoadingImage: '/ICS/UI/Common/Images/PortletImages/Lightbox/loading.gif',
+	            fileBottomNavCloseImage: '/ICS/UI/Common/Images/PortletImages/Lightbox/closelabel.gif'
+	        });
+	}
+ 
+</script>
+
+
+
+
+        <div class="pSection ccSection text-word-wrap-break-word"><div align="left"><div class="wysiwygtext"><p><img src="/ICS/icsfs/image_32288669321741900657934.png?target=a8da0047-7ade-4f91-8284-38dae4af3a32" width="300" height="77"></p>
+<p style="margin: 0in; font-size: 11pt; font-family: Calibri, sans-serif;"><u><span style="font-size: 14.0pt;">New students:</span> </u></p>
+<p style="margin: 0in; font-size: 11pt; font-family: Calibri, sans-serif;">Initiate your account <a style="color: rgb(5, 99, 193); text-decoration: underline;" href="https://www.office.com/">https://www.office.com/</a></p>
+<ul style="margin-bottom: 0in; margin-top: 0px;">
+<li style="margin: 0in 0in 0in 0px; font-size: 11pt; font-family: Calibri, sans-serif;">You will be prompted to reset your password</li>
+<li style="margin: 0in 0in 0in 0px; font-size: 11pt; font-family: Calibri, sans-serif;">Enter your mobile phone number to associate with the account. This is to support multi-factor authentication. (MFA)</li>
+</ul>
+<p style="margin: 0in; font-size: 11pt; font-family: Calibri, sans-serif;"> </p>
+<p style="margin: 0in; font-size: 11pt; font-family: Calibri, sans-serif;"><u><span style="font-size: 14.0pt;">Returning students:</span> </u></p>
+<p style="margin: 0in; font-size: 11pt; font-family: Calibri, sans-serif;">Login to your account: <a style="color: rgb(5, 99, 193); text-decoration: underline;" href="https://www.office.com/">https://www.office.com/</a></p>
+<ul style="margin-bottom: 0in; margin-top: 0px;">
+<li style="margin: 0in 0in 0in 0px; font-size: 11pt; font-family: Calibri, sans-serif;">If you do not know your password, select, “<em>Can’t access your account</em>?” or <em>“forgot password”</em> and follow the prompts to create a new password.</li>
+<li style="margin: 0in 0in 0in 0px; font-size: 11pt; font-family: Calibri, sans-serif;">Direct link to set a new password: <a style="color: rgb(5, 99, 193); text-decoration: underline;" href="https://passwordreset.microsoftonline.com/">https://passwordreset.microsoftonline.com/</a></li>
+</ul>
+<p style="margin: 0in; font-size: 11pt; font-family: Calibri, sans-serif;"> </p>
+<p style="margin: 0in; font-size: 11pt; font-family: Calibri, sans-serif;">Please email <a style="color: rgb(5, 99, 193); text-decoration: underline;" href="mailto:helpdesk@madonna.edu">helpdesk@madonna.edu</a> from your personal email address, if…</p>
+<ul style="margin-bottom: 0in; margin-top: 0px;">
+<li style="margin: 0in 0in 0in 0px; font-size: 11pt; font-family: Calibri, sans-serif;">You do not have a phone number associated with your account.</li>
+<li style="margin: 0in 0in 0in 0px; font-size: 11pt; font-family: Calibri, sans-serif;">You no longer have access to the number that was previously associated with your account.</li>
+<li style="margin: 0in 0in 0in 0px; font-size: 11pt; font-family: Calibri, sans-serif;">You attempt a password reset and receive this message, “<span style="font-size: 9.0pt; font-family: 'Segoe UI', sans-serif; color: #b30000; background: white;">Your account is currently blocked from signing in. As a result, you may not reset your password at this time. Please contact an admin in your organization and ask him or her to unblock your account.</span>”</li>
+</ul>
+<p>Your email will generate a ticket for the helpdesk staff, they will reach out to you directly to restore access to your account. Include your phone number, student ID number and MU email address, if possible.</p></div></div></div>
+        
+        <div style="clear:both"></div>
+    
+</div></div>
+<div id="pg1_CustomContentPortlet" class="portlet pt_CustomContentPortlet pi_Free_form_Content_2020_04_23T14_57_08_447" style="z-index:4;"><div class="portlet-header-bar"><h3><a href="/ICS/Student_Help/IT_Help_Desk.jnz?portlet=Free-form_Content_2020-04-23T14-57-08-447" title="Go to main Madonna Bookstore Information screen">Madonna Bookstore Information</a></h3><div class="portlet-help-wrapper"> <a class="btn btn-no-bg-hover-color-content-one help" target="blank" href="https://jenzabarhelp.jenzabar.com/ews/help/JICS/Base/released/en/free-form-content.html" title="Get help using 'Madonna Bookstore Information'"><span aria-hidden="true" class="glyphicons glyphicons-question-sign"></span><span class="sr-only">Get help using 'Madonna Bookstore Information'</span></a></div></div><div class="portlet-padding">
+<SCRIPT language="javascript">
+<!--
+    function ConfirmDelete(msg) {
+        return confirm(msg);
+    }
+//-->
+</SCRIPT>
+
+
+<link rel="stylesheet" type="text/css" property="stylesheet" href="/ICS/UI/Common/Styles/lightbox.css" />
+<script src="/ICS/UI/Common/Scripts/jquery.lightbox.js"></script>
+<script>
+    $(document).ready(function() { LoadLightboxValues();});    
+	function LoadLightboxValues() 
+	{
+	    $(".lightbox").lightbox(
+	        {
+	            fileLoadingImage: '/ICS/UI/Common/Images/PortletImages/Lightbox/loading.gif',
+	            fileBottomNavCloseImage: '/ICS/UI/Common/Images/PortletImages/Lightbox/closelabel.gif'
+	        });
+	}
+ 
+</script>
+
+
+
+
+        <div class="pSection ccSection text-word-wrap-break-word"><div align="left"><div class="wysiwygtext"><p><img src="/ICS/icsfs/slingshot-logo-thumb.jpg?target=1b726cb4-b65d-40bc-877c-356b9a056229" alt="" width="277" height="80"></p>
+<h4>Textbook Rental and Purchase Information</h4>
+<p>Slingshot is an auto fulfillment service. When you register for your courses, this service electronically fulfills the required course materials for each course, and delivers them directly to the Spirit Store or the residence hall before classes start. Your course materials will be a combination of physical and digital e-books. There’s no need for you to order books. You will have all of your course materials and none of the book-buying hassle. </p>
+<ol start="1" type="1">
+<li>Go to <a href="https://madonna.slingshotedu.com/">madonna.slingshotedu.com</a></li>
+<li>Click the <strong>Login With School Account</strong> button.</li>
+<li>You’ve already got an account – use your Madonna University email address and password when prompted.</li>
+<li>If you are registered for courses, your schedule will appear and you can manage your course material preferences</li>
+</ol>
+<p>From the Slingshot portal, you can:  </p>
+<ul>
+<li>Manage your account and delivery preferences</li>
+<li>Access your digital course materials</li>
+<li>See when your rentals are due, or purchase more time</li>
+</ul>
+<p>Here are some frequently asked questions:</p>
+<p><strong><em>Am I signed up for Slingshot automatically?</em></strong></p>
+<p>Yes. In order to make sure every student has all of their required course materials Madonna has decided that the default option for students is opted-in. Any student can opt out, but we can’t guarantee availability of books at the Spirit Store for students who have opted out.  If you choose to opt out, you will need to complete the opt-out form available in MY Portal under Student Tab/Eforms/Opt Out/Automated Course Materials.</p>
+<p><strong><em>How are course materials delivered?</em></strong></p>
+<p>Students living on campus, will have their initial package delivered to their campus residence. Any books that arrive after that initial delivery can be picked up in the Spirit Store. Students that live off campus will pick up all physical course materials in the Spirit Store or can select a shipping preference of “Mail” to receive items at their home address for an additional shipping fee ($3.99 per item). Digital items will be accessible on the Slingshot portal under “My Course Materials”. Email notifications will be sent when items are ready for pick-up and when digital items are available to access.</p>
+<p><strong><em>How much does Slingshot cost?</em></strong></p>
+<p>This full-service course material subscription service is included in your tuition! No other fees will appear on your student account, and you will receive all of your required course materials for your upcoming semester. E-books are the default format for your course materials, provided at no additional cost. </p>
+<p>For more detailed FAQs please visit <a href="https://madonna.slingshotedu.com/#/faq">https://madonna.slingshotedu.com/#/faq</a> or reach out to Slingshot’s Customer Support team with any questions at <a href="https://www.slingshotedu.com/support">https://www.slingshotedu.com/support</a> (phone, chat, or email).</p>
+<p>Please reach out to <a href="mailto:madonna@slingshotedu.com" target="_blank" rel="noopener">madonna@slingshotedu.com</a> if you have any questions about orders.</p>
+<h3>Slingshot FAQ</h3>
+<h5><strong>How can I track my order?</strong></h5>
+<p>Once you have placed an order through the website, you can view your order’s current status and tracking number (if applicable) by logging into this website, and navigating to the “My Transactions” tab.</p>
+<h5><strong>How do I access digital items?</strong></h5>
+<p>If you have purchased a digital item, that item will be accessible under the “My Course Materials” tab upon logging into the madonna.treeoflifebooks.com portal.</p>
+<h5><strong>What is the online order return policy?</strong></h5>
+<p>For online orders, all sales are final unless accompanied by a course withdrawal. If you drop the class, you can return your book within 14 days of the start of your course when you provide proof of your course drop. In the case of a drop, all items must be returned in the original condition that they were provided. Some digital restrictions apply.</p>
+<h5><strong>What if I need to return a digital item?</strong></h5>
+<p>Digital items fall outside our normal return and refund policies, as each publisher has set different policies on digital. Digital items are refundable within 14 days of the first day of access, or thirty (30) days after the purchase is made, whichever occurs first. Additionally, we cannot fulfill refund requests if more than 10% of the product has been viewed and/or if any page(s) of the product has been printed. We’d recommend contacting our Support Team as soon as possible if you think you will need to return an item.</p>
+<h5><strong>Who do I contact if I have other questions?</strong></h5>
+<p>Email the Slingshot Support Team anytime at <a href="mailto:madonna@slingshotedu.com" target="_blank" rel="noopener noreferrer" data-auth="NotApplicable">madonna@slingshotedu.com</a> where the estimated response time is within 24 hours. Alternatively, Slingshot staff are available by chat or phone every Monday through Friday, 8 a.m. -11 p.m. EST. Please utilize the online chat box or call 1-888-392-2930.</p></div></div></div>
+        
+        <div style="clear:both"></div>
+    
+</div></div>
+</div><div class="portlet-column col-md-6"><div id="pg2_CustomContentPortlet" class="portlet pt_CustomContentPortlet pi_Free_form_Content_1" style="z-index:3;"><div class="portlet-header-bar"><h3><a href="/ICS/Student_Help/IT_Help_Desk.jnz?portlet=Free-form_Content_1" title="Go to main Campus Safety - Rave Guardian screen">Campus Safety - Rave Guardian</a></h3><div class="portlet-help-wrapper"> <a class="btn btn-no-bg-hover-color-content-one help" target="blank" href="https://jenzabarhelp.jenzabar.com/ews/help/JICS/Base/released/en/free-form-content.html" title="Get help using 'Campus Safety - Rave Guardian'"><span aria-hidden="true" class="glyphicons glyphicons-question-sign"></span><span class="sr-only">Get help using 'Campus Safety - Rave Guardian'</span></a></div></div><div class="portlet-padding">
+<SCRIPT language="javascript">
+<!--
+    function ConfirmDelete(msg) {
+        return confirm(msg);
+    }
+//-->
+</SCRIPT>
+
+
+<link rel="stylesheet" type="text/css" property="stylesheet" href="/ICS/UI/Common/Styles/lightbox.css" />
+<script src="/ICS/UI/Common/Scripts/jquery.lightbox.js"></script>
+<script>
+    $(document).ready(function() { LoadLightboxValues();});    
+	function LoadLightboxValues() 
+	{
+	    $(".lightbox").lightbox(
+	        {
+	            fileLoadingImage: '/ICS/UI/Common/Images/PortletImages/Lightbox/loading.gif',
+	            fileBottomNavCloseImage: '/ICS/UI/Common/Images/PortletImages/Lightbox/closelabel.gif'
+	        });
+	}
+ 
+</script>
+
+
+
+
+        <div class="pSection ccSection text-word-wrap-break-word"><div align="left"><div class="wysiwygtext"><p>Rave Guardian is a FREE Smartphone-based campus security application that allows users to call 911, contact Madonna University Campus Safety and set up a timed virtual escort that notifies Campus Safety, as well as friends and family of your status and location.</p>
+<p><a href="/ICS/icsfs/mm/additional_info._and_how_to_install_app.pdf?target=8f861ed8-4d9e-46e9-ab6e-64b51d241f15" target="_blank" rel="noopener">additional info. and how to install app.pdf</a></p>
+<p> </p></div></div></div>
+        
+        <div style="clear:both"></div>
+    
+</div></div>
+<div id="pg3_CustomContentPortlet" class="portlet pt_CustomContentPortlet pi_IT_Help_Desk" style="z-index:2;"><div class="portlet-header-bar"><h3><a href="/ICS/Student_Help/IT_Help_Desk.jnz?portlet=IT_Help_Desk" title="Go to main IT Help Desk screen">IT Help Desk</a></h3><div class="portlet-help-wrapper"> <a class="btn btn-no-bg-hover-color-content-one help" target="blank" href="https://jenzabarhelp.jenzabar.com/ews/help/JICS/Base/released/en/free-form-content.html" title="Get help using 'IT Help Desk'"><span aria-hidden="true" class="glyphicons glyphicons-question-sign"></span><span class="sr-only">Get help using 'IT Help Desk'</span></a></div></div><div class="portlet-padding">
+<SCRIPT language="javascript">
+<!--
+    function ConfirmDelete(msg) {
+        return confirm(msg);
+    }
+//-->
+</SCRIPT>
+
+
+<link rel="stylesheet" type="text/css" property="stylesheet" href="/ICS/UI/Common/Styles/lightbox.css" />
+<script src="/ICS/UI/Common/Scripts/jquery.lightbox.js"></script>
+<script>
+    $(document).ready(function() { LoadLightboxValues();});    
+	function LoadLightboxValues() 
+	{
+	    $(".lightbox").lightbox(
+	        {
+	            fileLoadingImage: '/ICS/UI/Common/Images/PortletImages/Lightbox/loading.gif',
+	            fileBottomNavCloseImage: '/ICS/UI/Common/Images/PortletImages/Lightbox/closelabel.gif'
+	        });
+	}
+ 
+</script>
+
+
+
+
+        <h4>One Point of Contact for all Your Technology Questions and Requests</h4><div class="pSection ccSection text-word-wrap-break-word"><div align="left"><div class="wysiwygtext"><div style="font-family: verdana, arial, sans-serif; font-size: 12.8000001907349px; color: #000000; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: 15.3600006103516px; orphans: auto; text-indent: 0px; text-transform: none; white-space: normal; widows: 1; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-align: left; background-color: #ffffff;">The IT Help Desk is the one point of contact for technology support at Madonna University providing resources, workshops, and support for Blackboard, student email, MYPortal, and other University supported technologies.</div>
+<ul>
+<li style="font-family: verdana, arial, sans-serif; font-size: 12.8px; color: #000000; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: 15.36px; text-indent: 0px; text-transform: none; white-space: normal; widows: 1; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-align: left; background-color: #ffffff;"><strong>Submit a ticket for IT support </strong>at <a href="https://madonna.topdesk.net">madonna.topdesk.net</a><br><br></li>
+<li style="font-family: verdana, arial, sans-serif; font-size: 12.8px; color: #000000; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: 15.36px; text-indent: 0px; text-transform: none; white-space: normal; widows: 1; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-align: left; background-color: #ffffff;"><strong style="font-size: 12.8px;">Chat online</strong><span style="font-size: 12.8px;"> with a Helpdesk representative at </span><a style="font-size: 12.8px;" href="https://www.madonna.edu/helpdesk" target="_blank" rel="noopener">madonna.edu/helpdesk</a><br><br></li>
+<li style="font-family: verdana, arial, sans-serif; font-size: 12.8px; color: #000000; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: 15.36px; text-indent: 0px; text-transform: none; white-space: normal; widows: 1; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-align: left; background-color: #ffffff;"><strong>For urgent matters</strong>, please call the Helpdesk at 734-432-5800, before submitting a ticket for your issue.</li>
+</ul>
+<p><strong><a href="https://ww3.madonna.edu/pdf/Topdesk-Guide.pdf" target="_blank" rel="noopener">Steps for Submitting Tickets</a></strong></p>
+<ul>
+<li>Computer workstations available in room 1724 for walk-in use.</li>
+<li>Helpdesk staff are available for support.</li>
+</ul>
+<p><strong><span style="font-size: 12pt;">Papercut – printing on campus</span></strong></p>
+<p>To pay for printing you must go to the Registrar’s office of the main building.</p>
+<ol start="1" type="1">
+<li>Pay for printing and you credit will be added the following morning</li>
+<li>Pay for printing and then bring your receipt down to room 1724 the help desk between 8 am and 7:30 pm to have the credit added right away.</li>
+</ol>
+<p><strong>Printing Resources</strong></p>
+<ul>
+<li>Access your Papercut account at <a href="https://papercut.madonna.edu" target="_blank" rel="noopener noreferrer" data-auth="NotApplicable">papercut.madonna.edu</a></li>
+<li><a href="https://ww3.madonna.edu/pdf/Printing-Library-Area-2.pdf" target="_blank" rel="noopener">Use of Desktops and printing in Library guest area room #2300</a></li>
+<li><a href="https://ww3.madonna.edu/pdf/Printing-Walk-in-lab-2.pdf" target="_blank" rel="noopener">Use of Desktops and printing in Helpdesk area room #1724</a></li>
+</ul>
+<div>Locations of printers/copiers:</div>
+<div><strong>Academic Building</strong></div>
+<div>               -Lobby, 2<sup>nd</sup> floor</div>
+<div>               -IT Helpdesk Room 1724</div>
+<div>               -Hallway outside of Collaborative Lab, 1<sup>st</sup> floor</div>
+<div>               -Library, room #2300</div>
+<div> </div>
+<div><strong>Franciscan Center</strong></div>
+<div>               -Top of the stairs, by the windows</div></div></div></div>
+        
+        <div style="clear:both"></div>
+    
+</div></div>
+<div id="pg4_CustomContentPortlet" class="portlet pt_CustomContentPortlet pi_Free_form_Content_2021_05_28T12_28_24_645" style="z-index:1;"><div class="portlet-header-bar"><h3><a href="/ICS/Student_Help/IT_Help_Desk.jnz?portlet=Free-form_Content_2021-05-28T12-28-24-645" title="Go to main Single Sign-On for Blackboard Learn screen">Single Sign-On for Blackboard Learn</a></h3><div class="portlet-help-wrapper"> <a class="btn btn-no-bg-hover-color-content-one help" target="blank" href="https://jenzabarhelp.jenzabar.com/ews/help/JICS/Base/released/en/free-form-content.html" title="Get help using 'Single Sign-On for Blackboard Learn'"><span aria-hidden="true" class="glyphicons glyphicons-question-sign"></span><span class="sr-only">Get help using 'Single Sign-On for Blackboard Learn'</span></a></div></div><div class="portlet-padding">
+<SCRIPT language="javascript">
+<!--
+    function ConfirmDelete(msg) {
+        return confirm(msg);
+    }
+//-->
+</SCRIPT>
+
+
+<link rel="stylesheet" type="text/css" property="stylesheet" href="/ICS/UI/Common/Styles/lightbox.css" />
+<script src="/ICS/UI/Common/Scripts/jquery.lightbox.js"></script>
+<script>
+    $(document).ready(function() { LoadLightboxValues();});    
+	function LoadLightboxValues() 
+	{
+	    $(".lightbox").lightbox(
+	        {
+	            fileLoadingImage: '/ICS/UI/Common/Images/PortletImages/Lightbox/loading.gif',
+	            fileBottomNavCloseImage: '/ICS/UI/Common/Images/PortletImages/Lightbox/closelabel.gif'
+	        });
+	}
+ 
+</script>
+
+
+
+
+        <div class="pSection ccSection text-word-wrap-break-word"><div align="left"><div class="wysiwygtext"><ul>
+<li>Recommended browsers to access Bb with Single Sign-on are <strong>Chrome and Mozilla Firefox</strong>.</li>
+<li><strong>If you receive a <img src="/ICS/icsfs/error.png?target=a3ff7f22-7541-4276-ac32-49a082f5d465" width="119" height="26" border="0" /> when attempting to login, please go to the options or settings of your web browser to clear all cookies. Close and re-open the web browser to try again.</strong></li>
+<li>Tap the Web Login option to enter your AD credentials for the Blackboard Mobile App. <br />Students <img src="/ICS/icsfs/b1.png?target=48458b51-d7c0-4bbf-a0ac-80b5ec3ea5c3" border="0" />    Faculty <img src="/ICS/icsfs/b2.jpg?target=42ecf524-852a-46a1-a403-e3ffba9dcd91" border="0" /></li>
+</ul>
+<p><strong>Accessing Blackboard:</strong><br />Go directly to <a href="https://madonna.blackboard.com" target="_blank" rel="noopener">https://madonna.blackboard.com</a> or to the Quick Link "Blackboard Learn" at the left side of <a href="https://myportal.madonna.edu/ics" target="_blank" rel="noopener">My Portal</a>.</p>
+<p><strong>Option 1</strong><br />If you have an @madonna.edu or @my.madonna.edu account, select "O365 LOGIN" to use your email credentials to login.<br /><img src="/ICS/icsfs/b3.png?target=517870b0-a35d-45ea-98ea-787299e765f8" border="0" /></p>
+<div><img style="float: right; border: 1px solid black; margin-left: 10px;" src="/ICS/icsfs/b4.png?target=fe11bdb9-74ac-4020-bb09-3be159b23fe4" border="1" /></div>
+<ul>
+<li>Microsoft's landing page will appear.</li>
+<li>Click your email address if listed or click "Use another account" to enter your full email address, if needed.</li>
+<li>Enter your email password.</li>
+</ul>
+<p>After entering your credentials, you will be logged into Blackboard. If you have already logged into your MU Office 365 account on the web browser, you will immediately be logged into Blackboard and will not have to re-enter your email credentials.</p>
+<p><strong>Option 2</strong><br />If you do not have a Madonna University email, select "Direct Login" to use your existing Blackboard credentials to login.</p>
+<p><img src="/ICS/icsfs/b5.png?target=92050cb1-fa92-4202-8864-7f1de71392ff" border="0" /></p>
+<p><strong>Alternative login for users who have a MU email address but the O365 login is not working.</strong></p>
+<ul>
+<li>Use the Direct Login mentioned in option 2.</li>
+<li><strong>Students</strong> - as of 6/3/21, your Blackboard username (previously your student ID number) has been replaced with your email alias, the text before the @sign of your @my.madonna.edu address. For example, if your e-mail address is jsmith123@my.madonna.edu, your Blackboard username is jsmith123. There has been no change to your Blackboard password.</li>
+<li><strong>Faculty</strong> – There are no changes to your username and password for the direct login to Blackboard. Use your email alias for the username and existing password.</li>
+</ul>
+<p><strong>Please report any issue with Single Sign-on by submitting a ticket to the helpdesk so that it can be resolved.</strong></p>
+<ul style="list-style-type: disc;">
+<li style="list-style-type: inherit;"><strong>Submit a ticket for IT support </strong>at <a href="https://madonna.topdesk.net/">madonna.topdesk.net</a><br /><br /></li>
+<li style="list-style-type: inherit;"><strong>Chat online</strong> with a Helpdesk representative at <a href="https://www.madonna.edu/helpdesk" target="_blank" rel="noopener">madonna.edu/helpdesk</a></li>
+</ul></div></div></div>
+        
+        <div style="clear:both"></div>
+    
+</div></div>
+</div></div></div>
+							<div class="portletsFoot containerFoot"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="container-fluid footer-wrapper primary">
+				<div class="row no-margin-r no-margin-l">
+					<div class="col-md-12"><footer><div id="foot" class="footer-links"><span id="copyright">  Powered by Jenzabar. v2025.1</span></div></footer></div>
+				</div>
+			</div>
+			
+		
+
+<script type="text/javascript">
+//<![CDATA[
+(function() {var fn = function() {$get("_scriptManager_HiddenField").value = '';Sys.Application.remove_init(fn);};Sys.Application.add_init(fn);})();//]]>
+</script>
+</form>
+	</div>
+<script type="text/javascript">
+	$(function() {
+		$("#youAreHere a:last").attr("aria-current", "page");
+
+		jenzabar.framework.accessibleSidebarMenu.init();
+		jenzabar.framework.accessibleSearchMenu.init();
+		jenzabar.framework.accessibleLoginMenu.init();
+		jenzabar.framework.accessibleHamburgerMenu.init();
+	});
+</script>
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015" integrity="sha512-ZpsOmlRQV6y907TI0dKBHq9Md29nnaEIPlkf84rnaERnq6zvWvPUqr2ft8M1aS28oN72PdrCzSjY4U6VaAw1EQ==" data-cf-beacon='{"rayId":"9cfdba859b5fb41e","version":"2025.9.1","serverTiming":{"name":{"cfExtPri":true,"cfEdge":true,"cfOrigin":true,"cfL4":true,"cfSpeedBrain":true,"cfCacheStatus":true}},"token":"1c569ba8f1dd4833bada8e7f4d1fec80","b":1}' crossorigin="anonymous"></script>
+</body>
+</html>

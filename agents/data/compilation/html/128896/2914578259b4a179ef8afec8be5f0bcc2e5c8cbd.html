@@ -1,0 +1,873 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head><meta charset="UTF-8"><script>if(navigator.userAgent.match(/MSIE|Internet Explorer/i)||navigator.userAgent.match(/Trident\/7\..*?rv:11/i)){var href=document.location.href;if(!href.match(/[?&]nowprocket/)){if(href.indexOf("?")==-1){if(href.indexOf("#")==-1){document.location.href=href+"?nowprocket=1"}else{document.location.href=href.replace("#","?nowprocket=1#")}}else{if(href.indexOf("#")==-1){document.location.href=href+"&nowprocket=1"}else{document.location.href=href.replace("#","&nowprocket=1#")}}}}</script><script>(()=>{class RocketLazyLoadScripts{constructor(){this.v="2.0.3",this.userEvents=["keydown","keyup","mousedown","mouseup","mousemove","mouseover","mouseenter","mouseout","mouseleave","touchmove","touchstart","touchend","touchcancel","wheel","click","dblclick","input","visibilitychange"],this.attributeEvents=["onblur","onclick","oncontextmenu","ondblclick","onfocus","onmousedown","onmouseenter","onmouseleave","onmousemove","onmouseout","onmouseover","onmouseup","onmousewheel","onscroll","onsubmit"]}async t(){this.i(),this.o(),/iP(ad|hone)/.test(navigator.userAgent)&&this.h(),this.u(),this.l(this),this.m(),this.k(this),this.p(this),this._(),await Promise.all([this.R(),this.L()]),this.lastBreath=Date.now(),this.S(this),this.P(),this.D(),this.O(),this.M(),await this.C(this.delayedScripts.normal),await this.C(this.delayedScripts.defer),await this.C(this.delayedScripts.async),this.F("domReady"),await this.T(),await this.j(),await this.I(),this.F("windowLoad"),await this.A(),window.dispatchEvent(new Event("rocket-allScriptsLoaded")),this.everythingLoaded=!0,this.lastTouchEnd&&await new Promise((t=>setTimeout(t,500-Date.now()+this.lastTouchEnd))),this.H(),this.F("all"),this.U(),this.W()}i(){this.CSPIssue=sessionStorage.getItem("rocketCSPIssue"),document.addEventListener("securitypolicyviolation",(t=>{this.CSPIssue||"script-src-elem"!==t.violatedDirective||"data"!==t.blockedURI||(this.CSPIssue=!0,sessionStorage.setItem("rocketCSPIssue",!0))}),{isRocket:!0})}o(){window.addEventListener("pageshow",(t=>{this.persisted=t.persisted,this.realWindowLoadedFired=!0}),{isRocket:!0}),window.addEventListener("pagehide",(()=>{this.onFirstUserAction=null}),{isRocket:!0})}h(){let t;function e(e){t=e}window.addEventListener("touchstart",e,{isRocket:!0}),window.addEventListener("touchend",(function i(o){Math.abs(o.changedTouches[0].pageX-t.changedTouches[0].pageX)<10&&Math.abs(o.changedTouches[0].pageY-t.changedTouches[0].pageY)<10&&o.timeStamp-t.timeStamp<200&&(o.target.dispatchEvent(new PointerEvent("click",{target:o.target,bubbles:!0,cancelable:!0,detail:1})),event.preventDefault(),window.removeEventListener("touchstart",e,{isRocket:!0}),window.removeEventListener("touchend",i,{isRocket:!0}))}),{isRocket:!0})}q(t){this.userActionTriggered||("mousemove"!==t.type||this.firstMousemoveIgnored?"keyup"===t.type||"mouseover"===t.type||"mouseout"===t.type||(this.userActionTriggered=!0,this.onFirstUserAction&&this.onFirstUserAction()):this.firstMousemoveIgnored=!0),"click"===t.type&&t.preventDefault(),this.savedUserEvents.length>0&&(t.stopPropagation(),t.stopImmediatePropagation()),"touchstart"===this.lastEvent&&"touchend"===t.type&&(this.lastTouchEnd=Date.now()),"click"===t.type&&(this.lastTouchEnd=0),this.lastEvent=t.type,this.savedUserEvents.push(t)}u(){this.savedUserEvents=[],this.userEventHandler=this.q.bind(this),this.userEvents.forEach((t=>window.addEventListener(t,this.userEventHandler,{passive:!1,isRocket:!0})))}U(){this.userEvents.forEach((t=>window.removeEventListener(t,this.userEventHandler,{passive:!1,isRocket:!0}))),this.savedUserEvents.forEach((t=>{t.target.dispatchEvent(new window[t.constructor.name](t.type,t))}))}m(){this.eventsMutationObserver=new MutationObserver((t=>{const e="return false";for(const i of t){if("attributes"===i.type){const t=i.target.getAttribute(i.attributeName);t&&t!==e&&(i.target.setAttribute("data-rocket-"+i.attributeName,t),i.target["rocket"+i.attributeName]=new Function("event",t),i.target.setAttribute(i.attributeName,e))}"childList"===i.type&&i.addedNodes.forEach((t=>{if(t.nodeType===Node.ELEMENT_NODE)for(const i of t.attributes)this.attributeEvents.includes(i.name)&&i.value&&""!==i.value&&(t.setAttribute("data-rocket-"+i.name,i.value),t["rocket"+i.name]=new Function("event",i.value),t.setAttribute(i.name,e))}))}})),this.eventsMutationObserver.observe(document,{subtree:!0,childList:!0,attributeFilter:this.attributeEvents})}H(){this.eventsMutationObserver.disconnect(),this.attributeEvents.forEach((t=>{document.querySelectorAll("[data-rocket-"+t+"]").forEach((e=>{e.setAttribute(t,e.getAttribute("data-rocket-"+t)),e.removeAttribute("data-rocket-"+t)}))}))}k(t){Object.defineProperty(HTMLElement.prototype,"onclick",{get(){return this.rocketonclick||null},set(e){this.rocketonclick=e,this.setAttribute(t.everythingLoaded?"onclick":"data-rocket-onclick","this.rocketonclick(event)")}})}S(t){function e(e,i){let o=e[i];e[i]=null,Object.defineProperty(e,i,{get:()=>o,set(s){t.everythingLoaded?o=s:e["rocket"+i]=o=s}})}e(document,"onreadystatechange"),e(window,"onload"),e(window,"onpageshow");try{Object.defineProperty(document,"readyState",{get:()=>t.rocketReadyState,set(e){t.rocketReadyState=e},configurable:!0}),document.readyState="loading"}catch(t){console.log("WPRocket DJE readyState conflict, bypassing")}}l(t){this.originalAddEventListener=EventTarget.prototype.addEventListener,this.originalRemoveEventListener=EventTarget.prototype.removeEventListener,this.savedEventListeners=[],EventTarget.prototype.addEventListener=function(e,i,o){o&&o.isRocket||!t.B(e,this)&&!t.userEvents.includes(e)||t.B(e,this)&&!t.userActionTriggered||e.startsWith("rocket-")||t.everythingLoaded?t.originalAddEventListener.call(this,e,i,o):t.savedEventListeners.push({target:this,remove:!1,type:e,func:i,options:o})},EventTarget.prototype.removeEventListener=function(e,i,o){o&&o.isRocket||!t.B(e,this)&&!t.userEvents.includes(e)||t.B(e,this)&&!t.userActionTriggered||e.startsWith("rocket-")||t.everythingLoaded?t.originalRemoveEventListener.call(this,e,i,o):t.savedEventListeners.push({target:this,remove:!0,type:e,func:i,options:o})}}F(t){"all"===t&&(EventTarget.prototype.addEventListener=this.originalAddEventListener,EventTarget.prototype.removeEventListener=this.originalRemoveEventListener),this.savedEventListeners=this.savedEventListeners.filter((e=>{let i=e.type,o=e.target||window;return"domReady"===t&&"DOMContentLoaded"!==i&&"readystatechange"!==i||("windowLoad"===t&&"load"!==i&&"readystatechange"!==i&&"pageshow"!==i||(this.B(i,o)&&(i="rocket-"+i),e.remove?o.removeEventListener(i,e.func,e.options):o.addEventListener(i,e.func,e.options),!1))}))}p(t){let e;function i(e){return t.everythingLoaded?e:e.split(" ").map((t=>"load"===t||t.startsWith("load.")?"rocket-jquery-load":t)).join(" ")}function o(o){function s(e){const s=o.fn[e];o.fn[e]=o.fn.init.prototype[e]=function(){return this[0]===window&&t.userActionTriggered&&("string"==typeof arguments[0]||arguments[0]instanceof String?arguments[0]=i(arguments[0]):"object"==typeof arguments[0]&&Object.keys(arguments[0]).forEach((t=>{const e=arguments[0][t];delete arguments[0][t],arguments[0][i(t)]=e}))),s.apply(this,arguments),this}}if(o&&o.fn&&!t.allJQueries.includes(o)){const e={DOMContentLoaded:[],"rocket-DOMContentLoaded":[]};for(const t in e)document.addEventListener(t,(()=>{e[t].forEach((t=>t()))}),{isRocket:!0});o.fn.ready=o.fn.init.prototype.ready=function(i){function s(){parseInt(o.fn.jquery)>2?setTimeout((()=>i.bind(document)(o))):i.bind(document)(o)}return t.realDomReadyFired?!t.userActionTriggered||t.fauxDomReadyFired?s():e["rocket-DOMContentLoaded"].push(s):e.DOMContentLoaded.push(s),o([])},s("on"),s("one"),s("off"),t.allJQueries.push(o)}e=o}t.allJQueries=[],o(window.jQuery),Object.defineProperty(window,"jQuery",{get:()=>e,set(t){o(t)}})}P(){const t=new Map;document.write=document.writeln=function(e){const i=document.currentScript,o=document.createRange(),s=i.parentElement;let n=t.get(i);void 0===n&&(n=i.nextSibling,t.set(i,n));const c=document.createDocumentFragment();o.setStart(c,0),c.appendChild(o.createContextualFragment(e)),s.insertBefore(c,n)}}async R(){return new Promise((t=>{this.userActionTriggered?t():this.onFirstUserAction=t}))}async L(){return new Promise((t=>{document.addEventListener("DOMContentLoaded",(()=>{this.realDomReadyFired=!0,t()}),{isRocket:!0})}))}async I(){return this.realWindowLoadedFired?Promise.resolve():new Promise((t=>{window.addEventListener("load",t,{isRocket:!0})}))}M(){this.pendingScripts=[];this.scriptsMutationObserver=new MutationObserver((t=>{for(const e of t)e.addedNodes.forEach((t=>{"SCRIPT"!==t.tagName||t.noModule||t.isWPRocket||this.pendingScripts.push({script:t,promise:new Promise((e=>{const i=()=>{const i=this.pendingScripts.findIndex((e=>e.script===t));i>=0&&this.pendingScripts.splice(i,1),e()};t.addEventListener("load",i,{isRocket:!0}),t.addEventListener("error",i,{isRocket:!0}),setTimeout(i,1e3)}))})}))})),this.scriptsMutationObserver.observe(document,{childList:!0,subtree:!0})}async j(){await this.J(),this.pendingScripts.length?(await this.pendingScripts[0].promise,await this.j()):this.scriptsMutationObserver.disconnect()}D(){this.delayedScripts={normal:[],async:[],defer:[]},document.querySelectorAll("script[type$=rocketlazyloadscript]").forEach((t=>{t.hasAttribute("data-rocket-src")?t.hasAttribute("async")&&!1!==t.async?this.delayedScripts.async.push(t):t.hasAttribute("defer")&&!1!==t.defer||"module"===t.getAttribute("data-rocket-type")?this.delayedScripts.defer.push(t):this.delayedScripts.normal.push(t):this.delayedScripts.normal.push(t)}))}async _(){await this.L();let t=[];document.querySelectorAll("script[type$=rocketlazyloadscript][data-rocket-src]").forEach((e=>{let i=e.getAttribute("data-rocket-src");if(i&&!i.startsWith("data:")){i.startsWith("//")&&(i=location.protocol+i);try{const o=new URL(i).origin;o!==location.origin&&t.push({src:o,crossOrigin:e.crossOrigin||"module"===e.getAttribute("data-rocket-type")})}catch(t){}}})),t=[...new Map(t.map((t=>[JSON.stringify(t),t]))).values()],this.N(t,"preconnect")}async $(t){if(await this.G(),!0!==t.noModule||!("noModule"in HTMLScriptElement.prototype))return new Promise((e=>{let i;function o(){(i||t).setAttribute("data-rocket-status","executed"),e()}try{if(navigator.userAgent.includes("Firefox/")||""===navigator.vendor||this.CSPIssue)i=document.createElement("script"),[...t.attributes].forEach((t=>{let e=t.nodeName;"type"!==e&&("data-rocket-type"===e&&(e="type"),"data-rocket-src"===e&&(e="src"),i.setAttribute(e,t.nodeValue))})),t.text&&(i.text=t.text),t.nonce&&(i.nonce=t.nonce),i.hasAttribute("src")?(i.addEventListener("load",o,{isRocket:!0}),i.addEventListener("error",(()=>{i.setAttribute("data-rocket-status","failed-network"),e()}),{isRocket:!0}),setTimeout((()=>{i.isConnected||e()}),1)):(i.text=t.text,o()),i.isWPRocket=!0,t.parentNode.replaceChild(i,t);else{const i=t.getAttribute("data-rocket-type"),s=t.getAttribute("data-rocket-src");i?(t.type=i,t.removeAttribute("data-rocket-type")):t.removeAttribute("type"),t.addEventListener("load",o,{isRocket:!0}),t.addEventListener("error",(i=>{this.CSPIssue&&i.target.src.startsWith("data:")?(console.log("WPRocket: CSP fallback activated"),t.removeAttribute("src"),this.$(t).then(e)):(t.setAttribute("data-rocket-status","failed-network"),e())}),{isRocket:!0}),s?(t.fetchPriority="high",t.removeAttribute("data-rocket-src"),t.src=s):t.src="data:text/javascript;base64,"+window.btoa(unescape(encodeURIComponent(t.text)))}}catch(i){t.setAttribute("data-rocket-status","failed-transform"),e()}}));t.setAttribute("data-rocket-status","skipped")}async C(t){const e=t.shift();return e?(e.isConnected&&await this.$(e),this.C(t)):Promise.resolve()}O(){this.N([...this.delayedScripts.normal,...this.delayedScripts.defer,...this.delayedScripts.async],"preload")}N(t,e){this.trash=this.trash||[];let i=!0;var o=document.createDocumentFragment();t.forEach((t=>{const s=t.getAttribute&&t.getAttribute("data-rocket-src")||t.src;if(s&&!s.startsWith("data:")){const n=document.createElement("link");n.href=s,n.rel=e,"preconnect"!==e&&(n.as="script",n.fetchPriority=i?"high":"low"),t.getAttribute&&"module"===t.getAttribute("data-rocket-type")&&(n.crossOrigin=!0),t.crossOrigin&&(n.crossOrigin=t.crossOrigin),t.integrity&&(n.integrity=t.integrity),t.nonce&&(n.nonce=t.nonce),o.appendChild(n),this.trash.push(n),i=!1}})),document.head.appendChild(o)}W(){this.trash.forEach((t=>t.remove()))}async T(){try{document.readyState="interactive"}catch(t){}this.fauxDomReadyFired=!0;try{await this.G(),document.dispatchEvent(new Event("rocket-readystatechange")),await this.G(),document.rocketonreadystatechange&&document.rocketonreadystatechange(),await this.G(),document.dispatchEvent(new Event("rocket-DOMContentLoaded")),await this.G(),window.dispatchEvent(new Event("rocket-DOMContentLoaded"))}catch(t){console.error(t)}}async A(){try{document.readyState="complete"}catch(t){}try{await this.G(),document.dispatchEvent(new Event("rocket-readystatechange")),await this.G(),document.rocketonreadystatechange&&document.rocketonreadystatechange(),await this.G(),window.dispatchEvent(new Event("rocket-load")),await this.G(),window.rocketonload&&window.rocketonload(),await this.G(),this.allJQueries.forEach((t=>t(window).trigger("rocket-jquery-load"))),await this.G();const t=new Event("rocket-pageshow");t.persisted=this.persisted,window.dispatchEvent(t),await this.G(),window.rocketonpageshow&&window.rocketonpageshow({persisted:this.persisted})}catch(t){console.error(t)}}async G(){Date.now()-this.lastBreath>45&&(await this.J(),this.lastBreath=Date.now())}async J(){return document.hidden?new Promise((t=>setTimeout(t))):new Promise((t=>requestAnimationFrame(t)))}B(t,e){return e===document&&"readystatechange"===t||(e===document&&"DOMContentLoaded"===t||(e===window&&"DOMContentLoaded"===t||(e===window&&"load"===t||e===window&&"pageshow"===t)))}static run(){(new RocketLazyLoadScripts).t()}}RocketLazyLoadScripts.run()})();</script>
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="format-detection" content="telephone=no">
+		<link rel="shortcut icon" type="image/png" href="https://www.cortiva.edu/wp-content/themes/cortiva/assets/images/favicon.png">
+	<meta name='robots' content='index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' />
+<!-- This site is tracked with the HandL UTM Grabber v3 (3.1.3) - https://www.utmgrabber.com/ --> 
+
+	<!-- This site is optimized with the Yoast SEO plugin v24.7 - https://yoast.com/wordpress/plugins/seo/ -->
+	<title>Title IX - Cortiva Institute</title><link rel="preload" data-rocket-preload as="image" href="https://www.cortiva.edu/wp-content/smush-webp/sites/2/2024/04/cortiva-logo.png.webp" fetchpriority="high"><link rel="preload" data-rocket-preload as="style" href="https://www.cortiva.edu/wp-content/cache/perfmatters/www.cortiva.edu/fonts/d1dd847377c7.google-fonts.min.css" /><link rel="stylesheet" href="https://www.cortiva.edu/wp-content/cache/perfmatters/www.cortiva.edu/fonts/d1dd847377c7.google-fonts.min.css" media="print" onload="this.media='all'" /><noscript><link rel="stylesheet" href="https://www.cortiva.edu/wp-content/cache/perfmatters/www.cortiva.edu/fonts/d1dd847377c7.google-fonts.min.css" /></noscript>
+	<meta name="description" content="Learn about Cortiva Institute’s commitment to preventing discrimination and ensuring a safe, inclusive environment for all students." />
+	<link rel="canonical" href="https://www.cortiva.edu/title-ix/" />
+	<meta property="og:locale" content="en_US" />
+	<meta property="og:type" content="article" />
+	<meta property="og:title" content="Title IX - Cortiva Institute" />
+	<meta property="og:description" content="Learn about Cortiva Institute’s commitment to preventing discrimination and ensuring a safe, inclusive environment for all students." />
+	<meta property="og:url" content="https://www.cortiva.edu/title-ix/" />
+	<meta property="og:site_name" content="Cortiva Institute" />
+	<meta property="article:modified_time" content="2025-03-16T21:45:04+00:00" />
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:label1" content="Est. reading time" />
+	<meta name="twitter:data1" content="45 minutes" />
+	<script type="application/ld+json" class="yoast-schema-graph">{"@context":"https://schema.org","@graph":[{"@type":"WebPage","@id":"https://www.cortiva.edu/title-ix/","url":"https://www.cortiva.edu/title-ix/","name":"Title IX - Cortiva Institute","isPartOf":{"@id":"https://www.cortiva.edu/#website"},"datePublished":"2024-03-22T15:25:42+00:00","dateModified":"2025-03-16T21:45:04+00:00","description":"Learn about Cortiva Institute’s commitment to preventing discrimination and ensuring a safe, inclusive environment for all students.","breadcrumb":{"@id":"https://www.cortiva.edu/title-ix/#breadcrumb"},"inLanguage":"en-US","potentialAction":[{"@type":"ReadAction","target":["https://www.cortiva.edu/title-ix/"]}]},{"@type":"BreadcrumbList","@id":"https://www.cortiva.edu/title-ix/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.cortiva.edu/"},{"@type":"ListItem","position":2,"name":"Title IX"}]},{"@type":"WebSite","@id":"https://www.cortiva.edu/#website","url":"https://www.cortiva.edu/","name":"Cortiva Institute","description":"Massage &amp; Beauty School","potentialAction":[{"@type":"SearchAction","target":{"@type":"EntryPoint","urlTemplate":"https://www.cortiva.edu/?s={search_term_string}"},"query-input":{"@type":"PropertyValueSpecification","valueRequired":true,"valueName":"search_term_string"}}],"inLanguage":"en-US"}]}</script>
+	<!-- / Yoast SEO plugin. -->
+
+
+<link rel='dns-prefetch' href='//cdnjs.cloudflare.com' />
+
+<link rel="alternate" type="text/calendar" title="Cortiva Institute &raquo; iCal Feed" href="https://www.cortiva.edu/events/?ical=1" />
+<style id='wp-img-auto-sizes-contain-inline-css' type='text/css'>
+img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
+/*# sourceURL=wp-img-auto-sizes-contain-inline-css */
+</style>
+<style id='classic-theme-styles-inline-css' type='text/css'>
+/*! This file is auto-generated */
+.wp-block-button__link{color:#fff;background-color:#32373c;border-radius:9999px;box-shadow:none;text-decoration:none;padding:calc(.667em + 2px) calc(1.333em + 2px);font-size:1.125em}.wp-block-file__button{background:#32373c;color:#fff;text-decoration:none}
+/*# sourceURL=/wp-includes/css/classic-themes.min.css */
+</style>
+<style id='akismet-widget-style-inline-css' type='text/css'>
+
+			.a-stats {
+				--akismet-color-mid-green: #357b49;
+				--akismet-color-white: #fff;
+				--akismet-color-light-grey: #f6f7f7;
+
+				max-width: 350px;
+				width: auto;
+			}
+
+			.a-stats * {
+				all: unset;
+				box-sizing: border-box;
+			}
+
+			.a-stats strong {
+				font-weight: 600;
+			}
+
+			.a-stats a.a-stats__link,
+			.a-stats a.a-stats__link:visited,
+			.a-stats a.a-stats__link:active {
+				background: var(--akismet-color-mid-green);
+				border: none;
+				box-shadow: none;
+				border-radius: 8px;
+				color: var(--akismet-color-white);
+				cursor: pointer;
+				display: block;
+				font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen-Sans', 'Ubuntu', 'Cantarell', 'Helvetica Neue', sans-serif;
+				font-weight: 500;
+				padding: 12px;
+				text-align: center;
+				text-decoration: none;
+				transition: all 0.2s ease;
+			}
+
+			/* Extra specificity to deal with TwentyTwentyOne focus style */
+			.widget .a-stats a.a-stats__link:focus {
+				background: var(--akismet-color-mid-green);
+				color: var(--akismet-color-white);
+				text-decoration: none;
+			}
+
+			.a-stats a.a-stats__link:hover {
+				filter: brightness(110%);
+				box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06), 0 0 2px rgba(0, 0, 0, 0.16);
+			}
+
+			.a-stats .count {
+				color: var(--akismet-color-white);
+				display: block;
+				font-size: 1.5em;
+				line-height: 1.4;
+				padding: 0 13px;
+				white-space: nowrap;
+			}
+		
+/*# sourceURL=akismet-widget-style-inline-css */
+</style>
+<link data-minify="1" rel='stylesheet' id='additional-style-css' href='https://www.cortiva.edu/wp-content/cache/min/2/wp-content/themes/cortiva/css/cortiva.css?ver=1769719320' type='text/css' media='all' />
+<link data-minify="1" rel='stylesheet' id='am_https-cdnjs-cloudflare-com-ajax-libs-fancybox-3-5-7-jquery-fancybox-min-css-css' href='https://www.cortiva.edu/wp-content/cache/min/2/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css?ver=1769719320' type='text/css' media='all' />
+
+
+<link rel='stylesheet' id='am_assets-css-slick-min-css-css' href='https://www.cortiva.edu/wp-content/themes/cortiva/assets/css/slick.min.css?ver=1713431788' type='text/css' media='all' />
+<link data-minify="1" rel='stylesheet' id='am_assets-css-slick-theme-min-css-css' href='https://www.cortiva.edu/wp-content/cache/background-css/2/www.cortiva.edu/wp-content/cache/min/2/wp-content/themes/cortiva/assets/css/slick-theme.min.css?ver=1769719320&wpr_t=1771360843' type='text/css' media='all' />
+<link rel='stylesheet' id='am_assets-css-style-min-css-css' href='https://www.cortiva.edu/wp-content/cache/background-css/2/www.cortiva.edu/wp-content/themes/cortiva/assets/css/style.min.css?ver=1713612118&wpr_t=1771360843' type='text/css' media='all' />
+<link data-minify="1" rel='stylesheet' id='am_style-css-css' href='https://www.cortiva.edu/wp-content/cache/min/2/wp-content/themes/cortiva/style.css?ver=1769719320' type='text/css' media='all' />
+<script type="rocketlazyloadscript" data-rocket-type="text/javascript" data-rocket-src="https://www.cortiva.edu/wp-includes/js/jquery/jquery.min.js?ver=3.7.1" id="jquery-core-js" data-rocket-defer defer></script>
+<script type="rocketlazyloadscript" data-rocket-type="text/javascript" data-rocket-src="https://www.cortiva.edu/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.4.1" id="jquery-migrate-js" data-rocket-defer defer></script>
+<script type="rocketlazyloadscript" data-minify="1" data-rocket-type="text/javascript" data-rocket-src="https://www.cortiva.edu/wp-content/cache/min/2/wp-content/plugins/handl-utm-grabber-v3/js/js.cookie.js?ver=1769719320" id="js.cookie-js" data-rocket-defer defer></script>
+<script type="text/javascript" id="handl-utm-grabber-js-extra">
+/* <![CDATA[ */
+var handl_utm = [];
+var handl_utm_all_params = ["utm_source","utm_medium","utm_term","utm_content","utm_campaign","first_utm_source","first_utm_medium","first_utm_term","first_utm_content","first_utm_campaign","fbclid","msclkid","gclid","handl_original_ref","handl_landing_page","handl_landing_page_base","handl_ip","handl_ref","handl_url","handl_ref_domain","handl_url_base","gaclientid","organic_source","organic_source_str","user_agent","traffic_source","first_traffic_source","handlID","_fbc","_fbp"];
+var handl_utm_cookie_duration = ["30","1"];
+var handl_utm_append_params = ["utm_source","utm_medium","utm_term","utm_content","utm_campaign","gclid"];
+var handl_utm_first_touch_params = ["utm_source","utm_medium","utm_term","utm_content","utm_campaign"];
+var handl_utm_session_cookies = 0;
+var handl_ajax = {"ajax_url":"https://www.cortiva.edu/wp-admin/admin-ajax.php","fb_capi_enabled":"0"};
+var handl_utm_custom_params = [];
+var handl_utm_dyo_logic = [];
+var handl_utm_predefined = [];
+//# sourceURL=handl-utm-grabber-js-extra
+/* ]]> */
+</script>
+<script type="rocketlazyloadscript" data-minify="1" data-rocket-type="text/javascript" data-rocket-src="https://www.cortiva.edu/wp-content/cache/min/2/wp-content/plugins/handl-utm-grabber-v3/js/handl-utm-grabber.js?ver=1769719320" id="handl-utm-grabber-js" data-rocket-defer defer></script>
+<script type="rocketlazyloadscript" data-minify="1" data-rocket-type="text/javascript" data-rocket-src="https://www.cortiva.edu/wp-content/cache/min/2/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js?ver=1769719320" id="am_https-cdnjs-cloudflare-com-ajax-libs-fancybox-3-5-7-jquery-fancybox-min-js-js" data-rocket-defer defer></script>
+<script type="rocketlazyloadscript" data-minify="1" data-rocket-type="text/javascript" data-rocket-src="https://www.cortiva.edu/wp-content/cache/min/2/wp-content/themes/cortiva/js/custom_script.js?ver=1769719320" id="custom-script-js" data-rocket-defer defer></script>
+<link rel="https://api.w.org/" href="https://www.cortiva.edu/wp-json/" /><link rel="alternate" title="JSON" type="application/json" href="https://www.cortiva.edu/wp-json/wp/v2/pages/1474" /><meta name="google-site-verification" content="FwUbXEmDDZUOxOQSMCxzue2BNj4xIG_NAD2VpVyGpbE" />
+<!-- Google tag (gtag.js) -->
+<script type="rocketlazyloadscript" async data-rocket-src="https://www.googletagmanager.com/gtag/js?id=G-DB1NTCKSBH"></script>
+<script type="rocketlazyloadscript">
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-DB1NTCKSBH');
+</script><style>.handl-hidden{display: none}</style><style>[class^="fieldset-handl_"]{display: none}</style><meta name="tec-api-version" content="v1"><meta name="tec-api-origin" content="https://www.cortiva.edu"><link rel="alternate" href="https://www.cortiva.edu/wp-json/tribe/events/v1/" />        <script type="rocketlazyloadscript" data-rocket-type="text/javascript">
+        var ajaxurl = 'https://www.cortiva.edu/wp-admin/admin-ajax.php';
+    </script>
+    <link rel="icon" href="https://www.cortiva.edu/wp-content/smush-webp/sites/2/2024/04/cropped-Favicon-Cortiva-150x150.png.webp" sizes="32x32" />
+<link rel="icon" href="https://www.cortiva.edu/wp-content/smush-webp/sites/2/2024/04/cropped-Favicon-Cortiva-300x300.png.webp" sizes="192x192" />
+<link rel="apple-touch-icon" href="https://www.cortiva.edu/wp-content/smush-webp/sites/2/2024/04/cropped-Favicon-Cortiva-300x300.png.webp" />
+<meta name="msapplication-TileImage" content="https://www.cortiva.edu/wp-content/uploads/sites/2/2024/04/cropped-Favicon-Cortiva-300x300.png" />
+		<style type="text/css" id="wp-custom-css">
+			/* Left-align images in blog posts */
+.single-post img {
+    display: block;
+    margin-left: 0;
+    margin-right: auto;
+}
+
+/* Force 100% width on mobile devices */
+@media only screen and (max-width: 768px) {
+    .single-post img {
+        width: 100% !important;
+        height: auto;
+    }
+}
+
+/* Remove dark gradient overlay on banner image (page ID 2310) */
+.page-id-2175 .banner-image::after {
+  content: none !important;
+  background: none !important;
+  display: none !important;
+  height: 0 !important;
+}
+
+/**
+ * Winning Split Test Additions 
+ */
+
+/* START - FA Badge on Forms*/
+
+.prism-form.template-21:before {
+    background: var(--wpr-bg-6939dc5c-6700-4175-ab9b-9d5e848f3942) no-repeat top center transparent;
+	content: "";
+	display: block;
+	height: 73px;
+	position: absolute;
+	right: 16px;
+	top: 0;
+	width: 120px;
+	background-size: contain;
+}
+
+.prism-form.template-21 span.title {
+	display: none;
+}
+
+.prism-form.template-21 .template-21-header:before {
+	content: "Next Step:\ARequest Info";
+	display: block;
+	text-align: left;
+	white-space: pre;
+}
+
+/* END - FA Badge on Forms*/		</style>
+		<noscript><style id="rocket-lazyload-nojs-css">.rll-youtube-player, [data-lazy-src]{display:none !important;}</style></noscript>    
+
+  <!-- begin Convert Experiences code--><script type="text/javascript" src="//cdn-4.convertexperiments.com/v1/js/10041833-100416834.js?environment=production"></script><!-- end Convert Experiences code -->
+
+  <!-- Google Tag Manager -->
+  <script type="rocketlazyloadscript">(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-PB49B3V');</script>
+  <!-- End Google Tag Manager -->
+
+  <script type="rocketlazyloadscript" data-rocket-type="text/javascript" data-rocket-src="//js.web-2-tel.com/org-sdk?identifier=3c592860-26bf-4115-5965-08db0ba37cbe" async></script>
+
+  <!-- 
+  Start of global snippet: Please do not remove
+  Place this snippet between the <head> and <style id="rocket-lazyrender-inline-css">[data-wpr-lazyrender] {content-visibility: auto;}</style><style id="wpr-lazyload-bg-container"></style><style id="wpr-lazyload-bg-exclusion"></style>
+<noscript>
+<style id="wpr-lazyload-bg-nostyle">.slick-loading .slick-list{--wpr-bg-43908c55-2419-4b43-8c6a-3c79ca50ec3c: url('https://www.cortiva.edu/wp-content/themes/cortiva/assets/css/ajax-loader.gif');}.career-cards__cards.two .card-item li:before{--wpr-bg-a1a72115-cf3d-4633-bb64-07707347935d: url('https://www.cortiva.edu/wp-content/themes/cortiva/assets/images/done_ring_round.svg');}.media-content__description li:before{--wpr-bg-9abed17a-064e-4f9a-93d8-f691a588e80e: url('https://www.cortiva.edu/wp-content/themes/cortiva/assets/images/done_ring_round.svg');}.error-404{--wpr-bg-bc506698-e30d-4cf8-b006-6596183641da: url('https://www.cortiva.edu/wp-content/themes/cortiva/assets/images/404.png\');}.page-template-testimonials .form{--wpr-bg-b8742237-3c30-4b2a-a1dc-4856303ffacd: url('https://www.cortiva.edu/wp-content/themes/cortiva/assets/images/form-back.png');}.prism-form.template-21:before{--wpr-bg-6939dc5c-6700-4175-ab9b-9d5e848f3942: url('https://www.cortiva.edu/wp-content/uploads/sites/2/2026/01/fin-aid-badge.png');}</style>
+</noscript>
+<script type="application/javascript">const rocket_pairs = [{"selector":".slick-loading .slick-list","style":".slick-loading .slick-list{--wpr-bg-43908c55-2419-4b43-8c6a-3c79ca50ec3c: url('https:\/\/www.cortiva.edu\/wp-content\/themes\/cortiva\/assets\/css\/ajax-loader.gif');}","hash":"43908c55-2419-4b43-8c6a-3c79ca50ec3c","url":"https:\/\/www.cortiva.edu\/wp-content\/themes\/cortiva\/assets\/css\/ajax-loader.gif"},{"selector":".career-cards__cards.two .card-item li","style":".career-cards__cards.two .card-item li:before{--wpr-bg-a1a72115-cf3d-4633-bb64-07707347935d: url('https:\/\/www.cortiva.edu\/wp-content\/themes\/cortiva\/assets\/images\/done_ring_round.svg');}","hash":"a1a72115-cf3d-4633-bb64-07707347935d","url":"https:\/\/www.cortiva.edu\/wp-content\/themes\/cortiva\/assets\/images\/done_ring_round.svg"},{"selector":".media-content__description li","style":".media-content__description li:before{--wpr-bg-9abed17a-064e-4f9a-93d8-f691a588e80e: url('https:\/\/www.cortiva.edu\/wp-content\/themes\/cortiva\/assets\/images\/done_ring_round.svg');}","hash":"9abed17a-064e-4f9a-93d8-f691a588e80e","url":"https:\/\/www.cortiva.edu\/wp-content\/themes\/cortiva\/assets\/images\/done_ring_round.svg"},{"selector":".error-404","style":".error-404{--wpr-bg-bc506698-e30d-4cf8-b006-6596183641da: url('https:\/\/www.cortiva.edu\/wp-content\/themes\/cortiva\/assets\/images\/404.png\\');}","hash":"bc506698-e30d-4cf8-b006-6596183641da","url":"https:\/\/www.cortiva.edu\/wp-content\/themes\/cortiva\/assets\/images\/404.png\\"},{"selector":".page-template-testimonials .form","style":".page-template-testimonials .form{--wpr-bg-b8742237-3c30-4b2a-a1dc-4856303ffacd: url('https:\/\/www.cortiva.edu\/wp-content\/themes\/cortiva\/assets\/images\/form-back.png');}","hash":"b8742237-3c30-4b2a-a1dc-4856303ffacd","url":"https:\/\/www.cortiva.edu\/wp-content\/themes\/cortiva\/assets\/images\/form-back.png"},{"selector":".prism-form.template-21","style":".prism-form.template-21:before{--wpr-bg-6939dc5c-6700-4175-ab9b-9d5e848f3942: url('https:\/\/www.cortiva.edu\/wp-content\/uploads\/sites\/2\/2026\/01\/fin-aid-badge.png');}","hash":"6939dc5c-6700-4175-ab9b-9d5e848f3942","url":"https:\/\/www.cortiva.edu\/wp-content\/uploads\/sites\/2\/2026\/01\/fin-aid-badge.png"}]; const rocket_excluded_pairs = [];</script><meta name="generator" content="WP Rocket 3.18.3" data-wpr-features="wpr_lazyload_css_bg_img wpr_delay_js wpr_defer_js wpr_minify_js wpr_lazyload_images wpr_automatic_lazy_rendering wpr_oci wpr_image_dimensions wpr_minify_css wpr_preload_links wpr_desktop" /></head> tags on every page of your site.
+  -->
+  <!-- Global site tag (gtag.js) - Google Marketing Platform -->
+  <script type="rocketlazyloadscript" async data-rocket-src="https://www.googletagmanager.com/gtag/js?id=DC-10570508"></script>
+  <script type="rocketlazyloadscript">
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'DC-10570508');
+  </script>
+  <!-- End of global snippet: Please do not remove -->
+
+<style id="wpr-lazyload-bg-container"></style><style id="wpr-lazyload-bg-exclusion"></style>
+<noscript>
+<style id="wpr-lazyload-bg-nostyle">.slick-loading .slick-list{--wpr-bg-43908c55-2419-4b43-8c6a-3c79ca50ec3c: url('https://www.cortiva.edu/wp-content/themes/cortiva/assets/css/ajax-loader.gif');}.career-cards__cards.two .card-item li:before{--wpr-bg-a1a72115-cf3d-4633-bb64-07707347935d: url('https://www.cortiva.edu/wp-content/themes/cortiva/assets/images/done_ring_round.svg');}.media-content__description li:before{--wpr-bg-9abed17a-064e-4f9a-93d8-f691a588e80e: url('https://www.cortiva.edu/wp-content/themes/cortiva/assets/images/done_ring_round.svg');}.error-404{--wpr-bg-bc506698-e30d-4cf8-b006-6596183641da: url('https://www.cortiva.edu/wp-content/themes/cortiva/assets/images/404.png\');}.page-template-testimonials .form{--wpr-bg-b8742237-3c30-4b2a-a1dc-4856303ffacd: url('https://www.cortiva.edu/wp-content/themes/cortiva/assets/images/form-back.png');}.prism-form.template-21:before{--wpr-bg-6939dc5c-6700-4175-ab9b-9d5e848f3942: url('https://www.cortiva.edu/wp-content/uploads/sites/2/2026/01/fin-aid-badge.png');}</style>
+</noscript>
+<script type="application/javascript">const rocket_pairs = [{"selector":".slick-loading .slick-list","style":".slick-loading .slick-list{--wpr-bg-43908c55-2419-4b43-8c6a-3c79ca50ec3c: url('https:\/\/www.cortiva.edu\/wp-content\/themes\/cortiva\/assets\/css\/ajax-loader.gif');}","hash":"43908c55-2419-4b43-8c6a-3c79ca50ec3c","url":"https:\/\/www.cortiva.edu\/wp-content\/themes\/cortiva\/assets\/css\/ajax-loader.gif"},{"selector":".career-cards__cards.two .card-item li","style":".career-cards__cards.two .card-item li:before{--wpr-bg-a1a72115-cf3d-4633-bb64-07707347935d: url('https:\/\/www.cortiva.edu\/wp-content\/themes\/cortiva\/assets\/images\/done_ring_round.svg');}","hash":"a1a72115-cf3d-4633-bb64-07707347935d","url":"https:\/\/www.cortiva.edu\/wp-content\/themes\/cortiva\/assets\/images\/done_ring_round.svg"},{"selector":".media-content__description li","style":".media-content__description li:before{--wpr-bg-9abed17a-064e-4f9a-93d8-f691a588e80e: url('https:\/\/www.cortiva.edu\/wp-content\/themes\/cortiva\/assets\/images\/done_ring_round.svg');}","hash":"9abed17a-064e-4f9a-93d8-f691a588e80e","url":"https:\/\/www.cortiva.edu\/wp-content\/themes\/cortiva\/assets\/images\/done_ring_round.svg"},{"selector":".error-404","style":".error-404{--wpr-bg-bc506698-e30d-4cf8-b006-6596183641da: url('https:\/\/www.cortiva.edu\/wp-content\/themes\/cortiva\/assets\/images\/404.png\\');}","hash":"bc506698-e30d-4cf8-b006-6596183641da","url":"https:\/\/www.cortiva.edu\/wp-content\/themes\/cortiva\/assets\/images\/404.png\\"},{"selector":".page-template-testimonials .form","style":".page-template-testimonials .form{--wpr-bg-b8742237-3c30-4b2a-a1dc-4856303ffacd: url('https:\/\/www.cortiva.edu\/wp-content\/themes\/cortiva\/assets\/images\/form-back.png');}","hash":"b8742237-3c30-4b2a-a1dc-4856303ffacd","url":"https:\/\/www.cortiva.edu\/wp-content\/themes\/cortiva\/assets\/images\/form-back.png"},{"selector":".prism-form.template-21","style":".prism-form.template-21:before{--wpr-bg-6939dc5c-6700-4175-ab9b-9d5e848f3942: url('https:\/\/www.cortiva.edu\/wp-content\/uploads\/sites\/2\/2026\/01\/fin-aid-badge.png');}","hash":"6939dc5c-6700-4175-ab9b-9d5e848f3942","url":"https:\/\/www.cortiva.edu\/wp-content\/uploads\/sites\/2\/2026\/01\/fin-aid-badge.png"}]; const rocket_excluded_pairs = [];</script></head>
+
+<body class="wp-singular page-template page-template-page-templates page-template-privacy-policy page-template-page-templatesprivacy-policy-php page page-id-1474 wp-theme-cortiva bodyclass-global tribe-no-js group-blog unknown">
+	<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PB49B3V"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+	<!-- Header -->
+	<header  class="header">
+		<div  class="container">
+			<nav class="header-nav">
+				<button class="hamburger d-sm-only" aria-label="Menu Toggler"><span></span></button>
+								<a href="https://www.cortiva.edu" class="header-logo">
+					<img width="150" height="46" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20150%2046'%3E%3C/svg%3E" alt="Cortiva Institute" class="header-logo-img" data-lazy-src="https://www.cortiva.edu/wp-content/smush-webp/sites/2/2024/04/cortiva-logo.png.webp"><noscript><img width="150" height="46" src="https://www.cortiva.edu/wp-content/uploads/sites/2/2024/04/cortiva-logo.png" alt="Cortiva Institute" class="header-logo-img"></noscript>
+				</a>
+				<ul id="menu-main-menu" class="header-nav__menu"><li id="menu-item-1187" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-1187"><a href="/programs/">Career Paths</a>
+<ul class="sub-menu">
+	<li id="menu-item-3100" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-3100"><a href="/programs/barber/">Barber</a></li>
+	<li id="menu-item-1643" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1643"><a href="/programs/cosmetologist/">Cosmetologist</a></li>
+	<li id="menu-item-1209" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1209"><a href="/programs/esthetician/">Esthetician</a></li>
+	<li id="menu-item-1211" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1211"><a href="/programs/makeup-artist-esthetician/">Makeup Artist &#038; Esthetician</a></li>
+	<li id="menu-item-1208" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1208"><a href="/programs/massage-therapist/">Massage Therapist</a></li>
+	<li id="menu-item-1213" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1213"><a href="/programs/nail-specialist/">Nail Specialist</a></li>
+	<li id="menu-item-1210" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1210"><a href="/programs/paramedical-esthetician/">Paramedical Esthetician</a></li>
+	<li id="menu-item-2378" class="menu-item menu-item-type-post_type menu-item-object-program menu-item-2378"><a href="https://www.cortiva.edu/programs/dual-programs/">Dual Programs</a></li>
+</ul>
+</li>
+<li id="menu-item-1188" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-1188"><a href="/locations/">Locations</a>
+<ul class="sub-menu">
+	<li id="menu-item-1214" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1214"><a href="/locations/arlington-tx/">Arlington, TX</a></li>
+	<li id="menu-item-1215" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1215"><a href="/locations/baltimore-md/">Baltimore, MD</a></li>
+	<li id="menu-item-1216" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1216"><a href="/locations/cromwell-ct/">Cromwell, CT</a></li>
+	<li id="menu-item-1217" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1217"><a href="/locations/king-of-prussia-pa/">King of Prussia, PA</a></li>
+	<li id="menu-item-1218" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1218"><a href="/locations/maitland-fl/">Maitland, FL</a></li>
+	<li id="menu-item-1220" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1220"><a href="/locations/st-petersburg-fl/">St. Petersburg, FL</a></li>
+</ul>
+</li>
+<li id="menu-item-2047" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2047"><a href="https://www.cortiva.edu/about-us/">About Us</a></li>
+<li id="menu-item-1190" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1190"><a href="/blog/">Blog</a></li>
+<li id="menu-item-2978" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-2978"><a href="https://www.cortiva.edu/blog/category/events/">Events</a></li>
+<li id="menu-item-1892" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1892"><a target="_blank" href="https://www.thespaatcortiva.com/">Visit Spa</a></li>
+</ul>				<div class="header-nav__right">
+										
+
+
+
+				<a class="btn header-nav__right__cta" href="https://www.thespaatcortiva.com/" target="_blank">
+			Visit Spa					</a>
+							
+
+
+
+				<a class="btn btn-primary header-nav__right__cta" href="https://www.cortiva.edu/contact/" target="_self">
+			Request Info					</a>
+							
+
+
+
+				<a class="btn btn-primary header-nav__right__mobile" href="/contact" target="_self">
+			Request Info					</a>
+										</div>
+			</nav>
+		</div>
+	</header>
+
+	<!-- Main -->
+	<main  class="main">
+
+<section  class="two-column-content">
+    <div  class="container">
+        <h1 class="two-column-content__title h2">Title IX</h1>
+        <div class="two-column-content__content">
+            <p><strong>Title IX Notice of Non-Discrimination and Policy</strong><br />
+Title IX of the Education Amendments Act of 1972 prohibits discrimination on the basis of sex in any education program or activity operated by a recipient that receives federal financial assistance. As an educational institution subject to Title IX, Hollywood/Cortiva Institute:<br />
+Does not discriminate on the basis of sex, including but not limited to admissions and employment, and is committed to providing an educational and workplace environment that is free from sex-based discrimination, harassment, and retaliation;<br />
+Prohibits discrimination on the basis of sex in its educational programs and activities, as required by law;<br />
+Is committed to promoting fairness and equity in all aspects its operations; and<br />
+Values and promotes the equal dignity of all community members and is committed to the pursuit of just resolutions with respect the rights of all parties involved.<br />
+Hollywood/Cortiva Institute prohibits retaliation against any individual who in good faith makes a complaint or assists a complainant in the filing of sex discrimination, sexual harassment, or sexual misconduct or participates as a witness in a proceeding under this or any other Institutional policy, it is also a violation of a federal law.</p>
+<p><strong>Title IX Coordinator</strong><br />
+Hollywood/Cortiva Institute’s Title IX Coordinator is identified below and may be contacted with questions about the Title IX Non-Discrimination &amp; Grievance Process Policy, to file a report or formal complaint, or to otherwise assist individuals in ensuring equal access to the educational programs or activities in compliance with Title IX.</p>
+<p><strong>Responsibilities of the Title IX Coordinator</strong><br />
+The Title IX Coordinator oversees the implementation and enforcement of this Policy, which includes primary responsibility for coordinating the Institute’s efforts related to the intake, investigation, resolution, and implementation of supportive measures to stop, remediate, and prevent discrimination, harassment, and retaliation prohibited under this Policy. The Title IX Coordinator’s duties also include education and prevention efforts, as well as training.<br />
+​<br />
+The Institute’s Title IX Coordinator is identified below and may be contacted with questions about this Policy, to file a report or formal complaint, or to otherwise assist individuals in ensuring equal access to the educational programs or activities in compliance with Title IX.<br />
+Title IX Team Coordinator:<br />
+​<br />
+Kiara Repress Corporate Offices- Hollywood Institute and Cortiva Institute 1166 West Newport Center Drive, Ste. 112 Deerfield Beach, Florida 33442 Office: 954-962-2624<br />
+Email: TitleIX@hi.edu or TitleIX@cortiva.edu</p>
+<p><strong>Prohibited Conduct</strong><br />
+Sex and gender-based harassment, sexual misconduct, and retaliation (“Prohibited Conduct”) in employment and in access to educational opportunities violate:<br />
+• Title IX of the Educational Amendments Act of 1972<br />
+• Violence Against Women Reauthorization Act of 2013<br />
+• The Campus SAVE Act<br />
+• The Jeanne Clery Disclosure of Campus Security Policy and Campus Crime Statistics Act (“Clery Act”)<br />
+All forms of such conduct are prohibited under this Policy, as are attempts or threats to commit Prohibited Conduct.<br />
+The following acts are prohibited as “Prohibited Conduct” under this Policy and will be addressed by the Institute according to this Policy. Deliberately false and/or malicious accusations of harassment, discrimination, or retaliation are serious offenses and will be subject to appropriate disciplinary action.<br />
+Sex Discrimination: Discrimination on the basis of an individual’s sex. Sex Discrimination also covers sexual harassment and sexual assault.<br />
+Sexual Harassment: As defined by the federal Title IX regulations issued by the U.S. Department of Education, conduct on the basis of sex that is:<br />
+1. Taken against a person in the United States;<br />
+2. Occurs in a Institute’s education program or activity (for purposes of this Policy, the Institute’s educational program or activities includes locations, events, or circumstances, within the U.S., where the Institute exercises substantial control over both the Respondent and the context in which the alleged sexual harassment or discrimination occurs and also includes any building owned or controlled by the Institute or by a student organization that is officially recognized by the Institute. It also includes online, when those behaviors occur in or have an effect on the Institute’s education program and activities or use the Institute networks, technology, or equipment);<br />
+3. Reported by or on behalf of a Complainant who, at the time of the report filing, was participating in or attempting to participate in a Institute’s education program or activity; and<br />
+4. Meets the definition of one of the following categories:<br />
+Quid Pro Quo Harassment &#8211; An employee conditioning the provision of an aid, benefit, or service of the Institute on an individual’s participation in unwelcome sexual conduct;<br />
+Hostile Environment &#8211; Unwelcome conduct determined by a reasonable person to be so severe, pervasive, and objectively offensive that it effectively denies a person equal access to the Institute’s education program or activity; or<br />
+“Sexual assault,” “dating violence” “domestic violence,” or “stalking,” as defined below by this Policy.”<br />
+Quid Pro Quo Harassment – An employee conditioning the provision of an aid, benefit, or service of the Institute on an individual’s participation in unwelcome sexual conduct.<br />
+Hostile Environment – Exists when the conduct is sufficiently severe, pervasive, or persistent that it unreasonably interferes with, limits, or deprives an individual from participating in or benefiting from the Institute’s education or employment programs and/or activities.<br />
+For the purposes of this definition:<br />
+Whether conduct is sufficiently severe, pervasive, or persistent is determined both from a subjective and objective perspective. A hostile environment can be created by oral, written, graphic, or physical conduct. A determination of a hostile environment considers the totality of the circumstances and includes: 1) the degree of interference; 2) the type, frequency, and duration of the conduct; 3) the relationship between the Respondent and the Complainant; 4) the nature and severity of the conduct; 5) whether the conduct was directed at more than one person; 6) whether the conduct arose in the context of other discriminatory conduct; and 7) whether the conduct implicates concerns related to academic freedom or protected speech. A single instance may be sufficient for a finding of a hostile environment if the conduct is serious enough to reasonably support such a finding, particularly if the conduct is physical.<br />
+Sexual Assault: An offense classified as a forcible or nonforcible sex offense under the uniform crime reporting system of the Federal Bureau of Investigation (FBI). This includes forcible rape and forcible fondling. Forcible rape is defined as any sexual penetration, no matter how slight, of the vagina or anus or any bodily opening with any body part or object, or oral penetration by a sex organ of another person, without the consent of the victim and committed by force, threat, coercion or through exploitation of another’s condition of which Respondent was aware or which a reasonable person would have been aware. Forcible fondling is defined as the touching of the private body parts of another person for the purpose of sexual gratification, forcibly and/or against that person’s will or not forcibly or against the person’s will in instances where the victim is incapable of giving consent because of their youth or because of their temporary or permanent mental or physical incapacity.<br />
+Dating Violence: Violence committed by a person (1) who is or has been in a social relationship of a romantic or intimate nature with the person subjected to such violence, and (2) where the existence of such a relationship shall be determined based on a consideration of the following factors: (1) the length of the relationship; (2) the type of relationship; and (3) the frequency of interaction between the persons involved in the relationship. Violence can encompass a broad range of behavior including, but not limited to, physical violence, sexual violence, psychological and/or emotional violence, and economic abuse. It may involve one act or an ongoing pattern of behavior and may take the form of threats, assault, property damage, violence, or threats of violence to one’s self, a sexual or romantic partner, or to the family members or friends of the sexual or romantic partner.<br />
+Domestic Violence: A felony or misdemeanor crime of violence committed by: 1) a current or former spouse or intimate partner of the victim; 2) a person with whom the victim shares a child in common; 3) a person who is cohabiting with, or has cohabitated with, the victims as a spouse or intimate partner; 4) a person similarly situated to a spouse of the victim; or 5) any other person against an adult or youth victim who is protected from that person’s acts under the domestic or family violence state laws or the laws of the jurisdiction in which the crime was committed. Violence can encompass a broad range of behavior including, but not limited to, physical violence, sexual violence, psychological and/or emotional violence, and economic abuse. It may involve one act or an ongoing pattern of behavior and may take the form of threats, assault, property damage, violence, or threats of violence to one’s self, a sexual or romantic partner, or to the family members or friends of the sexual or romantic partner.<br />
+Stalking: Engaging in a course of conduct, on the basis of sex, directed at a specific person that would cause a reasonable person to fear for the person’s safety, or the safety of others; or suffer substantial emotional distress.<br />
+For the purposes of this definition:<br />
+Course of conduct means two or more acts, including, but not limited to, acts in which the Respondent directly, indirectly, or through third parties, by any action, method, device, or means, follows, monitors, observes, surveils, threatens, or communicates to or about a person, or interferes with a person’s property.<br />
+Reasonable person means a reasonable person under similar circumstances and with similar identities to the Complainant.<br />
+Substantial emotional distress means significant mental suffering or anguish that may but does not necessarily require medical or other professional treatment or counseling.<br />
+Sexual Misconduct: Sexual Misconduct is generally defined as sexual conduct that occurs by force or threat of force or without affirmative consent, including where the person is incapacitated. This definition encompasses a range of sexual conduct including sexual harassment, sexual assault, dating violence, domestic violence, non-consensual sexual contact, sexual exploitation, and stalking.</p>
+<p><strong>Force, Coercion, Consent, and Incapacitation</strong><br />
+As used in the offenses above, the following definitions and meanings apply:<br />
+Force: Force is the use of physical violence and/or physical imposition to gain sexual access. Force also includes threats, intimidation (implied threats), and coercion that is intended to overcome resistance or produce consent.<br />
+Sexual activity that is forced is, by definition, non-consensual, but non-consensual sexual activity is not necessarily forced. Silence or the absence of resistance alone is not consent. Consent is not demonstrated by the absence of resistance. While resistance is not required or necessary, it is a clear demonstration of non-consent.<br />
+Coercion: Coercion is unreasonable pressure for sexual activity. Coercive conduct differs from seductive conduct based on factors such as the type and/or extent of the pressure used to obtain consent. When someone makes clear that they do not want to engage in certain sexual activity, that they want to stop, or that they do not want to go past a certain point of sexual interaction, continued pressure beyond that point can be coercive.<br />
+Consent: Words or actions demonstrating a knowing, willful, unambiguous, and voluntary agreement to engage in mutually agreed-upon sexual activity. Consent is determined based on the totality of the circumstances. Consent to some sexual contact (such as kissing and fondling) cannot be presumed to be consent for other sexual activity (such as sexual intercourse). A current or previous intimate relationship is not sufficient to constitute consent. Silence, passivity, or the absence of resistance alone is not consent. It is important to not make assumptions regarding whether a partner has consented to a sexual act. A person can withdraw consent at any time during sexual activity by expressing in words or actions that he or she no longer wants the act to continue, and, if that happens, the other person must stop immediately. Consent cannot be obtained by force, threat, duress, coercion, misuse of professional authority/status, by ignoring or acting in spite of the objections of another, or by taking advantage of the incapacitation of another. A person cannot consent if he or she is under the age of 16, is unable to understand what is happening, or is disoriented, helpless, asleep, or unconscious for any reason, including due to alcohol or other drugs. An individual who knowingly acts sexually upon another person who is physically or mentally incapacitated has violated this Policy.<br />
+Incapacitation: A state where an individual lacks the physical and/or mental ability to make informed, rational judgments and decisions (e.g., to understand the “who, what, when, where, why, or how” of their sexual interaction). Incapacity could result from mental disability, involuntary physical restraint, and/or from the consumption of alcohol or other incapacitating drugs. A person can be intoxicated without being incapacitated.<br />
+It is a defense to an alleged sexual assault violation that the Respondent neither knew nor should have known the Complainant to be physically or mentally incapacitated. “Should have known” is an objective, reasonable person standard which assumes that a reasonable person is both sober and exercising sound judgment.</p>
+<p><strong>Retaliation</strong><br />
+Intimidation, threats, coercion, or discrimination against any individual for the purpose of interfering with any right or privilege secured by applicable civil rights law and/or this Policy, or because the individual has made a Report or Complaint, testified, assisted, or participated or refused to participate in any manner in an investigation, proceeding, or hearing under applicable civil rights law and/or this Policy. Retaliation includes intimidation, threats, coercion, or discrimination, including charges against an individual for code of conduct violations that do not involve discrimination or harassment, but arise out of the same facts or circumstances as a Report or Complaint of prohibited conduct, or a Report or Complaint of prohibited conduct, for the purpose of interfering with any right or privilege secured by Title IX or this Policy. Retaliation can be committed by or against any individual or group of individuals, including a Respondent or Complainant.<br />
+​<br />
+Retaliation does not include the exercise of rights protected under the First Amendment, good faith actions lawfully pursued in response to an allegation of a violation of this Policy, or charging an individual with a code of conduct violation for making a materially or deliberately false statement or accusation in the course of a proceeding under this Policy, provided that a determination regarding responsibility, alone, is not sufficient to conclude that any party made a materially false statement in bad faith.</p>
+<p><strong>How to Make a Report or Formal Complaint of an Alleged Title IX Violation</strong><br />
+Any person may report alleged sex discrimination, sexual harassment, or retaliation to the Title IX Coordinator, irrespective of whether the reporting person is the alleged victim of such conduct. A Report is differentiated from a Formal Complaint (“Complaint”), which is a document filed/signed by the Complainant or signed by the Title IX Coordinator alleging sexual harassment and requesting that the Institute investigate the allegation(s) and implement the Institute’s Grievance Process. A report or complaint may be filed with the Title IX Coordinator in person, by mail, or by electronic mail at any time (including during non-business hours), using the contact information in the section above or as described below:</p>
+<p><strong>Title IX Team Coordinator:</strong><br />
+​<br />
+Kiara Repress Corporate Offices- Hollywood Institute and Cortiva Institute 1166 West Newport Center Drive, Ste. 112 Deerfield Beach, Florida 33442 Office: 954-962-2624<br />
+Email: TitleIX@hi.edu or TitleIX@cortiva.edu</p>
+<p><strong>On-Campus Title IX Coordinators:</strong></p>
+<p><strong>Campus Director</strong><br />
+Cortiva Institute- Maitland, FL Campus<br />
+2600 Lake Lucien Drive, Suite#140<br />
+Maitland, FL 32751<br />
+Phone: 407-261-0319</p>
+<p><strong>Campus Director</strong><br />
+Cortiva Institute- St. Petersburg, FL Campus<br />
+2370 34th St. N<br />
+St. Petersburg, FL 33713<br />
+Phone: 727-865-4940</p>
+<p><strong>Campus Director</strong><br />
+Cortiva Institute- Arlington, TX Campus<br />
+808 West I-20<br />
+Arlington, TX 76017<br />
+Phone: 682-999-3150</p>
+<p><strong>Campus Director</strong><br />
+Cortiva Institute- King of Prussia, PA Campus<br />
+211 South Gulph Road suite 100<br />
+King of Prussia, PA 19406<br />
+Phone: 484-690-1400</p>
+<p><strong>Campus Director</strong><br />
+Cortiva Institute- Cromwell, CT Campus<br />
+45 Shunpike Road, Suite #10<br />
+Cromwell, CT 06416<br />
+Phone: 860-667-1886</p>
+<p><strong>Campus Director</strong><br />
+Cortiva Institute- Linthicum Heights, MD Campus<br />
+517 Progress Drive, Suite A-J<br />
+Linthicum, MD 21090<br />
+Phone: 410-636-7929</p>
+<p>The Institute strongly encourages all individuals to report any conduct that may be considered criminal to local law enforcement, in addition to reporting to the Institute. Reports to the Institute and criminal reports may be made simultaneously.<br />
+​<br />
+In some instances, a Complaint may be signed by the Title IX Coordinator that alleges a potential violation of this Policy and requests that the Institute investigate the allegation or allegations. The Complaint must state the specific allegations to be investigated, as well as the scope of the investigation. Where the Title IX Coordinator signs a Complaint, the Title IX Coordinator is not a Complainant and must comply with the requirements of these Procedures.</p>
+<p><strong>The School’s Mandatory Response Obligations</strong><br />
+The Institute’s mandatory response obligations under this Policy arise when the Institute has Actual Knowledge of conduct that may constitute sexual discrimination, harassment, or retaliation, as defined herein. Actual Knowledge occurs when the Title IX Coordinator or a School official with authority to implement corrective measures (“OWA”) becomes aware of the potential occurrence of such conduct. Actual notice received by any of these OWAs constitutes Actual Knowledge upon which the Institute’s mandatory response obligations arise under this Policy.</p>
+<p>If an individual discloses Prohibited Conduct to any OWA, they must report to the Title IX Coordinator all relevant details about the alleged conduct. Additionally, to the extent either the Complainant and/or Respondent are the Institute’s employees, OWA must also notify the Institute’s Human Resources Department. The following employees have been identified and designated as:<br />
+Campus Director<br />
+Campus Registrar<br />
+Regional/Corporate Directors</p>
+<p><strong>Anonymous Report or Complaint</strong><br />
+If a Complainant makes a report anonymously, it will be investigated by the Institute to the extent possible, both to assess the underlying allegation(s) and to determine if Supportive Measures or Remedies can be provided. Anonymous reports typically limit the Institute’s ability to investigate and respond, depending on what information is shared. In some situations, the Title IX Coordinator may proceed with the issuance of a Formal Complaint even when the Complainant’s report has been made anonymously.</p>
+<p><strong>Time Limits on Reporting</strong><br />
+There is no time limitation on making a report or Complaint. However, acting on reports or Complaints is significantly impacted by the passage of time and occurrence of other events (including, but not limited to, the rescission or any revision of this Policy), and is at the discretion of the Title IX Coordinator, who may, among other things, document allegations for future reference, offer supportive measures and/or Remedies, and/or engage in informal or formal action, as appropriate. Additionally, if the Respondent is no longer subject to the Institute’s jurisdiction and/or significant time has passed, the ability to investigate, respond, and provide Remedies may be more limited or impossible.</p>
+<p><strong>Privacy and Confidentiality</strong><br />
+The Institute will undertake reasonable efforts to preserve the confidentiality of Reports and Complaints except as provided herein and as necessary to effectuate this Policy, or as permitted by the Family Educational Rights and Privacy Act (FERPA), 20 U.S.C. 1232g; FERPA regulations, 34 CFR part 99, or as required under applicable law to carry out the purposes of any arising investigation, hearing, or judicial proceeding. Privacy generally means that information related to a report of Prohibited Conduct will only be shared with those individuals who have a “need to know.” These individuals will be instructed to be discreet and respect the privacy of all individuals involved. The Institute does not restrict the ability of either party to a Complaint to discuss an investigation with other individuals.<br />
+The potential Complainant has the right to request that the Title IX Coordinator not share their name (or other identifiable information) with the Respondent, or that the Title IX Coordinator take no action in response to a Report. Title IX Coordinator, as appropriate, have the responsibility for evaluating confidentiality requests. If the potential Complainant makes such a request, the Title IX Coordinator will balance the request with its dual obligation to provide a safe and non-discriminatory environment for all Institute’s community members, and to remain true to principles of due process and fundamental fairness that require the Institute to provide the Respondent with notice of the allegations and an opportunity to respond before action is taken against the Respondent. The Title IX Coordinator will make this determination consistent with the following considerations: 1) the seriousness of the conduct; 2) the respective ages and roles of the Complainant and the Respondent; 3) whether there have been other Complaints against the Respondent; and 4) the right of the Respondent to receive notice and relevant information before disciplinary action is sought.</p>
+<p><strong>Consolidated Complaints</strong><br />
+If a Complaint involves one or more Complaint, Complainant and/or Respondent and allegations arising out of the same set of circumstances, the Institute may elect to consolidate complaints.</p>
+<p><strong>Preservation of Evidence</strong><br />
+Because sexual misconduct (see definition above) may involve physical trauma and is a crime, individuals who have experienced sexual violence are urged to seek medical treatment as soon as possible. They are strongly encouraged to preserve all physical and digital evidence of the violence. This may be needed to prove criminal sexual violence, or for obtaining a protective order. Individuals who have experienced sexual violence should not shower, bathe, douche, eat, drink, wash their hands, or brush their teeth until after they have had a medical examination. They should save all the clothing they were wearing at the time of the incident. Each item of clothing should be placed in a separate paper bag (not plastic). They should not clean or disturb anything in the area where the sexual violence occurred. Digital evidence relating to the incident, such as texts, emails, and social media posts, should be also be preserved.</p>
+<p><strong>Conflicts of Interest or Bias</strong><br />
+Both parties have a right to an investigation and resolution process free of conflicts of interest or bias by any Institute employee or official involved in the process, including the Title IX Coordinator, Investigator, or any person designated by the Institute to facilitate an informal resolution process. The Institute employee or official involved in the process must not have and should disqualify themselves in a matter or proceeding in which the member’s impartiality might reasonably be questioned, including but not limited to instances where:<br />
+The member has a personal bias or conflict of interest concerning a participant in the process, or has personal knowledge of disputed facts concerning the matter;<br />
+The member has a personal bias or prejudice against Complainants or Respondents generally;<br />
+The member was directly involved in the matter in controversy, or a subordinate whom the member previously supervised is involved in the matter, or the member was a witness to the matter;<br />
+The member or a person in his or her family is related to a participant in the process.<br />
+Failure of a Institute employee or official to disqualify themselves or notify the Title IX Coordinator of potential conflicts of interest is considered a violation of this Policy.</p>
+<p><strong>Complaint Dismissal</strong><br />
+Mandatory Dismissal<br />
+The Institute must dismiss a Complaint if, at any time during the investigation or hearing, it is determined that:<br />
+The conduct alleged in the Complaint does not constitute sexual harassment as defined in under Title IX; and/or<br />
+The conduct did not occur in an educational program or activity controlled by the Institute (including buildings or property controlled by recognized student organizations); and/or<br />
+The Institute does not have jurisdiction over the Respondent; and/or<br />
+The conduct did not occur against a person in the United States; and/or<br />
+At the time of filing a Complaint, the Complainant is not participating in or attempting to participate in the education program or activity of the Institute.<br />
+Discretionary Dismissal<br />
+The Institute may dismiss a formal complaint or any allegations therein if at any time during the investigation or hearing:<br />
+A Complainant notifies the Title IX Coordinator in writing that the Complainant would like to withdraw the Complaint or any allegation therein; or<br />
+The Respondent is no longer enrolled in or employed by the Institute; or<br />
+Circumstances prevent the Institute from gathering evidence sufficient to reach a determination as to the Complaint or allegations therein.<br />
+Upon any dismissal, the Institute shall promptly send written notice of the dismissal and its rationale simultaneously to the parties. This dismissal decision is appealable by any party under the procedures for appeal below.<br />
+​<br />
+<strong>After Making a Report or Formal Complaint</strong><br />
+Upon receipt of a report or Complaint, the Title IX Coordinator shall undertake an initial assessment to determine appropriate next steps as required under this Policy, including making an initial threat assessment to ensure there is no immediate danger to Complainant or the campus community and, if there is, to take appropriate action, which may include emergency removal of Respondent as described below.</p>
+<p>The Title IX Coordinator shall contact Complainant to discuss the availability of appropriate supportive measures that may be implemented with input from the Complainant irrespective of, and in addition to, any resolution process including the formal grievance process, and will notify Complainant about the right to have an advisor.<br />
+If the report has been made without filing a Complaint, the Title IX Coordinator will review the allegations and discuss options with the Complainant, including the option of proceeding with a Complaint. If the Complainant does not want to proceed with a Complaint, the Coordinator may initiate a Complaint if the coordinator determines that a Complaint is warranted.<br />
+If the Complainant files a Complaint, or the Title IX Coordinator initiates a Complaint, the matter will proceed as described under the grievance process. A Complainant may, at any time, request a dismissal of the Complaint. All requests for dismissal must be sent to the Title IX Coordinator and be in writing.<br />
+After submission of a Complaint and after notifying the Respondent of the Complaint’s allegations, the parties will be notified of the availability of informal resolution, as applicable. All parties must voluntarily consent in writing to any informal resolution process. The parties may withdraw such consent at any time and resume the formal grievance process.<br />
+The Institute may consolidate Complaints as to allegations of violations of this Policy against more than one Respondent, or by more than one Complainant against one or more Respondents, or by one party against the other party, where the allegations arise out of the same facts or circumstances.<br />
+At all stages of the process, irrespective of any resolution or grievance process which may be implemented, responsive and reasonable supportive measures will be implemented to ensure continued access to the Institute’s educational program or activities.</p>
+<p><strong>Supportive Measures</strong><br />
+Upon receipt of a Report or Complaint under this Policy, the Institute will offer supportive measures, as appropriate and as reasonably available to the Complainant and/or to the Respondent. Supportive measures are non-disciplinary, non-punitive, individualized services that must be offered without fee or charge to the Complainant or the Respondent before or after the filing of a Complaint or where no Complaint has been filed. Such measures are designed to restore or preserve equal access to the Institute’s programs and/ or activities without unreasonably burdening the other party, including measures designed to protect the safety of all parties or the Institute’s educational environment, or deter discrimination or harassment.</p>
+<p>Supportive measures may include extensions of deadlines or other course-related adjustments, modifications of work or class schedules, campus escort services, mutual restrictions on contact     between the parties, changes in work locations, leaves of absence, restrictions on access to the campus or to specific campus areas or activities, limitations on extracurricular activities, as well as any other remedy that can be tailored to the involved individuals to achieve the goals of the Policy.</p>
+<p>The Title IX Coordinator is responsible for coordinating the effective implementation of supportive measures. Upon receipt of a report or Complaint under this Policy, the Title IX Coordinator will promptly contact the Complainant to discuss the availability of supportive measures, consider the Complainant’s wishes with respect to supportive measures with or without the filing of a Complaint, and explain to the Complainant the process for filing a Complaint. The Title IX Coordinator will contact the Respondent concerning supportive measures no later than issuance of notice that an investigation will be conducted.</p>
+<p>The Institute will maintain the confidentiality of any supportive measures provided to the Complainant or Respondent, to the extent that maintaining such confidentiality would not impair the ability of the Institute to provide the supportive measures. The Institute will promptly address any violation of the protective measures. The Institute will take immediate and responsive action to enforce a previously implemented restriction if such restriction is violated.</p>
+<p>Emergency Removal of Respondent and Administrative Leave of Employee Respondent<br />
+The Institute reserves the right to remove a Respondent from its education program or activities on an emergency basis when the Respondent poses an immediate threat to the health or safety of any student or campus community member. The Institute will implement the least restrictive emergency actions possible in light of the circumstances and safety concerns. If an emergency removal is imposed, the Respondent will be given notice of the removal and the option to meet with the Title IX Coordinator prior to such action/removal being imposed, or as soon thereafter as reasonably possible, to show cause why the removal should not be implemented. Emergency removal decisions are not subject to appeal. Respondents that are Institute’s employees may be placed on administrative leave during the pendency of a grievance process as determined by the Institute and the Title IX Coordinator.</p>
+<p><strong>Informal Resolution</strong><br />
+At any time prior to reaching a determination regarding responsibility, the Institute may offer and facilitate an informal resolution process, such as mediation, that does not involve a full investigation and adjudication. Informal Resolution is a voluntary, structured interaction between or among the parties that is designed to reach an effective resolution to a Report or Complaint made under this Policy. The Institute recognizes that Informal Resolution options may be an appropriate means of addressing some forms of possible Prohibited Conduct reported under this Policy. Informal Resolution may include, but ot limited to:<br />
+Referral for disciplinary action;<br />
+An agreement between the parties;<br />
+Referring the Respondent to targeted preventive educational and training programs; and<br />
+Conducting a follow-up review to ensure that the resolution has been carried out effectively.<br />
+Informal Resolution is not appropriate for all forms of possible Prohibited Conduct under the Policy and the Title IX Coordinator retains the discretion to determine which cases are appropriate for Informal Resolution. The Title IX Coordinator will determine if Informal Resolution is appropriate based upon: 1) the willingness of the parties to participate in Informal Resolution; 2) the nature of the conduct at issue; and 3) the susceptibility of the conduct to Informal Resolution.<br />
+​<br />
+Participation in the Informal Resolution process is voluntary, and the Institute will not require the parties to participate in an informal resolution process to resolve allegations of Prohibited Conduct under this Policy. Both a Complainant and a Respondent can request to end this type of resolution and pursue an investigation at any time.</p>
+<p>The Institute must obtain the parties’ voluntary, written consent to the informal resolution process. The Institute will provide the parties with written notice disclosing: 1) the allegations; 2) the requirements of the Informal Resolution process, including the circumstances under which it precludes the parties from resuming an investigation arising from the same allegations, provided, however, that at any time prior to agreeing to a resolution, any party has the right to withdraw from the informal resolution process and resume the formal resolution process; and 3) any consequences resulting from participating in the Informal Resolution process, including the records that will be maintained or could be shared. Individuals may be accompanied by an Advisor at any meetings related to the Informal Resolution process. Information shared or obtained during Informal Resolution will be treated as confidential to the extent permitted by law and will not result in subsequent disciplinary actions by the Institute unless additional action is deemed necessary to fulfill the Institute’s legal obligations.<br />
+​<br />
+The Title IX Coordinator will conduct the Informal Resolution process unless good cause requires another individual. The Title IX Coordinator will endeavor to complete the Informal Resolution process promptly, typically within 30 to 60 business days of notifying the parties in writing of starting the process. However, the Title IX Coordinator may extend the Informal Resolution process past 60 days for good cause. The Title IX Coordinator will notify the parties in writing of the reason for any extension and the projected new timeline. The actual time required will depend on the specific circumstances, including the complexity of the allegations and the nature of the alleged conduct.</p>
+<p>Once the parties have agreed to the terms of an Informal Resolution, the Institute will not conduct a formal investigation unless the Title IX Coordinator determines that the Respondent failed to satisfy the terms of the Informal Resolution. The Institute will keep records of any resolution that is reached, and failure to abide by the resolution may result in appropriate responsive actions.</p>
+<p><strong>Notice of the Investigation to the Parties</strong><br />
+The Institute will notify the Complainant (or potential Complainant) and Respondent, of its decision to proceed to investigation of any alleged violation of this Policy. This notice will include a copy of the Complaint. The notification to the Complainant and to the Respondent will include the following, where known at that time:<br />
+A copy of this Policy, including any available Informal Resolution processes.<br />
+A description of the allegations potentially constituting a violation of this Policy, including sufficient details known at the time. Sufficient details include the identities of the parties involved in the incident, if known, the conduct allegedly constituting a violation of this Policy, and the date and location of the alleged incident, if known.<br />
+Notice that the Respondent is presumed not responsible for the alleged conduct and that a determination regarding responsibility is made at the conclusion of the Procedures in this Policy.<br />
+The date, time, location, participants, and purpose of all hearings, investigative interviews, or other meetings, with sufficient time for the party to prepare to participate.<br />
+Notice to the parties that they may have an advisor of their choice, who may be, but is not required to be an attorney.<br />
+Notice to the parties of the Institute’s student or employee code of conduct that prohibits knowingly making false statements or knowingly submitting false information during the procedures under this Policy.<br />
+Notice that the parties will be given an opportunity to inspect and review all directly related and relevant evidence obtained during the investigation.<br />
+The Institute’s policy on retaliation.<br />
+Information about the privacy of the process.<br />
+An instruction to preserve any evidence that is directly related to the allegations.<br />
+The Institute will provide the Respondent with sufficient time to review the notice and prepare a response before any initial interview. In the course of the investigation, the Institute will provide notice of any additional allegations to the parties if the Institute decides to investigate allegations about the Complainant or Respondent that are not otherwise provided in the initial notice.</p>
+<p><strong>Right to an Advisor</strong><br />
+The parties have the right to select an advisor of their choice to accompany them to any or all meetings and interviews during the resolution process. There are no limits on who can serve as an advisor; it may be a friend, mentor, family member, attorney, or any other individual a party chooses to advise, support, and/or consult with them throughout the resolution process. Under Title IX, cross-examination is required during the hearing, and must be conducted by the parties’ advisors. If a party selects an advisor of their choice, this advisor must perform cross- examination on their behalf during the hearing, as the parties are not permitted to directly cross- examine each other or any witnesses. If a party does not have an advisor, or the advisor does not appear for a hearing, the Institute will provide one for the limited purpose of conducting cross- examination on behalf of the party.<br />
+An advisor who is also a witness to the allegations in the complaint creates potential for bias and conflict-of-interest. A party who chooses an advisor who is also a witness can anticipate that issues of potential bias will be explored by the hearing Decision-maker(s) and may, but will not necessarily, impact the Final Determination.</p>
+<p>The Institute cannot guarantee equal advisory rights, meaning that if one party selects an advisor who is an attorney, but the other party does not select or retain an attorney or cannot afford an attorney, the Institute is not obligated to provide the other party with an attorney.<br />
+Timeframe for Investigations</p>
+<p>The Institute will complete all investigations, hearings, and appeals within reasonably prompt timeframes. The Institute’s goals are to complete investigations and hearings within 90 Business Days and to complete the appeals process within 30 Business Days after receipt of the appeal. These processes may be temporarily delayed or extended for a limited time frame for good cause. Good cause may include considerations such as the absence of a party, a party’s advisor or witness, concurrent law enforcement activity, or the need for language assistance or accommodation of disabilities. The Title IX Coordinator will provide written notice of any delays and/or extensions to the parties and describe the reason(s) for the delays and/or extension.</p>
+<p><strong>The Investigation Procedures</strong><br />
+Investigators serve free from conflict of interest, objectively and without bias. All investigations are thorough, reliable, impartial, prompt, and fair. Investigations involve interviews with all relevant parties and witnesses and obtaining available, relevant evidence. The Institute, not the parties, bears the burden of gathering evidence and burden of proof. Parties have equal opportunity, through the investigation process, to suggest witnesses and questions, to provide evidence and expert witnesses, and to fully review and respond to all evidence on the record.<br />
+The investigation will be conducted within a reasonably prompt timeframe, allowing for thorough collection and evaluation of all evidence related to the allegations. The investigator will keep the parties informed as to estimated timelines, and any delays.<br />
+No unauthorized audio or video recording of any kind is permitted during investigation meetings. If Investigator(s) elect to audio and/or video record interviews, all involved parties must be made aware of [and consent to] audio and/or video recording.<br />
+Witnesses who are Institute’s employees are expected to cooperate with and participate in the Institute’s investigation and resolution process. Failure of such witnesses to cooperate with and/or participate in the investigation or resolution process constitutes a Policy violation and may warrant discipline. Interviews may occur in-person or remotely.<br />
+The parties may suggest witnesses and documents to the investigator, as well as questions for the investigator to ask the other party and any witnesses. The investigator will determine whether the suggestions are relevant and appropriate. The Institute asks the parties to keep the investigation private but cannot prohibit the parties from discussing the investigation with others in connection with identifying evidence for the investigator to gather.<br />
+Prior to the conclusion of the investigation, the parties will be provided with an electronic or hard copy of the draft investigation report as well as an opportunity to inspect and review all of the evidence obtained as part of the investigation that is directly related to the allegations in the Formal Complaint, (whether or not it will be used in reaching a determination). The parties will have a ten (10) business day review and comment period so that each party may meaningfully respond to the evidence.<br />
+The Investigator will incorporate any relevant feedback provided by the parties during the review process, and the final report is then shared with all parties and their advisors through electronic transmission or hard copy at least ten (10) business days prior to a hearing.</p>
+<p><strong>Evidentiary Considerations in the Investigation</strong><br />
+The investigation includes collection of all evidence directly related to the allegations, which is not otherwise privileged. Only evidence which is also deemed relevant is summarized in the investigative report which is considered by the Decision-Maker(s), in rendering a determination of responsibility. All parties are provided the opportunity to review all non-privileged evidence gathered during the investigation which is directly related to the allegations in the complaint, whether or not it is also included in the investigative report. All parties are also provided with a copy of the investigative report summarizing relevant evidence only.</p>
+<p>Relevant evidence does not include evidence about the Complainant’s sexual predisposition or prior sexual behavior, unless such evidence is offered to prove that someone other than the Respondent committed the conduct alleged by the Complainant, or if the evidence concerns specific incidents of the Complainant’s prior sexual behavior with respect to the Respondent and are offered to prove consent. Privileged evidence is likewise excluded from both the investigation, investigative report and hearing unless a party expressly waives this privilege in writing and consents to the release of this information during the grievance process.</p>
+<p><strong>Investigative Report</strong><br />
+Upon conclusion of the investigation, the Investigator will create an investigative report that fairly summarizes relevant evidence and, at least ten (10) days prior to a hearing, will send the report to each party and the party’s advisor, if any, the investigative report in an electronic format or hard copy, for their review and written response.</p>
+<p><strong>The Hearing</strong><br />
+Upon conclusion of the investigation and distribution of the investigative report to the parties, the matter will proceed to the hearing stage of the grievance process. The hearing will be offered live, in real-time and will include cross-examination. A Decision-maker(s) will be appointed to preside over the hearing, evaluate the evidence and make a determination as to each allegation in the complaint. Investigators, Title IX Coordinator (or designee) or advisors are prohibited from serving as Decision-makers. The Decision-maker may be an institution employee or outside contractor appointed by the Title IX Coordinator. Regardless, they will be appropriately trained, including on how to make a trauma-informed response, with such training coordinated by the Title IX Coordinator. The Title IX Coordinator will inform the parties of the Decision-maker’s identity. Within five (5) calendar days after the notification, the parties may request the Decision-maker’s disqualification because of bias or conflict of interest. The Title IX Coordinator shall have sole discretion to decide whether an actual bias or conflict of interest exists. Employment or affiliation with the institution, or prior work as a contractor, on its own, does not warrant disqualification. Similarly, the Decision-maker’s gender, gender identity, race, ethnicity, religion, sexual orientation or similar identifying characteristic, or the fact that they differ from those of any party, do not, on their own, warrant disqualification.<br />
+The Institute reserves the right to adopt any hearing protocols, which will be applied and be made available equally to both parties, to ensure the efficiency, order and decorum of the hearing process. Any such protocols will be provided in writing to the parties, witnesses, and participating individuals at least ten (10) days prior to the scheduled hearing date.<br />
+The Institute may designate an administrative facilitator of the hearing, which may include the Title IX Coordinator, as long as they do not have a conflict of interest.<br />
+The Institute may conduct the hearing virtually at its discretion or upon request of a party.   Request for remote participation by any party or witness should directed to the Title IX Coordinator made at least five (5)] business days prior to the hearing.<br />
+The Decision-maker may question the parties and any witness at the hearing.<br />
+Only relevant questions, testimony and evidence may be proffered at the hearing, and the Decision-maker will make determinations as to relevancy of every question posed by an advisor during cross-examination before it is answered, and of any evidence offered. The hearing does not consider the following which are deemed not relevant: 1) incidents not directly related to the possible violation, unless they evidence a pattern; or 2) questions and evidence about the Complainant’s sexual predisposition or prior sexual behavior, unless such questions and evidence about the Complainant’s prior sexual behavior are offered to prove that someone other than the Respondent committed the conduct alleged by the Complainant, or if the questions and evidence concern specific incidents of the Complainant’s prior sexual behavior with respect to the Respondent and are offered to prove consent.<br />
+Privileged evidence or testimony, likewise, may not be proffered during the hearing, without a party’s waiver and written consent allowing its consideration at the hearing.<br />
+Parties may not conduct cross-examination. Advisors only will conduct cross-exam on a party’s behalf. If a party does not have an Advisor present at the live hearing, the Institute will provide without fee or charge to that party, an Advisor of the Institute’s choice, who may be, but is not required to be, an attorney, to conduct cross-examination on behalf of that party. Only relevant questions will be allowed.<br />
+If a party or witness does not attend or chooses not to submit to cross-examination at the hearing, the Decision-maker may not rely on any prior statement made by that party or witness in the ultimate determination of responsibility, provided however, that the Decision-maker(s) may not draw any inference solely from a party’s or witness’s absence from the hearing or refusal to answer cross-examination or other questions.<br />
+Parties, advisors, witnesses, and all participating individuals are expected to behave respectfully during the hearing. Harassing, intimidating or disruptive behavior will not be tolerated, and the Institute reserves the right to exclude anyone from participation in the process that fails to comport themselves accordingly.<br />
+An audio or audiovisual recording, or transcript will be made of the hearing, and will be made available to the parties for inspection and review. No other recording of the hearing will be allowed.</p>
+<p><strong>False Allegations and Evidence</strong><br />
+Making deliberately false and/or malicious accusations, knowingly providing false evidence, tampering with or destroying evidence, or deliberately misleading an official conducting an investigation are policy violations subject to discipline.</p>
+<p><strong>Final Determination as to Responsibility and Standard of Proof</strong><br />
+Upon completion of the hearing, the Decision-maker will deliberate privately and will render a finding as to each allegation in the Complaint by applying the preponderance of the evidence &#8211; whether it is more likely than not that the Respondent violated the Policy as alleged. The decision will be provided simultaneously to the parties through the issuance of a written determination letter, delivered by one or more of the following methods: in person, mailed to the local or permanent address of the parties as indicated in official the Institute records, or emailed to the parties’ email or otherwise approved account. Once mailed, emailed, and/or received in- person, notice will be presumptively delivered.<br />
+The determination letter will include:<br />
+Identification of the allegations potentially constituting sexual harassment as defined under the Policy;<br />
+A description of the procedural steps taken from the receipt of the formal complaint through the determination, including any notifications to the parties, interviews with parties and witnesses, site visits methods used to gather evidence, and hearing held;<br />
+Findings of fact supporting the determination;<br />
+Conclusions regarding application of the Institute’s code of conduct to the facts;<br />
+A statement, and rationale for, the results as to each allegation, including a determination regarding responsibility, and disciplinary sanctions the Institute imposes on the Respondent, and whether remedies designed to restore or preserve equal access to the Institute’s education program or activity will be provided by the Institute to the Complainant; and<br />
+The Institute’s permissible bases for the Complainant and Respondent to appeal.<br />
+The determination regarding responsibility becomes final either on the date that the Institute provides the parties with the written determination of the result of the appeal, if an appeal is filed, or if an appeal is not filed, the date on which an appeal would no longer be considered timely.</p>
+<p><strong>Sanctions/Disciplinary Actions and Remedies</strong><br />
+Factors considered when determining a sanction or other disciplinary action may include, but are not limited to:<br />
+The nature, severity of, and circumstances surrounding the violation;<br />
+An individual’s disciplinary history;<br />
+Class standing (hours earned) where necessary to determine the impact of the sanction on the Complainant, Respondent, or Institute’s community. The academic records of the parties shall not be considered in determining sanctions;<br />
+Previous allegations involving similar conduct;<br />
+Completion of required training related to this Policy;<br />
+The need for sanctions to bring an end to the sexual harassment and/or retaliation;<br />
+The need for sanctions/responsive actions to prevent the future recurrence of sexual harassment and/or retaliation; and<br />
+The need to remedy the effects of the sexual harassment and/or retaliation on the victim and the community.<br />
+The following are the possible sanctions that will be imposed upon individuals who are found to be responsible for specific violations of the Policy. The sanctions listed below may be imposed singularly or in combination and second or subsequent offenses will receive more severe sanction. Possible sanctions include, but are not limited to:<br />
+Warning<br />
+Disciplinary probation<br />
+Training<br />
+Mandatory counseling/coaching<br />
+Censure: a formal written reprimand for Policy violation placed in the Respondent’s file<br />
+Exclusion from participation in certain activities for specified period<br />
+Termination/Expulsion<br />
+Revocation of admission<br />
+Other appropriate corrective action &#8211; in addition to or in place of the above sanctions, the Institute may impose any other sanction as deemed appropriate.<br />
+The Decision-maker may also decide to provide remedies to the Complainant. Remedies must be designed to restore or preserve equal access to the Institute’s programs and activities. Such remedies may include the same individualized services described in this Policy as “supportive measures”; however, remedies need not be non-disciplinary or non-punitive and need not avoid burdening the Respondent.</p>
+<p><strong>Appeals</strong><br />
+The Respondent and the Complainant may appeal the Institute’s closure or dismissal of a complaint or allegations therein, as well as the Decision-maker’s final determination of responsibility and/or sanctions or discipline. The Institute will implement the appeal procedures equally for both parties and will use the preponderance of the evidence standard for its determination.<br />
+All appeals must be submitted in writing to the Title IX coordinator within five (5) business Days of the receipt of the written decision rendered. The Title IX Coordinator will refer only timely and appealable matters to an Appeal Officer. If the Title IX Coordinator determines that the matter cannot be appealed, he or she will provide notice to the requesting party. If the matter is referred for an appeal, the Title IX Coordinator will then disclose, the Appeal Officer’s identity to the person making the appeal.<br />
+After the Appeal Officer has been selected and the matter is assigned, the Appeal Officer will notify both parties in writing of the appeal and its basis. Both parties may submit a written statement supporting or challenging the matter’s outcome. When an appeal is filed by one party, the Institute will notify the other party in writing that an appeal has been filed. An appeal must be based on one or more of the following grounds:<br />
+Procedural Error: A procedural error occurred that affected the outcome of the investigation, including the findings and/or sanctions or discipline. A description of the error and its impact on the outcome of the case must be included in the written appeal.<br />
+New Evidence: New evidence that was not reasonably available at the time that the determination of responsibility was made and that could affect the outcome of the case, including the findings and/or sanctions. Information that was known to the Complainant or Respondent during the investigation, but which he or she chose not to present, is not new evidence. A summary of this new evidence and its potential impact on the investigation findings and/or sanctions must be included in the written appeal.<br />
+Conflict of Interest or Bias: The Title IX Coordinator, Investigator(s), or a Decision- maker had a conflict of interest or bias for or against Complainants or Respondents generally or the individual Complainant or Respondent that affected the outcome of the matter.<br />
+There are no other grounds for appealing a final determination. Appeals are not intended to be a full rehearing of the Complaint. Appeals will not include a hearing. The parties will be given a reasonable, equal opportunity to submit a written statement in support of, or challenging, the outcome of the investigation. A decision on the merits will be based on information provided in the appeal document. If an appeal is based on the availability of new evidence, this evidence must be described with specificity and must be available for review within a reasonably prompt timeframe for consideration. Title IX personnel with prior involvement in the matter will not be permitted to serve as an Appeal Officer in the appeal. After reviewing the written appeal, the Appeal Officer has the sole discretion to deny or grant the appeal, and, if granted, order a new hearing or refer the case back to the Decision-maker with instructions. The Appeal Officer, if the appeal is granted, may order the Title IX Coordinator to reopen a dismissed case. The appeal outcome will specify the finding on each ground for appeal, any specific instructions for remand or reconsideration, and the rationale supporting the findings. Appeal decisions will be made within seven (7) business days, barring exigent circumstances, including the review of new evidence not immediately available for submission with the appeal request.<br />
+Notification of the appeal outcome will be made in writing and will be delivered simultaneously to the parties by one or more of the following methods: in person, mailed to the local or permanent address of the parties as indicated in official Institute’s records, or emailed to the parties’ email or otherwise approved account. Once mailed, e-mailed and/or received in-person, notice will be presumptively delivered. All appeal decisions are final.</p>
+<p><strong>Records</strong><br />
+The Title IX Coordinator maintain detailed records of each matter, including individuals involved, investigative steps taken, documentation received, individuals interviewed, decisions reached, and reason(s) for the decisions reached. Complaints and information gathered in the course of an investigation will be kept private to the extent permitted by law. For allegations of Title IX Sexual Harassment, the Institute will maintain records for a period of seven years of:<br />
+Reports or Formal Complaints alleging sexual discrimination, including harassment.<br />
+Records of any dismissal of a Formal Complaint.<br />
+Each sexual harassment investigation including any determination regarding responsibility and any audio or audiovisual recording or transcript required under federal regulation;<br />
+Any disciplinary sanctions imposed on the Respondent;<br />
+Any Remedies implemented by the Institute designed to restore or preserve equal access to the Institute’s education program or activity;<br />
+Any appeal and the result therefrom;<br />
+Any Informal Resolution and the result therefrom;<br />
+All materials used to train Title IX Coordinators, Investigators, Decision-makers, and any person who facilitates an Informal Resolution process. The Institute will make these training materials publicly available on the Institute’s website; and<br />
+Any actions, including any supportive measures, taken in response to a report or formal complaint of sexual harassment, including:<br />
+The basis for all conclusions that the response was not deliberately indifferent;<br />
+Any measures designed to restore or preserve equal access to the Institute’s education program or activity; and<br />
+If no supportive measures were provided, document the reasons why such a response was not clearly unreasonable in light of the known circumstances.</p>
+<p><strong>Training</strong><br />
+The Institute shall take steps to ensure that any individual designated as a Title IX Coordinator, Investigator, Decision-maker, or any person designated by a recipient to facilitate an Informal Resolution process, receive training as required by the final Title IX regulations. The training materials must not rely on sex stereotypes and must promote impartial investigations and adjudications of formal complaints of sexual harassment. The Institute will post the training materials on its website.</p>
+<p><strong>Revision of this Policy</strong><br />
+This Policy and procedures supersede any previous policy(ies) addressing harassment, sexual misconduct, discrimination, and/or retaliation under Title IX and will be reviewed and updated subject to any relevant change in law or Institute policy, and on a recurring periodic basis, by the Title IX Coordinator. The Institute reserves the right to make changes to this Policy as necessary, which become effective when published. This Policy and procedures are effective as of August 13, 2020.</p>
+<p><strong>Definitions</strong><br />
+In addition to those terms defined above, the following terms also apply to this Policy:<br />
+Actual Notice: Notice of violations of this Policy or allegations of violations to this Policy to a Institute’s Title IX Coordinator or any official of the Institute who has authority to institute corrective measures on behalf of the Institute. Imputation of knowledge based solely on vicarious liability or constructive notice is insufficient to constitute actual knowledge. This standard is not met when the only official of the Institute with actual knowledge is the Respondent. The mere ability or obligation to report sexual harassment or to inform a student about how to report sexual harassment, or having been trained to do so, does not qualify an individual as one who has authority to institute corrective measures on behalf of the Institute. “Notice” as used in this paragraph includes, but is not limited to, a Report to the Title IX Coordinator.<br />
+Advisor: A party may choose to have another individual accompany them to meetings with the Investigator(s), or to a hearing. The advisor of choice may be, but is not required to be, an attorney,<br />
+Complainant: A person or entity who is alleged to be the victim of conduct that could constitute a violation of this Policy.<br />
+Complaint or Formal Complaint: A document filed by a Complainant, or signed by the Title IX Coordinator, that alleges a potential violation of this Policy and requests that the Institute investigate the allegation or allegations. The phrase “document filed by a Complainant” means a document or electronic submission (such as by electronic mail) that contains the Complainant’s physical or digital signature, or otherwise indicates that the Complainant is the person filing the formal Complaint. At the time of filing a Complaint, a Complainant must be participating in or attempting to participate in the education program or activity of the Institute.<br />
+Decision-maker(s): A trained individual with responsibility for making a Final Determination as set forth in the Institute’s grievance process. A Decision-maker must maintain neutrality and cannot perform the function of either the Title IX Coordinator or Investigator.<br />
+Education Program or Activity: Any location, event, or circumstance over which the Institute exercises substantial control over both the Respondent and the context in which the alleged violation of this Policy occurs, and also includes any building owned or controlled by a student organization that is officially recognized by the Institute.<br />
+Final Determination: A decision rendered and provided in writing to the parties of a Formal Complaint after application of the Institute’s grievance process concluding whether or not Respondent is responsible for conduct alleged within a Formal Complaint in violation of this Policy.<br />
+Finding: A conclusion within the Final Determination as evaluated under the burden of proof that a specific allegation within a Formal Complaint did or did not occur.<br />
+Formal Grievance Process: The method of formal resolution designated by the Institute to address conduct that falls within the scope of this Policy, and which complies with the requirements of 34 CFR Part 106.45.<br />
+Investigator: A trained individual responsible for fulfilling the Institute’s burden of gathering and evaluating all evidence related to allegations within a Formal Complaint as required under this Policy.<br />
+Official with Authority: An employee of the Institute explicitly vested with the responsibility to implement corrective measures for sexual harassment and/or retaliation.<br />
+Preponderance of the Evidence Standard: Evidence is such that it would persuade a reasonable person that a proposition is more probably true than not true. A finding that is “more likely than not” to be true would satisfy this standard.<br />
+Remedies: Post-Finding actions directed to the Complainant and/or the community implemented to address safety, prevent the recurrence of harassment, and ensure continued access to the Institute’s educational program.<br />
+Report: Any report to the Title IX Coordinator, and/or any employee with the authority to take corrective action on behalf of the Institute (as defined above) of information that could constitute a potential violation of this Policy. The term “report” includes Complaints.<br />
+Respondent: An individual who has been reported to be the perpetrator of conduct that could constitute a violation of this Policy.<br />
+Sanction: A disciplinary consequence imposed by the Institute on a Respondent who is found to have violated this Policy.</p>
+<p><strong>Office for Civil Rights (OCR)</strong><br />
+U.S. Department of Education Headquarters<br />
+400 Maryland Avenue, SW Washington, D.C. 20202-1100<br />
+Customer Service Hotline #: (800) 421-3481<br />
+Facsimile: (202) 453-6012<br />
+TDD#: (877) 521-2172<br />
+Email: OCR@ed.gov<br />
+Web: https://ocrcas.ed.gov/contact-ocr<br />
+​<br />
+Title IX Training Materials<br />
+OCR Webinar: Title IX Regulations Addressing Sexual Harassment (Length: 01:11:29)<br />
+The First Amendment and Title IX: An OCR Short Webinar<br />
+OCR Short Webinar on How to Report Sexual Harassment under Title IX<br />
+Conducting and Adjudicating Title IX Hearings: An OCR Training Webinar<br />
+OCR Webinar on Due Process Protections under the New Title IX Regulations<br />
+OCR Webinar on New Title IX Protections Against Sexual Assault<br />
+OCR Blog: Effective Date and Retroactivity<br />
+OCR Blog: Live Hearings, Excluding Reliance on a Party’s Statements, and Verbal Conduct<br />
+OCR Blog: The Requirement to Update School Websites with Important Title IX Information</p>
+        </div>
+    </div>
+</section>
+</main>
+
+
+<footer data-wpr-lazyrender="1" class="footer">
+    <div  class="container">
+        <div  class="footer-top">
+            <div class="footer-logo a-up">
+                <a href="https://www.cortiva.edu">
+                    <img width="200" height="61" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20200%2061'%3E%3C/svg%3E" alt="Cortiva Institute" data-lazy-src="https://www.cortiva.edu/wp-content/smush-webp/sites/2/2024/04/cortiva-logo.png.webp"><noscript><img width="200" height="61" src="https://www.cortiva.edu/wp-content/uploads/sites/2/2024/04/cortiva-logo.png" alt="Cortiva Institute"></noscript>
+                </a>
+            </div>
+                        <ul class="footer-social_mobile footer-item--social">
+                                    <li class="footer-social__item">
+                        <a href="https://www.facebook.com/CortivaInstitute/" target="blank">
+                            <img width="24" height="24" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2024%2024'%3E%3C/svg%3E" alt="" data-lazy-src="https://www.cortiva.edu/wp-content/uploads/sites/2/2024/03/Facebook.svg"><noscript><img width="24" height="24" src="https://www.cortiva.edu/wp-content/uploads/sites/2/2024/03/Facebook.svg" alt=""></noscript>
+                        </a>
+                    </li>
+                                    <li class="footer-social__item">
+                        <a href="https://www.instagram.com/cortivainstitute/" target="blank">
+                            <img width="24" height="24" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2024%2024'%3E%3C/svg%3E" alt="" data-lazy-src="https://www.cortiva.edu/wp-content/uploads/sites/2/2024/03/Instagram.svg"><noscript><img width="24" height="24" src="https://www.cortiva.edu/wp-content/uploads/sites/2/2024/03/Instagram.svg" alt=""></noscript>
+                        </a>
+                    </li>
+                                    <li class="footer-social__item">
+                        <a href="https://www.tiktok.com/@cortivainstitute" target="blank">
+                            <img width="24" height="24" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2024%2024'%3E%3C/svg%3E" alt="" data-lazy-src="https://www.cortiva.edu/wp-content/uploads/sites/2/2024/03/tiktok.svg"><noscript><img width="24" height="24" src="https://www.cortiva.edu/wp-content/uploads/sites/2/2024/03/tiktok.svg" alt=""></noscript>
+                        </a>
+                    </li>
+                            </ul>
+                    </div>
+        <div  class="footer-main">
+            <div class="footer-item footer-item--location a-up a-delay-1">
+                
+ 
+ 
+						<div class="footer-item__time"			>
+				Admission Hours<br />
+Mon - Thurs: 9:00am - 8:00pm<br />
+Fri: 9:00am - 5:00pm					</div>
+			                                    <ul class="footer-item footer-location">
+                                                    <li class="location-item">
+                                <img width="16" height="16" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2016%2016'%3E%3C/svg%3E" alt="" data-lazy-src="https://www.cortiva.edu/wp-content/themes/cortiva/assets/images/location.svg"><noscript><img width="16" height="16" src="https://www.cortiva.edu/wp-content/themes/cortiva/assets/images/location.svg" alt=""></noscript>
+                                                                <a href="https://www.cortiva.edu/locations/arlington-tx/" class="footer-item__location">
+                                    Arlington, TX                                </a>
+                                                            </li>
+                                                    <li class="location-item">
+                                <img width="16" height="16" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2016%2016'%3E%3C/svg%3E" alt="" data-lazy-src="https://www.cortiva.edu/wp-content/themes/cortiva/assets/images/location.svg"><noscript><img width="16" height="16" src="https://www.cortiva.edu/wp-content/themes/cortiva/assets/images/location.svg" alt=""></noscript>
+                                                                <a href="https://www.cortiva.edu/locations/baltimore-md/" class="footer-item__location">
+                                    Baltimore, MD                                </a>
+                                                            </li>
+                                                    <li class="location-item">
+                                <img width="16" height="16" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2016%2016'%3E%3C/svg%3E" alt="" data-lazy-src="https://www.cortiva.edu/wp-content/themes/cortiva/assets/images/location.svg"><noscript><img width="16" height="16" src="https://www.cortiva.edu/wp-content/themes/cortiva/assets/images/location.svg" alt=""></noscript>
+                                                                <a href="https://www.cortiva.edu/locations/cromwell-ct/" class="footer-item__location">
+                                    Cromwell, CT                                </a>
+                                                            </li>
+                                                    <li class="location-item">
+                                <img width="16" height="16" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2016%2016'%3E%3C/svg%3E" alt="" data-lazy-src="https://www.cortiva.edu/wp-content/themes/cortiva/assets/images/location.svg"><noscript><img width="16" height="16" src="https://www.cortiva.edu/wp-content/themes/cortiva/assets/images/location.svg" alt=""></noscript>
+                                                                <a href="https://www.cortiva.edu/locations/king-of-prussia-pa/" class="footer-item__location">
+                                    King of Prussia, PA                                </a>
+                                                            </li>
+                                                    <li class="location-item">
+                                <img width="16" height="16" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2016%2016'%3E%3C/svg%3E" alt="" data-lazy-src="https://www.cortiva.edu/wp-content/themes/cortiva/assets/images/location.svg"><noscript><img width="16" height="16" src="https://www.cortiva.edu/wp-content/themes/cortiva/assets/images/location.svg" alt=""></noscript>
+                                                                <a href="https://www.cortiva.edu/locations/maitland-fl/" class="footer-item__location">
+                                    Maitland, FL                                </a>
+                                                            </li>
+                                                    <li class="location-item">
+                                <img width="16" height="16" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2016%2016'%3E%3C/svg%3E" alt="" data-lazy-src="https://www.cortiva.edu/wp-content/themes/cortiva/assets/images/location.svg"><noscript><img width="16" height="16" src="https://www.cortiva.edu/wp-content/themes/cortiva/assets/images/location.svg" alt=""></noscript>
+                                                                <a href="https://www.cortiva.edu/locations/st-petersburg-fl/" class="footer-item__location">
+                                    St. Petersburg, FL                                </a>
+                                                            </li>
+                                            </ul>
+                            </div>
+                        <div class="footer-item footer-item--menu a-up a-delay-1">
+                <ul id="menu-footer-menu" class="footer-menu"><li id="menu-item-1925" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1925"><a href="/programs/">Career Paths</a></li>
+<li id="menu-item-140" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-140"><a href="/about-us/">About us</a></li>
+<li id="menu-item-1927" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1927"><a href="/career-services/">Career Services</a></li>
+<li id="menu-item-1192" class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item menu-item-1192"><a href="/title-ix/" aria-current="page">Title IX</a></li>
+<li id="menu-item-1193" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1193"><a href="/consumer-information/">Consumer Information</a></li>
+<li id="menu-item-1195" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1195"><a href="/consumer-information/#campus-tuition-and-fees/">Tuition &#038; Fees</a></li>
+<li id="menu-item-1928" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1928"><a href="https://www.cortiva.edu/e-brochure-form/">Free eBrochure</a></li>
+<li id="menu-item-1194" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1194"><a href="/closed-compuses/">Closed Campuses</a></li>
+<li id="menu-item-1196" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1196"><a href="/sitemap/">Sitemap</a></li>
+</ul>            </div>
+                                    <ul class="footer-item footer-item--social footer-social_desktop a-up a-delay-1">
+                                    <li class="footer-social__item">
+                        <a href="https://www.facebook.com/CortivaInstitute/" target="blank">
+                            <img width="24" height="24" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2024%2024'%3E%3C/svg%3E" alt="" data-lazy-src="https://www.cortiva.edu/wp-content/uploads/sites/2/2024/03/Facebook.svg"><noscript><img width="24" height="24" src="https://www.cortiva.edu/wp-content/uploads/sites/2/2024/03/Facebook.svg" alt=""></noscript>
+                            Facebook                        </a>
+                    </li>
+                                    <li class="footer-social__item">
+                        <a href="https://www.instagram.com/cortivainstitute/" target="blank">
+                            <img width="24" height="24" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2024%2024'%3E%3C/svg%3E" alt="" data-lazy-src="https://www.cortiva.edu/wp-content/uploads/sites/2/2024/03/Instagram.svg"><noscript><img width="24" height="24" src="https://www.cortiva.edu/wp-content/uploads/sites/2/2024/03/Instagram.svg" alt=""></noscript>
+                            Instagram                        </a>
+                    </li>
+                                    <li class="footer-social__item">
+                        <a href="https://www.tiktok.com/@cortivainstitute" target="blank">
+                            <img width="24" height="24" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2024%2024'%3E%3C/svg%3E" alt="" data-lazy-src="https://www.cortiva.edu/wp-content/uploads/sites/2/2024/03/tiktok.svg"><noscript><img width="24" height="24" src="https://www.cortiva.edu/wp-content/uploads/sites/2/2024/03/tiktok.svg" alt=""></noscript>
+                            TikTok                        </a>
+                    </li>
+                            </ul>
+                    </div>
+                <div  class="footer-bottom">
+                        <p class="footer-copyright">&copy; 2026 by Cortiva Institute Massage Therapy &amp; Skincare Schools                                        <ul class="footer-cta">
+                                                                    <li class="footer-cta__item">
+                            <a href="/privacy-policy">Privacy Policy</a>
+                        </li>
+                                                            </ul>
+                    </div>
+    </div>
+</footer>
+
+<script type="speculationrules">
+{"prefetch":[{"source":"document","where":{"and":[{"href_matches":"/*"},{"not":{"href_matches":["/wp-*.php","/wp-admin/*","/wp-content/uploads/sites/2/*","/wp-content/*","/wp-content/plugins/*","/wp-content/themes/cortiva/*","/*\\?(.+)"]}},{"not":{"selector_matches":"a[rel~=\"nofollow\"]"}},{"not":{"selector_matches":".no-prefetch, .no-prefetch a"}}]},"eagerness":"conservative"}]}
+</script>
+    <script type="rocketlazyloadscript">window.addEventListener('DOMContentLoaded', function() {
+    document.addEventListener('HandL-After-Main-Function', () => {
+        if (typeof handl_utm_dyo_logic === 'object') {
+            handl_utm_dyo_logic.forEach(function(logic) {
+                let utmValue = Cookies.get(logic.utm_param);
+                if (checkCondition(utmValue, logic.operator, logic.utm_value)) {
+                    SetRefLink(logic.new_param, logic.new_value, true, 0);
+                }
+            });
+        }
+
+        // jQuery('.book-online-btn a').each(function(i, v) {
+        //     if (v.href !== undefined) {
+        //         let href = v.href.split('?')[0];
+        //         let params = getSearchParams(v.href);
+        //         handl_utm_dyo_logic.forEach(function(logic) {
+        //             let newParamValue = Cookies.get(logic.new_param);
+        //             if (newParamValue !== undefined) {
+        //                 params[logic.new_param] = newParamValue;
+        //             }
+        //         });
+        //         v.href = href + '?' + jQuery.param(params);
+        //     }
+        // });
+    });
+
+    function checkCondition(value, operator, compare) {
+        switch (operator) {
+            case 'equals':
+                return value === compare;
+            case 'not_equals':
+                return value !== compare;
+            case 'contains':
+                return value.indexOf(compare) !== -1;
+            case 'not_contains':
+                return value.indexOf(compare) === -1;
+            case 'starts_with':
+                return value.startsWith(compare);
+            case 'ends_with':
+                return value.endsWith(compare);
+            case 'regex':
+                return new RegExp(compare).test(value);
+            default:
+                return false;
+        }
+    }
+    });</script>
+    
+	<script type="rocketlazyloadscript">window.addEventListener('DOMContentLoaded', function() {
+	if (typeof MsCrmMkt !== 'undefined'){
+	    MsCrmMkt.MsCrmFormLoader.on("afterFormLoad", function(event) {
+			jQuery(event.formPlaceholder).find('input').each(function(id, field){
+			    var thiss = jQuery(field)			
+			    
+			    
+			    if ( typeof(thiss.attr('title')) != 'undefined' ){
+			        if (thiss.attr('title') != ''){
+			            //console.log('1',field,thiss.attr('title'))
+			            var param = thiss.attr('title').toLowerCase().replace(/\s+/g,'_')
+			            var cookie_value = ''
+					    if (param != '' && Cookies.get(param) && Cookies.get(param) != ''){
+					        cookie_value = Cookies.get(param)
+					    }
+                        
+                        if (cookie_value == ''){
+	                        var param = thiss.attr('placeholder').toLowerCase().replace(/\s+/g,'_')
+						    if (param != '' && Cookies.get(param) && Cookies.get(param) != ''){
+						        cookie_value = Cookies.get(param)
+						    }
+                        }
+                        
+                    	thiss.val(cookie_value)
+			        }else{
+			            //console.log('2',field,thiss.attr('title'))
+			        }
+				}else{
+			        //console.log('3',field,thiss.attr('title'))
+				}
+			})
+	//		handl_utm_all_params.forEach(function(param) {
+	//		    jQuery('input[title='+param+']').val(Cookies.get(param));
+	//		})
+		})
+	}
+	
+	});</script>		<script type="rocketlazyloadscript">
+		( function ( body ) {
+			'use strict';
+			body.className = body.className.replace( /\btribe-no-js\b/, 'tribe-js' );
+		} )( document.body );
+		</script>
+		<script type="rocketlazyloadscript"> /* <![CDATA[ */var tribe_l10n_datatables = {"aria":{"sort_ascending":": activate to sort column ascending","sort_descending":": activate to sort column descending"},"length_menu":"Show _MENU_ entries","empty_table":"No data available in table","info":"Showing _START_ to _END_ of _TOTAL_ entries","info_empty":"Showing 0 to 0 of 0 entries","info_filtered":"(filtered from _MAX_ total entries)","zero_records":"No matching records found","search":"Search:","all_selected_text":"All items on this page were selected. ","select_all_link":"Select all pages","clear_selection":"Clear Selection.","pagination":{"all":"All","next":"Next","previous":"Previous"},"select":{"rows":{"0":"","_":": Selected %d rows","1":": Selected 1 row"}},"datepicker":{"dayNames":["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],"dayNamesShort":["Sun","Mon","Tue","Wed","Thu","Fri","Sat"],"dayNamesMin":["S","M","T","W","T","F","S"],"monthNames":["January","February","March","April","May","June","July","August","September","October","November","December"],"monthNamesShort":["January","February","March","April","May","June","July","August","September","October","November","December"],"monthNamesMin":["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"nextText":"Next","prevText":"Prev","currentText":"Today","closeText":"Done","today":"Today","clear":"Clear"}};/* ]]> */ </script><script type="rocketlazyloadscript" data-rocket-type="text/javascript" id="rocket-browser-checker-js-after">
+/* <![CDATA[ */
+"use strict";var _createClass=function(){function defineProperties(target,props){for(var i=0;i<props.length;i++){var descriptor=props[i];descriptor.enumerable=descriptor.enumerable||!1,descriptor.configurable=!0,"value"in descriptor&&(descriptor.writable=!0),Object.defineProperty(target,descriptor.key,descriptor)}}return function(Constructor,protoProps,staticProps){return protoProps&&defineProperties(Constructor.prototype,protoProps),staticProps&&defineProperties(Constructor,staticProps),Constructor}}();function _classCallCheck(instance,Constructor){if(!(instance instanceof Constructor))throw new TypeError("Cannot call a class as a function")}var RocketBrowserCompatibilityChecker=function(){function RocketBrowserCompatibilityChecker(options){_classCallCheck(this,RocketBrowserCompatibilityChecker),this.passiveSupported=!1,this._checkPassiveOption(this),this.options=!!this.passiveSupported&&options}return _createClass(RocketBrowserCompatibilityChecker,[{key:"_checkPassiveOption",value:function(self){try{var options={get passive(){return!(self.passiveSupported=!0)}};window.addEventListener("test",null,options),window.removeEventListener("test",null,options)}catch(err){self.passiveSupported=!1}}},{key:"initRequestIdleCallback",value:function(){!1 in window&&(window.requestIdleCallback=function(cb){var start=Date.now();return setTimeout(function(){cb({didTimeout:!1,timeRemaining:function(){return Math.max(0,50-(Date.now()-start))}})},1)}),!1 in window&&(window.cancelIdleCallback=function(id){return clearTimeout(id)})}},{key:"isDataSaverModeOn",value:function(){return"connection"in navigator&&!0===navigator.connection.saveData}},{key:"supportsLinkPrefetch",value:function(){var elem=document.createElement("link");return elem.relList&&elem.relList.supports&&elem.relList.supports("prefetch")&&window.IntersectionObserver&&"isIntersecting"in IntersectionObserverEntry.prototype}},{key:"isSlowConnection",value:function(){return"connection"in navigator&&"effectiveType"in navigator.connection&&("2g"===navigator.connection.effectiveType||"slow-2g"===navigator.connection.effectiveType)}}]),RocketBrowserCompatibilityChecker}();
+//# sourceURL=rocket-browser-checker-js-after
+/* ]]> */
+</script>
+<script type="text/javascript" id="rocket-preload-links-js-extra">
+/* <![CDATA[ */
+var RocketPreloadLinksConfig = {"excludeUris":"/(?:.+/)?feed(?:/(?:.+/?)?)?$|/(?:.+/)?embed/|/(index.php/)?(.*)wp-json(/.*|$)|/refer/|/go/|/recommend/|/recommends/","usesTrailingSlash":"1","imageExt":"jpg|jpeg|gif|png|tiff|bmp|webp|avif|pdf|doc|docx|xls|xlsx|php","fileExt":"jpg|jpeg|gif|png|tiff|bmp|webp|avif|pdf|doc|docx|xls|xlsx|php|html|htm","siteUrl":"https://www.cortiva.edu","onHoverDelay":"100","rateThrottle":"3"};
+//# sourceURL=rocket-preload-links-js-extra
+/* ]]> */
+</script>
+<script type="rocketlazyloadscript" data-rocket-type="text/javascript" id="rocket-preload-links-js-after">
+/* <![CDATA[ */
+(function() {
+"use strict";var r="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(e){return typeof e}:function(e){return e&&"function"==typeof Symbol&&e.constructor===Symbol&&e!==Symbol.prototype?"symbol":typeof e},e=function(){function i(e,t){for(var n=0;n<t.length;n++){var i=t[n];i.enumerable=i.enumerable||!1,i.configurable=!0,"value"in i&&(i.writable=!0),Object.defineProperty(e,i.key,i)}}return function(e,t,n){return t&&i(e.prototype,t),n&&i(e,n),e}}();function i(e,t){if(!(e instanceof t))throw new TypeError("Cannot call a class as a function")}var t=function(){function n(e,t){i(this,n),this.browser=e,this.config=t,this.options=this.browser.options,this.prefetched=new Set,this.eventTime=null,this.threshold=1111,this.numOnHover=0}return e(n,[{key:"init",value:function(){!this.browser.supportsLinkPrefetch()||this.browser.isDataSaverModeOn()||this.browser.isSlowConnection()||(this.regex={excludeUris:RegExp(this.config.excludeUris,"i"),images:RegExp(".("+this.config.imageExt+")$","i"),fileExt:RegExp(".("+this.config.fileExt+")$","i")},this._initListeners(this))}},{key:"_initListeners",value:function(e){-1<this.config.onHoverDelay&&document.addEventListener("mouseover",e.listener.bind(e),e.listenerOptions),document.addEventListener("mousedown",e.listener.bind(e),e.listenerOptions),document.addEventListener("touchstart",e.listener.bind(e),e.listenerOptions)}},{key:"listener",value:function(e){var t=e.target.closest("a"),n=this._prepareUrl(t);if(null!==n)switch(e.type){case"mousedown":case"touchstart":this._addPrefetchLink(n);break;case"mouseover":this._earlyPrefetch(t,n,"mouseout")}}},{key:"_earlyPrefetch",value:function(t,e,n){var i=this,r=setTimeout(function(){if(r=null,0===i.numOnHover)setTimeout(function(){return i.numOnHover=0},1e3);else if(i.numOnHover>i.config.rateThrottle)return;i.numOnHover++,i._addPrefetchLink(e)},this.config.onHoverDelay);t.addEventListener(n,function e(){t.removeEventListener(n,e,{passive:!0}),null!==r&&(clearTimeout(r),r=null)},{passive:!0})}},{key:"_addPrefetchLink",value:function(i){return this.prefetched.add(i.href),new Promise(function(e,t){var n=document.createElement("link");n.rel="prefetch",n.href=i.href,n.onload=e,n.onerror=t,document.head.appendChild(n)}).catch(function(){})}},{key:"_prepareUrl",value:function(e){if(null===e||"object"!==(void 0===e?"undefined":r(e))||!1 in e||-1===["http:","https:"].indexOf(e.protocol))return null;var t=e.href.substring(0,this.config.siteUrl.length),n=this._getPathname(e.href,t),i={original:e.href,protocol:e.protocol,origin:t,pathname:n,href:t+n};return this._isLinkOk(i)?i:null}},{key:"_getPathname",value:function(e,t){var n=t?e.substring(this.config.siteUrl.length):e;return n.startsWith("/")||(n="/"+n),this._shouldAddTrailingSlash(n)?n+"/":n}},{key:"_shouldAddTrailingSlash",value:function(e){return this.config.usesTrailingSlash&&!e.endsWith("/")&&!this.regex.fileExt.test(e)}},{key:"_isLinkOk",value:function(e){return null!==e&&"object"===(void 0===e?"undefined":r(e))&&(!this.prefetched.has(e.href)&&e.origin===this.config.siteUrl&&-1===e.href.indexOf("?")&&-1===e.href.indexOf("#")&&!this.regex.excludeUris.test(e.href)&&!this.regex.images.test(e.href))}}],[{key:"run",value:function(){"undefined"!=typeof RocketPreloadLinksConfig&&new n(new RocketBrowserCompatibilityChecker({capture:!0,passive:!0}),RocketPreloadLinksConfig).init()}}]),n}();t.run();
+}());
+
+//# sourceURL=rocket-preload-links-js-after
+/* ]]> */
+</script>
+<script type="text/javascript" id="rocket_lazyload_css-js-extra">
+/* <![CDATA[ */
+var rocket_lazyload_css_data = {"threshold":"300"};
+//# sourceURL=rocket_lazyload_css-js-extra
+/* ]]> */
+</script>
+<script type="text/javascript" id="rocket_lazyload_css-js-after">
+/* <![CDATA[ */
+!function o(n,c,a){function u(t,e){if(!c[t]){if(!n[t]){var r="function"==typeof require&&require;if(!e&&r)return r(t,!0);if(s)return s(t,!0);throw(e=new Error("Cannot find module '"+t+"'")).code="MODULE_NOT_FOUND",e}r=c[t]={exports:{}},n[t][0].call(r.exports,function(e){return u(n[t][1][e]||e)},r,r.exports,o,n,c,a)}return c[t].exports}for(var s="function"==typeof require&&require,e=0;e<a.length;e++)u(a[e]);return u}({1:[function(e,t,r){"use strict";{const c="undefined"==typeof rocket_pairs?[]:rocket_pairs,a=(("undefined"==typeof rocket_excluded_pairs?[]:rocket_excluded_pairs).map(t=>{var e=t.selector;document.querySelectorAll(e).forEach(e=>{e.setAttribute("data-rocket-lazy-bg-"+t.hash,"excluded")})}),document.querySelector("#wpr-lazyload-bg-container"));var o=rocket_lazyload_css_data.threshold||300;const u=new IntersectionObserver(e=>{e.forEach(t=>{t.isIntersecting&&c.filter(e=>t.target.matches(e.selector)).map(t=>{var e;t&&((e=document.createElement("style")).textContent=t.style,a.insertAdjacentElement("afterend",e),t.elements.forEach(e=>{u.unobserve(e),e.setAttribute("data-rocket-lazy-bg-"+t.hash,"loaded")}))})})},{rootMargin:o+"px"});function n(){0<(0<arguments.length&&void 0!==arguments[0]?arguments[0]:[]).length&&c.forEach(t=>{try{document.querySelectorAll(t.selector).forEach(e=>{"loaded"!==e.getAttribute("data-rocket-lazy-bg-"+t.hash)&&"excluded"!==e.getAttribute("data-rocket-lazy-bg-"+t.hash)&&(u.observe(e),(t.elements||=[]).push(e))})}catch(e){console.error(e)}})}n(),function(){const r=window.MutationObserver;return function(e,t){if(e&&1===e.nodeType)return(t=new r(t)).observe(e,{attributes:!0,childList:!0,subtree:!0}),t}}()(document.querySelector("body"),n)}},{}]},{},[1]);
+//# sourceURL=rocket_lazyload_css-js-after
+/* ]]> */
+</script>
+<script type="rocketlazyloadscript" data-rocket-type="text/javascript" data-rocket-src="https://www.cortiva.edu/wp-includes/js/comment-reply.min.js?ver=6.9.1" id="comment-reply-js" async="async" data-wp-strategy="async" fetchpriority="low"></script>
+<script type="rocketlazyloadscript" data-rocket-type="text/javascript" data-rocket-src="https://www.cortiva.edu/wp-content/themes/cortiva/assets/js/libs.min.js?ver=1713448945" id="am_assets-js-libs-min-js-js" data-rocket-defer defer></script>
+<script type="rocketlazyloadscript" data-rocket-type="text/javascript" data-rocket-src="https://www.cortiva.edu/wp-content/themes/cortiva/assets/js/main.min.js?ver=1713592591" id="am_assets-js-main-min-js-js" data-rocket-defer defer></script>
+<script>window.lazyLoadOptions=[{elements_selector:"img[data-lazy-src],.rocket-lazyload",data_src:"lazy-src",data_srcset:"lazy-srcset",data_sizes:"lazy-sizes",class_loading:"lazyloading",class_loaded:"lazyloaded",threshold:300,callback_loaded:function(element){if(element.tagName==="IFRAME"&&element.dataset.rocketLazyload=="fitvidscompatible"){if(element.classList.contains("lazyloaded")){if(typeof window.jQuery!="undefined"){if(jQuery.fn.fitVids){jQuery(element).parent().fitVids()}}}}}},{elements_selector:".rocket-lazyload",data_src:"lazy-src",data_srcset:"lazy-srcset",data_sizes:"lazy-sizes",class_loading:"lazyloading",class_loaded:"lazyloaded",threshold:300,}];window.addEventListener('LazyLoad::Initialized',function(e){var lazyLoadInstance=e.detail.instance;if(window.MutationObserver){var observer=new MutationObserver(function(mutations){var image_count=0;var iframe_count=0;var rocketlazy_count=0;mutations.forEach(function(mutation){for(var i=0;i<mutation.addedNodes.length;i++){if(typeof mutation.addedNodes[i].getElementsByTagName!=='function'){continue}
+if(typeof mutation.addedNodes[i].getElementsByClassName!=='function'){continue}
+images=mutation.addedNodes[i].getElementsByTagName('img');is_image=mutation.addedNodes[i].tagName=="IMG";iframes=mutation.addedNodes[i].getElementsByTagName('iframe');is_iframe=mutation.addedNodes[i].tagName=="IFRAME";rocket_lazy=mutation.addedNodes[i].getElementsByClassName('rocket-lazyload');image_count+=images.length;iframe_count+=iframes.length;rocketlazy_count+=rocket_lazy.length;if(is_image){image_count+=1}
+if(is_iframe){iframe_count+=1}}});if(image_count>0||iframe_count>0||rocketlazy_count>0){lazyLoadInstance.update()}});var b=document.getElementsByTagName("body")[0];var config={childList:!0,subtree:!0};observer.observe(b,config)}},!1)</script><script data-no-minify="1" async src="https://www.cortiva.edu/wp-content/plugins/wp-rocket/assets/js/lazyload/17.8.3/lazyload.min.js"></script><script type="rocketlazyloadscript" data-rocket-type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "g82t66h167");
+</script>
+</body>
+</html>
+
+<!-- This website is like a Rocket, isn't it? Performance optimized by WP Rocket. Learn more: https://wp-rocket.me - Debug: cached@1771378843 -->

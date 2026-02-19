@@ -1,0 +1,913 @@
+<br />
+<b>Warning</b>:  Undefined array key "" in <b>/home/rosseducation/public_html/virtual-tour/index.php</b> on line <b>50</b><br />
+<!doctype html>
+<html class="no-js" lang="en" dir="ltr">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="x-ua-compatible" content="ie=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Virtual Campus Tour | Ross Education</title>
+		<meta name="description" content="Take a 360-degree virtual tour of the Ross campus nearest to you.">
+		<meta property="og:title" content="Virtual campus tour">
+		<meta property="og:image" content="https://rosseducation.edu/img/resource/ross-education.jpg">
+		<meta property="og:image:width" content="860">
+		<meta property="og:image:height" content="480">
+		<link rel="canonical" href="https://rosseducation.edu/virtual-tour/">
+		<link rel="stylesheet" href="https://rosseducation.edu/css/foundation.min.css" type="text/css">
+		<link rel="stylesheet" href="https://rosseducation.edu/css/kelsey.css" type="text/css">
+		<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-NH6PWBV');</script>
+		<script src="https://aframe.io/releases/1.3.0/aframe.min.js"></script>
+		<style>
+			.no-js body *:not(.covenant):not(.banshee) { display: none; }
+			.no-js body { background: transparent !important; }
+			html:not(.no-js) body > .covenant { z-index: 55; }
+			@-webkit-keyframes snailhammer { 0%, 70%, 100% { -webkit-transform: scale3D(1, 1, 1); transform: scale3D(1, 1, 1); } 35% { -webkit-transform: scale3D(0, 0, 1); transform: scale3D(0, 0, 1); } }
+			@keyframes snailhammer { 0%, 70%, 100% { -webkit-transform: scale3D(1, 1, 1); transform: scale3D(1, 1, 1); } 35% { -webkit-transform: scale3D(0, 0, 1); transform: scale3D(0, 0, 1); } }
+		</style>
+		<link rel="stylesheet" href="https://rosseducation.edu/css/antelopes.css">
+		<style>
+			.sr-only {
+position:absolute;
+left:-10000px;
+top:auto;
+width:1px;
+height:1px;
+overflow:hidden;
+}
+			.inventory { top: 130px; left: 0; padding: 15px 0; position: fixed; width: 100%; z-index: 6; }
+			html:not(.no-js) body,.infinitetour { background: #383c46; min-height: 100vh; }
+			.aframe { opacity: 0; position: relative; z-index: 5; }
+			.responsive-embed { background: #383c46; position: relative; }
+			canvas { top: 64px; }
+			.raccoonRancher { background: rgba(44,44,44,.4); bottom: 0; left: 0; padding: 15px 0; position: fixed; width: 100%; z-index: 6; }
+			.raccoonRancher .large-5 { display: none; }
+			.raccoonRancher .input-group.lastgroup { margin: 0; }
+			.raccoonRancher .input-group span, .raccoonRancher .input-group .input-group-field { font-family: 'Work Sans', sans-serif; font-size: 13px; padding: 5px -10px 5px 10px; }
+			.raccoonRancher .input-group span { font-weight: 500; }
+			#off-canvas-bottom { background: rgba(55,55,55,.8); }
+			#items { margin: 1.5rem; }
+			#off-canvas-bottom .close-button, #off-canvas-bottom .close-button:focus, #off-canvas-bottom .close-button:hover{ color: #fff; }
+			#items li { color: #fff; font-family: 'Zilla Slab', serif; font-size: 20px; font-weight: 500; line-height: 1.5; }
+			@media screen and (max-width: 39.9375em) {
+				.inventory { top: 60px; }
+				header:not(.entry-header) > .grid-container { position: absolute; top: 0; }
+				.aframe { height: calc(75vw - 1.875rem); width: 100%; }
+				.responsive-embed { min-height: calc(75vw - 1.875rem); padding-bottom: 0; position: relative; }
+			}
+			@media screen and (min-width: 64em) {
+				header:not(.entry-header) { top: 0; }
+				.off-canvas-content { background: #fafafa; padding-top: 80px; }
+				.infinitetour h1 { color: #fff; font-size: 24px; margin: 0; }
+				.infinitetour .large-3 .callout span { background: #888c96; border: 1px solid #888c96; color: #fff; display: block; font-family: 'Work Sans', sans-serif; font-size: 14px; font-weight: 500; margin: -17px -17px 1rem; padding: .825rem 1rem; transition: .3s; }
+				.infinitetour .large-3 .callout:hover span, .infinitetour .large-3 .callout:focus span { background: #383c46; border-color: #383c46; }
+				.raccoonRancher { background: rgba(44,44,44,.4); left: 0; height: max-content; max-height: 68px; padding: 15px 0; position: fixed; top: 64px; width: 100%; z-index: 6; }
+				.raccoonRancher .large-5 { display: block; }
+				.raccoonRancher .input-group { margin: 0; }
+			}
+		</style>
+	</head>
+	<body class="infinitetour">
+		<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NH6PWBV" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+		<div class="off-canvas position-right squeakyTaco" id="ocNav" data-off-canvas data-transition="overlap">
+			<ul class="vertical menu drilldown" data-drilldown>
+				<li id="firsty">
+					<a id="htpTarget" title="Healthcare Training Programs">Healthcare Training Programs</a>
+					<ul class="menu vertical nested">
+						<li><a href="https://rosseducation.edu/programs/dental-assistant.php" title="Dental Assistant">Dental Assistant</a></li>
+						<li><a href="https://rosseducation.edu/programs/medical-assistant.php" title="Medical Assistant">Medical Assistant</a></li>
+						<li><a href="https://rosseducation.edu/programs/nursing-assistant.php" title="Nursing Assistant">Nursing Assistant</a></li>
+						<li><a href="https://rosseducation.edu/programs/nursing.php" title="Nursing">Nursing</a></li>
+						<li><a href="https://rosseducation.edu/programs/occupational-therapy-assistant.php" title="Occupational Therapy Assistant">Occupational Therapy Assistant</a></li>
+						<li><a href="https://rosseducation.edu/programs/practical-nursing.php" title="Practical Nursing">Practical Nursing</a></li>
+						<li><a href="https://rosseducation.edu/programs/veterinary-assistant.php" title="Veterinary Assistant">Veterinary Assistant</a></li>
+						<li><a href="https://rosseducation.edu/programs/veterinary-technician.php" title="Veterinary Technician">Veterinary Technician</a></li>
+						<li>
+							<a title="Online Programs">Online Programs</a>
+							<ul class="menu vertical nested">
+								<li><a href="https://rosseducation.edu/programs/online/health-care-administration.php" title="Health Care Administration">Health Care Administration</a></li>
+								<li><a href="https://rosseducation.edu/programs/online/medical-office-administration.php" title="Medical Office Administration">Medical Office Administration</a></li>
+								<li><a href="https://rosseducation.edu/programs/online/medical-billing-administrative-specialist.php" title="Medical Billing Administrative Specialist">Medical Billing Administrative Specialist</a></li>
+								<li><a href="https://rosseducation.edu/programs/online/medical-assistant.php" title="Medical Assistant">Medical Assistant</a></li>
+								<li><a href="https://rosseducation.edu/programs/medical-billing-and-coding.php" title="Medical Insurance Billing and Office Administration">Medical Insurance Billing and Office Administration</a></li>
+								<li><a href="https://rosseducation.edu/programs/pharmacy-technician.php" title="Pharmacy Technician">Pharmacy Technician</a></li>
+							</ul>
+						</li>
+					</ul>
+				</li>
+				<li>
+					<a title="Campus Locations" id="other">Campus Locations</a>
+					<ul class="menu vertical nested">
+						<li>
+							<a title="Alabama">Alabama</a>
+							<ul class="menu vertical nested">
+								<li><a href="https://rosseducation.edu/campus/al/huntsville.php" title="Huntsville">Huntsville</a></li>
+							</ul>
+						</li>
+						<li>
+							<a title="Indiana">Indiana</a>
+							<ul class="menu vertical nested">
+								<li><a href="https://rosseducation.edu/campus/in/evansville.php" title="Evansville">Evansville</a></li>
+								<li><a href="https://rosseducation.edu/campus/in/fort-wayne.php" title="Fort Wayne">Fort Wayne</a></li>
+								<li><a href="https://rosseducation.edu/campus/in/kokomo.php" title="Kokomo">Kokomo</a></li>
+								<li><a href="https://rosseducation.edu/campus/in/lafayette.php" title="Lafayette">Lafayette</a></li>
+								<li><a href="https://rosseducation.edu/campus/in/merrillville.php" title="Merrillville">Merrillville</a></li>
+								<li><a href="https://rosseducation.edu/campus/in/muncie.php" title="Muncie">Muncie</a></li>
+								<li><a href="https://rosseducation.edu/campus/in/south-bend.php" title="South Bend">South Bend</a></li>
+							</ul>
+						</li>
+						<li>
+							<a title="Iowa">Iowa</a>
+							<ul class="menu vertical nested">
+								<li><a href="https://rosseducation.edu/campus/ia/quad-cities.php" title="Quad Cities">Quad Cities</a></li>
+							</ul>
+						</li>
+						<li>
+							<a title="Kentucky">Kentucky</a>
+							<ul class="menu vertical nested">
+								<li><a href="https://rosseducation.edu/campus/ky/bowling-green.php" title="Bowling Green">Bowling Green</a></li>
+								<li><a href="https://rosseducation.edu/campus/ky/erlanger.php" title="Erlanger">Erlanger</a></li>
+								<li><a href="https://rosseducation.edu/campus/ky/hopkinsville.php" title="Hopkinsville">Hopkinsville</a></li>
+								<li><a href="https://rosseducation.edu/campus/ky/owensboro.php" title="Owensboro">Owensboro</a></li>
+							</ul>
+						</li>
+						<li>
+							<a title="Michigan">Michigan</a>
+							<ul class="menu vertical nested">
+								<li><a href="https://rosseducation.edu/campus/mi/ann-arbor.php" title="Ann Arbor">Ann Arbor</a></li>
+								<li><a href="https://rosseducation.edu/campus/mi/battle-creek.php" title="Battle Creek">Battle Creek</a></li>
+								<li><a href="https://rosseducation.edu/campus/mi/benton-harbor.php" title="Benton Harbor">Benton Harbor</a></li>
+								<li><a href="https://rosseducation.edu/campus/mi/brighton.php" title="Brighton">Brighton</a></li>
+								<li><a href="https://rosseducation.edu/campus/mi/canton.php" title="Canton">Canton</a></li>
+								<li><a href="https://rosseducation.edu/campus/mi/davison.php" title="Davison">Davison</a></li>
+								<li><a href="https://rosseducation.edu/campus/mi/flint.php" title="Flint">Flint</a></li>
+								<li><a href="https://rosseducation.edu/campus/mi/grand-rapids.php" title="Grand Rapids">Grand Rapids</a></li>
+								<li><a href="https://rosseducation.edu/campus/mi/kalamazoo.php" title="Kalamazoo">Kalamazoo</a></li>
+								<li><a href="https://rosseducation.edu/campus/mi/kentwood.php" title="Kentwood">Kentwood</a></li>
+								<li><a href="https://rosseducation.edu/campus/mi/lansing.php" title="Lansing">Lansing</a></li>
+								<li><a href="https://rosseducation.edu/campus/mi/midland.php" title="Midland">Midland</a></li>
+								<li><a href="https://rosseducation.edu/campus/mi/muskegon.php" title="Muskegon">Muskegon</a></li>
+								<li><a href="https://rosseducation.edu/campus/mi/new-baltimore.php" title="New Baltimore">New Baltimore</a></li>
+								<li><a href="https://rosseducation.edu/campus/mi/port-huron.php" title="Port Huron">Port Huron</a></li>
+								<li><a href="https://rosseducation.edu/campus/mi/saginaw.php" title="Saginaw">Saginaw</a></li>
+								<li><a href="https://rosseducation.edu/campus/mi/taylor.php" title="Taylor">Taylor</a></li>
+								<li><a href="https://rosseducation.edu/campus/mi/warren.php" title="Warren">Warren</a></li>
+							</ul>
+						</li>
+						<li>
+							<a title="Ohio">Ohio</a>
+							<ul class="menu vertical nested">
+								<li><a href="https://rosseducation.edu/campus/oh/canton.php" title="Canton">Canton</a></li>
+								<li><a href="https://rosseducation.edu/campus/oh/cincinnati.php" title="Cincinnati">Cincinnati</a></li>
+								<li><a href="https://rosseducation.edu/campus/oh/dayton.php" title="Dayton">Dayton</a></li>
+								<li><a href="https://rosseducation.edu/campus/oh/elyria.php" title="Elyria">Elyria</a></li>
+								<li><a href="https://rosseducation.edu/campus/oh/niles.php" title="Niles">Niles</a></li>
+								<li><a href="https://rosseducation.edu/campus/oh/ontario.php" title="Ontario">Ontario</a></li>
+								<li><a href="https://rosseducation.edu/campus/oh/sylvania.php" title="Sylvania">Sylvania</a></li>
+							</ul>
+						</li>
+						<li>
+							<a title="Tennessee">Tennessee</a>
+							<ul class="menu vertical nested">
+								<li><a href="https://rosseducation.edu/campus/tn/johnson-city.php" title="Johnson City">Johnson City</a></li>
+								<li><a href="https://rosseducation.edu/campus/tn/knoxville.php" title="Knoxville">Knoxville</a></li>
+							</ul>
+						</li>
+						<li>
+							<a title="West Virginia">West Virginia</a>
+							<ul class="menu vertical nested">
+								<li><a href="https://rosseducation.edu/campus/wv/charleston.php" title="Charleston">Charleston</a></li>
+								<li><a href="https://rosseducation.edu/campus/wv/morgantown.php" title="Morgantown">Morgantown</a></li>
+							</ul>
+						</li>
+					</ul>
+				</li>
+				<li>
+					<a title="Our School" id="otherer">Our School</a>
+					<ul class="menu vertical nested">
+						<li><a href="https://rosseducation.edu/our-school/" title="About Ross">About Ross</a></li>
+						<li><a href="https://rosseducation.edu/jobs/" title="Work for Ross">Work for Ross</a></li>
+						<li><a href="https://rosseducation.edu/blog/" title="Blog">Blog</a></li>
+						<li><a href="https://rosseducation.edu/our-school/accreditation.php" title="Accreditation">Accreditation</a></li>
+						<li><a href="https://rosseducation.edu/consumer-info/" title="Consumer Info">Consumer Info</a></li>
+					</ul>
+				</li>
+				<li>
+					<a title="Students &amp; Alumni" id="lasty">Students &amp; Alumni</a>
+					<ul class="menu vertical nested">
+						<li><a href="https://rosseducation.edu/students/records/" title="Request My Records">Request My Records</a></li>
+						<li><a href="https://prod.launchservicing.com/Borrower/Login.aspx" rel="nofollow" title="Pay My Tuition">Pay My Tuition</a></li>
+						<li><a href="https://rosseducation.edu/students/career-services/" title="Career Services">Career Services</a></li>
+						<li><a href="https://rosseducation.edu/students/campus-closings/" title="Weather Closings">Campus Closings</a></li>
+						<li><a href="https://rosseducation.edu/students/student-concerns/" title="Student Concerns">Student Concerns</a></li>
+					</ul>
+				</li>
+			</ul>
+		</div>
+		<header>
+			<div class="grid-container frogBite">
+				<div class="grid-x grid-margin-x">
+					<div class="small-8 medium-10 large-2 cell">
+						<a href="https://rosseducation.edu" tabindex="0" title="Ross Education"><img class="headerLogo hide-for-large" src="https://rosseducation.edu/img/global/ross-medical-education-center-logo_136p-fff.png" alt="Ross Medical Education Center" height="28" width="121"><img class="headerLogo show-for-large" src="https://rosseducation.edu/img/global/ross-medical-education-center-logo_136p.png" alt="Ross Medical Education Center" height="32" width="139"></a>
+					</div>
+					<div class="small-2 large-10 cell show-for-large">
+						<ul>
+							<li><a aria-expanded="false" class="navDaddy" id="aPro" data-toggle="ocPrograms aPro" data-toggler=".is-active" tabindex="0" title="Healthcare Training Programs">Programs</a></li>
+							<li><a aria-expanded="false" class="navDaddy" id="aLoc" data-toggle="ocLocations aLoc" data-toggler=".is-active" tabindex="0" title="Campus Locations">Locations</a></li>
+							<li><a class="navDaddy" id="aSch" href="https://rosseducation.edu/our-school/" tabindex="0" title="Our School">Our School</a></li>
+							<li><a href="tel:(866) 815-5578" tabindex="0" title="8668155578">(866) 815-5578</a></li>
+						</ul>
+					</div>
+					<div class="small-2 medium-1 cell hide-for-large headerPhoneContainer">
+						<a class="headerPhone" href="tel:(866) 815-5578" tabindex="0" title="8668155578"><img src="https://rosseducation.edu/img/global/phone-icon_100p.svg" alt="Click to Call" height="36" width="36"></a>
+					</div>
+					<div class="small-2 medium-1 cell hide-for-large menuIconContainer">
+						<button id="ham" aria-label="Open navigation" class="menu-icon" type="button" data-toggle="ocNav"></button>
+					</div>
+				</div>
+			</div>
+		</header>
+		<div class="off-canvas position-bottom" id="off-canvas-bottom" data-off-canvas data-transition="overlap">
+			<button class="close-button" data-close type="button">
+				<span aria-hidden="true">&times;</span>
+			</button>
+			<ul id="items">
+
+			</ul>
+		</div>
+		<div class="raccoonRancher off-canvas-content" data-off-canvas-content>
+			<div class="grid-container">
+				<div class="grid-x grid-padding-x">
+					<div class="large-5 cell">
+						<h1>Virtual Tour: </h1>
+					</div>
+					<div class="large-7 cell">
+						<div class="grid-x grid-padding-x">
+							<div class="small-12 large-6 cell">
+								<!--<div class="sr-only">
+									<p>This text is hidden.</p>
+								</div>-->
+								<div class="input-group">
+									<span class="input-group-label">View:</span>
+									<select class="roompicker input-group-field">
+																			</select>
+								</div>
+							</div>
+							<div class="small-12 large-6 cell">
+								<div class="input-group lastgroup">
+									<span class="input-group-label">Campus:</span>
+									<select class="placepicker input-group-field">
+										<option value="kokomo">IN &mdash; Kokomo</option><option value="lafayett">IN &mdash; Lafayette</option><option value="merrill">IN &mdash; Merrillville</option><option value="muncie">IN &mdash; Muncie</option><option value="erlanger">KY &mdash; Erlanger</option><option value="battlecr">MI &mdash; Battle Creek</option><option value="benharb">MI &mdash; Benton Harbor</option><option value="brighton">MI &mdash; Brighton</option><option value="canton">MI &mdash; Canton</option><option value="davison">MI &mdash; Davison</option><option value="flint">MI &mdash; Flint</option><option value="jackson">MI &mdash; Jackson</option><option value="grandrap">MI &mdash; Kentwood</option><option value="lansing">MI &mdash; Lansing</option><option value="midland">MI &mdash; Midland</option><option value="rossevel">MI &mdash; Muskegon</option><option value="newbalti">MI &mdash; New Baltimore</option><option value="porthuro">MI &mdash; Port Huron</option><option value="saginaw">MI &mdash; Saginaw</option><option value="taylor">MI &mdash; Taylor</option><option value="warren">MI &mdash; Warren</option><option value="northcan">OH &mdash; Canton</option><option value="cincinna">OH &mdash; Cincinnati</option><option value="niles">OH &mdash; Niles</option><option value="sylvania">OH &mdash; Sylvania</option><option value="charlest">WV &mdash; Charleston</option><option value="morganto">WV &mdash; Morgantown</option>									</select>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="inventory" style="display:none;">
+			<div class="grid-container">
+				<div class="grid-x grid-padding-x">
+					<div class="small-12 large-5 cell">
+						<button class="button" id="itemRevealer" data-open="off-canvas-bottom">Room inventory list</button>
+						<div class="reveal" id="roomDesc" data-reveal>
+							
+							
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<a-scene class="aframe" vr-mode-ui="enabled:false">
+			<a-entity camera look-controls="reverseMouseDrag:true" wasd-controls="enabled:false"></a-entity>
+			<a-sky id="sky" src="/exterior.jpg" rotation="0  0" wasd-controls="enabled:false" aria-describedby="roomDesc"></a-sky>
+		</a-scene>
+		
+		<div class="off-canvas position-top is-closed show-for-medium" id="ocPrograms" data-off-canvas data-transition="overlap">
+				<div class="grid-container">
+					<div class="grid-x grid-margin-x tabs" data-tabs id="programTabs">
+						<div class="medium-4 cell baby">
+							<div class="grid-x grid-margin-x">
+								<span class="medium-12 cell tdHeading">Healthcare Programs</span>
+								<div class="medium-6 cell throwDown">
+									<ul>
+										<li class="dtNavTitle"><a data-tabs-target="c-ma" href="https://rosseducation.edu/programs/medical-assistant.php" tabindex="0" title="Medical Assistant">Medical Assistant</a></li>
+										<li class="dtNavTitle"><a data-tabs-target="c-da" href="https://rosseducation.edu/programs/dental-assistant.php" tabindex="0" title="Dental Assistant">Dental Assistant</a></li>
+										<li class="dtNavTitle"><a data-tabs-target="c-na" href="https://rosseducation.edu/programs/nursing-assistant.php" tabindex="0" title="Nursing Assistant">Nursing Assistant</a></li>
+										<li class="dtNavTitle"><a data-tabs-target="c-nursing" href="https://rosseducation.edu/programs/nursing.php" tabindex="0" title="Nursing">Nursing</a></li>										
+									</ul>
+								</div>
+								<div class="medium-6 cell throwDown">
+									<ul>
+										<li class="dtNavTitle"><a data-tabs-target="c-ota" href="https://rosseducation.edu/programs/occupational-therapy-assistant.php" tabindex="0" title="Occupational Therapy Assistant">Occupational Therapy Assistant</a></li>
+										<li class="dtNavTitle"><a data-tabs-target="c-pnursing" href="https://rosseducation.edu/programs/practical-nursing.php" tabindex="0" title="Practical Nursing">Practical Nursing</a></li>
+										<li class="dtNavTitle"><a data-tabs-target="c-va" href="https://rosseducation.edu/programs/veterinary-assistant.php" tabindex="0" title="Veterinary Assistant">Veterinary Assistant</a></li>
+										<li class="dtNavTitle"><a data-tabs-target="c-vettech" href="https://rosseducation.edu/programs/veterinary-technician.php" tabindex="0" title="Veterinary Technology">Veterinary Technology</a></li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<div class="medium-3 cell baby">
+							<div class="grid-x">
+								<span class="medium-12 cell tdHeading">Online Programs</span>
+								<div class="medium-12 cell throwDown">
+									<ul>
+										<li class="dtNavTitle"><a data-tabs-target="o-has" href="https://rosseducation.edu/programs/online/health-care-administration.php" tabindex="0" title="Health Care Administration">Health Care Administration</a></li>
+										<li class="dtNavTitle"><a data-tabs-target="o-mom" href="https://rosseducation.edu/programs/online/medical-office-administration.php" tabindex="0" title="Medical Office Administration">Medical Office Administration</a></li>
+										<li class="dtNavTitle"><a data-tabs-target="o-mbas" href="https://rosseducation.edu/programs/online/medical-billing-administrative-specialist.php" tabindex="0" title="Medical Billing Administrative Specialist">Medical Billing Administrative Specialist</a></li>
+										<li class="dtNavTitle"><a data-tabs-target="o-ma" href="https://rosseducation.edu/programs/online/medical-assistant.php" tabindex="0" title="Medical Assistant">Medical Assistant</a></li>
+										<li class="dtNavTitle"><a data-tabs-target="o-miboa" href="https://rosseducation.edu/programs/medical-billing-and-coding.php" tabindex="0" title="Medical Insurance Billing and Office Administration">Medical Insurance Billing and Office Administration</a></li>
+										<li class="dtNavTitle"><a data-tabs-target="o-pharmtech" href="https://rosseducation.edu/programs/pharmacy-technician.php" tabindex="0" title="Pharmacy Technician">Pharmacy Technician</a></li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<div class="medium-5 cell tabs-content dtNavContent" data-tabs-content="programTabs">
+							<div class="grid-x">
+								<div class="medium-12 cell tabs-panel" id="c-ma">
+									<div>
+										<span class="kiwiSmasher">Medical Assistant Program</span>
+										<span class="kiwiBasher">offered at these campus locations:</span>
+										<ul>
+											<div class="llllline">
+												<li>Huntsville</li>
+												<li>Quad Cities</li>
+												<li>Evansville</li>
+												<li>Fort Wayne</li>
+												<li>Kokomo</li>
+												<li>South Bend</li>
+											</div>
+											<div class="llllline">
+												<li>Lafayette</li>
+												<li>Muncie</li>
+												<li>Bowling Green</li>
+												<li>Erlanger</li>
+												<li>Hopkinsville</li>
+												<li>Owensboro</li>
+											</div>
+											<div class="llllline">
+												<li>Ann Arbor</li>
+												<li>Battle Creek</li>
+												<li>Brighton</li>
+												<li>Canton (MI)</li>
+												<li>Davison</li>
+												<li>Flint</li>
+											</div>
+											<div class="llllline">
+												<li>Grand Rapids</li>
+												<li>Kalamazoo</li>
+												<li>Kentwood</li>
+												<li>Lansing</li>
+												<li>Midland</li>
+												<li>Muskegon</li>
+											</div>
+											<div class="llllline">
+												<li>New Baltimore</li>
+												<li>Port Huron</li>
+												<li>Saginaw</li>
+												<li>Taylor</li>
+												<li>Warren</li>
+												<li>Cincinnati</li>
+											</div>
+											<div class="llllline">
+												<li>Dayton</li>
+												<li>Elyria</li>
+												<li>Mansfield</li>
+												<li>Niles</li>
+												<li>Canton (OH)</li>
+												<li>Sylvania</li>
+											</div>
+											<div class="llllline">
+												<li>Johnson City</li>
+												<li>Knoxville</li>
+												<li>Charleston</li>
+												<li>Morgantown</li>
+											</div>
+										</ul>
+									</div>
+								</div>
+								<div class="medium-12 cell tabs-panel" id="c-da">
+									<div>
+										<span class="kiwiSmasher">Dental Assistant Program</span>
+										<span class="kiwiBasher">offered at these campus locations:</span>
+										<ul>
+											<div class="llllline">
+												<li>Huntsville</li>
+												<li>Evansville</li>
+												<li>Fort Wayne</li>
+												<li>Kokomo</li>
+												<li>Lafayette</li>
+												<li>South Bend</li>
+											</div>
+											<div class="llllline">
+												<li>Muncie</li>	
+												<li>Erlanger</li>
+												<li>Owensboro</li>
+												<li>Brighton</li>
+												<li>Canton (MI)</li>
+												<li>Davison</li>
+												<li>Flint</li>									
+											</div>
+											<div class="llllline">
+												<li>Grand Rapids</li>
+												<li>Kalamazoo</li>
+												<li>Kentwood</li>
+												<li>Lansing</li>
+												<li>Warren</li>
+											</div>
+											<div class="llllline">
+												<li>New Baltimore</li>
+												<li>Muskegon</li>
+												<li>Saginaw</li>
+												<li>Cincinnati</li>
+												<li>Dayton</li>
+												<li>Elyria</li>
+											</div>
+											<div class="llllline">
+												<li>Niles</li>
+												<li>Johnson City</li>
+												<li>Knoxville</li>
+												<li>Charleston</li>
+												<li>Morgantown</li>
+											</div>
+										</ul>
+									</div>
+								</div>
+								<div class="medium-12 cell tabs-panel" id="c-va">
+									<div>
+										<span class="kiwiSmasher">Veterinary Assistant Program</span>
+										<span class="kiwiBasher">offered at these campus locations:</span>
+										<ul>
+											<div class="llllline">
+												<li>Huntsville</li>
+												<li>Erlanger</li>
+												<li>Canton</li>
+											</div>
+											<div class="llllline">
+												<li>Kalamazoo</li>
+												<li>New Baltimore</li>
+												<li>Warren</li>
+											</div>
+										</ul>
+									</div>
+								</div>
+								<div class="medium-12 cell tabs-panel" id="c-pharmtech">
+									<!--<div>
+										<span class="kiwiSmasher">Pharmacy Technician Program</span>
+										<span class="kiwiBasher">offered at these campus locations:</span>
+										<ul>
+											<div class="llllline">
+												<li>Huntsville</li>
+												<li>Evansville</li>
+												<li>Fort Wayne</li>
+												<li>Granger</li>
+												<li>Muncie</li>
+											</div>
+											<div class="llllline">
+												<li>Bowling Green</li>
+												<li>Brighton</li>
+												<li>Davison</li>
+												<li>Kalamazoo</li>
+												<li>Kentwood</li>
+											</div>
+											<div class="llllline">
+												<li>Lansing</li>
+												<li>Madison Heights</li>
+												<li>Saginaw</li>
+												<li>Cincinnati</li>
+												<li>Mansfield</li>
+											</div>
+											<div class="llllline">
+												<li>Johnson City</li>
+												<li>Charleston</li>
+											</div>
+										</ul>
+									</div>-->
+									<div>
+										<span class="kiwiClasher">Pharmacy Technician Program</span>
+										<span class="kiwiLasher">Certificate</span>
+										<span class="kiwiGasher">online program</span>
+									</div>
+								</div>
+								<div class="medium-12 cell tabs-panel" id="c-na">
+									<div>
+										<span class="kiwiSmasher">Nursing Assistant Program</span>
+										<span class="kiwiBasher">offered at these campus locations:</span>
+										<ul>
+											<div class="llllline">
+												<li>Brighton</li>
+												<li>Grand Rapids</li>
+												<li>Kalamazoo</li>
+												<li>Midland</li>
+											</div>
+										</ul>
+									</div>
+								</div>
+								<div class="medium-12 cell tabs-panel" id="c-miboa">
+									<!--<div>
+										<span class="kiwiSmasher">Medical Insurance Billing & Office Administration Program</span>
+										<span class="kiwiBasher">offered at these campus locations:</span>
+										<ul>
+											<div class="llllline">
+												<li>Huntsville</li>
+												<li>Evansville</li>
+												<li>Fort Wayne</li>
+												<li>Granger</li>
+												<li>Kokomo</li>
+												<li>Lafayette</li>
+												<li>Muncie</li>
+											</div>
+											<div class="llllline">
+												<li>Bowling Green</li>
+												<li>Erlanger</li>
+												<li>Owensboro</li>
+												<li>Ann Arbor</li>
+												<li>Brighton</li>
+												<li>Canton (MI)</li>
+											</div>
+											<div class="llllline">
+												<li>Davison</li>
+												<li>Flint</li>
+												<li>Grand Rapids</li>
+												<li>Kalamazoo</li>
+												<li>Kentwood</li>
+												<li>Lansing</li>
+											</div>
+											<div class="llllline">
+												<li>Madison Heights</li>
+												<li>New Baltimore</li>
+												<li>Port Huron</li>
+												<li>Muskegon</li>
+												<li>Saginaw</li>
+											</div>
+											<div class="llllline">
+												<li>Taylor</li>
+												<li>Cincinnati</li>
+												<li>Dayton</li>
+												<li>Elyria</li>
+												<li>Niles</li>
+												<li>Mansfield</li>
+											</div>
+											<div class="llllline">
+												<li>Johnson City</li>
+												<li>Knoxville</li>
+												<li>Charleston</li>
+												<li>Morgantown</li>
+											</div>
+										</ul>
+									</div>-->
+									<div>
+										<span class="kiwiClasher">Medical Insurance Billing and Office Administration</span>
+										<span class="kiwiLasher">Diploma</span>
+										<span class="kiwiGasher">online program</span>
+									</div>
+								</div>
+								<div class="medium-12 cell tabs-panel" id="c-ota">
+									<div>
+										<span class="kiwiSmasher">Occupational Therapy Assistant Program</span>
+										<span class="kiwiBasher">offered at these campus locations:</span>
+										<ul>
+											<div class="llllline">
+												<li>Hopkinsville</li>
+												<li>Quad Cities</li>
+											</div>
+										</ul>
+									</div>
+								</div>
+								<div class="medium-12 cell tabs-panel" id="c-nursing">
+									<div>
+										<span class="kiwiSmasher">Nursing Program</span>
+										<span class="kiwiBasher">offered at these campus locations:</span>
+										<ul>
+											<div class="llllline">
+												<li>Canton (OH)</li>
+												<li>Cincinnati</li>
+												<li>Dayton</li>
+												<li>Elyria</li>
+												<li>Niles</li>
+												<li>Sylvania</li>
+											</div>
+										</ul>
+									</div>
+								</div>
+								<div class="medium-12 cell tabs-panel" id="c-pnursing">
+									<div>
+										<span class="kiwiSmasher">Practical Nursing Program</span>
+										<span class="kiwiBasher">offered at these campus locations:</span>
+										<ul>
+											<div class="llllline">
+												<li>Canton (OH)</li>
+												<li>Cincinnati</li>
+												<li>Dayton</li>
+												<li>Elyria</li>
+												<li>Niles</li>
+												<li>Sylvania</li>
+											</div>
+										</ul>
+									</div>
+								</div>
+								<div class="medium-12 cell tabs-panel" id="c-vettech">
+									<div>
+										<span class="kiwiSmasher">Veterinary Technology Program</span>
+										<span class="kiwiBasher">offered at these campus locations:</span>
+										<ul>
+											<div class="llllline">
+												<li>Canton (OH)</li>
+											</div>
+										</ul>
+									</div>
+								</div>
+								<div class="medium-12 cell tabs-panel" id="c-business">
+									<div>
+										<span class="kiwiSmasher">Business Management Program</span>
+										<span class="kiwiBasher">offered at these campus locations:</span>
+										<ul>
+											<div class="llllline">
+												<li>Hopkinsville, KY</li>
+											</div>
+										</ul>
+									</div>
+								</div>
+								<div class="medium-12 cell tabs-panel online" id="o-ma">
+									<div>
+										<span class="kiwiClasher">Medical Assistant</span>
+										<span class="kiwiLasher">Associate of Applied Science Degree</span>
+										<span class="kiwiGasher">online program</span>
+									</div>
+								</div>
+
+								<div class="medium-12 cell tabs-panel online" id="o-has">
+									<div>
+										<span class="kiwiClasher">Health Care Administration</span>
+										<span class="kiwiLasher">Associate Degree</span>
+										<span class="kiwiGasher">online program</span>
+										</ul>
+									</div>
+								</div>
+								<div class="medium-12 cell tabs-panel online" id="o-hshs">
+									<div>
+										<span class="kiwiClasher">Human, Social, and Health Services</span>
+										<span class="kiwiLasher">Associate of Applied Science Degree</span>
+										<span class="kiwiGasher">online program</span>
+									</div>
+								</div>
+								<div class="medium-12 cell tabs-panel online" id="o-mbas">
+									<div>
+										<span class="kiwiClasher">Medical Billing Administrative Specialist</span>
+										<span class="kiwiLasher">Associate Degree</span>
+										<span class="kiwiGasher">online program</span>
+									</div>
+								</div>
+								<div class="medium-12 cell tabs-panel online" id="o-mom">
+									<div>
+										<span class="kiwiClasher">Medical Office Administration</span>
+										<span class="kiwiLasher">Diploma Program</span>
+										<span class="kiwiGasher">online program</span>
+									</div>
+								</div>
+								<div class="medium-12 cell tabs-panel online" id="o-miboa">
+									<div>
+										<span class="kiwiClasher">Medical Insurance Billing and Office Administration</span>
+										<span class="kiwiLasher">Diploma Program</span>
+										<span class="kiwiGasher">online program</span>
+									</div>
+								</div>
+								<div class="medium-12 cell tabs-panel online" id="o-pharmtech">
+									<div>
+										<span class="kiwiClasher">Pharmacy Technician Program</span>
+										<span class="kiwiLasher">Diploma Program</span>
+										<span class="kiwiGasher">online program</span>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		<div class="off-canvas position-top is-closed show-for-medium" id="ocLocations" data-off-canvas data-transition="overlap">
+				<div class="grid-container">
+					<div class="grid-x grid-margin-x" role="dialog">
+						<div class="medium-4 cell baby">
+							<div class="grid-x grid-margin-x">
+								<span class="medium-12 cell tdHeading">Michigan</span>
+								<div class="medium-4 cell throwDown">
+									<ul>
+										<li><a href="https://rosseducation.edu/campus/mi/ann-arbor.php" title="Ann Arbor">Ann Arbor</a></li>
+										<li><a href="https://rosseducation.edu/campus/mi/battle-creek.php" title="Battle Creek">Battle Creek</a></li>
+										<li><a href="https://rosseducation.edu/campus/mi/benton-harbor.php" title="Benton Harbor">Benton Harbor</a></li>
+										<li><a href="https://rosseducation.edu/campus/mi/brighton.php" title="Brighton">Brighton</a></li>
+										<li><a href="https://rosseducation.edu/campus/mi/canton.php" title="Canton">Canton</a></li>
+										<li><a href="https://rosseducation.edu/campus/mi/davison.php" title="Davison">Davison</a></li>
+										<li><a href="https://rosseducation.edu/campus/mi/flint.php" title="Flint">Flint</a></li>
+									</ul>
+								</div>
+								<div class="medium-4 cell throwDown">
+									<ul>
+										<li><a href="https://rosseducation.edu/campus/mi/grand-rapids.php" title="Grand Rapids">Grand Rapids</a></li>
+										<li><a href="https://rosseducation.edu/campus/mi/jackson.php" title="Jackson">Jackson</a></li>
+										<li><a href="https://rosseducation.edu/campus/mi/kalamazoo.php" title="Kalamazoo">Kalamazoo</a></li>
+										<li><a href="https://rosseducation.edu/campus/mi/kentwood.php" title="Kentwood">Kentwood</a></li>
+										<li><a href="https://rosseducation.edu/campus/mi/lansing.php" title="Lansing">Lansing</a></li>
+										<li><a href="https://rosseducation.edu/campus/mi/midland.php" title="Midland">Midland</a></li>
+									</ul>
+								</div>
+								<div class="medium-4 cell throwDown">
+									<ul>
+										<li><a href="https://rosseducation.edu/campus/mi/muskegon.php" title="Muskegon">Muskegon</a></li>
+										<li><a href="https://rosseducation.edu/campus/mi/new-baltimore.php" title="New Baltimore">New Baltimore</a></li>
+										<li><a href="https://rosseducation.edu/campus/mi/port-huron.php" title="Port Huron">Port Huron</a></li>
+										<li><a href="https://rosseducation.edu/campus/mi/saginaw.php" title="Saginaw">Saginaw</a></li>
+										<li><a href="https://rosseducation.edu/campus/mi/taylor.php" title="Taylor">Taylor</a></li>										
+										<li><a href="https://rosseducation.edu/campus/mi/warren.php" title="Warren">Warren</a></li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<div class="medium-2 cell baby">
+							<div class="grid-x grid-margin-x">
+								<span class="medium-12 cell tdHeading">Ohio</span>
+								<div class="medium-6 cell throwDown">
+									<ul>
+										<li><a href="https://rosseducation.edu/campus/oh/canton.php" title="Canton">Canton</a></li>
+										<li><a href="https://rosseducation.edu/campus/oh/cincinnati.php" title="Cincinnati">Cincinnati</a></li>
+										<li><a href="https://rosseducation.edu/campus/oh/dayton.php" title="Dayton">Dayton</a></li>
+										<li><a href="https://rosseducation.edu/campus/oh/elyria.php" title="Elyria">Elyria</a></li>
+									</ul>
+								</div>
+								<div class="medium-6 cell throwDown">
+									<ul>
+										<li><a href="https://rosseducation.edu/campus/oh/ontario.php" title="Mansfield">Mansfield</a></li>
+										<li><a href="https://rosseducation.edu/campus/oh/niles.php" title="Niles">Niles</a></li>
+										<li><a href="https://rosseducation.edu/campus/oh/sylvania.php" title="Sylvania">Sylvania</a></li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<div class="medium-3 cell">
+							<div class="grid-x grid-margin-x">
+								<div class="medium-6 cell baby">
+									<span class="tdHeading">Indiana</span>
+									<div class="throwDown">
+										<ul>
+											<li><a href="https://rosseducation.edu/campus/in/evansville.php" title="Evansville">Evansville</a></li>
+											<li><a href="https://rosseducation.edu/campus/in/fort-wayne.php" title="Fort Wayne">Fort Wayne</a></li>
+											<li><a href="https://rosseducation.edu/campus/in/kokomo.php" title="Kokomo">Kokomo</a></li>
+											<li><a href="https://rosseducation.edu/campus/in/lafayette.php" title="Lafayette">Lafayette</a></li>
+											<li><a href="https://rosseducation.edu/campus/in/merrillville.php" title="Merrillville">Merrillville</a></li>
+											<li><a href="https://rosseducation.edu/campus/in/muncie.php" title="Muncie">Muncie</a></li>
+											<li><a href="https://rosseducation.edu/campus/in/south-bend.php" title="South Bend">South Bend</a></li>
+										</ul>
+									</div>
+								</div>
+								<div class="medium-6 cell baby">
+									<span class="tdHeading">Kentucky</span>
+									<div class="throwDown">
+										<ul>
+											<li><a href="https://rosseducation.edu/campus/ky/bowling-green.php" title="Bowling Green">Bowling Green</a></li>
+											<li><a href="https://rosseducation.edu/campus/ky/erlanger.php" title="Erlanger">Erlanger</a></li>
+											<li><a href="https://rosseducation.edu/campus/ky/hopkinsville.php" title="Hopkinsville">Hopkinsville</a></li>
+											<li><a href="https://rosseducation.edu/campus/ky/owensboro.php" title="Owensboro">Owensboro</a></li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="medium-3 cell">
+							<div class="grid-x grid-margin-x">
+								<div class="medium-6 cell">
+									<div class="grid-x">
+										<div class="medium-12 cell baby">
+											<span class="tdHeading">Tennessee</span>
+											<div class="throwDown">
+												<ul>
+													<li><a href="https://rosseducation.edu/campus/tn/johnson-city.php" title="Johnson City">Johnson City</a></li>
+													<li><a href="https://rosseducation.edu/campus/tn/knoxville.php" title="Knoxville">Knoxville</a></li>
+												</ul>
+											</div>
+										</div>
+										<div class="medium-12 cell baby">
+											<div class="throwDown">
+												<span class="tdHeading">West Virginia</span>
+												<ul>
+													<li><a href="https://rosseducation.edu/campus/wv/charleston.php" title="Charleston">Charleston</a></li>
+													<li><a href="https://rosseducation.edu/campus/wv/morgantown.php" title="Morgantown">Morgantown</a></li>
+												</ul>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="medium-6 cell">
+									<div class="grid-x">
+										<div class="medium-12 cell baby">
+											<span class="tdHeading">Alabama</span>
+											<div class="throwDown">
+												<ul>
+													<li><a href="https://rosseducation.edu/campus/al/huntsville.php" title="Huntsville">Huntsville</a></li>
+												</ul>
+											</div>
+										</div>
+										<div class="medium-12 cell baby">
+											<span class="tdHeading">Iowa</span>
+											<div class="throwDown">
+												<ul>
+													<li><a class="partyruiner" href="https://rosseducation.edu/campus/ia/quad-cities.php" title="Quad Cities">Quad Cities</a></li>
+												</ul>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+		<script src="https://rosseducation.edu/js/vendor/what-input.js"></script>
+		<script src="https://rosseducation.edu/js/vendor/foundation.min.js"></script>
+		<script src="https://rosseducation.edu/js/app.js"></script>
+		<script>
+			$("select.roompicker").on("change",function(){
+				$(".inventory").hide();
+				var whatcampus = "";
+				var whatrotation = "";
+				var whatpic = $(this).val();
+				document.querySelector("#sky").setAttribute("src", whatcampus+"/"+whatpic+".jpg");
+				document.querySelector("#sky").setAttribute("rotation","0 "+whatrotation+" 0");
+				var scene = document.querySelector("a-scene");
+				var skyimg = document.querySelector('a-sky').components.material.material.map.image;
+				$(scene).css("opacity",".4");
+				skyimg.setAttribute("src", whatcampus+"/"+whatpic+".jpg");
+				var covenant = document.querySelector(".covenant");
+				$(covenant).css("display","block").css("z-index","55");
+				if(skyimg.complete) {
+					$(scene).css("opacity","1");
+					$(covenant).css("display","none").css("z-index","5");
+					console.log(skyimg);
+				} else {
+					skyimg.addEventListener('load', function(){
+						$(scene).css("opacity","1");
+						$(covenant).css("display","none").css("z-index","5");
+						console.log(skyimg);
+					});
+				}
+				if(whatpic == "medical-admin" || whatpic == "medical-clinic") {
+					$(".inventory").show();
+					$("#items").html("<ul><li>Head, Otoscope Diagnostic W/spcula 3.5v Wa</li><li>Sterilizer, Instr Ritter M9 Steam Autoclave 115v</li><li>Hammer, Taylor Percussion Og Std 7 1/2\"</li><li>Stethoscope, Dual Teach Blk (50/cs)</li><li>Curette, Dermal Fox #3 Sklar</li><li>Cart, Utility Plas All-Purp 100lb Cap Gry Unassmbl Mgm81</li><li>Thermometer, Dig Oral Bulk Lf (25/bx)</li><li>Stethoscope, Nurse R Blu Mgm01</li><li>Sphyg, Std Aneroid Lf Nvy Sml Adlt</li><li>Sphyg, Aneroid Std Lf Nvy Reg Adlt Mgm01</li><li>Handle, Rechargeable Battery Wall Plug In 3.5v Wa</li><li>Pole, Iv 2hook 4leg Base Economy Mgm81</li><li>Spill Kit, Ez Clean (24/cs) Medact</li><li>Starter Package, Hemoglobin Analyzer Kt W/1bg Microcuvette</li><li>Control, Hemoglobin Low 3x1.9ml (3ea/bx)</li><li>Control, Hemoglobin High 3x1.9ml (3ea/bx)</li><li>Meter Kit, Bld Gluc Truemetrixsngl Pt (1/bx 6bx/cs)</li><li>Strips, Bld Gluc Truemetrix Sngl Pt (50/bx 24bx/cs Mgm06</li><li>Thermometer, Suretemp Plus W/oral Prob Wa</li><li>Chart, Eye Test Snellen Lf 20'22\"x11\" (5/bg)</li><li>Handle, Scalpel #3 Og Mgm43</li><li>Forcep, Alligator Og Serr 3.25\" Mgm43</li><li>Scissor, Lister Bandage Og 5 1/2\" Mgm43</li><li>Speculum, Vienna Nasal Og Adltmgm43</li><li>Scissor, Oper Og Strt S/b 5 1/2\" Mgm43</li><li>Chair, Bld Drwng Mgm63</li><li>Scissor, Oper Og Strt S/s 5 1/2\" Mgm43</li><li>Speculum, Graves Og Sm 3/4\"x3\"mgm43</li><li>Scissor, Littauer Stch Og 4 1/2\" Mgm43</li><li>Hemostat, Halsted Mosq Og Strt5\" Mgm43</li><li>Forcep, Halsted Mosq Og Crvd 5\" Mgm43</li><li>Forcep, Foerster Og Strt Serr 9 1/2\" Mgm43</li><li>Forcep, Backhaus Twl Og 3 1/2\"mgm43</li><li>Forcep, Adson Drsng Og Serr 4 3/4\" Mgm43</li><li>Forcep, Splinter Plain Og 4 1/2\" Mgm43</li><li>Needle Holder, Baumgartner Og 5 1/2\" Mgm43</li><li>Forcep, Allis Tiss Og 4x5th 6\"mgm43</li><li>Thermometer, Ear Tympanic</li><li>Arm, Venipuncture&amp;injection Training Adlt Blk D/s</li><li>Rack, Test Tube 60place Wht 16mm</li><li>Table, Exam Ritter Base Only Fixed Height 500lbs F/204 Model</li><li>Top, Uphol Soft Touch F/204 Exam Table Soothing Blu 28\"</li><li>Skeleton, Budget Buckery Education W/stand Anatom</li><li>Arm, Venipuncture &amp; Injection Training Wht Nasco</li><li>Scale, Physician Dig W/ht Rod 500lb Pelstr</li><li>Model, Heart Budget Jumbo Anatom</li><li>Light, Exam Gooseneck Metal</li><li>Occluder, Eye Tecmed</li><li>Scissor, Oper Crvd 4 1/2\" Shrp/blnt Tip Miltex</li><li>Bag, Resuscitator Sngl Adlt (12/cs)</li><li>Resusciator, W/mask The Bag Iiinf Sz1(12/cs)</li><li>First Aid Kit, 10person Bndtre</li><li>Anatomy Program, Thin Man Nasco</li><li>Model, Human Skull-3part Nasco</li><li>Arm, Artificial Injecta Pd Nasco</li><li>Torso, W/head Classic Unisex Nasco</li><li>Nebulizer, Pulmoneb Compressor(6/cs)</li><li>Slide Set, Biology (25/pk) Nasco</li><li>Trainer, Aed Practice Nasco</li><li>Glo-Germ Kit, Complete Train Nasco</li><li>Centrifuge, Variable Speed 8place Unicoi</li><li>Sphyg, Aneroid Wall Lf Blk Adlt (1/bx 12bx/cs) Mgm01</li><li>Microscope, Binocular Revelation Iii Achro Object Led</li><li>Ecg, Cp150 Interpretive Wa</li><li>Spirometry Sys, Easy One Air</li><li>Pad, Alcohol Prep Str Med (200/bx 20bx/cs)</li><li>Sheet, Drape 2ply Econ Wht 40x48 (100/cs) Mgm18</li><li>Cape, Exam T/p/t F/b Opn Econ Wht 30x21 (100/cs) Mgm18</li><li>Paper, Table Smooth Econ Wht 18\"x200' (12/cs) Mgm18</li><li>Stethoscope, Dual Head R Blu Mgm01</li><li>Glove, Exam Vnyl Strtch Pf Xsm(100/bx 10bx/cs) Mgm14</li><li>Oximeter, Fingertip Pulse Baseline Fabent</li><li>Clip, Nose Foam Disp F/spirometry (25/bg 8bg/cs)</li><li>Electrode, Ekg Tab Rest Hi Tack(10/cd 10cd/pk 10pk Mgm120</li><li>Glove, Exam Vnyl Pf Sm (150/bx) Mgm14c</li><li>Glove, Exam Vnyl Pf Lg (150/bx) Mgm14c</li><li>Glove, Exam Vnyl Pf Med (150/bx) Mgm14c</li><li>Adapter, Ecg Clip Set (10/pk) Mortar</li><li>Mouthpiece, F/easyone Air Disp(50/cs)</li><li>Scale, Dig W/tray Inf Pelstr</li><li>Shield, Face 3/4 Lnth 7\" (25 /bx 4bx/cs)</li><li>Gown, Fld-Resist Lf Elascuf Ylw Sz Univ (50/ Mgm16</li><li>Centrifuge, Hematocrit Reader Disk Dig 24place</li><li>Paper, Ecg Z-Fold 8.5\"x11\" F/eli250/eli280/eli350 (250/pk)</li><li>Manikin, Cpr Professional W/monitor Adlt W/med Skin Tone</li><li>Mannequin, Cpr Mannikin Adlt Med Skin 2/monitor (4/pk)</li><li>Mannequin, Cpr Prestan Inf W/monit Med Skin</li><li>Newborn Baby White/male Nasco</li><li>Ecg, Burdick 280 Interp 200 Ecg Storage Am12/usb/lan/wireles</li></ul>");
+				}
+				if(whatpic == "dental" || whatpic == "dental-admin" || whatpic == "dental-clinic") {
+					$(".inventory").show();
+					$("#items").html("<ul><li>2 Dental Chairs</li><li>2 Doctos Stools</li><li>2 Assistant Stools</li><li>2 Dual Delivery Cart Systems</li><li>2 Self Contained Water Systems</li><li>1 Digital Xray Unit</li><li>2 Light Posts</li><li>2 - 110 Volt Gray Illuminators</li><li>Film Processor</li><li>Daylight Loader</li><li>Autoclave</li><li>Ultrasonic Cleaner w/ Digital</li><li>Air Compressor</li><li>40 Gallon Pump System</li><li>Hydromiser H-4</li><li>Control Panel Air Vac</li><li>Cover Plate w/ Exposure Switch</li><li>Switch X-Ray Exposure</li><li>Model Trimmer</li><li>Lathe</li><li>Splash Hood w/ Shield</li><li>Vibrator</li><li>Econo- Vac</li><li>Plaster Trap</li><li>Ultrasonic Basket Solid Side</li><li>Handpieces</li><li>Curing Light</li><li>Digital Sensors</li></ul>");
+				}
+				if(whatpic == "nursing" || whatpic == "nursing-simulation-lab") {
+					$(".inventory").show();
+					$("#items").html("<ul><li>Unit Dose Medication Cart</li><li>LIFELINE Emergency Crash Cart</li><li>AED Trainer 2</li><li>Lumex 5-Leg, 4-Hook IV Stand</li><li>Refurbished Alaris Medley 8100 Pump Module</li><li>Refurbished Alaris Medley Pump and (1) IV Pump Module</li><li>Simulated SlimRail Headwall Surface Mounted - Non-Functional</li><li>Wall-mount Aneroid Sphygmomanometer with Basket</li><li>Welch Allyn Wall Mount for Suretemp Plus</li><li>Poly-Cotton Hamper Bag with Draw Cord 44 Gallon Latex Free</li><li>Custom Cubicle Track Curtains</li><li>Life/form Complete IV Arm and Pump Set</li><li>04-50-7376 Graham Field Synergy 1000 Multi-Position 4 Rail Bed Package 1Door/1Drawer</li><li>Pocket Nurse Wall Mount Complete Sharp System</li><li>Step-On Waste Can</li><li>Pocket Nurse® Infant Incubator</li><li>Pocket Nurse® Stainless Steel Baby Bassinet with Shelves</li><li>Mechanical Tray Scale Pounds Only 50lb Capacity Portable - 19 3/8 x 12 3/8 x 3 3/4 Inch</li><li>Nursing Anne Simulator</li><li>SimMan 3G Light Refurbished </li><li>SimMom</li><li>Cath Tray, Foley W/DRN BG (10/CS)</li><li>Cath, insyte IAG STR BLU 22GX1 (50/CS)</li><li>DRESSING CHANGE TRAY, CTRL LINE STR LF (30/CS)</li><li>IV START KIT,W/TEGADERM STR LF (50/CS)</li><li>CUP, MED GRAD W/LIP 1OZ (100/SL) MGM16</li><li>PAD, ALCOHOL PREP STR MED (200 BX/ 20BX/CS)</li><li>SPONGE, GAUZE TYPE-VII 8PLY STR 2\"X2\" (2/PK 50PK/BX)</li><li>PENLIGHT,W/PUPIL GAUGE DISP (6/PK)</li><li>SYRINGE/NDL, SAFETYGLIDE INSUL1CC 29GX1/2\"(100/BX BD</li><li>SOLUTION SET, CONTINU-FLO 2 LUER VALVES (48\/CS) BAXTIV</li><li>WAFER, SKIN W/1 3/4 \"FLANGE 4\"X4\" CONVATEC (10/BX)</li><li>STAPLER, SKIN DISP 35 WIDE (12/BX)</li><li>SUCTION TUBE SALEM SUMP \"SUMP STYLE 16 fr VENT LUMEN</li><li>ENTERAL FEEDING BAG SET KANAGROO EPUMP 1000ML  (30/CS)</li><li>POCKET NURSE DEMO B-PATCH NON-STERILE</li><li>STATLOCK PICC PLUS STABILIZATION DEVICE</li><li>HOLDER, TUBE-CATH SECURE HOLDER</li><li>NEEDLE, BLUNT FILL 18GX1 1/2\" (100/BX)</li><li>NEEDLE, FILTER 19GX1 1/2\" TW (100/BX)</li><li>IV EXTENSION KIT SET NEEDLE FREE LUER LOCK CONNECT</li><li>SODIUM CHLORIDE .9PCT FLUSH SYRINGE 10ML FILL MONOJECT</li><li>DEMO DOSE TUBERCULN PPD APLISL 5 TU/0.1ML 5ML</li><li>DEMO DOSE PRACTICE VACCIN DRUG 2ML</li><li>DEMO DOSE METOPRLL LOPRESSR 50MG</li><li>DEMO DOSE METOPROLL TAR LOPRESSR 1MG ML 5ML</li><li>DEMO DOSE FUROSEMID LASX 100MG 10MG/ML</li><li>POCKET NURSE SIMULATED BLOOD</li><li>DEMO DOSE SIMULATED BLOOD AB NEGATIVE</li><li>DEMO DOSE SIMULATED BLOOD O NEGATIVE</li><li>DEMO DOSE INJECT-ED PAD</li><li>DEMO DOSE INJECT-ED HOLDER WITH STRAPS</li><li>GENERAL PURPOSE SYRINGE MCKESSON LUER LOCK 10ML</li><li>GENERAL PURPOSE SYRINGE MCKESSON LUER LOCK 5ML</li><li>GENERAL PURPOSE SYRINGE MCKESSON LUER LOCK 3ML</li><li>DEMO DOSE AMPULE CLEAR 2ML</li><li>DEMO DOSE POWDER 200MG 10ML</li><li>DEMO DOSE LORAZEPAM ATIVN 1ML 2MG/ML</li><li>DEMO DOSE DIPHENHYDRAMIN BENADRL 50MG 1ML</li><li>DEMO DOSE MORPHIN SULFAT 10 MG 1ML</li><li>DEMO DOSE PROMETHAZIN PHENERGN LABELS AMBER AMPULE</li><li>DEMO DOSE ONDANSETRN ZOFRN 2MG 2ML</li><li>SPHYG ANEROID DLX LF BLK ADULT (1/BX)MGM01</li><li>SPHYG ANEROID DLX LF BLK ADULT (1/BX)MGM01</li><li>GOWN ISO</li><li>METER KIT BLD GLUCOSE TRUMETERICS</li><li>DEMO DOSE .9 PCT DOSIUM CHLORID IV FLUID</li><li>DEMO DOSE LACTATED RINGERS</li><li>DEMO DOSE DEXTROS</li><li>THERMOMETER WALLMOUNT</li><li>PULSE OX FINGERTIP</li><li>BEDPAN</li><li>URINAL</li><li>BASIN</li><li>FRACTURE PAN</li><li>FEMALE URINAL</li><li>EMESIS BASIN</li><li>TOOTH BRUSH</li><li>POST MORTEM KIT</li><li>SIM JEVITY</li><li>PISTON SYRINGE</li><li>DENTURE SET</li><li>PEG TUBE 16FR</li><li>BUTTERFLY NEEDLES VENIPUNCTURE (50/CS)</li><li>STERILE DRESSING CHANGE TRAY</li><li>CATH SECURE</li><li>MEDICAL TAPE 2IN</li><li>SHARP CONTAINERS</li><li>SEONDARY TUBING SET</li><li>GAUZE 4X4</li><li>ABD</li><li>VACUTAINER HOLDER</li><li>BLOOD TRANSFER TUBES GREEN</li><li>BTT YELLOW</li><li>BTT PURPLE</li><li>BTT BLUE</li><li>BTT RED</li><li>BIOHAZARD BAGS</li><li>TRACH</li><li>TRACH KITS STERILE</li><li>NASAL CANULA</li><li>SIMPLE FACE MASK</li><li>NON-REBREATHER</li><li>TRACH MASK</li><li>FLOW METER</li><li>VENTURI MASK</li><li>FACE TENT</li><li>ACAPELLA</li><li>YANCHAUER</li><li>ET TUBE</li><li>HOYER</li><li>RESTRAINTS</li><li>GLOVES S</li><li>GLOVES M</li><li>GLOVES L</li><li>GLOVES XS</li><li>GLOVES XL</li><li>FACE MASKS</li><li>TED HOSE</li><li>MITTS</li><li>DEMO DOSE 1/2 NS</li><li>Pocket Nurse Simulated Fecal Spray</li><li>Pocket Nurse Simulated Vomit Spray</li><li>HESS Units with Accessories</li></ul>");
+				}
+				if(whatpic == "veterinary" || whatpic == "veterinary-lab") {
+					$(".inventory").show();
+					$("#items").html("<ul>GLOVES EXAM NITRILE PF SM 100</li><li>DROP SHIP FREIGHT</li><li>MICROSCOPE ACCUSCOPE 3002 BINOCULAR</li><li>DROP SHIP FREIGHT</li><li>TABLE EXAM 60\" 3+1 SS TOP WH</li><li>STETH SPRAGUE 22IN LITE BLUE     602</li><li>BOWL SS 1 QUART     VSSI</li><li>ALCOHOL SWABSTICK PK3</li><li>COPLIN STAIN JAR PLASTIC  EACH</li><li>J171 APRON PROTECTIVE NYLON</li><li>UNISEX SCRUB MED J1170NM</li><li>UNISEX SCRUB  BOTTOM CIEL BLUE MED J1173CM</li><li>TAPE CURITY POROUS 1\"   BX12</li><li>ELECTRONIC TIMER 18906</li><li>ROPE LEAD W/BOLT SNAP HUNTER GREEN</li><li>HORSE HALTER (BRASS) W/BURNED HOLE LARGE RED</li><li>HORSE HALTER (BRASS) W/BURNED HOLE MEDIUM BLACK</li><li>WASH BOTTLE  16OZ</li><li>GLOVES EXAM WVS MED  BX100</li><li>FECALYZER  CTN-50</li><li>PET PILLERS GUN DZ      J67</li><li>STAIN GRAM KIT VIOLET   ORM-D</li><li>STAIN GRAM KIT DECOLOR  ORM-D</li><li>CENTRIFUGE UNIVERSAL    J502M</li><li>DRAPE DISP  39INX100YD   J258</li><li>VAC TUBE LAV 2ML  100</li><li>DENTAL PERIO PROBE D.E.16-523</li><li>REFRACTOMETER LEICA VET 360</li><li>CET TOOTHPASTE VAN/MINT 70GM</li><li>TELFA PADS 3X4  BX100    2132</li><li>OSTER TURBO A5 TWO SPEED CLIPPER</li><li>CATH POLY 5FR DZ</li><li>VAC TUBE MONO  3ML  RED  100</li><li>SYRINGE CAPS MONO BG100 682085</li><li>SURGICAL SCRUB+HANDWASH 16OZ</li><li>SPECIALIST CAST PADDING 3INX4YDS 12RLS</li><li>PILL SPLITTER        J696</li><li>CET FINGERBRUSH +12G POULTRY</li><li>MUZZLE DOG NYLON SET-5 MS-05</li><li>SLICKER BRUSH MEDIUM    454</li><li>NAIL TRIMMER RESCO CAT   757</li><li>SNAREM  5FT POLE  S-EM-5</li><li>OTO/OPHT DIAGNOSTIC SET 96120</li><li>MASON META-SPLINT STARTER KIT</li><li>J546 CENTRIFUGE TUBE 15ML 10P</li><li>J556A STER CULT TUBE 5ML BG25</li><li>J170 CAT RESTRAINT BAG</li><li>J315 DISPOSABLE PEN LIGHT 6PK</li><li>CET PET TOOTHBRUSH  EACH</li><li>BLOOD AGAR PLATE  PKG10</li><li>GLOVES EXAM NITRILE PF LG 100</li><li>GLOVES EXAM NITRILE PF MD 100</li><li>IMMERSION OIL  1/4OZ      3205</li><li>STERILE LUBE JELLY  5OZ</li><li>ANM EAR CLEANSING+DRYING CUCUMBER/MELON SOL 8OZ</li><li>J878 UNIV CUBE TEST TUBE RACK</li><li>BETADINE (POVIDONE) SOLUTION 16OZ</li><li>LITTER TRAY KITTY DISP    100S</li><li>MINERAL OIL LIGHT  GALLON</li><li>COMPLY STEAM IND+250* SHT 200</li><li>THERMOMETER DIGITAL FLEX TIP</li><li>PIPETTES TRANSFER 3ML 50PK</li><li>FECAL FLOAT RTU  GAL    ORM-D</li><li>ALCOHOL 99% ISOPROPYL  4XQUART     ORM-D</li><li>AUTOCLA TAPE STEAM 1/2  268004</li><li>NAIL TRIMMER JUMB-Y 747</li><li>SURGERY CAP+TIES  BX100  J735</li><li>J169FT NYLON MUZZLE SET OF 3 FELINE</li><li>COTTON ROLL  1LB</li><li>GOWN OR DISP SM/MED STERILE EA</li><li>SHARPS CONTAIN-SML  4QT</li><li>MICRO SLIDES PLAIN  WVS  BX72</li><li>COVER SLIPS GLASS WVS 1OZ</li><li>COPLIN STAIN JAR PLASTIC  EACH</li><li>WEB TEAR WVS 4IN CLRPK  BX18</li><li>GAUZE SPONGE NON-WOVEN WVS 4X4  PK200</li><li>COTTON TIP APP WVS  1000</li><li>GAUZE BAND ROLL WVS 2IN  BG12</li><li>BOTTLES PLASTIC RX 4OZ  CA100</li><li>TAPE ELASTIKON J+J 2IN BX6</li><li>SNAP PARVO  5        CL</li><li>OPTICIDE 3 V DISINFECTANT GALLON</li><li>CAPILLARY TUBE SEALANT PAD EA</li><li>FLEA COMBS FINE  EA</li><li>LEASH FLAT BLUE  PK12</li><li>MASK SURGERY EAR LOOP PROCEDURE WVS  BX50</li><li>COTTON BALLS WVS MEDIUM  BG2000</li><li>TOWELS OR BLUE 17IN X 27IN  10S</li><li>J1079 JORVET ABSORBENT WOUND PADS 5X9IN  25PK</li><li>BOSTON ROUNDS 2OZ W/FLIP CAP  100</li><li>SNAP HEARTWORM RT 15 TESTS CL</li><li>MONITOR VET MEC 1200 VET MAIN UNIT (8.4IN TFT DISPLAY)</li><li>DIASCREEN 9 URINE STRIPS 100'S</li><li>BOTTLE DROPPER AMBER-PLASTIC 2OZ  DOZEN</li><li>DTM TEST VIAL  BOX OF 10</li><li>NEEDLES EXEL 22X3/4 POLY HUB BX100</li><li>SYRINGE EXEL 3CC LS BX100</li><li>SYRINGE EXEL 50-60CC LL BX25</li><li>J325FM 2.1% LUGOLS IODINE STAIN KIT  500ML</li><li>HEMATOCRIT TUBES MYLAR BLUE TIP 200 PK</li><li>GLOVES SURGEON LATEX STER  WVS SZ7.5  BX25</li><li>SNAP FELINE COMBO  15  CL</li><li>SCISSORS NURSE'S BANDAGE 5-1/2 BLUE HANDLE</li><li>SCISSORS BANDAGE &amp; UTILITY 7-1/2 BLACK HANDLES</li><li>ARTIFICIAL TEARS OPTH SOLUTION 15ML</li><li>INSULIN SYRINGE ULTICARE VET RX U100 .3CC 31GAX5/16\" BX60</li><li>KIM WIPES 4.5\"X8.5\"  BX280</li><li>ZORBOPAD 3\"X4\" PK50</li><li>ALPHATRAK 2 STARTER KIT</li><li>LENS PAPER 4X6\" BK50 3719</li><li>DYMO RX LABELS W/LOGO (6RLX500)  BX3000</li><li>STAIN GRAM KIT SAFRANIN  ORM-D</li><li>J455  RESTRAINT GLOVES</li><li>J825SS DIGITAL SCALE W/TRAY</li><li>DENTAL MOUTH MIRROR     DTP10545</li><li>DIP STAIN KIT 16OZ</li><li>DYMO LABELWRITER 450 TWIN TURBO PRINTER </li><li>GENERAL SURGICAL PACK WVS</li><li>VACUTAINER PLAST TUBE 8.5ML 100</li><li>ULTRASOUND GEL  8OZ/250ML</li><li>COTTON TIP APPL STERILE 6IN 100</li><li>LITTMANN STETH 28IN BURG 2451</li><li>WRIGHT DIP STAT STAIN KIT 8OZ    ORM-D</li><li>BOTTLES PLASTIC RX 2OZ  CA100</li><li>BAG PRESCRIPTION (PTO)_250/PK VETERINARY</li><li>PILL COUNTER (WEBSTER LOGO)</li><li>LABEL MED. INSTRUCTION 500/RL REFRIGERATE/WHITE W/BLUE</li><li></ul>");
+				}
+				if(whatpic == "veterinary-tech" || whatpic == "veterinary-radiology") {
+					$(".inventory").show();
+					$("#items").html("<ul><li>Companion Animals</li><li>Cats</li><li>Dogs</li><li>Horses/ponies/donkeys/mules</li><li>Food &amp; Fiber Animals</li><li>Cattle</li><li>Small Ruminants (Goats or Sheep)</li><li>Pigs</li><li>Carnelids</li><li>Guinea pigs</li><li>Hamsters</li><li>Non-human primates</li><li>Rabbits</li><li>Rats or Mice</li><li>Birds (e.g. pigeons, chickens, parrots, cockatoos, etc.)</li><li>Fish</li><li>Reptiles and amphibians</li><li>INSTRUCTIONAL EQUIPMENT</li><li>Camera</li><li>Computer</li><li>Microscope with camera or teaching microscope</li><li>AUDIOVISUAL</li><li>Electronic Presentation system (e.g. projector, software, learning management system)</li><li>Video recording and viewing equipment</li><li>SPECIMENS, MODELS</li><li>Large animal skeleton/limbs or veterinary anatomical software system</li><li>Dog or Cat skeleton or vetertinary anatomical software system</li><li>CLINICAL EQUIPMENT</li><li>Anesthesia machine - large animal</li><li>Anesthesia machine - dog or cat</li><li>Isoflurane</li><li>Sevoflurane</li><li>Non-rebreathing system</li><li>Waste anesthetic gas exhaust system</li><li>Animal gurney or stretcher</li><li>Autoclave</li><li>Bandaging/casting material</li><li>Bathing equipment</li><li>Blood pressure monitoring equipment</li><li>Cages complying with federal regulations</li><li>Capnometer</li><li>Controlled drug cabinet</li><li>Defibrillator</li><li>Dehorners</li><li>Dental instruments - large animal - dental floats</li><li>Dental instruments - dog or cat - ultrasonic scaler and polisher including appropriate hand instruments</li><li>Electric clippers</li><li>Electrocardiograph (with printing capabilities as optional)</li><li>Electrosurgical equipment</li><li>Emasculator</li><li>Emergency supplies and equipment with accessible emergency drugs and dosages (including, but not limited to, assorted endotracheal tubes, resuscitation bag, assorted intravenous catheter sizes, epinephrine, atropine, lidocane, face mask(s), stethoscope)</li><li>Endotracheal tubes</li><li>Esophageal stethoscope</li><li>Examination tables</li><li>Endoscope</li><li>Fluid Pump</li><li>Gas sterilizer</li><li>Hoof trimmer and picks</li><li>Microchip Scanner</li><li>Nail trimmers</li><li>Obstetrical instruments - large animal</li><li>Opthalmoscope</li><li>Oral dosing equipment (Laboratory Anima, Large animal, Dog or cat)</li><li>Oral speculum - large animal</li><li>Oral speculum  - dog or cat (Mouth gag)</li><li>Orthopedic equiment (familiarity with common orthopedic instruments - e.g. orthopedic wire, K-wire, pins, bone screws, pin cutter, wire cutting scissors, rongeur, bone holding forceps, hand chuck, osteotome, bone curette, mallet, Gigli wire saw and handles, and bone plates)</li><li>Otoscope</li><li>Pulse Oximeter</li><li>Resuscitation bag</li><li>Scales, animal</li><li>Stethoscope</li><li>Surgical instruments, basic</li><li>Surgical lights</li><li>Surgical suction</li><li>Surgical tables</li><li>Syringe - large animal multi-dose injection syringe</li><li>Syringe pump</li><li>Temperature monitoring device (e.g. thermometer)</li><li>Tonometer</li><li>Tourniquet</li><li>Tubes - feeding and gavage</li><li>Ultrasound machine</li><li>Vaginal speculum</li><li>Ventilator</li><li>Warming device (e.g. circulating warm water blanker, forced warm air blanket)</li><li>RESTRAINT EQUIPMENT</li><li>Laboratory Animal</li><li>Rodent</li><li>Large animal</li><li>Cattle chute (a restraint device whereby the animal head is fixed and the back and sides are closed to allow safe examination and treatment of patient)</li><li>Twitch</li><li>Nose tongs</li><li>Ropes</li><li>Halter</li><li>Hog snare</li><li>Dog or cat</li><li>Elizabethan collar</li><li>Restraint pole</li><li>Muzzle</li><li>LABORATORY EQUIPMENT</li><li>Blood mixer/rocker</li><li>Centrifuge</li><li>Clinical chemistry analyzer</li><li>Manual (Differential) blood cell counter</li><li>Electronic blood cell counter</li><li>Hand tally cell counter</li><li>Incubator</li><li>McMaster method slide</li><li>Microhematocrit centrifuge</li><li>Microscopes</li><li>Refractometer</li><li>Scales, laboratory</li><li>RADIOGRAPHIC IMAGING EQUIPMENT</li><li>Aprons &amp; gloves, protective</li><li>Automatic film processor</li><li>Calipers</li><li>Cassette holders</li><li>Computed radiology processor</li><li>Film</li><li>Directional/Positional markers</li><li>Hand dark room and developing equipment</li><li>High speed/rare earth screens</li><li>Lead eyeglasses (if required by state law)</li><li>Protective thyroid collar</li><li>Radiation safety badges</li><li>Storage racks for gloves and aprons</li><li>Radiographic machine - fixed</li><li>Radiographic machine - portable</li><li>Radiographic viewer</li><li>Radiographic machine - dental</li><li>Radiographic machine - digital</li></ul>");
+				}
+			});
+			$("select.placepicker").on("change",function(){
+				var whatcampus = $(this).val();
+				document.querySelector("#sky").setAttribute("src", whatcampus+"/external.jpg");
+				window.location.replace(window.location.origin+window.location.pathname+"?vtc="+whatcampus);
+			});
+			$(window).on("load",function(){
+				$(".aframe").css("opacity","1");
+				
+			});
+			$(document).on("keyup",function(q){
+				var hasFocus = $("select").is(':focus');
+				if (hasFocus) {
+					console.log("focus");			
+				}
+				else {
+					console.log("no focus");
+					if(q.which == 37 || q.which == 39) {
+						var cameraorwhatever = document.querySelector("a-sky");
+						var rr = cameraorwhatever.getAttribute('rotation');
+						//var rx = rr.x;
+						var ry = rr.y;
+						var ny = "";
+						if(q.which == 37) {
+							ny = ry - 30;
+						}
+						if(q.which == 39) {
+							ny = ry + 30;
+						}
+						cameraorwhatever.setAttribute('rotation', {x: 0, y: ny, z: 0});		
+						console.log(ny);
+					}
+				}
+			});
+		</script>
+		<!--<script>
+			$("#itemRevealer").on("click", function() {
+				console.log("heyy");
+			});
+		</script>-->
+	</body>
+</html>

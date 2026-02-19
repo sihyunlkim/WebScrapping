@@ -1,0 +1,810 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>
+    Carrie Fishner - LibGuides at SUNY Delhi
+</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noarchive"/>
+
+<!-- favicon.twig -->
+<link rel="apple-touch-icon" sizes="180x180" href="//d2jv02qf7xgjwx.cloudfront.net/apps/common/favicon/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="//d2jv02qf7xgjwx.cloudfront.net/apps/common/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="//d2jv02qf7xgjwx.cloudfront.net/apps/common/favicon/favicon-16x16.png">
+<link rel="manifest" href="//d2jv02qf7xgjwx.cloudfront.net/apps/common/favicon/site.webmanifest">
+<link rel="mask-icon" href="//d2jv02qf7xgjwx.cloudfront.net/apps/common/favicon/safari-pinned-tab.svg" color="#5bbad5">
+<link rel="shortcut icon" href="//d2jv02qf7xgjwx.cloudfront.net/apps/common/favicon/favicon.ico">
+<meta name="msapplication-TileColor" content="#ffc40d">
+<meta name="msapplication-config" content="//d2jv02qf7xgjwx.cloudfront.net/apps/common/favicon/browserconfig.xml">
+<meta name="theme-color" content="#ffffff">
+<!-- !favicon.twig -->
+
+<link rel="stylesheet" href="https://static-assets-us.libguides.com/web/jquery/css/jquery-ui.min.css?2691"/>
+<link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="https://static-assets-us.libguides.com/web/css3.23.5/lg-public.min.css"/>
+<script src="https://static-assets-us.libguides.com/web/jquery/js/1.12.4_jquery.min.js"></script>
+<!-- js_include_fallback_lg.twig -->
+<script src="//code.jquery.com/ui/1.13.2/jquery-ui.min.js"></script>
+<script>jQuery.ui || document.write('<script src="https://static-assets-us.libguides.com/web/jquery/js/jquery-ui.min.js?2691">\x3C/script>');</script>
+<!-- !js_include_fallback_lg.twig -->
+    <script type="text/javascript" src="https://static-assets-us.libguides.com/web/js3.23.5/lg-public.min.js"></script>
+<!-- Browser Favicon -->
+<link rel="shortcut icon" href="http://www.delhi.edu/_resources/images/favicon.png" />
+
+<script>
+    var springStats = springStats || {};
+    springStats.saConfig = springStats.saConfig || {
+        site_id: 7064,
+        tracking_parameters: {"_st_site_id":7064},
+        tracking_server_host: "libguides-proc.springyaws.com"
+    };
+</script>
+<script  src="https://static-assets-us.libguides.com/web/js/sa.min.js?3116"></script>
+
+<script type="text/javascript">
+    //====================================================
+    springSpace.publicObj = new springSpace.public.Public({
+        constant: {
+            PROCESSING: {},
+            CONTENT: {}
+        }
+    });
+    //====================================================
+    jQuery(document).ready(function() {
+        if (0 == 0) {
+            loadProfileList(0);
+        } else {
+            top.window.helptips = new springSpace.sui.helptip({ placement: "right" });
+        }
+        springSpace.UI.xhrPopover();
+    });
+    //====================================================
+    setActiveButton = function(id) {
+        jQuery("#s-lg-profile-name-btn").removeClass("active");
+        jQuery("#s-lg-profile-subject-btn").removeClass("active");
+        jQuery(id).addClass("active");
+    }
+    //====================================================
+    toggleSubjectBoxes = function(subject_id) {
+        jQuery("#s-lg-profile-guides-div").html("");
+
+        var is_subject = (subject_id != 0);
+        if (is_subject) {
+            xhr = jQuery.ajax({
+                url: "prf_process.php",
+                data: {
+                    action: 531,
+                    subject_id: subject_id
+                },
+                type: "GET",
+                dataType: "json",
+                success: function(response, textStatus, jqXHR) {
+                    if (response.errCode == 200) {
+                        jQuery("#s-lg-profile-guides-div").html(response.data.guides);
+                    } else {
+                        springSpace.UI.error(response.errCode);
+                    }
+                },
+                error: function (jqXHR, textStatus, errorThrown) {
+                    springSpace.UI.error(errorThrown);
+                }
+            });
+        }
+
+        jQuery("#s-lg-profile-az-div").toggle(!is_subject);
+        jQuery("#s-lg-profile-help-div").toggle(!is_subject);
+        jQuery("#s-lg-profile-guides-div").toggle(is_subject);
+    }
+    //====================================================
+    loadProfileList = function(subject_id) {
+        jQuery("#s-lg-profile-content").html('<div class="bold s-lib-color-lt-grey pad-top-med text-center">Loading...</div>');
+        jQuery("#s-lg-profile-count").html(0);
+
+        // set the active button
+        setActiveButton(subject_id == 0 ? "#s-lg-profile-name-btn" : "#s-lg-profile-subject-btn");
+
+        // toggle the right hand boxes based on if this is a subject or not
+        toggleSubjectBoxes(subject_id);
+
+        // hide the subject view if needed
+        if (subject_id == 0) { toggleSubjectView(false); }
+
+        // get the data
+        xhr = jQuery.ajax({
+            url: "prf_process.php",
+            data: {
+                action: 530,
+                subject_id: subject_id
+            },
+            type: "GET",
+            dataType: "json",
+            success: function(response, textStatus, jqXHR) {
+                if (response.errCode == 200) {
+                    jQuery("#s-lg-profile-content").html(response.data.html);
+                    jQuery("#s-lg-profile-count").html(response.data.count);
+                } else {
+                    springSpace.UI.error(response.errCode);
+                }
+            },
+            error: function (jqXHR, textStatus, errorThrown) {
+                springSpace.UI.error(errorThrown);
+            }
+        });
+    }
+    //====================================================
+    handleSubjectBtnClick = function() {
+        jQuery("#s-lg-profile-count").html(0);
+        if (!jQuery("#s-lg-profile-subjects").is(":visible")) {
+            jQuery("#s-lg-profile-content").html("");
+        }
+        toggleSubjectView(true);
+    }
+    //====================================================
+    toggleSubjectView = function(visible) {
+        jQuery("#s-lg-profile-subjects").toggle(visible);
+        if (visible) { setActiveButton("#s-lg-profile-subject-btn"); }
+    }
+    //====================================================
+    filterBySubject = function(subject_id) {
+        toggleSubjectView(true);
+        loadProfileList(subject_id);
+    }
+    //====================================================
+    jQuery(function() {
+        
+        jQuery(document).ready(function () {
+            springSpace.springTrack.trackPage({_st_type_id: '20'});
+        });
+    });
+</script>
+<style>
+    .pad-left-sm { margin-left:10px; }
+    .s-lib-featured-profile-container { width: 160px; margin:0 10px 20px 10px !important; }
+    .s-lib-profile-container .s-lib-profile-name, .s-lib-profile-container .s-lib-profile-pronouns { display:none; }
+    .s-lib-profile-image { margin-bottom:30px; }
+    .s-lg-profile-personal-statement { padding:10px; background-color:#fafafa; border:1px solid #ccc; }
+</style>
+</head>
+<body class="s-lib-public-body">
+<a id="s-lg-public-skiplink" class="alert-info" href="#s-lib-public-main">Skip to Main Content</a>
+<!-- BEGIN: Page Header -->
+<div class="container" style="padding:0;background-color:#024712">
+<a href="https://www.delhi.edu/academics/library/index.php"><img src="https://d2jv02qf7xgjwx.cloudfront.net/accounts/1253/images/suny_logo_white.png" style="padding:15px;width:17%;" alt="Main site homepage"></a></div>
+<!-- END: Page Header -->
+<!-- BEGIN: Content Header -->
+<div id="s-lib-public-header" class="s-lib-header container s-lib-side-borders">
+    <nav id="s-lib-bc" aria-label="breadcrumb">
+        <ol id="s-lib-bc-list" class="breadcrumb"><li id="s-lib-bc-customer" class="breadcrumb-item"><a href="http://www.delhi.edu/academics/library/index.php">SUNY Delhi</a></li><li id="s-lib-bc-site" class="breadcrumb-item"><a href="https://guides.delhi.edu/">LibGuides</a></li><li id="s-lib-bc-index" class="breadcrumb-item"><a href="/prf.php">Profiles</a></li><li id="s-lib-bc-page" class="active breadcrumb-item">Carrie Fishner</li></ol>
+    </nav>
+    <h1 id="s-lib-public-header-title">Carrie Fishner</h1>
+    <div id="s-lib-public-header-desc"><div id="s-lib-public-header-desc-pronouns">she, her, hers</div></div>
+</div>
+<!-- END: Content Header -->
+<!-- BEGIN: Nav Bar -->
+<div id="s-lib-public-nav" class="container s-lib-side-borders">
+    
+</div>
+<!-- END: Nav Bar -->
+<!-- BEGIN: content -->
+<div id="s-lib-public-main" class="s-lib-main container s-lib-side-borders" tabindex="-1">
+    <section aria-label="Profile Content">
+        <div id="s-lg-profile-cols" class="row">
+            <div id="col1" class="col-md-3 center">
+                <!-- bs3/box/profile_box_content.twig -->
+<div id="s-lib-profile-111082" class="s-lib-profile-container">
+        <a href="//guides.delhi.edu/prf.php?id=5a8c2a72-7cdb-11ed-9922-0ad758b798c3">
+    
+        <div id="s-lib-profile-image-111082"
+             class="s-lib-profile-div s-lib-profile-center s-lib-profile-image">
+            <img loading="lazy" src="//d2jv02qf7xgjwx.cloudfront.net/accounts/68565/profiles/111082/Strand.jpg" alt="Woman in front of bookshelves"/>
+        </div>
+
+                    <div id="s-lib-profile-name-111082"
+                 class="s-lib-profile-div s-lib-profile-center s-lib-profile-name"
+                 style="margin-bottom:0 !important;">
+                Carrie Fishner
+            </div>
+        
+        </a>
+    
+    <div id="s-lib-profile-pronouns-111082"
+         class="s-lib-profile-div s-lib-profile-center s-lib-profile-pronouns">
+        she, her, hers
+    </div>
+
+    <div id="s-lib-profile-email-111082" class="s-lib-profile-div s-lib-profile-center s-lib-profile-email">
+        <a title="fishnecj@delhi.edu" href="mailto:fishnecj@delhi.edu" class="label label-info">Email Me</a>
+    </div>
+
+    <div id="s-lib-profile-widget-la-111082" class="s-lib-profile-div s-lib-profile-widget-la">
+        <div class="s-lib-profile-widget"></div>
+    </div>
+
+    <div id="s-lib-profile-widget-lc-111082" class="s-lib-profile-div s-lib-profile-widget-lc">
+        <div class="s-lib-profile-widget"></div>
+    </div>
+
+    <div id="s-lib-profile-widget-other-111082" class="s-lib-profile-div s-lib-profile-widget-other">
+        <div class="s-lib-profile-widget"></div>
+    </div>
+
+    <div id="s-lib-profile-contact-111082" class="s-lib-profile-div s-lib-profile-contact">
+                    <strong>Contact:</strong> <div>Bush Hall 341</div><div>746-4648</div><a href="https://delhi.starfishsolutions.com/starfish-ops/dl/instructor/serviceCatalog.html?bookmark=connection/4829/schedule"><span aria-hidden="true" class="fa fa-bookmark fa-lg"></span> <span class="sr-only">Website</span></a>
+            </div>
+
+    <div id="s-lib-profile-social-111082" class="s-lib-profile-div s-lib-profile-social">
+            </div>
+
+    <div id="s-lib-profile-subjects-111082" class="s-lib-profile-div s-lib-profile-subjects">
+            </div>
+</div>
+<!-- !bs3/box/profile_box_content.twig -->
+
+            </div>
+            <div id="col2" class="col-md-6 center">
+                
+                <div class="margin-bottom-xlg"><div class="s-lib-public-side-header"><h2 class="pad-bottom-sm">My Guides</h2></div><div class="txt pad-top-sm"><div>
+    <div class="s-lib-box s-lib-border-round s-lib-box-idx-guide-list">
+        <div class="s-lib-box-content">
+            <div class="s-lg-gtitle s-lib-color-lt-grey">
+                <a class="bold" href="https://guides.delhi.edu/c.php?g=1301978">
+                    American Government (GOVT 110)
+                </a>
+                <div class="s-ui-helptip"><button id="s-ui-helptip-btn-guide-info-1301978" type="button" class="btn btn-link btn-help-popover"  data-ajload="/index_process.php?action=175&guide_id=1301978&group_id=0" data-title="American Government (GOVT 110)"><i class="fa fa-info-circle"></i><span class="sr-only">View Guide Info</span></button></div>
+            </div>
+            <div class="s-lg-gmeta pull-right s-lg-small s-lib-color-lt-grey">
+                <span aria-hidden="true" title="Last update" class="s-lib-color-lt-grey">
+                    <i class="fa fa-edit icon-small"></i> Jan 19, 2026
+                </span>
+                <span class="sr-only">Last update: Jan 19, 2026</span>
+                <span aria-hidden="true" title="Views" class="pad-left-med hitst">
+                    <i class="fa fa-eye icon-small"></i> 6
+                </span>
+                <span class="sr-only">6 views</span>
+            </div>
+        </div>
+    </div>
+</div>
+<div>
+    <div class="s-lib-box s-lib-border-round s-lib-box-idx-guide-list">
+        <div class="s-lib-box-content">
+            <div class="s-lg-gtitle s-lib-color-lt-grey">
+                <a class="bold" href="https://guides.delhi.edu/archives">
+                    Archives at the Resnick Library 
+                </a>
+                <div class="s-ui-helptip"><button id="s-ui-helptip-btn-guide-info-591930" type="button" class="btn btn-link btn-help-popover"  data-ajload="/index_process.php?action=175&guide_id=591930&group_id=0" data-title="Archives at the Resnick Library "><i class="fa fa-info-circle"></i><span class="sr-only">View Guide Info</span></button></div>
+            </div>
+            <div class="s-lg-gmeta pull-right s-lg-small s-lib-color-lt-grey">
+                <span aria-hidden="true" title="Last update" class="s-lib-color-lt-grey">
+                    <i class="fa fa-edit icon-small"></i> Aug 22, 2024
+                </span>
+                <span class="sr-only">Last update: Aug 22, 2024</span>
+                <span aria-hidden="true" title="Views" class="pad-left-med hitst">
+                    <i class="fa fa-eye icon-small"></i> 28
+                </span>
+                <span class="sr-only">28 views</span>
+            </div>
+        </div>
+    </div>
+</div>
+<div>
+    <div class="s-lib-box s-lib-border-round s-lib-box-idx-guide-list">
+        <div class="s-lib-box-content">
+            <div class="s-lg-gtitle s-lib-color-lt-grey">
+                <a class="bold" href="https://guides.delhi.edu/c.php?g=630658">
+                    Business Communication (BUSI 120)
+                </a>
+                <div class="s-ui-helptip"><button id="s-ui-helptip-btn-guide-info-630658" type="button" class="btn btn-link btn-help-popover"  data-ajload="/index_process.php?action=175&guide_id=630658&group_id=0" data-title="Business Communication (BUSI 120)"><i class="fa fa-info-circle"></i><span class="sr-only">View Guide Info</span></button></div>
+            </div>
+            <div class="s-lg-gmeta pull-right s-lg-small s-lib-color-lt-grey">
+                <span aria-hidden="true" title="Last update" class="s-lib-color-lt-grey">
+                    <i class="fa fa-edit icon-small"></i> Jan 19, 2026
+                </span>
+                <span class="sr-only">Last update: Jan 19, 2026</span>
+                <span aria-hidden="true" title="Views" class="pad-left-med hitst">
+                    <i class="fa fa-eye icon-small"></i> 15
+                </span>
+                <span class="sr-only">15 views</span>
+            </div>
+        </div>
+    </div>
+</div>
+<div>
+    <div class="s-lib-box s-lib-border-round s-lib-box-idx-guide-list">
+        <div class="s-lib-box-content">
+            <div class="s-lg-gtitle s-lib-color-lt-grey">
+                <a class="bold" href="https://guides.delhi.edu/ChatGPT">
+                    Chat GPT and AI
+                </a>
+                <div class="s-ui-helptip"><button id="s-ui-helptip-btn-guide-info-1325463" type="button" class="btn btn-link btn-help-popover"  data-ajload="/index_process.php?action=175&guide_id=1325463&group_id=0" data-title="Chat GPT and AI"><i class="fa fa-info-circle"></i><span class="sr-only">View Guide Info</span></button></div>
+            </div>
+            <div class="s-lg-gmeta pull-right s-lg-small s-lib-color-lt-grey">
+                <span aria-hidden="true" title="Last update" class="s-lib-color-lt-grey">
+                    <i class="fa fa-edit icon-small"></i> Jan 19, 2026
+                </span>
+                <span class="sr-only">Last update: Jan 19, 2026</span>
+                <span aria-hidden="true" title="Views" class="pad-left-med hitst">
+                    <i class="fa fa-eye icon-small"></i> 64
+                </span>
+                <span class="sr-only">64 views</span>
+            </div>
+        </div>
+    </div>
+</div>
+<div>
+    <div class="s-lib-box s-lib-border-round s-lib-box-idx-guide-list">
+        <div class="s-lib-box-content">
+            <div class="s-lg-gtitle s-lib-color-lt-grey">
+                <a class="bold" href="https://guides.delhi.edu/citations">
+                    Cite Your Sources
+                </a>
+                <div class="s-ui-helptip"><button id="s-ui-helptip-btn-guide-info-846215" type="button" class="btn btn-link btn-help-popover"  data-ajload="/index_process.php?action=175&guide_id=846215&group_id=0" data-title="Cite Your Sources"><i class="fa fa-info-circle"></i><span class="sr-only">View Guide Info</span></button></div>
+            </div>
+            <div class="s-lg-gmeta pull-right s-lg-small s-lib-color-lt-grey">
+                <span aria-hidden="true" title="Last update" class="s-lib-color-lt-grey">
+                    <i class="fa fa-edit icon-small"></i> Jan 19, 2026
+                </span>
+                <span class="sr-only">Last update: Jan 19, 2026</span>
+                <span aria-hidden="true" title="Views" class="pad-left-med hitst">
+                    <i class="fa fa-eye icon-small"></i> 288
+                </span>
+                <span class="sr-only">288 views</span>
+            </div>
+        </div>
+    </div>
+</div>
+<div>
+    <div class="s-lib-box s-lib-border-round s-lib-box-idx-guide-list">
+        <div class="s-lib-box-content">
+            <div class="s-lg-gtitle s-lib-color-lt-grey">
+                <a class="bold" href="https://guides.delhi.edu/dbs_subject">
+                    Databases by Subject
+                </a>
+                <div class="s-ui-helptip"><button id="s-ui-helptip-btn-guide-info-591970" type="button" class="btn btn-link btn-help-popover"  data-ajload="/index_process.php?action=175&guide_id=591970&group_id=0" data-title="Databases by Subject"><i class="fa fa-info-circle"></i><span class="sr-only">View Guide Info</span></button></div>
+            </div>
+            <div class="s-lg-gmeta pull-right s-lg-small s-lib-color-lt-grey">
+                <span aria-hidden="true" title="Last update" class="s-lib-color-lt-grey">
+                    <i class="fa fa-edit icon-small"></i> Jan 16, 2026
+                </span>
+                <span class="sr-only">Last update: Jan 16, 2026</span>
+                <span aria-hidden="true" title="Views" class="pad-left-med hitst">
+                    <i class="fa fa-eye icon-small"></i> 1640
+                </span>
+                <span class="sr-only">1640 views</span>
+            </div>
+        </div>
+    </div>
+</div>
+<div>
+    <div class="s-lib-box s-lib-border-round s-lib-box-idx-guide-list">
+        <div class="s-lib-box-content">
+            <div class="s-lg-gtitle s-lib-color-lt-grey">
+                <a class="bold" href="https://guides.delhi.edu/c.php?g=591958">
+                    Exotic Animals (Lariviere, VETS 247)
+                </a>
+                <div class="s-ui-helptip"><button id="s-ui-helptip-btn-guide-info-591958" type="button" class="btn btn-link btn-help-popover"  data-ajload="/index_process.php?action=175&guide_id=591958&group_id=0" data-title="Exotic Animals (Lariviere, VETS 247)"><i class="fa fa-info-circle"></i><span class="sr-only">View Guide Info</span></button></div>
+            </div>
+            <div class="s-lg-gmeta pull-right s-lg-small s-lib-color-lt-grey">
+                <span aria-hidden="true" title="Last update" class="s-lib-color-lt-grey">
+                    <i class="fa fa-edit icon-small"></i> Jan 19, 2026
+                </span>
+                <span class="sr-only">Last update: Jan 19, 2026</span>
+                <span aria-hidden="true" title="Views" class="pad-left-med hitst">
+                    <i class="fa fa-eye icon-small"></i> 6
+                </span>
+                <span class="sr-only">6 views</span>
+            </div>
+        </div>
+    </div>
+</div>
+<div>
+    <div class="s-lib-box s-lib-border-round s-lib-box-idx-guide-list">
+        <div class="s-lib-box-content">
+            <div class="s-lg-gtitle s-lib-color-lt-grey">
+                <a class="bold" href="https://guides.delhi.edu/FacultyResources">
+                    Faculty Resources
+                </a>
+                <div class="s-ui-helptip"><button id="s-ui-helptip-btn-guide-info-1320755" type="button" class="btn btn-link btn-help-popover"  data-ajload="/index_process.php?action=175&guide_id=1320755&group_id=0" data-title="Faculty Resources"><i class="fa fa-info-circle"></i><span class="sr-only">View Guide Info</span></button></div>
+            </div>
+            <div class="s-lg-gmeta pull-right s-lg-small s-lib-color-lt-grey">
+                <span aria-hidden="true" title="Last update" class="s-lib-color-lt-grey">
+                    <i class="fa fa-edit icon-small"></i> Feb 3, 2026
+                </span>
+                <span class="sr-only">Last update: Feb 3, 2026</span>
+                <span aria-hidden="true" title="Views" class="pad-left-med hitst">
+                    <i class="fa fa-eye icon-small"></i> 18
+                </span>
+                <span class="sr-only">18 views</span>
+            </div>
+        </div>
+    </div>
+</div>
+<div>
+    <div class="s-lib-box s-lib-border-round s-lib-box-idx-guide-list">
+        <div class="s-lib-box-content">
+            <div class="s-lg-gtitle s-lib-color-lt-grey">
+                <a class="bold" href="https://guides.delhi.edu/find_websites">
+                    Find Websites
+                </a>
+                <div class="s-ui-helptip"><button id="s-ui-helptip-btn-guide-info-815264" type="button" class="btn btn-link btn-help-popover"  data-ajload="/index_process.php?action=175&guide_id=815264&group_id=0" data-title="Find Websites"><i class="fa fa-info-circle"></i><span class="sr-only">View Guide Info</span></button></div>
+            </div>
+            <div class="s-lg-gmeta pull-right s-lg-small s-lib-color-lt-grey">
+                <span aria-hidden="true" title="Last update" class="s-lib-color-lt-grey">
+                    <i class="fa fa-edit icon-small"></i> Jan 15, 2026
+                </span>
+                <span class="sr-only">Last update: Jan 15, 2026</span>
+                <span aria-hidden="true" title="Views" class="pad-left-med hitst">
+                    <i class="fa fa-eye icon-small"></i> 32
+                </span>
+                <span class="sr-only">32 views</span>
+            </div>
+        </div>
+    </div>
+</div>
+<div>
+    <div class="s-lib-box s-lib-border-round s-lib-box-idx-guide-list">
+        <div class="s-lib-box-content">
+            <div class="s-lg-gtitle s-lib-color-lt-grey">
+                <a class="bold" href="https://guides.delhi.edu/permalinks">
+                    Finding Permalinks in Library Databases
+                </a>
+                <div class="s-ui-helptip"><button id="s-ui-helptip-btn-guide-info-1047854" type="button" class="btn btn-link btn-help-popover"  data-ajload="/index_process.php?action=175&guide_id=1047854&group_id=0" data-title="Finding Permalinks in Library Databases"><i class="fa fa-info-circle"></i><span class="sr-only">View Guide Info</span></button></div>
+            </div>
+            <div class="s-lg-gmeta pull-right s-lg-small s-lib-color-lt-grey">
+                <span aria-hidden="true" title="Last update" class="s-lib-color-lt-grey">
+                    <i class="fa fa-edit icon-small"></i> Apr 4, 2025
+                </span>
+                <span class="sr-only">Last update: Apr 4, 2025</span>
+                <span aria-hidden="true" title="Views" class="pad-left-med hitst">
+                    <i class="fa fa-eye icon-small"></i> 5
+                </span>
+                <span class="sr-only">5 views</span>
+            </div>
+        </div>
+    </div>
+</div>
+<div>
+    <div class="s-lib-box s-lib-border-round s-lib-box-idx-guide-list">
+        <div class="s-lib-box-content">
+            <div class="s-lg-gtitle s-lib-color-lt-grey">
+                <a class="bold" href="https://guides.delhi.edu/c.php?g=999001">
+                    Fundamentals of Hospitality Management (HOSP 105, Holland)
+                </a>
+                <div class="s-ui-helptip"><button id="s-ui-helptip-btn-guide-info-999001" type="button" class="btn btn-link btn-help-popover"  data-ajload="/index_process.php?action=175&guide_id=999001&group_id=0" data-title="Fundamentals of Hospitality Management (HOSP 105, Holland)"><i class="fa fa-info-circle"></i><span class="sr-only">View Guide Info</span></button></div>
+            </div>
+            <div class="s-lg-gmeta pull-right s-lg-small s-lib-color-lt-grey">
+                <span aria-hidden="true" title="Last update" class="s-lib-color-lt-grey">
+                    <i class="fa fa-edit icon-small"></i> Jun 5, 2025
+                </span>
+                <span class="sr-only">Last update: Jun 5, 2025</span>
+                <span aria-hidden="true" title="Views" class="pad-left-med hitst">
+                    <i class="fa fa-eye icon-small"></i> 2
+                </span>
+                <span class="sr-only">2 views</span>
+            </div>
+        </div>
+    </div>
+</div>
+<div>
+    <div class="s-lib-box s-lib-border-round s-lib-box-idx-guide-list">
+        <div class="s-lib-box-content">
+            <div class="s-lg-gtitle s-lib-color-lt-grey">
+                <a class="bold" href="https://guides.delhi.edu/govdocs">
+                    Government Documents
+                </a>
+                <div class="s-ui-helptip"><button id="s-ui-helptip-btn-guide-info-591941" type="button" class="btn btn-link btn-help-popover"  data-ajload="/index_process.php?action=175&guide_id=591941&group_id=0" data-title="Government Documents"><i class="fa fa-info-circle"></i><span class="sr-only">View Guide Info</span></button></div>
+            </div>
+            <div class="s-lg-gmeta pull-right s-lg-small s-lib-color-lt-grey">
+                <span aria-hidden="true" title="Last update" class="s-lib-color-lt-grey">
+                    <i class="fa fa-edit icon-small"></i> Jan 14, 2026
+                </span>
+                <span class="sr-only">Last update: Jan 14, 2026</span>
+                <span aria-hidden="true" title="Views" class="pad-left-med hitst">
+                    <i class="fa fa-eye icon-small"></i> 12
+                </span>
+                <span class="sr-only">12 views</span>
+            </div>
+        </div>
+    </div>
+</div>
+<div>
+    <div class="s-lib-box s-lib-border-round s-lib-box-idx-guide-list">
+        <div class="s-lib-box-content">
+            <div class="s-lg-gtitle s-lib-color-lt-grey">
+                <a class="bold" href="https://guides.delhi.edu/help">
+                    Help and How-Tos
+                </a>
+                <div class="s-ui-helptip"><button id="s-ui-helptip-btn-guide-info-591913" type="button" class="btn btn-link btn-help-popover"  data-ajload="/index_process.php?action=175&guide_id=591913&group_id=0" data-title="Help and How-Tos"><i class="fa fa-info-circle"></i><span class="sr-only">View Guide Info</span></button></div>
+            </div>
+            <div class="s-lg-gmeta pull-right s-lg-small s-lib-color-lt-grey">
+                <span aria-hidden="true" title="Last update" class="s-lib-color-lt-grey">
+                    <i class="fa fa-edit icon-small"></i> Jan 16, 2026
+                </span>
+                <span class="sr-only">Last update: Jan 16, 2026</span>
+                <span aria-hidden="true" title="Views" class="pad-left-med hitst">
+                    <i class="fa fa-eye icon-small"></i> 33
+                </span>
+                <span class="sr-only">33 views</span>
+            </div>
+        </div>
+    </div>
+</div>
+<div>
+    <div class="s-lib-box s-lib-border-round s-lib-box-idx-guide-list">
+        <div class="s-lib-box-content">
+            <div class="s-lg-gtitle s-lib-color-lt-grey">
+                <a class="bold" href="https://guides.delhi.edu/c.php?g=1229500">
+                    Information Literacy
+                </a>
+                <div class="s-ui-helptip"><button id="s-ui-helptip-btn-guide-info-1229500" type="button" class="btn btn-link btn-help-popover"  data-ajload="/index_process.php?action=175&guide_id=1229500&group_id=0" data-title="Information Literacy"><i class="fa fa-info-circle"></i><span class="sr-only">View Guide Info</span></button></div>
+            </div>
+            <div class="s-lg-gmeta pull-right s-lg-small s-lib-color-lt-grey">
+                <span aria-hidden="true" title="Last update" class="s-lib-color-lt-grey">
+                    <i class="fa fa-edit icon-small"></i> Jan 15, 2026
+                </span>
+                <span class="sr-only">Last update: Jan 15, 2026</span>
+                <span aria-hidden="true" title="Views" class="pad-left-med hitst">
+                    <i class="fa fa-eye icon-small"></i> 7
+                </span>
+                <span class="sr-only">7 views</span>
+            </div>
+        </div>
+    </div>
+</div>
+<div>
+    <div class="s-lib-box s-lib-border-round s-lib-box-idx-guide-list">
+        <div class="s-lib-box-content">
+            <div class="s-lg-gtitle s-lib-color-lt-grey">
+                <a class="bold" href="https://guides.delhi.edu/c.php?g=1222248">
+                    Library Accessibility
+                </a>
+                <div class="s-ui-helptip"><button id="s-ui-helptip-btn-guide-info-1222248" type="button" class="btn btn-link btn-help-popover"  data-ajload="/index_process.php?action=175&guide_id=1222248&group_id=0" data-title="Library Accessibility"><i class="fa fa-info-circle"></i><span class="sr-only">View Guide Info</span></button></div>
+            </div>
+            <div class="s-lg-gmeta pull-right s-lg-small s-lib-color-lt-grey">
+                <span aria-hidden="true" title="Last update" class="s-lib-color-lt-grey">
+                    <i class="fa fa-edit icon-small"></i> Jan 14, 2026
+                </span>
+                <span class="sr-only">Last update: Jan 14, 2026</span>
+                <span aria-hidden="true" title="Views" class="pad-left-med hitst">
+                    <i class="fa fa-eye icon-small"></i> 1
+                </span>
+                <span class="sr-only">1 views</span>
+            </div>
+        </div>
+    </div>
+</div>
+<div>
+    <div class="s-lib-box s-lib-border-round s-lib-box-idx-guide-list">
+        <div class="s-lib-box-content">
+            <div class="s-lg-gtitle s-lib-color-lt-grey">
+                <a class="bold" href="https://guides.delhi.edu/weather">
+                    Library Policies
+                </a>
+                <div class="s-ui-helptip"><button id="s-ui-helptip-btn-guide-info-704037" type="button" class="btn btn-link btn-help-popover"  data-ajload="/index_process.php?action=175&guide_id=704037&group_id=0" data-title="Library Policies"><i class="fa fa-info-circle"></i><span class="sr-only">View Guide Info</span></button></div>
+            </div>
+            <div class="s-lg-gmeta pull-right s-lg-small s-lib-color-lt-grey">
+                <span aria-hidden="true" title="Last update" class="s-lib-color-lt-grey">
+                    <i class="fa fa-edit icon-small"></i> Jan 19, 2026
+                </span>
+                <span class="sr-only">Last update: Jan 19, 2026</span>
+                <span aria-hidden="true" title="Views" class="pad-left-med hitst">
+                    <i class="fa fa-eye icon-small"></i> 23
+                </span>
+                <span class="sr-only">23 views</span>
+            </div>
+        </div>
+    </div>
+</div>
+<div>
+    <div class="s-lib-box s-lib-border-round s-lib-box-idx-guide-list">
+        <div class="s-lib-box-content">
+            <div class="s-lg-gtitle s-lib-color-lt-grey">
+                <a class="bold" href="https://guides.delhi.edu/c.php?g=863178">
+                    Literature and Crime (LITR 315)
+                </a>
+                <div class="s-ui-helptip"><button id="s-ui-helptip-btn-guide-info-863178" type="button" class="btn btn-link btn-help-popover"  data-ajload="/index_process.php?action=175&guide_id=863178&group_id=0" data-title="Literature and Crime (LITR 315)"><i class="fa fa-info-circle"></i><span class="sr-only">View Guide Info</span></button></div>
+            </div>
+            <div class="s-lg-gmeta pull-right s-lg-small s-lib-color-lt-grey">
+                <span aria-hidden="true" title="Last update" class="s-lib-color-lt-grey">
+                    <i class="fa fa-edit icon-small"></i> Jan 15, 2026
+                </span>
+                <span class="sr-only">Last update: Jan 15, 2026</span>
+                <span aria-hidden="true" title="Views" class="pad-left-med hitst">
+                    <i class="fa fa-eye icon-small"></i> 11
+                </span>
+                <span class="sr-only">11 views</span>
+            </div>
+        </div>
+    </div>
+</div>
+<div>
+    <div class="s-lib-box s-lib-border-round s-lib-box-idx-guide-list">
+        <div class="s-lib-box-content">
+            <div class="s-lg-gtitle s-lib-color-lt-grey">
+                <a class="bold" href="https://guides.delhi.edu/econ110">
+                    MicroEconomics (ECON 110, Brusoe)
+                </a>
+                <div class="s-ui-helptip"><button id="s-ui-helptip-btn-guide-info-1187721" type="button" class="btn btn-link btn-help-popover"  data-ajload="/index_process.php?action=175&guide_id=1187721&group_id=0" data-title="MicroEconomics (ECON 110, Brusoe)"><i class="fa fa-info-circle"></i><span class="sr-only">View Guide Info</span></button></div>
+            </div>
+            <div class="s-lg-gmeta pull-right s-lg-small s-lib-color-lt-grey">
+                <span aria-hidden="true" title="Last update" class="s-lib-color-lt-grey">
+                    <i class="fa fa-edit icon-small"></i> Feb 10, 2026
+                </span>
+                <span class="sr-only">Last update: Feb 10, 2026</span>
+                <span aria-hidden="true" title="Views" class="pad-left-med hitst">
+                    <i class="fa fa-eye icon-small"></i> 17
+                </span>
+                <span class="sr-only">17 views</span>
+            </div>
+        </div>
+    </div>
+</div>
+<div>
+    <div class="s-lib-box s-lib-border-round s-lib-box-idx-guide-list">
+        <div class="s-lib-box-content">
+            <div class="s-lg-gtitle s-lib-color-lt-grey">
+                <a class="bold" href="https://guides.delhi.edu/OER">
+                    Open Education Resources (OER)
+                </a>
+                <div class="s-ui-helptip"><button id="s-ui-helptip-btn-guide-info-839811" type="button" class="btn btn-link btn-help-popover"  data-ajload="/index_process.php?action=175&guide_id=839811&group_id=0" data-title="Open Education Resources (OER)"><i class="fa fa-info-circle"></i><span class="sr-only">View Guide Info</span></button></div>
+            </div>
+            <div class="s-lg-gmeta pull-right s-lg-small s-lib-color-lt-grey">
+                <span aria-hidden="true" title="Last update" class="s-lib-color-lt-grey">
+                    <i class="fa fa-edit icon-small"></i> Jan 16, 2026
+                </span>
+                <span class="sr-only">Last update: Jan 16, 2026</span>
+                <span aria-hidden="true" title="Views" class="pad-left-med hitst">
+                    <i class="fa fa-eye icon-small"></i> 27
+                </span>
+                <span class="sr-only">27 views</span>
+            </div>
+        </div>
+    </div>
+</div>
+<div>
+    <div class="s-lib-box s-lib-border-round s-lib-box-idx-guide-list">
+        <div class="s-lib-box-content">
+            <div class="s-lg-gtitle s-lib-color-lt-grey">
+                <a class="bold" href="https://guides.delhi.edu/sociology">
+                    Sociology 100
+                </a>
+                <div class="s-ui-helptip"><button id="s-ui-helptip-btn-guide-info-1269404" type="button" class="btn btn-link btn-help-popover"  data-ajload="/index_process.php?action=175&guide_id=1269404&group_id=0" data-title="Sociology 100"><i class="fa fa-info-circle"></i><span class="sr-only">View Guide Info</span></button></div>
+            </div>
+            <div class="s-lg-gmeta pull-right s-lg-small s-lib-color-lt-grey">
+                <span aria-hidden="true" title="Last update" class="s-lib-color-lt-grey">
+                    <i class="fa fa-edit icon-small"></i> Jan 16, 2026
+                </span>
+                <span class="sr-only">Last update: Jan 16, 2026</span>
+                <span aria-hidden="true" title="Views" class="pad-left-med hitst">
+                    <i class="fa fa-eye icon-small"></i> 11
+                </span>
+                <span class="sr-only">11 views</span>
+            </div>
+        </div>
+    </div>
+</div>
+<div>
+    <div class="s-lib-box s-lib-border-round s-lib-box-idx-guide-list">
+        <div class="s-lib-box-content">
+            <div class="s-lg-gtitle s-lib-color-lt-grey">
+                <a class="bold" href="https://guides.delhi.edu/c.php?g=645453">
+                    Surgical Nursing and Anesthesia (Dutton, VETS 238)
+                </a>
+                <div class="s-ui-helptip"><button id="s-ui-helptip-btn-guide-info-645453" type="button" class="btn btn-link btn-help-popover"  data-ajload="/index_process.php?action=175&guide_id=645453&group_id=0" data-title="Surgical Nursing and Anesthesia (Dutton, VETS 238)"><i class="fa fa-info-circle"></i><span class="sr-only">View Guide Info</span></button></div>
+            </div>
+            <div class="s-lg-gmeta pull-right s-lg-small s-lib-color-lt-grey">
+                <span aria-hidden="true" title="Last update" class="s-lib-color-lt-grey">
+                    <i class="fa fa-edit icon-small"></i> Jan 19, 2026
+                </span>
+                <span class="sr-only">Last update: Jan 19, 2026</span>
+                <span aria-hidden="true" title="Views" class="pad-left-med hitst">
+                    <i class="fa fa-eye icon-small"></i> 10
+                </span>
+                <span class="sr-only">10 views</span>
+            </div>
+        </div>
+    </div>
+</div>
+<div>
+    <div class="s-lib-box s-lib-border-round s-lib-box-idx-guide-list">
+        <div class="s-lib-box-content">
+            <div class="s-lg-gtitle s-lib-color-lt-grey">
+                <a class="bold" href="https://guides.delhi.edu/TextbookReserve">
+                    Textbook Course Reserves
+                </a>
+                <div class="s-ui-helptip"><button id="s-ui-helptip-btn-guide-info-1491764" type="button" class="btn btn-link btn-help-popover"  data-ajload="/index_process.php?action=175&guide_id=1491764&group_id=0" data-title="Textbook Course Reserves"><i class="fa fa-info-circle"></i><span class="sr-only">View Guide Info</span></button></div>
+            </div>
+            <div class="s-lg-gmeta pull-right s-lg-small s-lib-color-lt-grey">
+                <span aria-hidden="true" title="Last update" class="s-lib-color-lt-grey">
+                    <i class="fa fa-edit icon-small"></i> Oct 17, 2025
+                </span>
+                <span class="sr-only">Last update: Oct 17, 2025</span>
+                <span aria-hidden="true" title="Views" class="pad-left-med hitst">
+                    <i class="fa fa-eye icon-small"></i> 54
+                </span>
+                <span class="sr-only">54 views</span>
+            </div>
+        </div>
+    </div>
+</div>
+<div>
+    <div class="s-lib-box s-lib-border-round s-lib-box-idx-guide-list">
+        <div class="s-lib-box-content">
+            <div class="s-lg-gtitle s-lib-color-lt-grey">
+                <a class="bold" href="https://guides.delhi.edu/c.php?g=1485439">
+                    Women's Basic Self Defense (PEDC 105, Hoyt/Dawson)
+                </a>
+                <div class="s-ui-helptip"><button id="s-ui-helptip-btn-guide-info-1485439" type="button" class="btn btn-link btn-help-popover"  data-ajload="/index_process.php?action=175&guide_id=1485439&group_id=0" data-title="Women&#039;s Basic Self Defense (PEDC 105, Hoyt/Dawson)"><i class="fa fa-info-circle"></i><span class="sr-only">View Guide Info</span></button></div>
+            </div>
+            <div class="s-lg-gmeta pull-right s-lg-small s-lib-color-lt-grey">
+                <span aria-hidden="true" title="Last update" class="s-lib-color-lt-grey">
+                    <i class="fa fa-edit icon-small"></i> Jan 19, 2026
+                </span>
+                <span class="sr-only">Last update: Jan 19, 2026</span>
+                <span aria-hidden="true" title="Views" class="pad-left-med hitst">
+                    <i class="fa fa-eye icon-small"></i> 2
+                </span>
+                <span class="sr-only">2 views</span>
+            </div>
+        </div>
+    </div>
+</div>
+</div><div class="input-append"><script>
+                jQuery(document).ready(function() {
+                    top.window.helptips = new springSpace.sui.helptip({placement: "right"});
+                    springSpace.UI.xhrPopover();
+                });
+            </script></div></div>
+            </div>
+            <div id="col3" class="col-md-3 center">
+                <div class="margin-bottom-xlg"><div class="s-lib-public-side-header"><h2 class="pad-bottom-sm">My Subject Specialties</h2></div><div class="txt pad-top-sm">No subject specialties have been selected.</div></div>
+            </div>
+        </div>
+    </section>
+</div>
+<!-- END: content -->
+<!-- BEGIN: Page Footer -->
+<div id="s-lib-footer-public" class="s-lib-footer footer container s-lib-side-borders"><div><div id="s-lib-footer-brand">Powered by Springshare.</div><div id="s-lib-footer-rights">All rights reserved.</div><div id="s-lib-footer-login-link"><a href="https://delhi.libapps.com/libapps/login.php?site_id=7064">Login to LibApps</a></div></div><div id="s-lib-footer-support-link"><a href="mailto:library@delhi.edu">Report a problem.</a></div></div></div>
+<!-- END: Page Footer -->
+<div id="s-lib-alert" title=""><div id="s-lib-alert-content"></div></div>
+<!-- popover.twig -->
+<div id="s-lib-popover-title" class="hide">
+    <span class="text-info">
+        <strong>title</strong>
+    </span>
+
+    <button type="button" id="popclose" class="close" onclick="jQuery('.s-lib-popover').popover('hide')">
+        &times;
+    </button>
+</div>
+
+<div id="s-lib-popover-content" class="hide">
+    <i class="fa fa-refresh fa-spin"></i> Loading...
+    <button class="btn btn-default btn-sm popclose" type="button">Close</button>
+</div>
+<!-- !popover.twig -->
+
+<!-- scroll_top.twig -->
+<div id="s-lib-scroll-top">
+    <a href="javascript:void(0);" onclick="jQuery('body').focus();" title="Back to Top"
+       aria-label="Back to Top">
+        <span class="fa-stack fa-lg" aria-hidden="true">
+            <i class="fa fa-square-o fa-stack-2x"></i>
+            <i class="fa fa-angle-double-up fa-stack-1x" style="position:relative; bottom:2px;"></i>
+        </span>
+    </a>
+</div>
+<!-- !scroll_top.twig -->
+
+
+<!-- BEGIN: Custom Footer -->
+
+
+
+
+
+<!-- END: Custom Footer -->
+</body>
+</html>

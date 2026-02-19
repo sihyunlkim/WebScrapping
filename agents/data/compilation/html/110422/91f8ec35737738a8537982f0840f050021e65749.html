@@ -1,0 +1,978 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head profile="http://www.w3.org/1999/xhtml/vocab">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><script type="text/javascript">(window.NREUM||(NREUM={})).init={ajax:{deny_list:["bam.nr-data.net"]},feature_flags:["soft_nav"]};(window.NREUM||(NREUM={})).loader_config={licenseKey:"4e34bbaf17",applicationID:"4513637",browserID:"4513646"};;/*! For license information please see nr-loader-rum-1.309.0.min.js.LICENSE.txt */
+(()=>{var e,t,r={163:(e,t,r)=>{"use strict";r.d(t,{j:()=>E});var n=r(384),i=r(1741);var a=r(2555);r(860).K7.genericEvents;const s="experimental.resources",o="register",c=e=>{if(!e||"string"!=typeof e)return!1;try{document.createDocumentFragment().querySelector(e)}catch{return!1}return!0};var d=r(2614),u=r(944),l=r(8122);const f="[data-nr-mask]",g=e=>(0,l.a)(e,(()=>{const e={feature_flags:[],experimental:{allow_registered_children:!1,resources:!1},mask_selector:"*",block_selector:"[data-nr-block]",mask_input_options:{color:!1,date:!1,"datetime-local":!1,email:!1,month:!1,number:!1,range:!1,search:!1,tel:!1,text:!1,time:!1,url:!1,week:!1,textarea:!1,select:!1,password:!0}};return{ajax:{deny_list:void 0,block_internal:!0,enabled:!0,autoStart:!0},api:{get allow_registered_children(){return e.feature_flags.includes(o)||e.experimental.allow_registered_children},set allow_registered_children(t){e.experimental.allow_registered_children=t},duplicate_registered_data:!1},browser_consent_mode:{enabled:!1},distributed_tracing:{enabled:void 0,exclude_newrelic_header:void 0,cors_use_newrelic_header:void 0,cors_use_tracecontext_headers:void 0,allowed_origins:void 0},get feature_flags(){return e.feature_flags},set feature_flags(t){e.feature_flags=t},generic_events:{enabled:!0,autoStart:!0},harvest:{interval:30},jserrors:{enabled:!0,autoStart:!0},logging:{enabled:!0,autoStart:!0},metrics:{enabled:!0,autoStart:!0},obfuscate:void 0,page_action:{enabled:!0},page_view_event:{enabled:!0,autoStart:!0},page_view_timing:{enabled:!0,autoStart:!0},performance:{capture_marks:!1,capture_measures:!1,capture_detail:!0,resources:{get enabled(){return e.feature_flags.includes(s)||e.experimental.resources},set enabled(t){e.experimental.resources=t},asset_types:[],first_party_domains:[],ignore_newrelic:!0}},privacy:{cookies_enabled:!0},proxy:{assets:void 0,beacon:void 0},session:{expiresMs:d.wk,inactiveMs:d.BB},session_replay:{autoStart:!0,enabled:!1,preload:!1,sampling_rate:10,error_sampling_rate:100,collect_fonts:!1,inline_images:!1,fix_stylesheets:!0,mask_all_inputs:!0,get mask_text_selector(){return e.mask_selector},set mask_text_selector(t){c(t)?e.mask_selector="".concat(t,",").concat(f):""===t||null===t?e.mask_selector=f:(0,u.R)(5,t)},get block_class(){return"nr-block"},get ignore_class(){return"nr-ignore"},get mask_text_class(){return"nr-mask"},get block_selector(){return e.block_selector},set block_selector(t){c(t)?e.block_selector+=",".concat(t):""!==t&&(0,u.R)(6,t)},get mask_input_options(){return e.mask_input_options},set mask_input_options(t){t&&"object"==typeof t?e.mask_input_options={...t,password:!0}:(0,u.R)(7,t)}},session_trace:{enabled:!0,autoStart:!0},soft_navigations:{enabled:!0,autoStart:!0},spa:{enabled:!0,autoStart:!0},ssl:void 0,user_actions:{enabled:!0,elementAttributes:["id","className","tagName","type"]}}})());var p=r(6154),m=r(9324);let h=0;const v={buildEnv:m.F3,distMethod:m.Xs,version:m.xv,originTime:p.WN},b={consented:!1},y={appMetadata:{},get consented(){return this.session?.state?.consent||b.consented},set consented(e){b.consented=e},customTransaction:void 0,denyList:void 0,disabled:!1,harvester:void 0,isolatedBacklog:!1,isRecording:!1,loaderType:void 0,maxBytes:3e4,obfuscator:void 0,onerror:void 0,ptid:void 0,releaseIds:{},session:void 0,timeKeeper:void 0,registeredEntities:[],jsAttributesMetadata:{bytes:0},get harvestCount(){return++h}},_=e=>{const t=(0,l.a)(e,y),r=Object.keys(v).reduce((e,t)=>(e[t]={value:v[t],writable:!1,configurable:!0,enumerable:!0},e),{});return Object.defineProperties(t,r)};var w=r(5701);const x=e=>{const t=e.startsWith("http");e+="/",r.p=t?e:"https://"+e};var R=r(7836),k=r(3241);const A={accountID:void 0,trustKey:void 0,agentID:void 0,licenseKey:void 0,applicationID:void 0,xpid:void 0},S=e=>(0,l.a)(e,A),T=new Set;function E(e,t={},r,s){let{init:o,info:c,loader_config:d,runtime:u={},exposed:l=!0}=t;if(!c){const e=(0,n.pV)();o=e.init,c=e.info,d=e.loader_config}e.init=g(o||{}),e.loader_config=S(d||{}),c.jsAttributes??={},p.bv&&(c.jsAttributes.isWorker=!0),e.info=(0,a.D)(c);const f=e.init,m=[c.beacon,c.errorBeacon];T.has(e.agentIdentifier)||(f.proxy.assets&&(x(f.proxy.assets),m.push(f.proxy.assets)),f.proxy.beacon&&m.push(f.proxy.beacon),e.beacons=[...m],function(e){const t=(0,n.pV)();Object.getOwnPropertyNames(i.W.prototype).forEach(r=>{const n=i.W.prototype[r];if("function"!=typeof n||"constructor"===n)return;let a=t[r];e[r]&&!1!==e.exposed&&"micro-agent"!==e.runtime?.loaderType&&(t[r]=(...t)=>{const n=e[r](...t);return a?a(...t):n})})}(e),(0,n.US)("activatedFeatures",w.B)),u.denyList=[...f.ajax.deny_list||[],...f.ajax.block_internal?m:[]],u.ptid=e.agentIdentifier,u.loaderType=r,e.runtime=_(u),T.has(e.agentIdentifier)||(e.ee=R.ee.get(e.agentIdentifier),e.exposed=l,(0,k.W)({agentIdentifier:e.agentIdentifier,drained:!!w.B?.[e.agentIdentifier],type:"lifecycle",name:"initialize",feature:void 0,data:e.config})),T.add(e.agentIdentifier)}},384:(e,t,r)=>{"use strict";r.d(t,{NT:()=>o,US:()=>l,Zm:()=>c,bQ:()=>u,dV:()=>d,pV:()=>f});var n=r(6154),i=r(1863),a=r(944),s=r(1910);const o={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net"};function c(){return n.gm.NREUM||(n.gm.NREUM={}),void 0===n.gm.newrelic&&(n.gm.newrelic=n.gm.NREUM),n.gm.NREUM}function d(){let e=c();return e.o||(e.o={ST:n.gm.setTimeout,SI:n.gm.setImmediate||n.gm.setInterval,CT:n.gm.clearTimeout,XHR:n.gm.XMLHttpRequest,REQ:n.gm.Request,EV:n.gm.Event,PR:n.gm.Promise,MO:n.gm.MutationObserver,FETCH:n.gm.fetch,WS:n.gm.WebSocket},(0,s.i)(...Object.values(e.o))),e}function u(e,t){let r=c();r.initializedAgents??={},t.initializedAt={ms:(0,i.t)(),date:new Date},r.initializedAgents[e]=t,2===Object.keys(r.initializedAgents).length&&(0,a.R)(69)}function l(e,t){c()[e]=t}function f(){return function(){let e=c();const t=e.info||{};e.info={beacon:o.beacon,errorBeacon:o.errorBeacon,...t}}(),function(){let e=c();const t=e.init||{};e.init={...t}}(),d(),function(){let e=c();const t=e.loader_config||{};e.loader_config={...t}}(),c()}},782:(e,t,r)=>{"use strict";r.d(t,{T:()=>n});const n=r(860).K7.pageViewTiming},860:(e,t,r)=>{"use strict";r.d(t,{$J:()=>u,K7:()=>c,P3:()=>d,XX:()=>i,Yy:()=>o,df:()=>a,qY:()=>n,v4:()=>s});const n="events",i="jserrors",a="browser/blobs",s="rum",o="browser/logs",c={ajax:"ajax",genericEvents:"generic_events",jserrors:i,logging:"logging",metrics:"metrics",pageAction:"page_action",pageViewEvent:"page_view_event",pageViewTiming:"page_view_timing",sessionReplay:"session_replay",sessionTrace:"session_trace",softNav:"soft_navigations",spa:"spa"},d={[c.pageViewEvent]:1,[c.pageViewTiming]:2,[c.metrics]:3,[c.jserrors]:4,[c.spa]:5,[c.ajax]:6,[c.sessionTrace]:7,[c.softNav]:8,[c.sessionReplay]:9,[c.logging]:10,[c.genericEvents]:11},u={[c.pageViewEvent]:s,[c.pageViewTiming]:n,[c.ajax]:n,[c.spa]:n,[c.softNav]:n,[c.metrics]:i,[c.jserrors]:i,[c.sessionTrace]:a,[c.sessionReplay]:a,[c.logging]:o,[c.genericEvents]:"ins"}},944:(e,t,r)=>{"use strict";r.d(t,{R:()=>i});var n=r(3241);function i(e,t){"function"==typeof console.debug&&(console.debug("New Relic Warning: https://github.com/newrelic/newrelic-browser-agent/blob/main/docs/warning-codes.md#".concat(e),t),(0,n.W)({agentIdentifier:null,drained:null,type:"data",name:"warn",feature:"warn",data:{code:e,secondary:t}}))}},1687:(e,t,r)=>{"use strict";r.d(t,{Ak:()=>d,Ze:()=>f,x3:()=>u});var n=r(3241),i=r(7836),a=r(3606),s=r(860),o=r(2646);const c={};function d(e,t){const r={staged:!1,priority:s.P3[t]||0};l(e),c[e].get(t)||c[e].set(t,r)}function u(e,t){e&&c[e]&&(c[e].get(t)&&c[e].delete(t),p(e,t,!1),c[e].size&&g(e))}function l(e){if(!e)throw new Error("agentIdentifier required");c[e]||(c[e]=new Map)}function f(e="",t="feature",r=!1){if(l(e),!e||!c[e].get(t)||r)return p(e,t);c[e].get(t).staged=!0,g(e)}function g(e){const t=Array.from(c[e]);t.every(([e,t])=>t.staged)&&(t.sort((e,t)=>e[1].priority-t[1].priority),t.forEach(([t])=>{c[e].delete(t),p(e,t)}))}function p(e,t,r=!0){const s=e?i.ee.get(e):i.ee,c=a.i.handlers;if(!s.aborted&&s.backlog&&c){if((0,n.W)({agentIdentifier:e,type:"lifecycle",name:"drain",feature:t}),r){const e=s.backlog[t],r=c[t];if(r){for(let t=0;e&&t<e.length;++t)m(e[t],r);Object.entries(r).forEach(([e,t])=>{Object.values(t||{}).forEach(t=>{t[0]?.on&&t[0].context()instanceof o.y&&!t[0].listeners(e).includes(t[1])&&t[0].on(e,t[1])})})}}s.isolatedBacklog||delete c[t],s.backlog[t]=null,s.emit("drain-"+t,[])}}function m(e,t){var r=e[1];Object.values(t[r]||{}).forEach(t=>{var r=e[0];if(t[0]===r){var n=t[1],i=e[3],a=e[2];n.apply(i,a)}})}},1738:(e,t,r)=>{"use strict";r.d(t,{U:()=>g,Y:()=>f});var n=r(3241),i=r(9908),a=r(1863),s=r(944),o=r(5701),c=r(3969),d=r(8362),u=r(860),l=r(4261);function f(e,t,r,a){const f=a||r;!f||f[e]&&f[e]!==d.d.prototype[e]||(f[e]=function(){(0,i.p)(c.xV,["API/"+e+"/called"],void 0,u.K7.metrics,r.ee),(0,n.W)({agentIdentifier:r.agentIdentifier,drained:!!o.B?.[r.agentIdentifier],type:"data",name:"api",feature:l.Pl+e,data:{}});try{return t.apply(this,arguments)}catch(e){(0,s.R)(23,e)}})}function g(e,t,r,n,s){const o=e.info;null===r?delete o.jsAttributes[t]:o.jsAttributes[t]=r,(s||null===r)&&(0,i.p)(l.Pl+n,[(0,a.t)(),t,r],void 0,"session",e.ee)}},1741:(e,t,r)=>{"use strict";r.d(t,{W:()=>a});var n=r(944),i=r(4261);class a{#e(e,...t){if(this[e]!==a.prototype[e])return this[e](...t);(0,n.R)(35,e)}addPageAction(e,t){return this.#e(i.hG,e,t)}register(e){return this.#e(i.eY,e)}recordCustomEvent(e,t){return this.#e(i.fF,e,t)}setPageViewName(e,t){return this.#e(i.Fw,e,t)}setCustomAttribute(e,t,r){return this.#e(i.cD,e,t,r)}noticeError(e,t){return this.#e(i.o5,e,t)}setUserId(e,t=!1){return this.#e(i.Dl,e,t)}setApplicationVersion(e){return this.#e(i.nb,e)}setErrorHandler(e){return this.#e(i.bt,e)}addRelease(e,t){return this.#e(i.k6,e,t)}log(e,t){return this.#e(i.$9,e,t)}start(){return this.#e(i.d3)}finished(e){return this.#e(i.BL,e)}recordReplay(){return this.#e(i.CH)}pauseReplay(){return this.#e(i.Tb)}addToTrace(e){return this.#e(i.U2,e)}setCurrentRouteName(e){return this.#e(i.PA,e)}interaction(e){return this.#e(i.dT,e)}wrapLogger(e,t,r){return this.#e(i.Wb,e,t,r)}measure(e,t){return this.#e(i.V1,e,t)}consent(e){return this.#e(i.Pv,e)}}},1863:(e,t,r)=>{"use strict";function n(){return Math.floor(performance.now())}r.d(t,{t:()=>n})},1910:(e,t,r)=>{"use strict";r.d(t,{i:()=>a});var n=r(944);const i=new Map;function a(...e){return e.every(e=>{if(i.has(e))return i.get(e);const t="function"==typeof e?e.toString():"",r=t.includes("[native code]"),a=t.includes("nrWrapper");return r||a||(0,n.R)(64,e?.name||t),i.set(e,r),r})}},2555:(e,t,r)=>{"use strict";r.d(t,{D:()=>o,f:()=>s});var n=r(384),i=r(8122);const a={beacon:n.NT.beacon,errorBeacon:n.NT.errorBeacon,licenseKey:void 0,applicationID:void 0,sa:void 0,queueTime:void 0,applicationTime:void 0,ttGuid:void 0,user:void 0,account:void 0,product:void 0,extra:void 0,jsAttributes:{},userAttributes:void 0,atts:void 0,transactionName:void 0,tNamePlain:void 0};function s(e){try{return!!e.licenseKey&&!!e.errorBeacon&&!!e.applicationID}catch(e){return!1}}const o=e=>(0,i.a)(e,a)},2614:(e,t,r)=>{"use strict";r.d(t,{BB:()=>s,H3:()=>n,g:()=>d,iL:()=>c,tS:()=>o,uh:()=>i,wk:()=>a});const n="NRBA",i="SESSION",a=144e5,s=18e5,o={STARTED:"session-started",PAUSE:"session-pause",RESET:"session-reset",RESUME:"session-resume",UPDATE:"session-update"},c={SAME_TAB:"same-tab",CROSS_TAB:"cross-tab"},d={OFF:0,FULL:1,ERROR:2}},2646:(e,t,r)=>{"use strict";r.d(t,{y:()=>n});class n{constructor(e){this.contextId=e}}},2843:(e,t,r)=>{"use strict";r.d(t,{G:()=>a,u:()=>i});var n=r(3878);function i(e,t=!1,r,i){(0,n.DD)("visibilitychange",function(){if(t)return void("hidden"===document.visibilityState&&e());e(document.visibilityState)},r,i)}function a(e,t,r){(0,n.sp)("pagehide",e,t,r)}},3241:(e,t,r)=>{"use strict";r.d(t,{W:()=>a});var n=r(6154);const i="newrelic";function a(e={}){try{n.gm.dispatchEvent(new CustomEvent(i,{detail:e}))}catch(e){}}},3606:(e,t,r)=>{"use strict";r.d(t,{i:()=>a});var n=r(9908);a.on=s;var i=a.handlers={};function a(e,t,r,a){s(a||n.d,i,e,t,r)}function s(e,t,r,i,a){a||(a="feature"),e||(e=n.d);var s=t[a]=t[a]||{};(s[r]=s[r]||[]).push([e,i])}},3878:(e,t,r)=>{"use strict";function n(e,t){return{capture:e,passive:!1,signal:t}}function i(e,t,r=!1,i){window.addEventListener(e,t,n(r,i))}function a(e,t,r=!1,i){document.addEventListener(e,t,n(r,i))}r.d(t,{DD:()=>a,jT:()=>n,sp:()=>i})},3969:(e,t,r)=>{"use strict";r.d(t,{TZ:()=>n,XG:()=>o,rs:()=>i,xV:()=>s,z_:()=>a});const n=r(860).K7.metrics,i="sm",a="cm",s="storeSupportabilityMetrics",o="storeEventMetrics"},4234:(e,t,r)=>{"use strict";r.d(t,{W:()=>a});var n=r(7836),i=r(1687);class a{constructor(e,t){this.agentIdentifier=e,this.ee=n.ee.get(e),this.featureName=t,this.blocked=!1}deregisterDrain(){(0,i.x3)(this.agentIdentifier,this.featureName)}}},4261:(e,t,r)=>{"use strict";r.d(t,{$9:()=>d,BL:()=>o,CH:()=>g,Dl:()=>_,Fw:()=>y,PA:()=>h,Pl:()=>n,Pv:()=>k,Tb:()=>l,U2:()=>a,V1:()=>R,Wb:()=>x,bt:()=>b,cD:()=>v,d3:()=>w,dT:()=>c,eY:()=>p,fF:()=>f,hG:()=>i,k6:()=>s,nb:()=>m,o5:()=>u});const n="api-",i="addPageAction",a="addToTrace",s="addRelease",o="finished",c="interaction",d="log",u="noticeError",l="pauseReplay",f="recordCustomEvent",g="recordReplay",p="register",m="setApplicationVersion",h="setCurrentRouteName",v="setCustomAttribute",b="setErrorHandler",y="setPageViewName",_="setUserId",w="start",x="wrapLogger",R="measure",k="consent"},5289:(e,t,r)=>{"use strict";r.d(t,{GG:()=>s,Qr:()=>c,sB:()=>o});var n=r(3878),i=r(6389);function a(){return"undefined"==typeof document||"complete"===document.readyState}function s(e,t){if(a())return e();const r=(0,i.J)(e),s=setInterval(()=>{a()&&(clearInterval(s),r())},500);(0,n.sp)("load",r,t)}function o(e){if(a())return e();(0,n.DD)("DOMContentLoaded",e)}function c(e){if(a())return e();(0,n.sp)("popstate",e)}},5607:(e,t,r)=>{"use strict";r.d(t,{W:()=>n});const n=(0,r(9566).bz)()},5701:(e,t,r)=>{"use strict";r.d(t,{B:()=>a,t:()=>s});var n=r(3241);const i=new Set,a={};function s(e,t){const r=t.agentIdentifier;a[r]??={},e&&"object"==typeof e&&(i.has(r)||(t.ee.emit("rumresp",[e]),a[r]=e,i.add(r),(0,n.W)({agentIdentifier:r,loaded:!0,drained:!0,type:"lifecycle",name:"load",feature:void 0,data:e})))}},6154:(e,t,r)=>{"use strict";r.d(t,{OF:()=>c,RI:()=>i,WN:()=>u,bv:()=>a,eN:()=>l,gm:()=>s,mw:()=>o,sb:()=>d});var n=r(1863);const i="undefined"!=typeof window&&!!window.document,a="undefined"!=typeof WorkerGlobalScope&&("undefined"!=typeof self&&self instanceof WorkerGlobalScope&&self.navigator instanceof WorkerNavigator||"undefined"!=typeof globalThis&&globalThis instanceof WorkerGlobalScope&&globalThis.navigator instanceof WorkerNavigator),s=i?window:"undefined"!=typeof WorkerGlobalScope&&("undefined"!=typeof self&&self instanceof WorkerGlobalScope&&self||"undefined"!=typeof globalThis&&globalThis instanceof WorkerGlobalScope&&globalThis),o=Boolean("hidden"===s?.document?.visibilityState),c=/iPad|iPhone|iPod/.test(s.navigator?.userAgent),d=c&&"undefined"==typeof SharedWorker,u=((()=>{const e=s.navigator?.userAgent?.match(/Firefox[/\s](\d+\.\d+)/);Array.isArray(e)&&e.length>=2&&e[1]})(),Date.now()-(0,n.t)()),l=()=>"undefined"!=typeof PerformanceNavigationTiming&&s?.performance?.getEntriesByType("navigation")?.[0]?.responseStart},6389:(e,t,r)=>{"use strict";function n(e,t=500,r={}){const n=r?.leading||!1;let i;return(...r)=>{n&&void 0===i&&(e.apply(this,r),i=setTimeout(()=>{i=clearTimeout(i)},t)),n||(clearTimeout(i),i=setTimeout(()=>{e.apply(this,r)},t))}}function i(e){let t=!1;return(...r)=>{t||(t=!0,e.apply(this,r))}}r.d(t,{J:()=>i,s:()=>n})},6630:(e,t,r)=>{"use strict";r.d(t,{T:()=>n});const n=r(860).K7.pageViewEvent},7699:(e,t,r)=>{"use strict";r.d(t,{It:()=>a,KC:()=>o,No:()=>i,qh:()=>s});var n=r(860);const i=16e3,a=1e6,s="SESSION_ERROR",o={[n.K7.logging]:!0,[n.K7.genericEvents]:!1,[n.K7.jserrors]:!1,[n.K7.ajax]:!1}},7836:(e,t,r)=>{"use strict";r.d(t,{P:()=>o,ee:()=>c});var n=r(384),i=r(8990),a=r(2646),s=r(5607);const o="nr@context:".concat(s.W),c=function e(t,r){var n={},s={},u={},l=!1;try{l=16===r.length&&d.initializedAgents?.[r]?.runtime.isolatedBacklog}catch(e){}var f={on:p,addEventListener:p,removeEventListener:function(e,t){var r=n[e];if(!r)return;for(var i=0;i<r.length;i++)r[i]===t&&r.splice(i,1)},emit:function(e,r,n,i,a){!1!==a&&(a=!0);if(c.aborted&&!i)return;t&&a&&t.emit(e,r,n);var o=g(n);m(e).forEach(e=>{e.apply(o,r)});var d=v()[s[e]];d&&d.push([f,e,r,o]);return o},get:h,listeners:m,context:g,buffer:function(e,t){const r=v();if(t=t||"feature",f.aborted)return;Object.entries(e||{}).forEach(([e,n])=>{s[n]=t,t in r||(r[t]=[])})},abort:function(){f._aborted=!0,Object.keys(f.backlog).forEach(e=>{delete f.backlog[e]})},isBuffering:function(e){return!!v()[s[e]]},debugId:r,backlog:l?{}:t&&"object"==typeof t.backlog?t.backlog:{},isolatedBacklog:l};return Object.defineProperty(f,"aborted",{get:()=>{let e=f._aborted||!1;return e||(t&&(e=t.aborted),e)}}),f;function g(e){return e&&e instanceof a.y?e:e?(0,i.I)(e,o,()=>new a.y(o)):new a.y(o)}function p(e,t){n[e]=m(e).concat(t)}function m(e){return n[e]||[]}function h(t){return u[t]=u[t]||e(f,t)}function v(){return f.backlog}}(void 0,"globalEE"),d=(0,n.Zm)();d.ee||(d.ee=c)},8122:(e,t,r)=>{"use strict";r.d(t,{a:()=>i});var n=r(944);function i(e,t){try{if(!e||"object"!=typeof e)return(0,n.R)(3);if(!t||"object"!=typeof t)return(0,n.R)(4);const r=Object.create(Object.getPrototypeOf(t),Object.getOwnPropertyDescriptors(t)),a=0===Object.keys(r).length?e:r;for(let s in a)if(void 0!==e[s])try{if(null===e[s]){r[s]=null;continue}Array.isArray(e[s])&&Array.isArray(t[s])?r[s]=Array.from(new Set([...e[s],...t[s]])):"object"==typeof e[s]&&"object"==typeof t[s]?r[s]=i(e[s],t[s]):r[s]=e[s]}catch(e){r[s]||(0,n.R)(1,e)}return r}catch(e){(0,n.R)(2,e)}}},8362:(e,t,r)=>{"use strict";r.d(t,{d:()=>a});var n=r(9566),i=r(1741);class a extends i.W{agentIdentifier=(0,n.LA)(16)}},8374:(e,t,r)=>{r.nc=(()=>{try{return document?.currentScript?.nonce}catch(e){}return""})()},8990:(e,t,r)=>{"use strict";r.d(t,{I:()=>i});var n=Object.prototype.hasOwnProperty;function i(e,t,r){if(n.call(e,t))return e[t];var i=r();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,t,{value:i,writable:!0,enumerable:!1}),i}catch(e){}return e[t]=i,i}},9324:(e,t,r)=>{"use strict";r.d(t,{F3:()=>i,Xs:()=>a,xv:()=>n});const n="1.309.0",i="PROD",a="CDN"},9566:(e,t,r)=>{"use strict";r.d(t,{LA:()=>o,bz:()=>s});var n=r(6154);const i="xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx";function a(e,t){return e?15&e[t]:16*Math.random()|0}function s(){const e=n.gm?.crypto||n.gm?.msCrypto;let t,r=0;return e&&e.getRandomValues&&(t=e.getRandomValues(new Uint8Array(30))),i.split("").map(e=>"x"===e?a(t,r++).toString(16):"y"===e?(3&a()|8).toString(16):e).join("")}function o(e){const t=n.gm?.crypto||n.gm?.msCrypto;let r,i=0;t&&t.getRandomValues&&(r=t.getRandomValues(new Uint8Array(e)));const s=[];for(var o=0;o<e;o++)s.push(a(r,i++).toString(16));return s.join("")}},9908:(e,t,r)=>{"use strict";r.d(t,{d:()=>n,p:()=>i});var n=r(7836).ee.get("handle");function i(e,t,r,i,a){a?(a.buffer([e],i),a.emit(e,t,r)):(n.buffer([e],i),n.emit(e,t,r))}}},n={};function i(e){var t=n[e];if(void 0!==t)return t.exports;var a=n[e]={exports:{}};return r[e](a,a.exports,i),a.exports}i.m=r,i.d=(e,t)=>{for(var r in t)i.o(t,r)&&!i.o(e,r)&&Object.defineProperty(e,r,{enumerable:!0,get:t[r]})},i.f={},i.e=e=>Promise.all(Object.keys(i.f).reduce((t,r)=>(i.f[r](e,t),t),[])),i.u=e=>"nr-rum-1.309.0.min.js",i.o=(e,t)=>Object.prototype.hasOwnProperty.call(e,t),e={},t="NRBA-1.309.0.PROD:",i.l=(r,n,a,s)=>{if(e[r])e[r].push(n);else{var o,c;if(void 0!==a)for(var d=document.getElementsByTagName("script"),u=0;u<d.length;u++){var l=d[u];if(l.getAttribute("src")==r||l.getAttribute("data-webpack")==t+a){o=l;break}}if(!o){c=!0;var f={296:"sha512-ZBBVWt6PVOQQpTGc/xzYP/zYs+pj6QnNTqG2pFYHQrwWdUi4/1lsIi9EaFcj4Ifn3O38eFqKr9dqSv/HftTqtA=="};(o=document.createElement("script")).charset="utf-8",i.nc&&o.setAttribute("nonce",i.nc),o.setAttribute("data-webpack",t+a),o.src=r,0!==o.src.indexOf(window.location.origin+"/")&&(o.crossOrigin="anonymous"),f[s]&&(o.integrity=f[s])}e[r]=[n];var g=(t,n)=>{o.onerror=o.onload=null,clearTimeout(p);var i=e[r];if(delete e[r],o.parentNode&&o.parentNode.removeChild(o),i&&i.forEach(e=>e(n)),t)return t(n)},p=setTimeout(g.bind(null,void 0,{type:"timeout",target:o}),12e4);o.onerror=g.bind(null,o.onerror),o.onload=g.bind(null,o.onload),c&&document.head.appendChild(o)}},i.r=e=>{"undefined"!=typeof Symbol&&Symbol.toStringTag&&Object.defineProperty(e,Symbol.toStringTag,{value:"Module"}),Object.defineProperty(e,"__esModule",{value:!0})},i.p="https://js-agent.newrelic.com/",(()=>{var e={374:0,840:0};i.f.j=(t,r)=>{var n=i.o(e,t)?e[t]:void 0;if(0!==n)if(n)r.push(n[2]);else{var a=new Promise((r,i)=>n=e[t]=[r,i]);r.push(n[2]=a);var s=i.p+i.u(t),o=new Error;i.l(s,r=>{if(i.o(e,t)&&(0!==(n=e[t])&&(e[t]=void 0),n)){var a=r&&("load"===r.type?"missing":r.type),s=r&&r.target&&r.target.src;o.message="Loading chunk "+t+" failed: ("+a+": "+s+")",o.name="ChunkLoadError",o.type=a,o.request=s,n[1](o)}},"chunk-"+t,t)}};var t=(t,r)=>{var n,a,[s,o,c]=r,d=0;if(s.some(t=>0!==e[t])){for(n in o)i.o(o,n)&&(i.m[n]=o[n]);if(c)c(i)}for(t&&t(r);d<s.length;d++)a=s[d],i.o(e,a)&&e[a]&&e[a][0](),e[a]=0},r=self["webpackChunk:NRBA-1.309.0.PROD"]=self["webpackChunk:NRBA-1.309.0.PROD"]||[];r.forEach(t.bind(null,0)),r.push=t.bind(null,r.push.bind(r))})(),(()=>{"use strict";i(8374);var e=i(8362),t=i(860);const r=Object.values(t.K7);var n=i(163);var a=i(9908),s=i(1863),o=i(4261),c=i(1738);var d=i(1687),u=i(4234),l=i(5289),f=i(6154),g=i(944),p=i(384);const m=e=>f.RI&&!0===e?.privacy.cookies_enabled;function h(e){return!!(0,p.dV)().o.MO&&m(e)&&!0===e?.session_trace.enabled}var v=i(6389),b=i(7699);class y extends u.W{constructor(e,t){super(e.agentIdentifier,t),this.agentRef=e,this.abortHandler=void 0,this.featAggregate=void 0,this.loadedSuccessfully=void 0,this.onAggregateImported=new Promise(e=>{this.loadedSuccessfully=e}),this.deferred=Promise.resolve(),!1===e.init[this.featureName].autoStart?this.deferred=new Promise((t,r)=>{this.ee.on("manual-start-all",(0,v.J)(()=>{(0,d.Ak)(e.agentIdentifier,this.featureName),t()}))}):(0,d.Ak)(e.agentIdentifier,t)}importAggregator(e,t,r={}){if(this.featAggregate)return;const n=async()=>{let n;await this.deferred;try{if(m(e.init)){const{setupAgentSession:t}=await i.e(296).then(i.bind(i,3305));n=t(e)}}catch(e){(0,g.R)(20,e),this.ee.emit("internal-error",[e]),(0,a.p)(b.qh,[e],void 0,this.featureName,this.ee)}try{if(!this.#t(this.featureName,n,e.init))return(0,d.Ze)(this.agentIdentifier,this.featureName),void this.loadedSuccessfully(!1);const{Aggregate:i}=await t();this.featAggregate=new i(e,r),e.runtime.harvester.initializedAggregates.push(this.featAggregate),this.loadedSuccessfully(!0)}catch(e){(0,g.R)(34,e),this.abortHandler?.(),(0,d.Ze)(this.agentIdentifier,this.featureName,!0),this.loadedSuccessfully(!1),this.ee&&this.ee.abort()}};f.RI?(0,l.GG)(()=>n(),!0):n()}#t(e,r,n){if(this.blocked)return!1;switch(e){case t.K7.sessionReplay:return h(n)&&!!r;case t.K7.sessionTrace:return!!r;default:return!0}}}var _=i(6630),w=i(2614),x=i(3241);class R extends y{static featureName=_.T;constructor(e){var t;super(e,_.T),this.setupInspectionEvents(e.agentIdentifier),t=e,(0,c.Y)(o.Fw,function(e,r){"string"==typeof e&&("/"!==e.charAt(0)&&(e="/"+e),t.runtime.customTransaction=(r||"http://custom.transaction")+e,(0,a.p)(o.Pl+o.Fw,[(0,s.t)()],void 0,void 0,t.ee))},t),this.importAggregator(e,()=>i.e(296).then(i.bind(i,3943)))}setupInspectionEvents(e){const t=(t,r)=>{t&&(0,x.W)({agentIdentifier:e,timeStamp:t.timeStamp,loaded:"complete"===t.target.readyState,type:"window",name:r,data:t.target.location+""})};(0,l.sB)(e=>{t(e,"DOMContentLoaded")}),(0,l.GG)(e=>{t(e,"load")}),(0,l.Qr)(e=>{t(e,"navigate")}),this.ee.on(w.tS.UPDATE,(t,r)=>{(0,x.W)({agentIdentifier:e,type:"lifecycle",name:"session",data:r})})}}class k extends e.d{constructor(e){var t;(super(),f.gm)?(this.features={},(0,p.bQ)(this.agentIdentifier,this),this.desiredFeatures=new Set(e.features||[]),this.desiredFeatures.add(R),(0,n.j)(this,e,e.loaderType||"agent"),t=this,(0,c.Y)(o.cD,function(e,r,n=!1){if("string"==typeof e){if(["string","number","boolean"].includes(typeof r)||null===r)return(0,c.U)(t,e,r,o.cD,n);(0,g.R)(40,typeof r)}else(0,g.R)(39,typeof e)},t),function(e){(0,c.Y)(o.Dl,function(t,r=!1){if("string"!=typeof t&&null!==t)return void(0,g.R)(41,typeof t);const n=e.info.jsAttributes["enduser.id"];r&&null!=n&&n!==t?(0,a.p)(o.Pl+"setUserIdAndResetSession",[t],void 0,"session",e.ee):(0,c.U)(e,"enduser.id",t,o.Dl,!0)},e)}(this),function(e){(0,c.Y)(o.nb,function(t){if("string"==typeof t||null===t)return(0,c.U)(e,"application.version",t,o.nb,!1);(0,g.R)(42,typeof t)},e)}(this),function(e){(0,c.Y)(o.d3,function(){e.ee.emit("manual-start-all")},e)}(this),function(e){(0,c.Y)(o.Pv,function(t=!0){if("boolean"==typeof t){if((0,a.p)(o.Pl+o.Pv,[t],void 0,"session",e.ee),e.runtime.consented=t,t){const t=e.features.page_view_event;t.onAggregateImported.then(e=>{const r=t.featAggregate;e&&!r.sentRum&&r.sendRum()})}}else(0,g.R)(65,typeof t)},e)}(this),this.run()):(0,g.R)(21)}get config(){return{info:this.info,init:this.init,loader_config:this.loader_config,runtime:this.runtime}}get api(){return this}run(){try{const e=function(e){const t={};return r.forEach(r=>{t[r]=!!e[r]?.enabled}),t}(this.init),n=[...this.desiredFeatures];n.sort((e,r)=>t.P3[e.featureName]-t.P3[r.featureName]),n.forEach(r=>{if(!e[r.featureName]&&r.featureName!==t.K7.pageViewEvent)return;if(r.featureName===t.K7.spa)return void(0,g.R)(67);const n=function(e){switch(e){case t.K7.ajax:return[t.K7.jserrors];case t.K7.sessionTrace:return[t.K7.ajax,t.K7.pageViewEvent];case t.K7.sessionReplay:return[t.K7.sessionTrace];case t.K7.pageViewTiming:return[t.K7.pageViewEvent];default:return[]}}(r.featureName).filter(e=>!(e in this.features));n.length>0&&(0,g.R)(36,{targetFeature:r.featureName,missingDependencies:n}),this.features[r.featureName]=new r(this)})}catch(e){(0,g.R)(22,e);for(const e in this.features)this.features[e].abortHandler?.();const t=(0,p.Zm)();delete t.initializedAgents[this.agentIdentifier]?.features,delete this.sharedAggregator;return t.ee.get(this.agentIdentifier).abort(),!1}}}var A=i(2843),S=i(782);class T extends y{static featureName=S.T;constructor(e){super(e,S.T),f.RI&&((0,A.u)(()=>(0,a.p)("docHidden",[(0,s.t)()],void 0,S.T,this.ee),!0),(0,A.G)(()=>(0,a.p)("winPagehide",[(0,s.t)()],void 0,S.T,this.ee)),this.importAggregator(e,()=>i.e(296).then(i.bind(i,2117))))}}var E=i(3969);class j extends y{static featureName=E.TZ;constructor(e){super(e,E.TZ),f.RI&&document.addEventListener("securitypolicyviolation",e=>{(0,a.p)(E.xV,["Generic/CSPViolation/Detected"],void 0,this.featureName,this.ee)}),this.importAggregator(e,()=>i.e(296).then(i.bind(i,9623)))}}new k({features:[R,T,j],loaderType:"lite"})})()})();</script>
+<link rel="shortcut icon" href="https://provost.calpoly.edu/sites/all/themes/cpstandard_r/common/images_html/favicon.ico" type="image/vnd.microsoft.icon" />
+<meta http-equiv="content-language" content="en" />
+<meta charset="UTF-8" />
+<meta name="viewport" content="initial-scale=1" />
+<meta name="description" content="Winter 2026 1/12/26 - Save the Dates: Dean of CENG Candidate Visits On behalf of the Consultative Search Committee for the Dean of the College of Engineering (CENG), we are pleased to share that Cal Poly will soon host up to four finalists for the role." />
+<link rel="canonical" href="https://provost.calpoly.edu/messages" />
+<meta property="og:site_name" content="Office of the Provost" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://provost.calpoly.edu/messages" />
+<meta property="og:title" content="Messages from the Office of the Provost | Office of the Provost" />
+<meta property="og:description" content="Winter 2026 1/12/26 - Save the Dates: Dean of CENG Candidate Visits On behalf of the Consultative Search Committee for the Dean of the College of Engineering (CENG), we are pleased to share that Cal Poly will soon host up to four finalists for the role." />
+<meta name="dcterms.title" content="Messages from the Office of the Provost | Office of the Provost" />
+<meta name="dcterms.description" content="Winter 2026 1/12/26 - Save the Dates: Dean of CENG Candidate Visits On behalf of the Consultative Search Committee for the Dean of the College of Engineering (CENG), we are pleased to share that Cal Poly will soon host up to four finalists for the role." />
+<meta name="dcterms.type" content="Text" />
+<meta name="dcterms.format" content="text/html" />
+  <title>Messages from the Office of the Provost - Office of the Provost - Cal Poly, San Luis Obispo</title>
+  <style type="text/css" media="all">
+@import url("https://provost.calpoly.edu/modules/system/system.base.css?t7h8yh");
+@import url("https://provost.calpoly.edu/modules/system/system.menus.css?t7h8yh");
+@import url("https://provost.calpoly.edu/modules/system/system.messages.css?t7h8yh");
+@import url("https://provost.calpoly.edu/modules/system/system.theme.css?t7h8yh");
+</style>
+<style type="text/css" media="all">
+@import url("https://provost.calpoly.edu/modules/aggregator/aggregator.css?t7h8yh");
+@import url("https://provost.calpoly.edu/modules/comment/comment.css?t7h8yh");
+@import url("https://provost.calpoly.edu/modules/field/theme/field.css?t7h8yh");
+@import url("https://provost.calpoly.edu/modules/node/node.css?t7h8yh");
+@import url("https://provost.calpoly.edu/modules/search/search.css?t7h8yh");
+@import url("https://provost.calpoly.edu/modules/user/user.css?t7h8yh");
+@import url("https://provost.calpoly.edu/sites/all/modules/views/css/views.css?t7h8yh");
+@import url("https://provost.calpoly.edu/sites/all/modules/ckeditor/css/ckeditor.css?t7h8yh");
+</style>
+<style type="text/css" media="all">
+@import url("https://provost.calpoly.edu/sites/all/modules/ctools/css/ctools.css?t7h8yh");
+@import url("https://provost.calpoly.edu/sites/all/modules/tableofcontents/tableofcontents.css?t7h8yh");
+</style>
+<link type="text/css" rel="stylesheet" href="//fonts.googleapis.com/css?family=Open+Sans:400,600%7CVollkorn:400italic,400" media="all" />
+<style type="text/css" media="all">
+@import url("https://provost.calpoly.edu/sites/all/themes/cpstandard_r/common/css/cp_style.min.css?t7h8yh");
+@import url("https://provost.calpoly.edu/sites/all/themes/cpstandard_r/common/css/font-awesome.min.css?t7h8yh");
+@import url("https://provost.calpoly.edu/sites/all/themes/cpstandard_r/common/css/jquery-ui.min.css?t7h8yh");
+@import url("https://provost.calpoly.edu/sites/all/themes/cpstandard_r/css/cp_custom.css?t7h8yh");
+@import url("https://provost.calpoly.edu/sites/all/themes/cpstandard_r/css/honeypot.css?t7h8yh");
+</style>
+<style type="text/css" media="print">
+@import url("https://provost.calpoly.edu/sites/all/themes/cpstandard_r/common/css/cp_print.min.css?t7h8yh");
+</style>
+  <script type="text/javascript" src="https://provost.calpoly.edu/sites/provost.calpoly.edu/files/js/js_YD9ro0PAqY25gGWrTki6TjRUG8TdokmmxjfqpNNfzVU.js"></script>
+<script type="text/javascript" src="https://provost.calpoly.edu/sites/provost.calpoly.edu/files/js/js_-zpHfuGV_8VVwgRhy2PKeQaVJAtxKrM3J3ALmgmc1PQ.js"></script>
+<script type="text/javascript" src="https://provost.calpoly.edu/sites/provost.calpoly.edu/files/js/js_Koy9SwiUJmXG6zyo7C_1eqnqg3wjiLSjat9vhI0EoTw.js"></script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+jQuery.extend(Drupal.settings, {"basePath":"\/","pathPrefix":"","setHasJsCookie":0,"ajaxPageState":{"theme":"cpstandard_r","theme_token":"PZ8K4BngRvFOIvckSggJBZs6_m5mxBrxJayYXMiFt6Q","js":{"misc\/jquery.js":1,"misc\/jquery-extend-3.4.0.js":1,"misc\/jquery-html-prefilter-3.5.0-backport.js":1,"misc\/jquery.once.js":1,"misc\/drupal.js":1,"sites\/all\/modules\/tableofcontents\/jquery.scrollTo-min.js":1,"sites\/all\/modules\/tableofcontents\/jquery.localscroll-min.js":1,"sites\/all\/modules\/tableofcontents\/tableofcontents.js":1,"sites\/all\/themes\/cpstandard_r\/common\/js\/jquery-1.11.3.min.js":1,"sites\/all\/themes\/cpstandard_r\/common\/js\/jquery-ui.min.js":1,"sites\/all\/themes\/cpstandard_r\/common\/js\/noconflict.js":1,"sites\/all\/themes\/cpstandard_r\/common\/js\/calpoly.min.js":1,"sites\/all\/themes\/cpstandard_r\/common\/js\/_accordion.js":1},"css":{"modules\/system\/system.base.css":1,"modules\/system\/system.menus.css":1,"modules\/system\/system.messages.css":1,"modules\/system\/system.theme.css":1,"modules\/aggregator\/aggregator.css":1,"modules\/comment\/comment.css":1,"modules\/field\/theme\/field.css":1,"modules\/node\/node.css":1,"modules\/search\/search.css":1,"modules\/user\/user.css":1,"sites\/all\/modules\/views\/css\/views.css":1,"sites\/all\/modules\/ckeditor\/css\/ckeditor.css":1,"sites\/all\/modules\/ctools\/css\/ctools.css":1,"sites\/all\/modules\/tableofcontents\/tableofcontents.css":1,"\/\/fonts.googleapis.com\/css?family=Open+Sans:400,600%7CVollkorn:400italic,400":1,"sites\/all\/themes\/cpstandard_r\/common\/css\/cp_style.min.css":1,"sites\/all\/themes\/cpstandard_r\/common\/css\/font-awesome.min.css":1,"sites\/all\/themes\/cpstandard_r\/common\/css\/jquery-ui.min.css":1,"sites\/all\/themes\/cpstandard_r\/css\/cp_custom.css":1,"sites\/all\/themes\/cpstandard_r\/css\/honeypot.css":1,"sites\/all\/themes\/cpstandard_r\/common\/css\/cp_print.min.css":1}},"tableOfContents":{"boxSettings":{"hideText":"hide","showText":"show"}}});
+//--><!]]>
+</script>
+  <!-- Global Site Tag (gtag.js) - Google Analytics --> 
+<!-- Google Analytics - contact Cal Poly University Marketing for access to GA data --> 
+<!-- GTM / Contact UCM -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start': new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src= 'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f); })(window,document,'script','dataLayer','GTM-TKZNRR2');</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-CY2GPTVZY7"></script>
+<script>window.dataLayer = window.dataLayer || []; function gtag() {window.dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'G-CY2GPTVZY7'); </script>
+<!-- End GA gtag -->
+<!-- Slate / Contact SEM -->
+<script async="async" src="https://connect.calpoly.edu/ping">/**/</script>
+<!-- End Slate -->
+</head>
+
+<body class="html not-front not-logged-in no-sidebars page-node page-node- page-node-1024 node-type-page" >
+    <!--Header Content for Analytics-->
+  <div id="header-blocks" class="region region-header-content">
+        <div id="block-block-18" class="block block-block " >
+  <h2>Cal Poly Global Site Tag</h2>
+<!-- Global Site Tag (gtag.js) - Google Analytics --><script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-102181678-1"></script><script>
+<!--//--><![CDATA[// ><!--
+
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments)};
+  gtag('js', new Date());
+
+  gtag('config', 'UA-102181678-1');
+
+//--><!]]>
+</script></div>
+
+<div id="block-block-17" class="block block-block " >
+  <h2>Google Tag Manager</h2>
+<p><br /><!-- Google Tag Manager --></p><noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-NP6ZQS" height="0" width="0" title="GTM"></iframe></noscript><script>
+<!--//--><![CDATA[// ><!--
+(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&amp;l='+l:'';j.async=true;j.src=
+'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-NP6ZQS');
+//--><!]]>
+</script><!-- End Google Tag Manager --></div>
+
+  </div>
+
+<div id="wrapper">
+  
+  <header>
+    <div id="accessibilityNav"><ul><li><a href="#topH1" id="skip" title="skip to content">Skip to Content</a></li><li><a href="https://www.calpoly.edu/help.html" id="helpLink" title="help">?</a></li></ul></div>    <div id="audienceNav"><ul><li><a href="http://www.calpoly.edu/student/enrolled.html">Current Students</a></li>
+<li><a href="http://admissions.calpoly.edu/">Prospective Students</a></li>
+<li><a href="http://www.calpoly.edu/student/parents.html">Parents</a></li>
+<li><a href="http://www.calpoly.edu/business-community.html">Business Community</a></li>
+<li><a href="http://www.calpoly.edu/faculty-staff/faculty-staff.html">Faculty &amp; Staff</a></li>
+<li><a href="http://alumni.calpoly.edu/">Alumni</a></li>
+</ul></div>    <hr>
+    <div id="myCalPolyNav"><a href="https://my.calpoly.edu" id="login" title="my CalPoly login">my CalPoly login</a></div>    <div id="utilityNav"><ul><li id="maps"><a href="http://maps.calpoly.edu/" title="Maps">Maps</a></li>
+<li id="searchli"><div id="search"><form method="get" title="Search Form" action="https://www.calpoly.edu/search/?q=">
+	<div>
+		<input id="searchField" type="text" maxlength="256" placeholder="Search" title="Search this site" name="q" alt="Search Text" />
+		<input id="searchSubmit" type="image" name="submit" title="Submit Search Query" alt="Go" src="/sites/all/themes/cpstandard_r/common/images_html/header/search-arrow.png" />
+	</div>
+</form></div></li></ul></div>          
+    <div id="headerContent">
+      <div id="headerTop">
+        <div id="cplogo">
+          <a href="https://www.calpoly.edu/" >
+            <img title="Go to Cal Poly Home" alt="Cal Poly" src="/sites/all/themes/cpstandard_r/common/images_html/header/cplogo.svg">
+          </a>
+        </div>
+
+        <div id="mobileNavDept">
+          <div id="mobileIcons">
+          </div>
+        </div>
+      </div>
+
+      <div id="mobileNav">
+        <ul id="mobileMenu" style="display: none;">
+        </ul>
+        <ul id="mobileSearch" style="display: none;"><li id="searchli"><div id="search"><form method="get" title="Search Form" action="https://www.calpoly.edu/search/?q=">
+	<div>
+		<input id="searchField" type="text" maxlength="256" placeholder="Search" title="Search this site" name="q" alt="Search Text" />
+		<input id="searchSubmit" type="image" name="submit" title="Submit Search Query" alt="Go" src="/sites/all/themes/cpstandard_r/common/images_html/header/search-arrow.png" />
+	</div>
+</form></div></li></ul>
+      </div><!-- end #mobileNav -->
+
+      <div id="headerBottom">
+        <div id="deptName"><h2><a href="/">Office of the Provost</a></h2><h3></h3></div>
+      </div>
+    </div>
+        </header>
+
+  <nav>
+    <ul id="cpUl" class="cpStandardNav"><li><a href="/content/index">Home</a></li>
+<li><a href="http://academicaffairs.calpoly.edu">Academic Affairs</a></li>
+<li><a href="https://www.calpoly.edu/colleges">Academic Areas</a></li>
+<li><a href="/content/administrative-areas">Administrative Areas</a></li>
+<li><a href="https://academicaffairs.calpoly.edu/content/academic-affairs-roster">Academic Affairs Roster</a></li>
+<li><a href="/content/provost-contact-form">Contact</a></li>
+</ul>  </nav>
+
+  
+  
+  <!-- Old Breadcrumb Processing -->
+    <div id="breadcrumb"><a href="/">Home</a> : Messages from the Office of the Provost</div>
+          <div id="rightCol">
+        <div id="block-menu-menu-officeofprovost" class="block block-menu " >
+  <h2>Office of the Provost</h2>
+<ul><li class="first leaf"><a href="/content/AboutProvost" title="">About the Provost</a></li>
+<li class="leaf"><a href="/provost-office-directory" title="">Provost Office Directory</a></li>
+<li class="leaf"><a href="https://provost.calpoly.edu/messages" title="">Messages from the Office of the Provost</a></li>
+<li class="leaf"><a href="/aiconvening2025" title="">AI Convening</a></li>
+<li class="last collapsed"><a href="/EndowmentsInternshipsAwards" title="">Endowments, Internships and Awards</a></li>
+</ul></div>
+
+    </div>
+    
+    <main id="">
+      <a id="topH1"></a>
+                  <div id="contentLine"></div>            
+      <!-- Old Page Title Processing
+              <h1 class="page-title"></h1>
+            -->
+      
+      <div id="mainLeftFull"><div id="contentHeader"><h1 class="page-title">Messages from the Office of the Provost</h1></div>    <div id="block-system-main" class="block block-system " >
+
+<div class="field field-name-body field-type-text-with-summary field-label-hidden"><div class="field-items"><div class="field-item even" property="content:encoded"><h2 id="Winter_2026">Winter 2026</h2>
+
+<div class="accordion">
+<div>
+<h3 id="Save_the_Dates:_Dean_of_CENG_Candidate_Visits">1/12/26 - <span><span><span><span><span><span>Save the Dates: Dean of CENG Candidate Visits</span></span></span></span></span></span></h3>
+</div>
+
+<div>
+<p><span><span><span>On behalf of the Consultative Search Committee for the Dean of the College of Engineering (CENG), we are pleased to share that Cal Poly will soon host up to four finalists for the role. </span></span></span></p>
+
+<p><span><span><span>Please save the following dates for potential three-day finalist visits</span><span>, which will take place across both campuses:</span></span></span></p>
+
+<ul><li><span><span><span>Feb. 25-27</span></span></span></li>
+	<li><span><span><span>March 2-4</span></span></span></li>
+	<li><span><span><span>March 4-6</span></span></span></li>
+	<li><span><span><span>March 11-13</span></span></span></li>
+	<li><span><span><span>March 16-18</span></span></span></li>
+</ul><p><span><span><span>The first two days of each visit will be held on the San Luis Obispo campus, and the third day will be held on the Solano campus.</span></span></span></p>
+
+<p><span><span><span>Each visit will include an open forum on the first day from<b> </b></span><strong><span>11:10 a.m. to noon</span></strong><span>, offered both in person and via Zoom and open to all members of the campus community.</span></span></span></p>
+
+<p><span><span><span>Information about each finalist, forum locations, Zoom links and a feedback survey will be shared in advance of the visits.</span></span></span></p>
+
+<p><span><span><span>The CENG search committee is chaired by </span><strong><span>John Pan</span></strong><span>, chair of the Industrial and Manufacturing Engineering Department.</span></span></span></p>
+
+<p><span><span><span>Thank you in advance for your participation.</span></span></span></p>
+</div>
+</div>
+
+<div class="accordion">
+<div>
+<h3 id="Update_on_the_College_of_Engineering_Dean_Search">1/8/26 - Update on the College of Engineering Dean Search</h3>
+</div>
+
+<div>
+<p data-olk-copy-source="MessageBody">Dear Colleagues,</p>
+
+<p>As we continue the national search for the next dean of the College of Engineering (CENG), I’m pleased to share an important development: Cal Poly has established an endowed, named deanship for the college, supported by a $10 million endowment.</p>
+
+<p>In this role, the dean will provide external and universitywide strategic leadership for the College of Engineering and the Noyce School of Applied Computing. Noyce will continue to operate as a school under the leadership of Director Chris Lupo. This structure is intended to support deeper integration of engineering and computing across the university, strengthen interdisciplinary collaboration, and advance industry and external partnerships.</p>
+
+<p>This endowment represents a long-term institutional commitment to the strength, visibility and impact of engineering at Cal Poly. It will provide sustained resources to advance strategic priorities, support faculty and staff excellence, strengthen research and innovation, and expand opportunities for students.</p>
+
+<p>An endowed, named deanship elevates the scope of this role and strengthens our ability to recruit a leader with the experience and vision to build on the strong foundation and momentum already in place. The formal title associated with this endowed deanship will be announced later this year.</p>
+
+<p>This development does not change the trajectory of the search, which continues to move forward under the guidance of the current search committee, led by John Pan, chair of the Industrial and Manufacturing Engineering Department. I’m grateful to the committee for their leadership and service in this important work.</p>
+
+<p>As part of the search process, Cal Poly will soon host visits with finalists on both the San Luis Obispo and Solano campuses. These visits will include an open forum with the campus community, offered both in person and via Zoom. Additional details will be provided in advance.</p>
+
+<p>Thank you for your continued engagement and for your participation in this process as we move forward together in support of our students and the university.</p>
+
+<p>Sincerely,</p>
+
+<p>Al Liddicoat<br />
+Provost and Executive Vice President for Academic Affairs</p>
+</div>
+</div>
+
+<div class="accordion">
+<div>
+<h3 id="Update_on_Fall_2026_TeacherScholar_Model_Assigned_Time_Program">1/8/26 - <span><span>Update on Fall 2026 Teacher–Scholar Model Assigned Time Program</span></span></h3>
+</div>
+
+<div>
+<p><span><span><span>Dear Colleagues,</span></span></span></p>
+
+<p><span><span><span>As we begin the winter quarter and prepare academic schedules for 2026-27, I am sharing an update on the Teacher-Scholar Model (TSM) assigned-time program, which will launch in fall 2026. Thank you for the thoughtful planning already underway across departments and colleges to support this transition. </span></span></span></p>
+
+<p><span><span><span>Beginning in fall 2026, eligible tenure-line faculty will receive 3 WTUs each academic year for research, scholarship and creative activity while maintaining a minimum instructional load of 6 WTUs. This professional development program was designed to be clear and equitable and has been shaped through collaboration with deans, department heads and faculty leadership.</span></span></span></p>
+
+<p><span><span><span>As implementation gets underway, deans, department heads, chairs and staff will play a central role in supporting faculty and aligning instructional planning with program expectations. This work is further supported by the recent announcement of approximately 130 new faculty positions that will help strengthen instructional capacity across the university.</span></span></span></p>
+
+<p><span><span><span>At the heart of this effort is that students thrive when they learn from faculty who are active scholars, who bring their research and discovery into the classroom, and who invite students into the process of inquiry, creativity and innovation. Providing dedicated, protected time for research, scholarship and creative activity is an investment in faculty excellence and in the Learn by Doing environment that defines Cal Poly.</span></span></span></p>
+
+<p><span><span><span>More information, including eligibility, program parameters and a faculty-facing FAQ, is available on the new </span><a href="https://academicaffairs.calpoly.edu/teacher-scholar-model"><span>Teacher-Scholar Model landing page.</span></a></span></span></p>
+
+<p><span><span><span>Thank you for your continued leadership, partnership and commitment to our students and to Cal Poly’s academic excellence.</span></span></span></p>
+
+<p><span><span><span>Sincerely,</span></span></span></p>
+
+<p><span><span><span>Al Liddicoat</span><br /><span>Provost and Executive Vice President for Academic Affairs</span></span></span></p>
+</div>
+</div>
+
+<h2 id="Fall_2025">Fall 2025</h2>
+
+<div class="accordion">
+<div>
+<h3 id="End-of-Year_Message_from_the_Provost">12/11/25 - <span><span>End-of-Year Message from the Provost</span></span></h3>
+</div>
+
+<div>
+<p><span><span><span>Dear Colleagues,</span></span></span></p>
+
+<p><span><span><span>As I wrap up my first full quarter as provost, I continue to be impressed by the dedication and expertise our Academic Affairs faculty and staff bring to our students and to Cal Poly. I am grateful for the thoughtful conversations, candid insights and partnership many of you have offered across both campuses.</span></span></span></p>
+
+<p><span><span><span>This has been a quarter of meaningful progress. We celebrated the reopening of the transformed Kennedy Library, advanced transfer pathways with Cuesta and Allan Hancock colleges to expand four-year degree access for local students and welcomed new academic leaders who are further strengthening collaboration across colleges and campuses. These accomplishments, among many others, reflect the momentum you have helped build and the shared focus on student success that defines our community.</span></span></span></p>
+
+<p><span><span><span>Your contributions and feedback continue to guide our work. Interest in intentional, academically grounded engagement with artificial intelligence shaped this fall’s AI Convening, which brought together faculty and staff to explore the responsible, ethical use of AI in higher education. Our research community also moved forward through the administrative support assessment, integrating faculty and staff perspectives that were critical to informing improvements to better support scholarship and creative activity.</span></span></span></p>
+
+<p><span><span><span>We also saw important progress on several major university initiatives that position Cal Poly for the future. Maritime integration advanced through our first common student application cycle and continued academic alignment. Faculty and departments on both campuses are building meaningful collaborations through curriculum decisions and shared governance in the Academic Senate. </span></span></span></p>
+
+<p><span><span><span>Semester Conversion reached a significant milestone with the release of the new semester catalog, marking the culmination of three years of curriculum work by faculty and the catalog team. Students are already benefiting from expanded support resources, including the recent Semester Conversion Resource Carnival, which connected nearly 500 students with faculty, advisors and campus partners.</span></span></span></p>
+
+<p><span><span><span>Planning for Year-Round Operations also continued this fall. Through college meetings, town halls, and data analysis, we are learning how a year-round model can expand access, increase flexibility, and strengthen student success. We are also learning from institutions that have successfully implemented similar models as we consider what will work best for Cal Poly.</span></span></span></p>
+
+<p><span><span><span>These initiatives are ambitious, and I recognize the time and effort they require. Thank you for the leadership and adaptability you continue to demonstrate as we move this work forward together. </span></span></span></p>
+
+<p><span><span><span>In the year ahead, we will finalize the new academic calendar; prepare for full Maritime integration, where we will officially welcome the first class of Cal Poly Maritime Academy students; deepen our work on Year-Round Operations; and launch our enhanced Teacher-Scholar Model. Learn by Doing will continue to guide these efforts as we focus on what best supports our students and our academic community.</span></span></span></p>
+
+<p><span><span><span>My commitment remains to lead with transparency, collaboration, and a shared focus on the success of students, faculty, and staff. I welcome your ideas and feedback and encourage you to continue engaging through our </span><a href="https://forms.office.com/Pages/ResponsePage.aspx?id=2wING578lUSVNx03nMoq54Gxm9Xa_ipBkvROQg1M8DtUN0VDSjhMWDRUWUgwV1pFSks2UjNIQkw3Ty4u"><span>Office of the Provost feedback form</span></a><span>.</span></span></span></p>
+
+<p><span><span><span>Thank you for your extraordinary contributions. I look forward to the work we will do together in the new year. I hope you find time this winter break to rest, recharge and reflect on all you have accomplished. Enjoy the well-deserved time off!</span></span></span></p>
+
+<p><span><span><span>Sincerely,</span></span></span></p>
+
+<p><span><span><span>Al Liddicoat</span><br /><span>Provost and Executive Vice President for Academic Affairs</span></span></span></p>
+</div>
+</div>
+
+<div class="accordion">
+<div>
+<h3 id="Research_Administration_Assessment:_Priorities_and_Next_Steps">12/10/25 - Research Administration Assessment: Priorities and Next Steps</h3>
+</div>
+
+<div>
+<p data-olk-copy-source="MessageBody">Dear Colleagues,</p>
+
+<p>Thank you to everyone who contributed to the recent assessment of Cal Poly’s research administration services. The findings showed that while our research enterprise has grown significantly, our current administrative systems have not kept pace. Through faculty and staff feedback, we consistently heard that delays, unclear processes and inconsistent support create barriers for researchers and add to workload pressures. To better support the faculty, staff and students driving Cal Poly’s scholarly and creative work, we need to modernize our processes, structures and tools.</p>
+
+<p>The assessment highlighted several areas where we can strengthen our foundation. In response, we will prioritize the following actions:</p>
+
+<ul><li>Simplify and standardize processes for clarity and transparency.</li>
+	<li>Strengthen faculty support through faster, more consistent service.</li>
+	<li>Clarify roles and responsibilities to reduce overlap and delays.</li>
+	<li>Aligning staffing and structure with increased research activity.</li>
+	<li>Improve technology integration and access to system-driven data tools and dashboards.</li>
+	<li>Provide clearer compliance guidance through policies and training.</li>
+	<li>Enhance financial management for efficiency and visibility.</li>
+</ul><p>Our immediate goal is to define and formalize roles and responsibilities in research administration. Clarifying these will help reduce workload pressures, streamline handoffs and ensure more consistent service universitywide. We will also review proposal timeline flexibility and set service-level expectations, both of which the report highlighted as crucial to improving faculty experience and accelerating turnaround times.</p>
+
+<p>To help guide this work, we are establishing the <strong>University Research Advisory Committee</strong>, which will provide regular input, elevate concerns and help shape recommendations as they are developed and implemented.</p>
+
+<p><strong>If you are interested in serving, please complete the interest form by Friday, Jan. 9:</strong><br /><a data-auth="NotApplicable" data-linkindex="1" href="https://forms.office.com/Pages/ResponsePage.aspx?id=2wING578lUSVNx03nMoq57y-WFxL_ppIt9ihFsU1MwhUNlM4OUg5TU9OMlpBVEZZSERISVhIR0QxVi4u" rel="noopener noreferrer" target="_blank" title="https://forms.office.com/Pages/ResponsePage.aspx?id=2wING578lUSVNx03nMoq57y-WFxL_ppIt9ihFsU1MwhUNlM4OUg5TU9OMlpBVEZZSERISVhIR0QxVi4u">University Research Advisory Committee - Interest Form</a><br />
+Selected members will be notified by mid-January, and the committee will begin meeting later that month. The committee will meet every two weeks for six months, and members should expect to spend approximately 2 to 4 hours per month reviewing materials and participating in discussions.</p>
+
+<p>We are also pleased to share that Alexis Sexton, assistant vice president for finance in the Office of Research, will serve as transformation lead for this effort. In this role, Alexis will work closely with consulting partner Huron and campus stakeholders to guide implementation of the assessment recommendations. She will coordinate improvements across research administration, troubleshoot emerging challenges and partner with Dean Wendt in supporting the University Research Advisory Committee as it begins its work.</p>
+
+<p>Thank you for your partnership and for the many ways you contribute to Cal Poly’s scholarly and creative achievements. Strengthening these systems will not only support faculty and staff but also enhance the learning opportunities we provide for our students. We look forward to continuing this important work together.</p>
+
+<p>Sincerely,<br /><br />
+Al Liddicoat<br />
+Provost and Executive Vice President for Academic Affairs</p>
+
+<p>Dean Wendt<br />
+Interim Associate Vice Provost for Research<br />
+Dean, Bailey College of Science and Mathematics</p>
+</div>
+</div>
+
+<div class="accordion">
+<div>
+<h3 id="Deloittes_Mekena_McGrew_to_keynote_Cal_Polys_AI_Convening_Nov._6">10/28/25- Deloitte’s Mekena McGrew to keynote Cal Poly’s AI Convening — Nov. 6</h3>
+</div>
+
+<div>
+<p>Dear Colleagues,</p>
+
+<p><strong>Mekena McGrew</strong>, quantum information lead at Deloitte and member of the Noyce School of Applied Computing Advisory Board and Noyce distinguished speaker, will deliver the keynote address at Cal Poly’s inaugural <strong>AI Convening</strong> on <strong>Thursday, Nov. 6</strong>, in the <strong>Advanced Technology Lab (ATL)</strong>.</p>
+
+<p>Her talk, “AI and Business Transformation” <strong>(2:45-3:45 p.m.), </strong>will examine how quantum and artificial intelligence technologies are reshaping data analytics and decision-making across industries.</p>
+
+<p>The AI Convening, hosted by the Office of the Provost and the Noyce School of Applied Computing, will also feature panel discussions on applied and responsible uses of AI in teaching, research and university operations.<br /><br />
+All faculty and staff are invited to attend the full program, and students are welcome at the keynote<strong>. </strong>In addition to in-person attendance, colleagues are encouraged to join sessions virtually throughout the day. The keynote and all panels will be livestreamed and recorded for later viewing.</p>
+
+<p><strong>Date:</strong> Thursday, Nov. 6, 2025<br /><strong>Time:</strong> 9 a.m.-5:00 p.m. (Keynote 2:45-3:45 p.m.)<br /><strong>Location:</strong> Advanced Technology Lab (ATL)<br /><strong>Virtual Access:</strong> Join via Zoom: <a href="https://calpoly.zoom.us/j/89445621547" target="_new">https://calpoly.zoom.us/j/89445621547</a><br /><strong>Full program and registration:</strong> <a href="https://provost.calpoly.edu/aiconvening2025"><strong>AI Convening webpage</strong></a></p>
+
+<p>Sincerely,<br /><br />
+Office of the Provost<br />
+Noyce School of Applied Computing</p>
+</div>
+</div>
+
+<div class="accordion">
+<div>
+<h3 id="Register_now_for_Cal_Polys_AI_Convening_November_6">10/15/25- Register now for Cal Poly’s AI Convening — November 6</h3>
+</div>
+
+<div>
+<p>Dear Colleagues, </p>
+
+<p>The Office of the Provost and the Noyce School of Applied Computing invite Cal Poly faculty and staff to participate in the <strong>Cal Poly AI Convening</strong> on <strong>Thursday, Nov. 6, 2025</strong>, in the <strong>Advanced Technology Lab (ATL)</strong>.</p>
+
+<p><strong>Date:</strong> Thursday, Nov. 6, 2025<br /><strong>Time:</strong> 9 a.m. - 5 p.m.<br /><strong>Location:</strong> Advanced Technology Lab (ATL), Cal Poly<br /><strong>Registration: </strong><a href="https://forms.office.com/r/cYDY7y8Q8H">Register to attend</a><br /><em>*Virtual attendance will be available for the panels and keynote. Zoom links will be shared on the</em> <a href="https://provost.calpoly.edu/aiconvening2025"><strong><em>AI Convening webpage</em></strong></a><em> prior to the event.</em></p>
+
+<p>This inaugural event brings together faculty, staff and industry partners to explore how AI is shaping teaching, research, creative practice and operations. Cal Poly colleagues are already finding creative and responsible ways to apply AI. The convening offers a chance to connect across disciplines, share ideas and consider how applied and responsible uses of AI can strengthen our collective work.</p>
+
+<p>The day will include:</p>
+
+<ul><li><strong>Faculty Panels</strong> on AI in teaching, learning and research</li>
+	<li><strong>Staff Panel</strong> on AI in administration and operations</li>
+	<li><strong>Faculty Poster Session and Staff Showcase </strong><em>(lunch provided to registered attendees)</em></li>
+	<li><strong>Industry Keynote</strong> on AI and business transformation</li>
+	<li><strong>Networking Reception </strong><em>(refreshments provided)</em></li>
+</ul><p><strong>View the full agenda and additional details on the </strong><a href="https://provost.calpoly.edu/aiconvening2025"><strong>AI Convening webpage</strong></a><strong>.</strong></p>
+
+<p>Whether you’re just beginning to explore AI or already integrating it into your work, all experience levels are welcome and encouraged to attend. We look forward to the conversations and collaborations this event will spark across our campus community.<br />
+ </p>
+
+<p>Sincerely,</p>
+
+<p>Office of the Provost<br />
+Noyce School of Applied Computing</p>
+</div>
+</div>
+
+<div class="accordion">
+<div>
+<h3 id="Instructional_Materials_Accessibility_Compliance_April_2026_Deadline">10/6/25- Instructional Materials Accessibility Compliance – April 2026 Deadline</h3>
+</div>
+
+<div>
+<p data-olk-copy-source="MessageBody">Dear Colleagues,<br /><br />
+As part of CSU Executive Order 1111 and in compliance with federal law (ADA and Section 508), all digital instructional materials for spring 2026 courses and beyond must be fully accessible by <strong>April 24, 2026</strong>. This systemwide mandate ensures every student has equitable access to learning. The following describes the work to be completed and the resources we have in place to support it. Please know that you are not on your own; we are here to partner with you!</p>
+
+<p><strong>What this means for faculty:</strong><br />
+Accessibility applies to all published digital course materials, regardless of mode or format. Examples of accessible practices include captioning videos, adding alt text for images, using proper document structure, and checking Canvas content with the accessibility checker tool called <a data-auth="NotApplicable" data-linkindex="1" href="https://canvassupport.calpoly.edu/Access4All" rel="noopener noreferrer" target="_blank" title="https://canvassupport.calpoly.edu/Access4All">Access4All</a>. Access4All is a Canvas plug-in that allows you to check your course for accessibility and provides detailed steps on how to fix inaccessible content.</p>
+
+<p><strong>Support available:</strong><br />
+The Center for Teaching, Learning, and Technology (CTLT) team offers direct support for prioritized courses, as well as training, consultations, workshops and tools to support you at every stage. While faculty with Disability Resource Center (DRC) students in their spring courses will be prioritized for support from our new remediation service team, MIDAS (Making Instructional Documents Accessible to Students), both MIDAS and CTLT are also available to support as many faculty as possible. To discuss or schedule an appointment, please contact <a data-linkindex="2" href="mailto:access4all@calpoly.edu" title="mailto:access4all@calpoly.edu">access4all@calpoly.edu</a><strong>.</strong></p>
+
+<p>All faculty are also encouraged to visit the <a data-auth="NotApplicable" data-linkindex="3" href="https://canvassupport.calpoly.edu/accessible-courses" rel="noopener noreferrer" target="_blank" title="https://canvassupport.calpoly.edu/accessible-courses">Fixing Course Accessibility FAQs</a> webpage or email <a data-linkindex="4" href="mailto:canvassupport@calpoly.edu" title="mailto:canvassupport@calpoly.edu">canvassupport@calpoly.edu</a> for support with Canvas technical issues.  </p>
+
+<p><strong>Key checkpoints:</strong></p>
+
+<ul><li><strong>Fall 2025</strong>: For each course you expect to teach in spring 2026, <a data-auth="NotApplicable" data-linkindex="5" href="https://canvassupport.calpoly.edu/additional-test-course-request" rel="noopener noreferrer" target="_blank" title="https://canvassupport.calpoly.edu/additional-test-course-request">request a new Canvas sandbox course shell</a>, copy all course content into the shell, then use <a data-auth="NotApplicable" data-linkindex="6" href="https://canvassupport.calpoly.edu/tidyup" rel="noopener noreferrer" target="_blank" title="https://canvassupport.calpoly.edu/tidyup">TidyUp</a> to identify older, unused materials for removal, and use <a data-auth="NotApplicable" data-linkindex="7" href="https://canvassupport.calpoly.edu/Access4All" rel="noopener noreferrer" target="_blank" title="https://canvassupport.calpoly.edu/Access4All">Access4All</a> to ensure course accessibility. Video demonstrations showing how to complete this work are available on both the <a data-auth="NotApplicable" data-linkindex="8" href="https://canvassupport.calpoly.edu/tidyup" rel="noopener noreferrer" target="_blank" title="https://canvassupport.calpoly.edu/tidyup">TidyUp</a> and <a data-auth="NotApplicable" data-linkindex="9" href="https://canvassupport.calpoly.edu/Access4All" rel="noopener noreferrer" target="_blank" title="https://canvassupport.calpoly.edu/Access4All">Access4All</a> pages.</li>
+	<li><strong>Winter 2026</strong>: When Spring course shells open in late December, <a data-auth="NotApplicable" data-linkindex="10" href="https://app.guidde.com/share/playbooks/9Sn1RGq86m9QLath71tkyv" rel="noopener noreferrer" target="_blank" title="https://app.guidde.com/share/playbooks/9Sn1RGq86m9QLath71tkyv">copy the accessible materials</a> from your sandbox into each course shell and complete accessibility fixes <strong>before publishing</strong><strong>.</strong></li>
+	<li><strong>Spring 2026</strong>: All digital instructional materials must be fully accessible. Although the deadline is not until April 24, 2026, we recommend that all materials be accessible by the beginning of spring quarter 2026. Use <a data-auth="NotApplicable" data-linkindex="11" href="https://canvassupport.calpoly.edu/creating-accessible-content-canvas#accessibilitychecker" rel="noopener noreferrer" target="_blank" title="https://canvassupport.calpoly.edu/creating-accessible-content-canvas#accessibilitychecker">Canvas's built-in accessibility checker</a> to fix course materials already in Canvas. New materials should be made accessible before uploading them to Canvas and can be rechecked for any remaining issues once uploaded by running <a data-auth="NotApplicable" data-linkindex="12" href="https://canvassupport.calpoly.edu/creating-accessible-content-canvas#accessibilitychecker" rel="noopener noreferrer" target="_blank" title="https://canvassupport.calpoly.edu/creating-accessible-content-canvas#accessibilitychecker">Canvas's built-in accessibility checker</a>. CTLT is developing more video tutorials on how to make your materials accessible before you upload them, and we will share them with you soon.</li>
+</ul><p>Once again, please know that CTLT, MIDAS and I are all here to partner and support this work, so that we can meet this important systemwide commitment together. By ensuring accessibility, we affirm our shared responsibility for student success. Should you have any questions, please do not hesitate to reach out to us at the email addresses above or to me.</p>
+
+<p>Sincerely,</p>
+
+<p>Teshia Roby<br />
+Associate Provost, Academic Innovations and Programs</p>
+</div>
+</div>
+
+<div class="accordion">
+<div>
+<h3 id="Leadership_Update:_Extended_Professional_and_Continuing_Education">9/30/25 - Leadership Update: Extended, Professional, and Continuing Education</h3>
+</div>
+
+<div>
+<p>Dear Colleagues,   </p>
+
+<p paraeid="{c18f801d-6601-4c90-a6b3-a8b561288212}{64}" paraid="1535001616">I am pleased to announce that, effective Oct. 1, Damon Fleming, dean of the Orfalea College of Business (OCOB), will also serve as interim dean of Extended, Professional, and Continuing Education (EPaCE). He will serve in this role until Aug. 30, 2026, or until a permanent dean is appointed. Damon will oversee EPaCE’s overall strategy while continuing as dean of OCOB and will report directly to me as provost. </p>
+
+<p paraeid="{c18f801d-6601-4c90-a6b3-a8b561288212}{98}" paraid="1419163945">In this role, Damon will focus on strengthening the for-credit program model, developing a sustainable framework for long-term growth and expanding opportunities for extended education at the Cal Poly Solano Campus.  </p>
+
+<p paraeid="{c18f801d-6601-4c90-a6b3-a8b561288212}{110}" paraid="1200662096">Damon brings more than 20 years of higher education leadership experience. At Cal Poly, he has led OCOB through accreditation renewal, semester conversion planning, and the implementation of new student success initiatives. He also has extensive experience managing complex budgets and building partnerships across disciplines and with industry. </p>
+
+<p paraeid="{c18f801d-6601-4c90-a6b3-a8b561288212}{124}" paraid="601630313">I am also delighted to announce that Bianca Uway has been appointed interim executive director of EPaCE, overseeing day-to-day programmatic and administrative operations and reporting to Damon. Bianca has been with EPaCE since 2022 and brings valuable institutional experience, strong financial and program leadership and a proven record of collaboration across the university. </p>
+
+<p paraeid="{c18f801d-6601-4c90-a6b3-a8b561288212}{162}" paraid="39704782">I am grateful for Damon’s leadership and Bianca’s partnership in guiding EPaCE through this period of transition and growth. Please join me in congratulating and supporting them both in their new roles. </p>
+
+<p paraeid="{c18f801d-6601-4c90-a6b3-a8b561288212}{170}" paraid="1699936436">Sincerely, <br />
+ <br />
+Al Liddicoat <br />
+Provost and Executive Vice President for Academic Affairs </p>
+</div>
+</div>
+
+<div class="accordion">
+<div>
+<h3 id="Cal_Polys_Academic_Policies">9/24/25 - Cal Poly’s Academic Policies</h3>
+</div>
+
+<div>
+<p>Dear Colleagues,   </p>
+
+<p>We hope the start of the fall quarter has gone well and that you are settling into the new academic year. As you continue your teaching this quarter, please review the academic policies listed on the <a href="https://academicprograms.calpoly.edu/content/academicpolicies/index">Academic Programs and Planning website</a> and the <a href="https://policy.calpoly.edu/cap/200/">Campus Administrative Policies website</a>, including those based on Title 5, CSU executive orders, systemwide policies, and Academic Senate resolutions.</p>
+
+<p>Among the many policies available at that site, the following are especially relevant:</p>
+
+<ul><li><a href="https://policy.calpoly.edu/cap/200/cap-210#cap-211" target="_blank">Academic Calendar</a> </li>
+	<li><a href="https://academicprograms.calpoly.edu/cal-poly-mission-statement">Cal Poly Mission Statement</a> </li>
+	<li>Cal Poly Statements on <a href="https://academicprograms.calpoly.edu/academicpolicies/Academic-freedom" target="_blank">academic freedom</a>, <a href="https://academicprograms.calpoly.edu/content/academicpolicies/community_commitment_statement" target="_blank">commitment to community</a>, and <a href="https://academicprograms.calpoly.edu/content/academicpolicies/diversity-statement" target="_blank">diversity</a>.  </li>
+	<li><a href="https://academicprograms.calpoly.edu/content/academicpolicies/Cheating" target="_blank">Cheating and Plagiarism</a>  </li>
+	<li><a href="https://academicprograms.calpoly.edu/content/academicpolicies/class-attendance" target="_blank">Class Attendance</a>  </li>
+	<li><a href="https://registrar.calpoly.edu/course-policies-guidelines">Course Policies and Guidelines</a></li>
+	<li><a href="https://academicprograms.calpoly.edu/content/academicpolicies/course-syllabi" target="_blank">Course Syllabi</a>  </li>
+	<li><a href="https://academicprograms.calpoly.edu/content/academicpolicies/diversity_lo">Diversity Learning Objectives</a>  </li>
+	<li><a href="https://academicprograms.calpoly.edu/content/academicpolicies/final-exams" target="_blank">Final Assessments (Exams)</a> </li>
+	<li><a href="https://catalog.calpoly.edu/academicstandardsandpolicies/grading/" target="_blank">Grading</a>  </li>
+	<li><a href="https://academicprograms.calpoly.edu/content/academicpolicies/learn-by-doing" target="_blank">Learn by Doing</a>  </li>
+	<li><a href="https://academicsenate.calpoly.edu/content/faq-office-hours" target="_blank">Office Hours </a> </li>
+	<li><a href="https://academicprograms.calpoly.edu/content/exam_retention" target="_blank">Retention of Exams, Graded Coursework, and Gradebook</a> </li>
+	<li><a href="https://academicprograms.calpoly.edu/content/academicpolicies/Policies-Undergrad/Senior-project" target="_blank">Senior Project</a>  </li>
+	<li><a href="https://academicprograms.calpoly.edu/content/academicpolicies/sustainability_lo" target="_blank">Sustainability Learning Objectives</a>  </li>
+	<li><a href="https://academicprograms.calpoly.edu/content/academicpolicies/policies-courses/carnegie-unit">The Credit Hour </a> </li>
+	<li><a href="https://academicprograms.calpoly.edu/content/academicpolicies/timely-accessibility-to-instructional-materials">Timely Accessibility of Instructional Materials</a></li>
+	<li><a href="https://academicprograms.calpoly.edu/content/academicpolicies/university_lo" target="_blank">University Learning Objectives</a>  </li>
+</ul><p>We ask that you pay particular attention to the <a href="https://afd.calpoly.edu/ehs/docs/student_safety_training_program.pdf" target="_blank">Student Health and Safety Training Program</a>, including your roles and responsibilities and the student training and documentation requirements. Relatedly, field trips and field-based work must comply with the <a href="https://academicprograms.calpoly.edu/content/academicpolicies/field-trip-policy" target="_blank">Field Trip</a> policy.</p>
+
+<p>Additional resources:</p>
+
+<ul><li>The <a href="https://ctlt.calpoly.edu/">Center for Teaching, Learning &amp; Technology (CTLT</a><strong>)</strong> offers a set of optional <a href="https://ctlt.calpoly.edu/syllabus-statements">syllabus statements</a> you may include in your courses.</li>
+	<li>The <a href="https://catalog.calpoly.edu/">online catalog</a>, provides <a href="http://flowcharts.calpoly.edu/mymap.php">flowcharts and curriculum sheets</a>, <a href="https://catalog.calpoly.edu/programsaz/">program learning objectives</a>, and the requirements, objectives, and criteria of <a href="https://ge.calpoly.edu/program/guidelines">General Education</a> that are useful for advising and course planning.</li>
+	<li>The <a href="https://diversity.calpoly.edu/resources">Office of Diversity and Inclusion</a> offers resources to guide and support faculty in addressing bias, navigating compliance and direct referral points for students in need.</li>
+</ul><p>Thank you for your attention to these important policies and resources. We wish you a productive and successful fall quarter.</p>
+
+<p>Sincerely, <br /><br />
+Office of the Provost</p>
+</div>
+</div>
+
+<div class="accordion">
+<div>
+<h3 id="Welcome_to_the_2025-26_Academic_Year">9/22/25 - Welcome to the 2025-26 Academic Year</h3>
+</div>
+
+<div>
+<p data-olk-copy-source="MessageBody">Dear Colleagues,</p>
+
+<p>Welcome to the 2025–26 academic year. Thank you for the dedication you bring to our students, to one another, and to Cal Poly. Whether in classrooms, labs, offices or aboard ship, your work sustains our academic excellence and advances our shared commitment to student success and Learn by Doing. As I begin serving as your permanent provost, I am eager to listen, learn and work alongside you across both the San Luis Obispo and Solano campuses.</p>
+
+<p>This summer, Academic Affairs welcomed several new leaders, advanced semester conversion planning, and formally integrated administratively with Cal Maritime. We also reaffirmed our commitment to the teacher-scholar model by providing tenure-line faculty 3 WTUs dedicated to research and creative activity starting in fall 2026. These efforts give us strong momentum as we begin the year.<br /><br />
+Looking ahead, we will build on that foundation as we enter the next phase of Year-Round Operations planning guided by the pillars of Transformation, Innovation and Opportunity. This work will expand student access to Cal Poly, strengthen universal student success and create new ways to support faculty scholarship. Shared governance and open dialogue across departments, colleges and units will be essential as we shape the path forward.<br /><br />
+Alongside Year-Round Operations planning, we will also continue to expand 2+2 community college partnerships to open more doors to a Cal Poly degree and initiate campuswide conversations about how to effectively and responsibly integrate artificial intelligence (AI) into academics at Cal Poly. Additionally, to support the enhanced teacher-scholar model, we will open about 130 faculty recruitments across our colleges to begin at Cal Poly during the 2026-27academic year —likely the largest single-year faculty investment in Cal Poly’s history.<br /><br />
+I know this level of change raises important questions about effort, planning, and the rhythms of academic life. For Year-Round Operations, our commitment is to a phased rollout, added resources and strong support at every step. The Strategic Initiatives and Advocacy team, led by Jessica Darin will provide guidance throughout, and additional resources will be made available for each initiative.<br /><br />
+I look forward to what we will achieve together this year. I invite you to continue asking questions and sharing your perspectives using <a data-auth="NotApplicable" data-linkindex="1" href="https://forms.office.com/Pages/ResponsePage.aspx?id=2wING578lUSVNx03nMoq54Gxm9Xa_ipBkvROQg1M8DtUN0VDSjhMWDRUWUgwV1pFSks2UjNIQkw3Ty4u" rel="noopener noreferrer" target="_blank" title="https://forms.office.com/Pages/ResponsePage.aspx?id=2wING578lUSVNx03nMoq54Gxm9Xa_ipBkvROQg1M8DtUN0VDSjhMWDRUWUgwV1pFSks2UjNIQkw3Ty4u"><strong>this form</strong></a>, or directly at <a data-linkindex="2" href="mailto:provost@calpoly.edu" title="mailto:provost@calpoly.edu">provost@calpoly.edu</a>.<br /><br />
+Sincerely,<br /><br />
+Al Liddicoat<br />
+Provost and Executive Vice President for Academic Affairs</p>
+</div>
+</div>
+
+<div class="accordion">
+<div>
+<h3 id="Cal_Polys_Religious_Observance_Policy">9/19/25 - Cal Poly’s Religious Observance Policy</h3>
+</div>
+
+<div>
+<p data-olk-copy-source="MessageBody">Dear Colleagues,<br /><br />
+As we begin the new academic year, it is important to be aware that members of the Cal Poly community may observe various religious holidays.<br /><br />
+In accordance with the <a data-auth="NotApplicable" data-linkindex="1" href="https://academicprograms.calpoly.edu/academicpolicies/class-attendance" rel="noopener noreferrer" target="_blank" title="https://academicprograms.calpoly.edu/academicpolicies/class-attendance">Campus Academic Policy on Class Attendance</a> and <a data-auth="NotApplicable" data-linkindex="2" href="https://www.eeoc.gov/statutes/title-vii-civil-rights-act-1964#:~:text=Title%20VII%20prohibits%20employment%20discrimination,Rights%20Act%20of%201991%20(Pub" rel="noopener noreferrer" target="_blank" title="https://www.eeoc.gov/statutes/title-vii-civil-rights-act-1964#:~:text=Title%20VII%20prohibits%20employment%20discrimination,Rights%20Act%20of%201991%20(Pub">Title VII of the Civil Rights Act of 1964</a>, Cal Poly offers students, faculty and staff the opportunity to observe the holidays of their chosen faith.<br />
+ </p>
+
+<ul><li><strong>Students:</strong> Religious holidays are considered an excused absence. Faculty members should work collaboratively with their students to find reasonable solutions for each case, ensuring students are not disadvantaged by such absences. When planning major assignments, it may be helpful to refer to this <a data-auth="NotApplicable" data-linkindex="3" href="http://interfaith.calpoly.edu/resources/holydays" rel="noopener noreferrer" target="_blank" title="http://interfaith.calpoly.edu/resources/holydays">i</a><a data-auth="NotApplicable" data-linkindex="4" href="https://interfaith.calpoly.edu/resources/holydays" rel="noopener noreferrer" target="_blank" title="https://interfaith.calpoly.edu/resources/holydays">nterfaith holiday calendar</a>.  <br />
+	 </li>
+	<li><strong>Faculty and staff:</strong> Supervisors should make reasonable accommodations for religious observances. Requests may be approved as vacation, a personal holiday,  or, in some cases, through a schedule adjustment.<br />
+	 </li>
+</ul><p>This year, some religious holidays that our students may celebrate fall in the first week of classes. As such, some students might reach out to inform professors of a possible absence. Please consider replying to these emails before class so students know they will not be dropped for missing class due to these holidays.<br /><br />
+Without a straightforward and equitable way to verify individual claims, requests related to religious observances should be accepted at face value and handled in a fair and respectful manner.<br /><br />
+Thank you for helping ensure Cal Poly remains an environment that supports and promotes the success of every student.<br /><br />
+Sincerely,<br /><br />
+Office of the Provost</p>
+</div>
+</div>
+
+<div class="accordion">
+<div>
+<h3 id="Semester_Conversion_Update:_Finalized_Scheduling_Patterns">9/11/25 - Semester Conversion Update: Finalized Scheduling Patterns</h3>
+</div>
+
+<div>
+<p data-olk-copy-source="MessageBody">Dear Colleagues,</p>
+
+<p>As we prepare for Cal Poly’s transition to semesters in fall 2026, we have finalized the scheduling patterns that will guide how courses and exams are offered. These decisions were shaped by extensive consultation with department schedulers, department chairs and heads, the Academic Senate, and the Registrar’s Office. We are grateful for the thoughtful input shared throughout this process.<br /><br />
+Two items required additional consideration: the timing of UU Hour and the length of final exams. We have now reached solutions that balance academic needs, student experience, and efficient use of classrooms.</p>
+
+<ul><li><strong>UU Hour</strong> will move to Fridays, 11:00–11:50 a.m., beginning fall 2026.</li>
+	<li><strong>Final exams</strong> will follow a 2½-hour schedule, providing sufficient testing time and 30 minutes of passing time between exams.</li>
+</ul><p>The complete semester scheduling patterns are available on the <a data-auth="NotApplicable" data-linkindex="1" href="https://registrar.calpoly.edu/academic-scheduling-semesters" rel="noopener noreferrer" target="_blank" title="https://registrar.calpoly.edu/academic-scheduling-semesters">Registrar’s website</a>, and additional information can be found on the <a data-auth="NotApplicable" data-linkindex="2" href="https://semesters.calpoly.edu/frequently-asked-questions" rel="noopener noreferrer" target="_blank" title="https://semesters.calpoly.edu/frequently-asked-questions">Semester conversion website</a>.<br /><br />
+Thank you for your partnership as we take this important step in preparing for semester conversion.</p>
+
+<p>Sincerely,<br /><br />
+Al Liddicoat<br />
+Interim Provost and Executive Vice President for Academic Affairs</p>
+
+<p>Jerusha Greenwood<br />
+Academic Senate Chair</p>
+</div>
+</div>
+
+<h2 id="Spring_2025">Spring 2025</h2>
+
+<div class="accordion">
+<div>
+<h3 id="End-of-Year_Note_from_the_Provost">6/12/25 - End-of-Year Note from the Provost</h3>
+</div>
+
+<div>
+<p>Dear Colleagues,</p>
+
+<p>As we wrap up the academic year, I want to thank you for your continued dedication to our students, to one another, and to the collective efforts that make Cal Poly such an amazing university. Whether in classrooms, labs, advising centers, offices, or across operations and administration, your contributions uphold the academic excellence and innovation that define our institution.</p>
+
+<p>Since stepping into the role of interim provost, I’ve had the opportunity to connect with many of you through department and college visits, leadership meetings, the Academic Senate, advisory council meetings and at other events on campus. These conversations have been candid and insightful. I’m grateful for the warm welcome home and am so excited to be back working with all of you while serving this wonderful community.</p>
+
+<p>This spring, we’ve made meaningful progress. We’ve advanced a new leadership structure for the Office of Research and began working with Huron to chart a path forward to better support faculty and student research at Cal Poly. I’ve also convened two working groups to assess strategic academic resource planning and academic computing resources, with the goal of identifying critical needs in a time of funding uncertainty. Additionally, along with President Armstrong and university leadership, I participated in listening sessions across colleges to understand priorities as revisions to the CSU budget come forward and discuss how growth may help address long-term resource needs.   </p>
+
+<p>Major university initiatives are also moving forward:</p>
+
+<ul><li><a href="https://cpslo.sharepoint.com/sites/Semesters/SitePages/ProjectHome.aspx"><strong>Semester Conversion</strong></a> remains on track for fall 2026. As of the June 3 Academic Senate meeting, review and approval of the semester curriculum proposals is nearly complete, with just one minor still in progress.  We are grateful to the curriculum committees and the Academic Senate for their diligent work and to those who will continue this work into the summer.  Implementation and system planning are underway, and new faculty and student support resources are planned to roll out in the coming months.</li>
+	<li>The<strong> </strong><a href="https://www.calpoly.edu/maritime"><strong>Cal Maritime Integration</strong></a><strong> </strong>is progressing with<strong> </strong>Cal Poly and Cal Maritime set to begin operating administratively as one university effective July 1, 2025. Current efforts are focused on aligning academic programs and services and preparing for a smooth 2025-26 bridge year for students, faculty and staff. Additionally, an agreement was reached in our meet and confer with CFA on the required faculty evaluation changes necessary to integrate our two university policies and processes. </li>
+</ul><p>As we prepare for the year ahead, I want to share my top priorities:</p>
+
+<ul><li><strong>Continue multi-year budget and resource planning</strong> in alignment with the university to enhance Learn by Doing, academic excellence, and student and employee success<strong>.</strong></li>
+	<li><strong>Expanding access to a Cal Poly degree</strong> for more California students through strengthened partner school networks, innovative degree programs, and year-round operations where appropriate.<strong> </strong>This includes continuing to expand and enhance our<strong> </strong>2+2 pathways with Cuesta College and Allan Hancock College.</li>
+	<li><strong>Strengthening our academic leadership team, </strong>including onboarding new leaders and continuing key searches. This summer, we’ll welcome three new permanent deans (CAFES, CAED, and CLA) and one interim dean (Library Services). In the fall, we will resume the search for the next CENG dean and launch a national search for the Library Services dean. These leadership transitions bring fresh perspectives and will help foster multidisciplinary and cross-departmental collaboration.</li>
+</ul><p>Our work in the Office of the Provost is grounded in service to the Cal Poly community. Looking ahead, we’ll continue to prioritize transparency, collaboration and a commitment to shared governance. As we plan for the coming academic year, I invite you to share your thoughts on what’s working well, where we can improve, or what you’d like to see more of in Academic Affairs. Feedback can be submitted anonymously using <a href="https://forms.office.com/Pages/ResponsePage.aspx?id=2wING578lUSVNx03nMoq54Gxm9Xa_ipBkvROQg1M8DtUN0VDSjhMWDRUWUgwV1pFSks2UjNIQkw3Ty4u"><strong>this form</strong></a>, or you can email us at provost@calpoly.edu.</p>
+
+<p>Thank you again for all that you do as we continue to lead the nation in Learn by Doing education. Your contributions make Cal Poly stronger and better prepared for the opportunities ahead.</p>
+
+<p>I hope you find time this summer to rest, recharge and reflect on all you’ve accomplished. I am excited and look forward to what we’ll achieve together in the coming year.</p>
+
+<p>Sincerely,<br /><br />
+Al Liddicoat<br />
+Interim Provost and Executive Vice President for Academic Affairs</p>
+</div>
+</div>
+
+<div class="accordion">
+<div>
+<h3 id="Update_on_the_College_of_Engineering_Dean_Search-1">6/11/25 - Update on the College of Engineering Dean Search</h3>
+</div>
+
+<div>
+<p>Dear Campus Community,  </p>
+
+<p>Recently, four candidates for the College of Engineering (CENG) dean position participated in campus visits as part of a national search process. After careful deliberation and consideration of feedback from many and various campus constituents, I have decided to extend the current search and reopen the process in the next academic year.  </p>
+
+<p>Please be assured that I remain committed to appointing a new permanent dean of the college. President Armstrong and I are working with the executive search firm, Isaacson Miller, to assess opportunities for enhancing the next phase of the search. </p>
+
+<p>I am grateful to the consultative search committee for their dedicated work on this search and to the members of the campus community who participated in the search process, engaged with and provided feedback on the visiting candidates.  </p>
+
+<p>Bob Crockett’s service as interim dean of the College of Engineering (CENG) will be extended while the search continues. Please join me in thanking Bob for his willingness to continue leading during this transition to help ensure the college's and university's continued success. </p>
+
+<p>Sincerely, <br />
+ <br />
+Al Liddicoat <br />
+Interim Provost and Executive Vice President for Academic Affairs </p>
+</div>
+</div>
+
+<div class="accordion">
+<div>
+<h3 id="Supporting_Our_Community_During_Difficult_Times">6/9/25 - Supporting Our Community During Difficult Times</h3>
+</div>
+
+<div>
+<p>Dear Colleagues,</p>
+
+<p>As events continue to unfold in the Los Angeles area, members of our Cal Poly community may be experiencing uncertainty, disrupted routines, or emotional distress in response to social and political unrest.</p>
+
+<p>Please consider extending compassion and flexibility to your students and colleagues who may be affected. This may include adjusting deadlines, offering leniency with attendance or providing other appropriate forms of support. Academic Senate Resolution <a href="https://content-calpoly-edu.s3.amazonaws.com/academicprograms/1/documents/Policies/AS-890-20%20Resolution%20on%20Class%20Attendance.pdf">AS-980-20</a> provides guidance for accommodating students who miss class due to extenuating circumstances. </p>
+
+<p>The following resources are also available:</p>
+
+<ul><li><a href="https://ctlt.calpoly.edu/"><strong>The Center for Teaching, Learning, and Technology (CTLT):</strong></a> Offers helpful resources, including the guide <a href="https://ctlt.calpoly.edu/responding-distressing-events">Acknowledge and Respond to Distressing Events.</a></li>
+	<li><strong>Counseling services for students</strong>: Available 24/7 by calling 805-756-2511. Further information can be found on the <a href="https://chw.calpoly.edu/">Campus Health &amp; Wellbeing website</a>.</li>
+	<li><strong>Employee Assistance Program (EAP): </strong>Provides confidential counseling services to Cal Poly employees and their household members<strong>. </strong>Empathia’s <a href="https://www.mylifematters.com/">LifeMatters</a> EAP can be reached 24/7 at 800- 367-7474.</li>
+	<li><strong><a href="https://deanofstudents.calpoly.edu/care">Campus Assessment, Response &amp; Education (CARE) Team</a>: </strong>Allows faculty or staff to <a href="https://calpoly-advocate.symplicity.com/care_report/index.php/pid836080">refer a student of concern</a>.</li>
+</ul><p>Your support is so important to the well-being of our students and in creating a sense of stability across campus. And please remember that as you care for others, take time to care for yourselves.</p>
+
+<p>Thank you for all that you do for our community.</p>
+
+<p>Sincerely,</p>
+
+<p>Al Liddicoat<br />
+Interim Provost and Executive Vice President for Academic Affairs</p>
+</div>
+</div>
+
+<div class="accordion">
+<div>
+<h3 id="Interim_Dean_of_Library_Services">5/19/25 - Interim Dean of Library Services</h3>
+</div>
+
+<div>
+<p data-olk-copy-source="MessageBody">Dear Cal Poly Library Colleagues, </p>
+
+<p>I am pleased to announce the appointment of Katherine O’Clair as interim dean of Library Services, effective July 1, 2025. She will serve in this role through June 30, 2026, or until a permanent dean is appointed. </p>
+
+<p>Katherine is a longtime member of the Kennedy Library faculty and a respected leader in academic librarianship with more than two decades of experience in higher education. Since joining Cal Poly in 2009, she has advanced through faculty ranks, earning tenure in 2013 and promotion to librarian in 2018. For the past six years, she has served as associate dean for Academic Services, providing strategic leadership for library programs that reflect Cal Poly’s Teacher-Scholar Model and Learn by Doing philosophy. </p>
+
+<p>Her scholarship and professional contributions include peer-reviewed articles, book chapters, conference presentations and an edited monograph focused on library practice and information literacy. She has held leadership roles in national organizations such as the American Library Association and the Association of College and Research Libraries and has served multiple terms on Cal Poly’s Academic Senate and Academic Assessment Council. </p>
+
+<p>Katherine holds a bachelor’s degree in environmental science from Nazareth College and a master's degree in library and information studies from Florida State University.  </p>
+
+<p>A national search for a permanent dean for library services will begin soon. Please join me in thanking Katherine for her service and leadership during this transition.  </p>
+
+<p>Sincerely, <br />
+ <br />
+Al Liddicoat <br />
+Interim Provost and Executive Vice President for Academic Affairs </p>
+</div>
+</div>
+
+<div class="accordion">
+<div>
+<h3 id="Maritime_Integration:_New_Academic_Updates">5/5/25 - Maritime Integration: New Academic Updates</h3>
+</div>
+
+<div>
+<p>Dear Cal Poly Faculty and Academic Affairs Staff, </p>
+
+<p>Before our colleagues at Cal Maritime completed their spring semester on Friday, May 2, I shared a message outlining academic updates that have solidified since my recent visit to their campus. I’m sharing those same updates with you to ensure that faculty and staff across both campuses are informed and aligned.  </p>
+
+<p><strong>Department of International Strategy &amp; Security (ISS) Alignment </strong><br />
+After consultations with stakeholders at both campuses, Maritime’s ISS program will now be merged with the Philosophy Department in the College of Liberal Arts (CLA). This updated alignment reflects faculty feedback and positions the program for long-term growth and success.  </p>
+
+<p><strong>Department of Sciences and Mathematics Alignment </strong><br />
+The following alignments of Maritime’s Department of Sciences and Mathematics have been updated: The math faculty will integrate with the mathematics department in the Bailey College of Science and Math (BCSM), and the faculty in natural sciences will transition intact as a department to the BCSM. Faculty in this department will continue to work with Dean Wendt, exploring ways to strengthen and enhance the connections with existing departments in BCSM and the oceanography program that draws from the expertise and synergies across the two campuses. </p>
+
+<p><strong>Business Program </strong><br />
+The 2026-28 catalog will include a single, unified business program taught on both campuses, including a new supply chain management concentration at the Solano campus starting in Fall 2026. </p>
+
+<p><strong>Mechanical Engineering </strong><br />
+We’re committed to maintaining ABET accreditation for Mechanical Engineering across both campuses. Faculty in both mechanical engineering programs will develop a common core curriculum in the 2025-26 academic year, which they will propose for review in the 2026-28 catalog cycle. </p>
+
+<p><strong>Library </strong><br />
+Maritime librarians and library staff will report to the dean of library services at Cal Poly with a continuation of the current Maritime operating model through the 2025-2026 academic year. </p>
+
+<p><strong>Solano Campus Chair and Coordinator Appointments </strong><br />
+To support continuity and academic operations at the Solano campus, we have finalized new chair and academic program coordinator assignments across several departments and areas. These appointments will begin July 1, 2025, and include some summer assignments, for which faculty will be compensated. Current chair and coordinator roles at Cal Maritime will remain in place through June 30, 2025. The new Solano-based roles will report to Cal Poly leadership and play a key role in supporting a smooth transition. Additionally, college deans are determining assigned time needs for faculty who will take on administrative responsibilities at the Solano campus in the 2025-26 academic year. </p>
+
+<p><strong>RTP Process </strong><br />
+Details regarding the RTP process for the 2025-26 academic year are still being worked out with the Chancellor’s Office and the California Faculty Association. The meet-and-confer process will continue until an agreement is made. We understand the importance of this issue and will share details as soon as possible.  </p>
+
+<p>Thank you for your continued engagement, collaboration and support as we work together toward successful integration. Questions and feedback can be sent to <a data-linkindex="1" href="mailto:cpcmintegration@calpoly.edu" title="mailto:cpcmintegration@calpoly.edu">cpcmintegration@calpoly.edu</a>.  </p>
+
+<p>Sincerely, <br /><br />
+Dr. Al Liddicoat <br />
+Interim Provost and Executive Vice President for Academic Affairs </p>
+</div>
+</div>
+
+<div class="accordion">
+<div>
+<h3 id="Research_Updates">5/1/25 - Research Updates</h3>
+</div>
+
+<div>
+<p>Dear Colleagues,</p>
+
+<p>As President Armstrong <a data-auth="NotApplicable" data-linkindex="1" href="https://content-calpoly-edu.s3.amazonaws.com/president/1/documents/Announcements/03.07.2025%20Follow-Up%20on%20Budget%20and%20Organizational%20Changes%20vs%202.pdf" rel="noopener noreferrer" target="_blank" title="https://content-calpoly-edu.s3.amazonaws.com/president/1/documents/Announcements/03.07.2025%20Follow-Up%20on%20Budget%20and%20Organizational%20Changes%20vs%202.pdf">shared earlier this year</a>, the research office is integrating into the Division of Academic Affairs. Effective today, May 1, this move aims to strengthen the connection between research and academic priorities while optimizing the systems and tools that support scholarly activity across campus. This is a restructuring and does not reflect a reduced commitment to research at Cal Poly.</p>
+
+<p>Dawn Neill, who has served as interim vice president for Research, has started a new position effective today as executive director of Pacific Engagement and Educational Partnerships in the Office of Strategic Initiatives and Advocacy. I am grateful for Dawn’s leadership, dedication and many contributions to research at Cal Poly, and I look forward to seeing her impact in this new role.</p>
+
+<p>Dean Wendt, dean of the Bailey College of Science and Mathematics (BCSM), will assume the role of interim associate vice provost of research. He will serve in this role through the next academic year or until a permanent appointment is made. Having previously served as Cal Poly’s dean of research, Dean brings a passion for scholarship, a high-level commitment to undergraduate research and a deep understanding of Cal Poly’s mission and values to the role. He has a strong record of securing external funding, advancing interdisciplinary collaboration and supporting the success of faculty, staff and students. He will continue to lead Bailey College while taking on these new responsibilities.</p>
+
+<p>We’ve also engaged with Huron Consulting, a firm that specializes in higher education operations, to help guide our efforts. They will conduct a comprehensive review of our research administration processes and provide recommendations and best practices that align with Cal Poly’s needs and our Learn by Doing ethos. We will share updates about this work as it progresses.</p>
+
+<p>Yesterday, Dean, Dawn and I had a chance to meet with the Department of Research to share these updates and answer questions. That team’s expertise and institutional knowledge will be invaluable as we move through these transitions.</p>
+
+<p>Thank you for your ongoing dedication as our research office continues to support faculty, staff and students engaged in scholarship and creative activities at Cal Poly.</p>
+
+<p>Sincerely, </p>
+
+<p>Dr. Al Liddicoat <br />
+Interim Provost and Executive Vice President for Academic Affairs </p>
+</div>
+</div>
+
+<div class="accordion">
+<div>
+<h3 id="Maritime_Integration_Academic_Update">4/23/25 - Maritime Integration Academic Update</h3>
+</div>
+
+<div>
+<p>Dear Colleagues, </p>
+
+<p>Yesterday, I had the opportunity to meet with Cal Maritime faculty and staff to share updates and hear their perspectives on the integration's academic aspects. In the spirit of transparency and collaboration, I want to ensure you are provided with the same information.  </p>
+
+<p>Here are highlights of what was shared:  </p>
+
+<p><strong>Continuity and Planning:</strong> The 2025–26 academic year will serve as a bridge year, allowing us to continue delivering essential services on both campuses with a strong focus on student, faculty and staff success while we build toward full academic integration in fall 2026. </p>
+
+<p><strong>Academic Services:</strong> Advising, tutoring, and library services in general will continue as-is through the bridge year. Planning teams have completed a service inventory and are identifying opportunities to strengthen alignment and delivery across both campuses. </p>
+
+<p><strong>Academic Programs:</strong> Progress is underway on overlapping programs such as Mechanical Engineering and Business, with new offerings in development.  Working with Dean Wendt, faculty are exploring ways of strengthening and enhancing the oceanography program drawing from the expertise and synergies across the two campuses. </p>
+
+<p><strong>Shared Governance:</strong> Maritime faculty integration into the Cal Poly Academic Senate is effective as of July 1. As part of their recent academic senate resolution, the Cal Poly Academic Senate created four at-large Solano campus senator positions for the 2025-26 academic year. All Solano at large senators will be selected by the Solano Campus faculty. In addition, the Cal Poly Academic Senate created a Solano specific position on all standing Academic Senate committees and on all upcoming ad hoc Academic Senate committees. The Cal Maritime Faculty Senate approved a resolution to merge with Cal Poly’s Academic Senate earlier this month. An ad hoc committee will evaluate long-term governance models during the bridge year. </p>
+
+<p><strong>Retention, Tenure and Promotion (RTP):</strong> A unified RTP process is currently under discussion through the meet-and-confer process being finalized for the 2025–26 academic year. We aim to share updates as soon as we have an agreement. </p>
+
+<p>These have also been incorporated into the FAQ available on the <a href="https://www.calpoly.edu/maritime" target="_blank">Cal Poly Maritime Integration website</a>. This page will be updated regularly, including responses to several questions raised during the session that we are still working to answer.  </p>
+
+<p>This integration is significant and complex, and we know it raises important questions about what is changing, what is staying the same, and how work may be impacted on both campuses. We will have opportunities to discuss these updates with Cal Poly faculty and staff. In the meantime, if you have questions or feedback, please email <a href="mailto:cpcmintegration@calpoly.edu" target="_blank">cpcmintegration@calpoly.edu</a>. </p>
+
+<p>Thank you for your continued partnership and commitment to our students and academic community. </p>
+
+<p>Sincerely, </p>
+
+<p>Dr. Al Liddicoat <br />
+Interim Provost and Executive Vice President for Academic Affairs </p>
+</div>
+</div>
+
+<div class="accordion">
+<div>
+<h3 id="A_Message_from_Interim_Provost_Dr._Al_Liddicoat">4/22/25 - A Message from Interim Provost Dr. Al Liddicoat</h3>
+</div>
+
+<div>
+<p>Dear Cal Poly Faculty and Academic Affairs Staff, </p>
+
+<p>It is an honor to return to Cal Poly as your interim provost and executive vice president for Academic Affairs. Having served this university in various capacities over the years, I have great respect for the work we do together to advance our mission of academic excellence and student success. </p>
+
+<p>My immediate priority is to engage with faculty, staff, students and our Cal Poly community members as I onboard and begin my new role. Together, we will build on the strong foundation that has made Cal Poly a leader in higher education while enhancing our collaboration and communication across the division. I look forward to collaborating on many of the high priority initiatives that are currently underway.   </p>
+
+<p>Over the past year, I have served as interim vice chancellor for human resources at the CSU Chancellor’s Office. This experience has deepened my understanding of the systemwide challenges and opportunities ahead and reaffirmed my commitment to clear communication, transparency and alignment of our priorities. I will bring this perspective to our work at Cal Poly as we continue to strengthen our university and better serve our campus community. </p>
+
+<p>I also want to express my sincere thanks to Dr. Lynnette Zelezny for her leadership as acting provost during this transition. Her thoughtful engagement with faculty and staff and focus on accessibility and communication have set a strong foundation for the path ahead. </p>
+
+<p>Each and every one of you contributes to the success of Cal Poly and our students. In the weeks ahead, I look forward to reconnecting with many of you, meeting new colleagues and hearing your perspectives. I am committed to ensuring the Provost’s Office remains accessible, responsive and engaged in the work that matters most to our campus community. </p>
+
+<p>Thank you for your continued dedication to Cal Poly. </p>
+
+<p>Wishing you all a fabulous spring quarter,  </p>
+
+<p>Dr. Al Liddicoat <br />
+Interim Provost and Executive Vice President for Academic Affairs </p>
+</div>
+</div>
+
+<div class="accordion">
+<div>
+<h3 id="Save_the_Dates:_Dean_of_CENG_Candidate_Visits_and_Open_Forums">4/9/25 - Save the Dates: Dean of CENG Candidate Visits &amp; Open Forums</h3>
+</div>
+
+<div>
+<p paraeid="{51eb70a2-1c09-4437-a80e-fd1a758237f9}{240}" paraid="1774821077">On behalf of the Consultative Search Committee for the Dean of the College of Engineering (CENG), we are pleased to share that Cal Poly will soon host up to four finalists for the role.  </p>
+
+<p paraeid="{ada523bb-7937-45ea-ada5-ecdf3adf0b56}{5}" paraid="1989977608">Please save the following dates for potential two-day finalist visits to campus:  </p>
+
+<ul><li paraeid="{ada523bb-7937-45ea-ada5-ecdf3adf0b56}{15}" paraid="85926392">May 5-6, 2025 </li>
+	<li paraeid="{ada523bb-7937-45ea-ada5-ecdf3adf0b56}{23}" paraid="1275182674">May 7-8, 2025 </li>
+	<li paraeid="{ada523bb-7937-45ea-ada5-ecdf3adf0b56}{31}" paraid="1104334009">May 12-13, 2025 </li>
+	<li paraeid="{ada523bb-7937-45ea-ada5-ecdf3adf0b56}{39}" paraid="1068858532">May 15-16, 2025  </li>
+</ul><p paraeid="{ada523bb-7937-45ea-ada5-ecdf3adf0b56}{47}" paraid="207704465">All members of the campus community are invited to participate in the open forums with each finalist, offered both in person and virtually. These forums will take place on the second day of each visit, from 11:10 a.m. to noon, in the Advanced Technologies Lab (Building 007) and via Zoom. </p>
+
+<p paraeid="{ada523bb-7937-45ea-ada5-ecdf3adf0b56}{57}" paraid="339665499">Information about each finalist, Zoom links for the forums and a feedback survey will be shared in advance of the visits.  </p>
+
+<p aria-level="3" paraeid="{ada523bb-7937-45ea-ada5-ecdf3adf0b56}{85}" paraid="1252046056" role="heading">The CENG search committee is chaired by John Pan, professor in the Department of Industrial and Manufacturing Engineering. </p>
+</div>
+</div>
+
+<h2 id="Winter_2025">Winter 2025</h2>
+
+<div class="accordion">
+<div>
+<h3 id="Kate_Murphy_named_Dean_of_CLA_effective_July_1">3/11/2025 - Kate Murphy named Dean of CLA effective July 1</h3>
+</div>
+
+<div>
+<p paraeid="{16e8ff1c-5cd1-462d-a344-4fdb9496c955}{141}" paraid="658854749">Dr. Kate Murphy has been named dean of the College of Liberal Arts (CLA), effective July 1.  </p>
+
+<p paraeid="{16e8ff1c-5cd1-462d-a344-4fdb9496c955}{141}" paraid="658854749">Kate has served as interim dean of CLA since August 2024 and has provided steady leadership during this time. In this role, she has advanced multiple strategic initiatives, including expanding transfer student pathways, enhancing career readiness programs and strengthening interdisciplinary collaboration. Under her guidance, the college has remained committed to student success, faculty development and fostering a dynamic and inclusive learning environment.  </p>
+
+<p paraeid="{16e8ff1c-5cd1-462d-a344-4fdb9496c955}{141}" paraid="658854749">Since joining Cal Poly in 2007, Kate has been a dedicated educator, researcher and leader. Before her role as interim dean, she served as associate dean for student success in CLA, overseeing academic advising, student services and graduate program administration. She also held roles as CLA administrative fellow and department chair and professor in the History Department, where she made significant contributions to curriculum innovation and interdisciplinary program development. </p>
+
+<p paraeid="{16e8ff1c-5cd1-462d-a344-4fdb9496c955}{141}" paraid="658854749">A distinguished historian, Kate's research on the history of science and the transatlantic slave trade has been recognized with funding from the National Science Foundation and the American Council of Learned Societies (ACLS). Her work has been published widely in peer-reviewed journals and edited volumes, including Plants, People, Planet; The William and Mary Quarterly; Early American Studies; and The British Journal for the History of Science. She is also the author of Captivity’s Collections: Science, Natural History, and the Transatlantic British Slave Trade. </p>
+
+<p paraeid="{16e8ff1c-5cd1-462d-a344-4fdb9496c955}{141}" paraid="658854749">Kate holds a doctorate and master’s degree in history from Johns Hopkins University and a bachelor’s degree in history from the University of Virginia. </p>
+</div>
+</div>
+
+<div class="accordion">
+<div>
+<h3 id="Marc_Swackhamer_named_Dean_of_CAED_effective_Aug._18">2/20/2025 - Marc Swackhamer named Dean of CAED effective Aug. 18</h3>
+</div>
+
+<div>
+<p data-olk-copy-source="MessageBody">Marc Swackhamer will join Cal Poly as the dean of the College of Architecture and Environmental Design (CAED) on Aug. 18, 2025. <br />
+ <br />
+Marc brings extensive experience and a forward-thinking vision that aligns with CAED’s mission to lead in sustainable design, interdisciplinary collaboration and hands-on learning. His work at the University of Colorado Denver (CU Denver) and the University of Minnesota has been defined by his ability to integrate innovative research, digital fabrication and environmental sustainability into architectural education. <br />
+ <br />
+As chair of the Architecture Department at CU Denver, Marc’s support of their design-build program and his own design research closely mirrors Cal Poly’s Learn by Doing approach. He is committed to creating environments where students engage in experiential learning that prepares them for success in architecture, planning, design and related fields.  <br />
+ <br />
+Marc is also an advocate for making architectural and design education more accessible and inclusive. His collaborative leadership will support the disciplines within CAED, equipping students with the skills and knowledge necessary for success. He looks forward to building on CAED’s legacy while advancing innovation, sustainability and community impact. <br />
+ </p>
+</div>
+</div>
+
+<div class="accordion">
+<div>
+<h3 id="Brian_Horgan_named_Dean_of_CAFESeffective_July_1">1/22/2025 - Brian Horgan named Dean of CAFES effective July 1</h3>
+</div>
+
+<div>
+<p>Dr. Brian Horgan will join Cal Poly as the dean of the College of Agriculture, Food and Environmental Sciences (CAFES) on July 1, 2025.<br /><br />
+Brian brings extensive experience and a clear vision for advancing CAFES as a leader in agricultural innovation, sustainability, and education. His distinguished work at Michigan State University and the University of Minnesota demonstrates his ability to foster collaboration, modernize academic programs, and provide meaningful support to faculty and staff.<br /><br />
+His dedication to building interdisciplinary partnerships has created distinct opportunities for research, curriculum development, and community engagement. His focus on cultivating inclusive environments that embrace diverse perspectives will enrich the academic experience within the college and across the university.<br /><br />
+As an advocate for experiential learning, Brian values Cal Poly’s Learn by Doing philosophy, and he is eager to work with faculty and staff to enhance hands-on learning opportunities for our students.</p>
+</div>
+</div>
+
+<h2 id="Fall_2024">Fall 2024</h2>
+
+<div class="accordion">
+<div>
+<h3 id="Interim_Dean_of_the_College_of_Engineering">12/17/2024 - Interim Dean of the College of Engineering</h3>
+</div>
+
+<div>
+<p paraeid="{20e2ecf8-d333-4428-9bd6-34e6eee5ee7f}{210}" paraid="1108597598">Dr. Bob Crockett has been named interim dean for the College of Engineering, effective January 11, 2025. Bob will serve in this role through August 31, 2025, or until the permanent dean assumes the position. </p>
+
+<p paraeid="{20e2ecf8-d333-4428-9bd6-34e6eee5ee7f}{246}" paraid="446391427">Since joining Cal Poly in 2003, Bob has served as a professor in the Biomedical Engineering Department and has held several key leadership roles within the College of Engineering, including associate dean for innovation and infrastructure, department chair for biomedical engineering and program director for general engineering. In 2022, he served as the administrator in charge of the Research, Economic Development and Graduate Education division (R-EDGE). <br />
+ <br />
+With a professional career spanning more than three decades, Bob has worked across the aerospace, biotechnology, medical device and consumer products industries, specializing in the development and commercialization of disruptive technologies. He is also actively involved in innovation and entrepreneurship, working with several technology-based startup companies and serving as director of X-Lab for HaptX Inc. </p>
+
+<p paraeid="{085c4141-67c0-461d-b240-dd20fd3fe8d4}{123}" paraid="234654295">Bob holds a doctorate in materials science and engineering from the University of Arizona, an MBA from Pepperdine University and a bachelor’s degree in mechanical engineering from UC Berkeley.  </p>
+
+<p paraeid="{085c4141-67c0-461d-b240-dd20fd3fe8d4}{169}" paraid="1788727525">A national search for a permanent dean for the College of Engineering will begin soon.</p>
+</div>
+</div>
+
+<div class="accordion">
+<div>
+<h3 id="Interim_Dean_of_CAFES">12/16/2024 - Interim Dean of CAFES</h3>
+</div>
+
+<div>
+<p paraeid="{ef4319f9-9bf7-4ef2-8f79-c7fbad6a6742}{216}" paraid="1134801861">Dr. Jeremy James has been named interim dean for the College of Agriculture, Food and Environmental Sciences (CAFES), effective December 21, 2024.  He will serve in this role through August 31, 2025, or until a permanent dean assumes the position, whichever occurs first. Jeremy replaces the current CAFES interim dean, Bill Hendricks, who will retire after serving Cal Poly for 30 years.  </p>
+
+<p paraeid="{3baeb339-00f2-4ee7-ba12-6082d7711fc3}{11}" paraid="66418556">Jeremy joined Cal Poly in 2020 as department head for the Natural Resources Management and Environmental Sciences (NRES) Department, which serves more than 850 students across three majors. In this role, he has emphasized shared governance, distributed leadership and applied student-centered research to enhance student success and advance the university’s polytechnic mission. </p>
+
+<p paraeid="{3baeb339-00f2-4ee7-ba12-6082d7711fc3}{33}" paraid="1436146360">During his tenure, the NRES Department has experienced significant growth. Applications for the forest and fire sciences major have doubled, and enrollment capacity has increased by 60% to meet rising student demand. Jeremy also collaborated with faculty and Cal Poly’s Swanton Pacific Ranch to secure a $4.2 million CAL FIRE grant to prepare students to address California’s mounting wildfire challenges. </p>
+
+<p paraeid="{3baeb339-00f2-4ee7-ba12-6082d7711fc3}{73}" paraid="1381212468">Jeremy teaches a range of courses related to his scholarship and offers students hands-on opportunities supporting his ecosystem management research. For example, a recent student-led paper published in Environmental Research Letters evaluated how climatic variation impacts carbon capture across California’s diverse ecosystems. </p>
+
+<p paraeid="{3baeb339-00f2-4ee7-ba12-6082d7711fc3}{101}" paraid="850428089">Before joining Cal Poly, Jeremy served as a research center director for the University of California, supporting faculty across the state in addressing a range of industry challenges, including rangeland livestock production, soil health and water quality management, and biodiversity conservation. He also worked as a research scientist for the USDA Agricultural Research Service in eastern Oregon, focusing on the management and recovery of rangeland following wildfires.   </p>
+
+<p paraeid="{3baeb339-00f2-4ee7-ba12-6082d7711fc3}{189}" paraid="479168021">Jeremy holds a doctorate in plant biology from UC Davis and a bachelor’s degree in Ecology from Cal Poly. </p>
+</div>
+</div></div></div></div></div>
+
+<h2 id="relatedLinksTitle">Related Content</h2><div id="relatedLinksBottom"></div></div>
+      <div class="clear"></div>
+          </main>
+
+    <div class="clear"></div>
+
+        
+  <footer>
+        <div id="footerSocial">
+  <p id="socialConnect">CONNECT WITH CAL POLY</p>
+  <div id="socialIcons">
+    <span class="on-the-web otw-facebook otw-0"><a href="https://www.calpoly.edu/facebook" title="Find Us on Facebook"><img typeof="foaf:Image" src="https://provost.calpoly.edu/sites/all/modules/on_the_web/images/sm/facebook.png" alt="Find Us on Facebook" title="Find Us on Facebook" /></a></span><span class="on-the-web otw-youtube otw-1"><a href="https://www.youtube.com/user/CalPoly" title="Find Us on YouTube"><img typeof="foaf:Image" src="https://provost.calpoly.edu/sites/all/modules/on_the_web/images/sm/youtube.png" alt="Find Us on YouTube" title="Find Us on YouTube" /></a></span><span class="on-the-web otw-linkedin otw-2"><a href="https://www.linkedin.com/edu/school?id=17816&amp;trk=edu-cp-title" title="Find Us on LinkedIn"><img typeof="foaf:Image" src="https://provost.calpoly.edu/sites/all/modules/on_the_web/images/sm/linkedin.png" alt="Find Us on LinkedIn" title="Find Us on LinkedIn" /></a></span>  </div>
+</div>
+    
+      <ul id="footer_links">
+        <li><a href="https://www.calpoly.edu/">CP Home</a></li>
+        <li><a href="https://myportal.calpoly.edu/s/directory">Directory</a></li>
+        <li><a href="https://maps.calpoly.edu/">Campus Maps &amp; Directions</a></li>
+        <li><a href="https://www.bkstr.com/calpolystore">University Store</a></li>
+        <li><a href="https://registrar.calpoly.edu/acad_cal/">Calendar</a></li>
+        <li><a href="https://afd.calpoly.edu/hr/job-opportunities/">Employment</a></li>
+        <li><a href="https://policy.calpoly.edu/">Campus Policies</a></li>
+        <li><a href="https://www.calpoly.edu/contact/">Contact Us</a></li>
+      </ul>
+
+<div id="getPlugins">
+      <ul>
+        <li><a href="https://www.calpoly.edu/privacy/">Privacy Notice</a></li>
+        <li><a href="https://accessibility.calpoly.edu/website-accessibility-statement">Web Accessibility Statement</a></li>
+        <li><a href="https://crco.calpoly.edu/content/title-ix">Title IX</a></li>
+      </ul>
+</div>
+
+<div id="footer_deptinfo">
+  <p>&#169; 2026 California Polytechnic State University &nbsp;<img src="/sites/all/themes/cpstandard_r/common/images_html/footer/footer_separator.jpg" alt="" height="10" width="1" />&nbsp; San Luis Obispo, California 93407<br>Phone: 805-756-1111</p>
+</div>
+
+      </footer>
+
+      <div class="clear"></div>
+</div>
+
+<div id="closure-blocks" class="region region-closure">
+    <div id="block-block-8" class="block block-block " >
+<!-- Add your analytics script here e.g. CrazyEgg --><!-- If you don't want to use analytics, just ignore this block --></div>
+
+</div>
+  <script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"4e34bbaf17","applicationID":"4513637","transactionName":"YldTYBRYXUVVURdZXFsdZEYPFlpYUFcbHkNdQg==","queueTime":0,"applicationTime":13,"atts":"ThBQFlxCTks=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+
+<script>(function trackOutbounds(){var hitCallbackHandler=function(url,win){if(win){window.open(url,win)}else{window.location.href=url}};var addEvent=function(el,eventName,handler){if(el.addEventListener){el.addEventListener(eventName,handler)}else{el.attachEvent('on'+eventName,function(){handler.call(el)})}}
+if(document.getElementsByTagName){var el=document.getElementsByTagName('a');var getDomain=document.domain.split('.').reverse()[1]+'.'+document.domain.split('.').reverse()[0];for(var i=0;i<el.length;i++){var href=(typeof(el[i].getAttribute('href'))=='string')?el[i].getAttribute('href'):'';var myDomain=href.match(getDomain);if((href.match(/^(https?:|\/\/)/i)&&!myDomain)||href.match(/^mailto\:/i)){addEvent(el[i],'click',function(e){var url=this.getAttribute('href'),win=(typeof(this.getAttribute('target'))=='string')?this.getAttribute('target'):'';console.log("add event",url);ga('send','event','outbound','click',url,{'hitCallback':hitCallbackHandler(url,win)},{'nonInteraction':1});e.preventDefault()})}}}})();</script>
+</html>

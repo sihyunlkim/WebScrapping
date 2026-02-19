@@ -1,0 +1,830 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2024-11-15 Fri 10:01 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>CS4222 &#x2013; Artificial Intelligence (Fall 2024)</title>
+<meta name="generator" content="Org mode" />
+<style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #ccc;
+    box-shadow: 3px 3px 3px #eee;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: visible;
+    padding-top: 1.2em;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    background-color: white;
+    top: -10px;
+    right: 10px;
+    padding: 3px;
+    border: 1px solid black;
+  }
+  pre.src:hover:before { display: inline;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { width: 90%; }
+  /*]]>*/-->
+</style>
+<style>body {background-color: #FFFBEC; color: #000000;}</style>
+<script type="text/javascript">
+/*
+@licstart  The following is the entire license notice for the
+JavaScript code in this tag.
+
+Copyright (C) 2012-2020 Free Software Foundation, Inc.
+
+The JavaScript code in this tag is free software: you can
+redistribute it and/or modify it under the terms of the GNU
+General Public License (GNU GPL) as published by the Free Software
+Foundation, either version 3 of the License, or (at your option)
+any later version.  The code is distributed WITHOUT ANY WARRANTY;
+without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
+
+As additional permission under GNU GPL version 3 section 7, you
+may distribute non-source (e.g., minimized or compacted) forms of
+that code without the copy of the GNU GPL normally required by
+section 4, provided you include this license notice and a URL
+through which recipients can access the Corresponding Source.
+
+
+@licend  The above is the entire license notice
+for the JavaScript code in this tag.
+*/
+<!--/*--><![CDATA[/*><!--*/
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->
+</script>
+</head>
+<body>
+<div id="content">
+<h1 class="title">CS4222 &#x2013; Artificial Intelligence (Fall 2024)</h1>
+<hr />
+
+<div id="outline-container-orgff014e9" class="outline-2">
+<h2 id="orgff014e9">Course Description</h2>
+<div class="outline-text-2" id="text-orgff014e9">
+<p>
+<i>Principles and programming methods of artificial intelligence. Knowledge representation methods, state space search strategies, and use of logic for problem-solving. Applications are chosen from among expert systems, heuristic search, planning, natural language understanding, uncertainty reasoning, machine learning, and robotics. Lectures and labs will utilize suitable high-level languages (e.g., Python or LISP)</i>
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgc405fe0" class="outline-2">
+<h2 id="orgc405fe0">Instructor</h2>
+<div class="outline-text-2" id="text-orgc405fe0">
+<p>
+Dr. Andrew M. Sutton<br />
+Email: <i>amsutton@d.umn.edu</i><br />
+Tel: 218.726.7978<br />
+Office: 311 Heller Hall<br />
+Office Hours: Mon, Tue, Fri 10:00-11:00
+</p>
+</div>
+</div>
+
+<div id="outline-container-org93f80e3" class="outline-2">
+<h2 id="org93f80e3">Teaching Assistant</h2>
+<div class="outline-text-2" id="text-org93f80e3">
+<p>
+<b>Jack Quigley</b><br />
+Email: quigl088@d.umn.edu<br />
+Office Hours:
+</p>
+<ul class="org-ul">
+<li>Mon 15:00-16:00 in Chem 244</li>
+<li>Tue 15:15-16:15 in Chem 244</li>
+<li>Wed 16:00-17:00 in VKH 17</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orgbc88f5a" class="outline-2">
+<h2 id="orgbc88f5a">Meeting Times and Locations</h2>
+<div class="outline-text-2" id="text-orgbc88f5a">
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-right" />
+
+<col  class="org-left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">&#xa0;</th>
+<th scope="col" class="org-left"><i>Day</i></th>
+<th scope="col" class="org-right"><i>Time</i></th>
+<th scope="col" class="org-left"><i>Location</i></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left"><b>Lecture</b></td>
+<td class="org-left">M W F</td>
+<td class="org-right">11:00-12:15</td>
+<td class="org-left">M W Alworth Hall 177</td>
+</tr>
+
+<tr>
+<td class="org-left"><b>Lab</b></td>
+<td class="org-left">Th</td>
+<td class="org-right">18:00-18:50</td>
+<td class="org-left">M W Alworth Hall 177</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+
+<div id="outline-container-orgd2a40f7" class="outline-2">
+<h2 id="orgd2a40f7">Pre-requisites</h2>
+<div class="outline-text-2" id="text-orgd2a40f7">
+<ul class="org-ul">
+<li><b>CS 2511</b> - Software Analysis and Design</li>
+<li><b>CS 2531</b> - Discrete Structures or <b>Math 3355</b> - Discrete Math</li>
+</ul>
+
+<p>
+A grade of C- or better is required in all prerequisite courses.
+</p>
+
+<p>
+<b>Important note:</b> The computer science bachelor's degree program at UMD is accredited by CAC (the Computing Accreditation Commission). One of the CAC requirements is that all students must satisfy the prerequisites in order to be admitted to a course, so if you have not passed the prerequisite courses, you must drop this course (if you have any questions about this, please see the instructor after the lecture or during office hours).
+</p>
+</div>
+</div>
+
+<div id="outline-container-org719d07b" class="outline-2">
+<h2 id="org719d07b">Text</h2>
+<div class="outline-text-2" id="text-org719d07b">
+<p>
+Russell, S. and Norvig, P. <i>Artificial Intelligence: A Modern Approach</i>, <b>Fourth Edition</b>, 2020, Prentice Hall, NJ, ISBN: 978-0134610993.
+</p>
+
+<p>
+Web site: <a href="http://aima.cs.berkeley.edu">http://aima.cs.berkeley.edu</a>
+</p>
+</div>
+</div>
+
+<div id="outline-container-org4fa2831" class="outline-2">
+<h2 id="org4fa2831">Course Content and Objectives</h2>
+<div class="outline-text-2" id="text-org4fa2831">
+</div>
+<div id="outline-container-org76df252" class="outline-3">
+<h3 id="org76df252">Content</h3>
+<div class="outline-text-3" id="text-org76df252">
+<p>
+Artificial Intelligence is the study of intelligent behavior of machines. Broadly speaking, this is understanding how to make machines and software that can reason, learn, and evolve like animals or humans.
+</p>
+
+<p>
+AI has a long and interesting history that arose out of philosophical questions from antiquity and blossomed in the 1950s with the advent of electronic computers and computational research. In this course, we will study the basic ideas behind automated reasoning, heuristic search, representing knowledge effectively, and learning.
+</p>
+
+<p>
+The course is structured into three units, with 4-6 topics in each
+unit. We will discuss each topic in lecture, there will be associated
+required reading, and possible a related lab or written assignment.
+Here is a tentative schedule for the semester:
+</p>
+</div>
+
+<div id="outline-container-org9b83dfc" class="outline-4">
+<h4 id="org9b83dfc">UNIT I, Weeks 1-7: Search</h4>
+<div class="outline-text-4" id="text-org9b83dfc">
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-right" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-right"><b>Week</b></th>
+<th scope="col" class="org-left"><b>Dates</b></th>
+<th scope="col" class="org-left"><b>Topic</b></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-right">1</td>
+<td class="org-left">Aug 26,28,30</td>
+<td class="org-left">Intro, Agent Function, Uninformed Search</td>
+</tr>
+
+<tr>
+<td class="org-right">2</td>
+<td class="org-left">Sep 4, 6</td>
+<td class="org-left">Uninformed+Informed Search</td>
+</tr>
+
+<tr>
+<td class="org-right">3</td>
+<td class="org-left">Sep 9, 11</td>
+<td class="org-left">Informed Search</td>
+</tr>
+
+<tr>
+<td class="org-right">4</td>
+<td class="org-left">Sep 16, 18, 20</td>
+<td class="org-left">Iterative Improvement Search</td>
+</tr>
+
+<tr>
+<td class="org-right">5</td>
+<td class="org-left">Sep 23, 25, 27</td>
+<td class="org-left">Evolutionary Search</td>
+</tr>
+
+<tr>
+<td class="org-right">6</td>
+<td class="org-left">Sep 30, Oct 2, 4</td>
+<td class="org-left">Adversarial Search</td>
+</tr>
+
+<tr>
+<td class="org-right">7</td>
+<td class="org-left">Oct 7, 9, 11</td>
+<td class="org-left"><b>MIDTERM 1</b></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+
+<div id="outline-container-org3716f77" class="outline-4">
+<h4 id="org3716f77">UNIT II, Weeks 8-12: Reasoning</h4>
+<div class="outline-text-4" id="text-org3716f77">
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-right" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-right"><b>Week</b></th>
+<th scope="col" class="org-left"><b>Dates</b></th>
+<th scope="col" class="org-left"><b>Topic</b></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-right">8</td>
+<td class="org-left">Oct 14, 16, 18</td>
+<td class="org-left">Constraint Satisfaction</td>
+</tr>
+
+<tr>
+<td class="org-right">9</td>
+<td class="org-left">Oct 21, 23</td>
+<td class="org-left">Propositional Logic</td>
+</tr>
+
+<tr>
+<td class="org-right">10</td>
+<td class="org-left">Oct 28, 30, Nov 1</td>
+<td class="org-left">Propositional Satisfiability</td>
+</tr>
+
+<tr>
+<td class="org-right">11</td>
+<td class="org-left">Nov 4, 6, 8</td>
+<td class="org-left">Reasoning under Uncertainty</td>
+</tr>
+
+<tr>
+<td class="org-right">12</td>
+<td class="org-left">Nov 11, 13, 15</td>
+<td class="org-left">Reasoning under Uncertainty</td>
+</tr>
+
+<tr>
+<td class="org-right">13</td>
+<td class="org-left">Nov 18, 20, 22</td>
+<td class="org-left"><b>MIDTERM 2</b></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+
+<div id="outline-container-orgd24794d" class="outline-4">
+<h4 id="orgd24794d">UNIT III, Weeks 13-16: Learning</h4>
+<div class="outline-text-4" id="text-orgd24794d">
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-right" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-right"><b>Week</b></th>
+<th scope="col" class="org-left"><b>Dates</b></th>
+<th scope="col" class="org-left"><b>Topic</b></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-right">14</td>
+<td class="org-left">Nov 25</td>
+<td class="org-left">Inductive Learning and Trees</td>
+</tr>
+
+<tr>
+<td class="org-right">15</td>
+<td class="org-left">Dec 2, 4, 6</td>
+<td class="org-left">Linear Models, kNN, Deep Learning</td>
+</tr>
+
+<tr>
+<td class="org-right">16</td>
+<td class="org-left">Dec 13 at 8:00</td>
+<td class="org-left"><b>FINAL EXAM</b></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org36a99f9" class="outline-3">
+<h3 id="org36a99f9">Objectives and Student Learning Outcomes</h3>
+<div class="outline-text-3" id="text-org36a99f9">
+<p>
+This course addresses UMD campus student learning outcomes (SLOs), as well as <a href="https://scse.d.umn.edu/about/departments-and-programs/computer-science-department/undergraduate-programs">CS education outcomes</a> specified by the UMD Department of Computer Science and aligned with the standards put forth by the <a href="https://www.abet.org">ABET</a> accrediting board.
+</p>
+<ul class="org-ul">
+<li>SLO 1: Demonstrate competence in a major field
+<ul class="org-ul">
+<li>Students will gain knowledge of the core methods of artificial intelligence. They will be able to demonstrate knowledge of important search methods such as BFS, DFS, UCS, and A* search to solve a variety of problems.</li>
+</ul></li>
+<li>SLO 3: Think critically and creatively in seeking solutions to practical and theoretical problems.
+<ul class="org-ul">
+<li>Students will be able to formulate and solve constraint satisfaction problems with computer methods.</li>
+<li>Students will be able to analyze, design and employ inference on knowledge representations using logical constructs on knowledge representation problems.</li>
+<li>Students will be able to recognize different problems from the domain of AI, and be able to identify the most appropriate method for solving it.</li>
+<li>Students will be able to discuss the use of probabilistic methods on problems with significant uncertainty.</li>
+</ul></li>
+</ul>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgc0458cd" class="outline-2">
+<h2 id="orgc0458cd">Assignments and Grading</h2>
+<div class="outline-text-2" id="text-orgc0458cd">
+</div>
+<div id="outline-container-org4bdedd8" class="outline-3">
+<h3 id="org4bdedd8">Projects and Homework</h3>
+<div class="outline-text-3" id="text-org4bdedd8">
+<p>
+There will be approximately five lab projects and five written homework assignments worth 20 points each. The labs are programming exercises where we will build concrete instances of algorithms discussed in class. We will use <a href="http://www.python.org/">python</a> for every programming exercise. No prior experience with python is necessary.
+</p>
+
+<p>
+<b>All assignments must be submitted by their stated due date.</b>
+</p>
+</div>
+</div>
+
+<div id="outline-container-org9558b52" class="outline-3">
+<h3 id="org9558b52">Quizzes and Participation</h3>
+<div class="outline-text-3" id="text-org9558b52">
+<p>
+We will periodically have in-class quizzes. Each quiz will give you a
+chance to demonstrate what you have learned and what concepts are
+still hazy.
+</p>
+
+<p>
+Another goal of the quizzes is to encourage
+participation. Therefore, we will not announce
+quizzes ahead of time. Furthermore, we will
+usually go over the quiz together immediately
+afterwards. Because of this, we will not have
+make-up quizzes. However, to get you out of
+unforeseen circumstances, I will automatically
+drop the <span class="underline">two lowest quiz scores.</span>
+</p>
+
+<p>
+The quizzes will count toward your participation grade, which makes up
+roughly 10% of your total grade.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org6af3247" class="outline-3">
+<h3 id="org6af3247">Examinations</h3>
+<div class="outline-text-3" id="text-org6af3247">
+<p>
+There will be two midterm exams, worth <b>100 points each</b> and a final exam worth <b>200 points</b>. 
+</p>
+
+<p>
+Both midterm exams are closed book, and the final exam will be
+comprehensive. Exams will <i>not</i> be given early, and makeups must be
+justified by dire circumstances described to the instructor <i>before</i> the
+time of the exam. It is Department of Computer Science policy not to
+return final exams, however they are kept and you can look at your
+exam in the instructor's office. The UMD <a href="http://www.d.umn.edu/vcaa/FinalExams.html">Final Examination Policy</a> web
+page explains the UMD policy about having more than two final exams on
+a single day, among other things.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org715dfd0" class="outline-3">
+<h3 id="org715dfd0">Exam Schedule</h3>
+<div class="outline-text-3" id="text-org715dfd0">
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-right" />
+
+<col  class="org-left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left"><b>Exam</b></th>
+<th scope="col" class="org-right"><b>Points</b></th>
+<th scope="col" class="org-left"><b>Date</b></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">Midterm Exam 1</td>
+<td class="org-right">100</td>
+<td class="org-left">Oct 9</td>
+</tr>
+
+<tr>
+<td class="org-left">Midterm Exam 2</td>
+<td class="org-right">100</td>
+<td class="org-left">Nov 22</td>
+</tr>
+
+<tr>
+<td class="org-left">Final Exam</td>
+<td class="org-right">200</td>
+<td class="org-left">Friday, Dec 13 8:00am</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+
+<div id="outline-container-org786083c" class="outline-3">
+<h3 id="org786083c">Grading Procedures (undergraduate)</h3>
+<div class="outline-text-3" id="text-org786083c">
+<p>
+Final grades are based on total points distributed approximately as follows:
+</p>
+
+<ol class="org-ol">
+<li>Assignments and participation (approx. 250 points)</li>
+<li>Midterm Exams (200 points)</li>
+<li>Final Exam (200 points)</li>
+</ol>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org62e07dc" class="outline-2">
+<h2 id="org62e07dc">University Policies</h2>
+<div class="outline-text-2" id="text-org62e07dc">
+</div>
+<div id="outline-container-org062472b" class="outline-3">
+<h3 id="org062472b"><a href="https://regents.umn.edu/sites/regents.umn.edu/files/2020-01/policy_student_conduct_code.pdf">Student Conduct Code</a></h3>
+<div class="outline-text-3" id="text-org062472b">
+<p>
+Appropriate classroom conduct promotes an environment of academic achievement and integrity. Disruptive classroom behavior that substantially or repeatedly interrupts either the instructor's ability to teach, or student learning, is prohibited. Students are expected to adhere to the Board of Regents Policy.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgfcaf088" class="outline-3">
+<h3 id="orgfcaf088"><a href="https://evcaa.d.umn.edu/student-academic-integrity">Student Academic Integrity</a></h3>
+<div class="outline-text-3" id="text-orgfcaf088">
+<p>
+Academic dishonesty tarnishes UMD’s reputation and discredits the accomplishments of students. Academic dishonesty is regarded as a serious offense by all members of the academic community.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org5a22767" class="outline-3">
+<h3 id="org5a22767"><a href="https://evcaa.d.umn.edu/course-notes-materials">Appropriate Use of Class Notes &amp; Course Materials</a></h3>
+<div class="outline-text-3" id="text-org5a22767">
+<p>
+Taking notes is a means of recording information but more importantly of personally absorbing and integrating the educational experience. However, broadly disseminating class notes beyond the classroom community or accepting compensation for taking and distributing classroom notes undermines instructor interests in their intellectual work product while not substantially furthering instructor and student interests in effective learning.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org43dd038" class="outline-3">
+<h3 id="org43dd038"><a href="https://evcaa.d.umn.edu/excused-absences">Excused Absences</a></h3>
+<div class="outline-text-3" id="text-org43dd038">
+<p>
+Students are expected to attend all scheduled class meetings. It is the responsibility of students to plan their schedules to avoid excessive conflict with course requirements. However, there are legitimate circumstances that lead to excused student absence from the classroom. These are subpoenas, jury duty, military duty, religious observances, illness, bereavement, and NCAA varsity intercollegiate athletics.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgc9d1122" class="outline-3">
+<h3 id="orgc9d1122"><a href="https://evcaa.d.umn.edu/final-examinations">Final Examinations</a></h3>
+<div class="outline-text-3" id="text-orgc9d1122">
+<p>
+All 1xxx-5xxx courses offered for undergraduate credit should include a final graded component or end of term evaluation that assesses the level of student achievement of one or more course objectives. All final graded components are to be administered or due at the time and place according to the final exam schedule and not during the last week of class.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgef835cb" class="outline-3">
+<h3 id="orgef835cb"><a href="https://evcaa.d.umn.edu/instructor-and-student-responsibilities">Teaching &amp; Learning: Instructor &amp; Student Responsibilities</a></h3>
+<div class="outline-text-3" id="text-orgef835cb">
+<p>
+UMD is committed to providing a positive, safe, and inclusive place for all who study and work here. Instructors and students have mutual responsibility to ensure that the environment in all of these settings supports teaching and learning, is respectful of the rights and freedoms of all members, and promotes a civil and open exchange of ideas.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orge1f1dbe" class="outline-3">
+<h3 id="orge1f1dbe"><a href="https://policy.umn.edu/hr/sexharassassault">Sexual Harassment, Sexual Assault, Stalking and Relationship Violence</a></h3>
+<div class="outline-text-3" id="text-orge1f1dbe">
+<p>
+Sexual harassment means unwelcome sexual advances, requests for sexual favors, and/or other verbal or physical conduct of a sexual nature. Such conduct has the purpose or effect of unreasonably interfering with an individual's work or academic performance or creating an intimidating, hostile, or offensive working or academic environment in any University activity or program. Such behavior is not acceptable in the University setting. See also: <a href="https://regents.umn.edu/sites/regents.umn.edu/files/2020-08/policy_sexual_harassment_sexual_assault_stalking_and_relationship_violence.pdf">Board of Regents Policy</a>.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org835064d" class="outline-3">
+<h3 id="org835064d"><a href="https://regents.umn.edu/sites/regents.umn.edu/files/2019-09/policy_equity_diversity_equal_opportunity_and_affirmative_action.pdf">Equity, Diversity, Equal Employment Opportunity, and Affirmative Action</a></h3>
+<div class="outline-text-3" id="text-org835064d">
+<p>
+The University provides equal access to and opportunity in its programs and facilities, without regard to race, color, creed, religion, national origin, gender, age, marital status, disability, public assistance status, veteran status, sexual orientation, gender identity, or gender expression. <a href="https://compliance.umn.edu/report">Equal Opportunity and Affirmative Action</a> and the <a href="https://conduct.d.umn.edu/">Office of Student Conduct &amp; Conflict Resolution</a> are both available to all UMD employees, students, and participants in University-related activities <a href="https://campus-climate.d.umn.edu/">to discuss issues or concerns</a> regarding University policies or practices involving potential bias, discrimination, harassment or retaliation that an individual may have experienced or observed.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org7516037" class="outline-3">
+<h3 id="org7516037"><a href="https://regents.umn.edu/sites/regents.umn.edu/files/2019-09/policy_academic_freedom_and_responsibility.pdf">Academic Freedom and Responsibility</a></h3>
+<div class="outline-text-3" id="text-org7516037">
+<p>
+Thoughtful dialog is a cornerstone of higher education. This expectation is upheld in the University of Minnesota's Board of Regents Policy: Academic Freedom and Responsibility, which says in part:
+</p>
+
+<blockquote>
+<p>
+SECTION II. ACADEMIC FREEDOM.
+Academic freedom is the freedom, without institutional discipline or restraint, to discuss all relevant matters in the classroom, to explore all avenues of scholarship, research, and creative expression, and to speak or write on matters of public concern as well as on matters related to professional duties and the functioning of the University.
+</p>
+</blockquote>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org38f4647" class="outline-2">
+<h2 id="org38f4647">Resources for Students with Disabilities</h2>
+<div class="outline-text-2" id="text-org38f4647">
+<p>
+It is the policy and practice of the University of Minnesota Duluth to create inclusive learning environments for all students, including students with disabilities. If there are aspects of this course that result in barriers to your inclusion or your ability to meet course requirements such as time limited exams, inaccessible web content, or the use of non-captioned videos, please notify the instructor as soon as possible. You are also encouraged to contact the Office of Disability Resources to discuss and arrange reasonable accommodations. Call 218-726-6130 or visit the <a href="https://disability-resources.d.umn.edu/">Disability Resources website</a> for more information.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org7a675a7" class="outline-2">
+<h2 id="org7a675a7">Mental Health and Stress Management Resources</h2>
+<div class="outline-text-2" id="text-org7a675a7">
+<p>
+Feelings such as anxiety, anger, depression, low self-esteem, or tension are a normal part of being human and can affect anyone. Sometimes these feelings are temporary and can be eased by rest, relaxation, exercise, good nutrition and the support of trusted friends. At other times, stressors, relationships or past family experiences cannot be managed so easily and become overwhelming. If this happens, and you find it hard to function, you may want to seek professional help. Counseling Services are available at UMD Health Services to assist you. If you are in need of mental health support when Health Services is closed, or in case of an emergency, please contact The Birch Tree Center's Crisis line at 218-623-1800 or go to the emergency room/urgent care at either St. Luke's Hospital or St. Mary's Hospital. If an ambulance is needed, call 911. If the emergency is non-life-threatening and you do not have a means of transportation, call Campus Police at 218-726-7000. If you have needs that Counseling Services does not treat, they have a case manager who helps connect students to referrals as well as navigating issues with insurance. You can learn more about the broad range of confidential mental health services available on campus at <a href="http://d.umn.edu/health-services/counseling-services">UMD Health Services</a>.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgc31d000" class="outline-2">
+<h2 id="orgc31d000">Campus COVID Safety</h2>
+<div class="outline-text-2" id="text-orgc31d000">
+<p>
+Visit the the <a href="https://safe-campus.d.umn.edu/">UMD Safe Campus webpage</a> for up-to-date COVID information.
+</p>
+
+<hr />
+<p>
+<b><i>The instructor reserves the right to make changes to this syllabus or the course calendar at any time, and without prior notice.</i></b>
+</p>
+<hr />
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p>Last updated: 2024-11-15 Fri 10:01</p>
+</div>
+</body>
+</html>

@@ -1,0 +1,989 @@
+<!DOCTYPE html>
+
+<html  dir="ltr" lang="en" xml:lang="en">
+<head>
+    <title>eLearn: When you can use gen AI in assignments | eLearn</title>
+    <link rel="shortcut icon" href="https://moodle.unitec.ac.nz/pluginfile.php/1/core_admin/favicon/64x64/1770862159/favicon.ico" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="moodle, eLearn: When you can use gen AI in assignments | eLearn" />
+<link rel="stylesheet" type="text/css" href="https://moodle.unitec.ac.nz/theme/yui_combo.php?rollup/3.18.1/yui-moodlesimple-min.css" /><script id="firstthemesheet" type="text/css">/** Required in order to fix style inclusion problems in IE with YUI **/</script><link rel="stylesheet" type="text/css" href="https://moodle.unitec.ac.nz/theme/styles.php/boost/1770862159_1768758842/all" />
+<link rel="stylesheet" type="text/css" href="https://moodle.unitec.ac.nz/course/format/onetopic/styles.php" />
+<script>
+//<![CDATA[
+var M = {}; M.yui = {};
+M.pageloadstarttime = new Date();
+M.cfg = {"wwwroot":"https:\/\/moodle.unitec.ac.nz","apibase":"https:\/\/moodle.unitec.ac.nz\/r.php\/api","homeurl":{},"sesskey":"rCXjkiO2en","sessiontimeout":"28800","sessiontimeoutwarning":"1200","themerev":"1770862159","slasharguments":1,"theme":"boost","iconsystemmodule":"core\/icon_system_fontawesome","jsrev":"1770862160","admin":"admin","svgicons":true,"usertimezone":"Pacific\/Auckland","language":"en","courseId":1,"courseContextId":2,"contextid":667567,"contextInstanceId":526817,"langrev":1771428833,"templaterev":"1770862160","siteId":1,"userId":0};var yui1ConfigFn = function(me) {if(/-skin|reset|fonts|grids|base/.test(me.name)){me.type='css';me.path=me.path.replace(/\.js/,'.css');me.path=me.path.replace(/\/yui2-skin/,'/assets/skins/sam/yui2-skin')}};
+var yui2ConfigFn = function(me) {var parts=me.name.replace(/^moodle-/,'').split('-'),component=parts.shift(),module=parts[0],min='-min';if(/-(skin|core)$/.test(me.name)){parts.pop();me.type='css';min=''}
+if(module){var filename=parts.join('-');me.path=component+'/'+module+'/'+filename+min+'.'+me.type}else{me.path=component+'/'+component+'.'+me.type}};
+YUI_config = {"debug":false,"base":"https:\/\/moodle.unitec.ac.nz\/lib\/yuilib\/3.18.1\/","comboBase":"https:\/\/moodle.unitec.ac.nz\/theme\/yui_combo.php?","combine":true,"filter":null,"insertBefore":"firstthemesheet","groups":{"yui2":{"base":"https:\/\/moodle.unitec.ac.nz\/lib\/yuilib\/2in3\/2.9.0\/build\/","comboBase":"https:\/\/moodle.unitec.ac.nz\/theme\/yui_combo.php?","combine":true,"ext":false,"root":"2in3\/2.9.0\/build\/","patterns":{"yui2-":{"group":"yui2","configFn":yui1ConfigFn}}},"moodle":{"name":"moodle","base":"https:\/\/moodle.unitec.ac.nz\/theme\/yui_combo.php?m\/1770862160\/","combine":true,"comboBase":"https:\/\/moodle.unitec.ac.nz\/theme\/yui_combo.php?","ext":false,"root":"m\/1770862160\/","patterns":{"moodle-":{"group":"moodle","configFn":yui2ConfigFn}},"filter":null,"modules":{"moodle-core-handlebars":{"condition":{"trigger":"handlebars","when":"after"}},"moodle-core-maintenancemodetimer":{"requires":["base","node"]},"moodle-core-actionmenu":{"requires":["base","event","node-event-simulate"]},"moodle-core-chooserdialogue":{"requires":["base","panel","moodle-core-notification"]},"moodle-core-lockscroll":{"requires":["plugin","base-build"]},"moodle-core-event":{"requires":["event-custom"]},"moodle-core-dragdrop":{"requires":["base","node","io","dom","dd","event-key","event-focus","moodle-core-notification"]},"moodle-core-notification":{"requires":["moodle-core-notification-dialogue","moodle-core-notification-alert","moodle-core-notification-confirm","moodle-core-notification-exception","moodle-core-notification-ajaxexception"]},"moodle-core-notification-dialogue":{"requires":["base","node","panel","escape","event-key","dd-plugin","moodle-core-widget-focusafterclose","moodle-core-lockscroll"]},"moodle-core-notification-alert":{"requires":["moodle-core-notification-dialogue"]},"moodle-core-notification-confirm":{"requires":["moodle-core-notification-dialogue"]},"moodle-core-notification-exception":{"requires":["moodle-core-notification-dialogue"]},"moodle-core-notification-ajaxexception":{"requires":["moodle-core-notification-dialogue"]},"moodle-core-blocks":{"requires":["base","node","io","dom","dd","dd-scroll","moodle-core-dragdrop","moodle-core-notification"]},"moodle-core_availability-form":{"requires":["base","node","event","event-delegate","panel","moodle-core-notification-dialogue","json"]},"moodle-course-categoryexpander":{"requires":["node","event-key"]},"moodle-course-dragdrop":{"requires":["base","node","io","dom","dd","dd-scroll","moodle-core-dragdrop","moodle-core-notification","moodle-course-coursebase","moodle-course-util"]},"moodle-course-util":{"requires":["node"],"use":["moodle-course-util-base"],"submodules":{"moodle-course-util-base":{},"moodle-course-util-section":{"requires":["node","moodle-course-util-base"]},"moodle-course-util-cm":{"requires":["node","moodle-course-util-base"]}}},"moodle-course-management":{"requires":["base","node","io-base","moodle-core-notification-exception","json-parse","dd-constrain","dd-proxy","dd-drop","dd-delegate","node-event-delegate"]},"moodle-form-shortforms":{"requires":["node","base","selector-css3","moodle-core-event"]},"moodle-form-dateselector":{"requires":["base","node","overlay","calendar"]},"moodle-question-chooser":{"requires":["moodle-core-chooserdialogue"]},"moodle-question-searchform":{"requires":["base","node"]},"moodle-availability_completion-form":{"requires":["base","node","event","moodle-core_availability-form"]},"moodle-availability_date-form":{"requires":["base","node","event","io","moodle-core_availability-form"]},"moodle-availability_grade-form":{"requires":["base","node","event","moodle-core_availability-form"]},"moodle-availability_group-form":{"requires":["base","node","event","moodle-core_availability-form"]},"moodle-availability_grouping-form":{"requires":["base","node","event","moodle-core_availability-form"]},"moodle-availability_profile-form":{"requires":["base","node","event","moodle-core_availability-form"]},"moodle-mod_assign-history":{"requires":["node","transition"]},"moodle-mod_checklist-linkselect":{"requires":["node","event-valuechange"]},"moodle-mod_quiz-toolboxes":{"requires":["base","node","event","event-key","io","moodle-mod_quiz-quizbase","moodle-mod_quiz-util-slot","moodle-core-notification-ajaxexception"]},"moodle-mod_quiz-autosave":{"requires":["base","node","event","event-valuechange","node-event-delegate","io-form","datatype-date-format"]},"moodle-mod_quiz-questionchooser":{"requires":["moodle-core-chooserdialogue","moodle-mod_quiz-util","querystring-parse"]},"moodle-mod_quiz-modform":{"requires":["base","node","event"]},"moodle-mod_quiz-dragdrop":{"requires":["base","node","io","dom","dd","dd-scroll","moodle-core-dragdrop","moodle-core-notification","moodle-mod_quiz-quizbase","moodle-mod_quiz-util-base","moodle-mod_quiz-util-page","moodle-mod_quiz-util-slot","moodle-course-util"]},"moodle-mod_quiz-util":{"requires":["node","moodle-core-actionmenu"],"use":["moodle-mod_quiz-util-base"],"submodules":{"moodle-mod_quiz-util-base":{},"moodle-mod_quiz-util-slot":{"requires":["node","moodle-mod_quiz-util-base"]},"moodle-mod_quiz-util-page":{"requires":["node","moodle-mod_quiz-util-base"]}}},"moodle-mod_quiz-quizbase":{"requires":["base","node"]},"moodle-message_airnotifier-toolboxes":{"requires":["base","node","io"]},"moodle-report_eventlist-eventfilter":{"requires":["base","event","node","node-event-delegate","datatable","autocomplete","autocomplete-filters"]},"moodle-report_loglive-fetchlogs":{"requires":["base","event","node","io","node-event-delegate"]},"moodle-gradereport_history-userselector":{"requires":["escape","event-delegate","event-key","handlebars","io-base","json-parse","moodle-core-notification-dialogue"]},"moodle-qbank_editquestion-chooser":{"requires":["moodle-core-chooserdialogue"]},"moodle-tool_lp-dragdrop-reorder":{"requires":["moodle-core-dragdrop"]},"moodle-assignfeedback_editpdf-editor":{"requires":["base","event","node","io","graphics","json","event-move","event-resize","transition","querystring-stringify-simple","moodle-core-notification-dialog","moodle-core-notification-alert","moodle-core-notification-warning","moodle-core-notification-exception","moodle-core-notification-ajaxexception"]}}},"gallery":{"name":"gallery","base":"https:\/\/moodle.unitec.ac.nz\/lib\/yuilib\/gallery\/","combine":true,"comboBase":"https:\/\/moodle.unitec.ac.nz\/theme\/yui_combo.php?","ext":false,"root":"gallery\/1770862160\/","patterns":{"gallery-":{"group":"gallery"}}}},"modules":{"core_filepicker":{"name":"core_filepicker","fullpath":"https:\/\/moodle.unitec.ac.nz\/lib\/javascript.php\/1770862160\/repository\/filepicker.js","requires":["base","node","node-event-simulate","json","async-queue","io-base","io-upload-iframe","io-form","yui2-treeview","panel","cookie","datatable","datatable-sort","resize-plugin","dd-plugin","escape","moodle-core_filepicker","moodle-core-notification-dialogue"]},"core_comment":{"name":"core_comment","fullpath":"https:\/\/moodle.unitec.ac.nz\/lib\/javascript.php\/1770862160\/comment\/comment.js","requires":["base","io-base","node","json","yui2-animation","overlay","escape"]}},"logInclude":[],"logExclude":[],"logLevel":null};
+M.yui.loader = {modules: {}};
+
+//]]>
+</script>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body  id="page-mod-page-view" class="format-site limitedwidth  path-mod path-mod-page dir-ltr lang-en yui-skin-sam yui3-skin-sam moodle-unitec-ac-nz pagelayout-incourse course-1 context-667567 cmid-526817 cm-type-page notloggedin theme uses-drawers">
+<div class="toast-wrapper mx-auto py-0 fixed-top" role="status" aria-live="polite"></div>
+<div id="page-wrapper" class="d-print-block">
+
+    <div>
+    <a class="visually-hidden-focusable" href="#maincontent">Skip to main content</a>
+</div><script src="https://moodle.unitec.ac.nz/lib/javascript.php/1770862160/lib/polyfills/polyfill.js"></script>
+<script src="https://moodle.unitec.ac.nz/theme/yui_combo.php?rollup/3.18.1/yui-moodlesimple-min.js"></script><script src="https://moodle.unitec.ac.nz/lib/javascript.php/1770862160/lib/javascript-static.js"></script>
+<script>
+//<![CDATA[
+document.body.className += ' jsenabled';
+//]]>
+</script>
+
+
+
+    <nav class="navbar fixed-top bg-body navbar-expand" aria-label="Site navigation">
+        <div class="container-fluid">
+            <button class="navbar-toggler aabtn d-block d-md-none px-1 my-1 border-0" data-toggler="drawers" data-action="toggle" data-target="theme_boost-drawers-primary">
+                <span class="navbar-toggler-icon"></span>
+                <span class="visually-hidden">Side panel</span>
+            </button>
+    
+            <a href="https://moodle.unitec.ac.nz/" class="navbar-brand d-none d-md-flex align-items-center m-0 me-4 p-0 aabtn">
+    
+                    eLearn
+            </a>
+                <div class="primary-navigation">
+                    <nav class="moremenu navigation">
+                        <ul id="moremenu-6996b91344acd-navbar-nav" role="menubar" class="nav more-nav navbar-nav">
+                                    <li data-key="home" class="nav-item" role="none" data-forceintomoremenu="false">
+                                                <a role="menuitem" class="nav-link active "
+                                                    href="https://moodle.unitec.ac.nz/"
+                                                    
+                                                    aria-current="true"
+                                                    data-disableactive="true"
+                                                    
+                                                >
+                                                    Home
+                                                </a>
+                                    </li>
+                                    <li class="dropdown nav-item" role="none" data-forceintomoremenu="false">
+                                        <a class="dropdown-toggle nav-link  " id="drop-down-6996b91343f7e" role="menuitem" data-bs-toggle="dropdown"
+                                            aria-haspopup="true" aria-expanded="false" href="#" aria-controls="drop-down-menu-6996b91343f7e"
+                                            
+                                            
+                                            tabindex="-1"
+                                        >
+                                            Schools
+                                        </a>
+                                        <div class="dropdown-menu" role="menu" id="drop-down-menu-6996b91343f7e" aria-labelledby="drop-down-6996b91343f7e">
+                                                        <a class="dropdown-item" role="menuitem" href="https://moodle.unitec.ac.nz/course/index.php?categoryid=2"  data-disableactive="true" tabindex="-1"
+                                                            
+                                                        >
+                                                            APPLIED BUSINESS
+                                                        </a>
+                                                    <div class="dropdown-divider"></div>
+                                                        <a class="dropdown-item" role="menuitem" href="https://moodle.unitec.ac.nz/course/index.php?categoryid=3"  data-disableactive="true" tabindex="-1"
+                                                            
+                                                        >
+                                                            ARCHITECTURE
+                                                        </a>
+                                                    <div class="dropdown-divider"></div>
+                                                        <a class="dropdown-item" role="menuitem" href="https://moodle.unitec.ac.nz/course/index.php?categoryid=4"  data-disableactive="true" tabindex="-1"
+                                                            
+                                                        >
+                                                            BRIDGEPOINT
+                                                        </a>
+                                                    <div class="dropdown-divider"></div>
+                                                        <a class="dropdown-item" role="menuitem" href="https://moodle.unitec.ac.nz/course/index.php?categoryid=5"  data-disableactive="true" tabindex="-1"
+                                                            
+                                                        >
+                                                            BUILDING CONSTRUCTION
+                                                        </a>
+                                                    <div class="dropdown-divider"></div>
+                                                        <a class="dropdown-item" role="menuitem" href="https://moodle.unitec.ac.nz/course/index.php?categoryid=177"  data-disableactive="true" tabindex="-1"
+                                                            
+                                                        >
+                                                            CIVIL ENGINEERING AND LAND SURVEYING
+                                                        </a>
+                                                    <div class="dropdown-divider"></div>
+                                                        <a class="dropdown-item" role="menuitem" href="https://moodle.unitec.ac.nz/course/index.php?categoryid=6"  data-disableactive="true" tabindex="-1"
+                                                            
+                                                        >
+                                                            COMMUNITY STUDIES
+                                                        </a>
+                                                    <div class="dropdown-divider"></div>
+                                                        <a class="dropdown-item" role="menuitem" href="https://moodle.unitec.ac.nz/course/index.php?categoryid=7"  data-disableactive="true" tabindex="-1"
+                                                            
+                                                        >
+                                                            COMPUTING, ELECTRICAL AND APPLIED TECHNOLOGY
+                                                        </a>
+                                                    <div class="dropdown-divider"></div>
+                                                        <a class="dropdown-item" role="menuitem" href="https://moodle.unitec.ac.nz/course/index.php?categoryid=24"  data-disableactive="true" tabindex="-1"
+                                                            
+                                                        >
+                                                            CREATIVE INDUSTRIES
+                                                        </a>
+                                                    <div class="dropdown-divider"></div>
+                                                        <a class="dropdown-item" role="menuitem" href="https://moodle.unitec.ac.nz/course/index.php?categoryid=25"  data-disableactive="true" tabindex="-1"
+                                                            
+                                                        >
+                                                            ENVIRONMENTAL AND ANIMAL SCIENCES
+                                                        </a>
+                                                    <div class="dropdown-divider"></div>
+                                                        <a class="dropdown-item" role="menuitem" href="https://moodle.unitec.ac.nz/course/index.php?categoryid=10"  data-disableactive="true" tabindex="-1"
+                                                            
+                                                        >
+                                                            HEALTHCARE AND SOCIAL PRACTICE
+                                                        </a>
+                                                    <div class="dropdown-divider"></div>
+                                                        <a class="dropdown-item" role="menuitem" href="https://moodle.unitec.ac.nz/course/index.php?categoryid=11"  data-disableactive="true" tabindex="-1"
+                                                            
+                                                        >
+                                                            TRADES AND SERVICES
+                                                        </a>
+                                                    <div class="dropdown-divider"></div>
+                                                        <a class="dropdown-item" role="menuitem" href="https://moodle.unitec.ac.nz/course/index.php?categoryid=28"  data-disableactive="true" tabindex="-1"
+                                                            
+                                                        >
+                                                            Tuapapa Rangahau and Postgraduate Resources
+                                                        </a>
+                                                    <div class="dropdown-divider"></div>
+                                                        <a class="dropdown-item" role="menuitem" href="https://moodle.unitec.ac.nz/course/index.php?categoryid=31"  data-disableactive="true" tabindex="-1"
+                                                            
+                                                        >
+                                                            Unitec Pathways College
+                                                        </a>
+                                                    <div class="dropdown-divider"></div>
+                                                        <a class="dropdown-item" role="menuitem" href="https://moodle.unitec.ac.nz/course/index.php"  data-disableactive="true" tabindex="-1"
+                                                            
+                                                        >
+                                                            All departments
+                                                        </a>
+                                        </div>
+                                    </li>
+                                    <li class="dropdown nav-item" role="none" data-forceintomoremenu="false">
+                                        <a class="dropdown-toggle nav-link  " id="drop-down-6996b913440dd" role="menuitem" data-bs-toggle="dropdown"
+                                            aria-haspopup="true" aria-expanded="false" href="#" aria-controls="drop-down-menu-6996b913440dd"
+                                            
+                                            
+                                            tabindex="-1"
+                                        >
+                                            Students
+                                        </a>
+                                        <div class="dropdown-menu" role="menu" id="drop-down-menu-6996b913440dd" aria-labelledby="drop-down-6996b913440dd">
+                                                        <a class="dropdown-item" role="menuitem" href=""  data-disableactive="true" tabindex="-1"
+                                                            
+                                                        >
+                                                            ONLINE TOOLS
+                                                        </a>
+                                                        <a class="dropdown-item" role="menuitem" href="https://moodle.unitec.ac.nz/course/view.php?id=4384"  data-disableactive="true" tabindex="-1"
+                                                            
+                                                        >
+                                                            MyPortfolio guide
+                                                        </a>
+                                                        <a class="dropdown-item" role="menuitem" href="https://myportal.unitec.ac.nz/#/"  data-disableactive="true" tabindex="-1"
+                                                            
+                                                        >
+                                                            MyUnitec Portal
+                                                        </a>
+                                                        <a class="dropdown-item" role="menuitem" href="https://sts.unitec.ac.nz/adfs/ls/?wa=wsignin1.0&amp;wtrealm=urn%3Afederation%3AMicrosoftOnline&amp;wctx=wa%3Dwsignin1.0%26rpsnv%3D4%26ct%3D1421894965%26rver%3D6.4.6456.0%26wp%3DMCMBI%26wreply%3Dhttps%3A%252F%252Fportal.office.com%252Flanding.aspx%253Ftarget%253D%25252fHome%26lc%3D5129%26id%3D501392&amp;wfresh=0"  data-disableactive="true" tabindex="-1"
+                                                            
+                                                        >
+                                                            Student Email Outlook
+                                                        </a>
+                                                        <a class="dropdown-item" role="menuitem" href="https://www.unitec.ac.nz/askit/"  data-disableactive="true" tabindex="-1"
+                                                            
+                                                        >
+                                                            Ask IMS
+                                                        </a>
+                                                        <a class="dropdown-item" role="menuitem" href="https://moodle.unitec.ac.nz/course/view.php?id=4980"  data-disableactive="true" tabindex="-1"
+                                                            
+                                                        >
+                                                            Ask IMS orientation
+                                                        </a>
+                                                    <div class="dropdown-divider"></div>
+                                                        <a class="dropdown-item" role="menuitem" href=""  data-disableactive="true" tabindex="-1"
+                                                            
+                                                        >
+                                                            STUDY SUPPORT
+                                                        </a>
+                                                        <a class="dropdown-item" role="menuitem" href="https://moodle.unitec.ac.nz/course/view.php?id=4432"  data-disableactive="true" tabindex="-1"
+                                                            
+                                                        >
+                                                            ACADEMIC INTEGRITY
+                                                        </a>
+                                                        <a class="dropdown-item" role="menuitem" href="https://library.unitec.ac.nz"  data-disableactive="true" tabindex="-1"
+                                                            
+                                                        >
+                                                            Library
+                                                        </a>
+                                                        <a class="dropdown-item" role="menuitem" href="https://moodle.unitec.ac.nz/course/view.php?id=4434"  data-disableactive="true" tabindex="-1"
+                                                            
+                                                        >
+                                                            International
+                                                        </a>
+                                                        <a class="dropdown-item" role="menuitem" href="https://www.unitec.ac.nz/maori/maia-centre-and-marae"  data-disableactive="true" tabindex="-1"
+                                                            
+                                                        >
+                                                            Maia Maori
+                                                        </a>
+                                                        <a class="dropdown-item" role="menuitem" href="https://www.unitec.ac.nz/current-students/student-services"  data-disableactive="true" tabindex="-1"
+                                                            
+                                                        >
+                                                            Student Central (Te Pae Korero)
+                                                        </a>
+                                                        <a class="dropdown-item" role="menuitem" href="https://moodle.unitec.ac.nz/course/view.php?id=4940"  data-disableactive="true" tabindex="-1"
+                                                            
+                                                        >
+                                                            Student Learning and Achievement
+                                                        </a>
+                                                        <a class="dropdown-item" role="menuitem" href="https://guides.unitec.ac.nz/studytoolbox"  data-disableactive="true" tabindex="-1"
+                                                            
+                                                        >
+                                                            Study Toolbox
+                                                        </a>
+                                                        <a class="dropdown-item" role="menuitem" href="https://moodle.unitec.ac.nz/course/view.php?id=4426"  data-disableactive="true" tabindex="-1"
+                                                            
+                                                        >
+                                                            The Pacific Centre
+                                                        </a>
+                                                    <div class="dropdown-divider"></div>
+                                                        <a class="dropdown-item" role="menuitem" href=""  data-disableactive="true" tabindex="-1"
+                                                            
+                                                        >
+                                                            OTHER SERVICES
+                                                        </a>
+                                                        <a class="dropdown-item" role="menuitem" href="https://www.unitec.ac.nz/career-and-study-options"  data-disableactive="true" tabindex="-1"
+                                                            
+                                                        >
+                                                            Career and Study Options
+                                                        </a>
+                                                        <a class="dropdown-item" role="menuitem" href="https://moodle.unitec.ac.nz/course/view.php?id=4433"  data-disableactive="true" tabindex="-1"
+                                                            
+                                                        >
+                                                            CAREER &amp; EMPLOYABILITY
+                                                        </a>
+                                                        <a class="dropdown-item" role="menuitem" href="https://www.unitec.ac.nz/current-students/student-life/clubs-sports"  data-disableactive="true" tabindex="-1"
+                                                            
+                                                        >
+                                                            Clubs and Sports
+                                                        </a>
+                                                        <a class="dropdown-item" role="menuitem" href="https://unitecnz-02.vaultgrc.com/kiosk/index?id=zcjh817okfdzwl7gdodeaylo722effhbmtg1spxo32q1ftjrrnmkxj2yfhq4v452&amp;cid=UNITECNZ"  data-disableactive="true" tabindex="-1"
+                                                            
+                                                        >
+                                                            Health and Safety Reporting
+                                                        </a>
+                                                        <a class="dropdown-item" role="menuitem" href="https://www.unitec.ac.nz/current-students/student-life/counselling-services"  data-disableactive="true" tabindex="-1"
+                                                            
+                                                        >
+                                                            Counselling Services
+                                                        </a>
+                                                        <a class="dropdown-item" role="menuitem" href="https://www.unitec.ac.nz/current-students/student-life/student-voice/class-reps"  data-disableactive="true" tabindex="-1"
+                                                            
+                                                        >
+                                                            Student Reps
+                                                        </a>
+                                                        <a class="dropdown-item" role="menuitem" href="https://www.unitec.ac.nz/search?text=advocate"  data-disableactive="true" tabindex="-1"
+                                                            
+                                                        >
+                                                            Student Advocates
+                                                        </a>
+                                                        <a class="dropdown-item" role="menuitem" href="https://www.unitec.ac.nz/scholarships/"  data-disableactive="true" tabindex="-1"
+                                                            
+                                                        >
+                                                            Scholarships and Awards
+                                                        </a>
+                                        </div>
+                                    </li>
+                                    <li class="dropdown nav-item" role="none" data-forceintomoremenu="false">
+                                        <a class="dropdown-toggle nav-link  " id="drop-down-6996b91344216" role="menuitem" data-bs-toggle="dropdown"
+                                            aria-haspopup="true" aria-expanded="false" href="#" aria-controls="drop-down-menu-6996b91344216"
+                                            
+                                            
+                                            tabindex="-1"
+                                        >
+                                            Staff
+                                        </a>
+                                        <div class="dropdown-menu" role="menu" id="drop-down-menu-6996b91344216" aria-labelledby="drop-down-6996b91344216">
+                                                        <a class="dropdown-item" role="menuitem" href=""  data-disableactive="true" tabindex="-1"
+                                                            
+                                                        >
+                                                            DIGITAL LEARNING
+                                                        </a>
+                                                        <a class="dropdown-item" role="menuitem" href="https://moodle.unitec.ac.nz/course/view.php?id=13341"  data-disableactive="true" tabindex="-1"
+                                                            
+                                                        >
+                                                            Moodle Upgrade 2026: What's Changed? (NEW)
+                                                        </a>
+                                                        <a class="dropdown-item" role="menuitem" href="https://moodle.unitec.ac.nz/course/view.php?id=8221"  data-disableactive="true" tabindex="-1"
+                                                            
+                                                        >
+                                                            Digital Learning Standards
+                                                        </a>
+                                                        <a class="dropdown-item" role="menuitem" href="https://moodle.unitec.ac.nz/course/view.php?id=4392"  data-disableactive="true" tabindex="-1"
+                                                            
+                                                        >
+                                                            Echo 360
+                                                        </a>
+                                                        <a class="dropdown-item" role="menuitem" href="https://moodle.unitec.ac.nz/course/view.php?id=4418"  data-disableactive="true" tabindex="-1"
+                                                            
+                                                        >
+                                                            Flexible L&amp;T
+                                                        </a>
+                                                        <a class="dropdown-item" role="menuitem" href="https://moodle.unitec.ac.nz/course/view.php?id=8484"  data-disableactive="true" tabindex="-1"
+                                                            
+                                                        >
+                                                            Generative AI for Teachers
+                                                        </a>
+                                                        <a class="dropdown-item" role="menuitem" href="https://moodle.unitec.ac.nz/course/view.php?id=5259"  data-disableactive="true" tabindex="-1"
+                                                            
+                                                        >
+                                                            H5P Interactive Activities
+                                                        </a>
+                                                        <a class="dropdown-item" role="menuitem" href="https://moodle.unitec.ac.nz/course/view.php?id=4399"  data-disableactive="true" tabindex="-1"
+                                                            
+                                                        >
+                                                            SEAtS
+                                                        </a>
+                                                        <a class="dropdown-item" role="menuitem" href="https://moodle.unitec.ac.nz/mod/glossary/view.php?id=330147"  data-disableactive="true" tabindex="-1"
+                                                            
+                                                        >
+                                                            Staff Guide to Moodle
+                                                        </a>
+                                                        <a class="dropdown-item" role="menuitem" href="https://moodle.unitec.ac.nz/course/view.php?id=11413"  data-disableactive="true" tabindex="-1"
+                                                            
+                                                        >
+                                                            Teaching with Teams
+                                                        </a>
+                                                    <div class="dropdown-divider"></div>
+                                                        <a class="dropdown-item" role="menuitem" href=""  data-disableactive="true" tabindex="-1"
+                                                            
+                                                        >
+                                                            OTHER
+                                                        </a>
+                                                        <a class="dropdown-item" role="menuitem" href="https://moodle.unitec.ac.nz/course/view.php?id=4398"  data-disableactive="true" tabindex="-1"
+                                                            
+                                                        >
+                                                            Academic Quality
+                                                        </a>
+                                                        <a class="dropdown-item" role="menuitem" href="https://moodle.unitec.ac.nz/course/view.php?id=4591"  data-disableactive="true" tabindex="-1"
+                                                            
+                                                        >
+                                                            Badges (Teaching Competencies)
+                                                        </a>
+                                                        <a class="dropdown-item" role="menuitem" href="https://moodle.unitec.ac.nz/course/view.php?id=4983"  data-disableactive="true" tabindex="-1"
+                                                            
+                                                        >
+                                                            Collaborative Spaces
+                                                        </a>
+                                                        <a class="dropdown-item" role="menuitem" href="https://moodle.unitec.ac.nz/course/view.php?id=4403"  data-disableactive="true" tabindex="-1"
+                                                            
+                                                        >
+                                                            Moodle role induction
+                                                        </a>
+                                                        <a class="dropdown-item" role="menuitem" href="https://moodle.unitec.ac.nz/course/request.php"  data-disableactive="true" tabindex="-1"
+                                                            
+                                                        >
+                                                            Request a new Moodle course
+                                                        </a>
+                                                        <a class="dropdown-item" role="menuitem" href="https://moodle.unitec.ac.nz/course/view.php?id=3307"  data-disableactive="true" tabindex="-1"
+                                                            
+                                                        >
+                                                            Te Rito Suite
+                                                        </a>
+                                        </div>
+                                    </li>
+                            <li role="none" class="nav-item dropdown dropdownmoremenu d-none" data-region="morebutton">
+                                <a class="dropdown-toggle nav-link " href="#" id="moremenu-dropdown-6996b91344acd" role="menuitem" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" tabindex="-1">
+                                    More
+                                </a>
+                                <ul class="dropdown-menu dropdown-menu-start" data-region="moredropdown" aria-labelledby="moremenu-dropdown-6996b91344acd" role="menu">
+                                </ul>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+    
+            <ul class="navbar-nav d-none d-md-flex my-1 px-1">
+                <!-- page_heading_menu -->
+                
+            </ul>
+    
+            <div id="usernavigation" class="navbar-nav ms-auto h-100">
+                    <div id="searchinput-navbar-6996b913485d76996b91346db33" class="simplesearchform">
+    <div class="collapse" id="searchform-navbar">
+        <form autocomplete="off" action="https://moodle.unitec.ac.nz/search/index.php" method="get" accept-charset="utf-8" class="mform d-flex flex-wrap align-items-center searchform-navbar">
+                <input type="hidden" name="context" value="667567">
+            <div class="input-group" role="group" aria-labelledby="searchgrouplabel-6996b913485d76996b91346db33">
+                    <span id="searchgrouplabel-6996b913485d76996b91346db33" class="visually-hidden">Site-wide search</span>
+                <input type="text"
+                    id="searchinput-6996b913485d76996b91346db33"
+                    class="form-control withclear"
+                    placeholder="Search"
+                    aria-label="Search"
+                    name="q"
+                    data-region="input"
+                    autocomplete="off"
+                >
+                <label for="searchinput-6996b913485d76996b91346db33">
+                    <span class="visually-hidden">Search</span>
+                </label>
+                <a class="btn btn-close"
+                    data-action="closesearch"
+                    data-bs-toggle="collapse"
+                    href="#searchform-navbar"
+                    role="button"
+                    title="Close"
+                >
+                    <span class="visually-hidden">Close</span>
+                </a>
+                <button type="submit" class="btn btn-submit" data-action="submit" title="Perform search">
+                    <i class="icon fa fa-magnifying-glass fa-fw " aria-hidden="true" ></i>
+                    <span class="visually-hidden">Perform search</span>
+                </button>
+            </div>
+        </form>
+    </div>
+    <a
+        class="rounded-0 nav-link icon-no-margin"
+        data-bs-toggle="collapse"
+        data-action="opensearch"
+        href="#searchform-navbar"
+        role="button"
+        aria-expanded="false"
+        aria-controls="searchform-navbar"
+        title="Toggle search input"
+    >
+        <i class="icon fa fa-magnifying-glass fa-fw " aria-hidden="true" ></i>
+        <span class="visually-hidden">Toggle search input</span>
+    </a>
+</div>
+                    <div class="divider border-start h-75 align-self-center mx-1"></div>
+                    <div class="langmenu">
+                        <div class="dropdown show">
+                            <a href="#" role="button" id="lang-menu-toggle" data-bs-toggle="dropdown" aria-label="Language" aria-haspopup="true" aria-controls="lang-action-menu" class="btn dropdown-toggle">
+                                <i class="icon fa fa-language fa-fw me-1" aria-hidden="true"></i>
+                                <span class="langbutton">
+                                    English ‎(en)‎
+                                </span>
+                                <b class="caret"></b>
+                            </a>
+                            <div role="menu" aria-labelledby="lang-menu-toggle" id="lang-action-menu" class="dropdown-menu dropdown-menu-end">
+                                        <a href="https://moodle.unitec.ac.nz/mod/page/view.php?id=526817&amp;lang=af" class="dropdown-item ps-5" role="menuitem" 
+                                                lang="af" >
+                                            Afrikaans ‎(af)‎
+                                        </a>
+                                        <a href="https://moodle.unitec.ac.nz/mod/page/view.php?id=526817&amp;lang=de" class="dropdown-item ps-5" role="menuitem" 
+                                                lang="de" >
+                                            Deutsch ‎(de)‎
+                                        </a>
+                                        <a href="#" class="dropdown-item ps-5" role="menuitem" aria-current="true"
+                                                >
+                                            English ‎(en)‎
+                                        </a>
+                                        <a href="https://moodle.unitec.ac.nz/mod/page/view.php?id=526817&amp;lang=fil" class="dropdown-item ps-5" role="menuitem" 
+                                                lang="fil" >
+                                            Filipino ‎(fil)‎
+                                        </a>
+                                        <a href="https://moodle.unitec.ac.nz/mod/page/view.php?id=526817&amp;lang=fr" class="dropdown-item ps-5" role="menuitem" 
+                                                lang="fr" >
+                                            Français ‎(fr)‎
+                                        </a>
+                                        <a href="https://moodle.unitec.ac.nz/mod/page/view.php?id=526817&amp;lang=tl" class="dropdown-item ps-5" role="menuitem" 
+                                                lang="tl" >
+                                            Tagalog ‎(tl)‎
+                                        </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="divider border-start h-75 align-self-center mx-1"></div>
+                
+                <div class="d-flex align-items-stretch usermenu-container" data-region="usermenu">
+                        <div class="usermenu">
+                                <span class="login ps-2">
+                                        <a href="https://moodle.unitec.ac.nz/login/index.php">Log in</a>
+                                </span>
+                        </div>
+                </div>
+                
+            </div>
+        </div>
+    </nav>
+    
+
+<div  class="drawer drawer-left drawer-primary d-print-none not-initialized" data-region="fixed-drawer" id="theme_boost-drawers-primary" data-preference="" data-state="show-drawer-primary" data-forceopen="0" data-close-on-resize="1">
+    <div class="drawerheader">
+        <button
+            class="btn btn-icon drawertoggle hidden"
+            data-toggler="drawers"
+            data-action="closedrawer"
+            data-target="theme_boost-drawers-primary"
+            data-bs-toggle="tooltip"
+            data-bs-placement="right"
+            title="Close drawer"
+        >
+            <i class="icon fa fa-xmark fa-fw " aria-hidden="true" ></i>
+        </button>
+                <a
+            href="https://moodle.unitec.ac.nz/"
+            title="eLearn"
+            data-region="site-home-link"
+            class="aabtn text-reset d-flex align-items-center py-1 h-100"
+        >
+                <span class="sitename" title="eLearn">eLearn</span>
+        </a>
+
+        <div class="drawerheadercontent hidden">
+            
+        </div>
+    </div>
+    <div class="drawercontent drag-container" data-usertour="scroller">
+                <div class="list-group">
+                <a href="https://moodle.unitec.ac.nz/" class="list-group-item list-group-item-action active " aria-current="true">
+                    Home
+                </a>
+                <a id="drop-down-1" href="#" class="list-group-item list-group-item-action icons-collapse-expand collapsed d-flex" data-bs-toggle="collapse" data-bs-target="#drop-down-menu-1" aria-expanded="false" aria-controls="drop-down-menu-1">
+                    Schools
+                    <span class="ms-auto expanded-icon icon-no-margin mx-2">
+                        <i class="icon fa fa-chevron-down fa-fw " aria-hidden="true" ></i>
+                        <span class="visually-hidden">
+                            Collapse
+                        </span>
+                    </span>
+                    <span class="ms-auto collapsed-icon icon-no-margin mx-2">
+                        <i class="icon fa fa-chevron-right fa-fw " aria-hidden="true" ></i>
+                        <span class="visually-hidden">
+                            Expand
+                        </span>
+                    </span>
+                </a>
+                <div class="collapse list-group-item p-0 border-0" role="menu" id="drop-down-menu-1" aria-labelledby="drop-down-1">
+                             <a href="https://moodle.unitec.ac.nz/course/index.php?categoryid=2" class="ps-5 bg-light list-group-item list-group-item-action">APPLIED BUSINESS</a>
+                             <a href="https://moodle.unitec.ac.nz/course/index.php?categoryid=3" class="ps-5 bg-light list-group-item list-group-item-action">ARCHITECTURE</a>
+                             <a href="https://moodle.unitec.ac.nz/course/index.php?categoryid=4" class="ps-5 bg-light list-group-item list-group-item-action">BRIDGEPOINT</a>
+                             <a href="https://moodle.unitec.ac.nz/course/index.php?categoryid=5" class="ps-5 bg-light list-group-item list-group-item-action">BUILDING CONSTRUCTION</a>
+                             <a href="https://moodle.unitec.ac.nz/course/index.php?categoryid=177" class="ps-5 bg-light list-group-item list-group-item-action">CIVIL ENGINEERING AND LAND SURVEYING</a>
+                             <a href="https://moodle.unitec.ac.nz/course/index.php?categoryid=6" class="ps-5 bg-light list-group-item list-group-item-action">COMMUNITY STUDIES</a>
+                             <a href="https://moodle.unitec.ac.nz/course/index.php?categoryid=7" class="ps-5 bg-light list-group-item list-group-item-action">COMPUTING, ELECTRICAL AND APPLIED TECHNOLOGY</a>
+                             <a href="https://moodle.unitec.ac.nz/course/index.php?categoryid=24" class="ps-5 bg-light list-group-item list-group-item-action">CREATIVE INDUSTRIES</a>
+                             <a href="https://moodle.unitec.ac.nz/course/index.php?categoryid=25" class="ps-5 bg-light list-group-item list-group-item-action">ENVIRONMENTAL AND ANIMAL SCIENCES</a>
+                             <a href="https://moodle.unitec.ac.nz/course/index.php?categoryid=10" class="ps-5 bg-light list-group-item list-group-item-action">HEALTHCARE AND SOCIAL PRACTICE</a>
+                             <a href="https://moodle.unitec.ac.nz/course/index.php?categoryid=11" class="ps-5 bg-light list-group-item list-group-item-action">TRADES AND SERVICES</a>
+                             <a href="https://moodle.unitec.ac.nz/course/index.php?categoryid=28" class="ps-5 bg-light list-group-item list-group-item-action">Tuapapa Rangahau and Postgraduate Resources</a>
+                             <a href="https://moodle.unitec.ac.nz/course/index.php?categoryid=31" class="ps-5 bg-light list-group-item list-group-item-action">Unitec Pathways College</a>
+                             <a href="https://moodle.unitec.ac.nz/course/index.php" class="ps-5 bg-light list-group-item list-group-item-action">All departments</a>
+                </div>
+                <a id="drop-down-30" href="#" class="list-group-item list-group-item-action icons-collapse-expand collapsed d-flex" data-bs-toggle="collapse" data-bs-target="#drop-down-menu-30" aria-expanded="false" aria-controls="drop-down-menu-30">
+                    Students
+                    <span class="ms-auto expanded-icon icon-no-margin mx-2">
+                        <i class="icon fa fa-chevron-down fa-fw " aria-hidden="true" ></i>
+                        <span class="visually-hidden">
+                            Collapse
+                        </span>
+                    </span>
+                    <span class="ms-auto collapsed-icon icon-no-margin mx-2">
+                        <i class="icon fa fa-chevron-right fa-fw " aria-hidden="true" ></i>
+                        <span class="visually-hidden">
+                            Expand
+                        </span>
+                    </span>
+                </a>
+                <div class="collapse list-group-item p-0 border-0" role="menu" id="drop-down-menu-30" aria-labelledby="drop-down-30">
+                             <a href="" class="ps-5 bg-light list-group-item list-group-item-action">ONLINE TOOLS</a>
+                             <a href="https://moodle.unitec.ac.nz/course/view.php?id=4384" class="ps-5 bg-light list-group-item list-group-item-action">MyPortfolio guide</a>
+                             <a href="https://myportal.unitec.ac.nz/#/" class="ps-5 bg-light list-group-item list-group-item-action">MyUnitec Portal</a>
+                             <a href="https://sts.unitec.ac.nz/adfs/ls/?wa=wsignin1.0&amp;wtrealm=urn%3Afederation%3AMicrosoftOnline&amp;wctx=wa%3Dwsignin1.0%26rpsnv%3D4%26ct%3D1421894965%26rver%3D6.4.6456.0%26wp%3DMCMBI%26wreply%3Dhttps%3A%252F%252Fportal.office.com%252Flanding.aspx%253Ftarget%253D%25252fHome%26lc%3D5129%26id%3D501392&amp;wfresh=0" class="ps-5 bg-light list-group-item list-group-item-action">Student Email Outlook</a>
+                             <a href="https://www.unitec.ac.nz/askit/" class="ps-5 bg-light list-group-item list-group-item-action">Ask IMS</a>
+                             <a href="https://moodle.unitec.ac.nz/course/view.php?id=4980" class="ps-5 bg-light list-group-item list-group-item-action">Ask IMS orientation</a>
+                             <a href="" class="ps-5 bg-light list-group-item list-group-item-action">STUDY SUPPORT</a>
+                             <a href="https://moodle.unitec.ac.nz/course/view.php?id=4432" class="ps-5 bg-light list-group-item list-group-item-action">ACADEMIC INTEGRITY</a>
+                             <a href="https://library.unitec.ac.nz" class="ps-5 bg-light list-group-item list-group-item-action">Library</a>
+                             <a href="https://moodle.unitec.ac.nz/course/view.php?id=4434" class="ps-5 bg-light list-group-item list-group-item-action">International</a>
+                             <a href="https://www.unitec.ac.nz/maori/maia-centre-and-marae" class="ps-5 bg-light list-group-item list-group-item-action">Maia Maori</a>
+                             <a href="https://www.unitec.ac.nz/current-students/student-services" class="ps-5 bg-light list-group-item list-group-item-action">Student Central (Te Pae Korero)</a>
+                             <a href="https://moodle.unitec.ac.nz/course/view.php?id=4940" class="ps-5 bg-light list-group-item list-group-item-action">Student Learning and Achievement</a>
+                             <a href="https://guides.unitec.ac.nz/studytoolbox" class="ps-5 bg-light list-group-item list-group-item-action">Study Toolbox</a>
+                             <a href="https://moodle.unitec.ac.nz/course/view.php?id=4426" class="ps-5 bg-light list-group-item list-group-item-action">The Pacific Centre</a>
+                             <a href="" class="ps-5 bg-light list-group-item list-group-item-action">OTHER SERVICES</a>
+                             <a href="https://www.unitec.ac.nz/career-and-study-options" class="ps-5 bg-light list-group-item list-group-item-action">Career and Study Options</a>
+                             <a href="https://moodle.unitec.ac.nz/course/view.php?id=4433" class="ps-5 bg-light list-group-item list-group-item-action">CAREER &amp; EMPLOYABILITY</a>
+                             <a href="https://www.unitec.ac.nz/current-students/student-life/clubs-sports" class="ps-5 bg-light list-group-item list-group-item-action">Clubs and Sports</a>
+                             <a href="https://unitecnz-02.vaultgrc.com/kiosk/index?id=zcjh817okfdzwl7gdodeaylo722effhbmtg1spxo32q1ftjrrnmkxj2yfhq4v452&amp;cid=UNITECNZ" class="ps-5 bg-light list-group-item list-group-item-action">Health and Safety Reporting</a>
+                             <a href="https://www.unitec.ac.nz/current-students/student-life/counselling-services" class="ps-5 bg-light list-group-item list-group-item-action">Counselling Services</a>
+                             <a href="https://www.unitec.ac.nz/current-students/student-life/student-voice/class-reps" class="ps-5 bg-light list-group-item list-group-item-action">Student Reps</a>
+                             <a href="https://www.unitec.ac.nz/search?text=advocate" class="ps-5 bg-light list-group-item list-group-item-action">Student Advocates</a>
+                             <a href="https://www.unitec.ac.nz/scholarships/" class="ps-5 bg-light list-group-item list-group-item-action">Scholarships and Awards</a>
+                </div>
+                <a id="drop-down-58" href="#" class="list-group-item list-group-item-action icons-collapse-expand collapsed d-flex" data-bs-toggle="collapse" data-bs-target="#drop-down-menu-58" aria-expanded="false" aria-controls="drop-down-menu-58">
+                    Staff
+                    <span class="ms-auto expanded-icon icon-no-margin mx-2">
+                        <i class="icon fa fa-chevron-down fa-fw " aria-hidden="true" ></i>
+                        <span class="visually-hidden">
+                            Collapse
+                        </span>
+                    </span>
+                    <span class="ms-auto collapsed-icon icon-no-margin mx-2">
+                        <i class="icon fa fa-chevron-right fa-fw " aria-hidden="true" ></i>
+                        <span class="visually-hidden">
+                            Expand
+                        </span>
+                    </span>
+                </a>
+                <div class="collapse list-group-item p-0 border-0" role="menu" id="drop-down-menu-58" aria-labelledby="drop-down-58">
+                             <a href="" class="ps-5 bg-light list-group-item list-group-item-action">DIGITAL LEARNING</a>
+                             <a href="https://moodle.unitec.ac.nz/course/view.php?id=13341" class="ps-5 bg-light list-group-item list-group-item-action">Moodle Upgrade 2026: What's Changed? (NEW)</a>
+                             <a href="https://moodle.unitec.ac.nz/course/view.php?id=8221" class="ps-5 bg-light list-group-item list-group-item-action">Digital Learning Standards</a>
+                             <a href="https://moodle.unitec.ac.nz/course/view.php?id=4392" class="ps-5 bg-light list-group-item list-group-item-action">Echo 360</a>
+                             <a href="https://moodle.unitec.ac.nz/course/view.php?id=4418" class="ps-5 bg-light list-group-item list-group-item-action">Flexible L&amp;T</a>
+                             <a href="https://moodle.unitec.ac.nz/course/view.php?id=8484" class="ps-5 bg-light list-group-item list-group-item-action">Generative AI for Teachers</a>
+                             <a href="https://moodle.unitec.ac.nz/course/view.php?id=5259" class="ps-5 bg-light list-group-item list-group-item-action">H5P Interactive Activities</a>
+                             <a href="https://moodle.unitec.ac.nz/course/view.php?id=4399" class="ps-5 bg-light list-group-item list-group-item-action">SEAtS</a>
+                             <a href="https://moodle.unitec.ac.nz/mod/glossary/view.php?id=330147" class="ps-5 bg-light list-group-item list-group-item-action">Staff Guide to Moodle</a>
+                             <a href="https://moodle.unitec.ac.nz/course/view.php?id=11413" class="ps-5 bg-light list-group-item list-group-item-action">Teaching with Teams</a>
+                             <a href="" class="ps-5 bg-light list-group-item list-group-item-action">OTHER</a>
+                             <a href="https://moodle.unitec.ac.nz/course/view.php?id=4398" class="ps-5 bg-light list-group-item list-group-item-action">Academic Quality</a>
+                             <a href="https://moodle.unitec.ac.nz/course/view.php?id=4591" class="ps-5 bg-light list-group-item list-group-item-action">Badges (Teaching Competencies)</a>
+                             <a href="https://moodle.unitec.ac.nz/course/view.php?id=4983" class="ps-5 bg-light list-group-item list-group-item-action">Collaborative Spaces</a>
+                             <a href="https://moodle.unitec.ac.nz/course/view.php?id=4403" class="ps-5 bg-light list-group-item list-group-item-action">Moodle role induction</a>
+                             <a href="https://moodle.unitec.ac.nz/course/request.php" class="ps-5 bg-light list-group-item list-group-item-action">Request a new Moodle course</a>
+                             <a href="https://moodle.unitec.ac.nz/course/view.php?id=3307" class="ps-5 bg-light list-group-item list-group-item-action">Te Rito Suite</a>
+                </div>
+        </div>
+
+    </div>
+</div>
+    <div id="page" data-region="mainpage" data-usertour="scroller" class="drawers   drag-container">
+        <div id="topofscroll" class="main-inner">
+            <div class="drawer-toggles d-flex">
+            </div>
+            <header id="page-header" class="header-maxwidth d-print-none">
+    <div class="w-100">
+        <div class="d-flex flex-wrap">
+            <div id="page-navbar">
+                <nav aria-label="Navigation bar">
+    <ol class="breadcrumb"></ol>
+</nav>
+            </div>
+            <div class="ms-auto d-flex">
+                
+            </div>
+            <div id="course-header">
+                
+            </div>
+        </div>
+        <div class="d-flex align-items-center">
+            <div class="me-auto d-flex flex-column">
+                <div>
+                    <div class="page-context-header d-flex flex-wrap align-items-center mb-2">
+    <div class="page-header-image">
+        <div class="content activityiconcontainer me-2 modicon_page"><img class="icon activityicon " aria-hidden="true" src="https://moodle.unitec.ac.nz/theme/image.php/boost/page/1770862159/monologo?filtericon=1" alt="" /></div>
+    </div>
+    <div class="page-header-headings">
+        <h1 class="h2 mb-0">When you can use gen AI in assignments</h1>
+    </div>
+</div>
+                </div>
+                <div>
+                </div>
+            </div>
+            <div class="header-actions-container ms-auto" data-region="header-actions-container">
+            </div>
+        </div>
+    </div>
+</header>
+            <div id="page-content" class="pb-3 d-print-block">
+                <div id="region-main-box">
+                    <div id="region-main">
+
+                        <span class="notifications" id="user-notifications"></span>
+                            <span id="maincontent"></span>
+                            <div class="activity-header" data-for="page-activity-header">
+                                    <span class="visually-hidden">Completion requirements</span>
+                                    <div data-region="activity-information" data-activityname="When you can use gen AI in assignments" class="activity-information">
+
+
+</div>
+</div>
+                        <div role="main"><div class="box py-3 generalbox center clearfix"><div class="no-overflow"><h4><strong>Be
+careful how you use Generative Artificial Intelligence in Assignments!</strong></h4>
+
+<h5><strong>Before
+you use Gen AI in any assignment, check the instructions, and ask your lecturer
+– </strong></h5>
+
+<p></p><p style="text-align: left;"><strong style="font-size: 0.9375rem; font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, Arial, &quot;Noto Sans&quot;, &quot;Liberation Sans&quot;, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;, &quot;Noto Color Emoji&quot;;">•&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </strong><strong style="font-size: 0.9375rem; font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, Arial, &quot;Noto Sans&quot;, &quot;Liberation Sans&quot;, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;, &quot;Noto Color Emoji&quot;;"><i>what is allowed</i></strong></p><span><p style="text-align: left;"><strong><span style="font-size: 0.9375rem; font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, Arial, &quot;Noto Sans&quot;, &quot;Liberation Sans&quot;, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;, &quot;Noto Color Emoji&quot;;">•&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span style="font-size: 0.9375rem; font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, Arial, &quot;Noto Sans&quot;, &quot;Liberation Sans&quot;, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;, &quot;Noto Color Emoji&quot;;"><i>what is not allowed</i></span></strong></p></span><p style="text-align: left;"><span style="font-size: 0.9375rem; font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, Arial, &quot;Noto Sans&quot;, &quot;Liberation Sans&quot;, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;, &quot;Noto Color Emoji&quot;;">•&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><strong style="font-size: 0.9375rem; font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, Arial, &quot;Noto Sans&quot;, &quot;Liberation Sans&quot;, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;, &quot;Noto Color Emoji&quot;;"><i>what is expected.</i></strong></p><p style="text-align: left;"><span style="font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, Arial, &quot;Noto Sans&quot;, &quot;Liberation Sans&quot;, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;, &quot;Noto Color Emoji&quot;; font-size: medium;" class="">Generative Artificial Intelligence (Gen AI) can be part of your learning at
+Unitec if you carefully follow instructions
+and permissions given by your teacher. Important: you are </span><strong style="font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, Arial, &quot;Noto Sans&quot;, &quot;Liberation Sans&quot;, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;, &quot;Noto Color Emoji&quot;; font-size: calc(0.90375rem + 0.045vw);"><span class="" style="font-size: medium;">not permitted</span></strong><span style="font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, Arial, &quot;Noto Sans&quot;, &quot;Liberation Sans&quot;, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;, &quot;Noto Color Emoji&quot;; font-size: medium;" class="">
+to use AI to “write your assignment” and then submit it as your original work.
+Evidence of this can be considered plagiarism, because it’s like </span><span lang="EN-US" style="font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, Arial, &quot;Noto Sans&quot;, &quot;Liberation Sans&quot;, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;, &quot;Noto Color Emoji&quot;; font-size: medium;" class="">like getting another person to write your assignment for you, even a
+friend or family member.</span></p>
+
+<p style="text-align: left;"><strong>Understand
+the expectations</strong></p>
+
+<p>Be careful to:</p>
+
+<p><!--[if !supportLists]--><span>1.</span><strong>&nbsp;&nbsp;&nbsp;&nbsp; </strong><!--[endif]--><strong>Read
+about </strong>how to<strong> </strong>show<strong> </strong><a href="https://www.unitec.ac.nz/current-students/study-support/academic-integrity">Academic
+Integrity</a><strong> </strong>in your assignments.</p>
+
+<p><!--[if !supportLists]-->2.&nbsp;&nbsp;&nbsp;&nbsp;<strong>Check </strong>Unitec’s<strong> </strong>rules about using
+Gen AI in assignments on page 3 of <a href="https://www.unitec.ac.nz/sites/default/files/public/documents/AC%202.8%20Academic%20Integrity%20Procedure_20231025.pdf">AC
+2.8<strong> </strong>Academic Integrity Procedure</a>. Briefly, these are:</p>
+
+<div class="editor-indent" style="margin-left: 30px;"><p>·&nbsp;&nbsp;&nbsp;
+<!--[endif]-->Using Gen AI <i>may</i> be allowed in formal
+submitted assignment work - if this is explicitly stated in the instructions.</p><p>·&nbsp;&nbsp;&nbsp;
+<!--[endif]-->Gen AI use <i>must not</i> be used in formal
+submitted assignment work if it has not been explicitly allowed in the
+instructions.</p><p>·&nbsp;&nbsp;&nbsp;
+<!--[endif]-->Evidence for your assessment may include
+discussion of your assignment with your teacher.</p></div>
+
+
+
+
+
+<p>Inappropriate
+use of Gen AI in any assessment submission that goes against these expectations
+may result in an academic misconduct investigation.</p>
+
+<p><!--[if !supportLists]-->3.&nbsp;&nbsp;&nbsp;&nbsp;
+<!--[endif]--><strong>Check </strong>what is allowed in each course<strong>, </strong>and
+in all your assignments. Ask your teacher if you are not sure or it is not
+clear about Gen AI in assignments.</p>
+
+<p><!--[if !supportLists]-->4.&nbsp;&nbsp;&nbsp;&nbsp;
+<!--[endif]--><strong>Check </strong>how to acknowledge your use of AI.
+If you are allowed to use Gen AI as part of your learning and assessment, you
+are expected to:</p>
+
+<div class="editor-indent" style="margin-left: 30px;"><p><span>a.&nbsp;&nbsp;&nbsp;</span><strong>&nbsp; </strong><!--[endif]--><strong>Reference
+AI</strong> in your references list. Check <a href="https://guides.unitec.ac.nz/referencingandciting/plagiarism">Unitec
+Library’s guidelines</a> on how to format a reference to AI, such as <a href="https://guides.unitec.ac.nz/c.php?g=931258&amp;p=6970016">Chat GPT
+using APA</a> style. You can also make an <a href="https://www.unitec.ac.nz/current-students/study-support/learning-advisors" target="_blank" title="https://www.unitec.ac.nz/current-students/study-support/learning-advisors">appointment
+with a Learning Advisor</a> or with <a href="https://guides.unitec.ac.nz/subjectlibrarians" target="_blank" title="https://guides.unitec.ac.nz/subjectlibrarians">a Subject Librarian</a> on
+the Unitec Library website to get guidance on how to do the referencing.</p><p><span>b.&nbsp;&nbsp;&nbsp;</span><strong> </strong><!--[endif]-->Under
+your References List, write a <strong>declaration about what AI tools</strong> you used
+and how you used them. Your course materials should have examples of how to do
+this. If you are not sure, ask your teacher. You can see examples of how to
+declare your use of AI such as at <a href="https://students.unimelb.edu.au/academic-skills/resources/academic-integrity/acknowledging-AI-tools-and-technologies">Melbourne
+University</a>. Most guidelines for AI Declarations ask students to for 4
+things:</p></div><div class="editor-indent" style="margin-left: 30px;"><div class="editor-indent" style="margin-left: 30px;"><p>-&nbsp; <!--[endif]-->the specific AI tools you used (including
+translation, editing or proofreading&nbsp;
+tools)</p></div><div class="editor-indent" style="margin-left: 30px;"><p>-&nbsp; <!--[endif]-->what you used the AI tools or technologies
+for the assessment</p></div><div class="editor-indent" style="margin-left: 30px;"><p>-&nbsp; <!--[endif]-->the prompts you gave to the AI tool/s</p></div><div class="editor-indent" style="margin-left: 30px;"><p>-&nbsp; <!--[endif]-->an explanation of how the outputs from the AI were used
+in your work.</p></div></div>
+
+<p><span lang="EN-US">At Unitec we want you to succeed as <strong>you! </strong>We’re interested in <i>your</i>
+ideas and what you have learned. So, </span>your teacher may want to discuss with you in person how you created
+your assignment when they are assessing your work. This could be to clarify how
+AI may have helped you in the assignment, or to make sure you have declared and
+referenced it correctly, or other aspects.</p>
+
+<p style="text-align: left;"><span class="" style="font-size: medium;">Take
+great care to follow Unitec’s expectations about how to use AI tools ethically
+and effectively!</span></p></div></div><div class="modified">Last modified: Monday, 17 February 2025, 5:06 PM</div></div>
+                        
+                        
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <footer id="page-footer" class="footer-popover bg-white">
+            <div data-region="footer-container-popover">
+                <button class="btn btn-icon rounded-circle bg-secondary btn-footer-popover" data-action="footer-popover" aria-label="Show footer">
+                    <i class="icon fa fa-question fa-fw " aria-hidden="true" ></i>
+                </button>
+            </div>
+            <div class="footer-content-popover container" data-region="footer-content-popover">
+                    <div class="footer-section p-3 border-bottom">
+        
+        
+                            <div class="footer-support-link"><a href="https://www.unitec.ac.nz/askit/" target="blank"><i class="icon fa-regular fa-envelope fa-fw " aria-hidden="true" ></i>Contact site support<i class="icon fa fa-arrow-up-right-from-square fa-fw ms-1" aria-hidden="true" ></i></a></div>
+                    </div>
+                <div class="footer-section p-3 border-bottom">
+                    <div class="logininfo">
+                        <div class="logininfo">You are not logged in. (<a href="https://moodle.unitec.ac.nz/login/index.php">Log in</a>)</div>
+                    </div>
+                    <div class="tool_usertours-resettourcontainer">
+                    </div>
+        
+                    <div class="tool_dataprivacy"><a href="https://moodle.unitec.ac.nz/admin/tool/dataprivacy/summary.php">Data retention summary</a></div>
+                    <script>
+//<![CDATA[
+var require = {
+    baseUrl : 'https://moodle.unitec.ac.nz/lib/requirejs.php/1770862160/',
+    // We only support AMD modules with an explicit define() statement.
+    enforceDefine: true,
+    skipDataMain: true,
+    waitSeconds : 0,
+
+    paths: {
+        jquery: 'https://moodle.unitec.ac.nz/lib/javascript.php/1770862160/lib/jquery/jquery-3.7.1.min',
+        jqueryui: 'https://moodle.unitec.ac.nz/lib/javascript.php/1770862160/lib/jquery/ui-1.14.1/jquery-ui.min',
+        jqueryprivate: 'https://moodle.unitec.ac.nz/lib/javascript.php/1770862160/lib/requirejs/jquery-private'
+    },
+
+    // Custom jquery config map.
+    map: {
+      // '*' means all modules will get 'jqueryprivate'
+      // for their 'jquery' dependency.
+      '*': { jquery: 'jqueryprivate' },
+
+      // 'jquery-private' wants the real jQuery module
+      // though. If this line was not here, there would
+      // be an unresolvable cyclic dependency.
+      jqueryprivate: { jquery: 'jquery' }
+    }
+};
+
+//]]>
+</script>
+<script src="https://moodle.unitec.ac.nz/lib/javascript.php/1770862160/lib/requirejs/require.min.js"></script>
+<script>
+//<![CDATA[
+M.util.js_pending("core/first");
+require(['core/first'], function() {
+require(['core/prefetch'])
+;
+M.util.js_pending('filter_mathjaxloader/loader'); require(['filter_mathjaxloader/loader'], function(amd) {amd.configure({"mathjaxurl":"https:\/\/cdn.jsdelivr.net\/npm\/mathjax@3.2.2\/es5\/tex-mml-chtml.js","mathjaxconfig":"","lang":"en"}); M.util.js_complete('filter_mathjaxloader/loader');});;
+require(["media_videojs/loader"], function(loader) {
+    loader.setUp('en');
+});;
+M.util.js_pending('filter_glossary/autolinker'); require(['filter_glossary/autolinker'], function(amd) {amd.init(); M.util.js_complete('filter_glossary/autolinker');});;
+M.util.js_pending('core_courseformat/local/content/activity_header'); require(['core_courseformat/local/content/activity_header'], function(amd) {amd.init(); M.util.js_complete('core_courseformat/local/content/activity_header');});;
+
+    require(['core/moremenu'], function(moremenu) {
+        moremenu(document.querySelector('#moremenu-6996b91344acd-navbar-nav'));
+    });
+;
+
+require(
+[
+    'jquery',
+],
+function(
+    $
+) {
+    const container = document.getElementById('searchform-navbar');
+    const opensearch = container.parentElement.querySelector('[data-action="opensearch"]');
+    const input = container.querySelector('[data-region="input"]');
+    const submit = container.querySelector('[data-action="submit"]');
+
+    submit.addEventListener('click', (e) => {
+        if (input.valUE === '') {
+            e.preventDefault();
+        }
+    });
+
+    container.addEventListener('hidden.bs.collapse', () => {
+        opensearch.classList.remove('d-none');
+        input.value = '';
+    });
+
+    container.addEventListener('show.bs.collapse', () => {
+        opensearch.classList.add('d-none');
+    });
+
+    container.addEventListener('shown.bs.collapse', () => {
+        input.focus();
+    });
+});
+;
+
+require(
+[
+    'jquery',
+],
+function(
+    $
+) {
+    const container = document.getElementById('searchform-navbar');
+    const opensearch = container.parentElement.querySelector('[data-action="opensearch"]');
+    const input = container.querySelector('[data-region="input"]');
+    const submit = container.querySelector('[data-action="submit"]');
+
+    submit.addEventListener('click', (e) => {
+        if (input.valUE === '') {
+            e.preventDefault();
+        }
+    });
+
+    container.addEventListener('hidden.bs.collapse', () => {
+        opensearch.classList.remove('d-none');
+        input.value = '';
+    });
+
+    container.addEventListener('show.bs.collapse', () => {
+        opensearch.classList.add('d-none');
+    });
+
+    container.addEventListener('shown.bs.collapse', () => {
+        input.focus();
+    });
+});
+;
+
+    require(['core/usermenu'], function(UserMenu) {
+        UserMenu.init();
+    });
+;
+
+M.util.js_pending('theme_boost/drawers:load');
+require(['theme_boost/drawers'], function() {
+    M.util.js_complete('theme_boost/drawers:load');
+});
+;
+
+require(['theme_boost/footer-popover'], function(FooterPopover) {
+    FooterPopover.init();
+});
+;
+
+M.util.js_pending('theme_boost/loader');
+require(['theme_boost/loader', 'theme_boost/drawer'], function(Loader, Drawer) {
+    Drawer.init();
+    M.util.js_complete('theme_boost/loader');
+});
+;
+M.util.js_pending('core/notification'); require(['core/notification'], function(amd) {amd.init(667567, []); M.util.js_complete('core/notification');});;
+M.util.js_pending('core/log'); require(['core/log'], function(amd) {amd.setConfig({"level":"warn"}); M.util.js_complete('core/log');});;
+M.util.js_pending('core/page_global'); require(['core/page_global'], function(amd) {amd.init(); M.util.js_complete('core/page_global');});;
+M.util.js_pending('core/utility'); require(['core/utility'], function(amd) {M.util.js_complete('core/utility');});;
+M.util.js_pending('core/storage_validation'); require(['core/storage_validation'], function(amd) {amd.init(null); M.util.js_complete('core/storage_validation');});
+    M.util.js_complete("core/first");
+});
+//]]>
+</script>
+<script>
+//<![CDATA[
+M.str = {"moodle":{"lastmodified":"Last modified","name":"Name","error":"Error","info":"Information","yes":"Yes","no":"No","cancel":"Cancel","confirm":"Confirm","areyousure":"Are you sure?","closebuttontitle":"Close","unknownerror":"Unknown error","file":"File","url":"URL","collapseall":"Collapse all","expandall":"Expand all"},"repository":{"type":"Type","size":"Size","invalidjson":"Invalid JSON string","nofilesattached":"No files attached","filepicker":"File picker","logout":"Logout","nofilesavailable":"No files available","norepositoriesavailable":"Sorry, none of your current repositories can return files in the required format.","fileexistsdialogheader":"File exists","fileexistsdialog_editor":"A file with that name has already been attached to the text you are editing.","fileexistsdialog_filemanager":"A file with that name has already been attached","renameto":"Rename to \"{$a}\"","referencesexist":"There are {$a} links to this file","select":"Select"},"admin":{"confirmdeletecomments":"Are you sure you want to delete the selected comment(s)?","confirmation":"Confirmation"},"debug":{"debuginfo":"Debug info","line":"Line","stacktrace":"Stack trace"},"langconfig":{"labelsep":": "}};
+//]]>
+</script>
+<script>
+//<![CDATA[
+(function() {M.util.help_popups.setup(Y);
+ M.util.js_pending('random6996b91346db34'); Y.on('domready', function() { M.util.js_complete("init");  M.util.js_complete('random6996b91346db34'); });
+})();
+//]]>
+</script>
+
+                </div>
+                <div class="footer-section p-3">
+                    <div>Powered by <a href="https://moodle.com">Moodle</a></div>
+                </div>
+            </div>
+        
+            <div class="footer-content-debugging footer-dark bg-dark text-light">
+                <div class="container-fluid footer-dark-inner">
+                    
+                </div>
+            </div>
+        </footer>
+    </div>
+    
+</div>
+
+
+</body></html>

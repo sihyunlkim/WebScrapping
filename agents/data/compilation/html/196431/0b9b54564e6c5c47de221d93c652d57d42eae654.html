@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Talmudical Seminary Oholei Torah</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+
+/* ===== Reset ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ===== Global ===== */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background: #f4f6f9;
+    color: #333;
+}
+
+/* ===== Container ===== */
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: auto;
+}
+
+/* ===== HEADER ===== */
+.site-header {
+    background: linear-gradient(135deg, #0b2e59, #123d7a);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+}
+
+.header-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 0;
+}
+
+.logo img {
+    height: 65px;
+    width: auto;
+}
+
+/* Navigation */
+.nav-menu {
+    display: flex;
+    gap: 25px;
+}
+
+.nav-menu a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 15px;
+    font-weight: 500;
+    transition: 0.3s ease;
+}
+
+.nav-menu a:hover {
+    color: #f4c430;
+}
+
+/* Donate Button */
+.btn-donate {
+    background: #f4c430;
+    color: #0b2e59 !important;
+    padding: 8px 16px;
+    border-radius: 6px;
+    font-weight: bold;
+}
+
+/* Mobile Menu Button */
+.menu-toggle {
+    display: none;
+    font-size: 28px;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+/* ===== HERO ===== */
+.hero {
+    width: 100%;
+    overflow: hidden;
+}
+
+.hero img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* ===== SECTIONS ===== */
+section {
+    background: white;
+    margin: 40px auto;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+    max-width: 1100px;
+}
+
+h2 {
+    margin-bottom: 20px;
+    color: #0b2e59;
+}
+
+p {
+    margin-bottom: 12px;
+}
+
+/* ===== FOOTER ===== */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #0b2e59;
+    color: white;
+    margin-top: 40px;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 900px) {
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .nav-menu {
+        position: absolute;
+        top: 80px;
+        right: 0;
+        background: linear-gradient(135deg, #0b2e59, #123d7a);
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        display: none;
+        padding: 20px 0;
+    }
+
+    .nav-menu.active {
+        display: flex;
+    }
+
+    .nav-menu a {
+        padding: 12px 0;
+        width: 100%;
+        text-align: center;
+        border-top: 1px solid rgba(255,255,255,0.15);
+    }
+
+    .header-inner {
+        padding: 15px;
+    }
+}
+.reg{
+}
+
+.top-banner {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: linear-gradient(90deg, #f4c430, #ffcc00, #f4c430);
+    background-size: 200% auto;
+    animation: shine 6s linear infinite;
+    text-align: center;
+    padding: 14px 20px;
+    font-size: 16px;
+    font-weight: 600;
+    z-index: 3000;
+}
+
+.top-banner a {
+    color: #0b2e59;
+    text-decoration: none;
+    display: block;
+}
+
+/* Animation */
+@keyframes shine {
+    to {
+        background-position: 200% center;
+    }
+}
+
+.top-banner a:hover {
+    letter-spacing: 0.5px;
+}
+
+/* ===== Registration Banner Under Hero ===== */
+
+.registration-banner {
+    background: linear-gradient(135deg, #f4c430, #ffdd66);
+    text-align: center;
+    padding: 18px 15px;
+    font-size: 18px;
+    font-weight: 600;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+}
+
+.registration-banner a {
+    color: #0b2e59;
+    text-decoration: none;
+    display: inline-block;
+    transition: all 0.3s ease;
+}
+
+.registration-banner a:hover {
+    transform: scale(1.05);
+    text-decoration: underline;
+}
+
+
+</style>
+</head>
+
+<body>
+<!--
+<div class="top-banner">
+    <a href="https://tsot.edu/Registration.php">
+        Registration and Applications for 2026 – 2027 are now open – Click Here
+    </a>
+</div>
+-->
+<header class="site-header">
+    <div class="container header-inner">
+
+        <div class="logo">
+            <a href="index.php"> <img src="images/Logo.png" alt="TSOT Logo"></a>
+        </div>
+
+        <button class="menu-toggle" id="mobile-menu">☰</button>
+
+        <nav class="nav-menu" id="nav-menu">
+            <a href="index.php">Home</a>
+            <a href="Registration.php">Registration</a>
+			<a href="transcript.php">Transcript</a>
+            <a href="StudentInfo.php">Student Info</a>
+            <a href="Links.php">Links</a>
+            <a href="Publications.php">Publications</a>
+            <a href="Forms.php">Forms</a>
+            <a href="donate.php" class="btn-donate">Donate</a>
+           
+        </nav>
+
+    </div>
+</header>	
+
+<section>
+<H2>Registration 5787</h2>
+<p>
+<br>
+<p><strong>Welcome to the Beis Medrash Registration Portal</strong></p><p> <strong>Shiurim Alef–Bais:</strong>
+Now accepting applications.<br>
+<strong>Shiur Daled:</strong> Now accepting applications.</p><p>To begin your application for the upcoming year <strong>Shnas Halimudim 5787</strong>, please download and complete the Yeshiva Evaluation Form, as well as the Talmid Evaluation Form (only for Shiurim Alef and Bais), and then click <b>Register Now</b> to proceed.</p><p>If you encounter any difficulties during the application process, please don’t hesitate to reach out to us at <strong>  <a href="mailto:info@tsot.edu"> info@tsot.edu</a></strong>.</p>
+<p><ul>
+Talmidim currently in the Oholei Torah Beis Medrash who are returning do not need to complete the evaluation forms.<br>
+</ul> 
+</p><hr><p><strong>Quick Links to Required Forms:</strong></p><p>
+
+<p><ul>
+<li>
+<p><strong><a href="pdf/student_Alef_Beis.pdf" target="_blank">Shiurim Alef/Bais – Talmid Self-Evaluation</a></strong></p>
+</li>
+<li>
+<p><strong><a href="pdf/recommendation1.pdf" target="_blank">Shiurim Alef/Bais – Yeshiva Evaluation</a></strong></p>
+</li>
+<li>
+<p><strong><a href="pdf/recommendation.pdf" target="_blank">Shiur Daled – Yeshiva Evaluation</a></strong></p></li></ul>
+<style>
+.register-btn {
+    display: inline-block;
+    background: #0b2e59;
+    color: #ffffff;
+    padding: 14px 32px;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 6px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.register-btn:hover {
+    background: #123d7a;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+}
+
+</Style>
+<a href="https://script.google.com/a/macros/oholeitorah.com/s/AKfycbxpGKBxoJgiIwJbfu6KJt-aE8MY4aVLNdaNPmc9IL6mgFC1qB7kpZ4ewXAlAT1FofZ3Lw/exec?type=application" class="register-btn">Register Now</a>
+
+</section>
+
+
+<style>
+    #footer-search {
+      background:#ffffff;
+      width:100%;
+      max-width:300px;
+      height:44px;
+      border-radius:5px;
+      display:flex;
+      flex-direction:row;
+      align-items:center;
+      margin:auto;
+    }
+
+    #footer-search input {
+      all: unset;
+      font:16px system-ui;
+      color:#44695B;
+      height:100%;
+      width:100%;
+      padding:6px 10px;
+    }
+
+    #footer-search ::placeholder {
+      color:#44695B;
+      opacity:.7;
+    }
+
+    #footer-search svg {
+      color:#44695B;
+      fill:currentColor;
+      width:50px;
+      height:50px;
+      padding:10px;
+    }
+
+    #footer-search button {
+      all: unset;
+      cursor:pointer;
+      width:44px;
+      height:44px;
+    }
+  </style>
+
+<footer>
+
+<br>
+  Talmudical Seminary Oholei Torah strives to make its website content accessible to all users.
+  Should you require an alternative format for any of our website content,
+  please contact us at (718) 363-2034
+  <br><br><br>
+
+  <form role="search" id="form" style="max-width:300px; margin:auto;">
+    <div id="footer-search">
+      <input type="search" id="query" name="q" placeholder="Search..." aria-label="Search through site content">
+      <button>
+        <svg viewBox="0 0 1024 1024">
+          <path d="M848.471 928l-263.059-263.059c-48.941 36.706-110.118 55.059-177.412 55.059-171.294 0-312-140.706-312-312s140.706-312 312-312c171.294 0 312 140.706 312 312 0 67.294-24.471 128.471-55.059 177.412l263.059 263.059-79.529 79.529zM189.623 408.078c0 121.364 97.091 218.455 218.455 218.455s218.455-97.091 218.455-218.455c0-121.364-103.159-218.455-218.455-218.455-121.364 0-218.455 97.091-218.455 218.455z"></path>
+        </svg>
+      </button>
+    </div>
+  </form>
+
+  <script>
+    const f = document.getElementById('form');
+    const q = document.getElementById('query');
+    const google = 'https://www.google.com/search?q=site%3A+';
+    const site = 'tsot.edu';
+
+    function submitted(event) {
+      event.preventDefault();
+      const url = google + site + '+' + q.value;
+      const win = window.open(url, '_blank');
+      if (win) win.focus();
+    }
+
+    f.addEventListener('submit', submitted);
+  </script>
+<br />
+<br />
+    <p>667 Eastern Parkway, Brooklyn, NY 11213 • (718) 774-5050</p>
+    <p>© 2026 Talmudical Seminary Oholei Torah</p>
+</footer>
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    document.getElementById("mobile-menu").addEventListener("click", function() {
+        document.getElementById("nav-menu").classList.toggle("active");
+    });
+});
+</script>
+
+</body>
+</html>

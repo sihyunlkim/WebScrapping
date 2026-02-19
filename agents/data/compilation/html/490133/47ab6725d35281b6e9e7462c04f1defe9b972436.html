@@ -1,0 +1,1006 @@
+
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head><meta name="viewport" content="width=device-width, initial-scale=1.0" /><!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-WR9V5K73');</script>
+<!-- End Google Tag Manager --><script>
+  window.TdxGtmContext = {"User":{"Id":0,"UID":"00000000-0000-0000-0000-000000000000","UserName":"","FullName":"Public User","AlertEmail":"publicuser@noreply.com","Role":"Experience User","HasTDNext":false,"StandardApplicationNames":null,"TicketApplicationNames":[],"AssetApplicationNames":[],"ClientPortalApplicationNames":[],"Type":"Technician","Analytics":{"Title":null,"Organization":null}},"Partition":{"Id":1008,"Name":"Multi-Tenant 08 Production"},"BillableEntity":{"Id":7,"Name":"Westcliff University","SalesForceIdentifier":"001Hq000037AoRXIA0","GWMIID":"a80470e7-8226-4f0c-94bb-c226054d420a"},"Environment":{"ShortName":"PRD"}};
+</script><script src="/TDPortal/Content/Scripts/jquery/2.2.4/jquery.min.js?v=20260213000508"></script><script src="/TDPortal/Content/Scripts/jquery-migrate/1.4.1/jquery-migrate.min.js?v=20260213000508"></script><script src="/TDPortal/Content/Scripts/jquery-ui/1.13.2/jquery-ui-1.13.2.custom.timepicker.min.js?v=20260213000818"></script><link href="/TDPortal/Content/Styles/jquery-ui/1.13.2/jquery-ui.compiled.min.css?v=20260213000820" rel="stylesheet" type="text/css"  /><link href="/TDPortal/Content/bootstrap/3.4.1/dist/css/bootstrap.min.css?v=20260213000508" rel="stylesheet" type="text/css" id="lnkBootstrapCSS" /><script src="/TDPortal/Content/bootstrap/3.4.1/dist/js/bootstrap.min.js?v=20260213000508"></script><link href="/TDPortal/Content/FontAwesome/css/fontawesome.min.css?v=20260213000506" rel="stylesheet" type="text/css" id="lnkFontAwesome" /><link href="/TDPortal/Content/FontAwesome/css/solid.css?v=20260213000506" rel="stylesheet" type="text/css"  /><link href="/TDPortal/Content/FontAwesome/css/regular.css?v=20260213000506" rel="stylesheet" type="text/css"  /><link href="/TDPortal/Content/FontAwesome/css/brands.css?v=20260213000506" rel="stylesheet" type="text/css"  /><link href="/TDPortal/Content/FontAwesome/css/v4-shims.css?v=20260213000506" rel="stylesheet" type="text/css"  /><link href="/TDClient/Styles/bootstrap_custom.min.css?v=20260213000818" rel="stylesheet" type="text/css"  /><link href="/TDClient/Styles/TDStyles.min.css?v=20260213000820" rel="stylesheet" type="text/css"  /><link href="https://services.westcliff.edu/TDPortal/BE/Style/7/TDClient/48?v=20250424185953" rel="stylesheet" type="text/css" /><script src="/TDPortal/Content/Scripts/tdx/dist/TDJSFramework.compiled.min.js?v=20260213000818"></script><script src="/TDPortal/Content/Scripts/tdx/dist/modalFocusTrap.min.js?v=20260213000816"></script><script src="/TDPortal/Content/Scripts/underscore/1.12.1/underscore-min.js?v=20260213000508"></script>
+<script src="/TDClient/Scripts/clientOS.min.js?v=20260213000810"></script>
+<script src="/TDClient/Scripts/collapseMe.min.js?v=20260213000810"></script>
+<script src="/TDClient/Scripts/tdsearchfilter.min.js?v=20260213000810"></script>
+<script src="/TDClient/Scripts/SiteSearch.min.js?v=20260213000810"></script>
+<script src="/TDPortal/Content/Scripts/tdx/dist/elasticsearchAutocomplete.min.js?v=20260213000816"></script>
+<link id="ctl00_ctl00_lnkFavicon" rel="icon" href="https://services.westcliff.edu/TDPortal/BE/Icon/7/48?v=20241206164726" />
+
+  <script>
+
+      $(function () {
+        var masterUi = MasterUI({
+          isPostback: false,
+          baseUrl: '/TDClient/',
+          isTdGoogleAnalyticsEnabled: true,
+          isAuthenticated: false
+          });
+
+        $('#collapseMe').collapseMe({
+          toggleVisibilitySelector: '.navbar-toggle'
+        });
+
+        TeamDynamix.addRequiredFieldHelp();
+      });
+
+      // The sub-nav menu uses padding-top to position itself below the header bar and main navigation sections. When the
+      // window is resized, there is a chance that the content of these header or nav sections wraps, causing the height
+      // to change, potentially covering the sub-nav menu, which is obviously a big usability problem. This function
+      // listens for when the window size or orientation is changing (and also when the window first loads), and adjusts
+      // the padding so that the sub-nav menu appears in the correct location.
+      $(window).bind('load ready resize orientationchange', function () {
+        var headerHeight = $('#divMstrHeader').height();
+        $('#navShim').css({
+          "padding-top": headerHeight
+        });
+
+        $('#content').css({
+          "padding-top": headerHeight,
+          "margin-top": headerHeight * -1
+        });
+      });
+  </script>
+
+  
+  
+  
+
+
+  <script>
+
+    function ReloadList() {
+      window.location.href = window.location.href;
+    }
+
+    function ToggleSubscribe() {
+      __doPostBack('ctl00$ctl00$cpContent$cpContent$btnToggleSubscribe', '');
+          }
+
+    // Adds ellipsis for long descriptions with long titles
+    $(function () {
+
+
+      
+
+      $('#ctl00_ctl00_cpContent_cpContent_txtCategorySearch').keyup(function (e) {
+        if (e.keyCode === 13) {
+          $('#ctl00_ctl00_cpContent_cpContent_btnCategorySearch').click()
+        }
+      });
+    });
+  </script>
+
+
+<meta property="og:title" content="Knowledge Base" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://services.westcliff.edu/TDClient/48/Portal/KB/" />
+<meta property="og:image" content="https://services.westcliff.edu/TDPortal/BE/Logo/7/48" />
+  <meta property="og:site_name" content="Westcliff University" /><title>
+	Knowledge Base
+</title></head>
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WR9V5K73"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+<form method="post" action="/TDClient/48/Portal/KB/" id="aspnetForm">
+<div class="aspNetHidden">
+<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
+<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="787D+wBRCr5k7eo/SnKffN2+KKU9xQgkiwDE+qWifg9ZTvlMFypckgNVsAg2wXXNzOleO/kkIXkMq6EQ2+NF/WE6JcAzLDwKLIfz7WLu9iAVSVTr1tx/pDShB8RHgeJruBHSEF0FvfFAi6+bUVFlkC27g+dDIclctA3ohCl3ss3qPxKwRWfCFcmnQXtnKx9CsBaG69OAmE+F0pd3MSUxSXMMLDseaO5L5nne5oibBIqNlk903D9BIygN6de6isB2SIrwio+B9kb2bPCZk835CVC5Lu92dBkHhrFMw7aIQZ3FQBXuXarPpIvgtCz2HpPxMNjYT6b64gEpkWBf7oJtj6l1hqg=" />
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['aspnetForm'];
+if (!theForm) {
+    theForm = document.aspnetForm;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script>
+
+
+<script src="/TDClient/WebResource.axd?d=pynGkmcFUV13He1Qd6_TZMSMQxVWLi4fik2rw1_u_hZsCNzwv5c621ov6_ZX_wzTt5vh-g2&amp;t=638901392248157332" type="text/javascript"></script>
+
+
+<script src="/TDClient/ScriptResource.axd?d=NJmAwtEo3Ipnlaxl6CMhvmVxW3-Ljsg_2Hna32smxrg-6ogyYAN3UTPsJQ8m1uwzn_kuf2Wpne6NSFmYui3h0wCQhJN3ZUiLTNkvhiIgZpq74-lKmofUPQGJ8own8RI2_mwAcmvlSj2WBnqwm5Wj4cyNvv81&amp;t=5c0e0825" type="text/javascript"></script>
+<script src="/TDClient/ScriptResource.axd?d=dwY9oWetJoJoVpgL6Zq8OLdGoo5BVWQ_Eo60QZTEhEcHeiVfwgY9tLCgzdZ5TRwvrwYEnOvujbNccOVLUfWtUg4HivSIsewg6JABxkBGEqVVV64eiRyCAsPDqh6tUioISUQKB74sWMO4Er2mHrWEIWs_sBM1&amp;t=5c0e0825" type="text/javascript"></script>
+<div class="aspNetHidden">
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="EA19DDCE" />
+	<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="20wfxo+mKBGg3+58Dmpf439umhngXPPkqGN5R+NlN1ngkrCnbtIpVFxEkF/w8y7ijVhZDEaPmtIvRlavNI7i1xqJFN3umCnjG7YXZuac1Ieqywtw" />
+</div>
+<script type="text/javascript">
+//<![CDATA[
+Sys.WebForms.PageRequestManager._initialize('ctl00$ctl00$smMain', 'aspnetForm', ['tctl00$ctl00$cpContent$cpContent$UpdatePanel3','','tctl00$ctl00$cpContent$cpContent$lblResults$ctl00',''], ['ctl00$ctl00$cpContent$cpContent$btnToggleSubscribe',''], [], 90, 'ctl00$ctl00');
+//]]>
+</script>
+
+<div id="ctl00_ctl00_upMain" style="display:none;">
+	
+    <div id="ctl00_ctl00_pbMain" class="progress-box-container"><div class="progress-box-body"><div class="well shadow"><h2 class="h4 gutter-top-none">Updating...</h2><div class="progress" style="margin-bottom: 0;"><div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuemin="0" aria-valuemax="100" style="width: 100%"></div></div></div></div></div>
+  
+</div>
+
+<header id="ctl00_ctl00_navHeader" role="banner">
+
+  <div id="divMstrHeader" class="master-header NoPrint" style="background-color: #fff;">
+
+  
+
+  <div class="logo-header-full hidden-xs">
+
+    
+    <div class="pull-left">
+      <a href="#mainContent" class="sr-only sr-only-focusable">Skip to main content</a>
+    </div>
+
+
+    <div id="ctl00_ctl00_divPageHeader" class="container logo-header clearfix" style="padding: 5px;">
+
+      <div id="divLogo" class="pull-left logo-container">
+
+        <a href="https://services.westcliff.edu/TDClient/48/Portal/Home/"
+           target="_blank">
+          <img src="/TDPortal/BE/Logo/7/0" alt="Westcliff University Logo" class="js-logo img-responsive" />
+          <span class="sr-only">(opens in a new tab)</span>
+        </a>
+
+      </div>
+
+      <div class="master-header-right pull-right padding-top padding-bottom">
+
+        
+
+          <div class="pull-left topLevelSearch input-group">
+            <div id="SiteSearch-ffed92f3cb4149fb835f29045afb070a" class="gutter-bottom input-group site-search" style="max-width: 400px;">
+  <div id="SiteSearch-dropdown-ffed92f3cb4149fb835f29045afb070a" class="input-group-btn">
+    <button type="button" id="SiteSearch-filter-ffed92f3cb4149fb835f29045afb070a" class="btn btn-default dropdown-toggle" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false" title="Filter your search by category" data-component="all">
+      <span class="fa-solid fa-solid fa-earth-americas"></span><span class="fa-solid fa-fw fa-nopad fa-caret-down" aria-hidden="true"></span>
+      <span class="sr-only">
+        Filter your search by category. Current category:
+        <span class="js-current-component">All</span>
+      </span>
+    </button>
+    <ul tabindex="-1" aria-label="Filter your search by category" role="menu" class="dropdown-menu" >
+      <li>
+        <a role="menuitem" href="javascript:void(0);" data-component-text="All" data-component="all" data-component-icon="fa-solid fa-earth-americas" title="Search all areas">
+          <span class="fa-solid fa-fw fa-nopad fa-earth-americas" aria-hidden="true"></span>
+          All
+        </a>
+      </li>
+
+      <li aria-hidden="true" class="divider"></li>
+
+        <li role="presentation">
+          <a role="menuitem" href="javascript:void(0);" data-component-text="Knowledge Base" data-component="kb" data-component-icon="fa-lightbulb" title="Search Knowledge Base">
+            <span class="fa-regular fa-fw fa-nopad fa-lightbulb" aria-hidden="true"></span>
+            Knowledge Base
+          </a>
+        </li>
+
+        <li role="presentation">
+          <a role="menuitem" href="javascript:void(0);" data-component-text="Service Catalog" data-component="sc" data-component-icon="fa-compass" title="Search Service Catalog">
+            <span class="fa-solid fa-fw fa-nopad fa-compass" aria-hidden="true"></span>
+            Service Catalog
+          </a>
+        </li>
+
+    </ul>
+  </div>
+
+  <label class="sr-only" for="SiteSearch-text-ffed92f3cb4149fb835f29045afb070a">Search the client portal</label>
+
+  <input id="SiteSearch-text-ffed92f3cb4149fb835f29045afb070a" type="text" class="form-control" autocomplete="off" placeholder="Search the client portal" title="To search for items with a specific tag, enter the # symbol followed by the name of the tag.
+To search for items using exact match, place double quotes around your text." />
+
+  <span class="input-group-btn">
+    <button id="SiteSearch-button-ffed92f3cb4149fb835f29045afb070a" class="btn btn-default" type="button" title="Search">
+      <span class="fa-solid fa-fw fa-nopad fa-search blue" aria-hidden="true"></span>
+      <span class="sr-only">Search</span>
+    </button>
+  </span>
+</div>
+
+<script>
+  $(function() {
+    var siteSearch = new TeamDynamix.SiteSearch({
+      searchUrl: "/TDClient/48/Portal/Shared/Search",
+      autocompleteSearchUrl: '/TDClient/48/Portal/Shared/AutocompleteSearch',
+      autocompleteResultsPosition: 'fixed',
+      autocompleteResultsZIndex: 1000,
+      searchTextBoxSelector: '#SiteSearch-text-ffed92f3cb4149fb835f29045afb070a',
+      searchComponentFilterButtonSelector: '#SiteSearch-filter-ffed92f3cb4149fb835f29045afb070a',
+      searchButtonSelector: '#SiteSearch-button-ffed92f3cb4149fb835f29045afb070a',
+      searchFilterDropdownSelector: '#SiteSearch-dropdown-ffed92f3cb4149fb835f29045afb070a',
+      showKnowledgeBaseOption: true,
+      showServicesOption: true,
+      showForumsOption: false,
+      autoFocusSearch: false
+    });
+  });
+</script>
+          </div>
+
+        
+          <div title="Sign In" class="pull-right gutter-top-sm">
+            <a href="/TDClient/48/Portal/Login.aspx?ReturnUrl=%2fTDClient%2f48%2fPortal%2fKB%2f">
+              Sign In
+            </a>
+          </div>
+        
+      </div>
+
+    </div>
+
+  </div>
+
+  <nav id="ctl00_ctl00_mainNav" class="navbar navbar-default themed tdbar" aria-label="Primary">
+    <div id="navContainer" class="container">
+
+      <div class="navbar-header">
+        <button type="button" class="pull-left navbar-toggle collapsed themed tdbar-button-anchored tdbar-toggle gutter-left" data-toggle="collapse" data-target=".navbar-collapse">
+          <span class="tdbar-button-anchored icon-bar"></span>
+          <span class="tdbar-button-anchored icon-bar"></span>
+          <span class="tdbar-button-anchored icon-bar"></span>
+          <span class="sr-only">Show Applications Menu</span>
+        </button>
+        <a class="navbar-brand hidden-sm hidden-md hidden-lg themed tdbar-button-anchored truncate-be" href="#">
+
+          Services Portal
+        </a>
+      </div>
+
+      <div id="td-navbar-collapse" class="collapse navbar-collapse">
+
+        <ul class="nav navbar-nav nav-collapsing" id="collapseMe">
+
+          
+            <li class="themed tdbar-button-anchored hidden-sm hidden-md hidden-lg">
+              <a href="/TDClient/48/Portal/Login.aspx?ReturnUrl=%2fTDClient%2f48%2fPortal%2fKB%2f">Sign In</a>
+            </li>
+          
+            <li id="divSearch" class="themed tdbar-button-anchored hidden-sm hidden-md hidden-lg">
+              <a href="/TDClient/48/Portal/Shared/Search" title="search">Search</a>
+            </li>
+          
+              <li id="divDesktopf31eb938-fae3-42b7-af96-8daceeb118b8" class="themed tdbar-button-anchored">
+                <a href="/TDClient/48/Portal/Home/">Home</a>
+              </li>
+            
+
+          
+            <li id="divTDRequests" class="themed tdbar-button-anchored sr-focusable">
+              <a href="/TDClient/48/Portal/Requests/ServiceCatalog">Services</a>
+            </li>
+          
+            <li id="divTDKnowledgeBase" class="themed tdbar-button-anchored sr-focusable">
+              <a href="/TDClient/48/Portal/KB/">Knowledge Base</a>
+            </li>
+          
+
+          <li class="themed tdbar-button-anchored hidden-xs more-items-button" id="moreMenu">
+            <a data-toggle="dropdown" title="More Applications" href="javascript:;">
+              <span class="sr-only">More Applications</span>
+              <span class="fa-solid fa-ellipsis-h" aria-hidden="true"></span>
+            </a>
+            <ul class="dropdown-menu dropdown-menu-right themed tdbar" id="collapsed"></ul>
+          </li>
+
+        </ul>
+      </div>
+
+    </div>
+
+  </nav>
+
+  </div>
+
+  </header>
+
+
+
+<div id="navShim" class="hidden-xs hidden-sm"></div>
+<main role="main">
+  <div id="content">
+    <div id="mainContent" tabindex="-1"></div>
+    
+
+  <nav id="ctl00_ctl00_cpContent_divTabHeader" class="tdbar-sub NoPrint hidden-xs navbar-subnav" aria-label="Knowledge Base">
+      <a href="#kbContent" class="sr-only sr-only-focusable">Skip to Knowledge Base content</a>
+      <div class="container clearfix">
+        <ul class="nav navbar-nav js-submenu" id="kbSubMenu" style="margin-left: -15px;">
+          
+          <li>
+            <a href="/TDClient/48/Portal/KB/Search">Search <span class="sr-only">Articles</span></a>
+          </li>
+
+          
+          
+        </ul>
+      </div>
+    </nav>
+  
+
+  <div id="kbContent" class="container gutter-top gutter-bottom" tabindex="-1" style="outline:none;">
+    
+
+  <span id="ctl00_ctl00_cpContent_cpContent_lblResults_ctl00" aria-live="polite" aria-atomic="true"><span id="ctl00_ctl00_cpContent_cpContent_lblResults_lblResults-label" class="red tdx-error-text"></span></span>
+
+  <div class="gutter-bottom">
+
+    <nav aria-label="Breadcrumb">
+      
+    </nav>
+
+    <h1>
+      
+      <span id="ctl00_ctl00_cpContent_cpContent_lblCategoryName">Knowledge Base</span>
+      
+    </h1>
+
+  </div>
+
+  <div class="row">
+
+    <div id="divCats" class="col-md-8">
+
+      
+
+      <h2>Categories (11)</h2>
+
+<div class="gutter-bottom">
+    <div class="media media-doubled border category-box category-box-collapsed" title="Information Technology">
+      <div class="category-box-text-content">
+        <div class="media-left leftIcon">
+          <span class="gutter-top-sm media-object category-icon fa-solid fa-4x fa-fw" aria-hidden="true"
+                  style="color: #336690;"  >
+          </span>
+        </div>
+        <div class="media-body">
+          <h3 class="category-title">
+            <span class="category-title">
+              <a href="/TDClient/48/Portal/KB/?CategoryID=117">Information Technology</a>
+            </span>
+          </h3>
+          <div class="category-box-description">
+            <small>
+              A technological knowledge hub offers how-to articles, answers to frequently asked questions, and essential information to help you troubleshoot and resolve technical issues efficiently.
+            </small>
+          </div>
+        </div>
+      </div>
+      <div class="category-box-button-container">
+        <a href="javascript:void(0);" role="button" class="no-underline category-box-button category-box-button-collapsed" onclick="toggleCategoryBox(this)">
+          <span class="sr-only">Expand</span>
+          <span class="fa-regular fa-2x fa-circle-down button-arrow" aria-hidden="true"></span>
+        </a>
+      </div>
+    </div>
+    <div class="media media-doubled border category-box category-box-collapsed" title="Learning Technologies">
+      <div class="category-box-text-content">
+        <div class="media-left leftIcon">
+          <span class="gutter-top-sm media-object category-icon fa-solid fa-4x fa-fw" aria-hidden="true"
+                  style="color: #1f7463;"  >
+          </span>
+        </div>
+        <div class="media-body">
+          <h3 class="category-title">
+            <span class="category-title">
+              <a href="/TDClient/48/Portal/KB/?CategoryID=467">Learning Technologies</a>
+            </span>
+          </h3>
+          <div class="category-box-description">
+            <small>
+              Information about Global Academic Portal (GAP)
+            </small>
+          </div>
+        </div>
+      </div>
+      <div class="category-box-button-container">
+        <a href="javascript:void(0);" role="button" class="no-underline category-box-button category-box-button-collapsed" onclick="toggleCategoryBox(this)">
+          <span class="sr-only">Expand</span>
+          <span class="fa-regular fa-2x fa-circle-down button-arrow" aria-hidden="true"></span>
+        </a>
+      </div>
+    </div>
+    <div class="media media-doubled border category-box category-box-collapsed" title="Student Services">
+      <div class="category-box-text-content">
+        <div class="media-left leftIcon">
+          <span class="gutter-top-sm media-object category-icon fa-solid fa-4x fa-fw" aria-hidden="true"
+                  style="color: #a08f30;"  >
+          </span>
+        </div>
+        <div class="media-body">
+          <h3 class="category-title">
+            <span class="category-title">
+              <a href="/TDClient/48/Portal/KB/?CategoryID=118">Student Services</a>
+            </span>
+          </h3>
+          <div class="category-box-description">
+            <small>
+              The mission of Student Services is to support each student throughout their academic career from the point of enrollment to the moment of graduation. We work closely with each student to ensure they reach their academic goals and will be successful upon completion of their program. Our team strives to foster the development of all students by providing support services, academic advising, and student life activities. <br /><br />Our main goal is to promote educational excellence and a global perspective that will help students achieve their personal and academic aspirations. In order to accomplish this goal, we are here to guide students through their academic journey and connect them to our resources. To ensure your continued success, our student advisors will check in with you throughout your courses, support and celebrate your successes, partner with you in developing your personalized educational plan, and will assist you in any way possi
+            </small>
+          </div>
+        </div>
+      </div>
+      <div class="category-box-button-container">
+        <a href="javascript:void(0);" role="button" class="no-underline category-box-button category-box-button-collapsed" onclick="toggleCategoryBox(this)">
+          <span class="sr-only">Expand</span>
+          <span class="fa-regular fa-2x fa-circle-down button-arrow" aria-hidden="true"></span>
+        </a>
+      </div>
+    </div>
+    <div class="media media-doubled border category-box category-box-collapsed" title="International Affairs">
+      <div class="category-box-text-content">
+        <div class="media-left leftIcon">
+          <span class="gutter-top-sm media-object category-icon fa-solid fa-4x fa-fw" aria-hidden="true"
+                  style="color: #a45555;"  >
+          </span>
+        </div>
+        <div class="media-body">
+          <h3 class="category-title">
+            <span class="category-title">
+              <a href="/TDClient/48/Portal/KB/?CategoryID=119">International Affairs</a>
+            </span>
+          </h3>
+          <div class="category-box-description">
+            <small>
+              The International Affairs team is here to guide our international students in maintaining F-1 status, understanding USCIS regulations, acclimating to the U.S., applying for work authorizations (CPT/OPT), navigating international travel, taking annual vacations, or exploring options after graduation, and more.
+            </small>
+          </div>
+        </div>
+      </div>
+      <div class="category-box-button-container">
+        <a href="javascript:void(0);" role="button" class="no-underline category-box-button category-box-button-collapsed" onclick="toggleCategoryBox(this)">
+          <span class="sr-only">Expand</span>
+          <span class="fa-regular fa-2x fa-circle-down button-arrow" aria-hidden="true"></span>
+        </a>
+      </div>
+    </div>
+    <div class="media media-doubled border category-box category-box-collapsed" title="Registrar">
+      <div class="category-box-text-content">
+        <div class="media-left leftIcon">
+          <span class="gutter-top-sm media-object category-icon fa-solid fa-4x fa-fw" aria-hidden="true"
+                  style="color: #aa61e1;"  >
+          </span>
+        </div>
+        <div class="media-body">
+          <h3 class="category-title">
+            <span class="category-title">
+              <a href="/TDClient/48/Portal/KB/?CategoryID=120">Registrar</a>
+            </span>
+          </h3>
+          <div class="category-box-description">
+            <small>
+              The Office of Registrar at Westcliff University monitors and supports student progress by providing services to students, faculty, academic and administrative departments, alumni, and the public.<br /><br />The Office of Registrar ensures the protection and confidentiality of academic records under the Family Educational Rights and Privacy Act (FERPA). The University is legally and ethically obligated to safeguard the confidentiality of any information contained in these records, and hence, University personnel only have access to the specific information required in the performance of their job function.
+            </small>
+          </div>
+        </div>
+      </div>
+      <div class="category-box-button-container">
+        <a href="javascript:void(0);" role="button" class="no-underline category-box-button category-box-button-collapsed" onclick="toggleCategoryBox(this)">
+          <span class="sr-only">Expand</span>
+          <span class="fa-regular fa-2x fa-circle-down button-arrow" aria-hidden="true"></span>
+        </a>
+      </div>
+    </div>
+    <div class="media media-doubled border category-box category-box-collapsed" title="Student Accounts">
+      <div class="category-box-text-content">
+        <div class="media-left leftIcon">
+          <span class="gutter-top-sm media-object category-icon fa-solid fa-4x fa-fw" aria-hidden="true"
+                  style="color: #2e740e;"  >
+          </span>
+        </div>
+        <div class="media-body">
+          <h3 class="category-title">
+            <span class="category-title">
+              <a href="/TDClient/48/Portal/KB/?CategoryID=121">Student Accounts</a>
+            </span>
+          </h3>
+          <div class="category-box-description">
+            <small>
+              • Account Balance Adjustment<br />• Make a Payment <br />• Payment Plans<br />• Private Student Loans<br />• Refund Requests<br />• Tuition Costs
+            </small>
+          </div>
+        </div>
+      </div>
+      <div class="category-box-button-container">
+        <a href="javascript:void(0);" role="button" class="no-underline category-box-button category-box-button-collapsed" onclick="toggleCategoryBox(this)">
+          <span class="sr-only">Expand</span>
+          <span class="fa-regular fa-2x fa-circle-down button-arrow" aria-hidden="true"></span>
+        </a>
+      </div>
+    </div>
+    <div class="media media-doubled border category-box category-box-collapsed" title="Financial Aid">
+      <div class="category-box-text-content">
+        <div class="media-left leftIcon">
+          <span class="gutter-top-sm media-object category-icon fa-solid fa-4x fa-fw" aria-hidden="true"
+                  style="color: #0d617d;"  >
+          </span>
+        </div>
+        <div class="media-body">
+          <h3 class="category-title">
+            <span class="category-title">
+              <a href="/TDClient/48/Portal/KB/?CategoryID=122">Financial Aid</a>
+            </span>
+          </h3>
+          <div class="category-box-description">
+            <small>
+              • Financial Aid Offer Letter<br />• FAFSA<br />• Private Student Loans<br />• 1098-T<br />• Student Loan Request
+            </small>
+          </div>
+        </div>
+      </div>
+      <div class="category-box-button-container">
+        <a href="javascript:void(0);" role="button" class="no-underline category-box-button category-box-button-collapsed" onclick="toggleCategoryBox(this)">
+          <span class="sr-only">Expand</span>
+          <span class="fa-regular fa-2x fa-circle-down button-arrow" aria-hidden="true"></span>
+        </a>
+      </div>
+    </div>
+    <div class="media media-doubled border category-box category-box-collapsed" title="Alumni Affairs and Career Services">
+      <div class="category-box-text-content">
+        <div class="media-left leftIcon">
+          <span class="gutter-top-sm media-object category-icon fa-solid fa-4x fa-fw" aria-hidden="true"
+                  style="color: #cf552b;"  >
+          </span>
+        </div>
+        <div class="media-body">
+          <h3 class="category-title">
+            <span class="category-title">
+              <a href="/TDClient/48/Portal/KB/?CategoryID=123">Alumni Affairs and Career Services</a>
+            </span>
+          </h3>
+          <div class="category-box-description">
+            <small>
+              • International &amp; Domestic Student Success (Interstride)<br />• Network on Linkedin<br />• Resume Writing and Revision<br />• Networking<br />• Job Search Strategies<br />• Mock &amp; AI Interviews<br />• Personality &amp; Values Assessments<br />• Social Media Presence<br />• Understanding CPT/OPT/STEM OPT<br />• Internship<br />• Leadership Opportunities<br />• Alumni Networking<br />• Alumni Benefits
+            </small>
+          </div>
+        </div>
+      </div>
+      <div class="category-box-button-container">
+        <a href="javascript:void(0);" role="button" class="no-underline category-box-button category-box-button-collapsed" onclick="toggleCategoryBox(this)">
+          <span class="sr-only">Expand</span>
+          <span class="fa-regular fa-2x fa-circle-down button-arrow" aria-hidden="true"></span>
+        </a>
+      </div>
+    </div>
+    <div class="media media-doubled border category-box category-box-collapsed" title="Military / Veterans">
+      <div class="category-box-text-content">
+        <div class="media-left leftIcon">
+          <span class="gutter-top-sm media-object category-icon fa-solid fa-4x fa-fw" aria-hidden="true"
+                  style="color: #13348f;"  >
+          </span>
+        </div>
+        <div class="media-body">
+          <h3 class="category-title">
+            <span class="category-title">
+              <a href="/TDClient/48/Portal/KB/?CategoryID=124">Military / Veterans</a>
+            </span>
+          </h3>
+          <div class="category-box-description">
+            <small>
+              • Military and Veterans Orientation<br />• Education and Personal Counseling [VA Benefits VR&amp;E, GiBill, other Military Benefits]<br />• Classes and Scheduling as a VA Student<br />• Add and Drop Classes<br />• Certification of VA Benefits Request Form<br />• 1018 Disclosure and Checklist [Active students using VA Benefits]<br />• Career Services [Required for Students using VA Benefits]
+            </small>
+          </div>
+        </div>
+      </div>
+      <div class="category-box-button-container">
+        <a href="javascript:void(0);" role="button" class="no-underline category-box-button category-box-button-collapsed" onclick="toggleCategoryBox(this)">
+          <span class="sr-only">Expand</span>
+          <span class="fa-regular fa-2x fa-circle-down button-arrow" aria-hidden="true"></span>
+        </a>
+      </div>
+    </div>
+    <div class="media media-doubled border category-box category-box-collapsed" title="Student Life">
+      <div class="category-box-text-content">
+        <div class="media-left leftIcon">
+          <span class="gutter-top-sm media-object category-icon fa-solid fa-4x fa-fw" aria-hidden="true"
+                  style="color: #edf33d;"  >
+          </span>
+        </div>
+        <div class="media-body">
+          <h3 class="category-title">
+            <span class="category-title">
+              <a href="/TDClient/48/Portal/KB/?CategoryID=125">Student Life</a>
+            </span>
+          </h3>
+          <div class="category-box-description">
+            <small>
+              • Peer Mentor<br />• Student Club<br />• Student Life Events<br />• Housing<br />• Mental Health Assistance
+            </small>
+          </div>
+        </div>
+      </div>
+      <div class="category-box-button-container">
+        <a href="javascript:void(0);" role="button" class="no-underline category-box-button category-box-button-collapsed" onclick="toggleCategoryBox(this)">
+          <span class="sr-only">Expand</span>
+          <span class="fa-regular fa-2x fa-circle-down button-arrow" aria-hidden="true"></span>
+        </a>
+      </div>
+    </div>
+    <div class="media media-doubled border category-box category-box-collapsed" title="Learning Experience Design (LXD) Team">
+      <div class="category-box-text-content">
+        <div class="media-left leftIcon">
+          <span class="gutter-top-sm media-object category-icon fa-brands fa-4x fa-fw" aria-hidden="true"
+                  style="color: #153dab;"  >
+          </span>
+        </div>
+        <div class="media-body">
+          <h3 class="category-title">
+            <span class="category-title">
+              <a href="/TDClient/48/Portal/KB/?CategoryID=497">Learning Experience Design (LXD) Team</a>
+            </span>
+          </h3>
+          <div class="category-box-description">
+            <small>
+              The Learning Experience Design (LXD) hub offers essential information to help FACULTY troubleshoot issues found within GAP courses and can resolve curriculum/syllabus issues efficiently.<br /><br />STUDENTS - please use the Learning Technologies category to submit tickets about completing/submitting assignments.
+            </small>
+          </div>
+        </div>
+      </div>
+      <div class="category-box-button-container">
+        <a href="javascript:void(0);" role="button" class="no-underline category-box-button category-box-button-collapsed" onclick="toggleCategoryBox(this)">
+          <span class="sr-only">Expand</span>
+          <span class="fa-regular fa-2x fa-circle-down button-arrow" aria-hidden="true"></span>
+        </a>
+      </div>
+    </div>
+</div>
+<div class="clearfix"></div>
+
+<script>
+
+  $(function () {
+    function initCategoryBoxes() {
+      $('.category-box').each(function () {
+        $categoryBoxButtonContainer = $(this).find('.category-box-button-container');
+        $categoryBoxTextContent = $(this).find('.category-box-text-content');
+
+        if ($(this).find('.media-body').height() <= 91) {
+          $categoryBoxButtonContainer.hide();
+          $categoryBoxTextContent.removeClass('text-fade');
+        } else {
+          $categoryBoxButtonContainer.show();
+          if ($(this).find('.category-box-button-expanded').length == 0) {
+            $categoryBoxTextContent.addClass('text-fade');
+          }
+        }
+      });
+    }
+    $(window).resize(initCategoryBoxes).resize();
+  });
+
+  function toggleCategoryBox(button) {
+    $(button).toggleClass('category-box-button-collapsed').toggleClass('category-box-button-expanded');
+    $(button).parents('.media').toggleClass('category-box-expanded').toggleClass('category-box-collapsed');
+    $(button).parents('.media').children('.category-box-text-content').toggleClass('text-fade');
+    $(button).children('.fa-regular').toggleClass('fa-circle-down').toggleClass('fa-circle-up');
+
+    if ($(button).hasClass('category-box-button-expanded')) {
+      $(button).children('.sr-only').text('Collapse');
+      srAlert("category box collapsed");
+    } else {
+      $(button).children('.sr-only').text('Expand');
+      srAlert("category box expanded");
+    }
+  }
+</script>
+      <h2>Articles (1)</h2>
+
+<div class="gutter-bottom">
+    <div class="gutter-bottom-lg">
+      <h3 class="gutter-bottom-xs">
+
+
+        <a href="/TDClient/48/Portal/KB/ArticleDet?ID=747">
+          Tips for Using Services Portal
+        </a>
+      </h3>
+
+      <div class="gray">
+        
+      </div>
+    </div>
+</div>
+      
+
+    </div>
+
+    <div id="divCatsSidebar" class="col-md-4">
+      
+
+
+  <a id="ctl00_ctl00_cpContent_cpContent_btnToggleSubscribe" tabindex="-1" class="hidden" aria-hidden="true" href="javascript:__doPostBack(&#39;ctl00$ctl00$cpContent$cpContent$btnToggleSubscribe&#39;,&#39;&#39;)">Blank</a>
+
+
+  <div id="ctl00_ctl00_cpContent_cpContent_UpdatePanel3" class="gutter-bottom-sm" aria-live="polite" aria-atomic="true">
+	
+        
+</div>
+
+    
+
+
+      <div id="ctl00_ctl00_cpContent_cpContent_divPopular" class="panel panel-default gutter-top">
+
+        <div class="panel-heading">
+          <h2 class="h3 panel-title" title="Most popular articles based upon total views">Popular Articles</h2>
+        </div>
+
+        <div class="panel-body">
+          <ul class="panel-list">
+            
+                <li class="gutter-bottom">
+                  <a href="/TDClient/48/Portal/KB/ArticleDet?ID=2184">Signing Into Terra Dotta-Step by Step Guideline</a>
+                </li>
+              
+                <li class="gutter-bottom">
+                  <a href="/TDClient/48/Portal/KB/ArticleDet?ID=266">CPT Applications Guideline</a>
+                </li>
+              
+                <li class="gutter-bottom">
+                  <a href="/TDClient/48/Portal/KB/ArticleDet?ID=2906">Locate and Download Your I-20 on Terra Dotta</a>
+                </li>
+              
+                <li class="gutter-bottom">
+                  <a href="/TDClient/48/Portal/KB/ArticleDet?ID=837">F-1 Curricular Practical Training (CPT) FAQs</a>
+                </li>
+              
+                <li class="gutter-bottom">
+                  <a href="/TDClient/48/Portal/KB/ArticleDet?ID=280">Payment Plans</a>
+                </li>
+              
+          </ul>
+        </div>
+
+        <div class="panel-footer clearfix">
+          <a class="pull-right" href="/TDClient/48/Portal/KB/PopularArticles">
+            View All Popular Articles
+            <span class="fa-solid fa-chevron-right"></span>
+          </a>
+        </div>
+      </div>
+
+      <div id="ctl00_ctl00_cpContent_cpContent_divRecent" class="panel panel-default gutter-top">
+
+        <div class="panel-heading">
+          <h2 class="h3 panel-title" title="Most recently modified articles">Recent Articles</h2>
+        </div>
+
+        <div class="panel-body">
+          <ul class="panel-list">
+            
+                <li class="gutter-bottom">
+                  <a href="/TDClient/48/Portal/KB/ArticleDet?ID=2184">Signing Into Terra Dotta-Step by Step Guideline</a>
+                </li>
+              
+                <li class="gutter-bottom">
+                  <a href="/TDClient/48/Portal/KB/ArticleDet?ID=1187">OPT Application Guideline</a>
+                </li>
+              
+                <li class="gutter-bottom">
+                  <a href="/TDClient/48/Portal/KB/ArticleDet?ID=785">How to Reset your My.Westcliff Account Password</a>
+                </li>
+              
+                <li class="gutter-bottom">
+                  <a href="/TDClient/48/Portal/KB/ArticleDet?ID=275">Diploma Orders</a>
+                </li>
+              
+                <li class="gutter-bottom">
+                  <a href="/TDClient/48/Portal/KB/ArticleDet?ID=2186">TD Tutorial: Submitting New CPT and CPT Renewal Request (Current Students)</a>
+                </li>
+              
+          </ul>
+        </div>
+
+        <div class="panel-footer clearfix">
+          <a class="pull-right" href="/TDClient/48/Portal/KB/RecentArticles">
+            View All Recent Articles
+            <span class="fa-solid fa-chevron-right"></span>
+          </a>
+        </div>
+      </div>
+
+      <div class="gutter-top">
+        
+      </div>
+
+      <div class="clearfix"></div>
+
+    </div>
+
+  </div>
+
+  <div class="clearfix"></div>
+
+
+  </div>
+
+
+  </div>
+</main>
+
+
+
+<script type="text/javascript">
+//<![CDATA[
+setNavPosition('TDKnowledgeBase');Sys.Application.add_init(function() {
+    $create(Sys.UI._UpdateProgress, {"associatedUpdatePanelId":null,"displayAfter":500,"dynamicLayout":true}, null, null, $get("ctl00_ctl00_upMain"));
+});
+//]]>
+</script>
+</form>
+
+
+
+
+
+  <footer role="contentinfo">
+
+    <div class="master-footer">
+      <footer role="contentinfo">
+
+    <div class="master-footer">
+      
+
+<div style="background: #0B3050; border: 1px solid #000000; padding: 7px 20px">
+<div class="container"><div class="row">
+  <div class="col-md-4"><img src="https://www.westcliff.edu/wp-content/uploads/2019/10/logo-westcliff-300x75.png" alt="Westcliff University" width="225" style="margin-top: 15px">
+  <p style="color: #FFFFFF; font-size: smaller; font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, Arial, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;">This system is maintained by <a href="https://tech.westcliff.edu/" target="_new" style="color: #FFFFFF">Information Technology</a>.<br><br>
+  &nbsp;&nbsp;&nbsp;<b>Support Services</b><br>
+  &nbsp;&nbsp;&nbsp;Call Now: 1-949-825-5999<br>
+  &nbsp;&nbsp;&nbsp;17877 Von Karman Ave, 4th Floor,<br>  
+  &nbsp;&nbsp;&nbsp;Irvine, CA 92614</p>
+  <p style="color: #FFFFFF; font-size: smaller; font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, Arial, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;"> &nbsp;&nbsp;Copyright © 2025, All Rights Reserved.</p>
+  </div>
+    <div class="col-md-3" style="margin-bottom: 15px"><p style="color: #D79F2D; font-size: larger; font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, Arial, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;"><strong>Support Services Hours</strong></p>
+    
+		<span style="font-size: smaller; color: #FFFFFF; font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, Arial, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;"><li>Monday - Friday: 7:00 am - 7:00 pm </li>
+<li>Saturday: 8:00 am - 4:30 pm</li>
+</span></div>
+
+  
+  
+  
+  
+    
+  
+  
+    <div class="col-md-2" style="margin-bottom: 15px"><p style="color: #D79F2D; font-size: larger; font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, Arial, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;"><strong>Quick Links</strong></p>
+      <a href="https://my.westcliff.edu/" target="_parent" title="" style="color: #FFFFFF; font-size: smaller; font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, Arial, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;">MyWestcliff</a><br>
+  <a href="https://gap.westcliff.edu/" target="_parent" title="" style="color: #FFFFFF; font-size: smaller; font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, Arial, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;">Global Academic Portal (GAP)</a><br>
+    <a href="https://gmail.com/" target="_parent" title="" style="color: #FFFFFF; font-size: smaller; font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, Arial, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;">Email</a><br>
+  
+  
+  
+</div>
+</div></div>
+      
+    </div>
+
+  </div></footer>
+      
+    </div>
+
+  </footer>
+
+
+
+<script>
+
+    
+    
+
+      // Inject the Google Analytics isogram. This must happen here because it
+      // cannot be injected through an external javascript library.
+      (function (i, s, o, g, r, a, m) {
+        i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+          (i[r].q = i[r].q || []).push(arguments)
+        }, i[r].l = 1 * new Date(); a = s.createElement(o),
+          m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+      })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+    
+
+      // Per Incident #6707155. Need to focus on img. pseudo-class :focus-within is not supported in IE
+      (function ($) {
+        var $anchor = $('#divLogo a');
+        var $beLogo = $('#divLogo a img');
+
+        $anchor.focus(function () {
+          $beLogo.addClass('accessibility-focus-on-logo');
+        }).blur(function () {
+          $beLogo.removeClass('accessibility-focus-on-logo');
+        });
+
+        
+        
+          const queryParams = new URLSearchParams(window.location.search);
+          let showChatbot = true;
+          if (queryParams.has('nobot')) {
+            const nobotFlag = queryParams.get('nobot');
+            if (nobotFlag === '1' || nobotFlag === 'true') {
+              showChatbot = false;
+            }
+          }
+
+          if(showChatbot) {
+            $.ajax({
+              url: "/TDClient/48/Portal/Chatbots/GetScript",
+              type: "GET",
+              dataType: 'text',
+              success: function (data) {
+                
+                var jQueryAjaxSettingsCache = jQuery.ajaxSettings.cache;
+                jQuery.ajaxSettings.cache = true;
+                $(document.body).append(data);
+                jQuery.ajaxSettings.cache = jQueryAjaxSettingsCache;
+              }
+            });
+          }
+        
+
+        window.addEventListener("message", (event) => {
+
+          // Only accept events that come from the same origin
+          if (event.origin != window.location.origin) {
+            return;
+          }
+
+          switch (event.data.type) {
+
+            case "authenticate-using-popup":
+              handleAuthenticateUsingPopup(event.data.payload);
+              break;
+
+            case "authenticated-successfully":
+              handleAuthenticatedSuccessfully(event.data.payload);
+              break;
+
+            default:
+              break;
+          }
+
+        });
+
+        function handleAuthenticateUsingPopup(payload) {
+          let loginUrl = '/TDClient/48/Portal/Login.aspx';
+
+          if (payload.successCallbackUrl) {
+            loginUrl += '?SuccessCallbackUrl=' + payload.successCallbackUrl;
+          }
+
+          window.open(loginUrl, "_blank", "popup=1");
+        }
+
+        function handleAuthenticatedSuccessfully() {
+          event.source.close();
+          window.location.href = window.location.href;
+        }
+    })(jQuery);
+
+</script>
+
+</body>
+</html>

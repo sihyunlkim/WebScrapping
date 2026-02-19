@@ -1,0 +1,984 @@
+
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head><meta name="viewport" content="width=device-width, initial-scale=1.0" /><!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-WR9V5K73');</script>
+<!-- End Google Tag Manager --><script>
+  window.TdxGtmContext = {"User":{"Id":0,"UID":"00000000-0000-0000-0000-000000000000","UserName":"","FullName":"Public User","AlertEmail":"publicuser@noreply.com","Role":"Experience User","HasTDNext":false,"StandardApplicationNames":null,"TicketApplicationNames":[],"AssetApplicationNames":[],"ClientPortalApplicationNames":[],"Type":"Technician","Analytics":{"Title":null,"Organization":null}},"Partition":{"Id":3143,"Name":"Temple University Production"},"BillableEntity":{"Id":78,"Name":"Temple University","SalesForceIdentifier":"0013600000EM54nAAD","GWMIID":"eb76fe7e-7121-4f3e-9997-6554865e5a7e"},"Environment":{"ShortName":"PRD"}};
+</script><script src="/TDPortal/Content/Scripts/jquery/2.2.4/jquery.min.js?v=20260213000508"></script><script src="/TDPortal/Content/Scripts/jquery-migrate/1.4.1/jquery-migrate.min.js?v=20260213000508"></script><script src="/TDPortal/Content/Scripts/jquery-ui/1.13.2/jquery-ui-1.13.2.custom.timepicker.min.js?v=20260213000818"></script><link href="/TDPortal/Content/Styles/jquery-ui/1.13.2/jquery-ui.compiled.min.css?v=20260213000820" rel="stylesheet" type="text/css"  /><link href="/TDPortal/Content/bootstrap/3.4.1/dist/css/bootstrap.min.css?v=20260213000508" rel="stylesheet" type="text/css" id="lnkBootstrapCSS" /><script src="/TDPortal/Content/bootstrap/3.4.1/dist/js/bootstrap.min.js?v=20260213000508"></script><link href="/TDPortal/Content/FontAwesome/css/fontawesome.min.css?v=20260213000506" rel="stylesheet" type="text/css" id="lnkFontAwesome" /><link href="/TDPortal/Content/FontAwesome/css/solid.css?v=20260213000506" rel="stylesheet" type="text/css"  /><link href="/TDPortal/Content/FontAwesome/css/regular.css?v=20260213000506" rel="stylesheet" type="text/css"  /><link href="/TDPortal/Content/FontAwesome/css/brands.css?v=20260213000506" rel="stylesheet" type="text/css"  /><link href="/TDPortal/Content/FontAwesome/css/v4-shims.css?v=20260213000506" rel="stylesheet" type="text/css"  /><link href="/TDClient/Styles/bootstrap_custom.min.css?v=20260213000818" rel="stylesheet" type="text/css"  /><link href="/TDClient/Styles/TDStyles.min.css?v=20260213000820" rel="stylesheet" type="text/css"  /><link href="https://help.temple.edu/TDPortal/BE/Style/78/TDClient/277?v=20250319025450" rel="stylesheet" type="text/css" /><script src="/TDPortal/Content/Scripts/tdx/dist/TDJSFramework.compiled.min.js?v=20260213000818"></script><script src="/TDPortal/Content/Scripts/tdx/dist/modalFocusTrap.min.js?v=20260213000816"></script><script src="/TDPortal/Content/Scripts/underscore/1.12.1/underscore-min.js?v=20260213000508"></script>
+<script src="/TDClient/Scripts/clientOS.min.js?v=20260213000810"></script>
+<script src="/TDClient/Scripts/collapseMe.min.js?v=20260213000810"></script>
+<script src="/TDClient/Scripts/tdsearchfilter.min.js?v=20260213000810"></script>
+<script src="/TDClient/Scripts/SiteSearch.min.js?v=20260213000810"></script>
+<script src="/TDPortal/Content/Scripts/tdx/dist/elasticsearchAutocomplete.min.js?v=20260213000816"></script>
+<link id="ctl00_ctl00_lnkFavicon" rel="icon" href="https://help.temple.edu/TDPortal/BE/Icon/78/277?v=20250311012114" />
+
+    
+    <script async src="//www.googletagmanager.com/gtag/js?id=G-J7PGRXSC1Y"></script>
+    <script>
+
+      $(function () {
+
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        // Be sure to set the proper cookie domain to the customer's full subdomain when sending the pageview hit.
+        gtag('config', 'G-J7PGRXSC1Y', { 'cookie_domain': 'help.temple.edu' });
+
+        });
+
+    </script>
+
+  
+
+  <script>
+
+      $(function () {
+        var masterUi = MasterUI({
+          isPostback: false,
+          baseUrl: '/TDClient/',
+          isTdGoogleAnalyticsEnabled: true,
+          isAuthenticated: false
+          });
+
+        $('#collapseMe').collapseMe({
+          toggleVisibilitySelector: '.navbar-toggle'
+        });
+
+        TeamDynamix.addRequiredFieldHelp();
+      });
+
+      // The sub-nav menu uses padding-top to position itself below the header bar and main navigation sections. When the
+      // window is resized, there is a chance that the content of these header or nav sections wraps, causing the height
+      // to change, potentially covering the sub-nav menu, which is obviously a big usability problem. This function
+      // listens for when the window size or orientation is changing (and also when the window first loads), and adjusts
+      // the padding so that the sub-nav menu appears in the correct location.
+      $(window).bind('load ready resize orientationchange', function () {
+        var headerHeight = $('#divMstrHeader').height();
+        $('#navShim').css({
+          "padding-top": headerHeight
+        });
+
+        $('#content').css({
+          "padding-top": headerHeight,
+          "margin-top": headerHeight * -1
+        });
+      });
+  </script>
+
+  
+  
+  
+  <script src="/TDPortal/Content/select2/v3/select2.min.js?v=20260213002344"></script><link href="/TDPortal/Content/select2/v3/select2.compiled.min.css?v=20260213002344" rel="stylesheet" type="text/css" id="lnkSelect2" />
+  <script src="/TDClient/Scripts/attachmentHandler.min.js?v=20260213000818"></script>
+
+  <style type="text/css">
+    .honey-pot-div {
+      display: none;
+    }
+  </style>
+
+  <script>
+    
+
+    function shareArticle() {
+      if ($('#ctl00_ctl00_cpContent_cpContent_shareRecipients').val().trim() === "") {
+        alert('You must first enter a valid email.');
+        $('#btnShare').progressButton('reset');
+      }
+      else {
+        __doPostBack('ctl00$ctl00$cpContent$cpContent$btnSendShare', '');
+      }
+    }
+
+    function closeShareModal() {
+      $('#divShareModal').modal('hide');
+      $('#btnShare').progressButton('reset');
+    }
+
+    function toggleFeedback(isHelpful) {
+      $('#divHelpfulComments').show();
+      $('#divHelpfulYesNo').hide();
+      $('#ctl00_ctl00_cpContent_cpContent_hdnIsHelpful').val(isHelpful);
+      $('#ctl00_ctl00_cpContent_cpContent_txtComments').focus();
+    }
+
+    function toggleFeedbackResult() {
+      $('#divWasHelpful, #divFeedbackRecorded, #divHelpfulComments, #divHelpfulYesNo').toggle();
+    }
+
+    // The following two functions were added as a result of ticket ID: 1392522. We are generating these buttons dynamically to
+    // prevent bots from clicking them and posting feedback on an article. Additionally, we have an input that is hidden from
+    // the user. If a bot enters text in that input, which it likely will (bots love filling out forms), then we don't accept the
+    // form submission
+    function generateFeedbackButtons() {
+      var $btnHelpfulYes = $('<button id="btnHelpfulYes" type="button" class="btn btn-primary gutter-left" onclick="toggleFeedback(1);">Yes</button>');
+      var $btnHelpfulNo = $('<button id="btnHelpfulNo" type="button" class="btn btn-primary gutter-left-sm" onclick="toggleFeedback(0);">No</button>');
+
+      $('#divWasHelpful').append($btnHelpfulYes);
+      $('#divWasHelpful').append($btnHelpfulNo);
+    }
+    function attemptAddFeedback(e) {
+      if ($('#honeyPot').val() !== '') {
+        e.preventDefault();
+        window.location.reload();
+      }
+    }
+
+    function cancelFeedback() {
+      $('#ctl00_ctl00_cpContent_cpContent_txtComments').val('');
+      $('#divHelpfulComments, #divHelpfulYesNo').toggle();
+    }
+
+    function confirmDeleteFeedback(id) {
+      if (confirm('Are you sure you want to delete this feedback? This cannot be undone.')) {
+        $('#ctl00_ctl00_cpContent_cpContent_hdnFeedbackID').val(id);
+        __doPostBack('ctl00$ctl00$cpContent$cpContent$btnDeleteFeedback', '');
+      }
+    }
+
+    function toggleAddressed(id, isAddressed) {
+      $('#ctl00_ctl00_cpContent_cpContent_hdnFeedbackID').val(id);
+      $('#ctl00_ctl00_cpContent_cpContent_hdnIsAddressed').val(isAddressed);
+      __doPostBack('ctl00$ctl00$cpContent$cpContent$btnToggleAddressed', '');
+    }
+
+    $(function () {
+      
+
+      generateFeedbackButtons();
+      $('[data-toggle="popover"]').popover();
+
+      var attachmentHandler = new TeamDynamix.AttachmentHandler({
+        containerSelector: '.js-article-attachments',
+        resultLabelSelector: '#ctl00_ctl00_cpContent_cpContent_lblResults_lblResults-label',
+        baseControllerUrl: '/TDClient/277/Portal/Shared/Attachments',
+        antiForgeryToken: 'ncEo4wYdBUtgqPZ19sz10y2VzHq75ASJDNotiVP5Li8oKxPZUqiFc2V79wOUQZEYsa4HdLn_3lprQscdVNvVUf9ARlY1:19z3YDAGZeQGUDVgf2DxmX2nZavT0UuBL54G0vqm9jc7Rk3Uum-tNwK9xz-Vq-bZi8Gh8rE86tddaDX1ImFpSjs1cDA1',
+        itemId: 20166,
+        componentId: 26,
+        feedId: 'articleFeed',
+        readOnly: false
+      });
+
+      $('#btnShare').on('click', function () {
+        shareArticle();
+      });
+
+      // Don't try and update the table styles if the user wanted to opt out.
+      $('#ctl00_ctl00_cpContent_cpContent_divBody table:not(.SkipTableFixup)').each(function () {
+        var padding = $(this).attr('cellpadding');
+        var spacing = $(this).attr('cellspacing');
+
+        $(this).css("border-collapse", "separate");
+
+        if (spacing) {
+          $(this).css("border-spacing", spacing + "px");
+        }
+
+        $(this).find('td').each(function () { $(this).css('padding', padding + 'px') });
+      });
+
+      
+    });
+
+    
+  </script>
+
+
+
+<meta property="og:title" content="Tech Policies List" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://help.temple.edu/TDClient/277/Portal/KB/ArticleDet?ID=20166" />
+<meta property="og:image" content="https://help.temple.edu/TDPortal/BE/Logo/78/277" />
+  <meta property="og:site_name" content="Temple University - Knowledge Base" />
+  <meta property="article:section" content="Policy and Guidelines" />
+  <meta property="article:published_time" content="2025-04-23T13:38Z" />
+  <meta property="article:modified_time" content="2025-06-27T14:50Z" />
+    <meta property="article:tag" content="tuportal-migrated" /><title>
+	Article - Tech Policies List
+</title></head>
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WR9V5K73"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+<form method="post" action="/TDClient/277/Portal/KB/ArticleDet?ID=20166" onsubmit="javascript:return WebForm_OnSubmit();" id="aspnetForm">
+<div class="aspNetHidden">
+<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
+<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="f5Gq3uHP9YsFtJ9++vTT/c0Q8oudHtllxAqgwJw4HjTej4iHaUGqVuwS64R33HnlwtMg/UDeo5Vw7a2EKbQm0TTYMGYVlnDEmQnxKM05Q8PEV0KQlhKq50lNb3iG7baYBez7QpnVF7sOuz8xlR63XY/jOP5P9v1JKgGLt0q1b2MDjwFzsvkh6xhRG3qRhaAoPTlVthksYqeYoL6ehTW6kdxtQrgvF+s7Ld67G3nBac/L7SThbxiPU4YYd0U3cNwROsQlYY5vAU0EJONTRXObLjFNfa/0+SZnq4NsDBKtRGS6+BCMJNHDn2yTedn+nlxskyaMKsR1UnvI3mF6q/qKKgRwAfo5Y0Q2XxCT3idq4idTj7jw0A/IaI0VDbiO93jbQw7GbdIKRca/ta3m3s2ZXveictzitAYOY1jE29XhrhguC17Nj+O0xHQyh+cTDr43EwUpe+E9yrYCX978+VoxizuQ3OoQnwz6AEUu8tbpdnh+iRTtgv2SKgIIZbuwxIRXux38H8OLRH9+W+sVCAKpbnCFC3D7FCjNKt6lPnq4asiVF8jmQXrHuudj4k+OW9ROh/8z5QO54U2dMcpyWP0eHjkGsxQqGA6Hdpec9HN7bOioEc/DKzaF0bQifaR9wOQMerdLGNeabCv65Yny2YC5rdgHITmAaseLedfH/U2pWf6jvX+PDC66PY4wlSPaiCdg7O9PmuJ66tY15WdJKZ3XrfOpwf1QTvRRVEqVX0O0782lgi3VhL34597Hndfy+FC8BNJmrSmGvrf2MHA+SyiG8TmGorXsfBXzfCXkxkrKah8MOfhtHQo/Fb03e2/Hd0G0ieytXy7q04/m5lwsYIDdCt3zKFjvQDJt/uI/cHuUnTnP+z9VGPGKpKtgIbmzG0N+v6ZSaAnLMhkwYfF/HrNyji9MIN2362YkDtZrKBwDNkoXUNCJoILuve0IBePHRpWhCzzMG6LyHLQc1nLY1B15wPJr35337eRSRqLwGQgSTHP/gsEZbneUuF4pc1v/rPgB/0nQFySTyDtLR33Rfg7nYP1D4ojKJwPYfwTdrSDxKECmM3cX0hG+wGFsNjjXOj8KhZ+PbdMGA9dox9wzTmSTsbU52ku6m9778FE68HssKvMEcVeHk2tBkFPdYqj9/HxHY9QNYLDFXGBH3mVSCkuJYKuX1dswNGcADcfJiAiR6+gyec3dm77wKRy2Hh63v+VbfjVdQ4QVqMcUdap33uHEJ0U/kybdstmfC9E0RcuMMl6TQxrckg7M+kVQIzQFdjOsGX2qpdbn6nhAVCn96w4KCBJSyCnK6/r5oR0F6WgEZyVMLpmdaefyMGHz6wQLpxTM/VlYm9dAYigFg554bq6Jwe3RjwHtclYiiM8WxDizsbe7n1U1sJ0sJi2RuxCFzyX+W8QwPUMvzDKiPBIhJwd/kgZVuMBAO9xC7TGyQo5WL0PzOJGo4bcDTGdDNnpAUFsuUd+4pitf4R+D/PFQogh9NNGp9gum1MT0rc2fy+XgBBew4rnfzF32VLsNd912v96gOKr35XMXVB56QYaUZrrUfwqG6oWhl2isWb87t9DGIhhoPVLdy3Rc4bWbTEXM1vy0wmvp5LnnE2oeBTzysnHsc3/34OSOLb6xGU4ymX1HkDiAkOox3/YOHyFRMu6QUKlNvyvSRtiuZpEYsjMu64uTsBD8hQWMlwdXvC/CKKlhhnep2+V684i+IHinCKBgziZFReNct86GhCqAW7ITVqOeMWMJJa+wN1AjdlmDO0qAJp0cqf8slSPA08YP2Mi+PnrgqwpsgGXULznrnqfDfwWYwMqBc54yYx8LE6IUbAc+3siHTdiJsSE0KzDDzR3fqJjEpS1hrm3J0tOzgX7PSwezh0xWo12QL7UG+43vziBYa0FxCIbLbjya6OfqZxwJF47XL6YvIw5ey9SP/B5xLAagGGqKNODLaN/39wYyQ14qXkoWY1YxprFW0jBQtBvEBTXerFZkeA7nZEE3TVzCb7lJaNT3TlITIHx8bW7rfWmGpfzUoe73dLs+ZUmP1wC+lvmvfA92NFrjA1UGcdvcHIQuotjbcp1TMKzuyMiIG2ZDeBvKcx/cKUjybZqa1l7/iO2WnvNedgmuT+zPbxCVCm9+R6YIC50G/DtQ4B0CkFvIjnRiYim6HE+xIPYe8J6apmL2KYRyyBlWgPCluiQbiIm4qW84FkTEXmYNBvw+4BngD8ekO1v+ic/C/nVCdGNAqcLNBADCQ+PyL0qBIi4NqBUtzRgYiYbOA+cwBP33K1wRyqj6mTA1407+UBAEV84gygz1mnmlaLaX7w62J5cqeeBBDF5tsZriNZpJ32JPvsIgQSkjYFBnvphFnayqQpZomlvEXGWRPvwSS8B7WMhMPVubVX02YbmghaiePPlkt8Bh1zXSVFtCxfp6AWKAMo9BrDOH2wGQklJG/uhbePGD2aaIJ7pI4FUvbdYqqB7R2EfLF5Pd9nrH77R/ACoIJB108kaHPjec3waLQWRxksZ4FqEQ27MI0KcVkc5EMsqlsCUxcYJPssk4EIJg31opmxEoZ3g92K868QXb92hafk6A17+QfhdzKCZTs8wYYDfsS1h9Gw3Ruzr8FYnNHbgRzPD/O65GJ06WiwiaoP0MXZZDSPdeUmzGDfzrSE6h6IOC3e41p+TT0QGqYCyaqk0VAb0yzsbBBRVE2qv9PZ6VgERW78EefyZ1ICw8jTHBF2kYjPGO6957trLxkZtY68Bpl4OzvdJUPLV1XyHXpjZLJYnoAgx0KkG3e9gSMi+ryx+ToRMBXW/U/+Njk3mZ/RJ+7GWXA0mR+lILmwCvYunmeaa/gwW35vGT9Y3deNnf8Hk3DYc1Ha0DjgnungzfQFHiPoIdDb0iwzPmskYe4/F5LAAt4A2NByhstcJymQAZQyRtcIWlGTSCgMaCTe3jNXLdudqNaHYs39khw/y7gAbkv2KKDe+doeZpeReAsB3GKjQGklxXJXPiGFozBoGEZB7yW/BZ1t9rKJrsZAGbJCwNLVWMkd8DHkduc6i+wxNy6rxLNHbTii0Hq3FU42lusiTk53QfD6UdVPs4mQvRGtUuomjYs+QvZ/w29IfUmhGv0jnIQe+aMkEW1VEMV1xQwReiGs8WjjoEDZN+Ixdc6bqckJbd8ltCaqpxSNzGW810zEXbTFUxTVHefHEW4K2Zb/X6npeV38vC8CVlsrk3gvoTYqq+MgeGSFjWqbLH0colyNMNeyqo1XdZ7J2C68opwuFFuco/q8Ek8tkuxlyvRUJHASkN1068JL3REjGBliJUvWLrF2XCVDTb494dpkCjgIF83bTPGUxqI4F2C8WpJNJPeGcOzy7LSrLNnU7VkkTCc2wFXw70gOEmwRwOpLHAmIFGoJvFB1pF0pz2rTL9fxRJ/zZZ9zXDDTNb3uWR7UG0i3gzIB9vBpuVrT7kCxt2JYSIqQTt337I1Ih+LWVIEj7H5atP9neDtjn6Srx6DvhGoHUEJvv7ke4RoaLQnSzGPmLb5QJKuhfu3BbyJID2DaiiXafPftppbespvXKdBYTTk5z8MMwW3VAPh/WbgHyOHTZ9COQA/H6GYutD3Mf+iLx2E5T++KxPT9rhdIo+vtkbnPzAZ6FhSPzoUKRdwkMxEJ9Es17PctEK3hFAArXW+T9r/zjK5E6nAf15LMRJ3RvFyS/s7TPNOC65FNIxKsFTdjuF4TvlSd52DtmKkYrPbqlYRGHSUyGj37wtTOdDMRfOYtmAAtMpyd98hCScVbBUAjvsrb6FVJ7E/eOfzUaxSECJnPulcvWXqn6LhoEpzywLHC5DUl7NouhIAZEmRiZ73xE5fx6vIQmvgHszPZImNPzRNFbuf1m9wmzf4PBhW2VBut/MPDc9DC1goPOakEROfGVXpdTQ5ka+TKWD4Fjm7Qct/b6Qn+jn3Kiijv3lQZwcEqhKQAZxa4LzS3rigdzJd/8j12trm6QGl0Dmj0kJUH0y96reaVCwus+eLvLyvlkvaYUMEMuy7V1XLtpraigtWTcihnec68KxyUFvsMjhfCtVUI5d5wTDUR9oYzfq1faQgfi6BAVf7W+DViHYjG/VTyUKwBHgnTkYP+tQhrv+DcdFZtCHwiBZJPWVvVT0IOF0A9iBZ7oP/txnmHP0r+lXQTUxWst9RebhDvYOGLMND4kFKTNwL5y0f/KHMcuxBvfv3sRBZXA4eKDoc2NXsxl6jSYpf0k1QibnmsRMgAbMQDcIS7EI9xYGin0OjIAKIulh1RzjmdBLUHeC8hgNL5WagQ5QLX53kH5JGPfA3vzAXiUFr9heJ3BJYU3BWp4kXv84NlGvKuBagHj9xXTho3o1UZstVZLSDxsbj6pxw6aKgDxX5ILo5Om+Hrs/j1nKbmPOW5i+9b8azDazM2sO0RCGEGhLyc/gNXU6d0lZLhQIjfq2qmYCxf85vf4FyQp8RctHYOUmJEkm2irTmy8asdLUQkWPFwKJVviMUirTLEkquO9g4R8RmY9GCTt0V32pFcVXRmVg1h8OfvqqeauZMggvletVhXikxu5oBih7zNtw70viIpwMESO1L6dmLOSCi+qAudL4DyrDYCrofPWsK1drFSPYdNGuRc8ioocf4ddHE7NNUsix59gUitQJEktgxePDkD48SMmu9RA7ytVp1u1Ebuip2L471sMPXwtRUcYLfKrY2sZ1cltqumOnTQqJNMRqkR+xtCaxUphGJKgaLd1JvMZ/LYqZ8pJ6NvCE/G61C0xWUP4MIkz1J2pJ+PbZg2ipl/q4DzwEWiyF7zZAzm7gPDmIxXgdddIxn47YwzJ4RILXMeUPIXsVXAgRKH466l1l3S+bysg4Mpck+aFRx8bznzlTaoOXt65Exu5ldE8LIxtZEFw4zcP5vRLYDnSGVSYINh0+sz/hjb0WVDAFJy7S22dreJh4jjztLfKdryVrSsDc6ixWGGa71mXSeKeCA1cC8rPm8M64yL1Vy4jS/JTd3PTZkT8WfJQXxQ++6gTL5HQpkWvJ0FTyDGxm1ICxKRuB89h2gwIfzZ7puAnPDgtdf1LpmkWs1V4Fb8xIQvoMabx/V1xbmQMWPxRXan0ReAClEl4+y0U/z0WMK/qCURWZeo4Dg2HgCv030OpP7gWZcgTqV5QNw/ritgCdP8b7OIYBHgk8kKKz7p2ROq9AIym2YW+/oBwnVnu4bmXqComOcY1iQ62wwOafi+JeNrseUQDRVkGBXWzagbbI4heHKNvjzTaVe+RS7NU3Hza6/IgNDS5GtSnZKkbqR6egAtweYJXBsalg3nnjYjVClu5OPEqbg2zsDOu3bjmubZpi7FHT9u9IMENJULQcDkQ8QMRJZOhaBxlHZEzWUyh2GjbYZ0rrKfh4tP13o9R1yaG6DOUKKw11nQ9rhfEgquCu5U4mvbx+ApgwZSqEAIPW2oysTExt8PrOjPKbMYT8N0/oDMKDid6Q8UQYk8fY5BU0JfsDrSrr5b1hqtIV6enTBC16LRiWNjq0mAviKAtJLuaPWNyHfiXbVKE4KgyNpoz1/NsoxGBjKGb2e86dVP6RJS/BpUrr1hlhWcwl19qs2//rL13jplJlnyZz1MZf+9++SKTJSaeF/SEPnuuUrgfpekImr3qcDUBjRHyCKO5ZT1khXsaqZ7eeYQGd+pUNOzCJqebfTvm4/6wAEbfuCQYgP1LSu+f0IHloGA/ckovk3S+Tk8GG19QgAWY/eqfVjTNXSa2Th0qENE4J7GDe/rhdZ7Ok5xkUmgFI73SpVQ4o1NbvXj8kTdBg1EPtBjc37aGYyR2sO2xDciYhGR6q85hiLto2Zf7wrifOhunsLf8hEBYX4mUjPhD+IfxAHoOJI/EMQ6oIKcgEn8LQOGXCAQMMZZvWPHPX797mjmEnP9AUfPFebU852CrT2SpRav0Tz0rD8C5LdHaRYj6Ign7PsXqT5mgt7olaIIQ94d8fbuFh94HE5IHeb6lBnsKY7TX4e5bdKyt/wjM5xbFclNSHW5oLgva10m+lJXbWLGGYoJk+2hKDRwG4w6i1mRwjdQpaLWL1vu9299yaBPx0qXRQQExItooYZMycWgpFtyKsEbWihByWMir+k0hjaJmklGWaOUkU7up6mPBQF11JSCiPjX0PnyDzTbb0aI0wwYwnTnJbXtJre2y0o+gGDPU7WxZioFhwM8jbfWLJNa8lbjiKY7vN/eM0cvRXuXkyv3BIJ+ZZm2Gb3znEdQCbfH9J1BvZV5ahNgsvtT6onqWRSitkPQk7dcDtl0w4BtQUO6+0WA92xJFloy0Ylz/pODNCnh+w74spDmgg/Z/PSWW6Jfsq0ikleSDiVXS3tBS/IjvT3TtM9TaHXOTbR99qqfIJvYW0XmjI3Qu31ZspxviM9MJYIPx8Q/y3wuqkpwlRSP/dWyvwdY77IFC7Ntwroc74B3l1guH/KU+XS3WMlvOpzsgAaIJ9ZNnjAwyiZchqDSLAfCDqT9q6iDaTtcDjWFMu/DSMGzcPPXT4evh8ldasNtXySuZOos9u4/ba0PVxLO6K2fbAum41U9PD94x9oGS5olu+O72hhiIxQnMkDg3Jn85W3Aa6qe2QHHDEC4wq7jDkCyp0LPs1kFcDrK+7I6urd3iVqAjTfdr4tu6hlJYnulU/t5gT7wycaf6Ama1OkDCZIm0oseGnA0TH9kaXC00E38htqsSdtYnSIZafOIthqSmMN/g6Uj5s5HPe20QCC6LrJsk6e0UzzyaQmAftIoXBIwgObJNBIqrJV16FuBPFMD6LoVyUsrOG6eUXqW4dX2bYWhQk4rMz/bxTXcZZ439/DkCT76AISOwegh9GxtQVaUQJbdVtTXuKDsMa+4wfd7Rs+ev5vT+Eh0FvZQCZGfHN3WJlhYABNSTchgIppz1qz+BJApTXNdg7fwwKfpX3S9eUXmfmBcXaXFn8194MuqCzddn3lKJ7ai2ReM6FkIAnytTGA40rWM9YY0d5An4x9UlMtPve3STO4arVngQzImmMQUkg2i1KwD9sdcO/6L/1VpKaVeE5kQfIV1ULNj4/0JKOlwTN7gVjQ3I5FDho5KTQyZ7ODnD48UY2DxO+eSipX6rW1hC28BumnOpY5sF5cl3WY/nlSRSuAEv6yExpdhGmnNAZNX2odjgpEyPmS5rcj9SU7QNkjHionDTur2rYE5w2u63PoZU9j0niHfIKu0lhSoDpHTwMFijuw3sftzIZHqW/o49pduRtAMxZrHMJDQN8BGLXypmVeF29tcjxrOrCtRzkupX7xpAYZ+/MMJUsC0bbu1JQDDPbzGcheFPYNAceDk6FPRHEJ0m/qK8dKY4g7XMXI1ho5grOLdonZO7b7oHeTKR0FOpGoM8Rz7dz4IPvC/zJFLOp8Mn7VN6yx9qqmluEPm76L8q2vT7g+FQxtQ/X9vttvcg4lBMp4erhg9TCn+OyAbNVDky6dgtXaY316XPEooQxK9I5F7cvSmSH4Z4DgzpYcbfZKzmDihkFhLdjdxY9B/EJsNSfIWqhWpd0wU9g/mcbm5jWFrEhbmdkWAm5giBc80ErbtKtzg7urmMESrUZSEVLiZTxdkS6qtZFIzbJqKupxbn5NZl+8b+SXxts54keymMAek8mj5u2O4cPshG0CeB4LYPaKiW8IcXMVQiD2TRDcdaRKlw9Pfx5LvGKaBaCHqntpfrotddcX3kYXpPUWhC+YuWo2U22zOaEpR3Bfi1FAjlgtahzEhFUmT9fgAiCenGfT5xi3zAZGqXGWxPF+6AJiI+Y5nw8AshaXk1cyvrLEk9LXIjjoPvg7Ba8vkHHeP3cRnWE83AXyQU4u53wn8etxdW7mLSoJ8znmANWxQNC+uiNrlltJNzuP0LyM8aeyrQ+1uK/gIA2Yb8XGY2eGWTRNw2X9SR4U945h2U60mYEnXrKbBPA4l8hcyonFY8dBWf20AxWrv/xEiMfJ3tK8QRLqTHuGrzSbFeHdr+ObTHT0jDN9POzZGA0u4AVNKFjooMnV35HQ7bc1bhyKd8q6pj9/lILhhefBxDxOK1A8R7M85bSEQapKwAgrNVKf/Mn3EayeX86yiJ0mjYZlMfr4N2Zee3RQ8Ji3a1ZfqMTb4owS3zqH5J5gOLKdDv0b5tK4rI2cPR13K0T5feSiHQdp4TjV1NXY7LPZ+2kbEp2nbp5ag0KffXpWrwfT0Aygp/H8VibW3EDOt616JQ/C9Mdso6Ezvlo99Cgktp/CX8cDJdLnTEvpVsXF3+7GdQEidY9aEj0S0kbai2UkUtqTIspEnJMuXAiRbNjM0xd5GaoHDA3w8Kv99nLDJHTS+dLqxek35ud+9LtIQg9WDCRHYyUS8nMjQk/Vv6COvwyCgbQigkPaMSVjVoWSJgkwJ4ls62VZ8uI79Klvu8uEfPRAk1sufGUPYkGDKol+am07nC5FGxW1qEJbvah0FGh0zAV+bWrx3AuSOqOGbHuZjYmj9zKAew2g+S1+nQPEKGiBY5+nIW5GORUaGcnYoivjh/s7ZxT78HejomChXTK/XoN43YyK5ZYplHc8ec7CcrR7OrNXUfYToRkQn6WoIwKWHNhQN99zt+5UuUP5v14ViZ549v6paBHw6PJw7tYPMzNxSynX3tqW1AT9DbDX2rVp1q3NoyzRz1+NDcoBCT+539o48hT52tECJVTBZAMFl5HkKeg5jLCcyrLcISI4uAaC4dfejm9cWPMYA4P4lBK1bqTgWixo6F+E4mWm3WAzIqmdnIRidPF8yd5BBOtelVZthfuAI8dN37q65tt/uSrFlR3Miz4YL8toOLsoRvi5vRDCNDhRYuUzngMkngi4y6GpM5PD9mBPj+LOrE+akt8vOkdT3hIXjiEkQ6QgPHtBaE1bpRBB3vNInlhJLjjLHgANbSgTZi7v3t+BBUsnsaNgQdqj2Gb2RPnXXiA/9uza9B5YTrWSNhBR03wbe1W5+wDq42r3PvroiAy8SQf5sZIpsLZrCavUDNG3FX8Y2Ei599YIxvUIAVvXLjdrHoTm1E5dDRfaWZJbJHER/WK7azqSsCad20d50qL4EHD8p9stL3o6XU6osDAxJ1kWh03jhW5smZaoS/7HKm9/niH7KTVoddfAysib0K3Ifn50xYjBalHABefFNOikvGdRDfHElGPkTmKwjo4X/R+cwHTRidv9EkyEtKCghfEtyaQW6zh7Hes8rKsivR8qeTbVSG/rvukfu/RM3fnrKqR5ysmW06MUqBuyMHZqxsdRvlx9SH59+c31Tv2odvcTPvUeowTXypSoBB/8pBdH8gRsn2G6aA1eP8Zl78F6uwVN51vdJz9DFQI/k0Kv6P/e5+3zJ1Eq0OUCX5Zh902Jw00uaP2kPQpsPw4uR/lLfKukzwVfBE0+tusOYxJXTRC39+x/asW51+JenU9lh/C7uyewY1T8u+idHTTb7P4zNYwIRmPp7jTllVxsMQ34L3b3eOsVJKm9jZA1BNquQ0Q2luSXk6fzJxyOMFNq6oKxwN1U6vUMKIaTrkPRnIHQkT+08xGyX68F5A7KaEiClhR2ua0fh7EYvnnd6huSFUtV6gmu8ePqIiKoiCI+tcOq+YMCvYM8mGtwDOZv9QQDfgiasZcpRCqcLCbSxYvbmSSTdYqZaxF1Hl50Kt8CIRhxE3C5Yzuui8iebQZ9rmw+SL9372IU759l0u3AuZbplke6LpvP3VL5l3f2kJYbkS/1I2l62fucsSvQhT2aZArWnziV0jEP1HJhg5up7ukjFnsjrTyvcxcwhC92UoTtijgfD5/iVBYLn2oTEwL/E7sCAbrfu0RUPoh8/C9ylJM+v3zW0zX/KhT2FoouoX+aHQWsaBIufqBpvn8i/ZT02VbsXzd+CrVetkpjZhMEGwmulauG/O5CUpdUf+lmUNljjvByKEZxHvx4B2qHLKNve9l06wCUGUk0YQgbb/MzGKadf1uF+lBNqAswyb6Job8W4peXDVypo4q997NUmqkmi3Wj9bqqYFc+V/3iQwwvkVaUFV8u/PoyCNTC7BER0l/y+3YwFo0GMFY1WgHmnBBqS/8sQi40OD/nCGN9DASfNn/f6+YSL7TLQOK5C/4vj4pE3i8pawicJu//aTfLV9yPovhOoxbZzaLqD1jG4PcNg47kMcKqOcflIWf4QJcnT595bbh7n6278h+21re9IZNyoUmxQKv0/73B9/f0x4WU8yRiDff5WqSALCkbFQQ0u9gdaoiabhxqfUMAGFw7B9MjGwHbCZgh1krszmq5Nj3v+u9HSQqiWZ86BZ6N4Fok5KIYuSx/tFkjZ4XJM4lTtJV76MQb2gE8Q7+8wNVDyao0lXX9oZA6NEPeBBUiioTW/S3xpx/SCKu7ds=" />
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['aspnetForm'];
+if (!theForm) {
+    theForm = document.aspnetForm;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script>
+
+
+<script src="/TDClient/WebResource.axd?d=pynGkmcFUV13He1Qd6_TZMSMQxVWLi4fik2rw1_u_hZsCNzwv5c621ov6_ZX_wzTt5vh-g2&amp;t=638901392248157332" type="text/javascript"></script>
+
+
+<script src="/TDClient/ScriptResource.axd?d=nv7asgRUU0tRmHNR2D6t1NXOAgTb3J37FC1L2PfbYYFmSPm-ANa7n6FP0x7BAsbHeL4jfY3ptd1q7zKKVI7DbuXZcwEoKOwj9WxCI1VrQlbWE1Trg1t1GmJDN43kQMJsB7X8tw2&amp;t=ffffffff93d1c106" type="text/javascript"></script>
+<script src="/TDClient/ScriptResource.axd?d=NJmAwtEo3Ipnlaxl6CMhvmVxW3-Ljsg_2Hna32smxrg-6ogyYAN3UTPsJQ8m1uwzn_kuf2Wpne6NSFmYui3h0wCQhJN3ZUiLTNkvhiIgZpq74-lKmofUPQGJ8own8RI2_mwAcmvlSj2WBnqwm5Wj4cyNvv81&amp;t=5c0e0825" type="text/javascript"></script>
+<script src="/TDClient/ScriptResource.axd?d=dwY9oWetJoJoVpgL6Zq8OLdGoo5BVWQ_Eo60QZTEhEcHeiVfwgY9tLCgzdZ5TRwvrwYEnOvujbNccOVLUfWtUg4HivSIsewg6JABxkBGEqVVV64eiRyCAsPDqh6tUioISUQKB74sWMO4Er2mHrWEIWs_sBM1&amp;t=5c0e0825" type="text/javascript"></script>
+<script src="/TDClient/WebResource.axd?d=xtfVMqdF1exC2MBVkOJwMveStDR5kg3dbZWgIXMXZmB1xXom6CcIrWFgHa7jsp4qJuFW2L5XShudyzlBsIO3JhCfiU5HmL2BDz__mCv9dznmBlEMS7LvcYg6wTdPTrAXIXI2CvtjwlnpZd-j4Zpsx2wG_uA1&amp;t=639065204200000000" type="text/javascript"></script>
+<script src="/TDClient/WebResource.axd?d=sp7vCoAo-SSYfpsQ1sYBBeEDnwCGxDYEwZCM0ler88yoVZIPDXMk1C3XF2L2L0xrbB8Rvhli51TswRlmPIOCZgaY58lKhPr-Pv1jTFJ1oUAu7x6RDtNFZUxbtxs3KYQGLK6FpPD5bKuB0e0NmS9HkAqRVks1&amp;t=639065204200000000" type="text/javascript"></script>
+<script src="/TDClient/WebResource.axd?d=icMURy63hv40LPPfq4rTvmm-RfB_YkC6rEEF_2QOO68q3TseXYNBetRKKgBXJ8mn2e8UIgCPiV23HaQUZbjySMHqSgmYZgLcYltBqwD2_EK8aQ08zBuqc3ZBVZITQrbtn6w46dRxFLibMIQg0Aho73rn8Rpxrzg5YMG_JR0UOrUR0wlZ0&amp;t=639065204200000000" type="text/javascript"></script>
+<script src="/TDClient/WebResource.axd?d=1HpFfNpwNihNfEP1lyJHvdPVqbv8KRoFH4-_ZORUgPOP-bqmmtIJRvFQc7828Vf59O_-fdBXcnwdv-hYp5RptPuHmMR0kGQM0_3rS4Z7sKfC7jy9Cc_8fyfcUWa8psszacEQlAXHPXmNwyRymbGSywEmhrE1&amp;t=639065204200000000" type="text/javascript"></script>
+<script type="text/javascript">
+//<![CDATA[
+function WebForm_OnSubmit() {
+CKEditor_TextBoxEncode('ctl00_ctl00_cpContent_cpContent_shareBody_txtBody', 0); if (typeof(ValidatorOnSubmit) == "function" && ValidatorOnSubmit() == false) return false;
+return true;
+}
+//]]>
+</script>
+
+<div class="aspNetHidden">
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="784CA02E" />
+</div>
+<script type="text/javascript">
+//<![CDATA[
+Sys.WebForms.PageRequestManager._initialize('ctl00$ctl00$smMain', 'aspnetForm', ['tctl00$ctl00$cpContent$cpContent$UpdatePanel1','','tctl00$ctl00$cpContent$cpContent$upFeedbackGrid','','tctl00$ctl00$cpContent$cpContent$lblResults$ctl00',''], ['ctl00$ctl00$cpContent$cpContent$btnSubmitComments','','ctl00$ctl00$cpContent$cpContent$btnToggleSubscribe','','ctl00$ctl00$cpContent$cpContent$btnToggleFavorite','','ctl00$ctl00$cpContent$cpContent$btnSendShare',''], [], 90, 'ctl00$ctl00');
+//]]>
+</script>
+
+<div id="ctl00_ctl00_upMain" style="display:none;">
+	
+    <div id="ctl00_ctl00_pbMain" class="progress-box-container"><div class="progress-box-body"><div class="well shadow"><h2 class="h4 gutter-top-none">Updating...</h2><div class="progress" style="margin-bottom: 0;"><div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuemin="0" aria-valuemax="100" style="width: 100%"></div></div></div></div></div>
+  
+</div>
+
+<header id="ctl00_ctl00_navHeader" role="banner">
+
+  <div id="divMstrHeader" class="master-header NoPrint" style="background-color: #fff;">
+
+  <div class="temple-header-top hidden-xs" style="background-color: #222222; white-space: nowrap">
+<div class="container"><div class="row">
+	<div style="border-bottom: 1px solid #363636">
+		<div class="col-xs-3">
+			<ul class="nav navbar-nav">
+				<li class="themed tdbar-button-anchored">
+					  <a target="_blank" href="https://www.temple.edu/academics/schools-and-colleges" style="color: #FFFFFF; letter-spacing: 0; font-size: 11px; height: 100%; padding: 12px 0 7px; display: inline-block; width: auto; font-family: &quot;Roboto&quot;, &quot;Arial&quot;, &quot;sans&quot;">Explore Temple's Schools and Colleges</a>
+				  </li>
+		  </ul>
+		</div>
+		<div class="col-xs-2 col-sm-3">
+		</div>
+		<div class="col-xs-3 col-sm-4">
+			<div class="pull-right" style="margin-right: 3px">
+		   
+				<ul class="nav navbar-nav">
+					<li class="themed tdbar-button-anchored"><a href="https://admissions.temple.edu/visit" target="_blank" style="color: #FFFFFF; letter-spacing: 0; font-size: 11px; height: 100%; padding: 12px 8px 7px; display: inline-block; width: auto; font-family: &quot;Roboto&quot;, &quot;Arial&quot;, &quot;sans&quot;">Visit</a></li>
+
+					<li class="themed tdbar-button-anchored"><a href="https://temple.edu/admissions" target="_blank" style="color: #FFFFFF; letter-spacing: 0; font-size: 11px; height: 100%; padding: 12px 8px 7px; display: inline-block; width: auto; font-family: &quot;Roboto&quot;, &quot;Arial&quot;, &quot;sans&quot;">Apply</a></li>
+
+					<li class="themed tdbar-button-anchored"><a href="https://www.alumni.temple.edu/" target="_blank" style="color: #FFFFFF; letter-spacing: 0; font-size: 11px; height: 100%; padding: 12px 8px 7px; display: inline-block; width: auto; font-family: &quot;Roboto&quot;, &quot;Arial&quot;, &quot;sans&quot;">Alumni</a></li>
+					
+					<li class="themed tdbar-button-anchored"><a href="https://tuportal.temple.edu/" target="_blank" style="color: #FFFFFF; letter-spacing: 0; font-size: 11px; height: 100%; padding: 12px 8px 7px; display: inline-block; width: auto; font-family: &quot;Roboto&quot;, &quot;Arial&quot;, &quot;sans&quot;">TUportal</a></li>
+				  </ul>
+			</div>
+		</div>
+	</div>
+	<div class="col-xs-3 col-sm-2">
+          <div class="pull-right" style="max-width: 135px; padding-left: 0; color: #FFFFFF; letter-spacing: 0; font-family: &quot;Roboto&quot;, &quot;Arial&quot;, &quot;sans&quot;">
+            <a href="https://www.giving.temple.edu/" target="_blank" style="text-transform: uppercase; font-weight: bold; background: #A41E35; border-top: none; border-right: none; border-bottom: 3px solid rgba(0, 0, 0, 0); border-left: none; color: #FFFFFF; letter-spacing: 0; font-size: 11px; height: 100%; padding: 12px 8px 7px; font-family: &quot;Roboto&quot;, &quot;Arial&quot;, &quot;sans&quot;">Support Temple <img style="display: inline-block" role="none" alt="" src="https://help.temple.edu/TDPortal/BE/Icon/78/277?v=20250311012114"></a>
+          </div>
+	</div>
+</div></div>
+</div>
+  
+
+  <div class="logo-header-full hidden-xs">
+
+    
+    <div class="pull-left">
+      <a href="#mainContent" class="sr-only sr-only-focusable">Skip to main content</a>
+    </div>
+
+
+    <div id="ctl00_ctl00_divPageHeader" class="container logo-header clearfix" style="padding: 5px;">
+
+      <div id="divLogo" class="pull-left logo-container">
+
+        <a href="https://help.temple.edu/TDClient/277/Portal/Home/"
+           target="_blank">
+          <img src="/TDPortal/BE/Logo/78/277" alt="Temple University Help Homepage" class="js-logo img-responsive" />
+          <span class="sr-only">(opens in a new tab)</span>
+        </a>
+
+      </div>
+
+      <div class="master-header-right pull-right padding-top padding-bottom">
+
+        
+
+          <div class="pull-left topLevelSearch input-group">
+            <div id="SiteSearch-bb55093233bd47edb34f64f1aa3b85e6" class="gutter-bottom input-group site-search" style="max-width: 400px;">
+  <div id="SiteSearch-dropdown-bb55093233bd47edb34f64f1aa3b85e6" class="input-group-btn">
+    <button type="button" id="SiteSearch-filter-bb55093233bd47edb34f64f1aa3b85e6" class="btn btn-default dropdown-toggle" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false" title="Filter your search by category" data-component="all">
+      <span class="fa-solid fa-solid fa-earth-americas"></span><span class="fa-solid fa-fw fa-nopad fa-caret-down" aria-hidden="true"></span>
+      <span class="sr-only">
+        Filter your search by category. Current category:
+        <span class="js-current-component">All</span>
+      </span>
+    </button>
+    <ul tabindex="-1" aria-label="Filter your search by category" role="menu" class="dropdown-menu" >
+      <li>
+        <a role="menuitem" href="javascript:void(0);" data-component-text="All" data-component="all" data-component-icon="fa-solid fa-earth-americas" title="Search all areas">
+          <span class="fa-solid fa-fw fa-nopad fa-earth-americas" aria-hidden="true"></span>
+          All
+        </a>
+      </li>
+
+      <li aria-hidden="true" class="divider"></li>
+
+        <li role="presentation">
+          <a role="menuitem" href="javascript:void(0);" data-component-text="Knowledge Base" data-component="kb" data-component-icon="fa-lightbulb" title="Search Knowledge Base">
+            <span class="fa-regular fa-fw fa-nopad fa-lightbulb" aria-hidden="true"></span>
+            Knowledge Base
+          </a>
+        </li>
+
+        <li role="presentation">
+          <a role="menuitem" href="javascript:void(0);" data-component-text="Service Catalog" data-component="sc" data-component-icon="fa-compass" title="Search Service Catalog">
+            <span class="fa-solid fa-fw fa-nopad fa-compass" aria-hidden="true"></span>
+            Service Catalog
+          </a>
+        </li>
+
+    </ul>
+  </div>
+
+  <label class="sr-only" for="SiteSearch-text-bb55093233bd47edb34f64f1aa3b85e6">Search the client portal</label>
+
+  <input id="SiteSearch-text-bb55093233bd47edb34f64f1aa3b85e6" type="text" class="form-control" autocomplete="off" placeholder="Search the client portal" title="To search for items with a specific tag, enter the # symbol followed by the name of the tag.
+To search for items using exact match, place double quotes around your text." />
+
+  <span class="input-group-btn">
+    <button id="SiteSearch-button-bb55093233bd47edb34f64f1aa3b85e6" class="btn btn-default" type="button" title="Search">
+      <span class="fa-solid fa-fw fa-nopad fa-search blue" aria-hidden="true"></span>
+      <span class="sr-only">Search</span>
+    </button>
+  </span>
+</div>
+
+<script>
+  $(function() {
+    var siteSearch = new TeamDynamix.SiteSearch({
+      searchUrl: "/TDClient/277/Portal/Shared/Search",
+      autocompleteSearchUrl: '/TDClient/277/Portal/Shared/AutocompleteSearch',
+      autocompleteResultsPosition: 'fixed',
+      autocompleteResultsZIndex: 1000,
+      searchTextBoxSelector: '#SiteSearch-text-bb55093233bd47edb34f64f1aa3b85e6',
+      searchComponentFilterButtonSelector: '#SiteSearch-filter-bb55093233bd47edb34f64f1aa3b85e6',
+      searchButtonSelector: '#SiteSearch-button-bb55093233bd47edb34f64f1aa3b85e6',
+      searchFilterDropdownSelector: '#SiteSearch-dropdown-bb55093233bd47edb34f64f1aa3b85e6',
+      showKnowledgeBaseOption: true,
+      showServicesOption: true,
+      showForumsOption: false,
+      autoFocusSearch: false
+    });
+  });
+</script>
+          </div>
+
+        
+          <div title="Sign In" class="pull-right gutter-top-sm">
+            <a href="/TDClient/277/Portal/Login.aspx?ReturnUrl=%2fTDClient%2f277%2fPortal%2fKB%2fArticleDet%3fID%3d20166">
+              Sign In
+            </a>
+          </div>
+        
+      </div>
+
+    </div>
+
+  </div>
+
+  <nav id="ctl00_ctl00_mainNav" class="navbar navbar-default themed tdbar" aria-label="Primary">
+    <div id="navContainer" class="container">
+
+      <div class="navbar-header">
+        <button type="button" class="pull-left navbar-toggle collapsed themed tdbar-button-anchored tdbar-toggle gutter-left" data-toggle="collapse" data-target=".navbar-collapse">
+          <span class="tdbar-button-anchored icon-bar"></span>
+          <span class="tdbar-button-anchored icon-bar"></span>
+          <span class="tdbar-button-anchored icon-bar"></span>
+          <span class="sr-only">Show Applications Menu</span>
+        </button>
+        <a class="navbar-brand hidden-sm hidden-md hidden-lg themed tdbar-button-anchored truncate-be" href="#">
+
+          Client Portal
+        </a>
+      </div>
+
+      <div id="td-navbar-collapse" class="collapse navbar-collapse">
+
+        <ul class="nav navbar-nav nav-collapsing" id="collapseMe">
+
+          
+            <li class="themed tdbar-button-anchored hidden-sm hidden-md hidden-lg">
+              <a href="/TDClient/277/Portal/Login.aspx?ReturnUrl=%2fTDClient%2f277%2fPortal%2fKB%2fArticleDet%3fID%3d20166">Sign In</a>
+            </li>
+          
+            <li id="divSearch" class="themed tdbar-button-anchored hidden-sm hidden-md hidden-lg">
+              <a href="/TDClient/277/Portal/Shared/Search" title="search">Search</a>
+            </li>
+          
+              <li id="divDesktop5b52d12c-b3cc-4b6b-ae68-ec43efda9a89" class="themed tdbar-button-anchored">
+                <a href="/TDClient/277/Portal/Home/">Home</a>
+              </li>
+            
+              <li id="divDesktopef795ba7-f0e5-4bf8-8a80-2b9598d82a45" class="themed tdbar-button-anchored">
+                <a href="/TDClient/277/Portal/Home/?ID=ef795ba7-f0e5-4bf8-8a80-2b9598d82a45">System Status</a>
+              </li>
+            
+
+          
+            <li id="divTDRequests" class="themed tdbar-button-anchored sr-focusable">
+              <a href="/TDClient/277/Portal/Requests/ServiceCatalog">Services</a>
+            </li>
+          
+            <li id="divTDKnowledgeBase" class="themed tdbar-button-anchored sr-focusable">
+              <a href="/TDClient/277/Portal/KB/">Knowledge Base</a>
+            </li>
+          
+
+          <li class="themed tdbar-button-anchored hidden-xs more-items-button" id="moreMenu">
+            <a data-toggle="dropdown" title="More Applications" href="javascript:;">
+              <span class="sr-only">More Applications</span>
+              <span class="fa-solid fa-ellipsis-h" aria-hidden="true"></span>
+            </a>
+            <ul class="dropdown-menu dropdown-menu-right themed tdbar" id="collapsed"></ul>
+          </li>
+
+        </ul>
+      </div>
+
+    </div>
+
+  </nav>
+
+  </div>
+
+  </header>
+
+
+
+<div id="navShim" class="hidden-xs hidden-sm"></div>
+<main role="main">
+  <div id="content">
+    <div id="mainContent" tabindex="-1"></div>
+    
+
+  <nav id="ctl00_ctl00_cpContent_divTabHeader" class="tdbar-sub NoPrint hidden-xs navbar-subnav" aria-label="Knowledge Base">
+      <a href="#kbContent" class="sr-only sr-only-focusable">Skip to Knowledge Base content</a>
+      <div class="container clearfix">
+        <ul class="nav navbar-nav js-submenu" id="kbSubMenu" style="margin-left: -15px;">
+          
+          <li>
+            <a href="/TDClient/277/Portal/KB/Search">Search <span class="sr-only">Articles</span></a>
+          </li>
+
+          
+          
+        </ul>
+      </div>
+    </nav>
+  
+
+  <div id="kbContent" class="container gutter-top gutter-bottom" tabindex="-1" style="outline:none;">
+    
+
+<input type="hidden" name="ctl00$ctl00$cpContent$cpContent$hdnFeedbackID" id="ctl00_ctl00_cpContent_cpContent_hdnFeedbackID" />
+<input type="hidden" name="ctl00$ctl00$cpContent$cpContent$hdnIsAddressed" id="ctl00_ctl00_cpContent_cpContent_hdnIsAddressed" />
+
+<span id="ctl00_ctl00_cpContent_cpContent_lblResults_ctl00" aria-live="polite" aria-atomic="true"><span id="ctl00_ctl00_cpContent_cpContent_lblResults_lblResults-label" class="red tdx-error-text"></span></span>
+
+<a id="ctl00_ctl00_cpContent_cpContent_btnSendShare" tabindex="-1" class="hidden" aria-hidden="true" href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$ctl00$cpContent$cpContent$btnSendShare&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))">Blank</a>
+
+<div class="clearfix">
+  <nav aria-label="Breadcrumb">
+    <ol class="breadcrumb pull-left">
+      <li><a href="/TDClient/277/Portal/KB/">Knowledge Base</a></li><li class="active"><a href="/TDClient/277/Portal/KB/?CategoryID=942">Policy and Guidelines</a></li><li class="active">Tech Policies List</li>
+    </ol>
+  </nav>
+  <span class="js-open-monitor" style="display: none;"></span>
+</div>
+
+
+
+<div class="row gutter-top">
+
+<div id="divMainContent" class="col-md-8">
+
+<h1 class="gutter-top" style="-ms-word-wrap: break-word; word-wrap: break-word;">
+  Tech Policies List
+</h1>
+
+<div id="ctl00_ctl00_cpContent_cpContent_divTags">
+  <span class="sr-only">Tags</span>
+  <span class="fa-solid fa-tags gray gutter-right-sm" aria-hidden="true" title="Tags"></span>
+  
+      <a href="/TDClient/277/Portal/KB/Search?SearchText=%2523tuportal-migrated" id="ctl00_ctl00_cpContent_cpContent_rptTags_ctl00_TagControl1_lnkDisplay" title="tuportal-migrated">tuportal-migrated</a>
+
+    
+</div>
+
+
+
+<div id="ctl00_ctl00_cpContent_cpContent_divBody" class="gutter-top break-word ckeShim clearfix"><div>
+<div>
+<div>
+<h2>Policies</h2>
+
+<div>
+<ul>
+	<li><a href="https://secretary.temple.edu/sites/secretary/files/policies/04.71.11.pdf" target="_blank" title="Link will be opened in a new window. Link to PDF">Temple University Technology and Software Usage Policy </a></li>
+	<li><a href="https://secretary.temple.edu/sites/secretary/files/policies/04.71.10.pdf" target="_blank" title="Link will be opened in a new window. Link to PDF">Data Usage, Governance and Integrity Policy </a></li>
+	<li><a href="https://secretary.temple.edu/sites/secretary/files/policies/04.74.11.pdf" target="_blank" title="Link will be opened in a new window. Link to PDF">Email Policy </a></li>
+	<li><a href="https://secretary.temple.edu/sites/secretary/files/policies/03.20.11.pdf" target="_blank" title="Link will be opened in a new window. Link to PDF">Policy Regarding Confidentiality of Student Records </a></li>
+	<li><a href="https://secretary.temple.edu/sites/secretary/files/policies/04.76.11.pdf" target="_blank" title="Link will be opened in a new window. Link to PDF">Procurement and Use of Cellular Equipment </a></li>
+	<li><a href="https://secretary.temple.edu/sites/secretary/files/policies/04.61.11.pdf" target="_blank" title="Link will be opened in a new window. Link to PDF">Camera and Video Imaging Systems </a></li>
+	<li><a href="https://secretary.temple.edu/sites/secretary/files/policies/04.71.13.pdf" target="_blank" title="Link will be opened in a new window. Link to PDF">Accessibility of information and technology </a></li>
+	<li><a href="https://secretary.temple.edu/sites/secretary/files/policies/05.20.01.pdf" target="_blank" title="Link will be opened in a new window. Link to PDF">Identity Theft Prevention Program </a></li>
+	<li><a href="https://www.temple.edu/privacy-statement" target="_blank" title="Link will be opened in a new window">Privacy Statement </a></li>
+</ul>
+
+<p>Other <a href="https://secretary.temple.edu/policies" target="_blank" title="Link will be opened in a new window"> university policies </a> ...</p>
+</div>
+</div>
+
+<div>
+<h2>Security Guidelines &amp; Procedures</h2>
+
+<div>
+<ul>
+	<li><a href="ArticleDet?ID=20148">Procedure for Reporting and Handling Security and Privacy Incidents </a></li>
+	<li><a href="ArticleDet?ID=20209">Guidelines for Development of Electronic Signature Processes </a></li>
+	<li><a href="ArticleDet?ID=20210">Temple Data Rules </a></li>
+	<li><a href="ArticleDet?ID=20099">Data Classifications </a></li>
+	<li><a href="ArticleDet?ID=20147">Procedure for Preparing Your Technology for International Travel </a></li>
+	<li><a href="ArticleDet?ID=20205">Interactive Logon Text Seen when hitting CTRL ALT DELETE </a></li>
+	<li><a href="/TDClient/277/Portal/Shared/FileOpen?AttachmentID=68a50d5a-e5de-4843-978e-4187a265d062&amp;ItemID=20166&amp;ItemComponent=26&amp;IsInline=0">​​​​​​​Security Questions for Vendors </a> (MS-Word)</li>
+</ul>
+</div>
+</div>
+
+<div>
+<h2>Artificial Intelligence (AI) Guidelines</h2>
+
+<div>
+<ul>
+	<li><a href="https://teaching.temple.edu/teaching-technologies/faculty-guide-ai" target="_blank">AI Guidelines for Educational Purposes </a></li>
+	<li><a href="/TDClient/277/Portal/Shared/FileOpen?AttachmentID=d0b78006-89bd-4a88-b9b4-35418b3351a9&amp;ItemID=20166&amp;ItemComponent=26&amp;IsInline=0" target="_blank">Guidelines for Generative Artificial Intelligence (GenAI) </a></li>
+	<li><a href="/TDClient/277/Portal/Shared/FileOpen?AttachmentID=f3f93218-8ecc-4920-a16d-cfe623945412&amp;ItemID=20166&amp;ItemComponent=26&amp;IsInline=0" target="_blank">Guidelines for Generative Artificial Intelligence (AI) Note-Taking Tools </a> ​​​​​​​</li>
+</ul>
+</div>
+</div>
+
+<div>
+<h2>Office of Identity Management Guidelines &amp; Procedures</h2>
+
+<div>
+<ul>
+	<li><a href="ArticleDet?ID=20212">Temple University User Agreement Affirmation </a></li>
+	<li><a href="ArticleDet?ID=20214">Procedure for Granting Systems Access and Guest Cards to Guests </a></li>
+	<li><a href="ArticleDet?ID=20215">Procedure for Revocation of System Access Upon Termination </a></li>
+	<li><a href="ArticleDet?ID=20203">Guidelines for Handling Former Employee Computing Resources </a></li>
+	<li><a href="https://tuportal6.temple.edu/group/home/university-enterprise-roles-guide" target="_blank" title="Link will be opened in a new window. Link to PDF">System Access by University Enterprise Role </a></li>
+	<li><a href="ArticleDet?ID=20202">Employee Role/Job Change Process Guidelines </a></li>
+	<li><a href="ArticleDet?ID=20218">Procedures and Processes Related to AccessNet Provisioning </a></li>
+</ul>
+</div>
+</div>
+
+<div>
+<h2>Banner Guidelines &amp; Procedures</h2>
+
+<div>
+<ul>
+	<li><a href="ArticleDet?ID=20200">Duplicate General Person Data Resolution Procedures </a></li>
+</ul>
+</div>
+</div>
+
+<div>
+<h2>Classroom &amp; Computer Labs Guidelines &amp; Procedures</h2>
+
+<div>
+<ul>
+	<li><a href="ArticleDet?ID=20162">Student Printing in Temple University Computer Labs </a></li>
+</ul>
+</div>
+</div>
+
+<div>
+<h2>Communication Guidelines &amp; Procedures</h2>
+
+<div>
+<ul>
+	<li><a href="/TDClient/277/Portal/KB/ArticleDet?ID=20233">University-Wide Electronic Communication Guidelines </a></li>
+</ul>
+</div>
+</div>
+
+<div>
+<h2>File Sharing Guidelines &amp; Procedures</h2>
+
+<div>
+<ul>
+	<li><a href="ArticleDet?ID=20207">Policy Reminder on Copyright Violations </a></li>
+</ul>
+</div>
+</div>
+
+<div>
+<h2>Electronic Equipment Return Guidelines &amp; Procedures</h2>
+
+<div>
+<ul>
+	<li><a href="ArticleDet?ID=20211">Temple University Electronic Equipment Return Guidelines </a></li>
+</ul>
+</div>
+</div>
+
+<div>
+<h2>Network Guidelines &amp; Procedures</h2>
+
+<div>
+<ul>
+	<li><a href="ArticleDet?ID=20206">Network Connectivity for Business Associates </a></li>
+</ul>
+</div>
+</div>
+
+<div>
+<h2>TUcloud Guidelines and Procedures</h2>
+
+<div>
+<ul>
+	<li><a href="ArticleDet?ID=20213">TUcloud Service Level Agreement </a></li>
+	<li><a href="ArticleDet?ID=20208">Procedure for Data Backup Protection </a></li>
+</ul>
+</div>
+</div>
+
+<div>
+<h2>Web Guidelines &amp; Procedures</h2>
+
+<div>
+<ul>
+	<li><a href="/TDClient/277/Portal/KB/ArticleDet?ID=20199">Panopto Rentention Guidelines </a></li>
+	<li><a href="ArticleDet?ID=20217">Web Cookies Best Practices </a></li>
+</ul>
+</div>
+</div>
+
+<div>
+<h2>Video Conferencing Guidelines and Procedures</h2>
+
+<div>
+<ul>
+	<li><a href="ArticleDet?ID=20216">Procedure for Zoom Host Usage </a></li>
+	<li><a href="ArticleDet?ID=20204">Guidelines for Zoom Recordings </a></li>
+</ul>
+</div>
+</div>
+</div>
+</div></div>
+
+<div id="ctl00_ctl00_cpContent_cpContent_divFeedback2" class="well gutter-top-lg">
+
+  <div class="row" id="divHelpfulYesNo">
+    <div class="col-sm-7">
+      
+        <div>
+          <a href="/TDClient/277/Portal/Login.aspx?ReturnUrl=%2fTDClient%2f277%2fPortal%2fKB%2fArticleDet%3fID%3d20166">Sign in to leave feedback</a>
+        </div>
+      
+    </div>
+    <div class="col-sm-5 text-right">
+      <div id="ctl00_ctl00_cpContent_cpContent_UpdatePanel1" aria-live="polite" aria-atomic="true">
+	
+          0 reviews
+        
+</div>
+    </div>
+  </div>
+
+  </div>
+
+
+
+<div class="tab-content gutter-top gutter-bottom">
+  
+  <div id="ctl00_ctl00_cpContent_cpContent_upFeedbackGrid">
+	
+        <a id="ctl00_ctl00_cpContent_cpContent_btnToggleAddressed" tabindex="-1" class="hidden" aria-hidden="true" href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$ctl00$cpContent$cpContent$btnToggleAddressed&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))">Blank</a>
+        <a id="ctl00_ctl00_cpContent_cpContent_btnDeleteFeedback" tabindex="-1" class="hidden" aria-hidden="true" href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$ctl00$cpContent$cpContent$btnDeleteFeedback&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))">Blank</a>
+        
+      
+</div>
+    
+    
+
+    
+</div>
+</div>
+
+<div class="col-md-4">
+
+
+
+    <a id="ctl00_ctl00_cpContent_cpContent_btnToggleSubscribe" tabindex="-1" class="hidden" aria-hidden="true" href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$ctl00$cpContent$cpContent$btnToggleSubscribe&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))">Blank</a>
+
+<a id="ctl00_ctl00_cpContent_cpContent_btnToggleFavorite" tabindex="-1" class="hidden" aria-hidden="true" href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$ctl00$cpContent$cpContent$btnToggleFavorite&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))">Blank</a>
+
+<a class="DetailAction print-article" href="/TDClient/277/Portal/KB/PrintArticle?ID=20166" rel="nofollow" target="_blank">  <span class="fa-solid fa-print fa-fw" aria-hidden="true"></span>
+Print Article</a>
+
+<div id="ctl00_ctl00_cpContent_cpContent_divKB" class="panel panel-default">
+
+  <div class="panel-heading">
+    <h2 class="h3 panel-title">Related Articles (1)</h2>
+  </div>
+
+  <div class="panel-body">
+    
+        <div id="ctl00_ctl00_cpContent_cpContent_rptArticles_ctl00_ctlArticle_divContainer" class="gutter-top-sm gutter-bottom-lg">
+  <div class="clearfix">
+    <div class="pull-left font-md">
+      <a target="_blank" href="https://help.temple.edu/TDClient/277/Portal/KB/ArticleDet?ID=20233">University-Wide Electronic Communication Guidelines</a>
+    </div>
+  </div>
+  
+  
+</div>
+      
+  </div>
+
+</div>
+
+
+
+<div id="divAttachments" class="js-article-attachments"></div>
+
+</div>
+
+</div>
+
+<div id="ctl00_ctl00_cpContent_cpContent_divProgress" style="display: none; z-index: 60;">
+  <div id="ctl00_ctl00_cpContent_cpContent_pbMain" class="progress-box-container"><div class="progress-box-body"><div class="well shadow"><h2 class="h4 gutter-top-none">Deleting...</h2><div class="progress" style="margin-bottom: 0;"><div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuemin="0" aria-valuemax="100" style="width: 100%"></div></div></div></div></div>
+</div>
+
+
+
+  </div>
+
+
+  </div>
+</main>
+
+
+
+<script type="text/javascript">
+//<![CDATA[
+setNavPosition('TDKnowledgeBase');window.CKEDITOR_BASEPATH = 'https://help.temple.edu/TDPortal/Content/ckeditor/';
+//]]>
+</script>
+<script src="https://help.temple.edu/TDPortal/Content/ckeditor/ckeditor.js?t=C6HH5UF" type="text/javascript"></script>
+<script type="text/javascript">
+//<![CDATA[
+var CKEditor_Controls=[],CKEditor_Init=[];function CKEditor_TextBoxEncode(d,e){var f;if(typeof CKEDITOR=='undefined'||typeof CKEDITOR.instances[d]=='undefined'){f=document.getElementById(d);if(f)f.value=f.value.replace(/</g,'&lt;').replace(/>/g,'&gt;');}else{var g=CKEDITOR.instances[d];if(e&&(typeof Page_BlockSubmit=='undefined'||!Page_BlockSubmit)){g.destroy();f=document.getElementById(d);if(f)f.style.visibility='hidden';}else g.updateElement();}};(function(){if(typeof CKEDITOR!='undefined'){var d=document.getElementById('ctl00_ctl00_cpContent_cpContent_shareBody_txtBody');if(d)d.style.visibility='hidden';}var e=function(){var f=CKEditor_Controls,g=CKEditor_Init,h=window.pageLoad,i=function(){for(var j=f.length;j--;){var k=document.getElementById(f[j]);if(k&&k.value&&(k.value.indexOf('<')==-1||k.value.indexOf('>')==-1))k.value=k.value.replace(/&lt;/g,'<').replace(/&gt;/g,'>').replace(/&amp;/g,'&');}if(typeof CKEDITOR!='undefined')for(var j=0;j<g.length;j++)g[j].call(this);};window.pageLoad=function(j,k){if(k.get_isPartialLoad())setTimeout(i,0);if(h&&typeof h=='function')h.call(this,j,k);};if(typeof Page_ClientValidate=='function'&&typeof CKEDITOR!='undefined')Page_ClientValidate=CKEDITOR.tools.override(Page_ClientValidate,function(j){return function(){for(var k in CKEDITOR.instances){if(document.getElementById(k))CKEDITOR.instances[k].updateElement();}return j.apply(this,arguments);};});setTimeout(i,0);};if(typeof Sys!='undefined'&&typeof Sys.Application!='undefined')Sys.Application.add_load(e);if(window.addEventListener)window.addEventListener('load',e,false);else if(window.attachEvent)window.attachEvent('onload',e);})();CKEditor_Controls.push('ctl00_ctl00_cpContent_cpContent_shareBody_txtBody');
+CKEditor_Init.push(function(){if(typeof CKEDITOR.instances['ctl00_ctl00_cpContent_cpContent_shareBody_txtBody']!='undefined' || !document.getElementById('ctl00_ctl00_cpContent_cpContent_shareBody_txtBody')) return;CKEDITOR.replace('ctl00_ctl00_cpContent_cpContent_shareBody_txtBody',{"autoGrow_maxHeight" : 175, "autoGrow_minHeight" : 175, "contentsCss" : ['https://help.temple.edu/TDPortal/Content/ckeditor/contents.css', '/TDPortal/Content/FontAwesome/css/fontawesome.min.css', '/TDPortal/Content/FontAwesome/css/brands.min.css', '/TDPortal/Content/FontAwesome/css/regular.min.css', '/TDPortal/Content/FontAwesome/css/solid.min.css', '/TDPortal/Content/FontAwesome/css/v4-shims.min.css'], "height" : "175", "htmlEncodeOutput" : true, "image_previewText" : " ", "removePlugins" : "magicline,devtools,templates,elementspath,fontawesome,youtube,uploadimage,simpleimage,remoteimageblocker", "title" : "Message", "toolbar" : "TDSimple"}); });
+
+var Page_ValidationActive = false;
+if (typeof(ValidatorOnLoad) == "function") {
+    ValidatorOnLoad();
+}
+
+function ValidatorOnSubmit() {
+    if (Page_ValidationActive) {
+        return ValidatorCommonOnSubmit();
+    }
+    else {
+        return true;
+    }
+}
+        Sys.Application.add_init(function() {
+    $create(Sys.UI._UpdateProgress, {"associatedUpdatePanelId":null,"displayAfter":500,"dynamicLayout":true}, null, null, $get("ctl00_ctl00_upMain"));
+});
+//]]>
+</script>
+</form>
+
+
+
+
+
+  <footer role="contentinfo">
+
+    <div class="master-footer">
+      <script src="https://tutdxstore.blob.core.windows.net/tutdxweb/tdassets.min.js" type="text/javascript"></script>
+<script src="https://telecom.temple.edu/bridge3/TU/chatbot/tsc.js" type="text/javascript"></script>
+<script src="https://unpkg.com/tabulator-tables@6.3.1/dist/js/tabulator.min.js" type="text/javascript"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.34.0/tocbot.min.js" type="text/javascript"></script>
+
+<div style="background-color: #222222; color: #FFFFFF">
+	<div class="container">
+		<div class="row" style="padding-bottom: 6rem; padding-top: 6rem">
+			<div class="col-md-6" style="display: flex; align-items: center">
+				<img src="https://help.temple.edu/TDPortal/BE/Logo/78/277" alt="Temple University Logo" role="presentation">
+			</div>
+
+			<div class="col-md-6">
+				<div style="padding-bottom: 20px; font-size: 1.5rem">
+					<b>
+						<a style="white-space: nowrap; color: #FFFFFF" href="https://directory.temple.edu/">Cherry &amp; White Directory</a>
+							<span style="user-select: none; padding-left: 3px; padding-right: 3px">•</span>
+						<a style="white-space: nowrap; color: #FFFFFF" href="https://temple.edu/maps-and-directions/">Maps &amp; Directions</a>
+							<span style="user-select: none; padding-left: 3px; padding-right: 3px">•</span>
+						<a style="white-space: nowrap; color: #FFFFFF" href="https://temple.edu/contact/">Contact</a>
+							<span style="user-select: none; padding-left: 3px; padding-right: 3px">•</span>
+						<a style="white-space: nowrap; color: #FFFFFF" href="https://secretary.temple.edu/policies">Policies</a>
+							<span style="user-select: none; padding-left: 3px; padding-right: 3px">•</span>
+						<a style="white-space: nowrap; color: #FFFFFF" href="https://news.temple.edu/social-media">Social Media</a>
+							<span style="user-select: none; padding-left: 3px; padding-right: 3px">•</span>
+						<a style="white-space: nowrap; color: #FFFFFF" href="https://tuportal.temple.edu/">TUportal</a>
+							<span style="user-select: none; padding-left: 3px; padding-right: 3px">•</span>
+						<a style="white-space: nowrap; color: #FFFFFF" href="https://tumail.temple.edu/">TUmail</a>
+							<span style="user-select: none; padding-left: 3px; padding-right: 3px">•</span>
+						<a style="white-space: nowrap; color: #FFFFFF" href="https://www.temple.edu/about/accessibility-statement">Accessibility</a>
+							<span style="user-select: none; padding-left: 3px; padding-right: 3px">•</span>
+						<a style="white-space: nowrap; color: #FFFFFF" href="https://careers.temple.edu/">Careers at Temple</a>
+					</b>
+				</div>
+				<div>
+					<b>Copyright 2025, Temple University. All rights reserved.</b>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+      
+    </div>
+
+  </footer>
+
+
+
+<script>
+
+    
+    
+
+      // Inject the Google Analytics isogram. This must happen here because it
+      // cannot be injected through an external javascript library.
+      (function (i, s, o, g, r, a, m) {
+        i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+          (i[r].q = i[r].q || []).push(arguments)
+        }, i[r].l = 1 * new Date(); a = s.createElement(o),
+          m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+      })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+    
+
+      // Per Incident #6707155. Need to focus on img. pseudo-class :focus-within is not supported in IE
+      (function ($) {
+        var $anchor = $('#divLogo a');
+        var $beLogo = $('#divLogo a img');
+
+        $anchor.focus(function () {
+          $beLogo.addClass('accessibility-focus-on-logo');
+        }).blur(function () {
+          $beLogo.removeClass('accessibility-focus-on-logo');
+        });
+
+        
+        
+          const queryParams = new URLSearchParams(window.location.search);
+          let showChatbot = true;
+          if (queryParams.has('nobot')) {
+            const nobotFlag = queryParams.get('nobot');
+            if (nobotFlag === '1' || nobotFlag === 'true') {
+              showChatbot = false;
+            }
+          }
+
+          if(showChatbot) {
+            $.ajax({
+              url: "/TDClient/277/Portal/Chatbots/GetScript",
+              type: "GET",
+              dataType: 'text',
+              success: function (data) {
+                
+                var jQueryAjaxSettingsCache = jQuery.ajaxSettings.cache;
+                jQuery.ajaxSettings.cache = true;
+                $(document.body).append(data);
+                jQuery.ajaxSettings.cache = jQueryAjaxSettingsCache;
+              }
+            });
+          }
+        
+
+        window.addEventListener("message", (event) => {
+
+          // Only accept events that come from the same origin
+          if (event.origin != window.location.origin) {
+            return;
+          }
+
+          switch (event.data.type) {
+
+            case "authenticate-using-popup":
+              handleAuthenticateUsingPopup(event.data.payload);
+              break;
+
+            case "authenticated-successfully":
+              handleAuthenticatedSuccessfully(event.data.payload);
+              break;
+
+            default:
+              break;
+          }
+
+        });
+
+        function handleAuthenticateUsingPopup(payload) {
+          let loginUrl = '/TDClient/277/Portal/Login.aspx';
+
+          if (payload.successCallbackUrl) {
+            loginUrl += '?SuccessCallbackUrl=' + payload.successCallbackUrl;
+          }
+
+          window.open(loginUrl, "_blank", "popup=1");
+        }
+
+        function handleAuthenticatedSuccessfully() {
+          event.source.close();
+          window.location.href = window.location.href;
+        }
+    })(jQuery);
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,750 @@
+<!DOCTYPE>
+
+<HTML>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    
+
+    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" />
+   
+    
+<link href="/CMCPortal/Public/global/css/bootstrap.css" rel="stylesheet" type="text/css" /><link href="/CMCPortal/Public/global/css/Main.css" rel="stylesheet" type="text/css" /><link href="/CMCPortal/Public/10-global/images/cm_ico.ico" rel="icon" type="image/x-icon" /><link href="/CMCPortal/Public/10-global/images/cm_ico.ico" rel="shortcut icon" type="image/x-icon" /><link href="/CMCPortal/Public/10-global/css/bootstrap.css" rel="stylesheet" type="text/css" /><link href="/CMCPortal/Public/10-global/css/main.css" rel="stylesheet" type="text/css" /><link href="/CMCPortal/Public/10-global/images/cm_ico.ico" rel="icon" type="image/x-icon" /><link href="/CMCPortal/Public/10-global/images/cm_ico.ico" rel="shortcut icon" type="image/x-icon" />
+
+<title>
+	Portal hosted on cloud
+</title><script type="text/javascript">var appInsights=window.appInsights||function(config){function t(config){i[config]=function(){var t=arguments;i.queue.push(function(){i[config].apply(i,t)})}}var i={config:config},u=document,e=window,o="script",s="AuthenticatedUserContext",h="start",c="stop",l="Track",a=l+"Event",v=l+"Page",r,f;setTimeout(function(){var t=u.createElement(o);t.src=config.url||"https://js.monitor.azure.com/scripts/a/ai.0.js";u.getElementsByTagName(o)[0].parentNode.appendChild(t)});try{i.cookie=u.cookie}catch(y){}for(i.queue=[],r=["Event","Exception","Metric","PageView","Trace","Dependency"];r.length;)t("track"+r.pop());return t("set"+s),t("clear"+s),t(h+a),t(c+a),t(h+v),t(c+v),t("flush"),config.disableExceptionTracking||(r="onerror",t("_"+r),f=e[r],e[r]=function(config,t,u,e,o){var s=f&&f(config,t,u,e,o);return s!==!0&&i["_"+r](config,t,u,e,o),s}),i}({instrumentationKey:"fa69b7cb-9a23-45c7-9763-b7653a1c3da8",sdkExtension:"a"});window.appInsights=appInsights;appInsights.queue&&appInsights.queue.length===0&&appInsights.trackPageView();</script></head>
+<body id="default">
+    <div id="wrapper">
+        <form name="Form1" method="post" action="./" id="Form1">
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="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" />
+
+
+<script src="/CMCPortal/WebResource.axd?d=N7YmIXG2RsXemlFJBn1LPtLa3HjQma48T87NR9pMPsoG3bRpn6CHK6MkXa8-hsLTfIVKjwKF2iRu5zWCg52SpeRrHq61nXSFLFRErR84dhrii2OAjpqz6H6kymrPjJsqYcCXlROMSCoj3Etd2HYBVw2&amp;t=638956395473573710" type="text/javascript"></script>
+<script src="/CMCPortal/WebResource.axd?d=V-BuC5nd3YJ1sKCGjlgAfLWqaB8UArofZPv25Pa7HoPdhVCnVNWTSiJG1nKjbj2gd2NFSXYpqIg3GP1HnloUgwz9zh7xHZ1LA3zxS8ESgGJaTsH9lFifaO5lCtEipxe8bZX7KF23VlHzGQ8TpF5EYw2&amp;t=638956395473573710" type="text/javascript"></script><link href="/CMCPortal/WebResource.axd?d=d0dBkhjLs5yB01KIq4ulu-Ies-Ve71pmkQoPWx9Fj0HxNu3f4Km_1RuO96ZDSGkRhIuhQAvOONzxol8i36bhZbtlJ2DExHvxHP183Ant10ogPQrW_bL81xduRCDywVbd0&t=638956395473573710" type="text/css" rel="stylesheet"></link><!--[if lt IE 7]><link href="/CMCPortal/WebResource.axd?d=z-M87YFCczMlGR9xHfYTUOTfo0YL6Of_x-m5rb957SR8i8im17dp95LlZ9iuFawQlg75OMZdBelnceJeOfFOL8vZi5WUuLWjWYp0fgu0dQqWgC1oyJ8HbIb6GI_USyKTjR34lPQj_gtGofiWB2Doow2&t=638956395473573710" type="text/css" rel="stylesheet"></link><![endif]-->
+<script src="/CMCPortal/scripts/jquery.min.js" type="text/javascript"></script>
+<script src="/CMCPortal/scripts/jquery.dataTables.js" type="text/javascript"></script>
+<script src="/CMCPortal/scripts/jquery.dataTables.columnFilter.js" type="text/javascript"></script>
+<script src="/CMCPortal/scripts/globalize.js" type="text/javascript"></script>
+<script src="/CMCPortal/scripts/cultures/globalize.culture.en-US.js" type="text/javascript"></script>
+<script src="/CMCPortal/scripts/cmcportal.js" type="text/javascript"></script>
+<script src="/CMCPortal/scripts/bootstrap.min.js" type="text/javascript"></script>
+<script src="/CMCPortal/scripts/bootstrap-datepicker.min.js" type="text/javascript"></script>
+<script type="text/javascript">
+<!--
+var sisID =-1;// -->
+</script>
+
+
+<div id="wrapper">
+    <div id="stdLayout">
+        <div id="_ctl0_cmcPageLayout">
+            <div id="header">
+                
+
+<link href="/CMCPortal/scripts/Logout/jquery-ui.min.css" rel="stylesheet" />
+<script src="/CMCPortal/scripts/jquery-ui.js"></script>
+<script src="/CMCPortal/scripts/store.min.js"></script>
+<script src="/CMCPortal/scripts/accessible-table.js"></script>
+
+
+<script type="text/javascript" charset="utf-8">
+
+    $(document).ready(function () {
+        var userid = "0";
+        if (userid.length === 0) {
+            return;
+        }
+
+        if (userid === "0") {
+            return;
+        }
+
+        $("a[href='']").each(function () { $(this).attr('href', '#') })
+        $("a[title='']").each(function () { $(this).attr('aria-hidden', 'true') })
+        $("a[title='']").each(function () { $(this).attr('title', $(this).parent().attr("id")) })
+        focusOnQuickLink();
+
+        $("#cmcCloseHoldsDialog").keydown(function (e) {
+            if (e.which == 9) {
+                setTimeout(() => {
+                    $("#cmcMsgHoldsDesc li:eq(0) a").focus();
+                }, 1);
+            }
+        });
+        $("#cmcCloseAlertsDialog").keydown(function (e) {
+            if (e.which == 9) {
+                setTimeout(() => {
+                    $("#cmcMsgAlertsDesc li:eq(0) a").focus();
+                }, 1);
+            }
+        });
+        $("#cmcCloseApptsDialog").keydown(function (e) {
+            if (e.which == 9) {
+                setTimeout(() => {
+                    $("#cmcMsgApptsDesc li:eq(0) a").focus();
+                }, 1);
+            }
+        });
+    });
+
+    $(document).on('keydown', '#cmcMsgHoldsDesc li a:last', function (e) {
+        setTimeout(() => {
+            $("#cmcHoldsViewAll").focus();
+        }, 1);
+    });
+
+    $(document).on('keydown', '#cmcMsgAlertsDesc li a:last', function (e) {
+        setTimeout(() => {
+            $("#cmcAlertsViewAll").focus();
+        }, 1);
+    });
+
+    $(document).on('keydown', '#cmcMsgApptsDesc li a:last', function (e) {
+        setTimeout(() => {
+            $("#cmcApptsViewAll").focus();
+        }, 1);
+    });
+
+    function showmodal() {
+        setTimeout(show, 500);
+    }
+    function show() {
+        $('#divIE').modal('show');
+        document.getElementById('divIE').style.visibility = "visible";
+    }
+    function CloseWindow() {
+        window.open('', '_self', '');
+        window.close();
+    }
+    function autoLogOutUser() {
+        $('#divSessionOut').attr('class', 'modal');
+        $('#divSessionOut').show();
+        $('#_ctl0_pagetitle_cmcbtnLogout').trigger('click');
+
+    }
+
+    function cmcTrayHoldsKeyDownEvent(e, type) {
+        var selected = $('.cmcCloseMsgTray:focus').index();
+        if ((e.keyCode == 13 || e.which === 32) && parseInt(selected) < 0) {
+            if (type === 'hold') {
+                $("#cmcTrayHolds a").trigger("click");
+            }
+            else if (type === 'alert') {
+                $("#cmcTrayAlerts a").trigger("click");
+            }
+            else if (type === 'appt') {
+                $("#cmcTrayAppts a").trigger("click");
+            }
+        }
+    }
+
+    function openHoldTryDialog(type) {
+        let dialogURL,
+            closeDialogID;
+        if (type === 'hold') {
+            closeDialogID = "#cmcCloseHoldsDialog";
+            dialogURL = "/student/Prof/msg_Home.aspx?tab=1";
+        }
+        else if (type === 'alert') {
+            closeDialogID = "#cmcCloseAlertsDialog";
+            dialogURL = "/student/Prof/msg_Home.aspx?tab=1";
+        }
+        else if (type === 'appt') {
+            closeDialogID = "#cmcCloseApptsDialog";
+            dialogURL = "/student/Prof/msg_Home.aspx?tab=2";
+        }
+
+        setTimeout(() => {
+            $(closeDialogID).focus().select();
+        }, 1200);
+
+        document.URL(dialogURL);
+    }
+
+    function focusOnQuickLink() {
+        var isQuickLinkVisible = $('#quick_links').is(":visible");
+        if (isQuickLinkVisible == true) {
+            $('#Show_quick_links').attr('aria-expanded', true);
+            $('.liQuickLinksItem').first().attr('tabindex', -1);
+            $('.liQuickLinksItem').first().focus().select();
+        }
+        else {
+            $('#Show_quick_links').attr('aria-expanded', false);
+        }
+    }
+</script>
+<nav class="navbar navbar-default HeaderMenuForPosition" aria-label="Quick Links">
+    <!-- <div class="top-bar">-->
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-5 col-xs-12">
+                <div class="row">
+                    <div class="col-xs-9" id="logoBox">
+                        
+                        <img id="_ctl0_pagetitle_CMCImage1" class=" navbar-brand1 img-responsive" src="/CMCPortal/Public/10-global/images/logo.png" alt="Institution Logo" border="0" />
+
+                    </div>
+                    <div class="col-xs-3">
+                        <div class="navbar-header" id="menu_btn">
+                            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                                <span class="sr-only">Toggle navigation</span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-7 col-xs-12">
+                <div class="social">
+                    <ul class="social-share">
+                        <li class="greeting text-wrap-on-overflow" tabindex="0">
+                            
+                        </li>
+                        <li class="quickLinks" TabIndex="-1">
+                            <div class="navbar-text">
+                                
+                                <input type="hidden" name="_ctl0:pagetitle:hfShowLinkText" id="_ctl0_pagetitle_hfShowLinkText" value="Show Quick Links..." />
+                                <input type="hidden" name="_ctl0:pagetitle:hfHideLinkText" id="_ctl0_pagetitle_hfHideLinkText" value="Hide Quick Link..." />
+                            </div>
+                        </li>
+                        <li id="lang_change">
+
+                            
+                            
+
+                        </li>
+                        <li class="search">
+                            
+
+                            
+                        </li>
+                        <li class="webPartPersonalize">
+                            
+                        </li>
+                        <li class="lmsLink">
+                            
+                        </li>
+                        <li class="logout">
+                            
+                            <input type="submit" name="_ctl0:pagetitle:cmcbtnLogout" value="" onclick="if (typeof(Page_ClientValidate) == &#39;function&#39;) Page_ClientValidate(); ;" language="javascript" id="_ctl0_pagetitle_cmcbtnLogout" class="navbar-text" style="display: none" />
+                        </li>
+
+                        <li class="help">
+                            
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-sm-12">
+        <!-- CQ 27016 Steve Donaldson - the browserdetect control must be available for all types of users.
+                       Removed from the below panel control -->
+        
+        
+<script src="/CMCPortal/scripts/autoLogOut.js"></script>
+
+<script>
+    function getAuthenticationValue() {
+        return  false;
+    }
+    function getTimeValue() {
+        var totalTime = 0;
+        var logOutValue = 3600;
+        if (logOutValue == 0) {
+            logOutValue = 3600;
+        }
+        else {
+            logOutValue= 3600;
+        }
+        totalTime = 120 + logOutValue;
+        return totalTime;
+    }
+
+    function autoLogOutUserfromPopUp() {
+        if ($('#divSessionExpired').length > 0) {                 //when the reg popup is open then only this modal visible else not
+            $('#divSessionExpired').attr('class', 'modal');
+            $('#divSessionExpired').show();                    //this will get call when registration page is open
+        }
+    }
+
+</script>
+
+    </div>
+    <div class="container-fluid " id="quick_links" style="display: none;">
+        <div class="row">
+            <div class="col-lg-12 zeropad">
+                <div id="_ctl0_pagetitle_tblQuickLinks" class="QuickLinks_social">
+                    <ul id="_ctl0_pagetitle_ulQuickLinks" class="QuickLinks_social-share"></ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>
+<div class="container-fluid" id="header_no_print">
+    <div class="row">
+        <div class="col-sm-3">
+            <div>
+                
+                <div id="_ctl0_pagetitle_horizontalMenu" class="dropdown menuClass" style="display: none">
+                    <a href="Controls/#" id="_ctl0_pagetitle_dLabel" role="button" data-toggle="dropdown" class="btn btn-primary navbar-text" data-target="#" onclick="if (typeof(Page_ClientValidate) == &#39;function&#39;) Page_ClientValidate(); ">Menu</a>
+                    
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-9">
+            <div class="row headerBar">
+
+                <div class="col-sm-10 col-xs-12">
+                    
+
+                </div>
+                <div class="col-sm-10 col-xs-12">
+                    
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+<div id="divIE" class="modal fade " data-backdrop="static" data-keyboard="false" role="dialog" style="visibility: visible;">
+    <div class="modal-dialog" id="modalIE" style="height: 80%" role="dialog">
+        <div class="modal-content" style="border-width: 0px !important;">
+            <div class="modal-body">
+                <img src="Public/global/images/Browser-Not-Supported-3a-01.svg" id="_ctl0_pagetitle_imgIEPrev" title="To get the best experience while using our application,you will need to use Microsoft Edge or Google Chrome latest versions. Outdated browsers can expose your computer to a security risk." alt="To get the best experience while using our application,
+you will need to use Microsoft Edge or Google Chrome latest versions.
+                                    
+Outdated browsers can expose your computer to a security risk." />
+                <div style="padding: 15px 15px 3px; text-align: right; margin-bottom: 20px">
+                    <button type="button" onclick="CloseWindow()" class="btn btn-secondary" style="padding: 4px 14px; border: 0px currentColor; border-image: none; color: white; font-size: 14px; text-decoration: none !important; background-color: rgb(109, 109, 109); border-radius: 0px; font-family: Verdana, sans-serif">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" data-backdrop="static" data-keyboard="false" role="dialog" id="divSessionOut">
+    <div class="modal-dialog" role="document">
+        <div id="_ctl0_pagetitle_divEmailSuccessMsg" class="col-lg-12 alert alert-danger alert-message emailsendmsg">
+            <i id="_ctl0_pagetitle_imgSymbol" class="fa fa-exclamation-circle fa-lg text-danger " aria-hidden="true"></i>
+            <span id="_ctl0_pagetitle_logOutMsg" style="font-weight: 100; margin-bottom: 0px;">Session timed out, logging you off.</span>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript">
+    var noAlertLabel = 'You currently have no alerts on record.';
+    var noHoldLabel = 'You currently have no holds on record.';
+    var noApptLabel = 'You currently have no appointments scheduled.';
+    var closeLabel = 'Close';
+    var viewAllAlertsLabel = 'View all alerts';
+    var viewAllHoldsLabel = 'View all holds ';
+    var viewAllApptsLabel = 'View all appointments';
+    var noServiceLabel = 'Your messages are currently unavailable at this time.';
+    var noMessagesLabel = 'You do not have any new messages at this time.';
+    var dateFormat = 'm/d/yyyy';
+    $(document).ready(function () {
+        $('a[data-toggle="tab"]').on('show.bs.tab', function (e) {
+            localStorage.setItem('activeTab', $(e.target).attr('href'));
+        });
+        var activeTab = localStorage.getItem('activeTab');
+        if (activeTab) {
+            $('#myTab a[href="' + activeTab + '"]').tab('show');
+        }
+
+        // Added by fouzia to hide the left content div when horizontal Menu is enabled
+        var status = $('.menuClass').is(':visible');
+        if (status === true) {
+            $('.contentleft').hide();
+            $('#menu_btn').hide();
+
+        }
+
+        if ($('.HideLanguageClass').length !== 0)
+            $('#lang_change').hide();
+
+        var langCode = $("#DDLanguageChange option:selected").val();
+        $('html').attr('lang', langCode);
+    });
+    $(function () {
+
+        var date = new Date();
+
+        //date.setDate(date.getDate() - 1);
+        var today = new Date(date.getFullYear(), date.getMonth(), date.getDate(), 0, 0, 0, 0);
+
+        dateFormat = dateFormat.includes('yyyy') ? dateFormat.replace('yyyy', 'yy') : dateFormat.replace('yy', 'y');
+
+        // Visit jQuery-ui datepicker for more info - https://jqueryui.com/datepicker/
+        // Use datetimepicker1 ID if back dates should be disabled and future dates to be accessed
+        $('#datetimepicker1').find('input').datepicker({
+            startDate: today,
+            dateFormat: dateFormat
+        });
+
+        // Use dobDatePicker class if back dates should be accessed and future dates to be disabled
+        $('.dobDatePicker').find('input').datepicker({
+            endDate: today,
+            dateFormat: dateFormat
+        });
+
+        // Use datetimepicker class if all months date can be picked
+        $('.datetimepicker').find('input').datepicker({
+            dateFormat: dateFormat
+        });
+    });
+</script>
+<script>
+    if (0 === 1) {
+        (function (apiKey) {
+            (function (p, e, n, d, o) {
+                var v, w, x, y, z;
+                o = p[d] = p[d] || {};
+                o._q = o._q || [];
+                v = ['initialize', 'identify', 'updateOptions', 'pageLoad', 'track'];
+                for (w = 0, x = v.length; w < x; ++w)
+                    (function (m) {
+                        o[m] = o[m] || function () { o._q[m === v[0] ? 'unshift' : 'push']([m].concat([].slice.call(arguments, 0))); };
+                    })(v[w]); y = e.createElement(n);
+                y.async = !0;
+                y.src = 'https://cdn.pendo.io/agent/static/' + apiKey + '/pendo.js'; z = e.getElementsByTagName(n)[0]; z.parentNode.insertBefore(y, z);
+            })(window, document, 'script', 'pendo');
+            pendo.initialize({
+                visitor: {
+                    id: '0-',
+                    role: '',
+                },
+                account: {
+                    id: '',
+                    clientName: ''
+                }
+            });
+        })('7910e3ae-70f5-4406-5599-f4817ff2ed01');
+    }
+</script>
+            </div>
+            <div id="content">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="row-height">
+                            <div class="col-sm-12 col-xs-12 col-md-12 col-height col-top  contentpart pad">
+                                <div id="_ctl0_cmcContent">
+
+<!-- contentCell START -->
+
+
+            <div id="_ctl0_pnlDefault">
+	
+
+                
+                <div class="dropdown land_page_dropdown">
+                    <a href="#" class="dropdown-toggle login_link label-default" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                        <span id="lblLogin" accesskey="L" class="control-label">LOGIN</span>
+                        <span class="caret" ></span> </a>
+                    <ul class="dropdown-menu">
+                        <li>
+                            <div class="box1-innerbg1">
+                                <div id="_ctl0_pnlStuPrtl" class="lblstu navbar-default">
+		
+                                    <a id="_ctl0_hlStudentPath" class="styled-link" href="/CMCPortal/secure/student/loginstu.aspx">Student Portal Homepage</a><hr />
+                                    <span id="_ctl0_lblStuMsg" class="lblstulbl navbar-text"></span>
+                                   
+                                    
+                                
+	</div>
+
+                                <div id="_ctl0_pnlFacPrtl" class="lblstu navbar-default">
+		
+                                    <a id="_ctl0_Cmchyperlink2" class="styled-link" href="/CMCPortal/secure/Staff/loginsta.aspx">Faculty Portal Homepage</a><hr />
+
+                                    <span id="_ctl0_lblFacMsg" class="lblstulbl navbar-text"></span>
+                                
+	</div>
+
+                                <div id="_ctl0_pnlEmpPrtl" class="lblstu navbar-default">
+		
+                                    <a id="_ctl0_Cmchyperlink3" class="styled-link" href="/CMCPortal/secure/employer/loginemp.aspx">Employer Portal Homepage</a><hr />
+
+                                    <span id="_ctl0_lblEmpMsg" class="lblstulbl navbar-text"></span>
+                                
+	</div>
+
+                                <div id="_ctl0_pnlAppPrtl" class="lblstu navbar-default">
+		
+                                    <a id="_ctl0_Cmchyperlink4" class="styled-link" href="/CMCPortal/Applicant/ApplyOnline_Login.aspx">Applicant Portal Homepage</a><hr />
+
+                                    <span id="_ctl0_lblAppMsg" class="lblstulbl navbar-text"></span>
+
+                                    <hr />
+                                    
+                                
+	</div>
+
+                                <div id="_ctl0_pnlReqInfo" class="lblstu navbar-default">
+		
+                                    <a id="_ctl0_Cmchyperlink5" class="styled-link" href="/CMCPortal/Applicant/InfoRequest.aspx">Request Information</a><hr />
+
+                                    <span id="_ctl0_lblReqMsg" class="lblstulbl navbar-text"></span>
+                                
+	</div>
+
+                                <div id="_ctl0_pnlCourseSched" class="lblstu navbar-default">
+		
+                                    <a id="_ctl0_Cmchyperlink6" class="styled-link" href="/CMCPortal/Common/CourseSchedule.aspx">Course Schedule</a><hr />
+
+                                    <span id="_ctl0_lblCourseSched" class="lblstulbl navbar-text"></span>
+                                
+	</div>
+
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="container middle-container">
+
+                    <div class="row">
+                        <div class="col-lg-12 middle-text divcenter">
+
+                            <h3>
+                                <span id="_ctl0_lblHomeTitle">Self-Service Portal</span></h3>
+                            <p>
+                                <span id="_ctl0_lblHomeDescription">Log into the portal to view your academic information, receive personalized communication, and use our self-service tools.</span>
+
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 landing_img">
+                            <div class="buttom_tabimg">
+                                <img src="/CMCPortal/Public/10-global/images/img1.jpg" id="_ctl0_img1" class="navbar-default img-responsive" />
+                            </div>
+                            <div class="buttom_tab_icon divcenter">
+                                <div>
+                                    <img src="/CMCPortal/Public/10-global/images/icon1.png" id="_ctl0_icon1" class="tab_icon navbar-default" />
+                                </div>
+                                <p>
+                                    <span id="_ctl0_lblCourses">COURSES</span>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 landing_img">
+                            <div class="buttom_tabimg">
+                                <img src="/CMCPortal/Public/10-global/images/img2.jpg" id="_ctl0_img2" class="navbar-default img-responsive" />
+                            </div>
+                            <div class="buttom_tab_icon divcenter">
+                                <div>
+                                    <img src="/CMCPortal/Public/10-global/images/icon2.png" id="_ctl0_icon2" class="tab_icon navbar-default" />
+                                </div>
+                                <p>
+                                    <span id="_ctl0_lblAcademics">ACADEMICS</span>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 landing_img">
+                            <div class="buttom_tabimg">
+                                <img src="/CMCPortal/Public/10-global/images/img3.jpg" id="_ctl0_img3" class="navbar-default img-responsive" />
+                            </div>
+                            <div class="buttom_tab_icon divcenter">
+                                <div>
+                                    <img src="/CMCPortal/Public/10-global/images/icon3.png" id="_ctl0_icon3" class="tab_icon navbar-default" />
+                                </div>
+                                <p>
+                                    <span id="_ctl0_lblStaff">STAFF</span>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 landing_img">
+                            <div class="buttom_tabimg">
+                                <img src="/CMCPortal/Public/10-global/images/img4.jpg" id="_ctl0_img4" class="navbar-default img-responsive" />
+                            </div>
+                            <div class="buttom_tab_icon divcenter">
+                                <div>
+                                    <img src="/CMCPortal/Public/10-global/images/icon4.png" id="_ctl0_icon4" class="tab_icon navbar-default" />
+                                </div>
+                                <p>
+                                    <span id="_ctl0_lblClasses">CLASSES</span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            
+</div>
+         <div id="divIE" class="modal fade " data-backdrop="static" data-keyboard="false" role="dialog" style="visibility: visible;">
+                     <div class="modal-dialog" id="modalIE" style="height: 80%" role="dialog">
+                        <div class="modal-content" style="border-width:0px !important;">
+                          
+                            <div class="modal-body">
+                                <img src="Public/global/images/Browser-Not-Supported-3a-01.svg" id="_ctl0_imgIEPrev" title="To get the best experience while using our application,you will need to use Microsoft Edge or Google Chrome latest versions. Outdated browsers can expose your computer to a security risk." alt="To get the best experience while using our application,
+you will need to use Microsoft Edge or Google Chrome latest versions.
+                                    
+Outdated browsers can expose your computer to a security risk." />
+                                <div style="text-align:right">
+									
+
+                                    <button type="button" onclick="CloseWindow()" class="btn btn-secondary" style="background-color:#6D6D6D" >Close</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        
+
+<!-- contentCell END -->
+
+</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="footer"  style="position:fixed">
+        
+<nav class="container-fluid navbar-default" aria-label="Footer">
+    <div class="col-lg-4">
+        <p class="navbar-text  left">
+            <span><span class="control-label" style="width:100%;">Version: 25.2.2.22</span></span>
+    </div>
+    <div class="col-lg-8 right">
+        
+        
+    </div>
+    <script type="text/javascript" charset="utf-8">
+        /*
+        ".example" is a css class name used by all datagrids.
+        On "$(document).ready(function () {}) we set the values of 
+        predefind properties which refer to juery.dataTables.js file 
+        */
+        $(document).ready(function () {
+            $('.day-event').css("height", 'auto');
+            $(".example").dataTable({
+
+                "oLanguage":
+                {
+
+                    "sProcessing": "Processing...",
+                    "sSearch": "Search",
+                    "sEmptyTable": "No data available in table",
+                    "sInfo": "Showing _START_ to _END_ of _TOTAL_ entries",
+                    "sLengthMenu": "Show &nbsp;  _MENU_  &nbsp; entries",
+                    "sInfoEmpty": "Showing 0 to 0 of 0 entries",
+                    "sLoadingRecords": "Loading...",
+                    "sZeroRecords": "No matching records found",
+                    "sInfoFiltered": "(filtered from _MAX_ total entries)",
+                    "oPaginate": {
+                        "sFirst": "First",
+                        "sLast": "Last",
+                        "sNext": "Next",
+                        "sPrevious": "Previous "
+                    }
+                },
+                "order": [["0", "asc"]],
+                "oSearch": { "bSmart": false },
+                "lengthMenu": [[10, 25, 50, 100, -1], [10, 25, 50, 100, "ALL"]],
+                "dom": '<"top"lfip<"clear">>rt<"bottom"lfip<"clear">>'
+
+            });
+            $(".example").dataTable().columnFilter();
+        });
+
+        //Sorting Account Information Grid by Date only.
+        $(document).ready(function () {
+            $('.day-event').css("height", 'auto');
+            $(".accountinfosort").dataTable({
+                "order": [[0, "desc"]],
+                "columnDefs": [
+                    { "orderable": false, "targets": [2, 3, 4, 5] }
+                ],
+                "oLanguage":
+                {
+
+                    "sProcessing": "Processing...",
+                    "sSearch": "Search",
+                    "sEmptyTable": "No data available in table",
+                    "sInfo": "Showing _START_ to _END_ of _TOTAL_ entries",
+                    "sLengthMenu": "Show &nbsp;  _MENU_  &nbsp; entries",
+                    "sInfoEmpty": "Showing 0 to 0 of 0 entries",
+                    "sLoadingRecords": "Loading...",
+                    "sZeroRecords": "No matching records found",
+                    "sInfoFiltered": "(filtered from _MAX_ total entries)",
+                    "oPaginate": {
+                        "sFirst": "First",
+                        "sLast": "Last",
+                        "sNext": "Next",
+                        "sPrevious": "Previous "
+                    }
+                },
+                "lengthMenu": [[10, 25, 50,100 ], [ 10, 25, 50,100 ]],
+                "dom": '<"top"lfip<"clear">>rt<"bottom"lfip<"clear">>'
+            });
+        });
+
+        $(document).ready(function () {
+            $('.day-event').css("height", 'auto');
+            $(".pendingchargessort").dataTable({
+                "order": [[0, "asc"]],
+                "columnDefs": [
+                    { "orderable": false, "targets": [1, 2, 3, 4] }
+                ],
+                "oLanguage":
+                {
+
+                    "sProcessing": "Processing...",
+                    "sSearch": "Search",
+                    "sEmptyTable": "No data available in table",
+                    "sInfo": "Showing _START_ to _END_ of _TOTAL_ entries",
+                    "sLengthMenu": "Show &nbsp;  _MENU_  &nbsp; entries",
+                    "sInfoEmpty": "Showing 0 to 0 of 0 entries",
+                    "sLoadingRecords": "Loading...",
+                    "sZeroRecords": "No matching records found",
+                    "sInfoFiltered": "(filtered from _MAX_ total entries)",
+                    "oPaginate": {
+                        "sFirst": "First",
+                        "sLast": "Last",
+                        "sNext": "Next",
+                        "sPrevious": "Previous "
+                    }
+                },
+                "lengthMenu": [[10, 25, 50,100 ], [ 10, 25, 50,100 ]],
+                "dom": '<"top"lfip<"clear">>rt<"bottom"lfip<"clear">>'
+            });
+        });
+
+    </script>
+
+    <script>
+        // JavaScript to dynamically set the title attribute for text which lenght long, so the we can truncate the text and display the full text on mouse hover
+        document.querySelectorAll('.text-wrap-on-overflow').forEach(element => {
+            element.setAttribute('title', element.textContent);
+        });
+    </script>
+</nav>
+
+    </div>
+
+</div>
+
+
+<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="16DF4810" />
+<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="SMMW2oftkSnlmich1yGugMr+HjUkRpi63apGbqILjYXKNIHh0yaAYTHhm7uGOyUKPrEIA4fuCiyxHIeYlQxyrQ5m+ZVKOHDsyeujsSlTr1fxuNvNEToYDZB7wU6lO45xaeFRXwuPlV8LMaUNsRNiLmOVX+0iOrBZz0BaxltqIYM=" /></form>
+        <script type="text/javascript">
+            $(document).ready(function () {
+                $("#Show_quick_links").remove();
+                $('#menu_btn').hide();
+            });
+           
+        </script>
+    </div>
+</body>
+</html>

@@ -1,0 +1,1867 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head><!-- inj yui3-seed: --><script type='text/javascript' src='//cdnjs.cloudflare.com/ajax/libs/yui/3.6.0/yui/yui-min.js'></script><script type='text/javascript' src='//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js'></script><!-- Adobe Analytics --><script type='text/javascript' src='https://assets.adobedtm.com/4a848ae9611a/d0e96722185b/launch-d525bb0064d8.min.js'></script><script type='text/javascript' src=/assets/nr_browser_production.js></script>
+
+<!-- def.1 -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+<title>
+"Prompt Engineering Principles for Generative AI" by Paul A. Hill, Lendel K. Narine et al.
+</title>
+
+
+<!-- FILE article_meta-tags.inc --><!-- FILE: /srv/sequoia/main/data/assets/site/article_meta-tags.inc -->
+<meta itemprop="name" content="Prompt Engineering Principles for Generative AI Use in Extension">
+<meta property="og:title" content="Prompt Engineering Principles for Generative AI Use in Extension">
+<meta name="twitter:title" content="Prompt Engineering Principles for Generative AI Use in Extension">
+<meta property="article:author" content="Paul A. Hill">
+<meta name="author" content="Paul A. Hill">
+<meta property="article:author" content="Lendel K. Narine">
+<meta name="author" content="Lendel K. Narine">
+<meta property="article:author" content="Aubree L. Miller">
+<meta name="author" content="Aubree L. Miller">
+<meta name="robots" content="noodp, noydir">
+<meta name="description" content="The prevalence of Generative AI (GenAI) and Large Language Models (LLMs) is increasing rapidly. For Extension professionals, the utilization of prompt engineering is key to leveraging GenAI and LLMs effectively. Prompt engineering involves crafting prompts that elicit desired LLM responses. This article discusses prompt engineering principles, providing examples and guidance. The application of prompt engineering in Extension is explored, showcasing its potential to enhance programs, deliver personalized advice, engage audiences, and disseminate research-based information. By learning prompt engineering skills, Extension professionals can harness the power of GenAI and LLMs, enhancing their ability to address complex challenges in the 21st century.">
+<meta itemprop="description" content="The prevalence of Generative AI (GenAI) and Large Language Models (LLMs) is increasing rapidly. For Extension professionals, the utilization of prompt engineering is key to leveraging GenAI and LLMs effectively. Prompt engineering involves crafting prompts that elicit desired LLM responses. This article discusses prompt engineering principles, providing examples and guidance. The application of prompt engineering in Extension is explored, showcasing its potential to enhance programs, deliver personalized advice, engage audiences, and disseminate research-based information. By learning prompt engineering skills, Extension professionals can harness the power of GenAI and LLMs, enhancing their ability to address complex challenges in the 21st century.">
+<meta name="twitter:description" content="The prevalence of Generative AI (GenAI) and Large Language Models (LLMs) is increasing rapidly. For Extension professionals, the utilization of prompt engineering is key to leveraging GenAI and LLMs effectively. Prompt engineering involves crafting prompts that elicit desired LLM responses. This article discusses prompt engineering principles, providing examples and guidance. The application of prompt engineering in Extension is explored, showcasing its potential to enhance programs, deliver personalized advice, engage audiences, and disseminate research-based information. By learning prompt engineering skills, Extension professionals can harness the power of GenAI and LLMs, enhancing their ability to address complex challenges in the 21st century.">
+<meta property="og:description" content="The prevalence of Generative AI (GenAI) and Large Language Models (LLMs) is increasing rapidly. For Extension professionals, the utilization of prompt engineering is key to leveraging GenAI and LLMs effectively. Prompt engineering involves crafting prompts that elicit desired LLM responses. This article discusses prompt engineering principles, providing examples and guidance. The application of prompt engineering in Extension is explored, showcasing its potential to enhance programs, deliver personalized advice, engage audiences, and disseminate research-based information. By learning prompt engineering skills, Extension professionals can harness the power of GenAI and LLMs, enhancing their ability to address complex challenges in the 21st century.">
+<meta name="keywords" content="Generative AI, Large Language Models, prompt engineering, Extension, personalized learning, audience engagement">
+<link rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">
+<meta name="bepress_citation_journal_title" content="Journal of Extension">
+<meta name="bepress_citation_firstpage" content="20">
+<meta name="bepress_citation_author" content="Hill, Paul A.">
+<meta name="bepress_citation_author_institution" content="Utah State University">
+<meta name="bepress_citation_author" content="Narine, Lendel K.">
+<meta name="bepress_citation_author_institution" content="Utah State University">
+<meta name="bepress_citation_author" content="Miller, Aubree L.">
+<meta name="bepress_citation_author_institution" content="Utah State University">
+<meta name="bepress_citation_title" content="Prompt Engineering Principles for Generative AI Use in Extension">
+<meta name="bepress_citation_date" content="2024">
+<meta name="bepress_citation_volume" content="62">
+<meta name="bepress_citation_issue" content="3">
+<!-- FILE: /srv/sequoia/main/data/assets/site/ir_download_link.inc -->
+<!-- FILE: /srv/sequoia/main/data/assets/site/article_meta-tags.inc (cont) -->
+<meta name="bepress_citation_pdf_url" content="https://commons.joe.org/cgi/viewcontent.cgi?article=5540&amp;context=joe">
+<meta name="bepress_citation_abstract_html_url" content="https://commons.joe.org/joe/vol62/iss3/20">
+<meta name="bepress_citation_issn" content="1077-5315">
+<meta name="bepress_citation_online_date" content="2024/9/8">
+<meta name="viewport" content="width=device-width">
+<!-- Additional Twitter data -->
+<meta name="twitter:card" content="summary">
+<!-- Additional Open Graph data -->
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://commons.joe.org/joe/vol62/iss3/20">
+<meta property="og:site_name" content="The Commons">
+
+
+
+
+<!-- FILE: article_meta-tags.inc (cont) -->
+<meta name="bepress_is_article_cover_page" content="1">
+
+
+<!-- sh.1 -->
+<link rel="stylesheet" href="/joe/ir-journal-style.css" type="text/css" media="screen">
+<link rel="alternate" type="application/rss+xml" title="Journal of Extension Newsfeed" href="/joe/recent.rss">
+<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+
+<link type="text/css" rel="stylesheet" href="/assets/floatbox/floatbox.css">
+<script type="text/javascript" src="/assets/jsUtilities.js"></script>
+<script type="text/javascript" src="/assets/footnoteLinks.js"></script>
+<link rel="stylesheet" href="/ir-print.css" type="text/css" media="print">
+<!--[if IE]>
+<link rel="stylesheet" href="/ir-ie.css" type="text/css" media="screen">
+<![endif]-->
+<!-- end sh.1 -->
+
+
+
+
+<script type="text/javascript">var pageData = {"page":{"environment":"prod","productName":"bpdg","language":"en","name":"ir_journal:volume:issue:article","businessUnit":"els:rp:st"},"visitor":{}};</script>
+
+</head>
+<body >
+<!-- FILE /srv/sequoia/main/data/assets/site/ir_journal/header.pregen -->
+
+	<!-- FILE: /srv/sequoia/main/data/assets/site/ir_journal/header_custom.inc --><!-- FILE: /srv/sequoia/main/data/assets/site/mobile_nav.inc --><!--[if !IE]>-->
+<script src="/assets/scripts/dc-mobile/dc-responsive-nav.js"></script>
+
+<header id="mobile-nav" class="nav-down device-fixed-height" style="visibility: hidden;">
+  
+  
+  <nav class="nav-collapse">
+    <ul>
+      <li class="menu-item active device-fixed-width"><a href="https://commons.joe.org" title="Home" data-scroll >Home</a></li>
+      <li class="menu-item device-fixed-width"><a href="https://commons.joe.org/do/search/advanced/" title="Search" data-scroll ><i class="icon-search"></i> Search</a></li>
+      <li class="menu-item device-fixed-width"><a href="https://commons.joe.org/communities.html" title="Browse" data-scroll >Browse Collections</a></li>
+      <li class="menu-item device-fixed-width"><a href="/cgi/myaccount.cgi?context=" title="My Account" data-scroll >My Account</a></li>
+      <li class="menu-item device-fixed-width"><a href="https://commons.joe.org/about.html" title="About" data-scroll >About</a></li>
+      <li class="menu-item device-fixed-width"><a href="https://network.bepress.com" title="Digital Commons Network" data-scroll ><img width="16" height="16" alt="DC Network" style="vertical-align:top;" src="/assets/md5images/8e240588cf8cd3a028768d4294acd7d3.png"> Digital Commons Network™</a></li>
+    </ul>
+  </nav>
+</header>
+
+<script src="/assets/scripts/dc-mobile/dc-mobile-nav.js"></script>
+<!--<![endif]-->
+<!-- FILE: /srv/sequoia/main/data/assets/site/ir_journal/header_custom.inc (cont) -->
+
+
+
+<div id="joe">
+	<div id="container">
+		<a href="#main" class="skiplink" accesskey="2" >Skip to main content</a>
+
+					
+			<div id="header">
+				<a href="https://commons.joe.org/joe" id="banner_link" title="Journal of Extension" >
+					<img id="banner_image" alt="Journal of Extension" width='980' height='212' src="/assets/md5images/6445303bb1b9b681cd7f6202dd98a811.png">
+				</a>	
+				
+					<a href="https://open.clemson.edu/joe/" id="logo_link" title="Extension Journal Inc" >
+						<img id="logo_image" alt="Extension Journal Inc" width='402' height='288' src="/assets/md5images/5f985ad9da5776f700c5956d8a152169.png">
+					</a>	
+				
+			</div>
+					
+			<div id="navigation">
+				<!-- FILE: /srv/sequoia/main/data/assets/site/ir_navigation.inc -->
+
+<div id="tabs" role="navigation" aria-label="Main"><ul><li id="tabfour"><a href="https://commons.joe.org/cgi/myaccount.cgi?context=" title="My Account" ><span>My Account</span></a></li><li id="tabthree"><a href="mailto:joe@joe.org" title="Contact Us" ><span>Contact Us</span></a></li><li id="tabtwo"><a href="https://commons.joe.org/joe" title="Home" ><span>Home</span></a></li><li id="tabone"><a href="" title=""><span></span></a></li></ul></div>
+
+<!-- FILE: /srv/sequoia/main/data/assets/site/ir_journal/header_custom.inc (cont) -->
+			</div>
+			
+			
+		<div id="wrapper">
+			<div id="content">
+				<div id="main" class="text">					
+					<!-- FILE: /srv/sequoia/main/data/assets/site/ir_journal/ir_breadcrumb.inc -->
+	<ul id="pager">
+		<li>&nbsp;</li>
+		 
+		<li>&nbsp;</li> 
+		
+	</ul>
+
+<div class="crumbs" role="navigation" aria-label="Breadcrumb">
+	<p>
+		
+
+		
+		
+		
+			<a href="https://commons.joe.org" class="ignore" >Home</a>
+		
+		
+		
+		
+		
+		
+		
+		
+		 <span aria-hidden="true">&gt;</span> 
+			<a href="https://commons.joe.org/joe" class="ignore" >JOE</a>
+		
+		
+		
+		 <span aria-hidden="true">&gt;</span> 
+			<a href="https://commons.joe.org/joe/vol62" class="ignore" >Vol. 62</a>
+		
+		
+		
+		
+		
+		
+		 <span aria-hidden="true">&gt;</span> 
+			<a href="https://commons.joe.org/joe/vol62/iss3" class="ignore" >No. 3 (2024)</a>
+		
+		
+		
+		
+		
+	</p>
+</div>
+
+<div class="clear">&nbsp;</div>
+<!-- FILE: /srv/sequoia/main/data/assets/site/ir_journal/header_custom.inc (cont) -->
+					
+						<!-- FILE: /srv/sequoia/main/data/assets/site/ir_journal/volume/issue/ir_journal_logo.inc -->
+
+
+
+
+
+ 
+
+
+
+
+
+<!-- FILE: /srv/sequoia/main/data/assets/site/ir_journal/header_custom.inc (cont) -->
+					
+
+<!-- FILE: /srv/sequoia/main/data/assets/site/ir_journal/header.pregen (cont) -->
+
+<script type="text/javascript" src="/assets/floatbox/floatbox.js"></script>
+<!-- FILE: /srv/sequoia/main/data/assets/site/ir_journal/article_info.inc --><!-- FILE: /srv/sequoia/main/data/assets/site/openurl.inc -->
+<!-- FILE: /srv/sequoia/main/data/assets/site/ir_journal/article_info.inc (cont) -->
+<!-- FILE: /srv/sequoia/main/data/assets/site/ir_download_link.inc -->
+<!-- FILE: /srv/sequoia/main/data/assets/site/ir_journal/article_info.inc (cont) -->
+<!-- FILE: /srv/sequoia/main/data/assets/site/ir_journal/ir_article_header.inc --><div id="sub">
+<div id="alpha"><!-- FILE: /srv/sequoia/main/data/assets/site/ir_journal/article_info.inc (cont) --><div id='title' class='element'>
+<h1><a href='https://commons.joe.org/cgi/viewcontent.cgi?article=5540&amp;context=joe'>Prompt Engineering Principles for Generative AI Use in Extension</a></h1>
+</div>
+<div class='clear'></div>
+<div id='authors' class='element'>
+<h2 class='visually-hidden'>Authors</h2>
+<p class="author"><a href='https://commons.joe.org/do/search/?q=%28author%3A%22Paul%20A.%20Hill%22%20AND%20-bp_author_id%3A%5B%2A%20TO%20%2A%5D%29%20OR%20bp_author_id%3A%28%22bfc2936c-f88e-4977-bc4d-bd4931c72eaf%22%29&start=0&context=39547327'><strong>Paul A. Hill</strong>, <em>Utah State University</em></a><a rel="nofollow" href="https://network.bepress.com/api/follow/subscribe?user=YWJhMmViMzkzNWJhYWRmNQ%3D%3D&amp;institution=MmRmZDdkM2ZjNTIzNmQ2ZDZlMzk1MzkwZDE1NjEzZDE%3D&amp;format=html" data-follow-set="user:YWJhMmViMzkzNWJhYWRmNQ== institution:MmRmZDdkM2ZjNTIzNmQ2ZDZlMzk1MzkwZDE1NjEzZDE=" title="Follow Paul A. Hill" class="btn followable">Follow</a><br />
+<a href='https://commons.joe.org/do/search/?q=%28author%3A%22Lendel%20K.%20Narine%22%20AND%20-bp_author_id%3A%5B%2A%20TO%20%2A%5D%29%20OR%20bp_author_id%3A%28%225384e59f-f6ec-4fcc-9dd3-8fb89ea10f9f%22%20OR%20%22d1a234da-c6d5-4155-859c-7515e949408e%22%29&start=0&context=39547327'><strong>Lendel K. Narine</strong>, <em>Utah State University</em></a><a rel="nofollow" href="https://network.bepress.com/api/follow/subscribe?user=MmExN2JiZjExMzFhYzk2Mw%3D%3D&amp;institution=MmRmZDdkM2ZjNTIzNmQ2ZDZlMzk1MzkwZDE1NjEzZDE%3D&amp;format=html" data-follow-set="user:MmExN2JiZjExMzFhYzk2Mw== institution:MmRmZDdkM2ZjNTIzNmQ2ZDZlMzk1MzkwZDE1NjEzZDE=" title="Follow Lendel K. Narine" class="btn followable">Follow</a><br />
+<a href='https://commons.joe.org/do/search/?q=%28author%3A%22Aubree%20L.%20Miller%22%20AND%20-bp_author_id%3A%5B%2A%20TO%20%2A%5D%29%20OR%20bp_author_id%3A%28%22b0089be1-b3a4-4264-9a42-b26a84b49d31%22%29&start=0&context=39547327'><strong>Aubree L. Miller</strong>, <em>Utah State University</em></a><a rel="nofollow" href="https://network.bepress.com/api/follow/subscribe?user=ZDIyZTE5NTY5YTU3YTBkMg%3D%3D&amp;institution=MmRmZDdkM2ZjNTIzNmQ2ZDZlMzk1MzkwZDE1NjEzZDE%3D&amp;format=html" data-follow-set="user:ZDIyZTE5NTY5YTU3YTBkMg== institution:MmRmZDdkM2ZjNTIzNmQ2ZDZlMzk1MzkwZDE1NjEzZDE=" title="Follow Aubree L. Miller" class="btn followable">Follow</a><br />
+</p></div>
+<div class='clear'></div>
+<div id='volnum' class='element'>
+<h2 class='field-heading'>Volume</h2>
+<p>62</p>
+</div>
+<div class='clear'></div>
+<div id='issnum' class='element'>
+<h2 class='field-heading'>Issue</h2>
+<p>3</p>
+</div>
+<div class='clear'></div>
+<div id='abstract' class='element'>
+<h2 class='field-heading'>Abstract</h2>
+<p>The prevalence of Generative AI (GenAI) and Large Language Models (LLMs) is increasing rapidly. For Extension professionals, the utilization of prompt engineering is key to leveraging GenAI and LLMs effectively. Prompt engineering involves crafting prompts that elicit desired LLM responses. This article discusses prompt engineering principles, providing examples and guidance. The application of prompt engineering in Extension is explored, showcasing its potential to enhance programs, deliver personalized advice, engage audiences, and disseminate research-based information. By learning prompt engineering skills, Extension professionals can harness the power of GenAI and LLMs, enhancing their ability to address complex challenges in the 21st century.</p>
+</div>
+<div class='clear'></div>
+<div id='distribution_license' class='element'>
+<h2 class='field-heading'>Creative Commons License</h2>
+<p><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons Attribution-Noncommercial 4.0 License" src="https://resources.bepress.com/assets/cc-by-nc-sa-4.0-88x31.png"></a><br>This work is licensed under a <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-Noncommercial-Share Alike 4.0 License</a>.</p>
+</div>
+<div class='clear'></div>
+<div id='recommended_citation' class='element'>
+<h2 class='field-heading'>Recommended Citation</h2>
+<!-- FILE: /srv/sequoia/main/data/journals/commons.joe.org/joe/assets/ir_citation.inc -->
+<p>
+        Hill, P. A., 
+        Narine, L. K., 
+            & 
+        Miller, A. L.
+    (2024).
+    Prompt Engineering Principles for Generative AI Use in Extension.
+    <em>Journal of Extension, 62</em>(3), Article 20.
+        <a href="https://commons.joe.org/joe/vol62/iss3/20" >https://commons.joe.org/joe/vol62/iss3/20</a>        
+</p><!-- FILE: /srv/sequoia/main/data/assets/site/ir_journal/article_info.inc (cont) --></div>
+<div class='clear'></div>
+</div>
+    </div>
+    <div id='beta_7-3'>
+<!-- FILE: /srv/sequoia/main/data/assets/site/info_box_7_3.inc --><!-- FILE: /srv/sequoia/main/data/assets/site/openurl.inc -->
+<!-- FILE: /srv/sequoia/main/data/assets/site/info_box_7_3.inc (cont) -->
+<!-- FILE: /srv/sequoia/main/data/assets/site/ir_download_link.inc -->
+<!-- FILE: /srv/sequoia/main/data/assets/site/info_box_7_3.inc (cont) -->
+	<!-- FILE: /srv/sequoia/main/data/assets/site/info_box_download_button.inc --><div class="aside download-button">
+      <a id="pdf" class="btn" href="https://commons.joe.org/cgi/viewcontent.cgi?article=5540&amp;context=joe" title="PDF (186&nbsp;KB) opens in new window" target="_blank" > 
+    	<i class="icon-download-alt" aria-hidden="true"></i>
+        Download
+      </a>
+</div>
+<!-- FILE: /srv/sequoia/main/data/assets/site/info_box_7_3.inc (cont) -->
+	<!-- FILE: /srv/sequoia/main/data/assets/site/info_box_embargo.inc -->
+<!-- FILE: /srv/sequoia/main/data/assets/site/info_box_7_3.inc (cont) -->
+<!-- FILE: /srv/sequoia/main/data/assets/site/info_box_custom_upper.inc -->
+<!-- FILE: /srv/sequoia/main/data/assets/site/info_box_7_3.inc (cont) -->
+<!-- FILE: /srv/sequoia/main/data/assets/site/info_box_openurl.inc -->
+<!-- FILE: /srv/sequoia/main/data/assets/site/info_box_7_3.inc (cont) -->
+<!-- FILE: /srv/sequoia/main/data/assets/site/info_box_article_metrics.inc -->
+<div id="article-stats" class="aside hidden">
+    <p class="article-downloads-wrapper hidden"><span id="article-downloads"></span> DOWNLOADS</p>
+    <p class="article-stats-date hidden">Since September 08, 2024</p>
+    <p class="article-plum-metrics">
+        <a href="https://plu.mx/plum/a/?repo_url=https://commons.joe.org/joe/vol62/iss3/20" class="plumx-plum-print-popup plum-bigben-theme" data-badge="true" data-hide-when-empty="true" ></a>
+    </p>
+</div>
+<script type="text/javascript" src="//cdn.plu.mx/widget-popup.js"></script>
+<!-- Article Download Counts -->
+<script type="text/javascript" src="/assets/scripts/article-downloads.pack.js"></script>
+<script type="text/javascript">
+    insertDownloads(36078786);
+</script>
+<!-- Add border to Plum badge & download counts when visible -->
+<script>
+// bind to event when PlumX widget loads
+jQuery('body').bind('plum:widget-load', function(e){
+// if Plum badge is visible
+  if (jQuery('.PlumX-Popup').length) {
+// remove 'hidden' class
+  jQuery('#article-stats').removeClass('hidden');
+  jQuery('.article-stats-date').addClass('plum-border');
+  }
+});
+// bind to event when page loads
+jQuery(window).bind('load',function(e){
+// if DC downloads are visible
+  if (jQuery('#article-downloads').text().length > 0) {
+// add border to aside
+  jQuery('#article-stats').removeClass('hidden');
+  }
+});
+</script>
+<!-- Adobe Analytics: Download Click Tracker -->
+<script>
+$(function() {
+  // Download button click event tracker for PDFs
+  $(".aside.download-button").on("click", "a#pdf", function(event) {
+    pageDataTracker.trackEvent('navigationClick', {
+      link: {
+          location: 'aside download-button',
+          name: 'pdf'
+      }
+    });
+  });
+  // Download button click event tracker for native files
+  $(".aside.download-button").on("click", "a#native", function(event) {
+    pageDataTracker.trackEvent('navigationClick', {
+        link: {
+            location: 'aside download-button',
+            name: 'native'
+        }
+     });
+  });
+});
+</script>
+<!-- FILE: /srv/sequoia/main/data/assets/site/info_box_7_3.inc (cont) -->
+	<!-- FILE: /srv/sequoia/main/data/assets/site/info_box_disciplines.inc -->
+	<div id="beta-disciplines" class="aside">
+		<h4>Included in</h4>
+	<p>
+					<a href="https://network.bepress.com/hgg/discipline/628" title="Business Law, Public Responsibility, and Ethics Commons" >Business Law, Public Responsibility, and Ethics Commons</a>, 
+					<a href="https://network.bepress.com/hgg/discipline/305" title="Operations Research, Systems Engineering and Industrial Engineering Commons" >Operations Research, Systems Engineering and Industrial Engineering Commons</a>, 
+					<a href="https://network.bepress.com/hgg/discipline/265" title="Other Computer Engineering Commons" >Other Computer Engineering Commons</a>
+	</p>
+	</div>
+<!-- FILE: /srv/sequoia/main/data/assets/site/info_box_7_3.inc (cont) -->
+<!-- FILE: /srv/sequoia/main/data/assets/site/bookmark_widget.inc -->
+<div id="share" class="aside">
+<h2>Share</h2>
+	<div class="a2a_kit a2a_kit_size_24 a2a_default_style">
+    	<a class="a2a_button_facebook"></a>
+    	<a class="a2a_button_linkedin"></a>
+		<a class="a2a_button_whatsapp"></a>
+		<a class="a2a_button_email"></a>
+    	<a class="a2a_dd"></a>
+    	<script async src="https://static.addtoany.com/menu/page.js"></script>
+	</div>
+</div>
+<!-- FILE: /srv/sequoia/main/data/assets/site/info_box_7_3.inc (cont) -->
+<!-- FILE: /srv/sequoia/main/data/assets/site/info_box_geolocate.inc --><!-- FILE: /srv/sequoia/main/data/assets/site/ir_geolocate_enabled_and_displayed.inc -->
+<!-- FILE: /srv/sequoia/main/data/assets/site/info_box_geolocate.inc (cont) -->
+<!-- FILE: /srv/sequoia/main/data/assets/site/info_box_7_3.inc (cont) -->
+	<!-- FILE: /srv/sequoia/main/data/assets/site/zotero_coins.inc -->
+<span class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft_id=https%3A%2F%2Fcommons.joe.org%2Fjoe%2Fvol62%2Fiss3%2F20&amp;rft.atitle=Prompt%20Engineering%20Principles%20for%20Generative%20AI%20Use%20in%20Extension&amp;rft.aufirst=Paul&amp;rft.aulast=Hill&amp;rft.au=Lendel%20Narine&amp;rft.au=Aubree%20Miller&amp;rft.jtitle=Journal%20of%20Extension&amp;rft.volume=62&amp;rft.issue=3&amp;rft.issn=1077-5315&amp;rft.date=2024-09-08">COinS</span>
+<!-- FILE: /srv/sequoia/main/data/assets/site/info_box_7_3.inc (cont) -->
+<!-- FILE: /srv/sequoia/main/data/assets/site/info_box_custom_lower.inc -->
+<!-- FILE: /srv/sequoia/main/data/assets/site/info_box_7_3.inc (cont) -->
+<!-- FILE: /srv/sequoia/main/data/assets/site/ir_journal/article_info.inc (cont) --></div>
+<div class='clear'>&nbsp;</div>
+<!-- FILE: /srv/sequoia/main/data/assets/site/ir_article_custom_fields.inc -->
+<!-- FILE: /srv/sequoia/main/data/assets/site/ir_journal/article_info.inc (cont) -->
+	<!-- FILE: /srv/sequoia/main/data/assets/site/ir_display_pdf.inc -->
+<div class='clear'>&nbsp;</div>
+<div id="display-pdf">
+   <object type='application/pdf' data='https://commons.joe.org/cgi/viewcontent.cgi?article=5540&amp;context=joe#toolbar=0&amp;navpanes=0&amp;scrollbar=1' width='660' height='460'>
+      <div id="message">
+<p>To view the content in your browser, please <a href="https://get.adobe.com/reader/" title="Adobe - Adobe Reader download" >download Adobe Reader</a> or, alternately, <br>
+you may <a href="https://commons.joe.org/cgi/viewcontent.cgi?article=5540&amp;context=joe" >Download</a> the file to your hard drive.</p>
+ <p> NOTE: The latest versions of Adobe Reader do not support viewing <acronym title="Portable Document Format">PDF</acronym> files within Firefox on Mac OS and if you are using a modern (Intel) Mac, there is no official plugin for viewing <acronym title="Portable Document Format">PDF</acronym> files within the browser window.  </p>
+   </object>
+</div>
+<div class='clear'>&nbsp;</div>
+<!-- FILE: /srv/sequoia/main/data/assets/site/ir_journal/article_info.inc (cont) -->
+<!-- FILE: /srv/sequoia/main/data/assets/site/ir_journal/volume/issue/article/index.html (cont) --> 
+
+<!-- FILE /srv/sequoia/main/data/assets/site/ir_journal/footer.pregen -->
+
+	<!-- FILE: /srv/sequoia/main/data/assets/site/ir_journal/footer_custom_7_8.inc -->				</div>
+
+<div class="verticalalign">&nbsp;</div>
+<div class="clear">&nbsp;</div>
+
+			</div>
+
+				<div id="sidebar">
+					<!-- FILE: /srv/sequoia/main/data/assets/site/ir_journal/ir_journal_sidebar_7_8.inc -->
+
+	<!-- FILE: /srv/sequoia/main/data/journals/commons.joe.org/joe/assets/ir_journal_sidebar_links_7_8.inc --><ul class="sb-custom-journal">
+		<li class="sb-about">
+			<a href="https://commons.joe.org/joe/about.html" >
+				About this Journal
+			</a>
+		</li>
+		<li class="sb-ed-board">
+			<a href="https://commons.joe.org/joe/editorialboard.html" >
+				Editorial Board
+			</a>
+		</li>
+		<li class="sb-ed-board">
+			<a href="https://commons.joe.org/joe/editorial_team.html" >
+				Editorial Team
+			</a>
+		</li>
+<li>		
+<a href="https://commons.joe.org/joe/article_categories.html" >Article Categories</a></li>
+		<li class="sb-policies">
+			<a href="https://commons.joe.org/joe/policies.html" >
+				Policies
+			</a>
+		</li>
+	<li>
+		<a href="https://commons.joe.org/joe/styleguide.html" >Style Guide</a>
+	</li>
+	<li>
+		<a href="https://commons.joe.org/joe/submission_guidelines.html" >Submission Guidelines</a>
+	</li>	
+		<li class="sb-aims">
+			<a href="https://commons.joe.org/joe/for_reviewers.html" >
+				For Reviewers
+			</a>
+		</li>
+		<li class="sb-ethics">
+			<a href="https://commons.joe.org/joe/publication_ethics.html" >
+				Publishing Ethics Statement
+			</a>
+		</li>
+</ul>
+<ul id="jobs">
+	<li id="jobs_link"><a href="https://jobs.joe.org/" >Extension Jobs</a>
+</ul>
+<!-- FILE: /srv/sequoia/main/data/assets/site/ir_journal/ir_journal_sidebar_7_8.inc (cont) -->
+		<!-- FILE: /srv/sequoia/main/data/assets/site/urc_badge.inc -->
+<!-- FILE: /srv/sequoia/main/data/assets/site/ir_journal/ir_journal_sidebar_7_8.inc (cont) -->
+	<!-- FILE: /srv/sequoia/main/data/assets/site/ir_journal/ir_journal_navcontainer_7_8.inc --><div id="navcontainer">
+	<ul id="navlist">
+			<li class="sb-submit">
+					<a href="https://commons.joe.org/cgi/submit.cgi?context=joe" title="Submit Article to Journal of Extension" >
+						Submit Article</a>
+			</li>
+			<li class="sb-popular">
+				<a href="https://commons.joe.org/joe/topdownloads.html" title="View the top downloaded papers" >
+						Most Popular Papers
+				</a>
+			</li>
+			<li class="sb-rss">
+				<a href="https://commons.joe.org/joe/announcements.html" title="Receive notifications of new content" >
+					Receive Email Notices or RSS
+				</a>
+			</li>
+	</ul>
+<!-- FILE: /srv/sequoia/main/data/assets/site/ir_journal/ir_journal_special_issue_7_8.inc -->
+<!-- FILE: /srv/sequoia/main/data/assets/site/ir_journal/ir_journal_navcontainer_7_8.inc (cont) -->
+</div><!-- FILE: /srv/sequoia/main/data/assets/site/ir_journal/ir_journal_sidebar_7_8.inc (cont) -->
+	<!-- FILE: /srv/sequoia/main/data/assets/site/ir_journal/ir_journal_sidebar_search_7_8.inc --><div class="sidebar-search">
+	<form method="post" action="https://commons.joe.org/cgi/redirect.cgi" id="browse">
+		<label for="url">
+			Select an issue:
+		</label>
+			<br>
+		<!-- FILE: /srv/sequoia/main/data/assets/site/ir_journal/ir_journal_volume_issue_popup_7_8.inc --><div>
+	<span class="border">
+								<select name="url" id="url">
+							<option value="https://commons.joe.org/joe/all_issues.html">
+								All Issues
+							</option>
+										<option value="https://commons.joe.org/joe/vol63/iss4">
+											Vol. 63, No.
+											 4
+										</option>
+										<option value="https://commons.joe.org/joe/vol63/iss3">
+											Vol. 63, No.
+											 3
+										</option>
+										<option value="https://commons.joe.org/joe/vol63/iss2">
+											Vol. 63, No.
+											 2
+										</option>
+										<option value="https://commons.joe.org/joe/vol63/iss1">
+											Vol. 63, No.
+											 1
+										</option>
+										<option value="https://commons.joe.org/joe/vol62/iss4">
+											Vol. 62, No.
+											 4
+										</option>
+										<option value="https://commons.joe.org/joe/vol62/iss3">
+											Vol. 62, No.
+											 3
+										</option>
+										<option value="https://commons.joe.org/joe/vol62/iss2">
+											Vol. 62, No.
+											 2
+										</option>
+										<option value="https://commons.joe.org/joe/vol62/iss1">
+											Vol. 62, No.
+											 1
+										</option>
+										<option value="https://commons.joe.org/joe/vol61/iss4">
+											Vol. 61, No.
+											 4
+										</option>
+										<option value="https://commons.joe.org/joe/vol61/iss3">
+											Vol. 61, No.
+											 3
+										</option>
+										<option value="https://commons.joe.org/joe/vol61/iss2">
+											Vol. 61, No.
+											 2
+										</option>
+										<option value="https://commons.joe.org/joe/vol61/iss1">
+											Vol. 61, No.
+											 1
+										</option>
+										<option value="https://commons.joe.org/joe/vol60/iss4">
+											Vol. 60, No.
+											 4
+										</option>
+										<option value="https://commons.joe.org/joe/vol60/iss3">
+											Vol. 60, No.
+											 3
+										</option>
+										<option value="https://commons.joe.org/joe/vol60/iss2">
+											Vol. 60, No.
+											 2
+										</option>
+										<option value="https://commons.joe.org/joe/vol60/iss1">
+											Vol. 60, No.
+											 1
+										</option>
+										<option value="https://commons.joe.org/joe/vol59/iss4">
+											Vol. 59, No.
+											 4
+										</option>
+										<option value="https://commons.joe.org/joe/vol59/iss3">
+											Vol. 59, No.
+											 3
+										</option>
+										<option value="https://commons.joe.org/joe/vol59/iss2">
+											Vol. 59, No.
+											 2
+										</option>
+										<option value="https://commons.joe.org/joe/vol59/iss1">
+											Vol. 59, No.
+											 1
+										</option>
+										<option value="https://commons.joe.org/joe/vol58/iss6">
+											Vol. 58, No.
+											 6
+										</option>
+										<option value="https://commons.joe.org/joe/vol58/iss5">
+											Vol. 58, No.
+											 5
+										</option>
+										<option value="https://commons.joe.org/joe/vol58/iss4">
+											Vol. 58, No.
+											 4
+										</option>
+										<option value="https://commons.joe.org/joe/vol58/iss3">
+											Vol. 58, No.
+											 3
+										</option>
+										<option value="https://commons.joe.org/joe/vol58/iss2">
+											Vol. 58, No.
+											 2
+										</option>
+										<option value="https://commons.joe.org/joe/vol58/iss1">
+											Vol. 58, No.
+											 1
+										</option>
+										<option value="https://commons.joe.org/joe/vol57/iss6">
+											Vol. 57, No.
+											 6
+										</option>
+										<option value="https://commons.joe.org/joe/vol57/iss5">
+											Vol. 57, No.
+											 5
+										</option>
+										<option value="https://commons.joe.org/joe/vol57/iss4">
+											Vol. 57, No.
+											 4
+										</option>
+										<option value="https://commons.joe.org/joe/vol57/iss3">
+											Vol. 57, No.
+											 3
+										</option>
+										<option value="https://commons.joe.org/joe/vol57/iss2">
+											Vol. 57, No.
+											 2
+										</option>
+										<option value="https://commons.joe.org/joe/vol57/iss1">
+											Vol. 57, No.
+											 1
+										</option>
+										<option value="https://commons.joe.org/joe/vol56/iss7">
+											Vol. 56, No.
+											 7
+										</option>
+										<option value="https://commons.joe.org/joe/vol56/iss6">
+											Vol. 56, No.
+											 6
+										</option>
+										<option value="https://commons.joe.org/joe/vol56/iss5">
+											Vol. 56, No.
+											 5
+										</option>
+										<option value="https://commons.joe.org/joe/vol56/iss4">
+											Vol. 56, No.
+											 4
+										</option>
+										<option value="https://commons.joe.org/joe/vol56/iss3">
+											Vol. 56, No.
+											 3
+										</option>
+										<option value="https://commons.joe.org/joe/vol56/iss2">
+											Vol. 56, No.
+											 2
+										</option>
+										<option value="https://commons.joe.org/joe/vol56/iss1">
+											Vol. 56, No.
+											 1
+										</option>
+										<option value="https://commons.joe.org/joe/vol55/iss6">
+											Vol. 55, No.
+											 6
+										</option>
+										<option value="https://commons.joe.org/joe/vol55/iss5">
+											Vol. 55, No.
+											 5
+										</option>
+										<option value="https://commons.joe.org/joe/vol55/iss4">
+											Vol. 55, No.
+											 4
+										</option>
+										<option value="https://commons.joe.org/joe/vol55/iss3">
+											Vol. 55, No.
+											 3
+										</option>
+										<option value="https://commons.joe.org/joe/vol55/iss2">
+											Vol. 55, No.
+											 2
+										</option>
+										<option value="https://commons.joe.org/joe/vol55/iss1">
+											Vol. 55, No.
+											 1
+										</option>
+										<option value="https://commons.joe.org/joe/vol54/iss6">
+											Vol. 54, No.
+											 6
+										</option>
+										<option value="https://commons.joe.org/joe/vol54/iss5">
+											Vol. 54, No.
+											 5
+										</option>
+										<option value="https://commons.joe.org/joe/vol54/iss4">
+											Vol. 54, No.
+											 4
+										</option>
+										<option value="https://commons.joe.org/joe/vol54/iss3">
+											Vol. 54, No.
+											 3
+										</option>
+										<option value="https://commons.joe.org/joe/vol54/iss2">
+											Vol. 54, No.
+											 2
+										</option>
+										<option value="https://commons.joe.org/joe/vol54/iss1">
+											Vol. 54, No.
+											 1
+										</option>
+										<option value="https://commons.joe.org/joe/vol53/iss6">
+											Vol. 53, No.
+											 6
+										</option>
+										<option value="https://commons.joe.org/joe/vol53/iss5">
+											Vol. 53, No.
+											 5
+										</option>
+										<option value="https://commons.joe.org/joe/vol53/iss4">
+											Vol. 53, No.
+											 4
+										</option>
+										<option value="https://commons.joe.org/joe/vol53/iss3">
+											Vol. 53, No.
+											 3
+										</option>
+										<option value="https://commons.joe.org/joe/vol53/iss2">
+											Vol. 53, No.
+											 2
+										</option>
+										<option value="https://commons.joe.org/joe/vol53/iss1">
+											Vol. 53, No.
+											 1
+										</option>
+										<option value="https://commons.joe.org/joe/vol52/iss6">
+											Vol. 52, No.
+											 6
+										</option>
+										<option value="https://commons.joe.org/joe/vol52/iss5">
+											Vol. 52, No.
+											 5
+										</option>
+										<option value="https://commons.joe.org/joe/vol52/iss4">
+											Vol. 52, No.
+											 4
+										</option>
+										<option value="https://commons.joe.org/joe/vol52/iss3">
+											Vol. 52, No.
+											 3
+										</option>
+										<option value="https://commons.joe.org/joe/vol52/iss2">
+											Vol. 52, No.
+											 2
+										</option>
+										<option value="https://commons.joe.org/joe/vol52/iss1">
+											Vol. 52, No.
+											 1
+										</option>
+										<option value="https://commons.joe.org/joe/vol51/iss6">
+											Vol. 51, No.
+											 6
+										</option>
+										<option value="https://commons.joe.org/joe/vol51/iss5">
+											Vol. 51, No.
+											 5
+										</option>
+										<option value="https://commons.joe.org/joe/vol51/iss4">
+											Vol. 51, No.
+											 4
+										</option>
+										<option value="https://commons.joe.org/joe/vol51/iss3">
+											Vol. 51, No.
+											 3
+										</option>
+										<option value="https://commons.joe.org/joe/vol51/iss2">
+											Vol. 51, No.
+											 2
+										</option>
+										<option value="https://commons.joe.org/joe/vol51/iss1">
+											Vol. 51, No.
+											 1
+										</option>
+										<option value="https://commons.joe.org/joe/vol50/iss6">
+											Vol. 50, No.
+											 6
+										</option>
+										<option value="https://commons.joe.org/joe/vol50/iss5">
+											Vol. 50, No.
+											 5
+										</option>
+										<option value="https://commons.joe.org/joe/vol50/iss4">
+											Vol. 50, No.
+											 4
+										</option>
+										<option value="https://commons.joe.org/joe/vol50/iss3">
+											Vol. 50, No.
+											 3
+										</option>
+										<option value="https://commons.joe.org/joe/vol50/iss2">
+											Vol. 50, No.
+											 2
+										</option>
+										<option value="https://commons.joe.org/joe/vol50/iss1">
+											Vol. 50, No.
+											 1
+										</option>
+										<option value="https://commons.joe.org/joe/vol49/iss6">
+											Vol. 49, No.
+											 6
+										</option>
+										<option value="https://commons.joe.org/joe/vol49/iss5">
+											Vol. 49, No.
+											 5
+										</option>
+										<option value="https://commons.joe.org/joe/vol49/iss4">
+											Vol. 49, No.
+											 4
+										</option>
+										<option value="https://commons.joe.org/joe/vol49/iss3">
+											Vol. 49, No.
+											 3
+										</option>
+										<option value="https://commons.joe.org/joe/vol49/iss2">
+											Vol. 49, No.
+											 2
+										</option>
+										<option value="https://commons.joe.org/joe/vol49/iss1">
+											Vol. 49, No.
+											 1
+										</option>
+										<option value="https://commons.joe.org/joe/vol48/iss6">
+											Vol. 48, No.
+											 6
+										</option>
+										<option value="https://commons.joe.org/joe/vol48/iss5">
+											Vol. 48, No.
+											 5
+										</option>
+										<option value="https://commons.joe.org/joe/vol48/iss4">
+											Vol. 48, No.
+											 4
+										</option>
+										<option value="https://commons.joe.org/joe/vol48/iss3">
+											Vol. 48, No.
+											 3
+										</option>
+										<option value="https://commons.joe.org/joe/vol48/iss2">
+											Vol. 48, No.
+											 2
+										</option>
+										<option value="https://commons.joe.org/joe/vol48/iss1">
+											Vol. 48, No.
+											 1
+										</option>
+										<option value="https://commons.joe.org/joe/vol47/iss6">
+											Vol. 47, No.
+											 6
+										</option>
+										<option value="https://commons.joe.org/joe/vol47/iss5">
+											Vol. 47, No.
+											 5
+										</option>
+										<option value="https://commons.joe.org/joe/vol47/iss4">
+											Vol. 47, No.
+											 4
+										</option>
+										<option value="https://commons.joe.org/joe/vol47/iss3">
+											Vol. 47, No.
+											 3
+										</option>
+										<option value="https://commons.joe.org/joe/vol47/iss2">
+											Vol. 47, No.
+											 2
+										</option>
+										<option value="https://commons.joe.org/joe/vol47/iss1">
+											Vol. 47, No.
+											 1
+										</option>
+										<option value="https://commons.joe.org/joe/vol46/iss6">
+											Vol. 46, No.
+											 6
+										</option>
+										<option value="https://commons.joe.org/joe/vol46/iss5">
+											Vol. 46, No.
+											 5
+										</option>
+										<option value="https://commons.joe.org/joe/vol46/iss4">
+											Vol. 46, No.
+											 4
+										</option>
+										<option value="https://commons.joe.org/joe/vol46/iss3">
+											Vol. 46, No.
+											 3
+										</option>
+										<option value="https://commons.joe.org/joe/vol46/iss2">
+											Vol. 46, No.
+											 2
+										</option>
+										<option value="https://commons.joe.org/joe/vol46/iss1">
+											Vol. 46, No.
+											 1
+										</option>
+										<option value="https://commons.joe.org/joe/vol45/iss6">
+											Vol. 45, No.
+											 6
+										</option>
+										<option value="https://commons.joe.org/joe/vol45/iss5">
+											Vol. 45, No.
+											 5
+										</option>
+										<option value="https://commons.joe.org/joe/vol45/iss4">
+											Vol. 45, No.
+											 4
+										</option>
+										<option value="https://commons.joe.org/joe/vol45/iss3">
+											Vol. 45, No.
+											 3
+										</option>
+										<option value="https://commons.joe.org/joe/vol45/iss2">
+											Vol. 45, No.
+											 2
+										</option>
+										<option value="https://commons.joe.org/joe/vol45/iss1">
+											Vol. 45, No.
+											 1
+										</option>
+										<option value="https://commons.joe.org/joe/vol44/iss6">
+											Vol. 44, No.
+											 6
+										</option>
+										<option value="https://commons.joe.org/joe/vol44/iss5">
+											Vol. 44, No.
+											 5
+										</option>
+										<option value="https://commons.joe.org/joe/vol44/iss4">
+											Vol. 44, No.
+											 4
+										</option>
+										<option value="https://commons.joe.org/joe/vol44/iss3">
+											Vol. 44, No.
+											 3
+										</option>
+										<option value="https://commons.joe.org/joe/vol44/iss2">
+											Vol. 44, No.
+											 2
+										</option>
+										<option value="https://commons.joe.org/joe/vol44/iss1">
+											Vol. 44, No.
+											 1
+										</option>
+										<option value="https://commons.joe.org/joe/vol43/iss6">
+											Vol. 43, No.
+											 6
+										</option>
+										<option value="https://commons.joe.org/joe/vol43/iss5">
+											Vol. 43, No.
+											 5
+										</option>
+										<option value="https://commons.joe.org/joe/vol43/iss4">
+											Vol. 43, No.
+											 4
+										</option>
+										<option value="https://commons.joe.org/joe/vol43/iss3">
+											Vol. 43, No.
+											 3
+										</option>
+										<option value="https://commons.joe.org/joe/vol43/iss2">
+											Vol. 43, No.
+											 2
+										</option>
+										<option value="https://commons.joe.org/joe/vol43/iss1">
+											Vol. 43, No.
+											 1
+										</option>
+										<option value="https://commons.joe.org/joe/vol42/iss6">
+											Vol. 42, No.
+											 6
+										</option>
+										<option value="https://commons.joe.org/joe/vol42/iss5">
+											Vol. 42, No.
+											 5
+										</option>
+										<option value="https://commons.joe.org/joe/vol42/iss4">
+											Vol. 42, No.
+											 4
+										</option>
+										<option value="https://commons.joe.org/joe/vol42/iss3">
+											Vol. 42, No.
+											 3
+										</option>
+										<option value="https://commons.joe.org/joe/vol42/iss2">
+											Vol. 42, No.
+											 2
+										</option>
+										<option value="https://commons.joe.org/joe/vol42/iss1">
+											Vol. 42, No.
+											 1
+										</option>
+										<option value="https://commons.joe.org/joe/vol41/iss6">
+											Vol. 41, No.
+											 6
+										</option>
+										<option value="https://commons.joe.org/joe/vol41/iss5">
+											Vol. 41, No.
+											 5
+										</option>
+										<option value="https://commons.joe.org/joe/vol41/iss4">
+											Vol. 41, No.
+											 4
+										</option>
+										<option value="https://commons.joe.org/joe/vol41/iss3">
+											Vol. 41, No.
+											 3
+										</option>
+										<option value="https://commons.joe.org/joe/vol41/iss2">
+											Vol. 41, No.
+											 2
+										</option>
+										<option value="https://commons.joe.org/joe/vol41/iss1">
+											Vol. 41, No.
+											 1
+										</option>
+										<option value="https://commons.joe.org/joe/vol40/iss6">
+											Vol. 40, No.
+											 6
+										</option>
+										<option value="https://commons.joe.org/joe/vol40/iss5">
+											Vol. 40, No.
+											 5
+										</option>
+										<option value="https://commons.joe.org/joe/vol40/iss4">
+											Vol. 40, No.
+											 4
+										</option>
+										<option value="https://commons.joe.org/joe/vol40/iss3">
+											Vol. 40, No.
+											 3
+										</option>
+										<option value="https://commons.joe.org/joe/vol40/iss2">
+											Vol. 40, No.
+											 2
+										</option>
+										<option value="https://commons.joe.org/joe/vol40/iss1">
+											Vol. 40, No.
+											 1
+										</option>
+										<option value="https://commons.joe.org/joe/vol39/iss6">
+											Vol. 39, No.
+											 6
+										</option>
+										<option value="https://commons.joe.org/joe/vol39/iss5">
+											Vol. 39, No.
+											 5
+										</option>
+										<option value="https://commons.joe.org/joe/vol39/iss4">
+											Vol. 39, No.
+											 4
+										</option>
+										<option value="https://commons.joe.org/joe/vol39/iss3">
+											Vol. 39, No.
+											 3
+										</option>
+										<option value="https://commons.joe.org/joe/vol39/iss2">
+											Vol. 39, No.
+											 2
+										</option>
+										<option value="https://commons.joe.org/joe/vol39/iss1">
+											Vol. 39, No.
+											 1
+										</option>
+										<option value="https://commons.joe.org/joe/vol38/iss6">
+											Vol. 38, No.
+											 6
+										</option>
+										<option value="https://commons.joe.org/joe/vol38/iss5">
+											Vol. 38, No.
+											 5
+										</option>
+										<option value="https://commons.joe.org/joe/vol38/iss4">
+											Vol. 38, No.
+											 4
+										</option>
+										<option value="https://commons.joe.org/joe/vol38/iss3">
+											Vol. 38, No.
+											 3
+										</option>
+										<option value="https://commons.joe.org/joe/vol38/iss2">
+											Vol. 38, No.
+											 2
+										</option>
+										<option value="https://commons.joe.org/joe/vol38/iss1">
+											Vol. 38, No.
+											 1
+										</option>
+										<option value="https://commons.joe.org/joe/vol37/iss6">
+											Vol. 37, No.
+											 6
+										</option>
+										<option value="https://commons.joe.org/joe/vol37/iss5">
+											Vol. 37, No.
+											 5
+										</option>
+										<option value="https://commons.joe.org/joe/vol37/iss4">
+											Vol. 37, No.
+											 4
+										</option>
+										<option value="https://commons.joe.org/joe/vol37/iss3">
+											Vol. 37, No.
+											 3
+										</option>
+										<option value="https://commons.joe.org/joe/vol37/iss2">
+											Vol. 37, No.
+											 2
+										</option>
+										<option value="https://commons.joe.org/joe/vol37/iss1">
+											Vol. 37, No.
+											 1
+										</option>
+										<option value="https://commons.joe.org/joe/vol36/iss6">
+											Vol. 36, No.
+											 6
+										</option>
+										<option value="https://commons.joe.org/joe/vol36/iss5">
+											Vol. 36, No.
+											 5
+										</option>
+										<option value="https://commons.joe.org/joe/vol36/iss4">
+											Vol. 36, No.
+											 4
+										</option>
+										<option value="https://commons.joe.org/joe/vol36/iss3">
+											Vol. 36, No.
+											 3
+										</option>
+										<option value="https://commons.joe.org/joe/vol36/iss2">
+											Vol. 36, No.
+											 2
+										</option>
+										<option value="https://commons.joe.org/joe/vol36/iss1">
+											Vol. 36, No.
+											 1
+										</option>
+										<option value="https://commons.joe.org/joe/vol35/iss6">
+											Vol. 35, No.
+											 6
+										</option>
+										<option value="https://commons.joe.org/joe/vol35/iss5">
+											Vol. 35, No.
+											 5
+										</option>
+										<option value="https://commons.joe.org/joe/vol35/iss4">
+											Vol. 35, No.
+											 4
+										</option>
+										<option value="https://commons.joe.org/joe/vol35/iss3">
+											Vol. 35, No.
+											 3
+										</option>
+										<option value="https://commons.joe.org/joe/vol35/iss2">
+											Vol. 35, No.
+											 2
+										</option>
+										<option value="https://commons.joe.org/joe/vol35/iss1">
+											Vol. 35, No.
+											 1
+										</option>
+										<option value="https://commons.joe.org/joe/vol34/iss6">
+											Vol. 34, No.
+											 6
+										</option>
+										<option value="https://commons.joe.org/joe/vol34/iss5">
+											Vol. 34, No.
+											 5
+										</option>
+										<option value="https://commons.joe.org/joe/vol34/iss4">
+											Vol. 34, No.
+											 4
+										</option>
+										<option value="https://commons.joe.org/joe/vol34/iss3">
+											Vol. 34, No.
+											 3
+										</option>
+										<option value="https://commons.joe.org/joe/vol34/iss2">
+											Vol. 34, No.
+											 2
+										</option>
+										<option value="https://commons.joe.org/joe/vol34/iss1">
+											Vol. 34, No.
+											 1
+										</option>
+										<option value="https://commons.joe.org/joe/vol33/iss6">
+											Vol. 33, No.
+											 6
+										</option>
+										<option value="https://commons.joe.org/joe/vol33/iss5">
+											Vol. 33, No.
+											 5
+										</option>
+										<option value="https://commons.joe.org/joe/vol33/iss4">
+											Vol. 33, No.
+											 4
+										</option>
+										<option value="https://commons.joe.org/joe/vol33/iss3">
+											Vol. 33, No.
+											 3
+										</option>
+										<option value="https://commons.joe.org/joe/vol33/iss2">
+											Vol. 33, No.
+											 2
+										</option>
+										<option value="https://commons.joe.org/joe/vol33/iss1">
+											Vol. 33, No.
+											 1
+										</option>
+										<option value="https://commons.joe.org/joe/vol32/iss4">
+											Vol. 32, No.
+											 4
+										</option>
+										<option value="https://commons.joe.org/joe/vol32/iss3">
+											Vol. 32, No.
+											 3
+										</option>
+										<option value="https://commons.joe.org/joe/vol32/iss2">
+											Vol. 32, No.
+											 2
+										</option>
+										<option value="https://commons.joe.org/joe/vol32/iss1">
+											Vol. 32, No.
+											 1
+										</option>
+										<option value="https://commons.joe.org/joe/vol31/iss4">
+											Vol. 31, No.
+											 4
+										</option>
+										<option value="https://commons.joe.org/joe/vol31/iss3">
+											Vol. 31, No.
+											 3
+										</option>
+										<option value="https://commons.joe.org/joe/vol31/iss2">
+											Vol. 31, No.
+											 2
+										</option>
+										<option value="https://commons.joe.org/joe/vol31/iss1">
+											Vol. 31, No.
+											 1
+										</option>
+										<option value="https://commons.joe.org/joe/vol30/iss4">
+											Vol. 30, No.
+											 4
+										</option>
+										<option value="https://commons.joe.org/joe/vol30/iss3">
+											Vol. 30, No.
+											 3
+										</option>
+										<option value="https://commons.joe.org/joe/vol30/iss2">
+											Vol. 30, No.
+											 2
+										</option>
+										<option value="https://commons.joe.org/joe/vol30/iss1">
+											Vol. 30, No.
+											 1
+										</option>
+										<option value="https://commons.joe.org/joe/vol29/iss4">
+											Vol. 29, No.
+											 4
+										</option>
+										<option value="https://commons.joe.org/joe/vol29/iss3">
+											Vol. 29, No.
+											 3
+										</option>
+										<option value="https://commons.joe.org/joe/vol29/iss2">
+											Vol. 29, No.
+											 2
+										</option>
+										<option value="https://commons.joe.org/joe/vol29/iss1">
+											Vol. 29, No.
+											 1
+										</option>
+										<option value="https://commons.joe.org/joe/vol28/iss4">
+											Vol. 28, No.
+											 4
+										</option>
+										<option value="https://commons.joe.org/joe/vol28/iss3">
+											Vol. 28, No.
+											 3
+										</option>
+										<option value="https://commons.joe.org/joe/vol28/iss2">
+											Vol. 28, No.
+											 2
+										</option>
+										<option value="https://commons.joe.org/joe/vol28/iss1">
+											Vol. 28, No.
+											 1
+										</option>
+										<option value="https://commons.joe.org/joe/vol27/iss4">
+											Vol. 27, No.
+											 4
+										</option>
+										<option value="https://commons.joe.org/joe/vol27/iss3">
+											Vol. 27, No.
+											 3
+										</option>
+										<option value="https://commons.joe.org/joe/vol27/iss2">
+											Vol. 27, No.
+											 2
+										</option>
+										<option value="https://commons.joe.org/joe/vol27/iss1">
+											Vol. 27, No.
+											 1
+										</option>
+										<option value="https://commons.joe.org/joe/vol26/iss4">
+											Vol. 26, No.
+											 4
+										</option>
+										<option value="https://commons.joe.org/joe/vol26/iss3">
+											Vol. 26, No.
+											 3
+										</option>
+										<option value="https://commons.joe.org/joe/vol26/iss2">
+											Vol. 26, No.
+											 2
+										</option>
+										<option value="https://commons.joe.org/joe/vol26/iss1">
+											Vol. 26, No.
+											 1
+										</option>
+										<option value="https://commons.joe.org/joe/vol25/iss4">
+											Vol. 25, No.
+											 4
+										</option>
+										<option value="https://commons.joe.org/joe/vol25/iss3">
+											Vol. 25, No.
+											 3
+										</option>
+										<option value="https://commons.joe.org/joe/vol25/iss2">
+											Vol. 25, No.
+											 2
+										</option>
+										<option value="https://commons.joe.org/joe/vol25/iss1">
+											Vol. 25, No.
+											 1
+										</option>
+										<option value="https://commons.joe.org/joe/vol24/iss4">
+											Vol. 24, No.
+											 4
+										</option>
+										<option value="https://commons.joe.org/joe/vol24/iss3">
+											Vol. 24, No.
+											 3
+										</option>
+										<option value="https://commons.joe.org/joe/vol24/iss2">
+											Vol. 24, No.
+											 2
+										</option>
+										<option value="https://commons.joe.org/joe/vol24/iss1">
+											Vol. 24, No.
+											 1
+										</option>
+										<option value="https://commons.joe.org/joe/vol23/iss4">
+											Vol. 23, No.
+											 4
+										</option>
+										<option value="https://commons.joe.org/joe/vol23/iss3">
+											Vol. 23, No.
+											 3
+										</option>
+										<option value="https://commons.joe.org/joe/vol23/iss2">
+											Vol. 23, No.
+											 2
+										</option>
+										<option value="https://commons.joe.org/joe/vol23/iss1">
+											Vol. 23, No.
+											 1
+										</option>
+										<option value="https://commons.joe.org/joe/vol22/iss6">
+											Vol. 22, No.
+											 6
+										</option>
+										<option value="https://commons.joe.org/joe/vol22/iss5">
+											Vol. 22, No.
+											 5
+										</option>
+										<option value="https://commons.joe.org/joe/vol22/iss4">
+											Vol. 22, No.
+											 4
+										</option>
+										<option value="https://commons.joe.org/joe/vol22/iss3">
+											Vol. 22, No.
+											 3
+										</option>
+										<option value="https://commons.joe.org/joe/vol22/iss2">
+											Vol. 22, No.
+											 2
+										</option>
+										<option value="https://commons.joe.org/joe/vol22/iss1">
+											Vol. 22, No.
+											 1
+										</option>
+										<option value="https://commons.joe.org/joe/vol21/iss6">
+											Vol. 21, No.
+											 6
+										</option>
+										<option value="https://commons.joe.org/joe/vol21/iss5">
+											Vol. 21, No.
+											 5
+										</option>
+										<option value="https://commons.joe.org/joe/vol21/iss4">
+											Vol. 21, No.
+											 4
+										</option>
+										<option value="https://commons.joe.org/joe/vol21/iss3">
+											Vol. 21, No.
+											 3
+										</option>
+										<option value="https://commons.joe.org/joe/vol21/iss2">
+											Vol. 21, No.
+											 2
+										</option>
+										<option value="https://commons.joe.org/joe/vol21/iss1">
+											Vol. 21, No.
+											 1
+										</option>
+										<option value="https://commons.joe.org/joe/vol20/iss6">
+											Vol. 20, No.
+											 6
+										</option>
+										<option value="https://commons.joe.org/joe/vol20/iss5">
+											Vol. 20, No.
+											 5
+										</option>
+										<option value="https://commons.joe.org/joe/vol20/iss4">
+											Vol. 20, No.
+											 4
+										</option>
+										<option value="https://commons.joe.org/joe/vol20/iss3">
+											Vol. 20, No.
+											 3
+										</option>
+										<option value="https://commons.joe.org/joe/vol20/iss2">
+											Vol. 20, No.
+											 2
+										</option>
+										<option value="https://commons.joe.org/joe/vol20/iss1">
+											Vol. 20, No.
+											 1
+										</option>
+										<option value="https://commons.joe.org/joe/vol19/iss6">
+											Vol. 19, No.
+											 6
+										</option>
+										<option value="https://commons.joe.org/joe/vol19/iss5">
+											Vol. 19, No.
+											 5
+										</option>
+										<option value="https://commons.joe.org/joe/vol19/iss4">
+											Vol. 19, No.
+											 4
+										</option>
+										<option value="https://commons.joe.org/joe/vol19/iss3">
+											Vol. 19, No.
+											 3
+										</option>
+										<option value="https://commons.joe.org/joe/vol19/iss2">
+											Vol. 19, No.
+											 2
+										</option>
+										<option value="https://commons.joe.org/joe/vol19/iss1">
+											Vol. 19, No.
+											 1
+										</option>
+										<option value="https://commons.joe.org/joe/vol18/iss6">
+											Vol. 18, No.
+											 6
+										</option>
+										<option value="https://commons.joe.org/joe/vol18/iss5">
+											Vol. 18, No.
+											 5
+										</option>
+										<option value="https://commons.joe.org/joe/vol18/iss4">
+											Vol. 18, No.
+											 4
+										</option>
+										<option value="https://commons.joe.org/joe/vol18/iss2">
+											Vol. 18, No.
+											 2
+										</option>
+										<option value="https://commons.joe.org/joe/vol18/iss1">
+											Vol. 18, No.
+											 1
+										</option>
+										<option value="https://commons.joe.org/joe/vol17/iss6">
+											Vol. 17, No.
+											 6
+										</option>
+										<option value="https://commons.joe.org/joe/vol17/iss5">
+											Vol. 17, No.
+											 5
+										</option>
+										<option value="https://commons.joe.org/joe/vol17/iss4">
+											Vol. 17, No.
+											 4
+										</option>
+										<option value="https://commons.joe.org/joe/vol17/iss3">
+											Vol. 17, No.
+											 3
+										</option>
+										<option value="https://commons.joe.org/joe/vol17/iss2">
+											Vol. 17, No.
+											 2
+										</option>
+										<option value="https://commons.joe.org/joe/vol17/iss1">
+											Vol. 17, No.
+											 1
+										</option>
+										<option value="https://commons.joe.org/joe/vol16/iss6">
+											Vol. 16, No.
+											 6
+										</option>
+										<option value="https://commons.joe.org/joe/vol16/iss5">
+											Vol. 16, No.
+											 5
+										</option>
+										<option value="https://commons.joe.org/joe/vol16/iss4">
+											Vol. 16, No.
+											 4
+										</option>
+										<option value="https://commons.joe.org/joe/vol16/iss3">
+											Vol. 16, No.
+											 3
+										</option>
+										<option value="https://commons.joe.org/joe/vol16/iss2">
+											Vol. 16, No.
+											 2
+										</option>
+										<option value="https://commons.joe.org/joe/vol16/iss1">
+											Vol. 16, No.
+											 1
+										</option>
+										<option value="https://commons.joe.org/joe/vol15/iss6">
+											Vol. 15, No.
+											 6
+										</option>
+										<option value="https://commons.joe.org/joe/vol15/iss5">
+											Vol. 15, No.
+											 5
+										</option>
+										<option value="https://commons.joe.org/joe/vol15/iss4">
+											Vol. 15, No.
+											 4
+										</option>
+										<option value="https://commons.joe.org/joe/vol15/iss3">
+											Vol. 15, No.
+											 3
+										</option>
+										<option value="https://commons.joe.org/joe/vol15/iss2">
+											Vol. 15, No.
+											 2
+										</option>
+										<option value="https://commons.joe.org/joe/vol15/iss1">
+											Vol. 15, No.
+											 1
+										</option>
+										<option value="https://commons.joe.org/joe/vol14/iss6">
+											Vol. 14, No.
+											 6
+										</option>
+										<option value="https://commons.joe.org/joe/vol14/iss5">
+											Vol. 14, No.
+											 5
+										</option>
+										<option value="https://commons.joe.org/joe/vol14/iss4">
+											Vol. 14, No.
+											 4
+										</option>
+										<option value="https://commons.joe.org/joe/vol14/iss3">
+											Vol. 14, No.
+											 3
+										</option>
+										<option value="https://commons.joe.org/joe/vol14/iss2">
+											Vol. 14, No.
+											 2
+										</option>
+										<option value="https://commons.joe.org/joe/vol14/iss1">
+											Vol. 14, No.
+											 1
+										</option>
+										<option value="https://commons.joe.org/joe/vol13/iss6">
+											Vol. 13, No.
+											 6
+										</option>
+										<option value="https://commons.joe.org/joe/vol13/iss5">
+											Vol. 13, No.
+											 5
+										</option>
+										<option value="https://commons.joe.org/joe/vol13/iss4">
+											Vol. 13, No.
+											 4
+										</option>
+										<option value="https://commons.joe.org/joe/vol13/iss3">
+											Vol. 13, No.
+											 3
+										</option>
+										<option value="https://commons.joe.org/joe/vol13/iss2">
+											Vol. 13, No.
+											 2
+										</option>
+										<option value="https://commons.joe.org/joe/vol13/iss1">
+											Vol. 13, No.
+											 1
+										</option>
+										<option value="https://commons.joe.org/joe/vol12/iss4">
+											Vol. 12, No.
+											 4
+										</option>
+										<option value="https://commons.joe.org/joe/vol12/iss3">
+											Vol. 12, No.
+											 3
+										</option>
+										<option value="https://commons.joe.org/joe/vol12/iss2">
+											Vol. 12, No.
+											 2
+										</option>
+										<option value="https://commons.joe.org/joe/vol12/iss1">
+											Vol. 12, No.
+											 1
+										</option>
+										<option value="https://commons.joe.org/joe/vol11/iss4">
+											Vol. 11, No.
+											 4
+										</option>
+										<option value="https://commons.joe.org/joe/vol11/iss3">
+											Vol. 11, No.
+											 3
+										</option>
+										<option value="https://commons.joe.org/joe/vol11/iss2">
+											Vol. 11, No.
+											 2
+										</option>
+										<option value="https://commons.joe.org/joe/vol11/iss1">
+											Vol. 11, No.
+											 1
+										</option>
+										<option value="https://commons.joe.org/joe/vol10/iss4">
+											Vol. 10, No.
+											 4
+										</option>
+										<option value="https://commons.joe.org/joe/vol10/iss3">
+											Vol. 10, No.
+											 3
+										</option>
+										<option value="https://commons.joe.org/joe/vol10/iss2">
+											Vol. 10, No.
+											 2
+										</option>
+										<option value="https://commons.joe.org/joe/vol10/iss1">
+											Vol. 10, No.
+											 1
+										</option>
+										<option value="https://commons.joe.org/joe/vol9/iss4">
+											Vol. 9, No.
+											 4
+										</option>
+										<option value="https://commons.joe.org/joe/vol9/iss3">
+											Vol. 9, No.
+											 3
+										</option>
+										<option value="https://commons.joe.org/joe/vol9/iss2">
+											Vol. 9, No.
+											 2
+										</option>
+										<option value="https://commons.joe.org/joe/vol9/iss1">
+											Vol. 9, No.
+											 1
+										</option>
+										<option value="https://commons.joe.org/joe/vol8/iss4">
+											Vol. 8, No.
+											 4
+										</option>
+										<option value="https://commons.joe.org/joe/vol8/iss3">
+											Vol. 8, No.
+											 3
+										</option>
+										<option value="https://commons.joe.org/joe/vol8/iss2">
+											Vol. 8, No.
+											 2
+										</option>
+										<option value="https://commons.joe.org/joe/vol8/iss1">
+											Vol. 8, No.
+											 1
+										</option>
+										<option value="https://commons.joe.org/joe/vol7/iss4">
+											Vol. 7, No.
+											 4
+										</option>
+										<option value="https://commons.joe.org/joe/vol7/iss3">
+											Vol. 7, No.
+											 3
+										</option>
+										<option value="https://commons.joe.org/joe/vol7/iss2">
+											Vol. 7, No.
+											 2
+										</option>
+										<option value="https://commons.joe.org/joe/vol7/iss1">
+											Vol. 7, No.
+											 1
+										</option>
+										<option value="https://commons.joe.org/joe/vol6/iss4">
+											Vol. 6, No.
+											 4
+										</option>
+										<option value="https://commons.joe.org/joe/vol6/iss3">
+											Vol. 6, No.
+											 3
+										</option>
+										<option value="https://commons.joe.org/joe/vol6/iss2">
+											Vol. 6, No.
+											 2
+										</option>
+										<option value="https://commons.joe.org/joe/vol6/iss1">
+											Vol. 6, No.
+											 1
+										</option>
+										<option value="https://commons.joe.org/joe/vol5/iss4">
+											Vol. 5, No.
+											 4
+										</option>
+										<option value="https://commons.joe.org/joe/vol5/iss3">
+											Vol. 5, No.
+											 3
+										</option>
+										<option value="https://commons.joe.org/joe/vol5/iss2">
+											Vol. 5, No.
+											 2
+										</option>
+										<option value="https://commons.joe.org/joe/vol5/iss1">
+											Vol. 5, No.
+											 1
+										</option>
+										<option value="https://commons.joe.org/joe/vol4/iss4">
+											Vol. 4, No.
+											 4
+										</option>
+										<option value="https://commons.joe.org/joe/vol4/iss3">
+											Vol. 4, No.
+											 3
+										</option>
+										<option value="https://commons.joe.org/joe/vol4/iss2">
+											Vol. 4, No.
+											 2
+										</option>
+										<option value="https://commons.joe.org/joe/vol4/iss1">
+											Vol. 4, No.
+											 1
+										</option>
+										<option value="https://commons.joe.org/joe/vol3/iss4">
+											Vol. 3, No.
+											 4
+										</option>
+										<option value="https://commons.joe.org/joe/vol3/iss3">
+											Vol. 3, No.
+											 3
+										</option>
+										<option value="https://commons.joe.org/joe/vol3/iss2">
+											Vol. 3, No.
+											 2
+										</option>
+										<option value="https://commons.joe.org/joe/vol3/iss1">
+											Vol. 3, No.
+											 1
+										</option>
+										<option value="https://commons.joe.org/joe/vol2/iss4">
+											Vol. 2, No.
+											 4
+										</option>
+										<option value="https://commons.joe.org/joe/vol2/iss3">
+											Vol. 2, No.
+											 3
+										</option>
+										<option value="https://commons.joe.org/joe/vol2/iss2">
+											Vol. 2, No.
+											 2
+										</option>
+										<option value="https://commons.joe.org/joe/vol2/iss1">
+											Vol. 2, No.
+											 1
+										</option>
+										<option value="https://commons.joe.org/joe/vol1/iss4">
+											Vol. 1, No.
+											 4
+										</option>
+										<option value="https://commons.joe.org/joe/vol1/iss3">
+											Vol. 1, No.
+											 3
+										</option>
+										<option value="https://commons.joe.org/joe/vol1/iss2">
+											Vol. 1, No.
+											 2
+										</option>
+										<option value="https://commons.joe.org/joe/vol1/iss1">
+											Vol. 1, No.
+											 1
+										</option>
+						</select>
+		<input type="submit" value="Browse" class="searchbutton" style="font-size:11px;">
+	</span>
+</div>
+<!-- FILE: /srv/sequoia/main/data/assets/site/ir_journal/ir_journal_sidebar_search_7_8.inc (cont) -->
+			<div style="clear:left;">&nbsp;</div>
+	</form>
+	<!-- FILE: /srv/sequoia/main/data/assets/site/ir_sidebar_search_7_8.inc --><h2>Search</h2>
+<form method='get' action='https://commons.joe.org/do/search/' id="sidebar-search">
+	<label for="search" accesskey="4">
+		Enter search terms:
+	</label>
+		<div>
+			<span class="border">
+				<input type="text" name='q' class="search" id="search">
+			</span> 
+			<input type="submit" value="Search" class="searchbutton" style="font-size:11px;">
+		</div>
+	<label for="context">
+		Select context to search:
+	</label> 
+		<div>
+			<span class="border">
+				<select name="fq" id="context">
+						<option value='virtual_ancestor_link:"https://commons.joe.org/joe"'>in this journal</option>
+					<option value='virtual_ancestor_link:"https://commons.joe.org"'>in this repository</option>
+					<option value='virtual_ancestor_link:"http:/"'>across all repositories</option>
+				</select>
+			</span>
+		</div>
+</form>
+<p class="advanced">
+		<a href="https://commons.joe.org/do/search/advanced/?fq=virtual_ancestor_link:%22https://commons.joe.org/joe%22" >
+			Advanced Search
+		</a>
+</p>
+<!-- FILE: /srv/sequoia/main/data/assets/site/ir_journal/ir_journal_sidebar_search_7_8.inc (cont) -->
+</div>
+<!-- FILE: /srv/sequoia/main/data/assets/site/ir_journal/ir_journal_sidebar_7_8.inc (cont) -->
+	<!-- FILE: /srv/sequoia/main/data/assets/site/ir_journal/ir_journal_issn_7_8.inc -->
+	<div id="issn">
+		<p class="sb-issn">ISSN: 1077-5315</p>
+	</div>
+	<div class="clear">&nbsp;</div>
+<!-- FILE: /srv/sequoia/main/data/assets/site/ir_journal/ir_journal_sidebar_7_8.inc (cont) -->
+	<!-- FILE: /srv/sequoia/main/data/assets/site/ir_journal/ir_journal_custom_lower_7_8.inc --><!-- FILE: /srv/sequoia/main/data/assets/site/ir_journal/ir_journal_sidebar_7_8.inc (cont) -->
+	<!-- FILE: /srv/sequoia/main/data/assets/site/ir_journal/ir_custom_sidebar_images.inc --><!-- FILE: /srv/sequoia/main/data/assets/site/ir_journal/ir_journal_sidebar_7_8.inc (cont) -->
+	<!-- FILE: /srv/sequoia/main/data/assets/site/ir_sidebar_geolocate.inc --><!-- FILE: /srv/sequoia/main/data/assets/site/ir_geolocate_enabled_and_displayed.inc -->
+<!-- FILE: /srv/sequoia/main/data/assets/site/ir_sidebar_geolocate.inc (cont) -->
+<!-- FILE: /srv/sequoia/main/data/assets/site/ir_journal/ir_journal_sidebar_7_8.inc (cont) -->
+	<!-- FILE: /srv/sequoia/main/data/journals/commons.joe.org/joe/assets/ir_journal_custom_lowest_7_8.inc -->
+<!-- FILE: /srv/sequoia/main/data/assets/site/ir_journal/ir_journal_sidebar_7_8.inc (cont) -->
+
+<!-- FILE: /srv/sequoia/main/data/assets/site/ir_journal/footer_custom_7_8.inc (cont) -->
+						<div class="verticalalign">&nbsp;</div>
+				</div>
+
+		</div>
+
+			<!-- FILE: /srv/sequoia/main/data/journals/commons.joe.org/joe/assets/ir_journal_footer_content.inc --><div id="footer">
+	<!-- FILE: /srv/sequoia/main/data/assets/site/ir_bepress_logo.inc --><div id="bepress">
+
+<a href="https://www.elsevier.com/solutions/digital-commons" title="Elsevier - Digital Commons" >
+	<em>Elsevier - Digital Commons</em>
+</a>
+
+</div>
+<!-- FILE: /srv/sequoia/main/data/journals/commons.joe.org/joe/assets/ir_journal_footer_content.inc (cont) -->
+		<p>
+			<a href="https://commons.joe.org/joe" title="Home page" accesskey="1" >Home
+			</a> | 
+			<a href="https://commons.joe.org/joe/about.html" title="About" >About
+			</a> | 
+			
+			<a href="/cgi/myaccount.cgi?context=" title="My Account Page" accesskey="3" >My Account
+			</a> | 
+			<a href="https://commons.joe.org/accessibility.html" title="Accessibility Statement" accesskey="0" >Accessibility Statement
+			</a>
+		</p>
+		<p>
+    			<a class="secondary-link" href="http://www.bepress.com/privacy.html" title="Privacy Policy" >
+                                        Privacy
+    			</a>
+    			<a class="secondary-link" href="http://www.bepress.com/copyright_infringement.html" title="Copyright Policy" >
+                                        Copyright
+    			</a>	
+		</p> 
+</div>
+<!-- FILE: /srv/sequoia/main/data/assets/site/ir_journal/footer_custom_7_8.inc (cont) -->
+
+	</div>
+</div>
+
+
+<!-- FILE: /srv/sequoia/main/data/assets/site/ir_analytics.inc --><!-- FILE: /srv/sequoia/main/data/assets/site/ir_journal/footer_custom_7_8.inc (cont) -->
+
+<!-- FILE: /srv/sequoia/main/data/assets/site/ir_journal/footer.pregen (cont) -->
+<script type='text/javascript' src='/assets/scripts/bpbootstrap-20160726.pack.js'></script><script type='text/javascript'>BPBootstrap.init({appendCookie:''})</script></body></html>

@@ -1,0 +1,157 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="en-us">
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Acceptable Use of Information Technology Resources Policy</title>
+	<link type="text/css" rel="stylesheet" href="/Styles/Global_Books.css" />
+	<link type="text/css" rel="stylesheet" href="/Styles/CLEM/CLEM_Books.css" />
+	<link type="text/css" rel="stylesheet" href="/Styles/MobileReadyBook.css" />
+	
+	<style type="text/css">
+		:root {
+			--section_header-background: #ddd;
+			--menu_top-background:#2e353e;
+			--menu_top-mob-height:0px;
+--content-background: white;
+--page-background: #eeeeee;
+--content-font-color: black;
+--content-max-width: 900px;
+--nav-panel-background: #f5f5f5;
+--color-pageinfo-text: #666;
+--title-page-borders: #999;
+--color-link: #B94700;
+--content-font-accent: #F56600;
+--color-main: #2E1A47;
+--left-nav-accent: #ccc;
+--left-nav-icon: #2b2b2b;
+--pagetoc-width: 300px;
+--focus1: blue;
+--left-nav-text: #000;
+--color-button-text: white;
+--focus2: blue;
+--content-border-color: #dddddd;
+--left-nav-background: #f9f9f9;
+--left-nav-border: #f9f9f9;
+--left-nav-text_noaccess: #707070;
+
+--left-nav-width: 300px;
+		}
+		
+	</style>
+
+	<script type="text/javascript" src="/scripts/common.js" ></script>
+	<script type="text/javascript" src="/scripts/popupframe.js" ></script>
+	<script type="text/javascript" src="/scripts/jquery-1.8.1.min.js"></script>
+	<script type="text/javascript" src="/scripts/BookM.js" ></script>
+	<script type="text/javascript" src="/scripts/splitter.js"></script>
+
+	<script type="text/javascript">
+		var m_bSectionalNav		= T;
+		var m_nBookId			= 10873;
+		var m_nPageId			= -1;
+		var m_bSinglePage		= F;
+		var m_nTOCWidth			= 200;
+		var m_nLeftNavWidth		= 250;
+		var m_nTitleBarH		= 0;
+		var m_strComplete		= "COMPLETE";
+		var m_bMobile			= true;
+		var m_bHideLeftNav		= T;
+		var m_bShowTitlePage	= F;
+		var m_strWaitMessage	= "Please wait while your request is being processed...";
+		var m_strPrevMessage	= 'This is the first Page of the Book';
+		var m_strNextMessage	= 'This is the last Page of the Book';
+		var m_strTOCContent		= 'On This Page';
+		var m_fnSentToGoogle	= false;
+
+		function sBase(nId,hash,b,bForce) {
+			if (nId==0) return;
+			var oContent=$O('divContent'+nId);
+			if (oContent && !bForce) {
+				$O('divScroll').scrollTop=oContent.offsetTop;
+				return;
+			}
+			var strParams	= ($O('Search') && $O('Search').value.length>0?'&Search='+escape($O('Search').value):'')+(hash?hash:'');
+			CFM.GETO('B.GetContent.actor?BookId='+m_nBookId+'&PageId='+nId+strParams,ContentLoaded,strParams,hash,m_fnSentToGoogle)
+		}
+		function PageChecked(oRes) {
+			if (oRes.Error) {
+				alert(oRes.Message);
+				return;
+			}
+			LoadBook(oRes.BookId,oRes.PageId);
+		}
+		function LoadBook(nBookId,nPageId){
+			location.href='B.aspx?BookId='+nBookId+'&PageId='+nPageId;
+		}
+		function LoadPage(nId,nType,nWidth,nBookId) {
+			CFM.GETO("B.CheckPage.actor?id="+nId+'&BookId='+nBookId,PageChecked)
+		}
+		function SetAddressBar(nId,strParams) {
+			if (window.history.pushState) window.history.pushState('object or string', document.title, 'B.aspx?BookId='+m_nBookId+'&PageId='+nId+strParams);
+			else document.location.href='B.aspx?BookId='+m_nBookId+'&PageId='+nId+strParams;
+		}
+		function ReportProgress() {
+			ProgressUpdated();
+		}
+		function ExitBook() {
+			location.href='/';
+		}
+		
+	</script>
+</head>
+
+<body onLoad='Init(F,F,F)'>
+
+<button class="bOpt" onclick="OpenRightPane(true)" id="imgContent" aria-label="Show Page TOC" title="Show Page TOC" style="width: 28px; height: 28px; display: none; right: 20px; top: calc(40px + var(--menu_top-mob-height)); position: absolute; z-index: 150; cursor: pointer; transition: right 0.3s ease 0s" onclick="OpenRightPane(true)">
+	<svg arial-labeledby="imgContent" style="width:24px;height:24px;fill:none;stroke:var(--color-main);stroke-width:2;stroke-linecap:round;stroke-linejoin:round"><path d="M11 17L6 12L11 7M18 17L13 12L18 7" /></svg>
+</button>
+<div id="divRightPane" class="divPageTOCM" aria-expanded="true" role="region">
+	<button id="imgTOCClose" type="button" aria-label="Close" class="bOpt" onclick="ClosePageTOC(T)" style="display:block;width:28px;height:28px;">
+		<svg viewBox="0 0 24 24" class="svgBase" style="display:block;width:24px;height:24px"><path d="M13 17L18 12L13 7M6 17L11 12L6 7" /><title>Close</title></svg>
+	</button>
+	<div role="button" aria-expanded="true" aria-controls="divPageTOCContent" aria-label="Show On this Page" class="sectionHead" id="divPageTOCTitle" style="margin-top:10px" tabindex="0" onkeypress="ToggleSB(this)" onclick="ToggleSB(this)">On This Page</div>
+	<div id="divPageTOCContent" class="sectionBody" style="overflow:revert"></div>
+	
+	<div id="divPageInfoH" onkeypress="ToggleSB(this)" aria-label="Show Page Info" class="sectionHead" tabindex="0" style="margin-top:10px" aria-expanded="true" aria-controls="divPageInfoC" role="contentinfo" onclick="ToggleSB(this)">Document Information</div>
+	<div id="divPageInfoC" class="sectionBody"></div>
+
+	
+	
+</div>
+<div id="divMobileMenu" class="panel" onclick="HidePanel(event)">
+	<div class="panel-canvas" id="divCanvas" aria-live="polite" aria-expanded="false">
+		<button type="button" title="Hide Menu" class="bOpt btnHideLeft" id='btnLeftClose' onclick="ShowPanel(F,T)"><svg aria-labelledby="btnLeftClose" style="width:24px;height:24px;stroke-width:2px" viewBox="0 0 24 24"><path d="M11 7l-5 5l5 5M18 17l-5-5l5-5" /><title>Hide Menu</title></svg></button>
+	</div>
+</div>
+<div style='height:500px;overflow:hidden' id="divSplit">
+	
+	<div id="divRight" role="main">
+		<div id="divTopMenu" class="SubMenu" >
+			<button type="button" class="bOpt MenuButton" aria-label="Menu" title="Menu" id="bMenu" onclick="ShowPanel(T,T)"><svg aria-labelledby="bMenu" style="width:24px;height:24px;stroke-width:2px" viewBox="0 0 24 24"><path d="M3 12h18M3 6h18M3 18h18" /></svg></button>
+			<div id="divTopBookTitle" class="divBookTitle mob_vis"><span style='float:left'>Acceptable Use of Information Technology Resources Policy</span></div>
+			<div id="divSearch">
+				<input name="Search" type="text" id="Search" style="float:left;vertical-align:top" class="drpdwnSEARCHM" aria-label="Search" placeholder="Search" maxlength="200" onKeyDown="if(window.event.keyCode==13) {DoSearch();return false;}" />
+				<label for="Search" style="display:none">Search</label>
+				<button type="button" id="btnSearch" class="searchIMGM" title="search" aria-label="search" onclick="DoSearch()" style="float:left"><svg aria-labelledby="btnSearch" ViewBox="0 0 24 24"><circle cx="11" cy="11" r="8" /><path d="M21 21L16.65 16.65" /></svg></button>
+				<svg role="button" tabindex="0" onkeypress="HelpSearch()" onclick="HelpSearch()" class="svgBase" style="margin:5px 3px;width:20px;height:20px;cursor:pointer" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" fill="#fff"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3M12 17h0.01" /><title>Help Search</title></svg>
+			</div>
+			<div style="margin:5px 10px 0 0" id="divExit"><a href="javascript:ExitBook()" class=nl>Exit</a></div>
+		</div>
+		<div id="divScroll" aria-live="polite" tabindex="0">
+			<div id="divTOPPlaceHolder" class="divTopPageTOC"></div>
+		</div>
+	</div>
+</div>
+<div id="divNavigation">
+	<div id="divOpt" class="divOptP">
+		<button id="aPrinter" type="button" class="bOpt" aria-label="Print" title="Print" onclick="Print(&#39;divOpt&#39;,0)"><svg aria-labelledby="aPrinter"		viewBox="0 0 24 24"><path d="M6 14h12v8h-12v-8M6 9v-7h12v7M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2" /></svg></button>
+		
+		
+		
+		
+		
+	</div>
+	
+</div>
+</body>
+</html>

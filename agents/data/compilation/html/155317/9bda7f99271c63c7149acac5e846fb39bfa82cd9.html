@@ -1,0 +1,1380 @@
+
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head><meta name="viewport" content="width=device-width, initial-scale=1.0" /><!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-WR9V5K73');</script>
+<!-- End Google Tag Manager --><script>
+  window.TdxGtmContext = {"User":{"Id":0,"UID":"00000000-0000-0000-0000-000000000000","UserName":"","FullName":"Public User","AlertEmail":"publicuser@noreply.com","Role":"Experience User","HasTDNext":false,"StandardApplicationNames":null,"TicketApplicationNames":[],"AssetApplicationNames":[],"ClientPortalApplicationNames":[],"Type":"Technician","Analytics":{"Title":null,"Organization":null}},"Partition":{"Id":3094,"Name":"University of Kansas Production"},"BillableEntity":{"Id":2,"Name":"University of Kansas","SalesForceIdentifier":"0013600000EM5EAAA1","GWMIID":"2583b0ce-45ea-4e60-b1cb-95bea73cd1c4"},"Environment":{"ShortName":"PRD"}};
+</script><script src="/TDPortal/Content/Scripts/jquery/2.2.4/jquery.min.js?v=20260213000508"></script><script src="/TDPortal/Content/Scripts/jquery-migrate/1.4.1/jquery-migrate.min.js?v=20260213000508"></script><script src="/TDPortal/Content/Scripts/jquery-ui/1.13.2/jquery-ui-1.13.2.custom.timepicker.min.js?v=20260213000818"></script><link href="/TDPortal/Content/Styles/jquery-ui/1.13.2/jquery-ui.compiled.min.css?v=20260213000820" rel="stylesheet" type="text/css"  /><link href="/TDPortal/Content/bootstrap/3.4.1/dist/css/bootstrap.min.css?v=20260213000508" rel="stylesheet" type="text/css" id="lnkBootstrapCSS" /><script src="/TDPortal/Content/bootstrap/3.4.1/dist/js/bootstrap.min.js?v=20260213000508"></script><link href="/TDPortal/Content/FontAwesome/css/fontawesome.min.css?v=20260213000506" rel="stylesheet" type="text/css" id="lnkFontAwesome" /><link href="/TDPortal/Content/FontAwesome/css/solid.css?v=20260213000506" rel="stylesheet" type="text/css"  /><link href="/TDPortal/Content/FontAwesome/css/regular.css?v=20260213000506" rel="stylesheet" type="text/css"  /><link href="/TDPortal/Content/FontAwesome/css/brands.css?v=20260213000506" rel="stylesheet" type="text/css"  /><link href="/TDPortal/Content/FontAwesome/css/v4-shims.css?v=20260213000506" rel="stylesheet" type="text/css"  /><link href="/TDClient/Styles/bootstrap_custom.min.css?v=20260213000818" rel="stylesheet" type="text/css"  /><link href="/TDClient/Styles/TDStyles.min.css?v=20260213000820" rel="stylesheet" type="text/css"  /><link href="https://services.ku.edu/TDPortal/BE/Style/2/TDClient/818?v=20250320154101" rel="stylesheet" type="text/css" /><script src="/TDPortal/Content/Scripts/tdx/dist/TDJSFramework.compiled.min.js?v=20260213000818"></script><script src="/TDPortal/Content/Scripts/tdx/dist/modalFocusTrap.min.js?v=20260213000816"></script><script src="/TDPortal/Content/Scripts/underscore/1.12.1/underscore-min.js?v=20260213000508"></script>
+<script src="/TDClient/Scripts/clientOS.min.js?v=20260213000810"></script>
+<script src="/TDClient/Scripts/collapseMe.min.js?v=20260213000810"></script>
+<script src="/TDClient/Scripts/tdsearchfilter.min.js?v=20260213000810"></script>
+<script src="/TDClient/Scripts/SiteSearch.min.js?v=20260213000810"></script>
+<script src="/TDPortal/Content/Scripts/tdx/dist/elasticsearchAutocomplete.min.js?v=20260213000816"></script>
+<link id="ctl00_ctl00_lnkFavicon" rel="icon" href="https://services.ku.edu/TDPortal/BE/Icon/2/818?v=20241209231230" />
+
+  <script>
+
+      $(function () {
+        var masterUi = MasterUI({
+          isPostback: false,
+          baseUrl: '/TDClient/',
+          isTdGoogleAnalyticsEnabled: true,
+          isAuthenticated: false
+          });
+
+        $('#collapseMe').collapseMe({
+          toggleVisibilitySelector: '.navbar-toggle'
+        });
+
+        TeamDynamix.addRequiredFieldHelp();
+      });
+
+      // The sub-nav menu uses padding-top to position itself below the header bar and main navigation sections. When the
+      // window is resized, there is a chance that the content of these header or nav sections wraps, causing the height
+      // to change, potentially covering the sub-nav menu, which is obviously a big usability problem. This function
+      // listens for when the window size or orientation is changing (and also when the window first loads), and adjusts
+      // the padding so that the sub-nav menu appears in the correct location.
+      $(window).bind('load ready resize orientationchange', function () {
+        var headerHeight = $('#divMstrHeader').height();
+        $('#navShim').css({
+          "padding-top": headerHeight
+        });
+
+        $('#content').css({
+          "padding-top": headerHeight,
+          "margin-top": headerHeight * -1
+        });
+      });
+  </script>
+
+  
+  
+  
+  <script src="/TDPortal/Content/select2/v3/select2.min.js?v=20260213002344"></script><link href="/TDPortal/Content/select2/v3/select2.compiled.min.css?v=20260213002344" rel="stylesheet" type="text/css" id="lnkSelect2" />
+  <script src="/TDClient/Scripts/attachmentHandler.min.js?v=20260213000818"></script>
+
+  <style type="text/css">
+    .honey-pot-div {
+      display: none;
+    }
+  </style>
+
+  <script>
+    
+
+    function shareArticle() {
+      if ($('#ctl00_ctl00_cpContent_cpContent_shareRecipients').val().trim() === "") {
+        alert('You must first enter a valid email.');
+        $('#btnShare').progressButton('reset');
+      }
+      else {
+        __doPostBack('ctl00$ctl00$cpContent$cpContent$btnSendShare', '');
+      }
+    }
+
+    function closeShareModal() {
+      $('#divShareModal').modal('hide');
+      $('#btnShare').progressButton('reset');
+    }
+
+    function toggleFeedback(isHelpful) {
+      $('#divHelpfulComments').show();
+      $('#divHelpfulYesNo').hide();
+      $('#ctl00_ctl00_cpContent_cpContent_hdnIsHelpful').val(isHelpful);
+      $('#ctl00_ctl00_cpContent_cpContent_txtComments').focus();
+    }
+
+    function toggleFeedbackResult() {
+      $('#divWasHelpful, #divFeedbackRecorded, #divHelpfulComments, #divHelpfulYesNo').toggle();
+    }
+
+    // The following two functions were added as a result of ticket ID: 1392522. We are generating these buttons dynamically to
+    // prevent bots from clicking them and posting feedback on an article. Additionally, we have an input that is hidden from
+    // the user. If a bot enters text in that input, which it likely will (bots love filling out forms), then we don't accept the
+    // form submission
+    function generateFeedbackButtons() {
+      var $btnHelpfulYes = $('<button id="btnHelpfulYes" type="button" class="btn btn-primary gutter-left" onclick="toggleFeedback(1);">Yes</button>');
+      var $btnHelpfulNo = $('<button id="btnHelpfulNo" type="button" class="btn btn-primary gutter-left-sm" onclick="toggleFeedback(0);">No</button>');
+
+      $('#divWasHelpful').append($btnHelpfulYes);
+      $('#divWasHelpful').append($btnHelpfulNo);
+    }
+    function attemptAddFeedback(e) {
+      if ($('#honeyPot').val() !== '') {
+        e.preventDefault();
+        window.location.reload();
+      }
+    }
+
+    function cancelFeedback() {
+      $('#ctl00_ctl00_cpContent_cpContent_txtComments').val('');
+      $('#divHelpfulComments, #divHelpfulYesNo').toggle();
+    }
+
+    function confirmDeleteFeedback(id) {
+      if (confirm('Are you sure you want to delete this feedback? This cannot be undone.')) {
+        $('#ctl00_ctl00_cpContent_cpContent_hdnFeedbackID').val(id);
+        __doPostBack('ctl00$ctl00$cpContent$cpContent$btnDeleteFeedback', '');
+      }
+    }
+
+    function toggleAddressed(id, isAddressed) {
+      $('#ctl00_ctl00_cpContent_cpContent_hdnFeedbackID').val(id);
+      $('#ctl00_ctl00_cpContent_cpContent_hdnIsAddressed').val(isAddressed);
+      __doPostBack('ctl00$ctl00$cpContent$cpContent$btnToggleAddressed', '');
+    }
+
+    $(function () {
+      
+
+      generateFeedbackButtons();
+      $('[data-toggle="popover"]').popover();
+
+      var attachmentHandler = new TeamDynamix.AttachmentHandler({
+        containerSelector: '.js-article-attachments',
+        resultLabelSelector: '#ctl00_ctl00_cpContent_cpContent_lblResults_lblResults-label',
+        baseControllerUrl: '/TDClient/818/Portal/Shared/Attachments',
+        antiForgeryToken: 'GpUatv28R3gf4gxUu88ccmc36hDWh5v5xsnUBOw4cz8uHVy9wWHd2op7MTwExNsVFl0LFxCBvvT-Wgse_La8MR9ys3Y1:7froHcnZyiCNlwFb7CkHRfQuE7IIEBfFQQzWrzxormWOnWmj22ZYgrdYDhyUkaiD0h4y7HLXWSzvEfCzepJpziM_s4s1',
+        itemId: 21335,
+        componentId: 26,
+        feedId: 'articleFeed',
+        readOnly: false
+      });
+
+      $('#btnShare').on('click', function () {
+        shareArticle();
+      });
+
+      // Don't try and update the table styles if the user wanted to opt out.
+      $('#ctl00_ctl00_cpContent_cpContent_divBody table:not(.SkipTableFixup)').each(function () {
+        var padding = $(this).attr('cellpadding');
+        var spacing = $(this).attr('cellspacing');
+
+        $(this).css("border-collapse", "separate");
+
+        if (spacing) {
+          $(this).css("border-spacing", spacing + "px");
+        }
+
+        $(this).find('td').each(function () { $(this).css('padding', padding + 'px') });
+      });
+
+      
+    });
+
+    
+  </script>
+
+
+
+<meta property="og:title" content="Acceptable Use of Electronic Information Resources" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://services.ku.edu/TDClient/818/Portal/KB/ArticleDet?ID=21335" />
+<meta property="og:image" content="https://services.ku.edu/TDPortal/BE/Logo/2/818" />
+<meta property="og:description" content="This policy outlines the expectations for the use of electronic information resources at the University of Kansas." />
+  <meta property="og:site_name" content="KU - Knowledge Base" />
+  <meta property="article:section" content="Information Technology" />
+  <meta property="article:published_time" content="2025-03-13T17:20Z" />
+  <meta property="article:modified_time" content="2026-02-13T22:20Z" />
+    <meta property="article:tag" content="copyright" />
+    <meta property="article:tag" content="KBOR" />
+    <meta property="article:tag" content="electronic" />
+    <meta property="article:tag" content="faculty" /><title>
+	Article - Acceptable Use of Electroni...
+</title></head>
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WR9V5K73"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+<form method="post" action="/TDClient/818/Portal/KB/ArticleDet?ID=21335" onsubmit="javascript:return WebForm_OnSubmit();" id="aspnetForm">
+<div class="aspNetHidden">
+<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
+<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="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" />
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['aspnetForm'];
+if (!theForm) {
+    theForm = document.aspnetForm;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script>
+
+
+<script src="/TDClient/WebResource.axd?d=pynGkmcFUV13He1Qd6_TZMSMQxVWLi4fik2rw1_u_hZsCNzwv5c621ov6_ZX_wzTt5vh-g2&amp;t=638901392248157332" type="text/javascript"></script>
+
+
+<script src="/TDClient/ScriptResource.axd?d=nv7asgRUU0tRmHNR2D6t1NXOAgTb3J37FC1L2PfbYYFmSPm-ANa7n6FP0x7BAsbHeL4jfY3ptd1q7zKKVI7DbuXZcwEoKOwj9WxCI1VrQlbWE1Trg1t1GmJDN43kQMJsB7X8tw2&amp;t=ffffffff93d1c106" type="text/javascript"></script>
+<script src="/TDClient/ScriptResource.axd?d=NJmAwtEo3Ipnlaxl6CMhvmVxW3-Ljsg_2Hna32smxrg-6ogyYAN3UTPsJQ8m1uwzn_kuf2Wpne6NSFmYui3h0wCQhJN3ZUiLTNkvhiIgZpq74-lKmofUPQGJ8own8RI2_mwAcmvlSj2WBnqwm5Wj4cyNvv81&amp;t=5c0e0825" type="text/javascript"></script>
+<script src="/TDClient/ScriptResource.axd?d=dwY9oWetJoJoVpgL6Zq8OLdGoo5BVWQ_Eo60QZTEhEcHeiVfwgY9tLCgzdZ5TRwvrwYEnOvujbNccOVLUfWtUg4HivSIsewg6JABxkBGEqVVV64eiRyCAsPDqh6tUioISUQKB74sWMO4Er2mHrWEIWs_sBM1&amp;t=5c0e0825" type="text/javascript"></script>
+<script src="/TDClient/WebResource.axd?d=xtfVMqdF1exC2MBVkOJwMveStDR5kg3dbZWgIXMXZmB1xXom6CcIrWFgHa7jsp4qJuFW2L5XShudyzlBsIO3JhCfiU5HmL2BDz__mCv9dznmBlEMS7LvcYg6wTdPTrAXIXI2CvtjwlnpZd-j4Zpsx2wG_uA1&amp;t=639065204200000000" type="text/javascript"></script>
+<script src="/TDClient/WebResource.axd?d=sp7vCoAo-SSYfpsQ1sYBBeEDnwCGxDYEwZCM0ler88yoVZIPDXMk1C3XF2L2L0xrbB8Rvhli51TswRlmPIOCZgaY58lKhPr-Pv1jTFJ1oUAu7x6RDtNFZUxbtxs3KYQGLK6FpPD5bKuB0e0NmS9HkAqRVks1&amp;t=639065204200000000" type="text/javascript"></script>
+<script src="/TDClient/WebResource.axd?d=icMURy63hv40LPPfq4rTvmm-RfB_YkC6rEEF_2QOO68q3TseXYNBetRKKgBXJ8mn2e8UIgCPiV23HaQUZbjySMHqSgmYZgLcYltBqwD2_EK8aQ08zBuqc3ZBVZITQrbtn6w46dRxFLibMIQg0Aho73rn8Rpxrzg5YMG_JR0UOrUR0wlZ0&amp;t=639065204200000000" type="text/javascript"></script>
+<script src="/TDClient/WebResource.axd?d=1HpFfNpwNihNfEP1lyJHvdPVqbv8KRoFH4-_ZORUgPOP-bqmmtIJRvFQc7828Vf59O_-fdBXcnwdv-hYp5RptPuHmMR0kGQM0_3rS4Z7sKfC7jy9Cc_8fyfcUWa8psszacEQlAXHPXmNwyRymbGSywEmhrE1&amp;t=639065204200000000" type="text/javascript"></script>
+<script type="text/javascript">
+//<![CDATA[
+function WebForm_OnSubmit() {
+CKEditor_TextBoxEncode('ctl00_ctl00_cpContent_cpContent_shareBody_txtBody', 0); if (typeof(ValidatorOnSubmit) == "function" && ValidatorOnSubmit() == false) return false;
+return true;
+}
+//]]>
+</script>
+
+<div class="aspNetHidden">
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="784CA02E" />
+</div>
+<script type="text/javascript">
+//<![CDATA[
+Sys.WebForms.PageRequestManager._initialize('ctl00$ctl00$smMain', 'aspnetForm', ['tctl00$ctl00$cpContent$cpContent$UpdatePanel1','','tctl00$ctl00$cpContent$cpContent$upFeedbackGrid','','tctl00$ctl00$cpContent$cpContent$lblResults$ctl00',''], ['ctl00$ctl00$cpContent$cpContent$btnSubmitComments','','ctl00$ctl00$cpContent$cpContent$btnToggleSubscribe','','ctl00$ctl00$cpContent$cpContent$btnToggleFavorite','','ctl00$ctl00$cpContent$cpContent$btnSendShare',''], [], 90, 'ctl00$ctl00');
+//]]>
+</script>
+
+<div id="ctl00_ctl00_upMain" style="display:none;">
+	
+    <div id="ctl00_ctl00_pbMain" class="progress-box-container"><div class="progress-box-body"><div class="well shadow"><h2 class="h4 gutter-top-none">Updating...</h2><div class="progress" style="margin-bottom: 0;"><div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuemin="0" aria-valuemax="100" style="width: 100%"></div></div></div></div></div>
+  
+</div>
+
+<header id="ctl00_ctl00_navHeader" role="banner">
+
+  <div id="divMstrHeader" class="master-header NoPrint" style="background-color: #fff;">
+
+  
+
+  <div class="logo-header-full hidden-xs">
+
+    
+    <div class="pull-left">
+      <a href="#mainContent" class="sr-only sr-only-focusable">Skip to main content</a>
+    </div>
+
+
+    <div id="ctl00_ctl00_divPageHeader" class="container logo-header clearfix" style="padding: 5px;">
+
+      <div id="divLogo" class="pull-left logo-container">
+
+        <a href="https://services.ku.edu/TDClient/818/Portal/Home/"
+           target="_blank">
+          <img src="/TDPortal/BE/Logo/2/818" alt="KU Policy Administration Client Portal Home Page" class="js-logo img-responsive" />
+          <span class="sr-only">(opens in a new tab)</span>
+        </a>
+
+      </div>
+
+      <div class="master-header-right pull-right padding-top padding-bottom">
+
+        
+
+          <div class="pull-left topLevelSearch input-group">
+            <div id="SiteSearch-907f86a756cf4ed08783a8aa27369152" class="gutter-bottom input-group site-search" style="max-width: 400px;">
+  <div id="SiteSearch-dropdown-907f86a756cf4ed08783a8aa27369152" class="input-group-btn">
+    <button type="button" id="SiteSearch-filter-907f86a756cf4ed08783a8aa27369152" class="btn btn-default dropdown-toggle" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false" title="Filter your search by category" data-component="all">
+      <span class="fa-solid fa-solid fa-earth-americas"></span><span class="fa-solid fa-fw fa-nopad fa-caret-down" aria-hidden="true"></span>
+      <span class="sr-only">
+        Filter your search by category. Current category:
+        <span class="js-current-component">All</span>
+      </span>
+    </button>
+    <ul tabindex="-1" aria-label="Filter your search by category" role="menu" class="dropdown-menu" >
+      <li>
+        <a role="menuitem" href="javascript:void(0);" data-component-text="All" data-component="all" data-component-icon="fa-solid fa-earth-americas" title="Search all areas">
+          <span class="fa-solid fa-fw fa-nopad fa-earth-americas" aria-hidden="true"></span>
+          All
+        </a>
+      </li>
+
+      <li aria-hidden="true" class="divider"></li>
+
+        <li role="presentation">
+          <a role="menuitem" href="javascript:void(0);" data-component-text="Knowledge Base" data-component="kb" data-component-icon="fa-lightbulb" title="Search Knowledge Base">
+            <span class="fa-regular fa-fw fa-nopad fa-lightbulb" aria-hidden="true"></span>
+            Knowledge Base
+          </a>
+        </li>
+
+        <li role="presentation">
+          <a role="menuitem" href="javascript:void(0);" data-component-text="Service Catalog" data-component="sc" data-component-icon="fa-compass" title="Search Service Catalog">
+            <span class="fa-solid fa-fw fa-nopad fa-compass" aria-hidden="true"></span>
+            Service Catalog
+          </a>
+        </li>
+
+    </ul>
+  </div>
+
+  <label class="sr-only" for="SiteSearch-text-907f86a756cf4ed08783a8aa27369152">Search the client portal</label>
+
+  <input id="SiteSearch-text-907f86a756cf4ed08783a8aa27369152" type="text" class="form-control" autocomplete="off" placeholder="Search the client portal" title="To search for items with a specific tag, enter the # symbol followed by the name of the tag.
+To search for items using exact match, place double quotes around your text." />
+
+  <span class="input-group-btn">
+    <button id="SiteSearch-button-907f86a756cf4ed08783a8aa27369152" class="btn btn-default" type="button" title="Search">
+      <span class="fa-solid fa-fw fa-nopad fa-search blue" aria-hidden="true"></span>
+      <span class="sr-only">Search</span>
+    </button>
+  </span>
+</div>
+
+<script>
+  $(function() {
+    var siteSearch = new TeamDynamix.SiteSearch({
+      searchUrl: "/TDClient/818/Portal/Shared/Search",
+      autocompleteSearchUrl: '/TDClient/818/Portal/Shared/AutocompleteSearch',
+      autocompleteResultsPosition: 'fixed',
+      autocompleteResultsZIndex: 1000,
+      searchTextBoxSelector: '#SiteSearch-text-907f86a756cf4ed08783a8aa27369152',
+      searchComponentFilterButtonSelector: '#SiteSearch-filter-907f86a756cf4ed08783a8aa27369152',
+      searchButtonSelector: '#SiteSearch-button-907f86a756cf4ed08783a8aa27369152',
+      searchFilterDropdownSelector: '#SiteSearch-dropdown-907f86a756cf4ed08783a8aa27369152',
+      showKnowledgeBaseOption: true,
+      showServicesOption: true,
+      showForumsOption: false,
+      autoFocusSearch: false
+    });
+  });
+</script>
+          </div>
+
+        
+          <div title="Sign In" class="pull-right gutter-top-sm">
+            <a href="/TDClient/818/Portal/Login.aspx?ReturnUrl=%2fTDClient%2f818%2fPortal%2fKB%2fArticleDet%3fID%3d21335">
+              Sign In
+            </a>
+          </div>
+        
+      </div>
+
+    </div>
+
+  </div>
+
+  <nav id="ctl00_ctl00_mainNav" class="navbar navbar-default themed tdbar" aria-label="Primary">
+    <div id="navContainer" class="container">
+
+      <div class="navbar-header">
+        <button type="button" class="pull-left navbar-toggle collapsed themed tdbar-button-anchored tdbar-toggle gutter-left" data-toggle="collapse" data-target=".navbar-collapse">
+          <span class="tdbar-button-anchored icon-bar"></span>
+          <span class="tdbar-button-anchored icon-bar"></span>
+          <span class="tdbar-button-anchored icon-bar"></span>
+          <span class="sr-only">Show Applications Menu</span>
+        </button>
+        <a class="navbar-brand hidden-sm hidden-md hidden-lg themed tdbar-button-anchored truncate-be" href="#">
+
+          Policy Admin Client Portal
+        </a>
+      </div>
+
+      <div id="td-navbar-collapse" class="collapse navbar-collapse">
+
+        <ul class="nav navbar-nav nav-collapsing" id="collapseMe">
+
+          
+            <li class="themed tdbar-button-anchored hidden-sm hidden-md hidden-lg">
+              <a href="/TDClient/818/Portal/Login.aspx?ReturnUrl=%2fTDClient%2f818%2fPortal%2fKB%2fArticleDet%3fID%3d21335">Sign In</a>
+            </li>
+          
+            <li id="divSearch" class="themed tdbar-button-anchored hidden-sm hidden-md hidden-lg">
+              <a href="/TDClient/818/Portal/Shared/Search" title="search">Search</a>
+            </li>
+          
+              <li id="divDesktopf39145cf-36de-4b20-80b6-2aa59e09ba58" class="themed tdbar-button-anchored">
+                <a href="/TDClient/818/Portal/Home/">Home</a>
+              </li>
+            
+              <li id="divDesktop7962033f-f5ca-4a78-b73d-f8a25a373dce" class="themed tdbar-button-anchored">
+                <a href="/TDClient/818/Portal/Home/?ID=7962033f-f5ca-4a78-b73d-f8a25a373dce">Search A-Z</a>
+              </li>
+            
+              <li id="divDesktop8ec86700-09b7-474e-a21c-66de5797f2a2" class="themed tdbar-button-anchored">
+                <a href="/TDClient/818/Portal/Home/?ID=8ec86700-09b7-474e-a21c-66de5797f2a2">Search All University</a>
+              </li>
+            
+              <li id="divDesktop318e591d-dbcd-40da-adda-1641a51df3d6" class="themed tdbar-button-anchored">
+                <a href="/TDClient/818/Portal/Home/?ID=318e591d-dbcd-40da-adda-1641a51df3d6">Search by Topic</a>
+              </li>
+            
+
+          
+            <li id="divTDRequests" class="themed tdbar-button-anchored sr-focusable">
+              <a href="/TDClient/818/Portal/Requests/ServiceCatalog">Services</a>
+            </li>
+          
+            <li id="divTDKnowledgeBase" class="themed tdbar-button-anchored sr-focusable">
+              <a href="/TDClient/818/Portal/KB/">Knowledge Base</a>
+            </li>
+          
+
+          <li class="themed tdbar-button-anchored hidden-xs more-items-button" id="moreMenu">
+            <a data-toggle="dropdown" title="More Applications" href="javascript:;">
+              <span class="sr-only">More Applications</span>
+              <span class="fa-solid fa-ellipsis-h" aria-hidden="true"></span>
+            </a>
+            <ul class="dropdown-menu dropdown-menu-right themed tdbar" id="collapsed"></ul>
+          </li>
+
+        </ul>
+      </div>
+
+    </div>
+
+  </nav>
+
+  </div>
+
+  </header>
+
+
+
+<div id="navShim" class="hidden-xs hidden-sm"></div>
+<main role="main">
+  <div id="content">
+    <div id="mainContent" tabindex="-1"></div>
+    
+
+  <nav id="ctl00_ctl00_cpContent_divTabHeader" class="tdbar-sub NoPrint hidden-xs navbar-subnav" aria-label="Knowledge Base">
+      <a href="#kbContent" class="sr-only sr-only-focusable">Skip to Knowledge Base content</a>
+      <div class="container clearfix">
+        <ul class="nav navbar-nav js-submenu" id="kbSubMenu" style="margin-left: -15px;">
+          
+          <li>
+            <a href="/TDClient/818/Portal/KB/Search">Search <span class="sr-only">Articles</span></a>
+          </li>
+
+          
+          
+        </ul>
+      </div>
+    </nav>
+  
+
+  <div id="kbContent" class="container gutter-top gutter-bottom" tabindex="-1" style="outline:none;">
+    
+
+<input type="hidden" name="ctl00$ctl00$cpContent$cpContent$hdnFeedbackID" id="ctl00_ctl00_cpContent_cpContent_hdnFeedbackID" />
+<input type="hidden" name="ctl00$ctl00$cpContent$cpContent$hdnIsAddressed" id="ctl00_ctl00_cpContent_cpContent_hdnIsAddressed" />
+
+<span id="ctl00_ctl00_cpContent_cpContent_lblResults_ctl00" aria-live="polite" aria-atomic="true"><span id="ctl00_ctl00_cpContent_cpContent_lblResults_lblResults-label" class="red tdx-error-text"></span></span>
+
+<a id="ctl00_ctl00_cpContent_cpContent_btnSendShare" tabindex="-1" class="hidden" aria-hidden="true" href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$ctl00$cpContent$cpContent$btnSendShare&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))">Blank</a>
+
+<div class="clearfix">
+  <nav aria-label="Breadcrumb">
+    <ol class="breadcrumb pull-left">
+      <li><a href="/TDClient/818/Portal/KB/">Knowledge Base</a></li><li class="active"><a href="/TDClient/818/Portal/KB/?CategoryID=3769">Information Technology</a></li><li class="active">Acceptable Use of Electronic Information Resources</li>
+    </ol>
+  </nav>
+  <span class="js-open-monitor" style="display: none;"></span>
+</div>
+
+
+
+<div class="row gutter-top">
+
+<div id="divMainContent" class="col-md-8">
+
+<h1 class="gutter-top" style="-ms-word-wrap: break-word; word-wrap: break-word;">
+  Acceptable Use of Electronic Information Resources
+</h1>
+
+<div id="ctl00_ctl00_cpContent_cpContent_divTags">
+  <span class="sr-only">Tags</span>
+  <span class="fa-solid fa-tags gray gutter-right-sm" aria-hidden="true" title="Tags"></span>
+  
+      <a href="/TDClient/818/Portal/KB/Search?SearchText=%2523copyright" id="ctl00_ctl00_cpContent_cpContent_rptTags_ctl00_TagControl1_lnkDisplay" title="copyright">copyright</a>
+
+    
+      <span class="fa-solid fa-circle gray gutter-right-sm font-xs vert-middle" aria-hidden="true"></span>
+    
+      <a href="/TDClient/818/Portal/KB/Search?SearchText=%2523KBOR" id="ctl00_ctl00_cpContent_cpContent_rptTags_ctl02_TagControl1_lnkDisplay" title="KBOR">KBOR</a>
+
+    
+      <span class="fa-solid fa-circle gray gutter-right-sm font-xs vert-middle" aria-hidden="true"></span>
+    
+      <a href="/TDClient/818/Portal/KB/Search?SearchText=%2523electronic" id="ctl00_ctl00_cpContent_cpContent_rptTags_ctl04_TagControl1_lnkDisplay" title="electronic">electronic</a>
+
+    
+      <span class="fa-solid fa-circle gray gutter-right-sm font-xs vert-middle" aria-hidden="true"></span>
+    
+      <a href="/TDClient/818/Portal/KB/Search?SearchText=%2523faculty" id="ctl00_ctl00_cpContent_cpContent_rptTags_ctl06_TagControl1_lnkDisplay" title="faculty">faculty</a>
+
+    
+</div>
+
+
+
+<div id="ctl00_ctl00_cpContent_cpContent_divBody" class="gutter-top break-word ckeShim clearfix"><p>PRINT DISCLAIMER: Official version of this document is accessible in the online policy library at <a href="https://policyoffice.ku.edu/" target="_blank">https://policyoffice.ku.edu/</a>. Printed copies may not reflect the most recent updates.</p>
+
+<h2><b>DOCUMENT TYPE: </b></h2>
+
+<p>Policy</p>
+
+<h2><b>PURPOSE: </b></h2>
+
+<p>This policy outlines the expectations for the use of electronic information resources at the University of Kansas.</p>
+
+<h2><b>APPLIES TO:</b></h2>
+
+<p>This policy applies to faculty, staff, students, official university affiliates, and any other individuals who use University electronic information resources or who use private electronic information resources to conduct University business. This policy applies to all units on the KU Lawrence and Edwards campuses or under the administrative oversight of the Lawrence campus.</p>
+
+<h2><b>CAMPUS: </b></h2>
+
+<p>Edwards, Lawrence, Juniper Gardens, Parsons, Yoder, Topeka</p>
+
+<h2><b>TABLE OF CONTENTS:</b></h2>
+
+<p>Introduction<br>
+Responsibilities of Users<br>
+Responsibilities of the University<br>
+Reporting Irresponsible Use of Electronic Information Resources<br>
+Consequences<br>
+Recourse/Appeals</p>
+
+<h2><strong>DEFINITIONS:</strong></h2>
+
+<p><strong>Electronic information resources</strong>&nbsp;include any hardware or software intended for the storage, transmission and use of information as well as the digital content files that may be stored, transmitted, or used with hardware or software. This definition includes electronic mail, voice systems, local databases, externally accessed databases, CD-ROM, DVD, video, recorded magnetic media, digital movie or photographic files, or other digitized information. This also includes any wire, radio, electromagnetic, photo-optical, photo-electronic or other facility used in transmitting electronic communications, and any computer facilities or related electronic equipment that electronically stores such communications.</p>
+
+<h2><b>POLICY STATEMENT:</b></h2>
+
+<h3><strong>Introduction</strong></h3>
+
+<p>The University of Kansas provides electronic information resources to faculty, staff, students, official university affiliates, and others in support of the education, research, and public service mission of the University.</p>
+
+<p>The University encourages civil discourse, tolerance, and respect for all individuals, as creating an inclusive, open environment is vital to our success as an academic community. Use of electronic information resources should meet these same expectations.</p>
+
+<h3><strong>Responsibilities of Users</strong></h3>
+
+<p>Users of electronic systems have the following responsibilities:</p>
+
+<p>Access to information resources is granted with the expectation that resources will be used in an ethical and lawful manner. Users will employ electronic information resources consistent with the requirements of federal, state and local law and University and Kansas Board of Regents policies. Users are responsible for using resources appropriately to maintain the integrity of the electronic information resources, and where appropriate, the privacy, confidentiality, and/or security of the electronic information.</p>
+
+<p>Individuals should not give out, loan, share, or otherwise allow anyone else to use the access privileges granted to them. Access to secured information resources is provided only with proper authorization.</p>
+
+<p>Users are responsible for all activities that occur while using information resources assigned to them, and shall respect the intended use of these resources. It is the preference of the University that employees use University resources to conduct University business. Any University business information or records in personal or private email accounts or electronic devices must be disclosed in the event of a request for public records under the Kansas Open Records Act or other University need.</p>
+
+<p>Users may not attempt to circumvent login procedures on any computer system or otherwise attempt to gain unauthorized access. This is not an acceptable use of information resources and may be a crime under federal, state or local law.</p>
+
+<p>All users shall use electronic information resources in a manner that does not in any way interfere with, compromise, or harm the performance, functionality, or integrity of the University’s electronic information resources. This shall include the adherence to University standards regarding software updates and protections, data handling, and other policies and procedures enacted by the University.</p>
+
+<p>Users will respect network capacity as a shared resource and therefore may not perform operations that degrade network performance for other users. Users may not send spam, chain letters, mail bombs, and or engage in other activities that infringe on the rights and/or productivity of other users.</p>
+
+<p>Users should respect the rights of copyright owners and, when appropriate, obtain permission from owners before using or copying protected material, including but not limited to, music, movies, software, documents, images, or multimedia objects. The University licenses most databases, electronic journals, and other forms of information content under contracts that define who may use the content and what may be done with it. In general, only University registered students, faculty, and staff may use these resources; unaffiliated users may use these resources within library buildings. Systematic or excessive downloading or printing of content is not permitted, including downloading or printing of whole journal issues.</p>
+
+<p>Incidental personal use of electronic information resources, including email, is permitted provided that this use does not interfere with University operations, violate University or Regents policies, create an inappropriate atmosphere for employees in violation of law or University or Regents policy, generate incremental identifiable costs to the University, and/or negatively impact the user’s job performance.</p>
+
+<p>Except in a purely incidental way, university resources may not be used in external activities unless written approval has been received in advance from the institution’s chief executive officer or the chief executive officer's designee. Such permission shall be granted only when the use of university resources is determined to further the mission of the institution. When such permission is granted, the user will make arrangements for reimbursement of the University for customarily price-able institutional materials, facilities or services used in the external activity. Such use may never be authorized if it violates the Regents policy on Sales of Products and Services. (Please refer to the <a href="https://services.ku.edu/TDClient/818/Portal/KB/ArticleDet?ID=20794" target="_blank">Conflict of Interest &amp; Time Policy</a>.)</p>
+
+<p>Users may not use electronic information resources for commercial purposes, for personal financial gain, or to solicit support for outside organizations not otherwise authorized to use University facilities.</p>
+
+<p>Individuals may use electronic resources to exchange ideas and opinions, including those dealing with political issues. The latter is generally considered an incidental use of electronic resources. However, University electronic resources (including email) may not be used to support partisan political candidates, party fundraising, or causes. Registered student and campus organizations such as the College Republicans or the KU Young Democrats may use their membership listservs to notify members of meetings, speeches, and /or rallies. Faculty members may use electronic systems for course-related discussions of political topics. For additional information on this topic see <a href="https://services.ku.edu/TDClient/818/Portal/KB/ArticleDet?ID=21315" target="_blank">Political Activity: Kansas Statutes and Board of Regents/University Policies</a>.</p>
+
+<p>Representing oneself as someone else, without previous written authorization, is not considered responsible use of electronic information resources.</p>
+
+<p>Electronic resources may not be used to engage in any conduct that is not protected by the First Amendment, including true threats, incitement to imminent violence, fighting words, and unlawful, targeted harassment, nor may they be used in a deliberately destructive manner.</p>
+
+<h3><strong>Responsibilities of the University</strong></h3>
+
+<p>Because University electronic information resources are state-owned and maintained, the University has the responsibility to monitor, audit, and assure the proper use of those resources. Although the University supports a climate of trust and respect and does not ordinarily read, monitor or screen individual user’s routine use of electronic information resources, it must monitor systems for misuse. The University, therefore, cannot guarantee the confidentiality, privacy, or security of data, email, or other information transmitted or stored on its electronic information. When University officials believe a user may be using electronic information resources in a way that may violate University or Regents policies or federal, state or local law, or the user is engaged in activities inconsistent with the user’s University responsibilities, then system administrators may monitor the activities and inspect and record the files of such users(s) on their computers and networks, including word processing equipment, personal computers, workstations, mainframes, minicomputers, and associated peripherals and software.</p>
+
+<h3><strong>Reporting Irresponsible Use of Electronic Information Resources</strong></h3>
+
+<p>All users and units have the responsibility to report any discovered unauthorized access attempts or other improper usage of KU information resources. If you observe, or have reported to you, a security or abuse problem with any University information resource, including violations of this policy, notify the Information Technology (IT) Customer Service Center (864-8080; <a href="mailto:itcsc@ku.edu">itcsc@ku.edu</a>). The Customer Service Center will notify the KU IT Security Officer, who will coordinate the technical and administrative response to such incidents. The KU IT Security Officer leads a Computer Incident Response Team (CIRT), responsible for the identification, containment, eradication, and recovery of all devices during an incident. CIRT members will work with departmental technical liaisons to ensure effective response time and communication. The CIRT is responsible for coordinating evidence gathering and documentation, and for seeking advice from representatives from the Provost and Executive Vice Chancellor’s Office, General Counsel’s Office, Public Affairs, and others as required by the particular incident.</p>
+
+<p>Reports of all apparent IT policy violations will be forwarded by the Chief Information Security Officer to the Chief Information Officer for disposition according to standard procedures and University policies on violation of policy.</p>
+
+<h3><strong>Freedom of Expression Acknowledgment</strong></h3>
+
+<p>Nothing herein shall be construed in a manner that would result in a conflict with the First Amendment to the U.S. Constitution or any other relevant federal or state laws or regulations concerning freedom of speech or expression. This policy incorporates by reference the principles set forth in the KBOR Statement on Free Expression, and shall be construed in a manner consistent therewith, along with KBOR’s policy on the Use of Campus Grounds and Facilities. Nothing herein, or in any other University policy or rule, shall be deemed to discourage students, faculty, or staff from hearing diverse points of view from speakers and programs sponsored by the University or recognized student, faculty, or employee organizations. Further, with regard to any regulation or restriction of protected speech or expression, this and all other University policies or rules are intended to be content-neutral and limited to narrowly drawn time, place and manner restrictions that are consistent with established principles of the First Amendment to the U.S. Constitution, and shall be construed accordingly.</p>
+
+<h2><b>CONSEQUENCES:</b></h2>
+
+<h3><strong>Consequences</strong></h3>
+
+<p>Use of University electronic information resources contrary to this policy, University or Regents policies, or applicable federal, state or local law is prohibited and may subject the user to disciplinary action including, but not limited to, suspension of the user’s access to the electronic information resources. Users also should be aware of other possible consequences under University or Regents policies and federal, state, or local laws, particularly those related to computer crime and copyright violation.</p>
+
+<p>Additionally, students could be subject to disciplinary action under the <a href="https://services.ku.edu/TDClient/818/Portal/KB/ArticleDet?ID=21011" target="_blank">Code of Student Rights and Responsibilities</a>.</p>
+
+<h3><strong>Recourse/Appeals</strong></h3>
+
+<p>If a department or individual feels that actions taken under this policy have been inappropriate, a review of the decision may be requested. The review will be conducted by the Provost and Executive Vice Chancellor. If, after the review, there is still a disagreement with the decision, appeals should be directed through the existing procedures established for employees and students.</p>
+
+<h2><strong>RESPONSIBLE UNIT:</strong></h2>
+
+<p>Information Technology</p>
+
+<h2><b>CONTACT: </b></h2>
+
+<p>Office of the Chief Information Officer<br>
+1001 Sunnyside Avenue&nbsp;<br>
+Lawrence, KS 66045<br>
+785-864-4999<br>
+<a href="mailto:kucio@ku.edu">kucio@ku.edu</a></p>
+
+<h2><b>APPROVED BY: </b></h2>
+
+<p>Chief Information Officer</p>
+
+<h2><b>APPROVED ON: </b></h2>
+
+<p>2006-09-15&nbsp;</p>
+
+<h2><b>EFFECTIVE ON: </b></h2>
+
+<p>2006-10-17&nbsp;</p>
+
+<h2><b>REVIEW CYCLE: </b></h2>
+
+<p>Annual (As Needed)</p>
+
+<h2><b>RELATED STATUTES, REGULATIONS, AND/OR POLICIES: </b></h2>
+
+<p><a href="https://www.kansasregents.org/resources/PDF/Students/Boards_Statement_on_Free_Expression_031721.pdf">Kansas Board of Regents Statement on Free Expression</a></p>
+
+<h2><b>CHANGE HISTORY: </b></h2>
+
+<p>10/03/2025: Updated formatting.<br>
+05/09/2025: Updated links.<br>
+03/26/2025:&nbsp;Migration to TeamDynamix from Drupal.<br>
+05/16/2022: Updated to align with KBOR's statement on Free Expression.<br>
+01/26/2022: Updated contact section.<br>
+03/30/2018: Updated policy to mirror current practice and standards.<br>
+07/21/2016: Updated policy to mirror changes in KORA regarding personal accounts.<br>
+07/01/2016: Updated to remove gendered pronouns.<br>
+10/29/2014: &nbsp;Replaced outdated web reference in the introductory section of the Policy Statement and replaced with updated text. Changes reviewed by Chancellor's Office, Public Affairs, and IT. Final changes approved by Bob Lim, CIO.<br>
+Updated on 9/11/2007 to reflect NTS/IT reorganization of responsibilities; updated June 22, 2012 to current organizational structure and titles.</p>
+
+<h2><strong>TITLE:</strong></h2>
+
+<p>Acceptable Use of Electronic Information Resources</p></div>
+
+<div id="ctl00_ctl00_cpContent_cpContent_divFeedback2" class="well gutter-top-lg">
+
+  <div class="row" id="divHelpfulYesNo">
+    <div class="col-sm-7">
+      
+        <div>
+          <a href="/TDClient/818/Portal/Login.aspx?ReturnUrl=%2fTDClient%2f818%2fPortal%2fKB%2fArticleDet%3fID%3d21335">Sign in to leave feedback</a>
+        </div>
+      
+    </div>
+    <div class="col-sm-5 text-right">
+      <div id="ctl00_ctl00_cpContent_cpContent_UpdatePanel1" aria-live="polite" aria-atomic="true">
+	
+          0 reviews
+        
+</div>
+    </div>
+  </div>
+
+  </div>
+
+
+
+<div class="tab-content gutter-top gutter-bottom">
+  
+  <div id="ctl00_ctl00_cpContent_cpContent_upFeedbackGrid">
+	
+        <a id="ctl00_ctl00_cpContent_cpContent_btnToggleAddressed" tabindex="-1" class="hidden" aria-hidden="true" href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$ctl00$cpContent$cpContent$btnToggleAddressed&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))">Blank</a>
+        <a id="ctl00_ctl00_cpContent_cpContent_btnDeleteFeedback" tabindex="-1" class="hidden" aria-hidden="true" href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$ctl00$cpContent$cpContent$btnDeleteFeedback&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))">Blank</a>
+        
+      
+</div>
+    
+    
+
+    
+</div>
+</div>
+
+<div class="col-md-4">
+
+
+
+    <a id="ctl00_ctl00_cpContent_cpContent_btnToggleSubscribe" tabindex="-1" class="hidden" aria-hidden="true" href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$ctl00$cpContent$cpContent$btnToggleSubscribe&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))">Blank</a>
+
+<a id="ctl00_ctl00_cpContent_cpContent_btnToggleFavorite" tabindex="-1" class="hidden" aria-hidden="true" href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$ctl00$cpContent$cpContent$btnToggleFavorite&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))">Blank</a>
+
+<a class="DetailAction print-article" href="/TDClient/818/Portal/KB/PrintArticle?ID=21335" rel="nofollow" target="_blank">  <span class="fa-solid fa-print fa-fw" aria-hidden="true"></span>
+Print Article</a>
+
+<div id="ctl00_ctl00_cpContent_cpContent_divKB" class="panel panel-default">
+
+  <div class="panel-heading">
+    <h2 class="h3 panel-title">Related Articles (29)</h2>
+  </div>
+
+  <div class="panel-body">
+    
+        <div id="ctl00_ctl00_cpContent_cpContent_rptArticles_ctl00_ctlArticle_divContainer" class="gutter-top-sm gutter-bottom-lg">
+  <div class="clearfix">
+    <div class="pull-left font-md">
+      <a target="_blank" href="https://services.ku.edu/TDClient/818/Portal/KB/ArticleDet?ID=20877">Acceptable Use of Educational Technologies Guidelines for Faculty and Staff</a>
+    </div>
+  </div>
+  <div id="ctl00_ctl00_cpContent_cpContent_rptArticles_ctl00_ctlArticle_divSummary">
+    The acceptable use of instructional delivery technologies guidelines are intended to assist faculty and instructional staff by outlining various issues that need to be considered when delivering course content through a technological medium.
+  </div>
+  
+</div>
+      
+        <div id="ctl00_ctl00_cpContent_cpContent_rptArticles_ctl01_ctlArticle_divContainer" class="gutter-top-sm gutter-bottom-lg">
+  <div class="clearfix">
+    <div class="pull-left font-md">
+      <a target="_blank" href="https://services.ku.edu/TDClient/818/Portal/KB/ArticleDet?ID=21011">Code of Student Rights and Responsibilities (Student Code)</a>
+    </div>
+  </div>
+  <div id="ctl00_ctl00_cpContent_cpContent_rptArticles_ctl01_ctlArticle_divSummary">
+    The Code of Student Rights and Responsibilities outlines the rights of students and many of the standards of conduct expected within the University of Kansas community.
+  </div>
+  
+</div>
+      
+        <div id="ctl00_ctl00_cpContent_cpContent_rptArticles_ctl02_ctlArticle_divContainer" class="gutter-top-sm gutter-bottom-lg">
+  <div class="clearfix">
+    <div class="pull-left font-md">
+      <a target="_blank" href="https://services.ku.edu/TDClient/818/Portal/KB/ArticleDet?ID=20898">Controlled Unclassified Information Policy</a>
+    </div>
+  </div>
+  <div id="ctl00_ctl00_cpContent_cpContent_rptArticles_ctl02_ctlArticle_divSummary">
+    This policy outlines requirements for receiving, collecting, developing, handling, storing, processing, and maintaining information that falls into at least one of the Controlled Unclassified Information (CUI) registry categories, as listed on the National Archives and Records Administration (NARA) website. University employees who access CUI must safeguard this information as outlined by the National Institute of Standards and Technology (NIST) “Protecting Controlled Unclassified Information in
+  </div>
+  
+</div>
+      
+        <div id="ctl00_ctl00_cpContent_cpContent_rptArticles_ctl03_ctlArticle_divContainer" class="gutter-top-sm gutter-bottom-lg">
+  <div class="clearfix">
+    <div class="pull-left font-md">
+      <a target="_blank" href="https://services.ku.edu/TDClient/818/Portal/KB/ArticleDet?ID=21029">Data Classification and Handling Procedures Guide</a>
+    </div>
+  </div>
+  <div id="ctl00_ctl00_cpContent_cpContent_rptArticles_ctl03_ctlArticle_divSummary">
+    This Procedures Guide for the University community was created to help you effectively manage information in your daily mission-related activities. Determining how to protect &amp;amp; handle information depends on a consideration of the information’s type, importance, and usage. These procedures outline the minimum level of protection necessary when performing certain activities, based on the classification of the information being handled. Classification is necessary to understand which security p
+  </div>
+  
+</div>
+      
+        <div id="ctl00_ctl00_cpContent_cpContent_rptArticles_ctl04_ctlArticle_divContainer" class="gutter-top-sm gutter-bottom-lg">
+  <div class="clearfix">
+    <div class="pull-left font-md">
+      <a target="_blank" href="https://services.ku.edu/TDClient/818/Portal/KB/ArticleDet?ID=21018">Data Classification Policy</a>
+    </div>
+  </div>
+  <div id="ctl00_ctl00_cpContent_cpContent_rptArticles_ctl04_ctlArticle_divSummary">
+    The purpose of this policy is to define a consistent, risk-based framework for identifying, classifying, and protecting data across the University of Kansas (KU), the University of Kansas Medical Center (KUMC), the University of Kansas Health System (health system), and related affiliates.
+  </div>
+  
+</div>
+      
+        <div id="ctl00_ctl00_cpContent_cpContent_rptArticles_ctl05_ctlArticle_divContainer" class="gutter-top-sm gutter-bottom-lg">
+  <div class="clearfix">
+    <div class="pull-left font-md">
+      <a target="_blank" href="https://services.ku.edu/TDClient/818/Portal/KB/ArticleDet?ID=20837">E-commerce Policy</a>
+    </div>
+  </div>
+  <div id="ctl00_ctl00_cpContent_cpContent_rptArticles_ctl05_ctlArticle_divSummary">
+    To provide the requirements for processing e-commerce transactions and any acceptance of credit card payments by administering entities for the University of Kansas Lawrence campus and its reporting units; to establish protocols to reduce the risk of exposure of cardholders’ personal financial information when such information is processed electronically through an e-commerce transaction; and to subject all e-commerce transactions to mandatory compliance with the Payment Card Industry (PCI) Data
+  </div>
+  
+</div>
+      
+        <div id="ctl00_ctl00_cpContent_cpContent_rptArticles_ctl06_ctlArticle_divContainer" class="gutter-top-sm gutter-bottom-lg">
+  <div class="clearfix">
+    <div class="pull-left font-md">
+      <a target="_blank" href="https://services.ku.edu/TDClient/818/Portal/KB/ArticleDet?ID=21682">Electronic Device Travel Policy</a>
+    </div>
+  </div>
+  <div id="ctl00_ctl00_cpContent_cpContent_rptArticles_ctl06_ctlArticle_divSummary">
+    To outline the requirements for the use of any University electronic devices (e.g., laptops, tablets, cell phones) and/or access to KU IT infrastructure and data during international travel.
+  </div>
+  
+</div>
+      
+        <div id="ctl00_ctl00_cpContent_cpContent_rptArticles_ctl07_ctlArticle_divContainer" class="gutter-top-sm gutter-bottom-lg">
+  <div class="clearfix">
+    <div class="pull-left font-md">
+      <a target="_blank" href="https://services.ku.edu/TDClient/818/Portal/KB/ArticleDet?ID=21144">Electronic Mail Policy</a>
+    </div>
+  </div>
+  <div id="ctl00_ctl00_cpContent_cpContent_rptArticles_ctl07_ctlArticle_divSummary">
+    To define appropriate use of electronic mail in the University
+  </div>
+  
+</div>
+      
+        <div id="ctl00_ctl00_cpContent_cpContent_rptArticles_ctl08_ctlArticle_divContainer" class="gutter-top-sm gutter-bottom-lg">
+  <div class="clearfix">
+    <div class="pull-left font-md">
+      <a target="_blank" href="https://services.ku.edu/TDClient/818/Portal/KB/ArticleDet?ID=21620">Healthcare Privacy and Information Security Sanctions Policy</a>
+    </div>
+  </div>
+  <div id="ctl00_ctl00_cpContent_cpContent_rptArticles_ctl08_ctlArticle_divSummary">
+    To establish the framework and define the sanctions that may be imposed for violations of University policies and procedures related to the Health Insurance Portability and Accountability Act (HIPAA), healthcare privacy, and information security.
+  </div>
+  
+</div>
+      
+        <div id="ctl00_ctl00_cpContent_cpContent_rptArticles_ctl09_ctlArticle_divContainer" class="gutter-top-sm gutter-bottom-lg">
+  <div class="clearfix">
+    <div class="pull-left font-md">
+      <a target="_blank" href="https://services.ku.edu/TDClient/818/Portal/KB/ArticleDet?ID=21254">Information Access Control Policy</a>
+    </div>
+  </div>
+  <div id="ctl00_ctl00_cpContent_cpContent_rptArticles_ctl09_ctlArticle_divSummary">
+    To ensure the security and integrity of university data and information assets as well as safeguard the information of its constituents. All Kansas University technology resources will adhere to a uniform access control standard and framework.
+  </div>
+  
+</div>
+      
+        <div id="ctl00_ctl00_cpContent_cpContent_rptArticles_ctl10_ctlArticle_divContainer" class="gutter-top-sm gutter-bottom-lg">
+  <div class="clearfix">
+    <div class="pull-left font-md">
+      <a target="_blank" href="https://services.ku.edu/TDClient/818/Portal/KB/ArticleDet?ID=21255">Information Technology Security Policy</a>
+    </div>
+  </div>
+  <div id="ctl00_ctl00_cpContent_cpContent_rptArticles_ctl10_ctlArticle_divSummary">
+    This Information Security Policy (“Policy”) defines the security requirements that everyone who works or studies at KU Lawrence campus and all reporting units is expected to be familiar with and consistently follow. These security measures are set forth to avoid problems that affect the Confidentiality, Integrity, and Availability of information and systems at the University.
+  </div>
+  
+</div>
+      
+        <div id="ctl00_ctl00_cpContent_cpContent_rptArticles_ctl11_ctlArticle_divContainer" class="gutter-top-sm gutter-bottom-lg">
+  <div class="clearfix">
+    <div class="pull-left font-md">
+      <a target="_blank" href="https://services.ku.edu/TDClient/818/Portal/KB/ArticleDet?ID=20725">KU Libraries: Access, Circulation, and Request Services for KU Faculty, Staff, and Affiliates</a>
+    </div>
+  </div>
+  <div id="ctl00_ctl00_cpContent_cpContent_rptArticles_ctl11_ctlArticle_divSummary">
+    To define KU Libraries access, circulation, and request services for KU Faculty, Staff, and Affiliates.
+  </div>
+  
+</div>
+      
+        <div id="ctl00_ctl00_cpContent_cpContent_rptArticles_ctl12_ctlArticle_divContainer" class="gutter-top-sm gutter-bottom-lg">
+  <div class="clearfix">
+    <div class="pull-left font-md">
+      <a target="_blank" href="https://services.ku.edu/TDClient/818/Portal/KB/ArticleDet?ID=20726">KU Libraries: Access, Circulation, and Request Services for KU Graduate Students</a>
+    </div>
+  </div>
+  <div id="ctl00_ctl00_cpContent_cpContent_rptArticles_ctl12_ctlArticle_divSummary">
+    To define KU Libraries access, circulation, and request services for KU Graduate Students.
+  </div>
+  
+</div>
+      
+        <div id="ctl00_ctl00_cpContent_cpContent_rptArticles_ctl13_ctlArticle_divContainer" class="gutter-top-sm gutter-bottom-lg">
+  <div class="clearfix">
+    <div class="pull-left font-md">
+      <a target="_blank" href="https://services.ku.edu/TDClient/818/Portal/KB/ArticleDet?ID=20731">KU Libraries: Access, Circulation, and Request Services for KU Medical Center Students, Faculty, and Staff in Lawrence Campus Libraries</a>
+    </div>
+  </div>
+  <div id="ctl00_ctl00_cpContent_cpContent_rptArticles_ctl13_ctlArticle_divSummary">
+    To define KU Libraries access, circulation, and request services for KU Medical Center Students, Faculty, and Staff using the Lawrence campus libraries.
+  </div>
+  
+</div>
+      
+        <div id="ctl00_ctl00_cpContent_cpContent_rptArticles_ctl14_ctlArticle_divContainer" class="gutter-top-sm gutter-bottom-lg">
+  <div class="clearfix">
+    <div class="pull-left font-md">
+      <a target="_blank" href="https://services.ku.edu/TDClient/818/Portal/KB/ArticleDet?ID=20727">KU Libraries: Access, Circulation, and Request Services for KU Undergraduate and Law Students</a>
+    </div>
+  </div>
+  <div id="ctl00_ctl00_cpContent_cpContent_rptArticles_ctl14_ctlArticle_divSummary">
+    To define KU Libraries access, circulation, and request services for KU Undergraduate and Law Students.
+  </div>
+  
+</div>
+      
+        <div id="ctl00_ctl00_cpContent_cpContent_rptArticles_ctl15_ctlArticle_divContainer" class="gutter-top-sm gutter-bottom-lg">
+  <div class="clearfix">
+    <div class="pull-left font-md">
+      <a target="_blank" href="https://services.ku.edu/TDClient/818/Portal/KB/ArticleDet?ID=20720">KU Libraries: Code of Conduct for Library Users</a>
+    </div>
+  </div>
+  <div id="ctl00_ctl00_cpContent_cpContent_rptArticles_ctl15_ctlArticle_divSummary">
+    In the interest of protecting the rights of all users and in order to provide an environment suitable for pursuit of scholarly activities, the University of Kansas Libraries have enacted a Code of Conduct for Library Users. This Code of Conduct supplements existing University and other Library policies and provides guidance for all library users. Library users must ensure their use of library facilities, services, collections, electronic resources, and equipment does not infringe on or disrupt t
+  </div>
+  
+</div>
+      
+        <div id="ctl00_ctl00_cpContent_cpContent_rptArticles_ctl16_ctlArticle_divContainer" class="gutter-top-sm gutter-bottom-lg">
+  <div class="clearfix">
+    <div class="pull-left font-md">
+      <a target="_blank" href="https://services.ku.edu/TDClient/818/Portal/KB/ArticleDet?ID=20732">KU Libraries: Off-campus Access to Licensed Electronic Resources</a>
+    </div>
+  </div>
+  <div id="ctl00_ctl00_cpContent_cpContent_rptArticles_ctl16_ctlArticle_divSummary">
+    To define the requirements for off-campus access to the KU Libraries electronic resources licensed for use by KU Students, Faculty, Staff, and Affiliates on the Lawrence and Edwards campuses.
+  </div>
+  
+</div>
+      
+        <div id="ctl00_ctl00_cpContent_cpContent_rptArticles_ctl17_ctlArticle_divContainer" class="gutter-top-sm gutter-bottom-lg">
+  <div class="clearfix">
+    <div class="pull-left font-md">
+      <a target="_blank" href="https://services.ku.edu/TDClient/818/Portal/KB/ArticleDet?ID=20728">KU Libraries: Proxy Borrower Card</a>
+    </div>
+  </div>
+  <div id="ctl00_ctl00_cpContent_cpContent_rptArticles_ctl17_ctlArticle_divSummary">
+    To define the purpose of the KU Libraries&#39; Proxy Borrower Card, to outline qualifications for the card, and to document the policies for the use of this card.
+  </div>
+  
+</div>
+      
+        <div id="ctl00_ctl00_cpContent_cpContent_rptArticles_ctl18_ctlArticle_divContainer" class="gutter-top-sm gutter-bottom-lg">
+  <div class="clearfix">
+    <div class="pull-left font-md">
+      <a target="_blank" href="https://services.ku.edu/TDClient/818/Portal/KB/ArticleDet?ID=20708">Learning Management Systems (LMS) Policy</a>
+    </div>
+  </div>
+  <div id="ctl00_ctl00_cpContent_cpContent_rptArticles_ctl18_ctlArticle_divSummary">
+    To provide decision-making guidance for the use of learning management systems (LMS) licensed by the University of Kansas.
+  </div>
+  
+</div>
+      
+        <div id="ctl00_ctl00_cpContent_cpContent_rptArticles_ctl19_ctlArticle_divContainer" class="gutter-top-sm gutter-bottom-lg">
+  <div class="clearfix">
+    <div class="pull-left font-md">
+      <a target="_blank" href="https://services.ku.edu/TDClient/818/Portal/KB/ArticleDet?ID=21684">Loaner Laptop/Azure Virtual Desktop Procedure</a>
+    </div>
+  </div>
+  <div id="ctl00_ctl00_cpContent_cpContent_rptArticles_ctl19_ctlArticle_divSummary">
+    To provide guidance on how to fulfill the requirements regarding the use of any University electronic devices (e.g., laptops, tablets) and/or access to KU IT infrastructure when traveling for University of Kansas (KU) related business.
+  </div>
+  
+</div>
+      
+        <div id="ctl00_ctl00_cpContent_cpContent_rptArticles_ctl20_ctlArticle_divContainer" class="gutter-top-sm gutter-bottom-lg">
+  <div class="clearfix">
+    <div class="pull-left font-md">
+      <a target="_blank" href="https://services.ku.edu/TDClient/818/Portal/KB/ArticleDet?ID=21295">Network Policy</a>
+    </div>
+  </div>
+  <div id="ctl00_ctl00_cpContent_cpContent_rptArticles_ctl20_ctlArticle_divSummary">
+    To define the University network and establish operational provisions governing use and operation of the network.
+  </div>
+  
+</div>
+      
+        <div id="ctl00_ctl00_cpContent_cpContent_rptArticles_ctl21_ctlArticle_divContainer" class="gutter-top-sm gutter-bottom-lg">
+  <div class="clearfix">
+    <div class="pull-left font-md">
+      <a target="_blank" href="https://services.ku.edu/TDClient/818/Portal/KB/ArticleDet?ID=21342">Password Policy</a>
+    </div>
+  </div>
+  <div id="ctl00_ctl00_cpContent_cpContent_rptArticles_ctl21_ctlArticle_divSummary">
+    The purpose of this policy is to establish a standard for creation of strong passwords, the protection of those passwords, and the frequency of password change.
+  </div>
+  
+</div>
+      
+        <div id="ctl00_ctl00_cpContent_cpContent_rptArticles_ctl22_ctlArticle_divContainer" class="gutter-top-sm gutter-bottom-lg">
+  <div class="clearfix">
+    <div class="pull-left font-md">
+      <a target="_blank" href="https://services.ku.edu/TDClient/818/Portal/KB/ArticleDet?ID=21319">Privacy Policy, General</a>
+    </div>
+  </div>
+  <div id="ctl00_ctl00_cpContent_cpContent_rptArticles_ctl22_ctlArticle_divSummary">
+    To set forth requirements regarding information entrusted to the University by the public and members of the KU community.
+  </div>
+  
+</div>
+      
+        <div id="ctl00_ctl00_cpContent_cpContent_rptArticles_ctl23_ctlArticle_divContainer" class="gutter-top-sm gutter-bottom-lg">
+  <div class="clearfix">
+    <div class="pull-left font-md">
+      <a target="_blank" href="https://services.ku.edu/TDClient/818/Portal/KB/ArticleDet?ID=20882">Remote Work Policy</a>
+    </div>
+  </div>
+  <div id="ctl00_ctl00_cpContent_cpContent_rptArticles_ctl23_ctlArticle_divSummary">
+    Defines the philosophy and expectations regarding remote work to strategically facilitate continuity of business operations, ensure effective use of facility resources, and enhance the quality of work life for employees.
+  </div>
+  
+</div>
+      
+        <div id="ctl00_ctl00_cpContent_cpContent_rptArticles_ctl24_ctlArticle_divContainer" class="gutter-top-sm gutter-bottom-lg">
+  <div class="clearfix">
+    <div class="pull-left font-md">
+      <a target="_blank" href="https://services.ku.edu/TDClient/818/Portal/KB/ArticleDet?ID=21367">Roles and Responsibilities for Information Management Policy</a>
+    </div>
+  </div>
+  <div id="ctl00_ctl00_cpContent_cpContent_rptArticles_ctl24_ctlArticle_divSummary">
+    The proper stewardship and custodianship of University administrative information will facilitate access to data that supports the work of those with official educational or administrative responsibilities within the institution, consistent with legal, ethical, competitive, and practical considerations.This document informs information stewards, managers, custodians, and users of data of their responsibilities.Note:&#160; Nothing in this document precludes or addresses the&#160;release of institutional da
+  </div>
+  
+</div>
+      
+        <div id="ctl00_ctl00_cpContent_cpContent_rptArticles_ctl25_ctlArticle_divContainer" class="gutter-top-sm gutter-bottom-lg">
+  <div class="clearfix">
+    <div class="pull-left font-md">
+      <a target="_blank" href="https://services.ku.edu/TDClient/818/Portal/KB/ArticleDet?ID=21562">Survey Coordination Policy</a>
+    </div>
+  </div>
+  <div id="ctl00_ctl00_cpContent_cpContent_rptArticles_ctl25_ctlArticle_divSummary">
+    To balance the demand for survey information with the burden surveys impose on students, faculty, and staff. To establish a process of best practices regarding survey development, submission, distribution, and approval and to outline protocols for survey data collection and access for the campus-wide community.
+  </div>
+  
+</div>
+      
+        <div id="ctl00_ctl00_cpContent_cpContent_rptArticles_ctl26_ctlArticle_divContainer" class="gutter-top-sm gutter-bottom-lg">
+  <div class="clearfix">
+    <div class="pull-left font-md">
+      <a target="_blank" href="https://services.ku.edu/TDClient/818/Portal/KB/ArticleDet?ID=21409">Systems Development Life Cycle (SDLC) Policy</a>
+    </div>
+  </div>
+  <div id="ctl00_ctl00_cpContent_cpContent_rptArticles_ctl26_ctlArticle_divSummary">
+    The purpose of the Systems Development Life Cycle (SDLC) Policy is to describe the requirements for developing and/or implementing new software and systems at the University of Kansas and to ensure that all development work is compliant as it relates to any and all regulatory, statutory, federal, and /or state guidelines.
+  </div>
+  
+</div>
+      
+        <div id="ctl00_ctl00_cpContent_cpContent_rptArticles_ctl27_ctlArticle_divContainer" class="gutter-top-sm gutter-bottom-lg">
+  <div class="clearfix">
+    <div class="pull-left font-md">
+      <a target="_blank" href="https://services.ku.edu/TDClient/818/Portal/KB/ArticleDet?ID=21410">Systems Development Life Cycle (SDLC) Standard</a>
+    </div>
+  </div>
+  <div id="ctl00_ctl00_cpContent_cpContent_rptArticles_ctl27_ctlArticle_divSummary">
+    The purpose of the Systems Development Life Cycle (SDLC) Standards is to describe the minimum required phases and considerations for developing and/or implementing new software and systems at the University of Kansas.
+  </div>
+  
+</div>
+      
+        <div id="ctl00_ctl00_cpContent_cpContent_rptArticles_ctl28_ctlArticle_divContainer" class="gutter-top-sm gutter-bottom-lg">
+  <div class="clearfix">
+    <div class="pull-left font-md">
+      <a target="_blank" href="https://services.ku.edu/TDClient/818/Portal/KB/ArticleDet?ID=21425">Unauthorized Peer-to-Peer File Sharing</a>
+    </div>
+  </div>
+  <div id="ctl00_ctl00_cpContent_cpContent_rptArticles_ctl28_ctlArticle_divSummary">
+    The following information is provided so that students and employees in the university community can avoid violating federal copyright law and understand the risks associated with unauthorized peer-to-peer file sharing.
+  </div>
+  
+</div>
+      
+  </div>
+
+</div>
+
+
+
+<div id="divAttachments" class="js-article-attachments"></div>
+
+</div>
+
+</div>
+
+<div id="ctl00_ctl00_cpContent_cpContent_divProgress" style="display: none; z-index: 60;">
+  <div id="ctl00_ctl00_cpContent_cpContent_pbMain" class="progress-box-container"><div class="progress-box-body"><div class="well shadow"><h2 class="h4 gutter-top-none">Deleting...</h2><div class="progress" style="margin-bottom: 0;"><div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuemin="0" aria-valuemax="100" style="width: 100%"></div></div></div></div></div>
+</div>
+
+
+
+  </div>
+
+
+  </div>
+</main>
+
+
+
+<script type="text/javascript">
+//<![CDATA[
+setNavPosition('TDKnowledgeBase');window.CKEDITOR_BASEPATH = 'https://services.ku.edu/TDPortal/Content/ckeditor/';
+//]]>
+</script>
+<script src="https://services.ku.edu/TDPortal/Content/ckeditor/ckeditor.js?t=C6HH5UF" type="text/javascript"></script>
+<script type="text/javascript">
+//<![CDATA[
+var CKEditor_Controls=[],CKEditor_Init=[];function CKEditor_TextBoxEncode(d,e){var f;if(typeof CKEDITOR=='undefined'||typeof CKEDITOR.instances[d]=='undefined'){f=document.getElementById(d);if(f)f.value=f.value.replace(/</g,'&lt;').replace(/>/g,'&gt;');}else{var g=CKEDITOR.instances[d];if(e&&(typeof Page_BlockSubmit=='undefined'||!Page_BlockSubmit)){g.destroy();f=document.getElementById(d);if(f)f.style.visibility='hidden';}else g.updateElement();}};(function(){if(typeof CKEDITOR!='undefined'){var d=document.getElementById('ctl00_ctl00_cpContent_cpContent_shareBody_txtBody');if(d)d.style.visibility='hidden';}var e=function(){var f=CKEditor_Controls,g=CKEditor_Init,h=window.pageLoad,i=function(){for(var j=f.length;j--;){var k=document.getElementById(f[j]);if(k&&k.value&&(k.value.indexOf('<')==-1||k.value.indexOf('>')==-1))k.value=k.value.replace(/&lt;/g,'<').replace(/&gt;/g,'>').replace(/&amp;/g,'&');}if(typeof CKEDITOR!='undefined')for(var j=0;j<g.length;j++)g[j].call(this);};window.pageLoad=function(j,k){if(k.get_isPartialLoad())setTimeout(i,0);if(h&&typeof h=='function')h.call(this,j,k);};if(typeof Page_ClientValidate=='function'&&typeof CKEDITOR!='undefined')Page_ClientValidate=CKEDITOR.tools.override(Page_ClientValidate,function(j){return function(){for(var k in CKEDITOR.instances){if(document.getElementById(k))CKEDITOR.instances[k].updateElement();}return j.apply(this,arguments);};});setTimeout(i,0);};if(typeof Sys!='undefined'&&typeof Sys.Application!='undefined')Sys.Application.add_load(e);if(window.addEventListener)window.addEventListener('load',e,false);else if(window.attachEvent)window.attachEvent('onload',e);})();CKEditor_Controls.push('ctl00_ctl00_cpContent_cpContent_shareBody_txtBody');
+CKEditor_Init.push(function(){if(typeof CKEDITOR.instances['ctl00_ctl00_cpContent_cpContent_shareBody_txtBody']!='undefined' || !document.getElementById('ctl00_ctl00_cpContent_cpContent_shareBody_txtBody')) return;CKEDITOR.replace('ctl00_ctl00_cpContent_cpContent_shareBody_txtBody',{"autoGrow_maxHeight" : 175, "autoGrow_minHeight" : 175, "contentsCss" : ['https://services.ku.edu/TDPortal/Content/ckeditor/contents.css', '/TDPortal/Content/FontAwesome/css/fontawesome.min.css', '/TDPortal/Content/FontAwesome/css/brands.min.css', '/TDPortal/Content/FontAwesome/css/regular.min.css', '/TDPortal/Content/FontAwesome/css/solid.min.css', '/TDPortal/Content/FontAwesome/css/v4-shims.min.css'], "height" : "175", "htmlEncodeOutput" : true, "image_previewText" : " ", "removePlugins" : "magicline,devtools,templates,elementspath,fontawesome,youtube,uploadimage,simpleimage,remoteimageblocker", "title" : "Message", "toolbar" : "TDSimple"}); });
+
+var Page_ValidationActive = false;
+if (typeof(ValidatorOnLoad) == "function") {
+    ValidatorOnLoad();
+}
+
+function ValidatorOnSubmit() {
+    if (Page_ValidationActive) {
+        return ValidatorCommonOnSubmit();
+    }
+    else {
+        return true;
+    }
+}
+        Sys.Application.add_init(function() {
+    $create(Sys.UI._UpdateProgress, {"associatedUpdatePanelId":null,"displayAfter":500,"dynamicLayout":true}, null, null, $get("ctl00_ctl00_upMain"));
+});
+//]]>
+</script>
+</form>
+
+
+
+
+
+  <footer role="contentinfo">
+
+    <div class="master-footer">
+      <div class="container" style="width: 100%; background-color: #003459; color: #FFFFFF; padding-top: 50px; padding-bottom: 45px; font-family: Segoe UI; font-size: 1.5rem; line-height: 2.25rem">
+            <div class="container">
+                <div class="row" style="display: flex; flex-wrap: wrap">
+        
+                    <div class="col-xs-12 col-sm-12 col-md-6">
+                        <div style="width: 210px">
+                            <a href="https://ku.edu" title="The University of Kansas">
+                                <img class="img-responsive" src="https://technology.ku.edu/libraries/ku-web-styleguide/images/logos/KUSig_Horz_Web_White.png" alt="KU The University of Kansas" style="width: 100%; margin-bottom: 32.5px">
+                            </a>
+                        </div>
+        
+                        <div>
+                            <div style="margin-bottom: 32.5px">
+                                <address>
+                                    Strong Hall
+                                    <br>
+                                    1450 Jayhawk Blvd.
+                                    <br>
+                                    Lawrence, KS 66045
+                                    <br>
+                                </address>
+        
+                                <address>
+                                    <a href="mailto:policy@ku.edu" style="color: #FFFFFF">policy@ku.edu</a>
+                                    <br>
+                                    <a href="tel:785-864-9600" style="color: #FFFFFF">785-864-9600</a>
+                                </address>
+                            </div>
+                        </div>
+        
+                        <div>
+                            <div style="font-size: 17.5px; width: 100%; margin-bottom: 32.5px">
+                                <a style="padding-right: 1rem !important" href="https://www.facebook.com/KU/">
+                                    <i aria-hidden="true" class="fa-brands fa-square-facebook" style="color: #FFFFFF"></i>
+                                    <span class="fa-sr-only">University of Kansas Facebook account</span>
+                                </a>
+                                <a style="padding-right: 1rem !important" href="https://www.instagram.com/universityofkansas/">
+                                    <i aria-hidden="true" class="fa-brands fa-instagram" style="color: #FFFFFF"></i>
+                                    <span class="fa-sr-only">University of Kansas Instagram account</span>
+                                </a>
+                                <a style="padding-right: 1rem !important" href="https://twitter.com/univofkansas">
+                                    <i aria-hidden="true" class="fa-brands fa-twitter" style="color: #FFFFFF"></i>
+                                    <span class="fa-sr-only">University of Kansas X-Twitter account</span>
+                                </a>
+                                <a style="padding-right: 1rem !important" href="https://www.youtube.com/user/KU">
+                                    <i aria-hidden="true" class="fa-brands fa-youtube" style="color: #FFFFFF"></i>
+                                    <span class="fa-sr-only">University of Kansas YouTube account</span>
+                                </a>
+                                <a style="padding-right: 1rem !important" href="https://www.linkedin.com/school/university-of-kansas/">
+                                    <i aria-hidden="true" class="fa-brands fa-linkedin" style="color: #FFFFFF"></i>
+                                    <span class="fa-sr-only">University of Kansas LinkedIn account</span>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div style="width: 100px; margin-top: 20px; margin-bottom: 20px">
+                            <hr style="background-color: #2767FF; height: 9px; border-top: 1px solid #000000; margin-top: 1rem; margin-bottom: 1rem">
+                        </div>
+                    </div>
+        
+                    <div class="col-xs-12 col-sm-12 col-md-3">
+                        <div>
+                            <div>
+                                <ul style="list-style: none; width: 100%">
+                                    <li style="margin-left: -35px; border-top: 3px solid #2767FF; border-bottom: 1px solid #2767FF; padding: 1.125rem 0">
+                                        <a href="https://policyoffice.ku.edu/" style="color: #FFFFFF">Policy Administration</a>
+                                    </li>
+                                    <li style="margin-left: -35px; border-bottom: 1px solid #2767FF; padding: 1.125rem 0">
+                                        <a href="https://policy.ku.edu/university-policy-program" style="color: #FFFFFF">University Policy Program</a>
+                                    </li>
+                                    <li style="margin-left: -35px; border-bottom: 1px solid #2767FF; padding: 1.125rem 0">
+                                        <a href="https://policyoffice.ku.edu/developing-university-policy" style="color: #FFFFFF">Develop University Policy</a>
+                                    </li>
+                                    <li style="margin-left: -35px; border-bottom: 1px solid #2767FF; padding: 1.125rem 0">
+                                        <a href="https://policyoffice.ku.edu/policy-library-template" style="color: #FFFFFF">Policy Library Template</a>
+                                    </li>
+                                    <li style="margin-left: -35px; border-bottom: 1px solid #2767FF; padding: 1.125rem 0">
+                                        <a href="https://services.ku.edu/TDClient/818/Portal/Requests/ServiceCatalog" style="color: #FFFFFF">Need Help?</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+        
+                    <div class="col-xs-12 col-sm-12 col-md-3">
+                        <div>
+                            <div>
+                                <ul style="list-style: none; width: 100%">
+                                    <li style="margin-left: -35px; border-top: 3px solid #2767FF; border-bottom: 1px solid #2767FF; padding: 1.125rem 0">
+                                        <a href="https://ku.edu/visit" style="color: #FFFFFF">Visit KU</a>
+                                    </li>
+                                    <li style="margin-left: -35px; border-bottom: 1px solid #2767FF; padding: 1.125rem 0">
+                                        <a href="https://ku.edu/admissions" style="color: #FFFFFF">Apply</a>
+                                    </li>
+                                    <li style="margin-left: -35px; border-bottom: 1px solid #2767FF; padding: 1.125rem 0">
+                                        <a href="http://www.kuendowment.org/" style="color: #FFFFFF">Give</a>
+                                    </li>
+                                    <li style="margin-left: -35px; border-bottom: 1px solid #2767FF; padding: 1.125rem 0">
+                                        <a href="https://news.ku.edu/" style="color: #FFFFFF">News</a>
+                                    </li>
+                                    <li style="margin-left: -35px; border-bottom: 1px solid #2767FF; padding: 1.125rem 0">
+                                        <a href="https://calendar.ku.edu/" style="color: #FFFFFF">Events</a>
+                                    </li>
+                                    <li style="margin-left: -35px; border-bottom: 1px solid #2767FF; padding: 1.125rem 0">
+                                        <a href="https://employment.ku.edu/" style="color: #FFFFFF">Careers</a>
+                                    </li>
+                                    <li style="margin-left: -35px; border-bottom: 1px solid #2767FF; padding: 1.125rem 0">
+                                        <a href="http://www.kualumni.org/" style="color: #FFFFFF">Alumni</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row" style="display: flex; flex-wrap: wrap; align-items: center !important">
+					<div class="col-xs-12 col-sm-12 col-md-5 col-lg-4">
+						<div>
+								<a href="https://services.ku.edu/TDClient/818/Portal/KB/ArticleDet?ID=21297" style="color: #FFFFFF">Nondiscrimination statement</a>
+						</div>
+					</div>
+
+					<div class="col-xs-12 col-sm-12 col-md-3 col-lg-5">
+						<a href="https://accessibility.ku.edu" style="color: #FFFFFF">Accessibility</a><span> | </span>
+						<a href="https://cms.ku.edu" style="color: #FFFFFF">Website support</a><span> | </span>
+						<a href="https://technology.ku.edu/cas" style="color: #FFFFFF">CMS login</a>
+					</div>
+
+					<div class="col-xs-12 col-sm-12 col-md-4 col-lg-3" style="text-align: right">
+						<div style="margin: 0 0 15px">
+							<a href="https://ksdegreestats.org">
+							<img alt="KU degree stats logo" src="https://technology.ku.edu/libraries/ku-web-styleguide/images/logos/KSDegreeStats_Logo_Std.png" style="width: 174px">
+							</a>
+						</div>
+						<div style="font-size: 1.125rem">
+							<p>© 2026 <a href="https://ku.edu" style="color: #FFFFFF">The University of Kansas</a></p>
+						</div>
+					</div>
+				</div>
+            </div>
+        </div>
+      
+    </div>
+
+  </footer>
+
+
+
+<script>
+
+    
+    
+
+      // Inject the Google Analytics isogram. This must happen here because it
+      // cannot be injected through an external javascript library.
+      (function (i, s, o, g, r, a, m) {
+        i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+          (i[r].q = i[r].q || []).push(arguments)
+        }, i[r].l = 1 * new Date(); a = s.createElement(o),
+          m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+      })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+    
+
+      // Per Incident #6707155. Need to focus on img. pseudo-class :focus-within is not supported in IE
+      (function ($) {
+        var $anchor = $('#divLogo a');
+        var $beLogo = $('#divLogo a img');
+
+        $anchor.focus(function () {
+          $beLogo.addClass('accessibility-focus-on-logo');
+        }).blur(function () {
+          $beLogo.removeClass('accessibility-focus-on-logo');
+        });
+
+        
+        
+          const queryParams = new URLSearchParams(window.location.search);
+          let showChatbot = true;
+          if (queryParams.has('nobot')) {
+            const nobotFlag = queryParams.get('nobot');
+            if (nobotFlag === '1' || nobotFlag === 'true') {
+              showChatbot = false;
+            }
+          }
+
+          if(showChatbot) {
+            $.ajax({
+              url: "/TDClient/818/Portal/Chatbots/GetScript",
+              type: "GET",
+              dataType: 'text',
+              success: function (data) {
+                
+                var jQueryAjaxSettingsCache = jQuery.ajaxSettings.cache;
+                jQuery.ajaxSettings.cache = true;
+                $(document.body).append(data);
+                jQuery.ajaxSettings.cache = jQueryAjaxSettingsCache;
+              }
+            });
+          }
+        
+
+        window.addEventListener("message", (event) => {
+
+          // Only accept events that come from the same origin
+          if (event.origin != window.location.origin) {
+            return;
+          }
+
+          switch (event.data.type) {
+
+            case "authenticate-using-popup":
+              handleAuthenticateUsingPopup(event.data.payload);
+              break;
+
+            case "authenticated-successfully":
+              handleAuthenticatedSuccessfully(event.data.payload);
+              break;
+
+            default:
+              break;
+          }
+
+        });
+
+        function handleAuthenticateUsingPopup(payload) {
+          let loginUrl = '/TDClient/818/Portal/Login.aspx';
+
+          if (payload.successCallbackUrl) {
+            loginUrl += '?SuccessCallbackUrl=' + payload.successCallbackUrl;
+          }
+
+          window.open(loginUrl, "_blank", "popup=1");
+        }
+
+        function handleAuthenticatedSuccessfully() {
+          event.source.close();
+          window.location.href = window.location.href;
+        }
+    })(jQuery);
+
+</script>
+
+</body>
+</html>

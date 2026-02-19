@@ -1,0 +1,743 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>Regulating platform risk and design: ChatGPT says the quiet part out loud</title>
+
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <meta name="theme-color" content="#c72513">
+
+    <link rel="preload stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300..800&display=swap" 
+        as="style" onload="this.onload=null;this.rel='stylesheet'" crossorigin>
+    <link rel="preload stylesheet" href="https://fonts.googleapis.com/css2?family=Lora:wght@400..700&display=swap" 
+        as="style" onload="this.onload=null;this.rel='stylesheet'" crossorigin>
+
+    <script defer type="module" src="https://cyberlaw.stanford.edu/assets/built/app.js?v=e3f8cac3c0"></script>
+
+    <link rel="stylesheet" type="text/css" href="https://cyberlaw.stanford.edu/assets/built/app.css?v=e3f8cac3c0" />
+
+    <script>
+  // Global values needed
+  const themeGlobal = {
+    currentPage: parseInt(''),
+    nextPage: parseInt(''),
+    nextPageLink: '',
+    maxPages: parseInt(''), 
+    lastPage: `` === `` ? true : false,
+    postsPerPage: parseInt('12'),
+    total: parseInt(''),
+    siteUrl: 'https://cyberlaw.stanford.edu',
+  }
+
+  // Calculate contrast & HSL value;
+  function getColorInfo(hexcolor) {
+    // get contrast
+    if (hexcolor.slice(0, 1) === '#') { hexcolor = hexcolor.slice(1); }
+    if (hexcolor.length === 3) { hexcolor = hexcolor.split('').map(function (hex) { return hex + hex;}).join(''); }
+    let r = parseInt(hexcolor.substr(0,2),16), g = parseInt(hexcolor.substr(2,2),16), b = parseInt(hexcolor.substr(4,2),16);
+    let yiq = ((r * 299) + (g * 587) + (b * 114)) / 1000;
+    const colorContrast = (yiq >= 128) ? '#000' : '#fff';
+
+    //get HSL
+    r /= 255, g /= 255, b /= 255;
+    const max = Math.max(r, g, b), min = Math.min(r, g, b);
+    let h, s, l = (max + min)  /  2;  
+    if ( max == min ) { h = s = 0; } else {
+      let d = max - min;
+      s = l > 0.5 ? d / (2 - max - min) : d / (max + min);
+      switch(max){
+        case r: h = (g - b) / d + (g < b ? 6 : 0); break;
+        case g: h = (b - r) / d + 2; break;
+        case b: h = (r - g) / d + 4; break;
+      }
+      h /= 6;
+    }
+    const colorHSL = [Math.round(h * 360), Math.round(s * 100), Math.round(l * 100)];
+
+    // return
+    return { colorContrast, colorHSL }
+  };
+
+  const brandColor = getColorInfo("#c72513");
+  let style = document.createElement('style');
+  style.innerHTML = `:root { 
+    --color-brand-contrast: ${brandColor.colorContrast}; 
+    --color-brand-h: ${brandColor.colorHSL[0]};
+    --color-brand-s: ${brandColor.colorHSL[1]}%;
+    --color-brand-l: ${brandColor.colorHSL[2]}%;
+    --color-brand-hsl: ${brandColor.colorHSL[0]} ${brandColor.colorHSL[1]}% ${brandColor.colorHSL[2]}%;
+  }`
+  document.getElementsByTagName('head')[0].appendChild(style);
+</script>
+
+<style>
+  .gh-heading { font-family: var(--gh-font-heading); }
+  .gh-body { font-family: var(--gh-font-body); }
+</style>
+
+    <meta name="description" content="Platform laws too often use terms like &quot;design&quot; or &quot;risk mitigation” as euphemisms for mandates that target legally protected expression. When asked GPT about them, its answers said that quiet part out loud.">
+    <link rel="icon" href="https://cyberlaw.stanford.edu/content/images/size/w256h256/2026/01/cislogo.png" type="image/png">
+    <link rel="canonical" href="https://cyberlaw.stanford.edu/blog/2024/08/regulating-platform-risk-and-design-chatgpt-says-the-quiet-part-out-loud/">
+    <meta name="referrer" content="no-referrer-when-downgrade">
+    
+    <meta property="og:site_name" content="Stanford CIS">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Regulating platform risk and design: ChatGPT says the quiet part out loud">
+    <meta property="og:description" content="Platform laws too often use terms like &quot;design&quot; or &quot;risk mitigation” as euphemisms for mandates that target legally protected expression. When asked GPT about them, its answers said that quiet part out loud.">
+    <meta property="og:url" content="https://cyberlaw.stanford.edu/blog/2024/08/regulating-platform-risk-and-design-chatgpt-says-the-quiet-part-out-loud/">
+    <meta property="og:image" content="https://cyberlaw.stanford.edu/content/images/2024/08/Computer-censorship-image-CC-BY-2.0-opensourceway.jpg">
+    <meta property="article:published_time" content="2024-08-22T13:00:30.000Z">
+    <meta property="article:modified_time" content="2024-09-17T18:15:59.000Z">
+    <meta property="article:tag" content="Blog">
+    <meta property="article:tag" content="Artificial Intelligence">
+    <meta property="article:tag" content="censorship">
+    <meta property="article:tag" content="Intermediary Liability">
+    
+    <meta property="article:publisher" content="https://www.facebook.com/stanfordcis">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Regulating platform risk and design: ChatGPT says the quiet part out loud">
+    <meta name="twitter:description" content="Platform laws too often use terms like &quot;design&quot; or &quot;risk mitigation” as euphemisms for mandates that target legally protected expression. When asked GPT about them, its answers said that quiet part out loud.">
+    <meta name="twitter:url" content="https://cyberlaw.stanford.edu/blog/2024/08/regulating-platform-risk-and-design-chatgpt-says-the-quiet-part-out-loud/">
+    <meta name="twitter:image" content="https://cyberlaw.stanford.edu/content/images/2024/08/Computer-censorship-image-CC-BY-2.0-opensourceway.jpg">
+    <meta name="twitter:label1" content="Written by">
+    <meta name="twitter:data1" content="Daphne Keller">
+    <meta name="twitter:label2" content="Filed under">
+    <meta name="twitter:data2" content="Blog, Artificial Intelligence, censorship, Intermediary Liability">
+    <meta name="twitter:site" content="@StanfordCIS">
+    <meta property="og:image:width" content="1024">
+    <meta property="og:image:height" content="575">
+    
+    <script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "publisher": {
+        "@type": "Organization",
+        "name": "Stanford CIS",
+        "url": "https://cyberlaw.stanford.edu/",
+        "logo": {
+            "@type": "ImageObject",
+            "url": "https://cyberlaw.stanford.edu/content/images/2023/12/cis.webp"
+        }
+    },
+    "author": {
+        "@type": "Person",
+        "name": "Daphne Keller",
+        "image": {
+            "@type": "ImageObject",
+            "url": "https://cyberlaw.stanford.edu/content/images/sites/default/files/styles/profile_image/public/people/portaits/img_6931.jpg",
+            "width": 220,
+            "height": 330
+        },
+        "url": "https://cyberlaw.stanford.edu/about/people/daphne-keller/",
+        "sameAs": []
+    },
+    "headline": "Regulating platform risk and design: ChatGPT says the quiet part out loud",
+    "url": "https://cyberlaw.stanford.edu/blog/2024/08/regulating-platform-risk-and-design-chatgpt-says-the-quiet-part-out-loud/",
+    "datePublished": "2024-08-22T13:00:30.000Z",
+    "dateModified": "2024-09-17T18:15:59.000Z",
+    "image": {
+        "@type": "ImageObject",
+        "url": "https://cyberlaw.stanford.edu/content/images/2024/08/Computer-censorship-image-CC-BY-2.0-opensourceway.jpg",
+        "width": 1024,
+        "height": 575
+    },
+    "keywords": "Blog, Artificial Intelligence, censorship, Intermediary Liability",
+    "description": "Platform laws too often use terms like &quot;design&quot; or &quot;risk mitigation” as euphemisms for mandates that target legally protected expression. When asked GPT about them, its answers said that quiet part out loud.",
+    "mainEntityOfPage": "https://cyberlaw.stanford.edu/blog/2024/08/regulating-platform-risk-and-design-chatgpt-says-the-quiet-part-out-loud/"
+}
+    </script>
+
+    <meta name="generator" content="Ghost 6.19">
+    <link rel="alternate" type="application/rss+xml" title="Stanford CIS" href="https://cyberlaw.stanford.edu/publications/rss/">
+    <script defer src="https://cdn.jsdelivr.net/ghost/portal@~2.64/umd/portal.min.js" data-i18n="true" data-ghost="https://cyberlaw.stanford.edu/" data-key="e5cc6f4534b756c5b3e6d235f4" data-api="https://stanford-cis.ghost.io/ghost/api/content/" data-locale="en" crossorigin="anonymous"></script><style id="gh-members-styles">.gh-post-upgrade-cta-content,
+.gh-post-upgrade-cta {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    text-align: center;
+    width: 100%;
+    color: #ffffff;
+    font-size: 16px;
+}
+
+.gh-post-upgrade-cta-content {
+    border-radius: 8px;
+    padding: 40px 4vw;
+}
+
+.gh-post-upgrade-cta h2 {
+    color: #ffffff;
+    font-size: 28px;
+    letter-spacing: -0.2px;
+    margin: 0;
+    padding: 0;
+}
+
+.gh-post-upgrade-cta p {
+    margin: 20px 0 0;
+    padding: 0;
+}
+
+.gh-post-upgrade-cta small {
+    font-size: 16px;
+    letter-spacing: -0.2px;
+}
+
+.gh-post-upgrade-cta a {
+    color: #ffffff;
+    cursor: pointer;
+    font-weight: 500;
+    box-shadow: none;
+    text-decoration: underline;
+}
+
+.gh-post-upgrade-cta a:hover {
+    color: #ffffff;
+    opacity: 0.8;
+    box-shadow: none;
+    text-decoration: underline;
+}
+
+.gh-post-upgrade-cta a.gh-btn {
+    display: block;
+    background: #ffffff;
+    text-decoration: none;
+    margin: 28px 0 0;
+    padding: 8px 18px;
+    border-radius: 4px;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.gh-post-upgrade-cta a.gh-btn:hover {
+    opacity: 0.92;
+}</style>
+    <script defer src="https://cdn.jsdelivr.net/ghost/sodo-search@~1.8/umd/sodo-search.min.js" data-key="e5cc6f4534b756c5b3e6d235f4" data-styles="https://cdn.jsdelivr.net/ghost/sodo-search@~1.8/umd/main.css" data-sodo-search="https://stanford-cis.ghost.io/" data-locale="en" crossorigin="anonymous"></script>
+    
+    <link href="https://cyberlaw.stanford.edu/webmentions/receive/" rel="webmention">
+    <script defer src="/public/cards.min.js?v=e3f8cac3c0"></script>
+    <link rel="stylesheet" type="text/css" href="/public/cards.min.css?v=e3f8cac3c0">
+    <script defer src="/public/comment-counts.min.js?v=e3f8cac3c0" data-ghost-comments-counts-api="https://cyberlaw.stanford.edu/members/api/comments/counts/"></script>
+    <script defer src="/public/member-attribution.min.js?v=e3f8cac3c0"></script>
+    <script defer src="/public/ghost-stats.min.js?v=e3f8cac3c0" data-stringify-payload="false" data-datasource="analytics_events" data-storage="localStorage" data-host="https://cyberlaw.stanford.edu/.ghost/analytics/api/v1/page_hit"  tb_site_uuid="d517bf5e-0944-433c-a10e-1dfe572602c5" tb_post_uuid="c175d162-39f8-49c0-896d-5b59957fd86c" tb_post_type="post" tb_member_uuid="undefined" tb_member_status="undefined"></script><style>:root {--ghost-accent-color: #c72513;}</style>
+    <meta name="google-site-verification" content="viL2jzFJpkJZDqcqeU6aM8Dhswu1-CyYYkTa6FJRTK0" />
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-05ZJ3P0LKG"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-05ZJ3P0LKG');
+</script>
+  </head>
+  <body class="post-template tag-blog tag-artificial-intelligence tag-censorship tag-intermediary-liability relative overflow-x-hidden bg-backgr text-typogr" x-data="{showMenu : false}" :class="{ 'overflow-hidden': showMenu, '': !showMenu}" @keydown.escape="menuOpen = false" @keydown.cmk.k="document.querySelector('[data-ghost-search]').click()">
+
+    <header class="bg-backgr text-typogr-tone" x-init="renderSubmenus()">
+  <div class="px-4">
+    <div class="max-w-container mx-auto flex py-3 gap-6 sm:py-4 lg:py-6">
+      <a href="https://cyberlaw.stanford.edu">
+          <picture  data-logo='default'>
+  <source 
+    srcset="/content/images/size/w100/format/webp/2023/12/cis.webp 100w, /content/images/size/w320/format/webp/2023/12/cis.webp 320w, /content/images/size/w640/format/webp/2023/12/cis.webp 600w"
+    sizes="(max-width: 800px) 200px, 320px"
+    type="image/webp"
+  >
+  <img class="h-[var(--logo-h-mobile)] w-[var(--logo-w-mobile)] md:h-[var(--logo-h-desktop)] md:w-[var(--logo-w-desktop)] transition duration-400 blur"
+    onload="this.classList.remove('blur')"
+    loading="lazy"
+    srcset="/content/images/size/w100/format/webp/2023/12/cis.webp 100w, /content/images/size/w320/format/webp/2023/12/cis.webp 320w, /content/images/size/w640/format/webp/2023/12/cis.webp 600w"
+    sizes="(max-width: 800px) 200px, 320px"
+    src="/content/images/size/w30/2023/12/cis.webp"
+    alt="Stanford CIS"
+  />
+</picture>
+      </a>
+
+      <p class="max-w-lg text-sm sm:flex font-lora text-brand italic self-end hidden md:text-base">
+        The Center for Internet and Society at Stanford Law School is a leader in the study of the law and policy around the Internet and other emerging technologies.
+      </p>
+    </div>
+  </div>
+  
+  <div class="bg-backgr-tone border-y border-border px-4 font-[450]">
+    <div class="max-w-container mx-auto py-2 flex items-center">
+      <button class="flex md:hidden items-center justify-center h-8 mr-1" @click="showMenu = !showMenu" aria-label="Toggle Menu"
+        :aria-expanded="showMenu" aria-controls="nav-list">
+        <span :class="{ 'block': !showMenu, 'hidden': showMenu}"><i class="icon icon-menu w-5 h-5 stroke-2">
+  <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-menu-2" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+  <path d="M4 6l16 0" />
+  <path d="M4 12l16 0" />
+  <path d="M4 18l16 0" />
+</svg>
+</i></span>
+        <span class="hidden" :class="{ 'hidden': !showMenu, 'block': showMenu}"><i class="icon icon-close w-5 h-5 stroke-2">
+  <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-x" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+  <path d="M18 6l-12 12" />
+  <path d="M6 6l12 12" />
+</svg>
+</i></span>
+        <span class="ml-1 sr-only">Menu</span>
+      </button>
+
+      <nav class="hidden text-sm md:flex flex-1" data-nav-desktop>
+        <ul class="flex gap-1" data-nav-items>
+    <li class="nav-about-us relative flex items-center" 
+      data-label="About Us" data-length="8">
+      <a class="px-3 py-2 decoration-2 opacity-90 hover:text-typogr hover:opacity-100" href="https://cyberlaw.stanford.edu/about-us/">
+        <span>About Us</span>
+      </a>
+    </li>
+    <li class="nav-work relative flex items-center" 
+      data-label="Work" data-length="4">
+      <a class="px-3 py-2 decoration-2 opacity-90 hover:text-typogr hover:opacity-100" href="https://cyberlaw.stanford.edu/work/">
+        <span>Work</span>
+      </a>
+    </li>
+    <li class="nav-people relative flex items-center" 
+      data-label="People" data-length="6">
+      <a class="px-3 py-2 decoration-2 opacity-90 hover:text-typogr hover:opacity-100" href="https://cyberlaw.stanford.edu/about/people/">
+        <span>People</span>
+      </a>
+    </li>
+    <li class="nav-blog nav-current-parent relative flex items-center" 
+      data-label="Blog" data-length="4">
+      <a class="px-3 py-2 decoration-2 opacity-90 hover:text-typogr hover:opacity-100" href="https://cyberlaw.stanford.edu/blog/">
+        <span>Blog</span>
+      </a>
+    </li>
+    <li class="nav-publications relative flex items-center" 
+      data-label="Publications" data-length="12">
+      <a class="px-3 py-2 decoration-2 opacity-90 hover:text-typogr hover:opacity-100" href="https://cyberlaw.stanford.edu/publications/">
+        <span>Publications</span>
+      </a>
+    </li>
+    <li class="nav-press relative flex items-center" 
+      data-label="Press" data-length="5">
+      <a class="px-3 py-2 decoration-2 opacity-90 hover:text-typogr hover:opacity-100" href="https://cyberlaw.stanford.edu/press/">
+        <span>Press</span>
+      </a>
+    </li>
+</ul>
+      </nav>
+
+      <span class="flex-1 md:hidden"></span>
+
+      <div class="flex items-center gap-1.5">
+          <a href="/subscribe/" class="rounded-theme bg-brand text-sm text-brand-contrast font-medium px-3 py-1.5 md:px-4 md:py-2">Subscribe</a>
+
+        <button class="flex items-center justify-center w-8 h-8" data-ghost-search title="Search" aria-label="Search">
+          <i class="icon icon-search w-5 h-5 stroke-2">
+  <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+  <path d="M10 10m-7 0a7 7 0 1 0 14 0a7 7 0 1 0 -14 0" />
+  <path d="M21 21l-6 -6" />
+</svg>
+</i>        </button>
+      </div>
+    </div>
+  </div>
+
+  <div class="max-w-container mx-auto px-4 bg-backgr-tone relative">
+    <!-- Mobile menu -->
+<div class="z-[100] hidden w-full bg-backgr-tone absolute left-0 top-0 text-typogr-tone" :class="{ 'block': showMenu, 'hidden': !showMenu}">
+  <div class="flex flex-col justify-center text-sm" aria-label="Global">
+    <nav class="md:hidden" data-nav-mobile>
+      <ul class="flex flex-col" data-nav-items>
+    <li class="nav-about-us flex flex-wrap border-b border-border" 
+      data-label="About Us" data-length="8">
+      <a class="flex-1 w-full px-4 py-2 decoration-2 opacity-90 hover:text-typogr hover:opacity-100 hover:bg-backgr-tone" href="https://cyberlaw.stanford.edu/about-us/">
+        <span>About Us</span>
+      </a>
+    </li>
+    <li class="nav-work flex flex-wrap border-b border-border" 
+      data-label="Work" data-length="4">
+      <a class="flex-1 w-full px-4 py-2 decoration-2 opacity-90 hover:text-typogr hover:opacity-100 hover:bg-backgr-tone" href="https://cyberlaw.stanford.edu/work/">
+        <span>Work</span>
+      </a>
+    </li>
+    <li class="nav-people flex flex-wrap border-b border-border" 
+      data-label="People" data-length="6">
+      <a class="flex-1 w-full px-4 py-2 decoration-2 opacity-90 hover:text-typogr hover:opacity-100 hover:bg-backgr-tone" href="https://cyberlaw.stanford.edu/about/people/">
+        <span>People</span>
+      </a>
+    </li>
+    <li class="nav-blog nav-current-parent flex flex-wrap border-b border-border" 
+      data-label="Blog" data-length="4">
+      <a class="flex-1 w-full px-4 py-2 decoration-2 opacity-90 hover:text-typogr hover:opacity-100 hover:bg-backgr-tone" href="https://cyberlaw.stanford.edu/blog/">
+        <span>Blog</span>
+      </a>
+    </li>
+    <li class="nav-publications flex flex-wrap border-b border-border" 
+      data-label="Publications" data-length="12">
+      <a class="flex-1 w-full px-4 py-2 decoration-2 opacity-90 hover:text-typogr hover:opacity-100 hover:bg-backgr-tone" href="https://cyberlaw.stanford.edu/publications/">
+        <span>Publications</span>
+      </a>
+    </li>
+    <li class="nav-press flex flex-wrap border-b border-border" 
+      data-label="Press" data-length="5">
+      <a class="flex-1 w-full px-4 py-2 decoration-2 opacity-90 hover:text-typogr hover:opacity-100 hover:bg-backgr-tone" href="https://cyberlaw.stanford.edu/press/">
+        <span>Press</span>
+      </a>
+    </li>
+</ul>
+    </nav>
+
+  </div>
+</div>  </div>
+</header>
+
+
+    <main class="main">
+      
+  <section class="px-4 my-8" data-post-hero>
+  <div class="max-w-content mx-auto border-b border-border pb-8">
+    <nav class="flex text-sm mb-4" aria-label="Breadcrumb">
+  <ol role="list" class="flex flex-wrap items-center">
+    <li>
+      <a href="/" class="text-typogr-tone opacity-80 hover:opacity-100">
+        <span class="">Home</span>
+      </a>
+    </li>
+      <li class="flex items-center">
+        <i class="icon icon-chevrons-right w-4 h-4 opacity-25 mx-1 stroke-2">
+  <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevrons-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M7 7l5 5l-5 5" /><path d="M13 7l5 5l-5 5" /></svg>
+</i>        <a href="/our-work/topics/blog/" class="text-typogr-tone opacity-80 hover:opacity-100">
+          <span class="">Blog</span>
+        </a>
+      </li>
+      <li class="flex items-center">
+        <i class="icon icon-chevrons-right w-4 h-4 opacity-25 mx-1 stroke-2">
+  <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevrons-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M7 7l5 5l-5 5" /><path d="M13 7l5 5l-5 5" /></svg>
+</i>        <a href="/our-work/topics/artificial-intelligence/" class="text-typogr-tone opacity-80 hover:opacity-100">
+          <span class="">Artificial Intelligence</span>
+        </a>
+      </li>
+  </ol>
+</nav>
+
+    <h1 class="font-bold text-2xl md:text-3xl lg:text-4xl">
+      Regulating platform risk and design: ChatGPT says the quiet part out loud
+    </h1>
+
+    <div class="text-typogr-tone text-sm mt-4">
+        <span class="opacity-75">By</span>
+          
+          <a href="/about/people/daphne-keller/" title="Daphne Keller" data-author="daphne-keller"
+            class="font-semibold decoration-2 hover:underline" >Daphne Keller</a>
+      <span class="opacity-75">on</span> 
+      <time class="opacity-75" datetime="2024-08-22">
+        August 22, 2024 at 6:00 AM
+      </time>
+    </div>
+  </div>
+</section>
+  <article class="ghost-content prose prose-theme">
+    <p>Around the world, lawmakers are enacting laws that require platforms to change their operations, and that use language like “design,” “risk mitigation,” or “systems.” All too often, these are transparently euphemisms for mandates that target legally protected speech and information. This misdirection keeps lawmakers and their constituents from having honest discussions about the laws. It also muddies the waters for laws that actually <em>do</em> regulate platform design without regulating users’ speech. Both speech-restrictive and non-speech-restrictive design laws exist. It can be hard to tell them apart.&nbsp;</p><p>I recently stumbled across a very interesting tool for assessing what these laws actually mean: I asked ChatGPT. Specifically, I asked a customized version of ChatGPT called the “<a href="https://chatgpt.com/g/g-3gXHwOsOE-trust-safety-regulation-expert">Trust &amp; Safety Regulation expert</a>” about laws like the EU’s Digital Services Act (<a href="https://ec.europa.eu/commission/presscorner/detail/en/QANDA_20_2348" rel="noreferrer">DSA</a>) and the U.S.’s draft Kids Online Safety Act (<a href="https://www.techpolicy.press/tracker/kids-online-safety-act-kosa-s-1409/" rel="noreferrer">KOSA</a>). I was surprised by the answers I got. While lawyers may debate the finer nuances of such laws, ChatGPT says the quiet part out loud. It clearly and bluntly tells platforms that the laws require them to suppress legal expression.&nbsp;</p><p>The annotated transcripts showing what ChatGPT told me are <a href="https://docs.google.com/document/d/1YT2HLsrdCjZR2riiP-b-nDO9SdHItLevS6xBZt03Qpo/edit">here</a> for the US and <a href="https://docs.google.com/document/d/1dllVWwNfpj1U1U2AEfHd_ZHc0raWem8RvKXJ1mnyywg/edit">here</a> for Europe. They include discussion of topics I won’t discuss here--about things like EU “Right to Be Forgotten” law and copyright filters, and Texas’s social media law. The transcripts are are fascinating, and I won’t be offended if you go straight to the transcripts instead of reading the rest of this post. The post is about how we arrived at laws regulating things like "design features," what ChatGPT said, and why it matters. &nbsp;</p><h2 id="how-we-got-here-trying-to-regulate-lawful-but-awful-speech">How We Got Here: Trying to Regulate Lawful but Awful Speech</h2><p><strong>Lawful but awful speech as a category:</strong> The widespread desire to restrict “<a href="https://lawreviewblog.uchicago.edu/2022/06/28/keller-control-over-speech/">lawful but awful</a>” speech drives a great deal of platform regulation. This category has a special role in policymaking, because legislators can’t use the law to directly restrict it—yet both they and the general public often want them to find ways to do so anyway. The U.S. has a particularly wide swath of content in this category, because there is such a vast gap between speech that the First Amendment protects and speech that most Americans think is acceptable to share as a matter of morality or social norms. As a <em>category</em>, though, lawful but awful speech exists in every human rights-compliant legal system. There will always be material that is protected by law, but that many people—and many lawmakers—do not want to see and consider offensive, harmful, or dangerous.</p><p><strong>Other legal approaches to lawful but awful speech:</strong> For lawmakers concerned about harmful but currently lawful speech online, perhaps the most honest response is to simply ban more speech. Then courts can decide if new speech restrictions are justifiable, perhaps in light of <a href="https://scholarship.law.missouri.edu/facpubs/674/">changed circumstances</a> created by the Internet. Alternately, lawmakers might try using the force of law to require platforms to remove speech <em>online</em> even though the same content would be lawful if shared <em>offline</em>. (That’s how things worked under some drafts of the UK’s Online Safety Act.) Or a law might tell platforms that they can carry lawful but awful speech, but can’t “amplify” it. (I think that would be <a href="https://knightcolumbia.org/content/amplification-and-its-discontents">unconstitutional</a> in the U.S.) A less honest variant is to pass laws that nominally prohibit only legitimately illegal content, but do so using such unclear rules that platforms inevitably respond by taking down legal speech. (That happened with lots of sexual content or discussions of commercial sex work under the US’s <a href="https://www.aclu.org/news/civil-liberties/how-online-censorship-harms-sex-workers-and-lgbtq-communities">SESTA/FOSTA</a> legislation.) I have <a href="https://lawreviewblog.uchicago.edu/2022/06/28/keller-control-over-speech/">argued</a> that the best legal response to lawful but awful content is to put more controls in the hands of individual users, but that isn’t a solution if the goal is to ensure that no one sees or posts this material online.</p><p><strong>The “design,” “systems,” or “risk mitigation” approach</strong>: Today, one of the most common ways lawmakers try to suppress lawful speech is by creating vaguely defined mandates for platforms to improve things like “systems,” “design features” or “risk mitigation.” Laws like this are tricky, because there are <em>legitimate</em> ways that legislation can use similar words to govern non-speech aspects of platform operations. For example, laws that require platforms to protect users’ privacy or security frequently use state power to regulate design, systems, and risk mitigation. Competition laws like the EU’s Digital Markets Act regulate design by requiring interoperability. Laws that are fundamentally about things like privacy or competition can regulate design without reshaping the rules for online speech. (Or <a href="https://btlj.org/data/articles2018/vol33/33_1/Keller_Web.pdf">not</a>. It varies.)</p><p>Even laws that are clearly about speech can productively regulate the systems platforms use to moderate online content. That’s what the DMCA in the US and the DSA in the EU do in defining the mechanics for “notice and takedown” operations, including avenues for affected users to appeal erroneous takedowns. &nbsp;</p><p>Laws like this cross the line when they use state power to compel or encourage platforms to take down lawful speech. Well-meaning people often disagree about whether any particular law actually crosses that line. Debates about laws like KOSA in the US or the DSA’s “risk mitigation” provisions can sometimes devolve into unproductive standoffs. One side says that the laws are obviously designed to make platforms take down lawful but awful content. The other says no, this is just about systems. (It doesn't help that recent legislative <a href="https://cdn.sanity.io/files/3tzzh18d/production/f4a6834c6acf09b548e2b6cb3a4c0d4b0b9fb075.pdf" rel="noreferrer">drafting</a> has tended to mash up dozens of ideas, often producing hard-to-read legislation that mixes perfectly reasonable rules with rules that are poorly considered, almost certainly unconstitutional, or both.)  </p><p>I have found myself on both sides of this debate. In Europe, I was until recently among the faithful in maintaining that the DSA is <a href="https://ec.europa.eu/commission/presscorner/detail/en/QANDA_20_2348#:~:text=How%20can%20harmful,and%20crisis%20protocols.">just a law about systems</a>. (That faith has been deeply shaken by the way EU Commissioner <a href="https://www.article19.org/resources/eu-political-posturing-vs-human-rights-bretons-flawed-vision-for-dsa-enforcement/">Thierry Breton</a> has tried to use the DSA, among other things.) In the US, by contrast, I think laws like KOSA and the California Age Appropriate Design Code (AADC) clearly regulate speech. The Ninth Circuit recently <a href="https://cdn.ca9.uscourts.gov/datastore/opinions/2024/08/16/23-2969.pdf">agreed</a> about the AADC, saying that it “deputizes covered businesses into serving as censors for the state” under rules applicable to specific “content or proxies for content.”</p><h2 id="chatgpt-tells-platforms-to-restrict-access-to-lawful-content">ChatGPT Tells Platforms to Restrict Access to Lawful Content</h2><p>For platforms planning their compliance with laws like KOSA and the DSA, the most basic question is “what do I need to do?” ChatGPT has a lot of answers. One of the main answers is that platforms need to take down more lawful speech. (As it turns out, that’s not just the answer from the “regulation expert” version, it’s what the main ChatGPT. Those answers from plain-vanilla ChatGPT are linked in my <a href="https://docs.google.com/document/d/1YT2HLsrdCjZR2riiP-b-nDO9SdHItLevS6xBZt03Qpo/edit">US</a> and <a href="https://docs.google.com/document/d/1dllVWwNfpj1U1U2AEfHd_ZHc0raWem8RvKXJ1mnyywg/edit">EU</a> chat transcript documents.)</p><p>Here is one example.</p><p><strong>PROMPT:</strong> I am planning my compliance under KOSA, assuming the latest Senate version is enacted. What content do I need to prevent children from seeing?</p><p><strong>ChatGPT RESPONSE:</strong> Under the <strong>Kids Online Safety Act (KOSA)</strong>, the following categories of content must be prevented from being accessed by children:</p><p>1.&nbsp;&nbsp;&nbsp;&nbsp; <strong>Sexual Content</strong>:</p><p>o&nbsp;&nbsp; Pornography or any sexual content that is age-inappropriate or harmful to children.</p><p>2.&nbsp;&nbsp;&nbsp;&nbsp; <strong>Violent Content</strong>:</p><p>o&nbsp;&nbsp; Content depicting gross or gratuitous violence or acts of cruelty.</p><p>3.&nbsp;&nbsp;&nbsp;&nbsp; <strong>Dangerous Challenges</strong>:</p><p>o&nbsp;&nbsp; Content that encourages or involves dangerous challenges that pose a risk to life, physical health, or safety.</p><p>4.&nbsp;&nbsp;&nbsp;&nbsp; <strong>Cyberbullying</strong>:</p><p>o&nbsp;&nbsp; Any content that involves or encourages cyberbullying, including bullying or humiliating another person.</p><p>...</p><p>This list continues, ultimately enumerating nine categories of speech that <em>“</em>must be prevented from being accessed[.]” Some, like violent content and <a href="https://www.oyez.org/cases/2016/15-1293">hate speech</a>, have been specifically identified as First Amendment-protected expression in relatively recent Supreme Court rulings – including a <a href="https://supreme.justia.com/cases/federal/us/564/786/#tab-opinion-1963566">case</a> holding that California could not restrict minors from seeing violent content in video games. (In true American fashion, the Court generally lets U.S. lawmakers restrict kids’ access to sexual content, and not much else.) And <em>all</em> of these categories include educational content, art and literature, news reporting, and more kinds of information that kids have every right to see. Briefs like <a href="https://storage.courtlistener.com/recap/gov.uscourts.cand.406140/gov.uscourts.cand.406140.56.1.pdf">this one</a> from the New York Times and Student Press Law Center have made that point eloquently, with moving examples from the history of student journalism and activism.</p><p>ChatGPT gave very similar answers about California’s Age Appropriate Design Code (AADC), telling me that as a platform operator “you need to ensure that your platform protects children from encountering” a list of “key types of content” including depictions of violence, substance abuse, and misinformation. Coincidentally, the same day that ChatGPT said this, the Ninth Circuit Court of Appeals said pretty much the same thing, <a href="https://cdn.ca9.uscourts.gov/datastore/opinions/2024/08/16/23-2969.pdf">ruling</a> that the law’s clearly content-related provisions violated the First Amendment.</p><p>The answers I got about <a href="https://docs.google.com/document/d/1dllVWwNfpj1U1U2AEfHd_ZHc0raWem8RvKXJ1mnyywg/edit">European law</a> were to my mind equally blunt, though they may require a little more translation for readers not steeped in EU policy debates. I asked a question that deliberately reused language from a recent Commission letter <a href="https://twitter.com/ThierryBreton/status/1823033048109367549/photo/1">demanding</a> that X mitigate risks arising from the interview it hosted with former President Trump. (That letter, from Commissioner Thierry Breton, prompted <a href="https://www.accessnow.org/press-release/commissioner-breton-stop-politicising-the-digital-services-act/">outcry</a> from civil society groups and rare <a href="https://www.ft.com/content/09cf4713-7199-4e47-a373-ed5de61c2afa">public</a> <a href="https://subscriber.politicopro.com/article/2024/08/eu-takes-shot-at-musk-over-trump-interview-and-misses-00173778">censure</a> from other Commission authorities.) The question was, “What must I do to mitigate risks of detrimental effects on civic discourse and public security under the DSA?”</p><p>ChatGPT’s answer went awry in a way that really matters for small and mid-sized platforms: it described obligations that won’t apply unless a platform has over 45 million users in the EU, without mentioning that these simply don’t affect everyone else. </p><p>Importantly for the rights of Internet users, ChatGPT's advice also crossed a number of important red lines in EU law that exist to protect freedom of expression and information. First, it instructed me to act not only against illegal content but also “harmful content,” through changes such as “adjusting your content moderation policies.” Using the word “harmful” is a big deal. Throughout the DSA legislative process that term was used to refer to lawful but awful expression, or else to a mixed category that includes both legal and illegal material. For example, the Commission’s <a href="https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX%3A52020PC0825">explanatory memorandum</a> for the DSA said</p><blockquote>&nbsp;There is a general agreement among stakeholders that ‘harmful’ (yet not, or at least not necessarily, illegal) content... should not be subject to removal obligations, as this is a delicate area with severe implications for the protection of freedom of expression.</blockquote><p>ChatGPT’s advice to remove disinformation has a version of the same problem since in the EU, as in the US, <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4689926">not all disinformation is illegal</a>.</p><p>Perhaps even more importantly, Chat GPT’s answers also violated the EU’s long-standing and very high profile <a href="https://www.eu-digital-services-act.com/Digital_Services_Act_Article_8.html" rel="noreferrer">rule</a> against requiring platforms to engage in “general monitoring” of users’ communications. The EU’s highest court has repeatedly <a href="https://academic.oup.com/grurint/article/69/6/616/5831378?guestAccessKey=14c3d29c-5f40-430c-bdb2-099f086e3823" rel="noreferrer">emphasized</a> that this rule protects users’ rights to free expression and privacy. ChatGPT, however, listed “Proactive Monitoring” as one of its top recommendations, saying I should<strong> </strong>use “advanced content moderation tools, including AI and machine learning, to detect and remove illegal content, such as hate speech, terrorist content, and disinformation, before it can cause harm.” (European free expression law expert Graham Smith pressed ChatGPT further on the “monitoring” recommendation, and eventually got it to <a href="https://docs.google.com/document/d/1Ku13zZGBhwQPXUYTCIEIZrwpkZlGVuuhIQHIgLoqntA/edit">back down</a>, but only after literally pointing out CJEU case law.)</p><h2 id="why-is-chatgpt-saying-this-stuff">Why Is ChatGPT Saying This Stuff??</h2><p>How does an AI tool wind up interpreting laws in ways that diverge so significantly from what proponents say the laws mean? I think the answer has to do with the laws themselves. The whole point of things like KOSA or the DSA’s “risk mitigation” rules, as I see it, is to come right up to the line of restricting lawful but awful speech, and then either try to surreptitiously cross that line (KOSA, I think) or not quite cross the line (DSA, I hope). We should not be surprised when both humans and machines get confused about which side of the line the law actually falls on.</p><p>Several people suggested that the repeated and consistent answers I got were just AI hallucinations. It would be pretty odd for ChatGPT to happen to hallucinate the same interpretation of the DSA that Commissioner Breton did, or the same interpretation of the AADC that a federal court of appeals did, but… I guess it’s possible. A more compelling point raised on BlueSky is that ChatGPT is bad at timelines. Given a training set that includes earlier and more recent versions of things like draft laws, it might just lump everything together.</p><p>The real reason ChatGPT’s answers should ring alarm bells is that they were so plausible. These are the answers that humans may well arrive at—whether or not they ask an AI what to do—in parsing confusing legal obligations. They are answers we can find in sloppy secondary materials purporting to explain the laws, and in news coverage that uncritically repeat politicians’ exaggerated claims about their legal authority. ChatGPT’s answers may not <em>correctly</em> answer questions about the law. But its "take it all down" directives may be the ones that both humans and machines get trained to apply all the same. &nbsp;</p><p></p><p></p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p>
+  </article>
+
+    <div class="px-4">
+      <div class="max-w-content mx-auto">  
+          <div class="text-typogr-tone text-sm font-medium flex flex-wrap py-4 border-t border-b border-border mb-4">
+            <span class="mr-1">Published in:</span>
+              <a class="text-brand hover:underline decoration-2" href="/our-work/topics/blog/">Blog</a>
+              <span class="mr-0.5">,</span>
+              <a class="text-brand hover:underline decoration-2" href="/our-work/topics/artificial-intelligence/">Artificial Intelligence</a>
+              <span class="mr-0.5">,</span>
+              <a class="text-brand hover:underline decoration-2" href="/our-work/topics/censorship/">censorship</a>
+              <span class="mr-0.5">,</span>
+              <a class="text-brand hover:underline decoration-2" href="/our-work/topics/intermediary-liability/">Intermediary Liability</a>
+              
+          </div>
+      </div>
+    </div>
+
+        <section class="px-4 py-8 bg-backgr" id="comments" data-comments>
+      <div class="max-w-content mx-auto">
+        
+        <script defer src="https://cdn.jsdelivr.net/ghost/comments-ui@~1.3/umd/comments-ui.min.js" data-locale="en" data-ghost-comments="https://cyberlaw.stanford.edu/" data-api="https://stanford-cis.ghost.io/ghost/api/content/" data-admin="https://stanford-cis.ghost.io/ghost/" data-key="e5cc6f4534b756c5b3e6d235f4" data-title="Comments" data-count="true" data-post-id="66c6a44f09ce4c0001aac7e6" data-color-scheme="auto" data-avatar-saturation="60" data-accent-color="#c72513" data-comments-enabled="all" data-publication="Stanford CIS" crossorigin="anonymous"></script>
+    
+      </div>
+    </section>
+
+
+
+    </main>
+
+    <footer class="bg-backgr-tone px-4 border-t border-border">
+  <div class="max-w-container mx-auto flex flex-col py-8">
+    <nav class="text-sm text-typogr-tone pb-4">
+        <ul class="flex flex-wrap gap-3 md:gap-4" data-nav-items>
+    <li class="nav-about-us " 
+      data-label="About Us" data-length="8">
+      <a class="hover:underline decoration-2" href="https://cyberlaw.stanford.edu/about-us/">
+        <span>About Us</span>
+      </a>
+    </li>
+    <li class="nav-work " 
+      data-label="Work" data-length="4">
+      <a class="hover:underline decoration-2" href="https://cyberlaw.stanford.edu/work/">
+        <span>Work</span>
+      </a>
+    </li>
+    <li class="nav-people " 
+      data-label="People" data-length="6">
+      <a class="hover:underline decoration-2" href="https://cyberlaw.stanford.edu/people/">
+        <span>People</span>
+      </a>
+    </li>
+    <li class="nav-blog nav-current-parent " 
+      data-label="Blog" data-length="4">
+      <a class="hover:underline decoration-2" href="https://cyberlaw.stanford.edu/blog/">
+        <span>Blog</span>
+      </a>
+    </li>
+    <li class="nav-publications " 
+      data-label="Publications" data-length="12">
+      <a class="hover:underline decoration-2" href="https://cyberlaw.stanford.edu/publications/">
+        <span>Publications</span>
+      </a>
+    </li>
+    <li class="nav-press " 
+      data-label="Press" data-length="5">
+      <a class="hover:underline decoration-2" href="https://cyberlaw.stanford.edu/press/">
+        <span>Press</span>
+      </a>
+    </li>
+    <li class="nav-bluesky " 
+      data-label="Bluesky" data-length="7">
+      <a class="hover:underline decoration-2" href="https://bsky.app/profile/stanfordcis.bsky.social">
+        <span>Bluesky</span>
+      </a>
+    </li>
+    <li class="nav-linkedin " 
+      data-label="LinkedIn" data-length="8">
+      <a class="hover:underline decoration-2" href="https://www.linkedin.com/company/stanford-university-center-for-internet-and-society/">
+        <span>LinkedIn</span>
+      </a>
+    </li>
+    <li class="nav-facebook " 
+      data-label="Facebook" data-length="8">
+      <a class="hover:underline decoration-2" href="https://www.facebook.com/stanfordcis">
+        <span>Facebook</span>
+      </a>
+    </li>
+    <li class="nav-x " 
+      data-label="X" data-length="1">
+      <a class="hover:underline decoration-2" href="https://x.com/StanfordCIS">
+        <span>X</span>
+      </a>
+    </li>
+    <li class="nav-threads " 
+      data-label="Threads" data-length="7">
+      <a class="hover:underline decoration-2" href="https://www.threads.com/@stanfordcis">
+        <span>Threads</span>
+      </a>
+    </li>
+    <li class="nav-donate-to-cis " 
+      data-label="Donate to CIS" data-length="13">
+      <a class="hover:underline decoration-2" href="https://give.stanford.edu/law/fund/?kwoDCFilter=KDC-LAW0004&kwoDCPreselect=KDC-LAW0004">
+        <span>Donate to CIS</span>
+      </a>
+    </li>
+</ul>
+    </nav>
+
+    <div class="text-sm opacity-60 pt-4 border-t border-border">
+      <span>&copy;2026.</span>
+      <span>Stanford Center for Internet and Society</span>
+    </div>
+    
+  </div>
+</footer>
+
+    <template data-post-card-template>
+  <article class="flex flex-col gap-3 p-4 bg-backgr-tone border border-border rounded-theme md:px-6 md:py-5">
+    <div class="flex font-medium text-[0.8rem] text-brand">
+      <a class="hover:underline decoration-2" data-template-tag href=""></a>
+      <span class="mx-2 opacity-50">•</span>
+      <time class="" data-template-date></time> 
+    </div>
+
+    <h2 class="leading-snug text-lg font-semibold hover:underline">
+      <a data-template-title href=""></a>
+    </h2>
+    
+    <p class="text-sm leading-relaxed text-typogr-tone" data-template-excerpt></p>
+  </article>
+</template>    <template data-publication-types="blog,press,white-paper-report,litigation-brief,regulatory-filing,academic-writing,journal-article,report,working-papers,other-writing"></template>
+    <template data-cis-team="barbara-van-schewick,elaine-adolfo"></template>
+
+      <script>
+    const pressDetailList = document.querySelector('.detail-list.press')
+    const pressDetails = pressDetailList 
+      ? pressDetailList 
+      : document.createElement('ul')
+    if (!pressDetailList) { 
+      pressDetails.classList.add('detail-list', 'press')
+      document.querySelector('article.ghost-content').appendChild(pressDetails) 
+    }
+    const pressAuthor = document.querySelector('[data-press-author]')?.content.cloneNode(true).querySelector('li')
+    if (pressDetails && pressAuthor) {
+      pressDetails.prepend(pressAuthor)
+    }
+
+    const tagLinks = document.querySelectorAll('.detail-list a[href*="/tag/"]')
+    tagLinks.forEach(link => {
+      const href = link.href.replace('/tag/', '/our-work/topics/'); 
+      link.setAttribute('href', href)
+    })
+  </script>
+
+  <template data-toggle-template>
+    <button class="-ml-2" title="Menu toggle" aria-label="Menu toggle"
+      onclick="this.classList.toggle('rotate-180');this.nextElementSibling.classList.toggle('hidden')" 
+    >
+      <i class="icon icon-chevron-down w-5 h-5 stroke-2 stroke-2">
+  <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevron-down" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+  <path d="M6 9l6 6l6 -6" />
+</svg>
+</i>    </button>
+  </template>
+  <script>
+    function renderSubmenus() {
+      // const navItems = document.querySelectorAll('[data-nav] li')
+      const navItems = document.querySelectorAll('[data-nav-items] li')
+      const subItems = document.querySelectorAll('.is-subitem')
+
+      // Remove '-' signs
+      subItems.forEach(item => {
+        const itemName = item.querySelector('a span')
+        itemName.innerText = itemName.innerText.slice(1)
+      });
+
+      // Add subitems in place
+      let subMenu, hasItems
+      navItems.forEach((item, index) => {
+        if (item.classList.contains('is-subitem') && !navItems[index - 1].classList.contains('is-subitem')) navItems[index - 1].classList.add('is-mainitem'); 
+        subMenu = item.classList.contains('is-subitem') ? subMenu : document.createElement('ul');
+        if (item.classList.contains('is-subitem')) { 
+          subMenu.appendChild(item)
+          subMenu.setAttribute('data-nav-items', '')
+          subMenu.setAttribute('data-nav-subitems', '')
+          if (subMenu.closest('[data-nav-desktop]')) {
+            subMenu.classList.add('absolute', 'z-[1]', 'flex','flex-col', 'shadow-2xl', 'border', 'border-border', 'bg-backgr-tone', '-ml-0.5', 'mt-10', 'top-1', 'hidden')
+          } else {
+            subMenu.classList.add('basis-full', 'border-t', 'border-border', 'hidden')
+          }
+        } else { 
+          item.appendChild(subMenu)
+        }
+      });
+
+      const dropdowMenus = document.querySelectorAll('[data-nav-items] .is-mainitem')
+      const toggle = document.querySelector('[data-toggle-template]');
+
+      dropdowMenus.forEach(menu => { 
+        const toggleBtn = toggle.content.cloneNode(true);
+        menu.insertBefore(toggleBtn, menu.children[1]);
+      });
+    }
+  </script>
+
+
+    <script>
+  document.addEventListener('DOMContentLoaded', function() {
+    var links = document.querySelectorAll('a');
+    links.forEach(function(link) {
+      if (link.hostname != window.location.hostname) {
+        link.target = '_blank';
+      }
+    });
+  });
+</script>
+
+
+<script>
+let regex = new RegExp(/\[\[([0-9]+)\]\](?!:)/, 'g') ;
+
+document.querySelectorAll('article p, article li, article figcaption, article .kg-callout-text').forEach(element => {
+    var textchunk = "";
+    for (var i = 0; i < element.childNodes.length; i++) {
+        var curNode = element.childNodes[i];
+        if (curNode.nodeName === "#text") {
+            textchunk=curNode.nodeValue
+            const matches = curNode.nodeValue.matchAll(regex);
+            for (const match of matches) {
+
+                let firstpiece = textchunk.slice(0,match.index)
+                let lastpiece = textchunk.slice(match.index + match[0].length)
+                let linkpiece = `
+                <sup id="fnref:${match[1]}">
+                  <a href="#fn:${match[1]}">${match[1]}</a>
+                </sup>
+              `
+                let newpiece = firstpiece + linkpiece + lastpiece                 
+                let tmp = document.createRange().createContextualFragment(newpiece)
+                curNode.replaceWith(tmp)
+            }
+
+        
+        }
+    }
+}
+)
+
+
+    let regex2 = new RegExp(/\[\[([0-9]+)\]\]:/, 'g') 
+    
+    for (let node of document.querySelectorAll('article p')) {
+                
+            textchunk=node.innerHTML
+            const matches = textchunk.matchAll(regex2);
+            for (const match of matches) {
+                    let newpiece = `<div class="footnotes"><ol><li class="footnote" id="fn:${match[1]}"><p>${textchunk.slice(match[1].length + 5)} <a href="#fnref:${match[1]}" title="return to article"> ↩</a></p></ol></div>`
+
+                    let tmp = document.createRange().createContextualFragment(newpiece)
+                    node.replaceWith(tmp)
+            }
+
+    }
+            
+        
+</script>
+<style>
+  .littlefoot {
+    --popover-background-color: white;
+    --popover-horizontal-padding: 2rem;
+    --popover-vertical-padding: 1.5rem;
+    }
+    /* Littlefoot */ 
+.littlefoot{--button-background-color:#949494;--button-text-color:#fff;--button-active-background-color:#3f3f3f;--button-active-text-color:#fff;--button-border-radius:8px;--button-border-radius:0.5rem;--button-height:16px;--button-height:1rem;--button-margin:0 1.6px;--button-margin:0 0.1rem;--button-padding:0 9.6px;--button-padding:0 0.6rem;--button-transition:background-color 0.25s ease,color 0.25s ease;--popover-background-color:#f5f5f5;--popover-text-color:#111;--popover-border:1px solid #949494;--popover-border-radius:8px;--popover-border-radius:0.5rem;--popover-max-height:15em;--popover-max-width:90%;--popover-horizontal-padding:22.4px;--popover-horizontal-padding:1.4rem;--popover-vertical-padding:9.6px;--popover-vertical-padding:0.6rem;--popover-shadow:0 0 8px rgba(0,0,0,.302);--popover-transform-origin:50% 0;--popover-transform:scale(0.1) translateZ(0);--popover-active-transform:scale(1) translateZ(0);--popover-transition:opacity 0.25s ease,transform 0.25s ease;--popover-width:22em;--popover-scroll-indicator-color:#3f3f3f;--popover-tooltip-size:8px;--popover-tooltip-size:0.5rem;position:relative}.littlefoot__button{background-color:var(--button-background-color);border:0;border:var(--button-border,0);border-radius:var(--button-border-radius);color:var(--button-text-color);cursor:pointer;display:inline-block;font-size:12px;font-size:var(--button-font-size,12px);font-size:.75rem;font-size:var(--button-font-size,.75rem);font-weight:400;font-weight:var(--button-font-weight,initial);height:var(--button-height);margin:var(--button-margin);padding:var(--button-padding);-webkit-text-decoration:none;text-decoration:none;transition:var(--button-transition);vertical-align:middle}.littlefoot__button.is-active,.littlefoot__button:active,.littlefoot__button:focus,.littlefoot__button:hover{background-color:var(--button-active-background-color);color:var(--button-active-text-color)}.littlefoot__button svg{float:left;height:4.8px;height:.3rem}.littlefoot__popover{border:var(--popover-border);border-radius:var(--popover-border-radius);box-shadow:var(--popover-shadow);margin:calc(var(--popover-tooltip-size) + var(--button-height)) 0;max-width:var(--popover-max-width);position:absolute;top:0;transform:var(--popover-transform);transform-origin:var(--popover-transform-origin);transition:var(--popover-transition);width:var(--popover-width);z-index:1}.littlefoot__popover.is-above{bottom:0;top:auto}.littlefoot__popover.is-active{transform:var(--popover-active-transform)}.littlefoot__wrapper{position:relative;z-index:1}.littlefoot__content,.littlefoot__wrapper{border-radius:var(--popover-border-radius)}.littlefoot__content{-webkit-overflow-scrolling:touch;background-color:var(--popover-background-color);color:var(--popover-text-color);font-family:initial;font-family:var(--popover-font-family,initial);font-size:medium;font-size:var(--popover-font-size,initial);font-style:normal;font-style:var(--popover-font-style,initial);font-weight:400;font-weight:var(--popover-font-weight,initial);line-height:normal;line-height:var(--popover-line-height,normal);max-height:var(--popover-max-height);overflow:auto;padding:var(--popover-vertical-padding) var(--popover-horizontal-padding)}.littlefoot__content img{max-width:100%}.littlefoot__content:focus{outline:none}.is-scrollable{--arrow-x:calc(var(--popover-horizontal-padding)*-1);--arrow-y:calc(var(--popover-vertical-padding)/2)}.is-scrollable .littlefoot__content:after{bottom:0;color:var(--popover-scroll-indicator-color);content:"\21E3";display:block;left:0;opacity:1;position:sticky;text-align:center;transform:translateX(var(--arrow-x)) translateY(var(--arrow-y));transition:var(--popover-transition);width:var(--popover-horizontal-padding)}.is-scrollable.is-fully-scrolled .littlefoot__content:after{opacity:0}.littlefoot__tooltip{--tooltip-margin:calc(var(--popover-tooltip-size)*-1);background-color:var(--popover-background-color);border:var(--popover-border);box-shadow:var(--popover-shadow);height:calc(var(--popover-tooltip-size)*2);margin-left:var(--tooltip-margin);position:absolute;transform:rotate(45deg);width:calc(var(--popover-tooltip-size)*2)}.is-below .littlefoot__tooltip{top:var(--tooltip-margin)}.is-above .littlefoot__tooltip{bottom:var(--tooltip-margin)}@media (max-width:767px){.littlefoot__popover{border-radius:0;border-width:1px 0 0;bottom:0;left:0!important;margin:0;max-width:100%!important;position:fixed;right:0;top:auto;transform:translateY(100%);width:100%}.littlefoot__popover.is-active{transform:translateY(0)}.littlefoot__wrapper{border-radius:0;max-width:100%!important;transform:none}.littlefoot__tooltip{display:none}}@media not print{.littlefoot--print{display:none}}@media print{.littlefoot__button,.littlefoot__popover{display:none}}
+
+.littlefoot__wrapper a {
+  text-decoration: underline;
+}
+</style>
+<script>
+// inlined Littlefoot code below
+!function(e,t){"object"==typeof exports&&"undefined"!=typeof module?t(exports):"function"==typeof define&&define.amd?define(["exports"],t):t((e="undefined"!=typeof globalThis?globalThis:e||self).littlefoot={})}(this,(function(e){"use strict";var t=function(){return t=Object.assign||function(e){for(var t,n=1,r=arguments.length;n<r;n++)for(var o in t=arguments[n])Object.prototype.hasOwnProperty.call(t,o)&&(e[o]=t[o]);return e},t.apply(this,arguments)},n=("undefined"!=typeof globalThis?globalThis:"undefined"!=typeof window?window:"undefined"!=typeof global?global:"undefined"!=typeof self&&self,{__esModule:!0}),r=n.getStyle=void 0;r=n.getStyle=function(e,t){var n,r=((null===(n=e.ownerDocument)||void 0===n?void 0:n.defaultView)||window).getComputedStyle(e);return r.getPropertyValue(t)||r[t]};var o=void 0,i=n,a=96,c=25.4;function u(e){return e?i.getStyle(e,"fontSize")||u(e.parentElement):i.getStyle(window.document.documentElement,"fontSize")}function s(e,t){e.classList.add(t)}function l(e,t){e.classList.remove(t)}function f(e){var t;null===(t=e.parentNode)||void 0===t||t.removeChild(e)}o=function e(t,n){var r,o,i=null!==(o=null===(r=null==n?void 0:n.ownerDocument)||void 0===r?void 0:r.defaultView)&&void 0!==o?o:window,s=i.document.documentElement||i.document.body,l=function(e){var t,n=e||"0",r=parseFloat(n),o=n.match(/[\d-.]+(\w+)$/);return[r,(null!==(t=null==o?void 0:o[1])&&void 0!==t?t:"").toLowerCase()]}(t),f=l[0];switch(l[1]){case"rem":return f*e(u(window.document.documentElement));case"em":return f*e(u(n),null==n?void 0:n.parentElement);case"in":return f*a;case"q":return f*a/c/4;case"mm":return f*a/c;case"cm":return f*a*10/c;case"pt":return f*a/72;case"pc":return f*a/6;case"vh":return(f*i.innerHeight||s.clientWidth)/100;case"vw":return(f*i.innerWidth||s.clientHeight)/100;case"vmin":return f*Math.min(i.innerWidth||s.clientWidth,i.innerHeight||s.clientHeight)/100;case"vmax":return f*Math.max(i.innerWidth||s.clientWidth,i.innerHeight||s.clientHeight)/100;default:return f}};var d="littlefoot__tooltip";function p(e){var t=e.offsetHeight,n=e.getBoundingClientRect().top+t/2;return{above:n,below:window.innerHeight-n}}function v(e){var t=parseFloat(r(e,"marginLeft")),n=e.offsetWidth-t;return(e.getBoundingClientRect().left+n/2)/window.innerWidth}function h(e,t){var n=2*parseInt(r(e,"marginTop"),10)+e.offsetHeight;return t.below<n&&t.below<t.above?"above":"below"}var m="is-active",g="is-changing",y="is-scrollable",b=function(e){return!!e.parentElement};function w(e){var t=e.id,n=e.button,i=e.content,a=e.host,c=e.popover,u=e.wrapper,w=!1,x=0,E="above";return{id:t,activate:function(e){var t;n.setAttribute("aria-expanded","true"),s(n,g),s(n,m),n.insertAdjacentElement("afterend",c),c.style.maxWidth=document.body.clientWidth+"px",t=i,x=Math.round(o(r(t,"maxHeight"),t)),null==e||e(c,n)},dismiss:function(e){n.setAttribute("aria-expanded","false"),s(n,g),l(n,m),l(c,m),null==e||e(c,n)},isActive:function(){return n.classList.contains(m)},isReady:function(){return!n.classList.contains(g)},isHovered:function(){return w},ready:function(){s(c,m),l(n,g)},remove:function(){f(c),l(n,g)},reposition:function(){b(c)&&(i.style.maxHeight=function(e,t,n){var o=p(t),i=h(e,o),a=parseInt(r(e,"marginTop"),10);return Math.min(n,o[i]-a-15)}(c,n,x)+"px",E=function(e,t,n){var r=h(e,p(t));if(n!==r){l(e,"is-"+n),s(e,"is-"+r);var o=100*v(t)+"%",i="above"===r?"100%":"0";e.style.transformOrigin=o+" "+i}return r}(c,n,E),c.offsetHeight<i.scrollHeight?(s(c,y),i.setAttribute("tabindex","0")):(l(c,y),i.removeAttribute("tabindex")))},resize:function(){b(c)&&(c.style.left=function(e,t){var n=e.offsetWidth;return-v(t)*n+parseInt(r(t,"marginLeft"),10)+t.offsetWidth/2}(i,n)+"px",u.style.maxWidth=i.offsetWidth+"px",function(e,t){var n=e.querySelector("."+d);n&&(n.style.left=100*v(t)+"%")}(c,n))},startHovering:function(){w=!0},stopHovering:function(){w=!1},destroy:function(){return f(a)}}}var x=void 0;x=function(e,t){void 0===t&&(t=0);var n,r=0;return Object.assign((function(){for(var o=[],i=0;i<arguments.length;i++)o[i]=arguments[i];var a=Math.max(0,r+t-Date.now());a?(clearTimeout(n),n=setTimeout((function(){r=Date.now(),e.apply(void 0,o)}),a)):(r=Date.now(),e.apply(void 0,o))}),{cancel:function(){r=0,clearTimeout(n)}})};var E="is-fully-scrolled";function S(e,t){e.addEventListener("wheel",x(function(e){return function(t){var n=t.currentTarget,r=-t.deltaY;r>0&&l(e,E),n&&r<=0&&r<n.clientHeight+n.scrollTop-n.scrollHeight&&s(e,E)}}(t),16))}var A="littlefoot__content",H="littlefoot__wrapper",T="littlefoot--print",M=function(e){return s(e,T)};function D(e,t){return Array.from(e.querySelectorAll(t))}function O(e,t){return e.querySelector("."+t)||e.firstElementChild||e}function k(e){var t=document.createElement("div");return t.innerHTML=e,t.firstElementChild}function P(e){return void 0!==e}function j(e){var t=e.parentElement,n=function(e,t){return Array.from(e.children).filter((function(e){return 8!==e.nodeType&&e.matches(t)}))}(t,":not(.littlefoot--print)"),r=n.filter((function(e){return"HR"===e.tagName}));n.length===r.length&&(r.concat(t).forEach(M),j(t))}function I(e){var t=e.parentElement;f(e),t.innerHTML.replace("[]","").replace("&nbsp;"," ").trim()||I(t)}function L(e,t){var n=k(e.body.outerHTML);D(n,'[href$="#'+e.referenceId+'"]').forEach(I);var r=n.innerHTML.trim();return{original:e,data:{id:String(t+1),number:t+1,reference:"lf-"+e.referenceId,content:r.startsWith("<")?r:"<p>"+r+"</p>"}}}function W(e){var t=/<%=?\s*(\w+?)\s*%>/g;return function(n){return e.replace(t,(function(e,t){var r;return String(null!==(r=n[t])&&void 0!==r?r:"")}))}}function C(e){var n,r,o,i=e.allowDuplicates,a=e.anchorParentSelector,c=e.anchorPattern,u=e.buttonTemplate,s=e.contentTemplate,f=e.footnoteSelector,d=e.numberResetSelector,p=e.scope,v=function(e,t,n){return D(e,n+' a[href*="#"]').filter((function(e){return(e.href+e.rel).match(t)}))}(document,c,p).map(function(e,t,n,r){var o=[];return function(i){var a=i.href.split("#")[1],c=D(e,"#"+window.CSS.escape(a)).find((function(e){return t||!o.includes(e)})),u=null==c?void 0:c.closest(r);if(u){o.push(u);var s=i.closest(n)||i;return{reference:s,referenceId:s.id||i.id,body:u}}}}(document,i,a,f)).filter(P).map(L).map(d?(n=d,r=0,o=null,function(e){var i=e.original,a=e.data,c=i.reference.closest(n);return r=o===c?r+1:1,o=c,{original:i,data:t(t({},a),{number:r})}}):function(e){return e}).map(function(e,t){var n=W(e),r=W(t);return function(e){var t=e.original,o=e.data,i=o.id,a=k('<span class="'.concat("littlefoot",'">').concat(n(o),"</span>")),c=a.firstElementChild;c.setAttribute("aria-expanded","false"),c.dataset.footnoteButton="",c.dataset.footnoteId=i;var u=k(r(o));u.dataset.footnotePopover="",u.dataset.footnoteId=i;var s=O(u,H),l=O(u,A);return S(l,u),{original:t,data:o,id:i,button:c,host:a,popover:u,content:l,wrapper:s}}}(u,s)).map((function(e){return M(e.original.reference),M(e.original.body),j(e.original.body),e.original.reference.insertAdjacentElement("beforebegin",e.host),e})).map(w);return{footnotes:v,unmount:function(){v.forEach((function(e){return e.destroy()})),D(document,".littlefoot--print").forEach((function(e){return l(e,T)}))}}}var _={activateDelay:100,activateOnHover:!1,allowDuplicates:!0,allowMultiple:!1,anchorParentSelector:"sup",anchorPattern:/(fn|footnote|note)[:\-_\d]/gi,dismissDelay:100,dismissOnUnhover:!1,footnoteSelector:"li",hoverDelay:250,numberResetSelector:"",scope:"",contentTemplate:'<aside class="littlefoot__popover" id="fncontent:<% id %>"><div class="'.concat(H,'"><div class="').concat(A,'"><% content %></div></div><div class="').concat(d,'"></div></aside>'),buttonTemplate:'<button class="littlefoot__button" id="<% reference %>" title="See Footnote <% number %>"><svg role="img" aria-labelledby="title-<% reference %>" viewbox="0 0 31 6" preserveAspectRatio="xMidYMid"><title id="title-<% reference %>">Footnote <% number %></title><circle r="3" cx="3" cy="3" fill="white"></circle><circle r="3" cx="15" cy="3" fill="white"></circle><circle r="3" cx="27" cy="3" fill="white"></circle></svg></button>'};var F,z={},R={},q={get exports(){return R},set exports(e){R=e}};function U(){return F||(F=1,function(e,t){e.exports=function(){function e(){if(!(this instanceof e))return new e;this.size=0,this.uid=0,this.selectors=[],this.selectorObjects={},this.indexes=Object.create(this.indexes),this.activeIndexes=[]}var t=window.document.documentElement,n=t.matches||t.webkitMatchesSelector||t.mozMatchesSelector||t.oMatchesSelector||t.msMatchesSelector;e.prototype.matchesSelector=function(e,t){return n.call(e,t)},e.prototype.querySelectorAll=function(e,t){return t.querySelectorAll(e)},e.prototype.indexes=[];var r=/^#((?:[\w\u00c0-\uFFFF\-]|\\.)+)/g;e.prototype.indexes.push({name:"ID",selector:function(e){var t;if(t=e.match(r))return t[0].slice(1)},element:function(e){if(e.id)return[e.id]}});var o=/^\.((?:[\w\u00c0-\uFFFF\-]|\\.)+)/g;e.prototype.indexes.push({name:"CLASS",selector:function(e){var t;if(t=e.match(o))return t[0].slice(1)},element:function(e){var t=e.className;if(t){if("string"==typeof t)return t.split(/\s/);if("object"==typeof t&&"baseVal"in t)return t.baseVal.split(/\s/)}}});var i,a=/^((?:[\w\u00c0-\uFFFF\-]|\\.)+)/g;e.prototype.indexes.push({name:"TAG",selector:function(e){var t;if(t=e.match(a))return t[0].toUpperCase()},element:function(e){return[e.nodeName.toUpperCase()]}}),e.prototype.indexes.default={name:"UNIVERSAL",selector:function(){return!0},element:function(){return[!0]}},i="function"==typeof window.Map?window.Map:function(){function e(){this.map={}}return e.prototype.get=function(e){return this.map[e+" "]},e.prototype.set=function(e,t){this.map[e+" "]=t},e}();var c=/((?:\((?:\([^()]+\)|[^()]+)+\)|\[(?:\[[^\[\]]*\]|['"][^'"]*['"]|[^\[\]'"]+)+\]|\\.|[^ >+~,(\[\\]+)+|[>+~])(\s*,\s*)?((?:.|\r|\n)*)/g;function u(e,t){var n,r,o,i,a,u,s=(e=e.slice(0).concat(e.default)).length,l=t,f=[];do{if(c.exec(""),(o=c.exec(l))&&(l=o[3],o[2]||!l))for(n=0;n<s;n++)if(a=(u=e[n]).selector(o[1])){for(r=f.length,i=!1;r--;)if(f[r].index===u&&f[r].key===a){i=!0;break}i||f.push({index:u,key:a});break}}while(o);return f}function s(e,t){var n,r,o;for(n=0,r=e.length;n<r;n++)if(o=e[n],t.isPrototypeOf(o))return o}function l(e,t){return e.id-t.id}return e.prototype.logDefaultIndexUsed=function(){},e.prototype.add=function(e,t){var n,r,o,a,c,l,f,d,p=this.activeIndexes,v=this.selectors,h=this.selectorObjects;if("string"==typeof e){for(h[(n={id:this.uid++,selector:e,data:t}).id]=n,f=u(this.indexes,e),r=0;r<f.length;r++)a=(d=f[r]).key,(c=s(p,o=d.index))||((c=Object.create(o)).map=new i,p.push(c)),o===this.indexes.default&&this.logDefaultIndexUsed(n),(l=c.map.get(a))||(l=[],c.map.set(a,l)),l.push(n);this.size++,v.push(e)}},e.prototype.remove=function(e,t){if("string"==typeof e){var n,r,o,i,a,c,s,l,f=this.activeIndexes,d=this.selectors=[],p=this.selectorObjects,v={},h=1===arguments.length;for(n=u(this.indexes,e),o=0;o<n.length;o++)for(r=n[o],i=f.length;i--;)if(c=f[i],r.index.isPrototypeOf(c)){if(s=c.map.get(r.key))for(a=s.length;a--;)(l=s[a]).selector!==e||!h&&l.data!==t||(s.splice(a,1),v[l.id]=!0);break}for(o in v)delete p[o],this.size--;for(o in p)d.push(p[o].selector)}},e.prototype.queryAll=function(e){if(!this.selectors.length)return[];var t,n,r,o,i,a,c,u,s={},f=[],d=this.querySelectorAll(this.selectors.join(", "),e);for(t=0,r=d.length;t<r;t++)for(i=d[t],n=0,o=(a=this.matches(i)).length;n<o;n++)s[(u=a[n]).id]?c=s[u.id]:(c={id:u.id,selector:u.selector,data:u.data,elements:[]},s[u.id]=c,f.push(c)),c.elements.push(i);return f.sort(l)},e.prototype.matches=function(e){if(!e)return[];var t,n,r,o,i,a,c,u,s,f,d,p=this.activeIndexes,v={},h=[];for(t=0,o=p.length;t<o;t++)if(u=(c=p[t]).element(e))for(n=0,i=u.length;n<i;n++)if(s=c.map.get(u[n]))for(r=0,a=s.length;r<a;r++)!v[d=(f=s[r]).id]&&this.matchesSelector(e,f.selector)&&(v[d]=!0,h.push(f));return h.sort(l)},e}()}(q)),R}!function(e,t){!function(e,t){t=t&&Object.prototype.hasOwnProperty.call(t,"default")?t.default:t;var n={},r={},o=new WeakMap,i=new WeakMap,a=new WeakMap,c=Object.getOwnPropertyDescriptor(Event.prototype,"currentTarget");function u(e,t,n){var r=e[t];return e[t]=function(){return n.apply(e,arguments),r.apply(e,arguments)},e}function s(e,t,n){var r=[],o=t;do{if(1!==o.nodeType)break;var i=e.matches(o);if(i.length){var a={node:o,observers:i};n?r.unshift(a):r.push(a)}}while(o=o.parentElement);return r}function l(){o.set(this,!0)}function f(){o.set(this,!0),i.set(this,!0)}function d(){return a.get(this)||null}function p(e,t){c&&Object.defineProperty(e,"currentTarget",{configurable:!0,enumerable:!0,get:t||c.get})}function v(e){try{return e.eventPhase,!0}catch(e){return!1}}function h(e){if(v(e)){var t=(1===e.eventPhase?r:n)[e.type];if(t){var c=s(t,e.target,1===e.eventPhase);if(c.length){u(e,"stopPropagation",l),u(e,"stopImmediatePropagation",f),p(e,d);for(var h=0,m=c.length;h<m&&!o.get(e);h++){var g=c[h];a.set(e,g.node);for(var y=0,b=g.observers.length;y<b&&!i.get(e);y++)g.observers[y].data.call(g.node,e)}a.delete(e),p(e)}}}}function m(e,o,i){var a=!!(arguments.length>3&&void 0!==arguments[3]?arguments[3]:{}).capture,c=a?r:n,u=c[e];u||(u=new t,c[e]=u,document.addEventListener(e,h,a)),u.add(o,i)}function g(e,t,o){var i=!!(arguments.length>3&&void 0!==arguments[3]?arguments[3]:{}).capture,a=i?r:n,c=a[e];c&&(c.remove(t,o),c.size||(delete a[e],document.removeEventListener(e,h,i)))}function y(e,t,n){return e.dispatchEvent(new CustomEvent(t,{bubbles:!0,cancelable:!0,detail:n}))}e.fire=y,e.off=g,e.on=m,Object.defineProperty(e,"__esModule",{value:!0})}(t,U())}(0,z);var V="[data-footnote-id]",N=function(e,t){return e.target.closest(t)},B=function(e){return null==e?void 0:e.dataset.footnoteId},Y=function(e){return function(t){t.preventDefault();var n=N(t,V),r=B(n);r&&e(r)}},$=document.addEventListener,G=window.addEventListener;function J(e){var t,n,r,o=new AbortController,i=o.signal,a=(t=e.toggle,n=e.dismissAll,function(e){var r=N(e,"[data-footnote-button]"),o=B(r);o?t(o):N(e,"[data-footnote-popover]")||n()}),c=(r=e.dismissAll,function(e){27!==e.keyCode&&"Escape"!==e.key&&"Esc"!==e.key||r()}),u=x(e.repositionAll,16),s=x(e.resizeAll,16),l=Y(e.hover),f=Y(e.unhover);return $("touchend",a,{signal:i}),$("click",a,{signal:i}),$("keyup",c,{signal:i}),$("gestureend",u,{signal:i}),G("scroll",u,{signal:i}),G("resize",s,{signal:i}),z.on("mouseover",V,l),z.on("mouseout",V,f),function(){o.abort(),z.off("mouseover",V,l),z.off("mouseout",V,f)}}function K(e){void 0===e&&(e={});var n=t(t({},_),e),r=function(e,t){var n=e.footnotes,r=e.unmount,o=function(e){return function(n){n.isReady()&&(n.dismiss(t.dismissCallback),setTimeout(n.remove,e))}},i=function(e){return function(r){t.allowMultiple||n.filter((function(e){return e.id!==r.id})).forEach(o(t.dismissDelay)),r.isReady()&&(r.activate(t.activateCallback),r.reposition(),r.resize(),setTimeout(r.ready,e))}},a=function(e){return function(t){var r=n.find((function(e){return e.id===t}));r&&e(r)}};return{activate:function(e,t){return a(i(t))(e)},dismiss:function(e,t){return a(o(t))(e)},dismissAll:function(){return n.forEach(o(t.dismissDelay))},repositionAll:function(){return n.forEach((function(e){return e.reposition()}))},resizeAll:function(){return n.forEach((function(e){return e.resize()}))},toggle:a((function(e){return e.isActive()?o(t.dismissDelay)(e):i(t.activateDelay)(e)})),hover:a((function(e){e.startHovering(),t.activateOnHover&&!e.isActive()&&i(t.hoverDelay)(e)})),unhover:a((function(e){e.stopHovering(),t.dismissOnUnhover&&setTimeout((function(){return n.filter((function(e){return!e.isHovered()})).forEach(o(t.dismissDelay))}),t.hoverDelay)})),unmount:r}}(C(n),n),o=J(r);return{activate:function(e,t){void 0===t&&(t=n.activateDelay),r.activate(e,t)},dismiss:function(e,t){void 0===t&&(t=n.dismissDelay),void 0===e?r.dismissAll():r.dismiss(e,t)},unmount:function(){o(),r.unmount()},getSetting:function(e){return n[e]},updateSetting:function(e,t){n[e]=t}}}e.default=K,e.littlefoot=K,Object.defineProperty(e,"__esModule",{value:!0})}));
+
+  littlefoot.littlefoot({
+  buttonTemplate: `<button
+  aria-label="Footnote <% number %>"
+  class="littlefoot__button"
+  id="<% reference %>"
+  title="See Footnote <% number %>"
+/>
+  <% number %>
+</button>`
+  }) // Pass any littlefoot settings here.
+</script>
+  </body>
+</html>

@@ -1,0 +1,867 @@
+
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head><meta name="viewport" content="width=device-width, initial-scale=1.0" /><!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-WR9V5K73');</script>
+<!-- End Google Tag Manager --><script>
+  window.TdxGtmContext = {"User":{"Id":0,"UID":"00000000-0000-0000-0000-000000000000","UserName":"","FullName":"Public User","AlertEmail":"publicuser@noreply.com","Role":"Experience User","HasTDNext":false,"StandardApplicationNames":null,"TicketApplicationNames":[],"AssetApplicationNames":[],"ClientPortalApplicationNames":[],"Type":"Technician","Analytics":{"Title":null,"Organization":null}},"Partition":{"Id":3134,"Name":"Wayne State University Production"},"BillableEntity":{"Id":78,"Name":"Wayne State University","SalesForceIdentifier":"0013600000EM5NUAA1","GWMIID":"180282cc-d014-4be3-b625-694f426e0c9b"},"Environment":{"ShortName":"PRD"}};
+</script><script src="/TDPortal/Content/Scripts/jquery/2.2.4/jquery.min.js?v=20260213000508"></script><script src="/TDPortal/Content/Scripts/jquery-migrate/1.4.1/jquery-migrate.min.js?v=20260213000508"></script><script src="/TDPortal/Content/Scripts/jquery-ui/1.13.2/jquery-ui-1.13.2.custom.timepicker.min.js?v=20260213000818"></script><link href="/TDPortal/Content/Styles/jquery-ui/1.13.2/jquery-ui.compiled.min.css?v=20260213000820" rel="stylesheet" type="text/css"  /><link href="/TDPortal/Content/bootstrap/3.4.1/dist/css/bootstrap.min.css?v=20260213000508" rel="stylesheet" type="text/css" id="lnkBootstrapCSS" /><script src="/TDPortal/Content/bootstrap/3.4.1/dist/js/bootstrap.min.js?v=20260213000508"></script><link href="/TDPortal/Content/FontAwesome/css/fontawesome.min.css?v=20260213000506" rel="stylesheet" type="text/css" id="lnkFontAwesome" /><link href="/TDPortal/Content/FontAwesome/css/solid.css?v=20260213000506" rel="stylesheet" type="text/css"  /><link href="/TDPortal/Content/FontAwesome/css/regular.css?v=20260213000506" rel="stylesheet" type="text/css"  /><link href="/TDPortal/Content/FontAwesome/css/brands.css?v=20260213000506" rel="stylesheet" type="text/css"  /><link href="/TDPortal/Content/FontAwesome/css/v4-shims.css?v=20260213000506" rel="stylesheet" type="text/css"  /><link href="/TDClient/Styles/bootstrap_custom.min.css?v=20260213000818" rel="stylesheet" type="text/css"  /><link href="/TDClient/Styles/TDStyles.min.css?v=20260213000820" rel="stylesheet" type="text/css"  /><link href="https://services.wayne.edu/TDPortal/BE/Style/78/TDClient/277?v=20251204195720" rel="stylesheet" type="text/css" /><script src="/TDPortal/Content/Scripts/tdx/dist/TDJSFramework.compiled.min.js?v=20260213000818"></script><script src="/TDPortal/Content/Scripts/tdx/dist/modalFocusTrap.min.js?v=20260213000816"></script><script src="/TDPortal/Content/Scripts/underscore/1.12.1/underscore-min.js?v=20260213000508"></script>
+<script src="/TDClient/Scripts/clientOS.min.js?v=20260213000810"></script>
+<script src="/TDClient/Scripts/collapseMe.min.js?v=20260213000810"></script>
+<script src="/TDClient/Scripts/tdsearchfilter.min.js?v=20260213000810"></script>
+<script src="/TDClient/Scripts/SiteSearch.min.js?v=20260213000810"></script>
+<script src="/TDPortal/Content/Scripts/tdx/dist/elasticsearchAutocomplete.min.js?v=20260213000816"></script>
+<link id="ctl00_ctl00_lnkFavicon" rel="icon" href="https://services.wayne.edu/TDPortal/BE/Icon/78/277?v=20251204195721" />
+
+  <script>
+
+      $(function () {
+        var masterUi = MasterUI({
+          isPostback: false,
+          baseUrl: '/TDClient/',
+          isTdGoogleAnalyticsEnabled: true,
+          isAuthenticated: false
+          });
+
+        $('#collapseMe').collapseMe({
+          toggleVisibilitySelector: '.navbar-toggle'
+        });
+
+        TeamDynamix.addRequiredFieldHelp();
+      });
+
+      // The sub-nav menu uses padding-top to position itself below the header bar and main navigation sections. When the
+      // window is resized, there is a chance that the content of these header or nav sections wraps, causing the height
+      // to change, potentially covering the sub-nav menu, which is obviously a big usability problem. This function
+      // listens for when the window size or orientation is changing (and also when the window first loads), and adjusts
+      // the padding so that the sub-nav menu appears in the correct location.
+      $(window).bind('load ready resize orientationchange', function () {
+        var headerHeight = $('#divMstrHeader').height();
+        $('#navShim').css({
+          "padding-top": headerHeight
+        });
+
+        $('#content').css({
+          "padding-top": headerHeight,
+          "margin-top": headerHeight * -1
+        });
+      });
+  </script>
+
+  
+  
+  
+  <script src="/TDPortal/Content/select2/v3/select2.min.js?v=20260213002344"></script><link href="/TDPortal/Content/select2/v3/select2.compiled.min.css?v=20260213002344" rel="stylesheet" type="text/css" id="lnkSelect2" />
+  <script src="/TDClient/Scripts/attachmentHandler.min.js?v=20260213000818"></script>
+
+  <style type="text/css">
+    .honey-pot-div {
+      display: none;
+    }
+  </style>
+
+  <script>
+    
+
+    function shareArticle() {
+      if ($('#ctl00_ctl00_cpContent_cpContent_shareRecipients').val().trim() === "") {
+        alert('You must first enter a valid email.');
+        $('#btnShare').progressButton('reset');
+      }
+      else {
+        __doPostBack('ctl00$ctl00$cpContent$cpContent$btnSendShare', '');
+      }
+    }
+
+    function closeShareModal() {
+      $('#divShareModal').modal('hide');
+      $('#btnShare').progressButton('reset');
+    }
+
+    function toggleFeedback(isHelpful) {
+      $('#divHelpfulComments').show();
+      $('#divHelpfulYesNo').hide();
+      $('#ctl00_ctl00_cpContent_cpContent_hdnIsHelpful').val(isHelpful);
+      $('#ctl00_ctl00_cpContent_cpContent_txtComments').focus();
+    }
+
+    function toggleFeedbackResult() {
+      $('#divWasHelpful, #divFeedbackRecorded, #divHelpfulComments, #divHelpfulYesNo').toggle();
+    }
+
+    // The following two functions were added as a result of ticket ID: 1392522. We are generating these buttons dynamically to
+    // prevent bots from clicking them and posting feedback on an article. Additionally, we have an input that is hidden from
+    // the user. If a bot enters text in that input, which it likely will (bots love filling out forms), then we don't accept the
+    // form submission
+    function generateFeedbackButtons() {
+      var $btnHelpfulYes = $('<button id="btnHelpfulYes" type="button" class="btn btn-primary gutter-left" onclick="toggleFeedback(1);">Yes</button>');
+      var $btnHelpfulNo = $('<button id="btnHelpfulNo" type="button" class="btn btn-primary gutter-left-sm" onclick="toggleFeedback(0);">No</button>');
+
+      $('#divWasHelpful').append($btnHelpfulYes);
+      $('#divWasHelpful').append($btnHelpfulNo);
+    }
+    function attemptAddFeedback(e) {
+      if ($('#honeyPot').val() !== '') {
+        e.preventDefault();
+        window.location.reload();
+      }
+    }
+
+    function cancelFeedback() {
+      $('#ctl00_ctl00_cpContent_cpContent_txtComments').val('');
+      $('#divHelpfulComments, #divHelpfulYesNo').toggle();
+    }
+
+    function confirmDeleteFeedback(id) {
+      if (confirm('Are you sure you want to delete this feedback? This cannot be undone.')) {
+        $('#ctl00_ctl00_cpContent_cpContent_hdnFeedbackID').val(id);
+        __doPostBack('ctl00$ctl00$cpContent$cpContent$btnDeleteFeedback', '');
+      }
+    }
+
+    function toggleAddressed(id, isAddressed) {
+      $('#ctl00_ctl00_cpContent_cpContent_hdnFeedbackID').val(id);
+      $('#ctl00_ctl00_cpContent_cpContent_hdnIsAddressed').val(isAddressed);
+      __doPostBack('ctl00$ctl00$cpContent$cpContent$btnToggleAddressed', '');
+    }
+
+    $(function () {
+      
+
+      generateFeedbackButtons();
+      $('[data-toggle="popover"]').popover();
+
+      var attachmentHandler = new TeamDynamix.AttachmentHandler({
+        containerSelector: '.js-article-attachments',
+        resultLabelSelector: '#ctl00_ctl00_cpContent_cpContent_lblResults_lblResults-label',
+        baseControllerUrl: '/TDClient/277/Portal/Shared/Attachments',
+        antiForgeryToken: '8o1P-u-lapG4r7LIEhGsgJpHagnqVnOxm8a1h8B8OcDKlPVkZ5KNaHDMwSHFkjVpTvG13tY_FT_SoRS6EYcZYFWHpSQ1:abimC4C0NDcXNkddMEDWqNrwp641CeC9cbcSeoosdWECi75cIwoMFdPPqYIpJIFwzvgF7yHsAEhfteDIoUFqHL-utL81',
+        itemId: 20301,
+        componentId: 26,
+        feedId: 'articleFeed',
+        readOnly: false
+      });
+
+      $('#btnShare').on('click', function () {
+        shareArticle();
+      });
+
+      // Don't try and update the table styles if the user wanted to opt out.
+      $('#ctl00_ctl00_cpContent_cpContent_divBody table:not(.SkipTableFixup)').each(function () {
+        var padding = $(this).attr('cellpadding');
+        var spacing = $(this).attr('cellspacing');
+
+        $(this).css("border-collapse", "separate");
+
+        if (spacing) {
+          $(this).css("border-spacing", spacing + "px");
+        }
+
+        $(this).find('td').each(function () { $(this).css('padding', padding + 'px') });
+      });
+
+      
+    });
+
+    
+  </script>
+
+
+
+<meta property="og:title" content="How to access and use WarriorGPT, Wayne State&#39;s standalone generative AI chat bot" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://services.wayne.edu/TDClient/277/Portal/KB/ArticleDet?ID=20301" />
+<meta property="og:image" content="https://services.wayne.edu/TDPortal/BE/Logo/78/277" />
+<meta property="og:description" content="Accessing WarriorGPT" />
+  <meta property="og:site_name" content="Wayne State University - Knowledge Base" />
+  <meta property="article:section" content="Computer, device and printing support" />
+  <meta property="article:published_time" content="2025-07-21T13:12Z" />
+  <meta property="article:modified_time" content="2025-11-25T20:58Z" />
+    <meta property="article:tag" content="WarriorGPT" /><title>
+	Article - How to access and use Warri...
+</title></head>
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WR9V5K73"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+<form method="post" action="/TDClient/277/Portal/KB/ArticleDet?ID=20301" onsubmit="javascript:return WebForm_OnSubmit();" id="aspnetForm">
+<div class="aspNetHidden">
+<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
+<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="+/2K8Iu3u2fX9NUrcrf5KPRnld+0k1r+RHLL541C7Acj03NwDqWVUwWqx97u08Pg68G9dhRwQDa+4aFKYhlW04VrjMdL5Zzz7vaWH3uRfHWP7EeXOc64moKoUmul9eXrk7KSlg17Y2JbnuhMJD39uYuXF55iV9QQKlPAgYNbM3UisAXAQr6nM/0hbMJaet2lmsYc8KFOb6kkoKepH+BdqG2Z8pwur+4VNsSmz07BvMvXiuxQeOPiQOfGWjvvQuszHe1TfGTXSfXX97XIN4sAPZ/l6eUax3pLnGScDfzxcTxL//m4pvAbbKIh9xVBqWLluRkYnoeLQd/ICyWqVsIfKhjX+k74HkJRNSvRZkim59XMye0ie/JzuczYj5zD8dGIKlMjC+1T23dfLkCk82cfmOIDM0nX+y3ulMVFl248wsqZqFIEsfs6KX+xrzOaYRgTrJ57mY71JKbXazi39C9xIx3BPv2UmXCsyDkCoTK6KMe8fEiPnITt064hLul5eDvzjuxrhJwXZJ3Cl1YL2wuDfqIC8zqG01wJzudCh/GE42ngAiwHcpk70k7zZPyju+kiHrmL7pOk1n0BhYFP4b/EL1OrpPLiaIyQjB++fJLjJx82d5eYyHV+pvzPpy9z7WgqZj036GMgqX9+AWE5FM/JAHuo6MTjsagJSzX13/7602/4tliIbqJx6pXtYDWG0OE7FJm5vX1VXDGIPmE2aHdsBIW092EANNmb/dgjVU7dppmqVqzkWLGKgRmcbxJuJfPILtP4HgIYJ3PEZl1tdZqNQHRfdl2wH/jpwGUtU+ayK34m0nA92NSrwFWeoDBYJJZzszZuuRHWp/bdScCAk9v8KaZhWjxfxl4/mfXpGjQ00e7fiae/WAms8nBJeXhj8WTULgUaeSXRmGMysP84zpBiaMIDPxN8mObYj67IDd1d8DTkTEJjyFdOaijgNTyQKsr69tCAagdMtmC0wcBPMVnLcqGDZQuuVxRPKH+Rws5uu1POl2QoGmoJEo49Zi9c+JWeQHvsUQrZVIm8hd3hZr1+sbK2Qzq4f0nRZJUN+ctJ+ODe4EMgzVQYfSGqiq36GDlhv12hQtYceQp06xieCLdHUPD7Dtz80i+nP4/R1Fh2wMgl/McnOfNcE9nGAUlTNNg5TIj9lMObJUokEDq4YRGe/d/JD/4gHNEtLLyTDIgHyOjQVgPTjoJrBSEi8vYPfZQz0jhdbwsyOeTCCo0sm6k0FsjarsTI8o/aTFyO2Lfnl63nPvOn677+Ykgiu8uvOnG4wUn+R3Sw5H0+bSC/m8/3mN3BhKGBz819hp/F4dVmI52bmUiMIzMWabSOXzgSPv2EJzSARZAebw3tBIobkM033pbWVCOoNjJVcjBO1U4cLySdn+FKoum+sMBen33XZOOknC369q1y9nWTh11Lh8WZz6hmwzYLLfnIZ3UyDFLSjJ9LqOW4w8dhifNC/7xs2/7pvdYJLLVP8E/QR2OhlwrGHtSm0+ruq3Df2xS56wKIa+v/IEaY0VNc30WaqxkHriwT4+fnkOYHWvqsJRTdi79BZ7mqxaAMUPNbFY5ZW2qADBjLhCTKton9D3mWTAyOyK1x4V3f1SGc4caaTtMRwd87PRi/3drg5pgxw5ThYaETcEOfGtz/1MSO5YtVnSAG+N3+a/hX7yifVHzhGqhp++8lUIStj2x5A6ggdN2pdWvk2DTNTEIpRT1N4jSc24jAiZudOr7VUpFKXzdFFPcR1eG7Tc2R9CdilUqjeOHF8LFZHK9BseRsUK4WowpNX0wllteAFXdt4bv7qov4B12j5hMYQ/XNmZtRwzoXklqrLtrArPy86vseuWsNzv9cvlvTeRAYuggJf98wbTXuGLj87e2NSCAjzwjmnLbE7nHtuIHkPv8s2hzXKvEsOIMoJE1UGK02mxHbY4B6IObmM/MxTafHuaj700kW4KRSEu7E4ONM38iESa6emYEcJwFurjNfpXUxRE4tk5dqLemNi8Ri9NqhE7U3N2fq0pRXXR3YcedqWwdh7lLQ2Te4qasz60NJGo1VybZvPtkJEVI1hiAsxhyU0XoY2Dei49Y91wNFj+izfoGCHgIWspt7H8NUPFB1+13ymxInj57xhgh/EYY4Wcr13fpuvz4INqAuAmf1Bc+u7ZiwmXOB+HqVoOIA2jMserpZK4eh3YOpH22Kw6YP+9sMQ9nKpquJtq6TXhv3GlhZskbkrwGRB/KrL3pKQ52/hNQG9QYNQ/CiF13ujhIXluPc1iXagans4k2IwSM/nHfx2DbVTDAeW5pDrCbpPn9oyI4wBXZZ3B9oV/F+TuoiXtj9iNoJpbpnnq8Wz/MOUhCfD3g0dRqRN7/BmLMzjKx/GsBFTCJTGKx1EVD0lOmgHEwF02S8psLN2Z+a0zjvObjpbKbWH/G+xhcY95xf9EV7Ojjmf0gviZ8SKKquiZatFgiZCFZdAkZAabJJNIZRfdNmqXkXC4uPEfk4hSzSf+9aQ6K2fVnnEf7WKxv5Sy2y7dvcroL6sWfdHsLZzJB5lg/xAJfCk3DRE1gGk69xlIO9wjRq2yWy+t0HFPK0ZHHolTG4PhW4XxpHK2ghT9+rGV63LMAPqN/T1Yp/TLla0VTfBaxfW6xc9kxT+b/08dMn1+oATt7+GjuxlvEBxRvgqoaURky9PDgBPfXYdy9FWi5U7Kt3B4VCu9EMoznl/mC2OoqbL1H8EMT/AMFRP1iPo9IHfxXEABBavC7CGIbxdmSkhXUeUvrbi9fqXyWkuNAqQnFHlAmVyWyrdLv/LXoMxfx2Pv29CBWgGFz3P/2ITBG/vy7dTZDmvT2hCXq6Z88Uq4+f+32WIbytXFnfVb4MQ3RpU6IH83Vj0kYyv04Epp0ku0RV/0jvW2qmqCmIqAi8y/F7iJDvS4grtyRlWEQ3e3rackzaR7HYh8T8N3RUt8iO+wma7ER9F4aA8vROQRwTKh/dCao6gw7h5yUWovllOToEHVHBmcRbFVF9siULbAcW9Nepo56RVcnYPRt7eo/9Ky9mIlAWeCmHZKbMHROQKMaJ+5hKlKzd1bf6dIPKE1wPe/UOFTjunMZLx6c6C42MDeqshT5Z8hemJKLFRNlyo2TRGruC542rdidwi/YWX3+rzQsaCLPrO1zXb6IrgRRcbQS7VUi+UPLFd7IzL4+fDd2B46tOd3LAjYt2B1uNb9F5BShEom8EhTi9x3NxMlJkk+PfqA0Vm37rKF5ZBWhSD74EGOlqasW2cD5obM36JLSb6C4t3eDc5EU/YZ1UQAE2wZ2IMMWRePSgVtgxTc+/uGuw85h9c0mHMVbyUE+v8mi6Yc7zJQiEXWJE7yjUFOU6/5VXy+Z517OdgK7C0RVX+cvAlsVWld+REI929QOiPpLaNTaCD0KAHnPmT4zmFWWCC0as0AuA1Td5w50n8OybTJ5HYGNoQvo8zr0o0bSdwSZn2ml0YTsxmdzr49IcXFcG246S3mJKcdn1gPC9Qg3KC46Y2T1ZP0gUn57oZBoKBCneAwr0ZFlRDsh8fNP+BdMlgqVh2JYK0xl0p6Z4gDIbya/JErypHFX8bobHF0TJsS0aP9c+cQcOB6q66N8TCkXYet38IxuuQqAydnUYl4tt+9Lra/fznzQW4Y6pTbPgTwROzMTg/PN1bOWFhhbdow9V9yZKdDSJw/U2uUXp3UVyK4+vJ+SHmiX/QNMo5WC1y2fVMxoOckPR1uVZwud0IsUeACKo4Vdc2rcUfekNPaltkUQZk57ribrWOViPc2U8/eAGhg/myt7B4KtOcVpLEfbD3WJEzy6htuAy+nKy6Rjd1aiTT472sdygmTU4DFHpmJR7VSQs7V/qyooeRCNGa48YpjVtZNzRGni5e1H3FNbkimoUT/fumgvw8ZpYIX/TuY8bzLKiYetwoPfTy90bIpVAD4/fRsijbc40V6O367xlZpsr0A4EpALEOC4NG6IFIfmxjLHFJ1RuAURTSYwbg07c+V/PbWEVewKLnddkGOBlZyQeQilvZEi9hC8/9XsdhN6fNI2uWpDtUpCv5SBi6AJHc5QDnAD577b69zXMzO/0OnbUcS8RY6kL5YVUtn4dcSTv0PpVAfGHO8bv2VYZFzENtZk9k/yDOXVAQD6gqaCZE7tPGci+mzfuh5dIpHUMn8SRUMM9RgAxV9OmztFieQ3S/EUKFrksf17S2iA6zitzDBdydMUqVAxZ4pjzwjHO8JMot7RqeumI9vmvsQZAo+065HIqC4utSHg9Y4vjoGzU72OKX0X1lNRDe0Z+BQuLOROoXrNQwT5pB9NTIPcxpW7fnXXOnBDJzTJF1TW6iZ/Ff+7nkow5eTEdw/9bUmTt5WEWH5BKP9YptG8DNUhqJjgLcgzxQ/hAA/Yg+j1aPxFIF8vKapuER1pNQuXMwb2A5Tjay+zN1tjputDoDy4vjzFbSGRFlVyiLjjI02J0/g2TI5REKOOGiYRFYby37wt2Xuu9pW/kDvDLnLhDg6RAaOnKTRCwPO06YkP5aoRQxV2sMlkh15zdAd+zvTncXoDeLTlhnoh5Eg3RenfKMvpBGoEgGIMCe+VG5fd7ep+5tKMXtj50LBmUbejiSd+37r8Jl6vx/f6PxBhrrwu5v3mo9CKv/5yvFTVmIOvQr7dE2VwMmgoCpw+R30b9IUk9wbjO0jbHqOSWAfkeCUrRocIf6EfRVs1WX8TES3J/vJaXWHbJI7EzNcyX5JPEDhvi1srSv9VgOnOACho5bEdHMcW0bvI/2FIvlrh7dr8EVp7Hoykyee+bP8EkA9WbasNCDUXXdOp2OcMBH7VXhc/9zfAJ4vFxUKjfWCHLlNJOae6IsPhxkOfrOFsgMafQ0uhEZSxAbL0ZSdZ3YBzWNOjDSLg3U5FPbkVW+HICJYFHBvHd7+IzQ7uG6D1XEcQh/i9aiaTPh6U1bGLwb/Oi7M5wKEyLvceZVN/uHwWAjwIAc15Xlro/HIN8haACtWF3K4XgAtfJ8C9I3qfVIhJJGiSJCPZe2LESDhbUffjSt8Q98Wn6A3DLXp7dQm2d5Iq/LxH2NUg2A6aorg81KrM+X6UsQ0fzPlLqNqjQwIlAir68TgVSwCnVg1Bl9lJxeA/kodHddhWCnSnkjzxWPRnkdbQ/ZbjBvz/DIz7/uCjGX4WZDyF2kjAw4eUp2pLJtu1pjrd0X0r9czUl8VuOGb0UeVqyqVUgqe6nE7TU43eYP+v6tu7WjOMFL58vVQc2UDcNARjYvmEU10h6Dq9JNOd/ugPZKpnJXw9s+FBeVKUtG0wF9Wr71CjTs4Y214c0Rz/2pLgRULiEEcYwPGUIrSCFf7GMyxKU8PoE3C3GG20HYvcQF6122cK3lB+sM9y3KY3ExlDmyHJUt+WDwDFTmmovI3KsGGOFcsnc5ZoV6KjQbEzwglWgyW9jTJ8JcK9j2ApaGrvMFhA5WBTezaGyoLZ+q9Se19hKhnaHiUMP/+p55WIWMTpWuQrfGly43U22eOXcPJfeTHpBKvF1XxZbpl5mN71i3EoBRPu0MlWxI+bj90xUS1/JApaLcd7xp6wdCIvUEERF8hlbJtZHzL8kLGPNNxuOpdXAN63ztWhnqRZxoeWBARMeOqNuiTXP9uo5Ey3lzd4oUzjBjkO6QGO2/TxLOsIMnxoovAKyHssERDA/pxjlQTCpy8Vqpau4A6yH1PVmVw6tvbZMFRht6m/OtXWgEUogYZwUzLHwPUYigAE38rBPExIWLbLI6R4/cngIccnkIJ8j3cwoiNUL4Qg3HKTDI3a5EbZL6CS01BHL+mDlbS4I4GsckMLOSz7LNxkcszO9n6I6hB0rVX7Me5YGr3BJMbzq9zp5VJGvbJSqEwRrVnXHxal31+kxh9ALDgWh8XFXt5AxKTx+J0I3nXJcAbdB1+dxTzRkA/q6JY7iUIbhNNPymA7luHhA67IRLiUScnbHStyyIqsA+2U0WGoWwohmEDPyRN6t5cHUV84NUgYM1U7Mzcx9v1m9dz5zJs+s6e0/Ft812eUhrPCcvSx2d4ORJtRN+/rOJiEAy0junOWnH2qN0t2BEfLW8yG5De0CacY0vCKQnQE5ouKeRmU5Fe1n6BhGKcU53ANbqeOHLL+/5487j2prdvNjf2U++cOqOnpsWEiGR9M8VaHr+2F+L6g7n8u5t0jpcOHsaX4xDz4oQTz4MhFrIqbzIA3K4+peGrLMB4k+ZZ3i3JRqQT+3UwpGoEYzWYK9ZL7f2bcsZNJRpWjh5YG7ofWnN/B/IMi0CKgSrYJVePr/GPwrHsbve/Ju4AfswKDzJnW2rrHYRoRoESjgySb6+E09+2gfOBhA0VUr05vAjuJcX84g9mifzs2Tz1RKtYLvB9moSwjjVYzzOlXG7ySiB87s1IH95bOoZvVZmtSiGH98g7ZQEn8uWGuWKlW6SPacHsbiE5y/3s2FVYjACjMowinaI5NQecxV3mQFJj10pC03XzxB3yu4+seIYrObiPWWHc7osScyq/GPVoKmvRUQg96c7YXjYJKfQxlYcY7OE6y917RdYV9qK0g9fU4k0/jSavYfOEgVv0vKZEDYdTg0MZMlAX90XWS7z2XoDmNvQuW79uJ2YTfee8kw2TQ0RZ1F3FiQJEA9R/JVNqk5MvxGzk++RSthLzM+RXRklzBVgW3zu0rAanNRLqmi7zQs0Nfc+VN1hwJXNEbHC5FTjdaYrmdk/2/tobsr43HWL1lC/2ksQKIINlEOf2OMLPnwRWQlTk6I3l+MZmKFvYLJsWJ95O/Uc2SCNJtmvtUG+9E0fMOVM50RO07xJdX5E5h+UiiELVEqh6cY5Oauvi7rlHDbDy/oYYd11UFBBe1d6dg7+b06FnLxfyZAxsk5BFYWWh+aFXNKbmQdZlZ89/SMcC1Fcg+eyWycoNluHEEIqp8eMUG1D+CGWeNtHoL4MDXuweTt4Tj0iHv629mvsoYt/qtJvJIyBH8TQxnHKRrdPicSgy9WdEhvd8WOlZMceePPAEYnpYfU6ZXzQULES6Bn2Ba1mLATJCcCWIkfJ5y//zS2q9nUtbLUtzaaTp1OVpbJsY0R1q8t5ebjXSfZTvG98ZKza8L30TPg5twlR2Una2P2R85CJ3ADMty1C+JYPzYNz1bNl8j8ehJHHVHPvUKgXpac7HFW1HsTZ340K8r/a8HNCjYxzAnb7icmr+RrCrvs4gRx7lywkjVq7GUiikiRvYDs4U6Pz8QOs33AHHVvst+4+boWXkJldyA7P9CAfUTNktzxIIxMUUBxoprPxz2fzqC7iR4GRAlLVCDdOwe0onmvFfEW7tdcfM43YSS7kVgMO01pp5dWsQBZ7Fhi++BgSjNiPtqXGjxCWhYnunGP31yxgLwnxcTlk1QeWo5hPpICIDxr1ASKo1rxDcxPRqydtiQDtanPXWOzQQp4nhvxTIpAOUUN3SGcH1ZBtDHnWtLxBIEOQljPw7+/51SkX0Nc9SAwr2NQHUNyE3TtZU9nNlXdnQMiK3RHN5gdWaSza5DHmcS+spmuffjS+QMpBt0dp38iSq0a3anLJ1/QdTMi2X7DBJtLCsyn2Ij+kz8kgtXvIO/OaYkgs5XxY0T4dKzYYt8EymZlz4nttumDovCcXkdJG0RirGe8Dk8hhfrIVzQRdWDTyXQJ2kUrXvGKYu4Y0CSOTuBAivGWv3s6Vt8t1dePN7sql4zc6g6kqxjSor3zWIfEh7ifT5RNmKKfbSyIqVE0l1eak2uHt5/j0W/qwaF3fMC/yMQWUhbE9HMvBtX8oxlwbIkh8WYgbQ6f8yG18tM85E5XiGl6oeE8MX6VVAMkivBKa8zLTXzz9Vl4S41aR0Wc6fCabCCyODvLhxtIIcJL22CwQt1aWyhq5XkbKjDiHcjlru+q6pvbnGuKAjXg/HjqbpzfJMbo/ztGdDa1bi72NdZ1fS6ieWb0y1dTuJUfF5DAzdyYCUEEMdNE+s9eBmeZK00XM7DxbL4B/Jhuj6+u5fFFnEcV1ttPrA57ccNWd6dcWBh1WPWKT8cNvpSoIu3BPiuxgDIuvl8aXeeDRHntk6TdFWimjVqtQiMQe40tAXuvCiCst0axMgXFF7853MoEcy7tOj+3a6ZdlYFmmAB43apiwVUWpm0qxWC2o/F3WO1kekLyN9FXJSdWjbpbHm50naYR16PCmMiF3CNGAEGUFnaIY2QZrK9QdQfsGwEhycW4oBS2qyKf/e3v80W4WG+m8MY77YLzFAmpvpUgFj+1BwJrj0f+UnchUoLRn9zKtYQZc7QaxaA4KJBhRsJdIoZ9W/0hHmg/hTWI2D3VKueh5HD82jZ4DGdevjv6YxLBmxCl5ZZ98AyuQpdk6rM6N/A23Ap/6fm57z5vJ+1Tvn7V3Rs0L+4RAMaXT0eLpUduSfbK8EfeeVw1XKjIgGS/cBuwyRDac07HuOI2fEgZXO7sNKv61MaDjdXA0JIWFwdq74Cb068r45OcL8ysGlG1/K7Wo4d6m6CiRn7nm4u28XFlFM/KazSTp4u0MELkEojKLYBHPzw9t2AQ8EG0eMgvGtFBwuiYIImN/VBBKzGRsXtt/ILuet4gO/a6qPay6wjHKcfqeVDwruBTy8xm19UwUvGHy8fdc+eZvxuIOVrDTc94lA2QbsFFO+2esnrzcw01fuRMTS3GuOlsMnweHx6ByJ4WrvKiJte+qdSAkrmJihZ89u3yBI0s1ZUUlXNtmS4Hbp0K8kD38iYnifJgyQ/tuTyzNatqKTwTeZ0VKFKyPO/wlBouGYyN3wEE6sabeY1bHWlazW+JdAm0TIZoNjy2yf/9n+rD0ZPRyjIwKKivI6SUVxGyRTbkHoRnmC/QoLCrQ4Ta7dHH7WqTJvor3Da15ZC4xLC8G9YVr2m731m2TNCqpeA8gmC1HDZ7TLwmbh2jA5v6P+YvGkqbQK2NhXInI43tDhIdBOLJ/+TqDMVBWd4nGzje5pkG7WUgrSoRAfVVjOM+WJDnzxx0LeJz6ch8MG1SpLqJMBcnPTv8wKFHYYN13mv2xsKpMT3hXJju03UGRPd3kQAvCdE6yk81vpzHh/X9t+8c+TikvOvqkRC21JkijCizeXYXb367sFf/9eFFtcLMjWE1434YTimlwRv7uM5jE0KE94Kcno4u4r8mw5CXfofOlwMx0AZFmw0qy7On0mH1gBYUpkKAGnmilwW0aIYt+SMkWOHOOaEtFffYPr05YgC+X44qUoecqml9aWGiWV8G9TbzKvvnqNa7AHTvVOz8z9pcxLhnVY5iRlYLqI999AjLwwFoN8D3ATmaJZJBeMo289I05e7bktXgmdR8cXfg741OCNWbumo8/40sn4mtaroMtkRXCuwQddCVrKolWfjbNoRVK6g0c3p8H1ksFYnRRmtH2SnGzHevqYx5DjVsAHyVsPnExIVJyRPzYZf78CUm7+yzFQODFTij0rCluDYgfFMP+YkC2iaiwuAaNJ1Y4SWSJObVF181eTP3NK5K68Hn9Sh4N73zeGIvm1VdZPjVLpRxDC0NSU0q6xHy2L6X21aj6+nRQ4W6imub9lGiS8fwySZkqhqTwFkkuQVcOCeyvJIYs3Hz9VQksx9g4EksB5nSrxtIYXU5yW0r5bLjI+OUQWw1zGrIXUODvLdKTryjq+GSphrwdxQgBWXS5NNFRiVI/uEEz88YTqyVrk4qclE+lsBwd8k2AoAsU1GuLMdvvM/CvO/QJ2cNicx9kvf3dyBSej2hoLJeL1AIEfwdPWtrUHJUyzQY4cSoGaVrJQLKpIyD4AwsGDHBwEHmjU5STBzS0Q0H9uGlMKglaVjUFZlYl4W8miTdRkkVo+ZctvWD+cP7NrJOjDPpWp5KcXtxOaGyvketL1yg/2VKwpRmt6jG252Hf9KwBfrPWgNa6DJ8BrDdWSV7b7JWnXXwTmF655gbAyLkwmgc2X99BNC2J+RCrDm0HLI1hpcyaY1L4vSRj8Skg8YfxE7zlcrCxzAxdBmXkg8+Eu6y8tM9Gc3HBs0pNSWKGDqGmx6N8LBHltmhypNvy9oU5hIs63aH+4Kr9VAzjvWcvtEE4N0VZS25gZXtFZt1obtGJ1foMMYkUCh9RR8yfq9/YkkdSOOiDzaNvsOuLGeP/vqmmPlZxpR54q62eFgqkKRkN0zpPoQarc2BeAca+nAEZfEF6ZBeZ/a0GImTlhtGM+NNbSaMu2mr4sTpU8tK+H/DM3kxqs3oXw6avwPSU3Rg5HBab4zR6nsOXQ39nFA8Kfu8jB67Y9y44x1s/0C0jO8pzCH+kyTVm4RTSPFMFFxNRUmuYFhRtbZ5V9c5uXseAfs7v7vUZ5zRm2xX+xbojyuxn8KpmjpcVfJ0/DRcgETCm01Yf8GJ0h25N54ySeCUOT7GDhIs2YXQd8hi6bbOwQLhQY6+auwX6iJLiwxs0kE1ucKl+4zuf+CwZvkrvceYnbD6WaToDZUe2dJyTd3n7RkC7yCZ28A3WXi3bDCzd5BXO2atUVLUewgZKxovDCCzb2/rRZZ0OpKgkhieOsvt8GtnouCaEw==" />
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['aspnetForm'];
+if (!theForm) {
+    theForm = document.aspnetForm;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script>
+
+
+<script src="/TDClient/WebResource.axd?d=pynGkmcFUV13He1Qd6_TZMSMQxVWLi4fik2rw1_u_hZsCNzwv5c621ov6_ZX_wzTt5vh-g2&amp;t=638901392248157332" type="text/javascript"></script>
+
+
+<script src="/TDClient/ScriptResource.axd?d=nv7asgRUU0tRmHNR2D6t1NXOAgTb3J37FC1L2PfbYYFmSPm-ANa7n6FP0x7BAsbHeL4jfY3ptd1q7zKKVI7DbuXZcwEoKOwj9WxCI1VrQlbWE1Trg1t1GmJDN43kQMJsB7X8tw2&amp;t=ffffffff93d1c106" type="text/javascript"></script>
+<script src="/TDClient/ScriptResource.axd?d=NJmAwtEo3Ipnlaxl6CMhvmVxW3-Ljsg_2Hna32smxrg-6ogyYAN3UTPsJQ8m1uwzn_kuf2Wpne6NSFmYui3h0wCQhJN3ZUiLTNkvhiIgZpq74-lKmofUPQGJ8own8RI2_mwAcmvlSj2WBnqwm5Wj4cyNvv81&amp;t=5c0e0825" type="text/javascript"></script>
+<script src="/TDClient/ScriptResource.axd?d=dwY9oWetJoJoVpgL6Zq8OLdGoo5BVWQ_Eo60QZTEhEcHeiVfwgY9tLCgzdZ5TRwvrwYEnOvujbNccOVLUfWtUg4HivSIsewg6JABxkBGEqVVV64eiRyCAsPDqh6tUioISUQKB74sWMO4Er2mHrWEIWs_sBM1&amp;t=5c0e0825" type="text/javascript"></script>
+<script src="/TDClient/WebResource.axd?d=xtfVMqdF1exC2MBVkOJwMveStDR5kg3dbZWgIXMXZmB1xXom6CcIrWFgHa7jsp4qJuFW2L5XShudyzlBsIO3JhCfiU5HmL2BDz__mCv9dznmBlEMS7LvcYg6wTdPTrAXIXI2CvtjwlnpZd-j4Zpsx2wG_uA1&amp;t=639065204200000000" type="text/javascript"></script>
+<script src="/TDClient/WebResource.axd?d=sp7vCoAo-SSYfpsQ1sYBBeEDnwCGxDYEwZCM0ler88yoVZIPDXMk1C3XF2L2L0xrbB8Rvhli51TswRlmPIOCZgaY58lKhPr-Pv1jTFJ1oUAu7x6RDtNFZUxbtxs3KYQGLK6FpPD5bKuB0e0NmS9HkAqRVks1&amp;t=639065204200000000" type="text/javascript"></script>
+<script src="/TDClient/WebResource.axd?d=icMURy63hv40LPPfq4rTvmm-RfB_YkC6rEEF_2QOO68q3TseXYNBetRKKgBXJ8mn2e8UIgCPiV23HaQUZbjySMHqSgmYZgLcYltBqwD2_EK8aQ08zBuqc3ZBVZITQrbtn6w46dRxFLibMIQg0Aho73rn8Rpxrzg5YMG_JR0UOrUR0wlZ0&amp;t=639065204200000000" type="text/javascript"></script>
+<script src="/TDClient/WebResource.axd?d=1HpFfNpwNihNfEP1lyJHvdPVqbv8KRoFH4-_ZORUgPOP-bqmmtIJRvFQc7828Vf59O_-fdBXcnwdv-hYp5RptPuHmMR0kGQM0_3rS4Z7sKfC7jy9Cc_8fyfcUWa8psszacEQlAXHPXmNwyRymbGSywEmhrE1&amp;t=639065204200000000" type="text/javascript"></script>
+<script type="text/javascript">
+//<![CDATA[
+function WebForm_OnSubmit() {
+CKEditor_TextBoxEncode('ctl00_ctl00_cpContent_cpContent_shareBody_txtBody', 0); if (typeof(ValidatorOnSubmit) == "function" && ValidatorOnSubmit() == false) return false;
+return true;
+}
+//]]>
+</script>
+
+<div class="aspNetHidden">
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="784CA02E" />
+</div>
+<script type="text/javascript">
+//<![CDATA[
+Sys.WebForms.PageRequestManager._initialize('ctl00$ctl00$smMain', 'aspnetForm', ['tctl00$ctl00$cpContent$cpContent$UpdatePanel1','','tctl00$ctl00$cpContent$cpContent$upFeedbackGrid','','tctl00$ctl00$cpContent$cpContent$lblResults$ctl00',''], ['ctl00$ctl00$cpContent$cpContent$btnSubmitComments','','ctl00$ctl00$cpContent$cpContent$btnToggleSubscribe','','ctl00$ctl00$cpContent$cpContent$btnToggleFavorite','','ctl00$ctl00$cpContent$cpContent$btnSendShare',''], [], 90, 'ctl00$ctl00');
+//]]>
+</script>
+
+<div id="ctl00_ctl00_upMain" style="display:none;">
+	
+    <div id="ctl00_ctl00_pbMain" class="progress-box-container"><div class="progress-box-body"><div class="well shadow"><h2 class="h4 gutter-top-none">Updating...</h2><div class="progress" style="margin-bottom: 0;"><div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuemin="0" aria-valuemax="100" style="width: 100%"></div></div></div></div></div>
+  
+</div>
+
+<header id="ctl00_ctl00_navHeader" role="banner">
+
+  <div id="divMstrHeader" class="master-header NoPrint" style="background-color: #fff;">
+
+  <script src="https://waynestate.github.io/tdx/resources/js/script-global.js"></script>
+  
+
+  <div class="logo-header-full hidden-xs">
+
+    
+    <div class="pull-left">
+      <a href="#mainContent" class="sr-only sr-only-focusable">Skip to main content</a>
+    </div>
+
+
+    <div id="ctl00_ctl00_divPageHeader" class="container logo-header clearfix" style="padding: 5px;">
+
+      <div id="divLogo" class="pull-left logo-container">
+
+        <a href="https://wayne.edu/"
+           target="_blank">
+          <img src="/TDPortal/BE/Logo/78/0" alt="Wayne State University" class="js-logo img-responsive" />
+          <span class="sr-only">(opens in a new tab)</span>
+        </a>
+
+      </div>
+
+      <div class="master-header-right pull-right padding-top padding-bottom">
+
+        
+
+          <div class="pull-left topLevelSearch input-group">
+            <div id="SiteSearch-77074aa7299d48719cefba348d26fce2" class="gutter-bottom input-group site-search" style="max-width: 400px;">
+  <div id="SiteSearch-dropdown-77074aa7299d48719cefba348d26fce2" class="input-group-btn">
+    <button type="button" id="SiteSearch-filter-77074aa7299d48719cefba348d26fce2" class="btn btn-default dropdown-toggle" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false" title="Filter your search by category" data-component="all">
+      <span class="fa-solid fa-solid fa-earth-americas"></span><span class="fa-solid fa-fw fa-nopad fa-caret-down" aria-hidden="true"></span>
+      <span class="sr-only">
+        Filter your search by category. Current category:
+        <span class="js-current-component">All</span>
+      </span>
+    </button>
+    <ul tabindex="-1" aria-label="Filter your search by category" role="menu" class="dropdown-menu" >
+      <li>
+        <a role="menuitem" href="javascript:void(0);" data-component-text="All" data-component="all" data-component-icon="fa-solid fa-earth-americas" title="Search all areas">
+          <span class="fa-solid fa-fw fa-nopad fa-earth-americas" aria-hidden="true"></span>
+          All
+        </a>
+      </li>
+
+      <li aria-hidden="true" class="divider"></li>
+
+        <li role="presentation">
+          <a role="menuitem" href="javascript:void(0);" data-component-text="Knowledge Base" data-component="kb" data-component-icon="fa-lightbulb" title="Search Knowledge Base">
+            <span class="fa-regular fa-fw fa-nopad fa-lightbulb" aria-hidden="true"></span>
+            Knowledge Base
+          </a>
+        </li>
+
+        <li role="presentation">
+          <a role="menuitem" href="javascript:void(0);" data-component-text="Service Catalog" data-component="sc" data-component-icon="fa-compass" title="Search Service Catalog">
+            <span class="fa-solid fa-fw fa-nopad fa-compass" aria-hidden="true"></span>
+            Service Catalog
+          </a>
+        </li>
+
+    </ul>
+  </div>
+
+  <label class="sr-only" for="SiteSearch-text-77074aa7299d48719cefba348d26fce2">Search the client portal</label>
+
+  <input id="SiteSearch-text-77074aa7299d48719cefba348d26fce2" type="text" class="form-control" autocomplete="off" placeholder="Search the client portal" title="To search for items with a specific tag, enter the # symbol followed by the name of the tag.
+To search for items using exact match, place double quotes around your text." />
+
+  <span class="input-group-btn">
+    <button id="SiteSearch-button-77074aa7299d48719cefba348d26fce2" class="btn btn-default" type="button" title="Search">
+      <span class="fa-solid fa-fw fa-nopad fa-search blue" aria-hidden="true"></span>
+      <span class="sr-only">Search</span>
+    </button>
+  </span>
+</div>
+
+<script>
+  $(function() {
+    var siteSearch = new TeamDynamix.SiteSearch({
+      searchUrl: "/TDClient/277/Portal/Shared/Search",
+      autocompleteSearchUrl: '/TDClient/277/Portal/Shared/AutocompleteSearch',
+      autocompleteResultsPosition: 'fixed',
+      autocompleteResultsZIndex: 1000,
+      searchTextBoxSelector: '#SiteSearch-text-77074aa7299d48719cefba348d26fce2',
+      searchComponentFilterButtonSelector: '#SiteSearch-filter-77074aa7299d48719cefba348d26fce2',
+      searchButtonSelector: '#SiteSearch-button-77074aa7299d48719cefba348d26fce2',
+      searchFilterDropdownSelector: '#SiteSearch-dropdown-77074aa7299d48719cefba348d26fce2',
+      showKnowledgeBaseOption: true,
+      showServicesOption: true,
+      showForumsOption: false,
+      autoFocusSearch: false
+    });
+  });
+</script>
+          </div>
+
+        
+          <div title="Sign In" class="pull-right gutter-top-sm">
+            <a href="/TDClient/277/Portal/Login.aspx?ReturnUrl=%2fTDClient%2f277%2fPortal%2fKB%2fArticleDet%3fID%3d20301">
+              Sign In
+            </a>
+          </div>
+        
+      </div>
+
+    </div>
+
+  </div>
+
+  <nav id="ctl00_ctl00_mainNav" class="navbar navbar-default themed tdbar" aria-label="Primary">
+    <div id="navContainer" class="container">
+
+      <div class="navbar-header">
+        <button type="button" class="pull-left navbar-toggle collapsed themed tdbar-button-anchored tdbar-toggle gutter-left" data-toggle="collapse" data-target=".navbar-collapse">
+          <span class="tdbar-button-anchored icon-bar"></span>
+          <span class="tdbar-button-anchored icon-bar"></span>
+          <span class="tdbar-button-anchored icon-bar"></span>
+          <span class="sr-only">Show Applications Menu</span>
+        </button>
+        <a class="navbar-brand hidden-sm hidden-md hidden-lg themed tdbar-button-anchored truncate-be" href="#">
+
+          Client Portal
+        </a>
+      </div>
+
+      <div id="td-navbar-collapse" class="collapse navbar-collapse">
+
+        <ul class="nav navbar-nav nav-collapsing" id="collapseMe">
+
+          
+            <li class="themed tdbar-button-anchored hidden-sm hidden-md hidden-lg">
+              <a href="/TDClient/277/Portal/Login.aspx?ReturnUrl=%2fTDClient%2f277%2fPortal%2fKB%2fArticleDet%3fID%3d20301">Sign In</a>
+            </li>
+          
+            <li id="divSearch" class="themed tdbar-button-anchored hidden-sm hidden-md hidden-lg">
+              <a href="/TDClient/277/Portal/Shared/Search" title="search">Search</a>
+            </li>
+          
+              <li id="divDesktop5b52d12c-b3cc-4b6b-ae68-ec43efda9a89" class="themed tdbar-button-anchored">
+                <a href="/TDClient/277/Portal/Home/">Home</a>
+              </li>
+            
+
+          
+            <li id="divTDRequests" class="themed tdbar-button-anchored sr-focusable">
+              <a href="/TDClient/277/Portal/Requests/ServiceCatalog">Services</a>
+            </li>
+          
+            <li id="divTDKnowledgeBase" class="themed tdbar-button-anchored sr-focusable">
+              <a href="/TDClient/277/Portal/KB/">Knowledge Base</a>
+            </li>
+          
+
+          <li class="themed tdbar-button-anchored hidden-xs more-items-button" id="moreMenu">
+            <a data-toggle="dropdown" title="More Applications" href="javascript:;">
+              <span class="sr-only">More Applications</span>
+              <span class="fa-solid fa-ellipsis-h" aria-hidden="true"></span>
+            </a>
+            <ul class="dropdown-menu dropdown-menu-right themed tdbar" id="collapsed"></ul>
+          </li>
+
+        </ul>
+      </div>
+
+    </div>
+
+  </nav>
+
+  </div>
+
+  </header>
+
+
+
+<div id="navShim" class="hidden-xs hidden-sm"></div>
+<main role="main">
+  <div id="content">
+    <div id="mainContent" tabindex="-1"></div>
+    
+
+  <nav id="ctl00_ctl00_cpContent_divTabHeader" class="tdbar-sub NoPrint hidden-xs navbar-subnav" aria-label="Knowledge Base">
+      <a href="#kbContent" class="sr-only sr-only-focusable">Skip to Knowledge Base content</a>
+      <div class="container clearfix">
+        <ul class="nav navbar-nav js-submenu" id="kbSubMenu" style="margin-left: -15px;">
+          
+          <li>
+            <a href="/TDClient/277/Portal/KB/Search">Search <span class="sr-only">Articles</span></a>
+          </li>
+
+          
+          
+        </ul>
+      </div>
+    </nav>
+  
+
+  <div id="kbContent" class="container gutter-top gutter-bottom" tabindex="-1" style="outline:none;">
+    
+
+<input type="hidden" name="ctl00$ctl00$cpContent$cpContent$hdnFeedbackID" id="ctl00_ctl00_cpContent_cpContent_hdnFeedbackID" />
+<input type="hidden" name="ctl00$ctl00$cpContent$cpContent$hdnIsAddressed" id="ctl00_ctl00_cpContent_cpContent_hdnIsAddressed" />
+
+<span id="ctl00_ctl00_cpContent_cpContent_lblResults_ctl00" aria-live="polite" aria-atomic="true"><span id="ctl00_ctl00_cpContent_cpContent_lblResults_lblResults-label" class="red tdx-error-text"></span></span>
+
+<a id="ctl00_ctl00_cpContent_cpContent_btnSendShare" tabindex="-1" class="hidden" aria-hidden="true" href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$ctl00$cpContent$cpContent$btnSendShare&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))">Blank</a>
+
+<div class="clearfix">
+  <nav aria-label="Breadcrumb">
+    <ol class="breadcrumb pull-left">
+      <li><a href="/TDClient/277/Portal/KB/">Knowledge Base</a></li><li class="active"><a href="/TDClient/277/Portal/KB/?CategoryID=868">Computer, device and printing support</a></li><li class="active">How to access and use WarriorGPT, Wayne State&#39;s standalone generative AI chat bot</li>
+    </ol>
+  </nav>
+  <span class="js-open-monitor" style="display: none;"></span>
+</div>
+
+
+
+<div class="row gutter-top">
+
+<div id="divMainContent" class="col-md-8">
+
+<h1 class="gutter-top" style="-ms-word-wrap: break-word; word-wrap: break-word;">
+  How to access and use WarriorGPT, Wayne State&#39;s standalone generative AI chat bot
+</h1>
+
+<div id="ctl00_ctl00_cpContent_cpContent_divTags">
+  <span class="sr-only">Tags</span>
+  <span class="fa-solid fa-tags gray gutter-right-sm" aria-hidden="true" title="Tags"></span>
+  
+      <a href="/TDClient/277/Portal/KB/Search?SearchText=%2523WarriorGPT" id="ctl00_ctl00_cpContent_cpContent_rptTags_ctl00_TagControl1_lnkDisplay" title="WarriorGPT">WarriorGPT</a>
+
+    
+</div>
+
+
+
+<div id="ctl00_ctl00_cpContent_cpContent_divBody" class="gutter-top break-word ckeShim clearfix"><p style=""><span style=""><span style="font-size: small">WarriorGPT is a secure and private generative AI platform for Wayne State students and faculty, designed to mitigate the challenges posed by using intuitional data with external generative AI tools. </span></span></p>
+
+<ul style="">
+	<li style=""><span style="font-size: small"><span style="font-size: small">WarriorGPT is available for faculty via Canvas if they choose to enroll their course(s) </span></span></li>
+	<li style=""><span style="font-size: small"><span style="font-size: small">WarriorGPT is available to students registered for current courses in which the assigned instructor has enrolled the course </span></span></li>
+	<li style=""><span style="font-size: small"><span style="font-size: small">WarriorGPT is available to all other employees with AccessID login at </span></span><a href="https://warriorgpt.wayne.edu" style="cursor: inherit" target="_blank" title="https://warriorgpt.wayne.edu "><span style="font-size: small">warriorgpt.wayne.edu</span></a></li>
+</ul>
+
+<p style=""><span style="font-size: small"><span style="font-size: small">WarriorGPT is a standalone Generative AI chatbot platform that functions similarly to ChatGPT and other AI chatbots and includes its own guardrails. That means Wayne State can control the quality of the data that users get from the tool and the security of any personal or institutional data that is inputted.</span></span></p>
+
+<ul style="">
+	<li style=""><span style="font-size: small"><span style="font-size: small">WarriorGPT does not learn from user input</span></span></li>
+	<li style=""><span style="font-size: small"><span style="font-size: small">WarriorGPT utilizes a large language model pre-trained for ethical engagement </span><span style="font-size: small"></span></span></li>
+	<li style=""><span style="font-size: small"><span style="font-size: small">User conversations are not saved in WarriorGPT </span></span></li>
+</ul>
+
+<p style=""><span style="font-size: medium"><strong style=""><strong style="">How to enroll a Canvas course in WarriorGPT</strong></strong></span></p>
+
+<p style=""><span style="font-size: small"><span style="font-size: small">Follow the instructions below to enroll your course(s) in WarriorGPT. Membership is processed daily.</span></span></p>
+
+<div style="background: #EEEEEE; border: 1px solid #CCCCCC; padding: 5px 10px"><strong>&nbsp;Step 1</strong></div>
+
+<p><span style="font-size: small"><span style="font-size: small">Go to</span><span style="font-size: small"> <a href="https://canvas.wayne.edu" style="cursor: inherit" target="_blank" title="https://canvas.wayne.edu  ">canvas.wayne.edu</a> </span><span style="font-size: small">and log in with your AccessID and password.</span></span></p>
+
+<div style="background: #EEEEEE; border: 1px solid #CCCCCC; padding: 5px 10px"><strong>Step 2</strong></div>
+
+<p><span style="font-size: small"><span style="font-size: small">Navigate to the course you would like to enroll and open it.</span></span></p>
+
+<p><span style="font-size: small"><span style="font-size: small">Click <strong style="">Course Tools</strong> in the lefthand menu and then click <strong style="">WarriorGPT Configuration</strong>.</span></span></p>
+
+<p><img alt="" src="https://services.wayne.edu/TDPortal/Images/Viewer?fileName=4458fdbb-4386-4ddd-bd9f-20b22ac0e55d.jpeg&amp;beidInt=78" style="width: 568px; height: 358px"></p>
+
+<div style="background: #EEEEEE; border: 1px solid #CCCCCC; padding: 5px 10px"><strong>Step 3</strong></div>
+
+<p><span style="font-size: small">Check <strong style="">Enable WarriorGPT</strong> for your course and then click <strong style="">Submit</strong>.</span></p>
+
+<p><img alt="" src="https://services.wayne.edu/TDPortal/Images/Viewer?fileName=dc6262cb-1d3e-473b-9c6c-4f1e4c6a05e7.jpeg&amp;beidInt=78" style="width: 478px; height: 86px"></p>
+
+<p><span style="font-size: small"><span style="font-size: small">You should now see WarriorGPT in the lefthand menu. Page refresh may be necessary.</span></span></p>
+
+<p><span style="font-size: small"><span style="font-size: small">Repeat this process for all courses you wish to enroll.</span></span><span style="font-size: small"><span style="font-size: small"></span></span><strong style=""><span style="font-size: small"></span></strong></p>
+
+<p style=""><strong style=""><span style="font-size: medium"><strong style="">WarriorGPT Command Center (temperature, top P, and max token settings)</strong></span><span style="font-size: small"> </span><span style="font-size: small"></span></strong></p>
+
+<p style=""><span style="font-size: small"><span style="font-size: small">WarriorGPT is configured with default settings designed to offer the best user experience for all skill levels. Those with advanced knowledge of generative AI can use the Command Center to customize their experience.</span></span></p>
+
+<p style=""><span style="font-size: small"><span style="font-size: small">To access this menu, accept the user agreement and then click the gear icon in the lower right-hand corner.</span></span></p>
+
+<p style=""><img alt="Image" height="270" src="https://csm.wayne.edu/KBimg/500639_2.jpeg" style="" width="246"></p>
+
+<p style=""><span style="font-size: small"><span style="font-size: small">Use this menu to alter the temperature, top P, and max tokens settings.</span></span><strong style=""><span style="font-size: small"><span style="font-size: small"></span></span></strong></p>
+
+<ul style="">
+	<li style=""><strong style=""><strong style=""><span style="font-size: small"><strong style="">Temperature: </strong></span></strong></strong><span style="font-size: small">Like a dial for creativity where 0.1 produces focused and predictable responses; 0.6 (default) produces balanced responses; 2.0 produces highly random and experimental responses; and extreme values (1.5 and over) produce unexpected results.</span></li>
+	<li style=""><strong style=""><strong style=""><strong style=""><span style="font-size: small"><strong style="">Top P: </strong></span></strong></strong></strong><span style="font-size: small">Controls how focused the model is on likely words, where 0.1 uses only the possible words; 0.9 (default) produces a variety; and 1 considers many more possibilities.</span></li>
+	<li style=""><strong style=""><strong style=""><strong style=""><span style="font-size: small"><strong style="">Max tokens: </strong></span></strong></strong></strong><span style="font-size: small">The maximum length of a possible response. Higher values allow for longer responses but may create longer process times.</span></li>
+</ul></div>
+
+<div id="ctl00_ctl00_cpContent_cpContent_divFeedback2" class="well gutter-top-lg">
+
+  <div class="row" id="divHelpfulYesNo">
+    <div class="col-sm-7">
+      
+        <div>
+          <a href="/TDClient/277/Portal/Login.aspx?ReturnUrl=%2fTDClient%2f277%2fPortal%2fKB%2fArticleDet%3fID%3d20301">Sign in to leave feedback</a>
+        </div>
+      
+    </div>
+    <div class="col-sm-5 text-right">
+      <div id="ctl00_ctl00_cpContent_cpContent_UpdatePanel1" aria-live="polite" aria-atomic="true">
+	
+          0 reviews
+        
+</div>
+    </div>
+  </div>
+
+  </div>
+
+
+
+<div class="tab-content gutter-top gutter-bottom">
+  
+  <div id="ctl00_ctl00_cpContent_cpContent_upFeedbackGrid">
+	
+        <a id="ctl00_ctl00_cpContent_cpContent_btnToggleAddressed" tabindex="-1" class="hidden" aria-hidden="true" href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$ctl00$cpContent$cpContent$btnToggleAddressed&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))">Blank</a>
+        <a id="ctl00_ctl00_cpContent_cpContent_btnDeleteFeedback" tabindex="-1" class="hidden" aria-hidden="true" href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$ctl00$cpContent$cpContent$btnDeleteFeedback&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))">Blank</a>
+        
+      
+</div>
+    
+    
+
+    
+</div>
+</div>
+
+<div class="col-md-4">
+
+
+
+    <a id="ctl00_ctl00_cpContent_cpContent_btnToggleSubscribe" tabindex="-1" class="hidden" aria-hidden="true" href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$ctl00$cpContent$cpContent$btnToggleSubscribe&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))">Blank</a>
+
+<a id="ctl00_ctl00_cpContent_cpContent_btnToggleFavorite" tabindex="-1" class="hidden" aria-hidden="true" href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$ctl00$cpContent$cpContent$btnToggleFavorite&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))">Blank</a>
+
+<a class="DetailAction print-article" href="/TDClient/277/Portal/KB/PrintArticle?ID=20301" rel="nofollow" target="_blank">  <span class="fa-solid fa-print fa-fw" aria-hidden="true"></span>
+Print Article</a>
+
+
+
+<div id="ctl00_ctl00_cpContent_cpContent_divRelatedServicesAndOfferings" class="panel panel-default">
+
+  <div class="panel-heading">
+    <h3 class="panel-title">Related Services / Offerings (1)</h3>
+  </div>
+
+  <div class="panel-body">
+    
+        <div class="gutter-top-sm gutter-bottom-lg">
+          <div class="clearfix">
+            <div class="pull-left font-md">
+              <a href="/TDClient/277/Portal/Requests/ServiceDet?ID=10764">WarriorGPT</a>
+            </div>
+          </div>
+          <div>
+            Support with Wayne State's standalone generative AI chatbot.
+          </div>
+        </div>
+      
+  </div>
+
+</div>
+
+<div id="divAttachments" class="js-article-attachments"></div>
+
+</div>
+
+</div>
+
+<div id="ctl00_ctl00_cpContent_cpContent_divProgress" style="display: none; z-index: 60;">
+  <div id="ctl00_ctl00_cpContent_cpContent_pbMain" class="progress-box-container"><div class="progress-box-body"><div class="well shadow"><h2 class="h4 gutter-top-none">Deleting...</h2><div class="progress" style="margin-bottom: 0;"><div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuemin="0" aria-valuemax="100" style="width: 100%"></div></div></div></div></div>
+</div>
+
+
+
+  </div>
+
+
+  </div>
+</main>
+
+
+
+<script type="text/javascript">
+//<![CDATA[
+setNavPosition('TDKnowledgeBase');window.CKEDITOR_BASEPATH = 'https://services.wayne.edu/TDPortal/Content/ckeditor/';
+//]]>
+</script>
+<script src="https://services.wayne.edu/TDPortal/Content/ckeditor/ckeditor.js?t=C6HH5UF" type="text/javascript"></script>
+<script type="text/javascript">
+//<![CDATA[
+var CKEditor_Controls=[],CKEditor_Init=[];function CKEditor_TextBoxEncode(d,e){var f;if(typeof CKEDITOR=='undefined'||typeof CKEDITOR.instances[d]=='undefined'){f=document.getElementById(d);if(f)f.value=f.value.replace(/</g,'&lt;').replace(/>/g,'&gt;');}else{var g=CKEDITOR.instances[d];if(e&&(typeof Page_BlockSubmit=='undefined'||!Page_BlockSubmit)){g.destroy();f=document.getElementById(d);if(f)f.style.visibility='hidden';}else g.updateElement();}};(function(){if(typeof CKEDITOR!='undefined'){var d=document.getElementById('ctl00_ctl00_cpContent_cpContent_shareBody_txtBody');if(d)d.style.visibility='hidden';}var e=function(){var f=CKEditor_Controls,g=CKEditor_Init,h=window.pageLoad,i=function(){for(var j=f.length;j--;){var k=document.getElementById(f[j]);if(k&&k.value&&(k.value.indexOf('<')==-1||k.value.indexOf('>')==-1))k.value=k.value.replace(/&lt;/g,'<').replace(/&gt;/g,'>').replace(/&amp;/g,'&');}if(typeof CKEDITOR!='undefined')for(var j=0;j<g.length;j++)g[j].call(this);};window.pageLoad=function(j,k){if(k.get_isPartialLoad())setTimeout(i,0);if(h&&typeof h=='function')h.call(this,j,k);};if(typeof Page_ClientValidate=='function'&&typeof CKEDITOR!='undefined')Page_ClientValidate=CKEDITOR.tools.override(Page_ClientValidate,function(j){return function(){for(var k in CKEDITOR.instances){if(document.getElementById(k))CKEDITOR.instances[k].updateElement();}return j.apply(this,arguments);};});setTimeout(i,0);};if(typeof Sys!='undefined'&&typeof Sys.Application!='undefined')Sys.Application.add_load(e);if(window.addEventListener)window.addEventListener('load',e,false);else if(window.attachEvent)window.attachEvent('onload',e);})();CKEditor_Controls.push('ctl00_ctl00_cpContent_cpContent_shareBody_txtBody');
+CKEditor_Init.push(function(){if(typeof CKEDITOR.instances['ctl00_ctl00_cpContent_cpContent_shareBody_txtBody']!='undefined' || !document.getElementById('ctl00_ctl00_cpContent_cpContent_shareBody_txtBody')) return;CKEDITOR.replace('ctl00_ctl00_cpContent_cpContent_shareBody_txtBody',{"autoGrow_maxHeight" : 175, "autoGrow_minHeight" : 175, "contentsCss" : ['https://services.wayne.edu/TDPortal/Content/ckeditor/contents.css', '/TDPortal/Content/FontAwesome/css/fontawesome.min.css', '/TDPortal/Content/FontAwesome/css/brands.min.css', '/TDPortal/Content/FontAwesome/css/regular.min.css', '/TDPortal/Content/FontAwesome/css/solid.min.css', '/TDPortal/Content/FontAwesome/css/v4-shims.min.css'], "height" : "175", "htmlEncodeOutput" : true, "image_previewText" : " ", "removePlugins" : "magicline,devtools,templates,elementspath,fontawesome,youtube,uploadimage,simpleimage,remoteimageblocker", "title" : "Message", "toolbar" : "TDSimple"}); });
+
+var Page_ValidationActive = false;
+if (typeof(ValidatorOnLoad) == "function") {
+    ValidatorOnLoad();
+}
+
+function ValidatorOnSubmit() {
+    if (Page_ValidationActive) {
+        return ValidatorCommonOnSubmit();
+    }
+    else {
+        return true;
+    }
+}
+        Sys.Application.add_init(function() {
+    $create(Sys.UI._UpdateProgress, {"associatedUpdatePanelId":null,"displayAfter":500,"dynamicLayout":true}, null, null, $get("ctl00_ctl00_upMain"));
+});
+//]]>
+</script>
+</form>
+
+
+
+
+
+  <footer role="contentinfo">
+
+    <div class="master-footer">
+      <div class="wsu-container wsu-footer">
+    <div class="wsu-footer__left-col">
+        <div class="wsu-footer__wayne-contact">
+            <h2 class="h"><a href="https://wayne.edu">Wayne State University</a></h2>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Website</th>
+                        <th>Phone number</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <address><a href="https://maps.wayne.edu/view/welcome-center">42 W. Warren Ave. <br>Detroit, MI 48201</a></address>
+                        </td>
+                        <td>
+                            <a href="tel:+313-577-2424">313-577-2424</a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="wsu-footer__cit-contact">
+            <h3 class="h">
+                <em>Site supported by</em> 
+                <a href="https://tech.wayne.edu">Computing &amp; Information Technology</a>
+            </h3>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Website</th>
+                        <th>Phone number</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <address><a href="https://maps.wayne.edu/view/student-center">005 Student Center <br>5221 Gullen Mall <br>Detroit, MI 48202</a></address>
+                        </td>
+                        <td>
+                            <a href="tel:+313-577-4357">313-577-4357</a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div class="wsu-footer__support-contact">
+        <h4 class="h wsu-footer__service-providers">Service providers</h4>
+        <table>
+            <thead>
+                <tr>
+                    <th>Website</th>
+                    <th>Phone number</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><a href="https://tech.wayne.edu">Computing &amp; Information Technology</a></td>
+                    <td><a href="tel:+313-577-4357">313-577-4357</a></td>
+                </tr>
+                <tr>
+                    <td><a href="https://irda.wayne.edu">Institutional Research and Data Analytics</a></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td><a href="https://recordsandreg.med.wayne.edu">School of Medicine Records and Registration</a></td>
+                    <td><a href="tel:+313-577-1470">313-577-1470</a></td>
+                </tr>
+                <tr>
+                    <td><a href="https://wayne.edu/onestop">Warrior One Stop</a></td>
+                    <td><a href="tel:+313-577-2100">313-577-2100</a></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+      
+    </div>
+
+  </footer>
+
+
+
+<script>
+
+    
+    
+
+      // Inject the Google Analytics isogram. This must happen here because it
+      // cannot be injected through an external javascript library.
+      (function (i, s, o, g, r, a, m) {
+        i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+          (i[r].q = i[r].q || []).push(arguments)
+        }, i[r].l = 1 * new Date(); a = s.createElement(o),
+          m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+      })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+    
+
+      // Per Incident #6707155. Need to focus on img. pseudo-class :focus-within is not supported in IE
+      (function ($) {
+        var $anchor = $('#divLogo a');
+        var $beLogo = $('#divLogo a img');
+
+        $anchor.focus(function () {
+          $beLogo.addClass('accessibility-focus-on-logo');
+        }).blur(function () {
+          $beLogo.removeClass('accessibility-focus-on-logo');
+        });
+
+        
+        
+          const queryParams = new URLSearchParams(window.location.search);
+          let showChatbot = true;
+          if (queryParams.has('nobot')) {
+            const nobotFlag = queryParams.get('nobot');
+            if (nobotFlag === '1' || nobotFlag === 'true') {
+              showChatbot = false;
+            }
+          }
+
+          if(showChatbot) {
+            $.ajax({
+              url: "/TDClient/277/Portal/Chatbots/GetScript",
+              type: "GET",
+              dataType: 'text',
+              success: function (data) {
+                
+                var jQueryAjaxSettingsCache = jQuery.ajaxSettings.cache;
+                jQuery.ajaxSettings.cache = true;
+                $(document.body).append(data);
+                jQuery.ajaxSettings.cache = jQueryAjaxSettingsCache;
+              }
+            });
+          }
+        
+
+        window.addEventListener("message", (event) => {
+
+          // Only accept events that come from the same origin
+          if (event.origin != window.location.origin) {
+            return;
+          }
+
+          switch (event.data.type) {
+
+            case "authenticate-using-popup":
+              handleAuthenticateUsingPopup(event.data.payload);
+              break;
+
+            case "authenticated-successfully":
+              handleAuthenticatedSuccessfully(event.data.payload);
+              break;
+
+            default:
+              break;
+          }
+
+        });
+
+        function handleAuthenticateUsingPopup(payload) {
+          let loginUrl = '/TDClient/277/Portal/Login.aspx';
+
+          if (payload.successCallbackUrl) {
+            loginUrl += '?SuccessCallbackUrl=' + payload.successCallbackUrl;
+          }
+
+          window.open(loginUrl, "_blank", "popup=1");
+        }
+
+        function handleAuthenticatedSuccessfully() {
+          event.source.close();
+          window.location.href = window.location.href;
+        }
+    })(jQuery);
+
+</script>
+
+</body>
+</html>

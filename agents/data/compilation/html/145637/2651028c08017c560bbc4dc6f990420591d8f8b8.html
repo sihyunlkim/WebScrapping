@@ -1,0 +1,743 @@
+<!doctype html>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="profile" href="https://gmpg.org/xfn/11">
+	
+	<!-- OneTrust Cookies Consent Notice start for illinois.edu -->
+	<script>
+	function OptanonWrapper() { }
+	</script>
+	<!-- OneTrust Cookies Consent Notice end for illinois.edu -->
+
+	<title>Privacy considerations for Generative AI &#8211; Privacy &amp; Cybersecurity</title>
+<meta name='robots' content='max-image-preview:large' />
+<link rel='dns-prefetch' href='//cdn.toolkit.illinois.edu' />
+<link rel='dns-prefetch' href='//cdn.disability.illinois.edu' />
+<link rel='dns-prefetch' href='//stackpath.bootstrapcdn.com' />
+<link rel='dns-prefetch' href='//kit.fontawesome.com' />
+<link rel='dns-prefetch' href='//cdn.jsdelivr.net' />
+<link rel='dns-prefetch' href='//onetrust.techservices.illinois.edu' />
+<link rel='dns-prefetch' href='//www.googletagmanager.com' />
+<link rel="alternate" type="application/rss+xml" title="Privacy &amp; Cybersecurity &raquo; Feed" href="https://www.cybersecurity.illinois.edu/feed/" />
+<link rel="alternate" type="text/calendar" title="Privacy &amp; Cybersecurity &raquo; iCal Feed" href="https://www.cybersecurity.illinois.edu/events/?ical=1" />
+<link rel="alternate" title="oEmbed (JSON)" type="application/json+oembed" href="https://www.cybersecurity.illinois.edu/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.cybersecurity.illinois.edu%2Fprivacy-considerations-for-generative-ai%2F" />
+<link rel="alternate" title="oEmbed (XML)" type="text/xml+oembed" href="https://www.cybersecurity.illinois.edu/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.cybersecurity.illinois.edu%2Fprivacy-considerations-for-generative-ai%2F&#038;format=xml" />
+<style id='wp-img-auto-sizes-contain-inline-css'>
+img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
+/*# sourceURL=wp-img-auto-sizes-contain-inline-css */
+</style>
+<style id='wp-emoji-styles-inline-css'>
+
+	img.wp-smiley, img.emoji {
+		display: inline !important;
+		border: none !important;
+		box-shadow: none !important;
+		height: 1em !important;
+		width: 1em !important;
+		margin: 0 0.07em !important;
+		vertical-align: -0.1em !important;
+		background: none !important;
+		padding: 0 !important;
+	}
+/*# sourceURL=wp-emoji-styles-inline-css */
+</style>
+<link rel='stylesheet' id='wp-block-library-css' href='https://www.cybersecurity.illinois.edu/wp-includes/css/dist/block-library/style.min.css?ver=6.9.1' media='all' />
+
+<style id='wp-block-heading-inline-css'>
+h1:where(.wp-block-heading).has-background,h2:where(.wp-block-heading).has-background,h3:where(.wp-block-heading).has-background,h4:where(.wp-block-heading).has-background,h5:where(.wp-block-heading).has-background,h6:where(.wp-block-heading).has-background{padding:1.25em 2.375em}h1.has-text-align-left[style*=writing-mode]:where([style*=vertical-lr]),h1.has-text-align-right[style*=writing-mode]:where([style*=vertical-rl]),h2.has-text-align-left[style*=writing-mode]:where([style*=vertical-lr]),h2.has-text-align-right[style*=writing-mode]:where([style*=vertical-rl]),h3.has-text-align-left[style*=writing-mode]:where([style*=vertical-lr]),h3.has-text-align-right[style*=writing-mode]:where([style*=vertical-rl]),h4.has-text-align-left[style*=writing-mode]:where([style*=vertical-lr]),h4.has-text-align-right[style*=writing-mode]:where([style*=vertical-rl]),h5.has-text-align-left[style*=writing-mode]:where([style*=vertical-lr]),h5.has-text-align-right[style*=writing-mode]:where([style*=vertical-rl]),h6.has-text-align-left[style*=writing-mode]:where([style*=vertical-lr]),h6.has-text-align-right[style*=writing-mode]:where([style*=vertical-rl]){rotate:180deg}
+/*# sourceURL=https://www.cybersecurity.illinois.edu/wp-includes/blocks/heading/style.min.css */
+</style>
+<style id='wp-block-list-inline-css'>
+ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:1.25em 2.375em}
+/*# sourceURL=https://www.cybersecurity.illinois.edu/wp-includes/blocks/list/style.min.css */
+</style>
+<style id='wp-block-columns-inline-css'>
+.wp-block-columns{box-sizing:border-box;display:flex;flex-wrap:wrap!important}@media (min-width:782px){.wp-block-columns{flex-wrap:nowrap!important}}.wp-block-columns{align-items:normal!important}.wp-block-columns.are-vertically-aligned-top{align-items:flex-start}.wp-block-columns.are-vertically-aligned-center{align-items:center}.wp-block-columns.are-vertically-aligned-bottom{align-items:flex-end}@media (max-width:781px){.wp-block-columns:not(.is-not-stacked-on-mobile)>.wp-block-column{flex-basis:100%!important}}@media (min-width:782px){.wp-block-columns:not(.is-not-stacked-on-mobile)>.wp-block-column{flex-basis:0;flex-grow:1}.wp-block-columns:not(.is-not-stacked-on-mobile)>.wp-block-column[style*=flex-basis]{flex-grow:0}}.wp-block-columns.is-not-stacked-on-mobile{flex-wrap:nowrap!important}.wp-block-columns.is-not-stacked-on-mobile>.wp-block-column{flex-basis:0;flex-grow:1}.wp-block-columns.is-not-stacked-on-mobile>.wp-block-column[style*=flex-basis]{flex-grow:0}:where(.wp-block-columns){margin-bottom:1.75em}:where(.wp-block-columns.has-background){padding:1.25em 2.375em}.wp-block-column{flex-grow:1;min-width:0;overflow-wrap:break-word;word-break:break-word}.wp-block-column.is-vertically-aligned-top{align-self:flex-start}.wp-block-column.is-vertically-aligned-center{align-self:center}.wp-block-column.is-vertically-aligned-bottom{align-self:flex-end}.wp-block-column.is-vertically-aligned-stretch{align-self:stretch}.wp-block-column.is-vertically-aligned-bottom,.wp-block-column.is-vertically-aligned-center,.wp-block-column.is-vertically-aligned-top{width:100%}
+/*# sourceURL=https://www.cybersecurity.illinois.edu/wp-includes/blocks/columns/style.min.css */
+</style>
+<style id='wp-block-paragraph-inline-css'>
+.is-small-text{font-size:.875em}.is-regular-text{font-size:1em}.is-large-text{font-size:2.25em}.is-larger-text{font-size:3em}.has-drop-cap:not(:focus):first-letter{float:left;font-size:8.4em;font-style:normal;font-weight:100;line-height:.68;margin:.05em .1em 0 0;text-transform:uppercase}body.rtl .has-drop-cap:not(:focus):first-letter{float:none;margin-left:.1em}p.has-drop-cap.has-background{overflow:hidden}:root :where(p.has-background){padding:1.25em 2.375em}:where(p.has-text-color:not(.has-link-color)) a{color:inherit}p.has-text-align-left[style*="writing-mode:vertical-lr"],p.has-text-align-right[style*="writing-mode:vertical-rl"]{rotate:180deg}
+/*# sourceURL=https://www.cybersecurity.illinois.edu/wp-includes/blocks/paragraph/style.min.css */
+</style>
+
+<style id='classic-theme-styles-inline-css'>
+/*! This file is auto-generated */
+.wp-block-button__link{color:#fff;background-color:#32373c;border-radius:9999px;box-shadow:none;text-decoration:none;padding:calc(.667em + 2px) calc(1.333em + 2px);font-size:1.125em}.wp-block-file__button{background:#32373c;color:#fff;text-decoration:none}
+/*# sourceURL=/wp-includes/css/classic-themes.min.css */
+</style>
+<link rel='stylesheet' id='block-styles-css' href='https://www.cybersecurity.illinois.edu/wp-content/themes/uofi-2020/block-styles.css?ver=6.9.1' media='all' />
+<link rel='stylesheet' id='toolkit-css' href='https://cdn.toolkit.illinois.edu/2.16/toolkit.css?ver=6.9.1' media='all' />
+<style id='global-styles-inline-css'>
+:root{--wp--preset--aspect-ratio--square: 1;--wp--preset--aspect-ratio--4-3: 4/3;--wp--preset--aspect-ratio--3-4: 3/4;--wp--preset--aspect-ratio--3-2: 3/2;--wp--preset--aspect-ratio--2-3: 2/3;--wp--preset--aspect-ratio--16-9: 16/9;--wp--preset--aspect-ratio--9-16: 9/16;--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #FFFFFF;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--color--il-cloud: #F8FAFC;--wp--preset--color--il-cloud-1: #E8E9EB;--wp--preset--color--il-cloud-2: #DDDEDE;--wp--preset--color--il-cloud-3: #D2D2D2;--wp--preset--color--il-orange: #FF552E;--wp--preset--color--il-altgeld: #DD3403;--wp--preset--color--il-heritage-orange: #F5821E;--wp--preset--color--il-heritage-orange-1: #E56E15;--wp--preset--color--il-heritage-orange-2: #CE5E11;--wp--preset--color--il-heritage-orange-3: #B74D04;--wp--preset--color--il-blue: #13294B;--wp--preset--color--il-alma-mater: #1E3877;--wp--preset--color--il-alma-mater-1: #4D69A0;--wp--preset--color--il-alma-mater-2: #849BC1;--wp--preset--color--il-alma-mater-3: #AFC7DB;--wp--preset--color--il-industrial-blue: #1D58A7;--wp--preset--color--il-industrial-blue-1: #5783BC;--wp--preset--color--il-industrial-blue-2: #90AED5;--wp--preset--color--il-industrial-blue-3: #CAD9EF;--wp--preset--color--il-arches-blue: #009FD4;--wp--preset--color--il-arches-blue-1: #7FC3E1;--wp--preset--color--il-arches-blue-2: #A6D7EB;--wp--preset--color--il-arches-blue-3: #D2EBF5;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgb(6,147,227) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgb(252,185,0) 0%,rgb(255,105,0) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgb(255,105,0) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--font-size--small: 13px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 36px;--wp--preset--font-size--x-large: 42px;--wp--preset--spacing--20: 0.44rem;--wp--preset--spacing--30: 0.67rem;--wp--preset--spacing--40: 1rem;--wp--preset--spacing--50: 1.5rem;--wp--preset--spacing--60: 2.25rem;--wp--preset--spacing--70: 3.38rem;--wp--preset--spacing--80: 5.06rem;--wp--preset--shadow--natural: 6px 6px 9px rgba(0, 0, 0, 0.2);--wp--preset--shadow--deep: 12px 12px 50px rgba(0, 0, 0, 0.4);--wp--preset--shadow--sharp: 6px 6px 0px rgba(0, 0, 0, 0.2);--wp--preset--shadow--outlined: 6px 6px 0px -3px rgb(255, 255, 255), 6px 6px rgb(0, 0, 0);--wp--preset--shadow--crisp: 6px 6px 0px rgb(0, 0, 0);}:where(.is-layout-flex){gap: 0.5em;}:where(.is-layout-grid){gap: 0.5em;}body .is-layout-flex{display: flex;}.is-layout-flex{flex-wrap: wrap;align-items: center;}.is-layout-flex > :is(*, div){margin: 0;}body .is-layout-grid{display: grid;}.is-layout-grid > :is(*, div){margin: 0;}:where(.wp-block-columns.is-layout-flex){gap: 2em;}:where(.wp-block-columns.is-layout-grid){gap: 2em;}:where(.wp-block-post-template.is-layout-flex){gap: 1.25em;}:where(.wp-block-post-template.is-layout-grid){gap: 1.25em;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}
+:where(.wp-block-columns.is-layout-flex){gap: 2em;}:where(.wp-block-columns.is-layout-grid){gap: 2em;}
+/*# sourceURL=global-styles-inline-css */
+</style>
+
+<link rel='stylesheet' id='parent-style-css' href='https://www.cybersecurity.illinois.edu/wp-content/themes/uofi-2020/style.css?ver=6.9.1' media='all' />
+<link rel='stylesheet' id='bootstrapcss-css' crossorigin="anonymous" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" href='https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css' media='all' />
+<link rel='stylesheet' id='main-css-css' href='https://www.cybersecurity.illinois.edu/wp-content/themes/uofi-2020-cybersecurity/style.css?ver=251119-184148' media='all' />
+<script src="https://cdn.toolkit.illinois.edu/2.16/toolkit.js?ver=6.9.1" id="toolkit-js"></script>
+<script src="https://www.cybersecurity.illinois.edu/wp-includes/js/jquery/jquery.min.js?ver=3.7.1" id="jquery-core-js"></script>
+<script src="https://www.cybersecurity.illinois.edu/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.4.1" id="jquery-migrate-js"></script>
+<script src="https://www.cybersecurity.illinois.edu/wp-content/themes/uofi-2020/js/main.js?ver=251028-203455" id="main_js-js"></script>
+<script src="https://www.cybersecurity.illinois.edu/wp-content/themes/uofi-2020/js/skipto.config.js" id="skiptoconf-js"></script>
+<script src="https://cdn.disability.illinois.edu/skipto.min.js" id="skipto-js"></script>
+<script crossorigin="anonymous" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" id="bootstrapjs-js"></script>
+<script crossorigin="anonymous" src="https://kit.fontawesome.com/846f7e331a.js" id="fontawesome-js"></script>
+<script crossorigin="anonymous" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" id="popper-js"></script>
+<script data-domain-script="26be7d61-2017-4ea7-8a8b-8f1704889763" src="https://onetrust.techservices.illinois.edu/scripttemplates/otSDKStub.js" id="onetrust-js"></script>
+
+<!-- Google tag (gtag.js) snippet added by Site Kit -->
+<!-- Google Analytics snippet added by Site Kit -->
+<script src="https://www.googletagmanager.com/gtag/js?id=GT-PZSW59L" id="google_gtagjs-js" async></script>
+<script id="google_gtagjs-js-after">
+window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}
+gtag("set","linker",{"domains":["www.cybersecurity.illinois.edu"]});
+gtag("js", new Date());
+gtag("set", "developer_id.dZTNiMT", true);
+gtag("config", "GT-PZSW59L");
+//# sourceURL=google_gtagjs-js-after
+</script>
+<link rel="https://api.w.org/" href="https://www.cybersecurity.illinois.edu/wp-json/" /><link rel="alternate" title="JSON" type="application/json" href="https://www.cybersecurity.illinois.edu/wp-json/wp/v2/posts/2646" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://www.cybersecurity.illinois.edu/xmlrpc.php?rsd" />
+<meta name="generator" content="WordPress 6.9.1" />
+<link rel="canonical" href="https://www.cybersecurity.illinois.edu/privacy-considerations-for-generative-ai/" />
+<link rel='shortlink' href='https://www.cybersecurity.illinois.edu/?p=2646' />
+<!-- start Simple Custom CSS and JS -->
+<style>
+@media screen and (min-width: 1190px)
+{
+html body #primary_secondary_wrapper header, #primary_secondary_wrapper .entry-content > *
+  {
+    max-width: unset;
+  }
+	
+html body #primary_secondary_wrapper article header, #primary_secondary_wrapper article .entry-content > * 
+	{  
+	 padding-left: 0;
+	 padding-right: 0;
+	}
+	
+}
+
+@media screen and (max-width: 1190px)
+{
+html body #primary_secondary_wrapper article header, #primary_secondary_wrapper article .entry-content > * 
+  {
+    margin-left: 0;
+  }
+	
+html body #primary_secondary_wrapper article header, #primary_secondary_wrapper article .entry-content > * 
+	{  
+	 padding-left: calc(2 * var(--theme-content-padding));
+	 padding-right: calc(2 * var(--theme-content-padding));
+	}	
+}
+
+il-hero ul
+	{
+	justify-content: space-evenly;
+	}
+
+.medium-box-padding
+	{
+	padding: 2rem;
+	}
+}
+
+.home .uofi-hero h1
+{
+	font-size: 3rem !important;
+}
+
+nav.il-links li:last-child
+{
+    border: 3px solid var(--il-orange);
+    padding-left: 0.5rem !important;
+    padding-right: 0.5rem !important;
+}</style>
+<!-- end Simple Custom CSS and JS -->
+<meta name="generator" content="Site Kit by Google 1.172.0" /><meta name="tec-api-version" content="v1"><meta name="tec-api-origin" content="https://www.cybersecurity.illinois.edu"><link rel="alternate" href="https://www.cybersecurity.illinois.edu/wp-json/tribe/events/v1/" />
+	<link rel="icon" href="https://cdn.brand.illinois.edu/favicon.ico">
+	
+
+	
+		
+
+		
+		
+		
+							
+				<style>
+		body .tile-list .tile.w66
+		{
+		flex: 0 0 calc(40% - 1.2rem);
+		max-width: calc(40% - 1.2rem);
+		min-width: calc(40% - 1.2rem);
+		}
+
+					#primary_secondary_wrapper header, #primary_secondary_wrapper .entry-content > *
+				{
+				max-width: 1140px !important;
+				}
+			
+			@media (max-width: 768px)
+			{
+			#primary_secondary_wrapper #secondary
+				{
+				max-width: 100% !important;
+				}			
+			}			
+						#primary_secondary_wrapper header, #primary_secondary_wrapper .entry-content > *, .search #primary_secondary_wrapper article
+				{
+				margin-left: auto;
+				margin-right: auto;
+				}
+				
+			#primary_secondary_wrapper #secondary
+				{
+				max-width: 300px !important;
+				}
+			
+			.search #primary_secondary_wrapper article .entry-summary
+			{
+			margin-top: 0;
+			padding-left: 1rem;
+			padding-right: 1rem;
+			}
+			
+			.search #primary_secondary_wrapper article .post-thumbnail
+				{
+				max-width: 33%;
+				margin: 0 1rem 0.25rem 1rem;
+				float: right;
+				}
+			
+			@media (max-width: 768px)
+				{
+				.search #primary_secondary_wrapper article .post-thumbnail
+						{
+						max-width: 50%;
+						}		
+				}
+
+			@media (max-width: 400px)
+				{
+				.search #primary_secondary_wrapper article .post-thumbnail
+						{
+						max-width: 100%;
+						width: 100%;
+						float: none;
+						display: block;
+						padding: 0;
+						margin: 0 0 0.5rem 0;
+						}		
+				}
+
+			.archive #primary_secondary_wrapper #primary
+				{
+				max-width: 1140px;
+				}
+				
+			.has-sidebar .archive #primary_secondary_wrapper #primary
+				{
+				max-width: 870px;
+				}
+			
+			.has-sidebar #primary_secondary_wrapper main article .alignfull
+				{
+				max-width: 870px !important;	
+				}
+			
+	</style>
+<style id='core-block-supports-inline-css'>
+.wp-container-core-columns-is-layout-9d6595d7{flex-wrap:nowrap;}
+/*# sourceURL=core-block-supports-inline-css */
+</style>
+
+</head>
+<body class="wp-singular post-template-default single single-post postid-2646 single-format-standard wp-theme-uofi-2020 wp-child-theme-uofi-2020-cybersecurity tribe-no-js no-sidebar">
+<div id="page" class="site">
+	<div>
+	<div>
+		<header id="masthead" class="site-header">
+					<div class="masthead_inner d-flex justify-content-between align-items-stretch">
+				<div class="il-header-wrapper flex-grow-1">
+					<il-header>
+						<div slot="wordmark">
+							<il-unit-wordmark>
+															<p class="il-primary-unit"><a href="https://cio.illinois.edu/">Office of the Chief Information Officer</a></p>
+								<h1 class="il-secondary-unit"><a href="https://www.cybersecurity.illinois.edu">Privacy &amp; Cybersecurity</a></h1>
+														</il-unit-wordmark>
+						</div>
+						
+						<il-search slot="search" action="https://www.cybersecurity.illinois.edu" method="get" searchname="s"></il-search>
+						
+												<div slot="navigation" id="navbar_wrapper_outer" class="navbar navbar-expand-lg p-0">
+							<div id="megamenunavbar"id="mainnav">
+								<nav aria-label="Site Navigation">
+									<ul id="menu-menu-1" class="navbar-nav w-100"><li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-1075" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children  menu-item-1075 nav-item"><a href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="dropdown-toggle nav-link" id="menu-item-dropdown-1075">Report a Cybersecurity Incident</a><div class="dropdown-menu tile-list" id="mainnav-"  ><section class="tile menu white-box col">
+<ul style="column-count: 1;" class=" nav_items " aria-labelledby="menu-item-dropdown-1075" >
+	<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-2351" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children dropdown menu-item-2351 nav-item"><a href="https://www.cybersecurity.illinois.edu/cybersecurity/report-a-cybersecurity-incident/" class="dropdown-item">Report a Cybersecurity Incident</a>
+	<ul  aria-labelledby="menu-item-dropdown-1075">
+		<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-1291" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1291 nav-item"><a href="https://answers.uillinois.edu/illinois/56730" class="dropdown-item">Report a Compromised Device</a></li>
+		<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-1265" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1265 nav-item"><a href="https://answers.uillinois.edu/illinois/internal/page.php?id=109228" class="dropdown-item">Report a Phishing Email</a></li>
+	</ul>
+</li>
+	<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-1278" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1278 nav-item"><a href="http://answers.uillinois.edu/illinois/70754" class="dropdown-item">Report a Stolen Device</a></li>
+	<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-1211" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1211 nav-item"><a href="https://www.cybersecurity.illinois.edu/cybersecurity-vulnerability-disclosure/" class="dropdown-item">Cybersecurity Vulnerability Disclosure</a></li>
+</ul>
+</section></div></li>
+<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-348" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children  menu-item-348 nav-item"><a href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="dropdown-toggle nav-link" id="menu-item-dropdown-348">Students</a><div class="dropdown-menu tile-list" id="mainnav-"  ><section class="tile menu white-box col">
+<ul style="column-count: 1;" class=" nav_items " aria-labelledby="menu-item-dropdown-348" >
+	<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-1294" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1294 nav-item"><a href="https://identity.uillinois.edu/iamFrontEnd/iam/start" class="dropdown-item">2-Factor Authentication</a></li>
+	<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-2344" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2344 nav-item"><a href="https://www.cybersecurity.illinois.edu/be-aware-of-threats/" class="dropdown-item">Be Aware of Threats</a></li>
+	<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-1449" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1449 nav-item"><a href="/cybersecurity-training-and-awareness" class="dropdown-item">Cybersecurity Training</a></li>
+	<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-2342" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2342 nav-item"><a href="https://www.cybersecurity.illinois.edu/develop-safe-online-habits/" class="dropdown-item">Develop Safe Online Habits</a></li>
+	<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-1154" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children dropdown menu-item-1154 nav-item"><a href="https://www.cybersecurity.illinois.edu/secure-my-devices/" class="dropdown-item">Manage and Protect My Devices</a>
+	<ul  aria-labelledby="menu-item-dropdown-348">
+		<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-1290" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1290 nav-item"><a href="#" class="dropdown-item">Report a Stolen Device</a></li>
+	</ul>
+</li>
+	<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-1286" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1286 nav-item"><a href="https://www.cybersecurity.illinois.edu/manage-and-protect-my-identity/" class="dropdown-item">Manage and Protect My Identity</a></li>
+	<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-1153" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children dropdown menu-item-1153 nav-item"><a href="https://www.cybersecurity.illinois.edu/manage-and-protect-my-data/" class="dropdown-item">Privacy Guide to University Data</a>
+	<ul  aria-labelledby="menu-item-dropdown-348">
+		<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-1176" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children dropdown menu-item-1176 nav-item"><a href="https://www.cybersecurity.illinois.edu/passwords/" class="dropdown-item">Passwords</a>
+		<ul  aria-labelledby="menu-item-dropdown-348">
+			<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-1283" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1283 nav-item"><a href="https://identity.uillinois.edu" class="dropdown-item">Password Reset</a></li>
+		</ul>
+</li>
+	</ul>
+</li>
+</ul>
+</section></div></li>
+<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-651" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children  menu-item-651 nav-item"><a href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="dropdown-toggle nav-link" id="menu-item-dropdown-651">Faculty &#038; Staff</a><div class="dropdown-menu tile-list" id="mainnav-"  ><section class="tile menu white-box col">
+<ul style="column-count: 1;" class=" nav_items " aria-labelledby="menu-item-dropdown-651" >
+	<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-1295" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1295 nav-item"><a href="https://identity.uillinois.edu/iamFrontEnd/iam/start" class="dropdown-item">2-Factor Authentication</a></li>
+	<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-1726" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children dropdown menu-item-1726 nav-item"><a href="https://www.cybersecurity.illinois.edu/cybersecurity-training-and-awareness/" class="dropdown-item">Cybersecurity Training &amp; Awareness</a>
+	<ul  aria-labelledby="menu-item-dropdown-651">
+		<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-2345" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2345 nav-item"><a href="https://www.cybersecurity.illinois.edu/be-aware-of-threats/" class="dropdown-item">Be Aware of Threats</a></li>
+		<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-2343" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2343 nav-item"><a href="https://www.cybersecurity.illinois.edu/develop-safe-online-habits/" class="dropdown-item">Develop Safe Online Habits</a></li>
+	</ul>
+</li>
+	<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-1934" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1934 nav-item"><a href="https://www.cybersecurity.illinois.edu/data-classification/" class="dropdown-item">Data Classification</a></li>
+	<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-1156" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children dropdown menu-item-1156 nav-item"><a href="https://www.cybersecurity.illinois.edu/secure-my-devices/" class="dropdown-item">Manage and Protect My Devices</a>
+	<ul  aria-labelledby="menu-item-dropdown-651">
+		<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-1293" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1293 nav-item"><a href="https://answers.uillinois.edu/illinois/56730" class="dropdown-item">Report a Compromised Device</a></li>
+		<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-1280" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1280 nav-item"><a href="#" class="dropdown-item">Report a Stolen Device</a></li>
+	</ul>
+</li>
+	<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-1287" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1287 nav-item"><a href="https://www.cybersecurity.illinois.edu/manage-and-protect-my-identity/" class="dropdown-item">Manage and Protect My Identity</a></li>
+	<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-1155" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children dropdown menu-item-1155 nav-item"><a href="https://www.cybersecurity.illinois.edu/manage-and-protect-my-data/" class="dropdown-item">Privacy Guide to University Data</a>
+	<ul  aria-labelledby="menu-item-dropdown-651">
+		<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-1937" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1937 nav-item"><a href="https://www.cybersecurity.illinois.edu/privacy/privacy-tools/" class="dropdown-item">Privacy Solutions &amp; Consulting</a></li>
+		<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-1281" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children dropdown menu-item-1281 nav-item"><a href="https://www.cybersecurity.illinois.edu/passwords/" class="dropdown-item">Passwords</a>
+		<ul  aria-labelledby="menu-item-dropdown-651">
+			<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-1282" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1282 nav-item"><a href="https://identity.uillinois.edu" class="dropdown-item">Password Reset</a></li>
+		</ul>
+</li>
+	</ul>
+</li>
+</ul>
+</section></div></li>
+<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-655" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children  menu-item-655 nav-item"><a href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="dropdown-toggle nav-link" id="menu-item-dropdown-655">Researchers</a><div class="dropdown-menu tile-list" id="mainnav-"  ><section class="tile menu white-box col">
+<ul style="column-count: 1;" class=" nav_items " aria-labelledby="menu-item-dropdown-655" >
+	<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-2347" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2347 nav-item"><a href="https://www.cybersecurity.illinois.edu/be-aware-of-threats/" class="dropdown-item">Be Aware of Threats</a></li>
+	<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-1936" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1936 nav-item"><a href="https://www.cybersecurity.illinois.edu/cybersecurity-training-and-awareness/" class="dropdown-item">Cybersecurity Training &amp; Awareness</a></li>
+	<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-1785" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1785 nav-item"><a href="https://www.cybersecurity.illinois.edu/data-classification/" class="dropdown-item">Data Classification</a></li>
+	<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-1889" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1889 nav-item"><a href="/data-governance" class="dropdown-item">Data Governance</a></li>
+	<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-1151" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1151 nav-item"><a href="https://www.cybersecurity.illinois.edu/research-data-protection-and-storage/" class="dropdown-item">Manage and Protect My Research</a></li>
+	<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-1725" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1725 nav-item"><a href="https://www.cybersecurity.illinois.edu/privacy/privacy-tools/" class="dropdown-item">Privacy Solutions and Consulting</a></li>
+</ul>
+</section></div></li>
+<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-645" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children  menu-item-645 nav-item"><a href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="dropdown-toggle nav-link" id="menu-item-dropdown-645">IT Staff</a><div class="dropdown-menu tile-list" id="mainnav-"  ><section class="tile menu white-box col">
+<ul style="column-count: 1;" class=" nav_items " aria-labelledby="menu-item-dropdown-645" >
+	<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-2283" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2283 nav-item"><a href="https://www.cybersecurity.illinois.edu/it-professionals/" class="dropdown-item">Help for IT Staff</a></li>
+	<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-2124" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2124 nav-item"><a href="https://identity.uillinois.edu/iamFrontEnd/iam/start" class="dropdown-item">2-Factor Authentication</a></li>
+	<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-2346" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2346 nav-item"><a href="https://www.cybersecurity.illinois.edu/be-aware-of-threats/" class="dropdown-item">Be Aware of Threats</a></li>
+	<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-1935" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1935 nav-item"><a href="https://www.cybersecurity.illinois.edu/cybersecurity-training-and-awareness/" class="dropdown-item">Cybersecurity Training &amp; Awareness</a></li>
+	<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-566" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-566 nav-item"><a href="https://www.cybersecurity.illinois.edu/cybersecurity-vulnerability-disclosure/" class="dropdown-item">Cybersecurity Vulnerability Disclosure</a></li>
+	<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-1933" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1933 nav-item"><a href="https://www.cybersecurity.illinois.edu/data-classification/" class="dropdown-item">Data Classification</a></li>
+	<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-2918" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2918 nav-item"><a href="https://www.cybersecurity.illinois.edu/nuts-and-bolts-talks/" class="dropdown-item">Nuts and Bolts Talks</a></li>
+	<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-783" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-783 nav-item"><a href="https://www.cybersecurity.illinois.edu/privacy/privacy-tools/" class="dropdown-item">Privacy Solutions and Consulting</a></li>
+	<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-809" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-809 nav-item"><a href="https://www.cybersecurity.illinois.edu/solutions-for-developers-and-programmers/" class="dropdown-item">Secure Code Development</a></li>
+	<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-615" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children dropdown menu-item-615 nav-item"><a href="https://www.cybersecurity.illinois.edu/secure-my-devices/" class="dropdown-item">Secure &amp; Protect My Devices</a>
+	<ul  aria-labelledby="menu-item-dropdown-645">
+		<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-1292" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1292 nav-item"><a href="https://answers.uillinois.edu/illinois/56730" class="dropdown-item">Report a Compromised Device</a></li>
+		<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-1279" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1279 nav-item"><a href="https://answers.uillinois.edu/illinois/70754" class="dropdown-item">Report a Stolen Device</a></li>
+	</ul>
+</li>
+	<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-2761" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2761 nav-item"><a href="https://www.cybersecurity.illinois.edu/controls/" class="dropdown-item">Standards and Controls</a></li>
+</ul>
+</section></div></li>
+<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-1943" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children  menu-item-1943 nav-item"><a href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="dropdown-toggle nav-link" id="menu-item-dropdown-1943">Policies &#038; Governance</a><div class="dropdown-menu tile-list" id="mainnav-"  ><section class="tile menu white-box col">
+<ul style="column-count: 1;" class=" nav_items " aria-labelledby="menu-item-dropdown-1943" >
+	<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-2126" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children dropdown menu-item-2126 nav-item"><a href="https://www.cybersecurity.illinois.edu/policies-governance/" class="dropdown-item">Policies &#038; Governance</a>
+	<ul  aria-labelledby="menu-item-dropdown-1943">
+		<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-2348" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2348 nav-item"><a href="https://www.cybersecurity.illinois.edu/data-governance/" class="dropdown-item">Data Governance</a></li>
+		<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-1526" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-privacy-policy menu-item-1526 nav-item"><a href="https://www.cybersecurity.illinois.edu/privacy/privacy-policy/" class="dropdown-item">Privacy 101</a></li>
+		<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-5303" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-5303 nav-item"><a href="https://genai.illinois.edu/ethical-and-responsible-use-of-generative-ai/" class="dropdown-item">Ethical and Responsible Use of Generative AI</a></li>
+	</ul>
+</li>
+	<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-1149" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children dropdown menu-item-1149 nav-item"><a href="https://www.cybersecurity.illinois.edu/illinois-security-program/" class="dropdown-item">Illinois Security Program</a>
+	<ul  aria-labelledby="menu-item-dropdown-1943">
+		<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-647" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-647 nav-item"><a href="https://www.cybersecurity.illinois.edu/controls/" class="dropdown-item">Standards and Controls</a></li>
+		<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-1208" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1208 nav-item"><a href="https://www.cybersecurity.illinois.edu/data-classification/" class="dropdown-item">Data Classification</a></li>
+	</ul>
+</li>
+</ul>
+</section></div></li>
+<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-597" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children  menu-item-597 nav-item"><a href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="dropdown-toggle nav-link" id="menu-item-dropdown-597">Our Teams</a><div class="dropdown-menu tile-list" id="mainnav-"  ><section class="tile menu white-box col">
+<ul style="column-count: 1;" class=" nav_items " aria-labelledby="menu-item-dropdown-597" >
+	<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-3818" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-3818 nav-item"><a href="https://cio.illinois.edu" class="dropdown-item">Office of the CIO</a></li>
+	<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-2125" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2125 nav-item"><a href="https://www.cybersecurity.illinois.edu/cybersecurity/sample-page-2/" class="dropdown-item">About Us</a></li>
+	<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-347" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children dropdown menu-item-347 nav-item"><a href="https://www.cybersecurity.illinois.edu/cybersecurity-2/" class="dropdown-item">Cybersecurity Team</a>
+	<ul  aria-labelledby="menu-item-dropdown-597">
+		<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-1987" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1987 nav-item"><a href="/cybersecurity-2/#CSOC" class="dropdown-item">CSOC</a></li>
+		<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-1986" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1986 nav-item"><a href="/cybersecurity-2/#Engineering" class="dropdown-item">Infrastructure and Engineering</a></li>
+		<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-1988" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1988 nav-item"><a href="/cybersecurity-2/#Engineering" class="dropdown-item">Software Development &amp; Assurance</a></li>
+	</ul>
+</li>
+	<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-662" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-662 nav-item"><a href="https://www.cybersecurity.illinois.edu/cybersecurity-training-and-awareness/" class="dropdown-item">Cybersecurity Training &#038; Awareness Team</a></li>
+	<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-652" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-652 nav-item"><a href="https://www.cybersecurity.illinois.edu/governance/" class="dropdown-item">Governance, Risk, &amp; Compliance</a></li>
+	<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-787" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-787 nav-item"><a href="https://www.cybersecurity.illinois.edu/identity-and-access-management/" class="dropdown-item">Identity &#038; Access Management Team</a></li>
+	<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-346" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-346 nav-item"><a href="https://www.cybersecurity.illinois.edu/privacy/" class="dropdown-item">Privacy Team</a></li>
+	<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-1676" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1676 nav-item"><a href="https://www.cybersecurity.illinois.edu/contact/" class="dropdown-item">Contact</a></li>
+</ul>
+</section></div></li>
+</ul>								</nav>
+							</div>
+						</div>	
+																	<nav slot="links" class="il-links" aria-label="Top">
+							<ul>
+								<li><a href="https://cybersecurity.illinois.edu/cybersecurity-vulnerability-disclosure/"  target="_blank" rel="noopener" >Vulnerability Disclosure <span class="screen-reader-text"> (link opens in new window) </span> </a></li><li><a href="https://cybersecurity.illinois.edu/news/"  target="_blank" rel="noopener" >News <span class="screen-reader-text"> (link opens in new window) </span> </a></li><li><a href="https://cybersecurity.illinois.edu/events"  target="_blank" rel="noopener" >Events <span class="screen-reader-text"> (link opens in new window) </span> </a></li><li><a href="https://cybersecurity.illinois.edu/resources"  target="_blank" rel="noopener" >Resources <span class="screen-reader-text"> (link opens in new window) </span> </a></li><li><a href="https://cybersecurity.illinois.edu/report-a-cybersecurity-incident/"  target="_blank" rel="noopener" >Report a Cybersecurity Incident <span class="screen-reader-text"> (link opens in new window) </span> </a></li>							</ul>
+						</nav>
+											</il-header>
+						
+				</div>
+			</div>
+		</header><!-- #masthead -->
+	</div>
+		<div id="primary_secondary_wrapper" class="d-flex flex-md-row flex-column justify-content-center ">
+		<main id="primary" class="site-main flex-grow-1" aria-label="Document Content">
+			<article id="post-2646" class="post-2646 post type-post status-publish format-standard hentry category-news tag-privacy">
+
+		
+	<header class="entry-header il-formatted">
+		<h1 class="entry-title">Privacy considerations for Generative AI</h1>			<div class="entry-meta">
+				<span class="posted-on">Posted on <a href="https://www.cybersecurity.illinois.edu/privacy-considerations-for-generative-ai/" rel="bookmark"><time class="entry-date published" datetime="2023-07-17T19:31:28+00:00">July 17, 2023</time><time class="updated" datetime="2025-11-20T20:57:32+00:00">November 20, 2025</time></a></span><span class="byline"> by <span class="author vcard"><a class="url fn n" href="https://www.cybersecurity.illinois.edu/author/dmancusoillinois-edu/">Dana Mancuso</a></span></span>			</div><!-- .entry-meta -->
+			</header><!-- .entry-header -->
+	
+	<div class="entry-content">	
+		<div class="uofi-default-block il-formatted uofi_infobox uofi_infobox_top"></div><div class="uofi-default-block il-formatted">
+<h2 class="wp-block-heading"><strong>WE HAVE UPDATED THIS INFORMATION. <a href="https://genai.illinois.edu/ethical-and-responsible-use-of-generative-ai/">SEE IT HERE</a></strong></h2>
+</div><div class="uofi-default-block il-formatted">
+
+</div><div class="uofi-default-block il-formatted">
+<p>Generative AI refers to artificial intelligence models that create content in various forms, including text, images, and audio across many formats and mediums. </p>
+</div><div class="uofi-default-block il-formatted">
+
+</div><div class="uofi-default-block il-formatted">
+<p>Generative AI uses deep-learning algorithms and training data to produce new content that approximates the training data.</p>
+</div><div class="uofi-default-block il-formatted">
+
+</div><div class="uofi-default-block il-formatted">
+<p>Given the incredible rise in popularity and the transformative nature of Generative AI, following is some general guidance to consider related to data privacy. <em>Note: not legal advice, and not intended to be comprehensive.</em></p>
+</div><div class="uofi-default-block il-formatted">
+
+</div><div class="uofi-default-block ">
+<div class="wp-block-columns is-layout-flex wp-container-core-columns-is-layout-9d6595d7 wp-block-columns-is-layout-flex">
+<div class="wp-block-column is-vertically-aligned-center has-il-industrial-blue-3-background-color has-background is-layout-flow wp-block-column-is-layout-flow"><div class="uofi-default-block il-formatted">
+<h3 class="wp-block-heading has-text-align-center">If you use generative AI in regular work</h3>
+</div>
+
+<div class="uofi-default-block il-formatted">
+<ul class="wp-block-list"><div class="uofi-default-block il-formatted">
+<li>Explore options to purchase or license a business or enterprise version of the software. Enterprise software usually brings contractual protection and additional resources such as real-time support.</li>
+</div>
+
+<div class="uofi-default-block il-formatted">
+<li>Begin discussions with your colleagues about the privacy considerations listed in the next section.</li>
+</div>
+
+<div class="uofi-default-block il-formatted">
+<li>Consider where and how existing policies and best practices can be updated to better protect user privacy.</li>
+</div>
+
+<div class="uofi-default-block il-formatted">
+<li>Remember to validate the output of Generative AI, and if using Generative AI in a workflow, consider implementing formal fact-checking, editorial, and validation steps to your workflow.</li>
+</div></ul>
+</div></div>
+
+
+
+<div class="wp-block-column has-il-industrial-blue-3-background-color has-background is-layout-flow wp-block-column-is-layout-flow"><div class="uofi-default-block il-formatted">
+<h3 class="wp-block-heading has-text-align-center">If you create or develop generative AI</h3>
+</div>
+
+<div class="uofi-default-block il-formatted">
+<ul class="wp-block-list"><div class="uofi-default-block il-formatted">
+<li>Provide transparency about how your Generative AI models are trained. Inform users what data might be collected about them when using generative AI and create accessible mechanisms for users to request data deletion or opt-out of certain data processing activities.</li>
+</div>
+
+<div class="uofi-default-block il-formatted">
+<li>Explore incorporating privacy enhancing technologies in your initial design stages to mitigate privacy risks and protect user data. Consider technologies that support data deidentification and anonymization, PII identification and data loss prevention, and always incorporate principles of data minimization.</li>
+</div></ul>
+</div></div>
+</div>
+</div><div class="uofi-default-block il-formatted">
+
+</div><div class="uofi-default-block il-formatted">
+<p><strong><em>If you would like assistance as you consider data minimization, data anonymization, or data deidentification in your AI, the Privacy Team can help. Contact <a href="mailto:privacy@illinois.edu" target="_blank" rel="noreferrer noopener">privacy@illinois.edu</a></em></strong>.</p>
+</div><div class="uofi-default-block il-formatted">
+
+</div><div class="uofi-default-block il-formatted">
+<h2 class="wp-block-heading">Additional guidance</h2>
+</div><div class="uofi-default-block il-formatted">
+
+</div><div class="uofi-default-block il-formatted">
+<h3 class="wp-block-heading"><strong>Generative AI is not new, and concerns regarding its use and potential harms have been raised and discussed for years</strong>.</h3>
+</div><div class="uofi-default-block il-formatted">
+
+</div><div class="uofi-default-block il-formatted">
+<p>In light of the recent popularity and public access to generative ai capabilities, it’s important to remember there are existing policies and practices, as well as scholarly, historical, and theoretical applications that should be considered alongside the more recent conversations. Initiatives involving personally identifiable information (PII) at the university, including generative AI, are subject to all applicable laws, university policies, and university contractual obligations.</p>
+</div><div class="uofi-default-block il-formatted">
+
+</div><div class="uofi-default-block il-formatted">
+<ul class="wp-block-list"><div class="uofi-default-block il-formatted">
+<li>In the university setting, specific privacy laws that come into consideration include the federal U.S. Privacy Act as well as state privacy laws such as PIPA, industry specific regulations such as FERPA, HIPAA, COPPA, and geographic and extraterritorial international laws such as GDPR and PIPL, among others. For more information about these laws and others, see the <a href="https://epic.org/issues/privacy-laws/united-states/">Electronic Privacy Information Center’s guide.</a> &nbsp;Given the unprecedented access to and increasing adoption of AI and generative AI capabilities, market forces are driving steep competition to add AI capabilities to existing offerings. This pressure may result in compromised ethics and integrity when rushing new features and new capabilities to market.</li>
+</div></ul>
+</div><div class="uofi-default-block il-formatted">
+
+</div><div class="uofi-default-block il-formatted">
+<p></p>
+</div><div class="uofi-default-block il-formatted">
+
+</div><div class="uofi-default-block il-formatted">
+<h3 class="wp-block-heading"><strong>Training data may include data that was collected in violation of copyright and privacy laws</strong>, <strong>among other laws or ethical considerations, which may contaminate the model and any products that use it.</strong></h3>
+</div><div class="uofi-default-block il-formatted">
+
+</div><div class="uofi-default-block il-formatted">
+<p>Training data refers to the initial structured and unstructured data (databases, text, video, books, websites, blogs, etc.) used to train machine learning algorithms. We will not know the societal and business impacts of these violations for many years.</p>
+</div><div class="uofi-default-block il-formatted">
+
+</div><div class="uofi-default-block il-formatted">
+<ul class="wp-block-list"><div class="uofi-default-block il-formatted">
+<li>Identifying and removing personally identifiable information (PII) from large language models is largely untested and therefore may complicate responding to data subject requests within regulated timeframes. Additionally, if PII is a part of the large language model it may be possible for generative AI to expose PII in the output.<br></li>
+</div></ul>
+</div><div class="uofi-default-block il-formatted">
+
+</div><div class="uofi-default-block il-formatted">
+<h3 class="wp-block-heading"><strong>It is likely that input data may be used as training data, and users are more likely to overshare when data collection is interactive and conversational.</strong></h3>
+</div><div class="uofi-default-block il-formatted">
+
+</div><div class="uofi-default-block il-formatted">
+<ul class="wp-block-list"><div class="uofi-default-block il-formatted">
+<li>Users may lack technical literacy to understand that Generative AI is mimicking human behavior.</li>
+</div>
+
+<div class="uofi-default-block il-formatted">
+<li><span style="color: initial;">Users can be intentionally misled to believe they are interacting with a human.</span></li>
+</div>
+
+<div class="uofi-default-block il-formatted">
+<li>Given the prolonged and conversational method of interaction, users may lower their guard and share personal information.<br></li>
+</div></ul>
+</div><div class="uofi-default-block il-formatted">
+
+</div><div class="uofi-default-block il-formatted">
+<h3 class="wp-block-heading"><strong>It is unclear what personal information, user behavior, and analytics are being recorded and retained, or shared with third parties</strong>.</h3>
+</div><div class="uofi-default-block il-formatted">
+
+</div><div class="uofi-default-block il-formatted">
+<p>As generative AI is mainstreamed, it is likely to follow proven channels for monetization, such as using personal data for targeted advertising. Clear policies should be established regarding the retention and deletion of user data collected during interactions with generative AI systems. When considering uses, determine whether individuals may request deletion of their personal data, which is a requirement of GDPR and most other privacy laws.</p>
+</div><div class="uofi-default-block il-formatted">
+
+</div><div class="uofi-default-block il-formatted">
+<p></p>
+</div><div class="uofi-default-block il-formatted">
+
+</div><div class="uofi-default-block il-formatted">
+<h3 class="wp-block-heading"><strong>Depending on how they’re used, generative AI models may qualify as automated decision-making, which creates heightened privacy and consent obligations.</strong></h3>
+</div><div class="uofi-default-block il-formatted">
+
+</div><div class="uofi-default-block il-formatted">
+<ul class="wp-block-list"><div class="uofi-default-block il-formatted">
+<li>Under the GDPR, individuals “have the right not to be subject to a decision based solely on automated processing, including profiling,” that has legal or similarly significant effects (GDPR Article 22(1), PIPL Article 73).</li>
+</div>
+
+<div class="uofi-default-block il-formatted">
+<li>Privacy laws in Colorado, Virginia, and Connecticut give individuals the right to opt out of personal data processing for purposes of profiling.<br></li>
+</div></ul>
+</div><div class="uofi-default-block il-formatted">
+
+</div><div class="uofi-default-block il-formatted">
+<h3 class="wp-block-heading"><strong>Given the prolonged and conversational interaction of many chatbot-based Generative AI solutions, special care should be taken to minimize legal and privacy risks related to wiretapping.</strong></h3>
+</div><div class="uofi-default-block il-formatted">
+
+</div><div class="uofi-default-block il-formatted">
+<p>Risks arise in many possible implementations, including under federal and state wiretap laws. The extent of the risk largely depends upon what information is collected and who has access to the information, so properly configuring the Generative AI solutions with these risks in mind, including incorporating appropriate notice and consent language, is essential. To mitigate these risks, any implementation of a Generative AI service should be reviewed by University Counsel and the University Ethics and Compliance Office.</p>
+</div><div class="uofi-default-block il-formatted">
+
+</div><div class="uofi-default-block il-formatted">
+<p></p>
+</div><div class="uofi-default-block il-formatted">
+
+</div><div class="uofi-default-block il-formatted">
+<h3 class="wp-block-heading"><strong>Generative AI models can be susceptible to adversarial prompt engineering, where malicious actors manipulate input to generate harmful or misleading content</strong>.</h3>
+</div><div class="uofi-default-block il-formatted">
+
+</div><div class="uofi-default-block il-formatted">
+<p>Malicious prompt engineering may lead to the dissemination of false information, the exposure of sensitive data, or inappropriate collection of private information.</p>
+</div><div class="uofi-default-block il-formatted">
+
+</div><div class="uofi-default-block il-formatted">
+<p></p>
+</div><div class="uofi-default-block il-formatted">
+
+</div><div class="uofi-default-block il-formatted">
+<h3 class="wp-block-heading"><strong>Implementation of Generative AI should be transparent for users and be accompanied by training and educational programming.</strong></h3>
+</div><div class="uofi-default-block il-formatted">
+
+</div><div class="uofi-default-block il-formatted">
+<p>Educating users about how AI models work, the data they collect, and the potential risks involved can empower individuals to make informed decisions and take necessary privacy precautions when engaging with such technologies. Promoting AI literacy within the University community is crucial to assist in understanding the privacy implications of interacting with Generative AI systems.</p>
+</div><div class="uofi-default-block il-formatted">
+
+</div><div class="uofi-default-block il-formatted">
+<p></p>
+</div><div class="uofi-default-block il-formatted">
+
+</div><div class="uofi-default-block il-formatted">
+<h3 class="wp-block-heading"><strong>Generative AI systems have the potential to generate content that may inadvertently or intentionally defame individuals or organizations.</strong></h3>
+</div><div class="uofi-default-block il-formatted">
+
+</div><div class="uofi-default-block il-formatted">
+<ul class="wp-block-list"><div class="uofi-default-block il-formatted">
+<li>Vigilantly implement measures to prevent the generation of defamatory content, such as robust content moderation, human review and editing, and filtering mechanisms.</li>
+</div>
+
+<div class="uofi-default-block il-formatted">
+<li>Clear policies should be in place to address and rectify any instances of defamation that may arise from the use of Generative AI systems, ensuring accountability and protecting the reputation of the University and our communities.</li>
+</div></ul>
+</div><div class="uofi-default-block il-formatted">
+
+</div><div class="uofi-default-block il-formatted">
+<h3 class="wp-block-heading"><strong>Generative AI systems have the potential to generate false, misleading, or inaccurate content.</strong></h3>
+</div><div class="uofi-default-block il-formatted">
+
+</div><div class="uofi-default-block il-formatted">
+<p>Users should be aware the output created by generative AI may not be accurate or true. These models do not evaluate or analyze outputs for accuracy in fact or substance. Instead, they s evaluate outputs on the similarities to the training data they are built upon.</p>
+</div>	</div><!-- .entry-content -->
+
+	<footer class="entry-footer il-formatted">
+		<span class="cat-links">Posted in <a href="https://www.cybersecurity.illinois.edu/category/news/" rel="category tag">News</a></span><span class="tags-links">Tagged <a href="https://www.cybersecurity.illinois.edu/tag/privacy/" rel="tag">Privacy</a></span>	</footer><!-- .entry-footer -->
+</article><!-- #post-2646 -->
+
+	<nav class="navigation il-formatted" aria-label="Previous/Next Post">
+		<h2 class="screen-reader-text">Post navigation</h2>
+		<div class="nav-links"><div class="nav-previous"><a href="https://www.cybersecurity.illinois.edu/meet-kim-milford/" rel="prev"><span class="nav-subtitle">Previous:</span> <span class="nav-title">Meet Kim Milford</span></a></div><div class="nav-next"><a href="https://www.cybersecurity.illinois.edu/insider-threats/" rel="next"><span class="nav-subtitle">Next:</span> <span class="nav-title">Insider Threats</span></a></div></div>
+	</nav>
+		</main><!-- #main -->
+		
+	</div>
+	</div>
+
+	<footer id="colophon" class="site-footer">
+	   <il-footer>
+
+	  <div slot="contact" class="il-footer-contact uofi_address">
+					<p><a href="https://www.cybersecurity.illinois.edu">Privacy &amp; Cybersecurity</a></p>
+							<p>Digital Computer Lab</p><p>1304 W. Springfield Ave.</p><p>Urbana, IL 61801</p><p>Email: <a href="mailto:securitysupport@illinois.edu">securitysupport@illinois.edu</a><p>
+			  </div>
+
+					<div slot="social" class="il-footer-social">
+				<ul>
+											<li><a href="https://www.linkedin.com/company/illinois-ocio" >LinkedIn</a></li>
+												<li><a href="http://www.facebook.com/techservicesil"  target="_blank" rel="noopener" >Facebook <span class="screen-reader-text"> (link opens in new window) </span> </a></li>
+												<li><a href="http://www.instagram.com/techservicesil"  target="_blank" rel="noopener" >Instagram <span class="screen-reader-text"> (link opens in new window) </span> </a></li>
+									</ul>
+		  </div>
+		
+				<div slot="parent" class="il-footer-parent">
+							<p><a href="https://cio.illinois.edu/">Office of the Chief Information Officer</a></p>
+								</div>
+		
+					<div class="il-footer-navigation">
+									<div class="il-footer-navigation-column">
+				<h2><strong>Help Desk</strong></h2>
+<p><a href="mailto:consult@illinois.edu">consult@illinois.edu</a><br />
+<a href="https://help.uillinois.edu/TDClient/42/UIUC/Requests/TicketRequests/NewForm?ID=6JKqPvcuGcE_">submit a help request</a><br />
+217-244-7000</p>
+<h2>Office of the CIO and partner sites</h2>
+<ul>
+<li><a href="https://cio.illinois.edu/" target="_blank" rel="noopener">Office of the CIO</a></li>
+<li><a href="https://boldlyit.illinois.edu">Boldly IT at Illinois</a></li>
+<li><a href="https://digitalaccessibility.illinois.edu/">Digital Accessibility</a></li>
+<li><a href="http://genai.illinois.edu/" target="_blank" rel="noopener">Enterprise GenAI</a></li>
+<li><a href="http://m.illinois.edu/" target="_blank" rel="noopener">Illinois App</a></li>
+<li><a href="https://researchit.illinois.edu/" target="_blank" rel="noopener">Research IT</a></li>
+<li><a href="https://www.techservices.illinois.edu/">Technology Services</a></li>
+<li><a href="https://webstore.illinois.edu/">WebStore</a></li>
+</ul>
+				
+					</div>
+									<div class="il-footer-navigation-column">
+				<p><strong>QUICK LINKS</strong></p>
+<p><a href="/report-an-incident/">Report an Incident</a></p>
+<p><strong>CONTACT TEAMS</strong></p>
+<p><em>Cybersecurity Engineering<br />
+</em><a href="mailto:securitysupport@illinois.edu">securitysupport@illinois.edu</a></p>
+<p><em>Cybersecurity Operations Center<br />
+</em><a href="mailto:security@illinois.edu">security@illinois.edu</a></p>
+<p><em>Governance, Risk and Compliance</em><br />
+<a href="mailto:digitalrisk@illinois.edu">digitalrisk@illinois.edu</a></p>
+<p><em>Identity &amp; Access Management<br />
+</em><a href="mailto:securitysupport@illinois.edu">securitysupport@illinois.edu</a><em><br />
+</em></p>
+<p><em>Privacy<br />
+</em><a href="mailto:privacy@illinois.edu">privacy@illinois.edu</a></p>
+				
+					</div>
+							</div>
+					
+		  <nav slot="links" class="il-footer-links" aria-label="Legal notices">
+			<ul>
+			  <li><button data-il="cookies" ></button></li>
+			  <li><a data-il="privacy"></a></li>
+			  <li><a data-il="copyright"></a></li>
+			  <li><a data-il="accessibility"></a></li>
+			  					
+					<li><a href="https://www.cybersecurity.illinois.edu/wp-login.php">Log In</a></li>
+								</ul>
+		  </nav>
+		</il-footer>
+	</footer><!-- #colophon -->
+
+
+</div><!-- #page -->
+
+<script type="speculationrules">
+{"prefetch":[{"source":"document","where":{"and":[{"href_matches":"/*"},{"not":{"href_matches":["/wp-*.php","/wp-admin/*","/wp-content/uploads/*","/wp-content/*","/wp-content/plugins/*","/wp-content/themes/uofi-2020-cybersecurity/*","/wp-content/themes/uofi-2020/*","/*\\?(.+)"]}},{"not":{"selector_matches":"a[rel~=\"nofollow\"]"}},{"not":{"selector_matches":".no-prefetch, .no-prefetch a"}}]},"eagerness":"conservative"}]}
+</script>
+		<script>
+		( function ( body ) {
+			'use strict';
+			body.className = body.className.replace( /\btribe-no-js\b/, 'tribe-js' );
+		} )( document.body );
+		</script>
+		<script> /* <![CDATA[ */var tribe_l10n_datatables = {"aria":{"sort_ascending":": activate to sort column ascending","sort_descending":": activate to sort column descending"},"length_menu":"Show _MENU_ entries","empty_table":"No data available in table","info":"Showing _START_ to _END_ of _TOTAL_ entries","info_empty":"Showing 0 to 0 of 0 entries","info_filtered":"(filtered from _MAX_ total entries)","zero_records":"No matching records found","search":"Search:","all_selected_text":"All items on this page were selected. ","select_all_link":"Select all pages","clear_selection":"Clear Selection.","pagination":{"all":"All","next":"Next","previous":"Previous"},"select":{"rows":{"0":"","_":": Selected %d rows","1":": Selected 1 row"}},"datepicker":{"dayNames":["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],"dayNamesShort":["Sun","Mon","Tue","Wed","Thu","Fri","Sat"],"dayNamesMin":["S","M","T","W","T","F","S"],"monthNames":["January","February","March","April","May","June","July","August","September","October","November","December"],"monthNamesShort":["January","February","March","April","May","June","July","August","September","October","November","December"],"monthNamesMin":["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"nextText":"Next","prevText":"Prev","currentText":"Today","closeText":"Done","today":"Today","clear":"Clear"}};/* ]]> */ </script><script src="https://www.cybersecurity.illinois.edu/wp-content/plugins/the-events-calendar/common/build/js/user-agent.js?ver=da75d0bdea6dde3898df" id="tec-user-agent-js"></script>
+<script id="wp-emoji-settings" type="application/json">
+{"baseUrl":"https://s.w.org/images/core/emoji/17.0.2/72x72/","ext":".png","svgUrl":"https://s.w.org/images/core/emoji/17.0.2/svg/","svgExt":".svg","source":{"concatemoji":"https://www.cybersecurity.illinois.edu/wp-includes/js/wp-emoji-release.min.js?ver=6.9.1"}}
+</script>
+<script type="module">
+/*! This file is auto-generated */
+const a=JSON.parse(document.getElementById("wp-emoji-settings").textContent),o=(window._wpemojiSettings=a,"wpEmojiSettingsSupports"),s=["flag","emoji"];function i(e){try{var t={supportTests:e,timestamp:(new Date).valueOf()};sessionStorage.setItem(o,JSON.stringify(t))}catch(e){}}function c(e,t,n){e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(t,0,0);t=new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data);e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(n,0,0);const a=new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data);return t.every((e,t)=>e===a[t])}function p(e,t){e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(t,0,0);var n=e.getImageData(16,16,1,1);for(let e=0;e<n.data.length;e++)if(0!==n.data[e])return!1;return!0}function u(e,t,n,a){switch(t){case"flag":return n(e,"\ud83c\udff3\ufe0f\u200d\u26a7\ufe0f","\ud83c\udff3\ufe0f\u200b\u26a7\ufe0f")?!1:!n(e,"\ud83c\udde8\ud83c\uddf6","\ud83c\udde8\u200b\ud83c\uddf6")&&!n(e,"\ud83c\udff4\udb40\udc67\udb40\udc62\udb40\udc65\udb40\udc6e\udb40\udc67\udb40\udc7f","\ud83c\udff4\u200b\udb40\udc67\u200b\udb40\udc62\u200b\udb40\udc65\u200b\udb40\udc6e\u200b\udb40\udc67\u200b\udb40\udc7f");case"emoji":return!a(e,"\ud83e\u1fac8")}return!1}function f(e,t,n,a){let r;const o=(r="undefined"!=typeof WorkerGlobalScope&&self instanceof WorkerGlobalScope?new OffscreenCanvas(300,150):document.createElement("canvas")).getContext("2d",{willReadFrequently:!0}),s=(o.textBaseline="top",o.font="600 32px Arial",{});return e.forEach(e=>{s[e]=t(o,e,n,a)}),s}function r(e){var t=document.createElement("script");t.src=e,t.defer=!0,document.head.appendChild(t)}a.supports={everything:!0,everythingExceptFlag:!0},new Promise(t=>{let n=function(){try{var e=JSON.parse(sessionStorage.getItem(o));if("object"==typeof e&&"number"==typeof e.timestamp&&(new Date).valueOf()<e.timestamp+604800&&"object"==typeof e.supportTests)return e.supportTests}catch(e){}return null}();if(!n){if("undefined"!=typeof Worker&&"undefined"!=typeof OffscreenCanvas&&"undefined"!=typeof URL&&URL.createObjectURL&&"undefined"!=typeof Blob)try{var e="postMessage("+f.toString()+"("+[JSON.stringify(s),u.toString(),c.toString(),p.toString()].join(",")+"));",a=new Blob([e],{type:"text/javascript"});const r=new Worker(URL.createObjectURL(a),{name:"wpTestEmojiSupports"});return void(r.onmessage=e=>{i(n=e.data),r.terminate(),t(n)})}catch(e){}i(n=f(s,u,c,p))}t(n)}).then(e=>{for(const n in e)a.supports[n]=e[n],a.supports.everything=a.supports.everything&&a.supports[n],"flag"!==n&&(a.supports.everythingExceptFlag=a.supports.everythingExceptFlag&&a.supports[n]);var t;a.supports.everythingExceptFlag=a.supports.everythingExceptFlag&&!a.supports.flag,a.supports.everything||((t=a.source||{}).concatemoji?r(t.concatemoji):t.wpemoji&&t.twemoji&&(r(t.twemoji),r(t.wpemoji)))});
+//# sourceURL=https://www.cybersecurity.illinois.edu/wp-includes/js/wp-emoji-loader.min.js
+</script>
+
+<div id="gototop" class="hidden">
+	<a href="#"><i class="fa fa-chevron-up"></i><span class="sr-only">Go to top</span></a>
+</div>
+</body>
+</html>

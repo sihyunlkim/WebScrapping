@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<link rel="icon" href="/assets/favicon-689d0759.ico" type="image/x-icon" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>BYU Law School</title>
+		<meta name="privacy-policy-url" content="https://privacy.byu.edu" />
+		<meta
+			name="data-collection-notice"
+			content="This website collects usage data to improve user experience."
+		/>
+		
+		<script type="text/javascript" src="SEOhelpers.js"></script>
+
+		<!-- <script
+			type="text/javascript"
+			src="//script.crazyegg.com/pages/scripts/0012/5117.js"
+			async="async"
+		></script> -->
+
+		<script>
+			function loadTrackingScripts() {
+				const consent = localStorage.getItem("cookieConsent");
+				if (consent === "accepted") {
+					const script = document.createElement("script");
+					script.type = "text/javascript";
+					script.src = "//script.crazyegg.com/pages/scripts/0012/5117.js";
+					script.async = true;
+					document.head.appendChild(script);
+				}
+			}
+
+			document.addEventListener("DOMContentLoaded", loadTrackingScripts);
+			window.addEventListener("cookieConsentChanged", loadTrackingScripts);
+		</script>
+
+		<script>
+			window.addEventListener("load", function () {
+				if (!localStorage.getItem("cookieConsent")) {
+					setTimeout(function () {
+						// Make cookie consent data available to React
+						window.showCookieConsent = true;
+						// Dispatch event for React to listen to
+						window.dispatchEvent(new Event("cookieConsentReady"));
+					}, 1000);
+				}
+			});
+		</script>
+		<script type="module" crossorigin src="/assets/index-f36cb234.js"></script>
+		<link rel="stylesheet" href="/assets/index-8cb699eb.css">
+	</head>
+	<body>
+		<div id="root"></div>
+		
+
+		<!-- <script
+			type="text/javascript"
+			src="https://byu-law.atlassian.net/s/d41d8cd98f00b204e9800998ecf8427e-T/-3o5b4z/b/5/c95134bc67d3a521bb3f4331beb9b804/_/download/batch/com.atlassian.jira.collector.plugin.jira-issue-collector-plugin:issuecollector/com.atlassian.jira.collector.plugin.jira-issue-collector-plugin:issuecollector.js?locale=en-US&collectorId=ca4ec506"
+		></script>
+		<script type="text/javascript">
+			window.ATL_JQ_PAGE_PROPS = {
+				triggerFunction: function (showCollectorDialog) {
+					window.showCollectorDialog = showCollectorDialog;
+				},
+				fieldValues: {
+					recordWebInfo: "1",
+					recordWebInfoConsent: ["1"],
+				},
+			};
+		</script> -->
+
+		<script>
+			function loadJiraScript() {
+				const consent = localStorage.getItem("cookieConsent");
+				if (consent === "accepted") {
+					const script = document.createElement("script");
+					script.type = "text/javascript";
+					script.src =
+						"https://byu-law.atlassian.net/s/d41d8cd98f00b204e9800998ecf8427e-T/-3o5b4z/b/5/c95134bc67d3a521bb3f4331beb9b804/_/download/batch/com.atlassian.jira.collector.plugin.jira-issue-collector-plugin:issuecollector/com.atlassian.jira.collector.plugin.jira-issue-collector-plugin:issuecollector.js?locale=en-US&collectorId=ca4ec506";
+					document.head.appendChild(script);
+
+					window.ATL_JQ_PAGE_PROPS = {
+						triggerFunction: function (showCollectorDialog) {
+							window.showCollectorDialog = showCollectorDialog;
+						},
+						fieldValues: {
+							recordWebInfo: "1",
+							recordWebInfoConsent: ["1"],
+						},
+					};
+				}
+			}
+
+			document.addEventListener("DOMContentLoaded", loadJiraScript);
+			window.addEventListener("cookieConsentChanged", loadJiraScript);
+		</script>
+	</body>
+</html>

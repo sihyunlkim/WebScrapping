@@ -1,0 +1,898 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<link rel="pingback" href="https://academictech.uchicago.edu/xmlrpc.php" />
+
+	<script type="text/javascript">
+		document.documentElement.className = 'js';
+	</script>
+
+	<title>Combating Academic Dishonesty, Part 6: ChatGPT, AI, and Academic Integrity | Academic Technology Solutions</title>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin /><style id="et-builder-googlefonts-cached-inline">/* Original: https://fonts.googleapis.com/css?family=Montserrat:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic|Open+Sans:300,300italic,regular,italic,600,600italic,700,700italic,800,800italic&#038;subset=cyrillic,cyrillic-ext,latin,latin-ext,vietnamese,greek,greek-ext,hebrew&#038;display=swap *//* User Agent: Mozilla/5.0 (Unknown; Linux x86_64) AppleWebKit/538.1 (KHTML, like Gecko) Safari/538.1 Daum/4.1 */@font-face {font-family: 'Montserrat';font-style: italic;font-weight: 100;font-display: swap;src: url(https://fonts.gstatic.com/s/montserrat/v31/JTUFjIg1_i6t8kCHKm459Wx7xQYXK0vOoz6jq6R8aX8.ttf) format('truetype');}@font-face {font-family: 'Montserrat';font-style: italic;font-weight: 200;font-display: swap;src: url(https://fonts.gstatic.com/s/montserrat/v31/JTUFjIg1_i6t8kCHKm459Wx7xQYXK0vOoz6jqyR9aX8.ttf) format('truetype');}@font-face {font-family: 'Montserrat';font-style: italic;font-weight: 300;font-display: swap;src: url(https://fonts.gstatic.com/s/montserrat/v31/JTUFjIg1_i6t8kCHKm459Wx7xQYXK0vOoz6jq_p9aX8.ttf) format('truetype');}@font-face {font-family: 'Montserrat';font-style: italic;font-weight: 400;font-display: swap;src: url(https://fonts.gstatic.com/s/montserrat/v31/JTUFjIg1_i6t8kCHKm459Wx7xQYXK0vOoz6jq6R9aX8.ttf) format('truetype');}@font-face {font-family: 'Montserrat';font-style: italic;font-weight: 500;font-display: swap;src: url(https://fonts.gstatic.com/s/montserrat/v31/JTUFjIg1_i6t8kCHKm459Wx7xQYXK0vOoz6jq5Z9aX8.ttf) format('truetype');}@font-face {font-family: 'Montserrat';font-style: italic;font-weight: 600;font-display: swap;src: url(https://fonts.gstatic.com/s/montserrat/v31/JTUFjIg1_i6t8kCHKm459Wx7xQYXK0vOoz6jq3p6aX8.ttf) format('truetype');}@font-face {font-family: 'Montserrat';font-style: italic;font-weight: 700;font-display: swap;src: url(https://fonts.gstatic.com/s/montserrat/v31/JTUFjIg1_i6t8kCHKm459Wx7xQYXK0vOoz6jq0N6aX8.ttf) format('truetype');}@font-face {font-family: 'Montserrat';font-style: italic;font-weight: 800;font-display: swap;src: url(https://fonts.gstatic.com/s/montserrat/v31/JTUFjIg1_i6t8kCHKm459Wx7xQYXK0vOoz6jqyR6aX8.ttf) format('truetype');}@font-face {font-family: 'Montserrat';font-style: italic;font-weight: 900;font-display: swap;src: url(https://fonts.gstatic.com/s/montserrat/v31/JTUFjIg1_i6t8kCHKm459Wx7xQYXK0vOoz6jqw16aX8.ttf) format('truetype');}@font-face {font-family: 'Montserrat';font-style: normal;font-weight: 100;font-display: swap;src: url(https://fonts.gstatic.com/s/montserrat/v31/JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCtr6Uw-.ttf) format('truetype');}@font-face {font-family: 'Montserrat';font-style: normal;font-weight: 200;font-display: swap;src: url(https://fonts.gstatic.com/s/montserrat/v31/JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCvr6Ew-.ttf) format('truetype');}@font-face {font-family: 'Montserrat';font-style: normal;font-weight: 300;font-display: swap;src: url(https://fonts.gstatic.com/s/montserrat/v31/JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCs16Ew-.ttf) format('truetype');}@font-face {font-family: 'Montserrat';font-style: normal;font-weight: 400;font-display: swap;src: url(https://fonts.gstatic.com/s/montserrat/v31/JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCtr6Ew-.ttf) format('truetype');}@font-face {font-family: 'Montserrat';font-style: normal;font-weight: 500;font-display: swap;src: url(https://fonts.gstatic.com/s/montserrat/v31/JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCtZ6Ew-.ttf) format('truetype');}@font-face {font-family: 'Montserrat';font-style: normal;font-weight: 600;font-display: swap;src: url(https://fonts.gstatic.com/s/montserrat/v31/JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCu170w-.ttf) format('truetype');}@font-face {font-family: 'Montserrat';font-style: normal;font-weight: 700;font-display: swap;src: url(https://fonts.gstatic.com/s/montserrat/v31/JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCuM70w-.ttf) format('truetype');}@font-face {font-family: 'Montserrat';font-style: normal;font-weight: 800;font-display: swap;src: url(https://fonts.gstatic.com/s/montserrat/v31/JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCvr70w-.ttf) format('truetype');}@font-face {font-family: 'Montserrat';font-style: normal;font-weight: 900;font-display: swap;src: url(https://fonts.gstatic.com/s/montserrat/v31/JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCvC70w-.ttf) format('truetype');}@font-face {font-family: 'Open Sans';font-style: italic;font-weight: 300;font-stretch: normal;font-display: swap;src: url(https://fonts.gstatic.com/s/opensans/v44/memQYaGs126MiZpBA-UFUIcVXSCEkx2cmqvXlWq8tWZ0Pw86hd0Rk5hkaVc.ttf) format('truetype');}@font-face {font-family: 'Open Sans';font-style: italic;font-weight: 400;font-stretch: normal;font-display: swap;src: url(https://fonts.gstatic.com/s/opensans/v44/memQYaGs126MiZpBA-UFUIcVXSCEkx2cmqvXlWq8tWZ0Pw86hd0Rk8ZkaVc.ttf) format('truetype');}@font-face {font-family: 'Open Sans';font-style: italic;font-weight: 600;font-stretch: normal;font-display: swap;src: url(https://fonts.gstatic.com/s/opensans/v44/memQYaGs126MiZpBA-UFUIcVXSCEkx2cmqvXlWq8tWZ0Pw86hd0RkxhjaVc.ttf) format('truetype');}@font-face {font-family: 'Open Sans';font-style: italic;font-weight: 700;font-stretch: normal;font-display: swap;src: url(https://fonts.gstatic.com/s/opensans/v44/memQYaGs126MiZpBA-UFUIcVXSCEkx2cmqvXlWq8tWZ0Pw86hd0RkyFjaVc.ttf) format('truetype');}@font-face {font-family: 'Open Sans';font-style: italic;font-weight: 800;font-stretch: normal;font-display: swap;src: url(https://fonts.gstatic.com/s/opensans/v44/memQYaGs126MiZpBA-UFUIcVXSCEkx2cmqvXlWq8tWZ0Pw86hd0Rk0ZjaVc.ttf) format('truetype');}@font-face {font-family: 'Open Sans';font-style: normal;font-weight: 300;font-stretch: normal;font-display: swap;src: url(https://fonts.gstatic.com/s/opensans/v44/memSYaGs126MiZpBA-UvWbX2vVnXBbObj2OVZyOOSr4dVJWUgsiH0C4n.ttf) format('truetype');}@font-face {font-family: 'Open Sans';font-style: normal;font-weight: 400;font-stretch: normal;font-display: swap;src: url(https://fonts.gstatic.com/s/opensans/v44/memSYaGs126MiZpBA-UvWbX2vVnXBbObj2OVZyOOSr4dVJWUgsjZ0C4n.ttf) format('truetype');}@font-face {font-family: 'Open Sans';font-style: normal;font-weight: 600;font-stretch: normal;font-display: swap;src: url(https://fonts.gstatic.com/s/opensans/v44/memSYaGs126MiZpBA-UvWbX2vVnXBbObj2OVZyOOSr4dVJWUgsgH1y4n.ttf) format('truetype');}@font-face {font-family: 'Open Sans';font-style: normal;font-weight: 700;font-stretch: normal;font-display: swap;src: url(https://fonts.gstatic.com/s/opensans/v44/memSYaGs126MiZpBA-UvWbX2vVnXBbObj2OVZyOOSr4dVJWUgsg-1y4n.ttf) format('truetype');}@font-face {font-family: 'Open Sans';font-style: normal;font-weight: 800;font-stretch: normal;font-display: swap;src: url(https://fonts.gstatic.com/s/opensans/v44/memSYaGs126MiZpBA-UvWbX2vVnXBbObj2OVZyOOSr4dVJWUgshZ1y4n.ttf) format('truetype');}/* User Agent: Mozilla/5.0 (Windows NT 6.1; WOW64; rv:27.0) Gecko/20100101 Firefox/27.0 */@font-face {font-family: 'Montserrat';font-style: italic;font-weight: 100;font-display: swap;src: url(https://fonts.gstatic.com/l/font?kit=JTUFjIg1_i6t8kCHKm459Wx7xQYXK0vOoz6jq6R8aXw&skey=2d3c1187d5eede0f&v=v31) format('woff');}@font-face {font-family: 'Montserrat';font-style: italic;font-weight: 200;font-display: swap;src: url(https://fonts.gstatic.com/l/font?kit=JTUFjIg1_i6t8kCHKm459Wx7xQYXK0vOoz6jqyR9aXw&skey=2d3c1187d5eede0f&v=v31) format('woff');}@font-face {font-family: 'Montserrat';font-style: italic;font-weight: 300;font-display: swap;src: url(https://fonts.gstatic.com/l/font?kit=JTUFjIg1_i6t8kCHKm459Wx7xQYXK0vOoz6jq_p9aXw&skey=2d3c1187d5eede0f&v=v31) format('woff');}@font-face {font-family: 'Montserrat';font-style: italic;font-weight: 400;font-display: swap;src: url(https://fonts.gstatic.com/l/font?kit=JTUFjIg1_i6t8kCHKm459Wx7xQYXK0vOoz6jq6R9aXw&skey=2d3c1187d5eede0f&v=v31) format('woff');}@font-face {font-family: 'Montserrat';font-style: italic;font-weight: 500;font-display: swap;src: url(https://fonts.gstatic.com/l/font?kit=JTUFjIg1_i6t8kCHKm459Wx7xQYXK0vOoz6jq5Z9aXw&skey=2d3c1187d5eede0f&v=v31) format('woff');}@font-face {font-family: 'Montserrat';font-style: italic;font-weight: 600;font-display: swap;src: url(https://fonts.gstatic.com/l/font?kit=JTUFjIg1_i6t8kCHKm459Wx7xQYXK0vOoz6jq3p6aXw&skey=2d3c1187d5eede0f&v=v31) format('woff');}@font-face {font-family: 'Montserrat';font-style: italic;font-weight: 700;font-display: swap;src: url(https://fonts.gstatic.com/l/font?kit=JTUFjIg1_i6t8kCHKm459Wx7xQYXK0vOoz6jq0N6aXw&skey=2d3c1187d5eede0f&v=v31) format('woff');}@font-face {font-family: 'Montserrat';font-style: italic;font-weight: 800;font-display: swap;src: url(https://fonts.gstatic.com/l/font?kit=JTUFjIg1_i6t8kCHKm459Wx7xQYXK0vOoz6jqyR6aXw&skey=2d3c1187d5eede0f&v=v31) format('woff');}@font-face {font-family: 'Montserrat';font-style: italic;font-weight: 900;font-display: swap;src: url(https://fonts.gstatic.com/l/font?kit=JTUFjIg1_i6t8kCHKm459Wx7xQYXK0vOoz6jqw16aXw&skey=2d3c1187d5eede0f&v=v31) format('woff');}@font-face {font-family: 'Montserrat';font-style: normal;font-weight: 100;font-display: swap;src: url(https://fonts.gstatic.com/l/font?kit=JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCtr6Uw9&skey=7bc19f711c0de8f&v=v31) format('woff');}@font-face {font-family: 'Montserrat';font-style: normal;font-weight: 200;font-display: swap;src: url(https://fonts.gstatic.com/l/font?kit=JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCvr6Ew9&skey=7bc19f711c0de8f&v=v31) format('woff');}@font-face {font-family: 'Montserrat';font-style: normal;font-weight: 300;font-display: swap;src: url(https://fonts.gstatic.com/l/font?kit=JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCs16Ew9&skey=7bc19f711c0de8f&v=v31) format('woff');}@font-face {font-family: 'Montserrat';font-style: normal;font-weight: 400;font-display: swap;src: url(https://fonts.gstatic.com/l/font?kit=JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCtr6Ew9&skey=7bc19f711c0de8f&v=v31) format('woff');}@font-face {font-family: 'Montserrat';font-style: normal;font-weight: 500;font-display: swap;src: url(https://fonts.gstatic.com/l/font?kit=JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCtZ6Ew9&skey=7bc19f711c0de8f&v=v31) format('woff');}@font-face {font-family: 'Montserrat';font-style: normal;font-weight: 600;font-display: swap;src: url(https://fonts.gstatic.com/l/font?kit=JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCu170w9&skey=7bc19f711c0de8f&v=v31) format('woff');}@font-face {font-family: 'Montserrat';font-style: normal;font-weight: 700;font-display: swap;src: url(https://fonts.gstatic.com/l/font?kit=JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCuM70w9&skey=7bc19f711c0de8f&v=v31) format('woff');}@font-face {font-family: 'Montserrat';font-style: normal;font-weight: 800;font-display: swap;src: url(https://fonts.gstatic.com/l/font?kit=JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCvr70w9&skey=7bc19f711c0de8f&v=v31) format('woff');}@font-face {font-family: 'Montserrat';font-style: normal;font-weight: 900;font-display: swap;src: url(https://fonts.gstatic.com/l/font?kit=JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCvC70w9&skey=7bc19f711c0de8f&v=v31) format('woff');}@font-face {font-family: 'Open Sans';font-style: italic;font-weight: 300;font-stretch: normal;font-display: swap;src: url(https://fonts.gstatic.com/l/font?kit=memQYaGs126MiZpBA-UFUIcVXSCEkx2cmqvXlWq8tWZ0Pw86hd0Rk5hkaVQ&skey=743457fe2cc29280&v=v44) format('woff');}@font-face {font-family: 'Open Sans';font-style: italic;font-weight: 400;font-stretch: normal;font-display: swap;src: url(https://fonts.gstatic.com/l/font?kit=memQYaGs126MiZpBA-UFUIcVXSCEkx2cmqvXlWq8tWZ0Pw86hd0Rk8ZkaVQ&skey=743457fe2cc29280&v=v44) format('woff');}@font-face {font-family: 'Open Sans';font-style: italic;font-weight: 600;font-stretch: normal;font-display: swap;src: url(https://fonts.gstatic.com/l/font?kit=memQYaGs126MiZpBA-UFUIcVXSCEkx2cmqvXlWq8tWZ0Pw86hd0RkxhjaVQ&skey=743457fe2cc29280&v=v44) format('woff');}@font-face {font-family: 'Open Sans';font-style: italic;font-weight: 700;font-stretch: normal;font-display: swap;src: url(https://fonts.gstatic.com/l/font?kit=memQYaGs126MiZpBA-UFUIcVXSCEkx2cmqvXlWq8tWZ0Pw86hd0RkyFjaVQ&skey=743457fe2cc29280&v=v44) format('woff');}@font-face {font-family: 'Open Sans';font-style: italic;font-weight: 800;font-stretch: normal;font-display: swap;src: url(https://fonts.gstatic.com/l/font?kit=memQYaGs126MiZpBA-UFUIcVXSCEkx2cmqvXlWq8tWZ0Pw86hd0Rk0ZjaVQ&skey=743457fe2cc29280&v=v44) format('woff');}@font-face {font-family: 'Open Sans';font-style: normal;font-weight: 300;font-stretch: normal;font-display: swap;src: url(https://fonts.gstatic.com/l/font?kit=memSYaGs126MiZpBA-UvWbX2vVnXBbObj2OVZyOOSr4dVJWUgsiH0C4k&skey=62c1cbfccc78b4b2&v=v44) format('woff');}@font-face {font-family: 'Open Sans';font-style: normal;font-weight: 400;font-stretch: normal;font-display: swap;src: url(https://fonts.gstatic.com/l/font?kit=memSYaGs126MiZpBA-UvWbX2vVnXBbObj2OVZyOOSr4dVJWUgsjZ0C4k&skey=62c1cbfccc78b4b2&v=v44) format('woff');}@font-face {font-family: 'Open Sans';font-style: normal;font-weight: 600;font-stretch: normal;font-display: swap;src: url(https://fonts.gstatic.com/l/font?kit=memSYaGs126MiZpBA-UvWbX2vVnXBbObj2OVZyOOSr4dVJWUgsgH1y4k&skey=62c1cbfccc78b4b2&v=v44) format('woff');}@font-face {font-family: 'Open Sans';font-style: normal;font-weight: 700;font-stretch: normal;font-display: swap;src: url(https://fonts.gstatic.com/l/font?kit=memSYaGs126MiZpBA-UvWbX2vVnXBbObj2OVZyOOSr4dVJWUgsg-1y4k&skey=62c1cbfccc78b4b2&v=v44) format('woff');}@font-face {font-family: 'Open Sans';font-style: normal;font-weight: 800;font-stretch: normal;font-display: swap;src: url(https://fonts.gstatic.com/l/font?kit=memSYaGs126MiZpBA-UvWbX2vVnXBbObj2OVZyOOSr4dVJWUgshZ1y4k&skey=62c1cbfccc78b4b2&v=v44) format('woff');}/* User Agent: Mozilla/5.0 (Windows NT 6.3; rv:39.0) Gecko/20100101 Firefox/39.0 */@font-face {font-family: 'Montserrat';font-style: italic;font-weight: 100;font-display: swap;src: url(https://fonts.gstatic.com/s/montserrat/v31/JTUFjIg1_i6t8kCHKm459Wx7xQYXK0vOoz6jq6R8aXo.woff2) format('woff2');}@font-face {font-family: 'Montserrat';font-style: italic;font-weight: 200;font-display: swap;src: url(https://fonts.gstatic.com/s/montserrat/v31/JTUFjIg1_i6t8kCHKm459Wx7xQYXK0vOoz6jqyR9aXo.woff2) format('woff2');}@font-face {font-family: 'Montserrat';font-style: italic;font-weight: 300;font-display: swap;src: url(https://fonts.gstatic.com/s/montserrat/v31/JTUFjIg1_i6t8kCHKm459Wx7xQYXK0vOoz6jq_p9aXo.woff2) format('woff2');}@font-face {font-family: 'Montserrat';font-style: italic;font-weight: 400;font-display: swap;src: url(https://fonts.gstatic.com/s/montserrat/v31/JTUFjIg1_i6t8kCHKm459Wx7xQYXK0vOoz6jq6R9aXo.woff2) format('woff2');}@font-face {font-family: 'Montserrat';font-style: italic;font-weight: 500;font-display: swap;src: url(https://fonts.gstatic.com/s/montserrat/v31/JTUFjIg1_i6t8kCHKm459Wx7xQYXK0vOoz6jq5Z9aXo.woff2) format('woff2');}@font-face {font-family: 'Montserrat';font-style: italic;font-weight: 600;font-display: swap;src: url(https://fonts.gstatic.com/s/montserrat/v31/JTUFjIg1_i6t8kCHKm459Wx7xQYXK0vOoz6jq3p6aXo.woff2) format('woff2');}@font-face {font-family: 'Montserrat';font-style: italic;font-weight: 700;font-display: swap;src: url(https://fonts.gstatic.com/s/montserrat/v31/JTUFjIg1_i6t8kCHKm459Wx7xQYXK0vOoz6jq0N6aXo.woff2) format('woff2');}@font-face {font-family: 'Montserrat';font-style: italic;font-weight: 800;font-display: swap;src: url(https://fonts.gstatic.com/s/montserrat/v31/JTUFjIg1_i6t8kCHKm459Wx7xQYXK0vOoz6jqyR6aXo.woff2) format('woff2');}@font-face {font-family: 'Montserrat';font-style: italic;font-weight: 900;font-display: swap;src: url(https://fonts.gstatic.com/s/montserrat/v31/JTUFjIg1_i6t8kCHKm459Wx7xQYXK0vOoz6jqw16aXo.woff2) format('woff2');}@font-face {font-family: 'Montserrat';font-style: normal;font-weight: 100;font-display: swap;src: url(https://fonts.gstatic.com/s/montserrat/v31/JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCtr6Uw7.woff2) format('woff2');}@font-face {font-family: 'Montserrat';font-style: normal;font-weight: 200;font-display: swap;src: url(https://fonts.gstatic.com/s/montserrat/v31/JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCvr6Ew7.woff2) format('woff2');}@font-face {font-family: 'Montserrat';font-style: normal;font-weight: 300;font-display: swap;src: url(https://fonts.gstatic.com/s/montserrat/v31/JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCs16Ew7.woff2) format('woff2');}@font-face {font-family: 'Montserrat';font-style: normal;font-weight: 400;font-display: swap;src: url(https://fonts.gstatic.com/s/montserrat/v31/JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCtr6Ew7.woff2) format('woff2');}@font-face {font-family: 'Montserrat';font-style: normal;font-weight: 500;font-display: swap;src: url(https://fonts.gstatic.com/s/montserrat/v31/JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCtZ6Ew7.woff2) format('woff2');}@font-face {font-family: 'Montserrat';font-style: normal;font-weight: 600;font-display: swap;src: url(https://fonts.gstatic.com/s/montserrat/v31/JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCu170w7.woff2) format('woff2');}@font-face {font-family: 'Montserrat';font-style: normal;font-weight: 700;font-display: swap;src: url(https://fonts.gstatic.com/s/montserrat/v31/JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCuM70w7.woff2) format('woff2');}@font-face {font-family: 'Montserrat';font-style: normal;font-weight: 800;font-display: swap;src: url(https://fonts.gstatic.com/s/montserrat/v31/JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCvr70w7.woff2) format('woff2');}@font-face {font-family: 'Montserrat';font-style: normal;font-weight: 900;font-display: swap;src: url(https://fonts.gstatic.com/s/montserrat/v31/JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCvC70w7.woff2) format('woff2');}@font-face {font-family: 'Open Sans';font-style: italic;font-weight: 300;font-stretch: normal;font-display: swap;src: url(https://fonts.gstatic.com/s/opensans/v44/memQYaGs126MiZpBA-UFUIcVXSCEkx2cmqvXlWq8tWZ0Pw86hd0Rk5hkaVI.woff2) format('woff2');}@font-face {font-family: 'Open Sans';font-style: italic;font-weight: 400;font-stretch: normal;font-display: swap;src: url(https://fonts.gstatic.com/s/opensans/v44/memQYaGs126MiZpBA-UFUIcVXSCEkx2cmqvXlWq8tWZ0Pw86hd0Rk8ZkaVI.woff2) format('woff2');}@font-face {font-family: 'Open Sans';font-style: italic;font-weight: 600;font-stretch: normal;font-display: swap;src: url(https://fonts.gstatic.com/s/opensans/v44/memQYaGs126MiZpBA-UFUIcVXSCEkx2cmqvXlWq8tWZ0Pw86hd0RkxhjaVI.woff2) format('woff2');}@font-face {font-family: 'Open Sans';font-style: italic;font-weight: 700;font-stretch: normal;font-display: swap;src: url(https://fonts.gstatic.com/s/opensans/v44/memQYaGs126MiZpBA-UFUIcVXSCEkx2cmqvXlWq8tWZ0Pw86hd0RkyFjaVI.woff2) format('woff2');}@font-face {font-family: 'Open Sans';font-style: italic;font-weight: 800;font-stretch: normal;font-display: swap;src: url(https://fonts.gstatic.com/s/opensans/v44/memQYaGs126MiZpBA-UFUIcVXSCEkx2cmqvXlWq8tWZ0Pw86hd0Rk0ZjaVI.woff2) format('woff2');}@font-face {font-family: 'Open Sans';font-style: normal;font-weight: 300;font-stretch: normal;font-display: swap;src: url(https://fonts.gstatic.com/s/opensans/v44/memSYaGs126MiZpBA-UvWbX2vVnXBbObj2OVZyOOSr4dVJWUgsiH0C4i.woff2) format('woff2');}@font-face {font-family: 'Open Sans';font-style: normal;font-weight: 400;font-stretch: normal;font-display: swap;src: url(https://fonts.gstatic.com/s/opensans/v44/memSYaGs126MiZpBA-UvWbX2vVnXBbObj2OVZyOOSr4dVJWUgsjZ0C4i.woff2) format('woff2');}@font-face {font-family: 'Open Sans';font-style: normal;font-weight: 600;font-stretch: normal;font-display: swap;src: url(https://fonts.gstatic.com/s/opensans/v44/memSYaGs126MiZpBA-UvWbX2vVnXBbObj2OVZyOOSr4dVJWUgsgH1y4i.woff2) format('woff2');}@font-face {font-family: 'Open Sans';font-style: normal;font-weight: 700;font-stretch: normal;font-display: swap;src: url(https://fonts.gstatic.com/s/opensans/v44/memSYaGs126MiZpBA-UvWbX2vVnXBbObj2OVZyOOSr4dVJWUgsg-1y4i.woff2) format('woff2');}@font-face {font-family: 'Open Sans';font-style: normal;font-weight: 800;font-stretch: normal;font-display: swap;src: url(https://fonts.gstatic.com/s/opensans/v44/memSYaGs126MiZpBA-UvWbX2vVnXBbObj2OVZyOOSr4dVJWUgshZ1y4i.woff2) format('woff2');}</style><meta name='robots' content='max-image-preview:large' />
+<script type="text/javascript">
+			let jqueryParams=[],jQuery=function(r){return jqueryParams=[...jqueryParams,r],jQuery},$=function(r){return jqueryParams=[...jqueryParams,r],$};window.jQuery=jQuery,window.$=jQuery;let customHeadScripts=!1;jQuery.fn=jQuery.prototype={},$.fn=jQuery.prototype={},jQuery.noConflict=function(r){if(window.jQuery)return jQuery=window.jQuery,$=window.jQuery,customHeadScripts=!0,jQuery.noConflict},jQuery.ready=function(r){jqueryParams=[...jqueryParams,r]},$.ready=function(r){jqueryParams=[...jqueryParams,r]},jQuery.load=function(r){jqueryParams=[...jqueryParams,r]},$.load=function(r){jqueryParams=[...jqueryParams,r]},jQuery.fn.ready=function(r){jqueryParams=[...jqueryParams,r]},$.fn.ready=function(r){jqueryParams=[...jqueryParams,r]};</script><link rel='dns-prefetch' href='//stats.wp.com' />
+<link rel="alternate" type="application/rss+xml" title="Academic Technology Solutions &raquo; Feed" href="https://academictech.uchicago.edu/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Academic Technology Solutions &raquo; Comments Feed" href="https://academictech.uchicago.edu/comments/feed/" />
+<link rel="alternate" title="oEmbed (JSON)" type="application/json+oembed" href="https://academictech.uchicago.edu/wp-json/oembed/1.0/embed?url=https%3A%2F%2Facademictech.uchicago.edu%2F2023%2F01%2F23%2Fcombating-academic-dishonesty-part-6-chatgpt-ai-and-academic-integrity%2F" />
+<link rel="alternate" title="oEmbed (XML)" type="text/xml+oembed" href="https://academictech.uchicago.edu/wp-json/oembed/1.0/embed?url=https%3A%2F%2Facademictech.uchicago.edu%2F2023%2F01%2F23%2Fcombating-academic-dishonesty-part-6-chatgpt-ai-and-academic-integrity%2F&#038;format=xml" />
+<meta content="Divi v.4.27.4" name="generator"/><link rel='stylesheet' id='formidable-css' href='https://academictech.uchicago.edu?load_frmpro_css=true&#038;ver=1014950' type='text/css' media='all' />
+<style id='formidable-inline-css' type='text/css'>
+.da11y-submenu-show,.menu li.et-hover>ul,.nav li.et-hover>ul{opacity:1!important;visibility:visible!important}
+.keyboard-outline{outline-style:solid!important;outline-width:2px!important;-webkit-transition:none!important;transition:none!important}a[role=tab].keyboard-outline,button:active.keyboard-outline,button:focus.keyboard-outline,input:active.keyboard-outline,input:focus.keyboard-outline{outline-offset:-5px}.et-search-form input:focus.keyboard-outline{padding-left:15px;padding-right:15px}.et_pb_tab{-webkit-animation:none!important;animation:none!important}.et_pb_scroll_top.et-visible:focus{outline-color:Highlight;outline-style:solid;outline-width:2px}@media (-webkit-min-device-pixel-ratio:0){.et_pb_scroll_top.et-visible:focus{outline-color:-webkit-focus-ring-color;outline-style:auto}}
+.et_pb_contact_form_label,.et_pb_search .screen-reader-text,.et_pb_social_media_follow_network_name,.widget_search .screen-reader-text{display:block!important}.da11y-screen-reader-text,.et_pb_contact_form_label,.et_pb_search .screen-reader-text,.et_pb_social_media_follow_network_name,.widget_search .screen-reader-text{clip:rect(1px,1px,1px,1px);-webkit-font-smoothing:subpixel-antialiased;font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif;font-size:1em;font-weight:600;height:1px;letter-spacing:normal;line-height:normal;overflow:hidden;position:absolute!important;text-shadow:none;text-transform:none;width:1px}.da11y-screen-reader-text:focus{clip:auto!important;background:#f1f1f1;-webkit-box-shadow:0 0 2px 2px rgba(0,0,0,.6);box-shadow:0 0 2px 2px rgba(0,0,0,.6);color:#00547a;display:block;height:auto;left:5px;padding:15px 23px 14px;text-decoration:none;top:7px;width:auto;z-index:1000000}
+/*# sourceURL=formidable-inline-css */
+</style>
+<style id='wp-block-library-inline-css' type='text/css'>
+:root{--wp-block-synced-color:#7a00df;--wp-block-synced-color--rgb:122,0,223;--wp-bound-block-color:var(--wp-block-synced-color);--wp-editor-canvas-background:#ddd;--wp-admin-theme-color:#007cba;--wp-admin-theme-color--rgb:0,124,186;--wp-admin-theme-color-darker-10:#006ba1;--wp-admin-theme-color-darker-10--rgb:0,107,160.5;--wp-admin-theme-color-darker-20:#005a87;--wp-admin-theme-color-darker-20--rgb:0,90,135;--wp-admin-border-width-focus:2px}@media (min-resolution:192dpi){:root{--wp-admin-border-width-focus:1.5px}}.wp-element-button{cursor:pointer}:root .has-very-light-gray-background-color{background-color:#eee}:root .has-very-dark-gray-background-color{background-color:#313131}:root .has-very-light-gray-color{color:#eee}:root .has-very-dark-gray-color{color:#313131}:root .has-vivid-green-cyan-to-vivid-cyan-blue-gradient-background{background:linear-gradient(135deg,#00d084,#0693e3)}:root .has-purple-crush-gradient-background{background:linear-gradient(135deg,#34e2e4,#4721fb 50%,#ab1dfe)}:root .has-hazy-dawn-gradient-background{background:linear-gradient(135deg,#faaca8,#dad0ec)}:root .has-subdued-olive-gradient-background{background:linear-gradient(135deg,#fafae1,#67a671)}:root .has-atomic-cream-gradient-background{background:linear-gradient(135deg,#fdd79a,#004a59)}:root .has-nightshade-gradient-background{background:linear-gradient(135deg,#330968,#31cdcf)}:root .has-midnight-gradient-background{background:linear-gradient(135deg,#020381,#2874fc)}:root{--wp--preset--font-size--normal:16px;--wp--preset--font-size--huge:42px}.has-regular-font-size{font-size:1em}.has-larger-font-size{font-size:2.625em}.has-normal-font-size{font-size:var(--wp--preset--font-size--normal)}.has-huge-font-size{font-size:var(--wp--preset--font-size--huge)}.has-text-align-center{text-align:center}.has-text-align-left{text-align:left}.has-text-align-right{text-align:right}.has-fit-text{white-space:nowrap!important}#end-resizable-editor-section{display:none}.aligncenter{clear:both}.items-justified-left{justify-content:flex-start}.items-justified-center{justify-content:center}.items-justified-right{justify-content:flex-end}.items-justified-space-between{justify-content:space-between}.screen-reader-text{border:0;clip-path:inset(50%);height:1px;margin:-1px;overflow:hidden;padding:0;position:absolute;width:1px;word-wrap:normal!important}.screen-reader-text:focus{background-color:#ddd;clip-path:none;color:#444;display:block;font-size:1em;height:auto;left:5px;line-height:normal;padding:15px 23px 14px;text-decoration:none;top:5px;width:auto;z-index:100000}html :where(.has-border-color){border-style:solid}html :where([style*=border-top-color]){border-top-style:solid}html :where([style*=border-right-color]){border-right-style:solid}html :where([style*=border-bottom-color]){border-bottom-style:solid}html :where([style*=border-left-color]){border-left-style:solid}html :where([style*=border-width]){border-style:solid}html :where([style*=border-top-width]){border-top-style:solid}html :where([style*=border-right-width]){border-right-style:solid}html :where([style*=border-bottom-width]){border-bottom-style:solid}html :where([style*=border-left-width]){border-left-style:solid}html :where(img[class*=wp-image-]){height:auto;max-width:100%}:where(figure){margin:0 0 1em}html :where(.is-position-sticky){--wp-admin--admin-bar--position-offset:var(--wp-admin--admin-bar--height,0px)}@media screen and (max-width:600px){html :where(.is-position-sticky){--wp-admin--admin-bar--position-offset:0px}}
+
+/*# sourceURL=wp-block-library-inline-css */
+</style><style id='global-styles-inline-css' type='text/css'>
+:root{--wp--preset--aspect-ratio--square: 1;--wp--preset--aspect-ratio--4-3: 4/3;--wp--preset--aspect-ratio--3-4: 3/4;--wp--preset--aspect-ratio--3-2: 3/2;--wp--preset--aspect-ratio--2-3: 2/3;--wp--preset--aspect-ratio--16-9: 16/9;--wp--preset--aspect-ratio--9-16: 9/16;--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgb(6,147,227) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgb(252,185,0) 0%,rgb(255,105,0) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgb(255,105,0) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--font-size--small: 13px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 36px;--wp--preset--font-size--x-large: 42px;--wp--preset--spacing--20: 0.44rem;--wp--preset--spacing--30: 0.67rem;--wp--preset--spacing--40: 1rem;--wp--preset--spacing--50: 1.5rem;--wp--preset--spacing--60: 2.25rem;--wp--preset--spacing--70: 3.38rem;--wp--preset--spacing--80: 5.06rem;--wp--preset--shadow--natural: 6px 6px 9px rgba(0, 0, 0, 0.2);--wp--preset--shadow--deep: 12px 12px 50px rgba(0, 0, 0, 0.4);--wp--preset--shadow--sharp: 6px 6px 0px rgba(0, 0, 0, 0.2);--wp--preset--shadow--outlined: 6px 6px 0px -3px rgb(255, 255, 255), 6px 6px rgb(0, 0, 0);--wp--preset--shadow--crisp: 6px 6px 0px rgb(0, 0, 0);}:root { --wp--style--global--content-size: 823px;--wp--style--global--wide-size: 1080px; }:where(body) { margin: 0; }.wp-site-blocks > .alignleft { float: left; margin-right: 2em; }.wp-site-blocks > .alignright { float: right; margin-left: 2em; }.wp-site-blocks > .aligncenter { justify-content: center; margin-left: auto; margin-right: auto; }:where(.is-layout-flex){gap: 0.5em;}:where(.is-layout-grid){gap: 0.5em;}.is-layout-flow > .alignleft{float: left;margin-inline-start: 0;margin-inline-end: 2em;}.is-layout-flow > .alignright{float: right;margin-inline-start: 2em;margin-inline-end: 0;}.is-layout-flow > .aligncenter{margin-left: auto !important;margin-right: auto !important;}.is-layout-constrained > .alignleft{float: left;margin-inline-start: 0;margin-inline-end: 2em;}.is-layout-constrained > .alignright{float: right;margin-inline-start: 2em;margin-inline-end: 0;}.is-layout-constrained > .aligncenter{margin-left: auto !important;margin-right: auto !important;}.is-layout-constrained > :where(:not(.alignleft):not(.alignright):not(.alignfull)){max-width: var(--wp--style--global--content-size);margin-left: auto !important;margin-right: auto !important;}.is-layout-constrained > .alignwide{max-width: var(--wp--style--global--wide-size);}body .is-layout-flex{display: flex;}.is-layout-flex{flex-wrap: wrap;align-items: center;}.is-layout-flex > :is(*, div){margin: 0;}body .is-layout-grid{display: grid;}.is-layout-grid > :is(*, div){margin: 0;}body{padding-top: 0px;padding-right: 0px;padding-bottom: 0px;padding-left: 0px;}:root :where(.wp-element-button, .wp-block-button__link){background-color: #32373c;border-width: 0;color: #fff;font-family: inherit;font-size: inherit;font-style: inherit;font-weight: inherit;letter-spacing: inherit;line-height: inherit;padding-top: calc(0.667em + 2px);padding-right: calc(1.333em + 2px);padding-bottom: calc(0.667em + 2px);padding-left: calc(1.333em + 2px);text-decoration: none;text-transform: inherit;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}
+/*# sourceURL=global-styles-inline-css */
+</style>
+
+<link rel='stylesheet' id='divi-style-css' href='https://academictech.uchicago.edu/wp-content/themes/divi/style-static.min.css?ver=4.27.4' type='text/css' media='all' />
+<script type="text/javascript" id="jquery-core-js-extra">
+/* <![CDATA[ */
+var msreader_featured_posts = {"saving":"Saving...","post_featured":"This post is featured","feature":"Feature","unfeature":"Unfeature"};
+//# sourceURL=jquery-core-js-extra
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://academictech.uchicago.edu/wp-includes/js/jquery/jquery.min.js?ver=3.7.1" id="jquery-core-js"></script>
+<script type="text/javascript" src="https://academictech.uchicago.edu/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.4.1" id="jquery-migrate-js"></script>
+<script type="text/javascript" id="jquery-js-after">
+/* <![CDATA[ */
+jqueryParams.length&&$.each(jqueryParams,function(e,r){if("function"==typeof r){var n=String(r);n.replace("$","jQuery");var a=new Function("return "+n)();$(document).ready(a)}});
+var ajaxurl = 'https://academictech.uchicago.edu/wp-admin/admin-ajax.php';
+//# sourceURL=jquery-js-after
+/* ]]> */
+</script>
+<link rel="https://api.w.org/" href="https://academictech.uchicago.edu/wp-json/" /><link rel="alternate" title="JSON" type="application/json" href="https://academictech.uchicago.edu/wp-json/wp/v2/posts/3984" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://academictech.uchicago.edu/xmlrpc.php?rsd" />
+<meta name="generator" content="University of Chicago Blogs 6.9 - http://voices.uchicago.edu/" />
+<link rel="canonical" href="https://academictech.uchicago.edu/2023/01/23/combating-academic-dishonesty-part-6-chatgpt-ai-and-academic-integrity/" />
+<link rel='shortlink' href='https://academictech.uchicago.edu/?p=3984' />
+	<style>
+		@media screen and (max-width: 782px) {
+			#wpadminbar li#wp-admin-bar-log-in,
+			#wpadminbar li#wp-admin-bar-register {
+				display: block;
+			}
+
+			#wpadminbar li#wp-admin-bar-log-in a,
+			#wpadminbar li#wp-admin-bar-register a {
+				padding: 0 8px;
+			}
+		}
+	</style>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" /><style id="simpler-css-style" type="text/css">
+/*
+#logo {max-height: 75%;height: 75% !important;}
+
+ Setting the breakpoint of the mobile menu 
+@media only screen and ( max-width: 1325px ) {
+    #top-menu-nav, #top-menu {display: none;}
+    #et_top_search {display: none;}
+    #et_mobile_nav_menu {display: block;}
+}
+
+#main-header {
+    -webkit-box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+    -moz-box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+    box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+
+}
+
+#sitename {padding: 0;}
+#sitename .et_pb_row {padding: 8px 0 15px 10px;}
+#sitename .et_pb_row p {
+    float: left;
+    border-top: solid 1px #ddd;
+    padding: 5px 8px 0 0;
+    font-size: 18px;
+    color: #252525;
+    text-transform: uppercase;
+}
+
+*/
+
+/* -- Nav styles --*/
+#top-menu-nav > ul > li > a:hover{
+    color: #800000;
+    opacity: 1;
+}
+ 
+#et-secondary-menu > ul > li > a:hover {
+    color: rgba(255,255,255, .6);
+    opacity: 1;
+}
+
+.nav li ul {
+    padding: 10px;
+    top: 40px;
+}
+
+.nav li ul:before {
+    content: '';
+    width: 0;
+    height: 0;
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    border-bottom: 8px solid #800000;
+    position: absolute;
+    top: -10px;
+    left: 15px;
+}
+#top-menu li li {padding: 0;}
+#top-menu li li a {
+    padding: 10px !important;
+    width: 220px;
+}
+
+.nav ul li a:hover,
+.et_mobile_menu li a:hover {
+    background-color: transparent;
+    color: #800000 !important;
+    opacity: 1;
+}
+
+
+/* Campaign */
+
+.campaign {
+    background-color: #800000 !important;
+    padding: 20px 0 !important;
+}
+.campaign .et_pb_row {padding: 0;}
+
+.campaign h3 a {
+	background-image: url('https://voices.uchicago.edu/files/2017/01/uc_campaign-201gfnw.svg');
+	background-repeat: no-repeat;
+	background-size: contain;
+	background-position: center;
+	display: block;
+	height: 80px;
+	text-indent: -9876em;
+	width: 100%;
+}
+.campaign h4 {
+	text-align: center;
+	text-transform: none;
+}	
+.campaign h4 a {
+	color: white;
+	font-size: 20px;
+}
+
+@media (min-width: 768px) {
+    .campaign h3, .campaign h4 {margin-bottom: 0; padding-bottom: 0;}
+	.campaign h3 {float:left; margin-right: 20px;}
+	.campaign h3 a {background-position: left center;width: 125px;}
+	.campaign h4 {line-height: 30px;text-align: left;}
+	.campaign h4 a {font-size: 25px;}
+}
+
+@media (min-width: 992px) {
+	.campaign h4 {line-height: 80px;}
+}
+
+.list-widget dt {}
+.list-widget dd {margin-left: 0;}
+.list-widget dd.room {margin-bottom: 50px;}
+.list-widget dd.date span {display: none;}
+.list-widget dd.date {margin-top: -25px;}
+
+#footer-info {
+    float: left;
+    padding-bottom: 10px;
+    text-align: left;
+}</style><!-- end of custom css -->
+<script>document.documentElement.className += " js";</script>
+	<style>img#wpstats{display:none}</style>
+		
+        <script type="text/javascript">
+            var jQueryMigrateHelperHasSentDowngrade = false;
+
+			window.onerror = function( msg, url, line, col, error ) {
+				// Break out early, do not processing if a downgrade reqeust was already sent.
+				if ( jQueryMigrateHelperHasSentDowngrade ) {
+					return true;
+                }
+
+				var xhr = new XMLHttpRequest();
+				var nonce = '34ed8d4111';
+				var jQueryFunctions = [
+					'andSelf',
+					'browser',
+					'live',
+					'boxModel',
+					'support.boxModel',
+					'size',
+					'swap',
+					'clean',
+					'sub',
+                ];
+				var match_pattern = /\)\.(.+?) is not a function/;
+                var erroredFunction = msg.match( match_pattern );
+
+                // If there was no matching functions, do not try to downgrade.
+                if ( null === erroredFunction || typeof erroredFunction !== 'object' || typeof erroredFunction[1] === "undefined" || -1 === jQueryFunctions.indexOf( erroredFunction[1] ) ) {
+                    return true;
+                }
+
+                // Set that we've now attempted a downgrade request.
+                jQueryMigrateHelperHasSentDowngrade = true;
+
+				xhr.open( 'POST', 'https://academictech.uchicago.edu/wp-admin/admin-ajax.php' );
+				xhr.setRequestHeader( 'Content-Type', 'application/x-www-form-urlencoded' );
+				xhr.onload = function () {
+					var response,
+                        reload = false;
+
+					if ( 200 === xhr.status ) {
+                        try {
+                        	response = JSON.parse( xhr.response );
+
+                        	reload = response.data.reload;
+                        } catch ( e ) {
+                        	reload = false;
+                        }
+                    }
+
+					// Automatically reload the page if a deprecation caused an automatic downgrade, ensure visitors get the best possible experience.
+					if ( reload ) {
+						location.reload();
+                    }
+				};
+
+				xhr.send( encodeURI( 'action=jquery-migrate-downgrade-version&_wpnonce=' + nonce ) );
+
+				// Suppress error alerts in older browsers
+				return true;
+			}
+        </script>
+
+							<!-- Google Analytics tracking code output by Beehive Analytics Pro -->
+						<script async src="https://www.googletagmanager.com/gtag/js?id=G-0K48F1C7ZV&l=beehiveDataLayer"></script>
+		<script>
+						window.beehiveDataLayer = window.beehiveDataLayer || [];
+			function gaplusu() {beehiveDataLayer.push(arguments);}
+			gaplusu('js', new Date())
+						gaplusu('config', 'G-0K48F1C7ZV', {
+				'anonymize_ip': false,
+				'allow_google_signals': false,
+			})
+						gaplusu('config', 'G-Z8EJD4Z3L6', {
+				'anonymize_ip': false,
+				'allow_google_signals': false,
+			})
+					</script>
+		<style type="text/css">
+/* <![CDATA[ */
+img.latex { vertical-align: middle; border: none; }
+/* ]]> */
+</style>
+<script>
+var $j = jQuery.noConflict();  	
+$j(function() {
+	
+	$j(window).on('load', function (e) {
+		/* a11y fix: Masthead Search Icon ARIA */
+		var searchTop = $j('#et_top_search');
+		var searchIcon = $j('#et_top_search > #et_search_icon ');
+		searchTop.removeAttr('aria-hidden');
+		searchIcon.attr('aria-label', 'Search');
+		/* a11y fix: Back to top button - add aria-label and button role */
+		var bttButton = $j('.et_pb_scroll_top');
+		bttButton.attr({
+			'aria-label':'Back to top',
+			role:'button',
+			tabindex:'0'
+		});
+		/* a11y fix: Back to top button - keyboard users - return to top and set focus on skip nav link */
+		bttButton.keypress(function(e){
+			var code = e.charCode || e.keyCode;
+			console.log(code);
+			if((code === 32)|| (code === 13)){
+				$j('a.skip-link').focus();
+			}
+			e.stopPropagation();
+		});
+	});
+	/* a11y fix: Wufoo Forms iframe titles */
+			var A4AForm = $j('iframe#wufooForms12z73xp04kb34i');		
+			A4AForm.attr('title', 'Sign up for the Aim for Accessible Challenge');
+
+	/* a11y fix: blurb module icons wrapped in an <a> tag */
+	var blurbIcons = $j('.et_pb_blurb_content > .et_pb_main_blurb_image > a');
+	blurbIcons.contents().unwrap();
+	/* a11y fix: blog post images wrapped in an <a> tag */
+	var postImg = $j('.et_pb_post > a.entry-featured-image-url');
+	postImg.contents().unwrap();
+	/* QA fix: remove xmlrpc links that can't be removed via admin and throw 404s  */
+	var pingback = $j('link[rel=pingback][href~="https://digitalaccessibility.uchicago.edu/xmlrpc.php"]');
+	var EditURI = $j('link[rel=EditURI][href~="https://digitalaccessibility.uchicago.edu/xmlrpc.php?rsd"]');
+	pingback.remove();
+	EditURI.remove();
+	/* Current copyright year in footer */
+	/* Update Footer Credits text in Divi > Theme Customizer > Footer > Bottom Bar to: ©CurrentCopyrightYear The University of Chicago */
+	var dateNow = new Date();
+	var intYear = dateNow.getFullYear();
+	var footerInfo = $j('#footer-info');
+	footerInfo.each(function() {var text = $j(this).text();$j(this).text(text.replace('CurrentCopyrightYear', intYear)); });
+});
+</script><link rel="icon" href="https://bpb-us-w2.wpmucdn.com/voices.uchicago.edu/dist/8/1142/files/2025/09/cropped-favicon-32x32.png" sizes="32x32" />
+<link rel="icon" href="https://bpb-us-w2.wpmucdn.com/voices.uchicago.edu/dist/8/1142/files/2025/09/cropped-favicon-192x192.png" sizes="192x192" />
+<link rel="apple-touch-icon" href="https://bpb-us-w2.wpmucdn.com/voices.uchicago.edu/dist/8/1142/files/2025/09/cropped-favicon-180x180.png" />
+<meta name="msapplication-TileImage" content="https://bpb-us-w2.wpmucdn.com/voices.uchicago.edu/dist/8/1142/files/2025/09/cropped-favicon-270x270.png" />
+<style id="et-divi-customizer-global-cached-inline-styles">body,.et_pb_column_1_2 .et_quote_content blockquote cite,.et_pb_column_1_2 .et_link_content a.et_link_main_url,.et_pb_column_1_3 .et_quote_content blockquote cite,.et_pb_column_3_8 .et_quote_content blockquote cite,.et_pb_column_1_4 .et_quote_content blockquote cite,.et_pb_blog_grid .et_quote_content blockquote cite,.et_pb_column_1_3 .et_link_content a.et_link_main_url,.et_pb_column_3_8 .et_link_content a.et_link_main_url,.et_pb_column_1_4 .et_link_content a.et_link_main_url,.et_pb_blog_grid .et_link_content a.et_link_main_url,body .et_pb_bg_layout_light .et_pb_post p,body .et_pb_bg_layout_dark .et_pb_post p{font-size:16px}.et_pb_slide_content,.et_pb_best_value{font-size:18px}body{color:#000000}body{line-height:2em}#et_search_icon:hover,.mobile_menu_bar:before,.mobile_menu_bar:after,.et_toggle_slide_menu:after,.et-social-icon a:hover,.et_pb_sum,.et_pb_pricing li a,.et_pb_pricing_table_button,.et_overlay:before,.entry-summary p.price ins,.et_pb_member_social_links a:hover,.et_pb_widget li a:hover,.et_pb_filterable_portfolio .et_pb_portfolio_filters li a.active,.et_pb_filterable_portfolio .et_pb_portofolio_pagination ul li a.active,.et_pb_gallery .et_pb_gallery_pagination ul li a.active,.wp-pagenavi span.current,.wp-pagenavi a:hover,.nav-single a,.tagged_as a,.posted_in a{color:#800000}.et_pb_contact_submit,.et_password_protected_form .et_submit_button,.et_pb_bg_layout_light .et_pb_newsletter_button,.comment-reply-link,.form-submit .et_pb_button,.et_pb_bg_layout_light .et_pb_promo_button,.et_pb_bg_layout_light .et_pb_more_button,.et_pb_contact p input[type="checkbox"]:checked+label i:before,.et_pb_bg_layout_light.et_pb_module.et_pb_button{color:#800000}.footer-widget h4{color:#800000}.et-search-form,.nav li ul,.et_mobile_menu,.footer-widget li:before,.et_pb_pricing li:before,blockquote{border-color:#800000}.et_pb_counter_amount,.et_pb_featured_table .et_pb_pricing_heading,.et_quote_content,.et_link_content,.et_audio_content,.et_pb_post_slider.et_pb_bg_layout_dark,.et_slide_in_menu_container,.et_pb_contact p input[type="radio"]:checked+label i:before{background-color:#800000}.container,.et_pb_row,.et_pb_slider .et_pb_container,.et_pb_fullwidth_section .et_pb_title_container,.et_pb_fullwidth_section .et_pb_title_featured_container,.et_pb_fullwidth_header:not(.et_pb_fullscreen) .et_pb_fullwidth_header_container{max-width:1200px}.et_boxed_layout #page-container,.et_boxed_layout.et_non_fixed_nav.et_transparent_nav #page-container #top-header,.et_boxed_layout.et_non_fixed_nav.et_transparent_nav #page-container #main-header,.et_fixed_nav.et_boxed_layout #page-container #top-header,.et_fixed_nav.et_boxed_layout #page-container #main-header,.et_boxed_layout #page-container .container,.et_boxed_layout #page-container .et_pb_row{max-width:1360px}a{color:#800000}.et_secondary_nav_enabled #page-container #top-header{background-color:#800000!important}#et-secondary-nav li ul{background-color:#800000}#main-header .nav li ul a{color:rgba(0,0,0,0.7)}#top-header,#top-header a,#et-secondary-nav li li a,#top-header .et-social-icon a:before{font-size:13px}#top-menu li a{font-size:16px}body.et_vertical_nav .container.et_search_form_container .et-search-form input{font-size:16px!important}#top-menu li.current-menu-ancestor>a,#top-menu li.current-menu-item>a,#top-menu li.current_page_item>a{color:#800000}#main-footer{background-color:#dddddd}#footer-widgets .footer-widget a,#footer-widgets .footer-widget li a,#footer-widgets .footer-widget li a:hover{color:#000000}.footer-widget{color:#000000}#main-footer .footer-widget h4,#main-footer .widget_block h1,#main-footer .widget_block h2,#main-footer .widget_block h3,#main-footer .widget_block h4,#main-footer .widget_block h5,#main-footer .widget_block h6{color:#000000}.footer-widget li:before{border-color:#dddddd}.footer-widget .et_pb_widget div,.footer-widget .et_pb_widget ul,.footer-widget .et_pb_widget ol,.footer-widget .et_pb_widget label{line-height:1.7em}#footer-widgets .footer-widget li:before{top:10.6px}.bottom-nav,.bottom-nav a,.bottom-nav li.current-menu-item a{color:#000000}#et-footer-nav .bottom-nav li.current-menu-item a{color:#000000}body .et_pb_button{}body.et_pb_button_helper_class .et_pb_button,body.et_pb_button_helper_class .et_pb_module.et_pb_button{color:#ffffff}body .et_pb_bg_layout_light.et_pb_button:hover,body .et_pb_bg_layout_light .et_pb_button:hover,body .et_pb_button:hover{color:#ffffff!important}@media only screen and (min-width:981px){.et_header_style_centered #logo{max-height:54%}.et_pb_svg_logo.et_header_style_centered #logo{height:54%}.et_header_style_centered.et_hide_primary_logo #main-header:not(.et-fixed-header) .logo_container,.et_header_style_centered.et_hide_fixed_logo #main-header.et-fixed-header .logo_container{height:11.88px}.et_header_style_left .et-fixed-header #et-top-navigation,.et_header_style_split .et-fixed-header #et-top-navigation{padding:23px 0 0 0}.et_header_style_left .et-fixed-header #et-top-navigation nav>ul>li>a,.et_header_style_split .et-fixed-header #et-top-navigation nav>ul>li>a{padding-bottom:23px}.et_header_style_centered header#main-header.et-fixed-header .logo_container{height:45px}.et_header_style_split #main-header.et-fixed-header .centered-inline-logo-wrap{width:45px;margin:-45px 0}.et_header_style_split .et-fixed-header .centered-inline-logo-wrap #logo{max-height:45px}.et_pb_svg_logo.et_header_style_split .et-fixed-header .centered-inline-logo-wrap #logo{height:45px}.et_header_style_slide .et-fixed-header #et-top-navigation,.et_header_style_fullscreen .et-fixed-header #et-top-navigation{padding:14px 0 14px 0!important}.et_fixed_nav #page-container .et-fixed-header#top-header{background-color:#800000!important}.et_fixed_nav #page-container .et-fixed-header#top-header #et-secondary-nav li ul{background-color:#800000}.et-fixed-header #top-menu li.current-menu-ancestor>a,.et-fixed-header #top-menu li.current-menu-item>a,.et-fixed-header #top-menu li.current_page_item>a{color:#800000!important}body.home-posts #left-area .et_pb_post .post-meta,body.archive #left-area .et_pb_post .post-meta,body.search #left-area .et_pb_post .post-meta,body.single #left-area .et_pb_post .post-meta{font-size:12px}}@media only screen and (min-width:1500px){.et_pb_row{padding:30px 0}.et_pb_section{padding:60px 0}.single.et_pb_pagebuilder_layout.et_full_width_page .et_post_meta_wrapper{padding-top:90px}.et_pb_fullwidth_section{padding:0}}	h1,h2,h3,h4,h5,h6{font-family:'Montserrat',Helvetica,Arial,Lucida,sans-serif}body,input,textarea,select{font-family:'Open Sans',Helvetica,Arial,Lucida,sans-serif}#top-header .container{font-family:'Open Sans',Helvetica,Arial,Lucida,sans-serif}:focus{outline:auto}body{background-color:#fff}.entry-content p,.entry-content li{font-weight:400}.formidable-recaptcha-privacy a,.entry-content a,.et_pb_team_member_description a,.pagination a,.et_pb_post a,.et_pb_blurb h4 a,.et_pb_blurb .et_pb_module_header a,.et_pb_blurb_description a,.et_pb_text_inner a,.et_pb_toggle_content a,.post-content a,#footer-widgets .footer-widget a,#footer-widgets .footer-widget li a{color:#800000;text-decoration:none;border-bottom:1px dotted #800000;transition:color 0.3s ease-in-out}#footer-widgets .footer-widget a a:hover,#footer-widgets .footer-widget li a:hover,.formidable-recaptcha-privacy a:hover,.formidable-recaptcha-privacy a:focus,.entry-content a:hover,.entry-content a:focus,.et_pb_team_member_description a:hover,.et_pb_team_member_description a:focus,.pagination a:hover,.pagination a:focus,.et_pb_post a:hover,.et_pb_post a:focus,.et_pb_blurb h4 a:hover,.et_pb_blurb h4 a:focus,.et_pb_blurb .et_pb_module_header a:hover,.et_pb_blurb .et_pb_module_header a:focus,.et_pb_blurb_description a:hover,.et_pb_blurb_description a:focus,.et_pb_text_inner a:focus,.et_pb_text_inner a:hover,.et_pb_toggle_content a:focus,.et_pb_toggle_content a:hover,.post-content a:hover,.post-content a:focus{color:#4d0000;text-decoration:none;border-bottom:1px solid #4d0000}a.et-pb-arrow-prev:hover,a.et-pb-arrow-prev:focus,a.et-pb-arrow-next:hover,a.et-pb-arrow-next:focus{color:#ffffff;text-decoration:none;border-bottom:none}.et_pb_slide_title a,#hp-event .event a{color:#fff;text-decoration:none;border-bottom:1px dotted #fff;transition:color 0.3s ease-in-out}#hp-event .event a:focus,#hp-event .event a:hover,.et_pb_slide_title a:hover,.et_pb_slide_title a:focus{color:#fff;border-bottom:1px solid #fff}.et_pb_cta_0.et_pb_promo a.et_pb_button,.et_pb_slide_description a.et_pb_button{border:1px solid #fff}#left-area .post-meta a,.et_pb_widget a{color:#666;border-bottom:1px dotted #666}#left-area .post-meta a:focus,#left-area .post-meta a:hover,.et_pb_widget a:focus,.et_pb_widget a:hover{color:#800000;border-bottom:1px solid #800000}.comment-form-comment label>span{color:#EB0000!important}.comment_area .comment-reply-link{display:none;visibility:hidden}.et_pb_blog_grid h2{line-height:1.5em}.with_frm_style .frm_form_fields>fieldset{background-color:#fff!important}.with_frm_style legend+h3,.with_frm_style h3.frm_form_title{color:#444444!important}.with_frm_style .frm_required{color:#B94A48!important}.with_frm_style .frm_primary_label{color:#3f4b5b!important}footer a[id^="et-info-"],#footer-widgets .footer-widget a{text-decoration:none!important;border-bottom:1px dotted #000;color:#800}footer a[id^="et-info-"]:hover,footer a[id^="et-info-"]:focus,#footer-widgets .footer-widget a:hover,#footer-widgets .footer-widget a:focus{color:#000;text-decoration:none!important;border-bottom:1px solid #000}.et_pb_toggle_content h3{font-size:20px}.entry-content ul{line-height:2em}#commentform input[type=email],#commentform input[type=text],#commentform input[type=url],#commentform textarea{color:#6B6B6B;background-color:#eee}#left-area ul li ul,.entry-content ul li ul,.comment-content ul li ul,body.et-pb-preview #main-content .container ul li ul{list-style-type:circle!important}footer#main-footer{background-color:transparent!important}footer#main-footer:before{content:"";display:block;width:80%;border-top:solid 1px rgba(0,0,0,.25);margin:5% auto 0;padding-top:5%}footer#main-footer #footer-widgets{padding:0}footer#main-footer #footer-widgets .footer-widget{text-align:left;color:#000}footer#main-footer #footer-widgets .footer-widget a{color:#000}footer#main-footer #footer-bottom{background-color:transparent!important}#hp-event .et_pb_code_inner{text-align:center}@media (min-width:720px){#hp-event .et_pb_code_inner{display:flex;text-align:center}#hp-event .event:not(:last-of-type){margin-right:20px}}@media (max-width:719px){#hp-event .event:not(:last-of-type){margin-bottom:30px}}#hp-event p{padding:0;color:#fff}#hp-event p.event_meta{}#hp-event h3{font-size:16px;line-height:1.5em;color:#fff;font-weight:bold}</style><link rel='stylesheet' id='subscribe-by-email-widget-css-css' href='https://academictech.uchicago.edu/wp-content/plugins/subscribe-by-email/subscribe-by-email/assets/css/widget.css?ver=3' type='text/css' media='all' />
+</head>
+<body class="wp-singular post-template-default single single-post postid-3984 single-format-standard wp-theme-divi et_pb_button_helper_class et_non_fixed_nav et_show_nav et_pb_show_title et_secondary_nav_enabled et_secondary_nav_only_menu et_primary_nav_dropdown_animation_fade et_secondary_nav_dropdown_animation_fade et_header_style_centered et_pb_svg_logo et_pb_footer_columns3 et_cover_background et_pb_gutter et_pb_gutters3 et_smooth_scroll et_right_sidebar et_divi_theme et-db">
+	<div id="page-container">
+
+					<div id="top-header">
+			<div class="container clearfix">
+
+			
+				<div id="et-secondary-menu">
+				<ul id="et-secondary-nav" class="menu"><li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-819"><a href="https://academictech.uchicago.edu/about-us/">About Us</a>
+<ul class="sub-menu">
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-822"><a href="https://academictech.uchicago.edu/about-us/ats-blog/">ATS Blog</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3134"><a href="https://academictech.uchicago.edu/about-us/staff-directory/">Staff Directory</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1024"><a href="https://academictech.uchicago.edu/about-us/contact-us/">Contact Us</a></li>
+</ul>
+</li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1006"><a href="https://academictech.uchicago.edu/events/">Workshops and Events</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1010"><a href="https://academictech.uchicago.edu/for-students/">For Students</a></li>
+</ul>				</div>
+
+			</div>
+		</div>
+		
+	
+			<header id="main-header" data-height-onload="66">
+			<div class="container clearfix et_menu_container">
+							<div class="logo_container">
+					<span class="logo_helper"></span>
+					<a href="https://academictech.uchicago.edu/">
+						<img src="https://voices.uchicago.edu/academictech/files/2018/08/ats-yyfzsc.svg" width="93" height="43" alt="Academic Technology Solutions" id="logo" data-height-percentage="54" />
+					</a>
+				</div>
+							<div id="et-top-navigation" data-height="66" data-fixed-height="45">
+											<nav id="top-menu-nav">
+						<ul id="top-menu" class="nav"><li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-4432"><a href="https://academictech.uchicago.edu/ldt">Who We Are</a>
+<ul class="sub-menu">
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4433"><a href="https://academictech.uchicago.edu/ldt/">Learning Design Team</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4436"><a href="https://academictech.uchicago.edu/dpf/">Instructional Technology Assistants</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4435"><a href="https://academictech.uchicago.edu/avst/">Audio-Visual Services Team</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4434"><a href="https://academictech.uchicago.edu/cda/">Center for Digital Accessibility</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4446"><a href="https://academictech.uchicago.edu/about-us/staff-directory/">Staff Directory</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4447"><a href="https://academictech.uchicago.edu/our-partners/">Our Partners</a></li>
+</ul>
+</li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-4437"><a href="https://academictech.uchicago.edu/services/">What We Offer</a>
+<ul class="sub-menu">
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1001"><a href="https://academictech.uchicago.edu/services/av-services/">Audio-Visual Services</a></li>
+	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-4448"><a href="https://digitalaccessibility.uchicago.edu/training/">Accessibility Training and Resources</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1003"><a href="https://academictech.uchicago.edu/services/instructional-design/">Instructional Design</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4444"><a href="https://academictech.uchicago.edu/services/multimedia-development/">Multimedia Development</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4445"><a href="https://academictech.uchicago.edu/office-hours/">Office Hours</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4438"><a href="https://academictech.uchicago.edu/events/">Workshops and Events</a></li>
+</ul>
+</li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-800"><a href="https://academictech.uchicago.edu/teaching-tools/">Tools We Support</a>
+<ul class="sub-menu">
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2830"><a href="https://academictech.uchicago.edu/teaching-tools/">Teaching Tools</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5443"><a href="https://academictech.uchicago.edu/a11y-tools/">Accessibility Tools</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-789"><a href="https://academictech.uchicago.edu/canvas/">Canvas</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2017"><a href="https://academictech.uchicago.edu/panopto/">Panopto</a></li>
+</ul>
+</li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-4449"><a href="https://academictech.uchicago.edu/about-us/ats-blog/">Resources</a>
+<ul class="sub-menu">
+	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-3741"><a href="https://academictech.uchicago.edu/about-us/news">ATS Blog</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4615"><a href="https://academictech.uchicago.edu/newsletter/">ATS Newsletter</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5068"><a href="https://academictech.uchicago.edu/av-training/">AV Training Videos</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4450"><a href="https://academictech.uchicago.edu/generative-ai/">Generative AI</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5857"><a href="https://academictech.uchicago.edu/detection-software/">Detection Software</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5872"><a href="https://academictech.uchicago.edu/podcasting-teaching/">Podcasting</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5886"><a href="https://academictech.uchicago.edu/course-a11y-guide/">Course Accessibility Guide</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6215"><a href="https://academictech.uchicago.edu/aim-for-accessible/">Aim for Accessible</a></li>
+</ul>
+</li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-4451"><a href="https://academictech.uchicago.edu/about-us/contact-us/">Contact Us</a>
+<ul class="sub-menu">
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4452"><a href="https://academictech.uchicago.edu/about-us/contact-us/">General Contact Form</a></li>
+	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-4614"><a href="https://outlook.office.com/book/ATSLearningDesignTeamConsultation@uchicagoedu.onmicrosoft.com/">Request an Instructional Design Consultation</a></li>
+	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-4453"><a href="https://digitalaccessibility.uchicago.edu/contact-us/">Request a CDA Consultation</a></li>
+</ul>
+</li>
+</ul>						</nav>
+					
+					
+					
+											<div id="et_top_search">
+							<span id="et_search_icon"></span>
+						</div>
+					
+					<div id="et_mobile_nav_menu">
+				<div class="mobile_nav closed">
+					<span class="select_page">Select Page</span>
+					<span class="mobile_menu_bar mobile_menu_bar_toggle"></span>
+				</div>
+			</div>				</div> <!-- #et-top-navigation -->
+			</div> <!-- .container -->
+						<div class="et_search_outer">
+				<div class="container et_search_form_container">
+					<form role="search" method="get" class="et-search-form" action="https://academictech.uchicago.edu/">
+					<input type="search" class="et-search-field" placeholder="Search &hellip;" value="" name="s" title="Search for:" />					</form>
+					<span class="et_close_search_field"></span>
+				</div>
+			</div>
+					</header> <!-- #main-header -->
+			<div id="et-main-area">
+	
+<div id="main-content">
+		<div class="container">
+		<div id="content-area" class="clearfix">
+			<div id="left-area">
+											<article id="post-3984" class="et_pb_post post-3984 post type-post status-publish format-standard has-post-thumbnail hentry category-instructional-design category-services tag-academic-dishonesty tag-academic-integrity tag-artificial-intelligence tag-chatgpt tag-cheating tag-genai tag-generative-ai tag-plagiarism">
+											<div class="et_post_meta_wrapper">
+							<h1 class="entry-title">Combating Academic Dishonesty, Part 6: ChatGPT, AI, and Academic Integrity</h1>
+
+						<p class="post-meta"> by <span class="author vcard"><a href="https://academictech.uchicago.edu/author/trkeith/" title="Posts by Thomas Keith" rel="author">Thomas Keith</a></span> | <span class="published">Jan 23, 2023</span> | <a href="https://academictech.uchicago.edu/category/services/instructional-design/" rel="category tag">Instructional design</a>, <a href="https://academictech.uchicago.edu/category/services/" rel="category tag">Services</a></p><img src="https://academictech.uchicago.edu/files/2023/01/possessed-photography-U3sOwViXhkY-unsplash-1080x675.jpg" alt="Robot using keyboard" class="" width="1080" height="675" srcset="https://academictech.uchicago.edu/files/2023/01/possessed-photography-U3sOwViXhkY-unsplash-980x735.jpg 980w, https://academictech.uchicago.edu/files/2023/01/possessed-photography-U3sOwViXhkY-unsplash-480x360.jpg 480w" sizes="(min-width: 0px) and (max-width: 480px) 480px, (min-width: 481px) and (max-width: 980px) 980px, (min-width: 981px) 1080px, 100vw" />
+												</div>
+				
+					<div class="entry-content">
+					<p><strong>Author’s Note:</strong> This is the latest installment in an ongoing series of articles about issues pertaining to academic integrity in higher education. For earlier installments, please see: <a href="https://academictech.uchicago.edu/2022/02/16/combating-academic-dishonesty-part-1-understanding-the-problem/">Part 1</a> | <a href="https://academictech.uchicago.edu/2022/02/25/combating-academic-dishonesty-part-2-small-steps-to-discourage-academic-dishonesty/">Part 2</a> | <a href="https://academictech.uchicago.edu/2022/04/28/combating-academic-dishonesty-part-3-towards-a-pedagogy-of-academic-integrity/">Part 3</a> | <a href="https://academictech.uchicago.edu/2022/06/07/combating-academic-dishonesty-part-4-library-services-to-support-academic-honesty/">Part 4</a> | <a href="https://academictech.uchicago.edu/2022/11/16/combating-academic-dishonesty-part-5-the-problem-of-text-spinners/">Part 5</a></p>
+<p>ATS instructional designers Mohammad Ahmed and Michael Hernandez contributed content to this article.</p>
+<ul>
+<li aria-level="1"><a href="#introduction">Introduction</a></li>
+<li aria-level="1"><a href="#state">The State of the Tool</a></li>
+<li aria-level="1"><a href="#issues">Issues for Academic Integrity</a></li>
+<li aria-level="1"><a href="#how">How Do We Deal with the Problem?</a>
+<ul>
+<li aria-level="2"><a href="#technological">Technological Prevention</a></li>
+<li aria-level="2"><a href="#nontechnological">Non-Technological Prevention</a></li>
+<li aria-level="2"><a href="#creative">Creative Adaptation</a></li>
+</ul>
+</li>
+<li aria-level="1"><a href="#further">Further Resources</a></li>
+</ul>
+<h2 id="introduction">Introduction</h2>
+<p>There are few current issues in education that have provoked more interest – or sounded more alarms – than artificial intelligence (AI) technology. While the issue has simmered for some time, it burst into the forefront of debate following OpenAI’s public release of <a href="https://openai.com/blog/chatgpt">ChatGPT</a>. When given a prompt – e.g. “What were the causes of World War I?” or “How does the Krebs cycle work?” – ChatGPT (the acronym stands for “Generative Pretrained Transformer”) can generate text that reads, at least on superficial examination, like that written by a human – the basis of the famed <a href="https://en.wikipedia.org/wiki/Turing_test">Turing Test</a> for machine intelligence.</p>
+<p>Once the tool’s capabilities became known, it did not take long for fears to be voiced that students would turn to ChatGPT to write their assignments for them. Eye-grabbing headlines began to appear, not only in sensationalist newspapers like the <em>New York Post</em> (<a href="https://nypost.com/2022/12/26/students-using-chatgpt-to-cheat-professor-warns/">which dubbed the tool “CheatGPT”</a>) but in more sober publications like the <em>Atlantic</em>, where <a href="https://www.theatlantic.com/technology/archive/2022/12/chatgpt-ai-writing-college-student-essays/672371/">an opinion piece bluntly claimed</a> that “the college essay is dead”. Advocates for the worst-case scenario see a future in which human-generated and computer-generated text are indistinguishable, essay assignments are meaningless, and the very skill of academic writing is lost.</p>
+<p>One need not accept this doomsday proposition to recognize that ChatGPT raises legitimate concerns for academic integrity. But if we are to address such concerns, we must first answer several key questions: what is ChatGPT, exactly? What are its affordances and limitations? And, assuming that ChatGPT and tools like it are here to stay (as seems overwhelmingly likely), how should we rethink pedagogy to address this new reality?</p>
+<h2 id="state">The State of the Tool</h2>
+<p>At this time, ChatGPT is essentially an information aggregator. It trawls vast quantities of human-produced texts and extracts data, which it then synthesizes into a response to a given prompt. As noted above, its responses on many topics are at least coherent enough that they may be superficially indistinguishable from student writing.</p>
+<p>As with all AI tools, though, ChatGPT’s capacity to give responses depends upon what, and how much, it is “fed”. Its lack of data on current events, for example, limits its capacity to respond to prompts such as “How is the war in Ukraine progressing today?” There are also guardrails in place to prevent the tool’s being used for nefarious purposes (though <a href="https://www.theregister.com/2023/01/18/russia_openai_chatgpt_workarounds/">cybercriminals are already seeking to circumvent these</a>).</p>
+<p>There are other significant limitations to the tool as well. It cannot cite sources correctly – any request for a bibliography produces false and/or irrelevant citations. Nor is it error-free: users have run across blatant, even comical, mistakes when ChatGPT is asked a question as straightforward as “How do you work?” Like all AI, it is subject to <a href="https://hbr.org/2019/10/what-do-we-do-about-the-biases-in-ai">the biases of those who supply its data</a>. And, most fundamentally, it is not <em>true</em> artificial intelligence. There are no indications that ChatGPT <em>understands</em> the questions it is being asked or what it is producing in answer; simply put, it is not sapient. This is worth keeping in mind as the debate rages over whether such tools are capable of supplanting human creativity.</p>
+<h2 id="issues">Issues for Academic Integrity</h2>
+<p>It is, without question, too early in the game to expound upon all the possible difficulties ChatGPT and similar generative AI tools could pose for academic integrity. Already, however, ChatGPT-generated text has proved itself capable of evading plagiarism checkers such as Turnitin. Plagiarism detection software relies on comparing student work to a database of pre-existing work and identifying identical phrases, sentences, etc. to produce an “originality score”. Because the text generated by ChatGPT is (in some sense, anyway) “original,” it renders this technique useless.</p>
+<p>ChatGPT also ties into the broader issue of <a href="https://www.turnitin.com/blog/what-is-contract-cheating-why-does-it-matter">contract cheating</a> – hiring a third party to do work, such as writing an essay or taking an exam, on a student’s behalf. Contract cheating is already a severe problem worldwide, and with the widespread availability of AI writing tools, students can now generate “original” written work for free, without the need to involve a human agent who might betray the student’s confidence.</p>
+<h2 id="how">How Do We Deal with the Problem?</h2>
+<p><a href="https://www.nytimes.com/2023/01/16/technology/chatgpt-artificial-intelligence-universities.html?searchResultPosition=3">As the New York Times has noted</a>, many faculty and instructors already feel the need to adjust their pedagogy to account for the existence of ChatGPT. Their strategies, actual and proposed, for coping with the tool can be divided into three categories: technological prevention; non-technological prevention; and creative adaptation. We shall consider each of these in turn below.</p>
+<h3 id="technological">Technological Prevention</h3>
+<p>It will come as no surprise that technological counters to ChatGPT are already in play. <a href="https://www.bbc.com/news/world-us-canada-64252570">A 22-year-old computer science student at Princeton named Edward Tian</a> has introduced <a href="https://gptzero.me">GPTZero</a>, which claims to distinguish human- and computer-generated text with a high degree of accuracy. Meanwhile, other plagiarism tools, such as Turnitin, offer their own AI-detection tools and are rapidly working to detect the newest generation of generative AI text. And finally, the makers of ChatGPT are themselves exploring “watermarking” technology to indicate when a document has been generated by the software.</p>
+<p>Some experts foresee an “arms race” between AI writing tools and AI detection tools. If this scenario comes to pass, faculty and instructors will be hard-pressed to keep up with the bleeding-edge software needed to counter the newest writing tools. But more fundamentally, we might ask: is technology always the best solution to the problems it creates? Or are there other, perhaps less involved, means of addressing the questions raised by AI?</p>
+<h3 id="nontechnological">Non-Technological Prevention</h3>
+<p>At the other end of the spectrum, some faculty and instructors have sought to neutralize ChatGPT entirely. This may entail banning ChatGPT specifically; banning all computers in the classroom; supervising student essay-writing, whether in class or via monitoring software such as Proctorio; or even requiring writing assignments to be handwritten.</p>
+<p>The concern that underlies such measures is understandable, and they can be effective in the short-term, but they come at a cost: aside from the anxiety that can be provoked by being under surveillance, accessibility issues that may be raised by requiring handwritten work, and the legal/ethical issues raised by video proctoring, students miss the opportunity to learn about the tool and its implications. As we confront the likelihood of a future with ubiquitous AI technology, those students who have never experienced tools like ChatGPT and who know nothing about their uses may well find themselves at a professional disadvantage.</p>
+<h3 id="creative">Creative Adaptation</h3>
+<p>At this point in time, it seems most productive to take a third path – one that balances the need to safeguard academic integrity with the reality that ChatGPT and its like are here to stay. Here are some suggestions for methods to integrate AI tools like ChatGPT into your pedagogy in a productive, rather than destructive, fashion.</p>
+<ul>
+<li aria-level="1"><strong>Clarify expectations at the outset.</strong> As early in your course as possible – ideally within the syllabus itself – you should specify whether, and under what circumstances, the use of AI tools is permissible. It may help to think of ChatGPT as similar to peer assistance, group work, or outside tutoring: in all these cases, your students should understand where the boundaries lie, when help is permissible, and when they must rely on their own resources. You might also discuss with your students how they feel about AI and its ability (or lack thereof) to convey their ideas. <a href="https://eds-s-ebscohost-com.proxy.uchicago.edu/eds/detail/detail?vid=0&amp;sid=085cefe4-6ff4-4a42-a7a2-b9b09d44a9ab%40redis&amp;bdata=JnNpdGU9ZWRzLWxpdmUmc2NvcGU9c2l0ZQ%3d%3d#AN=edssjs.94AD7592&amp;db=edssjs">Emergent research suggests</a> that at least some students feel dissatisfied with the results when they entrust expression of their ideas to AI.</li>
+<li aria-level="1"><strong>Craft writing prompts that require creative thought.</strong> A tool like ChatGPT can easily respond to a simple prompt such as “What are the causes of inflation?”, but it is likely to have trouble with a prompt such as “Compare and contrast inflation in the present-day American economy with that in the late 1970s”. The more in-depth and thought out the prompt, the more it will demand critical reasoning – not simply regurgitation – to answer.</li>
+<li aria-level="1"><strong>Run your prompts through ChatGPT.</strong> Related to the point above, actually using ChatGPT on a draft of your writing prompt can be an illuminating exercise. Successive iterations may help you to clarify your thinking and add nuances to your prompt that were not present in the initial draft.</li>
+<li aria-level="1"><strong>Scaffold your writing assignments.</strong> This is a time-honored technique for combating plagiarism of any kind in academic writing. It will be much harder for a student to submit a final draft generated by AI and get away with it if you have observed that student’s thinking and writing process throughout the course.</li>
+<li aria-level="1"><strong>Promote library resources.</strong> As mentioned previously, ChatGPT is not presently able to generate an accurate bibliography, nor does it understand the concept of citation. This shortcoming can be a good jumping-off point for you to explain to your students how to cite properly, why citation is important, and how they can use available resources to do their own research.</li>
+<li aria-level="1"><strong>Model productive use of AI tools.</strong> For all its hazards, ChatGPT also offers promising possibilities. A “dialogue” between the user and the tool can help the user to probe deeper into the subject matter, become familiar with mainstream scholarship on the topic, and push beyond “easy answers” toward original work. To promote such dialogue, you might, for example, assign your students to come up with their own prompts, post them to ChatGPT, and then comment on the answers, finding the strengths and weaknesses of the “argument” that the tool generates.</li>
+</ul>
+<p>In a field evolving by the day, no article, this one included, can hope to offer definite answers. What we have presented here are points we hope will contextualize the debate and provide a framework for further discussion. In the end, what AI tools will mean for higher education – and for society as a whole – remains to be seen.</p>
+<h2 id="further">Further Resources</h2>
+<p>To learn more about AI in the classroom, we recommend the excellent <a href="https://poorvucenter.yale.edu/AIguidance">page on AI Guidance</a> from Yale’s Poorvu Center for Teaching and Learning. Turnitin also offers a concise but helpful <a href="https://marketing-tii-statamic-assets-us-west-2.s3-us-west-2.amazonaws.com/marketing/tli_ai_respondinginyourclassroom_guide_us_0123.pdf">Guide for approaching AI-generated text in your classroom</a>.</p>
+<p>If you have further questions, Academic Technology Solutions is here to help. You can <a href="https://academictech.uchicago.edu/about-us/contact-us/">schedule a consultation with us</a> or drop by our <a href="https://academictech.uchicago.edu/office-hours/">office hours</a> (virtual and in-person, no appointment needed). We also offer a range of <a href="https://courses.uchicago.edu/workshop-schedule/">workshops</a> on topics in teaching with technology.</p>
+<p>(Cover Photo by <a href="https://unsplash.com/@possessedphotography?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Possessed Photography</a> on <a href="https://unsplash.com/s/photos/artificial-intelligence?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a>)</p>
+					</div>
+					<div class="et_post_meta_wrapper">
+										</div>
+				</article>
+
+						</div>
+
+				<div id="sidebar">
+		<div id="search-2" class="et_pb_widget widget_search"><h4 class="widgettitle">Search Blog</h4><form role="search" method="get" id="searchform" class="searchform" action="https://academictech.uchicago.edu/">
+				<div>
+					<label class="screen-reader-text" for="s">Search for:</label>
+					<input type="text" value="" name="s" id="s" />
+					<input type="submit" id="searchsubmit" value="Search" />
+				</div>
+			</form></div><div id="subscribe-by-email-2" class="et_pb_widget subscribe-by-email"><h4 class="widgettitle">Subscribe by Email</h4>		        <form method="post" id="subscribe-by-email-subscribe-form" class="subscribe-by-email-subscribe-form" />
+	        	<p>
+		        			        </p>
+		        	<p tabindex="-1" class="subscribe-by-email-error" style="display: none">Please, insert a valid email.</p>
+	        		<p tabindex="-1" class="subscribe-by-email-updated" style="display: none">Thank you, your email will be added to the mailing list once you click on the link in the confirmation email.</p>
+					<label class="screen-reader-text sbe-screen-reader-text" for="subscribe-by-email-field">Your Email</label>
+					<p>
+						<input type="email" id="subscribe-by-email-field" class="subscribe-by-email-field" name="subscription-email" placeholder="ex: someone@mydomain.com" required/>
+					</p>
+		        	<label aria-hidden="true" class="screen-reader-text sbe-screen-reader-text" for="security-check-aside">Leave this field blank</label>
+		        	<input aria-hidden="true" type="text" tabindex="-1" name="security-check-aside" id="security-check-aside" class="screen-reader-text sbe-screen-reader-text" />
+					<div class="sbe-recaptcha-holder">
+						<p class="subscribe-by-email-error" style="display: none">Spam protection has stopped this request. Please contact site owner for help.</p>
+						<input name="g-recaptcha-response" type="hidden" class="g-recaptcha-response">
+						<p class="sbe-recaptcha-privacy"><small>This form is protected by reCAPTCHA and the Google <a href="https://policies.google.com/privacy" rel="nofollow">Privacy Policy</a> and <a href="https://policies.google.com/terms" rel="nofollow">Terms of Service</a> apply.</small></p>
+					</div>
+		        	<input type="hidden" name="action" value="sbe_subscribe_user" />
+		        	<input type="submit" class="subscribe-by-email-submit" name="submit-subscribe-user" value="Subscribe" />
+		        	<img src="https://academictech.uchicago.edu/wp-content/plugins/subscribe-by-email/subscribe-by-email/assets/images/ajax-loader.gif" alt="" class="subscribe-by-email-loader" style="display:none;" />
+	        </form>
+
+        </div>
+		<div id="recent-posts-2" class="et_pb_widget widget_recent_entries">
+		<h4 class="widgettitle">Recent Posts</h4>
+		<ul>
+											<li>
+					<a href="https://academictech.uchicago.edu/2026/02/16/open-education-week-2026-workshop-highlights-a-deep-dive-into-libretexts/">Open Education Week 2026: Workshop Highlights &#038; A Deep Dive into LibreTexts</a>
+									</li>
+											<li>
+					<a href="https://academictech.uchicago.edu/2026/01/20/support-academic-integrity-in-your-online-assessments-with-respondus-lockdown-browser/">Support Academic Integrity in Your In-Person Canvas Assessments with Respondus LockDown Browser</a>
+									</li>
+											<li>
+					<a href="https://academictech.uchicago.edu/2025/12/10/explore-new-hypothesis-features-for-image-annotation-grading-and-more/">Explore New Hypothesis Features for Image Annotation, Grading, and More</a>
+									</li>
+											<li>
+					<a href="https://academictech.uchicago.edu/2025/12/08/ai-learning-resources-for-educators/">AI Learning Resources for Educators</a>
+									</li>
+											<li>
+					<a href="https://academictech.uchicago.edu/2025/12/03/faculty-success-story-podcasting-part-3/">Faculty Success Story: Jordan Bimm Makes Science Come Alive with the Podcast Studio</a>
+									</li>
+					</ul>
+
+		</div><div id="archives-2" class="et_pb_widget widget_archive"><h4 class="widgettitle">Archives</h4>		<label class="screen-reader-text" for="archives-dropdown-2">Archives</label>
+		<select id="archives-dropdown-2" name="archive-dropdown">
+			
+			<option value="">Select Month</option>
+				<option value='https://academictech.uchicago.edu/2026/02/'> February 2026 </option>
+	<option value='https://academictech.uchicago.edu/2026/01/'> January 2026 </option>
+	<option value='https://academictech.uchicago.edu/2025/12/'> December 2025 </option>
+	<option value='https://academictech.uchicago.edu/2025/11/'> November 2025 </option>
+	<option value='https://academictech.uchicago.edu/2025/10/'> October 2025 </option>
+	<option value='https://academictech.uchicago.edu/2025/09/'> September 2025 </option>
+	<option value='https://academictech.uchicago.edu/2025/08/'> August 2025 </option>
+	<option value='https://academictech.uchicago.edu/2025/07/'> July 2025 </option>
+	<option value='https://academictech.uchicago.edu/2025/06/'> June 2025 </option>
+	<option value='https://academictech.uchicago.edu/2025/05/'> May 2025 </option>
+	<option value='https://academictech.uchicago.edu/2025/04/'> April 2025 </option>
+	<option value='https://academictech.uchicago.edu/2025/03/'> March 2025 </option>
+	<option value='https://academictech.uchicago.edu/2025/02/'> February 2025 </option>
+	<option value='https://academictech.uchicago.edu/2024/12/'> December 2024 </option>
+	<option value='https://academictech.uchicago.edu/2024/11/'> November 2024 </option>
+	<option value='https://academictech.uchicago.edu/2024/10/'> October 2024 </option>
+	<option value='https://academictech.uchicago.edu/2024/09/'> September 2024 </option>
+	<option value='https://academictech.uchicago.edu/2024/08/'> August 2024 </option>
+	<option value='https://academictech.uchicago.edu/2024/07/'> July 2024 </option>
+	<option value='https://academictech.uchicago.edu/2024/06/'> June 2024 </option>
+	<option value='https://academictech.uchicago.edu/2024/05/'> May 2024 </option>
+	<option value='https://academictech.uchicago.edu/2024/04/'> April 2024 </option>
+	<option value='https://academictech.uchicago.edu/2024/03/'> March 2024 </option>
+	<option value='https://academictech.uchicago.edu/2024/02/'> February 2024 </option>
+	<option value='https://academictech.uchicago.edu/2024/01/'> January 2024 </option>
+	<option value='https://academictech.uchicago.edu/2023/12/'> December 2023 </option>
+	<option value='https://academictech.uchicago.edu/2023/11/'> November 2023 </option>
+	<option value='https://academictech.uchicago.edu/2023/10/'> October 2023 </option>
+	<option value='https://academictech.uchicago.edu/2023/09/'> September 2023 </option>
+	<option value='https://academictech.uchicago.edu/2023/08/'> August 2023 </option>
+	<option value='https://academictech.uchicago.edu/2023/07/'> July 2023 </option>
+	<option value='https://academictech.uchicago.edu/2023/06/'> June 2023 </option>
+	<option value='https://academictech.uchicago.edu/2023/05/'> May 2023 </option>
+	<option value='https://academictech.uchicago.edu/2023/04/'> April 2023 </option>
+	<option value='https://academictech.uchicago.edu/2023/03/'> March 2023 </option>
+	<option value='https://academictech.uchicago.edu/2023/02/'> February 2023 </option>
+	<option value='https://academictech.uchicago.edu/2023/01/'> January 2023 </option>
+	<option value='https://academictech.uchicago.edu/2022/12/'> December 2022 </option>
+	<option value='https://academictech.uchicago.edu/2022/11/'> November 2022 </option>
+	<option value='https://academictech.uchicago.edu/2022/10/'> October 2022 </option>
+	<option value='https://academictech.uchicago.edu/2022/09/'> September 2022 </option>
+	<option value='https://academictech.uchicago.edu/2022/08/'> August 2022 </option>
+	<option value='https://academictech.uchicago.edu/2022/07/'> July 2022 </option>
+	<option value='https://academictech.uchicago.edu/2022/06/'> June 2022 </option>
+	<option value='https://academictech.uchicago.edu/2022/05/'> May 2022 </option>
+	<option value='https://academictech.uchicago.edu/2022/04/'> April 2022 </option>
+	<option value='https://academictech.uchicago.edu/2022/02/'> February 2022 </option>
+	<option value='https://academictech.uchicago.edu/2022/01/'> January 2022 </option>
+	<option value='https://academictech.uchicago.edu/2021/12/'> December 2021 </option>
+	<option value='https://academictech.uchicago.edu/2021/11/'> November 2021 </option>
+	<option value='https://academictech.uchicago.edu/2021/10/'> October 2021 </option>
+	<option value='https://academictech.uchicago.edu/2021/09/'> September 2021 </option>
+	<option value='https://academictech.uchicago.edu/2021/08/'> August 2021 </option>
+	<option value='https://academictech.uchicago.edu/2021/07/'> July 2021 </option>
+	<option value='https://academictech.uchicago.edu/2021/06/'> June 2021 </option>
+	<option value='https://academictech.uchicago.edu/2021/05/'> May 2021 </option>
+	<option value='https://academictech.uchicago.edu/2021/04/'> April 2021 </option>
+	<option value='https://academictech.uchicago.edu/2021/03/'> March 2021 </option>
+	<option value='https://academictech.uchicago.edu/2021/02/'> February 2021 </option>
+	<option value='https://academictech.uchicago.edu/2021/01/'> January 2021 </option>
+	<option value='https://academictech.uchicago.edu/2020/12/'> December 2020 </option>
+	<option value='https://academictech.uchicago.edu/2020/11/'> November 2020 </option>
+	<option value='https://academictech.uchicago.edu/2020/10/'> October 2020 </option>
+	<option value='https://academictech.uchicago.edu/2020/08/'> August 2020 </option>
+	<option value='https://academictech.uchicago.edu/2020/07/'> July 2020 </option>
+	<option value='https://academictech.uchicago.edu/2020/06/'> June 2020 </option>
+	<option value='https://academictech.uchicago.edu/2020/05/'> May 2020 </option>
+	<option value='https://academictech.uchicago.edu/2020/04/'> April 2020 </option>
+	<option value='https://academictech.uchicago.edu/2020/02/'> February 2020 </option>
+	<option value='https://academictech.uchicago.edu/2020/01/'> January 2020 </option>
+	<option value='https://academictech.uchicago.edu/2019/12/'> December 2019 </option>
+	<option value='https://academictech.uchicago.edu/2019/09/'> September 2019 </option>
+	<option value='https://academictech.uchicago.edu/2019/08/'> August 2019 </option>
+	<option value='https://academictech.uchicago.edu/2019/07/'> July 2019 </option>
+	<option value='https://academictech.uchicago.edu/2019/06/'> June 2019 </option>
+	<option value='https://academictech.uchicago.edu/2019/05/'> May 2019 </option>
+	<option value='https://academictech.uchicago.edu/2019/04/'> April 2019 </option>
+	<option value='https://academictech.uchicago.edu/2019/03/'> March 2019 </option>
+	<option value='https://academictech.uchicago.edu/2019/02/'> February 2019 </option>
+	<option value='https://academictech.uchicago.edu/2019/01/'> January 2019 </option>
+	<option value='https://academictech.uchicago.edu/2018/11/'> November 2018 </option>
+	<option value='https://academictech.uchicago.edu/2018/10/'> October 2018 </option>
+	<option value='https://academictech.uchicago.edu/2018/09/'> September 2018 </option>
+	<option value='https://academictech.uchicago.edu/2018/08/'> August 2018 </option>
+	<option value='https://academictech.uchicago.edu/2017/09/'> September 2017 </option>
+	<option value='https://academictech.uchicago.edu/2015/06/'> June 2015 </option>
+
+		</select>
+
+			<script type="text/javascript">
+/* <![CDATA[ */
+
+( ( dropdownId ) => {
+	const dropdown = document.getElementById( dropdownId );
+	function onSelectChange() {
+		setTimeout( () => {
+			if ( 'escape' === dropdown.dataset.lastkey ) {
+				return;
+			}
+			if ( dropdown.value ) {
+				document.location.href = dropdown.value;
+			}
+		}, 250 );
+	}
+	function onKeyUp( event ) {
+		if ( 'Escape' === event.key ) {
+			dropdown.dataset.lastkey = 'escape';
+		} else {
+			delete dropdown.dataset.lastkey;
+		}
+	}
+	function onClick() {
+		delete dropdown.dataset.lastkey;
+	}
+	dropdown.addEventListener( 'keyup', onKeyUp );
+	dropdown.addEventListener( 'click', onClick );
+	dropdown.addEventListener( 'change', onSelectChange );
+})( "archives-dropdown-2" );
+
+//# sourceURL=WP_Widget_Archives%3A%3Awidget
+/* ]]> */
+</script>
+</div><div id="categories-2" class="et_pb_widget widget_categories"><h4 class="widgettitle">Categories</h4>
+			<ul>
+					<li class="cat-item cat-item-16"><a href="https://academictech.uchicago.edu/category/services/av-equipment/">A/V Equipment</a>
+</li>
+	<li class="cat-item cat-item-120"><a href="https://academictech.uchicago.edu/category/accessibility/">Accessibility</a>
+</li>
+	<li class="cat-item cat-item-126"><a href="https://academictech.uchicago.edu/category/canvas/">Canvas</a>
+</li>
+	<li class="cat-item cat-item-127"><a href="https://academictech.uchicago.edu/category/canvas-featuresfunctions/">Canvas Features/Functions</a>
+</li>
+	<li class="cat-item cat-item-44"><a href="https://academictech.uchicago.edu/category/de-promote/">De-Promote</a>
+</li>
+	<li class="cat-item cat-item-76"><a href="https://academictech.uchicago.edu/category/services/digital-accessibility/">Digital Accessibility</a>
+</li>
+	<li class="cat-item cat-item-60"><a href="https://academictech.uchicago.edu/category/events/">Events</a>
+</li>
+	<li class="cat-item cat-item-52"><a href="https://academictech.uchicago.edu/category/faculty-success-stories/">Faculty Success Stories</a>
+</li>
+	<li class="cat-item cat-item-189"><a href="https://academictech.uchicago.edu/category/events/gaad/">GAAD</a>
+</li>
+	<li class="cat-item cat-item-228"><a href="https://academictech.uchicago.edu/category/generative-ai/">Generative AI</a>
+</li>
+	<li class="cat-item cat-item-208"><a href="https://academictech.uchicago.edu/category/health-and-wellness/">Health and Wellness</a>
+</li>
+	<li class="cat-item cat-item-128"><a href="https://academictech.uchicago.edu/category/how-tos/">How-tos</a>
+</li>
+	<li class="cat-item cat-item-14"><a href="https://academictech.uchicago.edu/category/services/instructional-design/">Instructional design</a>
+</li>
+	<li class="cat-item cat-item-186"><a href="https://academictech.uchicago.edu/category/services/av-equipment/lightboard/">Lightboard</a>
+</li>
+	<li class="cat-item cat-item-221"><a href="https://academictech.uchicago.edu/category/linkedin-learning/">LinkedIn Learning</a>
+</li>
+	<li class="cat-item cat-item-15"><a href="https://academictech.uchicago.edu/category/services/multimedia-development/">Multimedia Development</a>
+</li>
+	<li class="cat-item cat-item-190"><a href="https://academictech.uchicago.edu/category/panopto/">Panopto</a>
+</li>
+	<li class="cat-item cat-item-129"><a href="https://academictech.uchicago.edu/category/pedagogy/">Pedagogy</a>
+</li>
+	<li class="cat-item cat-item-220"><a href="https://academictech.uchicago.edu/category/podcasting/">Podcasting</a>
+</li>
+	<li class="cat-item cat-item-197"><a href="https://academictech.uchicago.edu/category/poll-everywhere/">Poll Everywhere</a>
+</li>
+	<li class="cat-item cat-item-153"><a href="https://academictech.uchicago.edu/category/security/">Security</a>
+</li>
+	<li class="cat-item cat-item-17"><a href="https://academictech.uchicago.edu/category/services/">Services</a>
+</li>
+	<li class="cat-item cat-item-142"><a href="https://academictech.uchicago.edu/category/student/">Student</a>
+</li>
+	<li class="cat-item cat-item-156"><a href="https://academictech.uchicago.edu/category/surveys-and-feedback/">Surveys and Feedback</a>
+</li>
+	<li class="cat-item cat-item-61"><a href="https://academictech.uchicago.edu/category/events/symposium-for-teaching-with-technology/">Symposium for Teaching with Technology</a>
+</li>
+	<li class="cat-item cat-item-173"><a href="https://academictech.uchicago.edu/category/events/try-it/">Try IT</a>
+</li>
+	<li class="cat-item cat-item-1"><a href="https://academictech.uchicago.edu/category/uncategorized/">Uncategorized</a>
+</li>
+	<li class="cat-item cat-item-82"><a href="https://academictech.uchicago.edu/category/universal-design-for-learning/">Universal Design for Learning</a>
+</li>
+	<li class="cat-item cat-item-198"><a href="https://academictech.uchicago.edu/category/updates/">Updates</a>
+</li>
+	<li class="cat-item cat-item-18"><a href="https://academictech.uchicago.edu/category/visualization/">Visualization</a>
+</li>
+			</ul>
+
+			</div><div id="tag_cloud-2" class="et_pb_widget widget_tag_cloud"><h4 class="widgettitle">Tags</h4><div class="tagcloud"><a href="https://academictech.uchicago.edu/tag/a11y/" class="tag-cloud-link tag-link-101 tag-link-position-1" style="font-size: 13.957446808511pt;" aria-label="a11y (14 items)">a11y</a>
+<a href="https://academictech.uchicago.edu/tag/academic-dishonesty/" class="tag-cloud-link tag-link-47 tag-link-position-2" style="font-size: 11.872340425532pt;" aria-label="Academic Dishonesty (10 items)">Academic Dishonesty</a>
+<a href="https://academictech.uchicago.edu/tag/academic-integrity/" class="tag-cloud-link tag-link-104 tag-link-position-3" style="font-size: 12.914893617021pt;" aria-label="Academic Integrity (12 items)">Academic Integrity</a>
+<a href="https://academictech.uchicago.edu/tag/accessibility/" class="tag-cloud-link tag-link-59 tag-link-position-4" style="font-size: 18.425531914894pt;" aria-label="Accessibility (29 items)">Accessibility</a>
+<a href="https://academictech.uchicago.edu/tag/ai-discernment/" class="tag-cloud-link tag-link-226 tag-link-position-5" style="font-size: 9.0425531914894pt;" aria-label="AI Discernment (6 items)">AI Discernment</a>
+<a href="https://academictech.uchicago.edu/tag/annotation/" class="tag-cloud-link tag-link-105 tag-link-position-6" style="font-size: 12.468085106383pt;" aria-label="annotation (11 items)">annotation</a>
+<a href="https://academictech.uchicago.edu/tag/artificial-intelligence/" class="tag-cloud-link tag-link-111 tag-link-position-7" style="font-size: 17.382978723404pt;" aria-label="artificial intelligence (25 items)">artificial intelligence</a>
+<a href="https://academictech.uchicago.edu/tag/canvas/" class="tag-cloud-link tag-link-35 tag-link-position-8" style="font-size: 20.510638297872pt;" aria-label="Canvas (41 items)">Canvas</a>
+<a href="https://academictech.uchicago.edu/tag/canvas-features/" class="tag-cloud-link tag-link-46 tag-link-position-9" style="font-size: 15.446808510638pt;" aria-label="Canvas Features (18 items)">Canvas Features</a>
+<a href="https://academictech.uchicago.edu/tag/canvas-featuresfunctions/" class="tag-cloud-link tag-link-134 tag-link-position-10" style="font-size: 17.68085106383pt;" aria-label="Canvas features/functions (26 items)">Canvas features/functions</a>
+<a href="https://academictech.uchicago.edu/tag/close-reading/" class="tag-cloud-link tag-link-73 tag-link-position-11" style="font-size: 10.531914893617pt;" aria-label="Close Reading (8 items)">Close Reading</a>
+<a href="https://academictech.uchicago.edu/tag/course-blogs/" class="tag-cloud-link tag-link-65 tag-link-position-12" style="font-size: 9.0425531914894pt;" aria-label="course blogs (6 items)">course blogs</a>
+<a href="https://academictech.uchicago.edu/tag/creative-assignments/" class="tag-cloud-link tag-link-56 tag-link-position-13" style="font-size: 11.872340425532pt;" aria-label="Creative Assignments (10 items)">Creative Assignments</a>
+<a href="https://academictech.uchicago.edu/tag/critical-pedagogy/" class="tag-cloud-link tag-link-85 tag-link-position-14" style="font-size: 9.0425531914894pt;" aria-label="Critical Pedagogy (6 items)">Critical Pedagogy</a>
+<a href="https://academictech.uchicago.edu/tag/digital-accessibility/" class="tag-cloud-link tag-link-84 tag-link-position-15" style="font-size: 16.63829787234pt;" aria-label="Digital Accessibility (22 items)">Digital Accessibility</a>
+<a href="https://academictech.uchicago.edu/tag/digital-annotation/" class="tag-cloud-link tag-link-89 tag-link-position-16" style="font-size: 10.531914893617pt;" aria-label="Digital Annotation (8 items)">Digital Annotation</a>
+<a href="https://academictech.uchicago.edu/tag/digital-pedagogy/" class="tag-cloud-link tag-link-166 tag-link-position-17" style="font-size: 16.340425531915pt;" aria-label="Digital Pedagogy (21 items)">Digital Pedagogy</a>
+<a href="https://academictech.uchicago.edu/tag/discussions/" class="tag-cloud-link tag-link-66 tag-link-position-18" style="font-size: 12.468085106383pt;" aria-label="Discussions (11 items)">Discussions</a>
+<a href="https://academictech.uchicago.edu/tag/ed-discussion/" class="tag-cloud-link tag-link-79 tag-link-position-19" style="font-size: 12.468085106383pt;" aria-label="Ed Discussion (11 items)">Ed Discussion</a>
+<a href="https://academictech.uchicago.edu/tag/edstem/" class="tag-cloud-link tag-link-113 tag-link-position-20" style="font-size: 9.0425531914894pt;" aria-label="Edstem (6 items)">Edstem</a>
+<a href="https://academictech.uchicago.edu/tag/events/" class="tag-cloud-link tag-link-36 tag-link-position-21" style="font-size: 9.0425531914894pt;" aria-label="events (6 items)">events</a>
+<a href="https://academictech.uchicago.edu/tag/faculty-support/" class="tag-cloud-link tag-link-58 tag-link-position-22" style="font-size: 8pt;" aria-label="Faculty Support (5 items)">Faculty Support</a>
+<a href="https://academictech.uchicago.edu/tag/genai/" class="tag-cloud-link tag-link-202 tag-link-position-23" style="font-size: 16.936170212766pt;" aria-label="genai (23 items)">genai</a>
+<a href="https://academictech.uchicago.edu/tag/generative-ai/" class="tag-cloud-link tag-link-203 tag-link-position-24" style="font-size: 17.382978723404pt;" aria-label="generative ai (25 items)">generative ai</a>
+<a href="https://academictech.uchicago.edu/tag/getting-started/" class="tag-cloud-link tag-link-201 tag-link-position-25" style="font-size: 18.425531914894pt;" aria-label="Getting Started (29 items)">Getting Started</a>
+<a href="https://academictech.uchicago.edu/tag/gradescope/" class="tag-cloud-link tag-link-67 tag-link-position-26" style="font-size: 8pt;" aria-label="Gradescope (5 items)">Gradescope</a>
+<a href="https://academictech.uchicago.edu/tag/hiring/" class="tag-cloud-link tag-link-31 tag-link-position-27" style="font-size: 9.0425531914894pt;" aria-label="hiring (6 items)">hiring</a>
+<a href="https://academictech.uchicago.edu/tag/hypothes-is/" class="tag-cloud-link tag-link-72 tag-link-position-28" style="font-size: 16.340425531915pt;" aria-label="Hypothes.is (21 items)">Hypothes.is</a>
+<a href="https://academictech.uchicago.edu/tag/inclusive-teaching/" class="tag-cloud-link tag-link-83 tag-link-position-29" style="font-size: 8pt;" aria-label="Inclusive Teaching (5 items)">Inclusive Teaching</a>
+<a href="https://academictech.uchicago.edu/tag/instructional-design/" class="tag-cloud-link tag-link-162 tag-link-position-30" style="font-size: 9.7872340425532pt;" aria-label="instructional design (7 items)">instructional design</a>
+<a href="https://academictech.uchicago.edu/tag/jobs/" class="tag-cloud-link tag-link-32 tag-link-position-31" style="font-size: 9.0425531914894pt;" aria-label="jobs (6 items)">jobs</a>
+<a href="https://academictech.uchicago.edu/tag/linkedin-learning/" class="tag-cloud-link tag-link-69 tag-link-position-32" style="font-size: 10.531914893617pt;" aria-label="LinkedIn Learning (8 items)">LinkedIn Learning</a>
+<a href="https://academictech.uchicago.edu/tag/multimedia/" class="tag-cloud-link tag-link-53 tag-link-position-33" style="font-size: 11.872340425532pt;" aria-label="Multimedia (10 items)">Multimedia</a>
+<a href="https://academictech.uchicago.edu/tag/multimedia-instruction/" class="tag-cloud-link tag-link-42 tag-link-position-34" style="font-size: 8pt;" aria-label="Multimedia Instruction (5 items)">Multimedia Instruction</a>
+<a href="https://academictech.uchicago.edu/tag/panopto/" class="tag-cloud-link tag-link-55 tag-link-position-35" style="font-size: 13.957446808511pt;" aria-label="Panopto (14 items)">Panopto</a>
+<a href="https://academictech.uchicago.edu/tag/pedagogy/" class="tag-cloud-link tag-link-22 tag-link-position-36" style="font-size: 22pt;" aria-label="Pedagogy (51 items)">Pedagogy</a>
+<a href="https://academictech.uchicago.edu/tag/podcasting/" class="tag-cloud-link tag-link-57 tag-link-position-37" style="font-size: 8pt;" aria-label="Podcasting (5 items)">Podcasting</a>
+<a href="https://academictech.uchicago.edu/tag/poll-everywhere/" class="tag-cloud-link tag-link-97 tag-link-position-38" style="font-size: 12.468085106383pt;" aria-label="Poll Everywhere (11 items)">Poll Everywhere</a>
+<a href="https://academictech.uchicago.edu/tag/polling/" class="tag-cloud-link tag-link-171 tag-link-position-39" style="font-size: 9.0425531914894pt;" aria-label="Polling (6 items)">Polling</a>
+<a href="https://academictech.uchicago.edu/tag/social-annotation/" class="tag-cloud-link tag-link-78 tag-link-position-40" style="font-size: 14.702127659574pt;" aria-label="Social Annotation (16 items)">Social Annotation</a>
+<a href="https://academictech.uchicago.edu/tag/student-jobs/" class="tag-cloud-link tag-link-30 tag-link-position-41" style="font-size: 9.0425531914894pt;" aria-label="student jobs (6 items)">student jobs</a>
+<a href="https://academictech.uchicago.edu/tag/teaching-learning-tools/" class="tag-cloud-link tag-link-20 tag-link-position-42" style="font-size: 19.021276595745pt;" aria-label="Teaching &amp; Learning Tools (32 items)">Teaching &amp; Learning Tools</a>
+<a href="https://academictech.uchicago.edu/tag/teach-smart/" class="tag-cloud-link tag-link-19 tag-link-position-43" style="font-size: 9.0425531914894pt;" aria-label="Teach Smart (6 items)">Teach Smart</a>
+<a href="https://academictech.uchicago.edu/tag/udl/" class="tag-cloud-link tag-link-191 tag-link-position-44" style="font-size: 9.7872340425532pt;" aria-label="UDL (7 items)">UDL</a>
+<a href="https://academictech.uchicago.edu/tag/universal-design-for-learning/" class="tag-cloud-link tag-link-94 tag-link-position-45" style="font-size: 13.510638297872pt;" aria-label="Universal Design for Learning (13 items)">Universal Design for Learning</a></div>
+</div>	</div>
+		</div>
+	</div>
+	</div>
+
+
+	<span class="et_pb_scroll_top et-pb-icon"></span>
+
+
+			<footer id="main-footer">
+				
+<div class="container">
+	<div id="footer-widgets" class="clearfix">
+		<div class="footer-widget"><div id="text-3" class="fwidget et_pb_widget widget_text">			<div class="textwidget"><img src="https://voices.uchicago.edu/sandbox/files/2016/11/uchicago_wordmark-1spdj3z-1qpd6pz.svg" alt="The University of Chicago"/>
+<br/>
+<p>Academic Technology Solutions</br/> 
+1100 East 57th Street, A-Level<br/>
+Chicago, IL 60637<br/>
+<a href="mailto:academictech@uchicago.edu">academictech@uchicago.edu</a><br/>
+©2023 The University of Chicago<br/>
+All rights reserved</p></div>
+		</div></div><div class="footer-widget"><div id="text-5" class="fwidget et_pb_widget widget_text"><h4 class="title">Related Links</h4>			<div class="textwidget"><ul>
+<li><a href="http://courses.uchicago.edu">UChicago Canvas Homepage</a></li>
+<li><a href="http://itservices.uchicago.edu">IT Services</a></li>
+<li><a href="https://panopto.uchicago.edu">Panopto</a></li>
+<li><a href="https://accessibility.uchicago.edu">Accessibility</a></li>
+</ul>
+</div>
+		</div></div><div class="footer-widget"><div id="text-6" class="fwidget et_pb_widget widget_text"><h4 class="title">Help and Support</h4>			<div class="textwidget"><ul>
+<li>Canvas 24/7 hotline:<br /> 833.564.8137 (Faculty)<br /> 844.334.6803 (Student)</li>
+<li><a href="https://itservices.uchicago.edu/page/support" target="_blank" rel="noopener">ITS Service Desk</a></li>
+<li><a href="https://academictech.uchicago.edu/about-us/contact-us/" target="_blank" rel="noopener">Set Up Individual Consultation with ATS</a></li>
+</ul>
+</div>
+		</div></div>	</div>
+</div>
+
+
+		
+				<div id="footer-bottom">
+					<div class="container clearfix">
+									</div>
+				</div>
+			</footer>
+		</div>
+
+
+	</div>
+
+	<script type="speculationrules">
+{"prefetch":[{"source":"document","where":{"and":[{"href_matches":"/*"},{"not":{"href_matches":["/wp-*.php","/wp-admin/*","/files/*","/wp-content/*","/wp-content/plugins/*","/wp-content/themes/divi/*","/*\\?(.+)"]}},{"not":{"selector_matches":"a[rel~=\"nofollow\"]"}},{"not":{"selector_matches":".no-prefetch, .no-prefetch a"}}]},"eagerness":"conservative"}]}
+</script>
+<style id="et-builder-googlefonts-inline">/* Original: https://fonts.googleapis.com/css?family=Montserrat:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic|Open+Sans:300,regular,500,600,700,800,300italic,italic,500italic,600italic,700italic,800italic&#038;subset=cyrillic,cyrillic-ext,latin,latin-ext,vietnamese,greek,greek-ext,hebrew&#038;display=swap *//* User Agent: Mozilla/5.0 (Unknown; Linux x86_64) AppleWebKit/538.1 (KHTML, like Gecko) Safari/538.1 Daum/4.1 */@font-face {font-family: 'Montserrat';font-style: italic;font-weight: 100;font-display: swap;src: url(https://fonts.gstatic.com/s/montserrat/v31/JTUFjIg1_i6t8kCHKm459Wx7xQYXK0vOoz6jq6R8aX8.ttf) format('truetype');}@font-face {font-family: 'Montserrat';font-style: italic;font-weight: 200;font-display: swap;src: url(https://fonts.gstatic.com/s/montserrat/v31/JTUFjIg1_i6t8kCHKm459Wx7xQYXK0vOoz6jqyR9aX8.ttf) format('truetype');}@font-face {font-family: 'Montserrat';font-style: italic;font-weight: 300;font-display: swap;src: url(https://fonts.gstatic.com/s/montserrat/v31/JTUFjIg1_i6t8kCHKm459Wx7xQYXK0vOoz6jq_p9aX8.ttf) format('truetype');}@font-face {font-family: 'Montserrat';font-style: italic;font-weight: 400;font-display: swap;src: url(https://fonts.gstatic.com/s/montserrat/v31/JTUFjIg1_i6t8kCHKm459Wx7xQYXK0vOoz6jq6R9aX8.ttf) format('truetype');}@font-face {font-family: 'Montserrat';font-style: italic;font-weight: 500;font-display: swap;src: url(https://fonts.gstatic.com/s/montserrat/v31/JTUFjIg1_i6t8kCHKm459Wx7xQYXK0vOoz6jq5Z9aX8.ttf) format('truetype');}@font-face {font-family: 'Montserrat';font-style: italic;font-weight: 600;font-display: swap;src: url(https://fonts.gstatic.com/s/montserrat/v31/JTUFjIg1_i6t8kCHKm459Wx7xQYXK0vOoz6jq3p6aX8.ttf) format('truetype');}@font-face {font-family: 'Montserrat';font-style: italic;font-weight: 700;font-display: swap;src: url(https://fonts.gstatic.com/s/montserrat/v31/JTUFjIg1_i6t8kCHKm459Wx7xQYXK0vOoz6jq0N6aX8.ttf) format('truetype');}@font-face {font-family: 'Montserrat';font-style: italic;font-weight: 800;font-display: swap;src: url(https://fonts.gstatic.com/s/montserrat/v31/JTUFjIg1_i6t8kCHKm459Wx7xQYXK0vOoz6jqyR6aX8.ttf) format('truetype');}@font-face {font-family: 'Montserrat';font-style: italic;font-weight: 900;font-display: swap;src: url(https://fonts.gstatic.com/s/montserrat/v31/JTUFjIg1_i6t8kCHKm459Wx7xQYXK0vOoz6jqw16aX8.ttf) format('truetype');}@font-face {font-family: 'Montserrat';font-style: normal;font-weight: 100;font-display: swap;src: url(https://fonts.gstatic.com/s/montserrat/v31/JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCtr6Uw-.ttf) format('truetype');}@font-face {font-family: 'Montserrat';font-style: normal;font-weight: 200;font-display: swap;src: url(https://fonts.gstatic.com/s/montserrat/v31/JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCvr6Ew-.ttf) format('truetype');}@font-face {font-family: 'Montserrat';font-style: normal;font-weight: 300;font-display: swap;src: url(https://fonts.gstatic.com/s/montserrat/v31/JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCs16Ew-.ttf) format('truetype');}@font-face {font-family: 'Montserrat';font-style: normal;font-weight: 400;font-display: swap;src: url(https://fonts.gstatic.com/s/montserrat/v31/JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCtr6Ew-.ttf) format('truetype');}@font-face {font-family: 'Montserrat';font-style: normal;font-weight: 500;font-display: swap;src: url(https://fonts.gstatic.com/s/montserrat/v31/JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCtZ6Ew-.ttf) format('truetype');}@font-face {font-family: 'Montserrat';font-style: normal;font-weight: 600;font-display: swap;src: url(https://fonts.gstatic.com/s/montserrat/v31/JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCu170w-.ttf) format('truetype');}@font-face {font-family: 'Montserrat';font-style: normal;font-weight: 700;font-display: swap;src: url(https://fonts.gstatic.com/s/montserrat/v31/JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCuM70w-.ttf) format('truetype');}@font-face {font-family: 'Montserrat';font-style: normal;font-weight: 800;font-display: swap;src: url(https://fonts.gstatic.com/s/montserrat/v31/JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCvr70w-.ttf) format('truetype');}@font-face {font-family: 'Montserrat';font-style: normal;font-weight: 900;font-display: swap;src: url(https://fonts.gstatic.com/s/montserrat/v31/JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCvC70w-.ttf) format('truetype');}@font-face {font-family: 'Open Sans';font-style: italic;font-weight: 300;font-stretch: normal;font-display: swap;src: url(https://fonts.gstatic.com/s/opensans/v44/memQYaGs126MiZpBA-UFUIcVXSCEkx2cmqvXlWq8tWZ0Pw86hd0Rk5hkaVc.ttf) format('truetype');}@font-face {font-family: 'Open Sans';font-style: italic;font-weight: 400;font-stretch: normal;font-display: swap;src: url(https://fonts.gstatic.com/s/opensans/v44/memQYaGs126MiZpBA-UFUIcVXSCEkx2cmqvXlWq8tWZ0Pw86hd0Rk8ZkaVc.ttf) format('truetype');}@font-face {font-family: 'Open Sans';font-style: italic;font-weight: 500;font-stretch: normal;font-display: swap;src: url(https://fonts.gstatic.com/s/opensans/v44/memQYaGs126MiZpBA-UFUIcVXSCEkx2cmqvXlWq8tWZ0Pw86hd0Rk_RkaVc.ttf) format('truetype');}@font-face {font-family: 'Open Sans';font-style: italic;font-weight: 600;font-stretch: normal;font-display: swap;src: url(https://fonts.gstatic.com/s/opensans/v44/memQYaGs126MiZpBA-UFUIcVXSCEkx2cmqvXlWq8tWZ0Pw86hd0RkxhjaVc.ttf) format('truetype');}@font-face {font-family: 'Open Sans';font-style: italic;font-weight: 700;font-stretch: normal;font-display: swap;src: url(https://fonts.gstatic.com/s/opensans/v44/memQYaGs126MiZpBA-UFUIcVXSCEkx2cmqvXlWq8tWZ0Pw86hd0RkyFjaVc.ttf) format('truetype');}@font-face {font-family: 'Open Sans';font-style: italic;font-weight: 800;font-stretch: normal;font-display: swap;src: url(https://fonts.gstatic.com/s/opensans/v44/memQYaGs126MiZpBA-UFUIcVXSCEkx2cmqvXlWq8tWZ0Pw86hd0Rk0ZjaVc.ttf) format('truetype');}@font-face {font-family: 'Open Sans';font-style: normal;font-weight: 300;font-stretch: normal;font-display: swap;src: url(https://fonts.gstatic.com/s/opensans/v44/memSYaGs126MiZpBA-UvWbX2vVnXBbObj2OVZyOOSr4dVJWUgsiH0C4n.ttf) format('truetype');}@font-face {font-family: 'Open Sans';font-style: normal;font-weight: 400;font-stretch: normal;font-display: swap;src: url(https://fonts.gstatic.com/s/opensans/v44/memSYaGs126MiZpBA-UvWbX2vVnXBbObj2OVZyOOSr4dVJWUgsjZ0C4n.ttf) format('truetype');}@font-face {font-family: 'Open Sans';font-style: normal;font-weight: 500;font-stretch: normal;font-display: swap;src: url(https://fonts.gstatic.com/s/opensans/v44/memSYaGs126MiZpBA-UvWbX2vVnXBbObj2OVZyOOSr4dVJWUgsjr0C4n.ttf) format('truetype');}@font-face {font-family: 'Open Sans';font-style: normal;font-weight: 600;font-stretch: normal;font-display: swap;src: url(https://fonts.gstatic.com/s/opensans/v44/memSYaGs126MiZpBA-UvWbX2vVnXBbObj2OVZyOOSr4dVJWUgsgH1y4n.ttf) format('truetype');}@font-face {font-family: 'Open Sans';font-style: normal;font-weight: 700;font-stretch: normal;font-display: swap;src: url(https://fonts.gstatic.com/s/opensans/v44/memSYaGs126MiZpBA-UvWbX2vVnXBbObj2OVZyOOSr4dVJWUgsg-1y4n.ttf) format('truetype');}@font-face {font-family: 'Open Sans';font-style: normal;font-weight: 800;font-stretch: normal;font-display: swap;src: url(https://fonts.gstatic.com/s/opensans/v44/memSYaGs126MiZpBA-UvWbX2vVnXBbObj2OVZyOOSr4dVJWUgshZ1y4n.ttf) format('truetype');}/* User Agent: Mozilla/5.0 (Windows NT 6.1; WOW64; rv:27.0) Gecko/20100101 Firefox/27.0 */@font-face {font-family: 'Montserrat';font-style: italic;font-weight: 100;font-display: swap;src: url(https://fonts.gstatic.com/l/font?kit=JTUFjIg1_i6t8kCHKm459Wx7xQYXK0vOoz6jq6R8aXw&skey=2d3c1187d5eede0f&v=v31) format('woff');}@font-face {font-family: 'Montserrat';font-style: italic;font-weight: 200;font-display: swap;src: url(https://fonts.gstatic.com/l/font?kit=JTUFjIg1_i6t8kCHKm459Wx7xQYXK0vOoz6jqyR9aXw&skey=2d3c1187d5eede0f&v=v31) format('woff');}@font-face {font-family: 'Montserrat';font-style: italic;font-weight: 300;font-display: swap;src: url(https://fonts.gstatic.com/l/font?kit=JTUFjIg1_i6t8kCHKm459Wx7xQYXK0vOoz6jq_p9aXw&skey=2d3c1187d5eede0f&v=v31) format('woff');}@font-face {font-family: 'Montserrat';font-style: italic;font-weight: 400;font-display: swap;src: url(https://fonts.gstatic.com/l/font?kit=JTUFjIg1_i6t8kCHKm459Wx7xQYXK0vOoz6jq6R9aXw&skey=2d3c1187d5eede0f&v=v31) format('woff');}@font-face {font-family: 'Montserrat';font-style: italic;font-weight: 500;font-display: swap;src: url(https://fonts.gstatic.com/l/font?kit=JTUFjIg1_i6t8kCHKm459Wx7xQYXK0vOoz6jq5Z9aXw&skey=2d3c1187d5eede0f&v=v31) format('woff');}@font-face {font-family: 'Montserrat';font-style: italic;font-weight: 600;font-display: swap;src: url(https://fonts.gstatic.com/l/font?kit=JTUFjIg1_i6t8kCHKm459Wx7xQYXK0vOoz6jq3p6aXw&skey=2d3c1187d5eede0f&v=v31) format('woff');}@font-face {font-family: 'Montserrat';font-style: italic;font-weight: 700;font-display: swap;src: url(https://fonts.gstatic.com/l/font?kit=JTUFjIg1_i6t8kCHKm459Wx7xQYXK0vOoz6jq0N6aXw&skey=2d3c1187d5eede0f&v=v31) format('woff');}@font-face {font-family: 'Montserrat';font-style: italic;font-weight: 800;font-display: swap;src: url(https://fonts.gstatic.com/l/font?kit=JTUFjIg1_i6t8kCHKm459Wx7xQYXK0vOoz6jqyR6aXw&skey=2d3c1187d5eede0f&v=v31) format('woff');}@font-face {font-family: 'Montserrat';font-style: italic;font-weight: 900;font-display: swap;src: url(https://fonts.gstatic.com/l/font?kit=JTUFjIg1_i6t8kCHKm459Wx7xQYXK0vOoz6jqw16aXw&skey=2d3c1187d5eede0f&v=v31) format('woff');}@font-face {font-family: 'Montserrat';font-style: normal;font-weight: 100;font-display: swap;src: url(https://fonts.gstatic.com/l/font?kit=JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCtr6Uw9&skey=7bc19f711c0de8f&v=v31) format('woff');}@font-face {font-family: 'Montserrat';font-style: normal;font-weight: 200;font-display: swap;src: url(https://fonts.gstatic.com/l/font?kit=JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCvr6Ew9&skey=7bc19f711c0de8f&v=v31) format('woff');}@font-face {font-family: 'Montserrat';font-style: normal;font-weight: 300;font-display: swap;src: url(https://fonts.gstatic.com/l/font?kit=JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCs16Ew9&skey=7bc19f711c0de8f&v=v31) format('woff');}@font-face {font-family: 'Montserrat';font-style: normal;font-weight: 400;font-display: swap;src: url(https://fonts.gstatic.com/l/font?kit=JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCtr6Ew9&skey=7bc19f711c0de8f&v=v31) format('woff');}@font-face {font-family: 'Montserrat';font-style: normal;font-weight: 500;font-display: swap;src: url(https://fonts.gstatic.com/l/font?kit=JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCtZ6Ew9&skey=7bc19f711c0de8f&v=v31) format('woff');}@font-face {font-family: 'Montserrat';font-style: normal;font-weight: 600;font-display: swap;src: url(https://fonts.gstatic.com/l/font?kit=JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCu170w9&skey=7bc19f711c0de8f&v=v31) format('woff');}@font-face {font-family: 'Montserrat';font-style: normal;font-weight: 700;font-display: swap;src: url(https://fonts.gstatic.com/l/font?kit=JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCuM70w9&skey=7bc19f711c0de8f&v=v31) format('woff');}@font-face {font-family: 'Montserrat';font-style: normal;font-weight: 800;font-display: swap;src: url(https://fonts.gstatic.com/l/font?kit=JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCvr70w9&skey=7bc19f711c0de8f&v=v31) format('woff');}@font-face {font-family: 'Montserrat';font-style: normal;font-weight: 900;font-display: swap;src: url(https://fonts.gstatic.com/l/font?kit=JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCvC70w9&skey=7bc19f711c0de8f&v=v31) format('woff');}@font-face {font-family: 'Open Sans';font-style: italic;font-weight: 300;font-stretch: normal;font-display: swap;src: url(https://fonts.gstatic.com/l/font?kit=memQYaGs126MiZpBA-UFUIcVXSCEkx2cmqvXlWq8tWZ0Pw86hd0Rk5hkaVQ&skey=743457fe2cc29280&v=v44) format('woff');}@font-face {font-family: 'Open Sans';font-style: italic;font-weight: 400;font-stretch: normal;font-display: swap;src: url(https://fonts.gstatic.com/l/font?kit=memQYaGs126MiZpBA-UFUIcVXSCEkx2cmqvXlWq8tWZ0Pw86hd0Rk8ZkaVQ&skey=743457fe2cc29280&v=v44) format('woff');}@font-face {font-family: 'Open Sans';font-style: italic;font-weight: 500;font-stretch: normal;font-display: swap;src: url(https://fonts.gstatic.com/l/font?kit=memQYaGs126MiZpBA-UFUIcVXSCEkx2cmqvXlWq8tWZ0Pw86hd0Rk_RkaVQ&skey=743457fe2cc29280&v=v44) format('woff');}@font-face {font-family: 'Open Sans';font-style: italic;font-weight: 600;font-stretch: normal;font-display: swap;src: url(https://fonts.gstatic.com/l/font?kit=memQYaGs126MiZpBA-UFUIcVXSCEkx2cmqvXlWq8tWZ0Pw86hd0RkxhjaVQ&skey=743457fe2cc29280&v=v44) format('woff');}@font-face {font-family: 'Open Sans';font-style: italic;font-weight: 700;font-stretch: normal;font-display: swap;src: url(https://fonts.gstatic.com/l/font?kit=memQYaGs126MiZpBA-UFUIcVXSCEkx2cmqvXlWq8tWZ0Pw86hd0RkyFjaVQ&skey=743457fe2cc29280&v=v44) format('woff');}@font-face {font-family: 'Open Sans';font-style: italic;font-weight: 800;font-stretch: normal;font-display: swap;src: url(https://fonts.gstatic.com/l/font?kit=memQYaGs126MiZpBA-UFUIcVXSCEkx2cmqvXlWq8tWZ0Pw86hd0Rk0ZjaVQ&skey=743457fe2cc29280&v=v44) format('woff');}@font-face {font-family: 'Open Sans';font-style: normal;font-weight: 300;font-stretch: normal;font-display: swap;src: url(https://fonts.gstatic.com/l/font?kit=memSYaGs126MiZpBA-UvWbX2vVnXBbObj2OVZyOOSr4dVJWUgsiH0C4k&skey=62c1cbfccc78b4b2&v=v44) format('woff');}@font-face {font-family: 'Open Sans';font-style: normal;font-weight: 400;font-stretch: normal;font-display: swap;src: url(https://fonts.gstatic.com/l/font?kit=memSYaGs126MiZpBA-UvWbX2vVnXBbObj2OVZyOOSr4dVJWUgsjZ0C4k&skey=62c1cbfccc78b4b2&v=v44) format('woff');}@font-face {font-family: 'Open Sans';font-style: normal;font-weight: 500;font-stretch: normal;font-display: swap;src: url(https://fonts.gstatic.com/l/font?kit=memSYaGs126MiZpBA-UvWbX2vVnXBbObj2OVZyOOSr4dVJWUgsjr0C4k&skey=62c1cbfccc78b4b2&v=v44) format('woff');}@font-face {font-family: 'Open Sans';font-style: normal;font-weight: 600;font-stretch: normal;font-display: swap;src: url(https://fonts.gstatic.com/l/font?kit=memSYaGs126MiZpBA-UvWbX2vVnXBbObj2OVZyOOSr4dVJWUgsgH1y4k&skey=62c1cbfccc78b4b2&v=v44) format('woff');}@font-face {font-family: 'Open Sans';font-style: normal;font-weight: 700;font-stretch: normal;font-display: swap;src: url(https://fonts.gstatic.com/l/font?kit=memSYaGs126MiZpBA-UvWbX2vVnXBbObj2OVZyOOSr4dVJWUgsg-1y4k&skey=62c1cbfccc78b4b2&v=v44) format('woff');}@font-face {font-family: 'Open Sans';font-style: normal;font-weight: 800;font-stretch: normal;font-display: swap;src: url(https://fonts.gstatic.com/l/font?kit=memSYaGs126MiZpBA-UvWbX2vVnXBbObj2OVZyOOSr4dVJWUgshZ1y4k&skey=62c1cbfccc78b4b2&v=v44) format('woff');}/* User Agent: Mozilla/5.0 (Windows NT 6.3; rv:39.0) Gecko/20100101 Firefox/39.0 */@font-face {font-family: 'Montserrat';font-style: italic;font-weight: 100;font-display: swap;src: url(https://fonts.gstatic.com/s/montserrat/v31/JTUFjIg1_i6t8kCHKm459Wx7xQYXK0vOoz6jq6R8aXo.woff2) format('woff2');}@font-face {font-family: 'Montserrat';font-style: italic;font-weight: 200;font-display: swap;src: url(https://fonts.gstatic.com/s/montserrat/v31/JTUFjIg1_i6t8kCHKm459Wx7xQYXK0vOoz6jqyR9aXo.woff2) format('woff2');}@font-face {font-family: 'Montserrat';font-style: italic;font-weight: 300;font-display: swap;src: url(https://fonts.gstatic.com/s/montserrat/v31/JTUFjIg1_i6t8kCHKm459Wx7xQYXK0vOoz6jq_p9aXo.woff2) format('woff2');}@font-face {font-family: 'Montserrat';font-style: italic;font-weight: 400;font-display: swap;src: url(https://fonts.gstatic.com/s/montserrat/v31/JTUFjIg1_i6t8kCHKm459Wx7xQYXK0vOoz6jq6R9aXo.woff2) format('woff2');}@font-face {font-family: 'Montserrat';font-style: italic;font-weight: 500;font-display: swap;src: url(https://fonts.gstatic.com/s/montserrat/v31/JTUFjIg1_i6t8kCHKm459Wx7xQYXK0vOoz6jq5Z9aXo.woff2) format('woff2');}@font-face {font-family: 'Montserrat';font-style: italic;font-weight: 600;font-display: swap;src: url(https://fonts.gstatic.com/s/montserrat/v31/JTUFjIg1_i6t8kCHKm459Wx7xQYXK0vOoz6jq3p6aXo.woff2) format('woff2');}@font-face {font-family: 'Montserrat';font-style: italic;font-weight: 700;font-display: swap;src: url(https://fonts.gstatic.com/s/montserrat/v31/JTUFjIg1_i6t8kCHKm459Wx7xQYXK0vOoz6jq0N6aXo.woff2) format('woff2');}@font-face {font-family: 'Montserrat';font-style: italic;font-weight: 800;font-display: swap;src: url(https://fonts.gstatic.com/s/montserrat/v31/JTUFjIg1_i6t8kCHKm459Wx7xQYXK0vOoz6jqyR6aXo.woff2) format('woff2');}@font-face {font-family: 'Montserrat';font-style: italic;font-weight: 900;font-display: swap;src: url(https://fonts.gstatic.com/s/montserrat/v31/JTUFjIg1_i6t8kCHKm459Wx7xQYXK0vOoz6jqw16aXo.woff2) format('woff2');}@font-face {font-family: 'Montserrat';font-style: normal;font-weight: 100;font-display: swap;src: url(https://fonts.gstatic.com/s/montserrat/v31/JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCtr6Uw7.woff2) format('woff2');}@font-face {font-family: 'Montserrat';font-style: normal;font-weight: 200;font-display: swap;src: url(https://fonts.gstatic.com/s/montserrat/v31/JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCvr6Ew7.woff2) format('woff2');}@font-face {font-family: 'Montserrat';font-style: normal;font-weight: 300;font-display: swap;src: url(https://fonts.gstatic.com/s/montserrat/v31/JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCs16Ew7.woff2) format('woff2');}@font-face {font-family: 'Montserrat';font-style: normal;font-weight: 400;font-display: swap;src: url(https://fonts.gstatic.com/s/montserrat/v31/JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCtr6Ew7.woff2) format('woff2');}@font-face {font-family: 'Montserrat';font-style: normal;font-weight: 500;font-display: swap;src: url(https://fonts.gstatic.com/s/montserrat/v31/JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCtZ6Ew7.woff2) format('woff2');}@font-face {font-family: 'Montserrat';font-style: normal;font-weight: 600;font-display: swap;src: url(https://fonts.gstatic.com/s/montserrat/v31/JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCu170w7.woff2) format('woff2');}@font-face {font-family: 'Montserrat';font-style: normal;font-weight: 700;font-display: swap;src: url(https://fonts.gstatic.com/s/montserrat/v31/JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCuM70w7.woff2) format('woff2');}@font-face {font-family: 'Montserrat';font-style: normal;font-weight: 800;font-display: swap;src: url(https://fonts.gstatic.com/s/montserrat/v31/JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCvr70w7.woff2) format('woff2');}@font-face {font-family: 'Montserrat';font-style: normal;font-weight: 900;font-display: swap;src: url(https://fonts.gstatic.com/s/montserrat/v31/JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCvC70w7.woff2) format('woff2');}@font-face {font-family: 'Open Sans';font-style: italic;font-weight: 300;font-stretch: normal;font-display: swap;src: url(https://fonts.gstatic.com/s/opensans/v44/memQYaGs126MiZpBA-UFUIcVXSCEkx2cmqvXlWq8tWZ0Pw86hd0Rk5hkaVI.woff2) format('woff2');}@font-face {font-family: 'Open Sans';font-style: italic;font-weight: 400;font-stretch: normal;font-display: swap;src: url(https://fonts.gstatic.com/s/opensans/v44/memQYaGs126MiZpBA-UFUIcVXSCEkx2cmqvXlWq8tWZ0Pw86hd0Rk8ZkaVI.woff2) format('woff2');}@font-face {font-family: 'Open Sans';font-style: italic;font-weight: 500;font-stretch: normal;font-display: swap;src: url(https://fonts.gstatic.com/s/opensans/v44/memQYaGs126MiZpBA-UFUIcVXSCEkx2cmqvXlWq8tWZ0Pw86hd0Rk_RkaVI.woff2) format('woff2');}@font-face {font-family: 'Open Sans';font-style: italic;font-weight: 600;font-stretch: normal;font-display: swap;src: url(https://fonts.gstatic.com/s/opensans/v44/memQYaGs126MiZpBA-UFUIcVXSCEkx2cmqvXlWq8tWZ0Pw86hd0RkxhjaVI.woff2) format('woff2');}@font-face {font-family: 'Open Sans';font-style: italic;font-weight: 700;font-stretch: normal;font-display: swap;src: url(https://fonts.gstatic.com/s/opensans/v44/memQYaGs126MiZpBA-UFUIcVXSCEkx2cmqvXlWq8tWZ0Pw86hd0RkyFjaVI.woff2) format('woff2');}@font-face {font-family: 'Open Sans';font-style: italic;font-weight: 800;font-stretch: normal;font-display: swap;src: url(https://fonts.gstatic.com/s/opensans/v44/memQYaGs126MiZpBA-UFUIcVXSCEkx2cmqvXlWq8tWZ0Pw86hd0Rk0ZjaVI.woff2) format('woff2');}@font-face {font-family: 'Open Sans';font-style: normal;font-weight: 300;font-stretch: normal;font-display: swap;src: url(https://fonts.gstatic.com/s/opensans/v44/memSYaGs126MiZpBA-UvWbX2vVnXBbObj2OVZyOOSr4dVJWUgsiH0C4i.woff2) format('woff2');}@font-face {font-family: 'Open Sans';font-style: normal;font-weight: 400;font-stretch: normal;font-display: swap;src: url(https://fonts.gstatic.com/s/opensans/v44/memSYaGs126MiZpBA-UvWbX2vVnXBbObj2OVZyOOSr4dVJWUgsjZ0C4i.woff2) format('woff2');}@font-face {font-family: 'Open Sans';font-style: normal;font-weight: 500;font-stretch: normal;font-display: swap;src: url(https://fonts.gstatic.com/s/opensans/v44/memSYaGs126MiZpBA-UvWbX2vVnXBbObj2OVZyOOSr4dVJWUgsjr0C4i.woff2) format('woff2');}@font-face {font-family: 'Open Sans';font-style: normal;font-weight: 600;font-stretch: normal;font-display: swap;src: url(https://fonts.gstatic.com/s/opensans/v44/memSYaGs126MiZpBA-UvWbX2vVnXBbObj2OVZyOOSr4dVJWUgsgH1y4i.woff2) format('woff2');}@font-face {font-family: 'Open Sans';font-style: normal;font-weight: 700;font-stretch: normal;font-display: swap;src: url(https://fonts.gstatic.com/s/opensans/v44/memSYaGs126MiZpBA-UvWbX2vVnXBbObj2OVZyOOSr4dVJWUgsg-1y4i.woff2) format('woff2');}@font-face {font-family: 'Open Sans';font-style: normal;font-weight: 800;font-stretch: normal;font-display: swap;src: url(https://fonts.gstatic.com/s/opensans/v44/memSYaGs126MiZpBA-UvWbX2vVnXBbObj2OVZyOOSr4dVJWUgshZ1y4i.woff2) format('woff2');}</style><style>.grecaptcha-badge { visibility: hidden; }.frm_dropzone_disabled{max-width:100% !important; padding: 10px;}.frm_dropzone_disabled .dz-message {display:block;border:none;text-align:left;margin:0;padding:0;}.frm_dropzone_disabled .frm_upload_icon,.frm_dropzone_disabled .frm_upload_text{display: none;}</style><script type="text/javascript" id="blog_templates_front-js-extra">
+/* <![CDATA[ */
+var blog_templates_params = {"type":""};
+//# sourceURL=blog_templates_front-js-extra
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://academictech.uchicago.edu/wp-content/plugins/blogtemplates//blogtemplatesfiles/assets/js/front.js?ver=2.6.8.2" id="blog_templates_front-js"></script>
+<script type="text/javascript" id="divi-custom-script-js-extra">
+/* <![CDATA[ */
+var DIVI = {"item_count":"%d Item","items_count":"%d Items"};
+var et_builder_utils_params = {"condition":{"diviTheme":true,"extraTheme":false},"scrollLocations":["app","top"],"builderScrollLocations":{"desktop":"app","tablet":"app","phone":"app"},"onloadScrollLocation":"app","builderType":"fe"};
+var et_frontend_scripts = {"builderCssContainerPrefix":"#et-boc","builderCssLayoutPrefix":"#et-boc .et-l"};
+var et_pb_custom = {"ajaxurl":"https://academictech.uchicago.edu/wp-admin/admin-ajax.php","images_uri":"https://academictech.uchicago.edu/wp-content/themes/divi/images","builder_images_uri":"https://academictech.uchicago.edu/wp-content/themes/divi/includes/builder/images","et_frontend_nonce":"4d5c72b2e7","subscription_failed":"Please, check the fields below to make sure you entered the correct information.","et_ab_log_nonce":"849e803e65","fill_message":"Please, fill in the following fields:","contact_error_message":"Please, fix the following errors:","invalid":"Invalid email","captcha":"Captcha","prev":"Prev","previous":"Previous","next":"Next","wrong_captcha":"You entered the wrong number in captcha.","wrong_checkbox":"Checkbox","ignore_waypoints":"no","is_divi_theme_used":"1","widget_search_selector":".widget_search","ab_tests":[],"is_ab_testing_active":"","page_id":"3984","unique_test_id":"","ab_bounce_rate":"5","is_cache_plugin_active":"yes","is_shortcode_tracking":"","tinymce_uri":"https://academictech.uchicago.edu/wp-content/themes/divi/includes/builder/frontend-builder/assets/vendors","accent_color":"#800000","waypoints_options":[]};
+var et_pb_box_shadow_elements = [];
+//# sourceURL=divi-custom-script-js-extra
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://academictech.uchicago.edu/wp-content/themes/divi/js/scripts.min.js?ver=4.27.4" id="divi-custom-script-js"></script>
+<script type="text/javascript" src="https://academictech.uchicago.edu/wp-content/themes/divi/js/smoothscroll.js?ver=4.27.4" id="smoothscroll-js"></script>
+<script type="text/javascript" src="https://academictech.uchicago.edu/wp-content/themes/divi/includes/builder/feature/dynamic-assets/assets/js/jquery.fitvids.js?ver=4.27.4" id="fitvids-js"></script>
+<script type="text/javascript" src="https://academictech.uchicago.edu/wp-content/themes/divi/core/admin/js/common.js?ver=4.27.4" id="et-core-common-js"></script>
+<script type="text/javascript" id="jetpack-stats-js-before">
+/* <![CDATA[ */
+_stq = window._stq || [];
+_stq.push([ "view", JSON.parse("{\"v\":\"ext\",\"blog\":\"224661189\",\"post\":\"3984\",\"tz\":\"-6\",\"srv\":\"academictech.uchicago.edu\",\"j\":\"1:15.0.2\"}") ]);
+_stq.push([ "clickTrackerInit", "224661189", "3984" ]);
+//# sourceURL=jetpack-stats-js-before
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://stats.wp.com/e-202608.js" id="jetpack-stats-js" defer="defer" data-wp-strategy="defer"></script>
+<script type="text/javascript" id="divi-accessibility-da11y-js-extra">
+/* <![CDATA[ */
+var _da11y = {"version":"2.0.5","active_outline_color":"#2ea3f2","skip_navigation_link_text":"Skip to content"};
+//# sourceURL=divi-accessibility-da11y-js-extra
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://academictech.uchicago.edu/wp-content/plugins/divi-accessibility/public/js/da11y.js?ver=2.0.5" id="divi-accessibility-da11y-js"></script>
+<script type="text/javascript" id="divi-accessibility-da11y-js-after">
+/* <![CDATA[ */
+jQuery(document).ready((function(e){function n(){const n=e(".et_search_form_container");n.hasClass("et_pb_is_animating")||(e(".et_menu_container").removeClass("et_pb_menu_visible et_pb_no_animation").addClass("et_pb_menu_hidden"),n.removeClass("et_pb_search_form_hidden et_pb_no_animation").addClass("et_pb_search_visible et_pb_is_animating"),setTimeout((function(){e(".et_menu_container").addClass("et_pb_no_animation"),n.addClass("et_pb_no_animation").removeClass("et_pb_is_animating")}),1e3),n.find("input").focus(),function(){const n=e(".et_search_form_container"),s=e("body");if(n.hasClass("et_pb_search_visible")){const a=e("#main-header").innerHeight(),i=e("#top-menu").width(),t=e("#top-menu li a").css("font-size");n.css({height:a+"px"}),n.find("input").css("font-size",t),s.hasClass("et_header_style_left")?n.find("form").css("max-width",i+60):n.css("max-width",i+60)}}())}e(".et-menu > li").on("focusout",(function(){e(this).removeClass("et-hover")})),e(".menu-item-has-children > a").length&&(e(".menu-item-has-children > a").addClass("da11y-submenu"),e(".menu-item-has-children > a").attr("aria-expanded","false")),e(".menu-item a").on("focus",(function(){e(this).siblings(".da11y-submenu").attr("aria-expanded","true"),e(this).siblings(".sub-menu").addClass("da11y-submenu-show"),e(this).trigger("mouseenter")})),e(".menu-item-has-children a").on("focusout",(function(){e(this).parent().not(".menu-item-has-children").is(":last-child")&&e(this).parents(".menu-item-has-children").children(".da11y-submenu").attr("aria-expanded","false").trigger("mouseleave").siblings(".sub-menu").removeClass("da11y-submenu-show")})),e(".menu-item-has-children a").keyup((function(n){if(27===n.keyCode){var s=e(this).parents(".menu-item-has-children").last();s.length&&(s.children("a").focus(),s.find(".da11y-submenu").attr("aria-expanded","false").trigger("mouseleave").siblings(".sub-menu").removeClass("da11y-submenu-show"))}})),e(this).keyup((function(){e(".et-search-field").focus((function(){n()})).blur((function(){e(".et_search_form_container").hasClass("et_pb_is_animating")||(e(".et_menu_container").removeClass("et_pb_menu_hidden et_pb_no_animation").addClass("et_pb_menu_visible"),e(".et_search_form_container").removeClass("et_pb_search_visible et_pb_no_animation").addClass("et_pb_search_form_hidden et_pb_is_animating"),setTimeout((function(){e(".et_menu_container").addClass("et_pb_no_animation"),e(".et_search_form_container").addClass("et_pb_no_animation").removeClass("et_pb_is_animating")}),1e3))}))}))}));
+jQuery(document).ready((function(n){const t=((window||{})._da11y||{}).skip_navigation_link_text||!1;!function(e){const i='<a href="'+e+'" class="skip-link da11y-screen-reader-text">'+t+"</a>";n(e).attr("tabindex",-1),n("body").prepend(i)}("#main-content"),n('a[href^="#"]').click((function(){n("#"+n(this).attr("href").slice(1)).focus()}))}));
+jQuery(document).ready((function(e){let n=new Date,o=new Date;e(this).on("focusin",(function(t){e(".keyboard-outline").removeClass("keyboard-outline");o<n&&e(t.target).addClass("keyboard-outline")})),e(this).on("mousedown",(function(){o=new Date})),e(this).on("keydown",(function(){n=new Date}))}));
+jQuery(document).ready((function(t){t(".et_pb_toggle").each((function(e){var a=t(this),o=a.find(".et_pb_toggle_title"),_=a.find(".et_pb_toggle_content"),i=a.hasClass("et_pb_accordion_item");o.attr("role","button"),o.attr("tabindex",0),o.attr("aria-controls","et_pb_toggle_content_"+e),_.attr("id","et_pb_toggle_content_"+e),a.hasClass("et_pb_toggle_open")?(o.attr("aria-expanded",!0),i&&o.attr("aria-disabled",!0)):(o.attr("aria-expanded",!1),i&&o.removeAttr("aria-disabled"))})),t(".et_pb_toggle_title").on("keydown",(function(t){32===t.which&&t.preventDefault()})),t(document).on("keyup",(function(e){13!==e.which&&32!==e.which||t(".et_pb_toggle_title:focus").trigger("click")})),t(".et_pb_toggle_title").on("click",(function(){var e=t(this),a=e.parent();a.hasClass("et_pb_accordion_item")?a.hasClass("et_pb_toggle_open")||(e.closest(".et_pb_accordion").find(".et_pb_toggle").each((function(){if($toggle=t(this),$toggle.hasClass("et_pb_toggle_open")){var e=$toggle.find(".et_pb_toggle_title");e.attr("aria-expanded",!1),e.removeAttr("aria-disabled")}})),setTimeout((function(){e.attr("aria-expanded",!0),e.attr("aria-disabled",!0)}),500)):a.hasClass("et_pb_toggle_open")?e.attr("aria-expanded",!1):e.attr("aria-expanded",!0)}))}));
+jQuery(document).ready((function(e){e(".et-search-field").each((function(t){e(this).attr("id","et_pb_search_module_input_"+t),e("#et_pb_search_module_input_"+t).before('<label class="da11y-screen-reader-text" for="et_pb_search_module_input_'+t+'">Search for...</label>'),e("#et_pb_search_module_input_"+t).after('<button type="submit" class="da11y-screen-reader-text">Search</button>')})),e(".et_pb_s").each((function(t){e(this).attr("id","et_pb_s_module_input_"+t),e("#et_pb_s_module_input_"+t).before('<label class="da11y-screen-reader-text" for="et_pb_s_module_input_'+t+'">Search for...</label>')})),e(".et_pb_contact_form").each((function(){e(this).find(".et_pb_contact_captcha_question").parent().wrap("<label></label>")})),e(".et-social-facebook a.icon span").text("Facebook"),e(".et-social-twitter a.icon span").text("Twitter"),e(".et-social-google-plus a.icon span").text("Google Plus"),e(".et-social-pinterest a.icon span").text("Pinterest"),e(".et-social-linkedin a.icon span").text("LinkedIn"),e(".et-social-tumblr a.icon span").text("Tumblr"),e(".et-social-instagram a.icon span").text("Instagram"),e(".et-social-skype a.icon span").text("Skype"),e(".et-social-flikr a.icon span").text("Flickr"),e(".et-social-myspace a.icon span").text("Myspace"),e(".et-social-dribbble a.icon span").text("Dribble"),e(".et-social-youtube a.icon span").text("YouTube"),e(".et-social-vimeo a.icon span").text("Vimeo"),e(".et-social-rss a.icon span").text("RSS")}));
+jQuery(document).ready((function(t){t(".et_pb_tabs_controls").each((function(){t(this).attr("role","tablist")})),t(".et_pb_tabs_controls li").each((function(){t(this).attr("role","presentation")})),t(".et_pb_tabs_controls a").each((function(){t(this).attr({role:"tab"})})),t(".et_pb_tab").each((function(){t(this).attr("role","tabpanel")})),t(".et_pb_tabs_controls li:not(.et_pb_tab_active) a").each((function(){t(this).attr({"aria-selected":"false","aria-expanded":"false",tabindex:-1})})),t(".et_pb_tabs_controls li.et_pb_tab_active a").each((function(){t(this).attr({"aria-selected":"true","aria-expanded":"true",tabindex:0})})),t("ul.sub-menu .menu-item a").each((function(){t(this).attr({"aria-haspopup":"true"})})),t("a:not(.et-social-icon a, .wp-block-button__link, figure a, .et_pb_button, .et_pb_video_play a, .et_pb_tabs_controls a)").each((function(){t(this).attr({role:"link"})})),t("#et_search_icon, .et_close_search_field, #et_mobile_nav_menu, #searchsubmit, .icon, .wp-block-button__link, .et_pb_button, .et_pb_video_play a").each((function(){t(this).attr({role:"button"})})),t("#g-recaptcha-response").each((function(){t(this).attr({"aria-hidden":"true","aria-label":"do not use","aria-readonly":"true"})})),t(".et_pb_tabs_controls a").each((function(a){t(this).attr({id:"et_pb_tab_control_"+a,"aria-controls":"et_pb_tab_panel_"+a})})),t(".et_pb_tab").each((function(a){t(this).attr({id:"et_pb_tab_panel_"+a,"aria-labelledby":"et_pb_tab_control_"+a})})),t(".et_pb_tab.et_pb_active_content").each((function(){t(this).attr("aria-hidden","false")})),t(".et_pb_tab:not(.et_pb_active_content)").each((function(){t(this).attr("aria-hidden","true")})),t(".et_pb_tabs").each((function(a){t(this).attr("data-da11y-id","et_pb_tab_module_"+a)})),t(".et_pb_tabs_controls a").on("click",(function(){const a=t(this).attr("id"),e=t(this).closest(".et_pb_tabs").attr("data-da11y-id");t('[data-da11y-id="'+e+'"] .et_pb_tabs_controls a').attr({"aria-selected":"false","aria-expanded":"false",tabindex:-1}),t(this).attr({"aria-selected":"true","aria-expanded":"true",tabindex:0}),t("#"+e+" .et_pb_tab").attr("aria-hidden","true"),t('[aria-labelledby="'+a+'"]').attr("aria-hidden","false")})),t(".et_pb_tabs_controls a").keyup((function(a){const e=t(this).closest(".et_pb_tabs").attr("data-da11y-id"),i=t('[data-da11y-id="'+e+'"]');if(39===a.which){const t=i.find("li.et_pb_tab_active").next();t.length>0?t.find("a").trigger("click"):i.find("li:first a").trigger("click")}else if(37===a.which){const t=i.find("li.et_pb_tab_active").prev();t.length>0?t.find("a").trigger("click"):i.find("li:last a").trigger("click")}t(".et_pb_tabs_controls a").removeClass("keyboard-outline"),i.find("li.et_pb_tab_active a").addClass("keyboard-outline")})),t(".et_pb_search").each((function(a){t(this).attr("data-da11y-id","et_pb_search_module_"+a)})),t('[data-required_mark="required"]').each((function(){t(this).attr("aria-required","true")})),t(".et_pb_contactform_validate_field").attr("type","hidden"),t(".et-pb-contact-message").attr("role","alert"),t("#main-content").attr("role","main"),t(".et_pb_fullwidth_header").each((function(a){t(this).attr("aria-label","Wide Header"+a)})),t("#comment-wrap").attr("aria-label","Comments"),t(".aria-hidden").each((function(a,e){!function a(e){const i=t(e);t(e).attr("aria-hidden","true");for(const t of i.children())a(t)}(e)}))}));
+jQuery(document).ready((function(e){e("#et_top_search, .et_close_search_field, .et_pb_main_blurb_image").attr("aria-hidden","true")}));
+//# sourceURL=divi-accessibility-da11y-js-after
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://www.google.com/recaptcha/api.js?render=6Ld0txosAAAAAKKMCOHHH-pwdfX98Ied6yP_FLpa&amp;ver=6.9" id="google-recaptcha-cp-v3-js"></script>
+<script type="text/javascript" id="subscribe-by-email-widget-js-js-extra">
+/* <![CDATA[ */
+var sbe_localized = {"ajaxurl":"https://academictech.uchicago.edu/wp-admin/admin-ajax.php","subscription_created":"Your subscription has been successfully created!","already_subscribed":"You are already subscribed!","subscription_cancelled":"Your subscription has been successfully canceled!","failed_to_cancel_subscription":"Failed to cancel your subscription!","invalid_email":"Invalid e-mail address!","default_email":"ex: john@hotmail.com","recaptcha_v3_site_key":"6Ld0txosAAAAAKKMCOHHH-pwdfX98Ied6yP_FLpa"};
+//# sourceURL=subscribe-by-email-widget-js-js-extra
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://academictech.uchicago.edu/wp-content/plugins/subscribe-by-email/subscribe-by-email/assets/js/widget.js?ver=3" id="subscribe-by-email-widget-js-js"></script>
+</body>
+</html>

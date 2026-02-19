@@ -1,0 +1,1304 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<link rel="pingback" href="https://www.oit.uci.edu/xmlrpc.php" />
+
+	<script type="text/javascript">
+		document.documentElement.className = 'js';
+	</script>
+	
+	<title>ZotGPT | Office of Information Technology</title>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin /><style type='text/css'>.chat-container {
+display: flex;
+flex-direction: column;
+height: 40vh; 
+}
+iframe {
+  flex-grow: 1;
+}</style><style id="et-builder-googlefonts-cached-inline">/* Original: https://fonts.googleapis.com/css?family=Roboto+Slab:100,200,300,regular,500,600,700,800,900|Source+Sans+Pro:200,200italic,300,300italic,regular,italic,600,600italic,700,700italic,900,900italic|Montserrat:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic&#038;subset=cyrillic,cyrillic-ext,greek,greek-ext,latin,latin-ext,vietnamese&#038;display=swap *//* User Agent: Mozilla/5.0 (Unknown; Linux x86_64) AppleWebKit/538.1 (KHTML, like Gecko) Safari/538.1 Daum/4.1 */@font-face {font-family: 'Montserrat';font-style: italic;font-weight: 100;font-display: swap;src: url(https://fonts.gstatic.com/s/montserrat/v31/JTUFjIg1_i6t8kCHKm459Wx7xQYXK0vOoz6jq6R8aX8.ttf) format('truetype');}@font-face {font-family: 'Montserrat';font-style: italic;font-weight: 200;font-display: swap;src: url(https://fonts.gstatic.com/s/montserrat/v31/JTUFjIg1_i6t8kCHKm459Wx7xQYXK0vOoz6jqyR9aX8.ttf) format('truetype');}@font-face {font-family: 'Montserrat';font-style: italic;font-weight: 300;font-display: swap;src: url(https://fonts.gstatic.com/s/montserrat/v31/JTUFjIg1_i6t8kCHKm459Wx7xQYXK0vOoz6jq_p9aX8.ttf) format('truetype');}@font-face {font-family: 'Montserrat';font-style: italic;font-weight: 400;font-display: swap;src: url(https://fonts.gstatic.com/s/montserrat/v31/JTUFjIg1_i6t8kCHKm459Wx7xQYXK0vOoz6jq6R9aX8.ttf) format('truetype');}@font-face {font-family: 'Montserrat';font-style: italic;font-weight: 500;font-display: swap;src: url(https://fonts.gstatic.com/s/montserrat/v31/JTUFjIg1_i6t8kCHKm459Wx7xQYXK0vOoz6jq5Z9aX8.ttf) format('truetype');}@font-face {font-family: 'Montserrat';font-style: italic;font-weight: 600;font-display: swap;src: url(https://fonts.gstatic.com/s/montserrat/v31/JTUFjIg1_i6t8kCHKm459Wx7xQYXK0vOoz6jq3p6aX8.ttf) format('truetype');}@font-face {font-family: 'Montserrat';font-style: italic;font-weight: 700;font-display: swap;src: url(https://fonts.gstatic.com/s/montserrat/v31/JTUFjIg1_i6t8kCHKm459Wx7xQYXK0vOoz6jq0N6aX8.ttf) format('truetype');}@font-face {font-family: 'Montserrat';font-style: italic;font-weight: 800;font-display: swap;src: url(https://fonts.gstatic.com/s/montserrat/v31/JTUFjIg1_i6t8kCHKm459Wx7xQYXK0vOoz6jqyR6aX8.ttf) format('truetype');}@font-face {font-family: 'Montserrat';font-style: italic;font-weight: 900;font-display: swap;src: url(https://fonts.gstatic.com/s/montserrat/v31/JTUFjIg1_i6t8kCHKm459Wx7xQYXK0vOoz6jqw16aX8.ttf) format('truetype');}@font-face {font-family: 'Montserrat';font-style: normal;font-weight: 100;font-display: swap;src: url(https://fonts.gstatic.com/s/montserrat/v31/JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCtr6Uw-.ttf) format('truetype');}@font-face {font-family: 'Montserrat';font-style: normal;font-weight: 200;font-display: swap;src: url(https://fonts.gstatic.com/s/montserrat/v31/JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCvr6Ew-.ttf) format('truetype');}@font-face {font-family: 'Montserrat';font-style: normal;font-weight: 300;font-display: swap;src: url(https://fonts.gstatic.com/s/montserrat/v31/JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCs16Ew-.ttf) format('truetype');}@font-face {font-family: 'Montserrat';font-style: normal;font-weight: 400;font-display: swap;src: url(https://fonts.gstatic.com/s/montserrat/v31/JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCtr6Ew-.ttf) format('truetype');}@font-face {font-family: 'Montserrat';font-style: normal;font-weight: 500;font-display: swap;src: url(https://fonts.gstatic.com/s/montserrat/v31/JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCtZ6Ew-.ttf) format('truetype');}@font-face {font-family: 'Montserrat';font-style: normal;font-weight: 600;font-display: swap;src: url(https://fonts.gstatic.com/s/montserrat/v31/JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCu170w-.ttf) format('truetype');}@font-face {font-family: 'Montserrat';font-style: normal;font-weight: 700;font-display: swap;src: url(https://fonts.gstatic.com/s/montserrat/v31/JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCuM70w-.ttf) format('truetype');}@font-face {font-family: 'Montserrat';font-style: normal;font-weight: 800;font-display: swap;src: url(https://fonts.gstatic.com/s/montserrat/v31/JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCvr70w-.ttf) format('truetype');}@font-face {font-family: 'Montserrat';font-style: normal;font-weight: 900;font-display: swap;src: url(https://fonts.gstatic.com/s/montserrat/v31/JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCvC70w-.ttf) format('truetype');}@font-face {font-family: 'Roboto Slab';font-style: normal;font-weight: 100;font-display: swap;src: url(https://fonts.gstatic.com/s/robotoslab/v36/BngbUXZYTXPIvIBgJJSb6s3BzlRRfKOFbvjojIWWaA.ttf) format('truetype');}@font-face {font-family: 'Roboto Slab';font-style: normal;font-weight: 200;font-display: swap;src: url(https://fonts.gstatic.com/s/robotoslab/v36/BngbUXZYTXPIvIBgJJSb6s3BzlRRfKOFbvjoDISWaA.ttf) format('truetype');}@font-face {font-family: 'Roboto Slab';font-style: normal;font-weight: 300;font-display: swap;src: url(https://fonts.gstatic.com/s/robotoslab/v36/BngbUXZYTXPIvIBgJJSb6s3BzlRRfKOFbvjo0oSWaA.ttf) format('truetype');}@font-face {font-family: 'Roboto Slab';font-style: normal;font-weight: 400;font-display: swap;src: url(https://fonts.gstatic.com/s/robotoslab/v36/BngbUXZYTXPIvIBgJJSb6s3BzlRRfKOFbvjojISWaA.ttf) format('truetype');}@font-face {font-family: 'Roboto Slab';font-style: normal;font-weight: 500;font-display: swap;src: url(https://fonts.gstatic.com/s/robotoslab/v36/BngbUXZYTXPIvIBgJJSb6s3BzlRRfKOFbvjovoSWaA.ttf) format('truetype');}@font-face {font-family: 'Roboto Slab';font-style: normal;font-weight: 600;font-display: swap;src: url(https://fonts.gstatic.com/s/robotoslab/v36/BngbUXZYTXPIvIBgJJSb6s3BzlRRfKOFbvjoUoOWaA.ttf) format('truetype');}@font-face {font-family: 'Roboto Slab';font-style: normal;font-weight: 700;font-display: swap;src: url(https://fonts.gstatic.com/s/robotoslab/v36/BngbUXZYTXPIvIBgJJSb6s3BzlRRfKOFbvjoa4OWaA.ttf) format('truetype');}@font-face {font-family: 'Roboto Slab';font-style: normal;font-weight: 800;font-display: swap;src: url(https://fonts.gstatic.com/s/robotoslab/v36/BngbUXZYTXPIvIBgJJSb6s3BzlRRfKOFbvjoDIOWaA.ttf) format('truetype');}@font-face {font-family: 'Roboto Slab';font-style: normal;font-weight: 900;font-display: swap;src: url(https://fonts.gstatic.com/s/robotoslab/v36/BngbUXZYTXPIvIBgJJSb6s3BzlRRfKOFbvjoJYOWaA.ttf) format('truetype');}@font-face {font-family: 'Source Sans Pro';font-style: italic;font-weight: 200;font-display: swap;src: url(https://fonts.gstatic.com/s/sourcesanspro/v23/6xKwdSBYKcSV-LCoeQqfX1RYOo3qPZYokRdr.ttf) format('truetype');}@font-face {font-family: 'Source Sans Pro';font-style: italic;font-weight: 300;font-display: swap;src: url(https://fonts.gstatic.com/s/sourcesanspro/v23/6xKwdSBYKcSV-LCoeQqfX1RYOo3qPZZMkhdr.ttf) format('truetype');}@font-face {font-family: 'Source Sans Pro';font-style: italic;font-weight: 400;font-display: swap;src: url(https://fonts.gstatic.com/s/sourcesanspro/v23/6xK1dSBYKcSV-LCoeQqfX1RYOo3qPa7g.ttf) format('truetype');}@font-face {font-family: 'Source Sans Pro';font-style: italic;font-weight: 600;font-display: swap;src: url(https://fonts.gstatic.com/s/sourcesanspro/v23/6xKwdSBYKcSV-LCoeQqfX1RYOo3qPZY4lBdr.ttf) format('truetype');}@font-face {font-family: 'Source Sans Pro';font-style: italic;font-weight: 700;font-display: swap;src: url(https://fonts.gstatic.com/s/sourcesanspro/v23/6xKwdSBYKcSV-LCoeQqfX1RYOo3qPZZclRdr.ttf) format('truetype');}@font-face {font-family: 'Source Sans Pro';font-style: italic;font-weight: 900;font-display: swap;src: url(https://fonts.gstatic.com/s/sourcesanspro/v23/6xKwdSBYKcSV-LCoeQqfX1RYOo3qPZZklxdr.ttf) format('truetype');}@font-face {font-family: 'Source Sans Pro';font-style: normal;font-weight: 200;font-display: swap;src: url(https://fonts.gstatic.com/s/sourcesanspro/v23/6xKydSBYKcSV-LCoeQqfX1RYOo3i94_AkA.ttf) format('truetype');}@font-face {font-family: 'Source Sans Pro';font-style: normal;font-weight: 300;font-display: swap;src: url(https://fonts.gstatic.com/s/sourcesanspro/v23/6xKydSBYKcSV-LCoeQqfX1RYOo3ik4zAkA.ttf) format('truetype');}@font-face {font-family: 'Source Sans Pro';font-style: normal;font-weight: 400;font-display: swap;src: url(https://fonts.gstatic.com/s/sourcesanspro/v23/6xK3dSBYKcSV-LCoeQqfX1RYOo3aPw.ttf) format('truetype');}@font-face {font-family: 'Source Sans Pro';font-style: normal;font-weight: 600;font-display: swap;src: url(https://fonts.gstatic.com/s/sourcesanspro/v23/6xKydSBYKcSV-LCoeQqfX1RYOo3i54rAkA.ttf) format('truetype');}@font-face {font-family: 'Source Sans Pro';font-style: normal;font-weight: 700;font-display: swap;src: url(https://fonts.gstatic.com/s/sourcesanspro/v23/6xKydSBYKcSV-LCoeQqfX1RYOo3ig4vAkA.ttf) format('truetype');}@font-face {font-family: 'Source Sans Pro';font-style: normal;font-weight: 900;font-display: swap;src: url(https://fonts.gstatic.com/s/sourcesanspro/v23/6xKydSBYKcSV-LCoeQqfX1RYOo3iu4nAkA.ttf) format('truetype');}/* User Agent: Mozilla/5.0 (Windows NT 6.1; WOW64; rv:27.0) Gecko/20100101 Firefox/27.0 */@font-face {font-family: 'Montserrat';font-style: italic;font-weight: 100;font-display: swap;src: url(https://fonts.gstatic.com/l/font?kit=JTUFjIg1_i6t8kCHKm459Wx7xQYXK0vOoz6jq6R8aXw&skey=2d3c1187d5eede0f&v=v31) format('woff');}@font-face {font-family: 'Montserrat';font-style: italic;font-weight: 200;font-display: swap;src: url(https://fonts.gstatic.com/l/font?kit=JTUFjIg1_i6t8kCHKm459Wx7xQYXK0vOoz6jqyR9aXw&skey=2d3c1187d5eede0f&v=v31) format('woff');}@font-face {font-family: 'Montserrat';font-style: italic;font-weight: 300;font-display: swap;src: url(https://fonts.gstatic.com/l/font?kit=JTUFjIg1_i6t8kCHKm459Wx7xQYXK0vOoz6jq_p9aXw&skey=2d3c1187d5eede0f&v=v31) format('woff');}@font-face {font-family: 'Montserrat';font-style: italic;font-weight: 400;font-display: swap;src: url(https://fonts.gstatic.com/l/font?kit=JTUFjIg1_i6t8kCHKm459Wx7xQYXK0vOoz6jq6R9aXw&skey=2d3c1187d5eede0f&v=v31) format('woff');}@font-face {font-family: 'Montserrat';font-style: italic;font-weight: 500;font-display: swap;src: url(https://fonts.gstatic.com/l/font?kit=JTUFjIg1_i6t8kCHKm459Wx7xQYXK0vOoz6jq5Z9aXw&skey=2d3c1187d5eede0f&v=v31) format('woff');}@font-face {font-family: 'Montserrat';font-style: italic;font-weight: 600;font-display: swap;src: url(https://fonts.gstatic.com/l/font?kit=JTUFjIg1_i6t8kCHKm459Wx7xQYXK0vOoz6jq3p6aXw&skey=2d3c1187d5eede0f&v=v31) format('woff');}@font-face {font-family: 'Montserrat';font-style: italic;font-weight: 700;font-display: swap;src: url(https://fonts.gstatic.com/l/font?kit=JTUFjIg1_i6t8kCHKm459Wx7xQYXK0vOoz6jq0N6aXw&skey=2d3c1187d5eede0f&v=v31) format('woff');}@font-face {font-family: 'Montserrat';font-style: italic;font-weight: 800;font-display: swap;src: url(https://fonts.gstatic.com/l/font?kit=JTUFjIg1_i6t8kCHKm459Wx7xQYXK0vOoz6jqyR6aXw&skey=2d3c1187d5eede0f&v=v31) format('woff');}@font-face {font-family: 'Montserrat';font-style: italic;font-weight: 900;font-display: swap;src: url(https://fonts.gstatic.com/l/font?kit=JTUFjIg1_i6t8kCHKm459Wx7xQYXK0vOoz6jqw16aXw&skey=2d3c1187d5eede0f&v=v31) format('woff');}@font-face {font-family: 'Montserrat';font-style: normal;font-weight: 100;font-display: swap;src: url(https://fonts.gstatic.com/l/font?kit=JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCtr6Uw9&skey=7bc19f711c0de8f&v=v31) format('woff');}@font-face {font-family: 'Montserrat';font-style: normal;font-weight: 200;font-display: swap;src: url(https://fonts.gstatic.com/l/font?kit=JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCvr6Ew9&skey=7bc19f711c0de8f&v=v31) format('woff');}@font-face {font-family: 'Montserrat';font-style: normal;font-weight: 300;font-display: swap;src: url(https://fonts.gstatic.com/l/font?kit=JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCs16Ew9&skey=7bc19f711c0de8f&v=v31) format('woff');}@font-face {font-family: 'Montserrat';font-style: normal;font-weight: 400;font-display: swap;src: url(https://fonts.gstatic.com/l/font?kit=JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCtr6Ew9&skey=7bc19f711c0de8f&v=v31) format('woff');}@font-face {font-family: 'Montserrat';font-style: normal;font-weight: 500;font-display: swap;src: url(https://fonts.gstatic.com/l/font?kit=JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCtZ6Ew9&skey=7bc19f711c0de8f&v=v31) format('woff');}@font-face {font-family: 'Montserrat';font-style: normal;font-weight: 600;font-display: swap;src: url(https://fonts.gstatic.com/l/font?kit=JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCu170w9&skey=7bc19f711c0de8f&v=v31) format('woff');}@font-face {font-family: 'Montserrat';font-style: normal;font-weight: 700;font-display: swap;src: url(https://fonts.gstatic.com/l/font?kit=JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCuM70w9&skey=7bc19f711c0de8f&v=v31) format('woff');}@font-face {font-family: 'Montserrat';font-style: normal;font-weight: 800;font-display: swap;src: url(https://fonts.gstatic.com/l/font?kit=JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCvr70w9&skey=7bc19f711c0de8f&v=v31) format('woff');}@font-face {font-family: 'Montserrat';font-style: normal;font-weight: 900;font-display: swap;src: url(https://fonts.gstatic.com/l/font?kit=JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCvC70w9&skey=7bc19f711c0de8f&v=v31) format('woff');}@font-face {font-family: 'Roboto Slab';font-style: normal;font-weight: 100;font-display: swap;src: url(https://fonts.gstatic.com/l/font?kit=BngbUXZYTXPIvIBgJJSb6s3BzlRRfKOFbvjojIWWaw&skey=a9ad6a4717e923f0&v=v36) format('woff');}@font-face {font-family: 'Roboto Slab';font-style: normal;font-weight: 200;font-display: swap;src: url(https://fonts.gstatic.com/l/font?kit=BngbUXZYTXPIvIBgJJSb6s3BzlRRfKOFbvjoDISWaw&skey=a9ad6a4717e923f0&v=v36) format('woff');}@font-face {font-family: 'Roboto Slab';font-style: normal;font-weight: 300;font-display: swap;src: url(https://fonts.gstatic.com/l/font?kit=BngbUXZYTXPIvIBgJJSb6s3BzlRRfKOFbvjo0oSWaw&skey=a9ad6a4717e923f0&v=v36) format('woff');}@font-face {font-family: 'Roboto Slab';font-style: normal;font-weight: 400;font-display: swap;src: url(https://fonts.gstatic.com/l/font?kit=BngbUXZYTXPIvIBgJJSb6s3BzlRRfKOFbvjojISWaw&skey=a9ad6a4717e923f0&v=v36) format('woff');}@font-face {font-family: 'Roboto Slab';font-style: normal;font-weight: 500;font-display: swap;src: url(https://fonts.gstatic.com/l/font?kit=BngbUXZYTXPIvIBgJJSb6s3BzlRRfKOFbvjovoSWaw&skey=a9ad6a4717e923f0&v=v36) format('woff');}@font-face {font-family: 'Roboto Slab';font-style: normal;font-weight: 600;font-display: swap;src: url(https://fonts.gstatic.com/l/font?kit=BngbUXZYTXPIvIBgJJSb6s3BzlRRfKOFbvjoUoOWaw&skey=a9ad6a4717e923f0&v=v36) format('woff');}@font-face {font-family: 'Roboto Slab';font-style: normal;font-weight: 700;font-display: swap;src: url(https://fonts.gstatic.com/l/font?kit=BngbUXZYTXPIvIBgJJSb6s3BzlRRfKOFbvjoa4OWaw&skey=a9ad6a4717e923f0&v=v36) format('woff');}@font-face {font-family: 'Roboto Slab';font-style: normal;font-weight: 800;font-display: swap;src: url(https://fonts.gstatic.com/l/font?kit=BngbUXZYTXPIvIBgJJSb6s3BzlRRfKOFbvjoDIOWaw&skey=a9ad6a4717e923f0&v=v36) format('woff');}@font-face {font-family: 'Roboto Slab';font-style: normal;font-weight: 900;font-display: swap;src: url(https://fonts.gstatic.com/l/font?kit=BngbUXZYTXPIvIBgJJSb6s3BzlRRfKOFbvjoJYOWaw&skey=a9ad6a4717e923f0&v=v36) format('woff');}@font-face {font-family: 'Source Sans Pro';font-style: italic;font-weight: 200;font-display: swap;src: url(https://fonts.gstatic.com/l/font?kit=6xKwdSBYKcSV-LCoeQqfX1RYOo3qPZYokRdo&skey=f3dde3b4b69fc0ae&v=v23) format('woff');}@font-face {font-family: 'Source Sans Pro';font-style: italic;font-weight: 300;font-display: swap;src: url(https://fonts.gstatic.com/l/font?kit=6xKwdSBYKcSV-LCoeQqfX1RYOo3qPZZMkhdo&skey=8215b74d5c696e49&v=v23) format('woff');}@font-face {font-family: 'Source Sans Pro';font-style: italic;font-weight: 400;font-display: swap;src: url(https://fonts.gstatic.com/l/font?kit=6xK1dSBYKcSV-LCoeQqfX1RYOo3qPa7j&skey=28c775fa366622c1&v=v23) format('woff');}@font-face {font-family: 'Source Sans Pro';font-style: italic;font-weight: 600;font-display: swap;src: url(https://fonts.gstatic.com/l/font?kit=6xKwdSBYKcSV-LCoeQqfX1RYOo3qPZY4lBdo&skey=1ddbb15c8706f8a1&v=v23) format('woff');}@font-face {font-family: 'Source Sans Pro';font-style: italic;font-weight: 700;font-display: swap;src: url(https://fonts.gstatic.com/l/font?kit=6xKwdSBYKcSV-LCoeQqfX1RYOo3qPZZclRdo&skey=7573a083f0c737cb&v=v23) format('woff');}@font-face {font-family: 'Source Sans Pro';font-style: italic;font-weight: 900;font-display: swap;src: url(https://fonts.gstatic.com/l/font?kit=6xKwdSBYKcSV-LCoeQqfX1RYOo3qPZZklxdo&skey=28b6885887279f18&v=v23) format('woff');}@font-face {font-family: 'Source Sans Pro';font-style: normal;font-weight: 200;font-display: swap;src: url(https://fonts.gstatic.com/l/font?kit=6xKydSBYKcSV-LCoeQqfX1RYOo3i94_Akw&skey=f7e766e587bd9f23&v=v23) format('woff');}@font-face {font-family: 'Source Sans Pro';font-style: normal;font-weight: 300;font-display: swap;src: url(https://fonts.gstatic.com/l/font?kit=6xKydSBYKcSV-LCoeQqfX1RYOo3ik4zAkw&skey=e2b26fc7e9e1ade8&v=v23) format('woff');}@font-face {font-family: 'Source Sans Pro';font-style: normal;font-weight: 400;font-display: swap;src: url(https://fonts.gstatic.com/l/font?kit=6xK3dSBYKcSV-LCoeQqfX1RYOo3aPA&skey=1e026b1c27170b9b&v=v23) format('woff');}@font-face {font-family: 'Source Sans Pro';font-style: normal;font-weight: 600;font-display: swap;src: url(https://fonts.gstatic.com/l/font?kit=6xKydSBYKcSV-LCoeQqfX1RYOo3i54rAkw&skey=227a890402fab339&v=v23) format('woff');}@font-face {font-family: 'Source Sans Pro';font-style: normal;font-weight: 700;font-display: swap;src: url(https://fonts.gstatic.com/l/font?kit=6xKydSBYKcSV-LCoeQqfX1RYOo3ig4vAkw&skey=84e1cdfb74260b1d&v=v23) format('woff');}@font-face {font-family: 'Source Sans Pro';font-style: normal;font-weight: 900;font-display: swap;src: url(https://fonts.gstatic.com/l/font?kit=6xKydSBYKcSV-LCoeQqfX1RYOo3iu4nAkw&skey=cf4dfcb31d72fb0a&v=v23) format('woff');}/* User Agent: Mozilla/5.0 (Windows NT 6.3; rv:39.0) Gecko/20100101 Firefox/39.0 */@font-face {font-family: 'Montserrat';font-style: italic;font-weight: 100;font-display: swap;src: url(https://fonts.gstatic.com/s/montserrat/v31/JTUFjIg1_i6t8kCHKm459Wx7xQYXK0vOoz6jq6R8aXo.woff2) format('woff2');}@font-face {font-family: 'Montserrat';font-style: italic;font-weight: 200;font-display: swap;src: url(https://fonts.gstatic.com/s/montserrat/v31/JTUFjIg1_i6t8kCHKm459Wx7xQYXK0vOoz6jqyR9aXo.woff2) format('woff2');}@font-face {font-family: 'Montserrat';font-style: italic;font-weight: 300;font-display: swap;src: url(https://fonts.gstatic.com/s/montserrat/v31/JTUFjIg1_i6t8kCHKm459Wx7xQYXK0vOoz6jq_p9aXo.woff2) format('woff2');}@font-face {font-family: 'Montserrat';font-style: italic;font-weight: 400;font-display: swap;src: url(https://fonts.gstatic.com/s/montserrat/v31/JTUFjIg1_i6t8kCHKm459Wx7xQYXK0vOoz6jq6R9aXo.woff2) format('woff2');}@font-face {font-family: 'Montserrat';font-style: italic;font-weight: 500;font-display: swap;src: url(https://fonts.gstatic.com/s/montserrat/v31/JTUFjIg1_i6t8kCHKm459Wx7xQYXK0vOoz6jq5Z9aXo.woff2) format('woff2');}@font-face {font-family: 'Montserrat';font-style: italic;font-weight: 600;font-display: swap;src: url(https://fonts.gstatic.com/s/montserrat/v31/JTUFjIg1_i6t8kCHKm459Wx7xQYXK0vOoz6jq3p6aXo.woff2) format('woff2');}@font-face {font-family: 'Montserrat';font-style: italic;font-weight: 700;font-display: swap;src: url(https://fonts.gstatic.com/s/montserrat/v31/JTUFjIg1_i6t8kCHKm459Wx7xQYXK0vOoz6jq0N6aXo.woff2) format('woff2');}@font-face {font-family: 'Montserrat';font-style: italic;font-weight: 800;font-display: swap;src: url(https://fonts.gstatic.com/s/montserrat/v31/JTUFjIg1_i6t8kCHKm459Wx7xQYXK0vOoz6jqyR6aXo.woff2) format('woff2');}@font-face {font-family: 'Montserrat';font-style: italic;font-weight: 900;font-display: swap;src: url(https://fonts.gstatic.com/s/montserrat/v31/JTUFjIg1_i6t8kCHKm459Wx7xQYXK0vOoz6jqw16aXo.woff2) format('woff2');}@font-face {font-family: 'Montserrat';font-style: normal;font-weight: 100;font-display: swap;src: url(https://fonts.gstatic.com/s/montserrat/v31/JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCtr6Uw7.woff2) format('woff2');}@font-face {font-family: 'Montserrat';font-style: normal;font-weight: 200;font-display: swap;src: url(https://fonts.gstatic.com/s/montserrat/v31/JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCvr6Ew7.woff2) format('woff2');}@font-face {font-family: 'Montserrat';font-style: normal;font-weight: 300;font-display: swap;src: url(https://fonts.gstatic.com/s/montserrat/v31/JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCs16Ew7.woff2) format('woff2');}@font-face {font-family: 'Montserrat';font-style: normal;font-weight: 400;font-display: swap;src: url(https://fonts.gstatic.com/s/montserrat/v31/JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCtr6Ew7.woff2) format('woff2');}@font-face {font-family: 'Montserrat';font-style: normal;font-weight: 500;font-display: swap;src: url(https://fonts.gstatic.com/s/montserrat/v31/JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCtZ6Ew7.woff2) format('woff2');}@font-face {font-family: 'Montserrat';font-style: normal;font-weight: 600;font-display: swap;src: url(https://fonts.gstatic.com/s/montserrat/v31/JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCu170w7.woff2) format('woff2');}@font-face {font-family: 'Montserrat';font-style: normal;font-weight: 700;font-display: swap;src: url(https://fonts.gstatic.com/s/montserrat/v31/JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCuM70w7.woff2) format('woff2');}@font-face {font-family: 'Montserrat';font-style: normal;font-weight: 800;font-display: swap;src: url(https://fonts.gstatic.com/s/montserrat/v31/JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCvr70w7.woff2) format('woff2');}@font-face {font-family: 'Montserrat';font-style: normal;font-weight: 900;font-display: swap;src: url(https://fonts.gstatic.com/s/montserrat/v31/JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCvC70w7.woff2) format('woff2');}@font-face {font-family: 'Roboto Slab';font-style: normal;font-weight: 100;font-display: swap;src: url(https://fonts.gstatic.com/s/robotoslab/v36/BngbUXZYTXPIvIBgJJSb6s3BzlRRfKOFbvjojIWWbQ.woff2) format('woff2');}@font-face {font-family: 'Roboto Slab';font-style: normal;font-weight: 200;font-display: swap;src: url(https://fonts.gstatic.com/s/robotoslab/v36/BngbUXZYTXPIvIBgJJSb6s3BzlRRfKOFbvjoDISWbQ.woff2) format('woff2');}@font-face {font-family: 'Roboto Slab';font-style: normal;font-weight: 300;font-display: swap;src: url(https://fonts.gstatic.com/s/robotoslab/v36/BngbUXZYTXPIvIBgJJSb6s3BzlRRfKOFbvjo0oSWbQ.woff2) format('woff2');}@font-face {font-family: 'Roboto Slab';font-style: normal;font-weight: 400;font-display: swap;src: url(https://fonts.gstatic.com/s/robotoslab/v36/BngbUXZYTXPIvIBgJJSb6s3BzlRRfKOFbvjojISWbQ.woff2) format('woff2');}@font-face {font-family: 'Roboto Slab';font-style: normal;font-weight: 500;font-display: swap;src: url(https://fonts.gstatic.com/s/robotoslab/v36/BngbUXZYTXPIvIBgJJSb6s3BzlRRfKOFbvjovoSWbQ.woff2) format('woff2');}@font-face {font-family: 'Roboto Slab';font-style: normal;font-weight: 600;font-display: swap;src: url(https://fonts.gstatic.com/s/robotoslab/v36/BngbUXZYTXPIvIBgJJSb6s3BzlRRfKOFbvjoUoOWbQ.woff2) format('woff2');}@font-face {font-family: 'Roboto Slab';font-style: normal;font-weight: 700;font-display: swap;src: url(https://fonts.gstatic.com/s/robotoslab/v36/BngbUXZYTXPIvIBgJJSb6s3BzlRRfKOFbvjoa4OWbQ.woff2) format('woff2');}@font-face {font-family: 'Roboto Slab';font-style: normal;font-weight: 800;font-display: swap;src: url(https://fonts.gstatic.com/s/robotoslab/v36/BngbUXZYTXPIvIBgJJSb6s3BzlRRfKOFbvjoDIOWbQ.woff2) format('woff2');}@font-face {font-family: 'Roboto Slab';font-style: normal;font-weight: 900;font-display: swap;src: url(https://fonts.gstatic.com/s/robotoslab/v36/BngbUXZYTXPIvIBgJJSb6s3BzlRRfKOFbvjoJYOWbQ.woff2) format('woff2');}@font-face {font-family: 'Source Sans Pro';font-style: italic;font-weight: 200;font-display: swap;src: url(https://fonts.gstatic.com/s/sourcesanspro/v23/6xKwdSBYKcSV-LCoeQqfX1RYOo3qPZYokRdu.woff2) format('woff2');}@font-face {font-family: 'Source Sans Pro';font-style: italic;font-weight: 300;font-display: swap;src: url(https://fonts.gstatic.com/s/sourcesanspro/v23/6xKwdSBYKcSV-LCoeQqfX1RYOo3qPZZMkhdu.woff2) format('woff2');}@font-face {font-family: 'Source Sans Pro';font-style: italic;font-weight: 400;font-display: swap;src: url(https://fonts.gstatic.com/s/sourcesanspro/v23/6xK1dSBYKcSV-LCoeQqfX1RYOo3qPa7l.woff2) format('woff2');}@font-face {font-family: 'Source Sans Pro';font-style: italic;font-weight: 600;font-display: swap;src: url(https://fonts.gstatic.com/s/sourcesanspro/v23/6xKwdSBYKcSV-LCoeQqfX1RYOo3qPZY4lBdu.woff2) format('woff2');}@font-face {font-family: 'Source Sans Pro';font-style: italic;font-weight: 700;font-display: swap;src: url(https://fonts.gstatic.com/s/sourcesanspro/v23/6xKwdSBYKcSV-LCoeQqfX1RYOo3qPZZclRdu.woff2) format('woff2');}@font-face {font-family: 'Source Sans Pro';font-style: italic;font-weight: 900;font-display: swap;src: url(https://fonts.gstatic.com/s/sourcesanspro/v23/6xKwdSBYKcSV-LCoeQqfX1RYOo3qPZZklxdu.woff2) format('woff2');}@font-face {font-family: 'Source Sans Pro';font-style: normal;font-weight: 200;font-display: swap;src: url(https://fonts.gstatic.com/s/sourcesanspro/v23/6xKydSBYKcSV-LCoeQqfX1RYOo3i94_AlQ.woff2) format('woff2');}@font-face {font-family: 'Source Sans Pro';font-style: normal;font-weight: 300;font-display: swap;src: url(https://fonts.gstatic.com/s/sourcesanspro/v23/6xKydSBYKcSV-LCoeQqfX1RYOo3ik4zAlQ.woff2) format('woff2');}@font-face {font-family: 'Source Sans Pro';font-style: normal;font-weight: 400;font-display: swap;src: url(https://fonts.gstatic.com/s/sourcesanspro/v23/6xK3dSBYKcSV-LCoeQqfX1RYOo3aOg.woff2) format('woff2');}@font-face {font-family: 'Source Sans Pro';font-style: normal;font-weight: 600;font-display: swap;src: url(https://fonts.gstatic.com/s/sourcesanspro/v23/6xKydSBYKcSV-LCoeQqfX1RYOo3i54rAlQ.woff2) format('woff2');}@font-face {font-family: 'Source Sans Pro';font-style: normal;font-weight: 700;font-display: swap;src: url(https://fonts.gstatic.com/s/sourcesanspro/v23/6xKydSBYKcSV-LCoeQqfX1RYOo3ig4vAlQ.woff2) format('woff2');}@font-face {font-family: 'Source Sans Pro';font-style: normal;font-weight: 900;font-display: swap;src: url(https://fonts.gstatic.com/s/sourcesanspro/v23/6xKydSBYKcSV-LCoeQqfX1RYOo3iu4nAlQ.woff2) format('woff2');}</style><meta name='robots' content='max-image-preview:large' />
+<link rel="alternate" type="application/rss+xml" title="Office of Information Technology &raquo; Feed" href="https://www.oit.uci.edu/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Office of Information Technology &raquo; Comments Feed" href="https://www.oit.uci.edu/comments/feed/" />
+<link rel="alternate" title="oEmbed (JSON)" type="application/json+oembed" href="https://www.oit.uci.edu/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.oit.uci.edu%2Fservices%2Fai%2Fzotgpt%2F" />
+<link rel="alternate" title="oEmbed (XML)" type="text/xml+oembed" href="https://www.oit.uci.edu/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.oit.uci.edu%2Fservices%2Fai%2Fzotgpt%2F&#038;format=xml" />
+<meta content="Divi v.4.27.4" name="generator"/>		<style id="content-control-block-styles">
+			@media (max-width: 640px) {
+	.cc-hide-on-mobile {
+		display: none !important;
+	}
+}
+@media (min-width: 641px) and (max-width: 920px) {
+	.cc-hide-on-tablet {
+		display: none !important;
+	}
+}
+@media (min-width: 921px) and (max-width: 1440px) {
+	.cc-hide-on-desktop {
+		display: none !important;
+	}
+}		</style>
+		<link rel='stylesheet' id='content-control-block-styles-css' href='https://www.oit.uci.edu/wp-content/plugins/content-control/dist/style-block-editor.css?ver=2.6.5' type='text/css' media='all' />
+<style id='content-control-block-styles-inline-css' type='text/css'>
+.da11y-submenu-show,.menu li.et-hover>ul,.nav li.et-hover>ul{opacity:1!important;visibility:visible!important}
+.keyboard-outline{outline-style:solid!important;outline-width:2px!important;-webkit-transition:none!important;transition:none!important}a[role=tab].keyboard-outline,button:active.keyboard-outline,button:focus.keyboard-outline,input:active.keyboard-outline,input:focus.keyboard-outline{outline-offset:-5px}.et-search-form input:focus.keyboard-outline{padding-left:15px;padding-right:15px}.et_pb_tab{-webkit-animation:none!important;animation:none!important}.et_pb_scroll_top.et-visible:focus{outline-color:Highlight;outline-style:solid;outline-width:2px}@media (-webkit-min-device-pixel-ratio:0){.et_pb_scroll_top.et-visible:focus{outline-color:-webkit-focus-ring-color;outline-style:auto}}
+.et_pb_contact_form_label,.et_pb_search .screen-reader-text,.et_pb_social_media_follow_network_name,.widget_search .screen-reader-text{display:block!important}.da11y-screen-reader-text,.et_pb_contact_form_label,.et_pb_search .screen-reader-text,.et_pb_social_media_follow_network_name,.widget_search .screen-reader-text{clip:rect(1px,1px,1px,1px);-webkit-font-smoothing:subpixel-antialiased;font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif;font-size:1em;font-weight:600;height:1px;letter-spacing:normal;line-height:normal;overflow:hidden;position:absolute!important;text-shadow:none;text-transform:none;width:1px}.da11y-screen-reader-text:focus{clip:auto!important;background:#f1f1f1;-webkit-box-shadow:0 0 2px 2px rgba(0,0,0,.6);box-shadow:0 0 2px 2px rgba(0,0,0,.6);color:#00547a;display:block;height:auto;left:5px;padding:15px 23px 14px;text-decoration:none;top:7px;width:auto;z-index:1000000}
+#et-main-area a:not(.et-social-icons a){text-decoration:underline}
+#et-main-area .entry-title a,.et_pb_button,.et_pb_module_header a,.et_pb_video_play,.wp-block-button a{text-decoration:none!important}
+/*# sourceURL=content-control-block-styles-inline-css */
+</style>
+<link rel='stylesheet' id='divi-post-data-wpcc-css' href='https://www.oit.uci.edu/wp-content/plugins/divi-post-data-wpcc/styles/divi-post-data-wpcc.min.css?ver=1.0.0' type='text/css' media='all' />
+<link rel='stylesheet' id='wdsi-css' href='https://www.oit.uci.edu/wp-content/plugins/slide-in/css/wdsi.css?ver=1.2.3' type='text/css' media='all' />
+<link rel='stylesheet' id='toc-screen-css' href='https://www.oit.uci.edu/wp-content/plugins/table-of-contents-plus/screen.min.css?ver=2411.1' type='text/css' media='all' />
+<link rel='stylesheet' id='table-sorter-custom-css-css' href='https://www.oit.uci.edu/wp-content/plugins/table-sorter/wp-style.css?ver=6.9' type='text/css' media='all' />
+<link rel='stylesheet' id='tipso-css-css' href='https://www.oit.uci.edu/wp-content/plugins/tipso/src/tipso.min.css?ver=6.9' type='text/css' media='all' />
+<link rel='stylesheet' id='wpa-style-css' href='https://www.oit.uci.edu/wp-content/plugins/wp-accessibility/css/wpa-style.css?ver=2.2.5' type='text/css' media='all' />
+<style id='wpa-style-inline-css' type='text/css'>
+.wpa-hide-ltr#skiplinks a, .wpa-hide-ltr#skiplinks a:hover, .wpa-hide-ltr#skiplinks a:visited {
+	
+}
+.wpa-hide-ltr#skiplinks a:active,  .wpa-hide-ltr#skiplinks a:focus {
+	
+}
+	
+		:focus { outline: 2px solid#233c7f!important; outline-offset: 2px !important; }
+		:root { --admin-bar-top : 7px; }
+/*# sourceURL=wpa-style-inline-css */
+</style>
+<link rel='stylesheet' id='Divi-Blog-Extras-styles-css' href='https://www.oit.uci.edu/wp-content/plugins/divi-blog-extras/styles/style.min.css?ver=2.7.0' type='text/css' media='all' />
+<link rel='stylesheet' id='divi-post-data-wpcc-styles-css' href='https://www.oit.uci.edu/wp-content/plugins/divi-post-data-wpcc/styles/style.min.css?ver=1.0.0' type='text/css' media='all' />
+<link rel='stylesheet' id='wp-pagenavi-css' href='https://www.oit.uci.edu/wp-content/plugins/wp-pagenavi/pagenavi-css.css?ver=2.70' type='text/css' media='all' />
+<link rel='stylesheet' id='tablepress-responsive-tables-css' href='https://www.oit.uci.edu/wp-content/plugins/tablepress/eb-mods/tablepress-responsive-tables/css/responsive.dataTables.min.css?ver=1.5' type='text/css' media='all' />
+<link rel='stylesheet' id='tablepress-default-css' href='https://www.oit.uci.edu/wp-content/plugins/tablepress/css/build/default.css?ver=3.2.5' type='text/css' media='all' />
+<link rel='stylesheet' id='wp-featherlight-css' href='https://www.oit.uci.edu/wp-content/plugins/wp-featherlight/css/wp-featherlight.min.css?ver=1.3.4' type='text/css' media='all' />
+<link rel='stylesheet' id='divi-style-css' href='https://www.oit.uci.edu/wp-content/themes/divi/style-static.min.css?ver=4.27.4' type='text/css' media='all' />
+<!--[if !IE]><!-->
+<link rel='stylesheet' id='tablepress-responsive-tables-flip-css' href='https://www.oit.uci.edu/wp-content/plugins/tablepress/eb-mods/tablepress-responsive-tables/css/tablepress-responsive-flip.min.css?ver=1.5' type='text/css' media='all' />
+<!--<![endif]-->
+<script type="text/javascript" id="jquery-core-js-extra">
+/* <![CDATA[ */
+var msreader_featured_posts = {"saving":"Saving...","post_featured":"This post is featured","feature":"Feature","unfeature":"Unfeature"};
+//# sourceURL=jquery-core-js-extra
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://www.oit.uci.edu/wp-includes/js/jquery/jquery.min.js?ver=3.7.1" id="jquery-core-js"></script>
+<script type="text/javascript" src="https://www.oit.uci.edu/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.4.1" id="jquery-migrate-js"></script>
+<script type="text/javascript" id="jquery-js-after">
+/* <![CDATA[ */
+var ajaxurl = 'https://www.oit.uci.edu/wp-admin/admin-ajax.php';
+//# sourceURL=jquery-js-after
+/* ]]> */
+</script>
+<script type="text/javascript" id="wdsi-js-extra">
+/* <![CDATA[ */
+var _wdsi_data = {"reshow":{"timeout":0,"name":"wdsi-on_hided41d8cd98f00b204e9800998ecf8427e","path":"/","all":false}};
+//# sourceURL=wdsi-js-extra
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://www.oit.uci.edu/wp-content/plugins/slide-in/js/wdsi.js?ver=1.2.3" id="wdsi-js"></script>
+<script type="text/javascript" src="https://www.oit.uci.edu/wp-content/plugins/table-sorter/jquery.tablesorter.min.js?ver=6.9" id="table-sorter-js"></script>
+<script type="text/javascript" src="https://www.oit.uci.edu/wp-content/plugins/table-sorter/jquery.metadata.js?ver=2.2" id="table-sorter-metadata-js"></script>
+<script type="text/javascript" src="https://www.oit.uci.edu/wp-content/plugins/table-sorter/wp-script.js?ver=2.2" id="table-sorter-custom-js-js"></script>
+<link rel="https://api.w.org/" href="https://www.oit.uci.edu/wp-json/" /><link rel="alternate" title="JSON" type="application/json" href="https://www.oit.uci.edu/wp-json/wp/v2/pages/47951" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://www.oit.uci.edu/xmlrpc.php?rsd" />
+<meta name="generator" content="WordPress 6.9" />
+<link rel="canonical" href="https://www.oit.uci.edu/services/ai/zotgpt/" />
+<link rel='shortlink' href='https://www.oit.uci.edu/?p=47951' />
+	<style>
+		@media screen and (max-width: 782px) {
+			#wpadminbar li#wp-admin-bar-log-in,
+			#wpadminbar li#wp-admin-bar-register {
+				display: block;
+			}
+
+			#wpadminbar li#wp-admin-bar-log-in a,
+			#wpadminbar li#wp-admin-bar-register a {
+				padding: 0 8px;
+			}
+		}
+	</style>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" /><link rel="sitemap" type="application/xml" title="Sitemap" href="https://www.oit.uci.edu?dynamic-sitemap=1" /><script>document.documentElement.className += " js";</script>
+
+        <script type="text/javascript">
+            var jQueryMigrateHelperHasSentDowngrade = false;
+
+			window.onerror = function( msg, url, line, col, error ) {
+				// Break out early, do not processing if a downgrade reqeust was already sent.
+				if ( jQueryMigrateHelperHasSentDowngrade ) {
+					return true;
+                }
+
+				var xhr = new XMLHttpRequest();
+				var nonce = 'fa51f58712';
+				var jQueryFunctions = [
+					'andSelf',
+					'browser',
+					'live',
+					'boxModel',
+					'support.boxModel',
+					'size',
+					'swap',
+					'clean',
+					'sub',
+                ];
+				var match_pattern = /\)\.(.+?) is not a function/;
+                var erroredFunction = msg.match( match_pattern );
+
+                // If there was no matching functions, do not try to downgrade.
+                if ( null === erroredFunction || typeof erroredFunction !== 'object' || typeof erroredFunction[1] === "undefined" || -1 === jQueryFunctions.indexOf( erroredFunction[1] ) ) {
+                    return true;
+                }
+
+                // Set that we've now attempted a downgrade request.
+                jQueryMigrateHelperHasSentDowngrade = true;
+
+				xhr.open( 'POST', 'https://www.oit.uci.edu/wp-admin/admin-ajax.php' );
+				xhr.setRequestHeader( 'Content-Type', 'application/x-www-form-urlencoded' );
+				xhr.onload = function () {
+					var response,
+                        reload = false;
+
+					if ( 200 === xhr.status ) {
+                        try {
+                        	response = JSON.parse( xhr.response );
+
+                        	reload = response.data.reload;
+                        } catch ( e ) {
+                        	reload = false;
+                        }
+                    }
+
+					// Automatically reload the page if a deprecation caused an automatic downgrade, ensure visitors get the best possible experience.
+					if ( reload ) {
+						location.reload();
+                    }
+				};
+
+				xhr.send( encodeURI( 'action=jquery-migrate-downgrade-version&_wpnonce=' + nonce ) );
+
+				// Suppress error alerts in older browsers
+				return true;
+			}
+        </script>
+
+							<!-- Google Analytics tracking code output by Beehive Analytics Pro -->
+						<script async src="https://www.googletagmanager.com/gtag/js?id=G-HFVXV9F5M0&l=beehiveDataLayer"></script>
+		<script>
+						window.beehiveDataLayer = window.beehiveDataLayer || [];
+			function gaplusu() {beehiveDataLayer.push(arguments);}
+			gaplusu('js', new Date())
+						gaplusu('config', 'G-HFVXV9F5M0', {
+				'anonymize_ip': true,
+				'allow_google_signals': false,
+			})
+					</script>
+		<style type="text/css">
+/* <![CDATA[ */
+img.latex { vertical-align: middle; border: none; }
+/* ]]> */
+</style>
+<style type="text/css" id="custom-background-css">
+body.custom-background { background-color: #ffffff; }
+</style>
+	<script src="https://kit.fontawesome.com/e957f39d12.js" crossorigin="anonymous"></script>
+<meta name="google-site-verification" content="bhDS92ohOOsqspyyScn9gjobOSbsyCfk3kKTcF9S0U4" />
+<!-- Speeds up Divi loading times -->
+<script type="text/javascript">
+var elm=document.getElementsByTagName("html")[0];
+elm.style.display="none";
+document.addEventListener("DOMContentLoaded",function(event) {elm.style.display="block"; });
+</script><link rel="icon" href="https://bpb-us-e2.wpmucdn.com/sites.oit.uci.edu/dist/c/2/files/2021/07/cropped-oit-square-web-32x32.png" sizes="32x32" />
+<link rel="icon" href="https://bpb-us-e2.wpmucdn.com/sites.oit.uci.edu/dist/c/2/files/2021/07/cropped-oit-square-web-192x192.png" sizes="192x192" />
+<link rel="apple-touch-icon" href="https://bpb-us-e2.wpmucdn.com/sites.oit.uci.edu/dist/c/2/files/2021/07/cropped-oit-square-web-180x180.png" />
+<meta name="msapplication-TileImage" content="https://bpb-us-e2.wpmucdn.com/sites.oit.uci.edu/dist/c/2/files/2021/07/cropped-oit-square-web-270x270.png" />
+<style id="et-divi-customizer-global-cached-inline-styles">body,.et_pb_column_1_2 .et_quote_content blockquote cite,.et_pb_column_1_2 .et_link_content a.et_link_main_url,.et_pb_column_1_3 .et_quote_content blockquote cite,.et_pb_column_3_8 .et_quote_content blockquote cite,.et_pb_column_1_4 .et_quote_content blockquote cite,.et_pb_blog_grid .et_quote_content blockquote cite,.et_pb_column_1_3 .et_link_content a.et_link_main_url,.et_pb_column_3_8 .et_link_content a.et_link_main_url,.et_pb_column_1_4 .et_link_content a.et_link_main_url,.et_pb_blog_grid .et_link_content a.et_link_main_url,body .et_pb_bg_layout_light .et_pb_post p,body .et_pb_bg_layout_dark .et_pb_post p{font-size:18px}.et_pb_slide_content,.et_pb_best_value{font-size:20px}body{color:#000000}h1,h2,h3,h4,h5,h6{color:#000000}body{line-height:1.5em}#et_search_icon:hover,.mobile_menu_bar:before,.mobile_menu_bar:after,.et_toggle_slide_menu:after,.et-social-icon a:hover,.et_pb_sum,.et_pb_pricing li a,.et_pb_pricing_table_button,.et_overlay:before,.entry-summary p.price ins,.et_pb_member_social_links a:hover,.et_pb_widget li a:hover,.et_pb_filterable_portfolio .et_pb_portfolio_filters li a.active,.et_pb_filterable_portfolio .et_pb_portofolio_pagination ul li a.active,.et_pb_gallery .et_pb_gallery_pagination ul li a.active,.wp-pagenavi span.current,.wp-pagenavi a:hover,.nav-single a,.tagged_as a,.posted_in a{color:#0064a4}.et_pb_contact_submit,.et_password_protected_form .et_submit_button,.et_pb_bg_layout_light .et_pb_newsletter_button,.comment-reply-link,.form-submit .et_pb_button,.et_pb_bg_layout_light .et_pb_promo_button,.et_pb_bg_layout_light .et_pb_more_button,.et_pb_contact p input[type="checkbox"]:checked+label i:before,.et_pb_bg_layout_light.et_pb_module.et_pb_button{color:#0064a4}.footer-widget h4{color:#0064a4}.et-search-form,.nav li ul,.et_mobile_menu,.footer-widget li:before,.et_pb_pricing li:before,blockquote{border-color:#0064a4}.et_pb_counter_amount,.et_pb_featured_table .et_pb_pricing_heading,.et_quote_content,.et_link_content,.et_audio_content,.et_pb_post_slider.et_pb_bg_layout_dark,.et_slide_in_menu_container,.et_pb_contact p input[type="radio"]:checked+label i:before{background-color:#0064a4}.container,.et_pb_row,.et_pb_slider .et_pb_container,.et_pb_fullwidth_section .et_pb_title_container,.et_pb_fullwidth_section .et_pb_title_featured_container,.et_pb_fullwidth_header:not(.et_pb_fullscreen) .et_pb_fullwidth_header_container{max-width:1920px}.et_boxed_layout #page-container,.et_boxed_layout.et_non_fixed_nav.et_transparent_nav #page-container #top-header,.et_boxed_layout.et_non_fixed_nav.et_transparent_nav #page-container #main-header,.et_fixed_nav.et_boxed_layout #page-container #top-header,.et_fixed_nav.et_boxed_layout #page-container #main-header,.et_boxed_layout #page-container .container,.et_boxed_layout #page-container .et_pb_row{max-width:2080px}a{color:#255799}.nav li ul{border-color:#ffd200}.et_secondary_nav_enabled #page-container #top-header{background-color:#0064a4!important}#et-secondary-nav li ul{background-color:#0064a4}.et_header_style_centered .mobile_nav .select_page,.et_header_style_split .mobile_nav .select_page,.et_nav_text_color_light #top-menu>li>a,.et_nav_text_color_dark #top-menu>li>a,#top-menu a,.et_mobile_menu li a,.et_nav_text_color_light .et_mobile_menu li a,.et_nav_text_color_dark .et_mobile_menu li a,#et_search_icon:before,.et_search_form_container input,span.et_close_search_field:after,#et-top-navigation .et-cart-info{color:#0064a4}.et_search_form_container input::-moz-placeholder{color:#0064a4}.et_search_form_container input::-webkit-input-placeholder{color:#0064a4}.et_search_form_container input:-ms-input-placeholder{color:#0064a4}#main-header .nav li ul a{color:#000000}#top-menu li a{font-size:18px}body.et_vertical_nav .container.et_search_form_container .et-search-form input{font-size:18px!important}#top-menu li.current-menu-ancestor>a,#top-menu li.current-menu-item>a,#top-menu li.current_page_item>a{color:#1b3d6d}#main-footer{background-color:#ffffff}#footer-widgets .footer-widget a,#footer-widgets .footer-widget li a,#footer-widgets .footer-widget li a:hover{color:#0064a4}.footer-widget{color:#000000}#main-footer .footer-widget h4,#main-footer .widget_block h1,#main-footer .widget_block h2,#main-footer .widget_block h3,#main-footer .widget_block h4,#main-footer .widget_block h5,#main-footer .widget_block h6{color:#000000}.footer-widget li:before{border-color:#0064a4}.footer-widget,.footer-widget li,.footer-widget li a,#footer-info{font-size:15px}.footer-widget .et_pb_widget div,.footer-widget .et_pb_widget ul,.footer-widget .et_pb_widget ol,.footer-widget .et_pb_widget label{line-height:1.5em}#footer-widgets .footer-widget li:before{top:8.25px}#et-footer-nav{background-color:#ffffff}.bottom-nav,.bottom-nav a,.bottom-nav li.current-menu-item a{color:#000000}#et-footer-nav .bottom-nav li.current-menu-item a{color:#000000}#footer-bottom{background-color:#ffffff}#footer-info,#footer-info a{color:#000000}#footer-bottom .et-social-icon a{color:#1b3d6d}body .et_pb_button{background-color:#ffffff;border-color:#fecc07;border-radius:20px}body.et_pb_button_helper_class .et_pb_button,body.et_pb_button_helper_class .et_pb_module.et_pb_button{color:#1b3d6d}body .et_pb_bg_layout_light.et_pb_button:hover,body .et_pb_bg_layout_light .et_pb_button:hover,body .et_pb_button:hover{background-color:#fecc07;border-color:#fecc07!important;border-radius:20px}h1,h2,h3,h4,h5,h6,.et_quote_content blockquote p,.et_pb_slide_description .et_pb_slide_title{line-height:1.5em}@media only screen and (min-width:981px){.et_header_style_left #et-top-navigation,.et_header_style_split #et-top-navigation{padding:50px 0 0 0}.et_header_style_left #et-top-navigation nav>ul>li>a,.et_header_style_split #et-top-navigation nav>ul>li>a{padding-bottom:50px}.et_header_style_split .centered-inline-logo-wrap{width:100px;margin:-100px 0}.et_header_style_split .centered-inline-logo-wrap #logo{max-height:100px}.et_pb_svg_logo.et_header_style_split .centered-inline-logo-wrap #logo{height:100px}.et_header_style_centered #top-menu>li>a{padding-bottom:18px}.et_header_style_slide #et-top-navigation,.et_header_style_fullscreen #et-top-navigation{padding:41px 0 41px 0!important}.et_header_style_centered #main-header .logo_container{height:100px}#logo{max-height:35%}.et_pb_svg_logo #logo{height:35%}.et_fixed_nav #page-container .et-fixed-header#top-header{background-color:#0064a4!important}.et_fixed_nav #page-container .et-fixed-header#top-header #et-secondary-nav li ul{background-color:#0064a4}.et-fixed-header #top-menu a,.et-fixed-header #et_search_icon:before,.et-fixed-header #et_top_search .et-search-form input,.et-fixed-header .et_search_form_container input,.et-fixed-header .et_close_search_field:after,.et-fixed-header #et-top-navigation .et-cart-info{color:#0064a4!important}.et-fixed-header .et_search_form_container input::-moz-placeholder{color:#0064a4!important}.et-fixed-header .et_search_form_container input::-webkit-input-placeholder{color:#0064a4!important}.et-fixed-header .et_search_form_container input:-ms-input-placeholder{color:#0064a4!important}.et-fixed-header #top-menu li.current-menu-ancestor>a,.et-fixed-header #top-menu li.current-menu-item>a,.et-fixed-header #top-menu li.current_page_item>a{color:#1b3d6d!important}}@media only screen and (min-width:2400px){.et_pb_row{padding:48px 0}.et_pb_section{padding:96px 0}.single.et_pb_pagebuilder_layout.et_full_width_page .et_post_meta_wrapper{padding-top:144px}.et_pb_fullwidth_section{padding:0}}h1,h1.et_pb_contact_main_title,.et_pb_title_container h1{font-size:32px}h2,.product .related h2,.et_pb_column_1_2 .et_quote_content blockquote p{font-size:27px}h3{font-size:23px}h4,.et_pb_circle_counter h3,.et_pb_number_counter h3,.et_pb_column_1_3 .et_pb_post h2,.et_pb_column_1_4 .et_pb_post h2,.et_pb_blog_grid h2,.et_pb_column_1_3 .et_quote_content blockquote p,.et_pb_column_3_8 .et_quote_content blockquote p,.et_pb_column_1_4 .et_quote_content blockquote p,.et_pb_blog_grid .et_quote_content blockquote p,.et_pb_column_1_3 .et_link_content h2,.et_pb_column_3_8 .et_link_content h2,.et_pb_column_1_4 .et_link_content h2,.et_pb_blog_grid .et_link_content h2,.et_pb_column_1_3 .et_audio_content h2,.et_pb_column_3_8 .et_audio_content h2,.et_pb_column_1_4 .et_audio_content h2,.et_pb_blog_grid .et_audio_content h2,.et_pb_column_3_8 .et_pb_audio_module_content h2,.et_pb_column_1_3 .et_pb_audio_module_content h2,.et_pb_gallery_grid .et_pb_gallery_item h3,.et_pb_portfolio_grid .et_pb_portfolio_item h2,.et_pb_filterable_portfolio_grid .et_pb_portfolio_item h2{font-size:19px}h5{font-size:16px}h6{font-size:15px}.et_pb_slide_description .et_pb_slide_title{font-size:48px}.et_pb_gallery_grid .et_pb_gallery_item h3,.et_pb_portfolio_grid .et_pb_portfolio_item h2,.et_pb_filterable_portfolio_grid .et_pb_portfolio_item h2,.et_pb_column_1_4 .et_pb_audio_module_content h2{font-size:16px}	h1,h2,h3,h4,h5,h6{font-family:'Roboto Slab',Georgia,"Times New Roman",serif}body,input,textarea,select{font-family:'Source Sans Pro',Helvetica,Arial,Lucida,sans-serif}#main-header,#et-top-navigation{font-family:'Montserrat',Helvetica,Arial,Lucida,sans-serif}a:hover{color:#f78d2d}#wp-admin-bar-et-use-visual-builder{display:none}body{font-weight:400}h1,h2,h3,h4,h5,h6{font-weight:500}h1 a,h2 a,h3 a,h4 a,h5 a,h6 a{color:#255799}h3{color:#444!important}p{margin-bottom:auto;line-height:1.5em;font-size:100%!important}.has-medium-font-size{font-size:1.25em!important}.et_pb_module.et_pb_tabs.et_pb_tabs_0.ul-bottom-padding ul li{padding-bottom:.5em}.et_pb_text ol,.et_pb_text ul{padding-bottom:0}#left-area ul,.entry-content ul,.et-l--body ul,.et-l--footer ul,.et-l--header ul{list-style-type:disc;padding:0 0 0 1em;line-height:26px}.frmcal-content p{line-height:1.5em;font-size:1.3em!important}.frmcal-content a{line-height:1.5em}.frmcal-title{font-size:150%;font-weight:600;padding-right:10%}table.frmcal-calendar .frmcal_date{background-color:#eee;padding:0 5px;text-align:right;-moz-box-shadow:0 2px 5px #BFC3C8;-webkit-box-shadow:0 2px 5px #BFC3C8;box-shadow:0 2px 5px #BFC3C8}.frmcal_day_name,.frmcal_num{display:inline;font-weight:600;font-size:1.2em}.frmcal-dropdown{font-size:1em}table.frmcal-calendar .frmcal-today .frmcal_date{background-color:#7ab800!important;padding:0 5px;text-align:right;-moz-box-shadow:0 2px 5px #66afe9;-webkit-box-shadow:0 2px 5px #66afe9;box-shadow:0 2px 5px #66afe9}.frmcal_num{background-color:#fff;padding:0 3px;border-radius:6px}.frmcal-next{display:none}.frmcal-prev{display:none}table.frmcal-calendar .frmcal-today .frmcal_date{background-color:#94c83d;color:#000;padding:0 5px;text-align:right;-moz-box-shadow:0 2px 5px #66afe9;-webkit-box-shadow:0 2px 5px #66afe9;box-shadow:0 2px 5px #66afe9}table.frm-grid th{background:#eee}table.frm-grid{width:100%}h4 a.apply4job{border:2px #255799 solid;border-radius:4px;padding:10px;margin-top:10px}#main-footer{border-top:1px solid #ccc}div.category-list ul{list-style-type:none}div.category-list li{padding-bottom:.5em;border-bottom:1px solid #eee}div.services-table{min-width:240px}.tablepress thead th,.tablepress tfoot th{background-color:#255799;color:#ffffff}.tablepress thead .sorting_asc,.tablepress thead .sorting_desc,.tablepress thead .sorting:hover{background-color:#1b3d6d;color:#ffffff}#tablepress-1_filter{padding-bottom:20px}#tablepress-42_filter label{font-size:.9rem}.tablepress tbody td{vertical-align:top;line-height:1.3em}.inline-buttons .et_pb_button_module_wrapper{display:inline-block;float:right}.inline-buttons-left .et_pb_button_module_wrapper{display:inline-block}.inline-buttons-center{text-align:center!important}.et_pb_menu_0_tb_header.et_pb_menu ul li.current-menu-item a{color:#1B3D6D!important;border-bottom:3px solid #FFD200}.et_pb_tabs_controls li.et_pb_tab_active{background-color:#FFF;border-top:4px solid #94C83D}div.glance{border-top:8px solid #00b0ca;line-height:1.3em}div.glance h3{padding-top:1.2em}p.warning{background-color:#FFCCCC;padding:10px;border-radius:4px}.note{background-color:#ffec97;padding:10px;border-radius:4px;margin-bottom:1em}.note-blue{background-color:#D1E4FC;padding:10px 10px 20px 10px;border-radius:4px;margin-bottom:1em}.note-green{background-color:#D9ECDB;padding:10px 10px 20px 10px;border-radius:4px;margin-bottom:1em}.note-red{background-color:#F2D8DA;padding:10px 10px 20px 10px;border-radius:4px;margin-bottom:1em}div.horizontal-list-menu ul li{display:inline;background:#f2f2f2;border-radius:10px;border:2px solid #FFD200;float:left;margin:0 4px}div.horizontal-list-menu ul li a{display:block;padding:10px;border-radius:10px;color:#1B3D6D;font-weight:600}div.horizontal-list-menu ul li a:hover{display:block;background-color:#FFD200;border-radius:10px}div.horizontal-anchors-menu ul li{display:inline;background:#253D6A;border-radius:10px;border:2px solid #6aa2b8;color:#ffffff;float:left;margin:4px;padding:0 10px}div.horizontal-anchors-menu ul li a{display:block;color:#ffffff;font-weight:600;text-decoration:none}div.horizontal-anchors-menu ul li a:hover{display:block;color:#F8E088;background-color:#253D6A!important}ul.vertical-menu{list-style-type:none;margin:0;padding:0;background-color:#f9f9f9;border-top:1px solid #eee}ul.vertical-menu li a{display:block;color:#0064a4;padding:8px 16px;border-bottom:1px solid #eee}ul.vertical-menu>li:nth-child(2n+2) a{background-color:#ffffff}ol.vertical-menu{list-style-type:decimal;margin:0 10px;padding:0;background-color:#f9f9f9;border-top:1px solid #eee;border-bottom:1px solid #eee}ol.vertical-menu li a{display:inline-block;color:#0064a4;padding:10px}ol.vertical-menu li{border-bottom:1px solid #eee}.et_pb_post .entry-featured-image-url{display:block;position:relative;margin-bottom:-10px}.et_pb_gutters2 .et_pb_column .et_pb_blog_grid .column.size-1of1 .et_pb_post:last-child,.et_pb_gutters2 .et_pb_column .et_pb_blog_grid .column.size-1of2 .et_pb_post:last-child,.et_pb_gutters2 .et_pb_column .et_pb_blog_grid .column.size-1of3 .et_pb_post:last-child,.et_pb_gutters2.et_pb_row .et_pb_column .et_pb_blog_grid .column.size-1of1 .et_pb_post:last-child,.et_pb_gutters2.et_pb_row .et_pb_column .et_pb_blog_grid .column.size-1of2 .et_pb_post:last-child,.et_pb_gutters2.et_pb_row .et_pb_column .et_pb_blog_grid .column.size-1of3 .et_pb_post:last-child{margin-bottom:0px}.wp-block-column.at-a-glance{border-top:10px solid #6AA2B8;padding:16px;box-shadow:2px 2px 2px 4px rgba(0,0,0,0.2);border-radius:3px}div.wmd-tabs div.wmd-item div.wmd-content{display:none;padding:10px!important;background-color:#fff;font-size:18px;border:1px solid #cccccc}.wmd-heading.wmd-active{border-top:3px solid #94c83d}div.alert ul{padding:.5em 0 0 .5em}.toc-right.has-background{padding:20px;border:1px solid #ccc}.sub-menu a{font-size:1.1em!important}.sub-menu{position:relative;right:1px}#top-menu a{font-weight:600}#top-menu a:hover{color:#f78d2d}nav#top-menu-nav{position:relative;right:20px}div.blue-tile{border:1px solid #ccc;background-color:#fafafa;padding:20px;border-radius:6px;border-top:6px solid #255799}#need-help-widget{border:1px solid #ccc;border-top-color:rgb(204,204,204);border-top-style:solid;border-top-width:1px;padding:10px;border-top:10px solid #0064a4;border-radius:6px}div.pagination div.alignright{float:right;padding-left:100px}.et_pb_title_featured_container{line-height:0;position:relative;margin:25px 0}.heading-line-both h2{display:flex;width:100%;justify-content:center;align-items:center;text-align:center}.heading-line-both h2:before,.heading-line-both h2:after{content:'';border-top:3px solid;margin:0 20px 0 0;flex:1 0 20px;color:#ffd200}.heading-line-both h2:after{margin:0 0 0 20px}div.column-padding div.wp-block-column{margin:20px}.center-fa{text-align:center;width:100%}.initiating{background-color:#f7eb5f;color:#000;padding:6px 10px;border-radius:4px}.planning{background-color:#6aa2b8;color:#fff;padding:6px 10px;border-radius:4px}.executing{background-color:#7ab800;color:#fff;padding:6px 10px;border-radius:4px}.delivering{background-color:#255799;color:#fff;padding:6px 10px;border-radius:4px}.closing{background-color:#1b3d6d;color:#fff;padding:6px 10px;border-radius:4px}.tablepress-id-51 .column-5{width:170px}.tp-border tbody td{border:1px solid #ccc!important}.tablepress-id-71 th{font-size:.9em}.tablepress-id-77 .row-2 .column-1,.tablepress-id-77 .row-2 .column-4{background-color:#255799}.tablepress-id-77 .row-2 .column-2,.tablepress-id-77 .row-2 .column-3{background-color:#eeeeee}.tablepress-id-74 .row-2 .column-1,.tablepress-id-74 .row-2 .column-4{background-color:#255799}.tablepress-id-74 .row-2 .column-2,.tablepress-id-74 .row-2 .column-3{background-color:#eeeeee}.tablepress-id-75 .row-2 .column-1,.tablepress-id-75 .row-2 .column-2{background-color:#255799}.tablepress-id-75 .column-3,.tablepress-id-75 .column-4,.tablepress-id-75 .column-5,.tablepress-id-75 .column-6,.tablepress-id-75 .column-7,.tablepress-id-77 .column-2,.tablepress-id-77 .column-3,.tablepress-id-74 .column-2,.tablepress-id-74 .column-3{text-align:center}.tablepress-id-75 .column-1{font-weight:bold}.tablepress-id-75 th,.tablepress-id-76 th,.tablepress-id-72 th,.tablepress-id-73 th,.tablepress-id-77 th{text-align:center}.tablepress-id-73 .row-2 .column-2,.tablepress-id-73 .row-2 .column-3,.tablepress-id-73 .row-2 .column-4,.tablepress-id-73 .row-2 .column-5{text-align:center}.tablepress-id-72 .column-1{width:20%;font-weight:bold}.tablepress-id-73 .row-2 .column-1{background-color:#255799}.tablepress ul{line-height:1.3em}.tablepress ul li{margin-top:0!important;margin-bottom:0!important;padding-top:0;padding-bottom:0}.bullet-list-check ul{list-style-type:none!important}.bullet-list-check ul li:before{content:'e052'!important;color:#2cba6c;font-family:'ETMODULES'!important;margin-right:10px;margin-left:-14px;font-size:1.2em!important}.wdsi-slide-minimal-blue .wdsi-slide-wrap{border-top-color:#00406a;background-color:#fafafa}ul.compact-list{list-style-type:disc;padding:0 0 0 1em;margin:0;line-height:1em!important}ul{margin-bottom:1em}.wp-pagenavi{border-top:none;text-align:center;margin-top:0px;padding-top:15px!important}.wp-pagenavi a,.wp-pagenavi span{color:#000000;background:#f1f3f5;font-size:1em!important;line-height:1em;font-weight:bold!important;padding:0.45em 0.6em!important;border-radius:100px;border:none;transition:all .5s;text-decoration:none!important}.extend{display:none}.wp-pagenavi span.current{color:#ffffff!important;background:#255799!important;border-radius:100px}.wp-pagenavi a:hover{color:#ffffff!important;background:#255799!important;text-decoration:none}.wp-pagenavi .pages{background:none;text-decoration:none}.wp-pagenavi{border-top:none;text-align:center;margin-top:0px;padding-top:0px}.et_pb_title_featured_container img{width:100%;border-radius:10px}.event-details{background-color:#0083b320;padding:20px;border-radius:10px;border:4px solid #0083b3}</style><style id='global-styles-inline-css' type='text/css'>
+:root{--wp--preset--aspect-ratio--square: 1;--wp--preset--aspect-ratio--4-3: 4/3;--wp--preset--aspect-ratio--3-4: 3/4;--wp--preset--aspect-ratio--3-2: 3/2;--wp--preset--aspect-ratio--2-3: 2/3;--wp--preset--aspect-ratio--16-9: 16/9;--wp--preset--aspect-ratio--9-16: 9/16;--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgb(6,147,227) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgb(252,185,0) 0%,rgb(255,105,0) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgb(255,105,0) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--font-size--small: 13px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 36px;--wp--preset--font-size--x-large: 42px;--wp--preset--spacing--20: 0.44rem;--wp--preset--spacing--30: 0.67rem;--wp--preset--spacing--40: 1rem;--wp--preset--spacing--50: 1.5rem;--wp--preset--spacing--60: 2.25rem;--wp--preset--spacing--70: 3.38rem;--wp--preset--spacing--80: 5.06rem;--wp--preset--shadow--natural: 6px 6px 9px rgba(0, 0, 0, 0.2);--wp--preset--shadow--deep: 12px 12px 50px rgba(0, 0, 0, 0.4);--wp--preset--shadow--sharp: 6px 6px 0px rgba(0, 0, 0, 0.2);--wp--preset--shadow--outlined: 6px 6px 0px -3px rgb(255, 255, 255), 6px 6px rgb(0, 0, 0);--wp--preset--shadow--crisp: 6px 6px 0px rgb(0, 0, 0);}:root { --wp--style--global--content-size: 823px;--wp--style--global--wide-size: 1080px; }:where(body) { margin: 0; }.wp-site-blocks > .alignleft { float: left; margin-right: 2em; }.wp-site-blocks > .alignright { float: right; margin-left: 2em; }.wp-site-blocks > .aligncenter { justify-content: center; margin-left: auto; margin-right: auto; }:where(.is-layout-flex){gap: 0.5em;}:where(.is-layout-grid){gap: 0.5em;}.is-layout-flow > .alignleft{float: left;margin-inline-start: 0;margin-inline-end: 2em;}.is-layout-flow > .alignright{float: right;margin-inline-start: 2em;margin-inline-end: 0;}.is-layout-flow > .aligncenter{margin-left: auto !important;margin-right: auto !important;}.is-layout-constrained > .alignleft{float: left;margin-inline-start: 0;margin-inline-end: 2em;}.is-layout-constrained > .alignright{float: right;margin-inline-start: 2em;margin-inline-end: 0;}.is-layout-constrained > .aligncenter{margin-left: auto !important;margin-right: auto !important;}.is-layout-constrained > :where(:not(.alignleft):not(.alignright):not(.alignfull)){max-width: var(--wp--style--global--content-size);margin-left: auto !important;margin-right: auto !important;}.is-layout-constrained > .alignwide{max-width: var(--wp--style--global--wide-size);}body .is-layout-flex{display: flex;}.is-layout-flex{flex-wrap: wrap;align-items: center;}.is-layout-flex > :is(*, div){margin: 0;}body .is-layout-grid{display: grid;}.is-layout-grid > :is(*, div){margin: 0;}body{padding-top: 0px;padding-right: 0px;padding-bottom: 0px;padding-left: 0px;}:root :where(.wp-element-button, .wp-block-button__link){background-color: #32373c;border-width: 0;color: #fff;font-family: inherit;font-size: inherit;font-style: inherit;font-weight: inherit;letter-spacing: inherit;line-height: inherit;padding-top: calc(0.667em + 2px);padding-right: calc(1.333em + 2px);padding-bottom: calc(0.667em + 2px);padding-left: calc(1.333em + 2px);text-decoration: none;text-transform: inherit;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}
+/*# sourceURL=global-styles-inline-css */
+</style>
+</head>
+<body class="wp-singular page-template-default page page-id-47951 page-child parent-pageid-47945 custom-background wp-theme-divi et-tb-has-template et-tb-has-header et-tb-has-body et-tb-has-footer wp-featherlight-captions et_button_no_icon et_pb_button_helper_class et_cover_background et_pb_gutter et_pb_gutters2 et_pb_pagebuilder_layout et_divi_theme et-db">
+	<div id="page-container">
+<div id="et-boc" class="et-boc">
+			
+		<header class="et-l et-l--header">
+			<div class="et_builder_inner_content et_pb_gutters2">
+		<div class="et_pb_section et_pb_section_0_tb_header et_pb_with_background et_section_regular" >
+				
+				
+				
+				
+				
+				
+				<div class="et_pb_row et_pb_row_0_tb_header">
+				<div class="et_pb_column et_pb_column_4_4 et_pb_column_0_tb_header  et_pb_css_mix_blend_mode_passthrough et-last-child">
+				
+				
+				
+				
+				<div class="et_pb_module et_pb_text et_pb_text_0_tb_header  et_pb_text_align_left et_pb_bg_layout_light">
+				
+				
+				
+				
+				<div class="et_pb_text_inner"><p><a href="https://uci.edu/"><strong>UC Irvine</strong></a></p></div>
+			</div>
+			</div>
+				
+				
+				
+				
+			</div>
+				
+				
+			</div><div class="et_pb_section et_pb_section_1_tb_header et_section_regular et_pb_section--with-menu" >
+				
+				
+				
+				
+				
+				
+				<div class="et_pb_row et_pb_row_1_tb_header et_pb_row--with-menu">
+				<div class="et_pb_column et_pb_column_1_3 et_pb_column_1_tb_header  et_pb_css_mix_blend_mode_passthrough">
+				
+				
+				
+				
+				<div class="et_pb_module et_pb_image et_pb_image_0_tb_header et_pb_image_sticky">
+				
+				
+				
+				
+				<a href="https://www.oit.uci.edu/"><span class="et_pb_image_wrap "><img fetchpriority="high" decoding="async" width="958" height="113" src="https://sites.oit.uci.edu/main/files/2025/10/UCI25_OIT_1LA-blue.png" alt="UC Irvine OIT" title="UC Irvine OIT" srcset="https://www.oit.uci.edu/files/2025/10/UCI25_OIT_1LA-blue.png 958w, https://www.oit.uci.edu/files/2025/10/UCI25_OIT_1LA-blue-480x57.png 480w" sizes="(min-width: 0px) and (max-width: 480px) 480px, (min-width: 481px) 958px, 100vw" class="wp-image-58569" /></span></a>
+			</div>
+			</div><div class="et_pb_column et_pb_column_2_3 et_pb_column_2_tb_header  et_pb_css_mix_blend_mode_passthrough et-last-child et_pb_column--with-menu">
+				
+				
+				
+				
+				<div id="main-nav" class="et_pb_module et_pb_menu et_pb_menu_0_tb_header et_pb_bg_layout_light  et_pb_text_align_left et_dropdown_animation_fade et_pb_menu--without-logo et_pb_menu--style-centered">
+					
+					
+					
+					
+					<div class="et_pb_menu_inner_container clearfix">
+						
+						<div class="et_pb_menu__wrap">
+							<div class="et_pb_menu__menu">
+								<nav class="et-menu-nav"><ul id="menu-main-menu" class="et-menu nav"><li class="et_pb_menu_page_id-home menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-37439"><a href="https://www.oit.uci.edu/">Home</a></li>
+<li class="et_pb_menu_page_id-18 menu-item menu-item-type-post_type menu-item-object-page current-page-ancestor menu-item-176"><a href="https://www.oit.uci.edu/services/">Services</a></li>
+<li class="et_pb_menu_page_id-36672 menu-item menu-item-type-post_type menu-item-object-page menu-item-36750"><a href="https://www.oit.uci.edu/help/">Support</a></li>
+<li class="et_pb_menu_page_id-856 menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-856"><a href="#">By Audience</a>
+<ul class="sub-menu">
+	<li class="et_pb_menu_page_id-770 menu-item menu-item-type-post_type menu-item-object-page menu-item-860"><a href="https://www.oit.uci.edu/undergrads/">Undergraduates</a></li>
+	<li class="et_pb_menu_page_id-776 menu-item menu-item-type-post_type menu-item-object-page menu-item-859"><a href="https://www.oit.uci.edu/grad/">Graduate Students</a></li>
+	<li class="et_pb_menu_page_id-774 menu-item menu-item-type-post_type menu-item-object-page menu-item-858"><a href="https://www.oit.uci.edu/staff/">Staff</a></li>
+	<li class="et_pb_menu_page_id-768 menu-item menu-item-type-post_type menu-item-object-page menu-item-857"><a href="https://www.oit.uci.edu/faculty/">Faculty / Instructors</a></li>
+	<li class="et_pb_menu_page_id-1621 menu-item menu-item-type-post_type menu-item-object-page menu-item-1630"><a href="https://www.oit.uci.edu/researcher/">Researchers</a></li>
+	<li class="et_pb_menu_page_id-36608 menu-item menu-item-type-post_type menu-item-object-page menu-item-36616"><a href="https://www.oit.uci.edu/it-pro/">IT Professionals</a></li>
+	<li class="et_pb_menu_page_id-1634 menu-item menu-item-type-post_type menu-item-object-page menu-item-1637"><a href="https://www.oit.uci.edu/applicant/">Applicants</a></li>
+	<li class="et_pb_menu_page_id-1624 menu-item menu-item-type-post_type menu-item-object-page menu-item-1632"><a href="https://www.oit.uci.edu/retiree/">Retirees</a></li>
+	<li class="et_pb_menu_page_id-1623 menu-item menu-item-type-post_type menu-item-object-page menu-item-1631"><a href="https://www.oit.uci.edu/alumni/">Alumni</a></li>
+	<li class="et_pb_menu_page_id-1620 menu-item menu-item-type-post_type menu-item-object-page menu-item-1629"><a href="https://www.oit.uci.edu/visitor/">Visitors / Guests</a></li>
+</ul>
+</li>
+<li class="et_pb_menu_page_id-40459 menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-40459"><a href="#">About OIT</a>
+<ul class="sub-menu">
+	<li class="et_pb_menu_page_id-302 menu-item menu-item-type-post_type menu-item-object-page menu-item-38456"><a href="https://www.oit.uci.edu/org/">Overview</a></li>
+	<li class="et_pb_menu_page_id-58689 menu-item menu-item-type-post_type menu-item-object-page menu-item-58701"><a href="https://www.oit.uci.edu/accessibility-resources/"><i class="fa-solid fa-universal-access fa-lg" style="color: #255799;"></I> Accessibility</a></li>
+	<li class="et_pb_menu_page_id-36555 menu-item menu-item-type-post_type menu-item-object-page menu-item-57005"><a href="https://www.oit.uci.edu/news/">News</a></li>
+	<li class="et_pb_menu_page_id-58408 menu-item menu-item-type-post_type menu-item-object-page menu-item-58427"><a href="https://www.oit.uci.edu/events/">Events</a></li>
+	<li class="et_pb_menu_page_id-37345 menu-item menu-item-type-post_type menu-item-object-page menu-item-40460"><a href="https://www.oit.uci.edu/contact-us/">Contact Us</a></li>
+	<li class="et_pb_menu_page_id-38453 menu-item menu-item-type-post_type menu-item-object-page menu-item-40487"><a href="https://www.oit.uci.edu/org/jobs/career/">Jobs</a></li>
+	<li class="et_pb_menu_page_id-39314 menu-item menu-item-type-post_type menu-item-object-page menu-item-40461"><a href="https://www.oit.uci.edu/org/directions/">Directions</a></li>
+	<li class="et_pb_menu_page_id-41123 menu-item menu-item-type-custom menu-item-object-custom menu-item-41123"><a href="https://sites.uci.edu/oitdocs/org-chart/">Org Chart (Login Required)</a></li>
+	<li class="et_pb_menu_page_id-47136 menu-item menu-item-type-custom menu-item-object-custom menu-item-47136"><a href="https://roadmap.oit.uci.edu">Technology Roadmap</a></li>
+	<li class="et_pb_menu_page_id-44573 menu-item menu-item-type-post_type menu-item-object-page menu-item-44677"><a href="https://www.oit.uci.edu/org/projects/">Campuswide Projects</a></li>
+</ul>
+</li>
+</ul></nav>
+							</div>
+							
+							
+							<div class="et_mobile_nav_menu">
+				<div class="mobile_nav closed">
+					<span class="mobile_menu_bar"></span>
+				</div>
+			</div>
+						</div>
+						
+					</div>
+				</div>
+			</div>
+				
+				
+				
+				
+			</div>
+				
+				
+			</div><div class="et_pb_section et_pb_section_3_tb_header et_pb_with_background et_section_regular" >
+				
+				
+				
+				
+				
+				
+				<div class="et_pb_row et_pb_row_2_tb_header">
+				<div class="et_pb_column et_pb_column_4_4 et_pb_column_3_tb_header  et_pb_css_mix_blend_mode_passthrough et-last-child">
+				
+				
+				
+				
+				<div id="search" class="et_pb_module et_pb_search et_pb_search_0_tb_header  et_pb_text_align_left et_pb_bg_layout_light">
+				
+				
+				
+				
+				<form role="search" method="get" class="et_pb_searchform" action="https://www.oit.uci.edu/">
+					<div>
+						<label class="screen-reader-text" for="s">Search for:</label>
+						<input type="text" name="s" placeholder="" class="et_pb_s" />
+						<input type="hidden" name="et_pb_searchform_submit" value="et_search_proccess" />
+						
+						<input type="hidden" name="et_pb_include_posts" value="yes" />
+						<input type="hidden" name="et_pb_include_pages" value="yes" />
+						<input type="submit" value="Search" class="et_pb_searchsubmit">
+					</div>
+				</form>
+			</div>
+			</div>
+				
+				
+				
+				
+			</div>
+				
+				
+			</div>		</div>
+	</header>
+	<div id="et-main-area">
+	
+    <div id="main-content">
+    <div class="et-l et-l--body">
+			<div class="et_builder_inner_content et_pb_gutters2"><div class="et_pb_section et_pb_section_0_tb_body et_section_regular" >
+				
+				
+				
+				
+				
+				
+				<div class="et_pb_row et_pb_row_0_tb_body">
+				<div class="et_pb_column et_pb_column_4_4 et_pb_column_0_tb_body  et_pb_css_mix_blend_mode_passthrough et-last-child">
+				
+				
+				
+				
+				<div class="et_pb_module et_pb_post_content et_pb_post_content_0_tb_body">
+				
+				
+				
+				
+				<div class="et-l et-l--post">
+			<div class="et_builder_inner_content et_pb_gutters2">
+		<div class="et_pb_section et_pb_section_0 et_section_regular" >
+				
+				
+				
+				
+				
+				
+				<div class="et_pb_row et_pb_row_1">
+				<div class="et_pb_column et_pb_column_4_4 et_pb_column_0  et_pb_css_mix_blend_mode_passthrough et-last-child">
+				
+				
+				
+				
+				<div class="et_pb_module et_pb_text et_pb_text_0  et_pb_text_align_left et_pb_bg_layout_light">
+				
+				
+				
+				
+				<div class="et_pb_text_inner"><p><nav aria-label="breadcrumbs">
+            <div class="breadcrumb-container theme1">
+                <ol>
+                    <li><a title="Home" href="https://www.oit.uci.edu"><span>Home</span></a><span class="separator">»</span></li>
+    <li><a title="OIT Service Catalog" href="https://www.oit.uci.edu/services/"><span>OIT Service Catalog</span></a><span class="separator">»</span></li>
+    <li><a title="Artificial Intelligence" href="https://www.oit.uci.edu/services/ai/"><span>Artificial Intelligence</span></a><span class="separator">»</span></li>
+    <li><a title="ZotGPT" href="https://www.oit.uci.edu/services/ai/zotgpt/"><span>ZotGPT</span></a><span class="separator">»</span></li>
+                    </ol>
+            </div>
+        </nav>    <script type="application/ld+json">
+        {
+            "@context": "http://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+                 {
+                            "@type": "ListItem",
+                            "position": 2,
+                            "item": {
+                                "@id": "https://www.oit.uci.edu",
+                                "name": "Home"
+                            }
+                        }
+                        ,                 {
+                            "@type": "ListItem",
+                            "position": 3,
+                            "item": {
+                                "@id": "https://www.oit.uci.edu/services/",
+                                "name": "OIT Service Catalog"
+                            }
+                        }
+                        ,                 {
+                            "@type": "ListItem",
+                            "position": 4,
+                            "item": {
+                                "@id": "https://www.oit.uci.edu/services/ai/",
+                                "name": "Artificial Intelligence"
+                            }
+                        }
+                        ,                 {
+                            "@type": "ListItem",
+                            "position": 5,
+                            "item": {
+                                "@id": "https://www.oit.uci.edu/services/ai/zotgpt/",
+                                "name": "ZotGPT"
+                            }
+                        }
+                                                    ]
+        }
+    </script>
+    <style type="text/css">
+        .breadcrumb-container {
+            font-size: 13px;
+        }
+
+        .breadcrumb-container ul {
+            margin: 0;
+            padding: 0;
+        }
+
+        .breadcrumb-container li {
+            box-sizing: unset;
+            display: inline-block;
+            margin: 0;
+            padding: 0;
+        }
+
+        .breadcrumb-container li a {
+            box-sizing: unset;
+            padding: 0 10px;
+        }
+
+        .breadcrumb-container {
+            font-size: 1em !important;
+                    }
+
+        .breadcrumb-container li a {
+            font-size: 1em !important;
+            line-height: 1em !important;
+                    }
+
+        .breadcrumb-container li .separator {
+            font-size: 1em !important;
+                    }
+
+        .breadcrumb-container li:last-child .separator {
+            display: none;
+        }
+    </style>
+    <style type="text/css">
+        .breadcrumb-container.theme1 li {
+            margin: 0;
+            padding: 0;
+        }
+        .breadcrumb-container.theme1 a {
+            background: ;
+            display: inline-block;
+            margin: 0 5px;
+            padding: 5px 10px;
+            text-decoration: none;
+        }
+    </style>
+        <style type="text/css">
+        .breadcrumb-container{}
+.breadcrumb-container ul{}
+.breadcrumb-container li{}
+.breadcrumb-container a{}
+.breadcrumb-container .separator{}
+    </style>
+    <script>
+            </script>
+</p></div>
+			</div>
+			</div>
+				
+				
+				
+				
+			</div><div class="et_pb_row et_pb_row_2">
+				<div class="et_pb_column et_pb_column_4_4 et_pb_column_1  et_pb_css_mix_blend_mode_passthrough et-last-child">
+				
+				
+				
+				
+				<div class="et_pb_module et_pb_post_title et_pb_post_title_0 et_pb_bg_layout_light  et_pb_text_align_left"   >
+				
+				
+				
+				
+				
+				<div class="et_pb_title_container">
+					<h1 class="entry-title">ZotGPT</h1><p class="et_pb_title_meta_container"></p>
+				</div>
+				
+			</div><div class="et_pb_module et_pb_text et_pb_text_1  et_pb_text_align_left et_pb_bg_layout_light">
+				
+				
+				
+				
+				<div class="et_pb_text_inner"><p><strong>Quicklink(s)</strong></p>
+</div>
+			</div>
+			</div>
+				
+				
+				
+				
+			</div><div class="et_pb_row et_pb_row_3 inline-buttons-left">
+				<div class="et_pb_column et_pb_column_4_4 et_pb_column_2  et_pb_css_mix_blend_mode_passthrough et-last-child">
+				
+				
+				
+				
+				<div class="et_pb_button_module_wrapper et_pb_button_0_wrapper et_pb_button_alignment_center et_pb_module ">
+				<a class="et_pb_button et_pb_button_0 et_pb_bg_layout_light" href="https://zotgpt.uci.edu">ZotGPT Chat</a>
+			</div><div class="et_pb_button_module_wrapper et_pb_button_1_wrapper et_pb_button_alignment_center et_pb_module ">
+				<a class="et_pb_button et_pb_button_1 et_pb_bg_layout_light" href="https://zotgpt.uci.edu/api/">ZotGPT API</a>
+			</div><div class="et_pb_button_module_wrapper et_pb_button_2_wrapper et_pb_button_alignment_center et_pb_module ">
+				<a class="et_pb_button et_pb_button_2 et_pb_bg_layout_light" href="https://zotgpt.uci.edu/classchat/">ZotGPT ClassChat</a>
+			</div><div class="et_pb_button_module_wrapper et_pb_button_3_wrapper et_pb_button_alignment_center et_pb_module ">
+				<a class="et_pb_button et_pb_button_3 et_pb_bg_layout_light" href="https://zotgpt.uci.edu/creator/">ZotGPT Creator</a>
+			</div><div class="et_pb_button_module_wrapper et_pb_button_4_wrapper et_pb_button_alignment_center et_pb_module ">
+				<a class="et_pb_button et_pb_button_4 et_pb_bg_layout_light" href="#faq">FAQ</a>
+			</div>
+			</div>
+				
+				
+				
+				
+			</div><div class="et_pb_row et_pb_row_4">
+				<div class="et_pb_column et_pb_column_3_4 et_pb_column_3  et_pb_css_mix_blend_mode_passthrough">
+				
+				
+				
+				
+				<div class="et_pb_module et_pb_text et_pb_text_2  et_pb_text_align_left et_pb_bg_layout_light">
+				
+				
+				
+				
+				<div class="et_pb_text_inner"><p>ZotGPT Chat is a free AI tool for UCI students, faculty, and staff, offering features like multiple models, chat history, file uploads, and a large context window.</p></div>
+			</div><div id="tabs" class="et_pb_module et_pb_tabs et_pb_tabs_0 " >
+				
+				
+				
+				
+				<ul class="et_pb_tabs_controls clearfix">
+					<li class="et_pb_tab_0 et_pb_tab_active"><a href="#">Features</a></li><li class="et_pb_tab_1"><a href="#">AI Partners</a></li><li class="et_pb_tab_2"><a href="#">Support</a></li>
+				</ul>
+				<div class="et_pb_all_tabs">
+					<div class="et_pb_tab et_pb_tab_0 clearfix et_pb_active_content">
+				
+				
+				
+				
+				<div class="et_pb_tab_content"><h2>What is ZotGPT?</h2>
+<p>ZotGPT is the umbrella term used for AI services secured with campus contracts. Curious about AI, but want to try it in a more secure environment? ZotGPT is the answer. This is a fast moving space. We will continue to add new AI resources as they become available.</p>
+<p class="note"><i class="fa-sharp fa-solid fa-shield-exclamation"></i> <a href="https://www.security.uci.edu/how-to/ai-chatbot/">Learn how to use AI Chatbots securely.</a><strong></strong></p>
+<h2 style="padding-top: .5em;">By UCI, For UCI</h2>
+<h3>ZotGPT Chat</h3>
+<p><span style="border-radius: 10px; background-color: #6aa2bb; padding: 8px; color: #ffffff;"><i class="fa-solid fa-shield-halved" aria-hidden="true"></i> Up to P3</span></p>
+<p>ZotGPT Chat is available to students, faculty, and staff at no cost. As part of OIT&#8217;s ongoing commitment to supporting the university&#8217;s emerging generative AI needs, ZotGPT Chat can help brainstorm ideas, develop plans, and find different ways to get things done; for any use related to classes, be sure to follow your instructor&#8217;s guidelines. Currently, Chat supports multiple models, chat history, file uploads, and a large context window. ZotGPT Chat is built using Microsoft Azure AI, Amazon AWS, and open web technologies.</p>
+<p><strong><a href="https://zotgpt.uci.edu/zotgpt/">Learn more about ZotGPT Chat</a></strong></p>
+<h3>ZotGPT API</h3>
+<p>The ZotGPT API offers researchers a unique opportunity to access advanced Language Learning Models (LLMs) programmatically, while ensuring the safety and protection of university proprietary data.</p>
+<p><a href="https://zotgpt.uci.edu/api/"><strong>Learn more about ZotGPT API</strong></a></p>
+<h3>ZotGPT ClassChat</h3>
+<p>ClassChat is built on top of ZotGPT to allow for the creation of curated chatbots for educational purposes. ClassChat is designed to be used by faculty to create chatbots for their classes, providing students with a conversational interface to interact with the course material.</p>
+<p><strong><a href="https://www.oit.uci.edu/services/ai/zotgpt-classchat/">Learn more about ZotGPT ClassChat</a></strong></p>
+<h3>ZotGPT Creator</h3>
+<p>Instructors and staff can create their own custom chatbots powered by ZotGPT and their own websites, content, and more.</p>
+<p><a href="https://www.oit.uci.edu/services/ai/zotgpt-creator/"><strong>Learn more about ZotGPT Creator</strong></a></p></div>
+			</div><div class="et_pb_tab et_pb_tab_1 clearfix">
+				
+				
+				
+				
+				<div class="et_pb_tab_content"><h2>AI Services from UCI Partners</h2>
+<p>OIT provides these tools as UCI-contracted resources, offering greater degrees of privacy and security than the publicly-available commercial versions of these tools.</p>
+<h3>Microsoft Copilot Chat</h3>
+<p><span style="border-radius: 10px; background-color: #6aa2bb; padding: 8px; color: #ffffff;"><i class="fa-solid fa-shield-halved" aria-hidden="true"></i> Up to P3</span></p>
+<p>Microsoft Copilot Chat offers a tailored AI-powered chat solution powered by OpenAI technology including ChatGPT and DALL-E 3. It is available to UCI employees and students who have <strong>Microsoft 365 accounts and are logged in with their UCI AD credentials</strong>.</p>
+<p><a class="et_pb_button" href="https://copilot.microsoft.com/">Use Copilot</a><br />(Log in with your UCI Microsoft 365 account.)</p>
+<h3>UCI Google Gemini</h3>
+<p><span style="border-radius: 10px; background-color: #6aa2bb; padding: 8px; color: #ffffff;"><i class="fa-solid fa-shield-halved" aria-hidden="true"></i> Only P1 &#8211; P2</span></p>
+<p>Gemini is a large language model chatbot developed by Google AI and powered by the Gemini AI model. Gemini is designed to be informative and comprehensive in its responses. It is available to UCI employees and students who are <strong>logged into their UCI Google accounts.</strong></p>
+<p><a class="et_pb_button" href="https://gemini.google.com/">Use Gemini</a><br />(Log in with your UCI Google account.)</p></div>
+			</div><div class="et_pb_tab et_pb_tab_2 clearfix">
+				
+				
+				
+				
+				<div class="et_pb_tab_content"><h2>Learn ZotGPT</h2>
+<ul>
+<li><a href="https://zotgpt.uci.edu/learn/academy/" style="text-decoration: underline;" role="link"><strong>ZotGPT Academy</strong></a> – Become an expert with our ZotGPT Academy, a series of courses designed to help you get the most out of ZotGPT</li>
+<li><a href="https://zotgpt.uci.edu/learn/promptLibrary/" style="text-decoration: underline;" role="link"><strong>ZotGPT Prompt Library</strong></a> – Browse our carefully curated prompt library for ideas about how to effectively use generative chat tools.</li>
+</ul>
+<h2>ZotGPT API Support</h2>
+<ul>
+<li><strong>Contact Information:</strong> For support, email <a href="mailto:oit@uci.edu?subject=ZotGPT%20API">oit@uci.edu</a> and include “ZotGPT API” in the subject line.</li>
+<li><strong>Service Notifications:</strong> Users will be informed of any significant changes, maintenance schedules, or potential outages via email.</li>
+<li><strong>Model Decommissioning:</strong> OIT may decommission underutilized or inferior models. Users will be notified and may need to migrate to newer supported models.</li>
+</ul>
+<h2>Microsoft Copilot Documentation</h2>
+<ul>
+<li><a href="https://learn.microsoft.com/en-us/bing-chat-enterprise/overview">Overview</a><a href="https://www.microsoft.com/en-us/edge/features/the-new-bing?form=MA13FV"></a></li>
+<li><a href="https://www.microsoft.com/en-us/bing/do-more-with-ai/what-is-bing-chat-and-how-can-you-use-it?form=MA13KP">Learn about Microsoft Copilot</a></li>
+</ul>
+<h2>Google Gemini Documentation</h2>
+<ul>
+<li><a href="https://gemini.google.com/faq">Gemini FAQ</a></li>
+<li><a href="https://support.google.com/gemini?hl=en&amp;sjid=10755858930454196870-NC#topic=13194540">Getting Started with Gemini</a></li>
+</ul>
+<ol></ol>
+<h3>Need more help?</h3>
+<p><a href="https://uci.service-now.com/sp/?id=sc_cat_item&amp;sys_id=3f1dd0320a0a0b99000a53f7604a2ef9">Open a Help Desk Ticket</a></p></div>
+			</div>
+				</div>
+			</div>
+			</div><div class="et_pb_column et_pb_column_1_4 et_pb_column_4  et_pb_css_mix_blend_mode_passthrough et-last-child">
+				
+				
+				
+				
+				<div class="et_pb_with_border et_pb_module et_pb_text et_pb_text_3 glance  et_pb_text_align_left et_pb_bg_layout_light">
+				
+				
+				
+				
+				<div class="et_pb_text_inner"><h2>AT A GLANCE</h2>
+<h3>REQUIREMENTS</h3>
+<ul>
+<li>ZotGPT requires an active UCInetID</li>
+<li>Copilot requires a UCI Microsoft 365 account</li>
+<li>Gemini requires a UCI Google account</li>
+</ul>
+<h3>COST</h3>
+<ul>
+<li>No additional charge for ZotGPT Chat, Copilot Chat or Gemini Chat</li>
+<li><a href="https://uci.service-now.com/sp?id=kb_article_view&amp;sysparm_article=KB0013366">See Pricing for ZotGPT API Access</a></li>
+</ul>
+<h3>ELIGIBILITY</h3>
+<p><a href="https://www.oit.uci.edu/faculty/">Faculty</a>, <a href="https://www.oit.uci.edu/staff/">Staff</a>, <a href="https://www.oit.uci.edu/grad/" role="link">Graduate Students</a>,<br /><a href="https://www.oit.uci.edu/undergrads/" role="link">Undergraduate Students</a></p>
+<h3>RELATED OR SIMILAR SERVICES</h3>
+<ul>
+<li><a href="https://zotgpt.uci.edu/learn/promptLibrary/" style="text-decoration: none;" role="link">ZotGPT Prompt Library</a></li>
+<li><a href="https://zotgpt.uci.edu/api/" style="text-decoration: underline;" role="link">ZotGPT API</a></li>
+<li><a href="https://www.oit.uci.edu/services/ai/zotgpt-classchat/" style="text-decoration: underline;" role="link">ZotGPT ClassChat</a></li>
+<li><a href="https://www.oit.uci.edu/services/ai/zotgpt-creator/">ZotGPT Creator</a></li>
+<li><a href="https://copilot.microsoft.com/" style="text-decoration: underline;" role="link">Microsoft Copilot Chat</a></li>
+<li><a href="https://gemini.google.com/" style="text-decoration: underline;" role="link">Google Gemini</a></li>
+</ul>
+<h3>DATA PROTECTION LEVELS</h3>
+<ul>
+<li><strong>ZotGPT:</strong> P1 &#8211; P3 (P4 with MOU)</li>
+<li><strong>UCI Microsoft Copilot:</strong> P1 &#8211; P3</li>
+<li><strong>UCI Google Gemini:</strong> P1 &#8211; P2 Only</li>
+</ul>
+<h3>TRAINING</h3>
+<ul>
+<li><a href="https://uci.udemy.com/organization/search/?src=ukw&amp;q=ai">UCI Udemy AI Courses</a></li>
+<li><a href="https://zotgpt.uci.edu/learn/academy/" style="text-decoration: underline;" role="link">ZotGPT Academy</a></li>
+</ul></div>
+			</div>
+			</div>
+				
+				
+				
+				
+			</div>
+				
+				
+			</div><div class="et_pb_section et_pb_section_1 et_pb_with_background et_section_regular section_has_divider et_pb_top_divider" >
+				<div class="et_pb_top_inside_divider et-no-transition"></div>
+				
+				
+				
+				
+				
+				<div class="et_pb_row et_pb_row_5">
+				<div class="et_pb_column et_pb_column_4_4 et_pb_column_5  et_pb_css_mix_blend_mode_passthrough et-last-child">
+				
+				
+				
+				
+				<div id="faq" class="et_pb_module et_pb_text et_pb_text_4  et_pb_text_align_left et_pb_bg_layout_light">
+				
+				
+				
+				
+				<div class="et_pb_text_inner"><h2>Frequently Asked Questions</h2></div>
+			</div><div class="et_pb_module et_pb_accordion et_pb_accordion_0">
+				
+				
+				
+				
+				<div class="et_pb_toggle et_pb_module et_pb_accordion_item et_pb_accordion_item_0  et_pb_toggle_open">
+				
+				
+				
+				
+				<h3 class="et_pb_toggle_title">Intentionally Left Blank</h3>
+				<div class="et_pb_toggle_content clearfix"><p>This toggle makes sure the first one is closed.</p></div>
+			</div><div class="et_pb_toggle et_pb_module et_pb_accordion_item et_pb_accordion_item_1  et_pb_toggle_close">
+				
+				
+				
+				
+				<h3 class="et_pb_toggle_title">What is ZotGPT?</h3>
+				<div class="et_pb_toggle_content clearfix"><p><span style="font-weight: 400;">ZotGPT is the umbrella term used for AI services secured with campus contracts. Curious about AI, but want to try it in a more secure environment? <strong>ZotGPT is the answer.</strong><br /></span></p>
+<h4><span style="font-weight: 400;"><strong>The current ZotGPT offerings include:</strong><br /></span></h4>
+<ul>
+<li><span style="font-weight: 400;"><a href="https://zotgpt.uci.edu/zotgpt/"><strong>ZotGPT Chat</strong></a> &#8211; Built at UCI<br /></span></li>
+<li><span style="font-weight: 400;"><a href="https://zotgpt.uci.edu/api/"><strong>ZotGPT API</strong></a> &#8211; Built at UCI</span></li>
+<li><span style="font-weight: 400;"><a href="https://zotgpt.uci.edu/classchat/"><strong>ClassChat</strong></a> &#8211; In Limited Pilot</span></li>
+<li><span style="font-weight: 400;"><a href="https://zotgpt.uci.edu/creator/"><strong>ZotGPT Creator</strong> </a> &#8211; In Development</span></li>
+<li><span style="font-weight: 400;"><strong>Microsoft Copilot Chat</strong> (used with your UCI Microsoft account)</span></li>
+<li><span style="font-weight: 400;"><strong>UCI Google Gemini </strong>(used with your UCI Google account)</span></li>
+</ul>
+<p><span style="font-weight: 400;">This is a fast moving space. We will continue to add new AI resources as they become available.</span></p></div>
+			</div><div class="et_pb_toggle et_pb_module et_pb_accordion_item et_pb_accordion_item_2  et_pb_toggle_close">
+				
+				
+				
+				
+				<h3 class="et_pb_toggle_title">What level of privacy is available with ZotGPT? Who can see my chats?</h3>
+				<div class="et_pb_toggle_content clearfix"><ul>
+<li><b>For ZotGPT Chat: </b>Your chats are not used by Microsoft, UCI, or OpenAI to train AI models. Your chats are private and secure. You can delete your chat history at any time.</li>
+<li><b>For Microsoft Copilot:</b> Your chats are not used by Microsoft, UCI, or OpenAI to train AI models <b>as long as you authenticate using your UCI credentials</b>. Your chats are confidential.</li>
+<li class="mb-1"><b>For Google Gemini:</b> Your chats are not used by Google to train the Gemini model <b>as long as you authenticate using your UCI credentials</b>.</li>
+</ul>
+<p><a href="https://zotgpt.uci.edu/privacy">Learn more on the ZotGPT Privacy Notice.</a></p></div>
+			</div><div class="et_pb_toggle et_pb_module et_pb_accordion_item et_pb_accordion_item_3  et_pb_toggle_close">
+				
+				
+				
+				
+				<h3 class="et_pb_toggle_title">Why should I use ZotGPT instead of just using a personal ChatGPT, Google Gemini, or the other AI services already available?</h3>
+				<div class="et_pb_toggle_content clearfix"><p>ZotGPT was created to allow UCI affiliates to explore AI in a safer environment. All AI models under the ZotGPT umbrella have campus contracts in place. External AI tools do not have these safeguards. <strong>Do not use them with campus data.</strong></p>
+<p>If you are using Copilot or Gemini, <strong>make sure you are logged in with your UCI credentials to protect campus data.</strong></p></div>
+			</div><div class="et_pb_toggle et_pb_module et_pb_accordion_item et_pb_accordion_item_4  et_pb_toggle_close">
+				
+				
+				
+				
+				<h3 class="et_pb_toggle_title">What type of data is safe to use with ZotGPT?</h3>
+				<div class="et_pb_toggle_content clearfix">
+<table id="tablepress-82" class="tablepress tablepress-id-82">
+<thead>
+<tr class="row-1">
+	<td class="column-1"></td><th class="column-2">P1</th><th class="column-3">P2</th><th class="column-4">P3</th><th class="column-5">P4 / HIPAA</th>
+</tr>
+</thead>
+<tbody class="row-striping row-hover">
+<tr class="row-2">
+	<td class="column-1">ZotGPT</td><td class="column-2"><i class="fa-sharp fa-solid fa-circle-check" style="color: #77bb41;"></i> Yes</td><td class="column-3"><i class="fa-sharp fa-solid fa-circle-check" style="color: #77bb41;"></i> Yes</td><td class="column-4"><i class="fa-sharp fa-solid fa-circle-check" style="color: #77bb41;"></i> Yes</td><td class="column-5"><i class="fa-solid fa-circle-xmark" style="color: #b51a00;"></i> No</td>
+</tr>
+<tr class="row-3">
+	<td class="column-1">UCI Microsoft Copilot</td><td class="column-2"><i class="fa-sharp fa-solid fa-circle-check" style="color: #77bb41;"></i> Yes</td><td class="column-3"><i class="fa-sharp fa-solid fa-circle-check" style="color: #77bb41;"></i> Yes</td><td class="column-4"><i class="fa-sharp fa-solid fa-circle-check" style="color: #77bb41;"></i> Yes</td><td class="column-5"><i class="fa-solid fa-circle-xmark" style="color: #b51a00;"></i> No</td>
+</tr>
+<tr class="row-4">
+	<td class="column-1">UCI Google Gemini</td><td class="column-2"><i class="fa-sharp fa-solid fa-circle-check" style="color: #77bb41;"></i> Yes</td><td class="column-3"><i class="fa-sharp fa-solid fa-circle-check" style="color: #77bb41;"></i> Yes</td><td class="column-4"><i class="fa-solid fa-circle-xmark" style="color: #b51a00;"></i> No</td><td class="column-5"><i class="fa-solid fa-circle-xmark" style="color: #b51a00;"></i> No</td>
+</tr>
+</tbody>
+</table>
+<!-- #tablepress-82 from cache -->
+<p><a href="https://www.security.uci.edu/program/classification/protection-levels/">Learn more about Data Protection Levels</a></p></div>
+			</div><div class="et_pb_toggle et_pb_module et_pb_accordion_item et_pb_accordion_item_5  et_pb_toggle_close">
+				
+				
+				
+				
+				<h3 class="et_pb_toggle_title">Can I trust the information I find using AI tools?</h3>
+				<div class="et_pb_toggle_content clearfix"><p>It’s important to note that AI is still in its early stages of development, and there are limitations to its capabilities. Therefore, it’s always a good idea to approach AI-generated information with a critical eye and use your own judgment to determine its reliability. It&#8217;s always a good idea to check the information to verify the accuracy using other sources.</p></div>
+			</div><div class="et_pb_toggle et_pb_module et_pb_accordion_item et_pb_accordion_item_6  et_pb_toggle_close">
+				
+				
+				
+				
+				<h3 class="et_pb_toggle_title">What is available via ZotGPT Chat? Chat, image generation, etc.</h3>
+				<div class="et_pb_toggle_content clearfix"><p>The first iteration of ZotGPT Chat will be text chat based. We will be adding new features as they become available. Microsoft Copilot Chat includes image generation using DALL-E 3. Google Gemini now also includes the capability of creating images using Imagen 2.</p></div>
+			</div><div class="et_pb_toggle et_pb_module et_pb_accordion_item et_pb_accordion_item_7  et_pb_toggle_close">
+				
+				
+				
+				
+				<h3 class="et_pb_toggle_title">What AI models does ZotGPT use?</h3>
+				<div class="et_pb_toggle_content clearfix"><ul>
+<li>ZotGPT Chat uses varieties of OpenAI GPT, Anthropic Claude Sonnet, Google Gemini, DeepSeek and Mistral.</li>
+<li aria-level="1">Microsoft Copilot uses Microsoft Prometheus (Powered by Bing and GPT-4 series LLMs), DALL-E 3</li>
+<li aria-level="1">Google Gemini currently uses the Gemini AI model</li>
+</ul></div>
+			</div><div class="et_pb_toggle et_pb_module et_pb_accordion_item et_pb_accordion_item_8  et_pb_toggle_close">
+				
+				
+				
+				
+				<h3 class="et_pb_toggle_title">Will other AI models be available through ZotGPT in the future?</h3>
+				<div class="et_pb_toggle_content clearfix"><p>Yes, UCI and the UC system are evaluating AI instances to see what can be made available with campus contracts. We have recently added several more AI models.</p></div>
+			</div><div class="et_pb_toggle et_pb_module et_pb_accordion_item et_pb_accordion_item_9  et_pb_toggle_close">
+				
+				
+				
+				
+				<h3 class="et_pb_toggle_title">Does it cost anything to use ZotGPT Chat?</h3>
+				<div class="et_pb_toggle_content clearfix"><p>No, currently there will be no cost to use ZotGPT chat. This may change in the future if it becomes cost prohibitive. </p>
+<p>There is a cost to use ZotGPT API. <a href="https://uci.service-now.com/sp?id=kb_article_view&amp;sysparm_article=KB0013366">See the API Pricing article.</a></p></div>
+			</div><div class="et_pb_toggle et_pb_module et_pb_accordion_item et_pb_accordion_item_10  et_pb_toggle_close">
+				
+				
+				
+				
+				<h3 class="et_pb_toggle_title">What is the difference between Microsoft Copilot Chat, Google Gemini, and ZotGPT Chat?</h3>
+				<div class="et_pb_toggle_content clearfix"><p>See the comparison chart below.</p>
+
+<table id="tablepress-81" class="tablepress tablepress-id-81" aria-describedby="tablepress-81-description">
+<thead>
+<tr class="row-1">
+	<th class="column-1">Feature</th><th class="column-2">ZotGPT Chat</th><th class="column-3">UCI Microsoft Copilot</th><th class="column-4">UCI Google Gemini</th>
+</tr>
+</thead>
+<tbody class="row-striping row-hover">
+<tr class="row-2">
+	<td class="column-1">Data Security</td><td class="column-2">Up to P3</td><td class="column-3">Up to P3 (P4 with MOU)</td><td class="column-4">P1 and P2 Only</td>
+</tr>
+<tr class="row-3">
+	<td class="column-1">Saved Chats</td><td class="column-2"><i class="fa-solid fa-square-check" style="color: #54c0ab;"></i> Yes</td><td class="column-3"><i class="fa-solid fa-square-check" style="color: #54c0ab;"></i> Yes</td><td class="column-4"><i class="fa-solid fa-square-check" style="color: #54c0ab;"></i> Yes</td>
+</tr>
+<tr class="row-4">
+	<td class="column-1">Text Extraction</td><td class="column-2"><i class="fa-solid fa-square-check" style="color: #54c0ab;"></i> Yes (from images and PDFs)</td><td class="column-3"><i class="fa-solid fa-square-check" style="color: #54c0ab;"></i> Yes (from images only)</td><td class="column-4"><i class="fa-solid fa-square-check" style="color: #54c0ab;"></i> Yes (from images only)</td>
+</tr>
+<tr class="row-5">
+	<td class="column-1">Image Analysis</td><td class="column-2"><i class="fa-solid fa-square-check" style="color: #54c0ab;"></i> Yes</td><td class="column-3"><i class="fa-solid fa-square-check" style="color: #54c0ab;"></i> Yes</td><td class="column-4"><i class="fa-solid fa-square-check" style="color: #54c0ab;"></i> Yes</td>
+</tr>
+<tr class="row-6">
+	<td class="column-1">Image Generation</td><td class="column-2"><i class="fa-regular fa-square-xmark" style="color: #000000;"></i> No</td><td class="column-3"><i class="fa-solid fa-square-check" style="color: #54c0ab;"></i> Yes (using DALL-E 3)</td><td class="column-4"><i class="fa-solid fa-square-check" style="color: #54c0ab;"></i> Yes</td>
+</tr>
+<tr class="row-7">
+	<td class="column-1">Voice Chat</td><td class="column-2"><i class="fa-solid fa-square-check" style="color: #54c0ab;"></i> Yes</td><td class="column-3"><i class="fa-solid fa-square-check" style="color: #54c0ab;"></i> Yes</td><td class="column-4"><i class="fa-solid fa-square-check" style="color: #54c0ab;"></i> Yes</td>
+</tr>
+<tr class="row-8">
+	<td class="column-1">Internet responses *</td><td class="column-2"><i class="fa-solid fa-square-check" style="color: #54c0ab;"></i> Yes (UCI Specific)</td><td class="column-3"><i class="fa-solid fa-square-check" style="color: #54c0ab;"></i> Yes (using Bing)</td><td class="column-4"><i class="fa-solid fa-square-check" style="color: #54c0ab;"></i> Yes (using Google)</td>
+</tr>
+<tr class="row-9">
+	<td class="column-1">Extended Memory **</td><td class="column-2"><i class="fa-solid fa-square-check" style="color: #54c0ab;"></i> Yes</td><td class="column-3"><i class="fa-regular fa-square-xmark" style="color: #000000;"></i> No</td><td class="column-4"><i class="fa-regular fa-square-xmark" style="color: #000000;"></i> No</td>
+</tr>
+<tr class="row-10">
+	<td class="column-1">Availability</td><td class="column-2">Faculty, Staff &amp; Students</td><td class="column-3">Faculty, Staff &amp; Students</td><td class="column-4">Faculty, Staff &amp; Students</td>
+</tr>
+<tr class="row-11">
+	<td class="column-1">UCI Authentication</td><td class="column-2">Use UCInetID</td><td class="column-3">Use UCI Microsoft Account</td><td class="column-4">Use UCI Google Account</td>
+</tr>
+<tr class="row-12">
+	<td class="column-1">AI Models</td><td class="column-2">OpenAI o1, GPT-4; Anthropic Claude; Mistral Large; Mixtral 8x7B;</td><td class="column-3">Microsoft Prometheus (Powered by Bing and GPT-4 series LLMs), DALL-E 3 </td><td class="column-4">Gemini</td>
+</tr>
+</tbody>
+</table>
+<span id="tablepress-81-description" class="tablepress-table-description tablepress-table-description-id-81">* Internet Responses can include answers from web searches in replies.<br />
+** Extended Memory can leverage historic chat data, files, etc. in replies.</span>
+<!-- #tablepress-81 from cache -->
+<p>&nbsp;</p></div>
+			</div><div class="et_pb_toggle et_pb_module et_pb_accordion_item et_pb_accordion_item_11  et_pb_toggle_close">
+				
+				
+				
+				
+				<h3 class="et_pb_toggle_title">What browsers does ZotGPT Chat work on?</h3>
+				<div class="et_pb_toggle_content clearfix"><p>ZotGPT Chat should work on all modern browsers including Chrome, Safari, Edge and Firefox. It is also mobile friendly, so try it out on your phone or other mobile device.</p></div>
+			</div><div class="et_pb_toggle et_pb_module et_pb_accordion_item et_pb_accordion_item_12  et_pb_toggle_close">
+				
+				
+				
+				
+				<h3 class="et_pb_toggle_title">I&#039;m getting an error message when trying to access ZotGPT Chat. What should I do?</h3>
+				<div class="et_pb_toggle_content clearfix"><p>Please wait a few minutes and try again. You may also need to clear your browser&#8217;s cache and cookies.</p>
+<h4>How to clear cache and cookies</h4>
+<ul>
+<li><a href="https://support.google.com/accounts/answer/32050?hl=en&amp;co=GENIE.Platform%3DDesktop">Chrome</a></li>
+<li><a href="https://support.apple.com/guide/safari/clear-your-browsing-history-sfri47acf5d6/mac">Safari</a></li>
+<li><a href="https://www.microsoft.com/en-us/edge/learning-center/how-to-manage-and-clear-your-cache-and-cookies?form=MA13I2">Edge</a></li>
+<li><a href="https://support.mozilla.org/en-US/kb/clear-cookies-and-site-data-firefox">Firefox</a><a href="https://www.microsoft.com/en-us/edge/learning-center/how-to-manage-and-clear-your-cache-and-cookies?form=MA13I2"></a></li>
+</ul>
+<p>If you continue to receive this error, please email <a href="mailto:oit@uci.edu">oit@uci.edu</a>.</p></div>
+			</div><div class="et_pb_toggle et_pb_module et_pb_accordion_item et_pb_accordion_item_13  et_pb_toggle_close">
+				
+				
+				
+				
+				<h3 class="et_pb_toggle_title">Are there usage limits with ZotGPT Chat?</h3>
+				<div class="et_pb_toggle_content clearfix"><p>No, not at this time, although we are monitoring usage and may implement limitations as needed.</p></div>
+			</div><div class="et_pb_toggle et_pb_module et_pb_accordion_item et_pb_accordion_item_14  et_pb_toggle_close">
+				
+				
+				
+				
+				<h3 class="et_pb_toggle_title">Is there API access to ZotGPT?</h3>
+				<div class="et_pb_toggle_content clearfix"><p>Yes! ZotGPT API is now available for researchers.</p>
+<p><span style="font-weight: 400;">The </span><b>ZotGPT API</b><span style="font-weight: 400;"> provides researchers and others with </span><b>safe, programmatic access to the latest LLMs</b><span style="font-weight: 400;">.  </span></p>
+<p><span style="font-weight: 400;">Currently, </span><b>there are no commercial AI API offerings approved for P3+ data</b><span style="font-weight: 400;">.  Running your own LLM could be an option, but that often requires specialized hardware, not to mention associated setup and maintenance effort.</span></p>
+<p><span style="font-weight: 400;">With the ZotGPT API, you can get an API key and be using the latest models </span><b>today</b><span style="font-weight: 400;"> – all while protecting the University’s proprietary data.</span></p>
+<p><span style="font-weight: 400;"><a href="#tabs|2">Learn more on the ZotGPT API tab.</a></span></p></div>
+			</div><div class="et_pb_toggle et_pb_module et_pb_accordion_item et_pb_accordion_item_15  et_pb_toggle_close">
+				
+				
+				
+				
+				<h3 class="et_pb_toggle_title">Is the hardware that runs ZotGPT Chat hosted locally by UCI?</h3>
+				<div class="et_pb_toggle_content clearfix"><p>ZotGPT Chat leverages several cloud technology providers, all of which are contracted by UCI to provide cloud services, abide by UC data security practices, and so on. Microsoft Azure serves as the host for the AI engine and Amazon AWS hosts the website, web application, and database.</p></div>
+			</div>
+			</div>
+			</div>
+				
+				
+				
+				
+			</div>
+				
+				
+			</div>		</div>
+	</div>
+	<button type="button" class="screen-reader-text wdsi-slide-show-button" id="wdsi-slide-show-button" aria-expanded="false">Show "&lt;div style=&quot;text-align: center;&quot;&gt;AI Assistant &lt;span class=&quot;fa-regular fa-message-bot&quot; style=&quot;margin-left: 0.2em;&quot;&gt;&lt;/span&gt;&lt;/div&gt;" slide-in</button>
+
+<div id="wdsi-slide_in" role="complementary" aria-label="&lt;div style=&quot;text-align: center;&quot;&gt;AI Assistant &lt;span class=&quot;fa-regular fa-message-bot&quot; style=&quot;margin-left: 0.2em;&quot;&gt;&lt;/span&gt;&lt;/div&gt;" class="wdsi-slide  wdsi-slide-right wdsi-slide-minimal wdsi-slide-minimal-light wdsi-slide-minimal-blue" data-slidein-start="15%"  data-slidein-end="100%" data-slidein-after="0s" data-slidein-timeout="3m" data-slidein-id="49495" >
+	<div class="screen-reader-text" role="status" aria-live="polite" aria-atomic="true" id="wdsi-slide-announcement" tabindex="-1"></div>
+
+	<div class="wdsi-slide-wrap" style="width:300px;" >
+		<div class="wdsi-slide-control">
+	<div class="wdsi-slide-share wdsi-clearfix">
+			</div>
+	<div class="wdsi-slide-close"><button type="button" aria-label="Close &quot;ZotGPT&quot; slide-in"><span aria-hidden="true">&times;</span> Close</button></div>
+</div>		<div class="wdsi-slide-content">
+			<h1 class="wdsi-slide-title wdsi-slide-bold wdsi-slide-italic"><div style="text-align: center;">AI Assistant <span class="fa-regular fa-message-bot" style="margin-left: 0.2em;"></span></div></h1>
+			<div style="text-align: center;">
+<h2 style="margin-bottom: 1em;">Get help now from UCI ZotDesk.</h2>
+<p><a class="et_pb_button" title="Opens in new tab" href="https://oit.uci.edu/zotdesk/" target="_blank" rel="noopener" aria-label="ZotDesk - link opens in a new tab">Chat Now! <i class="fa-solid fa-arrow-up-right-from-square fa-xs"></i></a></p>
+</div>
+		</div>
+			</div>
+</div>
+
+			</div><div class="et_pb_module dpdw_post_data dpdw_post_data_0_tb_body">
+				
+				
+				
+				
+				
+				
+				<div class="et_pb_module_inner">
+					<div class="postData__wrapper ">
+				
+				<div class="postData__body">
+					<span class="postData__textBefore">Page updated on:</span>
+					<span class="postData__content"><div class="postData__modifiedDate">August 27, 2025</div></span>
+					
+				</div>
+				
+			</div>
+				</div>
+			</div>
+			</div>
+				
+				
+				
+				
+			</div>
+				
+				
+			</div>		</div>
+	</div>
+	    </div>
+    
+	<footer class="et-l et-l--footer">
+			<div class="et_builder_inner_content et_pb_gutters2">
+		<div class="et_pb_section et_pb_section_0_tb_footer et_pb_with_background et_section_regular section_has_divider et_pb_top_divider et_pb_bottom_divider" >
+				
+				
+				
+				
+				
+				
+				<div class="et_pb_row et_pb_row_0_tb_footer">
+				<div class="et_pb_column et_pb_column_1_2 et_pb_column_0_tb_footer  et_pb_css_mix_blend_mode_passthrough">
+				
+				
+				
+				
+				<div class="et_pb_module et_pb_text et_pb_text_0_tb_footer  et_pb_text_align_left et_pb_bg_layout_dark">
+				
+				
+				
+				
+				<div class="et_pb_text_inner"><h2 style="text-align: right;"><strong>Follow OIT on Social</strong></h2></div>
+			</div>
+			</div><div class="et_pb_column et_pb_column_1_2 et_pb_column_1_tb_footer  et_pb_css_mix_blend_mode_passthrough et-last-child">
+				
+				
+				
+				
+				<div class="et_pb_module et_pb_image et_pb_image_0_tb_footer">
+				
+				
+				
+				
+				<a href="https://www.instagram.com/uci_oit/"><span class="et_pb_image_wrap "><img loading="lazy" decoding="async" width="100" height="100" src="https://sites.oit.uci.edu/main/files/2024/10/Instagram_icon-1.png" alt="Instagram Icon" title="Instagram Icon" class="wp-image-51112" /></span></a>
+			</div><div class="et_pb_module et_pb_image et_pb_image_1_tb_footer">
+				
+				
+				
+				
+				<a href="https://www.youtube.com/channel/UCHdDCovJvr2Dv1O7FjfRAqg"><span class="et_pb_image_wrap "><img loading="lazy" decoding="async" width="100" height="100" src="https://sites.oit.uci.edu/main/files/2024/10/Youtube-Icon-square-2340x2340-2-1.png" alt="YouTube Icon" title="YouTube Icon" class="wp-image-51113" /></span></a>
+			</div>
+			</div>
+				
+				
+				
+				
+			</div>
+				
+				<div class="et_pb_bottom_inside_divider et-no-transition"></div>
+			</div><div id="footer" class="et_pb_section et_pb_section_1_tb_footer et_section_regular" >
+				
+				
+				
+				
+				
+				
+				<div class="et_pb_row et_pb_row_1_tb_footer">
+				<div class="et_pb_column et_pb_column_1_4 et_pb_column_2_tb_footer  et_pb_css_mix_blend_mode_passthrough">
+				
+				
+				
+				
+				<div class="et_pb_module et_pb_text et_pb_text_1_tb_footer  et_pb_text_align_left et_pb_bg_layout_light">
+				
+				
+				
+				
+				<div class="et_pb_text_inner"><p><img loading="lazy" decoding="async" src="https://sites.oit.uci.edu/main/files/2025/10/UCI25_OIT_1LA-blue-300x35.png" width="240" height="28" alt="UC Irvine OIT" class="wp-image-58569 alignnone size-medium" /><br />Office of Information Technology<br /><a href="https://uci.edu">University of California, Irvine</a><br />Irvine, CA 92697</p>
+<p><a href="tel:949-824-2222">(949) 824-2222</a><br /><a href="https://www.oit.uci.edu/contact-us/">Contact Form</a><br /><a href="mailto:oit@uci.edu">oit@uci.edu</a></p></div>
+			</div>
+			</div><div class="et_pb_column et_pb_column_1_4 et_pb_column_3_tb_footer  et_pb_css_mix_blend_mode_passthrough">
+				
+				
+				
+				
+				<div class="et_pb_module et_pb_text et_pb_text_2_tb_footer  et_pb_text_align_left et_pb_bg_layout_light">
+				
+				
+				
+				
+				<div class="et_pb_text_inner"><h2 class="title">Need Help?</h2>
+<ul>
+<li><a href="https://uci.service-now.com/sp/?id=kb_view" role="link">Knowledge Base</a></li>
+<li><a href="https://uci.service-now.com/sp/?id=sc_cat_item&amp;sys_id=3f1dd0320a0a0b99000a53f7604a2ef9" role="link">Open a Ticket</a></li>
+<li><a href="https://uci.service-now.com/sp/?id=sc_home" role="link">Service Requests</a></li>
+<li><a href="https://uci.service-now.com/sp?id=my_incidents">View My Tickets</a></li>
+</ul></div>
+			</div>
+			</div><div class="et_pb_column et_pb_column_1_4 et_pb_column_4_tb_footer  et_pb_css_mix_blend_mode_passthrough">
+				
+				
+				
+				
+				<div class="et_pb_module et_pb_text et_pb_text_3_tb_footer  et_pb_text_align_left et_pb_bg_layout_light">
+				
+				
+				
+				
+				<div class="et_pb_text_inner"><h2>About OIT</h2>
+<ul>
+<li><a href="https://www.oit.uci.edu/org/">About Us</a></li>
+<li><a href="https://www.oit.uci.edu/org/jobs/">OIT Employment Opportunities</a></li>
+<li><a href="https://www.oit.uci.edu/org/feedback/">Website Feedback</a></li>
+</ul></div>
+			</div><div class="et_pb_module et_pb_text et_pb_text_4_tb_footer  et_pb_text_align_left et_pb_bg_layout_light">
+				
+				
+				
+				
+				<div class="et_pb_text_inner"><p><i class="fa-solid fa-universal-access fa-xl" style="color: #0083b3;"></i> <a href="https://sites.oit.uci.edu/main/accessibility-resources/">Accessibility Resources</a></p></div>
+			</div>
+			</div><div class="et_pb_with_border et_pb_column_1_4 et_pb_column et_pb_column_5_tb_footer blue-tile  et_pb_css_mix_blend_mode_passthrough et-last-child">
+				
+				
+				
+				
+				<div class="et_pb_module et_pb_text et_pb_text_5_tb_footer et_clickable  et_pb_text_align_left et_pb_bg_layout_light">
+				
+				
+				
+				
+				<div class="et_pb_text_inner"><h2 style="text-align: center;">AI Assistant <i class="fa-regular fa-message-bot"></i></h2>
+<p style="text-align: center;">Get help now from UCI ZotDesk</p></div>
+			</div><div class="et_pb_module et_pb_text et_pb_text_6_tb_footer  et_pb_text_align_left et_pb_bg_layout_light">
+				
+				
+				
+				
+				<div class="et_pb_text_inner"><p style="text-align: center;"><a aria-label="ZotDesk - link opens in a new tab" class="et_pb_button" href="https://oit.uci.edu/zotdesk/" target="_blank" rel="noopener" title="Opens in new tab">Chat Now! <i class="fa-solid fa-arrow-up-right-from-square fa-xs"></i></a></p></div>
+			</div>
+			</div>
+				
+				
+				
+				
+			</div>
+				
+				
+			</div><div class="et_pb_section et_pb_section_2_tb_footer et_section_regular" >
+				
+				
+				
+				
+				
+				
+				<div class="et_pb_row et_pb_row_2_tb_footer">
+				<div class="et_pb_column et_pb_column_4_4 et_pb_column_6_tb_footer  et_pb_css_mix_blend_mode_passthrough et-last-child">
+				
+				
+				
+				
+				<div class="et_pb_module et_pb_text et_pb_text_7_tb_footer  et_pb_text_align_center et_pb_bg_layout_light">
+				
+				
+				
+				
+				<div class="et_pb_text_inner"><a href="https://oit.uci.edu/privacy-policy">Privacy</a> | © 2026 <a href="https://uci.edu/copyright/">UC Regents</a></div>
+			</div>
+			</div>
+				
+				
+				
+				
+			</div>
+				
+				
+			</div>		</div>
+	</footer>
+		</div>
+
+			
+		</div>
+		</div>
+
+			<script type="speculationrules">
+{"prefetch":[{"source":"document","where":{"and":[{"href_matches":"/*"},{"not":{"href_matches":["/wp-*.php","/wp-admin/*","/files/*","/wp-content/*","/wp-content/plugins/*","/wp-content/themes/divi/*","/*\\?(.+)"]}},{"not":{"selector_matches":"a[rel~=\"nofollow\"]"}},{"not":{"selector_matches":".no-prefetch, .no-prefetch a"}}]},"eagerness":"conservative"}]}
+</script>
+<style type="text/css">
+        .wmd-buttons-button,
+        .wmd-buttons-content {
+            display: inline-block;
+        }
+        .wmd-buttons-button {
+            text-decoration:none !important;
+            cursor:pointer;
+            position: relative;
+            text-decoration: none;
+            letter-spacing:1px;
+            margin:5px;
+        }
+        .wmd-buttons-button:hover {
+            opacity:0.8;
+            -moz-opacity: 0.8;
+            -khtml-opacity: 0.8;
+            -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=80)";
+            filter: alpha(opacity=80);
+        }        
+        </style>	<script type="text/javascript">
+				var et_link_options_data = [{"class":"et_pb_text_5_tb_footer","url":"https:\/\/oit.uci.ed\/zotdesk\/","target":"_self"}];
+			</script>
+	<script type="text/javascript" id="blog_templates_front-js-extra">
+/* <![CDATA[ */
+var blog_templates_params = {"type":""};
+//# sourceURL=blog_templates_front-js-extra
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://www.oit.uci.edu/wp-content/plugins/blogtemplates//blogtemplatesfiles/assets/js/front.js?ver=2.6.8.2" id="blog_templates_front-js"></script>
+<script type="text/javascript" id="toc-front-js-extra">
+/* <![CDATA[ */
+var tocplus = {"visibility_show":"show","visibility_hide":"hide","width":"Auto"};
+//# sourceURL=toc-front-js-extra
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://www.oit.uci.edu/wp-content/plugins/table-of-contents-plus/front.min.js?ver=2411.1" id="toc-front-js"></script>
+<script type="text/javascript" src="https://www.oit.uci.edu/wp-content/plugins/tipso/src/tipso.min.js" id="tipso-js-js"></script>
+<script type="text/javascript" id="calltipso-js-js-extra">
+/* <![CDATA[ */
+var tipsoData = {"speed":"400","background":"#55b555","color":"#ffffff","position":"top","width":"200","delay":"200"};
+//# sourceURL=calltipso-js-js-extra
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://www.oit.uci.edu/wp-content/plugins/tipso/admin/callTipso.js" id="calltipso-js-js"></script>
+<script type="text/javascript" src="https://www.oit.uci.edu/wp-content/plugins/coblocks/dist/js/coblocks-animation.js?ver=3.1.16.1" id="coblocks-animation-js"></script>
+<script type="text/javascript" id="divi-custom-script-js-extra">
+/* <![CDATA[ */
+var DIVI = {"item_count":"%d Item","items_count":"%d Items"};
+var et_builder_utils_params = {"condition":{"diviTheme":true,"extraTheme":false},"scrollLocations":["app","top"],"builderScrollLocations":{"desktop":"app","tablet":"app","phone":"app"},"onloadScrollLocation":"app","builderType":"fe"};
+var et_frontend_scripts = {"builderCssContainerPrefix":"#et-boc","builderCssLayoutPrefix":"#et-boc .et-l"};
+var et_pb_custom = {"ajaxurl":"https://www.oit.uci.edu/wp-admin/admin-ajax.php","images_uri":"https://www.oit.uci.edu/wp-content/themes/divi/images","builder_images_uri":"https://www.oit.uci.edu/wp-content/themes/divi/includes/builder/images","et_frontend_nonce":"04491b8546","subscription_failed":"Please, check the fields below to make sure you entered the correct information.","et_ab_log_nonce":"6925836b62","fill_message":"Please, fill in the following fields:","contact_error_message":"Please, fix the following errors:","invalid":"Invalid email","captcha":"Captcha","prev":"Prev","previous":"Previous","next":"Next","wrong_captcha":"You entered the wrong number in captcha.","wrong_checkbox":"Checkbox","ignore_waypoints":"no","is_divi_theme_used":"1","widget_search_selector":".widget_search","ab_tests":[],"is_ab_testing_active":"","page_id":"47951","unique_test_id":"","ab_bounce_rate":"5","is_cache_plugin_active":"yes","is_shortcode_tracking":"","tinymce_uri":"https://www.oit.uci.edu/wp-content/themes/divi/includes/builder/frontend-builder/assets/vendors","accent_color":"#0064a4","waypoints_options":[]};
+var et_pb_box_shadow_elements = [];
+//# sourceURL=divi-custom-script-js-extra
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://www.oit.uci.edu/wp-content/themes/divi/js/scripts.min.js?ver=4.27.4" id="divi-custom-script-js"></script>
+<script type="text/javascript" id="Divi-Blog-Extras-frontend-bundle-js-extra">
+/* <![CDATA[ */
+var DiviBlogExtrasFrontendData = {"ajaxurl":"https://www.oit.uci.edu/wp-admin/admin-ajax.php","ajax_nonce":"8a19346055","et_theme_accent_color":"#0064a4"};
+//# sourceURL=Divi-Blog-Extras-frontend-bundle-js-extra
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://www.oit.uci.edu/wp-content/plugins/divi-blog-extras/scripts/frontend-bundle.min.js?ver=2.7.0" id="Divi-Blog-Extras-frontend-bundle-js"></script>
+<script type="text/javascript" src="https://www.oit.uci.edu/wp-content/plugins/divi-post-data-wpcc/scripts/frontend-bundle.min.js?ver=1.0.0" id="divi-post-data-wpcc-frontend-bundle-js"></script>
+<script type="text/javascript" src="https://www.oit.uci.edu/wp-content/plugins/page-links-to/dist/new-tab.js?ver=3.3.7" id="page-links-to-js"></script>
+<script type="text/javascript" src="https://www.oit.uci.edu/wp-content/themes/divi/core/admin/js/common.js?ver=4.27.4" id="et-core-common-js"></script>
+<script type="text/javascript" src="https://www.oit.uci.edu/wp-content/plugins/wp-featherlight/js/wpFeatherlight.pkgd.min.js?ver=1.3.4" id="wp-featherlight-js"></script>
+<script type="text/javascript" id="wp-accessibility-js-extra">
+/* <![CDATA[ */
+var wpa = {"skiplinks":{"enabled":true,"output":"\u003Cdiv class=\"wpa-hide-ltr\" id=\"skiplinks\" role=\"navigation\" aria-label=\"Skip links\"\u003E\u003Ca href=\"#main-nav\" class='no-scroll et_smooth_scroll_disabled'\u003ESkip to navigation\u003C/a\u003E \u003Ca href=\"#search\" class='no-scroll et_smooth_scroll_disabled'\u003ESkip to Search\u003C/a\u003E \u003C/div\u003E"},"target":"","tabindex":"","underline":{"enabled":false,"target":"a"},"videos":"","dir":"ltr","lang":"en-US","titles":"1","labels":"1","wpalabels":{"s":"Search","author":"Name","email":"Email","url":"Website","comment":"Comment"},"alt":"","altSelector":".hentry img[alt]:not([alt=\"\"]), .comment-content img[alt]:not([alt=\"\"]), #content img[alt]:not([alt=\"\"]),.entry-content img[alt]:not([alt=\"\"])","current":"","errors":"","tracking":"","ajaxurl":"https://www.oit.uci.edu/wp-admin/admin-ajax.php","security":"c0828d3126","action":"wpa_stats_action","url":"disabled","post_id":"47951","continue":"","pause":"Pause video","play":"Play video","restUrl":"https://www.oit.uci.edu/wp-json/wp/v2/media","ldType":"button","ldHome":"https://www.oit.uci.edu","ldText":"\u003Cspan class=\"dashicons dashicons-media-text\" aria-hidden=\"true\"\u003E\u003C/span\u003E\u003Cspan class=\"screen-reader\"\u003ELong Description\u003C/span\u003E"};
+//# sourceURL=wp-accessibility-js-extra
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://www.oit.uci.edu/wp-content/plugins/wp-accessibility/js/wp-accessibility.min.js?ver=2.2.5" id="wp-accessibility-js" defer="defer" data-wp-strategy="defer"></script>
+<script type="text/javascript" id="divi-accessibility-da11y-js-extra">
+/* <![CDATA[ */
+var _da11y = {"version":"2.0.5","active_outline_color":"#2ea3f2","skip_navigation_link_text":"Skip to content"};
+//# sourceURL=divi-accessibility-da11y-js-extra
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://www.oit.uci.edu/wp-content/plugins/divi-accessibility/public/js/da11y.js?ver=2.0.5" id="divi-accessibility-da11y-js"></script>
+<script type="text/javascript" id="divi-accessibility-da11y-js-after">
+/* <![CDATA[ */
+jQuery(document).ready((function(e){function n(){const n=e(".et_search_form_container");n.hasClass("et_pb_is_animating")||(e(".et_menu_container").removeClass("et_pb_menu_visible et_pb_no_animation").addClass("et_pb_menu_hidden"),n.removeClass("et_pb_search_form_hidden et_pb_no_animation").addClass("et_pb_search_visible et_pb_is_animating"),setTimeout((function(){e(".et_menu_container").addClass("et_pb_no_animation"),n.addClass("et_pb_no_animation").removeClass("et_pb_is_animating")}),1e3),n.find("input").focus(),function(){const n=e(".et_search_form_container"),s=e("body");if(n.hasClass("et_pb_search_visible")){const a=e("#main-header").innerHeight(),i=e("#top-menu").width(),t=e("#top-menu li a").css("font-size");n.css({height:a+"px"}),n.find("input").css("font-size",t),s.hasClass("et_header_style_left")?n.find("form").css("max-width",i+60):n.css("max-width",i+60)}}())}e(".et-menu > li").on("focusout",(function(){e(this).removeClass("et-hover")})),e(".menu-item-has-children > a").length&&(e(".menu-item-has-children > a").addClass("da11y-submenu"),e(".menu-item-has-children > a").attr("aria-expanded","false")),e(".menu-item a").on("focus",(function(){e(this).siblings(".da11y-submenu").attr("aria-expanded","true"),e(this).siblings(".sub-menu").addClass("da11y-submenu-show"),e(this).trigger("mouseenter")})),e(".menu-item-has-children a").on("focusout",(function(){e(this).parent().not(".menu-item-has-children").is(":last-child")&&e(this).parents(".menu-item-has-children").children(".da11y-submenu").attr("aria-expanded","false").trigger("mouseleave").siblings(".sub-menu").removeClass("da11y-submenu-show")})),e(".menu-item-has-children a").keyup((function(n){if(27===n.keyCode){var s=e(this).parents(".menu-item-has-children").last();s.length&&(s.children("a").focus(),s.find(".da11y-submenu").attr("aria-expanded","false").trigger("mouseleave").siblings(".sub-menu").removeClass("da11y-submenu-show"))}})),e(this).keyup((function(){e(".et-search-field").focus((function(){n()})).blur((function(){e(".et_search_form_container").hasClass("et_pb_is_animating")||(e(".et_menu_container").removeClass("et_pb_menu_hidden et_pb_no_animation").addClass("et_pb_menu_visible"),e(".et_search_form_container").removeClass("et_pb_search_visible et_pb_no_animation").addClass("et_pb_search_form_hidden et_pb_is_animating"),setTimeout((function(){e(".et_menu_container").addClass("et_pb_no_animation"),e(".et_search_form_container").addClass("et_pb_no_animation").removeClass("et_pb_is_animating")}),1e3))}))}))}));
+jQuery(document).ready((function(n){const t=((window||{})._da11y||{}).skip_navigation_link_text||!1;!function(e){const i='<a href="'+e+'" class="skip-link da11y-screen-reader-text">'+t+"</a>";n(e).attr("tabindex",-1),n("body").prepend(i)}("#main-content"),n('a[href^="#"]').click((function(){n("#"+n(this).attr("href").slice(1)).focus()}))}));
+jQuery(document).ready((function(e){let n=new Date,o=new Date;e(this).on("focusin",(function(t){e(".keyboard-outline").removeClass("keyboard-outline");o<n&&e(t.target).addClass("keyboard-outline")})),e(this).on("mousedown",(function(){o=new Date})),e(this).on("keydown",(function(){n=new Date}))}));
+jQuery(document).ready((function(t){t(".et_pb_toggle").each((function(e){var a=t(this),o=a.find(".et_pb_toggle_title"),_=a.find(".et_pb_toggle_content"),i=a.hasClass("et_pb_accordion_item");o.attr("role","button"),o.attr("tabindex",0),o.attr("aria-controls","et_pb_toggle_content_"+e),_.attr("id","et_pb_toggle_content_"+e),a.hasClass("et_pb_toggle_open")?(o.attr("aria-expanded",!0),i&&o.attr("aria-disabled",!0)):(o.attr("aria-expanded",!1),i&&o.removeAttr("aria-disabled"))})),t(".et_pb_toggle_title").on("keydown",(function(t){32===t.which&&t.preventDefault()})),t(document).on("keyup",(function(e){13!==e.which&&32!==e.which||t(".et_pb_toggle_title:focus").trigger("click")})),t(".et_pb_toggle_title").on("click",(function(){var e=t(this),a=e.parent();a.hasClass("et_pb_accordion_item")?a.hasClass("et_pb_toggle_open")||(e.closest(".et_pb_accordion").find(".et_pb_toggle").each((function(){if($toggle=t(this),$toggle.hasClass("et_pb_toggle_open")){var e=$toggle.find(".et_pb_toggle_title");e.attr("aria-expanded",!1),e.removeAttr("aria-disabled")}})),setTimeout((function(){e.attr("aria-expanded",!0),e.attr("aria-disabled",!0)}),500)):a.hasClass("et_pb_toggle_open")?e.attr("aria-expanded",!1):e.attr("aria-expanded",!0)}))}));
+jQuery(document).ready((function(e){e(".et-search-field").each((function(t){e(this).attr("id","et_pb_search_module_input_"+t),e("#et_pb_search_module_input_"+t).before('<label class="da11y-screen-reader-text" for="et_pb_search_module_input_'+t+'">Search for...</label>'),e("#et_pb_search_module_input_"+t).after('<button type="submit" class="da11y-screen-reader-text">Search</button>')})),e(".et_pb_s").each((function(t){e(this).attr("id","et_pb_s_module_input_"+t),e("#et_pb_s_module_input_"+t).before('<label class="da11y-screen-reader-text" for="et_pb_s_module_input_'+t+'">Search for...</label>')})),e(".et_pb_contact_form").each((function(){e(this).find(".et_pb_contact_captcha_question").parent().wrap("<label></label>")})),e(".et-social-facebook a.icon span").text("Facebook"),e(".et-social-twitter a.icon span").text("Twitter"),e(".et-social-google-plus a.icon span").text("Google Plus"),e(".et-social-pinterest a.icon span").text("Pinterest"),e(".et-social-linkedin a.icon span").text("LinkedIn"),e(".et-social-tumblr a.icon span").text("Tumblr"),e(".et-social-instagram a.icon span").text("Instagram"),e(".et-social-skype a.icon span").text("Skype"),e(".et-social-flikr a.icon span").text("Flickr"),e(".et-social-myspace a.icon span").text("Myspace"),e(".et-social-dribbble a.icon span").text("Dribble"),e(".et-social-youtube a.icon span").text("YouTube"),e(".et-social-vimeo a.icon span").text("Vimeo"),e(".et-social-rss a.icon span").text("RSS")}));
+jQuery(document).ready((function(t){t(".et_pb_tabs_controls").each((function(){t(this).attr("role","tablist")})),t(".et_pb_tabs_controls li").each((function(){t(this).attr("role","presentation")})),t(".et_pb_tabs_controls a").each((function(){t(this).attr({role:"tab"})})),t(".et_pb_tab").each((function(){t(this).attr("role","tabpanel")})),t(".et_pb_tabs_controls li:not(.et_pb_tab_active) a").each((function(){t(this).attr({"aria-selected":"false","aria-expanded":"false",tabindex:-1})})),t(".et_pb_tabs_controls li.et_pb_tab_active a").each((function(){t(this).attr({"aria-selected":"true","aria-expanded":"true",tabindex:0})})),t("ul.sub-menu .menu-item a").each((function(){t(this).attr({"aria-haspopup":"true"})})),t("a:not(.et-social-icon a, .wp-block-button__link, figure a, .et_pb_button, .et_pb_video_play a, .et_pb_tabs_controls a)").each((function(){t(this).attr({role:"link"})})),t("#et_search_icon, .et_close_search_field, #et_mobile_nav_menu, #searchsubmit, .icon, .wp-block-button__link, .et_pb_button, .et_pb_video_play a").each((function(){t(this).attr({role:"button"})})),t("#g-recaptcha-response").each((function(){t(this).attr({"aria-hidden":"true","aria-label":"do not use","aria-readonly":"true"})})),t(".et_pb_tabs_controls a").each((function(a){t(this).attr({id:"et_pb_tab_control_"+a,"aria-controls":"et_pb_tab_panel_"+a})})),t(".et_pb_tab").each((function(a){t(this).attr({id:"et_pb_tab_panel_"+a,"aria-labelledby":"et_pb_tab_control_"+a})})),t(".et_pb_tab.et_pb_active_content").each((function(){t(this).attr("aria-hidden","false")})),t(".et_pb_tab:not(.et_pb_active_content)").each((function(){t(this).attr("aria-hidden","true")})),t(".et_pb_tabs").each((function(a){t(this).attr("data-da11y-id","et_pb_tab_module_"+a)})),t(".et_pb_tabs_controls a").on("click",(function(){const a=t(this).attr("id"),e=t(this).closest(".et_pb_tabs").attr("data-da11y-id");t('[data-da11y-id="'+e+'"] .et_pb_tabs_controls a').attr({"aria-selected":"false","aria-expanded":"false",tabindex:-1}),t(this).attr({"aria-selected":"true","aria-expanded":"true",tabindex:0}),t("#"+e+" .et_pb_tab").attr("aria-hidden","true"),t('[aria-labelledby="'+a+'"]').attr("aria-hidden","false")})),t(".et_pb_tabs_controls a").keyup((function(a){const e=t(this).closest(".et_pb_tabs").attr("data-da11y-id"),i=t('[data-da11y-id="'+e+'"]');if(39===a.which){const t=i.find("li.et_pb_tab_active").next();t.length>0?t.find("a").trigger("click"):i.find("li:first a").trigger("click")}else if(37===a.which){const t=i.find("li.et_pb_tab_active").prev();t.length>0?t.find("a").trigger("click"):i.find("li:last a").trigger("click")}t(".et_pb_tabs_controls a").removeClass("keyboard-outline"),i.find("li.et_pb_tab_active a").addClass("keyboard-outline")})),t(".et_pb_search").each((function(a){t(this).attr("data-da11y-id","et_pb_search_module_"+a)})),t('[data-required_mark="required"]').each((function(){t(this).attr("aria-required","true")})),t(".et_pb_contactform_validate_field").attr("type","hidden"),t(".et-pb-contact-message").attr("role","alert"),t("#main-content").attr("role","main"),t(".et_pb_fullwidth_header").each((function(a){t(this).attr("aria-label","Wide Header"+a)})),t("#comment-wrap").attr("aria-label","Comments"),t(".aria-hidden").each((function(a,e){!function a(e){const i=t(e);t(e).attr("aria-hidden","true");for(const t of i.children())a(t)}(e)}))}));
+jQuery(document).ready((function(e){e("#et_top_search, .et_close_search_field, .et_pb_main_blurb_image").attr("aria-hidden","true")}));
+jQuery(document).ready((function(e){e(".mobile_menu_bar").attr({role:"button","aria-expanded":"false","aria-label":"Menu",tabindex:0}),e(".mobile_menu_bar").on("click",(function(){e(this).hasClass("a11y-mobile-menu-open")?e(this).removeClass("a11y-mobile-menu-open").attr("aria-expanded","false"):e(this).addClass("a11y-mobile-menu-open").attr("aria-expanded","true")})),e(".mobile_menu_bar").keyup((function(n){13!==n.keyCode&&32!==n.keyCode||e(".mobile_menu_bar").click()})),e(document).keyup((function(n){27===n.keyCode&&e("#et_mobile_nav_menu .mobile_nav").hasClass("opened")&&e(".mobile_menu_bar").click()})),e(this).on("focusin",(function(){e("#et_mobile_nav_menu .mobile_nav").hasClass("opened")&&(e("#et_mobile_nav_menu .et_mobile_menu :focus").length||e("#et_mobile_nav_menu .mobile_menu_bar").click())}))}));
+//# sourceURL=divi-accessibility-da11y-js-after
+/* ]]> */
+</script>
+<style id="et-builder-module-design-tb-42182-tb-36676-tb-36650-47951-cached-inline-styles">.et_divi_builder #et_builder_outer_content .et_pb_module.et_pb_text ul,.et_divi_builder #et_builder_outer_content .et_pb_module.et_pb_text ol{padding:0 0 23px 16px}.et_divi_builder #et_builder_outer_content .et_pb_module.et_pb_text ul li{list-style-type:disc}.et_divi_builder #et_builder_outer_content .et_pb_module.et_pb_text ol li{list-style-type:decimal}.et_pb_section_0_tb_header.et_pb_section{padding-top:6px;padding-bottom:0px;background-color:#1B3D6D!important}.et_pb_row_0_tb_header.et_pb_row{padding-top:2px!important;padding-bottom:1px!important;padding-top:2px;padding-bottom:1px}.et_pb_row_0_tb_header,body #page-container .et-db #et-boc .et-l .et_pb_row_0_tb_header.et_pb_row,body.et_pb_pagebuilder_layout.single #page-container #et-boc .et-l .et_pb_row_0_tb_header.et_pb_row,body.et_pb_pagebuilder_layout.single.et_full_width_page #page-container #et-boc .et-l .et_pb_row_0_tb_header.et_pb_row{width:95%}.et_pb_text_0_tb_header.et_pb_text{color:#ffffff!important}.et_pb_text_0_tb_header.et_pb_text:hover,.et_pb_text_0_tb_header.et_pb_text a:hover{color:#FFD200!important}.et_pb_text_0_tb_header{font-family:'Montserrat',Helvetica,Arial,Lucida,sans-serif;font-weight:500;font-size:1.2rem;padding-bottom:6px!important}.et_pb_text_0_tb_header.et_pb_text a{color:#FFFFFF!important}.et_pb_text_0_tb_header.et_pb_text,.et_pb_text_0_tb_header.et_pb_text a{transition:color 300ms ease 0ms}.et_pb_section_1_tb_header.et_pb_section{padding-top:17px;padding-bottom:10px}.et_pb_row_1_tb_header.et_pb_row{margin-bottom:16px!important}.et_pb_row_1_tb_header,body #page-container .et-db #et-boc .et-l .et_pb_row_1_tb_header.et_pb_row,body.et_pb_pagebuilder_layout.single #page-container #et-boc .et-l .et_pb_row_1_tb_header.et_pb_row,body.et_pb_pagebuilder_layout.single.et_full_width_page #page-container #et-boc .et-l .et_pb_row_1_tb_header.et_pb_row,.et_pb_section_2_tb_header,.et_pb_section_3_tb_header{width:100%}.et_pb_image_0_tb_header{padding-top:10px;padding-right:7%;padding-left:7%;width:85%;text-align:left;margin-left:0}.et_pb_menu_0_tb_header.et_pb_menu ul li a{font-family:'Montserrat',Helvetica,Arial,Lucida,sans-serif;font-weight:600;font-size:1.1rem;color:#255799!important;transition:color 300ms ease 0ms}.et_pb_menu_0_tb_header.et_pb_menu ul li:hover>a{color:#F78D2D!important}.et_pb_menu_0_tb_header.et_pb_menu{background-color:RGBA(0,0,0,0);min-height:44px}.et_pb_menu_0_tb_header{padding-top:16px;width:100%;max-width:100%}.et_pb_menu_0_tb_header.et_pb_menu ul li.current-menu-item a{color:#1B3D6D!important}.et_pb_menu_0_tb_header.et_pb_menu .nav li ul{background-color:#FFFFFF!important;border-color:#FFD200}.et_pb_menu_0_tb_header.et_pb_menu .et_mobile_menu{border-color:#FFD200}.et_pb_menu_0_tb_header.et_pb_menu .nav li ul.sub-menu a{color:#000000!important}.et_pb_menu_0_tb_header.et_pb_menu .nav li ul.sub-menu li.current-menu-item a,.et_pb_menu_0_tb_header.et_pb_menu .et_mobile_menu a{color:#0064A4!important}.et_pb_menu_0_tb_header.et_pb_menu .et_mobile_menu,.et_pb_menu_0_tb_header.et_pb_menu .et_mobile_menu ul{background-color:#FFFFFF!important}.et_pb_menu_0_tb_header.et_pb_menu nav>ul>li>a:hover{opacity:1}.et_pb_menu_0_tb_header .et_pb_menu_inner_container>.et_pb_menu__logo-wrap,.et_pb_menu_0_tb_header .et_pb_menu__logo-slot{width:100%;max-width:100%}.et_pb_menu_0_tb_header .et_pb_menu_inner_container>.et_pb_menu__logo-wrap .et_pb_menu__logo img,.et_pb_menu_0_tb_header .et_pb_menu__logo-slot .et_pb_menu__logo-wrap img{height:auto;max-height:none}.et_pb_menu_0_tb_header .mobile_nav .mobile_menu_bar:before,.et_pb_menu_0_tb_header .et_pb_menu__icon.et_pb_menu__search-button,.et_pb_menu_0_tb_header .et_pb_menu__icon.et_pb_menu__close-search-button,.et_pb_menu_0_tb_header .et_pb_menu__icon.et_pb_menu__cart-button{color:#0064a4}div.et_pb_section.et_pb_section_2_tb_header,div.et_pb_section.et_pb_section_3_tb_header{background-image:url(https://sites.oit.uci.edu/main/files/2021/07/wave-gradient.png),linear-gradient(88deg,#ffd200 0%,#0064a4 100%)!important}.et_pb_section_2_tb_header.et_pb_section{padding-top:16px;padding-bottom:5px}.et_pb_section_3_tb_header.et_pb_section{padding-top:16px;padding-bottom:5px;background-color:#1B3D6D!important}.et_pb_search_0_tb_header input.et_pb_searchsubmit{font-weight:700;font-size:0.9em;color:#FFFFFF!important;line-height:1.1em!important;background-color:#1B3D6D!important;border-color:#1B3D6D!important}.et_pb_search_0_tb_header form input.et_pb_s,.et_pb_search_0_tb_header form input.et_pb_s::placeholder{font-size:0.9em;font-size:0.9em;font-size:0.9em;font-size:0.9em}.et_pb_search_0_tb_header form input.et_pb_s::-ms-input-placeholder{font-size:0.9em;font-size:0.9em;font-size:0.9em;font-size:0.9em}.et_pb_search_0_tb_header form input.et_pb_s::-webkit-input-placeholder{font-size:0.9em;font-size:0.9em;font-size:0.9em;font-size:0.9em;color:rgba(0,0,0,0.58)!important}.et_pb_search_0_tb_header form input.et_pb_s::-moz-placeholder{font-size:0.9em;color:rgba(0,0,0,0.58)!important}.et_pb_search_0_tb_header form input.et_pb_s::-moz-placeholder::-webkit-input-placeholder{font-size:0.9em}.et_pb_search_0_tb_header form input.et_pb_s::-moz-placeholder::-moz-placeholder{font-size:0.9em}.et_pb_search_0_tb_header form input.et_pb_s::-moz-placeholder::-ms-input-placeholder{font-size:0.9em}.et_pb_search_0_tb_header .et_pb_searchform{background-color:RGBA(0,0,0,0)}.et_pb_search_0_tb_header{overflow-x:hidden;overflow-y:hidden;box-shadow:0px 12px 18px -6px rgba(0,0,0,0.3)}.et_pb_search_0_tb_header input.et_pb_s{padding-top:0.715em!important;padding-right:0.715em!important;padding-bottom:0.715em!important;padding-left:0.715em!important;border-color:#1B3D6D!important;height:auto;min-height:0}.et_pb_search_0_tb_header form input.et_pb_s{background-color:rgba(255,255,255,0.95)}.et_pb_search_0_tb_header form input.et_pb_s:focus{color:#000000}.et_pb_search_0_tb_header form input.et_pb_s:-ms-input-placeholder{color:rgba(0,0,0,0.58)!important}@media only screen and (max-width:980px){.et_pb_image_0_tb_header .et_pb_image_wrap img{width:auto}}@media only screen and (max-width:767px){.et_pb_image_0_tb_header .et_pb_image_wrap img{width:auto}}.et_divi_builder #et_builder_outer_content .et_pb_module.et_pb_text ul,.et_divi_builder #et_builder_outer_content .et_pb_module.et_pb_text ol{padding:0 0 23px 16px}.et_divi_builder #et_builder_outer_content .et_pb_module.et_pb_text ul li{list-style-type:disc}.et_divi_builder #et_builder_outer_content .et_pb_module.et_pb_text ol li{list-style-type:decimal}.et_pb_section_0_tb_body.et_pb_section{padding-top:3px;padding-bottom:0px}.et_pb_row_0_tb_body.et_pb_row{padding-top:0px!important;margin-top:0px!important;padding-top:0px}.et_pb_row_0_tb_body,body #page-container .et-db #et-boc .et-l .et_pb_row_0_tb_body.et_pb_row,body.et_pb_pagebuilder_layout.single #page-container #et-boc .et-l .et_pb_row_0_tb_body.et_pb_row,body.et_pb_pagebuilder_layout.single.et_full_width_page #page-container #et-boc .et-l .et_pb_row_0_tb_body.et_pb_row{width:100%}.et_pb_post_content_0_tb_body{padding-top:0px;margin-top:0px}.dpdw_post_data_0_tb_body .postData__body{text-align:center}.dpdw_post_data_0_tb_body .postData__wrapper{text-align:center}.et_pb_column_0_tb_body{padding-top:0px}.et_divi_builder #et_builder_outer_content .et_pb_module.et_pb_text ul,.et_divi_builder #et_builder_outer_content .et_pb_module.et_pb_text ol{padding:0 0 23px 16px}.et_divi_builder #et_builder_outer_content .et_pb_module.et_pb_text ul li{list-style-type:disc}.et_divi_builder #et_builder_outer_content .et_pb_module.et_pb_text ol li{list-style-type:decimal}.et_pb_section_0_tb_footer{min-height:100px}.et_pb_section_0_tb_footer.et_pb_section{padding-top:13px;padding-bottom:5px;background-color:#002244!important}.et_pb_section_0_tb_footer.section_has_divider.et_pb_bottom_divider .et_pb_bottom_inside_divider{background-image:url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIyMnB4IiB2aWV3Qm94PSIwIDAgMTI4MCAxNDAiIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGcgZmlsbD0iI2ZmZmZmZiI+PHBhdGggZD0iTTEyODAgMGwtMjY2IDkxLjUyYTcyLjU5IDcyLjU5IDAgMCAxLTMwLjc2IDMuNzFMMCAwdjE0MGgxMjgweiIgZmlsbC1vcGFjaXR5PSIuNSIvPjxwYXRoIGQ9Ik0xMjgwIDBsLTI2Mi4xIDExNi4yNmE3My4yOSA3My4yOSAwIDAgMS0zOS4wOSA2TDAgMHYxNDBoMTI4MHoiLz48L2c+PC9zdmc+);background-size:100% 22px;bottom:0;height:22px;z-index:1;transform:scale(1,1)}.et_pb_row_0_tb_footer,body #page-container .et-db #et-boc .et-l .et_pb_row_0_tb_footer.et_pb_row,body.et_pb_pagebuilder_layout.single #page-container #et-boc .et-l .et_pb_row_0_tb_footer.et_pb_row,body.et_pb_pagebuilder_layout.single.et_full_width_page #page-container #et-boc .et-l .et_pb_row_0_tb_footer.et_pb_row{width:70%}.et_pb_text_0_tb_footer.et_pb_text{color:#FFFFFF!important}.et_pb_text_0_tb_footer{font-family:'Roboto Slab',Georgia,"Times New Roman",serif;font-size:1.3em;overflow-x:visible;overflow-y:visible;padding-top:0px!important;margin-top:0px!important}.et_pb_text_0_tb_footer h2{font-size:1.1em;color:#FFFFFF!important}.et_pb_text_0_tb_footer h3{color:#FFFFFF!important;text-align:right}.et_pb_image_0_tb_footer{width:50px;float:left;text-align:left;margin-left:0}.et_pb_image_1_tb_footer .et_pb_image_wrap{border-radius:8px 8px 8px 8px;overflow:hidden}.et_pb_image_1_tb_footer{margin-left:10px!important;width:50px;float:left;text-align:left;margin-left:0}.et_pb_section_1_tb_footer.et_pb_section{padding-bottom:5px}.et_pb_row_1_tb_footer,body #page-container .et-db #et-boc .et-l .et_pb_row_1_tb_footer.et_pb_row,body.et_pb_pagebuilder_layout.single #page-container #et-boc .et-l .et_pb_row_1_tb_footer.et_pb_row,body.et_pb_pagebuilder_layout.single.et_full_width_page #page-container #et-boc .et-l .et_pb_row_1_tb_footer.et_pb_row{width:90%}.et_pb_text_1_tb_footer a,.et_pb_text_2_tb_footer a,.et_pb_text_3_tb_footer a,.et_pb_text_7_tb_footer a{text-decoration:underline}.et_pb_section_2_tb_footer.et_pb_section{padding-top:2px;padding-bottom:2px}.et_pb_text_7_tb_footer{font-size:0.9em}.et_pb_column_5_tb_footer{border-top-width:6px;border-top-color:#1B3D6D;box-shadow:0px 12px 18px -6px rgba(0,0,0,0.3)}.et_pb_row_0_tb_footer.et_pb_row{padding-top:11px!important;padding-bottom:33px!important;margin-left:auto!important;margin-right:auto!important;padding-top:11px;padding-bottom:33px}@media only screen and (max-width:980px){.et_pb_text_0_tb_footer h3{text-align:center}.et_pb_image_0_tb_footer .et_pb_image_wrap img,.et_pb_image_1_tb_footer .et_pb_image_wrap img{width:auto}.et_pb_column_5_tb_footer{border-top-width:6px;border-top-color:#1B3D6D}}@media only screen and (max-width:767px){.et_pb_column_0_tb_footer,.et_pb_column_1_tb_footer{display:none!important}.et_pb_text_0_tb_footer h3{text-align:center}.et_pb_image_0_tb_footer .et_pb_image_wrap img,.et_pb_image_1_tb_footer .et_pb_image_wrap img{width:auto}.et_pb_column_5_tb_footer{border-top-width:6px;border-top-color:#1B3D6D}}.et_divi_builder #et_builder_outer_content .et_pb_module.et_pb_text ul,.et_divi_builder #et_builder_outer_content .et_pb_module.et_pb_text ol{padding:0 0 23px 16px}.et_divi_builder #et_builder_outer_content .et_pb_module.et_pb_text ul li{list-style-type:disc}.et_divi_builder #et_builder_outer_content .et_pb_module.et_pb_text ol li{list-style-type:decimal}.et_pb_section_0.et_pb_section{padding-top:3px}.et_pb_row_0.et_pb_row{padding-bottom:0px!important;margin-bottom:20px!important}.et_pb_row_0,body #page-container .et-db #et-boc .et-l .et_pb_row_0.et_pb_row,body.et_pb_pagebuilder_layout.single #page-container #et-boc .et-l .et_pb_row_0.et_pb_row,body.et_pb_pagebuilder_layout.single.et_full_width_page #page-container #et-boc .et-l .et_pb_row_0.et_pb_row,.et_pb_row_1,body #page-container .et-db #et-boc .et-l .et_pb_row_1.et_pb_row,body.et_pb_pagebuilder_layout.single #page-container #et-boc .et-l .et_pb_row_1.et_pb_row,body.et_pb_pagebuilder_layout.single.et_full_width_page #page-container #et-boc .et-l .et_pb_row_1.et_pb_row,.et_pb_row_2,body #page-container .et-db #et-boc .et-l .et_pb_row_2.et_pb_row,body.et_pb_pagebuilder_layout.single #page-container #et-boc .et-l .et_pb_row_2.et_pb_row,body.et_pb_pagebuilder_layout.single.et_full_width_page #page-container #et-boc .et-l .et_pb_row_2.et_pb_row,.et_pb_row_3,body #page-container .et-db #et-boc .et-l .et_pb_row_3.et_pb_row,body.et_pb_pagebuilder_layout.single #page-container #et-boc .et-l .et_pb_row_3.et_pb_row,body.et_pb_pagebuilder_layout.single.et_full_width_page #page-container #et-boc .et-l .et_pb_row_3.et_pb_row,.et_pb_row_4,body #page-container .et-db #et-boc .et-l .et_pb_row_4.et_pb_row,body.et_pb_pagebuilder_layout.single #page-container #et-boc .et-l .et_pb_row_4.et_pb_row,body.et_pb_pagebuilder_layout.single.et_full_width_page #page-container #et-boc .et-l .et_pb_row_4.et_pb_row,.et_pb_row_5,body #page-container .et-db #et-boc .et-l .et_pb_row_5.et_pb_row,body.et_pb_pagebuilder_layout.single #page-container #et-boc .et-l .et_pb_row_5.et_pb_row,body.et_pb_pagebuilder_layout.single.et_full_width_page #page-container #et-boc .et-l .et_pb_row_5.et_pb_row{width:90%}.et_pb_row_1.et_pb_row{padding-bottom:0px!important;margin-bottom:20px!important;padding-bottom:0px}.et_pb_row_2.et_pb_row,.et_pb_row_3.et_pb_row{padding-top:0px!important;padding-bottom:0px!important;padding-top:0px;padding-bottom:0px}.et_pb_text_1.et_pb_text{color:#555555!important}.et_pb_text_1{font-size:20px;padding-bottom:10px!important;margin-bottom:0px!important}.et_pb_button_0_wrapper,.et_pb_button_1_wrapper,.et_pb_button_2_wrapper,.et_pb_button_3_wrapper,.et_pb_button_4_wrapper{margin-right:20px!important}body #page-container .et_pb_section .et_pb_button_0,body #page-container .et_pb_section .et_pb_button_1,body #page-container .et_pb_section .et_pb_button_2,body #page-container .et_pb_section .et_pb_button_3,body #page-container .et_pb_section .et_pb_button_4{border-color:#0064A4;font-size:1em}body #page-container .et_pb_section .et_pb_button_0,body #page-container .et_pb_section .et_pb_button_0:hover,body #page-container .et_pb_section .et_pb_button_1,body #page-container .et_pb_section .et_pb_button_1:hover,body #page-container .et_pb_section .et_pb_button_2,body #page-container .et_pb_section .et_pb_button_2:hover,body #page-container .et_pb_section .et_pb_button_3,body #page-container .et_pb_section .et_pb_button_3:hover,body #page-container .et_pb_section .et_pb_button_4,body #page-container .et_pb_section .et_pb_button_4:hover{padding:0.3em 1em!important}body #page-container .et_pb_section .et_pb_button_0:before,body #page-container .et_pb_section .et_pb_button_0:after,body #page-container .et_pb_section .et_pb_button_1:before,body #page-container .et_pb_section .et_pb_button_1:after,body #page-container .et_pb_section .et_pb_button_2:before,body #page-container .et_pb_section .et_pb_button_2:after,body #page-container .et_pb_section .et_pb_button_3:before,body #page-container .et_pb_section .et_pb_button_3:after,body #page-container .et_pb_section .et_pb_button_4:before,body #page-container .et_pb_section .et_pb_button_4:after{display:none!important}.et_pb_button_0,.et_pb_button_1,.et_pb_button_2,.et_pb_button_3,.et_pb_button_4{box-shadow:0px 12px 18px -6px rgba(0,0,0,0.3)}.et_pb_button_0,.et_pb_button_0:after,.et_pb_button_1,.et_pb_button_1:after,.et_pb_button_2,.et_pb_button_2:after,.et_pb_button_3,.et_pb_button_3:after,.et_pb_button_4,.et_pb_button_4:after{transition:all 300ms ease 0ms}.et_pb_row_4.et_pb_row{padding-top:20px!important;padding-top:20px}.et_pb_text_2{font-size:21px;margin-bottom:26px!important}.et_pb_tabs_0.et_pb_tabs .et_pb_tabs_controls li a{color:#000000!important}.et_pb_tabs_0.et_pb_tabs .et_pb_all_tabs .et_pb_tab ol li{line-height:1.5em;list-style-position:outside}.et_pb_tabs_0.et_pb_tabs .et_pb_all_tabs .et_pb_tab ol{padding-left:20px!important}.et_pb_tabs_0.et_pb_tabs{border-radius:4px 4px 4px 4px;overflow:hidden}.et_pb_tabs_0.et_pb_tabs .et_pb_tabs_controls li.et_pb_tab_active a{color:#0064A4!important}.et_pb_text_3 h2{font-size:28px}.et_pb_text_3 h3{font-size:18px}.et_pb_text_3{background-color:#fafafa;border-radius:4px 4px 4px 4px;overflow:hidden;border-top-width:24px;border-color:#6AA2B8 #eeeeee #eeeeee #eeeeee;padding-top:16px!important;padding-right:18px!important;padding-bottom:16px!important;padding-left:18px!important;box-shadow:0px 12px 18px -6px rgba(0,0,0,0.3)}.et_pb_section_1.et_pb_section{background-color:rgba(106,162,184,0.59)!important}.et_pb_section_1.section_has_divider.et_pb_top_divider .et_pb_top_inside_divider{background-image:url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIyNXB4IiB2aWV3Qm94PSIwIDAgMTI4MCAxNDAiIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGcgZmlsbD0iI2ZmZmZmZiI+PHBhdGggZD0iTTAgOTAuNzJsMTQwLTI4LjI4IDMxNS41MiAyNC4xNEw3OTYuNDggNjUuOCAxMTQwIDEwNC44OWwxNDAtMTQuMTdWMEgwdjkwLjcyeiIgZmlsbC1vcGFjaXR5PSIuNSIvPjxwYXRoIGQ9Ik0wIDB2NDcuNDRMMTcwIDBsNjI2LjQ4IDk0Ljg5TDExMTAgODcuMTFsMTcwLTM5LjY3VjBIMHoiLz48L2c+PC9zdmc+);background-size:100% 25px;top:0;height:25px;z-index:1;transform:scale(1,1)}.et_pb_accordion_item_0.et_pb_toggle{display:none}.et_pb_accordion_0 .et_pb_toggle_title:before{font-size:25px;right:-5px;color:#6AA2B8}@media only screen and (max-width:980px){.et_pb_text_3{border-top-width:24px;border-top-color:#6AA2B8}}@media only screen and (max-width:767px){.et_pb_text_3{border-top-width:24px;border-top-color:#6AA2B8}}</style>	
+			<span class="et_pb_scroll_top et-pb-icon"></span>
+	</body>
+</html>

@@ -1,0 +1,156 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-WHT8PT');</script>
+<!-- End Google Tag Manager -->
+
+    <title>
+	MyCIU - Columbia International University Portal
+</title><link rel="Shortcut Icon" href="/ICS/favicon.ico?v=2" type="image/x-icon" /><link rel="stylesheet" type="text/css" href="/ICSFileServer/Themes/CIUAegean/style.css" />
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js" type="text/javascript">
+	<script type="text/javascript" src="/ICSFileServer/Themes/CIUAegean/javascript.js"></script>
+
+	<!-- Responsive and mobile friendly stuff -->
+	<meta name="HandheldFriendly" content="True" /><meta name="MobileOptimized" content="320" /><meta name="viewport" content="width=device-width, target-densitydpi=160dpi, initial-scale=1.0, minimum-scale=1.0" />
+	<!-- END CIU CUSTOM MODIFICATIONS -->
+
+	<!-- style for MyCIU.aspx -->
+    <link rel="stylesheet" type="text/css" href="ClientConfig/MyCIU/myCIUstyles.css" />
+
+    <!-- Include Open Sans and Roboto - BD -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400" rel="stylesheet" type="text/css" /><link href="https://fonts.googleapis.com/css?family=Roboto:400,100" rel="stylesheet" type="text/css" />
+    
+    <!-- Include my CSS file (or copy & paste into the head) - BD -->
+    <link rel="stylesheet" type="text/css" href="ClientConfig/MyCIU/myCIUbd.css" /></head>
+<body id="body">
+
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WHT8PT"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+	<div id="myciulogin" style="display:none; pointer-events:auto">
+	  <div class="container">
+		<div id="close" onclick="myciulogin_hide()"><a>X</a></div>
+		<form id="myciuloginform" action="" method="post" name="MAINFORM">
+			<input type="hidden" name="__EVENTTARGET" value=""/>
+			<input type="hidden" name="__EVENTARGUMENT" value=""/>
+			<div class="field">
+			<label for="userName">User Name:</label>
+			<input type="text" id="userName" name="userName" value=""/>
+			</div>
+			<div class="field">
+			<label for="password">Password:</label>
+			<input type="password" id="password" name="password"/>
+			</div>
+			<div class="field">
+			<input type="submit" id="btnLogin" name="btnLogin" value="Login"
+			       onclick="return myciuloginform_validate()"/>
+			</div>
+			<div id="divForgot" class="field">
+			<a id="lnkForgot"
+			   href="javascript:location='/ics/_portletview_/Admin/Manage_Password/Forgot_Password.jnz?portlet=CIU_Password_Management&op=forgotpassword&username='+ document.getElementById('userName').value"
+			>Reset my password</a> &gt;
+			</div>
+		</form>
+	  </div>
+	</div>
+
+  <div id="overlay">
+	
+<div id="site-wrapper">
+	<div id="CIUHeader" style="height: 155px;">
+		<div id="masthead">
+		<h1><a title="myCIU Home Page" href="."></a></h1>
+		</div>
+    <div id="ribbon"></div>
+	</div>
+
+	<br style="clear:both"/>
+	<div id="TargetedMessage"></div>
+	<br style="clear:both"/>
+	<div id="welcomeBackBar">
+	<span>Hello, guest!</span>
+	<span id="loginlink">( <a  onclick="return myciu_login(this.href)" href="/ICS/default.aspx" title="login">login</a> )</span></div>
+	
+	<div id="wwwlink">
+		<!-- Remove line break - lowercase the URL -BD -->
+		Visit CIU's public website at <a id="visitwww" href="http://www.ciu.edu" title="visit www.ciu.edu">www.ciu.edu</a> &rarr;
+	</div>
+	
+	<!-- Move the content of the ribbon down here - text only - BD -->
+	<!-- <div id="hubpagetitle">Your hub for quick and easy access to our most frequently visited resources.</div> -->
+
+	<div id="hubsections" style="text-align:center;max-width:875px">
+	<div id="section_Hidden" class="hubsection"><div class="hubheader"><div class="hubheadertext">Hidden</div><div class="ind_t"></div><div class="ind_b"></div></div>
+<div class="hublist"><div class="hublink"><a Id="ADMIN"  onclick="return myciu_login(this.href)" href="Admin" title="Admin">Admin</a></div><div class="hublink"><a Id="ECAMPUS"  onclick="return myciu_login('Admin/Manage_Password/External_Site_Sign-ons/eCampus_Websites.jnz?click')" href="Portlets/CUS/ICS/ExternalSiteSignon/eCampusLogin.aspx" title="eCampus">eCampus</a></div><div class="hublink"><a Id="GRADUATIONCONFIRMATION"  onclick="return myciu_login(this.href)" href="Registrar/Graduation.jnz?portlet=Graduation_Confirmation" title="Graduation Confirmation">Graduation Confirmation</a></div><div class="hublink"><a Id="ITPOLICIES"  onclick="return myciu_login(this.href)" href="Services/Information_Technology/PoliciesHandbook.jnz" title="IT Policies">IT Policies</a></div><div class="hublink"><a Id="MANAGEPASSWORD"  onclick="return myciu_login(this.href)" href="Admin/Manage_Password/Manage_Password.jnz?portlet=CIU_Password_Management&amp;op=managepassword" title="Manage Password">Manage Password</a></div><div class="hublink"><a Id="MOODLE"  onclick="return myciu_login('Admin/Manage_Password/External_Site_Sign-ons/Moodle_Websites.jnz?click')" href="Portlets/CUS/ICS/ExternalSiteSignon/MoodleLogin.aspx" title="Moodle">Moodle</a></div><div class="hublink"><a Id="STUDENTACCOUNTING"  onclick="return myciu_login(this.href)" href="Finances" title="Student Accounting">Student Accounting</a></div><div class="hublink"><a Id="STUDENTDIRECTORY"  onclick="return myciu_login(this.href)" href="Campus_Life/Student_Directory/" title="Student Directory">Student Directory</a></div><div class="hublink"><a Id="STUDENTS"  onclick="return myciu_login(this.href)" href="Campus_Life" title="Students">Students</a></div><div class="hublink"><a Id="VPNLINKS"  onclick="return myciu_login(this.href)" href="Services/Information_Technology/VPN_Links/" title="VPN Links">VPN Links</a></div><div class="hublink"><a Id="WEBFORMS"  onclick="return myciu_login(this.href)" href="Resources/Webforms/" title="Web Forms">Web Forms</a></div></div>
+</div>
+
+	</div>
+	
+	<br style="clear:both">
+	
+</div>
+<div id="foot" style="font-size:x-small"></div>
+
+<div id="ciufooter">
+  <br>
+  <div><a href="http://www.ciu.edu"><img alt="Columbia International University" src="/ics/clientconfig/images/logo-footer.png"></a>
+  <br><br>
+  7435 Monticello Rd. | Columbia, SC 29203 | (800) 777-2227
+  <br><br>
+    <a href="http://www.ciu.edu/contact-ciu">Contact</a> 
+  | <a href="http://www.ciu.edu/about-ciu/explore-our-location/maps-and-directions">Maps &amp; Directions</a> 
+  | <a href="http://www.ciu.edu/privacy">Privacy</a> 
+  | <a href="http://www.ciu.edu/consumer-information">Consumer Information</a> 
+  | <a href="http://www.ciu.edu/employment">Employment</a> 
+  | <a href="http://www.ciu.edu/report-website-problems">Report Website Problems</a>
+  <br><br>
+  © 2018&nbsp;COLUMBIA INTERNATIONAL UNIVERSITY<br></div>
+
+<script type="text/javascript">
+//<![CDATA[
+// customize the footer
+function CIUAddCopyright(){
+  var foot = document.getElementById('foot');
+  foot.appendChild(document.getElementById('ciufooter'));
+}
+CIUAddCopyright();
+
+// customize the alert message for blank username when "Reset my password" is clicked.
+function CIUValidateLoginUserName()
+ { 
+    var userName = document.getElementById('userName').value;   
+    if (userName == ''|| userName == "guest") 
+    { 
+    	var innerHTML = document.getElementById('siteNavBar_lnkForgot').innerHTML;
+    	var alertmsg = 'Please enter your username* or reset code**, and then click on the "'+innerHTML+'" link again.';
+    	alertmsg = alertmsg + '\n\n*If you forgot your username, enter "forgot" as the Username.';
+    	alertmsg = alertmsg + '\n\n**If you forgot your password or username and already have a reset code, enter your reset code as the Username.';
+        alert(alertmsg); 
+        return false;
+    }     
+    return true; 
+}
+var lnkForgot=document.getElementById('siteNavBar_lnkForgot');
+if (lnkForgot!=null) lnkForgot.onclick=CIUValidateLoginUserName;
+//]]>
+</script>
+
+  </div>
+</body>
+</html>
+
+<script type="text/javascript" src="ClientConfig/MyCIU/myCIUjavascript.js"></script>
+
+<!-- INCLUDE MY JS - BD -->
+<script type="text/javascript" src="ClientConfig/MyCIU/myCIUbd.js"></script>

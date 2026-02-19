@@ -1,0 +1,885 @@
+<!DOCTYPE html>
+<html lang="en-US" >
+<head>
+		<meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=0" /><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" /><meta name="format-detection" content="telephone=no"><title>Generative AI &#8211; Idaho INBRE</title>
+<script type="text/javascript">var ajaxurl = "https://inbre.uidaho.edu/wp-admin/admin-ajax.php";</script><meta name='robots' content='max-image-preview:large' />
+	<style>img:is([sizes="auto" i], [sizes^="auto," i]) { contain-intrinsic-size: 3000px 1500px }</style>
+	
+		<style id="critical-path-css" type="text/css">
+			body,html{width:100%;height:100%;margin:0;padding:0}.page-preloader{top:0;left:0;z-index:999;position:fixed;height:100%;width:100%;text-align:center}.preloader-preview-area{animation-delay:-.2s;top:50%;-ms-transform:translateY(100%);transform:translateY(100%);margin-top:10px;max-height:calc(50% - 20px);opacity:1;width:100%;text-align:center;position:absolute}.preloader-logo{max-width:90%;top:50%;-ms-transform:translateY(-100%);transform:translateY(-100%);margin:-10px auto 0 auto;max-height:calc(50% - 20px);opacity:1;position:relative}.ball-pulse>div{width:15px;height:15px;border-radius:100%;margin:2px;animation-fill-mode:both;display:inline-block;animation:ball-pulse .75s infinite cubic-bezier(.2,.68,.18,1.08)}.ball-pulse>div:nth-child(1){animation-delay:-.36s}.ball-pulse>div:nth-child(2){animation-delay:-.24s}.ball-pulse>div:nth-child(3){animation-delay:-.12s}@keyframes ball-pulse{0%{transform:scale(1);opacity:1}45%{transform:scale(.1);opacity:.7}80%{transform:scale(1);opacity:1}}.ball-clip-rotate-pulse{position:relative;-ms-transform:translateY(-15px) translateX(-10px);transform:translateY(-15px) translateX(-10px);display:inline-block}.ball-clip-rotate-pulse>div{animation-fill-mode:both;position:absolute;top:0;left:0;border-radius:100%}.ball-clip-rotate-pulse>div:first-child{height:36px;width:36px;top:7px;left:-7px;animation:ball-clip-rotate-pulse-scale 1s 0s cubic-bezier(.09,.57,.49,.9) infinite}.ball-clip-rotate-pulse>div:last-child{position:absolute;width:50px;height:50px;left:-16px;top:-2px;background:0 0;border:2px solid;animation:ball-clip-rotate-pulse-rotate 1s 0s cubic-bezier(.09,.57,.49,.9) infinite;animation-duration:1s}@keyframes ball-clip-rotate-pulse-rotate{0%{transform:rotate(0) scale(1)}50%{transform:rotate(180deg) scale(.6)}100%{transform:rotate(360deg) scale(1)}}@keyframes ball-clip-rotate-pulse-scale{30%{transform:scale(.3)}100%{transform:scale(1)}}@keyframes square-spin{25%{transform:perspective(100px) rotateX(180deg) rotateY(0)}50%{transform:perspective(100px) rotateX(180deg) rotateY(180deg)}75%{transform:perspective(100px) rotateX(0) rotateY(180deg)}100%{transform:perspective(100px) rotateX(0) rotateY(0)}}.square-spin{display:inline-block}.square-spin>div{animation-fill-mode:both;width:50px;height:50px;animation:square-spin 3s 0s cubic-bezier(.09,.57,.49,.9) infinite}.cube-transition{position:relative;-ms-transform:translate(-25px,-25px);transform:translate(-25px,-25px);display:inline-block}.cube-transition>div{animation-fill-mode:both;width:15px;height:15px;position:absolute;top:-5px;left:-5px;animation:cube-transition 1.6s 0s infinite ease-in-out}.cube-transition>div:last-child{animation-delay:-.8s}@keyframes cube-transition{25%{transform:translateX(50px) scale(.5) rotate(-90deg)}50%{transform:translate(50px,50px) rotate(-180deg)}75%{transform:translateY(50px) scale(.5) rotate(-270deg)}100%{transform:rotate(-360deg)}}.ball-scale>div{border-radius:100%;margin:2px;animation-fill-mode:both;display:inline-block;height:60px;width:60px;animation:ball-scale 1s 0s ease-in-out infinite}@keyframes ball-scale{0%{transform:scale(0)}100%{transform:scale(1);opacity:0}}.line-scale>div{animation-fill-mode:both;display:inline-block;width:5px;height:50px;border-radius:2px;margin:2px}.line-scale>div:nth-child(1){animation:line-scale 1s -.5s infinite cubic-bezier(.2,.68,.18,1.08)}.line-scale>div:nth-child(2){animation:line-scale 1s -.4s infinite cubic-bezier(.2,.68,.18,1.08)}.line-scale>div:nth-child(3){animation:line-scale 1s -.3s infinite cubic-bezier(.2,.68,.18,1.08)}.line-scale>div:nth-child(4){animation:line-scale 1s -.2s infinite cubic-bezier(.2,.68,.18,1.08)}.line-scale>div:nth-child(5){animation:line-scale 1s -.1s infinite cubic-bezier(.2,.68,.18,1.08)}@keyframes line-scale{0%{transform:scaley(1)}50%{transform:scaley(.4)}100%{transform:scaley(1)}}.ball-scale-multiple{position:relative;-ms-transform:translateY(30px);transform:translateY(30px);display:inline-block}.ball-scale-multiple>div{border-radius:100%;animation-fill-mode:both;margin:2px;position:absolute;left:-30px;top:0;opacity:0;margin:0;width:50px;height:50px;animation:ball-scale-multiple 1s 0s linear infinite}.ball-scale-multiple>div:nth-child(2){animation-delay:-.2s}.ball-scale-multiple>div:nth-child(3){animation-delay:-.2s}@keyframes ball-scale-multiple{0%{transform:scale(0);opacity:0}5%{opacity:1}100%{transform:scale(1);opacity:0}}.ball-pulse-sync{display:inline-block}.ball-pulse-sync>div{width:15px;height:15px;border-radius:100%;margin:2px;animation-fill-mode:both;display:inline-block}.ball-pulse-sync>div:nth-child(1){animation:ball-pulse-sync .6s -.21s infinite ease-in-out}.ball-pulse-sync>div:nth-child(2){animation:ball-pulse-sync .6s -.14s infinite ease-in-out}.ball-pulse-sync>div:nth-child(3){animation:ball-pulse-sync .6s -70ms infinite ease-in-out}@keyframes ball-pulse-sync{33%{transform:translateY(10px)}66%{transform:translateY(-10px)}100%{transform:translateY(0)}}.transparent-circle{display:inline-block;border-top:.5em solid rgba(255,255,255,.2);border-right:.5em solid rgba(255,255,255,.2);border-bottom:.5em solid rgba(255,255,255,.2);border-left:.5em solid #fff;transform:translateZ(0);animation:transparent-circle 1.1s infinite linear;width:50px;height:50px;border-radius:50%}.transparent-circle:after{border-radius:50%;width:10em;height:10em}@keyframes transparent-circle{0%{transform:rotate(0)}100%{transform:rotate(360deg)}}.ball-spin-fade-loader{position:relative;top:-10px;left:-10px;display:inline-block}.ball-spin-fade-loader>div{width:15px;height:15px;border-radius:100%;margin:2px;animation-fill-mode:both;position:absolute;animation:ball-spin-fade-loader 1s infinite linear}.ball-spin-fade-loader>div:nth-child(1){top:25px;left:0;animation-delay:-.84s;-webkit-animation-delay:-.84s}.ball-spin-fade-loader>div:nth-child(2){top:17.05px;left:17.05px;animation-delay:-.72s;-webkit-animation-delay:-.72s}.ball-spin-fade-loader>div:nth-child(3){top:0;left:25px;animation-delay:-.6s;-webkit-animation-delay:-.6s}.ball-spin-fade-loader>div:nth-child(4){top:-17.05px;left:17.05px;animation-delay:-.48s;-webkit-animation-delay:-.48s}.ball-spin-fade-loader>div:nth-child(5){top:-25px;left:0;animation-delay:-.36s;-webkit-animation-delay:-.36s}.ball-spin-fade-loader>div:nth-child(6){top:-17.05px;left:-17.05px;animation-delay:-.24s;-webkit-animation-delay:-.24s}.ball-spin-fade-loader>div:nth-child(7){top:0;left:-25px;animation-delay:-.12s;-webkit-animation-delay:-.12s}.ball-spin-fade-loader>div:nth-child(8){top:17.05px;left:-17.05px;animation-delay:0s;-webkit-animation-delay:0s}@keyframes ball-spin-fade-loader{50%{opacity:.3;transform:scale(.4)}100%{opacity:1;transform:scale(1)}}		</style>
+
+		<link rel='dns-prefetch' href='//code.responsivevoice.org' />
+<link rel='dns-prefetch' href='//www.googletagmanager.com' />
+<link rel="alternate" type="application/rss+xml" title="Idaho INBRE &raquo; Feed" href="https://inbre.uidaho.edu/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Idaho INBRE &raquo; Comments Feed" href="https://inbre.uidaho.edu/comments/feed/" />
+<link rel="alternate" type="text/calendar" title="Idaho INBRE &raquo; iCal Feed" href="https://inbre.uidaho.edu/events/?ical=1" />
+
+<link rel="shortcut icon" href="/wp-content/uploads/2015/12/favicon.png"  />
+<script type="text/javascript">window.abb = {};php = {};window.PHP = {};PHP.ajax = "https://inbre.uidaho.edu/wp-admin/admin-ajax.php";PHP.wp_p_id = "5305";var mk_header_parallax, mk_banner_parallax, mk_page_parallax, mk_footer_parallax, mk_body_parallax;var mk_images_dir = "https://inbre.uidaho.edu/wp-content/themes/jupiter/assets/images",mk_theme_js_path = "https://inbre.uidaho.edu/wp-content/themes/jupiter/assets/js",mk_theme_dir = "https://inbre.uidaho.edu/wp-content/themes/jupiter",mk_captcha_placeholder = "Enter Captcha",mk_captcha_invalid_txt = "Invalid. Try again.",mk_captcha_correct_txt = "Captcha correct.",mk_responsive_nav_width = 1140,mk_vertical_header_back = "Back",mk_vertical_header_anim = "1",mk_check_rtl = true,mk_grid_width = 1140,mk_ajax_search_option = "fullscreen_search",mk_preloader_bg_color = "#ffffff",mk_accent_color = "#2e2e2e",mk_go_to_top =  "true",mk_smooth_scroll =  "false",mk_preloader_bar_color = "#2e2e2e",mk_preloader_logo = "";var mk_header_parallax = false,mk_banner_parallax = false,mk_footer_parallax = false,mk_body_parallax = false,mk_no_more_posts = "No More Posts",mk_typekit_id   = "",mk_google_fonts = ["Belleza:100italic,200italic,300italic,400italic,500italic,600italic,700italic,800italic,900italic,100,200,300,400,500,600,700,800,900","Francois One:100italic,200italic,300italic,400italic,500italic,600italic,700italic,800italic,900italic,100,200,300,400,500,600,700,800,900"],mk_global_lazyload = true;</script><link rel='stylesheet' id='dashicons-css' href='https://inbre.uidaho.edu/wp-includes/css/dashicons.min.css?ver=6.8.3' type='text/css' media='all' />
+<link rel='stylesheet' id='elusive-css' href='https://inbre.uidaho.edu/wp-content/plugins/menu-icons/vendor/codeinwp/icon-picker/css/types/elusive.min.css?ver=2.0' type='text/css' media='all' />
+<link rel='stylesheet' id='menu-icon-font-awesome-css' href='https://inbre.uidaho.edu/wp-content/plugins/menu-icons/css/fontawesome/css/all.min.css?ver=5.15.4' type='text/css' media='all' />
+<link rel='stylesheet' id='foundation-icons-css' href='https://inbre.uidaho.edu/wp-content/plugins/menu-icons/vendor/codeinwp/icon-picker/css/types/foundation-icons.min.css?ver=3.0' type='text/css' media='all' />
+<link rel='stylesheet' id='genericons-css' href='https://inbre.uidaho.edu/wp-content/plugins/menu-icons/vendor/codeinwp/icon-picker/css/types/genericons.min.css?ver=3.4' type='text/css' media='all' />
+<link rel='stylesheet' id='menu-icons-extra-css' href='https://inbre.uidaho.edu/wp-content/plugins/menu-icons/css/extra.min.css?ver=0.13.21' type='text/css' media='all' />
+<link rel='stylesheet' id='stickylist-css' href='https://inbre.uidaho.edu/wp-content/plugins/gravity-forms-sticky-list/css/sticky-list_styles.css?ver=6.8.3' type='text/css' media='all' />
+<link rel='stylesheet' id='wp-block-library-css' href='https://inbre.uidaho.edu/wp-includes/css/dist/block-library/style.min.css?ver=6.8.3' type='text/css' media='all' />
+<style id='wp-block-library-theme-inline-css' type='text/css'>
+.wp-block-audio :where(figcaption){color:#555;font-size:13px;text-align:center}.is-dark-theme .wp-block-audio :where(figcaption){color:#ffffffa6}.wp-block-audio{margin:0 0 1em}.wp-block-code{border:1px solid #ccc;border-radius:4px;font-family:Menlo,Consolas,monaco,monospace;padding:.8em 1em}.wp-block-embed :where(figcaption){color:#555;font-size:13px;text-align:center}.is-dark-theme .wp-block-embed :where(figcaption){color:#ffffffa6}.wp-block-embed{margin:0 0 1em}.blocks-gallery-caption{color:#555;font-size:13px;text-align:center}.is-dark-theme .blocks-gallery-caption{color:#ffffffa6}:root :where(.wp-block-image figcaption){color:#555;font-size:13px;text-align:center}.is-dark-theme :root :where(.wp-block-image figcaption){color:#ffffffa6}.wp-block-image{margin:0 0 1em}.wp-block-pullquote{border-bottom:4px solid;border-top:4px solid;color:currentColor;margin-bottom:1.75em}.wp-block-pullquote cite,.wp-block-pullquote footer,.wp-block-pullquote__citation{color:currentColor;font-size:.8125em;font-style:normal;text-transform:uppercase}.wp-block-quote{border-left:.25em solid;margin:0 0 1.75em;padding-left:1em}.wp-block-quote cite,.wp-block-quote footer{color:currentColor;font-size:.8125em;font-style:normal;position:relative}.wp-block-quote:where(.has-text-align-right){border-left:none;border-right:.25em solid;padding-left:0;padding-right:1em}.wp-block-quote:where(.has-text-align-center){border:none;padding-left:0}.wp-block-quote.is-large,.wp-block-quote.is-style-large,.wp-block-quote:where(.is-style-plain){border:none}.wp-block-search .wp-block-search__label{font-weight:700}.wp-block-search__button{border:1px solid #ccc;padding:.375em .625em}:where(.wp-block-group.has-background){padding:1.25em 2.375em}.wp-block-separator.has-css-opacity{opacity:.4}.wp-block-separator{border:none;border-bottom:2px solid;margin-left:auto;margin-right:auto}.wp-block-separator.has-alpha-channel-opacity{opacity:1}.wp-block-separator:not(.is-style-wide):not(.is-style-dots){width:100px}.wp-block-separator.has-background:not(.is-style-dots){border-bottom:none;height:1px}.wp-block-separator.has-background:not(.is-style-wide):not(.is-style-dots){height:2px}.wp-block-table{margin:0 0 1em}.wp-block-table td,.wp-block-table th{word-break:normal}.wp-block-table :where(figcaption){color:#555;font-size:13px;text-align:center}.is-dark-theme .wp-block-table :where(figcaption){color:#ffffffa6}.wp-block-video :where(figcaption){color:#555;font-size:13px;text-align:center}.is-dark-theme .wp-block-video :where(figcaption){color:#ffffffa6}.wp-block-video{margin:0 0 1em}:root :where(.wp-block-template-part.has-background){margin-bottom:0;margin-top:0;padding:1.25em 2.375em}
+</style>
+<style id='classic-theme-styles-inline-css' type='text/css'>
+/*! This file is auto-generated */
+.wp-block-button__link{color:#fff;background-color:#32373c;border-radius:9999px;box-shadow:none;text-decoration:none;padding:calc(.667em + 2px) calc(1.333em + 2px);font-size:1.125em}.wp-block-file__button{background:#32373c;color:#fff;text-decoration:none}
+</style>
+<style id='pdfemb-pdf-embedder-viewer-style-inline-css' type='text/css'>
+.wp-block-pdfemb-pdf-embedder-viewer{max-width:none}
+
+</style>
+<link rel='stylesheet' id='awsm-ead-public-css' href='https://inbre.uidaho.edu/wp-content/plugins/embed-any-document/css/embed-public.min.css?ver=2.7.12' type='text/css' media='all' />
+<style id='global-styles-inline-css' type='text/css'>
+:root{--wp--preset--aspect-ratio--square: 1;--wp--preset--aspect-ratio--4-3: 4/3;--wp--preset--aspect-ratio--3-4: 3/4;--wp--preset--aspect-ratio--3-2: 3/2;--wp--preset--aspect-ratio--2-3: 2/3;--wp--preset--aspect-ratio--16-9: 16/9;--wp--preset--aspect-ratio--9-16: 9/16;--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgba(6,147,227,1) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgba(252,185,0,1) 0%,rgba(255,105,0,1) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgba(255,105,0,1) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--font-size--small: 13px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 36px;--wp--preset--font-size--x-large: 42px;--wp--preset--spacing--20: 0.44rem;--wp--preset--spacing--30: 0.67rem;--wp--preset--spacing--40: 1rem;--wp--preset--spacing--50: 1.5rem;--wp--preset--spacing--60: 2.25rem;--wp--preset--spacing--70: 3.38rem;--wp--preset--spacing--80: 5.06rem;--wp--preset--shadow--natural: 6px 6px 9px rgba(0, 0, 0, 0.2);--wp--preset--shadow--deep: 12px 12px 50px rgba(0, 0, 0, 0.4);--wp--preset--shadow--sharp: 6px 6px 0px rgba(0, 0, 0, 0.2);--wp--preset--shadow--outlined: 6px 6px 0px -3px rgba(255, 255, 255, 1), 6px 6px rgba(0, 0, 0, 1);--wp--preset--shadow--crisp: 6px 6px 0px rgba(0, 0, 0, 1);}:where(.is-layout-flex){gap: 0.5em;}:where(.is-layout-grid){gap: 0.5em;}body .is-layout-flex{display: flex;}.is-layout-flex{flex-wrap: wrap;align-items: center;}.is-layout-flex > :is(*, div){margin: 0;}body .is-layout-grid{display: grid;}.is-layout-grid > :is(*, div){margin: 0;}:where(.wp-block-columns.is-layout-flex){gap: 2em;}:where(.wp-block-columns.is-layout-grid){gap: 2em;}:where(.wp-block-post-template.is-layout-flex){gap: 1.25em;}:where(.wp-block-post-template.is-layout-grid){gap: 1.25em;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}
+:where(.wp-block-post-template.is-layout-flex){gap: 1.25em;}:where(.wp-block-post-template.is-layout-grid){gap: 1.25em;}
+:where(.wp-block-columns.is-layout-flex){gap: 2em;}:where(.wp-block-columns.is-layout-grid){gap: 2em;}
+:root :where(.wp-block-pullquote){font-size: 1.5em;line-height: 1.6;}
+</style>
+<link rel='stylesheet' id='contact-form-7-css' href='https://inbre.uidaho.edu/wp-content/plugins/contact-form-7/includes/css/styles.css?ver=5.8.2' type='text/css' media='all' />
+<link rel='stylesheet' id='image-caption-hover-css-css' href='https://inbre.uidaho.edu/wp-content/plugins/image-caption-hover-visual-composer-addon/css/style.css?ver=6.8.3' type='text/css' media='all' />
+<link rel='stylesheet' id='collapseomatic-css-css' href='https://inbre.uidaho.edu/wp-content/plugins/jquery-collapse-o-matic/light_style.css?ver=1.6' type='text/css' media='all' />
+<link rel='stylesheet' id='rv-style-css' href='https://inbre.uidaho.edu/wp-content/plugins/responsivevoice-text-to-speech/includes/css/responsivevoice.css?ver=6.8.3' type='text/css' media='all' />
+<link rel='stylesheet' id='default-icon-styles-css' href='https://inbre.uidaho.edu/wp-content/plugins/svg-vector-icon-plugin/public/../admin/css/wordpress-svg-icon-plugin-style.min.css?ver=6.8.3' type='text/css' media='all' />
+<link rel='stylesheet' id='rt-fontawsome-css' href='https://inbre.uidaho.edu/wp-content/plugins/the-post-grid/assets/vendor/font-awesome/css/font-awesome.min.css?ver=7.8.9' type='text/css' media='all' />
+<link rel='stylesheet' id='rt-tpg-css' href='https://inbre.uidaho.edu/wp-content/plugins/the-post-grid/assets/css/thepostgrid.min.css?ver=7.8.9' type='text/css' media='all' />
+<link rel='stylesheet' id='UserAccessManagerLoginForm-css' href='https://inbre.uidaho.edu/wp-content/plugins/user-access-manager/assets/css/uamLoginForm.css?ver=2.2.15' type='text/css' media='screen' />
+<link rel='stylesheet' id='theme-styles-css' href='https://inbre.uidaho.edu/wp-content/themes/jupiter/assets/stylesheet/min/full-styles.6.10.0.css?ver=1633335623' type='text/css' media='all' />
+<style id='theme-styles-inline-css' type='text/css'>
+
+			#wpadminbar {
+				-webkit-backface-visibility: hidden;
+				backface-visibility: hidden;
+				-webkit-perspective: 1000;
+				-ms-perspective: 1000;
+				perspective: 1000;
+				-webkit-transform: translateZ(0px);
+				-ms-transform: translateZ(0px);
+				transform: translateZ(0px);
+			}
+			@media screen and (max-width: 600px) {
+				#wpadminbar {
+					position: fixed !important;
+				}
+			}
+		
+body { background-color:#fff; } .hb-custom-header #mk-page-introduce, .mk-header { background-color:#f4f4f4;background-size:cover;-webkit-background-size:cover;-moz-background-size:cover; } .hb-custom-header > div, .mk-header-bg { background-color:#ffffff; } .mk-classic-nav-bg { background-color:#ffffff; } .master-holder-bg { } #mk-footer { background-color:#394962; } #mk-boxed-layout { -webkit-box-shadow:0 0 0px rgba(0, 0, 0, 0); -moz-box-shadow:0 0 0px rgba(0, 0, 0, 0); box-shadow:0 0 0px rgba(0, 0, 0, 0); } .mk-news-tab .mk-tabs-tabs .is-active a, .mk-fancy-title.pattern-style span, .mk-fancy-title.pattern-style.color-gradient span:after, .page-bg-color { background-color:; } .page-title { font-size:20px; color:#4d4d4d; text-transform:uppercase; font-weight:inherit; letter-spacing:2px; } .page-subtitle { font-size:14px; line-height:100%; color:#a3a3a3; font-size:14px; text-transform:none; } .mk-header { border-bottom:1px solid #ededed; } .header-style-1 .mk-header-padding-wrapper, .header-style-2 .mk-header-padding-wrapper, .header-style-3 .mk-header-padding-wrapper { padding-top:151px; } .mk-process-steps[max-width~="950px"] ul::before { display:none !important; } .mk-process-steps[max-width~="950px"] li { margin-bottom:30px !important; width:100% !important; text-align:center; } .mk-event-countdown-ul[max-width~="750px"] li { width:90%; display:block; margin:0 auto 15px; } body { font-family:HelveticaNeue-Light, Helvetica Neue Light, Helvetica Neue, Helvetica, Arial, Lucida Grande, sans-serif } h1, h2, h3, h4, h5, h6 { font-family:Belleza } .main-navigation-ul, .mk-vm-menuwrapper { font-family:Francois One } @font-face { font-family:'star'; src:url('https://inbre.uidaho.edu/wp-content/themes/jupiter/assets/stylesheet/fonts/star/font.eot'); src:url('https://inbre.uidaho.edu/wp-content/themes/jupiter/assets/stylesheet/fonts/star/font.eot?#iefix') format('embedded-opentype'), url('https://inbre.uidaho.edu/wp-content/themes/jupiter/assets/stylesheet/fonts/star/font.woff') format('woff'), url('https://inbre.uidaho.edu/wp-content/themes/jupiter/assets/stylesheet/fonts/star/font.ttf') format('truetype'), url('https://inbre.uidaho.edu/wp-content/themes/jupiter/assets/stylesheet/fonts/star/font.svg#star') format('svg'); font-weight:normal; font-style:normal; } @font-face { font-family:'WooCommerce'; src:url('https://inbre.uidaho.edu/wp-content/themes/jupiter/assets/stylesheet/fonts/woocommerce/font.eot'); src:url('https://inbre.uidaho.edu/wp-content/themes/jupiter/assets/stylesheet/fonts/woocommerce/font.eot?#iefix') format('embedded-opentype'), url('https://inbre.uidaho.edu/wp-content/themes/jupiter/assets/stylesheet/fonts/woocommerce/font.woff') format('woff'), url('https://inbre.uidaho.edu/wp-content/themes/jupiter/assets/stylesheet/fonts/woocommerce/font.ttf') format('truetype'), url('https://inbre.uidaho.edu/wp-content/themes/jupiter/assets/stylesheet/fonts/woocommerce/font.svg#WooCommerce') format('svg'); font-weight:normal; font-style:normal; }
+</style>
+<link rel='stylesheet' id='mkhb-render-css' href='https://inbre.uidaho.edu/wp-content/themes/jupiter/header-builder/includes/assets/css/mkhb-render.css?ver=6.10.0' type='text/css' media='all' />
+<link rel='stylesheet' id='mkhb-row-css' href='https://inbre.uidaho.edu/wp-content/themes/jupiter/header-builder/includes/assets/css/mkhb-row.css?ver=6.10.0' type='text/css' media='all' />
+<link rel='stylesheet' id='mkhb-column-css' href='https://inbre.uidaho.edu/wp-content/themes/jupiter/header-builder/includes/assets/css/mkhb-column.css?ver=6.10.0' type='text/css' media='all' />
+<link rel='stylesheet' id='tablepress-default-css' href='https://inbre.uidaho.edu/wp-content/plugins/tablepress/css/build/default.css?ver=3.2.7' type='text/css' media='all' />
+<link rel='stylesheet' id='js_composer_front-css' href='https://inbre.uidaho.edu/wp-content/plugins/js_composer_theme/assets/css/js_composer.min.css?ver=7.2' type='text/css' media='all' />
+<link rel='stylesheet' id='theme-options-css' href='https://inbre.uidaho.edu/wp-content/uploads/mk_assets/theme-options-production-1770657692.css?ver=1770657685' type='text/css' media='all' />
+<link rel='stylesheet' id='ms-main-css' href='https://inbre.uidaho.edu/wp-content/plugins/masterslider/public/assets/css/masterslider.main.css?ver=3.6.5' type='text/css' media='all' />
+<link rel='stylesheet' id='ms-custom-css' href='https://inbre.uidaho.edu/wp-content/uploads/masterslider/custom.css?ver=1.1' type='text/css' media='all' />
+<link rel='stylesheet' id='jupiter-donut-shortcodes-css' href='https://inbre.uidaho.edu/wp-content/plugins/jupiter-donut/assets/css/shortcodes-styles.min.css?ver=1.4.4' type='text/css' media='all' />
+<link rel='stylesheet' id='mk-style-css' href='https://inbre.uidaho.edu/wp-content/themes/jupiter-child/style.css?ver=6.8.3' type='text/css' media='all' />
+<script type="text/javascript" data-noptimize='' data-no-minify='' src="https://inbre.uidaho.edu/wp-content/themes/jupiter/assets/js/plugins/wp-enqueue/min/webfontloader.js?ver=6.8.3" id="mk-webfontloader-js"></script>
+<script type="text/javascript" id="mk-webfontloader-js-after">
+/* <![CDATA[ */
+WebFontConfig = {
+	timeout: 2000
+}
+
+if ( mk_typekit_id.length > 0 ) {
+	WebFontConfig.typekit = {
+		id: mk_typekit_id
+	}
+}
+
+if ( mk_google_fonts.length > 0 ) {
+	WebFontConfig.google = {
+		families:  mk_google_fonts
+	}
+}
+
+if ( (mk_google_fonts.length > 0 || mk_typekit_id.length > 0) && navigator.userAgent.indexOf("Speed Insights") == -1) {
+	WebFont.load( WebFontConfig );
+}
+		
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://inbre.uidaho.edu/wp-includes/js/jquery/jquery.min.js?ver=3.7.1" id="jquery-core-js"></script>
+<script type="text/javascript" src="https://inbre.uidaho.edu/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.4.1" id="jquery-migrate-js"></script>
+<script type="text/javascript" src="https://inbre.uidaho.edu/wp-content/plugins/image-caption-hover-visual-composer-addon/js/script.js?ver=6.8.3" id="image-caption-hover-js-js"></script>
+<script type="text/javascript" src="https://code.responsivevoice.org/responsivevoice.js?key=v0CECtb8" id="responsive-voice-js"></script>
+
+<!-- Google tag (gtag.js) snippet added by Site Kit -->
+<!-- Google Analytics snippet added by Site Kit -->
+<script type="text/javascript" src="https://www.googletagmanager.com/gtag/js?id=GT-TNSB6WKM" id="google_gtagjs-js" async></script>
+<script type="text/javascript" id="google_gtagjs-js-after">
+/* <![CDATA[ */
+window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}
+gtag("set","linker",{"domains":["inbre.uidaho.edu"]});
+gtag("js", new Date());
+gtag("set", "developer_id.dZTNiMT", true);
+gtag("config", "GT-TNSB6WKM");
+ window._googlesitekit = window._googlesitekit || {}; window._googlesitekit.throttledEvents = []; window._googlesitekit.gtagEvent = (name, data) => { var key = JSON.stringify( { name, data } ); if ( !! window._googlesitekit.throttledEvents[ key ] ) { return; } window._googlesitekit.throttledEvents[ key ] = true; setTimeout( () => { delete window._googlesitekit.throttledEvents[ key ]; }, 5 ); gtag( "event", name, { ...data, event_source: "site-kit" } ); }; 
+/* ]]> */
+</script>
+<script></script><link rel="https://api.w.org/" href="https://inbre.uidaho.edu/wp-json/" /><link rel="alternate" title="JSON" type="application/json" href="https://inbre.uidaho.edu/wp-json/wp/v2/pages/5305" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://inbre.uidaho.edu/xmlrpc.php?rsd" />
+<link rel="canonical" href="https://inbre.uidaho.edu/generative-ai/" />
+<link rel='shortlink' href='https://inbre.uidaho.edu/?p=5305' />
+<link rel="alternate" title="oEmbed (JSON)" type="application/json+oembed" href="https://inbre.uidaho.edu/wp-json/oembed/1.0/embed?url=https%3A%2F%2Finbre.uidaho.edu%2Fgenerative-ai%2F" />
+<link rel="alternate" title="oEmbed (XML)" type="text/xml+oembed" href="https://inbre.uidaho.edu/wp-json/oembed/1.0/embed?url=https%3A%2F%2Finbre.uidaho.edu%2Fgenerative-ai%2F&#038;format=xml" />
+<meta name="generator" content="Site Kit by Google 1.172.0" /><script>var ms_grabbing_curosr='https://inbre.uidaho.edu/wp-content/plugins/masterslider/public/assets/css/common/grabbing.cur',ms_grab_curosr='https://inbre.uidaho.edu/wp-content/plugins/masterslider/public/assets/css/common/grab.cur';</script>
+<meta name="generator" content="MasterSlider 3.6.5 - Responsive Touch Image Slider" />
+        <style>
+            :root {
+                --tpg-primary-color: #0d6efd;
+                --tpg-secondary-color: #0654c4;
+                --tpg-primary-light: #c4d0ff
+            }
+
+                    </style>
+		<meta name="tec-api-version" content="v1"><meta name="tec-api-origin" content="https://inbre.uidaho.edu"><link rel="alternate" href="https://inbre.uidaho.edu/wp-json/tribe/events/v1/" /><meta itemprop="author" content="" /><meta itemprop="datePublished" content="September 25, 2024" /><meta itemprop="dateModified" content="October 30, 2024" /><meta itemprop="publisher" content="Idaho INBRE" /><script> var isTest = false; </script><meta name="generator" content="Powered by WPBakery Page Builder - drag and drop page builder for WordPress."/>
+<meta name="generator" content="Powered by Slider Revolution 6.6.16 - responsive, Mobile-Friendly Slider Plugin for WordPress with comfortable drag and drop interface." />
+<link rel="icon" href="https://inbre.uidaho.edu/wp-content/uploads/2025/03/cropped-swirl-logo-150x200-1-32x32.png" sizes="32x32" />
+<link rel="icon" href="https://inbre.uidaho.edu/wp-content/uploads/2025/03/cropped-swirl-logo-150x200-1-192x192.png" sizes="192x192" />
+<link rel="apple-touch-icon" href="https://inbre.uidaho.edu/wp-content/uploads/2025/03/cropped-swirl-logo-150x200-1-180x180.png" />
+<meta name="msapplication-TileImage" content="https://inbre.uidaho.edu/wp-content/uploads/2025/03/cropped-swirl-logo-150x200-1-270x270.png" />
+<script>function setREVStartSize(e){
+			//window.requestAnimationFrame(function() {
+				window.RSIW = window.RSIW===undefined ? window.innerWidth : window.RSIW;
+				window.RSIH = window.RSIH===undefined ? window.innerHeight : window.RSIH;
+				try {
+					var pw = document.getElementById(e.c).parentNode.offsetWidth,
+						newh;
+					pw = pw===0 || isNaN(pw) || (e.l=="fullwidth" || e.layout=="fullwidth") ? window.RSIW : pw;
+					e.tabw = e.tabw===undefined ? 0 : parseInt(e.tabw);
+					e.thumbw = e.thumbw===undefined ? 0 : parseInt(e.thumbw);
+					e.tabh = e.tabh===undefined ? 0 : parseInt(e.tabh);
+					e.thumbh = e.thumbh===undefined ? 0 : parseInt(e.thumbh);
+					e.tabhide = e.tabhide===undefined ? 0 : parseInt(e.tabhide);
+					e.thumbhide = e.thumbhide===undefined ? 0 : parseInt(e.thumbhide);
+					e.mh = e.mh===undefined || e.mh=="" || e.mh==="auto" ? 0 : parseInt(e.mh,0);
+					if(e.layout==="fullscreen" || e.l==="fullscreen")
+						newh = Math.max(e.mh,window.RSIH);
+					else{
+						e.gw = Array.isArray(e.gw) ? e.gw : [e.gw];
+						for (var i in e.rl) if (e.gw[i]===undefined || e.gw[i]===0) e.gw[i] = e.gw[i-1];
+						e.gh = e.el===undefined || e.el==="" || (Array.isArray(e.el) && e.el.length==0)? e.gh : e.el;
+						e.gh = Array.isArray(e.gh) ? e.gh : [e.gh];
+						for (var i in e.rl) if (e.gh[i]===undefined || e.gh[i]===0) e.gh[i] = e.gh[i-1];
+											
+						var nl = new Array(e.rl.length),
+							ix = 0,
+							sl;
+						e.tabw = e.tabhide>=pw ? 0 : e.tabw;
+						e.thumbw = e.thumbhide>=pw ? 0 : e.thumbw;
+						e.tabh = e.tabhide>=pw ? 0 : e.tabh;
+						e.thumbh = e.thumbhide>=pw ? 0 : e.thumbh;
+						for (var i in e.rl) nl[i] = e.rl[i]<window.RSIW ? 0 : e.rl[i];
+						sl = nl[0];
+						for (var i in nl) if (sl>nl[i] && nl[i]>0) { sl = nl[i]; ix=i;}
+						var m = pw>(e.gw[ix]+e.tabw+e.thumbw) ? 1 : (pw-(e.tabw+e.thumbw)) / (e.gw[ix]);
+						newh =  (e.gh[ix] * m) + (e.tabh + e.thumbh);
+					}
+					var el = document.getElementById(e.c);
+					if (el!==null && el) el.style.height = newh+"px";
+					el = document.getElementById(e.c+"_wrapper");
+					if (el!==null && el) {
+						el.style.height = newh+"px";
+						el.style.display = "block";
+					}
+				} catch(e){
+					console.log("Failure at Presize of Slider:" + e)
+				}
+			//});
+		  };</script>
+		<style type="text/css" id="wp-custom-css">
+			#rt-testimonial{
+  display:none!important;
+}
+
+
+		</style>
+		<meta name="generator" content="Jupiter Child Theme 1.0" /><style type="text/css" data-type="vc_shortcodes-custom-css">.vc_custom_1727906097151{margin-bottom: 0px !important;}.vc_custom_1728338947909{margin-bottom: 0px !important;}.vc_custom_1727905924077{margin-bottom: 0px !important;}.vc_custom_1730142300947{margin-bottom: 0px !important;}</style><noscript><style> .wpb_animate_when_almost_visible { opacity: 1; }</style></noscript>	</head>
+
+<body class="wp-singular page-template-default page page-id-5305 wp-theme-jupiter wp-child-theme-jupiter-child _masterslider _msp_version_3.6.5 rttpg rttpg-7.8.9 radius-frontend rttpg-body-wrap rttpg-flaticon tribe-no-js page-template-jupiter-child-theme wpb-js-composer js-comp-ver-7.2 vc_responsive" itemscope="itemscope" itemtype="https://schema.org/WebPage"  data-adminbar="">
+	
+	<!-- Target for scroll anchors to achieve native browser bahaviour + possible enhancements like smooth scrolling -->
+	<div id="top-of-page"></div>
+
+		<div id="mk-boxed-layout">
+
+			<div id="mk-theme-container" >
+
+				 
+    <header data-height='100'
+                data-sticky-height='55'
+                data-responsive-height='90'
+                data-transparent-skin=''
+                data-header-style='2'
+                data-sticky-style='fixed'
+                data-sticky-offset='header' id="mk-header-1" class="mk-header header-style-2 header-align-left  toolbar-false menu-hover-5 sticky-style-fixed mk-background-stretch boxed-header " role="banner" itemscope="itemscope" itemtype="https://schema.org/WPHeader" >
+                    <div class="mk-header-holder">
+                                <div class="mk-header-inner">
+                    
+                    <div class="mk-header-bg "></div>
+                    
+                    
+                                            <div class="mk-grid header-grid">
+                                            <div class="add-header-height">
+                            
+<div class="mk-nav-responsive-link">
+    <div class="mk-css-icon-menu">
+        <div class="mk-css-icon-menu-line-1"></div>
+        <div class="mk-css-icon-menu-line-2"></div>
+        <div class="mk-css-icon-menu-line-3"></div>
+    </div>
+</div>	<div class=" header-logo fit-logo-img add-header-height logo-is-responsive logo-has-sticky">
+		<a href="https://inbre.uidaho.edu/" title="Idaho INBRE">
+
+			<img class="mk-desktop-logo dark-logo "
+				title="IDeA Network of Biomedical Research Excellence"
+				alt="IDeA Network of Biomedical Research Excellence"
+				src="/wp-content/uploads/2021/04/210231-idaho-inbre-logo-05-rgb-1.png" />
+
+							<img class="mk-desktop-logo light-logo "
+					title="IDeA Network of Biomedical Research Excellence"
+					alt="IDeA Network of Biomedical Research Excellence"
+					src="/wp-content/uploads/2021/04/210231-idaho-inbre-logo-05-rgb-1.png" />
+			
+							<img class="mk-resposnive-logo "
+					title="IDeA Network of Biomedical Research Excellence"
+					alt="IDeA Network of Biomedical Research Excellence"
+					src="/wp-content/uploads/2021/04/210231-idaho-inbre-logo-05-rgb-1.png" />
+			
+							<img class="mk-sticky-logo "
+					title="IDeA Network of Biomedical Research Excellence"
+					alt="IDeA Network of Biomedical Research Excellence"
+					src="/wp-content/uploads/2021/04/210231-idaho-inbre-logo-05-rgb-1.png" />
+					</a>
+	</div>
+                        </div>
+                        <div class="header-btns">
+                            <ul>
+                                <li><a href="https://informareporting.com/idinbre/login" class="report-btn"></a></li>
+                                <li><a href="/cite-inbre/" class="cite-btn"></a></li>
+                                <li><a href="https://informareporting.com/idinbre/login" class="report-btn-mobile">Inbre Reporting</a></li>
+                                <li><a href="/cite-inbre/" class="cite-btn-mobile">Cite Inbre</a></li>
+                            </ul>
+                        </div><!--// .header-btns -->
+                                            </div>
+                    
+                    <div class="clearboth"></div>
+
+                    <div class="mk-header-nav-container menu-hover-style-5" role="navigation" itemscope="itemscope" itemtype="https://schema.org/SiteNavigationElement" >
+                        <div class="mk-classic-nav-bg"></div>
+                        <div class="mk-classic-menu-wrapper">
+                            <nav class="mk-main-navigation js-main-nav"><ul id="menu-main" class="main-navigation-ul"><li id="menu-item-104" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children no-mega-menu"><a class="menu-item-link js-smooth-scroll"  href="https://inbre.uidaho.edu/about-inbre/">About INBRE</a>
+<ul style="" class="sub-menu ">
+	<li id="menu-item-107" class="menu-item menu-item-type-post_type menu-item-object-page"><a class="menu-item-link js-smooth-scroll"  href="https://inbre.uidaho.edu/about-inbre/network-organization/">Network Organization</a></li>
+	<li id="menu-item-1660" class="menu-item menu-item-type-custom menu-item-object-custom"><a class="menu-item-link js-smooth-scroll"  href="/events">Upcoming Events</a></li>
+	<li id="menu-item-2830" class="menu-item menu-item-type-post_type menu-item-object-page"><a class="menu-item-link js-smooth-scroll"  href="https://inbre.uidaho.edu/about-inbre/evaluation/">Evaluation</a></li>
+	<li id="menu-item-5967" class="menu-item menu-item-type-post_type menu-item-object-page"><a class="menu-item-link js-smooth-scroll"  href="https://inbre.uidaho.edu/inbre-brochure/">INBRE Brochure</a></li>
+	<li id="menu-item-111" class="menu-item menu-item-type-post_type menu-item-object-page"><a class="menu-item-link js-smooth-scroll"  href="https://inbre.uidaho.edu/about-inbre/successes-2/">Successes</a></li>
+	<li id="menu-item-109" class="menu-item menu-item-type-post_type menu-item-object-page"><a class="menu-item-link js-smooth-scroll"  href="https://inbre.uidaho.edu/about-inbre/pipeline/">Pipeline</a></li>
+	<li id="menu-item-2923" class="menu-item menu-item-type-post_type menu-item-object-page"><a class="menu-item-link js-smooth-scroll"  href="https://inbre.uidaho.edu/about-inbre/inbre-in-3-words/">INBRE in 3 words</a></li>
+	<li id="menu-item-106" class="menu-item menu-item-type-post_type menu-item-object-page"><a class="menu-item-link js-smooth-scroll"  href="https://inbre.uidaho.edu/about-inbre/idea-western-region-2/">Regional Alliance of INBRE Networks (RAIN)</a></li>
+	<li id="menu-item-105" class="menu-item menu-item-type-post_type menu-item-object-page"><a class="menu-item-link js-smooth-scroll"  href="https://inbre.uidaho.edu/about-inbre/history/">History</a></li>
+	<li id="menu-item-1970" class="menu-item menu-item-type-post_type menu-item-object-page"><a class="menu-item-link js-smooth-scroll"  href="https://inbre.uidaho.edu/about-inbre/conflict-resolution-2/">Conflict Resolution</a></li>
+	<li id="menu-item-5094" class="menu-item menu-item-type-post_type menu-item-object-page"><a class="menu-item-link js-smooth-scroll"  href="https://inbre.uidaho.edu/nih-idea-programs-in-idaho/">NIH IDeA Programs in Idaho</a></li>
+	<li id="menu-item-108" class="menu-item menu-item-type-post_type menu-item-object-page"><a class="menu-item-link js-smooth-scroll"  href="https://inbre.uidaho.edu/about-inbre/nih-nigms/">NIH / NIGMS</a></li>
+	<li id="menu-item-4692" class="menu-item menu-item-type-post_type menu-item-object-page"><a class="menu-item-link js-smooth-scroll"  href="https://inbre.uidaho.edu/about-inbre/national-association-of-idea-pis-naipi/">National Association of IDeA PIs (NAIPI)</a></li>
+</ul>
+</li>
+<li id="menu-item-128" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children no-mega-menu"><a class="menu-item-link js-smooth-scroll"  href="https://inbre.uidaho.edu/research/">Research</a>
+<ul style="" class="sub-menu ">
+	<li id="menu-item-4941" class="menu-item menu-item-type-post_type menu-item-object-page"><a class="menu-item-link js-smooth-scroll"  href="https://inbre.uidaho.edu/inbre-funding-opportunities-2/">INBRE Funding Opportunities</a></li>
+	<li id="menu-item-130" class="menu-item menu-item-type-post_type menu-item-object-page"><a class="menu-item-link js-smooth-scroll"  href="https://inbre.uidaho.edu/research/faculty-research-inbre-4/">Faculty Research</a></li>
+	<li id="menu-item-5506" class="menu-item menu-item-type-post_type menu-item-object-page"><a class="menu-item-link js-smooth-scroll"  href="https://inbre.uidaho.edu/course-based-undergraduate-research-education-cure/">Course-based Undergraduate Research Education (CURE)</a></li>
+	<li id="menu-item-2138" class="menu-item menu-item-type-post_type menu-item-object-page"><a class="menu-item-link js-smooth-scroll"  href="https://inbre.uidaho.edu/annual-reporting-for-inbre-students/">Annual Reporting for INBRE Participants</a></li>
+	<li id="menu-item-133" class="menu-item menu-item-type-post_type menu-item-object-page"><a class="menu-item-link js-smooth-scroll"  href="https://inbre.uidaho.edu/research/research-conference/">Statewide Research Conference</a></li>
+	<li id="menu-item-5406" class="menu-item menu-item-type-post_type menu-item-object-page"><a class="menu-item-link js-smooth-scroll"  href="https://inbre.uidaho.edu/2027-western-regional-idea-conference/">2027 Western Regional IDeA Conference</a></li>
+	<li id="menu-item-132" class="menu-item menu-item-type-post_type menu-item-object-page"><a class="menu-item-link js-smooth-scroll"  href="https://inbre.uidaho.edu/research/publications-grants/">Publications &#038; Grants</a></li>
+	<li id="menu-item-5132" class="menu-item menu-item-type-post_type menu-item-object-page"><a class="menu-item-link js-smooth-scroll"  href="https://inbre.uidaho.edu/research/links-to-nih-other-resources/">Links to NIH &#038; Other Resources</a></li>
+</ul>
+</li>
+<li id="menu-item-112" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children no-mega-menu"><a class="menu-item-link js-smooth-scroll"  href="https://inbre.uidaho.edu/bioformatics/">Data Science</a>
+<ul style="" class="sub-menu ">
+	<li id="menu-item-4766" class="menu-item menu-item-type-post_type menu-item-object-page"><a class="menu-item-link js-smooth-scroll"  href="https://inbre.uidaho.edu/bioformatics/">Data Science Homepage</a></li>
+	<li id="menu-item-129" class="menu-item menu-item-type-post_type menu-item-object-page"><a class="menu-item-link js-smooth-scroll"  href="https://inbre.uidaho.edu/research/core-facilities/">Core Facilities</a></li>
+	<li id="menu-item-3481" class="menu-item menu-item-type-post_type menu-item-object-page"><a class="menu-item-link js-smooth-scroll"  href="https://inbre.uidaho.edu/inbre-bioinformatics-core-technology-access-awards/">Data Science Core Technology Access Awards</a></li>
+	<li id="menu-item-113" class="menu-item menu-item-type-post_type menu-item-object-page"><a class="menu-item-link js-smooth-scroll"  href="https://inbre.uidaho.edu/bioformatics/bioinformatics-core-personnel/">Data Science Core Personnel</a></li>
+	<li id="menu-item-2727" class="menu-item menu-item-type-post_type menu-item-object-page"><a class="menu-item-link js-smooth-scroll"  href="https://inbre.uidaho.edu/bioformatics/bioinformatics-degree-programs-idaho/">Bioinformatics Degree Programs in Idaho</a></li>
+	<li id="menu-item-3447" class="menu-item menu-item-type-post_type menu-item-object-page"><a class="menu-item-link js-smooth-scroll"  href="https://inbre.uidaho.edu/national-resource-for-quantitative-proteomics/">National Resource for Quantitative Proteomics</a></li>
+</ul>
+</li>
+<li id="menu-item-114" class="menu-item menu-item-type-post_type menu-item-object-page current-menu-ancestor current-menu-parent current_page_parent current_page_ancestor menu-item-has-children no-mega-menu"><a class="menu-item-link js-smooth-scroll"  href="https://inbre.uidaho.edu/faculty-opportunities/">Faculty Opportunities</a>
+<ul style="" class="sub-menu ">
+	<li id="menu-item-3674" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children"><a class="menu-item-link js-smooth-scroll"  href="https://inbre.uidaho.edu/faculty-opportunities/classroom-resources/">Classroom Resources</a><i class="menu-sub-level-arrow"><svg  class="mk-svg-icon" data-name="mk-icon-angle-right" data-cacheid="icon-69957fb241caf" style=" height:16px; width: 5.71428571429px; "  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 1792"><path d="M595 960q0 13-10 23l-466 466q-10 10-23 10t-23-10l-50-50q-10-10-10-23t10-23l393-393-393-393q-10-10-10-23t10-23l50-50q10-10 23-10t23 10l466 466q10 10 10 23z"/></svg></i>
+	<ul style="" class="sub-menu ">
+		<li id="menu-item-3685" class="menu-item menu-item-type-post_type menu-item-object-page"><a class="menu-item-link js-smooth-scroll"  href="https://inbre.uidaho.edu/faculty-opportunities/classroom-resources/lac-operon/">lac-operon</a></li>
+	</ul>
+</li>
+	<li id="menu-item-3106" class="menu-item menu-item-type-post_type menu-item-object-page"><a class="menu-item-link js-smooth-scroll"  href="https://inbre.uidaho.edu/faculty-opportunities/research-support/">Grant writing and publication support</a></li>
+	<li id="menu-item-5973" class="menu-item menu-item-type-post_type menu-item-object-page"><a class="menu-item-link js-smooth-scroll"  href="https://inbre.uidaho.edu/research-preceptors/">Research Preceptors</a></li>
+	<li id="menu-item-116" class="menu-item menu-item-type-post_type menu-item-object-page"><a class="menu-item-link js-smooth-scroll"  href="https://inbre.uidaho.edu/faculty-opportunities/funding-oppurtunities/">Funding Opportunities</a></li>
+	<li id="menu-item-5337" class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-5305 current_page_item"><a class="menu-item-link js-smooth-scroll"  href="https://inbre.uidaho.edu/generative-ai/">Generative AI</a></li>
+	<li id="menu-item-117" class="menu-item menu-item-type-post_type menu-item-object-page"><a class="menu-item-link js-smooth-scroll"  href="https://inbre.uidaho.edu/faculty-opportunities/mentoring-resources/">Mentoring Resources</a></li>
+</ul>
+</li>
+<li id="menu-item-5876" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children no-mega-menu"><a class="menu-item-link js-smooth-scroll"  href="https://inbre.uidaho.edu/student-programs/">Student Programs</a>
+<ul style="" class="sub-menu ">
+	<li id="menu-item-5872" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children"><a class="menu-item-link js-smooth-scroll"  href="https://inbre.uidaho.edu/student-programs/">Student Programs Homepage</a><i class="menu-sub-level-arrow"><svg  class="mk-svg-icon" data-name="mk-icon-angle-right" data-cacheid="icon-69957fb241f6e" style=" height:16px; width: 5.71428571429px; "  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 1792"><path d="M595 960q0 13-10 23l-466 466q-10 10-23 10t-23-10l-50-50q-10-10-10-23t10-23l393-393-393-393q-10-10-10-23t10-23l50-50q10-10 23-10t23 10l466 466q10 10 10 23z"/></svg></i>
+	<ul style="" class="sub-menu ">
+		<li id="menu-item-5939" class="menu-item menu-item-type-post_type menu-item-object-page"><a class="menu-item-link js-smooth-scroll"  href="https://inbre.uidaho.edu/summer-undergraduate-research-10-weeks/">Summer Undergraduate Research (10-weeks)</a></li>
+		<li id="menu-item-5889" class="menu-item menu-item-type-post_type menu-item-object-page"><a class="menu-item-link js-smooth-scroll"  href="https://inbre.uidaho.edu/?page_id=76">Summer Undergraduate Research (2-4 weeks)</a></li>
+		<li id="menu-item-5885" class="menu-item menu-item-type-post_type menu-item-object-page"><a class="menu-item-link js-smooth-scroll"  href="https://inbre.uidaho.edu/industry-interns/">Industry Internships</a></li>
+		<li id="menu-item-5911" class="menu-item menu-item-type-post_type menu-item-object-page"><a class="menu-item-link js-smooth-scroll"  href="https://inbre.uidaho.edu/rain-undergraduate-student-exchange/">RAIN Undergraduate Student Exchange</a></li>
+		<li id="menu-item-5886" class="menu-item menu-item-type-post_type menu-item-object-page"><a class="menu-item-link js-smooth-scroll"  href="https://inbre.uidaho.edu/grad-students-post-docs/">Grad Students and Post-docs</a></li>
+	</ul>
+</li>
+	<li id="menu-item-3407" class="menu-item menu-item-type-post_type menu-item-object-page"><a class="menu-item-link js-smooth-scroll"  href="https://inbre.uidaho.edu/student-resources/">Student Resources</a></li>
+	<li id="menu-item-5851" class="menu-item menu-item-type-post_type menu-item-object-page"><a class="menu-item-link js-smooth-scroll"  href="https://inbre.uidaho.edu/research-preceptors/">Research Preceptors</a></li>
+	<li id="menu-item-2924" class="menu-item menu-item-type-post_type menu-item-object-page"><a class="menu-item-link js-smooth-scroll"  href="https://inbre.uidaho.edu/about-inbre/inbre-in-3-words/">INBRE in 3 words</a></li>
+	<li id="menu-item-4679" class="menu-item menu-item-type-post_type menu-item-object-page"><a class="menu-item-link js-smooth-scroll"  href="https://inbre.uidaho.edu/former-current-students/">Former &#038; Current Students</a></li>
+	<li id="menu-item-1973" class="menu-item menu-item-type-post_type menu-item-object-page"><a class="menu-item-link js-smooth-scroll"  href="https://inbre.uidaho.edu/student-travel-awards/">Student Travel Awards [UI only]</a></li>
+</ul>
+</li>
+<li id="menu-item-122" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children no-mega-menu"><a class="menu-item-link js-smooth-scroll"  href="https://inbre.uidaho.edu/people/">People</a>
+<ul style="" class="sub-menu ">
+	<li id="menu-item-1178" class="menu-item menu-item-type-custom menu-item-object-custom"><a class="menu-item-link js-smooth-scroll"  href="/people/">Administrative Core</a></li>
+	<li id="menu-item-5011" class="menu-item menu-item-type-post_type menu-item-object-page"><a class="menu-item-link js-smooth-scroll"  href="https://inbre.uidaho.edu/steering-committee/">Steering Committee</a></li>
+	<li id="menu-item-127" class="menu-item menu-item-type-post_type menu-item-object-page"><a class="menu-item-link js-smooth-scroll"  href="https://inbre.uidaho.edu/people/executive-committee/">Executive Committee</a></li>
+	<li id="menu-item-4982" class="menu-item menu-item-type-post_type menu-item-object-page"><a class="menu-item-link js-smooth-scroll"  href="https://inbre.uidaho.edu/people/external-advisory-committee-2/">External Advisory Committee</a></li>
+	<li id="menu-item-4601" class="menu-item menu-item-type-post_type menu-item-object-page"><a class="menu-item-link js-smooth-scroll"  href="https://inbre.uidaho.edu/people/campus-leaders-and-student-coordinators/">Campus Leaders &#038; Student Coordinators</a></li>
+</ul>
+</li>
+<li id="menu-item-2110" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children no-mega-menu"><a class="menu-item-link js-smooth-scroll"  href="https://inbre.uidaho.edu/inbre-media/">Media</a>
+<ul style="" class="sub-menu ">
+	<li id="menu-item-4605" class="menu-item menu-item-type-post_type menu-item-object-page"><a class="menu-item-link js-smooth-scroll"  href="https://inbre.uidaho.edu/inbre-media/">Media Homepage</a></li>
+	<li id="menu-item-2803" class="menu-item menu-item-type-post_type menu-item-object-page"><a class="menu-item-link js-smooth-scroll"  href="https://inbre.uidaho.edu/inbre-media/inbre-epscor-newsletter/">INBRE EPSCoR Newsletter</a></li>
+</ul>
+</li>
+</ul></nav>
+	<div class="main-nav-side-search">
+		<a class="mk-search-trigger  mk-fullscreen-trigger" href="#"><i class="mk-svg-icon-wrapper"><svg  class="mk-svg-icon" data-name="mk-icon-search" data-cacheid="icon-69957fb242468" style=" height:16px; width: 14.8571428571px; "  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1664 1792"><path d="M1152 832q0-185-131.5-316.5t-316.5-131.5-316.5 131.5-131.5 316.5 131.5 316.5 316.5 131.5 316.5-131.5 131.5-316.5zm512 832q0 52-38 90t-90 38q-54 0-90-38l-343-342q-179 124-399 124-143 0-273.5-55.5t-225-150-150-225-55.5-273.5 55.5-273.5 150-225 225-150 273.5-55.5 273.5 55.5 225 150 150 225 55.5 273.5q0 220-124 399l343 343q37 37 37 90z"/></svg></i></a>
+	</div>
+
+                        </div>
+                    </div>
+
+
+                    <div class="mk-header-right">
+                                            </div>
+                    
+<div class="mk-responsive-wrap">
+
+	<nav class="menu-main-container"><ul id="menu-main-1" class="mk-responsive-nav"><li id="responsive-menu-item-104" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children"><a class="menu-item-link js-smooth-scroll"  href="https://inbre.uidaho.edu/about-inbre/">About INBRE</a><span class="mk-nav-arrow mk-nav-sub-closed"><svg  class="mk-svg-icon" data-name="mk-moon-arrow-down" data-cacheid="icon-69957fb245ac0" style=" height:16px; width: 16px; "  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M512 192l-96-96-160 160-160-160-96 96 256 255.999z"/></svg></span>
+<ul class="sub-menu ">
+	<li id="responsive-menu-item-107" class="menu-item menu-item-type-post_type menu-item-object-page"><a class="menu-item-link js-smooth-scroll"  href="https://inbre.uidaho.edu/about-inbre/network-organization/">Network Organization</a></li>
+	<li id="responsive-menu-item-1660" class="menu-item menu-item-type-custom menu-item-object-custom"><a class="menu-item-link js-smooth-scroll"  href="/events">Upcoming Events</a></li>
+	<li id="responsive-menu-item-2830" class="menu-item menu-item-type-post_type menu-item-object-page"><a class="menu-item-link js-smooth-scroll"  href="https://inbre.uidaho.edu/about-inbre/evaluation/">Evaluation</a></li>
+	<li id="responsive-menu-item-5967" class="menu-item menu-item-type-post_type menu-item-object-page"><a class="menu-item-link js-smooth-scroll"  href="https://inbre.uidaho.edu/inbre-brochure/">INBRE Brochure</a></li>
+	<li id="responsive-menu-item-111" class="menu-item menu-item-type-post_type menu-item-object-page"><a class="menu-item-link js-smooth-scroll"  href="https://inbre.uidaho.edu/about-inbre/successes-2/">Successes</a></li>
+	<li id="responsive-menu-item-109" class="menu-item menu-item-type-post_type menu-item-object-page"><a class="menu-item-link js-smooth-scroll"  href="https://inbre.uidaho.edu/about-inbre/pipeline/">Pipeline</a></li>
+	<li id="responsive-menu-item-2923" class="menu-item menu-item-type-post_type menu-item-object-page"><a class="menu-item-link js-smooth-scroll"  href="https://inbre.uidaho.edu/about-inbre/inbre-in-3-words/">INBRE in 3 words</a></li>
+	<li id="responsive-menu-item-106" class="menu-item menu-item-type-post_type menu-item-object-page"><a class="menu-item-link js-smooth-scroll"  href="https://inbre.uidaho.edu/about-inbre/idea-western-region-2/">Regional Alliance of INBRE Networks (RAIN)</a></li>
+	<li id="responsive-menu-item-105" class="menu-item menu-item-type-post_type menu-item-object-page"><a class="menu-item-link js-smooth-scroll"  href="https://inbre.uidaho.edu/about-inbre/history/">History</a></li>
+	<li id="responsive-menu-item-1970" class="menu-item menu-item-type-post_type menu-item-object-page"><a class="menu-item-link js-smooth-scroll"  href="https://inbre.uidaho.edu/about-inbre/conflict-resolution-2/">Conflict Resolution</a></li>
+	<li id="responsive-menu-item-5094" class="menu-item menu-item-type-post_type menu-item-object-page"><a class="menu-item-link js-smooth-scroll"  href="https://inbre.uidaho.edu/nih-idea-programs-in-idaho/">NIH IDeA Programs in Idaho</a></li>
+	<li id="responsive-menu-item-108" class="menu-item menu-item-type-post_type menu-item-object-page"><a class="menu-item-link js-smooth-scroll"  href="https://inbre.uidaho.edu/about-inbre/nih-nigms/">NIH / NIGMS</a></li>
+	<li id="responsive-menu-item-4692" class="menu-item menu-item-type-post_type menu-item-object-page"><a class="menu-item-link js-smooth-scroll"  href="https://inbre.uidaho.edu/about-inbre/national-association-of-idea-pis-naipi/">National Association of IDeA PIs (NAIPI)</a></li>
+</ul>
+</li>
+<li id="responsive-menu-item-128" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children"><a class="menu-item-link js-smooth-scroll"  href="https://inbre.uidaho.edu/research/">Research</a><span class="mk-nav-arrow mk-nav-sub-closed"><svg  class="mk-svg-icon" data-name="mk-moon-arrow-down" data-cacheid="icon-69957fb246117" style=" height:16px; width: 16px; "  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M512 192l-96-96-160 160-160-160-96 96 256 255.999z"/></svg></span>
+<ul class="sub-menu ">
+	<li id="responsive-menu-item-4941" class="menu-item menu-item-type-post_type menu-item-object-page"><a class="menu-item-link js-smooth-scroll"  href="https://inbre.uidaho.edu/inbre-funding-opportunities-2/">INBRE Funding Opportunities</a></li>
+	<li id="responsive-menu-item-130" class="menu-item menu-item-type-post_type menu-item-object-page"><a class="menu-item-link js-smooth-scroll"  href="https://inbre.uidaho.edu/research/faculty-research-inbre-4/">Faculty Research</a></li>
+	<li id="responsive-menu-item-5506" class="menu-item menu-item-type-post_type menu-item-object-page"><a class="menu-item-link js-smooth-scroll"  href="https://inbre.uidaho.edu/course-based-undergraduate-research-education-cure/">Course-based Undergraduate Research Education (CURE)</a></li>
+	<li id="responsive-menu-item-2138" class="menu-item menu-item-type-post_type menu-item-object-page"><a class="menu-item-link js-smooth-scroll"  href="https://inbre.uidaho.edu/annual-reporting-for-inbre-students/">Annual Reporting for INBRE Participants</a></li>
+	<li id="responsive-menu-item-133" class="menu-item menu-item-type-post_type menu-item-object-page"><a class="menu-item-link js-smooth-scroll"  href="https://inbre.uidaho.edu/research/research-conference/">Statewide Research Conference</a></li>
+	<li id="responsive-menu-item-5406" class="menu-item menu-item-type-post_type menu-item-object-page"><a class="menu-item-link js-smooth-scroll"  href="https://inbre.uidaho.edu/2027-western-regional-idea-conference/">2027 Western Regional IDeA Conference</a></li>
+	<li id="responsive-menu-item-132" class="menu-item menu-item-type-post_type menu-item-object-page"><a class="menu-item-link js-smooth-scroll"  href="https://inbre.uidaho.edu/research/publications-grants/">Publications &#038; Grants</a></li>
+	<li id="responsive-menu-item-5132" class="menu-item menu-item-type-post_type menu-item-object-page"><a class="menu-item-link js-smooth-scroll"  href="https://inbre.uidaho.edu/research/links-to-nih-other-resources/">Links to NIH &#038; Other Resources</a></li>
+</ul>
+</li>
+<li id="responsive-menu-item-112" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children"><a class="menu-item-link js-smooth-scroll"  href="https://inbre.uidaho.edu/bioformatics/">Data Science</a><span class="mk-nav-arrow mk-nav-sub-closed"><svg  class="mk-svg-icon" data-name="mk-moon-arrow-down" data-cacheid="icon-69957fb24659d" style=" height:16px; width: 16px; "  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M512 192l-96-96-160 160-160-160-96 96 256 255.999z"/></svg></span>
+<ul class="sub-menu ">
+	<li id="responsive-menu-item-4766" class="menu-item menu-item-type-post_type menu-item-object-page"><a class="menu-item-link js-smooth-scroll"  href="https://inbre.uidaho.edu/bioformatics/">Data Science Homepage</a></li>
+	<li id="responsive-menu-item-129" class="menu-item menu-item-type-post_type menu-item-object-page"><a class="menu-item-link js-smooth-scroll"  href="https://inbre.uidaho.edu/research/core-facilities/">Core Facilities</a></li>
+	<li id="responsive-menu-item-3481" class="menu-item menu-item-type-post_type menu-item-object-page"><a class="menu-item-link js-smooth-scroll"  href="https://inbre.uidaho.edu/inbre-bioinformatics-core-technology-access-awards/">Data Science Core Technology Access Awards</a></li>
+	<li id="responsive-menu-item-113" class="menu-item menu-item-type-post_type menu-item-object-page"><a class="menu-item-link js-smooth-scroll"  href="https://inbre.uidaho.edu/bioformatics/bioinformatics-core-personnel/">Data Science Core Personnel</a></li>
+	<li id="responsive-menu-item-2727" class="menu-item menu-item-type-post_type menu-item-object-page"><a class="menu-item-link js-smooth-scroll"  href="https://inbre.uidaho.edu/bioformatics/bioinformatics-degree-programs-idaho/">Bioinformatics Degree Programs in Idaho</a></li>
+	<li id="responsive-menu-item-3447" class="menu-item menu-item-type-post_type menu-item-object-page"><a class="menu-item-link js-smooth-scroll"  href="https://inbre.uidaho.edu/national-resource-for-quantitative-proteomics/">National Resource for Quantitative Proteomics</a></li>
+</ul>
+</li>
+<li id="responsive-menu-item-114" class="menu-item menu-item-type-post_type menu-item-object-page current-menu-ancestor current-menu-parent current_page_parent current_page_ancestor menu-item-has-children"><a class="menu-item-link js-smooth-scroll"  href="https://inbre.uidaho.edu/faculty-opportunities/">Faculty Opportunities</a><span class="mk-nav-arrow mk-nav-sub-closed"><svg  class="mk-svg-icon" data-name="mk-moon-arrow-down" data-cacheid="icon-69957fb246976" style=" height:16px; width: 16px; "  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M512 192l-96-96-160 160-160-160-96 96 256 255.999z"/></svg></span>
+<ul class="sub-menu ">
+	<li id="responsive-menu-item-3674" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children"><a class="menu-item-link js-smooth-scroll"  href="https://inbre.uidaho.edu/faculty-opportunities/classroom-resources/">Classroom Resources</a><span class="mk-nav-arrow mk-nav-sub-closed"><svg  class="mk-svg-icon" data-name="mk-moon-arrow-down" data-cacheid="icon-69957fb246b3a" style=" height:16px; width: 16px; "  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M512 192l-96-96-160 160-160-160-96 96 256 255.999z"/></svg></span>
+	<ul class="sub-menu ">
+		<li id="responsive-menu-item-3685" class="menu-item menu-item-type-post_type menu-item-object-page"><a class="menu-item-link js-smooth-scroll"  href="https://inbre.uidaho.edu/faculty-opportunities/classroom-resources/lac-operon/">lac-operon</a></li>
+	</ul>
+</li>
+	<li id="responsive-menu-item-3106" class="menu-item menu-item-type-post_type menu-item-object-page"><a class="menu-item-link js-smooth-scroll"  href="https://inbre.uidaho.edu/faculty-opportunities/research-support/">Grant writing and publication support</a></li>
+	<li id="responsive-menu-item-5973" class="menu-item menu-item-type-post_type menu-item-object-page"><a class="menu-item-link js-smooth-scroll"  href="https://inbre.uidaho.edu/research-preceptors/">Research Preceptors</a></li>
+	<li id="responsive-menu-item-116" class="menu-item menu-item-type-post_type menu-item-object-page"><a class="menu-item-link js-smooth-scroll"  href="https://inbre.uidaho.edu/faculty-opportunities/funding-oppurtunities/">Funding Opportunities</a></li>
+	<li id="responsive-menu-item-5337" class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-5305 current_page_item"><a class="menu-item-link js-smooth-scroll"  href="https://inbre.uidaho.edu/generative-ai/">Generative AI</a></li>
+	<li id="responsive-menu-item-117" class="menu-item menu-item-type-post_type menu-item-object-page"><a class="menu-item-link js-smooth-scroll"  href="https://inbre.uidaho.edu/faculty-opportunities/mentoring-resources/">Mentoring Resources</a></li>
+</ul>
+</li>
+<li id="responsive-menu-item-5876" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children"><a class="menu-item-link js-smooth-scroll"  href="https://inbre.uidaho.edu/student-programs/">Student Programs</a><span class="mk-nav-arrow mk-nav-sub-closed"><svg  class="mk-svg-icon" data-name="mk-moon-arrow-down" data-cacheid="icon-69957fb246edf" style=" height:16px; width: 16px; "  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M512 192l-96-96-160 160-160-160-96 96 256 255.999z"/></svg></span>
+<ul class="sub-menu ">
+	<li id="responsive-menu-item-5872" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children"><a class="menu-item-link js-smooth-scroll"  href="https://inbre.uidaho.edu/student-programs/">Student Programs Homepage</a><span class="mk-nav-arrow mk-nav-sub-closed"><svg  class="mk-svg-icon" data-name="mk-moon-arrow-down" data-cacheid="icon-69957fb24706c" style=" height:16px; width: 16px; "  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M512 192l-96-96-160 160-160-160-96 96 256 255.999z"/></svg></span>
+	<ul class="sub-menu ">
+		<li id="responsive-menu-item-5939" class="menu-item menu-item-type-post_type menu-item-object-page"><a class="menu-item-link js-smooth-scroll"  href="https://inbre.uidaho.edu/summer-undergraduate-research-10-weeks/">Summer Undergraduate Research (10-weeks)</a></li>
+		<li id="responsive-menu-item-5889" class="menu-item menu-item-type-post_type menu-item-object-page"><a class="menu-item-link js-smooth-scroll"  href="https://inbre.uidaho.edu/?page_id=76">Summer Undergraduate Research (2-4 weeks)</a></li>
+		<li id="responsive-menu-item-5885" class="menu-item menu-item-type-post_type menu-item-object-page"><a class="menu-item-link js-smooth-scroll"  href="https://inbre.uidaho.edu/industry-interns/">Industry Internships</a></li>
+		<li id="responsive-menu-item-5911" class="menu-item menu-item-type-post_type menu-item-object-page"><a class="menu-item-link js-smooth-scroll"  href="https://inbre.uidaho.edu/rain-undergraduate-student-exchange/">RAIN Undergraduate Student Exchange</a></li>
+		<li id="responsive-menu-item-5886" class="menu-item menu-item-type-post_type menu-item-object-page"><a class="menu-item-link js-smooth-scroll"  href="https://inbre.uidaho.edu/grad-students-post-docs/">Grad Students and Post-docs</a></li>
+	</ul>
+</li>
+	<li id="responsive-menu-item-3407" class="menu-item menu-item-type-post_type menu-item-object-page"><a class="menu-item-link js-smooth-scroll"  href="https://inbre.uidaho.edu/student-resources/">Student Resources</a></li>
+	<li id="responsive-menu-item-5851" class="menu-item menu-item-type-post_type menu-item-object-page"><a class="menu-item-link js-smooth-scroll"  href="https://inbre.uidaho.edu/research-preceptors/">Research Preceptors</a></li>
+	<li id="responsive-menu-item-2924" class="menu-item menu-item-type-post_type menu-item-object-page"><a class="menu-item-link js-smooth-scroll"  href="https://inbre.uidaho.edu/about-inbre/inbre-in-3-words/">INBRE in 3 words</a></li>
+	<li id="responsive-menu-item-4679" class="menu-item menu-item-type-post_type menu-item-object-page"><a class="menu-item-link js-smooth-scroll"  href="https://inbre.uidaho.edu/former-current-students/">Former &#038; Current Students</a></li>
+	<li id="responsive-menu-item-1973" class="menu-item menu-item-type-post_type menu-item-object-page"><a class="menu-item-link js-smooth-scroll"  href="https://inbre.uidaho.edu/student-travel-awards/">Student Travel Awards [UI only]</a></li>
+</ul>
+</li>
+<li id="responsive-menu-item-122" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children"><a class="menu-item-link js-smooth-scroll"  href="https://inbre.uidaho.edu/people/">People</a><span class="mk-nav-arrow mk-nav-sub-closed"><svg  class="mk-svg-icon" data-name="mk-moon-arrow-down" data-cacheid="icon-69957fb247532" style=" height:16px; width: 16px; "  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M512 192l-96-96-160 160-160-160-96 96 256 255.999z"/></svg></span>
+<ul class="sub-menu ">
+	<li id="responsive-menu-item-1178" class="menu-item menu-item-type-custom menu-item-object-custom"><a class="menu-item-link js-smooth-scroll"  href="/people/">Administrative Core</a></li>
+	<li id="responsive-menu-item-5011" class="menu-item menu-item-type-post_type menu-item-object-page"><a class="menu-item-link js-smooth-scroll"  href="https://inbre.uidaho.edu/steering-committee/">Steering Committee</a></li>
+	<li id="responsive-menu-item-127" class="menu-item menu-item-type-post_type menu-item-object-page"><a class="menu-item-link js-smooth-scroll"  href="https://inbre.uidaho.edu/people/executive-committee/">Executive Committee</a></li>
+	<li id="responsive-menu-item-4982" class="menu-item menu-item-type-post_type menu-item-object-page"><a class="menu-item-link js-smooth-scroll"  href="https://inbre.uidaho.edu/people/external-advisory-committee-2/">External Advisory Committee</a></li>
+	<li id="responsive-menu-item-4601" class="menu-item menu-item-type-post_type menu-item-object-page"><a class="menu-item-link js-smooth-scroll"  href="https://inbre.uidaho.edu/people/campus-leaders-and-student-coordinators/">Campus Leaders &#038; Student Coordinators</a></li>
+</ul>
+</li>
+<li id="responsive-menu-item-2110" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children"><a class="menu-item-link js-smooth-scroll"  href="https://inbre.uidaho.edu/inbre-media/">Media</a><span class="mk-nav-arrow mk-nav-sub-closed"><svg  class="mk-svg-icon" data-name="mk-moon-arrow-down" data-cacheid="icon-69957fb24784e" style=" height:16px; width: 16px; "  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M512 192l-96-96-160 160-160-160-96 96 256 255.999z"/></svg></span>
+<ul class="sub-menu ">
+	<li id="responsive-menu-item-4605" class="menu-item menu-item-type-post_type menu-item-object-page"><a class="menu-item-link js-smooth-scroll"  href="https://inbre.uidaho.edu/inbre-media/">Media Homepage</a></li>
+	<li id="responsive-menu-item-2803" class="menu-item menu-item-type-post_type menu-item-object-page"><a class="menu-item-link js-smooth-scroll"  href="https://inbre.uidaho.edu/inbre-media/inbre-epscor-newsletter/">INBRE EPSCoR Newsletter</a></li>
+</ul>
+</li>
+</ul></nav>
+			<form class="responsive-searchform" method="get" action="https://inbre.uidaho.edu/">
+		    <input type="text" class="text-input" value="" name="s" id="s" placeholder="Search.." />
+		    <i><input value="" type="submit" /><svg  class="mk-svg-icon" data-name="mk-icon-search" data-cacheid="icon-69957fb247a56" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1664 1792"><path d="M1152 832q0-185-131.5-316.5t-316.5-131.5-316.5 131.5-131.5 316.5 131.5 316.5 316.5 131.5 316.5-131.5 131.5-316.5zm512 832q0 52-38 90t-90 38q-54 0-90-38l-343-342q-179 124-399 124-143 0-273.5-55.5t-225-150-150-225-55.5-273.5 55.5-273.5 150-225 225-150 273.5-55.5 273.5 55.5 225 150 150 225 55.5 273.5q0 220-124 399l343 343q37 37 37 90z"/></svg></i>
+		</form>
+		
+
+</div>
+         
+                </div>
+            </div>
+                <div class="mk-header-padding-wrapper"></div>
+ 
+        <section id="mk-page-introduce" class="intro-left"><div class="mk-grid"><h1 class="page-title ">Generative AI</h1><div id="mk-breadcrumbs"><div class="mk-breadcrumbs-inner light-skin"><span xmlns:v="http://rdf.data-vocabulary.org/#"><span typeof="v:Breadcrumb"><a href="https://inbre.uidaho.edu/" rel="v:url" property="v:title">Home</a> &#47; <span rel="v:child" typeof="v:Breadcrumb">Generative AI</span></span></span></div></div><div class="clearboth"></div></div></section>    </header>
+
+		<div id="theme-page" class="master-holder  clearfix" itemscope="itemscope" itemtype="https://schema.org/Blog" >
+			<div class="master-holder-bg-holder">
+				<div id="theme-page-bg" class="master-holder-bg js-el"  ></div>
+			</div>
+			<div class="mk-main-wrapper-holder">
+				<div id="mk-page-id-5305" class="theme-page-wrapper mk-main-wrapper mk-grid full-layout false">
+					<div class="theme-content false" itemprop="mainEntityOfPage">
+							<div class="wpb-content-wrapper">
+<div  data-mk-stretch-content="true" class="wpb_row vc_row vc_row-fluid jupiter-donut- mk-fullwidth-false  attched-false     js-master-row  mk-grid">
+				
+<div class="vc_col-sm-12 wpb_column column_container  jupiter-donut- _ jupiter-donut-height-full">
+	
+<h2 id="fancy-title-3" class="mk-fancy-title  simple-style jupiter-donut-  color-single">
+	<span>
+				<h1 style="text-align: center;"><span style="color: #0000ff;">Generative Artificial Intelligence (GenAI) Resources for Educators and Researchers</span></h1>
+			</span>
+</h2>
+<div class="clearboth"></div>
+
+
+
+</div>
+	</div>
+
+<div  data-mk-stretch-content="true" class="wpb_row vc_row vc_row-fluid jupiter-donut- mk-fullwidth-false  attched-false     js-master-row  mk-grid">
+				
+<div class="vc_col-sm-6 wpb_column column_container  jupiter-donut- _ jupiter-donut-height-full">
+	
+<div id="padding-5" class="mk-padding-divider jupiter-donut-  jupiter-donut-clearfix"></div>
+
+
+	<div  class="wpb_single_image wpb_content_element vc_align_center">
+		
+		<figure class="wpb_wrapper vc_figure">
+			<div class="vc_single_image-wrapper   vc_box_border_grey"><img fetchpriority="high" decoding="async" width="1440" height="756" src="https://inbre.uidaho.edu/wp-content/uploads/2024/10/generative-ai.jpg" class="vc_single_image-img attachment-full" alt="" title="generative-ai" srcset="https://inbre.uidaho.edu/wp-content/uploads/2024/10/generative-ai.jpg 1440w, https://inbre.uidaho.edu/wp-content/uploads/2024/10/generative-ai-300x158.jpg 300w, https://inbre.uidaho.edu/wp-content/uploads/2024/10/generative-ai-1024x538.jpg 1024w, https://inbre.uidaho.edu/wp-content/uploads/2024/10/generative-ai-768x403.jpg 768w, https://inbre.uidaho.edu/wp-content/uploads/2024/10/generative-ai-600x315.jpg 600w" sizes="(max-width: 1440px) 100vw, 1440px" itemprop="image" /></div>
+		</figure>
+	</div>
+</div>
+
+<div class="vc_col-sm-6 wpb_column column_container  jupiter-donut- _ jupiter-donut-height-full">
+		<div class=" vc_custom_1727906097151">
+
+<div id="text-block-7" class="mk-text-block  jupiter-donut- ">
+
+	
+	<h3 style="text-align: center;">Links to Idaho Institution&#8217;s AI Policies/Guidance:</h3>
+<p style="text-align: center;">____________________</p>
+
+	<div class="clearboth"></div>
+</div>
+
+	</div>
+<div class="vc_btn3-container vc_btn3-center" ><a class="vc_general vc_btn3 vc_btn3-size-md vc_btn3-shape-rounded vc_btn3-style-modern vc_btn3-color-blue" href="https://www.boisestate.edu/policy/generative-artificial-intelligence-ai-use-and-policies/" title="" target="_blank">Boise State University</a></div><div class="vc_btn3-container vc_btn3-center" ><a class="vc_general vc_btn3 vc_btn3-size-md vc_btn3-shape-rounded vc_btn3-style-modern vc_btn3-color-blue" href="https://www.byui.edu/genai/" title="" target="_blank">Brigham Young University-Idaho</a></div><div class="vc_btn3-container vc_btn3-center" ><a class="vc_general vc_btn3 vc_btn3-size-md vc_btn3-shape-rounded vc_btn3-style-modern vc_btn3-color-blue" href="https://www.csi.edu/teaching-and-learning-center/resources/student-support.aspx" title="" target="_blank">College of Southern Idaho</a></div><div class="vc_btn3-container vc_btn3-center" ><a class="vc_general vc_btn3 vc_btn3-size-md vc_btn3-shape-rounded vc_btn3-style-modern vc_btn3-color-blue" href="https://www.isu.edu/aic/best-practices/" title="" target="_blank">Idaho State University</a></div><div class="vc_btn3-container vc_btn3-center" ><a class="vc_general vc_btn3 vc_btn3-size-md vc_btn3-shape-rounded vc_btn3-style-modern vc_btn3-color-blue" href="https://www.webpages.uidaho.edu/cetl/ai-teaching-learning.asp" title="" target="_blank">University of Idaho</a></div></div>
+	</div>
+
+<div  data-mk-stretch-content="true" class="wpb_row vc_row vc_row-fluid jupiter-donut- mk-fullwidth-false  attched-false     js-master-row  mk-grid">
+				
+<div class="vc_col-sm-12 wpb_column column_container  jupiter-donut- _ jupiter-donut-height-full">
+	</div>
+	</div>
+
+<div  data-mk-stretch-content="true" class="wpb_row vc_row vc_row-fluid jupiter-donut- mk-fullwidth-false  attched-false     js-master-row  mk-grid">
+				
+<div class="vc_col-sm-1/5 wpb_column column_container  jupiter-donut- _ jupiter-donut-height-full">
+	</div>
+
+<div class="vc_col-sm-1/5 wpb_column column_container  jupiter-donut- _ jupiter-donut-height-full">
+	</div>
+
+<div class="vc_col-sm-1/5 wpb_column column_container  jupiter-donut- _ jupiter-donut-height-full">
+	</div>
+
+<div class="vc_col-sm-1/5 wpb_column column_container  jupiter-donut- _ jupiter-donut-height-full">
+	</div>
+
+<div class="vc_col-sm-1/5 wpb_column column_container  jupiter-donut- _ jupiter-donut-height-full">
+	</div>
+	</div>
+
+<div  data-mk-stretch-content="true" class="wpb_row vc_row vc_row-fluid jupiter-donut- mk-fullwidth-false  attched-false     js-master-row  mk-grid">
+				
+<div class="vc_col-sm-12 wpb_column column_container  jupiter-donut- _ jupiter-donut-height-full">
+	<div id="divider-15" class="mk-divider  jupiter-donut-   divider_full_width center double_dot  ">
+
+			<div class="divider-inner"></div>
+	
+</div>
+<div class="clearboth"></div>
+
+<h2 id="fancy-title-16" class="mk-fancy-title  simple-style jupiter-donut-  color-single">
+	<span>
+				<h1 style="text-align: left;"><span style="text-decoration: underline; color: #3366ff;">For Educators</span></h1>
+			</span>
+</h2>
+<div class="clearboth"></div>
+
+
+
+	<div class=" vc_custom_1728338947909">
+
+<div id="text-block-17" class="mk-text-block  jupiter-donut- ">
+
+	
+	
+	<div class="clearboth"></div>
+</div>
+
+	</div>
+
+<div data-style="toggle-action" data-initialIndex="0" id="mk-accordion-18" class="mk-accordion mobile-false fancy-style ">
+	<div class="wpb_accordion_wrapper">
+		
+<div id=""class="mk-accordion-single">
+
+	<div class="mk-accordion-tab">
+		<i><svg  class="mk-svg-icon" data-name="mk-icon-book" data-cacheid="icon-69957fb24c4b2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1664 1792"><path d="M1639 478q40 57 18 129l-275 906q-19 64-76.5 107.5t-122.5 43.5h-923q-77 0-148.5-53.5t-99.5-131.5q-24-67-2-127 0-4 3-27t4-37q1-8-3-21.5t-3-19.5q2-11 8-21t16.5-23.5 16.5-23.5q23-38 45-91.5t30-91.5q3-10 .5-30t-.5-28q3-11 17-28t17-23q21-36 42-92t25-90q1-9-2.5-32t.5-28q4-13 22-30.5t22-22.5q19-26 42.5-84.5t27.5-96.5q1-8-3-25.5t-2-26.5q2-8 9-18t18-23 17-21q8-12 16.5-30.5t15-35 16-36 19.5-32 26.5-23.5 36-11.5 47.5 5.5l-1 3q38-9 51-9h761q74 0 114 56t18 130l-274 906q-36 119-71.5 153.5t-128.5 34.5h-869q-27 0-38 15-11 16-1 43 24 70 144 70h923q29 0 56-15.5t35-41.5l300-987q7-22 5-57 38 15 59 43zm-1064 2q-4 13 2 22.5t20 9.5h608q13 0 25.5-9.5t16.5-22.5l21-64q4-13-2-22.5t-20-9.5h-608q-13 0-25.5 9.5t-16.5 22.5zm-83 256q-4 13 2 22.5t20 9.5h608q13 0 25.5-9.5t16.5-22.5l21-64q4-13-2-22.5t-20-9.5h-608q-13 0-25.5 9.5t-16.5 22.5z"/></svg></i>		<span>Resources for Educators</span>
+		<svg  class="mk-svg-icon" data-name="mk-icon-chevron-right" data-cacheid="icon-69957fb24caba" style=" height:13px; width: 9.28571428571px; "  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 1792"><path d="M1107 877l-742 742q-19 19-45 19t-45-19l-166-166q-19-19-19-45t19-45l531-531-531-531q-19-19-19-45t19-45l166-166q19-19 45-19t45 19l742 742q19 19 19 45t-19 45z"/></svg>	</div>
+
+	<div class="mk-accordion-pane">
+			<div class=" vc_custom_1727905924077">
+
+<div id="text-block-19" class="mk-text-block  jupiter-donut- ">
+
+	
+	<p>L Furze, M Perkins, J Roe, and J MacVaugh (2024). THE AI ASSESSMENT SCALE (AIAS) IN ACTION: A PILOT IMPLEMENTATION OF GENAI SUPPORTED ASSESSMENT.<br />
+<span style="color: #0000ff;"><a style="color: #0000ff;" href="https://arxiv.org/pdf/2403.14692" target="_blank" rel="noopener">https://arxiv.org/pdf/2403.14692</a></span></p>
+
+	<div class="clearboth"></div>
+</div>
+
+	</div>
+
+		<div class="clearboth"></div>
+	</div>
+
+</div>
+
+<div id=""class="mk-accordion-single">
+
+	<div class="mk-accordion-tab">
+		<i><svg  class="mk-svg-icon" data-name="mk-icon-file-text-o" data-cacheid="icon-69957fb24cfcd" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1536 1792"><path d="M1468 380q28 28 48 76t20 88v1152q0 40-28 68t-68 28h-1344q-40 0-68-28t-28-68v-1600q0-40 28-68t68-28h896q40 0 88 20t76 48zm-444-244v376h376q-10-29-22-41l-313-313q-12-12-41-22zm384 1528v-1024h-416q-40 0-68-28t-28-68v-416h-768v1536h1280zm-1024-864q0-14 9-23t23-9h704q14 0 23 9t9 23v64q0 14-9 23t-23 9h-704q-14 0-23-9t-9-23v-64zm736 224q14 0 23 9t9 23v64q0 14-9 23t-23 9h-704q-14 0-23-9t-9-23v-64q0-14 9-23t23-9h704zm0 256q14 0 23 9t9 23v64q0 14-9 23t-23 9h-704q-14 0-23-9t-9-23v-64q0-14 9-23t23-9h704z"/></svg></i>		<span>AI Policies for Educators: Specific Examples</span>
+		<svg  class="mk-svg-icon" data-name="mk-icon-chevron-right" data-cacheid="icon-69957fb24d0db" style=" height:13px; width: 9.28571428571px; "  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 1792"><path d="M1107 877l-742 742q-19 19-45 19t-45-19l-166-166q-19-19-19-45t19-45l531-531-531-531q-19-19-19-45t19-45l166-166q19-19 45-19t45 19l742 742q19 19 19 45t-19 45z"/></svg>	</div>
+
+	<div class="mk-accordion-pane">
+			<div class=" vc_custom_1730142300947">
+
+<div id="text-block-20" class="mk-text-block  jupiter-donut- ">
+
+	
+	<p data-olk-copy-source="MessageBody"><strong>Jason Blomquist (Boise State University), Idaho Statewide AI Alliance</strong><br />
+<span style="color: #0000ff;"><a style="color: #0000ff;" href="http://inbre.uidaho.edu/wp-content/uploads/2024/10/writing-an-ai-focused-syllabus-statement.pdf" target="_blank" rel="noopener"><span style="text-decoration: underline;"><strong>Writing an AI-focused Syllabus Statement</strong></span></a> <i class="wp-svg-arrow-left-2 arrow-left-2"></i></span> see link</p>
+<p style="text-align: center;">___________________________________________________________________________</p>
+<p><strong>Anna Hegsted (College of Southern Idaho) added the following statement in her Biol 250 General Microbiology Syllabus</strong><br />
+<span style="text-decoration: underline;"><strong>Chat GTP and Generative AI</strong></span> <em>(text below)</em><br />
+Unless the assignment specifically bans it, generative AI (like Chat GTP) may be used. Students who chose to use generative AI must do the follow:<br />
+• Submit the prompt and original output produced by the generative AI with the assignment when they turn it in.<br />
+• Submit the final product. Generative AI is NOT a search engine and is NOT always accurate. It is the student’s responsibility to fact check any work produced by generative AI. These changes should be in the edited final product.<br />
+• Add references in CSE format. If you ask Chat GTP to provide references, it will either (1) not do it or (2) make them up. It is YOUR responsibility to ensure that all work is properly cited (in CSE format) and that the references are real.<br />
+• Acknowledge the use of generative AI.</p>
+<p style="text-align: center;">___________________________________________________________________________</p>
+<p><strong>Eric Stoffregen (Lewis-Clark State College) added the following statement in his Biology Course<br />
+<span style="text-decoration: underline;">Artificial Intelligence Tools</span> </strong><em>(text below)</em><strong><br />
+</strong>The expert use of artificial intelligence (AI) tools, such as the large language models like ChatGPT, Google Gemini, and Claude, may become an important skill for careers in the not-too-distant future. Therefore, we will be using these tools as part of assignments in this course. But outside of those assignments, please see the rest of this information regarding my policies on these tools.</p>
+<p>AI tools can be valuable for augmenting critical thinking and to support learning, but it is not a replacement for either! While AI can provide a wealth of information and insights, it is important to remember that it is a machine and not a human expert. It is not capable of independent thinking or making judgments based on personal experiences, cultural contexts, or ethical considerations. Therefore, it is important that if you use these tools, they are used as a complementary tool to academic work, and not as a replacement for one&#8217;s own thinking and analysis.</p>
+<p>Academic work involves developing essential skills such as critical thinking, problem-solving, and effective communication, which cannot be fully developed by relying solely on AI. Engaging in independent research, reading, writing, and discussion with peers and instructors are crucial components of academic work that should not be overlooked or replaced by technology. Think of AI tools as a resource for enhancing or supplementing academic work, but not a replacement for independent thinking and academic inquiry.</p>
+<p>In this course, <strong>you may use AI programs to help brainstorm or fine tune your ideas, as a tool to check grammar and style in your writing, or to help you find an expression to use in your writing.</strong> There are some important caveats to this allowable use of AI tools so please continue reading.</p>
+<ul>
+<li>First, you need to <strong>acknowledge when using these AI tools</strong>. Pay close attention to the work produced from AI so that it can be properly cited and so you can explain your use when requested. My recommendation is to screenshot and save everything (i.e., what prompts you used, what answers were produced, and where, why, and how you used that information). The tools are new, but basic attribution rules still apply. Cite everything, otherwise you are likely violating academic integrity policies.
+<ul>
+<li>Since AI tools like ChatGPT are so new, it&#8217;s going to take a while for society to figure out when using these tools is/isn&#8217;t acceptable. Here are a few reasons why:</li>
+</ul>
+</li>
+</ul>
+<p>1. Work created by AI tools may not be considered original work and may instead constitute <strong>automated plagiarism</strong>. The work it produces is derived from previously created texts from other sources that the AI models were trained on, yet it does not cite those sources.</p>
+<p>2. AI models have built-in biases (i.e., they are trained on limited underlying sources; they reproduce, rather than challenge, errors in the sources).</p>
+<p>3. AI tools have limitations (i.e., they lack critical thinking to evaluate and reflect on criteria; they lack abductive reasoning to make judgments with incomplete information at hand).</p>
+<ul>
+<li>It is important to understand that the material generated by these programs may be inaccurate, incomplete, or otherwise problematic.
+<ul>
+<li><strong>Don&#8217;t trust anything these systems say.</strong> Assume it is wrong, unless you can verify the information with trusted sources.</li>
+</ul>
+</li>
+<li>You may <strong>not use entire sentences or paragraphs</strong> suggested by an AI tool in your writing without providing quotation marks and a citation, just as you would from any other source. Citations should take this form: OpenAI, chatGPT. Response to prompt: “Explain what is meant by the term ‘Triple Bottom Line’” (February 15, 2023, https://chat.openai.com/)</li>
+<li>You may <strong>not have an app write a draft</strong> (either rough or final) of an assignment for you.</li>
+<li>AI tools are not allowed during in-class examinations or assignments unless explicitly permitted and instructed.</li>
+<li>This policy on the use of AI tools is specific to this course and is not an official policy of LC State. Make sure you understand the policies on the use of AI tools for your other courses, which may not be the same as these.</li>
+</ul>
+<p style="text-align: center;">___________________________________________________________________________</p>
+
+	<div class="clearboth"></div>
+</div>
+
+	</div>
+
+		<div class="clearboth"></div>
+	</div>
+
+</div>
+	</div>
+</div>
+
+
+</div>
+	</div>
+
+<div  data-mk-stretch-content="true" class="wpb_row vc_row vc_row-fluid jupiter-donut- mk-fullwidth-false  attched-false     js-master-row  mk-grid">
+				
+<div class="vc_col-sm-12 wpb_column column_container  jupiter-donut- _ jupiter-donut-height-full">
+	<div id="divider-22" class="mk-divider  jupiter-donut-   divider_full_width center double_dot  ">
+
+			<div class="divider-inner"></div>
+	
+</div>
+<div class="clearboth"></div>
+
+<h2 id="fancy-title-23" class="mk-fancy-title  simple-style jupiter-donut-  color-single">
+	<span>
+				<h1 style="text-align: left;"><span style="text-decoration: underline; color: #3366ff;">For Researchers</span></h1>
+			</span>
+</h2>
+<div class="clearboth"></div>
+
+
+
+
+<div data-style="accordion-style" data-initialIndex="0" id="mk-accordion-24" class="mk-accordion mobile-false fancy-style ">
+	<div class="wpb_accordion_wrapper">
+		
+<div id=""class="mk-accordion-single">
+
+	<div class="mk-accordion-tab">
+		<i><svg  class="mk-svg-icon" data-name="mk-moon-man" data-cacheid="icon-69957fb24ddd1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M320 352h-160c-17.601 0-32-14.4-32-32v-128c0-17.6 14.399-32 32-32v128h16v-296c0-13.2 10.8-24 24-24s24 10.8 24 24v168h32v-168c0-13.2 10.8-24 24-24s24 10.8 24 24v296h16v-128c17.6 0 32 14.4 32 32v128c0 17.6-14.4 32-32 32zm-128 64a48 48 12780 1 0 96 0 48 48 12780 1 0-96 0z" transform="scale(1 -1) translate(0 -480)"/></svg></i>		<span>Resources for Researchers (forthcoming)</span>
+		<svg  class="mk-svg-icon" data-name="mk-icon-chevron-right" data-cacheid="icon-69957fb24dec6" style=" height:13px; width: 9.28571428571px; "  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 1792"><path d="M1107 877l-742 742q-19 19-45 19t-45-19l-166-166q-19-19-19-45t19-45l531-531-531-531q-19-19-19-45t19-45l166-166q19-19 45-19t45 19l742 742q19 19 19 45t-19 45z"/></svg>	</div>
+
+	<div class="mk-accordion-pane">
+				<div class="clearboth"></div>
+	</div>
+
+</div>
+	</div>
+</div>
+
+
+</div>
+	</div>
+
+</div>		<div class="clearboth"></div>
+									<div class="clearboth"></div>
+											</div>
+										<div class="clearboth"></div>
+				</div>
+			</div>
+					</div>
+
+
+<section id="mk-footer-unfold-spacer"></section>
+
+<section id="mk-footer" class="" role="contentinfo" itemscope="itemscope" itemtype="https://schema.org/WPFooter" >
+		<div class="footer-wrapper mk-grid">
+		<div class="mk-padding-wrapper">
+					<div class="mk-col-1-3"><section id="text-4" class="widget widget_text"><div class="widgettitle">Funded by NIH | NIGMS</div>			<div class="textwidget">Award # P20GM103408</br>
+All Rights Reserved</br>
+© 2025 University of Idaho</div>
+		</section></div>
+			<div class="mk-col-1-3"><section id="text-5" class="widget widget_text">			<div class="textwidget"><a href="http://www.uidaho.edu/"><img src="https://inbre.uidaho.edu/wp-content/uploads/2024/01/ui_main_horizontal_w-002.png" class="foot-logo" ></a>
+
+</div>
+		</section></div>
+			<div class="mk-col-1-3"><section id="text-6" class="widget widget_text"><div class="widgettitle">Contact Idaho INBRE</div>			<div class="textwidget">875 Perimeter Dr., MS 3025</br>
+Moscow, ID 83844-3025</br>
+Phone: (208) 885-5373</br>
+Toll Free (888) 98-INBRE (888-984-6273)</br>
+Fax: (208) 885-6904</br>
+E-Mail:<a href="mailto:INBRE@UIDAHO.EDU"> INBRE@UIDAHO.EDU</a></div>
+		</section></div>
+				<div class="clearboth"></div>
+		</div>
+	</div>
+		</section>
+</div>
+</div>
+
+<div class="bottom-corner-btns js-bottom-corner-btns">
+
+<a href="#top-of-page" class="mk-go-top  js-smooth-scroll js-bottom-corner-btn js-bottom-corner-btn--back">
+	<svg  class="mk-svg-icon" data-name="mk-icon-chevron-up" data-cacheid="icon-69957fb24e86c" style=" height:16px; width: 16px; "  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1792 1792"><path d="M1683 1331l-166 165q-19 19-45 19t-45-19l-531-531-531 531q-19 19-45 19t-45-19l-166-165q-19-19-19-45.5t19-45.5l742-741q19-19 45-19t45 19l742 741q19 19 19 45.5t-19 45.5z"/></svg></a>
+	<div class="mk-quick-contact-wrapper js-bottom-corner-btn js-bottom-corner-btn--contact">
+			
+		<a href="#" class="mk-quick-contact-link"><svg  class="mk-svg-icon" data-name="mk-icon-envelope" data-cacheid="icon-69957fb24e999" style=" height:20px; width: 20px; "  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1792 1792"><path d="M1792 710v794q0 66-47 113t-113 47h-1472q-66 0-113-47t-47-113v-794q44 49 101 87 362 246 497 345 57 42 92.5 65.5t94.5 48 110 24.5h2q51 0 110-24.5t94.5-48 92.5-65.5q170-123 498-345 57-39 100-87zm0-294q0 79-49 151t-122 123q-376 261-468 325-10 7-42.5 30.5t-54 38-52 32.5-57.5 27-50 9h-2q-23 0-50-9t-57.5-27-52-32.5-54-38-42.5-30.5q-91-64-262-182.5t-205-142.5q-62-42-117-115.5t-55-136.5q0-78 41.5-130t118.5-52h1472q65 0 112.5 47t47.5 113z"/></svg></a>
+		<div id="mk-quick-contact">
+			<div class="mk-quick-contact-title">Contact Us</div>
+			<p>We&#039;re not around right now. But you can send us an email and we&#039;ll get back to you, asap.</p>
+			<form class="mk-contact-form" method="post" novalidate="novalidate">
+				<input type="text" placeholder="Name*" required="required" id="name" name="name" class="text-input" value="" tabindex="6202" />
+				<input type="email" data-type="email" required="required" placeholder="Email*" id="email" name="email" class="text-input" value="" tabindex="6203"  />
+				<textarea placeholder="Message*" required="required" id="content" name="content" class="textarea" tabindex="6204"></textarea>
+								<input placeholder="Enter Captcha" type="text" data-type="captcha" name="captcha" class="captcha-form text-input full" required="required" autocomplete="off" />
+				<a href="#" class="captcha-change-image">Not readable? Change text.</a>
+				<span class="captcha-image-holder">
+					<img src="https://inbre.uidaho.edu/wp-content/plugins/artbees-captcha/generate-captcha.php" class="captcha-image" alt="captcha txt"/>
+				</span>
+				<br/>
+				
+								<div class="mk-quick-contact-gdpr-consent">
+					<div>
+					<input type="checkbox" name="contact_form_gdpr_check" id="gdpr_check_6205" class="mk-checkbox" required="required" value="" tabindex="6205" /><label for="gdpr_check_6205">I consent to Idaho INBRE collecting my details through this form.</label>
+					</div>
+				</div>
+				
+				<div class="btn-cont">
+					<button tabindex="6206" class="mk-progress-button mk-contact-button accent-bg-color button" data-style="move-up">
+						<span class="mk-progress-button-content">Send</span>
+						<span class="mk-progress">
+							<span class="mk-progress-inner"></span>
+						</span>
+						<span class="state-success"><svg  class="mk-svg-icon" data-name="mk-moon-checkmark" data-cacheid="icon-69957fb24eb91" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M432 64l-240 240-112-112-80 80 192 192 320-320z"/></svg></span>
+						<span class="state-error"><svg  class="mk-svg-icon" data-name="mk-moon-close" data-cacheid="icon-69957fb24ed3e" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M507.331 411.33l-.006-.005-155.322-155.325 155.322-155.325.006-.005c1.672-1.673 2.881-3.627 3.656-5.708 2.123-5.688.912-12.341-3.662-16.915l-73.373-73.373c-4.574-4.573-11.225-5.783-16.914-3.66-2.08.775-4.035 1.984-5.709 3.655l-.004.005-155.324 155.326-155.324-155.325-.005-.005c-1.673-1.671-3.627-2.88-5.707-3.655-5.69-2.124-12.341-.913-16.915 3.66l-73.374 73.374c-4.574 4.574-5.784 11.226-3.661 16.914.776 2.08 1.985 4.036 3.656 5.708l.005.005 155.325 155.324-155.325 155.326-.004.005c-1.671 1.673-2.88 3.627-3.657 5.707-2.124 5.688-.913 12.341 3.661 16.915l73.374 73.373c4.575 4.574 11.226 5.784 16.915 3.661 2.08-.776 4.035-1.985 5.708-3.656l.005-.005 155.324-155.325 155.324 155.325.006.004c1.674 1.672 3.627 2.881 5.707 3.657 5.689 2.123 12.342.913 16.914-3.661l73.373-73.374c4.574-4.574 5.785-11.227 3.662-16.915-.776-2.08-1.985-4.034-3.657-5.707z"/></svg></span>
+					</button>
+				</div>
+				<input type="hidden" id="security" name="security" value="7d453f9326" /><input type="hidden" name="_wp_http_referer" value="/generative-ai/" />				<input type="hidden" id="sh_id" name="sh_id" value="15"><input type="hidden" id="p_id" name="p_id" value="2342">				<div class="contact-form-message clearfix"></div>  
+			</form>
+			<div class="bottom-arrow"></div>
+		</div>
+	</div>
+</div>
+
+
+
+<div class="mk-fullscreen-search-overlay">
+	<a href="#" class="mk-fullscreen-close"><svg  class="mk-svg-icon" data-name="mk-moon-close-2" data-cacheid="icon-69957fb24ef54" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M390.628 345.372l-45.256 45.256-89.372-89.373-89.373 89.372-45.255-45.255 89.373-89.372-89.372-89.373 45.254-45.254 89.373 89.372 89.372-89.373 45.256 45.255-89.373 89.373 89.373 89.372z"/></svg></a>
+	<div class="mk-fullscreen-search-wrapper">
+		<p>Start typing and press Enter to search</p>
+		<form method="get" id="mk-fullscreen-searchform" action="https://inbre.uidaho.edu/">
+			<input type="text" value="" name="s" id="mk-fullscreen-search-input" />
+			<i class="fullscreen-search-icon"><svg  class="mk-svg-icon" data-name="mk-icon-search" data-cacheid="icon-69957fb24f014" style=" height:25px; width: 23.2142857143px; "  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1664 1792"><path d="M1152 832q0-185-131.5-316.5t-316.5-131.5-316.5 131.5-131.5 316.5 131.5 316.5 316.5 131.5 316.5-131.5 131.5-316.5zm512 832q0 52-38 90t-90 38q-54 0-90-38l-343-342q-179 124-399 124-143 0-273.5-55.5t-225-150-150-225-55.5-273.5 55.5-273.5 150-225 225-150 273.5-55.5 273.5 55.5 225 150 150 225 55.5 273.5q0 220-124 399l343 343q37 37 37 90z"/></svg></i>
+		</form>
+	</div>
+</div>
+
+
+	<style type='text/css'></style>
+		<script>
+			window.RS_MODULES = window.RS_MODULES || {};
+			window.RS_MODULES.modules = window.RS_MODULES.modules || {};
+			window.RS_MODULES.waiting = window.RS_MODULES.waiting || [];
+			window.RS_MODULES.defered = true;
+			window.RS_MODULES.moduleWaiting = window.RS_MODULES.moduleWaiting || {};
+			window.RS_MODULES.type = 'compiled';
+		</script>
+		<style id="mk-shortcode-static-styles" type="text/css"> #fancy-title-3{letter-spacing:0px;text-transform:initial;font-size:14px;color:#16289e;text-align:left;font-style:inherit;font-weight:inherit;padding-top:0px;padding-bottom:20px;}#fancy-title-3 span{}#fancy-title-3 span i{font-style:inherit;} @media handheld, only screen and (max-width:767px) { #fancy-title-3 { text-align:center !important; } }  #padding-5 { height:60px; }  #text-block-7 { margin-bottom:0px; text-align:left; }        #divider-15 { padding:20px 0 20px; } #divider-15 .divider-inner { } #divider-15 .divider-inner:after { } #fancy-title-16{letter-spacing:0px;text-transform:initial;font-size:14px;color:;text-align:left;font-style:inherit;font-weight:inherit;padding-top:0px;padding-bottom:20px;}#fancy-title-16 span{}#fancy-title-16 span i{font-style:inherit;} @media handheld, only screen and (max-width:767px) { #fancy-title-16 { text-align:center !important; } } #text-block-17 { margin-bottom:0px; text-align:left; } #mk-accordion-18 .mk-accordion-pane{background-color:#ffffff;} #text-block-19 { margin-bottom:0px; text-align:left; } #text-block-20 { margin-bottom:0px; text-align:left; }  #divider-22 { padding:20px 0 20px; } #divider-22 .divider-inner { } #divider-22 .divider-inner:after { } #fancy-title-23{letter-spacing:0px;text-transform:initial;font-size:14px;color:;text-align:left;font-style:inherit;font-weight:inherit;padding-top:0px;padding-bottom:20px;}#fancy-title-23 span{}#fancy-title-23 span i{font-style:inherit;} @media handheld, only screen and (max-width:767px) { #fancy-title-23 { text-align:center !important; } } #mk-accordion-24 .mk-accordion-pane{background-color:#fff;}</style><script type="speculationrules">
+{"prefetch":[{"source":"document","where":{"and":[{"href_matches":"\/*"},{"not":{"href_matches":["\/wp-*.php","\/wp-admin\/*","\/wp-content\/uploads\/*","\/wp-content\/*","\/wp-content\/plugins\/*","\/wp-content\/themes\/jupiter-child\/*","\/wp-content\/themes\/jupiter\/*","\/*\\?(.+)"]}},{"not":{"selector_matches":"a[rel~=\"nofollow\"]"}},{"not":{"selector_matches":".no-prefetch, .no-prefetch a"}}]},"eagerness":"conservative"}]}
+</script>
+<script type='text/javascript'>
+var colomatduration = 'fast';
+var colomatslideEffect = 'slideFade';
+var colomatpauseInit = '';
+var colomattouchstart = '';
+</script><script>function loadScript(a){var b=document.getElementsByTagName("head")[0],c=document.createElement("script");c.type="text/javascript",c.src="https://tracker.metricool.com/app/resources/be.js",c.onreadystatechange=a,c.onload=a,b.appendChild(c)}loadScript(function(){beTracker.t({hash:'633270a4eb2fe0687e4af79e6ba54cd3'})})</script>		<script>
+		( function ( body ) {
+			'use strict';
+			body.className = body.className.replace( /\btribe-no-js\b/, 'tribe-js' );
+		} )( document.body );
+		</script>
+		<script type="text/javascript">
+    php = {
+        hasAdminbar: false,
+        json: (null != null) ? null : "",
+        jsPath: 'https://inbre.uidaho.edu/wp-content/themes/jupiter/assets/js'
+      };
+    </script><script> /* <![CDATA[ */var tribe_l10n_datatables = {"aria":{"sort_ascending":": activate to sort column ascending","sort_descending":": activate to sort column descending"},"length_menu":"Show _MENU_ entries","empty_table":"No data available in table","info":"Showing _START_ to _END_ of _TOTAL_ entries","info_empty":"Showing 0 to 0 of 0 entries","info_filtered":"(filtered from _MAX_ total entries)","zero_records":"No matching records found","search":"Search:","all_selected_text":"All items on this page were selected. ","select_all_link":"Select all pages","clear_selection":"Clear Selection.","pagination":{"all":"All","next":"Next","previous":"Previous"},"select":{"rows":{"0":"","_":": Selected %d rows","1":": Selected 1 row"}},"datepicker":{"dayNames":["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],"dayNamesShort":["Sun","Mon","Tue","Wed","Thu","Fri","Sat"],"dayNamesMin":["S","M","T","W","T","F","S"],"monthNames":["January","February","March","April","May","June","July","August","September","October","November","December"],"monthNamesShort":["January","February","March","April","May","June","July","August","September","October","November","December"],"monthNamesMin":["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"nextText":"Next","prevText":"Prev","currentText":"Today","closeText":"Done","today":"Today","clear":"Clear"}};/* ]]> */ </script><script type="text/html" id="wpb-modifications"> window.wpbCustomElement = 1; </script><link rel='stylesheet' id='rs-plugin-settings-css' href='https://inbre.uidaho.edu/wp-content/plugins/revslider/public/assets/css/rs6.css?ver=6.6.16' type='text/css' media='all' />
+<style id='rs-plugin-settings-inline-css' type='text/css'>
+#rs-demo-id {}
+</style>
+<script type="text/javascript" src="https://inbre.uidaho.edu/wp-content/plugins/the-events-calendar/common/build/js/user-agent.js?ver=da75d0bdea6dde3898df" id="tec-user-agent-js"></script>
+<script type="text/javascript" src="https://inbre.uidaho.edu/wp-content/plugins/embed-any-document/js/pdfobject.min.js?ver=2.7.12" id="awsm-ead-pdf-object-js"></script>
+<script type="text/javascript" id="awsm-ead-public-js-extra">
+/* <![CDATA[ */
+var eadPublic = [];
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://inbre.uidaho.edu/wp-content/plugins/embed-any-document/js/embed-public.min.js?ver=2.7.12" id="awsm-ead-public-js"></script>
+<script type="text/javascript" src="https://inbre.uidaho.edu/wp-content/plugins/contact-form-7/includes/swv/js/index.js?ver=5.8.2" id="swv-js"></script>
+<script type="text/javascript" id="contact-form-7-js-extra">
+/* <![CDATA[ */
+var wpcf7 = {"api":{"root":"https:\/\/inbre.uidaho.edu\/wp-json\/","namespace":"contact-form-7\/v1"},"cached":"1"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://inbre.uidaho.edu/wp-content/plugins/contact-form-7/includes/js/index.js?ver=5.8.2" id="contact-form-7-js"></script>
+<script type="text/javascript" src="https://inbre.uidaho.edu/wp-content/plugins/jquery-collapse-o-matic/js/collapse.js?ver=1.6.23" id="collapseomatic-js-js"></script>
+<script type="text/javascript" src="https://inbre.uidaho.edu/wp-content/plugins/revslider/public/assets/js/rbtools.min.js?ver=6.6.16" defer async id="tp-tools-js"></script>
+<script type="text/javascript" src="https://inbre.uidaho.edu/wp-content/plugins/revslider/public/assets/js/rs6.min.js?ver=6.6.16" defer async id="revmin-js"></script>
+<script type="text/javascript" src="https://inbre.uidaho.edu/wp-content/themes/jupiter-child/js/script.js?ver=6.8.3" id="custom-js"></script>
+<script type="text/javascript" src="https://inbre.uidaho.edu/wp-content/themes/jupiter/assets/js/min/full-scripts.6.10.0.js?ver=1633335624" id="theme-scripts-js"></script>
+<script type="text/javascript" src="https://inbre.uidaho.edu/wp-content/themes/jupiter/header-builder/includes/assets/js/mkhb-render.js?ver=6.10.0" id="mkhb-render-js"></script>
+<script type="text/javascript" src="https://inbre.uidaho.edu/wp-content/themes/jupiter/header-builder/includes/assets/js/mkhb-column.js?ver=6.10.0" id="mkhb-column-js"></script>
+<script type="text/javascript" id="jupiter-donut-shortcodes-js-extra">
+/* <![CDATA[ */
+var jupiterDonutVars = {"themeDir":"https:\/\/inbre.uidaho.edu\/wp-content\/themes\/jupiter","assetsUrl":"https:\/\/inbre.uidaho.edu\/wp-content\/plugins\/jupiter-donut\/assets","gridWidth":"1140","ajaxUrl":"https:\/\/inbre.uidaho.edu\/wp-admin\/admin-ajax.php","nonce":"bb645434a8"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://inbre.uidaho.edu/wp-content/plugins/jupiter-donut/assets/js/shortcodes-scripts.min.js?ver=1.4.4" id="jupiter-donut-shortcodes-js"></script>
+<script type="text/javascript" src="https://inbre.uidaho.edu/wp-content/plugins/google-site-kit/dist/assets/js/googlesitekit-events-provider-contact-form-7-83c32a029ed2cf5b6a82.js" id="googlesitekit-events-provider-contact-form-7-js" defer></script>
+<script type="text/javascript" src="https://inbre.uidaho.edu/wp-content/plugins/js_composer_theme/assets/js/dist/js_composer_front.min.js?ver=7.2" id="wpb_composer_front_js-js"></script>
+<script></script><script type="text/javascript">	window.get = {};	window.get.captcha = function(enteredCaptcha) {
+                  return jQuery.get(ajaxurl, { action : "mk_validate_captcha_input", captcha: enteredCaptcha });
+              	};</script>
+	</body>
+</html>

@@ -1,0 +1,2180 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head><meta http-equiv="X-UA-Compatible" content="IE=EDGE" /><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" /><title>
+	Academic Information | Registrar | Elmira College
+</title><base href="https://myec.elmira.edu/ICS/">
+<script type="text/javascript">
+    window.jenzabar = {};
+    jenzabar.userSettings = {
+        culture:    'en-US',
+        language:   'en',
+        dateFormat: 'm/d/yy'
+    };
+    window.userSettings = jenzabar.userSettings;
+
+    jenzabar.jicsVersion = {
+        text: {
+	        version: '?v=' + '2024.2.0'
+        }
+    }
+    jenzabar.siteSettings = {
+        textEditorSettings: {
+            customAudioMinutesLimit: 5,
+            customVideoMinutesLimit: 5
+        },
+        text: {
+            more: 'More'
+        }
+    };
+</script>
+
+<!-- BEGIN Html Head Elements -->
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.7/handlebars.min.js"></script>
+<script src="//stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jqueryui/1.13.2/jquery-ui.min.js"></script>
+<link rel="stylesheet" type="text/css" href="/ICS/UI/Common/Styles/jQuery/jquery-ui.custom.css" />
+<link href="//fonts.googleapis.com/css?family=Open+Sans:400,600,700" rel="stylesheet" type="text/css">
+<link href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="//stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+<link rel="stylesheet" type="text/css" href="/ICS/Portlets/CRM/Common/Jenzabar.EX.Common/css/ex-crm-bundle.css?v=2024.3.0.1">
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/signalr.js/2.4.0/jquery.signalR.min.js?v=2024.2.0"></script>
+<script type="text/javascript" src="/ICS/signalr/hubs?v=2024.2.0"></script>
+<script type="text/javascript" src="/ICS/UI/Common/Scripts/tinymce/plugins/moxiemanager/js/moxman.loader.min.js?v=2024.2.0"></script>
+<script type="text/javascript" src="/ICS/UI/Common/Scripts/Plugins/jquery.timepicker.min.js?v=2024.2.0"></script>
+<script type="text/javascript" src="/ICS/UI/Common/Scripts/Plugins/moment.min.js?v=2024.2.0"></script>
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/packery/2.1.2/packery.pkgd.min.js?v=2024.2.0"></script>
+<script type="text/javascript" src="/ICS/UI/Common/Scripts/Plugins/packery.jics.js?v=2024.2.0"></script>
+<script type="text/javascript" src="/ICS/UI/Common/Scripts/Plugins/imagesloaded.jics.js?v=2024.2.0"></script>
+<script type="text/javascript" src="/ICS/UI/Common/Scripts/DisplayIndicator.js?v=2024.2.0"></script>
+<!-- END Html Head Elements -->
+
+<link href="/ICS/UI/Common/Styles/css/site-bundle.css?v=zWsuAXRi2STtsssWM609bnyMnq9gGYfnKtwjufy33Ho1" rel="stylesheet"/>
+
+
+<link href="/ICS/Portlets/ICS/Portlet.Resources/Resources.css" type="text/css" rel="stylesheet" />
+
+<link rel="stylesheet" type="text/css" media="print" href="/ICS/UI/Common/Styles/print.css" />
+
+<script src="/ICS/UI/Common/Scripts/site-bundle.js?v=G8t2ipwn4sgFF3kB4JWJ8BDMWqRQj2xmQmT7y6KxXNk1"></script>
+
+
+<!-- BEGIN Html Head Elements After JICS JS Framework -->
+<script type="text/javascript" src="/ICS/UI/Common/Scripts/SignalRManager.js?v=2024.2.0"></script>
+<script type="text/javascript" src="/ICS/UI/Common/Scripts/LayoutManager.js?v=2024.2.0"></script>
+<link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/jquery-footable/3.1.6/footable.bootstrap.min.css?v=2024.2.0">
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery-footable/3.1.6/footable.min.js?v=2024.2.0"></script>
+<script type="text/javascript" src="/ICS/UI/Common/Scripts/FootableAccessibilityExtensions.js?v=2024.2.0"></script>
+<!-- END Html Head Elements After JICS JS Framework -->
+
+
+<!--[if IE]>
+<style type="text/css" media="all">@import url( UI/Common/Styles/IEOnly.css );</style>
+<script type="text/javascript" language="JavaScript" src="UI/Common/Scripts/IEOnly.js"></SCRIPT>
+<![endif]-->
+<script type="text/javascript">
+    window.Portal =
+    {
+        url: 'https://myec.elmira.edu/ICS/',
+        uid: null,
+    };
+</script>
+
+
+<script type="text/javascript">
+    jQuery(function () {
+        jenzabar.framework.timeoutWarning.create(true);
+    });
+</script>
+<script type="text/javascript" language="javascript">
+
+    $.connection.portalHub.client.sendLoginWarning = function (userId) {
+        let id = "b0b00000-c542-4d2a-86e6-55ebbbcd85da";
+        if (id === userId) {
+            alert("Your username has been used to authenticate in another browser.  If you are not responsible for this login, your account may be compromised!  Contact an administrator for assistance.");
+        }
+    }
+
+</script><link rel="stylesheet" type="text/css" href="/ICS/UI/Themes/Pacifica/style.css?v=1&u=02%2f18%2f2026+08%3a28%3a44" />
+<script type="text/javascript" src="/ICS/UI/Themes/Pacifica/js/javascript.js?v=1"></script>
+
+<style id="customCssImport_custom" type="text/css" media="all">
+	@import url( /ICS/StaticPages/GetFile.aspx?target=be7884da-8f42-4016-b362-9c70b7f95a83);
+</style>
+<link rel="Shortcut Icon" href="favicon.ico" type="image/x-icon">
+<style id="customHead_custom" type="text/css" media="all">
+	@import url( /ICS/ClientConfig/HtmlContent/custom-bundle.css?v=I6Ws-hbFaXFVO8yEPnwAPbVLJ2rHIsN6vpQu6LMe5w81);
+</style>
+</head>
+<body onload="doLoad();" >
+	<div id="siteWrapper" class="custom-grid">
+		<form name="MAINFORM" method="post" action="/ICS/Registrar/" id="MAINFORM" enctype="multipart/form-data" autocomplete="off">
+<div class="aspNetHidden">
+<input type="hidden" name="_scriptManager_HiddenField" id="_scriptManager_HiddenField" value="" />
+<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
+<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="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" />
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['MAINFORM'];
+if (!theForm) {
+    theForm = document.MAINFORM;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script>
+
+
+<script src="/ICS/WebResource.axd?d=pynGkmcFUV13He1Qd6_TZPUJOk1oFEzXoHTDfMVgTn87agUJMUin0pVq4j60fu8ZQvg4KWqScj-WeA7BBXqVNw2&amp;t=638901392248157332" type="text/javascript"></script>
+
+
+<script type="text/javascript">
+//<![CDATA[
+(function( pi, $) {pi.PageID = '';pi.DisplayName = '';pi.PageURL = '';pi.IsCustomizing ='';pi.IsShowingPortlet = '';}(window.PageInfo = window.PageInfo || {}, PageInfo));try {window.PageInfo.PageID = 'c17ff36f-ec0e-424b-910e-065169cea543';window.PageInfo.DisplayName = 'Academic Information';window.PageInfo.PageURL = '/ICS/Registrar/My_Academic_Information.jnz';window.PageInfo.IsCustomizing ='False';window.PageInfo.IsShowingPortlet = 'False';window.PageInfo.IsReadOnly = 'False';}catch(ex){ console.error(ex);}//]]>
+</script>
+
+<script src="/ICS/Portlets/ICS/Portlet.resources/Scripts/Resources.js?v=2024.2.0" type="text/javascript"></script>
+<script src="/ICS/ScriptResource.axd?d=x6wALODbMJK5e0eRC_p1LZ-vi-eZcjuIrNxyw3sUOptcoN1qCuWwURV1ZUTyDojZSYoRu4-4FyUpE_ZYeXLQ--vlDKqZyoL0r7Y8N2_6YvQ5s8zS5A4foJGpeTzdiXCS0&amp;t=245582f9" type="text/javascript"></script>
+<script src="/ICS/ScriptResource.axd?d=P5lTttoqSeZXoYRLQMIScA81QIq3qGHhk_iJXdTALs9srnCKzcR8MIFZWTyLlfNFFAiLWNgqnLWcfHQfaRXklZtG4lcdq7N9mNAWbjMBCaq6jLfet4uqXjchjAbFSf_L0&amp;t=245582f9" type="text/javascript"></script>
+<div class="aspNetHidden">
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="38ABEAAB" />
+</div>
+			<script type="text/javascript">
+//<![CDATA[
+Sys.WebForms.PageRequestManager._initialize('_scriptManager', 'MAINFORM', [], [], [], 90, '');
+//]]>
+</script>
+
+			<input name="___BrowserRefresh" type="hidden" id="___BrowserRefresh" value="0295646d-397a-4363-84d2-e1c35afb36d7" />
+			
+			<header>
+				<a href="#content" class="skip-navigation sr-only-focusable">Skip to content</a>
+				
+
+<div class="site-header-container">
+    <div class="mobile-fixed-container"></div>
+    <div id="sitemasthead">
+        <div>
+            
+                <button id="main-nav-btn" class="btn btn-no-bg-hover-color-content-one glyphicons glyphicons-menu-hamburger main-nav-btn" type="button" data-toggle="collapse" data-target="#hamburger-menu-section" aria-expanded="false" aria-controls="hamburger-menu-section"><span class="sr-only">main navigation</span></button>
+                
+<div id="welcomeBackBar" class="main-nav-submenu-container">
+	<div id="siteNavBar_welcomeBackBarLoggedOut_welcomeBackBarLoggedOut">
+		<button id="siteNavBar_welcomeBackBarLoggedOut_loginToggle" class="btn login-btn" type="button" data-toggle="collapse" data-target="#user-login-section" aria-expanded="false" aria-controls="user-login-section"><span>Login</span></button>
+		<div id="user-login-section" aria-label="Login" class="collapse user-login form-inline">
+			<div class="input-group init-user-username-section">
+				<span class="input-group-addon glyphicons glyphicons-user"></span>
+				<label id="siteNavBar_welcomeBackBarLoggedOut_UserNameLabel" for="userName" class="sr-only">Username</label>
+				<input type="text" name="userName" id="userName" placeholder="Username" class="form-control user-name" autocomplete="username" value="" />
+			</div>
+			<div class="input-group init-user-password-section">
+				<span class="input-group-addon glyphicons glyphicons-asterisk"></span>
+				<label id="siteNavBar_welcomeBackBarLoggedOut_PasswordLabel" for="password" class="sr-only">Password</label>
+				<input type="password" name="password" id="password" placeholder="Password" class="form-control user-password" autocomplete="off" />
+			</div>
+			<input type="submit" name="siteNavBar$welcomeBackBarLoggedOut$ButtonLogin" value="Login" id="siteNavBar_welcomeBackBarLoggedOut_ButtonLogin" class="btn btn-sm btn-block btn-primary init-user-login-btn" />
+			
+			<div id="siteNavBar_welcomeBackBarLoggedOut_JicsSimpleLogin" class="js-simple-login">
+				
+			</div>
+			
+			
+		</div>
+	</div>
+</div>
+<iframe id="siteNavBar_welcomeBackBarLoggedOut_AutoLoginFrame" style="display:none" width="1" height="1"></iframe>
+
+<script type="text/javascript">
+    jQuery(document).ready(function ($) {
+	    if (searchBox !== null && searchBox !== undefined) {
+		    searchBox.searchPanel = 'siteNavBar_searchBox_searchPanel';
+		    searchBox.textBox = 'siteNavBar_searchBox_tbSearch';
+		    searchBox.button = 'siteNavBar_searchBox_lbSearch';
+		    searchBox.userId = "b0b00000-c542-4d2a-86e6-55ebbbcd85da";
+		    searchBox.autoCompleteSelect = function(event, ui) {
+			    $("#" + searchBox.textBox).val(ui.item.value);
+			    __doPostBack('siteNavBar$searchBox$lbSearch','');
+		    };
+		    searchBox.initAutoComplete();
+		    $('#siteNavBar_searchBox_lbSearch').keypress(function(e) {
+			    var key = e.which;
+			    if (key === 32 || key === 13) {
+				    if (searchBox.searchClick()) {
+					    window.location.href = this.href;
+				    }
+				    return false;
+			    }
+		    });
+
+		    // Hack needed to comply with A11y
+		    $('#siteNavBar_searchBox_searchPanel').removeAttr('onkeypress');
+		    $('#siteNavBar_searchBox_tbSearch').keypress(function (e) {
+			    return WebForm_FireDefaultButton(e, searchBox.button);
+		    });
+	    }
+    });
+ </script>
+
+<span role="search">
+	<button id="siteNavBar_searchBox_SearchButton" class="btn btn-no-bg-hover-color-content-one glyphicons glyphicons-search search-btn" type="button" data-toggle="collapse" data-target="#search-section" aria-expanded="false" aria-controls="search-section">
+		<span class="sr-only">
+			Search
+		</span>
+	</button>
+</span>
+
+<div id="searchAutoCompleteResults" class="searchAutoComplete"> </div>
+
+<div id="siteNavBar_searchBox_searchPanel" class="search-panel" onkeypress="javascript:return WebForm_FireDefaultButton(event, &#39;siteNavBar_searchBox_lbSearch&#39;)">
+	
+    <div id="siteNavBar_searchBox_divSideBarContainer">
+        <div id="search-section" aria-label="Search" class="search-section collapse popover fade bottom">
+            <div class="arrow" style="left: 90%;"></div>
+            <div class="popover-content form-wrapper">
+                <div class="form-group"> 
+                    <label for="siteNavBar_searchBox_tbSearch" id="siteNavBar_searchBox_lblForSearch" class="sr-only">Search</label>
+                    <input name="siteNavBar$searchBox$tbSearch" type="text" id="siteNavBar_searchBox_tbSearch" class="search-input global-search-input form-control" placeholder="Search..." onfocus="return searchBox.cleardefault();" onblur="return searchBox.restoredefault();" />
+               </div>
+                <a onclick="return searchBox.validate();" id="siteNavBar_searchBox_lbSearch" class="btn btn-sm btn-block btn-primary init-search-btn" role="button" href="javascript:__doPostBack(&#39;siteNavBar$searchBox$lbSearch&#39;,&#39;&#39;)">Search</a>
+            </div>
+        </div>
+    </div>
+
+</div><h1 id="logo-heading">
+<a class="site-logo-link" href=".">
+	<img class="site-logo" src="/ICS/icsfs/mast_left.png?target=f4b64228-b8b1-481f-b380-e369874a49bd" alt="mast left"/>
+</a>
+</h1>
+<script>
+	$(function () {
+		$('#top-nav-bar').attr("aria-label", "Site tabs");
+	});
+</script>
+<nav id="top-nav-bar" class="top-nav-bar navbar navbar-default navbar-fixed-top">
+	<div class="nav-container">
+		<div id="header-tabs" class="link-scroll vertical-menu super-menu">
+			<div class="collapse h-menu" id="hamburger-menu-section">
+				
+						<ul id="main-nav" class="nav navbar-nav no-margin">
+					
+						<li class="tabs tab_Home firstTab">
+							<a href="/ICS/">
+								Home
+							</a>
+						</li>
+					
+						<li class="tabs tab_Registrar selected lastTab">
+							<a href="/ICS/Registrar/">
+								Registrar
+							</a>
+						</li>
+					
+						</ul>
+					
+			</div>
+		</div>
+	</div>
+</nav>
+
+        </div>
+    </div>
+</div>
+			</header>
+			
+<div id="mainCrumbs" class="main-crumbs" role="navigation" aria-label="Site breadcrumb">
+	<span class="breadcrumbs-title text-bold">You are here:</span>
+	<span class="crumbs">
+		<ul id="youAreHere" class="breadcrumbs-container">
+			 <li><a href="/ICS/Registrar/">Registrar</a></li>  <li><a href="/ICS/Registrar/My_Academic_Information.jnz">Academic Information</a></li> 
+			
+		</ul>
+	</span>
+</div>
+
+			
+			
+			<div id="mainLayout" class="main-layout">
+				<div class="container-fluid">
+					<div class="row">
+						
+						<nav aria-label="Site pages">
+							<div id="sideBar" aria-label="Sidebar links" class="col-md-2 mobile-padding-horizontal-none sidebar">
+								<div id="sidebar-slide-menu-container" class="slide-menu-right">
+									
+									<div id="thisContext" class="side-section"><span class="sidebar-link-title"><a href="/ICS/Registrar/"  accesskey="">Registrar</a></span><div class="navbar navbar-default"><ul id="contextPages" class="nav nav-pills nav-stacked"><li class="slide-menu-toggle-btns-wrapper"><ul id="slide-menu-toggle-btns" class="nav nav-pills nav-stacked slide-menu-toggle-btns"><li class="active"><a id="menu-links-tab" data-toggle="tab" href="#menu-links" aria-expanded="true" aria-controls="menu-links">Menu</a></li><li><a id="quick-links-tab" data-toggle="tab" href="#quick-links" aria-expanded="false" aria-controls="quick-links">Quick Links</a></li></ul></li><li id="menu-links" class="menu-links tab-pane fade in active"><ul id="this-context-pages" class="nav nav-pills nav-stacked" aria-label="Page menu "><li class="current-page"><button id="page-portlets-label" type="button" class="page-portlets sub-nav" data-toggle="collapse" data-target="#pagePortlets" aria-expanded="false" aria-controls="pagePortlets">Academic Information<span class="glyphicons glyphicons-chevron-down"></span></button><ul id="pagePortlets" class="nav nav-pills nav-stacked sub-nav collapse" aria-labelledby="page-portlets-label"><li><a href="/ICS/Registrar/My_Academic_Information.jnz?portlet=My_Unofficial_Transcript" >My Unofficial Transcript</a></li><li><a href="/ICS/Registrar/My_Academic_Information.jnz?portlet=My_Course_History" >My Course History</a></li><li><a href="/ICS/Registrar/My_Academic_Information.jnz?portlet=My_Grade_Report" >My Grade Report</a></li><li><a href="/ICS/Registrar/My_Academic_Information.jnz?portlet=Handouts" >Handouts</a></li><li><a href="/ICS/Registrar/My_Academic_Information.jnz?portlet=My_Degree_Progress" >My Degree Progress</a></li><li><a href="/ICS/Registrar/My_Academic_Information.jnz?portlet=Free-form_Content_1" >My Graduation Application</a></li><li><a href="/ICS/Registrar/My_Academic_Information.jnz?portlet=Major_Exploration" >Major Exploration</a></li><li><a href="/ICS/Registrar/My_Academic_Information.jnz?portlet=My_GPA_Projection" >My GPA Projection</a></li><li><a href="/ICS/Registrar/My_Academic_Information.jnz?portlet=Free-form_Content" >Contact Information for Academic Information</a></li></ul></li></ul></li></ul></div></div>
+									
+									
+									<div class="sideBarFoot containerFoot"></div>
+								</div>
+								<button id="sidebar-slide-menu-button" class="slide-menu-btn mobile-hide nsn is-closed" type="button" aria-expanded="false">
+									<span class="sidebar-slide-btn-icon glyphicons glyphicons-chevron-right">
+										<span class="sr-only">Sidebar</span>
+									</span>
+								</button>
+							</div>
+						</nav>
+						
+						<div id="portlets" role="main" class="col-md-10 mobile-padding-horizontal-none">
+							
+							
+
+<script type="text/javascript">
+    $( document ).ready(function() {
+        $(`[id*="pageOpenMoxieManager"]`).click(function () {
+            // Below we check every 200ms if the MoxieManager dialog is opened yet, then move keyboard focus if it is.
+            // We have to do this check because MoxieManager removed the 'onopen' option from the moxman.browse() function...
+            let intervalIndex = 0;
+            let interval = setInterval(function () {
+                let createButton = $($(`.moxman-reset .moxman-i-create`)[0].parentElement.parentElement);
+                if (createButton.length === 1) {
+                    createButton.focus();
+                    clearInterval(interval);
+                } else if (createButton.length === 0 && intervalIndex === 20000) { // We will stop trying to shift focus after 20 seconds.
+                    console.log("Error: Keyboard focus could not be shifted to the MoxieManager window");
+                    clearInterval(interval);
+                }
+                intervalIndex = intervalIndex + 200;
+            }, 200);
+        });
+    });
+</script>
+
+<div id="PageBar_pageTitle" class="page-title page-title-bar">
+    <h2><a href="/ICS/Registrar/" id="contextName">Registrar</a></h2>
+</div>
+<div id="PageBar_pageTitleButtons" class="page-title-btn">
+    
+    
+    <button id="PageBar_btnPrintView" class="btn btn-no-bg-hover-color-content-one glyphicons glyphicons-print" type="button" onclick="window.print(); return false;">
+        <span class="sr-only">Send to Printer</span>
+    </button>
+    
+</div>
+
+
+							
+							<span id="content" tabindex="-1"></span>
+							<div id="portlet-grid" class="portlet-grid two_column_even"><div class="row"><div class="portlet-column col-md-6"><div id="pg0_UnofficialTranscript" class="portlet pt_UnofficialTranscript pi_My_Unofficial_Transcript" style="z-index:9;"><div class="portlet-header-bar"><h3><a href="/ICS/Registrar/My_Academic_Information.jnz?portlet=My_Unofficial_Transcript" title="Go to main My Unofficial Transcript screen">My Unofficial Transcript</a></h3><div class="portlet-help-wrapper"> <a class="btn btn-no-bg-hover-color-content-one help" target="blank" href="https://jenzabarhelp.jenzabar.com/ews/help/JICS/released/en/my-unofficial-transcript.html" title="Get help using 'My Unofficial Transcript'"><span class="glyphicons glyphicons-question-sign"><span class="sr-only">Get help using 'My Unofficial Transcript'</span></span></a></div></div><div role="alert" class="alert-container error" ><span class="glyphicons glyphicons-exclamation-sign alert-icon"></span><span>You are not authorized to use this portlet; It is only available to users in certain roles within the portal.</span></div><div class="portlet-padding"><div class="feedbackMessage">You are not authorized to use this portlet; It is only available to users in certain roles within the portal.</div></div></div>
+<div id="pg1_CourseHistory" class="portlet pt_CourseHistory pi_My_Course_History" style="z-index:8;"><div class="portlet-header-bar"><h3><a href="/ICS/Registrar/My_Academic_Information.jnz?portlet=My_Course_History" title="Go to main My Course History screen">My Course History</a></h3><div class="portlet-help-wrapper"> <a class="btn btn-no-bg-hover-color-content-one help" target="blank" href="https://jenzabarhelp.jenzabar.com/ews/help/JICS/released/en/my-course-history.html" title="Get help using 'My Course History'"><span class="glyphicons glyphicons-question-sign"><span class="sr-only">Get help using 'My Course History'</span></span></a></div></div><div class="portlet-padding"><div class="feedbackMessage">You are not authorized to use this portlet; It is only available to users in certain roles within the portal.</div></div></div>
+<div id="pg2_GradeReportPortlet" class="portlet pt_GradeReportPortlet pi_My_Grade_Report" style="z-index:7;"><div class="portlet-header-bar"><h3><a href="/ICS/Registrar/My_Academic_Information.jnz?portlet=My_Grade_Report" title="Go to main My Grade Report screen">My Grade Report</a></h3><div class="portlet-help-wrapper"> <a class="btn btn-no-bg-hover-color-content-one help" target="blank" href="https://jenzabarhelp.jenzabar.com/ews/help/JICS/released/en/my-grade-report.html" title="Get help using 'My Grade Report'"><span class="glyphicons glyphicons-question-sign"><span class="sr-only">Get help using 'My Grade Report'</span></span></a></div></div><div role="alert" class="alert-container feedback" ><span class="glyphicons glyphicons-comments alert-icon"></span><span>You are not currently defined as a student or an advisor on the server</span></div><div class="portlet-padding"><div class="feedbackMessage">You are not authorized to use this portlet; It is only available to users in certain roles within the portal.</div></div></div>
+<div id="pg3_ResourcesPortlet" class="portlet pt_ResourcesPortlet pi_Handouts" style="z-index:6;"><div class="portlet-header-bar"><h3><a href="/ICS/Registrar/My_Academic_Information.jnz?portlet=Handouts" title="Go to main Handouts screen">Handouts</a></h3><div class="portlet-help-wrapper"> <a class="btn btn-no-bg-hover-color-content-one help" target="blank" href="https://jenzabarhelp.jenzabar.com/ews/help/JICS/Base/released/en/resources.html" title="Get help using 'Handouts'"><span class="glyphicons glyphicons-question-sign"><span class="sr-only">Get help using 'Handouts'</span></span></a></div></div><div class="portlet-padding resources-portlet">
+
+<script>
+	$(function () {
+		const uniquePrefix = '#pg3_ResourcesPortlet';
+		let openSetDrawerValueForCopy = $('#pg3_V_OpenSetDrawer').val();
+
+		window.resourcePortlet.initBatchEditModal.wireUp({
+			elements: {
+				uniqueId: `${uniquePrefix}`,
+				modal: $('#BatchEditResourceDialogpg3-ResourcesPortlet'),
+				batchEditButton: $(`${uniquePrefix} .batch-edit-btn-js`),
+				batchEditCancelModalButton: $('#BatchEditdResourceCancelpg3-ResourcesPortlet'),
+				batchEditSetSelectMenu: $('#pg3_V_BatchEditSetSelectMenu'),
+				batchEditSetCheckbox: $('#pg3_V_BatchEditSetCheckbox'),
+				batchEditSetCheckboxCheckedValue: $('#pg3_V_BatchEditSetCheckboxCheckedValue'),
+				batchEditStatusCheckbox: $('#pg3_V_BatchEditStatusCheckbox'),
+				batchEditStatusCheckboxCheckedValue: $('#pg3_V_BatchEditStatusCheckboxCheckedValue'),
+				batchEditStatusSelectMenu: $('#pg3_V_BatchEditStatusSelectMenu'),
+				batchEditDisplayIndicatorCheckbox: $('#pg3_V_BatchEditDisplayIndicatorCheckbox'),
+				batchEditDateCheckboxCheckedValue: $('#pg3_V_BatchEditDateCheckboxCheckedValue'),
+				batchEditResourceConfirm: $('#pg3_V_BatchEditResourceConfirm'),
+				batchEditValidationMessageLabelForNoChanges: $('#pg3_V_BatchEditValidationErrorForNoChangesContainerMessage'),
+				batchEditValidationErrorForNoChangesContainer: $('#pg3_V_BatchEditValidationErrorForNoChangesContainer'),
+				batchEditValidationErrorForMoveContainer: $('#pg3_V_BatchEditValidationErrorForMoveContainer'),
+				batchEditValidationMessageLabelForMove: $('#pg3_V_BatchEditValidationErrorForMoveContainerMessage'),
+				batchEditValidationErrorForStatusContainer: $('#pg3_V_BatchEditValidationErrorForStatusContainer'),
+				batchEditValidationMessageLabelForStatus: $('#pg3_V_BatchEditValidationErrorForStatusContainerMessage'),
+				batchEditResourceStartDate: $('#pg3_V_BatchEditResourceStartDate'),
+				batchEditResourceEndDate: $('#pg3_V_BatchEditResourceEndDate'),
+				batchEditResourceStartTime: $('#pg3_V_BatchEditResourceStartTime'),
+				batchEditResourceEndTime: $('#pg3_V_BatchEditResourceEndTime'),
+				batchEditResourceEndDateAction: $('#pg3_V_BatchEditResourceEndDateAction'),
+				validateDisplayIndicatorPlaceholder: $('#pg3_V_ValidateBatchEditPlaceholder')
+			},
+			text: {
+				noOptionsSelectedErrorMessage: 'At least one option must be selected.',
+				sameSetErrorMessage: 'A different Set must be selected to move these Resources to.',
+				noStatusErrorMessage: 'A Status must be selected.'
+			}
+		});
+
+		window.resourcePortlet.initDisplaySettingsMenu.wireUp({
+			elements: {
+				displayedSettingsButton: $(`${uniquePrefix} .displayed-settings-btn-js`),
+				displayedSettingsShowButton: $(`${uniquePrefix} .displayed-settings-show-btn-js`),
+				displayedSettingsHideButton: $(`${uniquePrefix} .displayed-settings-hide-btn-js`),
+				displayedSettingsScheduleButton: $(`${uniquePrefix} .displayed-settings-schedule-btn-js`),
+				editSelectedResourceDialog: $('#EditSelectedResourceDialogpg3-ResourcesPortlet'),
+				editSelectedResourceDialogDisplayOnRadio: $('#EditSelectedResourceDialogpg3-ResourcesPortlet [id*="_DisplayOnRadioButton"]'),
+				editSelectedResourceDialogEndOnRadio: $('#EditSelectedResourceDialogpg3-ResourcesPortlet [id*="_EndOnRadioButton"]'),
+				editSelectedResourceDialogMessage: $("#pg3_V_EditSelectedResourceDialogMessage"),
+				displayedSettingsSuccessContainer: $('.displayed-settings-resources-success-container-js')
+			},
+			text: {
+				resourceMessage: 'Set all selected Resources to display on the specified date and time.'
+			},
+			data: {
+				portletId: 'pg3-ResourcesPortlet'
+			}
+		});
+
+		if (openSetDrawerValueForCopy !== '') {
+			$(`${uniquePrefix} .set-container table`).on('ready.ft.table',
+				function () {
+					let drawerCollapseButton = document.querySelector(`[copy-resources-button-id=${openSetDrawerValueForCopy}]`);
+					let toggle = $(drawerCollapseButton).find('.glyphicons-chevron-down');
+					let drawerIsOpen = $(drawerCollapseButton).attr('aria-expanded');
+					if (drawerIsOpen === 'false') {
+						$(drawerCollapseButton).click();
+						toggle.removeClass('glyphicons-chevron-down');
+						toggle.addClass('glyphicons-chevron-up');
+					}
+				});
+		}
+
+		let openSetDrawerValueForMove = $('#pg3_V_SetIdForResourcesToBeMovedTo').val();
+		let selectorForMoveResources = `[set-draw-toggle-button="${openSetDrawerValueForMove}"]`;
+
+		if (openSetDrawerValueForMove !== '') {
+			let drawerCollapseButton = document.querySelector(selectorForMoveResources);
+			$(`${uniquePrefix} .set-container table`).on('ready.ft.table',
+				function () {
+					let toggle = $(drawerCollapseButton).find('.glyphicons-chevron-down');
+					let drawerIsOpen = $(drawerCollapseButton).attr('aria-expanded');
+
+					if (drawerIsOpen === 'false') {
+						$(drawerCollapseButton).click();
+						toggle.removeClass('glyphicons-chevron-down');
+						toggle.addClass('glyphicons-chevron-up');
+					}
+				});
+		}
+
+		window.resourcePortlet.buttonOptions.wireUp({
+			elements: {
+				setCheckbox: $(`${uniquePrefix} span.js-set-checkbox input`),
+				selectAllText: 'Select all sets',
+				ungroupedErrorContainer: $('#pg3_V_UnGroupedDeleteErrorMessageContainer'),
+				deselectAllText: 'Deselect all sets',
+				managePrimaryButton: $('#pg3_V_ManagePrimaryButton'),
+				managePrimaryDropDownSubMenu: $('#pg3_V_ManagePrimaryDropDownSubMenu'),
+				selectAllPrimaryCheckbox: $('#pg3_V_PrimarySelectAllSetsCheckBox'),
+				selectAllPrimaryCheckboxLabel: $('#pg3_V_PrimarySelectAllSetsCheckBoxLabel')
+			},
+			data: {
+				portletId: 'pg3-ResourcesPortlet'
+			}
+		});
+
+		window.resourcePortlet.deleteSetsModal.wireUp({
+			elements: {
+				ungroupedErrorContainer: $('#pg3_V_UnGroupedDeleteErrorMessageContainer'),
+				successMessageContainer: $(`${uniquePrefix} .js-success-message-container`),
+				ungroupedDeleteErrorLabel: $('#pg3_V_UnGroupedDeleteErrorLabel'),
+				ungroupedSetName: $('span[data-type="default"]').attr('data-name'),
+				modal: $('#pg3_V_DeleteSetsModal'),
+				saveButton: $('#pg3_V_SaveDeleteSetsButton'),
+				setCheckbox: $(`${uniquePrefix} .js-set-checkbox input`),
+				deleteSetsModal: $('#pg3_V_DeleteSetsModal'),
+				managePrimaryButton: $('#pg3_V_ManagePrimaryButton'),
+				primarySubMenuDeleteLink: $('#pg3_V_PrimarySubMenuDeleteLink')
+			},
+			text: {
+				title: 'Delete Sets',
+				cancel: 'Cancel',
+				remove: 'Delete',
+				ungroupedDeleteErrorText: 'The {0} set cannot be deleted. Please deselect it and try again.',
+				unitDeleteErrorText: 'Units can only be deleted in the Coursework feature. Deselect all Units and try again.'
+			},
+			data: {
+				portletId: 'pg3-ResourcesPortlet'
+			}
+		});
+
+		window.resourcePortlet.deleteSetsButtonAction.wireUp({
+			elements: {
+				setCheckbox: $(`${uniquePrefix} .js-set-checkbox input`),
+				setsDropdown: $('#pg3_V_MoveResourcesModalDropdown'),
+				setsDropdownLabel: $('#pg3_V_MoveResourcesModalDropdownLabel'),
+				moveResourcesModalDropdownSelectedValue: $('#pg3_V_MoveResourcesModalDropdownSelectedValue'),
+				deleteSetsModalMessage: $('#pg3_V_DeleteSetsModalMessage'),
+				primarySubMenuDeleteLink: $('#pg3_V_PrimarySubMenuDeleteLink')
+			},
+			text: {
+				emptySets: 'Are you sure you want to delete <strong>{0}</strong>? This action cannot be undone.',
+				setsWithResources: '<strong>{0}</strong> will be deleted as well as the resources in these sets. Select a set to move the resources to, or select none and they will be deleted. This action cannot be undone.',
+				dropdownNone: 'None'
+			},
+			data: {
+				portletId: 'pg3-ResourcesPortlet'
+			}
+		});
+
+		jenzabar.framework.expandCollapseCardViewListView.wireUp({
+			text: {
+				collapseText: "Collapse all sets",
+				expandText: "Expand all sets"
+			},
+			elements: {
+				loader: $('#pg3_V_loader')
+			}
+		});
+
+		window.resourcePortlet.subMenuButtonHandler.wireUp({
+			elements: {
+				dropdownButton: $(`${uniquePrefix} .resources-opener-button-for-sub-menu-js`)
+			}
+		});
+
+		jenzabar.framework.expandCollapseCardViewListView.activateLoader();
+
+		$('#pg3_V_ResourcesToggleAllButton').click(function(e) {
+			e.preventDefault();
+			jenzabar.framework.expandCollapseCardViewListView.toggleAllSets(this, 'pg3_V_ListView');
+			return false;
+		});
+
+        let cardsHaveBeenSetup = false;
+
+        if (!false) {
+            $('#pg3_V_ResourcesToggleAllButton').click();
+
+            wireupCardBlock(`${uniquePrefix}`);
+            cardsHaveBeenSetup = true;
+        }
+        else {
+            $('#pg3_V_ResourcesToggleAllButton').click(function (e) {
+                if (cardsHaveBeenSetup === false) {
+                    wireupCardBlock(`${uniquePrefix}`);
+                    cardsHaveBeenSetup = true;
+                }
+            });
+
+            let drawerCollapseButtons = $('button.resources-drawer');
+            drawerCollapseButtons.click(function () {
+                    window.resourcePortlet.cardBlockLayout.wireUp({
+			            uniqueId: `${uniquePrefix}`,
+			            onDeleteButtonClicked: openDeleteResourceConfirmationDialog,
+			            textDictionary: {
+				            'viewMore': 'View more',
+				            'cancelButton': 'Cancel',
+				            'selectAll': 'Select all<span class="sr-only"> in the {0} set</span>',
+				            'deselectAll': 'Deselect all<span class="sr-only"> in the {0} set</span>'
+			            }
+                    });
+            });
+        }
+
+		jenzabar.framework.expandCollapseCardViewListView.stopLoader();
+
+		window.resourcePortlet.reorderKeyboardControlsInfoModal.wireUp({
+			elements: {
+				reorderInfoButton: $('#pg3_V_ReorderInfoButton'),
+				reorderKeyboardControlsInfoModal: $('#pg3_V_ReorderKeyboardControlsInfoModal'),
+			},
+			text: {
+				title: 'Reorder keyboard controls',
+				done: 'Done'
+			}
+		});
+
+		window.resourcePortlet.subSectionButtonHandler.wireUp({
+			elements: {
+				dropdownButton: $(`${uniquePrefix} .resources-opener-button-for-sub-section-js`),
+				uniqueId: `${uniquePrefix}`
+			}
+		});
+
+        window.resourcePortlet.initExpandCollapseAll.wireUp({
+            elements: {
+                toggleAllButton: $('#pg3_V_ResourcesToggleAllButton'),
+				uniqueId: `${uniquePrefix}`
+			},
+			textDictionary: {
+                'txtExpandAll': 'Expand all sets',
+                'txtCollapseAll': 'Collapse all sets'
+            }
+        });
+
+		if ($(`${uniquePrefix} .resources-portlet .set[reorder-mode]`).length > 0) {
+			$(`${uniquePrefix} .js-sortable-list-for-resources tr`).removeClass('item');
+			$(`${uniquePrefix} .sortable-list li`).addClass('item');
+			$(`${uniquePrefix} .sortable-list li`).attr('draggable', 'true');
+			$(`${uniquePrefix} .sortable-list li`).attr('data-grabbed', 'false');
+
+			window.dragDropWithReorder.initDragDropWithReorder.wireUp({
+				elements: {
+					reorderWrapper: '.reorder-wrapper',
+					sortableElements: '.sortable-list',
+					screenReaderDirectionsContainer: '#js-element-info',
+					positionBuffer: 40
+
+				},
+				text: {
+					screenReaderDirectionsText: 'Use the arrow keys to move $$NAME and press Enter when done.',
+					screenReaderModifiedOrderText: '$$NAME is now at order $$ORDER'
+				}
+			});
+		}
+
+		if ($(`${uniquePrefix} .resources-portlet .drawer-container[resources-reorder-mode]`).length > 0) {
+			$(`${uniquePrefix} .sortable-list li`).removeClass('item');
+			$(`${uniquePrefix} .sortable-list li`).removeAttr('draggable');
+			$(`${uniquePrefix} .sortable-list li`).removeAttr('data-grabbed');
+			$(`${uniquePrefix} .resources-reorder-mode tr`).attr('draggable', 'true');
+			$(`${uniquePrefix} .resources-reorder-mode tr`).attr('data-grabbed', 'false');
+			$(`${uniquePrefix} .resources-reorder-mode tr`).attr('resources-reorder-row', 'true');
+			$(`${uniquePrefix} .resources-reorder-mode .card`).attr('draggable', 'true');
+			$(`${uniquePrefix} .resources-reorder-mode .card`).attr('data-grabbed', 'false');
+			$(`${uniquePrefix} .resources-reorder-mode .card`).attr('resources-reorder-row', 'true');
+
+			let resourcesSetId = $(`${uniquePrefix} input[id*="ResourcesTablePlaceholder"]`);
+
+			for (let i = 0; i < resourcesSetId.length; i++) {
+				if (resourcesSetId[i].hasAttribute('value') && $(resourcesSetId[i]).val() !== '') {
+					resourcesSetId = $(resourcesSetId[i]);
+				}
+			}
+			$(resourcesSetId).next().addClass('current-reorder-table');
+			let setId = $(resourcesSetId).attr('value');
+
+			$(`[set-draw-toggle-button="${setId}"]`).click();
+			window.dragDropWithReorder.initDragDropWithReorder.wireUp({
+				elements: {
+					reorderWrapper: '.current-reorder-table',
+					sortableElements: '.sortable-list',
+					screenReaderDirectionsContainer: '#js-element-info',
+					positionBuffer: 10,
+					isCardView: true
+				},
+				text: {
+					screenReaderDirectionsText: 'Use the arrow keys to move $$NAME and press Enter when done.',
+					screenReaderModifiedOrderText: '$$NAME is now at order $$ORDER'
+				}
+
+			});
+		}
+
+		const newestOrLastModifiedResourceSetId = $("#pg3_V_NewestOrLastModifiedResourceSetId").val();
+
+		if (newestOrLastModifiedResourceSetId === '') return;
+		const drawerToggleButtonToClick = $(`.drawer-toggle-button[set-draw-toggle-button=${newestOrLastModifiedResourceSetId}]`);
+
+		if (drawerToggleButtonToClick.attr('aria-expanded') !== 'true') {
+			drawerToggleButtonToClick.click();
+		}
+
+		
+	});
+
+    function wireupCardBlock(uniquePrefix) {
+            window.resourcePortlet.cardBlockLayout.wireUp({
+			    uniqueId: uniquePrefix,
+			    onDeleteButtonClicked: openDeleteResourceConfirmationDialog,
+			    textDictionary: {
+			     'viewMore': 'View more',
+			     'cancelButton': 'Cancel',
+			     'selectAll': 'Select all<span class="sr-only"> in the {0} set</span>',
+			     'deselectAll': 'Deselect all<span class="sr-only"> in the {0} set</span>'
+			    }
+            });
+    }
+
+	function handleDeleteButtonClick(event) {
+		const id = event.srcElement.id;
+		const name = $(event.srcElement).attr("data-name").replaceAll('_', ' ');
+		return openDeleteResourceConfirmationDialog(id, name);
+	}
+
+	function openDeleteResourceConfirmationDialog(submitButtonId, resourceName) {
+		$("#HiddenElementIdContainerSinglepg3-ResourcesPortlet").text(submitButtonId);
+
+		const targetedResourceName = `<strong>${resourceName}</strong>`;
+		const deleteSelectedDialogMessage = 'Are you sure you want to delete <strong>{0}</strong>? This action cannot be undone.';
+		const newDeleteSelectedDialogMessage = deleteSelectedDialogMessage.replace('{0}', targetedResourceName)
+
+		$("#pg3_V_DeleteSelectedDialogMessage").html(newDeleteSelectedDialogMessage);
+
+		$("#DeleteSelectedDialogpg3-ResourcesPortlet").dialog({
+			modal: true
+		});
+		return false;
+	}
+
+	function openDeleteResourcesConfirmationDialog(event, ele) {
+			if (event === undefined || event === null) {
+				$("#HiddenElementIdContainerMultipg3-ResourcesPortlet").text(ele.id);
+			} else {
+				$("#HiddenElementIdContainerMultipg3-ResourcesPortlet").text(event.srcElement.id);
+			}
+
+		$("#DeleteSelectedResourcesDialogpg3-ResourcesPortlet").dialog({
+			modal: true
+		});
+		return false;
+    }
+
+	function handleEditButtonClick(event) {
+		// Hide the save button for scheduling resources and show the one for editing a resources
+		$('.schedule-selected-resource-confrim-js').hide();
+		$('.edit-selected-resource-confrim-js').show();
+
+        const id = event.srcElement.id;
+        const hiddenSibling = event.srcElement.nextElementSibling;
+		const name = $(event.srcElement).attr("data-name").replaceAll('_', ' ');
+        return openEditSelectedResourceDialog(id, hiddenSibling, name);
+    }
+
+    function openEditSelectedResourceDialog(id, hiddenSibling, resourceName) {
+        $(`#EditSelectedResourceDialogpg3-ResourcesPortlet #EditSelectedResourceErrorMessage`).hide();
+		$(`#EditSelectedResourceDialogpg3-ResourcesPortlet #EditSelectedResourceEditDeleteTooltip`).hide();
+		$(`#EditSelectedResourceDialogpg3-ResourcesPortlet [id*="_ErrorMessageContainer"]`).hide();
+
+        const obj = JSON.parse(hiddenSibling.value);
+        const startDateTimestamp = Date.parse(obj.startDate);
+        const endDateTimestamp = Date.parse(obj.endDate);
+        const startDate = new Date(obj.startDate);
+        const endDate = new Date(obj.endDate);
+        const dateTimeMaxTimestamp = Date.parse("9999-12-31T23:59:59");
+        const dateTimeMaxTimestampWithMs = Date.parse("9999-12-31T23:59:59.9999999");
+
+        $("#HiddenElementIdContainerSingleSrcElepg3-ResourcesPortlet").text(id);
+        $("#HiddenElementIdContainerSingleEditpg3-ResourcesPortlet").text(obj.portletId);
+        $("#HiddenElementIdContainerSingleEditTwopg3-ResourcesPortlet").text(obj.resourceId);
+
+        if (startDateTimestamp === dateTimeMaxTimestamp || startDateTimestamp === dateTimeMaxTimestampWithMs) {
+            $('#EditSelectedResourceDialogpg3-ResourcesPortlet [id*="_DisplayLaterRadioButton"]').click();
+        } else {
+            $('#EditSelectedResourceDialogpg3-ResourcesPortlet [id*="_DisplayOnRadioButton"]').click();
+
+            $('#EditSelectedResourceDialogpg3-ResourcesPortlet [id*="_StartDateTextBox"]').val(startDate.toLocaleDateString());
+            $('#EditSelectedResourceDialogpg3-ResourcesPortlet [id*="_StartTimeTexBox"]').val(startDate.toLocaleTimeString([], { hour: 'numeric', minute: '2-digit' }));
+
+            if (endDateTimestamp === dateTimeMaxTimestamp || endDateTimestamp === dateTimeMaxTimestampWithMs) {
+                $('#EditSelectedResourceDialogpg3-ResourcesPortlet [id*="_NoEndDateRadioButton"]').click();
+            } else {
+                $('#EditSelectedResourceDialogpg3-ResourcesPortlet [id*="_EndOnRadioButton"]').click();
+                $('#EditSelectedResourceDialogpg3-ResourcesPortlet [id*="_EndDateTextBox"]').val(endDate.toLocaleDateString());
+                $('#EditSelectedResourceDialogpg3-ResourcesPortlet [id*="_EndTimeTexBox"]').val(endDate.toLocaleTimeString([], { hour: 'numeric', minute: '2-digit' }));
+                $('#EditSelectedResourceDialogpg3-ResourcesPortlet [id*="_EndOnActionsDropDownList"]')[0].selectedIndex = obj.endDateAction === 1 ? 0 : 1;
+            }
+        }
+
+        const targetedResourceName = `<strong>${resourceName}</strong>`;
+        const editSelectedDialogMessage = 'Set the displayed settings for {0}';
+        const newEditSelectedDialogMessage = editSelectedDialogMessage.replace('{0}', targetedResourceName)
+
+        $("#pg3_V_EditSelectedResourceDialogMessage").html(newEditSelectedDialogMessage);
+
+		$("#EditSelectedResourceDialogpg3-ResourcesPortlet").dialog({
+			width: 'auto',
+			height: 'auto',
+			modal: true
+		});
+		return false;
+	}
+
+</script>
+
+<div class="row">
+	<div class="col-md-12">
+		
+	</div>
+</div>
+<div class="row">
+	<div class="col-md-12">
+		
+	</div>
+</div>
+<div class="row">
+	<div class="col-md-12">
+		
+	</div>
+</div>
+<div class="row">
+	<div class="col-md-12">
+		<div id="pg3_V_UnGroupedDeleteErrorMessageContainer" class=" margin-b-md d-inline-block hide">
+			<div class="col-md-12">
+				<div class="alert-container form-inline error" role="alert">
+					<span class="glyphicons glyphicons-exclamation-sign alert-icon" aria-hidden="true"></span>
+					<span id="pg3_V_UnGroupedDeleteErrorLabel" class="error-label js-ungrouped-delete-error-label"></span>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="row margin-l-xs col-xs-9">
+	<div id="pg3_V_PrimarySetButtonsContainer" class="row">
+		
+		
+		
+		
+		<div id="pg3_V_DownloadAllPrimaryLinkContainer" class="d-inline-block margin-r-xs">
+			<a href="https://myec.elmira.edu/ICS/Portlets/ICS/Portlet.Resources/Pages/DownloadZip.aspx?id=ca940cab-8648-4e69-af1c-14cc0272e0d6&dla=true" id="pg3_V_DownloadAllPrimaryLink" class="btn btn-primary" role="button" target="_blank">
+				<span class="glyphicons glyphicons-download-alt" aria-hidden="true"></span>
+				<span id="pg3_V_DownloadAllPrimaryLinkLabel" class="margin-l-xs">Download all files</span>
+			</a>
+		</div>
+		
+		
+	</div>
+	
+	
+	
+	
+</div>
+<div id="pg3_V_CardListViewToggleContainer" class="float-right resource-card-list-toggle-elements col-xs-3">
+	<div class="card-list-view-toggle-container primary-border">
+        
+		<a id="pg3_V_ListViewLink" class="view-icon" left-side="true" href="/ICS/Registrar/?pvt_ca940cab-8648-4e69-af1c-14cc0272e0d6=List"><span id="pg3_V_ListViewIconDescription" class="sr-only">List view</span><span id="pg3_V_ListViewIcon" class="glyphicons glyphicons-list-alt primary" aria-hidden="true"></span></a>
+		<a id="pg3_V_CardLayoutLink" class="primary-background" right-side="true" href="/ICS/Registrar/?pvt_ca940cab-8648-4e69-af1c-14cc0272e0d6=Card"><span id="pg3_V_CardViewIconDescription" class="sr-only">Card view - selected</span><span id="pg3_V_CardViewIcon" class="glyphicons glyphicons-show-thumbnails color-content-one" aria-hidden="true"></span></a>
+	</div>
+	<div class="row margin-t-xs">
+		<div class="col-md-12">
+			<div class="d-inline ">
+				<button id="pg3_V_ResourcesToggleAllButton" type="button" class="link-btn horiz-padding-md" data-indicator="1" aria-expanded="false">Expand all sets</button>
+			</div>
+            <div class="d-inline ">
+                
+            </div>
+		</div>
+	</div>
+</div>
+<div class="row set">
+	<div class="col-md-12">
+		<div role="region" id="js-element-info" class="sr-only" aria-live="polite"></div>
+		<div id="pg3_V_ResourcesSetContainer" class="row set">
+			<div role="region" id="js-element-info" class="sr-only" aria-live="polite"></div>
+			<div id="pg3_V_ListView" class="col-md-12 set-container list-view" portlet-id="pg3-ResourcesPortlet">
+				<span id="pg3_V_loader"></span>
+				<div class="reorder-wrapper">
+					<ul class="sortable-list">
+						
+								<li id="pg3_V_ResourcesSetsRepeater_ctl00_ReorderItem" tabindex="0" class="item" data-name="" data-order="">
+									<input name="pg3$V$ResourcesSetsRepeater$ctl00$SetOrder" type="hidden" id="pg3_V_ResourcesSetsRepeater_ctl00_SetOrder" class="js-set-order-input" />
+									
+
+<script>
+	$(function () {
+		jenzabar.framework.subMenuOptions.hookUpElements({
+			pageElements: {
+				subMenu: $("#pg3_V_ResourcesSetsRepeater_ctl00_DrawerControl_DrawerInnerContainer"),
+				subMenuButtonTrigger: $("#pg3_V_ResourcesSetsRepeater_ctl00_DrawerControl_DrawerCollapseButton")
+			}
+		});
+
+		let setName = $('#pg3_V_ResourcesSetsRepeater_ctl00_DrawerControl_DrawerTitle').text();
+		let text = 'Select all resources in ' + setName;
+		let selectAllResourcesCheckbox = $('#pg3_V_ResourcesSetsRepeater_ctl00_DrawerControl_SelectAllResourcesCheckbox');
+		let selectAllResourcesCheckboxLabel = $('#pg3_V_ResourcesSetsRepeater_ctl00_DrawerControl_SelectAllResourcesCheckboxLabel');
+		selectAllResourcesCheckboxLabel.text(text);
+
+		let resourcesCount = $('#pg3_V_ResourcesSetsRepeater_ctl00_DrawerControl_ResourceCount').text();
+
+		if (resourcesCount == 0) {
+			selectAllResourcesCheckbox.hide();
+		}
+
+		$('.set-container table').on('ready.ft.table', function () {
+			let selectAllResourcesCheckbox = $('#pg3_V_ResourcesSetsRepeater_ctl00_DrawerControl_SelectAllResourcesCheckbox');
+
+			$('span.resource-checkbox input').on('click',
+				function () {
+					let headerId = $(this).parent()[0].attributes['data-id'].value;
+					if (!$(this)[0].checked) {
+						$('input[data-id=' + headerId + ']').prop('checked', false);
+					}
+					$('span[data-id=' + headerId + '] input').each(function (index) {
+						if ($(this)[0].checked) {
+							$('input[data-id=' + headerId + ']').prop('checked', true);
+						} else {
+							$('input[data-id=' + headerId + ']').prop('checked', false);
+							return false;
+						}
+					})
+				});
+
+			window.resourcePortlet.resourceCheckboxOptions.wireUp({
+				elements: {
+					setName: $('#pg3_V_ResourcesSetsRepeater_ctl00_DrawerControl_DrawerTitle').text(),
+					text: 'Select all resources in ',
+					selectAllResourcesCheckbox: $('#pg3_V_ResourcesSetsRepeater_ctl00_DrawerControl_SelectAllResourcesCheckbox'),
+					selectAllResourcesCheckboxLabel: $('#pg3_V_ResourcesSetsRepeater_ctl00_DrawerControl_SelectAllResourcesCheckboxLabel'),
+					resourcesCount: $('#pg3_V_ResourcesSetsRepeater_ctl00_DrawerControl_ResourceCount').text()
+				}
+			});
+		});
+
+		(nameValue = function (valueOrElement) {
+			var anchor = $(valueOrElement).find("a").text();
+			return anchor;
+		})();
+
+		if (!$('#pg3_V_ResourcesSetsRepeater_ctl00_DrawerControl_DrawerContainer').attr('resources-reorder-mode')) {
+			$('#pg3_V_ResourcesSetsRepeater_ctl00_DrawerControl_DrawerContainer .footable-container table.resources-footable').footable();
+		} else {
+			$('.resources-reorder-mode .description-header').hide();
+			$('.resources-reorder-mode .edit-header').hide();
+			$('.resources-reorder-mode .delete-header').hide();
+			$('.resources-reorder-mode .description-cell').hide();
+			$('.resources-reorder-mode .edit-cell').hide();
+			$('.resources-reorder-mode .delete-cell').hide();
+			$('.resources-reorder-mode .select-all-checkbox-header').empty();
+			$('.resources-reorder-mode .resource-checkbox-label').addClass('hide');
+			$('.resources-reorder-mode .resource-checkbox').addClass('hide');
+		}
+
+		window.resourcePortlet.reorderKeyboardControlsInfoModal.wireUp({
+			elements: {
+				reorderInfoButton: $('#pg3_V_ResourcesSetsRepeater_ctl00_DrawerControl_ReorderResourcesInfoButton'),
+				reorderKeyboardControlsInfoModal: $('#pg3_V_ResourcesSetsRepeater_ctl00_DrawerControl_ReorderKeyboardControlsInfoModal'),
+			},
+			text: {
+				title: 'Reorder keyboard controls',
+				done: 'Done'
+			}
+		});
+	});
+</script>
+
+<div class="drawer-global">
+	<div id="pg3_V_ResourcesSetsRepeater_ctl00_DrawerControl_DrawerContainer" data-active-reorder-set="false" class="drawer-container default-border-alternate-one color-background-one">
+		<div class="row margin-b-sm">
+			<div class="col-md-12">
+				<div class="header-container">
+					
+					
+					<div id="pg3_V_ResourcesSetsRepeater_ctl00_DrawerControl_DrawerTitleInfo" class="float-left">
+						<h4 id="pg3_V_ResourcesSetsRepeater_ctl00_DrawerControl_DrawerTitle" class="body-text drawer-title text-bold " data-id="d6d806b2-e4cd-4b14-b6f2-1b23ece65c99">Academic Calendars and Final Exam Schedules</h4>
+					</div>
+					<div id="pg3_V_ResourcesSetsRepeater_ctl00_DrawerControl_DrawerCollapseButtonContainer" class="float-right">
+						
+						<button id="pg3_V_ResourcesSetsRepeater_ctl00_DrawerControl_DrawerCollapseButton" type="button" class="link-btn toggle-arrow drawer-toggle-button float-right resources-drawer" data-toggle="collapse" aria-expanded="false" data-target="#pg3_V_ResourcesSetsRepeater_ctl00_DrawerControl_DrawerInnerContainer" aria-controls="pg3_V_ResourcesSetsRepeater_ctl00_DrawerControl_DrawerInnerContainer">
+							<span class="glyphicons footable-toggle toggle-set glyphicons-chevron-down" aria-hidden="true"></span>
+							<span id="pg3_V_ResourcesSetsRepeater_ctl00_DrawerControl_DrawerCollapseText" class="sr-only">Toggle Academic Calendars and Final Exam Schedules</span>
+						</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-12">
+				
+			</div>
+		</div>
+		
+		<div id="pg3_V_ResourcesSetsRepeater_ctl00_DrawerControl_DrawerInnerContainer" class="drawer-inner-container collapse">
+			<div class="options-container extra-padding">
+				<div id="pg3_V_ResourcesSetsRepeater_ctl00_DrawerControl_DrawerAdminResourceButtonContainer" class="row">
+					<div class="col-md-12 padding-all-md margin-l-sm">
+						<div class="row">
+							<div id="pg3_V_ResourcesSetsRepeater_ctl00_DrawerControl_NonReorderResourcesModeElements">
+								
+								
+								<div id="pg3_V_ResourcesSetsRepeater_ctl00_DrawerControl_DownloadAllDrawerLinkContainer" class="d-inline-block margin-r-xs">
+									<a href="https://myec.elmira.edu/ICS/Portlets/ICS/Portlet.Resources/Pages/DownloadZip.aspx?id=ca940cab-8648-4e69-af1c-14cc0272e0d6&sid=d6d806b2-e4cd-4b14-b6f2-1b23ece65c99&dla=false" id="pg3_V_ResourcesSetsRepeater_ctl00_DrawerControl_DownloadAllDrawerLink" class="btn btn-primary" role="button" target="_blank">
+										<span class="glyphicons glyphicons-download-alt" aria-hidden="true"></span>
+										<span id="pg3_V_ResourcesSetsRepeater_ctl00_DrawerControl_DownloadAllDrawerLinkLabel" class="margin-l-xs">Download files</span>
+									</a>
+								</div>
+								
+								
+							</div>
+							
+							
+							
+						</div>
+					</div>
+				</div>
+				<div id="pg3_V_ResourcesSetsRepeater_ctl00_DrawerControl_DisplayedSettingsSuccessContainer" class="alert-container success displayed-settings-resources-success-container-js hide" role="alert" set-id="d6d806b2-e4cd-4b14-b6f2-1b23ece65c99">
+					<span class="glyphicons glyphicons-ok-sign alert-icon"></span>
+					<span>The changes have been successfully applied to all selected Resources.</span>
+				</div>
+				
+				<input name="pg3$V$ResourcesSetsRepeater$ctl00$DrawerControl$ResourcesTablePlaceholder" type="hidden" id="pg3_V_ResourcesSetsRepeater_ctl00_DrawerControl_ResourcesTablePlaceholder" class="js-resources-table-placeholder" />
+				
+				
+
+<div class="card-block-layout body">
+	<div class="sortable-list">
+	
+			<div class="card item"
+				 
+				 data-resource-id="29b43aa8-3d04-405a-8f0e-baba53ab228a"
+				 data-edit-screen-url="/ICS/Registrar/My_Academic_Information.jnz?portlet=Handouts&screen=ManageResource&screenType=next&id=29b43aa8-3d04-405a-8f0e-baba53ab228a"
+			     data-link-button-text="Download file"
+			     data-open-in-new-window="True"
+			     data-name="2025-2026 Traditional/Long Term Academic Calendar">
+
+				<div class="card-contents-container">
+					
+					<div class="card-contents">
+						<div class="row title resource-header">
+							<div class="col-md-12">
+								<span class="glyphicons primary name-icon glyphicons-file"
+								      role="img" aria-label="File resource"></span>
+								<a href="/ICS/Portlets/ICS/Portlet.Resources/ViewHandler.ashx?id=29b43aa8-3d04-405a-8f0e-baba53ab228a" 
+								    target="_blank" 
+								   class="resource-link">2025-2026 Traditional/Long Term Academic Calendar</a>
+								
+							</div>
+						</div>
+						<div class="card-description">
+							
+							<div class="row resource-status">
+								<div class="col-md-12">Required</div>
+							</div>
+							<div class="row resource-source">
+								<div class="col-md-12">CURRENT_2025-2026 Traditional Academic Calendar=2-5-25.pdf</div>
+							</div>
+							
+						</div>
+					</div>
+				</div>
+				
+			</div>
+		
+			<div class="card item"
+				 
+				 data-resource-id="540b8801-8e85-4317-965e-4c0c0721cd6b"
+				 data-edit-screen-url="/ICS/Registrar/My_Academic_Information.jnz?portlet=Handouts&screen=ManageResource&screenType=next&id=540b8801-8e85-4317-965e-4c0c0721cd6b"
+			     data-link-button-text="Download file"
+			     data-open-in-new-window="True"
+			     data-name="2025-2026 Graduate Asynchronous Academic Calendar">
+
+				<div class="card-contents-container">
+					
+					<div class="card-contents">
+						<div class="row title resource-header">
+							<div class="col-md-12">
+								<span class="glyphicons primary name-icon glyphicons-file"
+								      role="img" aria-label="File resource"></span>
+								<a href="/ICS/Portlets/ICS/Portlet.Resources/ViewHandler.ashx?id=540b8801-8e85-4317-965e-4c0c0721cd6b" 
+								    target="_blank" 
+								   class="resource-link">2025-2026 Graduate Asynchronous Academic Calendar</a>
+								
+							</div>
+						</div>
+						<div class="card-description">
+							
+							<div class="row resource-status">
+								<div class="col-md-12">Required</div>
+							</div>
+							<div class="row resource-source">
+								<div class="col-md-12">2025-2026 Asynchronous Acad Calendar.pdf</div>
+							</div>
+							
+						</div>
+					</div>
+				</div>
+				
+			</div>
+		
+			<div class="card item"
+				 
+				 data-resource-id="c8c0d20d-97c9-44de-8eef-4e69cda41f5a"
+				 data-edit-screen-url="/ICS/Registrar/My_Academic_Information.jnz?portlet=Handouts&screen=ManageResource&screenType=next&id=c8c0d20d-97c9-44de-8eef-4e69cda41f5a"
+			     data-link-button-text="Download file"
+			     data-open-in-new-window="True"
+			     data-name="2025-2026 Final Exam Schedule">
+
+				<div class="card-contents-container">
+					
+					<div class="card-contents">
+						<div class="row title resource-header">
+							<div class="col-md-12">
+								<span class="glyphicons primary name-icon glyphicons-file"
+								      role="img" aria-label="File resource"></span>
+								<a href="/ICS/Portlets/ICS/Portlet.Resources/ViewHandler.ashx?id=c8c0d20d-97c9-44de-8eef-4e69cda41f5a" 
+								    target="_blank" 
+								   class="resource-link">2025-2026 Final Exam Schedule</a>
+								
+							</div>
+						</div>
+						<div class="card-description">
+							
+							<div class="row resource-status">
+								<div class="col-md-12">Required</div>
+							</div>
+							<div class="row resource-source">
+								<div class="col-md-12">2025-2026 Final Exam Schedule.pdf</div>
+							</div>
+							
+						</div>
+					</div>
+				</div>
+				
+			</div>
+		
+	</div>
+</div>
+			</div>
+		</div>
+	</div>
+	<div id="pg3_V_ResourcesSetsRepeater_ctl00_DrawerControl_ReorderKeyboardControlsInfoModal">
+		<span id="pg3_V_ResourcesSetsRepeater_ctl00_DrawerControl_ReorderKeyboardControlsInfoModalMessage">While focused on a reorder icon, press the Enter key or spacebar to &quot;select&quot; the icon. While a reorder icon is selected, pressing the up and down arrows will change the order of the selected item within the list. Pressing Enter key or spacebar again will drop the selected item at that location in the list.</span>
+	</div>
+</div>
+
+								</li>
+							
+								
+							
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<div id="pg3_V_DeleteSetsModal" class="delete-sets-modal" portlet-id="pg3-ResourcesPortlet">
+	<div class="move-resources-modal-info-container">
+		<span id="pg3_V_DeleteSetsModalMessage" class="js-move-resources-modal-info-message body-text"></span>
+	</div>
+
+	<div class="js-move-resources-modal-dropdown-container move-resources-modal-dropdown-container">
+		<label for="pg3_V_MoveResourcesModalDropdown" id="pg3_V_MoveResourcesModalDropdownLabel" class="js-move-resources-modal-dropdown-label">Move resources to</label>
+		<select name="pg3$V$MoveResourcesModalDropdown" id="pg3_V_MoveResourcesModalDropdown" class="form-control js-move-resources-modal-dropdown move-resources-modal-dropdown hide">
+	<option value="d6d806b2-e4cd-4b14-b6f2-1b23ece65c99">Academic Calendars and Final Exam Schedules</option>
+	<option value="7b7ee17d-08ae-4faa-8670-ab999cf45a69">Classroom Assignments</option>
+
+</select>
+	</div>
+	
+</div>
+
+<div id="pg3_V_ReorderKeyboardControlsInfoModal">
+	<span id="pg3_V_ReorderKeyboardControlsInfoModalMessage">While focused on a reorder icon, press the Enter key or spacebar to &quot;select&quot; the icon. While a reorder icon is selected, pressing the up and down arrows will change the order of the selected item within the list. Pressing Enter key or spacebar again will drop the selected item at that location in the list.</span>
+</div>
+<div id="DeleteSelectedDialogpg3-ResourcesPortlet" title="Delete Resource" style="display:none">
+	<div id="pg3_V_DeleteSelectedDialogMessage"></div>
+	<br/>
+	<span style="float:right">
+		<button id="DeleteSelectedCancelpg3-ResourcesPortlet" class="btn btn-clear-primary">Cancel</button>
+		<button id="DeleteSelectedConfirmpg3-ResourcesPortlet" class="btn btn-danger">Delete</button>
+	</span>
+	<input id="HiddenElementIdContainerSinglepg3-ResourcesPortlet" type="hidden"/>
+</div>
+
+<div id="DeleteSelectedResourcesDialogpg3-ResourcesPortlet" title="Delete Resources" style="display:none">
+	<div id="pg3_V_DeleteSelectedResourcesDialogMessage">Are you sure you want to delete the selected resources?  This action cannot be undone.</div>
+	<br/>
+	<span style="float:right">
+		<button id="DeleteSelectedResourcesCancelpg3-ResourcesPortlet" class="btn btn-clear-primary">Cancel</button>
+		<button id="DeleteSelectedResourcesConfirmpg3-ResourcesPortlet" class="btn btn-danger">Delete</button>
+	</span>
+	<input id="HiddenElementIdContainerMultipg3-ResourcesPortlet" type="hidden"/>
+</div>
+
+<div id="EditSelectedResourceDialogpg3-ResourcesPortlet" title="Displayed settings" style="display:none">
+    <div id="pg3_V_EditSelectedResourceDialogMessage"></div>
+    <div id="EditSelectedResourceErrorMessage" class="alert-container error" role="alert" style="display:none">
+        <span class="glyphicons glyphicons-exclamation-sign alert-icon"></span>
+        <span>An error occurred when saving the display dates. Please ensure the entered values are valid.</span>
+    </div>
+    <div id="EditSelectedResourceEditDeleteTooltip" class="alert-container error" role="alert" style="display:none">
+        <span class="glyphicons glyphicons-exclamation-sign alert-icon"></span>
+        <span>The selected options would result in the Resource being deleted immediately.  If you want to delete this Resource, use the Delete button instead.</span>
+    </div>
+    <div class="form-wrapper">
+        <div class="row margin-t-md margin-b-md">
+            <div class="col-md-12">
+	            <input name="pg3$V$ValidateEditSelectedResourceAndBatchEditPlaceholder" type="hidden" id="pg3_V_ValidateEditSelectedResourceAndBatchEditPlaceholder" class="hide js-batch-edit-validate" />
+                
+
+<script>
+
+	jenzabar.displayIndicator = {};
+    (function (displayIndicator, $) {
+        let isMultipleDisplayIndicatorsNeeded = 'true';
+		displayIndicator.validateDateAndTime = function (element) {
+			let currentDisplayIndicator = isMultipleDisplayIndicatorsNeeded === 'true' ? $(element).parent().find('.display-indicator-wrapper') : $('.display-indicator-wrapper');
+            let errorMessageContainer = currentDisplayIndicator.find('.display-indicator-error-message-container');
+			let displayOnRadioButton = currentDisplayIndicator.find('.display-indicator-display-on-radio-button input[type="radio"]');
+			let endOnRadioButton = currentDisplayIndicator.find('.display-indicator-end-on-radio-button input[type="radio"]');
+            let startDateTextbox = currentDisplayIndicator.find('.start-date-textbox');
+            let startTimeTextbox = currentDisplayIndicator.find('.start-time-textbox');
+            let endDateTextbox = currentDisplayIndicator.find('.end-date-textbox');
+            let endTimeTextbox = currentDisplayIndicator.find('.end-time-textbox');
+			let errorText = currentDisplayIndicator.find('.display-indicator-error-text');
+            
+			let displayIndicatorSelection = {
+				showTime: 'True',
+				errorMessageContainer: $(errorMessageContainer),
+				errorTextElement: $(errorText),
+				displayOnIsSelected: $(displayOnRadioButton).is(':checked'),
+				endOnIsSelected: $(endOnRadioButton).is(':checked'),
+				startDateElement: $(startDateTextbox),
+				startTimeElement: $(startTimeTextbox),
+				canSetEndDateBeforeCurrentMoment: 'False',
+				endDateElement: $(endDateTextbox),
+				endTimeElement: $(endTimeTextbox),
+				requiredStartDateText: 'A start date and time are required',
+				invalidStartDateText: 'The start date is invalid',
+				requiredEndDateText: 'An end date and time are required',
+				invalidStartTimeText: 'The start time is invalid',
+				invalidEndTimeText: 'The end time is invalid',
+				invalidEndDateText: 'The end date is invalid',
+				startBeforeEndText: 'The start date must occur before the end date.',
+				errorMessageTxt:'The end time cannot be in the past'
+			}
+			return initDisplayIndicator.runValidationOnDateandTime(displayIndicatorSelection);
+		};
+
+		displayIndicator.setStartAndEndVisibility = function () {
+			let displayIndicatorSelection = {
+				displayOnIsSelected: $('#pg3_V__displayIndicator_DisplayOnRadioButton').is(':checked'),
+				endOnIsSelected: $('#pg3_V__displayIndicator_EndOnRadioButton').is(':checked'),
+                displayOnNowSelected: $('#pg3_V__displayIndicator_DisplayLaterRadioButton').is(':checked'),
+                endOnNowSelected: $('#pg3_V__displayIndicator_EndNowRadioButton').is(':checked'),
+                startDateTimeContainer: $('#pg3_V__displayIndicator_startDateTimeContainer'),
+                endDateTimeContainer: $('#pg3_V__displayIndicator_endDateTimeContainer')
+            }
+            initDisplayIndicator.runSetStartAndEndVisibility(displayIndicatorSelection);
+        };
+
+        displayIndicator.displayNowSelected = function (element) {
+			let currentDisplayIndicator = $(element).closest('.display-indicator');
+			let displayOnWrapper = currentDisplayIndicator.find('.display-indicator-display-on-wrapper');
+
+			let displayLaterContainer = currentDisplayIndicator.find('.display-indicator-display-later-wrapper');
+			let errorMessageContainer = currentDisplayIndicator.find('.display-indicator-error-message-container');
+            let startDateTimeContainer = currentDisplayIndicator.find('.js-start-date-time-container');
+
+            let displayIndicatorSelection = {
+				displayIndicatorDisplayOnWrapper: $(displayOnWrapper),
+				displayIndicatorDisplayLaterWrapper: $(displayLaterContainer),
+				errorMessageContainer: $(errorMessageContainer),
+				startDateTimeContainer: $(startDateTimeContainer)
+            }
+            initDisplayIndicator.runDisplayNowSelected(displayIndicatorSelection);
+        };
+
+        displayIndicator.displayLaterSelected = function (element) {
+            let currentDisplayIndicator = $(element).closest('.display-indicator');
+            let displayOnWrapper = currentDisplayIndicator.find('.display-indicator-display-on-wrapper');
+			let displayLaterContainer = currentDisplayIndicator.find('.display-indicator-display-later-wrapper');
+			let errorMessageContainer = currentDisplayIndicator.find('.display-indicator-error-message-container');
+			let noEndDateRadioButton = currentDisplayIndicator.find('.display-indicator-no-end-date-radio-button input[type="radio"]');
+            let startDateTimeContainer = currentDisplayIndicator.find('.js-start-date-time-container');
+            let startLaterDropDownList = currentDisplayIndicator.find('.start-later-dropdown-list');
+            let startLaterContainer = currentDisplayIndicator.find('.start-later-container');
+			let startOnActionsContainer = currentDisplayIndicator.find('.start-on-actions-container');
+
+            let displayIndicatorSelection = {
+				displayIndicatorDisplayLaterWrapper: $(displayLaterContainer),
+				displayIndicatorDisplayOnWrapper: $(displayOnWrapper),
+				errorMessageContainer: $(errorMessageContainer),
+				noEndDateRadioButton: $(noEndDateRadioButton),
+                startDateTimeContainer: $(startDateTimeContainer),
+                startLaterDropDownList: $(startLaterDropDownList),
+                startLaterContainer: $(startLaterContainer),
+				startOnActionsContainer: $(startOnActionsContainer)
+            }
+            initDisplayIndicator.runDisplayLaterSelected(displayIndicatorSelection);
+        };
+
+        displayIndicator.displayOnSelected = function (element) {
+			let currentDisplayIndicator = $(element).closest('.display-indicator');
+			let displayOnWrapper = currentDisplayIndicator.find('.display-indicator-display-on-wrapper');
+			let displayLaterContainer = currentDisplayIndicator.find('.display-indicator-display-later-wrapper');
+            let startDateTimeContainer = currentDisplayIndicator.find('.js-start-date-time-container');
+
+            let displayIndicatorSelection = {
+				displayIndicatorDisplayOnWrapper: $(displayOnWrapper),
+				displayIndicatorDisplayLaterWrapper: $(displayLaterContainer),
+				startDateTimeContainer: $(startDateTimeContainer)
+            }
+            initDisplayIndicator.runDisplayOnSelected(displayIndicatorSelection);
+        };
+
+		displayIndicator.noEndDateSelected = function (element) {
+			let currentDisplayIndicator = $(element).closest('.display-indicator');
+			let endNowContainer = currentDisplayIndicator.find('.display-indicator-end-now-wrapper');
+			let errorMessageContainer = currentDisplayIndicator.find('.display-indicator-error-message-container');
+            let endOnContainer = currentDisplayIndicator.find('.display-indicator-end-on-wrapper');
+			let endTimeContainer = currentDisplayIndicator.find('.end-time-container');
+
+            let displayIndicatorSelection = {
+				displayIndicatorEndNowWrapper: $(endNowContainer),
+				displayIndicatorEndOnWrapper: $(endOnContainer),
+				endDateTimeContainer: $(endTimeContainer),
+				errorMessageContainer: $(errorMessageContainer)
+            }
+            initDisplayIndicator.runNoEndDateSelected(displayIndicatorSelection);
+        };
+
+		displayIndicator.endNowSelected = function (element) {
+			let currentDisplayIndicator = $(element).closest('.display-indicator');
+			let endNowContainer = currentDisplayIndicator.find('.display-indicator-end-now-wrapper');
+			let endOnContainer = currentDisplayIndicator.find('.display-indicator-end-on-wrapper');
+            let errorMessageContainer = currentDisplayIndicator.find('.display-indicator-error-message-container');
+            let endTimeContainer = currentDisplayIndicator.find('.end-time-container');
+            let endNowActionsContainer = currentDisplayIndicator.find('.end-now-on-actions-container');
+			let endOnActionsContainer = currentDisplayIndicator.find('.end-on-actions-container');
+
+            let displayIndicatorSelection = {
+				displayIndicatorEndNowWrapper: $(endNowContainer),
+				displayIndicatorEndOnWrapper: $(endOnContainer),
+				errorMessageContainer: $(errorMessageContainer),
+                endDateTimeContainer: $(endTimeContainer),
+                endNowActionsContainer: $(endNowActionsContainer),
+				endOnActionsContainer: $(endOnActionsContainer)
+            }
+            initDisplayIndicator.runEndNowSelected(displayIndicatorSelection);
+        };
+
+		displayIndicator.endOnSelected = function (element) {
+			let currentDisplayIndicator = $(element).closest('.display-indicator');
+			let endNowContainer = currentDisplayIndicator.find('.display-indicator-end-now-wrapper');
+            let endTimeContainer = currentDisplayIndicator.find('.end-time-container');
+            let endOnContainer = currentDisplayIndicator.find('.display-indicator-end-on-wrapper');
+            let endOnActionsContainer = currentDisplayIndicator.find('.end-on-actions-container');
+			let endNowActionsContainer = currentDisplayIndicator.find('.end-now-on-actions-container');
+
+            let displayIndicatorSelection = {
+				displayIndicatorEndNowWrapper: $(endNowContainer),
+				displayIndicatorEndOnWrapper: $(endOnContainer),
+                endDateTimeContainer: $(endTimeContainer),
+                endOnActionsContainer: $(endOnActionsContainer),
+				endNowActionsContainer: $(endNowActionsContainer)
+            }
+            initDisplayIndicator.runEndOnSelected(displayIndicatorSelection);
+        }
+        displayIndicator.load = function () {
+            jenzabar.displayIndicator.setStartAndEndVisibility();
+			let startDateElement = $('.start-date-textbox');
+			let startTimeElement = $('.start-time-textbox');
+			let endDateElement = $('.end-date-textbox');
+			let endTimeElement = $('.end-time-textbox');
+
+            startDateElement.datepicker({ dateFormat: jenzabar.userSettings.dateFormat });
+			startTimeElement.timepicker({ 'scrollDefault': 'now', 'timeFormat': 'g:i A' });
+
+            endDateElement.datepicker({ dateFormat: jenzabar.userSettings.dateFormat });
+            endTimeElement.timepicker({ 'scrollDefault': 'now', 'timeFormat': 'g:i A' });
+        }
+
+        displayIndicator.updateActionsView = function (actionName) {
+            let startLaterSelector = "#pg3_V__displayIndicator_StartLaterContainer";
+            let startLaterDropDownListSelector = "#pg3_V__displayIndicator_StartLaterDropDownList";
+            let displayLaterContainerSelector = "#pg3_V__displayIndicator_DisplayLaterContainer";
+            let startOnActionsSelector = "#pg3_V__displayIndicator_StartOnActionsContainer";
+            let endOnActionsSelector = "#pg3_V__displayIndicator_EndOnActionsContainer";
+            let endNowActionsSelector = "#pg3_V__displayIndicator_EndNowActionsContainer";
+            let allSelector = startLaterSelector + "," + startOnActionsSelector + "," + endOnActionsSelector + "," + endNowActionsSelector;
+
+            let setEndDateEnabledState = function (options) {
+                let defaultOptions = { "disabled": false };
+                let enableOptions = $.extend(defaultOptions, options || {});
+                $("[data-container='endDateTime'] :input").attr("disabled", enableOptions.disabled);
+            };
+            let setStartDateEnabledState = function (options) {
+                let defaultOptions = { "disabled": false };
+                let enableOptions = $.extend(defaultOptions, options || {});
+                $("[data-container='startDateTime'] :input").attr("disabled", enableOptions.disabled);
+            };
+
+            switch (actionName) {
+
+                case "ShowStartLaterDrop":
+                    let dropDownList = $(startLaterDropDownListSelector);
+                    if (dropDownList.length > 0) {
+                        $(displayLaterContainerSelector).show();
+                        $(startLaterSelector).show();
+                    } else {
+                        $(startLaterSelector).hide();
+                        $(displayLaterContainerSelector).hide();
+                    }
+                    setEndDateEnabledState({ "disabled": true });
+                    break;
+                case "ShowStartOnActions":
+                    setEndDateEnabledState({ "disabled": false });
+                    $(startOnActionsSelector).show();
+					$('#pg3_V__displayIndicator_DisplayIndicatorDisplayOnWrapper').show();
+                    $(startLaterSelector).hide();
+                    break;
+                case "ShowEndOnActions":
+                    setStartDateEnabledState({ "disabled": false });
+                    break;
+                case "ShowEndNowActions":
+                    setStartDateEnabledState({ "disabled": true });
+                    break;
+                case "HideStartActions":
+                    $(startOnActionsSelector).hide();
+                    $(startLaterSelector).hide();
+                    setEndDateEnabledState({ "disabled": false });
+                    break;
+                case "HideEndActions":
+                    $(endOnActionsSelector + "," + endNowActionsSelector).hide();
+                    setStartDateEnabledState({ "disabled": false });
+                    break;
+                default:
+                    $(allSelector).hide();
+            }
+        };
+    }(jenzabar.displayIndicator, jQuery));
+    // Page Load code for jQuery
+    jQuery(function ($) {
+		$('#pg3_V__displayIndicator_DisplayOnRadioButton').on('click', function () {
+			jenzabar.displayIndicator.displayOnSelected($(this));
+		})
+
+		$('#pg3_V__displayIndicator_EndOnRadioButton').on('click', function () {
+			jenzabar.displayIndicator.endOnSelected($(this));
+		})
+
+		$('#pg3_V__displayIndicator_NoEndDateRadioButton').on('click', function() {
+			jenzabar.displayIndicator.noEndDateSelected($(this));
+		})
+
+		$('#pg3_V__displayIndicator_DisplayNowRadioButton').on('click', function() {
+			jenzabar.displayIndicator.displayNowSelected($(this));
+		})
+
+		$('#pg3_V__displayIndicator_DisplayLaterRadioButton').on('click', function() {
+			jenzabar.displayIndicator.displayLaterSelected($(this));
+		})
+
+		$('#pg3_V__displayIndicator_EndNowRadioButton').on('click', function () {
+			jenzabar.displayIndicator.endNowSelected($(this));
+		})
+
+		jenzabar.displayIndicator.load();
+	});
+
+</script>
+
+<div id="pg3_V__displayIndicator_Display" class="display-indicator display-indicator-wrapper form-inline">
+    <fieldset>
+        <legend class="sr-only">
+            Select a start and end date and time
+        </legend>
+        <div id="pg3_V__displayIndicator_ErrorMessageContainer" class="display-indicator-error-message-container" style="display: none;">
+            <div id="pg3_V__displayIndicator_nameError" class="alert-container error" role="alert" style="">
+                <span class="glyphicons glyphicons-exclamation-sign alert-icon"></span>
+                <span id="pg3_V__displayIndicator_ErrorText" class="display-indicator-error-text"></span>
+            </div>
+        </div>
+        <div data-container="startDateTime">
+            <div class="form-group">
+                <fieldset>
+                    <legend><span class="sr-only">Start:</span></legend>
+                    <span id="pg3_V__displayIndicator_StartLabel" class="start-label">Start:</span>
+                    <span class="d-block-mobile-xxs">
+                        <input id="pg3_V__displayIndicator_DisplayNowRadioButton" type="radio" name="pg3$V$_displayIndicator$start-options" value="DisplayNowRadioButton" checked="checked" />
+                        <label for="pg3_V__displayIndicator_DisplayNowRadioButton" id="pg3_V__displayIndicator_DisplayNowLabel">Display now</label>
+                    </span>
+                    <span class="d-block-mobile-xxs">
+                        <input id="pg3_V__displayIndicator_DisplayLaterRadioButton" type="radio" name="pg3$V$_displayIndicator$start-options" value="DisplayLaterRadioButton" />
+                        <label for="pg3_V__displayIndicator_DisplayLaterRadioButton" id="pg3_V__displayIndicator_DisplayLaterLabel">Display later</label>
+                    </span>
+                    <span class="d-block-mobile-xxs">
+                        <span class="display-indicator-display-on-radio-button"><input id="pg3_V__displayIndicator_DisplayOnRadioButton" type="radio" name="pg3$V$_displayIndicator$start-options" value="DisplayOnRadioButton" /></span>
+                        <label for="pg3_V__displayIndicator_DisplayOnRadioButton" id="pg3_V__displayIndicator_DisplayOnLabel">Display on</label>
+                    </span>
+                </fieldset>
+            </div>
+        </div>
+        <div id="pg3_V__displayIndicator_DisplayIndicatorDisplayOnWrapper" class="display-indicator-display-on-wrapper" data-container="startDateTime">
+            <div class="form-group vert-padding-xs">
+                <div id="pg3_V__displayIndicator_startDateTimeContainer" class="cal js-start-date-time-container" style="display: none;">
+                    <div class="start-date-container">
+                        <div class="for-addon">
+                            <label for="pg3_V__displayIndicator_StartDateTextBox" id="pg3_V__displayIndicator_StartDatePickerLabel" class="sr-only">Pick Start Date</label>
+                            <input name="pg3$V$_displayIndicator$StartDateTextBox" type="text" id="pg3_V__displayIndicator_StartDateTextBox" class="form-control custom-form-control start-date-textbox" />
+                            <span class="glyphicons glyphicons-calendar form-icon" aria-hidden="true"></span>
+                        </div>
+                    </div>
+                    <div id="pg3_V__displayIndicator_StartTimeContainer" class="at-label-container">
+						<label id="pg3_V__displayIndicator_StartAtLabel" class="end-at-label">at</label>
+                        <label for="pg3_V__displayIndicator_StartTimeTexBox" id="pg3_V__displayIndicator_StartAtSRLabel" class="sr-only">Enter a time</label>
+                        <input name="pg3$V$_displayIndicator$StartTimeTexBox" type="text" id="pg3_V__displayIndicator_StartTimeTexBox" class="form-control custom-form-control start-time-textbox" />
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="pg3_V__displayIndicator_DisplayLaterContainer" class="display-indicator-display-later-wrapper" data-container="startDateTime">
+            <div class="form-group vert-padding-xs">
+                
+                
+            </div>
+        </div>
+        <div data-container="endDateTime">
+            <div class="form-group">
+                <fieldset>
+                    <legend><span class="sr-only">End:</span></legend>
+                    <span id="pg3_V__displayIndicator_EndLabel" class="end-label">End:</span>
+                    <span class="d-block-mobile-xxs">
+                        <span class="display-indicator-no-end-date-radio-button"><input id="pg3_V__displayIndicator_NoEndDateRadioButton" type="radio" name="pg3$V$_displayIndicator$end-options" value="NoEndDateRadioButton" checked="checked" /></span>
+                        <label for="pg3_V__displayIndicator_NoEndDateRadioButton" id="pg3_V__displayIndicator_NoEndDateLabel">No end date</label>
+                    </span>
+                    <span class="d-block-mobile-xxs">
+                        <input id="pg3_V__displayIndicator_EndNowRadioButton" type="radio" name="pg3$V$_displayIndicator$end-options" value="EndNowRadioButton" />
+                        <label for="pg3_V__displayIndicator_EndNowRadioButton" id="pg3_V__displayIndicator_EndNowLabel">End now</label>
+                    </span>
+                    <span class="d-block-mobile-xxs">
+                        <span class="display-indicator-end-on-radio-button"><input id="pg3_V__displayIndicator_EndOnRadioButton" type="radio" name="pg3$V$_displayIndicator$end-options" value="EndOnRadioButton" /></span>
+                        <label for="pg3_V__displayIndicator_EndOnRadioButton" id="pg3_V__displayIndicator_EndOnLabel">End on</label>
+                    </span>
+                </fieldset>
+            </div>
+        </div>
+        <div id="pg3_V__displayIndicator_EndOnContainer" class="display-indicator-end-on-wrapper" data-container="endDateTime">
+            <div class="form-group vert-padding-xs">
+                <div id="pg3_V__displayIndicator_endDateTimeContainer" class="display-indicator end-time-container cal" style="display: none;">
+                    <div class="end-date-container">
+                        <div class="for-addon">
+                            <input name="pg3$V$_displayIndicator$EndDateTextBox" type="text" id="pg3_V__displayIndicator_EndDateTextBox" class="form-control custom-form-control end-date-textbox" />
+                            <span class="glyphicons glyphicons-calendar form-icon" aria-hidden="true"></span>
+                        </div>
+                        <label for="pg3_V__displayIndicator_EndDateTextBox" id="pg3_V__displayIndicator_EndDatePickerLabel" class="sr-only">Pick End Date</label>
+                    </div>
+                    <div id="pg3_V__displayIndicator_EndTimeContainer" class="at-label-container">
+	                    <label id="pg3_V__displayIndicator_EndAtLabel" class="end-at-label">at</label>
+                        <label for="pg3_V__displayIndicator_EndTimeTexBox" id="pg3_V__displayIndicator_EndAtSRLabel" class="sr-only">Enter a time</label>
+                        <input name="pg3$V$_displayIndicator$EndTimeTexBox" type="text" id="pg3_V__displayIndicator_EndTimeTexBox" class="form-control custom-form-control ui-timepicker-input end-time-textbox" />
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="pg3_V__displayIndicator_AfterEndActionsContainer" class="display-indicator-end-now-wrapper" data-container="endDateTime">
+            <div class="form-group vert-padding-xs">
+                <div id="pg3_V__displayIndicator_EndOnActionsContainer" class="end-on-actions-container" style="display: none;">
+                    <label for="pg3_V__displayIndicator_EndOnActionsDropDownList" id="pg3_V__displayIndicator_EndOnActionsLabel">After End:</label>
+                    <select name="pg3$V$_displayIndicator$EndOnActionsDropDownList" id="pg3_V__displayIndicator_EndOnActionsDropDownList" class="form-control">
+	<option value="1">Make Inactive</option>
+	<option value="0">Delete</option>
+
+</select>
+                </div>
+                <div id="pg3_V__displayIndicator_EndNowActionsContainer" class="end-now-on-actions-container" style="display: none;">
+                    <label for="pg3_V__displayIndicator_EndNowActionsDropDownList" id="pg3_V__displayIndicator_EndNowActionsLabel">After End:</label>
+                    <select name="pg3$V$_displayIndicator$EndNowActionsDropDownList" id="pg3_V__displayIndicator_EndNowActionsDropDownList" class="form-control">
+	<option value="1">Make Inactive</option>
+	<option value="0">Delete</option>
+
+</select>
+                </div>
+            </div>
+        </div>
+    </fieldset>
+</div>
+            </div>
+        </div>
+    </div>
+    <span style="float:right">
+        <button id="EditSelectedResourceCancelpg3-ResourcesPortlet" class="btn btn-clear-primary">Cancel</button>
+        <input type="submit" name="pg3$V$EditSelectedResourceConfirm" value="Save" onclick="javascript:return jenzabar.displayIndicator.validateDateAndTime(pg3_V_ValidateEditSelectedResourceAndBatchEditPlaceholder);" id="pg3_V_EditSelectedResourceConfirm" class="btn btn-primary edit-selected-resource-confrim-js" />
+	    <input type="submit" name="pg3$V$ScheduleSelectedResourcesConfirm" value="Save" onclick="javascript:return jenzabar.displayIndicator.validateDateAndTime(pg3_V_ValidateEditSelectedResourceAndBatchEditPlaceholder);" id="pg3_V_ScheduleSelectedResourcesConfirm" class="btn btn-primary schedule-selected-resource-confrim-js" />
+
+    </span>
+    <input id="HiddenElementIdContainerSingleSrcElepg3-ResourcesPortlet" type="hidden"/>
+    <input id="HiddenElementIdContainerSingleEditpg3-ResourcesPortlet" type="hidden"/>
+    <input id="HiddenElementIdContainerSingleEditTwopg3-ResourcesPortlet" type="hidden"/>
+</div>
+
+<input type="hidden" name="pg3$V$MoveResourcesModalDropdownSelectedValue" id="pg3_V_MoveResourcesModalDropdownSelectedValue" />
+<input type="submit" name="pg3$V$SaveDeleteSetsButton" value="" id="pg3_V_SaveDeleteSetsButton" class="hide" />
+<input type="hidden" name="pg3$V$OpenSetDrawer" id="pg3_V_OpenSetDrawer" />
+<input name="pg3$V$SetIdForResourcesToBeMovedTo" type="hidden" id="pg3_V_SetIdForResourcesToBeMovedTo" class="SetIdForResourcesToBeMovedTo" />
+<input name="pg3$V$NewestOrLastModifiedResourceSetId" type="hidden" id="pg3_V_NewestOrLastModifiedResourceSetId" class="hide" />
+<input name="pg3$V$BatchEditResourceStatus" type="hidden" id="pg3_V_BatchEditResourceStatus" class="BatchEditResourceStatus" />
+<input name="pg3$V$BatchEditResourceStartDate" type="hidden" id="pg3_V_BatchEditResourceStartDate" class="js-batch-edit-resource-start-date" />
+<input name="pg3$V$BatchEditResourceEndDate" type="hidden" id="pg3_V_BatchEditResourceEndDate" class="js-batch-edit-resource-end-date" />
+<input name="pg3$V$BatchEditResourceStartTime" type="hidden" id="pg3_V_BatchEditResourceStartTime" class="js-batch-edit-resource-start-time" />
+<input name="pg3$V$BatchEditResourceEndTime" type="hidden" id="pg3_V_BatchEditResourceEndTime" class="js-batch-edit-resource-end-time" />
+<input name="pg3$V$BatchEditResourceEndDateAction" type="hidden" id="pg3_V_BatchEditResourceEndDateAction" class="js-batch-edit-resource-end-date-action" />
+<input name="pg3$V$BatchEditSetCheckboxCheckedValue" type="hidden" id="pg3_V_BatchEditSetCheckboxCheckedValue" />
+<input name="pg3$V$BatchEditStatusCheckboxCheckedValue" type="hidden" id="pg3_V_BatchEditStatusCheckboxCheckedValue" />
+<input name="pg3$V$BatchEditDateCheckboxCheckedValue" type="hidden" id="pg3_V_BatchEditDateCheckboxCheckedValue" />
+
+<div id="BatchEditResourceDialogpg3-ResourcesPortlet" class="batch-edit-resource-dialog" title="Edit Resources">
+	<span class="d-block margin-b-sm">
+		Edit the following settings for all selected Resources.
+	</span>
+	<div class="d-block">
+		<div id="BatchEditDeleteTooltip" class="alert-container error" role="alert" style="display:none">
+			<span class="glyphicons glyphicons-exclamation-sign alert-icon"></span>
+			<span>The selected options would result in the Resource being deleted immediately.  If you want to delete this Resource, use the Delete button instead.</span>
+		</div>
+	</div>
+	<div class="d-block">
+		<div id="pg3_V_BatchEditValidationErrorForNoChangesContainer" class="alert-container error js-batch-edit-validation-error-container-js hide" role="alert">
+			<span class="glyphicons glyphicons-exclamation-sign alert-icon"></span>
+			<span id="pg3_V_BatchEditValidationErrorForNoChangesContainerMessage" class="js-batch-edit-validation-message-label"></span>
+		</div>
+	</div>
+	<div class="d-block">
+		<div id="pg3_V_BatchEditValidationErrorForMoveContainer" class="alert-container error js-batch-edit-validation-error-container-js hide" role="alert">
+			<span class="glyphicons glyphicons-exclamation-sign alert-icon"></span>
+			<span id="pg3_V_BatchEditValidationErrorForMoveContainerMessage" class="js-batch-edit-validation-message-label"></span>
+		</div>
+	</div>
+	<div class="d-block">
+		<div id="pg3_V_BatchEditValidationErrorForStatusContainer" class="alert-container error js-batch-edit-validation-error-container-js hide" role="alert">
+			<span class="glyphicons glyphicons-exclamation-sign alert-icon"></span>
+			<span id="pg3_V_BatchEditValidationErrorForStatusContainerMessage" class="js-batch-edit-validation-message-label"></span>
+		</div>
+	</div>
+	<div class="form-wrapper">
+		<div>
+			<span type="checkbox"><input id="pg3_V_BatchEditSetCheckbox" type="checkbox" name="pg3$V$BatchEditSetCheckbox" /></span>
+			<label for="pg3_V_BatchEditSetCheckbox">Set</label>
+		</div>
+		<div class="margin-l-md margin-b-md batch-edit-select-menu">
+			<label class="sr-only" for="pg3_V_BatchEditSetSelectMenu">Set</label>
+			<select name="pg3$V$BatchEditSetSelectMenu" id="pg3_V_BatchEditSetSelectMenu" class="form-control custom-form-control">
+</select>
+		</div>
+		<div>
+			<span type="checkbox"><input id="pg3_V_BatchEditStatusCheckbox" type="checkbox" name="pg3$V$BatchEditStatusCheckbox" checked="checked" /></span>
+			<label for="pg3_V_BatchEditStatusCheckbox">Status</label>
+		</div>
+		<div class="margin-l-md batch-edit-select-menu">
+			<label class="sr-only" for="pg3_V_BatchEditStatusSelectMenu">Status</label>
+			<select name="pg3$V$BatchEditStatusSelectMenu" id="pg3_V_BatchEditStatusSelectMenu" class="form-control custom-form-control">
+	<option selected="selected" value=""></option>
+	<option value="0">Required</option>
+	<option value="1">Optional</option>
+	<option value="2">Suggested</option>
+	<option value="3">Extra credit</option>
+
+</select>
+		</div>
+		<div class="row margin-t-md margin-b-md">
+			<div class="col-md-12">
+				<div class="float-left display-indicator-checkbox-container">
+					<input name="pg3$V$BatchEditDisplayIndicatorCheckbox" type="checkbox" id="pg3_V_BatchEditDisplayIndicatorCheckbox" />
+					<label for="pg3_V_BatchEditDisplayIndicatorCheckbox" class="sr-only">Date</label>
+				</div>
+				<input name="pg3$V$ValidateBatchEditPlaceholder" type="hidden" id="pg3_V_ValidateBatchEditPlaceholder" class="hide js-batch-edit-validate" />
+				
+
+<script>
+
+	jenzabar.displayIndicator = {};
+    (function (displayIndicator, $) {
+        let isMultipleDisplayIndicatorsNeeded = 'true';
+		displayIndicator.validateDateAndTime = function (element) {
+			let currentDisplayIndicator = isMultipleDisplayIndicatorsNeeded === 'true' ? $(element).parent().find('.display-indicator-wrapper') : $('.display-indicator-wrapper');
+            let errorMessageContainer = currentDisplayIndicator.find('.display-indicator-error-message-container');
+			let displayOnRadioButton = currentDisplayIndicator.find('.display-indicator-display-on-radio-button input[type="radio"]');
+			let endOnRadioButton = currentDisplayIndicator.find('.display-indicator-end-on-radio-button input[type="radio"]');
+            let startDateTextbox = currentDisplayIndicator.find('.start-date-textbox');
+            let startTimeTextbox = currentDisplayIndicator.find('.start-time-textbox');
+            let endDateTextbox = currentDisplayIndicator.find('.end-date-textbox');
+            let endTimeTextbox = currentDisplayIndicator.find('.end-time-textbox');
+			let errorText = currentDisplayIndicator.find('.display-indicator-error-text');
+            
+			let displayIndicatorSelection = {
+				showTime: 'True',
+				errorMessageContainer: $(errorMessageContainer),
+				errorTextElement: $(errorText),
+				displayOnIsSelected: $(displayOnRadioButton).is(':checked'),
+				endOnIsSelected: $(endOnRadioButton).is(':checked'),
+				startDateElement: $(startDateTextbox),
+				startTimeElement: $(startTimeTextbox),
+				canSetEndDateBeforeCurrentMoment: 'False',
+				endDateElement: $(endDateTextbox),
+				endTimeElement: $(endTimeTextbox),
+				requiredStartDateText: 'A start date and time are required',
+				invalidStartDateText: 'The start date is invalid',
+				requiredEndDateText: 'An end date and time are required',
+				invalidStartTimeText: 'The start time is invalid',
+				invalidEndTimeText: 'The end time is invalid',
+				invalidEndDateText: 'The end date is invalid',
+				startBeforeEndText: 'The start date must occur before the end date.',
+				errorMessageTxt:'The end time cannot be in the past'
+			}
+			return initDisplayIndicator.runValidationOnDateandTime(displayIndicatorSelection);
+		};
+
+		displayIndicator.setStartAndEndVisibility = function () {
+			let displayIndicatorSelection = {
+				displayOnIsSelected: $('#pg3_V_BatchEditDisplayIndicator_DisplayOnRadioButton').is(':checked'),
+				endOnIsSelected: $('#pg3_V_BatchEditDisplayIndicator_EndOnRadioButton').is(':checked'),
+                displayOnNowSelected: $('#pg3_V_BatchEditDisplayIndicator_DisplayLaterRadioButton').is(':checked'),
+                endOnNowSelected: $('#pg3_V_BatchEditDisplayIndicator_EndNowRadioButton').is(':checked'),
+                startDateTimeContainer: $('#pg3_V_BatchEditDisplayIndicator_startDateTimeContainer'),
+                endDateTimeContainer: $('#pg3_V_BatchEditDisplayIndicator_endDateTimeContainer')
+            }
+            initDisplayIndicator.runSetStartAndEndVisibility(displayIndicatorSelection);
+        };
+
+        displayIndicator.displayNowSelected = function (element) {
+			let currentDisplayIndicator = $(element).closest('.display-indicator');
+			let displayOnWrapper = currentDisplayIndicator.find('.display-indicator-display-on-wrapper');
+
+			let displayLaterContainer = currentDisplayIndicator.find('.display-indicator-display-later-wrapper');
+			let errorMessageContainer = currentDisplayIndicator.find('.display-indicator-error-message-container');
+            let startDateTimeContainer = currentDisplayIndicator.find('.js-start-date-time-container');
+
+            let displayIndicatorSelection = {
+				displayIndicatorDisplayOnWrapper: $(displayOnWrapper),
+				displayIndicatorDisplayLaterWrapper: $(displayLaterContainer),
+				errorMessageContainer: $(errorMessageContainer),
+				startDateTimeContainer: $(startDateTimeContainer)
+            }
+            initDisplayIndicator.runDisplayNowSelected(displayIndicatorSelection);
+        };
+
+        displayIndicator.displayLaterSelected = function (element) {
+            let currentDisplayIndicator = $(element).closest('.display-indicator');
+            let displayOnWrapper = currentDisplayIndicator.find('.display-indicator-display-on-wrapper');
+			let displayLaterContainer = currentDisplayIndicator.find('.display-indicator-display-later-wrapper');
+			let errorMessageContainer = currentDisplayIndicator.find('.display-indicator-error-message-container');
+			let noEndDateRadioButton = currentDisplayIndicator.find('.display-indicator-no-end-date-radio-button input[type="radio"]');
+            let startDateTimeContainer = currentDisplayIndicator.find('.js-start-date-time-container');
+            let startLaterDropDownList = currentDisplayIndicator.find('.start-later-dropdown-list');
+            let startLaterContainer = currentDisplayIndicator.find('.start-later-container');
+			let startOnActionsContainer = currentDisplayIndicator.find('.start-on-actions-container');
+
+            let displayIndicatorSelection = {
+				displayIndicatorDisplayLaterWrapper: $(displayLaterContainer),
+				displayIndicatorDisplayOnWrapper: $(displayOnWrapper),
+				errorMessageContainer: $(errorMessageContainer),
+				noEndDateRadioButton: $(noEndDateRadioButton),
+                startDateTimeContainer: $(startDateTimeContainer),
+                startLaterDropDownList: $(startLaterDropDownList),
+                startLaterContainer: $(startLaterContainer),
+				startOnActionsContainer: $(startOnActionsContainer)
+            }
+            initDisplayIndicator.runDisplayLaterSelected(displayIndicatorSelection);
+        };
+
+        displayIndicator.displayOnSelected = function (element) {
+			let currentDisplayIndicator = $(element).closest('.display-indicator');
+			let displayOnWrapper = currentDisplayIndicator.find('.display-indicator-display-on-wrapper');
+			let displayLaterContainer = currentDisplayIndicator.find('.display-indicator-display-later-wrapper');
+            let startDateTimeContainer = currentDisplayIndicator.find('.js-start-date-time-container');
+
+            let displayIndicatorSelection = {
+				displayIndicatorDisplayOnWrapper: $(displayOnWrapper),
+				displayIndicatorDisplayLaterWrapper: $(displayLaterContainer),
+				startDateTimeContainer: $(startDateTimeContainer)
+            }
+            initDisplayIndicator.runDisplayOnSelected(displayIndicatorSelection);
+        };
+
+		displayIndicator.noEndDateSelected = function (element) {
+			let currentDisplayIndicator = $(element).closest('.display-indicator');
+			let endNowContainer = currentDisplayIndicator.find('.display-indicator-end-now-wrapper');
+			let errorMessageContainer = currentDisplayIndicator.find('.display-indicator-error-message-container');
+            let endOnContainer = currentDisplayIndicator.find('.display-indicator-end-on-wrapper');
+			let endTimeContainer = currentDisplayIndicator.find('.end-time-container');
+
+            let displayIndicatorSelection = {
+				displayIndicatorEndNowWrapper: $(endNowContainer),
+				displayIndicatorEndOnWrapper: $(endOnContainer),
+				endDateTimeContainer: $(endTimeContainer),
+				errorMessageContainer: $(errorMessageContainer)
+            }
+            initDisplayIndicator.runNoEndDateSelected(displayIndicatorSelection);
+        };
+
+		displayIndicator.endNowSelected = function (element) {
+			let currentDisplayIndicator = $(element).closest('.display-indicator');
+			let endNowContainer = currentDisplayIndicator.find('.display-indicator-end-now-wrapper');
+			let endOnContainer = currentDisplayIndicator.find('.display-indicator-end-on-wrapper');
+            let errorMessageContainer = currentDisplayIndicator.find('.display-indicator-error-message-container');
+            let endTimeContainer = currentDisplayIndicator.find('.end-time-container');
+            let endNowActionsContainer = currentDisplayIndicator.find('.end-now-on-actions-container');
+			let endOnActionsContainer = currentDisplayIndicator.find('.end-on-actions-container');
+
+            let displayIndicatorSelection = {
+				displayIndicatorEndNowWrapper: $(endNowContainer),
+				displayIndicatorEndOnWrapper: $(endOnContainer),
+				errorMessageContainer: $(errorMessageContainer),
+                endDateTimeContainer: $(endTimeContainer),
+                endNowActionsContainer: $(endNowActionsContainer),
+				endOnActionsContainer: $(endOnActionsContainer)
+            }
+            initDisplayIndicator.runEndNowSelected(displayIndicatorSelection);
+        };
+
+		displayIndicator.endOnSelected = function (element) {
+			let currentDisplayIndicator = $(element).closest('.display-indicator');
+			let endNowContainer = currentDisplayIndicator.find('.display-indicator-end-now-wrapper');
+            let endTimeContainer = currentDisplayIndicator.find('.end-time-container');
+            let endOnContainer = currentDisplayIndicator.find('.display-indicator-end-on-wrapper');
+            let endOnActionsContainer = currentDisplayIndicator.find('.end-on-actions-container');
+			let endNowActionsContainer = currentDisplayIndicator.find('.end-now-on-actions-container');
+
+            let displayIndicatorSelection = {
+				displayIndicatorEndNowWrapper: $(endNowContainer),
+				displayIndicatorEndOnWrapper: $(endOnContainer),
+                endDateTimeContainer: $(endTimeContainer),
+                endOnActionsContainer: $(endOnActionsContainer),
+				endNowActionsContainer: $(endNowActionsContainer)
+            }
+            initDisplayIndicator.runEndOnSelected(displayIndicatorSelection);
+        }
+        displayIndicator.load = function () {
+            jenzabar.displayIndicator.setStartAndEndVisibility();
+			let startDateElement = $('.start-date-textbox');
+			let startTimeElement = $('.start-time-textbox');
+			let endDateElement = $('.end-date-textbox');
+			let endTimeElement = $('.end-time-textbox');
+
+            startDateElement.datepicker({ dateFormat: jenzabar.userSettings.dateFormat });
+			startTimeElement.timepicker({ 'scrollDefault': 'now', 'timeFormat': 'g:i A' });
+
+            endDateElement.datepicker({ dateFormat: jenzabar.userSettings.dateFormat });
+            endTimeElement.timepicker({ 'scrollDefault': 'now', 'timeFormat': 'g:i A' });
+        }
+
+        displayIndicator.updateActionsView = function (actionName) {
+            let startLaterSelector = "#pg3_V_BatchEditDisplayIndicator_StartLaterContainer";
+            let startLaterDropDownListSelector = "#pg3_V_BatchEditDisplayIndicator_StartLaterDropDownList";
+            let displayLaterContainerSelector = "#pg3_V_BatchEditDisplayIndicator_DisplayLaterContainer";
+            let startOnActionsSelector = "#pg3_V_BatchEditDisplayIndicator_StartOnActionsContainer";
+            let endOnActionsSelector = "#pg3_V_BatchEditDisplayIndicator_EndOnActionsContainer";
+            let endNowActionsSelector = "#pg3_V_BatchEditDisplayIndicator_EndNowActionsContainer";
+            let allSelector = startLaterSelector + "," + startOnActionsSelector + "," + endOnActionsSelector + "," + endNowActionsSelector;
+
+            let setEndDateEnabledState = function (options) {
+                let defaultOptions = { "disabled": false };
+                let enableOptions = $.extend(defaultOptions, options || {});
+                $("[data-container='endDateTime'] :input").attr("disabled", enableOptions.disabled);
+            };
+            let setStartDateEnabledState = function (options) {
+                let defaultOptions = { "disabled": false };
+                let enableOptions = $.extend(defaultOptions, options || {});
+                $("[data-container='startDateTime'] :input").attr("disabled", enableOptions.disabled);
+            };
+
+            switch (actionName) {
+
+                case "ShowStartLaterDrop":
+                    let dropDownList = $(startLaterDropDownListSelector);
+                    if (dropDownList.length > 0) {
+                        $(displayLaterContainerSelector).show();
+                        $(startLaterSelector).show();
+                    } else {
+                        $(startLaterSelector).hide();
+                        $(displayLaterContainerSelector).hide();
+                    }
+                    setEndDateEnabledState({ "disabled": true });
+                    break;
+                case "ShowStartOnActions":
+                    setEndDateEnabledState({ "disabled": false });
+                    $(startOnActionsSelector).show();
+					$('#pg3_V_BatchEditDisplayIndicator_DisplayIndicatorDisplayOnWrapper').show();
+                    $(startLaterSelector).hide();
+                    break;
+                case "ShowEndOnActions":
+                    setStartDateEnabledState({ "disabled": false });
+                    break;
+                case "ShowEndNowActions":
+                    setStartDateEnabledState({ "disabled": true });
+                    break;
+                case "HideStartActions":
+                    $(startOnActionsSelector).hide();
+                    $(startLaterSelector).hide();
+                    setEndDateEnabledState({ "disabled": false });
+                    break;
+                case "HideEndActions":
+                    $(endOnActionsSelector + "," + endNowActionsSelector).hide();
+                    setStartDateEnabledState({ "disabled": false });
+                    break;
+                default:
+                    $(allSelector).hide();
+            }
+        };
+    }(jenzabar.displayIndicator, jQuery));
+    // Page Load code for jQuery
+    jQuery(function ($) {
+		$('#pg3_V_BatchEditDisplayIndicator_DisplayOnRadioButton').on('click', function () {
+			jenzabar.displayIndicator.displayOnSelected($(this));
+		})
+
+		$('#pg3_V_BatchEditDisplayIndicator_EndOnRadioButton').on('click', function () {
+			jenzabar.displayIndicator.endOnSelected($(this));
+		})
+
+		$('#pg3_V_BatchEditDisplayIndicator_NoEndDateRadioButton').on('click', function() {
+			jenzabar.displayIndicator.noEndDateSelected($(this));
+		})
+
+		$('#pg3_V_BatchEditDisplayIndicator_DisplayNowRadioButton').on('click', function() {
+			jenzabar.displayIndicator.displayNowSelected($(this));
+		})
+
+		$('#pg3_V_BatchEditDisplayIndicator_DisplayLaterRadioButton').on('click', function() {
+			jenzabar.displayIndicator.displayLaterSelected($(this));
+		})
+
+		$('#pg3_V_BatchEditDisplayIndicator_EndNowRadioButton').on('click', function () {
+			jenzabar.displayIndicator.endNowSelected($(this));
+		})
+
+		jenzabar.displayIndicator.load();
+	});
+
+</script>
+
+<div id="pg3_V_BatchEditDisplayIndicator_Display" class="display-indicator display-indicator-wrapper form-inline">
+    <fieldset>
+        <legend class="sr-only">
+            Select a start and end date and time
+        </legend>
+        <div id="pg3_V_BatchEditDisplayIndicator_ErrorMessageContainer" class="display-indicator-error-message-container" style="display: none;">
+            <div id="pg3_V_BatchEditDisplayIndicator_nameError" class="alert-container error" role="alert" style="">
+                <span class="glyphicons glyphicons-exclamation-sign alert-icon"></span>
+                <span id="pg3_V_BatchEditDisplayIndicator_ErrorText" class="display-indicator-error-text"></span>
+            </div>
+        </div>
+        <div data-container="startDateTime">
+            <div class="form-group">
+                <fieldset>
+                    <legend><span class="sr-only">Start:</span></legend>
+                    <span id="pg3_V_BatchEditDisplayIndicator_StartLabel" class="start-label">Start:</span>
+                    <span class="d-block-mobile-xxs">
+                        <input id="pg3_V_BatchEditDisplayIndicator_DisplayNowRadioButton" type="radio" name="pg3$V$BatchEditDisplayIndicator$start-options" value="DisplayNowRadioButton" checked="checked" />
+                        <label for="pg3_V_BatchEditDisplayIndicator_DisplayNowRadioButton" id="pg3_V_BatchEditDisplayIndicator_DisplayNowLabel">Display now</label>
+                    </span>
+                    <span class="d-block-mobile-xxs">
+                        <input id="pg3_V_BatchEditDisplayIndicator_DisplayLaterRadioButton" type="radio" name="pg3$V$BatchEditDisplayIndicator$start-options" value="DisplayLaterRadioButton" />
+                        <label for="pg3_V_BatchEditDisplayIndicator_DisplayLaterRadioButton" id="pg3_V_BatchEditDisplayIndicator_DisplayLaterLabel">Display later</label>
+                    </span>
+                    <span class="d-block-mobile-xxs">
+                        <span class="display-indicator-display-on-radio-button"><input id="pg3_V_BatchEditDisplayIndicator_DisplayOnRadioButton" type="radio" name="pg3$V$BatchEditDisplayIndicator$start-options" value="DisplayOnRadioButton" /></span>
+                        <label for="pg3_V_BatchEditDisplayIndicator_DisplayOnRadioButton" id="pg3_V_BatchEditDisplayIndicator_DisplayOnLabel">Display on</label>
+                    </span>
+                </fieldset>
+            </div>
+        </div>
+        <div id="pg3_V_BatchEditDisplayIndicator_DisplayIndicatorDisplayOnWrapper" class="display-indicator-display-on-wrapper" data-container="startDateTime">
+            <div class="form-group vert-padding-xs">
+                <div id="pg3_V_BatchEditDisplayIndicator_startDateTimeContainer" class="cal js-start-date-time-container" style="display: none;">
+                    <div class="start-date-container">
+                        <div class="for-addon">
+                            <label for="pg3_V_BatchEditDisplayIndicator_StartDateTextBox" id="pg3_V_BatchEditDisplayIndicator_StartDatePickerLabel" class="sr-only">Pick Start Date</label>
+                            <input name="pg3$V$BatchEditDisplayIndicator$StartDateTextBox" type="text" id="pg3_V_BatchEditDisplayIndicator_StartDateTextBox" class="form-control custom-form-control start-date-textbox" />
+                            <span class="glyphicons glyphicons-calendar form-icon" aria-hidden="true"></span>
+                        </div>
+                    </div>
+                    <div id="pg3_V_BatchEditDisplayIndicator_StartTimeContainer" class="at-label-container">
+						<label id="pg3_V_BatchEditDisplayIndicator_StartAtLabel" class="end-at-label">at</label>
+                        <label for="pg3_V_BatchEditDisplayIndicator_StartTimeTexBox" id="pg3_V_BatchEditDisplayIndicator_StartAtSRLabel" class="sr-only">Enter a time</label>
+                        <input name="pg3$V$BatchEditDisplayIndicator$StartTimeTexBox" type="text" id="pg3_V_BatchEditDisplayIndicator_StartTimeTexBox" class="form-control custom-form-control start-time-textbox" />
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="pg3_V_BatchEditDisplayIndicator_DisplayLaterContainer" class="display-indicator-display-later-wrapper" data-container="startDateTime">
+            <div class="form-group vert-padding-xs">
+                
+                
+            </div>
+        </div>
+        <div data-container="endDateTime">
+            <div class="form-group">
+                <fieldset>
+                    <legend><span class="sr-only">End:</span></legend>
+                    <span id="pg3_V_BatchEditDisplayIndicator_EndLabel" class="end-label">End:</span>
+                    <span class="d-block-mobile-xxs">
+                        <span class="display-indicator-no-end-date-radio-button"><input id="pg3_V_BatchEditDisplayIndicator_NoEndDateRadioButton" type="radio" name="pg3$V$BatchEditDisplayIndicator$end-options" value="NoEndDateRadioButton" checked="checked" /></span>
+                        <label for="pg3_V_BatchEditDisplayIndicator_NoEndDateRadioButton" id="pg3_V_BatchEditDisplayIndicator_NoEndDateLabel">No end date</label>
+                    </span>
+                    <span class="d-block-mobile-xxs">
+                        <input id="pg3_V_BatchEditDisplayIndicator_EndNowRadioButton" type="radio" name="pg3$V$BatchEditDisplayIndicator$end-options" value="EndNowRadioButton" />
+                        <label for="pg3_V_BatchEditDisplayIndicator_EndNowRadioButton" id="pg3_V_BatchEditDisplayIndicator_EndNowLabel">End now</label>
+                    </span>
+                    <span class="d-block-mobile-xxs">
+                        <span class="display-indicator-end-on-radio-button"><input id="pg3_V_BatchEditDisplayIndicator_EndOnRadioButton" type="radio" name="pg3$V$BatchEditDisplayIndicator$end-options" value="EndOnRadioButton" /></span>
+                        <label for="pg3_V_BatchEditDisplayIndicator_EndOnRadioButton" id="pg3_V_BatchEditDisplayIndicator_EndOnLabel">End on</label>
+                    </span>
+                </fieldset>
+            </div>
+        </div>
+        <div id="pg3_V_BatchEditDisplayIndicator_EndOnContainer" class="display-indicator-end-on-wrapper" data-container="endDateTime">
+            <div class="form-group vert-padding-xs">
+                <div id="pg3_V_BatchEditDisplayIndicator_endDateTimeContainer" class="display-indicator end-time-container cal" style="display: none;">
+                    <div class="end-date-container">
+                        <div class="for-addon">
+                            <input name="pg3$V$BatchEditDisplayIndicator$EndDateTextBox" type="text" id="pg3_V_BatchEditDisplayIndicator_EndDateTextBox" class="form-control custom-form-control end-date-textbox" />
+                            <span class="glyphicons glyphicons-calendar form-icon" aria-hidden="true"></span>
+                        </div>
+                        <label for="pg3_V_BatchEditDisplayIndicator_EndDateTextBox" id="pg3_V_BatchEditDisplayIndicator_EndDatePickerLabel" class="sr-only">Pick End Date</label>
+                    </div>
+                    <div id="pg3_V_BatchEditDisplayIndicator_EndTimeContainer" class="at-label-container">
+	                    <label id="pg3_V_BatchEditDisplayIndicator_EndAtLabel" class="end-at-label">at</label>
+                        <label for="pg3_V_BatchEditDisplayIndicator_EndTimeTexBox" id="pg3_V_BatchEditDisplayIndicator_EndAtSRLabel" class="sr-only">Enter a time</label>
+                        <input name="pg3$V$BatchEditDisplayIndicator$EndTimeTexBox" type="text" id="pg3_V_BatchEditDisplayIndicator_EndTimeTexBox" class="form-control custom-form-control ui-timepicker-input end-time-textbox" />
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="pg3_V_BatchEditDisplayIndicator_AfterEndActionsContainer" class="display-indicator-end-now-wrapper" data-container="endDateTime">
+            <div class="form-group vert-padding-xs">
+                <div id="pg3_V_BatchEditDisplayIndicator_EndOnActionsContainer" class="end-on-actions-container" style="display: none;">
+                    <label for="pg3_V_BatchEditDisplayIndicator_EndOnActionsDropDownList" id="pg3_V_BatchEditDisplayIndicator_EndOnActionsLabel">After End:</label>
+                    <select name="pg3$V$BatchEditDisplayIndicator$EndOnActionsDropDownList" id="pg3_V_BatchEditDisplayIndicator_EndOnActionsDropDownList" class="form-control">
+	<option value="1">Make Inactive</option>
+	<option value="0">Delete</option>
+
+</select>
+                </div>
+                <div id="pg3_V_BatchEditDisplayIndicator_EndNowActionsContainer" class="end-now-on-actions-container" style="display: none;">
+                    <label for="pg3_V_BatchEditDisplayIndicator_EndNowActionsDropDownList" id="pg3_V_BatchEditDisplayIndicator_EndNowActionsLabel">After End:</label>
+                    <select name="pg3$V$BatchEditDisplayIndicator$EndNowActionsDropDownList" id="pg3_V_BatchEditDisplayIndicator_EndNowActionsDropDownList" class="form-control">
+	<option value="1">Make Inactive</option>
+	<option value="0">Delete</option>
+
+</select>
+                </div>
+            </div>
+        </div>
+    </fieldset>
+</div>
+			</div>
+		</div>
+		<span class="float-right">
+			<button id="BatchEditdResourceCancelpg3-ResourcesPortlet" class="btn btn-clear-primary">Cancel</button>
+			<input type="submit" name="pg3$V$BatchEditResourceConfirm" value="Save" id="pg3_V_BatchEditResourceConfirm" class="btn btn-primary batch-edit-resource-confrim-js" />
+		</span>
+	</div>
+</div></div></div>
+</div><div class="portlet-column col-md-6"><div id="pg4_DegreeAuditPortlet" class="portlet pt_DegreeAuditPortlet pi_My_Degree_Progress" style="z-index:5;"><div class="portlet-header-bar"><h3><a href="/ICS/Registrar/My_Academic_Information.jnz?portlet=My_Degree_Progress" title="Go to main My Degree Progress screen">My Degree Progress</a></h3><div class="portlet-help-wrapper"> <a class="btn btn-no-bg-hover-color-content-one help" target="blank" href="https://jenzabarhelp.jenzabar.com/ews/help/JICS/released/en/my-degree-progress.html" title="Get help using 'My Degree Progress'"><span class="glyphicons glyphicons-question-sign"><span class="sr-only">Get help using 'My Degree Progress'</span></span></a></div></div><div role="alert" class="alert-container feedback" ><span class="glyphicons glyphicons-comments alert-icon"></span><span>You are not authorized to use this portlet; It is only available to users in certain roles within the portal.</span></div><div class="portlet-padding"><div class="feedbackMessage">You are not authorized to use this portlet; It is only available to users in certain roles within the portal.</div></div></div>
+<div id="pg5_CustomContentPortlet" class="portlet pt_CustomContentPortlet pi_Free_form_Content_1" style="z-index:4;"><div class="portlet-header-bar"><h3><a href="/ICS/Registrar/My_Academic_Information.jnz?portlet=Free-form_Content_1" title="Go to main My Graduation Application screen">My Graduation Application</a></h3><div class="portlet-help-wrapper"> <a class="btn btn-no-bg-hover-color-content-one help" target="blank" href="https://jenzabarhelp.jenzabar.com/ews/help/JICS/Base/released/en/free-form-content.html" title="Get help using 'My Graduation Application'"><span class="glyphicons glyphicons-question-sign"><span class="sr-only">Get help using 'My Graduation Application'</span></span></a></div></div><div class="portlet-padding">
+<SCRIPT language="javascript">
+<!--
+    function ConfirmDelete(msg) {
+        return confirm(msg);
+    }
+//-->
+</SCRIPT>
+
+
+<link rel="stylesheet" type="text/css" property="stylesheet" href="/ICS/UI/Common/Styles/lightbox.css" />
+<script src="/ICS/UI/Common/Scripts/jquery.lightbox.js"></script>
+<script>
+    $(document).ready(function() { LoadLightboxValues();});    
+	function LoadLightboxValues() 
+	{
+	    $(".lightbox").lightbox(
+	        {
+	            fileLoadingImage: '/ICS/UI/Common/Images/PortletImages/Lightbox/loading.gif',
+	            fileBottomNavCloseImage: '/ICS/UI/Common/Images/PortletImages/Lightbox/closelabel.gif'
+	        });
+	}
+ 
+</script>
+
+
+
+
+        <div class="pSection ccSection text-word-wrap-break-word"><div align="left"><div class="wysiwygtext"><p>Link to the application form: <span style="color: rgb(185, 106, 217);"><a style="color: rgb(185, 106, 217);" href="https://docs.google.com/forms/d/e/1FAIpQLSe-1wAP7sHeIol_fCqX2U5i4KY8_4jlL9LlN2q9vilDHvfe-w/viewform?usp=sharing&ouid=111271923867335308766">Application for Graduation 2026</a></span></p></div></div></div>
+        
+        <div style="clear:both"></div>
+    
+</div></div>
+<div id="pg6_MajorExplorationandWhatIf" class="portlet pt_MajorExplorationandWhatIf pi_Major_Exploration" style="z-index:3;"><div class="portlet-header-bar"><h3><a href="/ICS/Registrar/My_Academic_Information.jnz?portlet=Major_Exploration" title="Go to main Major Exploration screen">Major Exploration</a></h3><div class="portlet-help-wrapper"> <a class="btn btn-no-bg-hover-color-content-one help" target="blank" href="https://jenzabarhelp.jenzabar.com/ews/help/JICS/released/en/major-exploration.html" title="Get help using 'Major Exploration'"><span class="glyphicons glyphicons-question-sign"><span class="sr-only">Get help using 'Major Exploration'</span></span></a></div></div><div class="portlet-padding"><div class="feedbackMessage">You are not authorized to use this portlet; It is only available to users in certain roles within the portal.</div></div></div>
+<div id="pg7_GPAProjection" class="portlet pt_GPAProjection pi_My_GPA_Projection" style="z-index:2;"><div class="portlet-header-bar"><h3><a href="/ICS/Registrar/My_Academic_Information.jnz?portlet=My_GPA_Projection" title="Go to main My GPA Projection screen">My GPA Projection</a></h3><div class="portlet-help-wrapper"> <a class="btn btn-no-bg-hover-color-content-one help" target="blank" href="https://jenzabarhelp.jenzabar.com/ews/help/JICS/released/en/my-gpa-projection.html" title="Get help using 'My GPA Projection'"><span class="glyphicons glyphicons-question-sign"><span class="sr-only">Get help using 'My GPA Projection'</span></span></a></div></div><div class="portlet-padding"><div class="feedbackMessage">You are not authorized to use this portlet; It is only available to users in certain roles within the portal.</div></div></div>
+<div id="pg8_CustomContentPortlet" class="portlet pt_CustomContentPortlet pi_Free_form_Content" style="z-index:1;"><div class="portlet-header-bar"><h3><a href="/ICS/Registrar/My_Academic_Information.jnz?portlet=Free-form_Content" title="Go to main Contact Information for Academic Information screen">Contact Information for Academic Information</a></h3><div class="portlet-help-wrapper"> <a class="btn btn-no-bg-hover-color-content-one help" target="blank" href="https://jenzabarhelp.jenzabar.com/ews/help/JICS/Base/released/en/free-form-content.html" title="Get help using 'Contact Information for Academic Information'"><span class="glyphicons glyphicons-question-sign"><span class="sr-only">Get help using 'Contact Information for Academic Information'</span></span></a></div></div><div class="portlet-padding">
+<SCRIPT language="javascript">
+<!--
+    function ConfirmDelete(msg) {
+        return confirm(msg);
+    }
+//-->
+</SCRIPT>
+
+
+<link rel="stylesheet" type="text/css" property="stylesheet" href="/ICS/UI/Common/Styles/lightbox.css" />
+<script src="/ICS/UI/Common/Scripts/jquery.lightbox.js"></script>
+<script>
+    $(document).ready(function() { LoadLightboxValues();});    
+	function LoadLightboxValues() 
+	{
+	    $(".lightbox").lightbox(
+	        {
+	            fileLoadingImage: '/ICS/UI/Common/Images/PortletImages/Lightbox/loading.gif',
+	            fileBottomNavCloseImage: '/ICS/UI/Common/Images/PortletImages/Lightbox/closelabel.gif'
+	        });
+	}
+ 
+</script>
+
+
+
+
+        <div class="pSection ccSection text-word-wrap-break-word"><div align="left"><div class="wysiwygtext"><p>If you have any questions about your Academic Information please contact the Office of the Registrar at 607-735-1895 or at registrar@elmira.edu.</p></div></div></div>
+        
+        <div style="clear:both"></div>
+    
+</div></div>
+</div></div></div>
+							<div class="portletsFoot containerFoot"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="footer-links-div">
+                <a href="https://www.elmira.edu/" target="_blank">
+                    <img alt="Elmira College Logo" title="Elmira College" src="https://myec.elmira.edu/ICSFileServer/Themes/EC/images/EClogoTile.png" class="footer-link"/>
+                </a>
+                <a href="https://canvas.elmira.edu" target="_blank">
+                    <img alt="Canvas Logo" title="Canvas" src="https://myec.elmira.edu/ICSFileServer/Themes/EC/images/canvas_logo.png" class="footer-link"/>
+                </a>
+                <a href="https://mail.google.com/a/elmira.edu" target="_blank">
+                    <img alt="Gmail Logo" title="Gmail" src="https://myec.elmira.edu/ICSFileServer/Themes/EC/images/gmail_logo.png" class="footer-link"/>
+                </a>
+                <a href="http://athletics.elmira.edu" target="_blank">
+                    <img alt="Athletics Logo" title="Athletics" src="https://myec.elmira.edu/ICSFileServer/Themes/EC/images/Athletic_logo.jpeg" class="footer-link"/>
+                </a>
+                <a href="https://cloud.elmira.edu" target="_blank">
+                    <img alt="Elmira Cloud Logo" title="Elmira Cloud" src="https://myec.elmira.edu/ICSFileServer/Themes/EC/images/clouds-48.png" class="footer-link"/>
+                </a>
+                <a href="https://fafsa.ed.gov/" target="_blank">
+                    <img alt="FAFSA Logo" title="FAFSA" src="https://myec.elmira.edu/ICSFileServer/Themes/EC/images/FAFSA.png" class="footer-link"/>
+                </a>
+                
+				
+				<a href="https://events.dudesolutions.com/elmira/" target="_blank">
+                    <img alt="Brightly Logo" title="Brightly Event Manager" src="https://myec.elmira.edu/ICSFileServer/Themes/EC/images/brightly-apple-touch-icon-57x57.png" class="footer-link"/>
+                </a>
+				
+            </div>
+			<div class="container-fluid footer-wrapper primary">
+				<div class="row no-margin-r no-margin-l">
+					<div class="col-md-12"><footer><div id="foot" class="footer-links"><a target="_blank" href="/ICS/ClientConfig/HtmlContent/Privacy.html" >Privacy policy</a><a target="_blank" href="/ICS/ClientConfig/HtmlContent/AboutUs.html" >About us</a><a target="_blank" href="/ICS/ClientConfig/HtmlContent/ContactUs.html" >Contact us</a><a href="/ICS/Registrar/?tool=CampusDirectory"  accesskey="">Campus directory</a><span id="copyright">Please contact the IT Help Desk with any feedback or if you experience any issues at helpdesk@elmira.edu or call (607) 735-1915.</span></div></footer></div>
+				</div>
+			</div>
+			
+		
+
+<script type="text/javascript">
+//<![CDATA[
+(function() {var fn = function() {$get("_scriptManager_HiddenField").value = '';Sys.Application.remove_init(fn);};Sys.Application.add_init(fn);})();//]]>
+</script>
+</form>
+	</div>
+<script type="text/javascript">
+	$(function() {
+		$("#youAreHere a:last").attr("aria-current", "page");
+
+		jenzabar.framework.accessibleSidebarMenu.init();
+		jenzabar.framework.accessibleSearchMenu.init();
+		jenzabar.framework.accessibleLoginMenu.init();
+		jenzabar.framework.accessibleHamburgerMenu.init();
+	});
+</script>
+</body>
+</html>

@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>PUPR - Student Service System</title>
+    <meta property="og:title" content="PUPR - Student Service System">
+    <meta name="csrf-param" content="authenticity_token" />
+<meta name="csrf-token" content="xixCzpzS6NeT4b-8eaDaTGjsPiX7qb8wSSuSbSqZcr2iFpjDWtTZ9aVrw1_wvqM2LUBjID19linE5gIsL4sTtg" />
+    <meta name="csp-nonce" />
+    <link rel="stylesheet" href="/assets/application-f5125179dad257f1def2a39f3bfc0b2cf8e14f3ad478051261ae5627993c6a02.css" data-turbo-track="reload" />
+    <script src="/assets/application-31e596ff1d720a45ee47c7464e2ca5b1a73c501d4cb6599c39354d71ee13cb32.js" data-turbo-track="reload"></script>
+    <!--responsive viewport meta tag-->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="/assets/custom-679964687316e34269274d14d99f238b0f03d7fd67e42c71e18273d779e8781e.css" data-turbo-track="reload" />
+    <link rel="stylesheet" href="/assets/mojo-cooked-content-0158ceae484649b4a6aa0c8d2ab6f78d3f7d72d3198b0e0470299f83ebcbf347.css" data-turbo-track="reload" />
+    <link rel="stylesheet" href="/assets/google-roboto-font-family-e9a2961f2e0e8e9525cc1a32ec66282668222752b3fe15ed59bca7e90be44046.css" data-turbo-track="reload" />
+    <script src="/assets/1-c0d45f470a22138d64d361c5a10cf40af74a21b00d04d3d24f03979f76b8244d.js" data-turbolinks-track="reload"></script>
+    <!-- Notifications -->
+    <!-- Enhanced Flash Messages for Admin Interface -->
+
+<style>
+.flash-messages-container {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 1050;
+  max-width: 400px;
+  width: 100%;
+}
+
+.flash-message {
+  border-radius: 0.5rem;
+  border: none;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+  margin-bottom: 1rem;
+  animation: slideInRight 0.3s ease-out;
+}
+
+.flash-message.alert-success {
+  background-color: #d4edda;
+  color: #155724;
+  border-left: 4px solid #28a745;
+}
+
+.flash-message.alert-danger {
+  background-color: #f8d7da;
+  color: #721c24;
+  border-left: 4px solid #dc3545;
+}
+
+.flash-message.alert-warning {
+  background-color: #fff3cd;
+  color: #856404;
+  border-left: 4px solid #ffc107;
+}
+
+.flash-message.alert-info {
+  background-color: #d1ecf1;
+  color: #0c5460;
+  border-left: 4px solid #17a2b8;
+}
+
+.flash-message .alert-heading {
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.flash-message ul {
+  margin-bottom: 0;
+  padding-left: 1.2rem;
+}
+
+.flash-message .btn-close {
+  opacity: 0.7;
+  transition: opacity 0.2s;
+}
+
+.flash-message .btn-close:hover {
+  opacity: 1;
+}
+
+@keyframes slideInRight {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* Auto-hide flash messages after 5 seconds */
+.flash-message {
+  animation: slideInRight 0.3s ease-out, fadeOut 0.3s ease-in 4.7s forwards;
+}
+
+@keyframes fadeOut {
+  to {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .flash-messages-container {
+    top: 10px;
+    right: 10px;
+    left: 10px;
+    max-width: none;
+  }
+}
+</style>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  // Auto-hide flash messages after 5 seconds
+  const flashMessages = document.querySelectorAll('.flash-message');
+  flashMessages.forEach(function(message) {
+    setTimeout(function() {
+      message.style.animation = 'fadeOut 0.3s ease-in forwards';
+      setTimeout(function() {
+        message.remove();
+      }, 300);
+    }, 5000);
+  });
+
+  // Manual close functionality
+  const closeButtons = document.querySelectorAll('.flash-message .btn-close');
+  closeButtons.forEach(function(button) {
+    button.addEventListener('click', function() {
+      const message = this.closest('.flash-message');
+      message.style.animation = 'fadeOut 0.3s ease-in forwards';
+      setTimeout(function() {
+        message.remove();
+      }, 300);
+    });
+  });
+});
+</script>
+
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/assets/mojofavicon-ae1ad6f82ccb28dc5fcb955475da69cf6064c0239377e11498e381ac3fb6612b.ico" />
+    <!-- Chat widget if enabled in help center -->
+    <!-- Chat widget if enabled in help center -->
+    <style>
+      @keyframes blink {
+          0%, 100% {
+              opacity: 1;
+          }
+          50% {
+              opacity: 0.5;
+          }
+      }
+
+      .trial-ribbon {
+          position: fixed;
+          top: 30px;
+          right: -50px;
+          z-index: 9999;
+          background: #dc3545;
+          color: white;
+          padding: 5px 40px;
+          font-size: 0.8rem;
+          font-weight: bold;
+          transform: rotate(45deg);
+          transform-origin: center;
+          box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+          pointer-events: none;
+          animation: blink 1s ease-in-out infinite;
+          white-space: nowrap;
+      }
+
+      body {
+          color: #0d689c;
+      }
+
+      a:hover {
+          color: #0d689c;
+      }
+
+      .banner {
+      background-image: url("//asset.mojohelpdesk.com/images/portal/themes/9.png");background-attachment: fixed;background-color: #e7f1f7;background-size: auto;background-repeat: no-repeat no-repeat; background-position: 0% 0px;
+      }
+
+      .banner a {
+          color: #343a40;
+      }
+
+      .banner a:hover {
+          opacity: .68;
+      }
+
+      .navbar .btn:hover {
+          text-shadow: none;
+      }
+
+      .navbar .dropdown-menu,
+      .navbar .dropdown-toggle,
+      .navbar-scrolled,
+      .navbar-scrolled .btn {
+          text-shadow: none;
+      }
+    </style>
+    
+  </head>
+  <body id="portal-layout-1">
+    <nav class="navbar navbar-light text-header-color-type-dark
+fixed-top flex-nowrap p-2" id="kb-header">
+  <a class="navbar-brand d-flex align-items-center" href="/">
+        <span class="">Virtual Education Student Service Platform</span>
+        <span class="d-none d-md-inline">&nbsp;&nbsp;|&nbsp;&nbsp;Help Center</span>
+</a>
+
+  <div class="d-flex">
+  <div class="dropdown">
+      <button
+        type="button"
+        class="btn btn-outline-dark"
+        data-bs-toggle="dropdown"
+        aria-expanded="false"
+        data-bs-auto-close="outside"
+        aria-label="Open menu"
+        id="dropdownMenuLink">
+        <i class="fa fa-bars" aria-hidden="true"></i>
+      </button>
+    <ul class="dropdown-menu dropdown-menu-end">
+        <li>
+          <a class="dropdown-item first-letter-capitalize" href="/login">Log in to check your tickets</a>
+        </li>
+    </ul>
+  </div>
+</div>
+
+</nav>
+
+    <main class="main-content d-flex flex-column flex-fill"
+     style="
+     ">
+        <section class="banner text-dark"
+           style="
+           height:60vh;min-height:415px;
+             position:relative;">
+    <div class="search-container without-kb text-center vertical-center"
+         style="text-shadow: 0 1px 2px #f8f9fa;">
+      <h1 class="text-dark">Virtual Education Student Service Platform</h1>
+      <p class="lead text-dark">Hi. How can we help?</p>
+        <li class="nav-item dx-md-none" style="list-style: none;">
+          <button id="new-ticket-center" onclick="window.location = 'https://studentservice.pupr.edu/mc/up/new-ticket?hideStarWhenLoading=true';
+            return false;" class="btn btn-dark btn-lg">new ticket
+                </button>
+              </li>
+          </div>
+        </section>
+        <div class="text-center ">
+          <section class="news-section ">
+            <div class="news-section-container container-fluid container-md">
+              <div class="lead">
+                <img src="https://www.pupr.edu/wp-content/themes/politecnica/images/logo.svg" alt="">
+<h1>Welcome to our Virtual Education Student Service Platform</h1>
+<p>Find answers to your questions FAQ's by searching the knowledge base. If you don't find what you are looking for,
+please create a ticket.</p>
+              </div>
+            </div>
+          </section>
+          <div class="d-none">
+            <hr class="m-auto" style="max-width: 600px">
+            <section class="news-section">
+              <div class="news-section-container container-fluid container-md">
+                <div class="lead">
+                  
+                </div>
+              </div>
+            </section>
+          </div>
+        </div>
+
+    </main>
+        <div id="footer">
+  <div class="powered-by text-end">
+    
+  </div>
+</div>
+
+    <script>
+      function voteYes(articleId) {
+          console.log('Will vote yes' + articleId);
+          vote(articleId, true)
+      }
+
+      function voteNo(articleId) {
+          console.log('Will vote no' + articleId);
+          vote(articleId, false)
+      }
+
+      function vote(articleId, isUseful) {
+          var articleVoteDiv = document.getElementById('article-vote');
+          articleVoteDiv.innerHTML = "<p class=\"mb-0\"><b>Thank you for your feedback!</b></p>";
+          console.log('Will vote');
+
+          fetch('/help/vote/' + articleId, {
+              method: 'POST',
+              headers: {
+                  'Content-Type': 'application/json',
+                  'X-XSRF-TOKEN': '52tfULZgMxkkBCbMxiSnvEGCNrnc1CwnyjDJc7COs26DUYVdcGYCOxKOWi9POt7GBC5rvBoABT5H_VkytZzSZQ'
+              },
+              body: JSON.stringify({is_useful: isUseful}),
+          })
+              .then(response => {
+                  if (!response.ok) {
+                      throw new Error('Network response was not ok');
+                  }
+                  return response.json();
+              })
+              .then(data => {
+                  // Success callback
+                  articleVoteDiv.innerHTML = "<p class=\"mb-0\"><b>" + data.message + "</b></p>";
+                  setCookie('article' + articleId + 'Vote', '1', 30);
+              })
+              .catch(error => {
+                  // Error callback
+                  console.error('Fetch error:', error);
+              });
+      }
+
+    </script>
+  </body>
+</html>

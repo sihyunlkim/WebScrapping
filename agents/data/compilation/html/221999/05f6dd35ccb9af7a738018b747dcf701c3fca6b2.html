@@ -1,0 +1,1090 @@
+<!DOCTYPE html><html lang="en"><head><meta http-equiv="X-UA-Compatible" content="IE=Edge" /><meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Generative AI Deep Dive - AI for Business - Research Guides at Vanderbilt University</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noarchive" />
+<link rel="shortcut icon"     href="https://cdn.vanderbilt.edu/vu-futurevu/static/img/favicons/favicon-gold-dark.png"
+        data-href-light="https://cdn.vanderbilt.edu/vu-futurevu/static/img/favicons/favicon-gold-dark.png"
+        data-href-dark="https://cdn.vanderbilt.edu/vu-futurevu/static/img/favicons/favicon-gold.png"
+/>
+
+
+<!-- public_metadata.twig -->
+
+    <!-- auto generated dublin core metadata -->
+    <meta name="DC.Title" content="Research Guides: AI for Business: Generative AI Deep Dive"/>
+    <meta name="DC.Creator" content="Walker Management *Library"/>
+    <meta name="DC.Subject" content=""/>
+    <meta name="DC.Description" content=""/>
+    <meta name="DC.Publishers" content="Vanderbilt University"/>
+    <meta name="DC.Rights" content="Copyright Vanderbilt University 2026"/>
+    <meta name="DC.Language" content="en"/>
+    <meta name="DC.Identifier" content="https://researchguides.library.vanderbilt.edu/AI4Biz/DeepDive"/>
+    <meta name="DC.Date.Created" content="Jul 16, 2024"/>
+    <meta name="DC.Date.Modified" content="Jan 23, 2026"/>
+    
+
+<meta property="og:title" content="Research Guides: AI for Business: Generative AI Deep Dive">
+<meta property="og:description" content="Research Guides: AI for Business: Generative AI Deep Dive">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://researchguides.library.vanderbilt.edu/AI4Biz/DeepDive">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@springshare">
+
+
+
+<link rel="stylesheet" href="https://static-assets-us.libguides.com/web/jquery/css/jquery-ui.min.css?2691" />
+
+<link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"/>
+
+<link rel="stylesheet" type="text/css" href="https://static-assets-us.libguides.com/web/slick-1.8.1/slick/slick.css">
+<link rel="stylesheet" type="text/css" href="https://static-assets-us.libguides.com/web/slick-1.8.1/slick/slick-theme.css">
+
+    <link rel="stylesheet" href="https://static-assets-us.libguides.com/web/css3.23.5/lg-public.min.css" />
+
+<script type="text/javascript" src="https://static-assets-us.libguides.com/web/jquery/js/1.12.4_jquery.min.js"></script>
+<script>
+    jQuery(document).ready(function () {
+        jQuery(".dropdown-toggle").on("click", function(e){
+            jQuery(this).siblings("ul.s-lg-subtab-ul.dropdown-menu").toggle();
+        });
+                        var s_lg_guide_name = jQuery('#s-lg-guide-name');
+        if (s_lg_guide_name.length) {
+            if (jQuery.trim(s_lg_guide_name.text()) === '') {
+                s_lg_guide_name.remove();
+            }
+        }
+    });
+</script>
+
+    <script src="//code.jquery.com/ui/1.13.2/jquery-ui.min.js"></script>
+    <script>
+        jQuery.ui ||
+        document.write('<script src="https://static-assets-us.libguides.com/web/jquery/js/jquery-ui.min.js?2691">\x3C/script>');
+    </script>
+
+    <script type="text/javascript" src="https://static-assets-us.libguides.com/web/js3.23.5/lg-public.min.js"></script>
+<style>/** bootstrap_tab_css.twig **/
+#s-lg-tabs-container .nav-tabs > li > a,
+#s-lg-tabs-container .nav-tabs > li > button,
+#s-lg-tabs-container .nav-pills > li > a,
+#s-lg-tabs-container .nav-pills > li > button {
+    border: 1px solid transparent; -webkit-border-radius: 4px; -moz-border-radius: 4px; border-radius: 4px;
+    background-color: #cccccc;
+    color: #0c5686;
+    font-weight: bold;
+    padding: 4px 15px;
+}
+
+#s-lg-tabs-container .nav-tabs {
+    border-bottom: 0;
+}
+
+#s-lg-tabs-container .nav-tabs > li#s-lg-admin-tab-add > a {
+    -webkit-border-radius: 4px 4px 0 0;
+    -moz-border-radius: 4px 4px 0 0;
+    border-radius: 4px 4px 0 0;
+}
+
+#s-lg-tabs-container .nav-tabs > li > a:hover,
+#s-lg-tabs-container .nav-tabs > li > button:hover,
+#s-lg-tabs-container .nav-pills > li > a:hover,
+#s-lg-tabs-container .nav-pills > li > button:hover {
+    border: 1px solid transparent; -webkit-border-radius: 4px; -moz-border-radius: 4px; border-radius: 4px;
+    background-color: #24618e;
+    color: #ffffff;
+}
+
+#s-lg-tabs-container .nav-tabs > .active > a,
+#s-lg-tabs-container .nav-tabs > .active > button,
+#s-lg-tabs-container .nav-pills > .active > a,
+#s-lg-tabs-container .nav-pills > .active > button {
+    color: #ffffff;
+    cursor: default;
+    background-color: #24618e;
+    border: 1px solid transparent; -webkit-border-radius: 4px; -moz-border-radius: 4px; border-radius: 4px;
+    border-bottom-color: transparent;
+    font-weight: bold;
+}
+
+#s-lg-tabs-container .nav-tabs > .active > .s-lg-subtab-ul > .active > a,
+#s-lg-tabs-container .nav-tabs > .active > .s-lg-subtab-ul > .active > button {
+    color: #ffffff;
+    cursor: default;
+    background-color: #24618e;
+    border-bottom-color: transparent;
+}
+
+#s-lg-tabs-container .nav-tabs > .active > a:hover,
+#s-lg-tabs-container .nav-pills > .active > a:hover,
+#s-lg-tabs-container .nav-tabs > .active > button:hover,
+#s-lg-tabs-container .nav-pills > .active > button:hover {
+    color: #ffffff;
+    cursor: pointer;
+    background-color: #24618e;
+    border: 1px solid transparent; -webkit-border-radius: 4px; -moz-border-radius: 4px; border-radius: 4px;
+    border-bottom-color: transparent;
+    font-weight: bold;
+}
+
+#s-lg-tabs-container .nav .dropdown-toggle .caret {
+    border-top-color: #e1e1e1;
+}
+
+#s-lg-tabs-container .nav-tabs button.dropdown-toggle .caret {
+    margin-left: 2px;
+    margin-top: -3px;
+}
+
+#s-lg-tabs-container .nav-tabs > li > a.s-lg-tab-drop {
+    border-radius: 0 4px 4px 0;
+    padding: 4px 6px 4px 3px;
+    border-left: 1px solid transparent;
+}
+
+#s-lg-tabs-container .nav-tabs > li > button.s-lg-tab-drop {
+    border-radius: 0 4px 4px 0;
+    padding: 4px 6px 0px 3px;
+    border-left: 1px solid transparent;
+    margin-right: 2px;
+}
+
+#s-lg-tabs-container .nav-tabs > li > a.s-lg-tab-drop:hover {
+    border-radius: 0 4px 4px 0;
+    border-left: 1px solid #bbb;
+    padding: 4px 6px 4px 3px;
+}
+
+#s-lg-tabs-container .nav-tabs > li > button.s-lg-tab-drop:hover {
+    border-radius: 0 4px 4px 0;
+    border-left: 1px solid #bbb;
+    padding: 4px 6px 0px 3px;
+}
+
+#s-lg-tabs-container .nav-tabs > li > a.s-lg-tab-top-link,
+#s-lg-tabs-container .nav-tabs > li > a.s-lg-tab-top-link:hover,
+#s-lg-tabs-container .nav-tabs > li > button.s-lg-tab-top-link,
+#s-lg-tabs-container .nav-tabs > li > button.s-lg-tab-top-link:hover {
+    border-radius: 4px;
+    font-weight: bold;
+    padding: 4px 5px 4px 10px;
+}
+
+.nav-tabs > li > a.s-lg-tab-top-link,
+.nav-tabs > li > button.s-lg-tab-top-link {
+    margin-right: 0px;
+}
+
+#s-lg-tabs-container .nav-pills > li > a.s-lg-tab-drop,
+#s-lg-tabs-container .nav-pills > li > button.s-lg-tab-drop {
+    border-radius: 0 4px 4px 0;
+    padding: 4px 8px 4px 8px;
+    border-left: 1px solid transparent;
+    position: absolute;
+    right: 0;
+}
+
+#s-lg-tabs-container .nav-pills > li > a.s-lg-tab-drop:hover,
+#s-lg-tabs-container .nav-pills > li > button.s-lg-tab-drop:hover {
+    border-radius: 0 4px 4px 0;
+    border-left: 1px solid #bbb;
+    padding: 4px 8px 4px 8px;
+}
+
+#s-lg-tabs-container .nav-pills > li > a.s-lg-tab-top-link,
+#s-lg-tabs-container .nav-pills > li > a.s-lg-tab-top-link:hover,
+#s-lg-tabs-container .nav-pills > li > button.s-lg-tab-top-link,
+#s-lg-tabs-container .nav-pills > li > button.s-lg-tab-top-link:hover {
+    width: 100%;
+    float: left;
+    border-radius: 4px;
+    font-weight: bold;
+    padding: 4px 15px 4px 15px;
+}
+
+/** !bootstrap_tab_css.twig **/
+ .s-lib-box {border-color: #cccccc;
+                border-width: 3px;
+                box-shadow: 0 8px 6px -6px #AAAAAA;
+                border-radius: 4px 4px 4px 4px;
+                background-color: #fff;
+            }
+            .s-lib-box-std .s-lib-box-title {background-color: #d8ab4c; background-image: none;color: #000000;
+                border-bottom: 3px solid #cccccc;
+            }
+            .s-lib-box .s-lib-box-title {background-color: #d8ab4c; background-image: none;color: #000000;
+                border-bottom: 3px solid #cccccc;
+                border-radius: 3px 3px 0px 0px;
+            }
+            .s-lib-box .s-lg-box-footer {
+                border-radius: 0px 0px 3px 3px;
+            }</style><meta charset="utf-8"/>  
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>  <title> Research Guides | Vanderbilt University Libraries </title>
+<meta name="Description" content=" Vanderbilt Library ResearchGuides"/>   
+<meta name="Keywords"  content="research guides, researchguides, Vanderbilt libraries,"/>   
+
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-MZTW6P9');</script>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MZTW6P9"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+<!-- End Google Tag Manager -->
+
+<!-- ### Fonts  ###--> 
+<link rel="stylesheet" href="https://cdn.library.vanderbilt.edu/pwc/bootstrap3/dist/css/vul-pw-header.css">
+<link rel="stylesheet" href="https://cdn.library.vanderbilt.edu/pwc/bootstrap3/dist/css/vul-pw-fontawesome.css">  
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,700|Source+Sans+Pro:200,300,400,700&display=swap">  
+
+<!-- LibGuides specific styles --> 
+<style>
+body {padding: 0; }
+/** links within box  **/
+.s-lib-box-content a { color: #004976; }
+.label-info { background-color: #5bc0de;}  
+/** database links style **/
+.s-lg-link-list a {font-weight: 500; }
+#s-lg-guide-desc-container {display: none; }
+</style>  
+
+<!-- Styling for libguides Home Page -->
+<style>
+#s-lib-public-header-desc a {color: #337ab7; }
+
+/**  Box color and font  **/
+  .s-lib-box-std .s-lib-box-title { 
+	background-image: linear-gradient(to bottom, #d8ab4c 0%, #d8ab4c 100%);
+	color: #000; 
+}
+#s-lg-hp-nav { background: none repeat scroll 0 0 #d8ab4c; }
+
+/** hide subject guide link box in guide list by subject section in home page **/
+#s-lg-index-list-subjects .alert {display: none; }
+
+/** hide lg breadcrumb **/
+#s-lib-bc {display: none; }
+
+/* keep profile boxes from displaying too large */
+.s-lib-profile-image {max-width: 400px; margin-left: auto; margin-right: auto;}
+
+/* adjust when printing footer move up issue */
+@media print {
+  body {
+    position: relative;
+    min-height: 100vh;
+  }
+
+  .s-lib-footer {
+   /* position: fixed; */
+    bottom: 0;
+    left: 0;
+    right: 0;
+     padding: 10px;
+    background: white;
+    border-top: 1px solid #ccc;
+  }
+.s-lib-box-container >.s-lib-box  {
+   display: block;
+}
+
+}
+
+
+</style>
+
+<!-- to customize database A-Z page -->
+<style>  
+#s-lg-sel-az-vendors {display: none; } 
+.s-lg-az-result-keywords {display:none; }
+
+</style>
+
+<script type="text/JavaScript">
+$(document).ready(function(){
+   $('#s-lg-sel-az-type').on('change', function() {  
+            if ( this.value === '32288')   {
+                $("#s-lg-az-popular-div").hide();
+           }
+          else {
+               $("#s-lg-az-popular-div").show();  
+           }  
+  });
+});
+ </script><script>
+    var springStats = springStats || {};
+    springStats.saConfig = springStats.saConfig || {
+        site_id: 1775,
+        tracking_parameters: {"_st_guide_id":1411564,"_st_page_id":11070006,"_st_site_id":1775},
+        tracking_server_host: "libguides-proc.springyaws.com"
+    };
+</script>
+<script  src="https://static-assets-us.libguides.com/web/js/sa.min.js?3116"></script>
+<script>
+			springSpace.Common = springSpace.Common || { };
+			springSpace.Common.constant = {
+					PROCESSING: {
+						ACTION_DISPLAY_POLL: 159
+					}
+			};
+			springSpace.Common.baseURL = "https://researchguides.library.vanderbilt.edu/";
+			
+			handleScroll=function() {
+                if (false) {
+					var target_elt = "#s-lg-page-section-11070006";
+					jQuery("html, body").animate({ scrollTop: jQuery(target_elt).offset().top }, 750);
+					if (jQuery(this).scrollTop() > 220) {
+						jQuery("#s-lib-scroll-top").fadeIn(750);
+					}
+				}
+			}
+	   </script>
+        <script>
+            // Enable tooltips.
+            jQuery(function () {
+                try {
+                    springSpace.UI.initPopOvers(false);
+                    jQuery(".az-bs-tooltip").tooltip();
+                } catch (e) { }
+            });
+        jQuery(document).ready(function () {
+            springSpace.springTrack.trackPage({_st_type_id: '1',_st_group_id: '888',_st_guide_id: '1411564',_st_page_id: '11070006'});
+        });
+            jQuery(document).ready(function() {
+                handleScroll();
+            });
+        </script></head><!-- SIDE NAV -->
+	<body class="s-lg-guide-body">
+        
+        <!-- BEGIN: Page Header -->
+        <!-- <vul-brandbar></vul-brandbar>  -->
+<vul-navigation></vul-navigation>  
+
+<ol class="breadcrumb">
+   <li>
+      <a href="https://www.library.vanderbilt.edu/"><i title="Jean & Alexander Heard Libraries" class="fas fa-home"></i></a>
+   </li>
+   <li><a href="https://researchguides.library.vanderbilt.edu/">Research Guides</a></li>
+</ol>
+
+
+        <!-- END: Page Header -->
+        <!-- BEGIN: Guide Header -->
+  		<div id="s-lg-guide-header" class="container s-lib-header s-lib-side-borders">
+            <div id="s-lib-bc">
+                <ol id="s-lib-bc-list" class="breadcrumb"><li id="s-lib-bc-customer" class="breadcrumb-item"><a href="https://www.library.vanderbilt.edu/">Vanderbilt University Libraries</a></li><li id="s-lib-bc-site" class="breadcrumb-item"><a href="https://researchguides.library.vanderbilt.edu/">Research Guides</a></li><li id="s-lib-bc-group" class="breadcrumb-item"><a href="https://researchguides.library.vanderbilt.edu/management">Walker Management Library</a></li><li id="s-lib-bc-guide" class="breadcrumb-item"><a href="https://researchguides.library.vanderbilt.edu/AI4Biz">AI for Business</a></li><li id="s-lib-bc-page" class="active breadcrumb-item">Generative AI Deep Dive</li></ol>
+            </div>
+			<div class="pull-right">
+				<div id="s-lg-guide-header-search">
+					
+<div id="s-lg-guide-search-box">
+    <form role="search" id="s-lg-guide-search-form" action="https://researchguides.library.vanderbilt.edu/srch.php" method="GET">
+        <div class="input-group input-group-sm">
+            <input 
+                type="text" 
+                id="s-lg-guide-search-terms" 
+                name="q" 
+                class="form-control"
+                maxlength="260" 
+                placeholder="Search this Guide">
+                
+            <label class="sr-only" for="s-lg-guide-search-terms">Search this Guide</label>
+
+                            <input type="hidden" name="guide_id" value="1411564">
+            
+            
+            <span class="input-group-btn">
+                <button class="btn btn-default" type="submit">
+                    Search
+                </button>
+            </span>
+        </div>
+    </form>
+</div>
+				</div>
+				
+			</div>
+            <div id="s-lg-guide-header-info">
+                <h1 id="s-lg-guide-name">AI for Business</h1>
+                <div id="s-lg-guide-desc-container" class="pad-top-med">
+                    <span id="s-lg-guide-description"></span>
+                </div>
+            </div>
+        </div>
+        <!-- END: Guide Header -->
+        <div id="s-lg-guide-tabs-title-bar" class="container s-lib-side-borders"></div>
+        <div id="s-lg-tabs-container" class="container s-lib-side-borders pad-top-med">
+            <div id="s-lg-guide-tabs">
+                <div class="row">
+                    <div class="col-md-3 s-lg-tabs-side pad-bottom-med">
+                        <ul class="nav nav-pills nav-stacked">
+
+
+    <li class="">
+        <a title="" class="" 
+           href="https://researchguides.library.vanderbilt.edu/c.php?g=1411564&amp;p=10453801" 
+            
+            
+           >
+            <span>Guide Overview and AI Tools at VU</span>
+            
+        </a>
+        
+    </li>
+
+
+
+    <li class="active">
+        <a title="" class="active" 
+           href="https://researchguides.library.vanderbilt.edu/AI4Biz/DeepDive" 
+            
+            
+           >
+            <span>Generative AI Deep Dive</span>
+            
+        </a>
+        <ul class="list-group s-lg-boxnav"><li class="list-group-item"><a href="#s-lg-box-34803808">What Is Gen AI? </a></li><li class="list-group-item"><a href="#s-lg-box-34803819">How Gen AI Works</a></li><li class="list-group-item"><a href="#s-lg-box-34803824">History of AI</a></li></ul>
+    </li>
+
+
+
+    <li class="">
+        <a title="" class="" 
+           href="https://researchguides.library.vanderbilt.edu/AI4Biz/BusinessUse" 
+            
+            
+           >
+            <span>Generative AI in Business</span>
+            
+        </a>
+        
+    </li>
+
+
+
+    <li class="">
+        <a title="" class="" 
+           href="https://researchguides.library.vanderbilt.edu/AI4Biz/Assessing" 
+            
+            
+           >
+            <span>Value & Limitations of Generative AI</span>
+            
+        </a>
+        
+    </li>
+
+
+
+    <li class="">
+        <a title="" class="" 
+           href="https://researchguides.library.vanderbilt.edu/AI4Biz/Prompting" 
+            
+            
+           >
+            <span>Prompting and Prompt Patterns</span>
+            
+        </a>
+        
+    </li>
+
+
+
+    <li class="">
+        <a title="" class="" 
+           href="https://researchguides.library.vanderbilt.edu/AI4Biz/Policies" 
+            
+            
+           >
+            <span>AI Policies and Guidance</span>
+            
+        </a>
+        
+    </li>
+
+
+
+    <li class="">
+        <a title="" class="" 
+           href="https://researchguides.library.vanderbilt.edu/AI4Biz/LibraryLicense" 
+            
+            
+           >
+            <span>Using AI Tools with Library Content</span>
+            
+        </a>
+        
+    </li>
+
+
+
+    <li class="">
+        <a title="" class="" 
+           href="https://researchguides.library.vanderbilt.edu/c.php?g=1411564&amp;p=10459393" 
+            
+            
+           >
+            <span>Citing AI</span>
+            
+        </a>
+        
+    </li>
+
+
+
+    <li class="">
+        <a title="" class="" 
+           href="https://researchguides.library.vanderbilt.edu/c.php?g=1411564&amp;p=10459397" 
+            
+            
+           >
+            <span>Gen AI Upskilling Resources</span>
+            
+        </a>
+        
+    </li>
+
+</ul>
+                        <div class="s-lg-row margin-top-med"><div id="s-lg-col-0"><div class="s-lg-col-boxes"><div id="s-lg-box-wrapper-40960769" class="s-lg-box-wrapper-40960769">
+
+
+    <div id="s-lg-box-34821600-container" class="s-lib-box-container">
+        <div id="s-lg-box-34821600" class="s-lib-box s-lib-box-std">
+                            <h2 class="s-lib-box-title">
+                    Walker Management Library
+                                    </h2>
+                        <div id="s-lg-box-collapse-34821600" >
+                <div class="s-lib-box-content">
+                    <!-- bs3/box/profile_box_content.twig -->
+<div id="s-lib-profile-10724" class="s-lib-profile-container">
+        <a href="//researchguides.library.vanderbilt.edu/prf.php?id=58b9b89c-7cdb-11ed-9922-0ad758b798c3">
+    
+        <div id="s-lib-profile-image-10724"
+             class="s-lib-profile-div s-lib-profile-center s-lib-profile-image">
+            <img loading="lazy" src="//d2jv02qf7xgjwx.cloudfront.net/accounts/13968/profiles/10724/Squarelibrary.jpg" alt=""/>
+        </div>
+
+                    <div id="s-lib-profile-name-10724"
+                 class="s-lib-profile-div s-lib-profile-center s-lib-profile-name"
+                 style="">
+                Walker Management *Library
+            </div>
+        
+        </a>
+    
+    <div id="s-lib-profile-pronouns-10724"
+         class="s-lib-profile-div s-lib-profile-center s-lib-profile-pronouns">
+        
+    </div>
+
+    <div id="s-lib-profile-email-10724" class="s-lib-profile-div s-lib-profile-center s-lib-profile-email">
+        <a title="managementlibrary@vanderbilt.edu" href="mailto:managementlibrary@vanderbilt.edu" class="label label-info">Email Me</a>
+    </div>
+
+    <div id="s-lib-profile-widget-la-10724" class="s-lib-profile-div s-lib-profile-widget-la">
+        <div class="s-lib-profile-widget"><div id="libchat_d2o_widget"></div><script type="text/javascript"> var libchat_d2o = { button_online: "//libchat.s3.amazonaws.com/chat_button_online.png", button_offline: "//libchat.s3.amazonaws.com/chat_button_offline.png", iid: "54", key: "5d688fca4fbcd90", domain: "libanswers.library.vanderbilt.edu", uid: "1465" }; </script><script type="text/javascript" src="//libanswers.com/js/chat_load_direct.js"></script></div>
+    </div>
+
+    <div id="s-lib-profile-widget-lc-10724" class="s-lib-profile-div s-lib-profile-widget-lc">
+        <div class="s-lib-profile-widget"><script>
+jQuery.getScript("https://calendar.library.vanderbilt.edu/js/myscheduler.min.js", function() {
+    jQuery("#mysched_0").LibCalMySched({iid: 3205, lid: 1031, gid: 24469, uid: 0, width: 560, height: 680, title: 'Make an Appointment - ', domain: 'https://calendar.library.vanderbilt.edu'});
+});
+</script>
+
+<!-- Place the following link anywhere in your page. Make sure the id "mysched_0" matches with the above code: jQuery("#mysched_0")  //-->
+<button id="mysched_0" href="#">Schedule Appointment</button>
+<!-- Below is optional button styling  //-->
+<style>
+#mysched_0 {
+  background: #E8C848;
+  border: 1px solid #CCCCCC;
+  border-radius: 4px;
+  color: #333333;
+  font: 14px Arial, Helvetica, Verdana;
+  padding: 8px 20px;
+  cursor: pointer;
+}
+#mysched_0:hover, #mysched_0:active, #mysched_0:focus {
+  opacity: 0.9;
+}
+</style></div>
+    </div>
+
+    <div id="s-lib-profile-widget-other-10724" class="s-lib-profile-div s-lib-profile-widget-other">
+        <div class="s-lib-profile-widget"></div>
+    </div>
+
+    <div id="s-lib-profile-contact-10724" class="s-lib-profile-div s-lib-profile-contact">
+                    <strong>Contact:</strong> <div>Walker Management Library<br />
+Owen Graduate School of Management<br />
+401 21st. Avenue South<br />
+Nashville, TN 37203</div><a href="http://www.library.vanderbilt.edu/management/"><span aria-hidden="true" class="fa fa-bookmark fa-lg"></span> <span class="sr-only">Website</span></a>
+            </div>
+
+    <div id="s-lib-profile-social-10724" class="s-lib-profile-div s-lib-profile-social">
+            </div>
+
+    <div id="s-lib-profile-subjects-10724" class="s-lib-profile-div s-lib-profile-subjects">
+                    <strong>Subjects:</strong> <a href="https://researchguides.library.vanderbilt.edu/sb.php?subject_id=72120">Business</a>, <a href="https://researchguides.library.vanderbilt.edu/sb.php?subject_id=155076">Business: Company Information</a>, <a href="https://researchguides.library.vanderbilt.edu/sb.php?subject_id=155072">Business: Finance and Markets</a>, <a href="https://researchguides.library.vanderbilt.edu/sb.php?subject_id=155070">Business: Industry Information</a>, <a href="https://researchguides.library.vanderbilt.edu/sb.php?subject_id=155073">Business: International Business</a>
+            </div>
+</div>
+<!-- !bs3/box/profile_box_content.twig -->
+
+                </div>
+                
+            </div>
+        </div>
+    </div>
+</div></div></div></div>
+                    </div>
+                    <div class="col-md-9">
+                        <div class="s-lg-tab-content">
+                            <div id="s-lg-guide-main" class="tab-pane active">
+                                <div class="row s-lg-row"><div id="s-lg-col-1" class="col-md-12"><div class="s-lg-col-boxes"><div id="s-lg-box-wrapper-40938495" class="s-lg-box-wrapper-40938495">
+
+
+    <div id="s-lg-box-34803808-container" class="s-lib-box-container">
+        <div id="s-lg-box-34803808" class="s-lib-box s-lib-box-std">
+                            <h2 class="s-lib-box-title">
+                    What Is Gen AI? 
+                                    </h2>
+                        <div id="s-lg-box-collapse-34803808" >
+                <div class="s-lib-box-content">
+                    <div id="s-lg-content-81912792" class="  clearfix">
+    <p>Generative AI (Gen AI) refers to deep learning artificial intelligence models that can create content such as text, images, and code based on training data the models were provided (<a href="https://research.ibm.com/blog/what-is-generative-AI">IBM, 2023</a>). Gen AI emerged in wider public awareness when OpenAI released ChatGPT in November 2022.</p>
+
+<p>You most likely encounter Gen AI through a chat interface, such as ChatGPT or Google AI or Copilot. Underneath these interfaces are the actual models that do the generative work.&nbsp;</p>
+
+<p>AI is a general, umbrella term. There are various forms of AI, many of which have been used in organizations for some time.&nbsp;</p>
+
+<p><img alt="Diagram showing how large language models are part of a larger AI universe." loading="lazy" src="https://d2jv02qf7xgjwx.cloudfront.net/accounts/389887/images/AI-Universe.jpg" style="width: 400px; height: 403px;" /></p>
+
+<p style="text-align:left"><span style="font-size:12px;"><span style="unicode-bidi:embed"><span style="word-break:normal"><span style="font-family:Calibri"><span style="color:black"><strong>Source</strong>: Amaratunga, 2023</span></span></span></span></span></p>
+
+<p style="text-align: left;"><cite><span style="font-size:12px;">Amaratunga, T. (2023). Understanding large language models: Learning their underlying concepts and technologies. Apress Media LLC. <a href="https://catalog.library.vanderbilt.edu/permalink/01VAN_INST/18gthl0/alma991044248537503276">https://catalog.library.vanderbilt.edu/permalink/01VAN_INST/18gthl0/alma991044248537503276</a></span></cite></p>
+
+<hr />
+<p>&nbsp;</p>
+
+
+    </div>
+
+    <div class="">
+        <ul id="s-lg-link-list-84375481"
+            class="s-lg-link-list s-lg-link-list-2">
+
+<li class="">
+    
+
+
+<div id="s-lg-content-81912927" class="">
+    <span>
+                    <a href="https://www.mckinsey.com/featured-insights/mckinsey-explainers/what-is-generative-ai" target="_blank" onclick="return springSpace.springTrack.trackLink({link: this,_st_type_id: &#039;2&#039;,_st_content_id: &#039;81912927&#039;,_st_inc_return: this});" >
+                What is Generative AI?
+            </a>
+        
+            </span>
+
+    
+    
+                <div id="s-lg-link-desc-81912927" class="s-lg-link-desc">
+            An explainer article from McKinsey & Company
+        </div>
+    
+    </div>
+
+</li>
+
+
+
+
+<li class="">
+    
+
+
+<div id="s-lg-content-81950762" class="">
+    <span>
+                    <a href="https://catalog.library.vanderbilt.edu/permalink/01VAN_INST/71cohj/cdi_proquest_ebookcentralchapters_31181859_24_59" target="_blank" onclick="return springSpace.springTrack.trackLink({link: this,_st_type_id: &#039;2&#039;,_st_content_id: &#039;81950762&#039;,_st_inc_return: this});" >
+                AI Explained: A Non-Technical Guide
+            </a>
+        
+            </span>
+
+    
+    
+                <div id="s-lg-link-desc-81950762" class="s-lg-link-desc">
+            A short eBook with accessible explanations of AI   in Chapter 2.
+        </div>
+    
+    </div>
+
+</li>
+
+
+
+
+<li class="">
+    
+
+
+<div id="s-lg-content-81950846" class="">
+    <span>
+                    <a href="https://catalog.library.vanderbilt.edu/permalink/01VAN_INST/gj61pp/cdi_proquest_journals_2913584389" target="_blank" onclick="return springSpace.springTrack.trackLink({link: this,_st_type_id: &#039;2&#039;,_st_content_id: &#039;81950846&#039;,_st_inc_return: this});" >
+                Generative AI
+            </a>
+        
+            </span>
+
+    
+    
+                <div id="s-lg-link-desc-81950846" class="s-lg-link-desc">
+            This article conceptualizes Gen AI from a socio-technical systems perspective and describes Gen AI from three levels: model level, system level, and application level.
+        </div>
+    
+    </div>
+
+</li>
+
+
+
+
+<li class="">
+    
+
+
+<div id="s-lg-content-81950982" class="">
+    <span>
+                    <a href="https://www.ibm.com/think/topics/agentic-ai-vs-generative-ai" target="_blank" onclick="return springSpace.springTrack.trackLink({link: this,_st_type_id: &#039;2&#039;,_st_content_id: &#039;81950982&#039;,_st_inc_return: this});" >
+                Agentic AI vs. generative AI
+            </a>
+        
+            </span>
+
+    
+    
+                <div id="s-lg-link-desc-81950982" class="s-lg-link-desc">
+            An article from IBM explaining the differences between agentic and generative AI.
+        </div>
+    
+    </div>
+
+</li>
+
+        </ul>
+
+        
+    </div>
+
+                </div>
+                
+            </div>
+        </div>
+    </div>
+</div><div id="s-lg-box-wrapper-40938507" class="s-lg-box-wrapper-40938507">
+
+
+    <div id="s-lg-box-34803819-container" class="s-lib-box-container">
+        <div id="s-lg-box-34803819" class="s-lib-box s-lib-box-std">
+                            <h2 class="s-lib-box-title">
+                    How Gen AI Works
+                                    </h2>
+                        <div id="s-lg-box-collapse-34803819" >
+                <div class="s-lib-box-content">
+                    
+
+    <div class="">
+        <ul id="s-lg-link-list-84415461"
+            class="s-lg-link-list s-lg-link-list-2">
+
+<li class="">
+    
+
+
+<div id="s-lg-content-81951020" class="">
+    <span>
+                    <a href="https://www.understandingai.org/p/large-language-models-explained-with" target="_blank" onclick="return springSpace.springTrack.trackLink({link: this,_st_type_id: &#039;2&#039;,_st_content_id: &#039;81951020&#039;,_st_inc_return: this});" >
+                Large language models, explained with a minimum of math and jargon
+            </a>
+        
+            </span>
+
+    
+    
+                <div id="s-lg-link-desc-81951020" class="s-lg-link-desc">
+            A detailed (but non-technical) explanation of how large language models work.
+        </div>
+    
+    </div>
+
+</li>
+
+        </ul>
+
+        
+    </div>
+<div id="s-lg-content-81951062" class="s-lg-widget ">
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/-rAZLLlCjE0?si=Yz0gCfZZ4ltu3PXu" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+</div><div id="s-lg-box-wrapper-40938513" class="s-lg-box-wrapper-40938513">
+
+
+    <div id="s-lg-box-34803824-container" class="s-lib-box-container">
+        <div id="s-lg-box-34803824" class="s-lib-box s-lib-box-std">
+                            <h2 class="s-lib-box-title">
+                    History of AI
+                                    </h2>
+                        <div id="s-lg-box-collapse-34803824" >
+                <div class="s-lib-box-content">
+                    
+
+    <div class="">
+        <ul id="s-lg-link-list-84415543"
+            class="s-lg-link-list s-lg-link-list-2">
+
+<li class="">
+    
+
+
+<div id="s-lg-content-81951129" class="">
+    <span>
+                    <a href="https://catalog.library.vanderbilt.edu/permalink/01VAN_INST/11nigse/cdi_proquest_ebookcentralchapters_31181859_8_23" target="_blank" onclick="return springSpace.springTrack.trackLink({link: this,_st_type_id: &#039;2&#039;,_st_content_id: &#039;81951129&#039;,_st_inc_return: this});" >
+                A Brief History of Artificial Intelligence
+            </a>
+        
+            </span>
+
+    
+    
+                <div id="s-lg-link-desc-81951129" class="s-lg-link-desc">
+            A chapter from AI for Social Good by Rahul Dohdia that summarizes key figures and events in the history of AI.
+        </div>
+    
+    </div>
+
+</li>
+
+        </ul>
+
+        
+    </div>
+
+
+    <div class="">
+        <ul id="s-lg-link-list-84415581"
+            class="s-lg-link-list s-lg-link-list-5">
+
+<li class="">
+    
+<div id="s-lg-content-81951159" class="s-lg-book clearfix">
+    <div class="s-lg-book-props">
+
+                
+        <span id="s-lg-book-cover-81951159" class="s-lg-book-cover">
+                                        
+                
+                <img loading="lazy"
+                    alt="Cover Art"
+                    src="//syndetics.com/index.aspx?isbn=9783031510038/LC.GIF&amp;client=springshare"
+                    class="pull-left s-lg-book-cover-img-0"
+                     />
+                    </span>
+
+        <span id="s-lg-book-title-81951159" class="s-lg-book-title"
+              >
+            The Book of Chatbots
+        </span>
+
+                    <span id="s-lg-book-by-81951159" class="s-lg-book-by">
+                by
+            </span>
+        
+        <span id="s-lg-book-author-81951159" class="s-lg-book-author">
+            Robert Ciesla
+        </span>
+
+        
+                            <!-- popover_icon.twig -->
+<i class="fa fa-lg fa-info-circle pad-left-sm" tabindex="0" role="button" data-toggle="popover" data-trigger="focus"
+   data-content="Primitive software chatbots emerged in the 1960s, evolving swiftly through the decades and becoming able to provide engaging human-to-computer interactions sometime in the 1990s. Today, conversational technology is ubiquitous in many homes. Paired with web-searching abilities and neural networking, modern chatbots are capable of many tasks and are a major driving force behind machine learning and the quest for strong artificial intelligence, also known as artificial general intelligence (AGI).  Sophisticated artificial intelligence is changing the online world as advanced software chatbots can provide customer service, research duties, and assist in healthcare. Modern chatbots have indeed numerous applications -- including those of a malicious nature. They can write our essays, conduct autonomous scams, and potentially influence politics.  The Book of Chatbots is both a retrospective and a review of current artificial intelligence-driven conversational solutions. It explores their appeal to businesses and individuals as well as their greater social aspects, including the impact on academia. The book explains all relevant concepts for readers with no previous knowledge in these topics. Unearthing the secrets of virtual assistants such as the (in)famous ChatGPT and many other exciting technologies, The Book of Chatbots is meant for anyone interested in the topic, laypeople and IT-enthusiasts alike."><span class="sr-only">Primitive software chatbots emerged in the 1960s, evolving swiftly through the decades and becoming able to provide engaging human-to-computer interactions sometime in the 1990s. Today, conversational technology is ubiquitous in many homes. Paired with web-searching abilities and neural networking, modern chatbots are capable of many tasks and are a major driving force behind machine learning and the quest for strong artificial intelligence, also known as artificial general intelligence (AGI).  Sophisticated artificial intelligence is changing the online world as advanced software chatbots can provide customer service, research duties, and assist in healthcare. Modern chatbots have indeed numerous applications -- including those of a malicious nature. They can write our essays, conduct autonomous scams, and potentially influence politics.  The Book of Chatbots is both a retrospective and a review of current artificial intelligence-driven conversational solutions. It explores their appeal to businesses and individuals as well as their greater social aspects, including the impact on academia. The book explains all relevant concepts for readers with no previous knowledge in these topics. Unearthing the secrets of virtual assistants such as the (in)famous ChatGPT and many other exciting technologies, The Book of Chatbots is meant for anyone interested in the topic, laypeople and IT-enthusiasts alike.</span></i>
+
+<script>
+    jQuery(function () {
+        jQuery('[data-toggle="popover"]').popover()
+    })
+</script>
+<!-- !popover_icon.twig -->
+        
+                            
+        
+        
+        
+                    <div class="s-lg-book-prop-isbn">
+                ISBN: 9783031510038
+            </div>
+        
+                    <div class="s-lg-book-prop-pubdate">
+                Publication Date: 2024-01-14
+            </div>
+        
+                
+                
+    </div>
+</div>
+</li>
+
+
+
+
+<li class="">
+    
+<div id="s-lg-content-81951183" class="s-lg-book clearfix">
+    <div class="s-lg-book-props">
+
+                
+        <span id="s-lg-book-cover-81951183" class="s-lg-book-cover">
+                                        
+                
+                <img loading="lazy"
+                    alt="Cover Art"
+                    src="//syndetics.com/index.aspx?isbn=9819707706/LC.GIF&amp;client=springshare"
+                    class="pull-left s-lg-book-cover-img-0"
+                     />
+                    </span>
+
+        <span id="s-lg-book-title-81951183" class="s-lg-book-title"
+              >
+            A Narrative History of Artificial Intelligence
+        </span>
+
+                    <span id="s-lg-book-by-81951183" class="s-lg-book-by">
+                by
+            </span>
+        
+        <span id="s-lg-book-author-81951183" class="s-lg-book-author">
+            Masayuki Ida
+        </span>
+
+        
+                            <!-- popover_icon.twig -->
+<i class="fa fa-lg fa-info-circle pad-left-sm" tabindex="0" role="button" data-toggle="popover" data-trigger="focus"
+   data-content="This book addresses the history of artificial intelligence through the author&#039;s experiences from the 1960s, when AI was a dream to give computers far more power than the progress for industrial technological advancement. The book starts from the AI pioneering days including what the author witnessed and impressed, then the episodes during AI boom of the 80s and 90s when the author was involved in ANSI X3J13 committee work as a principal member, translating Common Lisp books into&amp;nbsp;Japanese, leading committee works in Japan for global standardization, and visiting MIT AI Lab for totally three years.&amp;nbsp;The book points out&amp;nbsp;that&amp;nbsp;neural network research&amp;nbsp;started in the&amp;nbsp;1980s, highlighting the DARPA report dated in 1988.&amp;nbsp;The last episodes and thoughts include the experiences with business school students after the author moved from engineering school.&amp;nbsp;The former half is from a view of an engineering mind and then the latter is based on how the author struggled with business-minded people to explain the core of AI.&amp;nbsp;  This book is suitable for anyone interested in the history of Artificial Intelligence. The content is easy to follow, even for readers without prior knowledge of AI. Experts will also find something new and thought-provoking."><span class="sr-only">This book addresses the history of artificial intelligence through the author&#039;s experiences from the 1960s, when AI was a dream to give computers far more power than the progress for industrial technological advancement. The book starts from the AI pioneering days including what the author witnessed and impressed, then the episodes during AI boom of the 80s and 90s when the author was involved in ANSI X3J13 committee work as a principal member, translating Common Lisp books into&amp;nbsp;Japanese, leading committee works in Japan for global standardization, and visiting MIT AI Lab for totally three years.&amp;nbsp;The book points out&amp;nbsp;that&amp;nbsp;neural network research&amp;nbsp;started in the&amp;nbsp;1980s, highlighting the DARPA report dated in 1988.&amp;nbsp;The last episodes and thoughts include the experiences with business school students after the author moved from engineering school.&amp;nbsp;The former half is from a view of an engineering mind and then the latter is based on how the author struggled with business-minded people to explain the core of AI.&amp;nbsp;  This book is suitable for anyone interested in the history of Artificial Intelligence. The content is easy to follow, even for readers without prior knowledge of AI. Experts will also find something new and thought-provoking.</span></i>
+
+<script>
+    jQuery(function () {
+        jQuery('[data-toggle="popover"]').popover()
+    })
+</script>
+<!-- !popover_icon.twig -->
+        
+                            
+        
+        
+        
+                    <div class="s-lg-book-prop-isbn">
+                ISBN: 9819707706
+            </div>
+        
+                    <div class="s-lg-book-prop-pubdate">
+                Publication Date: 2024-05-03
+            </div>
+        
+                
+                
+    </div>
+</div>
+</li>
+
+        </ul>
+
+        
+    </div>
+
+                </div>
+                
+            </div>
+        </div>
+    </div>
+</div></div></div></div>
+                            </div>
+                        </div>
+            			<ul id="s-lg-page-prevnext" class="pager s-lib-hide">
+    <li class="previous">
+        <a class="page-link" href="https://researchguides.library.vanderbilt.edu/c.php?g=1411564&p=10453801">&lt;&lt; <strong>Previous:</strong> Guide Overview and AI Tools at VU</a>
+    </li>
+    <li class="next">
+        <a class="page-link" href="https://researchguides.library.vanderbilt.edu/AI4Biz/BusinessUse"><strong>Next:</strong> Generative AI in Business &gt;&gt;</a>
+    </li>
+</ul>
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- BEGIN: Page Footer -->
+        <div id="s-lib-footer-public" class="s-lib-footer footer container  s-lib-side-borders">
+            <div id="s-lg-guide-header-meta" class="pad-top-sm pad-left-med clearfix">
+                <ul id="s-lg-guide-header-attributes" class="">
+                    <li id="s-lg-guide-header-updated" class="s-lg-h-separator">
+                        <span class="s-lg-guide-label">Last Updated:</span> <span class="s-lg-text-greyout">Jan 23, 2026 12:40 PM</span>                    </li>
+                    <li id="s-lg-guide-header-url" class="s-lg-h-separator">
+                        <span class="s-lg-guide-label">URL:</span> <span class="s-lg-text-greyout">https://researchguides.library.vanderbilt.edu/AI4Biz</span>
+                    </li>
+                    <li id="s-lg-guide-print-url">
+                    	<a href="javascript: window.print();"><i class="fa fa-print" aria-hidden="true" title="Print Page"></i> Print Page</a>
+                    </li>	
+                    </ul>
+                <div id="s-lib-footer-login-link" class="pull-right pad-right-med">
+                    <a href="https://vanderbilt.libapps.com/libapps/login.php?site_id=1775&target64=L2xpYmd1aWRlcy9hZG1pbl9jLnBocD9nPTE0MTE1NjQmcD0xMTA3MDAwNg==">Login to LibApps</a>                </div>
+            </div>
+            <div class="pad-bottom-sm clearfix">
+                <div id="s-lib-footer-support-link" class="pull-right pad-right-med">
+                     
+                </div>
+                <div id="s-lg-guide-header-subjects" class="pad-top-sm pad-left-med pad-right-med pull-left">
+                    
+                </div>
+                <div id="s-lg-guide-header-tags" class="pad-top-sm pad-left-med">
+                    
+                </div>
+            </div>
+
+        </div>
+        <!-- END: Page Footer -->
+        
+			<div id="s-lib-scroll-top" title="Back to Top">
+				<span class="fa-stack fa-lg">
+				  <i class="fa fa-square-o fa-stack-2x"></i>
+				  <i class="fa fa-angle-double-up fa-stack-1x" style="position:relative; bottom:2px;"></i>
+				</span>
+			</div>        <div id="s-lib-alert" title="">
+                            <div id="s-lib-alert-content"></div>
+                       </div>        
+                <!-- BEGIN: Custom Footer -->
+                
+<!-- added Creative Commons licenses statement for ResearchGuides site, April 2015 --> 
+
+<div id="license" class="s-lib-footer footer container s-lib-side-borders">
+<!-- <div id="license" class="s-lib-footer container">  -->
+    <div class="pull-left">
+      <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0; padding-right: 5px;" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png"  /></a>
+    </div>
+    <div style="font-size: 85%; line-height: 100%;">
+      VU Libraries ResearchGuides is licensed under a <a href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>. You may republish or adapt this guide for educational purposes, as long as proper credit is given. Our recommended credit includes the statement: Written by, or adapted from, Vanderbilt University Libraries (current as of .....). If you remix, transform, or build upon the material, you must distribute your contributions under the same license as the original.  
+    </div>
+</div><!-- end of license statement -->     
+
+<vul-footer></vul-footer>
+
+<script src="https://cdn.library.vanderbilt.edu/futurevul/pwc/js/pwc.min.js"></script>  
+
+		<!-- END: Custom Footer -->
+	<!-- BEGIN: Analytics code --><!-- <script>  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');  ga('create', 'UA-333143-17', 'auto');  ga('send', 'pageview');</script>  --><!-- END: Analytics code --></body></html>

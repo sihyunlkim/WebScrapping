@@ -1,0 +1,1514 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta property="og:locale" content="en_US" />
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Building a Strategy to Harness ChatGPT in Education" />
+<meta property="og:description" content="Higher education must proactively develop a strategy for Generative AI since it's an inevitability." />
+<meta property="og:url" content="https://cmr.berkeley.edu/2023/08/building-a-strategy-to-harness-chatgpt-in-education/"  />
+<meta property="og:site_name" content="California Management Review" />
+<meta property="og:image" content="https://cmr.berkeley.edu//assets/images/blog/jaredd-craig-hh4wbgnyltc-unsplash.jpg" />
+<link rel="icon" href="/assets/images/favicon/favicon.png">
+
+<title>Building a Strategy to Harness ChatGPT in Education | California Management Review</title>
+
+<meta name="description" content="Higher education must proactively develop a strategy for Generative AI since it's an inevitability.">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans+Condensed:400,500|IBM+Plex+Sans:300,300i,400,500,500i|IBM+Plex+Serif:400,400i,700,700i&display=swap" rel="stylesheet">
+<link href="/assets/css/theme-new.css" rel="stylesheet">
+
+
+<script type="text/javascript" src="//platform-api.sharethis.com/js/sharethis.js#property=5dbf6c4abb2d99001231ec52&product=inline-share-buttons"></script>
+<meta name="twitter:creator" content="@CMR_UCBerkeley" />
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@CMR_UCBerkeley" />
+<meta property="twitter:url" content="https://cmr.berkeley.edu/2023/08/building-a-strategy-to-harness-chatgpt-in-education/" />
+<meta property="twitter:title" content="Building a Strategy to Harness ChatGPT in Education" />
+<meta property="twitter:description" content="Higher education must proactively develop a strategy for Generative AI since it's an inevitability." />
+<meta property="twitter:image" content="https://cmr.berkeley.edu//assets/images/blog/jaredd-craig-hh4wbgnyltc-unsplash.jpg" />
+
+<meta name="citation_title" content="Building a Strategy to Harness ChatGPT in Education">
+
+
+
+
+
+
+
+    
+    
+    <meta name="citation_author" content="Jessica Freeman-Wong">
+    
+
+    
+    
+    <meta name="citation_author" content="Daisy Munguia">
+    
+
+    
+    
+    <meta name="citation_author" content="Jakki J. Mohr">
+    
+
+
+
+
+<meta name="citation_publication_date" content="2023/08/20">
+<meta name="citation_journal_title" content="California Management Review Insights">
+<meta name="citation_pdf_url" content="https://cmr.berkeley.edu/assets/documents/pdf/2023-08-building-a-strategy-to-harness-chatgpt-in-education.pdf">
+
+
+
+
+
+
+
+
+
+<script>
+(function (root, factory) {
+    if (typeof define === 'function' && define.amd) {
+      define(function() {
+        return factory(root);
+      });
+    } else if (typeof exports === 'object') {
+      module.exports = factory;
+    } else {
+      root.echo = factory(root);
+    }
+  })(this, function (root) {
+
+    'use strict';
+
+    var echo = {};
+
+    var callback = function () {};
+
+    var offset, poll, delay, useDebounce, unload;
+
+    var isHidden = function (element) {
+      return (element.offsetParent === null);
+    };
+
+    var inView = function (element, view) {
+      if (isHidden(element)) {
+        return false;
+      }
+
+      var box = element.getBoundingClientRect();
+      return (box.right >= view.l && box.bottom >= view.t && box.left <= view.r && box.top <= view.b);
+    };
+
+    var debounceOrThrottle = function () {
+      if(!useDebounce && !!poll) {
+        return;
+      }
+      clearTimeout(poll);
+      poll = setTimeout(function(){
+        echo.render();
+        poll = null;
+      }, delay);
+    };
+
+    echo.init = function (opts) {
+      opts = opts || {};
+      var offsetAll = opts.offset || 0;
+      var offsetVertical = opts.offsetVertical || offsetAll;
+      var offsetHorizontal = opts.offsetHorizontal || offsetAll;
+      var optionToInt = function (opt, fallback) {
+        return parseInt(opt || fallback, 10);
+      };
+      offset = {
+        t: optionToInt(opts.offsetTop, offsetVertical),
+        b: optionToInt(opts.offsetBottom, offsetVertical),
+        l: optionToInt(opts.offsetLeft, offsetHorizontal),
+        r: optionToInt(opts.offsetRight, offsetHorizontal)
+      };
+      delay = optionToInt(opts.throttle, 250);
+      useDebounce = opts.debounce !== false;
+      unload = !!opts.unload;
+      callback = opts.callback || callback;
+      echo.render();
+      if (document.addEventListener) {
+        root.addEventListener('scroll', debounceOrThrottle, false);
+        root.addEventListener('load', debounceOrThrottle, false);
+      } else {
+        root.attachEvent('onscroll', debounceOrThrottle);
+        root.attachEvent('onload', debounceOrThrottle);
+      }
+    };
+
+    echo.render = function (context) {
+      var nodes = (context || document).querySelectorAll('[data-echo], [data-echo-background]');
+      var length = nodes.length;
+      var src, elem;
+      var view = {
+        l: 0 - offset.l,
+        t: 0 - offset.t,
+        b: (root.innerHeight || document.documentElement.clientHeight) + offset.b,
+        r: (root.innerWidth || document.documentElement.clientWidth) + offset.r
+      };
+      for (var i = 0; i < length; i++) {
+        elem = nodes[i];
+        if (inView(elem, view)) {
+
+          if (unload) {
+            elem.setAttribute('data-echo-placeholder', elem.src);
+          }
+
+          if (elem.getAttribute('data-echo-background') !== null) {
+            elem.style.backgroundImage = 'url(' + elem.getAttribute('data-echo-background') + ')';
+          }
+          else if (elem.src !== (src = elem.getAttribute('data-echo'))) {
+            elem.src = src;
+          }
+
+          if (!unload) {
+            elem.removeAttribute('data-echo');
+            elem.removeAttribute('data-echo-background');
+          }
+
+          callback(elem, 'load');
+        }
+        else if (unload && !!(src = elem.getAttribute('data-echo-placeholder'))) {
+
+          if (elem.getAttribute('data-echo-background') !== null) {
+            elem.style.backgroundImage = 'url(' + src + ')';
+          }
+          else {
+            elem.src = src;
+          }
+
+          elem.removeAttribute('data-echo-placeholder');
+          callback(elem, 'unload');
+        }
+      }
+      if (!length) {
+        echo.detach();
+      }
+    };
+
+    echo.detach = function () {
+      if (document.removeEventListener) {
+        root.removeEventListener('scroll', debounceOrThrottle);
+      } else {
+        root.detachEvent('onscroll', debounceOrThrottle);
+      }
+      clearTimeout(poll);
+    };
+
+    return echo;
+
+  });
+</script>
+<script>
+    echo.init({
+      offset: 2500,
+      throttle: 250,
+      unload: false,
+      callback: function (element, op) {
+        //console.log(element, 'has been', op + 'ed')
+      }
+    });
+</script>
+
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-R56HCYX3CD"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-R56HCYX3CD');
+</script>
+
+<script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+
+</head>
+
+
+
+
+<body class="layout-post">
+
+
+<!-- Begin Menu Navigation
+================================================== -->
+
+
+
+
+        <div class="header-alert-large">
+          <div class="header-alert-content-lg">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 col-lg-12 col-sm-12">
+                    <span class="nav-search"><a href="/search/index.html"><i class="fa fa-search"></i></a></span>
+                    <span class="nav-subscribe"><a target="_blank" href="https://us.sagepub.com/nam/california-management-review/journal202706">Subscribe</a></span>
+                    <span class="nav-submit"><a target="_blank" href="https://mc.manuscriptcentral.com/uc-cmr">Submit</a></span>
+                    </div>
+                 </div>
+            </div>
+            </div>
+        </div>
+
+
+
+<header class="navbar navbar-toggleable-md navbar-light bg-white mediumnavigation">
+    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarsWow" aria-controls="navbarsWow" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="container">
+
+        <!-- Begin Logo -->
+        <div class="navbar-logo" style="margin-right:50px;">
+        <a href="/"><img src="/assets/images/logos/cmr-logo.svg"></a>
+        </div>
+        <!-- End Logo -->
+
+        <!-- Begin Menu -->
+        <div class="collapse navbar-collapse" id="navbarsWow">
+
+            <!-- Begin Menu -->
+            <ul class="navbar-nav ml-auto">
+
+
+                <li class="dropdown menu-large nav-item"> <a href="#" class="nav-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Topics &nbsp; <i class="fa fa-angle-down"></i></a>
+                    <ul class="dropdown-menu megamenu">
+                        <div class="row">
+                            <li class="col-md-3">
+                                <ul>
+                                    <li class="dropdown-header">Strategy & Competitive Advantage</li>
+                                    <li class="divider"></li>
+                                    <li><a class="dropdown-item" href="/topic/business-models/">Business Models</a>
+                                    </li>
+                                    <li><a class="dropdown-item" href="/topic/strategy/">Strategy</a>
+                                    </li>
+                                    <li><a class="dropdown-item" href="/topic/strategic-agility/">Strategic Agility</a>
+                                    </li>
+                                    <li><a class="dropdown-item" href="/topic/competitive-advantage/">Competitive Advantage</a>
+                                    </li>
+                                    <li><a class="dropdown-item" href="/topic/alliances-mergers/">Alliances & Mergers</a>
+                                    </li>
+                                    <li><a class="dropdown-item" href="/topic/growth-strategy/">Growth Strategy</a>
+                                    </li>
+                                    <li><a class="dropdown-item" href="/topic/capabilities/">Capabilities</a>
+                                    </li>
+                                    <br>
+                                    <li class="dropdown-header">Leadership & Decision-Making</li>
+                                    <li class="divider"></li>
+                                    <li><a class="dropdown-item" href="/topic/leadership/">Leadership</a>
+                                    </li>
+                                    <li><a class="dropdown-item" href="/topic/decision-making/">Decision-Making</a>
+                                    </li>
+                                    <li><a class="dropdown-item" href="/topic/change-management/">Change Management</a>
+                                    </li>
+                                    <li><a class="dropdown-item" href="/topic/negotiations/">Negotiations</a>
+                                    </li>
+                                    <li><a class="dropdown-item" href="/topic/crisis-management/">Crisis Management</a>
+                                    </li>
+                                    <li><a class="dropdown-item" href="#">&nbsp;</a></li>   
+                                    <br>
+                                    <li class="dropdown-header">Stakeholders & Governance</li>
+                                    <li class="divider"></li>
+                                    <li><a class="dropdown-item" href="/topic/board-of-directors/">Board of Directors</a>
+                                    </li>
+                                    <li><a class="dropdown-item" href="/topic/corporate-governance/">Corporate Governance</a>
+                                    </li>
+                                    <li><a class="dropdown-item" href="/topic/shareholder-engagement/">Shareholder Engagement</a>
+                                    </li>
+                                    <li><a class="dropdown-item" href="/topic/inclusivity-transparency/">Inclusivity & Transparency</a>
+                                    </li>
+                                    <li><a class="dropdown-item" href="/topic/disclosure-accountability/">Disclosure & Accountability</a>
+                                    </li>
+                                    <li><a class="dropdown-item" href="#">&nbsp;</a></li>  
+                                    <br>
+                                    <li class="dropdown-header">Risk, Resilience, & Compliance</li>
+                                    <li class="divider"></li>
+                                    <li><a class="dropdown-item" href="/topic/risk-management/">Risk Management</a>
+                                    </li>
+                                    <li><a class="dropdown-item" href="/topic/resilience/">Resilience</a>
+                                    </li>
+                                    <li><a class="dropdown-item" href="/topic/regulatory-compliance/">Regulatory Compliance</a>
+                                    </li>
+                                    <li><a class="dropdown-item" href="/topic/security-privacy/">Security & Privacy</a>
+                                    </li>                                      
+                                    <li><a class="dropdown-item" href="/topic/legal/">Legal</a>
+                                    </li>
+                                     <br>                                 
+                                </ul>
+                            </li>
+                            <li class="col-md-3">
+                                <ul>
+                                    <li class="dropdown-header">Innovation & Entrepreneurship</li>
+                                    <li class="divider"></li>
+                                    <li><a class="dropdown-item" href="/topic/innovation/">Innovation</a>
+                                    </li>
+                                    <li><a class="dropdown-item" href="/topic/open-innovation/">Open Innovation</a>
+                                    </li>
+                                    <li><a class="dropdown-item" href="/topic/entrepreneurship/">Entrepreneurship</a>
+                                    </li>
+                                    <li><a class="dropdown-item" href="/topic/research-development/">Research & Development</a>
+                                    </li>
+                                    <li><a class="dropdown-item" href="/topic/product-development/">Product Development</a>
+                                    </li>
+                                    <li><a class="dropdown-item" href="#">&nbsp;</a></li>  
+                                    <li><a class="dropdown-item" href="#">&nbsp;</a></li>                                     
+                                    <br>
+                                    <li class="dropdown-header">Technology & Digital Transformation</li>
+                                    <li class="divider"></li>
+                                    <li><a class="dropdown-item" href="/topic/blockchain/">Blockchain</a>
+                                    </li>
+                                    <li><a class="dropdown-item" href="/topic/digital-transformation/">Digital Transformation</a>
+                                    </li>
+                                    <li><a class="dropdown-item" href="/topic/digital-platforms/">Digital Platforms</a>
+                                    </li>
+                                    <li><a class="dropdown-item" href="/topic/information-technology/">Information Technology</a>
+                                    </li>
+                                    <li><a class="dropdown-item" href="/topic/technology-strategy/">Technology Strategy</a>
+                                    </li>                                    
+                                    <li><a class="dropdown-item" href="/topic/cybersecurity/">Cybersecurity</a>
+                                    </li>
+                                    <br>
+                                    <li class="dropdown-header">Artificial Intelligence</li>
+                                    <li class="divider"></li>
+                                    <li><a class="dropdown-item" href="/topic/artificial-intelligence/">Artificial Intelligence</a>
+                                    </li>
+                                    <li><a class="dropdown-item" href="/topic/agentic-ai/">Agentic AI</a>
+                                    </li>
+                                    <li><a class="dropdown-item" href="/topic/generative-ai/">Generative AI</a>
+                                    </li>
+                                    <li><a class="dropdown-item" href="/topic/automation/">Automation</a>
+                                    </li>
+                                    <li><a class="dropdown-item" href="#">&nbsp;</a></li>
+                                    <li><a class="dropdown-item" href="#">&nbsp;</a></li>  
+                                    <br>
+                                    <li class="dropdown-header">Data & Analytics</li>
+                                    <li class="divider"></li>
+                                    <li><a class="dropdown-item" href="/topic/business-intelligence/">Business Intelligence</a>
+                                    </li>
+                                    <li><a class="dropdown-item" href="/topic/data-management/">Data Management</a>
+                                    </li>
+                                    <li><a class="dropdown-item" href="/topic/data-analysis/">Data Analysis</a>
+                                    </li>                                    
+                                    <li><a class="dropdown-item" href="/topic/predictive-modeling/">Predictive Modeling</a>
+                                    </li>
+                                    <li><a class="dropdown-item" href="/topic/demographics/">Demographics</a>
+                                    </li>                                     
+                                     <br>                               
+                                </ul>
+                            </li>
+                            <li class="col-md-3">
+                                <ul>
+                                    <li class="dropdown-header">Sales & Marketing</li>
+                                    <li class="divider"></li>
+                                    <li><a class="dropdown-item" href="/topic/sales/">Sales</a>
+                                    </li>                                  
+                                    <li><a class="dropdown-item" href="/topic/customer-relationships/">Customer Relationships</a>
+                                    </li>
+                                    <li><a class="dropdown-item" href="/topic/marketing-strategy/">Marketing Strategy</a>
+                                    </li>
+                                    <li><a class="dropdown-item" href="/topic/digital-marketing/">Digital Marketing</a>
+                                    </li>
+                                    <li><a class="dropdown-item" href="/topic/social-media/">Social Media</a>
+                                    </li>
+                                    <li><a class="dropdown-item" href="/topic/advertising/">Advertising</a>
+                                    </li>
+                                    <li><a class="dropdown-item" href="/topic/brand-management/">Brand Management</a>
+                                    </li>    
+                                    <br>                                   
+                                    <li class="dropdown-header">Organizational Design & Culture</li>
+                                    <li class="divider"></li>
+                                    <li><a class="dropdown-item" href="/topic/organizational-design/">Organizational Design</a>
+                                    </li>
+                                    <li><a class="dropdown-item" href="/topic/organizational-behavior/">Organizational Behavior</a>
+                                    </li>
+                                    <li><a class="dropdown-item" href="/topic/teams-collaboration/">Teams & Collaboration</a>
+                                    </li>
+                                    <li><a class="dropdown-item" href="/topic/communication/">Communication</a>
+                                    </li>
+                                    <li><a class="dropdown-item" href="/topic/culture/">Culture</a>
+                                    </li> 
+                                    <li><a class="dropdown-item" href="#">&nbsp;</a></li>                                                                         
+                                     <br>                           
+                                    <li class="dropdown-header">People & Talent</li>
+                                    <li class="divider"></li>
+                                    </li>
+                                    <li><a class="dropdown-item" href="/topic/talent-management/">Talent Management</a>
+                                    </li>
+                                    <li><a class="dropdown-item" href="/topic/human-resource-management/">Human Resource Management</a>
+                                    </li>
+                                    <li><a class="dropdown-item" href="/topic/employee-wellness/">Employee Wellness</a>
+                                    </li>
+                                    <li><a class="dropdown-item" href="/topic/diversity-equity-inclusion/">Diversity, Equity, & Inclusion</a>
+                                    </li>
+                                    <li><a class="dropdown-item" href="/topic/conflict-resolution/">Conflict Resolution</a>
+                                    </li>
+                                    <li><a class="dropdown-item" href="#">&nbsp;</a></li>  
+                                    <br>
+                                   <li class="dropdown-header">Operations & Supply Chain</li>
+                                    <li class="divider"></li>
+                                    <li><a class="dropdown-item" href="/topic/project-management/">Project Management</a>
+                                    </li>
+                                    <li><a class="dropdown-item" href="/topic/supply-chain-management/">Supply Chain Management</a>
+                                    </li>
+                                    <li><a class="dropdown-item" href="/topic/logistics/">Logistics</a>
+                                    </li>
+                                    <li><a class="dropdown-item" href="/topic/planning-forecasting/">Planning & Forecasting</a>
+                                    </li>
+                                    <li><a class="dropdown-item" href="/topic/quality-management/">Quality Management</a>
+                                    </li>
+                                      <br>                                
+                                </ul>
+                            </li>
+                            <li class="col-md-3">
+                                <ul>
+                                    <li class="dropdown-header">Sustainability, CSR, & Ethics</li>
+                                    <li class="divider"></li>
+                                    <li><a class="dropdown-item" href="/topic/sustainability/">Sustainability</a>
+                                    </li>                                  
+                                    <li><a class="dropdown-item" href="/topic/business-ethics/">Business Ethics</a>
+                                    </li>                                      
+                                    <li><a class="dropdown-item" href="/topic/corporate-social-responsibility/">Corporate Social Responsibility</a>
+                                    </li>
+                                    <li><a class="dropdown-item" href="/topic/climate-change/">Climate Change</a>
+                                    </li>
+                                    <li><a class="dropdown-item" href="/topic/circular-economy/">Circular Economy</a>
+                                    </li>
+                                    <li><a class="dropdown-item" href="/topic/social-impact/">Social Impact</a>
+                                    </li>
+                                    <li><a class="dropdown-item" href="/topic/esg/">ESG</a>
+                                    </li>
+                                    <br>
+                                    <li class="dropdown-header">Global Business</li>
+                                    <li class="divider"></li>
+                                    <li><a class="dropdown-item" href="/topic/globalization/">Globalization</a>
+                                    </li>
+                                    <li><a class="dropdown-item" href="/topic/cross-cultural-issues/">Cross-Cultural Issues</a>
+                                    </li>
+                                    <li><a class="dropdown-item" href="/topic/global-supply-chains/">Global Supply Chains</a>
+                                    </li>
+                                    <li><a class="dropdown-item" href="/topic/international-partnerships/">International Partnerships</a>
+                                    </li>
+                                    <li><a class="dropdown-item" href="/topic/emerging-markets/">Emerging Markets</a>
+                                    </li>
+                                    <li><a class="dropdown-item" href="#">&nbsp;</a></li>   
+                                    <br>
+                                    <li class="dropdown-header">Government & Society</li>
+                                    <li class="divider"></li>
+                                    <li><a class="dropdown-item" href="/topic/government/">Government</a>
+                                    </li>  
+                                    <li><a class="dropdown-item" href="/topic/public-policy/">Public Policy</a>
+                                    </li>     
+                                    <li><a class="dropdown-item" href="/topic/public-interest/">Public Interest</a>
+                                    </li>                                                                                                    
+                                    <li><a class="dropdown-item" href="/topic/regulation/">Regulation</a>
+                                    </li>
+                                    <li><a class="dropdown-item" href="/topic/labor/">Labor</a>
+                                    </li>
+                                    <li><a class="dropdown-item" href="/topic/lobbying/">Lobbying</a>
+                                    </li> 
+                                     <br>                                                            
+                                    <li class="dropdown-header">Industries</li>
+                                    <li class="divider"></li>
+                                    <li><a class="dropdown-item" href="/topic/finance/">Finance</a>
+                                    </li>
+                                    <li><a class="dropdown-item" href="/topic/education/">Education</a>
+                                    </li>
+                                    <li><a class="dropdown-item" href="/topic/healthcare/">Healthcare</a>
+                                    </li>
+                                    <li><a class="dropdown-item" href="/topic/entertainment/">Entertainment</a>
+                                    </li>
+                                    <li><a class="dropdown-item" href="/topic/commodities/">Commodities</a>
+                                    </li>
+                                    <li><a class="dropdown-item" href="/topic/transportation/">Transportation</a>
+                                    </li>                                 
+                                    <br>
+                                </ul>
+                            </li>
+                        </div>
+                    </ul>
+                </li>
+
+
+                <li class="dropdown menu-large nav-item"> <a href="#" class="nav-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Journal &nbsp; <i class="fa fa-angle-down"></i></a>
+                    <ul class="dropdown-menu megamenu">
+                        <div class="row">
+                            <li class="col-md-3">
+                                <div class="row">
+                                    <div class="col-md-10">
+                                    <a href="/browse/issues/68_1/"><img class="img-fluid" style="margin-left: 1.5rem; border-radius: 4px; box-shadow:0 6px 10px 0 rgba(0,0,0,0.1);" src="/assets/images/covers/68_1.png"></a>
+                                    </div>
+                                    <div class="col-md-2">
+                                        &nbsp;
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="col-md-5">
+                                <ul>
+                                    <span style="margin-bottom:0.5rem; margin-left: 1.15rem;" class="badge badge-warning">&nbsp; FALL 2025 &nbsp; </span>
+                                    <!--<span style="font-weight:700; font-size: 0.8rem; color:grey; margin-left:0.6rem;">Volume 67 • Issue 4 </span>-->
+                                    <a href="/browse/issues/68_1/"><h4 style="margin-left: 1.15rem; color: #3f3f3f; font-family: 'IBM Plex Sans Condensed', sans-serif;">Digital Transformation</h4></a>
+                                    <p style="margin-left: 1.15rem; font-weight:500; color: grey;">Our fall issue features contributions on digital transformation, social innovation, board governance, and partnerships</p>
+                                </ul>
+                                <ul>
+            
+                                </ul>
+                                <ul style="margin-left:1.15rem;"><hr></ul>
+                                <ul>
+                                    <span style="margin-bottom:0.5rem; margin-left: 1.15rem;" class="badge badge-primary">&nbsp; NEW &nbsp; </span>
+                                    <a href="/spotlight"><h4 style="margin-left: 1.15rem; color: #3f3f3f; font-family: 'IBM Plex Sans Condensed', sans-serif;">Introducing Spotlight</h4></a>
+                                      <p style="margin-left: 1.15rem; font-weight:500; color: grey;">A new kind of practitioner-focused research designed to complement our traditional In-Depth articles</p>
+                                </ul>
+                                <ul>
+                                    <li><a class="dropdown-item megalink" href="/spotlight/">Learn more <i class="fa fa-arrow-circle-right"></i></a>
+                                    </li><br>
+                                </ul>
+
+                            </li>
+                            <li class="col-md-1"></li>
+
+                            <li class="col-md-3">
+                                <ul>
+                                    <li class="dropdown-header">Browse</li>
+                                    <li class="divider"></li>
+                                    <li><a class="dropdown-item" href="/browse/current/">Current Issue</a>
+                                    </li>
+                                    <li><a class="dropdown-item" href="/browse/issues/">All Issues</a>
+                                    </li>
+                                    <li><a class="dropdown-item" href="/browse/articles/">Latest</a>
+                                    </li>
+                                    <li><a class="dropdown-item" href="/browse/indepth/">In-Depth</a>
+                                    </li>
+                                    <li><a class="dropdown-item" href="/browse/spotlight/">Spotlight</a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </div>
+                    </ul>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="/insights/">Insights</a>
+                </li>
+
+
+            <li class="nav-item">
+                    <a class="nav-link" target="_blank" href="https://cases.haas.berkeley.edu/browse/latest/">Cases</a>
+            </li>
+
+
+
+             <li class="dropdown menu-large nav-item"> <a href="#" class="nav-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Publish &nbsp; <i class="fa fa-angle-down"></i></a>
+                    <ul class="dropdown-menu megamenu">
+                        <div class="row">
+                            <li class="col-md-3">
+                                <ul>
+                                    <a href="/resources/paper-calls"><img class="img-fluid" style="margin-left: 1.5rem; border-radius: 4px; box-shadow:0 6px 10px 0 rgba(0,0,0,0.1);" src="/assets/images/site/print.png"></a>
+                                </ul>
+                            </li>
+
+                           <li class="col-md-3 contentbox" style="margin-left:1rem;">
+                                <ul>
+                                    <span style="margin-bottom:0.5rem;" class="badge badge-info">&nbsp; OPEN &nbsp; </span>
+                                    <a href="/resources/paper-calls/"><h5>Paper Calls</h5></a>
+                                    <p>Explore our open paper calls and submit your research</p>
+                                    <br>
+                                </ul>
+                            </li>
+
+                            <li class="col-md-1"></li>
+
+                            <li class="col-md-2">
+                                <ul>
+                                    <li class="dropdown-header">About</li>
+                                    <li class="divider"></li>
+                                    <li><a class="dropdown-item" href="/about/publication-information/">Publication Information</a>
+                                    </li>
+                                    <li><a class="dropdown-item" href="/about/subscriptions/">Subscriptions</a>
+                                    </li>
+                                    <li><a class="dropdown-item" href="/about/permissions/">Permissions</a>
+                                    </li>
+                                    <li><a class="dropdown-item" href="/about/rankings/">Journal Rankings</a>
+                                    </li>
+                                    <li><a class="dropdown-item" href="/about/best-article-award/">Best Article Award</a>
+                                    </li>                                    
+                                    <li><a class="dropdown-item" href="/contact/">Contact Us</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="col-md-2">
+                                <ul>
+                                    <li class="dropdown-header">Resources</li>
+                                    <li class="divider"></li>
+                                    <li><a class="dropdown-item" href="/resources/access-options/">Access Options</a>
+                                    </li>
+                                    <li><a class="dropdown-item" href="/resources/submit/">Submission Guidelines</a>
+                                    </li>
+                                    <li><a class="dropdown-item" href="/resources/review/">Reviewer Guidelines</a>
+                                    </li>
+                                    <li><a class="dropdown-item" href="/resources/sample-articles/">Sample Articles</a>
+                                    </li>
+                                    <li><a class="dropdown-item" href="/resources/paper-calls/">Paper Calls</a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </div>
+                    </ul>
+                </li>
+
+
+
+            </ul>
+            <!-- End Menu -->
+
+        </div>
+    </div>
+
+
+
+</header>
+
+
+
+<!-- End Menu Navigation
+================================================== -->
+
+
+
+<div class="site-content">
+
+    <div class="container">
+
+
+    <!-- Site Title
+    ================================================== -->
+
+    <div class="mainheading" style="display:none;">
+        <h1 class="sitetitle">California Management Review</h1>
+        <p class="lead">
+             California Management Review is a premier professional management journal for practitioners published at UC Berkeley Haas School of Business.
+        </p>
+    </div>
+
+
+
+
+    <!-- Content
+    ================================================== -->
+    <div class="main-content">
+        </div>
+</div>
+
+
+
+<!-- Page Banner
+================================================== -->
+
+
+<!-- We reopen main-content and container -->
+
+<div class="container">
+
+    <div class="main-content" style="margin-top: -110px;">
+
+
+<!-- Begin Article
+================================================== -->
+
+	<div class="row">
+
+
+
+    <div class="col-md-2 col-sm-3">
+      <div class="row">
+        <div class="col-md-11">
+
+    <!---- CMR Insights Logo --->
+          <div style="background-color:#15284B; margin-top:40px; padding-top:1rem; padding-bottom:0.2rem; text-align:center; border-left: 5px solid; border-color:#FDB515; border-radius: 0px 10px 10px 0px;">
+          <h5><span style="color:#FDB515;"><i class="fa fa-check-square"></i> INSIGHT</span></h5>
+          </div>
+
+
+
+
+    <!---- Page Information --->
+
+
+        </div>
+        <div class="col-md-1">
+          <p>&nbsp;</p>
+        </div>
+      </div>
+    </div>
+
+
+
+
+
+
+		<!-- Post -->
+
+		<div class="col-md-9 col-lg-9 col-sm-9">
+			<div class="mainheading">
+
+                
+                <!-- Post Lead Topic -->
+                <a href="/topic/generative-ai"><span class="contentbox topicheading">Generative AI</span></a>
+                <!-- End Lead Topic -->
+
+                <!-- Post Title -->
+				<h1 class="posttitle">Building a Strategy to Harness ChatGPT in Education</h1>
+        
+
+        
+        
+
+
+        <p>
+        
+        
+          
+              
+              
+                  Jessica Freeman-Wong,
+              
+          
+              
+              
+                  Daisy Munguia,
+              
+          
+              
+              
+                  and Jakki J. Mohr
+              
+          
+        
+        </p>
+
+
+        
+
+			</div>
+
+			<!-- Post Featured Image -->
+			<img class="featured-image img-fluid" src="/assets/images/blog/jaredd-craig-hh4wbgnyltc-unsplash.jpg" alt="Building a Strategy to Harness ChatGPT in Education">
+			<!-- End Featured Image -->
+
+      <!-- Image Attribution -->
+      <p class="post-image-attribution">Image Credit | <a href="https://unsplash.com/photos/HH4WBGNyltc">Jaredd Craig</a></p>
+
+      <!-- Post Description -->
+      <div class="post-description">Higher education must proactively develop a strategy for Generative AI since it's an inevitability.</div>
+      <!-- End Post Description -->
+
+
+      <!-- Post Label -->
+      
+        
+        <span class="post-date" style="text-transform:uppercase; font-weight:500;"><span style="color:#FDB515"><i class="fa fa-check-square"></i> &nbsp; Insight </span> | frontier</span>
+        
+      
+      <!-- End Post Label -->
+
+      <!-- Post Date -->
+          <span class="post-date"><time class="post-date" datetime="2023-08-20">20 Aug 2023</time></span>
+          
+      <!-- End Post Date -->
+
+      <!-- Print PDF Button -->
+
+
+<a href="/assets/documents/pdf/2023-08-building-a-strategy-to-harness-chatgpt-in-education.pdf"><span class="smalltype"> <span style="color:grey;"><i class="fa fa-print"></i> &nbsp; PDF</span></a>
+
+
+
+
+      <!-- End Print PDF Button -->
+
+
+      <!-- Share buttons -->
+      <script type="text/javascript" src="//platform-api.sharethis.com/js/sharethis.js#property=5dbf6c4abb2d99001231ec52&product=inline-share-buttons"></script>
+      <!-- End share buttons -->
+
+      <hr>
+
+			<!-- Post Content -->
+      <!------------------------------------------------------->
+
+
+
+
+
+
+			<div class="article-post">
+
+        
+
+
+        <p>Not unlike the struggles many businesses have with leveraging new technologies, higher education, too, struggles to keep pace with technological change and innovation. Today, the challenge higher education faces is over embracing or banning ChatGPT.</p>
+
+        
+
+        
+        
+
+        <div class="row">
+          <div class="col-md-8">
+            <div class="aside smalltype" style="background:#eeeeee; font-family:'IBM Plex Sans', sans-serif; font-weight:300;">
+              <h5>Related Articles</h5>
+              <p> <p><a href="https://journals.sagepub.com/doi/abs/10.2307/41166448">“The Future Challenges of Business: Rethinking Management Education”</a> by Paul J.H. Schoemaker. (Vol. 50/3) 2008.</p>
+
+<p><a href="https://journals.sagepub.com/doi/abs/10.1177/0008125619867910">“Artificial Intelligence in Human Resources Management: Challenges and a Path Forward”</a> by Prasanna Tambe, Peter Cappelli, &amp; Valery Yakubovich. (Vol. 61/4) 2019.</p>
+<br>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="aside smalltype" style="background:transparent;">
+              <h5>Related Topics</h5>
+                         <!-- Post Categories -->
+                            <div>
+                                
+                                
+                                
+                                <a class="topicheading" style="font-weight:300;" href="/topic/artificial-intelligence">Artificial Intelligence</a><br>
+                                
+                                <a class="topicheading" style="font-weight:300;" href="/topic/agentic-ai">Agentic AI</a><br>
+                                
+                                <a class="topicheading" style="font-weight:300;" href="/topic/education">Education</a><br>
+                                
+                                <a class="topicheading" style="font-weight:300;" href="/topic/innovation">Innovation</a><br>
+                                
+                              </div>
+                    <!-- End Post Categories -->           
+            </div>
+          </div>
+        </div>
+
+
+        
+
+				
+<p>This past spring semester as students experimented with ChatGPT to assist with their coursework, some universities passed bans on the technology due to fears of cheating. Yet, the ability to police the use of ChatGPT and other generative AI tools is perhaps impractical. As of May 2023, ChatGPT had 1.8 billion users.<sup>1</sup> Instead of fearing technology, educators must develop the capability to understand how to leverage the technology in their classrooms.</p>
+
+<p>Here, we enumerate the concerns about ChatGPT in education as well as ways progressive educators are experimenting with it. We then briefly describe the evolution of education to successfully meet the needs of employers and argue that given the workplace of the future will be AI-enabled, educators must adopt that mindset as well. We then apply insights from how businesses effectively harness emerging technology to develop a strategy for educators to effectively deploy ChatGPT in higher education.</p>
+
+<h2 id="generative-ai-and-chatgpt"><strong>Generative AI and ChatGPT</strong></h2>
+
+<p>Generative AI (artificial intelligence) is the umbrella term for a type of AI, trained on vast amounts of data from the internet, that statistically predicts the next most likely sequence of words. One of the most advanced and well-known examples is ChatGPT developed by OpenAI. Referred to as a type of large language model (LLM), ChatGPT automatically generate responses to “prompts,” or natural language inquiries, that users type in to the program, allowing it to generate text that is seemingly coherent and relevant to a given topic—albeit perhaps inaccurate. Other types of generative AI can produce images, speech, and even music.</p>
+
+<h2 id="concerns-about-chatgpt-in-education-and-preliminary-uses"><strong>Concerns About ChatGPT in Education and Preliminary Uses</strong></h2>
+
+<p>Given its power, ChatGPT offers vast potential in education, including writing essays, solving math problems, and writing computer code. Yet, administrators and professors struggle to embrace it for many reasons:</p>
+
+<ul>
+  <li>
+    <p><strong>Concerns about plagiarism and cheating.</strong> Students can use ChatGPT to write essays, answer quizzes, and more. Although efforts to minimize and detect student cheating is not new, using techniques to detect AI writing requires new approaches. Some detection software claims it is able determine whether the assignment was written with ChatGPT with a high degree of accuracy.<sup>2</sup></p>
+  </li>
+  <li>
+    <p><strong>Possible inaccurate information.</strong> When asked to provide the square root of 423,894, ChatGPT confidently gives the wrong answer.<sup>3</sup> Instead of 651.07 (the correct answer), it provides 650.63. In another situation, a professor asked ChatGPT about a made-up term: “cycloidal inverted electromagnon;” ChatGPT wrote a plausible result that was totally bogus–as were the citations to non-existing literature.<sup>4</sup></p>
+  </li>
+  <li>
+    <p><strong>Perpetuate biases.</strong> Based on the way the algorithm works, ChatGPT can inadvertently perpetuate biases that were present in the training data on which it was created. For example, when asked about the history of the printing press, ChatGPT generates a U.S.-centric essay that includes no information about printing presses in Europe or Asia.<sup>5</sup></p>
+  </li>
+  <li>
+    <p><strong>Student privacy and data security.</strong> ChatGPT is elusive about its data privacy policy and can both access any information fed into the platform as well as share data entered into the model with third-parties.<sup>6</sup> ChatGPT collects IP addresses and location information of users, as well as any personal information typed into the chats. Educators and students alike are often unaware of these risks.</p>
+  </li>
+  <li>
+    <p><strong>Diminished collaboration and social engagement.</strong> Some worry that with a heavy reliance on AI in the classroom can lead to diminished social skills, undermining collaboration and human emotional connection that is a key aspect of in-person learning.<sup>7</sup></p>
+  </li>
+  <li>
+    <p><strong>Exacerbate the digital divide.</strong> The digital divide refers to inequalities between students who have ready access to technology and those who don’t, whether due to geography or socioeconomic status. To the extent that universities develop a strategy to effectively harness ChatGPT to facilitate student learning (as discussed below), concerns are that increased reliance on technology such as ChatGPT could perpetuate existing educational inequalities.</p>
+  </li>
+</ul>
+
+<p>A large concern in using ChatGPT is with student learning and comprehension of the topics they are studying. Many disciplines require basic knowledge acquisition in order to develop proficiency (say, anatomy and physiology). And, despite the ready availability of facts from their smart-phones, students still need to be innately familiar with the concepts in their discipline. Some say that these concerns about student learning by relying on ChatGPT are similar to concerns about the calculator—which now is embraced as a standard educational tool. </p>
+
+<p>Perhaps the largest concern is how ChatGPT might undermine student development of critical thinking and problem-solving skills.<sup>8</sup> If students come to rely too heavily on generative AI tools to develop their work, it could undermine not only their ability to develop their own understanding of the topic of study, but could also hinder their abilities to think independently and to develop problem solving skills.</p>
+
+<p>Despite these concerns, tech-savvy, early adopter educators have found intriguing ways to leverage generative AI in the classroom, as the following examples illustrate.</p>
+
+<ul>
+  <li>
+    <p><strong>Learn about misinformation and bias:</strong> While misinformation and bias are primary controversies around generative AI, creative teachers are using it to help students evaluate information. For example, students can learn to critique ChatGPT responses for misinformation and bias. Take the prior example of the U.S.-centric answer about the history of the printing press. By pointing out the problem, the teacher led an in-depth discussion on bias. One user calls this assignment “grade the bot.”<sup>9</sup></p>
+  </li>
+  <li>
+    <p><strong>Strengthen arguments:</strong> Another use of ChatGPT is as a “debate partner” of sorts, allowing students to think through opposing views to strengthen their own arguments.<sup>10</sup> Students can also critique the responses ChatGPT generates, to identify weaknesses or even to fact-check it.<sup>11</sup></p>
+  </li>
+  <li>
+    <p><strong>Provide real-time feedback and assessment:</strong> Students can paste their written work into ChatGPT and ask how it can improve their writing.<sup>12</sup> Some professors encourage students to use it to smooth out awkward first drafts.<sup>13</sup></p>
+  </li>
+  <li>
+    <p><strong>Customize learning:</strong> ChatGPT can customize learning plans for different learning styles. Quizlet, an education technology company, created a feature called Q-Chat using ChatGPT; its app adjusts the difficulty of questions based on a student’s learning style and how well they know the material they’re being quizzed on.</p>
+  </li>
+</ul>
+
+<p>Outside the classroom, professors are using ChatGPT to help them craft learning objectives, generate wrong answers for multiple-choice tests, and more.</p>
+
+<p>Certainly, these uses represent important initial efforts. At the same time, one-off pilots and experiments are not a viable strategy for technology utilization. Learning to leverage AI is a vital skill for the workforce of the future, particularly with regards to how it can augment human capabilities.<sup>14</sup> Hence, the interplay of the education system relative to employment needs offers an important perspective on the role of ChatGPT in education. </p>
+
+<h2 id="evolution-of-education-relative-to-business-needs"><strong>Evolution of Education Relative to Business Needs</strong></h2>
+
+<p>Since its inception, public education in the U.S. has been influenced by the needs of employers. Even in the 1800s, classrooms were designed, in part, to prepare students for the industrial age; factory owners wanted workers who would arrive on time, do what they were told, and work long hours. Hence, the schooling model of sitting in a classroom all day and mastering age-based curriculum was designed to fulfill these factory owners’ needs.<sup>15</sup></p>
+
+<p>In the fifties, business education was “more akin to vocational training than to science,” and criticized for its lack of rigor and scholarly merit.<sup>2</sup>Although changes were made in response to the criticism, those changes were focused more on analytical skills than on “the messy ambiguities of the real world.” More recently, the rise of big data and data analytics spurred another change, leading to a proliferation of programs developing student skills that would meet employer demands in those areas.</p>
+
+<p>Now, the education system must evolve again, this time to address how to usefully incorporate powerful tools like ChatGPT in learning,<sup>17</sup> while ensuring that its use does not detract from the skills and capabilities required for graduates to effectively navigate the volatile, uncertain challenges facing humanity.</p>
+
+<p>We argue that a useful perspective, to inform this challenge and to craft solutions, can be found in understanding how businesses craft strategies for their own successful adoption of emerging technology. Hence, here we build on that idea to inform how educational institutions can learn from business to develop a cohesive strategy for ChatGPT and other generative AI tools.</p>
+
+<h2 id="developing-a-strategy-to-harness-chatgpt-in-education"><strong>Developing a Strategy to Harness ChatGPT in Education</strong></h2>
+
+<p>Just as businesses develop a strategy to harness emerging technologies, so, too, should education systems. We integrate best-practices across multiple resources<sup>18</sup> in how companies develop an AI strategy to develop such a strategy for higher education (see <strong>Figure</strong>).</p>
+
+<p><img src="/assets/images/blog/screen-shot-2023-08-20-at-8.33.49-pm.png" style="box-shadow:none" /></p>
+
+<p>First, educational leaders must articulate a clear vision regarding <em>why</em> educators should embrace rather than ban generative AI tools such as ChatGPT. Business leaders know that early attention to a vision that rallies the team around embracing new technologies plays an outsized role in whether and how employees embrace the new technology. In particular, effective visioning can highlight opportunities to use AI to better equip students for future careers, identify the risks to education if it does not embrace AI, or even state the existential crisis that can arise if educators are unable to keep pace with emerging technology.</p>
+
+<p>Second, much like the role of pilot projects to test-and-learn as companies leverage new technologies, educational leaders can initiate pilot programs in selected programs to systematically explore the potential and pitfalls of ChatGPT. These pilots can help identify best practices, evaluate challenges, and refine implementation strategies. Insights gained from carefully selected pilot programs can provide guidance on where and how AI integration offers value. The assessment regarding the impact of AI on student learning and key outcomes can inform the value proposition and ideas on scaling its adoption across the education system. Based on these pilot projects, institutions can then develop a strategy to scale its use across the curriculum and more.</p>
+
+<p>Third, as in business, fostering a culture of innovation is key to the institutional ability to experiment and embrace possible opportunities to use generative AI across the curriculum. Culture, the values and beliefs that are shared across the institution, is shaped by leaders’ behaviors and communication–and is reinforced by processes and reward systems. Research implicates culture as the most significant issue in organizational adoption of technology. Developing an agile, experimental, adaptable mindset is part-and-parcel of a culture of innovation, and is more important than ever in education today.<sup>19</sup></p>
+
+<p>Fourth, to diffuse generative AI in education requires being mindful of the ecosystem in which it will be used, including accreditation systems, grading and testing systems, teacher evaluations, and more. Fortunately, the COVID-19 pandemic resulted in a renewed effort for universities to leverage technology for learning. Likewise, adequate funding and resources must be allocated to support AI in education, including investments in infrastructure, AI tools and technologies, and training (below). Partnerships with government agencies, industry leaders, and technology companies can facilitate knowledge sharing, research collaborations, and the development of AI tools tailored for education.</p>
+
+<p>Fifth, as in business, training for the front-line users is key. Enhancing teachers’ AI competencies by providing them with the necessary understanding of AI and its potential applications in education is vital. Professional development should cover topics like prompt engineering, sources of bias and misinformation, and more. Support should be extended to developing AI-focused curricula and instructional resources, enabling teachers to integrate AI into their teaching practices effectively. Continuous and ongoing support, technical assistance, and monitoring are required for effective implementation. Help desks, professional learning communities, and feedback mechanisms can help share best practices. For example, sharing ways ChatGPT can save time in preparing course materials, assisting in grading and providing immediate feedback to students, and enabling educators to create customized lesson plans for students with diverse needs can alleviate concerns that some educators may have.</p>
+
+<p>Throughout the process, leaders must be mindful of data privacy, security, and ethical considerations. For example, equitable access to AI tools and resources is required to ensure that all students may benefit from AI-enabled education. Moreover, emerging technologies are rife with ethical quandaries and unintended consequences;<sup>20</sup>effectively addressing these concerns requires proactive identification not just of the ethical issues that arise but also how to strategically manage those issues.</p>
+
+<p>Some argue that to the extent that ChatGPT is a disruptive force in education, wholesale changes in the very structure and design of the institution may be required. However, given the institutional factors that make such wholesale change difficult, we believe that this strategic approach offers a viable path forward. By adopting a strategic approach to ChatGPT, educational leaders can foster a system that empowers educators in order to enhance teaching and learning experiences, and to prepare students for the future.</p>
+
+<h2 id="conclusion"><strong>Conclusion</strong></h2>
+
+<p>The introduction of ChatGPT, an AI-powered chatbot, has sparked discussions and concerns about its potential impact on education. Rather than viewing AI as a threat to education, educators instead should proactively develop a strategy to productively harness it. Borrowing from business regarding strategic adoption of emerging technology is a logical approach. Embracing technology is required to ensure the education system remains relevant and effective in preparing students for the demands of the modern world.</p>
+
+<p> </p>
+
+<h2 id="endnotes"><strong>Endnotes</strong></h2>
+
+<ol>
+  <li>
+    <p>Ruby, Daniel (2023). “57+ ChatGPT Statistics for 2023 (New Data + GPT-4 Facts).” <em>Demand Sage</em>, May 18, <a href="https://www.demandsage.com/chatgpt-statistics/">Demand Sage</a>.</p>
+  </li>
+  <li>
+    <p>McMurtrie, Beth (2023), “ChatGPT Is Everywhere: Love it or hate it, academics can’t ignore the already pervasive technology,” <em>Chronicle of Higher Education</em>, March 6, <a href="https://www.chronicle.com/article/chatgpt-is-already-upending-campus-practices-colleges-are-rushing-to-respond">Chronicle of Higher Education</a>.</p>
+  </li>
+  <li>
+    <p><a href="https://analyticsindiamag.com/author/tasmia-ansari/">Ansari,</a> Tasmia (2022). “Freaky ChatGPT Fails That Caught Our Eyes.” <em>Analytics India Magazine</em>, December 7, <a href="https://analyticsindiamag.com/freaky-chatgpt-fails-that-caught-our-eyes/">Analytics India Magazine</a>.</p>
+  </li>
+  <li>
+    <p>Wingard, Jason (2023), “ChatGPT: A Threat to Higher Education?” <em>Forbes</em>, January 10, <a href="https://www.forbes.com/sites/jasonwingard/2023/01/10/chatgpt-a-threat-to-higher-education/?sh=2cb1a20c1e76">Forbes</a>.</p>
+  </li>
+  <li>
+    <p>Haven, Will Douglas (2023). “ChatGPT: Change, Not Destroy, Education.” <em>MIT Technology Review</em>, April 6, <a href="https://www.technologyreview.com/2023/04/06/1071059/chatgpt-change-not-destroy-education-openai/">MIT Technology Review</a>.</p>
+  </li>
+  <li>
+    <p>Pal, Anagh (2023). “Data you share with ChatGPT is not private: So be careful with what you reveal.” <em>Business Insider India</em>, March 31. <a href="https://www.businessinsider.in/tech/news/data-you-share-with-chatgpt-is-not-private-so-be-careful-with-what-you-reveal/articleshow/99116335.cms">Business Insider</a>.</p>
+  </li>
+  <li>
+    <p>Shonubi, Olufemi (2023) “AI In The Classroom: Pros, Cons And the Role of EdTech Companies.” Forbes, February 21. <a href="https://www.forbes.com/sites/theyec/2023/02/21/ai-in-the-classroom-pros-cons-and-the-role-of-edtech-companies/?sh=4d9099cffeb4">Forbes</a>.</p>
+  </li>
+  <li>
+    <p>Alphonso, Geoffrey (2023). “Generative AI: Education in the Age of Innovation.” <em>Forbes</em>, May 3, <a href="https://www.forbes.com/sites/forbestechcouncil/2023/03/03/generative-ai-education-in-the-age-of-innovation/?sh=1f0c9c544eca">Forbes</a>.</p>
+  </li>
+  <li>
+    <p>Miller, Matt (2022). “Ditch That Textbook - Artificial Intelligence in Education.” <em>Ditch That Textbook</em>, December 17,<a href="https://www.ditchthattextbook.com/ai#t-1671292150924">Ditch That Textbook</a>.</p>
+  </li>
+  <li>
+    <p>Roose, Kevin (2023). “AI Chatbots like ChatGPT Are Transforming Schools and Supporting Teachers.” <em>The New York Times</em>, January 12,  <a href="https://www.nytimes.com/2023/01/12/technology/chatgpt-schools-teachers.html">NY Times</a>.</p>
+  </li>
+  <li>
+    <p>Wingard, op cite.</p>
+  </li>
+  <li>
+    <p>Miller, Matt. op cit.</p>
+  </li>
+  <li>
+    <p>McMurtrie, op cit.</p>
+  </li>
+  <li>
+    <p>Davenport, Thomas and Steven Miller (2022), <em>Working with AI: Real Stories of Human-Machine Collaboration</em>, the MIT Press. Penn, Christopher (2021), “Preparing your Career for AI,” in <em>AI for Marketers: An Introduction &amp; Primer</em>, Third Edition, pp. 166-194.</p>
+  </li>
+  <li>
+    <p>Schrager, Allison (2018), “The Modern Education System was Designed to teach future factory workers to be ‘punctual, docile, and sober,’” Quartz.com, June 19, <a href="https://qz.com/1314814/universal-education-was-first-promoted-by-industrialists-who-wanted-docile-factory-workers">Quartz</a>.</p>
+  </li>
+  <li>
+    <p>Schoemaker, Paul JH. “The future challenges of business: Rethinking management education.” <em>California Management Review</em> 50, no. 3 (2008): 119-139.</p>
+  </li>
+  <li>
+    <p>Scott, Inara (2023), “Yes, We are in a (ChatGPT) Crisis,” <em>Inside Higher Ed</em>, April 18, <a href="https://www.insidehighered.com/opinion/views/2023/04/18/yes-we-are-chatgpt-crisis">Inside Higher Ed</a>.</p>
+  </li>
+  <li>
+    <p>Fountaine, T., McCarthy, B., &amp; Saleh, T. (2019). Building the AI-Powered Organization. Technology isn’t the biggest challenge, Culture is. <em>Harvard Business Review</em>, 97(4), 62-+; McKinsey.com (2022), The data-driven enterprise of 2025. <a href="https://www.mckinsey.com/capabilities/quantumblack/our-insights/the-data-driven-enterprise-of-2025">McKinsey</a>; Ransbotham, Sam, Francois Candelon, David Kiron, Burt LaFountain, and Shervin Khodabandeh (2021), “The Cultural Benefits of Artificial Intelligence in the Enterprise,” <em>MIT Sloan Management Review</em> and Boston Consulting Group, November 2021; Oliver Fleming, Tim Fountaine, Nicolaus Henke, and Tamim Saleh (2018), “Ten Red Flags Signaling your Analytics Program Will Fail,” McKinsey.com (May 14). <a href="https://www.mckinsey.com/capabilities/quantumblack/our-insights/ten-red-flags-signaling-your-analytics-program-will-fail">McKinsey</a>; Chiu, Michael, “Generative AI Is Here: How Tools Like ChatGPT Could Change Your Business.” McKinsey &amp; Company, 20 Dec. 2022, <a href="https://www.mckinsey.com/capabilities/quantumblack/our-insights/generative-ai-is-here-how-tools-like-chatgpt-could-change-your-business">McKinsey</a>. Philip Budden and Fiona Murray (2022), Strategically Engaging With Innovation Ecosystems, <em>MIT Sloan Management Review</em>, July 20; Lang, Nikolau, Konrad von Szczepanski, and Charline Wurzer (2019), “The Emerging Art of Ecosystem Management,” Boston Consulting Group; Ransbotham, Sam, Francois Candelon, David Kiron, Burt LaFountain, and Shervin Khodabandeh (2021), “The Cultural Benefits of Artificial Intelligence in the Enterprise,” <em>MIT Sloan Management Review</em> and Boston Consulting Group, November 2021; Knight, Rebecca (2015), “Convincing Skeptical Employees to Adopt New Technology, <em>Harvard Business Review</em> (March).</p>
+  </li>
+  <li>
+    <p>Wagner, Tony. Most Likely to Succeed: Preparing Our Kids for the Innovation Era. New York, NY: Scribner, 2015.</p>
+  </li>
+  <li>
+    <p>Blackman, Reid, (2023), “How to Avoid the Ethnical Nightmares of Emerging Technology,” <em>Harvard Business Review</em>, May 9.</p>
+  </li>
+</ol>
+
+
+
+
+
+                    <!-- Post Tags -->
+                    
+                    &nbsp;
+                    
+                    <!-- End Tags -->
+
+
+
+                <div class="clearfix"></div>
+			</div>
+
+
+
+      <!-- Alt Layout for Executive Summaries -->
+      
+      <!-- End Alt Layout for Executive Summaries -->
+
+
+
+            <br>
+
+<!-- Author Box site.data.profiles.authors -->
+
+
+<hr>
+
+
+
+
+
+
+
+
+<div class="row post-top-meta">
+<div class="col-md-2">
+<img class="author-thumb" src="/assets/images/avatar/jessica-freeman-wong.jpg?s=250&d=mm&r=x" alt="Jessica Freeman-Wong">
+</div>
+<div class="col-md-10">
+<a target="_blank" class="link-dark" href="www.cgu.edu">Jessica Freeman-Wong</a><a target="_blank" href="https://www.linkedin.com/in/jessica-pei-wong/" class="btn follow">Follow</a>
+<span class="author-description">Jessica Freeman-Wong oversees Information Systems for FlyCoin, a crypto-based travel rewards start-up and serves as Executive Director of Northwest Neighbors of Pasadena, a non-profit dedicated to community/youth development. Her MBA includes concentrations in entrepreneurship and leadership.</span>
+</div>
+</div>
+
+
+<div class="row post-top-meta">
+<div class="col-md-2">
+<img class="author-thumb" src="/assets/images/avatar/daisy-munguia-flores.jpg?s=250&d=mm&r=x" alt="Daisy Munguia">
+</div>
+<div class="col-md-10">
+<a target="_blank" class="link-dark" href="www.cgu.edu">Daisy Munguia</a><a target="_blank" href="https://www.twitter.com/DaisyMunguia8" class="btn follow">Follow</a>
+<span class="author-description">Daisy Munguia, a social entrepreneur with over 10 years of experience, is Associate Director for Share Our Strength's No Kid Hungry campaign. Previously, Daisy was the Regional Director for Rocket Learning, a national educational service provider offering programs and digital curriculum to lower-income communities.</span>
+</div>
+</div>
+
+
+<div class="row post-top-meta">
+<div class="col-md-2">
+<img class="author-thumb" src="/assets/images/avatar/jakki-mohr.jpg?s=250&d=mm&r=x" alt="Jakki J. Mohr">
+</div>
+<div class="col-md-10">
+<a target="_blank" class="link-dark" href="https://www.umt.edu/business-faculty-staff/directory/retired.php?ID=1912">Jakki J. Mohr</a><a target="_blank" href="https://www.linkedin.com/in/jakkimohr/" class="btn follow">Follow</a>
+<span class="author-description">Jakki Mohr, Ph.D., Regents Professor of Marketing, has devoted the past 10 years to research on the interface of business and nature, with a particular emphasis on innovative approaches to inspire and transform business strategy to authentically address environmental sustainability.</span>
+</div>
+</div>
+
+
+
+
+
+
+
+            <!-- Prev/Next -->
+            <div class="row PageNavigation mt-4 prevnextlinks">
+              
+                <div class="col-md-6 rightborder pl-0">
+                    <a class="thepostlink" href="/2023/08/a-playbook-to-anticipate-and-prevent-disasters/"><span style="color:#8a8a8a; font-size: 0.8rem;">&laquo; PREVIOUS </span><br> A Playbook to Anticipate and Prevent Disasters</a>
+                </div>
+              
+              
+                <div class="col-md-6 text-right pr-0">
+                    <a class="thepostlink" href="/2023/08/generational-divides-the-dos-and-donts-of-generational-labels/"><span style="color:#8a8a8a; font-size: 0.8rem;">NEXT &raquo;</span><br> Generational Divides: The Do's and Don'ts of Generational Labels </a>
+                </div>
+              
+            </div>
+            <!-- End Prev/Next -->
+
+                <br><br>
+
+
+
+
+<div class="recommended-posts row">
+
+  
+  
+  
+
+<div class="col-sm-12 col-md-6 col-lg-6 wrapthumbnail">
+  <a href="/2026/01/how-to-scale-the-black-box-realizing-generative-ai-s-business-potential/">
+    
+      
+      <div class="thumbnail" style="background-image:url(/assets/images/blog/2026-01-schmitt.jpg);"></div>
+      
+    
+  </a>
+
+    <div class="contentbox">
+      <a href="/topic/project-management/"><span class="topicheading">Project Management</span></a>
+      <div><a href="/2026/01/how-to-scale-the-black-box-realizing-generative-ai-s-business-potential/"><h5>How to Scale the Black Box: Realizing Generative AI’s Business Potential</h5></a></div>
+      <div class="smalltype">Instead of resisting Gen AI's probabilistic nature, turn the black...</div>
+      
+    <span><img class="post-icon" src="/assets/images/logos/insight-color.svg"></span>
+    <span class="post-date" style="text-transform:uppercase; font-weight:500; color:rgb(143, 143, 143);">Insight</span>
+
+
+      <span class="post-date">                            
+                            
+                              
+                                  
+                                  
+                                      Kevin Schmitt et al. &nbsp;
+                                  
+                              
+                                  
+                              
+                            
+ </span>
+    </div>
+    
+
+</div>
+
+
+
+
+
+
+      
+
+
+
+
+
+    
+  
+  
+
+<div class="col-sm-12 col-md-6 col-lg-6 wrapthumbnail">
+  <a href="/2026/01/how-to-harness-the-potential-of-bioinspired-innovation/">
+    
+      
+      <div class="thumbnail" style="background-image:url(/assets/images/blog/2026-01-eapen.jpg);"></div>
+      
+    
+  </a>
+
+    <div class="contentbox">
+      <a href="/topic/innovation/"><span class="topicheading">Innovation</span></a>
+      <div><a href="/2026/01/how-to-harness-the-potential-of-bioinspired-innovation/"><h5>How to Harness the Potential of Bioinspired Innovation</h5></a></div>
+      <div class="smalltype">Nature's attributes can inspire solutions to a wide range of...</div>
+      
+    <span><img class="post-icon" src="/assets/images/logos/insight-color.svg"></span>
+    <span class="post-date" style="text-transform:uppercase; font-weight:500; color:rgb(143, 143, 143);">Insight</span>
+
+
+      <span class="post-date">                            
+                            
+                              
+                                  
+                                  
+                                      Vijay Govindarajan et al. &nbsp;
+                                  
+                              
+                                  
+                              
+                                  
+                              
+                            
+ </span>
+    </div>
+    
+
+</div>
+
+
+
+
+
+
+      
+        
+
+</div>
+<br><br>
+
+
+          <!--Begin Comments
+            ==================================================
+
+            <section>
+            <div id="comments">
+                <section class="disqus">
+    <div id="disqus_thread"></div>
+    <script type="text/javascript">
+        var disqus_shortname = 'california-management-review'; 
+        var disqus_developer = 0;
+        (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = window.location.protocol + '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</section>
+
+            </div>
+            </section>
+        -->
+
+
+
+		</div>
+		<!-- End Post -->
+
+        <!-- Right Sidebar 
+        <div class="col-md-3 col-lg-3">
+          <div class="row">
+            <div class="col-md-2 col-lg-2">
+              &nbsp;
+            </div>
+            <div class="col-md-10 col-lg-10">
+              <div class="sidebar-right" style="margin-top:2rem;">
+                <div class="sidebar">
+
+    
+<div class="aside" style="background:transparent;">
+  <h5>Current Issue</h5>
+   <a href="/browse/current/"><img class="img-fluid" style="border-radius: 4px; box-shadow:0 6px 10px 0 rgba(0,0,0,0.1);" src="/assets/images/covers/68_1.png" alt="Fall 2025 | Volume 68 Issue 1" /></a><br><br>
+    <span style="text-transform:uppercase;" class="badge badge-fall">&nbsp;Fall 2025 &nbsp; </span>
+    <p style="font-weight:500; font-family:'IBM Plex Sans Condensed'; font-size: 16px;">Digital Transformation</p>
+    <div class="article-main"><a class="arrowlink" style="font-size:12px; margin-top:-3rem;" href="/browse/current/">Browse issue <i class="fa fa-arrow-circle-right"></i></a></div>
+</div>
+
+
+    
+
+    
+              <div class="aside" style="background:transparent;">
+
+  <a href="/browse/latest/articles/"><h5>Recent Articles</h5></a>
+
+<div>
+
+
+
+
+<hr><p><strong><a href="/2025/11/68-1-technical-debt-is-killing-digital-transformation-but-there-is-a-way-out/">Technical Debt Is Killing Digital Transformation, But There Is a Way Out</a></strong></p>
+
+
+
+<hr><p><strong><a href="/2025/11/68-1-scaling-strategies-for-industrial-small-tech-firms-exploring-the-market-scaling-process-barriers-and-outcomes/">Scaling Strategies for Industrial Small Tech Firms: Exploring the Market Scaling Process, Barriers, and Outcomes</a></strong></p>
+
+
+
+<hr><p><strong><a href="/2025/11/68-1-pathways-to-successful-startup-corporate-partnerships/">Pathways to Successful Startup-Corporate Partnerships</a></strong></p>
+
+
+
+<hr><p><strong><a href="/2025/11/68-1-organizing-open-social-innovation-for-grand-challenges-unlocking-the-potential-of-open-spaces/">Organizing Open Social Innovation for Grand Challenges: Unlocking the Potential of Open Spaces</a></strong></p>
+
+
+
+<div class="article-main"><a class="arrowlink" style="font-size:12px;" href="/browse/articles/">See more <i class="fa fa-arrow-circle-right"></i></a></div>
+</div>
+
+</div>
+
+    
+
+
+
+</div>
+
+              </div>
+
+
+
+
+            </div>
+          </div>
+        </div>
+
+      -->
+
+	</div>
+
+<!-- End Article
+================================================== -->
+
+    </div>
+
+    </div> <!-- /.container -->
+
+
+    <!-- Before Footer
+    ================================================== -->
+    <div class="beforefooter">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8">
+                    <h3>California Management Review</h3>
+                    <!--<p style="font-weight:500;">Berkeley-Haas's Premier Management Journal for Academics and Professionals</p>-->
+                    <p>Published at Berkeley Haas for more than sixty years, California Management Review seeks to share knowledge that challenges convention and shows a better way of doing business.</p>
+                    <div class="article-main"><a class="arrowlink" href="/about/publication-information/">Learn more <i class="fa fa-arrow-circle-right"></i></a></div>
+                </div>
+
+
+                <div class="col-md-4 text-right footersocial">
+                    <h5>Follow Us</h5>
+                    <a href="https://www.facebook.com/pages/California-Management-Review/158692584156353"><i class="fa fa-facebook" style="color:#3b5998"></i></a>
+                    <a href="https://twitter.com/CMR_UCBerkeley"><i class="fa fa-twitter" style="color:black"></i></a>
+                    <a href="https://www.youtube.com/channel/UCKXvPGqxAlIFgkttRSTEQAA"><i class="fa fa-youtube-play" style="color:#c4302b"></i></a>
+                    <a href="https://www.linkedin.com/company/california-management-review"><i class="fa fa-linkedin" style="color:#0077b5"></i></a>
+                    <a type="application/rss+xml" href="/feed.xml"><i class="fa fa-rss" style="color:#ee802f"></i></a>
+
+                <div class="article-main" style="float:right;">
+                    <a href="/signup.html" role="button" class="btn">Join our mailing list</a>
+                </div>
+
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Begin Footer
+    ================================================== -->
+    <footer class="footer">
+
+        <div class="container">
+
+            <div class="row">
+                <div class="col-sm-3">
+                <div class="footer-widget">
+                <a href="https://haas.berkeley.edu">
+                <img src="/assets/images/logos/berkeley-haas-logo.svg"></a>
+                <p>Haas School of Business<br>
+                University of California, Berkeley</p>
+
+                <br>
+
+                <p class="footer-copyright">California Management Review<br>
+                F465 Berkeley Haas School of Business<br>
+				2220 Piedmont Ave. Berkeley, CA 94720-1900<br>
+				(510) 725-7826 |
+				<a href="mailto:cmr@haas.berkeley.edu">cmr@haas.berkeley.edu</a><br><br>
+                <span style="font-size:0.8em;">Copyright © 2026 UC Regents | <a target="blank" href="http://www.berkeley.edu">UC Berkeley</a> | <a target="blank" href="http://hts.haas.berkeley.edu/privacy">Privacy Policy</a></span></p>
+
+
+                </div>
+                </div>
+
+
+                <div class="col-sm-1">
+                <div class="footer-widget">
+                </div>
+                </div>
+
+
+
+
+                <div class="col-sm-3">
+                <div class="footer-widget">
+                <h5 class="title">About</h5>
+                <ul>
+                <li><a href="/about/publication-information/">Publication Information</a></li>
+                <li><a href="/about/subscriptions/">Subscriptions</a></li>
+                <li><a href="/about/permissions/">Permissions</a></li>
+                <li><a href="/about/advertising/">Advertising</a></li>
+                <li><a href="/about/rankings/">Journal Rankings</a></li>
+                <li><a href="/about/best-article-award/">Best Article Award</a></li>
+                <li><a href="/about/press/">Press Releases</a></li>
+                </ul>
+                </div>
+                </div>
+
+
+                <div class="col-sm-3">
+                <div class="footer-widget">
+                <h5 class="title">Resources</h5>
+                <ul>
+                <li><a href="/resources/access-options/">Access Options</a></li>
+                <li><a href="/resources/submit/">Submission Guidelines</a></li>
+                <li><a href="/resources/review/">Reviewer Guidelines</a></li>
+                <li><a href="/resources/sample-articles/">Sample Articles</a></li>
+                <li><a href="/resources/paper-calls/">Paper Calls</a></li>
+                <li><a href="/contact">Contact Us</a></li>
+                <li><a target="_blank" href="https://mc.manuscriptcentral.com/uc-cmr">Submit &amp; Review &nbsp; <i class="fa fa-external-link"></i></a></li>
+                </ul>
+                </div>
+                </div>
+
+
+               <div class="col-sm-2">
+                <div class="footer-widget">
+                <h5 class="title">Browse</h5>
+                <ul>
+                <li><a href="/browse/current/">Current Issue</a></li>
+                <li><a href="/browse/issues/">All Issues</a></li>
+                <li><a href="/browse/articles/">Articles</a></li>
+                <li><a href="/insights/">Insights</a></li>
+                <li><a target="_blank" href="https://cases.haas.berkeley.edu">Cases &nbsp; <i class="fa fa-external-link"></i></a></li>
+                </ul>
+                </div>
+                </div>
+
+
+
+            </div>
+
+
+
+        </div>
+
+    </footer>
+    <!-- End Footer
+    ================================================== -->
+
+
+</div> <!-- /.site-content>
+
+<!- JavaScript
+================================================== -->
+
+
+<script src="/assets/js/jquery.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+
+<script src="/assets/js/ie10-viewport-bug-workaround.js"></script>
+
+<script type='text/javascript' src='/assets/js/masonry.pkgd.min.js'></script>
+
+<script src="/assets/js/theme.js"></script>
+
+<script src="/assets/js/printThis.js"></script>
+
+
+</body>
+
+</html>

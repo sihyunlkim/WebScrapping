@@ -1,0 +1,420 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>Talmudical Seminary Oholei Torah</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+
+/* ===== Reset ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ===== Global ===== */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background: #f4f6f9;
+    color: #333;
+}
+
+/* ===== Container ===== */
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: auto;
+}
+
+/* ===== HEADER ===== */
+.site-header {
+    background: linear-gradient(135deg, #0b2e59, #123d7a);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+}
+
+.header-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 0;
+}
+
+.logo img {
+    height: 65px;
+    width: auto;
+}
+
+/* Navigation */
+.nav-menu {
+    display: flex;
+    gap: 25px;
+}
+
+.nav-menu a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 15px;
+    font-weight: 500;
+    transition: 0.3s ease;
+}
+
+.nav-menu a:hover {
+    color: #f4c430;
+}
+
+/* Donate Button */
+.btn-donate {
+    background: #f4c430;
+    color: #0b2e59 !important;
+    padding: 8px 16px;
+    border-radius: 6px;
+    font-weight: bold;
+}
+
+/* Mobile Menu Button */
+.menu-toggle {
+    display: none;
+    font-size: 28px;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+/* ===== HERO ===== */
+.hero {
+    width: 100%;
+    overflow: hidden;
+}
+
+.hero img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* ===== SECTIONS ===== */
+section {
+    background: white;
+    margin: 40px auto;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+    max-width: 1100px;
+}
+
+h2 {
+    margin-bottom: 20px;
+    color: #0b2e59;
+}
+
+p {
+    margin-bottom: 12px;
+}
+
+/* ===== FOOTER ===== */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #0b2e59;
+    color: white;
+    margin-top: 40px;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 900px) {
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .nav-menu {
+        position: absolute;
+        top: 80px;
+        right: 0;
+        background: linear-gradient(135deg, #0b2e59, #123d7a);
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        display: none;
+        padding: 20px 0;
+    }
+
+    .nav-menu.active {
+        display: flex;
+    }
+
+    .nav-menu a {
+        padding: 12px 0;
+        width: 100%;
+        text-align: center;
+        border-top: 1px solid rgba(255,255,255,0.15);
+    }
+
+    .header-inner {
+        padding: 15px;
+    }
+}
+.reg{
+}
+
+.top-banner {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: linear-gradient(90deg, #f4c430, #ffcc00, #f4c430);
+    background-size: 200% auto;
+    animation: shine 6s linear infinite;
+    text-align: center;
+    padding: 14px 20px;
+    font-size: 16px;
+    font-weight: 600;
+    z-index: 3000;
+}
+
+.top-banner a {
+    color: #0b2e59;
+    text-decoration: none;
+    display: block;
+}
+
+/* Animation */
+@keyframes shine {
+    to {
+        background-position: 200% center;
+    }
+}
+
+.top-banner a:hover {
+    letter-spacing: 0.5px;
+}
+
+/* ===== Registration Banner Under Hero ===== */
+
+.registration-banner {
+    background: linear-gradient(135deg, #f4c430, #ffdd66);
+    text-align: center;
+    padding: 18px 15px;
+    font-size: 18px;
+    font-weight: 600;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+}
+
+.registration-banner a {
+    color: #0b2e59;
+    text-decoration: none;
+    display: inline-block;
+    transition: all 0.3s ease;
+}
+
+.registration-banner a:hover {
+    transform: scale(1.05);
+    text-decoration: underline;
+}
+
+
+</style>
+</head>
+
+<body>
+<!--
+<div class="top-banner">
+    <a href="https://tsot.edu/Registration.php">
+        Registration and Applications for 2026 – 2027 are now open – Click Here
+    </a>
+</div>
+-->
+<header class="site-header">
+    <div class="container header-inner">
+
+        <div class="logo">
+            <a href="index.php"> <img src="images/Logo.png" alt="TSOT Logo"></a>
+        </div>
+
+        <button class="menu-toggle" id="mobile-menu">☰</button>
+
+        <nav class="nav-menu" id="nav-menu">
+            <a href="index.php">Home</a>
+            <a href="Registration.php">Registration</a>
+			<a href="transcript.php">Transcript</a>
+            <a href="StudentInfo.php">Student Info</a>
+            <a href="Links.php">Links</a>
+            <a href="Publications.php">Publications</a>
+            <a href="Forms.php">Forms</a>
+            <a href="donate.php" class="btn-donate">Donate</a>
+           
+        </nav>
+
+    </div>
+</header>	
+
+
+<section>
+<section>
+<h2>Student Information and Disclosures</H2>
+
+
+
+<div class="entry-content">
+<p><p><a href="pdf/Ability-to-Benefit-Provisions.pdf" target="_blank"> Ability to Benefit Provisions</a><br />
+<p><p><a href="pdf/Academic-Year-Definition.pdf" target="_blank"> Academic Year Definition</a><br />
+<p><p><a href="pdf/Admissions-Policy-and-Procedures.pdf" target="_blank"> Admissions Policy and Procedures</a><br />
+<p><p><a href="pdf/Annual-Security-and-Fire-Safety-Report.pdf" target="_blank"> Annual Security Report</a><br />
+<p><p><a href="pdf/Anti-Hazing-Policy.pdf" target="_blank"> Anti-Hazing Policy</a><br />
+<p><p><a href="pdf/Attendance-Policy.pdf" target="_blank"> Attendance Policy</a><br />
+<p><p><a href="pdf/Availability-of-Full-Time-Employee.pdf" target="_blank"> Availability of Full Time Employee</a><br />
+<p><p><a href="pdf/Availability-of-GED-Program.pdf" target="_blank"> Availability of GED Program</a><br />
+<p><p><a href="pdf/Biennial-Review-of-Drug-and-Alcohol-Abuse-Prevention-Program.pdf" target="_blank"> Biennial Report</a><br />
+<p><p><a href="pdf/Code-of-Conduct-Loans.pdf" target="_blank"> Code of Conduct - Loans</a><br />
+<p><p><a href="pdf/Checking-the-Validity-of-a-High-School-Diploma.pdf" target="_blank"> Checking the Validity of a High School Diploma</a><br />
+<p><p><a href="pdf/Complaints-Policy.pdf" target="_blank"> Complaint Policy</a><br />
+<p><p><a href="pdf/Copyright-Infringement-Policy.pdf" target="_blank"> Copyright Infringement Policy</a><br />
+<p><a href="pdf/Credit-Balance-Procedures.pdf" target="_blank"> Credit Balance Procedures</a><br />
+<p><a href="pdf/Disability-Services.pdf" target="_blank"> Disability Services Policy</a><br />
+<p><a href="pdf/Drug-and-Alcohol-Abuse-Prevention-Policy.pdf" target="_blank"> Drug and Alcohol Abuse Prevention Policy</a><br />
+<p><a href="pdf/Family-Educational-Records-Privacy-Act-(FERPA).pdf" target="_blank"> Family Educational Records Privacy Act (FERPA)</a><br />
+<p><a href="pdf/Financial-Aid-Handbook.pdf" target="_blank"> Financial Aid Handbook</a><br />
+<!--<p><a href="pdf/Financial-Aid-Procedures-Manual.pdf" target="_blank"> Financial Aid Procedures Manual</a><br />
+<p><a href="pdf/Information-Security-Procedures.pdf" target="_blank"> Information Security Procedures</a><br />-->
+<p><a href="pdf/Leave-of-Absence-Policy.pdf" target="_blank"> Leave of Absence Policy</a><br />
+<!--<p><a href="pdf/Misrepresentation-Policy.pdf" target="_blank"> Misrepresentation Policy</a><br />
+<p><a href="pdf/Notice-of-Federal-Financial-Aid-Penalties-for-Drug-Law-Violations.pdf" target="_blank"> Notice of Federal Financial Aid Penalties for Drug Law Violations</a><br />-->
+<p><a href="pdf/Professional-Judgment-Procedure" target="_blank"> Professional Judgment Procedure</a><br />
+<p><a href="pdf/Incentive-Compensation-Policy.pdf" target="_blank"> Incentive Compensation Policy</a><br />
+<p><p><a href="pdf/Refund-Withdrawal-and-Return-to-Title-IV.pdf" target="_blank"> Refund, Withdrawal, and Return to Title IV </a><br />
+<p><a href="pdf/Satisfactory-Academic-Progress.pdf" target="_blank"> Satisfactory Academic Progress Policy (SAP)</a><br />
+<p><a href="pdf/Student-Right-to-Know.pdf" target="_blank">Student Right to Know</a><br />
+<p><a href="pdf/Textbook-Information.pdf" target="_blank"> Textbook Information</a><br />
+<p><a href="pdf/Title-IX-Policies-and-Procedures.pdf" target="_blank">Title IX Policies and Procedures</a><br />
+<p><p><a href="pdf/Transfer-Credit-Policy.pdf" target="_blank"> Transfer of Credit Policy</a><br />
+<p><a href="pdf/Cost-of-Attendance.pdf" target="_blank"> Tuition/Fees/Cost of Attendance</a><br />
+<p><a href="pdf/Vaccination-Policy.pdf" target="_blank"> Vaccination Policy</a><br />
+<!--<p><a href="pdf/Verification-of-High-School-Documentation.pdf" target="_blank"> Verification of High School Documentation </a><br />-->
+<p><a href="pdf/Verification-Procedures.pdf" target="_blank"> Verification Procedures</a><br />
+<!--<p><a href="pdf/Verification-Updates-Corrections-and-Student-Fraud-Referrals Policy.pdf" target="_blank"> Verification, Updates, Corrections and Student Fraud Referrals Policy</a><br />-->
+</section>
+<section>
+<H2>Title IX - Notification of Policy</H2>
+ 
+<p>Talmudical Seminary Oholei Torah does not discriminate on the basis of sex and prohibits sex discrimination in any education program or activity that it operates, as required by Title IX, including in employment. Inquiries about the application of Title IX may be referred to Talmudical Seminary Oholei Torah’s Title IX Coordinator listed below, to the Assistant Secretary for Civil Rights of the Department of Education, or both.
+<p><b><u>Talmudical Seminary Oholei Torah’s Title IX Coordinator</u></b><br/>
+<p>Name: Rabbi Yaakov Raskin<br/>
+Office Address: 667 Eastern Parkway Brooklyn, NY 11213<br/>
+Email Address: yraskin@oholeitorah.com<br/>
+Telephone Number: 718‐774‐5050
+ 
+
+</section>
+
+
+	
+
+
+
+
+
+		
+
+
+<style>
+    #footer-search {
+      background:#ffffff;
+      width:100%;
+      max-width:300px;
+      height:44px;
+      border-radius:5px;
+      display:flex;
+      flex-direction:row;
+      align-items:center;
+      margin:auto;
+    }
+
+    #footer-search input {
+      all: unset;
+      font:16px system-ui;
+      color:#44695B;
+      height:100%;
+      width:100%;
+      padding:6px 10px;
+    }
+
+    #footer-search ::placeholder {
+      color:#44695B;
+      opacity:.7;
+    }
+
+    #footer-search svg {
+      color:#44695B;
+      fill:currentColor;
+      width:50px;
+      height:50px;
+      padding:10px;
+    }
+
+    #footer-search button {
+      all: unset;
+      cursor:pointer;
+      width:44px;
+      height:44px;
+    }
+  </style>
+
+<footer>
+
+<br>
+  Talmudical Seminary Oholei Torah strives to make its website content accessible to all users.
+  Should you require an alternative format for any of our website content,
+  please contact us at (718) 363-2034
+  <br><br><br>
+
+  <form role="search" id="form" style="max-width:300px; margin:auto;">
+    <div id="footer-search">
+      <input type="search" id="query" name="q" placeholder="Search..." aria-label="Search through site content">
+      <button>
+        <svg viewBox="0 0 1024 1024">
+          <path d="M848.471 928l-263.059-263.059c-48.941 36.706-110.118 55.059-177.412 55.059-171.294 0-312-140.706-312-312s140.706-312 312-312c171.294 0 312 140.706 312 312 0 67.294-24.471 128.471-55.059 177.412l263.059 263.059-79.529 79.529zM189.623 408.078c0 121.364 97.091 218.455 218.455 218.455s218.455-97.091 218.455-218.455c0-121.364-103.159-218.455-218.455-218.455-121.364 0-218.455 97.091-218.455 218.455z"></path>
+        </svg>
+      </button>
+    </div>
+  </form>
+
+  <script>
+    const f = document.getElementById('form');
+    const q = document.getElementById('query');
+    const google = 'https://www.google.com/search?q=site%3A+';
+    const site = 'tsot.edu';
+
+    function submitted(event) {
+      event.preventDefault();
+      const url = google + site + '+' + q.value;
+      const win = window.open(url, '_blank');
+      if (win) win.focus();
+    }
+
+    f.addEventListener('submit', submitted);
+  </script>
+<br />
+<br />
+    <p>667 Eastern Parkway, Brooklyn, NY 11213 • (718) 774-5050</p>
+    <p>© 2026 Talmudical Seminary Oholei Torah</p>
+</footer>
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    document.getElementById("mobile-menu").addEventListener("click", function() {
+        document.getElementById("nav-menu").classList.toggle("active");
+    });
+});
+</script>
+
+</body>
+</html>

@@ -1,0 +1,1242 @@
+<!DOCTYPE html>
+
+<html >
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<title>Generative AI | Wharton Knowledge Base</title>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		
+    
+		<link rel="stylesheet" href="https://d3s179bfexmwfe.cloudfront.net/min/css/koFontawesome-3c612f865d.css" type="text/css">
+            <link rel="stylesheet" href="https://d3s179bfexmwfe.cloudfront.net/min/css/ko-9a938c79b7.css" type="text/css">
+		<link href="https://d1whm9yla4elqy.cloudfront.net/lato/lato.css" rel="stylesheet" type="text/css">
+		<style type="text/css">.documentation-body{background-color:#dddddd}.hg-classic-theme .documentation-categories{background-color:#dddddd}.hg-site .hg-header{background-color:#004785}.hg-widget-page .pager{background-color:#004785}.hg-site > .navbar{color:#ffffff}.navbar-default .navbar-nav > li > a.hg-header-link{color:#ffffff}.toc-toggle{color:#ffffff}.navbar-default .navbar-toggle:before{color:#ffffff}.cat-icon{color:#a90533}.home-icon{color:#a90533}.alt-icon{color:#a90533}.form-group.focus .form-control{color:#a90533}.form-group.focus .select2-search input[type=text]{color:#a90533}.hg-site:not(.hg-modern-theme) .documentation-categories li a{color:#212121}.documentation-article h1, .cke_editable h1{color:#212121}.documentation-article h2, .cke_editable h2{color:#212121}.documentation-article h3, .cke_editable h3{color:#212121}.documentation-article h4, .cke_editable h4{color:#212121}.documentation-article h5, .cke_editable h5{color:#212121}.documentation-article h6, .cke_editable h6{color:#212121}.documentation-article h7, .cke_editable h7{color:#212121}.navbar-default{border-bottom-color:#7f7f7f}.documentation-outter-list > .article-container{border-bottom-color:#7f7f7f}.level-0{border-bottom-color:#7f7f7f}.article-container:hover{background-color:rgb(216,216,216) }.category-link-container:hover{background-color:rgb(216,216,216) }.documentation-categories li a:hover{background-color:rgb(216,216,216) }.category-link-container.active{background-color:rgb(216,216,216) }.documentation-categories li.active{background-color:rgb(216,216,216) }.form-control:focus{border-color:#a90533 }.select2-search input[type=text]:focus{border-color:#a90533 }.btn-danger{background-color:#a90533 }.hg-ratings .hg-helpful{color:#a90533 }.hg-search-bar input:focus + .input-group-btn .btn{border-color:#a90533 }.hg-minimalist-theme a:not(.btn):hover, .hg-minimalist-theme a:not(.btn):hover, .hg-minimalist-theme a:not(.btn):focus{color:#a90533 }.faq-cat-container:hover a{color:#a90533 }.ko-article-actions a{color:#a90533 }.faq-cat-panel:hover{border-color:#a90533 }.btn-success{color:#ffffff }.btn-primary{color:#ffffff }.btn-danger{color:#ffffff }.btn-success:hover{color:#ffffff }.btn-primary:hover{color:#ffffff }.btn-danger:hover{color:#ffffff }.navbar-default .navbar-toggle:hover:before, .navbar-default .navbar-toggle:focus:before{color:#ffffff }.btn-success{background-color:rgb(169,5,51) }.btn-primary{background-color:rgb(169,5,51) }.hg-ratings .hg-unhelpful{color:rgb(169,5,51) }.hg-minimalist-theme a:not(.btn){color:rgb(129,-35,11) }.btn-primary:hover{background-color:rgb(189,25,71) }.btn-primary:focus{background-color:rgb(189,25,71) }.btn-primary:active{background-color:rgb(189,25,71) }.btn-success:hover{background-color:rgb(189,25,71) }.btn-success:focus{background-color:rgb(189,25,71) }.btn-success:active{background-color:rgb(189,25,71) }.hg-ratings .hg-unhelpful:hover{color:rgb(189,25,71) }.ko-article-actions a:hover{color:rgb(189,25,71) }.pager li>a:hover, .pager li>span:hover, .pager li>a:focus, .pager li>span:focus{background-color:rgb(189,25,71) }.btn-danger:hover{background-color:rgb(189,25,71) }.btn-danger:focus{background-color:rgb(189,25,71) }.btn-danger:active{background-color:rgb(189,25,71) }.hg-ratings .hg-helpful:hover{color:rgb(189,25,71) }.documentation-article h1, .cke_editable h1{font-family:Lato;font-size:36px;font-weight:400;}.documentation-article h2, .cke_editable h2{font-family:Lato;font-size:30px;font-weight:400;}.documentation-article h3, .cke_editable h3{font-family:Lato;font-size:24px;font-weight:400;}.documentation-article h4, .cke_editable h4{font-family:Lato;font-size:18px;font-weight:400;}.documentation-article h5, .cke_editable h5{font-family:Lato;font-size:12px;font-weight:400;}.documentation-article h6, .cke_editable h6{font-family:Lato;font-size:12px;font-weight:400;}.documentation-article h7, .cke_editable h7{font-family:Lato;font-size:12px;font-weight:400;}.hg-article-body, .hg-article-body p, .cke_editable, .cke_editable p{font-family:Lato;font-size:16px;font-weight:400;}.hg-site .hg-project-name, body{font-family:Lato;}.hg-article-body a:not([href]) {
+  display: block;
+  height: 140px; 
+  margin-top: -140px; 
+  visibility: hidden;
+}
+
+.well {
+    background-color: #f5f5f5;
+    border: 1px solid #e3e3e3;
+    border-radius: 4px;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05) inset;
+    margin-bottom: 20px;
+    min-height: 20px;
+    padding: 15px 15px;
+}
+
+.anchor{
+  display: block;
+  height: 140px; 
+  margin-top: -140px; 
+  visibility: hidden;
+}
+
+.ko-table-of-contents ul {
+  column-count: 1;
+}
+
+.hg-article-page .documentation-article h6, .hg-article-page .documentation-article h5 {
+  font-size: 16px;
+}
+
+/** Header Override **/
+.hg-site .hg-header {
+	background: #fff !important;
+}
+.hg-site .hg-header {
+	color: #2d2c41 !important;
+}
+
+.hg-site .hg-header a {
+	color: #2d2c41 !important;
+}
+
+.hg-site .hg-header a:hover {
+  	color: #004785 !important;
+}
+
+.hg-minimalist-theme .ko-nav-wrapper {
+    padding: 0 0px;
+}
+.wharton-pagetitle-container {
+    background: #004785;
+  	border-bottom: 1px solid #b4b7be;
+  	height: 80px;
+}
+.wharton-pagetitle {
+  	font-size: 1.5em;
+  	font-family: Calluna, serif;
+  	color: #fff;
+    text-transform: uppercase;
+  	line-height: 80px;
+  	padding: 0px 20px;
+}
+.hg-site .hg-header .wharton-pagetitle a {
+	color: #fff !important;
+}
+.hg-site .hg-header .wharton-pagetitle a:hover {
+	color: #fff !important;
+}
+
+.wharton-menu-container {
+    background: #004785;
+  	height: 60px;
+}
+.wharton-menu {
+    line-height: 60px;
+  	padding: 0px 20px;
+}
+.wharton-container {
+    max-width:1170px;
+  	margin:auto;
+}
+.wharton-menu .ko-slideout-left-toggle {
+  margin-top:9px;
+  background: #969696;
+  padding: 5px 10px;
+  height: 42px;
+  line-height: 18px;
+  border: 2px solid #bdc3c7;
+  margin-right:10px;
+}
+.hg-minimalist-theme .navbar .wharton-menu .hg-search-bar {
+    margin-top: 0px;
+    margin-bottom: 0;
+}
+.wharton-menu .hg-search-bar {
+    margin-top: 4px;
+    margin-bottom: 10px;
+}
+.wharton-menu .form-control, .select2-search input[type=text] {
+    height: 42px;
+  	margin-top:9px;
+}
+.navbar-fixed-top {
+    position: relative;
+    right: 0;
+    left: 0;
+}
+.hg-minimalist-theme .navbar-brand {
+    padding: 10px 15px;
+    height: 35px;
+    margin-bottom: 0;
+}
+.hg-minimalist-theme .navbar-header .navbar-toggle:before {
+    font: normal normal normal 14px/1 FontAwesome;
+    content: "\f0c9";
+    font-size: 35px;
+    line-height:60px;
+    color: #004785;
+}
+.slideout-menu {
+    top: 195px;
+}
+
+
+
+/** Site Overrides **/
+.hg-site {
+  background: none !important;
+}
+
+.ko-site-footer {
+  background: #1B4680;
+  color: #fff !important;
+  margin-bottom:0px !important;
+  margin-top: 40px;
+}
+.ko-site-footer a {
+    color: #fff !important;
+}
+.ko-site-footer a:hover {
+  color: #fff !important;
+}
+
+.faq-cat-panel {
+	box-shadow: none !important;
+    border: 2px solid #cfcfcf;
+}
+
+.hg-article-body {
+	border-bottom: 0px !important;
+}
+
+/** Accessiblity Tweaks **/
+/** Accessible TOC Button **/
+.wharton-menu .ko-slideout-left-toggle {
+    background-color: #6f6f6f;
+}
+
+/** Accessible Search Button **/
+.wharton-menu button[name="Search"] {
+    background-color: #6f6f6f!important;
+}
+
+/** Accessible Search Text **/
+.wharton-menu .form-control::placeholder, .select2-search input[type="text"]::placeholder {
+    color: #6f6f6f;
+}
+
+/** Accessible Category Content Count **/
+
+.content-count {
+    color: #2a7cb3;
+}
+
+
+/** Configuring Article List Behavior **/
+
+.hg-category-page .article-block div {
+
+  display:none;
+
+}
+.hg-category-page .article-block {
+
+     display: list-item;
+
+     list-style-type: square;
+
+     list-style-position: inside; 
+}
+.hg-category-page li.sub-cat-item {
+  list-style-type: square;
+  margin-left: 0px;
+}
+.hg-category-page .category-list ul.list-unstyled {
+  list-style-type: square;
+}
+
+
+
+/** Header Update **/
+.hg-site .hg-header {
+	background: #fff !important;
+}
+
+.hg-site .hg-header {
+	color: #2d2c41 !important;
+}
+
+.hg-site .hg-header a {
+	color: #2d2c41 !important;
+}
+
+.hg-site .hg-header a:hover {
+  	color: #004785 !important;
+}
+
+.fa.fa-bars {
+	color: #1B4680 !important;
+}
+
+.documentation-categories.slideout-menu.open {
+  background: #efefef;
+}
+
+.documentation-body {
+	background-color: #fff !important;
+}
+
+.hg-minimalist-theme .hg-site-body {
+    margin-top: 0px;
+}
+.hg-minimalist-theme .documentation-categories.slideout-menu.open {
+    position:absolute;
+  	top:0px;
+  	//width:100%;
+  	z-index: 2;
+    box-shadow: 3px 0px 4px #727272;
+}
+.slideout-open .hg-site-body {
+    overflow: visible;
+}
+.hg-minimalist-theme .hg-article {
+    max-width: 1170px;
+}
+.hg-minimalist-theme .ko-content-cntr {
+    max-width: 1170px;
+    margin: 0 auto;
+  	padding: 0 20px;
+}
+.hg-minimalist-theme:not(.hg-home-page) .ko-content-cntr {
+    max-width: 1170px;
+    margin: 0 auto;
+  	padding: 0 20px;
+}
+
+.hg-minimalist-theme .documentation-categories.slideout-menu.open {
+    position: absolute;
+    top: 0px;
+    z-index: 2;
+    box-shadow: none;
+}
+
+.hg-minimalist-theme .documentation-categories.slideout-menu.open {
+    z-index: 2;
+    box-shadow: none;
+}
+
+.slideout-menu {
+    width: 360px;
+    overflow-y: visible;
+}
+
+.hg-article-body .alert p {
+    margin-top:0px;
+}
+
+.ko-tags-container {
+    padding-bottom:10px;
+}
+
+.hg-article-header {
+    background-color: transparent;
+    border: none;
+    margin-bottom: 15px;
+    text-align: left;
+    margin-top: 15px;
+}
+
+table {
+	table-layout: fixed;
+}
+
+td, th {
+	word-wrap:break-word;
+}
+
+.hg-category-page .article-block div{
+  display:none;
+}
+/** Hides comments from all but KO Review Team **/
+#hg-comment-form {
+        display:none;
+}
+
+.metadata {
+  font-size: 12px;
+}
+
+</style>
+		<script type="text/javascript" charset="utf-8" src="https://d3s179bfexmwfe.cloudfront.net/min/js/kbJquery2-68d85adaef.js"></script>
+		
+		<link rel="canonical" href="https://support.wharton.upenn.edu/help/generative-ai" /><link href="https://dyzz9obi78pm5.cloudfront.net/app/image/id/59f2288fec161ce1554ded31/n/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-P30N6186EP"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-P30N6186EP');
+</script>
+
+<!-- Old Version that Works -->
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<!--
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-3218602-20"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-3218602-20');
+</script>
+-->
+<!-- End Google Analytics --> 
+
+
+
+<meta name="martech:site-title" content="Computing Knowledge Base"> 
+<meta name="martech:site-pname" content="wharton-wckb"> 
+<meta name="martech:site-penv" content="live"> 
+<meta name="martech:site-hostname" content="support.wharton.upenn.edu">
+<meta name="martech:content-type" content="ckb">
+<meta name="martech:intranet" content="false">
+            
+            
+		
+        <script data-cookieconsent='statistics'>
+          var _paq = window._paq = window._paq || [];
+          
+          
+					_paq.push(['setCustomDimension', customDimensionId = '1', customDimensionValue = 'Reader (no login)'])
+          _paq.push(['trackPageView']);
+          _paq.push(['enableLinkTracking']);
+          (function() {
+          var u='//reporting-production.knowledgeowl.com/';
+          _paq.push(['setTrackerUrl', u+'js/tracker.php']);
+          _paq.push(['setSiteId', '99']);
+          var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+          g.async=true; g.src=u+'js/tracker.php'; s.parentNode.insertBefore(g,s);
+          })();
+        </script>
+        
+	</head>
+	<body class='hg-site hg-minimalist-theme  hg-article-page hg-category-page hg-2column-layout '>
+		
+		
+		
+		<nav class="hg-header navbar navbar-default navbar-fixed-top" role="navigation">
+	<div class="ko-nav-wrapper">
+		<html lang="en">
+<head>
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+</head>
+<body>
+<!-- javascript library -->
+<script type="text/javascript" src="https://cdn.statuspage.io/se-v2.js"></script>
+
+<!-- get status code -->
+<script>
+  var sp = new StatusPage.page({ page : '5sc3pg19rm92' });
+  
+  sp.summary({
+    success : function(data) {
+    
+    var statuses = data.components;
+    //console.log(data.components)
+
+    //Degraded Performance > Under Maintenance > Operational 
+    var conditionsBySeverity = [
+        "major_outage",
+        "partial_outage",
+        "degraded_performance",
+        "under_maintenance",
+        "operational"
+    ]
+
+    var groupBy = function(listToGroup, key) {
+        return listToGroup.reduce(function(returnDictionary, item) {
+        (returnDictionary[item[key]] = returnDictionary[item[key]] || []).push(item);
+        return returnDictionary;
+        }, {});
+    };
+
+    var servicesByStatus = groupBy(statuses, "status");
+
+    conditionsBySeverity.forEach(function(condition) {
+
+        //console.log(condition); 
+        if (condition in servicesByStatus) {
+        servicesByStatus[condition].forEach(function(service){
+            //console.log(" - " + service.name)
+                }); 
+        }
+        else {
+        //console.log("none");
+        }
+    });
+    // servicesByStatus.filter(service => criticalServices.includes(service.name)); 
+
+    var nonOperationalConditions = Object.keys(servicesByStatus).filter(status => status != "operational")
+    
+    if (nonOperationalConditions.length < 1) {
+            //operational/green
+            //document.getElementById("status_notifier").className = "fa fa-check";
+            document.getElementById("status_notifier").className = "fa fa-check";
+            document.getElementById("status_notifier").style.color = "#2fcc66";
+    }
+        else  {
+            //  //major/red
+            //  document.getElementById("status_notifier").className = "fa fa-times";
+            //  document.getElementById("status_notifier").style.color = "#e74c3c";
+
+            if (nonOperationalConditions.includes("major_outage")) { 
+                //major/red
+            document.getElementById("status_notifier").className = "fa fa-times";
+            document.getElementById("status_notifier").style.color = "#e74c3c";
+             }
+             
+             else if (nonOperationalConditions.includes("partial_outage")) {
+                //partial/yellow
+            document.getElementById("status_notifier").className = "fa fa-exclamation-triangle";
+            document.getElementById("status_notifier").style.color = "#e67e22";
+
+             }
+             
+             else if (nonOperationalConditions.includes("degraded_performance")) { 
+            //degraded/yellow
+             document.getElementById("status_notifier").className = "fa fa-minus-square";
+             document.getElementById("status_notifier").style.color = "#f1c40f";
+
+             }
+
+             else if (nonOperationalConditions.includes("under_maintenance")) { 
+            //maintenance/green
+            document.getElementById("status_notifier").className = "fa fa-wrench";
+            document.getElementById("status_notifier").style.color = "#3498DB";
+
+             }
+
+// we could do the affected statuses as a hover message (CSS?)
+        }  
+        // } else if (status == "degraded_performance") {
+        //     //degraded/yellow
+        // document.getElementById("status_notifier").className = "fa fa-minus-square";
+        //     document.getElementById("status_notifier").style.color = "#f1c40f";
+            
+        // } else if (status == "partial_outage") {
+        //     //partial/yellow
+        //     document.getElementById("status_notifier").className = "fa fa-exclamation-triangle";
+        //     document.getElementById("status_notifier").style.color = "#e67e22";
+            
+        // } else if (status == "major_outage") {
+        //     //major/red
+        //     document.getElementById("status_notifier").className = "fa fa-times";
+        //     document.getElementById("status_notifier").style.color = "#e74c3c";
+
+        // } else if (status == "under_maintenance") {
+        //     //maintenance/green
+        //     document.getElementById("status_notifier").className = "fa fa-wrench";
+        //     document.getElementById("status_notifier").style.color = "#3498DB";
+        // }
+        
+    }
+  });//determining whether a service is critical
+  </script>   
+</body>
+</html> 
+<div class="wharton-container">
+<div class="navbar-header">
+	<a class="navbar-brand" href="http://www.wharton.upenn.edu" alt="Logo" title="Wharton"><img class="documentation-logo-image" alt="Knowledge Base Logo" src="//dyzz9obi78pm5.cloudfront.net/app/image/id/5aa09d528e121c83315e21ac/n/wharton-logo.svg" /></a>
+	<h1 class="hg-project-name">Wharton Knowledge Base</h1>
+	<div class="nav-left-searchbar">
+		<form action="/help/search" method="GET" class="hg-search-bar">
+	<div class="input-group">
+				<input type="search" role="search" title="Search" aria-label="Search for articles" class="form-control" placeholder='Search for articles...' name="phrase" />
+		<span class="input-group-btn"><button class="btn btn-default" title="Search" name="Search" aria-label="Search" type="submit"><i class="fa fa-search"></i></button></span>
+	</div>
+</form>
+	</div>
+	<button type="button" class="navbar-toggle toc-toggle pull-left clear-left" data-toggle="collapse" data-target=".documentation-categories">
+		<span class="sr-only">Table of Contents</span>
+		<span class="browse">Table of Contents</span>
+		<span class="icon-bar"></span>
+		<span class="icon-bar"></span>
+		<span class="icon-bar"></span>
+	</button>
+	
+	<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+		<span class="sr-only">Toggle navigation</span>
+		<span class="icon-bar"></span>
+		<span class="icon-bar"></span>
+		<span class="icon-bar"></span>
+	</button>
+  
+</div>
+
+<div class="navbar-collapse collapse" id="navbar-collapse">
+	
+	<ul class="nav navbar-nav navbar-right">
+      <li><a href="https://inside.wharton.upenn.edu">Wharton Inside</a></li>
+      <li><a href="https://technology.wharton.upenn.edu">Technology@Wharton</a></li>
+      <li><a href="https://mywharton.wharton.upenn.edu">MyWharton</a></li>
+      <li><a href="https://computing.wharton.upenn.edu">Client Support Services</a></li>
+      <li><a href="https://status.wharton.upenn.edu/" style="text-decoration:none;"><div>System Status: <span id="status_notifier" class=""></span></div></a></li> 
+		<li><a class="hg-header-link reader-login" href="/help/saml-login">Login</a></li>
+	</ul>
+</div>
+</div>
+
+
+<div class="wharton-pagetitle-container">
+  <div class="wharton-container">
+    <span class="wharton-pagetitle"><a href="http://support.wharton.upenn.edu"><span class="hidden-xs">Computing</span> Knowledge Base</a></span>
+  </div>
+</div>
+<div class="wharton-menu-container">
+  <div class="wharton-container">
+    <div class="wharton-menu">
+    	<button type="button" class="ko-slideout-left-toggle btn btn-primary">TOC</button>
+    	<form action="/help/search" method="GET" class="hg-search-bar">
+	<div class="input-group">
+				<input type="search" role="search" title="Search" aria-label="Search for articles" class="form-control" placeholder='Search for articles...' name="phrase" />
+		<span class="input-group-btn"><button class="btn btn-default" title="Search" name="Search" aria-label="Search" type="submit"><i class="fa fa-search"></i></button></span>
+	</div>
+</form>
+    </div>
+  </div>
+</div>
+
+
+
+	</div>
+</nav>
+		<div class="documentation-body">
+	<div >
+		<div style="clear:both"></div>
+<div class="row hg-site-body">
+	<div id="ko-documentation-categories" class="documentation-categories sidebar-nav nav-collapse hide col-md-4 col-lg-3">
+	<ul class="list-unstyled top-outter-list">
+		<li class="category-container search-header nav-header nav-header-sub level-0 hide">
+			<form action="/help/search" method="GET" class="hg-search-bar">
+	<div class="input-group">
+				<input type="search" role="search" title="Search" aria-label="Search for articles" class="form-control" placeholder='Search for articles...' name="phrase" />
+		<span class="input-group-btn"><button class="btn btn-default" title="Search" name="Search" aria-label="Search" type="submit"><i class="fa fa-search"></i></button></span>
+	</div>
+</form>
+		</li>
+	</ul>
+	<ul class="list-unstyled documentation-outter-list" data-level="0">
+		<li data-type="category" class="category-container nav-header nav-header-sub level-0 ">
+			<div class="category-link-container ">
+				<i class="home-icon fa fa-home"></i><a class="documentation-category" href="/help">Home</a>
+			</div>
+		</li>
+		<li data-type="category" class="category-container nav-header nav-header-sub level-0 ">
+			<div class="category-link-container ">
+				<i class="home-icon fa fa-book"></i><a class="documentation-category" href="/help/glossary">Glossary</a>
+			</div>
+		</li>
+		<li data-type="category" class="category-container nav-header nav-header-sub level-0">
+						<div class="category-link-container" data-id="5e665be9ec161c4e5ed3b068"><i class="cat-icon fa fa-chevron-right"></i><a class="documentation-category" href="javascript:void(0);">Working &amp; Teaching<span class="badge badge-new pull-right"></span><span class="badge badge-updated pull-right"></span></a>
+						</div>
+						<ul class="list-unstyled documentation-articles level-1" style="display:none;"><li data-type="category" class="category-container nav-header nav-header-sub">
+					<div class="category-link-container" data-id="5e668bedec161cc774d3b042"><i class="cat-icon fa fa-chevron-right"></i> <a class="documentation-category" href="javascript:void(0);">Teaching<span class="badge badge-new pull-right"></span><span class="badge badge-updated pull-right"></span></a>
+					</div>
+					<ul class="list-unstyled documentation-articles level-1" style="display:none;"><li data-type="article" data-id="5f219800ec161c2458639ceb" class="article-container"><a href="/help/planning-an-online-course" class="article-link">Planning an Online Course</a></li><li data-type="article" data-id="5e669cbf6e121c5b1db0ff61" class="article-container"><a href="/help/virtual-meetings-for-instruction" class="article-link">Video Conferences for Instruction</a></li><li data-type="article" data-id="5e728511ec161cfe03baa7b4" class="article-container"><a href="/help/remote-instructions-in-personremote-grid" class="article-link">In-Person to Remote Instruction</a></li><li data-type="article" data-id="5e837bb9ad121cae2d71056e" class="article-container"><a href="/help/remote-teaching-checklist" class="article-link">Remote Teaching Checklist</a></li><li data-type="article" data-id="5e7402828e121ccc3b22fe7e" class="article-container"><a href="/help/inviting-a-guest-speaker-virtual-meetings-for-instruction" class="article-link">Inviting a Guest Speaker to a Video Conference</a></li><li data-type="article" data-id="5e83a5a46e121c6529e0339f" class="article-container"><a href="/help/online-presentations" class="article-link">Online Presentations - Faculty</a></li><li data-type="article" data-id="5e9a171e8e121c0018d1640a" class="article-container"><a href="/help/exams-for-remote-instruction-faculty" class="article-link">Exams for Remote Instruction - Faculty</a></li><li data-type="article" data-id="5f4d07ffad121c461e0c6c6c" class="article-container"><a href="/help/distance-learning-booth-and-hybrid-classroom-av-system" class="article-link">Hybrid Instruction in Wharton Classrooms</a></li><li data-type="article" data-id="5f283c4dec161c8275910757" class="article-container"><a href="/help/equipment-recommendations" class="article-link">Web Conferencing Equipment - Buyers Guide</a></li><li data-type="article" data-id="6070bb9c6e121caa1f85c8cf" class="article-container"><a href="/help/work-remote-faculty-all-about-new-quizzes" class="article-link">All about New Quizzes</a></li><li data-type="article" data-id="60830ecc8e121cf61fdd71a1" class="article-container"><a href="/help/remote-teaching-exam-accommodations" class="article-link">Exam Accommodations</a></li><li data-type="article" data-id="6179b70740a1d1d2357b2566" class="article-container"><a href="/help/remote-teaching" class="article-link">Remote Teaching</a></li></ul>
+				</li><li data-type="category" class="category-container nav-header nav-header-sub">
+					<div class="category-link-container" data-id="5e67ca4c8e121cdc0fb81a0f"><i class="cat-icon fa fa-chevron-right"></i> <a class="documentation-category" href="javascript:void(0);">Learning<span class="badge badge-new pull-right"></span><span class="badge badge-updated pull-right"></span></a>
+					</div>
+					<ul class="list-unstyled documentation-articles level-1" style="display:none;"><li data-type="article" data-id="5e84a1ba8e121c9e222f22ce" class="article-container"><a href="/help/online-presentations-students" class="article-link">Online Presentations - Students</a></li><li data-type="article" data-id="5e9a1c126e121c4321100a1c" class="article-container"><a href="/help/exams-for-remote-instruction-students" class="article-link">Exams for Remote Instruction - Students</a></li><li data-type="article" data-id="5ede9be98e121cdf30845486" class="article-container"><a href="/help/virtual-lab" class="article-link">Virtual Lab</a></li><li data-type="article" data-id="63456aa5c650a94b123e8a30" class="article-container"><a href="/help/taking-online-exams" class="article-link">Preparing to Take an Online Exam</a></li></ul>
+				</li><li data-type="category" class="category-container nav-header nav-header-sub">
+					<div class="category-link-container" data-id="5e7a5d82ec161c2352c1face"><i class="cat-icon fa fa-chevron-right"></i> <a class="documentation-category" href="javascript:void(0);">Working<span class="badge badge-new pull-right"></span><span class="badge badge-updated pull-right"></span></a>
+					</div>
+					<ul class="list-unstyled documentation-articles level-1" style="display:none;"><li data-type="article" data-id="5e6929c3ad121c6d4b9d8deb" class="article-container"><a href="/help/preparing-to-work-remotely-checklist" class="article-link">Remote Working Checklist</a></li><li data-type="article" data-id="5e67c949ec161c6c08d3b00e" class="article-container"><a href="/help/using-the-wharton-vpn" class="article-link">Wharton VPN</a></li><li data-type="article" data-id="5e6296c38e121c2a224f251f" class="article-container"><a href="/help/a-guide-to-remote-working-staff" class="article-link">A Guide to Remote Working - Staff</a></li><li data-type="article" data-id="5f22e05bad121c70522df30a" class="article-container" external><a href="/help/zoom-outlook-connector" class="article-link">Zoom Outlook Connector (Staff)</a></li><li data-type="article" data-id="657cae63abe8444a3f229a33" class="article-container"><a href="/help/generative-ai-best-practices-and-resources" class="article-link">Generative AI -- Best Practices and Resources</a></li></ul>
+				</li><li data-type="category" class="category-container nav-header nav-header-sub">
+					<div class="category-link-container" data-id="5f0726c08e121c2e1ee47472"><i class="cat-icon fa fa-chevron-right"></i> <a class="documentation-category" href="javascript:void(0);">Recordings<span class="badge badge-new pull-right"></span><span class="badge badge-updated pull-right"></span></a>
+					</div>
+					<ul class="list-unstyled documentation-articles level-1" style="display:none;"><li data-type="article" data-id="5e70fb03ad121cf844cebfb3" class="article-container"><a href="/help/work-remote-faculty-async-teaching-panopto" class="article-link">Asynchronous Teaching Using Canvas and Panopto</a></li><li data-type="article" data-id="5e777ea6ec161c7a7cc1fae6" class="article-container"><a href="/help/upload-virtual-meeting-recording" class="article-link">Upload Video Conference Recordings</a></li><li data-type="article" data-id="5e7ce8818e121cf107cfcab9" class="article-container"><a href="/help/editing-videos-in-panopto" class="article-link">Editing Videos in Panopto</a></li><li data-type="article" data-id="5fff23b08e121ce9159c121c" class="article-container" external><a href="/help/zoom-recording-autodelete" class="article-link">Zoom recording autodelete to be enabled on 1/20/21</a></li><li data-type="article" data-id="62e7e9c15b91e212ed465127" class="article-container"><a href="/help/zoom-recordings" class="article-link">Zoom Recordings</a></li><li data-type="article" data-id="636291ee24883f1d285fc099" class="article-container"><a href="/help/captioning-service" class="article-link">Captioning Service</a></li></ul>
+				</li><li data-type="category" class="category-container nav-header nav-header-sub">
+					<div class="category-link-container" data-id="5f072707ad121c7b044f32fc"><i class="cat-icon fa fa-chevron-right"></i> <a class="documentation-category" href="javascript:void(0);">Meetings and Events<span class="badge badge-new pull-right"></span><span class="badge badge-updated pull-right"></span></a>
+					</div>
+					<ul class="list-unstyled documentation-articles level-1" style="display:none;"><li data-type="article" data-id="5e67cb2b8e121cdc0fb81a36" class="article-container"><a href="/help/working-remotely-students-virtual-meetings" class="article-link">Video Conferences</a></li><li data-type="article" data-id="5f3ece456e121c2a2c9dfdac" class="article-container"><a href="/help/roles-in-a-video-conference" class="article-link">Roles in a Video Conference</a></li><li data-type="article" data-id="5e725ff28e121c587e22fdd5" class="article-container"><a href="/help/video-conference-features" class="article-link">Video Conference Features</a></li><li data-type="article" data-id="5e90a3bc8e121c2c32e1a8da" class="article-container"><a href="/help/planning-a-virtual-event" class="article-link">Planning a Virtual Event</a></li><li data-type="category" class="category-container nav-header nav-header-sub">
+					<div class="category-link-container" data-id="5f2469456e121c2d6871b1bc"><i class="cat-icon fa fa-chevron-right"></i> <a class="documentation-category" href="javascript:void(0);">Zoom<span class="badge badge-new pull-right"></span><span class="badge badge-updated pull-right"></span></a>
+					</div>
+					<ul class="list-unstyled documentation-articles level-2" style="display:none;"><li data-type="article" data-id="5f22c7536e121c2f2c71b855" class="article-container"><a href="/help/logging-into-zoom" class="article-link">Logging into Zoom</a></li><li data-type="article" data-id="5f32dadc6e121cf256b34358" class="article-container"><a href="/help/activating-zoom-account" class="article-link">Activating Your Zoom Account</a></li><li data-type="article" data-id="5f31a2f28e121c0a66e1af7e" class="article-container"><a href="/help/zoom-faq" class="article-link">Zoom FAQ</a></li><li data-type="article" data-id="5f21e1008e121cb80c84e0d0" class="article-container"><a href="/help/installing-the-outlook-add-in-for-zoom" class="article-link">Installing the Outlook Add-in for Zoom</a></li><li data-type="article" data-id="5f2472edec161cba2d639957" class="article-container"><a href="/help/sharing-your-ipad-or-iphone-screen-with-zoom" class="article-link">Sharing Your iPad or iPhone Screen with Zoom</a></li><li data-type="article" data-id="5f22d15fec161c4869639d19" class="article-container"><a href="/help/wharton-virtual-backgrounds" class="article-link">Wharton Virtual Backgrounds</a></li><li data-type="article" data-id="5f202d406e121cbd0571bda5" class="article-container"><a href="/help/using-zoom-webinars" class="article-link">Using Zoom Webinars</a></li><li data-type="article" data-id="65eb5b1dac8eb741db1034ff" class="article-container"><a href="/help/zoom-ai-companion" class="article-link">Zoom AI Companion</a></li></ul>
+				</li><li data-type="category" class="category-container nav-header nav-header-sub">
+					<div class="category-link-container" data-id="5f3fddbe8e121cf10e744361"><i class="cat-icon fa fa-chevron-right"></i> <a class="documentation-category" href="javascript:void(0);">BlueJeans<span class="badge badge-new pull-right"></span><span class="badge badge-updated pull-right"></span></a>
+					</div>
+					<ul class="list-unstyled documentation-articles level-2" style="display:none;"></ul>
+				</li><li data-type="article" data-id="5f4fe3536e121c824c3593ad" class="article-container"><a href="/help/video-conference-breakout-rooms" class="article-link">Video Conference Breakout Rooms</a></li></ul>
+				</li><li data-type="article" data-id="68ffc6e89b57d3b6950db877" class="article-container"><a href="/help/file-sharing-and-collaboration" class="article-link">File Sharing and Collaboration</a></li></ul>
+							</li><li data-type="category" class="category-container nav-header nav-header-sub level-0">
+						<div class="category-link-container" data-id="595529fdec161ca72ed1cb92"><i class="cat-icon fa fa-chevron-down"></i><a class="documentation-category" href="/help/wired-wifi">Connections - Wired &amp; WiFi<span class="badge badge-new pull-right"></span><span class="badge badge-updated pull-right"></span></a>
+						</div>
+						<ul class="list-unstyled documentation-articles level-1" ><li data-type="category" class="category-container nav-header nav-header-sub">
+					<div class="category-link-container" data-id="59552a358e121ced2f0502cb"><i class="cat-icon fa fa-chevron-right"></i> <a class="documentation-category" href="javascript:void(0);">Wireless<span class="badge badge-new pull-right"></span><span class="badge badge-updated pull-right"></span></a>
+					</div>
+					<ul class="list-unstyled documentation-articles level-1" style="display:none;"><li data-type="article" data-id="5ada808ded121c7e1e4f591c" class="article-container"><a href="/help/203173957-airpennnet-wireless-setup" class="article-link">Wireless Network Overview</a></li><li data-type="article" data-id="5ada7fefed121c7e1e4f5890" class="article-container"><a href="/help/211715223-troubleshooting-" class="article-link">Troubleshooting WiFi (AirPennNet) Issues</a></li></ul>
+				</li><li data-type="category" class="category-container nav-header nav-header-sub">
+					<div class="category-link-container" data-id="5afd9198ec161cb3231845a1"><i class="cat-icon fa fa-chevron-right"></i> <a class="documentation-category" href="javascript:void(0);">Virtual Private Network (VPN)<span class="badge badge-new pull-right"></span><span class="badge badge-updated pull-right"></span></a>
+					</div>
+					<ul class="list-unstyled documentation-articles level-1" style="display:none;"><li data-type="article" data-id="59f2202eec161cd6554dec27" class="article-container"><a href="/help/wharton-vpn" class="article-link">Wharton VPN</a></li></ul>
+				</li><li data-type="article" data-id="5ad8b3fdec161c8f700dba2c" class="article-container"><a href="/help/connecting-to-personal-network-drive" class="article-link">Connecting to the Network Drive: Faculty and Staff</a></li></ul>
+							</li><li data-type="category" class="category-container nav-header nav-header-sub level-0">
+						<div class="category-link-container" data-id="59552b866e121c4978ab1991"><i class="cat-icon fa fa-chevron-right"></i><a class="documentation-category" href="javascript:void(0);">Accounts, Access &amp; Email<span class="badge badge-new pull-right"></span><span class="badge badge-updated pull-right"></span></a>
+						</div>
+						<ul class="list-unstyled documentation-articles level-1" style="display:none;"><li data-type="category" class="category-container nav-header nav-header-sub">
+					<div class="category-link-container" data-id="5b6376cfec161cd341d01e7b"><i class="cat-icon fa fa-chevron-right"></i> <a class="documentation-category" href="javascript:void(0);">Account Overview<span class="badge badge-new pull-right"></span><span class="badge badge-updated pull-right"></span></a>
+					</div>
+					<ul class="list-unstyled documentation-articles level-1" style="display:none;"><li data-type="article" data-id="5b51ee916e121c542e280817" class="article-container"><a href="/help/pennkey-accounts-5f858e7" class="article-link">PennKey Accounts</a></li><li data-type="article" data-id="5ada80a4ed121c7e1e4f593a" class="article-container"><a href="/help/202129446-overview-and-getting-started-with-google-wharton" class="article-link">Wharton Gmail Overview (Students)</a></li><li data-type="article" data-id="5ada82f4ed121c7e1e4f5b45" class="article-container"><a href="/help/202127736-students-taking-a-wharton-class" class="article-link">Penn Students Taking a Wharton Class</a></li><li data-type="article" data-id="5ad760de8e121c954f0c9bde" class="article-container"><a href="/help/department-website-faculty-profile" class="article-link">Department Website Faculty Profile</a></li><li data-type="article" data-id="5ada816bed121c7e1e4f59ff" class="article-container"><a href="/help/202651613-wharton-computing-system-accounts-and-policies" class="article-link">Wharton Computing Accounts &amp; System Policies</a></li><li data-type="article" data-id="5c3f8841ec161c5c3ffd9e7d" class="article-container"><a href="/help/account-closing-dates" class="article-link">Graduating Students: Account Closing Dates</a></li><li data-type="article" data-id="6621616295795248ae4fc232" class="article-container"><a href="/help/googlewharton-faculty-and-staff" class="article-link">Google@Wharton (Faculty and Staff)</a></li><li data-type="article" data-id="67083349224b9c3947009a74" class="article-container"><a href="/help/googlewharton-account-migration" class="article-link">Google@Wharton Account Migration</a></li></ul>
+				</li><li data-type="category" class="category-container nav-header nav-header-sub">
+					<div class="category-link-container" data-id="5b6485d56e121cb234306622"><i class="cat-icon fa fa-chevron-right"></i> <a class="documentation-category" href="javascript:void(0);">Account Management<span class="badge badge-new pull-right"></span><span class="badge badge-updated pull-right"></span></a>
+					</div>
+					<ul class="list-unstyled documentation-articles level-1" style="display:none;"><li data-type="article" data-id="5ada8151ed121c7e1e4f59e0" class="article-container"><a href="/help/203165417-create-your-wharton-account" class="article-link">Create Your Wharton Account</a></li><li data-type="article" data-id="5ada82dced121c7e1e4f5b2a" class="article-container"><a href="/help/202527178-change-reset-your-password" class="article-link">Change or Reset your Password</a></li><li data-type="article" data-id="5ada82dded121c7e1e4f5b2c" class="article-container"><a href="/help/203166667-name-changes-for-pennkey" class="article-link">Change Your PennKey Username</a></li><li data-type="article" data-id="5ada82d6ed121c7e1e4f5b24" class="article-container"><a href="/help/password-guidelines-tips" class="article-link">Wharton Passwords: Guidelines and Tips</a></li><li data-type="article" data-id="5c1bc93c8e121c81578ec0aa" class="article-container"><a href="/help/account-management-two-step-verification-start-here" class="article-link">Two-Step Verification: Start Here</a></li><li data-type="article" data-id="5c3e3e5cec161cb224fd9e6f" class="article-container"><a href="/help/exchange-account-closing-to-do-list" class="article-link">Exchange Students Account Closing To-Do List</a></li><li data-type="article" data-id="5b28fe00ec161c792482cc0d" class="article-container"><a href="/help/graduation-check-list" class="article-link">Graduation Technology To-Do List</a></li></ul>
+				</li><li data-type="category" class="category-container nav-header nav-header-sub">
+					<div class="category-link-container" data-id="5afeb0b4ad121c1235841dca"><i class="cat-icon fa fa-chevron-right"></i> <a class="documentation-category" href="javascript:void(0);">Email Management &amp; Configuration<span class="badge badge-new pull-right"></span><span class="badge badge-updated pull-right"></span></a>
+					</div>
+					<ul class="list-unstyled documentation-articles level-1" style="display:none;"><li data-type="article" data-id="5ada7fdaed121c7e1e4f5884" class="article-container"><a href="/help/211922383-alumni-forwarding-email" class="article-link">Alumni Forwarding Address</a></li><li data-type="article" data-id="5ada82d1ed121c7e1e4f5b1e" class="article-container"><a href="/help/202525753-how-can-i-change-my-email-display-name-in-gmail-" class="article-link">Managing your Google@Wharton Gmail Account (Students)</a></li><li data-type="article" data-id="5ada8101ed121c7e1e4f599a" class="article-container"><a href="/help/202112873-set-up-mail-forwarding-unforwarding" class="article-link">Forward Your Wharton Gmail to a Personal Mail Inbox (Students)</a></li><li data-type="article" data-id="5ee2676fad121c3831845aae" class="article-container"><a href="/help/send-as-short-gmail" class="article-link">Send as your Wharton Short Address from your Personal Gmail (Students)</a></li><li data-type="article" data-id="5b338f006e121c972fe19c8d" class="article-container"><a href="/help/send-as-alumni-forwarding-address-students" class="article-link">Send as your Alumni Forwarding Address (Students)</a></li><li data-type="article" data-id="5ada8257ed121c7e1e4f5ad1" class="article-container"><a href="/help/202900258-setting-up-an-out-of-office-vacation-message" class="article-link">Setting Up an Out-of-Office/Vacation Message in Gmail</a></li><li data-type="article" data-id="5ada82dbed121c7e1e4f5b28" class="article-container"><a href="/help/202112773-getting-complete-headers-from-an-email-message" class="article-link">Retrieve Complete Headers from an Email</a></li><li data-type="article" data-id="5ada827fed121c7e1e4f5af2" class="article-container"><a href="/help/202427136-setting-your-primary-address-in-penn-directory" class="article-link">Set Your Primary Email Address in Penn Directory</a></li><li data-type="article" data-id="5ada821aed121c7e1e4f5a9d" class="article-container"><a href="/help/202551483-backing-up-google-wharton-account-data-google-takeout-service-" class="article-link">Back Up Wharton Account Data using Google Takeout (Students)</a></li><li data-type="article" data-id="5ada824aed121c7e1e4f5abf" class="article-container"><a href="/help/202640783-transferring-backing-up-google-wharton-e-mail-calendar-and-contacts-to-a-personal-gmail-account" class="article-link">Transfer/Backup Wharton Email to a Personal Account (Students)</a></li><li data-type="article" data-id="5ada8246ed121c7e1e4f5aba" class="article-container"><a href="/help/202526568-exporting-messages-in-macmail" class="article-link">Export &amp; Transfer Messages from Mail on Mac (Students)</a></li><li data-type="article" data-id="5ade47cbad121c593a4b6e31" class="article-container"><a href="/help/configuring-outlook-for-gmail" class="article-link">Configuring Outlook for Gmail (Students)</a></li><li data-type="article" data-id="5ada816fed121c7e1e4f5a03" class="article-container"><a href="/help/202528483-mac-mail-email-calendar-" class="article-link">MacMail for Google@Wharton (Students)</a></li><li data-type="article" data-id="5ada8071ed121c7e1e4f58f6" class="article-container"><a href="/help/203442757-accessing-a-wharton-group-email-account" class="article-link">Accessing a Wharton Group Email Account (Students)</a></li><li data-type="article" data-id="5ade3dfa8e121c151ee6f49c" class="article-container" external><a href="/help/mailing-lists-subscribing-unsubscribing" class="article-link">Mailing Lists: Overview</a></li><li data-type="article" data-id="5ea0a36b6e121caa0f020e7f" class="article-container"><a href="/help/spam-filtering-overview" class="article-link">Spam Filtering Overview</a></li><li data-type="article" data-id="5ef64c876e121c266a32dd1e" class="article-container"><a href="/help/class-lists" class="article-link">Class Lists</a></li><li data-type="article" data-id="5f2181028e121c8d6184e209" class="article-container"><a href="/help/addremove-o365-mobile" class="article-link">Add/Remove M365 on Mobile</a></li><li data-type="article" data-id="62604c17157dcf0c7f0eec4e" class="article-container"><a href="/help/course-class-lists" class="article-link">Course Class Lists</a></li><li data-type="article" data-id="6282b85b40a3212e996de833" class="article-container"><a href="/help/forwarding-email-problem" class="article-link">Common Problems When Forwarding Email</a></li><li data-type="article" data-id="62f17e698accd967b421a38f" class="article-container"><a href="/help/penno365-shared-mailboxes" class="article-link">PennO365 Shared Mailboxes</a></li><li data-type="article" data-id="6303e26063b946042643a97b" class="article-container"><a href="/help/wharton-mailing-lists" class="article-link">Wharton Mailing Lists</a></li><li data-type="article" data-id="631a225949fb76126b17c3de" class="article-container"><a href="/help/mailing-lists-approve-messages-for-moderated-lists" class="article-link">Mailing Lists: Approving Messages for Moderated Lists (For Students)</a></li><li data-type="article" data-id="6554da8436953b4f62533d78" class="article-container"><a href="/help/mailing-list-security-update" class="article-link">Mailing List Security Update</a></li><li data-type="category" class="category-container nav-header nav-header-sub">
+					<div class="category-link-container" data-id="657242294a6d58419639b797"><i class="cat-icon fa fa-chevron-right"></i> <a class="documentation-category" href="javascript:void(0);">Mailing Lists<span class="badge badge-new pull-right"></span><span class="badge badge-updated pull-right"></span></a>
+					</div>
+					<ul class="list-unstyled documentation-articles level-2" style="display:none;"></ul>
+				</li></ul>
+				</li><li data-type="category" class="category-container nav-header nav-header-sub">
+					<div class="category-link-container" data-id="5b637651ad121c1c5c8756e2"><i class="cat-icon fa fa-chevron-right"></i> <a class="documentation-category" href="javascript:void(0);">Calendars<span class="badge badge-new pull-right"></span><span class="badge badge-updated pull-right"></span></a>
+					</div>
+					<ul class="list-unstyled documentation-articles level-1" style="display:none;"><li data-type="article" data-id="5d9f2f1f6e121c964f75d604" class="article-container"><a href="/help/wharton-calendar-overview-students" class="article-link">Wharton Calendar Overview (Students)</a></li></ul>
+				</li><li data-type="category" class="category-container nav-header nav-header-sub">
+					<div class="category-link-container" data-id="5b6484b06e121cb3343067b6"><i class="cat-icon fa fa-chevron-right"></i> <a class="documentation-category" href="javascript:void(0);">Additional Access<span class="badge badge-new pull-right"></span><span class="badge badge-updated pull-right"></span></a>
+					</div>
+					<ul class="list-unstyled documentation-articles level-1" style="display:none;"><li data-type="article" data-id="5b43b6f58e121c2a792609b2" class="article-container"><a href="/help/wharton-computing-student-resources" class="article-link">Wharton Computing Student Resources</a></li><li data-type="article" data-id="5afc9e816e121cf8177b6a69" class="article-container"><a href="/help/cloud-storage-options" class="article-link">Cloud Storage Options (Students &amp; Staff)</a></li><li data-type="article" data-id="601d9b3bad121c88596eba5e" class="article-container"><a href="/help/aws-linked-account-budget-codes" class="article-link">AWS Linked Accounts and Budget Codes</a></li></ul>
+				</li><li data-type="article" data-id="621d16f5e08ac0b17b7b249f" class="article-container"><a href="/help/aws-best-practices" class="article-link">AWS Best Practices</a></li></ul>
+							</li><li data-type="category" class="category-container nav-header nav-header-sub level-0">
+						<div class="category-link-container" data-id="59552ba9ad121c5d320b9538"><i class="cat-icon fa fa-chevron-right"></i><a class="documentation-category" href="javascript:void(0);">Canvas &amp; Learning Tools<span class="badge badge-new pull-right"></span><span class="badge badge-updated pull-right"></span></a>
+						</div>
+						<ul class="list-unstyled documentation-articles level-1" style="display:none;"><li data-type="category" class="category-container nav-header nav-header-sub">
+					<div class="category-link-container" data-id="59ee0cfcad121cd906243e9f"><i class="cat-icon fa fa-chevron-right"></i> <a class="documentation-category" href="javascript:void(0);">Canvas Help for Faculty and Staff<span class="badge badge-new pull-right"></span><span class="badge badge-updated pull-right"></span></a>
+					</div>
+					<ul class="list-unstyled documentation-articles level-1" style="display:none;"><li data-type="category" class="category-container nav-header nav-header-sub">
+					<div class="category-link-container" data-id="5aa825faed121c107e556835"><i class="cat-icon fa fa-chevron-right"></i> <a class="documentation-category" href="javascript:void(0);">Canvas Basics<span class="badge badge-new pull-right"></span><span class="badge badge-updated pull-right"></span></a>
+					</div>
+					<ul class="list-unstyled documentation-articles level-2" style="display:none;"><li data-type="article" data-id="5b5ce244ad121c841897c332" class="article-container"><a href="/help/requesting-a-canvas-site" class="article-link">Requesting a Canvas site for a Wharton Course</a></li><li data-type="article" data-id="5aa8260ded121c107e556859" class="article-container"><a href="/help/203190255-getting-around-in-canvas" class="article-link">Getting around in Canvas</a></li><li data-type="article" data-id="5aa82618ed121c107e556865" class="article-container"><a href="/help/203203815-communications" class="article-link">Communicating through Canvas</a></li><li data-type="article" data-id="5aa82619ed121c107e556867" class="article-container"><a href="/help/202540259-copying-content-from-one-canvas-site-to-another" class="article-link">Copying from one Canvas site to another</a></li><li data-type="article" data-id="6282bce8bf5b9c14d747ca55" class="article-container"><a href="/help/namecoach-faculty" class="article-link">Accessing NameCoach in Canvas (Instructors) </a></li></ul>
+				</li><li data-type="category" class="category-container nav-header nav-header-sub">
+					<div class="category-link-container" data-id="5aa825faed121c107e556839"><i class="cat-icon fa fa-chevron-right"></i> <a class="documentation-category" href="javascript:void(0);">Accounts and Access<span class="badge badge-new pull-right"></span><span class="badge badge-updated pull-right"></span></a>
+					</div>
+					<ul class="list-unstyled documentation-articles level-2" style="display:none;"><li data-type="article" data-id="5aa8261aed121c107e55686a" class="article-container" external><a href="/help/accessing-old-course-sites" class="article-link">Accessing old course sites</a></li><li data-type="article" data-id="5aa82615ed121c107e556860" class="article-container"><a href="/help/adding-users-to-a-canvas-site" class="article-link">Adding users to a Canvas site</a></li><li data-type="article" data-id="5b5cb297ad121c487d97c6c5" class="article-container"><a href="/help/canvas-teacher-app" class="article-link">Canvas app (for instructors)</a></li><li data-type="article" data-id="5f455a368e121cd21e95db62" class="article-container"><a href="/help/canvas-course-visibility-settings" class="article-link">Canvas course site visibility settings</a></li><li data-type="article" data-id="640a41847b57b70b01055ec2" class="article-container"><a href="/help/managing-notifications-in-canvas-faculty" class="article-link">Managing notifications in Canvas (for instructors)</a></li></ul>
+				</li><li data-type="category" class="category-container nav-header nav-header-sub">
+					<div class="category-link-container" data-id="5c9e431a8e121ca80feab686"><i class="cat-icon fa fa-chevron-right"></i> <a class="documentation-category" href="javascript:void(0);">Appointments and Groups<span class="badge badge-new pull-right"></span><span class="badge badge-updated pull-right"></span></a>
+					</div>
+					<ul class="list-unstyled documentation-articles level-2" style="display:none;"><li data-type="article" data-id="5aa82609ed121c107e556854" class="article-container"><a href="/help/all-about-appointments" class="article-link">All about appointment sign-ups</a></li><li data-type="article" data-id="5c9e43886e121c5a3d64601c" class="article-container"><a href="/help/all-about-groups" class="article-link">All about Canvas groups (for instructors)</a></li></ul>
+				</li><li data-type="category" class="category-container nav-header nav-header-sub">
+					<div class="category-link-container" data-id="5aa825faed121c107e556837"><i class="cat-icon fa fa-chevron-right"></i> <a class="documentation-category" href="javascript:void(0);">Assignments and Quizzes<span class="badge badge-new pull-right"></span><span class="badge badge-updated pull-right"></span></a>
+					</div>
+					<ul class="list-unstyled documentation-articles level-2" style="display:none;"><li data-type="article" data-id="5aa82605ed121c107e55684d" class="article-container"><a href="/help/all-about-assignments" class="article-link">All About Assignments</a></li><li data-type="article" data-id="5aa825feed121c107e556843" class="article-container"><a href="/help/202543159-all-about-quizzes" class="article-link">All about quizzes (Classic)</a></li><li data-type="article" data-id="602fe9dc6e121ccc737bb652" class="article-container"><a href="/help/all-about-new-quizzes" class="article-link">All about New Quizzes</a></li><li data-type="article" data-id="5aa825fced121c107e55683f" class="article-container"><a href="/help/204930569-delivering-online-exams" class="article-link">Delivering online exams (in-person)</a></li><li data-type="article" data-id="604a7bb56e121c8e63e86849" class="article-container"><a href="/help/exam-accommodations" class="article-link">Exam accommodations</a></li><li data-type="article" data-id="5d978ff1ec161c0d34d87faa" class="article-container"><a href="/help/respondus-lockdown-browser-faculty" class="article-link">Respondus LockDown Browser (for instructors)</a></li><li data-type="article" data-id="644832fb3faf6c0e7c0b6a3e" class="article-container"><a href="/help/administering-and-troubleshooting-online-exams" class="article-link">Administering and Troubleshooting Online Exams</a></li><li data-type="article" data-id="64b831888d9e026b182b8c41" class="article-container"><a href="/help/setting-up-assignments-requiring-student-collaboration-in-feedback-fruits" class="article-link">Setting Up Assignments Requiring Student Collaboration in FeedbackFruits</a></li><li data-type="article" data-id="6511a538d02be96d111c669b" class="article-container"><a href="/help/gradescope" class="article-link">Gradescope</a></li></ul>
+				</li><li data-type="category" class="category-container nav-header nav-header-sub">
+					<div class="category-link-container" data-id="5d03db7cec161ccc65955214"><i class="cat-icon fa fa-chevron-right"></i> <a class="documentation-category" href="javascript:void(0);">Files and Folders<span class="badge badge-new pull-right"></span><span class="badge badge-updated pull-right"></span></a>
+					</div>
+					<ul class="list-unstyled documentation-articles level-2" style="display:none;"><li data-type="article" data-id="5aa82600ed121c107e556846" class="article-container"><a href="/help/203203945-all-about-files-and-folders" class="article-link">All About Files and Folders</a></li><li data-type="article" data-id="5aa82601ed121c107e556848" class="article-container"><a href="/help/linking-to-articles-and-files" class="article-link">Linking to Articles and Files</a></li><li data-type="article" data-id="5aa8261bed121c107e55686b" class="article-container"><a href="/help/202530419-using-study-net-to-distribute-copyrighted-materials" class="article-link">Using Study.Net</a></li></ul>
+				</li><li data-type="category" class="category-container nav-header nav-header-sub">
+					<div class="category-link-container" data-id="5aa825faed121c107e55683a"><i class="cat-icon fa fa-chevron-right"></i> <a class="documentation-category" href="javascript:void(0);">Grading &amp; Attendance<span class="badge badge-new pull-right"></span><span class="badge badge-updated pull-right"></span></a>
+					</div>
+					<ul class="list-unstyled documentation-articles level-2" style="display:none;"><li data-type="article" data-id="65774566761dca428e1fded2" class="article-container"><a href="/help/aplus-setup-instructors" class="article-link">Setting Up aPlus+ Attendance in Canvas (Instructors)</a></li><li data-type="article" data-id="683f2c90c52dd454e6082362" class="article-container"><a href="/help/aplus-instructors" class="article-link">Using aPlus+ Attendance in Canvas (Instructors)</a></li><li data-type="article" data-id="6690143d9c2422f12c0ae2c8" class="article-container"><a href="/help/using-aplus-in-the-classroom-instructors" class="article-link">Using aPlus+ in the Classroom (Instructors)</a></li><li data-type="article" data-id="684706b2cf004086ad0d4c74" class="article-container"><a href="/help/managing-absences-with-aplus-attendance-in-canvas-instructors" class="article-link">Managing Student Absence Requests with aPlus+ Attendance in Canvas (Instructors)</a></li><li data-type="article" data-id="5aa825ffed121c107e556845" class="article-container"><a href="/help/202542729-all-about-grading" class="article-link">All about grading</a></li><li data-type="article" data-id="5aa82609ed121c107e556853" class="article-container"><a href="/help/203204095-advanced-grading-in-canvas" class="article-link">Grading: advanced features</a></li></ul>
+				</li><li data-type="article" data-id="64e62b575c8d3376c91db450" class="article-container"><a href="/help/blueprint-sites-in-canvas" class="article-link">Blueprint Sites in Canvas</a></li></ul>
+				</li><li data-type="category" class="category-container nav-header nav-header-sub">
+					<div class="category-link-container" data-id="5b5cadb5ec161c0561c8f308"><i class="cat-icon fa fa-chevron-right"></i> <a class="documentation-category" href="javascript:void(0);">Canvas Help for Students<span class="badge badge-new pull-right"></span><span class="badge badge-updated pull-right"></span></a>
+					</div>
+					<ul class="list-unstyled documentation-articles level-1" style="display:none;"><li data-type="category" class="category-container nav-header nav-header-sub">
+					<div class="category-link-container" data-id="5b5f5e65ad121c7b738753ba"><i class="cat-icon fa fa-chevron-right"></i> <a class="documentation-category" href="javascript:void(0);">Apps and Learning Tools<span class="badge badge-new pull-right"></span><span class="badge badge-updated pull-right"></span></a>
+					</div>
+					<ul class="list-unstyled documentation-articles level-2" style="display:none;"><li data-type="article" data-id="5ada8150ed121c7e1e4f59de" class="article-container"><a href="/help/canvas-student-mobile-apps" class="article-link">Canvas Student Mobile Apps</a></li><li data-type="article" data-id="5c1ea89c8e121ccf328ec04a" class="article-container"><a href="/help/using-web-browsers-with-learning-tools" class="article-link">Using web browsers with Learning Tools</a></li><li data-type="article" data-id="5d978449ad121cde431ff37b" class="article-container"><a href="/help/respondus-lockdown-browser-for-personal-devices-students" class="article-link">Respondus LockDown Browser for Personal Devices (Students)</a></li><li data-type="article" data-id="614265b43e87edae427b25c1" class="article-container"><a href="/help/attendance-absence-video-requests-students" class="article-link">Wharton Attendance, Absence, and Video Requests (For Students)</a></li><li data-type="article" data-id="6282ba7735f5b9560f2db751" class="article-container"><a href="/help/namecoach-student" class="article-link">Accessing NameCoach in Canvas (Students)</a></li><li data-type="article" data-id="62f3b975f1075a2b072d6713" class="article-container"><a href="/help/ed-discussion-for-students" class="article-link">Ed Discussion for Students</a></li><li data-type="article" data-id="65bbe1fa53675e69937680b0" class="article-container"><a href="/help/aplus-canvas-students" class="article-link">Getting started with aPlus+ Attendance in Canvas (Students)</a></li></ul>
+				</li><li data-type="category" class="category-container nav-header nav-header-sub">
+					<div class="category-link-container" data-id="5cf0108e6e121ccb3c6d9f89"><i class="cat-icon fa fa-chevron-right"></i> <a class="documentation-category" href="javascript:void(0);">Working with Canvas<span class="badge badge-new pull-right"></span><span class="badge badge-updated pull-right"></span></a>
+					</div>
+					<ul class="list-unstyled documentation-articles level-2" style="display:none;"><li data-type="article" data-id="5d0a7ed6ad121ca91248fb50" class="article-container"><a href="/help/access-and-course-sites" class="article-link">Canvas Access and Course Sites</a></li><li data-type="article" data-id="5cfe75b0ec161c9c4f9552f5" class="article-container"><a href="/help/all-about-groups-for-students" class="article-link">All about Canvas Groups (Students)</a></li><li data-type="article" data-id="5ada81b8ed121c7e1e4f5a3d" class="article-container"><a href="/help/assignments-and-quizzes" class="article-link">Assignments and Quizzes</a></li><li data-type="article" data-id="5ada816ced121c7e1e4f5a00" class="article-container"><a href="/help/calendar-and-appointments" class="article-link">Calendar and Appointment Sign-ups</a></li><li data-type="article" data-id="5b410542ad121cbe46a20f1a" class="article-container"><a href="/help/viewing-class-recordings" class="article-link">Class Recordings</a></li><li data-type="article" data-id="5ada821fed121c7e1e4f5aa3" class="article-container"><a href="/help/files-folders-and-studynet-materials" class="article-link">Files, folders and Study.Net materials</a></li><li data-type="article" data-id="5cddc1b06e121c2e222e250a" class="article-container"><a href="/help/submitting-a-video-on-canvas" class="article-link">Submitting Videos on Canvas</a></li><li data-type="article" data-id="5e60256a6e121c013dd7a48e" class="article-container" external><a href="/help/viewing-class-recordings-in-canvas" rel="noopener noreferrer" target="_blank" class="article-link">Viewing Class Recordings in Canvas</a></li><li data-type="article" data-id="5e8f6059ad121c6575d47fb9" class="article-container"><a href="/help/managing-notifications-in-canvas-student" class="article-link">Managing notifications in Canvas (Students)</a></li><li data-type="article" data-id="634ef1421529aa68997f3e2f" class="article-container"><a href="/help/preparing-to-take-an-online-exam" class="article-link">Preparing to Take an Online Exam</a></li><li data-type="article" data-id="654bac42a39f81788b4c4f94" class="article-container"><a href="/help/how-to-customize-your-canvas-dashboard" class="article-link">How To Customize Your Canvas Dashboard (For Students)</a></li></ul>
+				</li><li data-type="category" class="category-container nav-header nav-header-sub">
+					<div class="category-link-container" data-id="5e56e1fb6e121cc626708ac6"><i class="cat-icon fa fa-chevron-right"></i> <a class="documentation-category" href="javascript:void(0);">Using FeedbackFruits<span class="badge badge-new pull-right"></span><span class="badge badge-updated pull-right"></span></a>
+					</div>
+					<ul class="list-unstyled documentation-articles level-2" style="display:none;"><li data-type="article" data-id="5e456b796e121c705bf8d3a0" class="article-container"><a href="/help/completing-a-feedbackfruits-peer-evaluation" class="article-link">Completing a FeedbackFruits Peer Evaluation</a></li><li data-type="article" data-id="5e5444ee8e121c387f834fed" class="article-container"><a href="/help/draft-viewing-feedback-in-a-feedbackfruits-peer-evaluation" class="article-link">Viewing Feedback in a FeedbackFruits Peer Evaluation</a></li></ul>
+				</li></ul>
+				</li><li data-type="category" class="category-container nav-header nav-header-sub">
+					<div class="category-link-container" data-id="5ada315f8e121c06290c9aba"><i class="cat-icon fa fa-chevron-right"></i> <a class="documentation-category" href="javascript:void(0);">Learning Lab<span class="badge badge-new pull-right"></span><span class="badge badge-updated pull-right"></span></a>
+					</div>
+					<ul class="list-unstyled documentation-articles level-1" style="display:none;"><li data-type="category" class="category-container nav-header nav-header-sub">
+					<div class="category-link-container" data-id="6036a19bec161ce6180662cb"><i class="cat-icon fa fa-chevron-right"></i> <a class="documentation-category" href="javascript:void(0);">Backtester<span class="badge badge-new pull-right"></span><span class="badge badge-updated pull-right"></span></a>
+					</div>
+					<ul class="list-unstyled documentation-articles level-2" style="display:none;"><li data-type="article" data-id="5ada3181ad121cb53f099073" class="article-container"><a href="/help/backtester-how-to-access" class="article-link">Backtester: How to Access</a></li></ul>
+				</li><li data-type="category" class="category-container nav-header nav-header-sub">
+					<div class="category-link-container" data-id="6036a5bfec161c111906670e"><i class="cat-icon fa fa-chevron-right"></i> <a class="documentation-category" href="javascript:void(0);">Capital Budgeting<span class="badge badge-new pull-right"></span><span class="badge badge-updated pull-right"></span></a>
+					</div>
+					<ul class="list-unstyled documentation-articles level-2" style="display:none;"></ul>
+				</li><li data-type="category" class="category-container nav-header nav-header-sub">
+					<div class="category-link-container" data-id="5b98094b8e121c407be123f7"><i class="cat-icon fa fa-chevron-right"></i> <a class="documentation-category" href="javascript:void(0);">Change Management Simulation<span class="badge badge-new pull-right"></span><span class="badge badge-updated pull-right"></span></a>
+					</div>
+					<ul class="list-unstyled documentation-articles level-2" style="display:none;"><li data-type="article" data-id="5b980977ec161c54752830bb" class="article-container"><a href="/help/change-management-simulation-access-the-next-scenario" class="article-link">Change Management Simulation: Access the Next Scenario</a></li></ul>
+				</li><li data-type="category" class="category-container nav-header nav-header-sub">
+					<div class="category-link-container" data-id="6036a23cec161ca21806668c"><i class="cat-icon fa fa-chevron-right"></i> <a class="documentation-category" href="javascript:void(0);">Customer Centricity<span class="badge badge-new pull-right"></span><span class="badge badge-updated pull-right"></span></a>
+					</div>
+					<ul class="list-unstyled documentation-articles level-2" style="display:none;"><li data-type="article" data-id="5bc0ba458e121c02524e37d8" class="article-container"><a href="/help/customer-centricity-mktg-101---how-to-access" class="article-link">Customer Centricity: How to Access</a></li></ul>
+				</li><li data-type="category" class="category-container nav-header nav-header-sub">
+					<div class="category-link-container" data-id="5ae3ab1e6e121c0123881ad4"><i class="cat-icon fa fa-chevron-right"></i> <a class="documentation-category" href="javascript:void(0);">FutureView<span class="badge badge-new pull-right"></span><span class="badge badge-updated pull-right"></span></a>
+					</div>
+					<ul class="list-unstyled documentation-articles level-2" style="display:none;"><li data-type="article" data-id="5ada360a8e121c4b2c0c9afa" class="article-container"><a href="/help/futureview-how-to-access" class="article-link">FutureView: Accessing the Simulation</a></li></ul>
+				</li><li data-type="category" class="category-container nav-header nav-header-sub">
+					<div class="category-link-container" data-id="6036a3a3ec161ca2180667f4"><i class="cat-icon fa fa-chevron-right"></i> <a class="documentation-category" href="javascript:void(0);">GIST<span class="badge badge-new pull-right"></span><span class="badge badge-updated pull-right"></span></a>
+					</div>
+					<ul class="list-unstyled documentation-articles level-2" style="display:none;"><li data-type="article" data-id="60918859ec161ca86ab3eb27" class="article-container"><a href="/help/gist-iemav-how-to-access" class="article-link">GIST: How to Access</a></li></ul>
+				</li><li data-type="category" class="category-container nav-header nav-header-sub">
+					<div class="category-link-container" data-id="5ae3af898e121c7c3902204e"><i class="cat-icon fa fa-chevron-right"></i> <a class="documentation-category" href="javascript:void(0);">IdeaMachine<span class="badge badge-new pull-right"></span><span class="badge badge-updated pull-right"></span></a>
+					</div>
+					<ul class="list-unstyled documentation-articles level-2" style="display:none;"></ul>
+				</li><li data-type="category" class="category-container nav-header nav-header-sub">
+					<div class="category-link-container" data-id="5af9dbc1ec161cbc581846e9"><i class="cat-icon fa fa-chevron-right"></i> <a class="documentation-category" href="javascript:void(0);">IEMAV<span class="badge badge-new pull-right"></span><span class="badge badge-updated pull-right"></span></a>
+					</div>
+					<ul class="list-unstyled documentation-articles level-2" style="display:none;"><li data-type="article" data-id="5af9db086e121c5b407b6b54" class="article-container"><a href="/help/iemav-how-to-access" class="article-link">IEMAV: How to Access</a></li></ul>
+				</li><li data-type="category" class="category-container nav-header nav-header-sub">
+					<div class="category-link-container" data-id="6036a411ec161cbf1b06602f"><i class="cat-icon fa fa-chevron-right"></i> <a class="documentation-category" href="javascript:void(0);">Intermap<span class="badge badge-new pull-right"></span><span class="badge badge-updated pull-right"></span></a>
+					</div>
+					<ul class="list-unstyled documentation-articles level-2" style="display:none;"><li data-type="article" data-id="5afd8840ec161c211d1845c8" class="article-container"><a href="/help/intermap-how-to-access" class="article-link">Intermap: How to Access</a></li></ul>
+				</li><li data-type="category" class="category-container nav-header nav-header-sub">
+					<div class="category-link-container" data-id="6036a43aec161c8c1a066684"><i class="cat-icon fa fa-chevron-right"></i> <a class="documentation-category" href="javascript:void(0);">Macrosim<span class="badge badge-new pull-right"></span><span class="badge badge-updated pull-right"></span></a>
+					</div>
+					<ul class="list-unstyled documentation-articles level-2" style="display:none;"><li data-type="article" data-id="5ada3dacad121cd243099111" class="article-container"><a href="/help/macrosim-how-to-access" class="article-link">MacroSim Practice: How to Access</a></li></ul>
+				</li><li data-type="category" class="category-container nav-header nav-header-sub">
+					<div class="category-link-container" data-id="5afdc1d2ad121ca6428420e9"><i class="cat-icon fa fa-chevron-right"></i> <a class="documentation-category" href="javascript:void(0);">Marketspace<span class="badge badge-new pull-right"></span><span class="badge badge-updated pull-right"></span></a>
+					</div>
+					<ul class="list-unstyled documentation-articles level-2" style="display:none;"><li data-type="article" data-id="5afd8de6ec161ca61c18465b" class="article-container"><a href="/help/marketspace-how-to-access" class="article-link">Marketspace: How to Access</a></li></ul>
+				</li><li data-type="category" class="category-container nav-header nav-header-sub">
+					<div class="category-link-container" data-id="5afdc1e6ad121c094c841d6a"><i class="cat-icon fa fa-chevron-right"></i> <a class="documentation-category" href="javascript:void(0);">Rules of Engagement (ROE)<span class="badge badge-new pull-right"></span><span class="badge badge-updated pull-right"></span></a>
+					</div>
+					<ul class="list-unstyled documentation-articles level-2" style="display:none;"><li data-type="article" data-id="5afdc4556e121c32217b6b3d" class="article-container"><a href="/help/rules-of-engagement-roe-how-to-access" class="article-link">Rules of Engagement (ROE): How to Access</a></li><li data-type="article" data-id="5ba3eb1eec161cf41d28867a" class="article-container"><a href="/help/rules-of-engagement-issues" class="article-link">Rules of Engagement (ROE): Troubleshooting Issues</a></li></ul>
+				</li><li data-type="category" class="category-container nav-header nav-header-sub">
+					<div class="category-link-container" data-id="5afdc9996e121c20287b6a9d"><i class="cat-icon fa fa-chevron-right"></i> <a class="documentation-category" href="javascript:void(0);">SABRE<span class="badge badge-new pull-right"></span><span class="badge badge-updated pull-right"></span></a>
+					</div>
+					<ul class="list-unstyled documentation-articles level-2" style="display:none;"><li data-type="article" data-id="5afdc9abec161cff3b1845dd" class="article-container"><a href="/help/sabre-getting-started" class="article-link">SABRE: Accessing the Simulation</a></li></ul>
+				</li><li data-type="category" class="category-container nav-header nav-header-sub">
+					<div class="category-link-container" data-id="5adb6b65ec161cff3d0db892"><i class="cat-icon fa fa-chevron-right"></i> <a class="documentation-category" href="javascript:void(0);">Startup Game<span class="badge badge-new pull-right"></span><span class="badge badge-updated pull-right"></span></a>
+					</div>
+					<ul class="list-unstyled documentation-articles level-2" style="display:none;"><li data-type="article" data-id="5ada418aad121c4147099059" class="article-container"><a href="/help/startup-game-how-to-access" class="article-link">Startup Game: How to Access</a></li><li data-type="article" data-id="5ada40d38e121c3a320c9a42" class="article-container"><a href="/help/startup-game-cant-login-to-startup-game-on-my-iphone" class="article-link">Startup Game: I Can&#039;t Log In to Startup Game on my iPhone</a></li></ul>
+				</li></ul>
+				</li><li data-type="category" class="category-container nav-header nav-header-sub">
+					<div class="category-link-container" data-id="5ea84eefad121c140adf2282"><i class="cat-icon fa fa-chevron-right"></i> <a class="documentation-category" href="javascript:void(0);">Canvas Help for Remote Instruction<span class="badge badge-new pull-right"></span><span class="badge badge-updated pull-right"></span></a>
+					</div>
+					<ul class="list-unstyled documentation-articles level-1" style="display:none;"><li data-type="article" data-id="5e5ec761ec161cd258ae4856" class="article-container"><a href="/help/video-conferences-instruction" class="article-link">Video Conferences for Instruction</a></li><li data-type="article" data-id="5ea860078e121c273b73421f" class="article-container"><a href="/help/upload-zoom-recordings" class="article-link">Upload Virtual Meeting Recordings</a></li><li data-type="article" data-id="5ea85eecec161cee2ff1bfbb" class="article-container"><a href="/help/asynchronous-teaching-using-canvas-and-panopto" class="article-link">Asynchronous Teaching Using Canvas and Panopto</a></li><li data-type="article" data-id="5ea850e68e121cdc34734240" class="article-container"><a href="/help/canvas-remote-instruction-exams-for-remote-instruction-faculty" class="article-link">Exams for Remote Instruction - Faculty</a></li><li data-type="article" data-id="5ea85315ad121c2d10df21c3" class="article-container"><a href="/help/canvas-remote-instruction-exams-for-remote-instruction-students" class="article-link">Exams for Remote Instruction - Students</a></li><li data-type="article" data-id="5ea85f89ec161cf32ff1bfbb" class="article-container"><a href="/help/canvas-remote-instruction-online-presentations" class="article-link">Online Presentations - Faculty</a></li><li data-type="article" data-id="5ea85fb8ad121c2d10df22b3" class="article-container"><a href="/help/canvas-remote-instruction-online-presentations-students" class="article-link">Online Presentations - Students</a></li><li data-type="article" data-id="60745c9c6e121c8a3a5824c8" class="article-container"><a href="/help/canvas-remote-instruction-new-quizzes" class="article-link">All about New Quizzes</a></li></ul>
+				</li><li data-type="category" class="category-container nav-header nav-header-sub">
+					<div class="category-link-container" data-id="5f5b9b68ec161c4f4a48f567"><i class="cat-icon fa fa-chevron-right"></i> <a class="documentation-category" href="javascript:void(0);">Learning Tools Help for Faculty<span class="badge badge-new pull-right"></span><span class="badge badge-updated pull-right"></span></a>
+					</div>
+					<ul class="list-unstyled documentation-articles level-1" style="display:none;"><li data-type="article" data-id="6061f433ad121c9e3fcd9387" class="article-container"><a href="/help/creating-peer-evaluation" class="article-link">Creating peer evaluations using FeedbackFruits</a></li><li data-type="article" data-id="5f5b98d56e121cb25a076707" class="article-container"><a href="/help/studynet-materials-faculty-requests" class="article-link">Study.Net Materials: Faculty Requests</a></li><li data-type="article" data-id="63d0415cdc46a7243620ff82" class="article-container"><a href="/help/instruction-center" class="article-link">Instruction Center</a></li><li data-type="article" data-id="67475be0ad9e15f72a09b055" class="article-container"><a href="/help/polleverywhere-web" class="article-link">Poll Everywhere on the Web: Best Practices</a></li><li data-type="article" data-id="5f5bf1266e121c590107675b" class="article-container"><a href="/help/using-browsers-with-learning-tools" class="article-link">Using Web Browsers with Learning Tools</a></li><li data-type="article" data-id="62f7c7416b3baf71790738de" class="article-container"><a href="/help/ed-discussion-for-faculty" class="article-link">Ed Discussion for Faculty</a></li><li data-type="article" data-id="670851ac4a33ca496000d528" class="article-container"><a href="/help/harmonize-discussions-for-instructors" class="article-link">Harmonize Discussions for Instructors</a></li><li data-type="article" data-id="614266a222588b5e467b23ca" class="article-container"><a href="/help/canvas-attendance-absence-video-requests-instructors" class="article-link">Wharton Attendance, Absence, and Video Requests (For Instructors)</a></li></ul>
+				</li><li data-type="category" class="category-container nav-header nav-header-sub">
+					<div class="category-link-container" data-id="68ee688045430dfe870150b8"><i class="cat-icon fa fa-chevron-right"></i> <a class="documentation-category" href="javascript:void(0);">Blueprint Articles<span class="badge badge-new pull-right"></span><span class="badge badge-updated pull-right"></span></a>
+					</div>
+					<ul class="list-unstyled documentation-articles level-1" style="display:none;"><li data-type="article" data-id="68ee694c20a16c7d3704e0e4" class="article-container"><a href="/help/should-i-use-blueprint" class="article-link">Should I Use a Blueprint?</a></li></ul>
+				</li></ul>
+							</li><li data-type="category" class="category-container nav-header nav-header-sub level-0">
+						<div class="category-link-container" data-id="5a86ee55ad121ca77b3f16ff"><i class="cat-icon fa fa-chevron-right"></i><a class="documentation-category" href="javascript:void(0);">Apps &amp; Collaboration<span class="badge badge-new pull-right"></span><span class="badge badge-updated pull-right"></span></a>
+						</div>
+						<ul class="list-unstyled documentation-articles level-1" style="display:none;"><li data-type="category" class="category-container nav-header nav-header-sub">
+					<div class="category-link-container" data-id="5b637c33ad121c1a628754a7"><i class="cat-icon fa fa-chevron-right"></i> <a class="documentation-category" href="javascript:void(0);">Course-related Software<span class="badge badge-new pull-right"></span><span class="badge badge-updated pull-right"></span></a>
+					</div>
+					<ul class="list-unstyled documentation-articles level-1" style="display:none;"><li data-type="article" data-id="5ada809ded121c7e1e4f592c" class="article-container"><a href="/help/202149406-think-cell-" class="article-link">thinkcell</a></li><li data-type="article" data-id="5b5cbdd5ad121ca80b97c329" class="article-container"><a href="/help/canvas-student-apps" class="article-link">Canvas Student Apps</a></li><li data-type="article" data-id="5ada81cbed121c7e1e4f5a56" class="article-container"><a href="/help/201378419-jmp-access-and-troubleshooting-guide" class="article-link">JMP Access and Troubleshooting Guide</a></li><li data-type="article" data-id="5ada8138ed121c7e1e4f59c3" class="article-container"><a href="/help/201366415-math-software-matlab-and-mathematica" class="article-link">Software: MATLAB and Mathematica</a></li></ul>
+				</li><li data-type="category" class="category-container nav-header nav-header-sub">
+					<div class="category-link-container" data-id="5b637c61ec161c6e3ed02005"><i class="cat-icon fa fa-chevron-right"></i> <a class="documentation-category" href="javascript:void(0);">Wharton Apps<span class="badge badge-new pull-right"></span><span class="badge badge-updated pull-right"></span></a>
+					</div>
+					<ul class="list-unstyled documentation-articles level-1" style="display:none;"><li data-type="article" data-id="5f99b67dec161ce56faba5b6" class="article-container"><a href="/help/mypenn" class="article-link">MyPenn</a></li><li data-type="article" data-id="5ada807ded121c7e1e4f590d" class="article-container"><a href="/help/203175697-troubleshooting-the-virtual-lab" class="article-link">Troubleshooting the Virtual Lab</a></li><li data-type="article" data-id="5ada8052ed121c7e1e4f58da" class="article-container"><a href="/help/screencast-classroom-gsr" class="article-link">Screencasting via AirServer &amp; Solstice</a></li><li data-type="article" data-id="5b64c4d06e121cdd4c3066ed" class="article-container"><a href="/help/wharton-apps-virtual-meetings" class="article-link">Video Conferences</a></li><li data-type="article" data-id="5e00f719ec161cf36a04b2ef" class="article-container"><a href="/help/whooppee-for-students" class="article-link">WHOOPPEE (For Students)</a></li><li data-type="article" data-id="5e17582aec161ce67f82d16b" class="article-container"><a href="/help/whooppee-for-teaching-team-members" class="article-link">WHOOPPEE (For Teaching Team Members)</a></li><li data-type="article" data-id="610c3363bc6d2ccd187b23c8" class="article-container"><a href="/help/mba-pre-term-app" class="article-link">MBA Pre-Term 2025 App</a></li><li data-type="article" data-id="614b9208b12626e61b7b26c2" class="article-container"><a href="/help/campusgroups-connection-programs-appointment-scheduling-for-ugr-students" class="article-link">CampusGroups Connection Programs - Appointment scheduling (for UGR Students)</a></li><li data-type="article" data-id="668804a4cbb00297cc033c8d" class="article-container"><a href="/help/class-recording-permissions-for-students" class="article-link">Class Recording Permissions (For Students)</a></li><li data-type="article" data-id="668ee5dcd2a7df44e60451be" class="article-container"><a href="/help/class-recording-permissions-for-faculty" class="article-link">Class Recording Permissions (For Faculty)</a></li></ul>
+				</li><li data-type="category" class="category-container nav-header nav-header-sub">
+					<div class="category-link-container" data-id="5b637be26e121ce0363065f3"><i class="cat-icon fa fa-chevron-right"></i> <a class="documentation-category" href="javascript:void(0);">Software for Working &amp; Learning<span class="badge badge-new pull-right"></span><span class="badge badge-updated pull-right"></span></a>
+					</div>
+					<ul class="list-unstyled documentation-articles level-1" style="display:none;"><li data-type="article" data-id="5ada816aed121c7e1e4f59fd" class="article-container"><a href="/help/201429925-mobile-offerings-at-wharton" class="article-link">Useful Mobile Apps at Wharton</a></li><li data-type="article" data-id="5ada817bed121c7e1e4f5a0a" class="article-container"><a href="/help/202430116-force-quit-applications-on-your-device" class="article-link">Close an Unresponsive App</a></li><li data-type="article" data-id="5ade49f4ad121cf5334b6f42" class="article-container"><a href="/help/office-365-university-students" class="article-link">Microsoft 365 University</a></li><li data-type="article" data-id="5ada820ded121c7e1e4f5a8d" class="article-container"><a href="/help/202151726-lynda-com-video-tutorials-" class="article-link">LinkedIn Learning Video Tutorials </a></li><li data-type="article" data-id="5e629ea1ec161cba1cae4982" class="article-container"><a href="/help/apps-collaboration-a-guide-to-remote-working-staff" class="article-link">A Guide to Remote Working - Staff</a></li><li data-type="article" data-id="5ada8167ed121c7e1e4f59fa" class="article-container"><a href="/help/203429239-parallels-for-mac" class="article-link">Parallels Desktop for Mac</a></li><li data-type="article" data-id="5d0189d7ec161c044e955227" class="article-container"><a href="/help/dropbox-for-business" class="article-link">Dropbox for Business </a></li><li data-type="article" data-id="5e580494ad121c7c2ef75c9f" class="article-container"><a href="/help/sumatra-pdf-reader" class="article-link">SumatraPDF - Default Classroom PDF Reader</a></li><li data-type="article" data-id="5f36cede6e121c9a15b3461e" class="article-container"><a href="/help/penn-box" class="article-link">Penn+Box</a></li><li data-type="article" data-id="5e6a9b198e121c035fb81993" class="article-container" external><a href="/help/microsoft-teams" class="article-link">Microsoft Teams</a></li><li data-type="article" data-id="6272c515cad3bf5a38697335" class="article-container"><a href="/help/pennflex-phone" class="article-link">PennFlex Phone</a></li><li data-type="article" data-id="64678ced77674a06d432b81e" class="article-container"><a href="/help/weconnect" class="article-link">WeConnect</a></li><li data-type="article" data-id="64dbe177a3206367916eab94" class="article-container"><a href="/help/weconnect-for-wharton-executive-education" class="article-link">WeConnect for Wharton Executive Education</a></li><li data-type="article" data-id="6939e751f4313bd18f0d6e42" class="article-container"><a href="/help/dropbox-exception-request" class="article-link">Dropbox Account Exception Request</a></li></ul>
+				</li><li data-type="category" class="category-container nav-header nav-header-sub">
+					<div class="category-link-container" data-id="68f0fc54cdb60a8e92071e04"><i class="cat-icon fa fa-chevron-right"></i> <a class="documentation-category" href="javascript:void(0);">AWS at Wharton<span class="badge badge-new pull-right"></span><span class="badge badge-updated pull-right"></span></a>
+					</div>
+					<ul class="list-unstyled documentation-articles level-1" style="display:none;"><li data-type="article" data-id="68f1234e1b863870410376d8" class="article-container"><a href="/help/aws-at-wharton-aws-best-practices" class="article-link">AWS Best Practices</a></li><li data-type="article" data-id="68f101995b3c73dd1c075928" class="article-container"><a href="/help/aws-linked-accounts-and-budget-codes" class="article-link">AWS Linked Accounts and Budget Codes</a></li><li data-type="article" data-id="68f121bce636e9fbcf01587e" class="article-container"><a href="/help/requesting-a-aws-linked-account" class="article-link">Requesting a AWS Linked Account</a></li><li data-type="article" data-id="68f127b295a71ee7b80ba2a5" class="article-container"><a href="/help/aws-at-wharton-guardrails" class="article-link">AWS at Wharton Guardrails</a></li></ul>
+				</li><li data-type="category" class="category-container nav-header nav-header-sub">
+					<div class="category-link-container" data-id="68da8f5293883bd42b0d714b"><i class="cat-icon fa fa-chevron-right"></i> <a class="documentation-category" href="javascript:void(0);">Halo at Wharton<span class="badge badge-new pull-right"></span><span class="badge badge-updated pull-right"></span></a>
+					</div>
+					<ul class="list-unstyled documentation-articles level-1" style="display:none;"><li data-type="article" data-id="68dabca7ccd57e84aa015fd4" class="article-container"><a href="/help/halo-at-wharton" class="article-link">Halo at Wharton</a></li><li data-type="category" class="category-container nav-header nav-header-sub">
+					<div class="category-link-container" data-id="68e6e26b9752688a890c4f4d"><i class="cat-icon fa fa-chevron-right"></i> <a class="documentation-category" href="javascript:void(0);">Halo User Documentation<span class="badge badge-new pull-right"></span><span class="badge badge-updated pull-right"></span></a>
+					</div>
+					<ul class="list-unstyled documentation-articles level-2" style="display:none;"><li data-type="article" data-id="68dac6256b8e9f2d39005a2c" class="article-container"><a href="/help/fin-op-requests" class="article-link">Financial Operations Requests</a></li><li data-type="article" data-id="68e687108e5554100904ac50" class="article-container"><a href="/help/halo-user-portal" class="article-link">Halo User Portal</a></li></ul>
+				</li><li data-type="category" class="category-container nav-header nav-header-sub">
+					<div class="category-link-container" data-id="68e6906a112a40b4cf005ad1"><i class="cat-icon fa fa-chevron-right"></i> <a class="documentation-category" href="javascript:void(0);">Halo Agent Documentation<span class="badge badge-new pull-right"></span><span class="badge badge-updated pull-right"></span></a>
+					</div>
+					<ul class="list-unstyled documentation-articles level-2" style="display:none;"><li data-type="article" data-id="68e6923ad728337e3d045079" class="article-container"><a href="/help/halo-homescreen-and-navigation" class="article-link">Halo Agent Application Homescreen and Navigation</a></li><li data-type="article" data-id="68e6e05c7b770238ad009276" class="article-container"><a href="/help/halo-ticket" class="article-link">Halo Ticket Anatomy</a></li><li data-type="article" data-id="68e69fe0019bc46825046f33" class="article-container"><a href="/help/working-with-tickets-in-halo" class="article-link">Working with Tickets in Halo</a></li><li data-type="article" data-id="68e6c11c9737fb34040a8d58" class="article-container"><a href="/help/creating-a-new-ticket-as-an-agent" class="article-link">Creating a New Ticket as a Halo Agent</a></li><li data-type="article" data-id="6900f58e3f34a177430046b8" class="article-container"><a href="/help/emailing-from-halo-ticket" class="article-link">Emailing from a Halo Ticket</a></li><li data-type="article" data-id="68e67b9303341dd3090f6ff9" class="article-container"><a href="/help/financial-operations-ticket-status" class="article-link">Financial Operations Ticket Statuses</a></li><li data-type="article" data-id="68e81831f5f2f318af013955" class="article-container"><a href="/help/canned-text-in-halo" class="article-link">Canned Text in Halo</a></li><li data-type="article" data-id="696a571d1801c3d9fb02be2b" class="article-container"><a href="/help/followers-and-following-a-ticket" class="article-link">Followers and Following a Ticket</a></li></ul>
+				</li></ul>
+				</li><li data-type="category" class="category-container nav-header nav-header-sub">
+					<div class="category-link-container" data-id="640b3c698c77de2e0b33f5b6"><i class="cat-icon fa fa-chevron-right"></i> <a class="documentation-category" href="javascript:void(0);">Slack at Wharton<span class="badge badge-new pull-right"></span><span class="badge badge-updated pull-right"></span></a>
+					</div>
+					<ul class="list-unstyled documentation-articles level-1" style="display:none;"><li data-type="article" data-id="63f8dcfc0000621ead56480b" class="article-container"><a href="/help/slack-at-wharton-overview" class="article-link">Slack at Wharton Overview</a></li><li data-type="article" data-id="640b4a625fd6c769091f1ac5" class="article-container"><a href="/help/inviting-someone-to-slack-at-wharton" class="article-link">Inviting Someone to Slack at Wharton</a></li></ul>
+				</li></ul>
+							</li><li data-type="category" class="category-container nav-header nav-header-sub level-0">
+						<div class="category-link-container" data-id="5fa41b6d8e121c96711e8a87"><i class="cat-icon fa fa-chevron-right"></i><a class="documentation-category" href="javascript:void(0);">Portals &amp; Clubs<span class="badge badge-new pull-right"></span><span class="badge badge-updated pull-right"></span></a>
+						</div>
+						<ul class="list-unstyled documentation-articles level-1" style="display:none;"><li data-type="category" class="category-container nav-header nav-header-sub">
+					<div class="category-link-container" data-id="5b4fa198ad121ce2488bc76b"><i class="cat-icon fa fa-chevron-right"></i> <a class="documentation-category" href="javascript:void(0);">MyWharton<span class="badge badge-new pull-right"></span><span class="badge badge-updated pull-right"></span></a>
+					</div>
+					<ul class="list-unstyled documentation-articles level-1" style="display:none;"><li data-type="article" data-id="685b2a6eaf5e3d33ae0758c6" class="article-container"><a href="/help/mywharton-2025" class="article-link">MyWharton</a></li><li data-type="article" data-id="685ea73983b951891606f63c" class="article-container"><a href="/help/mywharton-dashboard-widget" class="article-link">MyWharton - Dashboards and Widgets</a></li><li data-type="article" data-id="685ead2870165c52c20a627b" class="article-container"><a href="/help/mywharton-directory" class="article-link">MyWharton - Directory</a></li><li data-type="article" data-id="685eaeaf834878d4cb092b00" class="article-container"><a href="/help/mywharton-events-calendar" class="article-link">MyWharton - Events and Calendar</a></li><li data-type="article" data-id="686e94edcb2cbfc8bc009fd6" class="article-container"><a href="/help/mywharton-personal-settings" class="article-link">MyWharton - Personal Settings</a></li><li data-type="article" data-id="6878142ae0229c0fef0a80b6" class="article-container"><a href="/help/mywharton-tools" class="article-link">MyWharton - Tools</a></li><li data-type="article" data-id="695eb498e0c37ed8760cfa28" class="article-container"><a href="/help/mywharton-tasks" class="article-link">MyWharton - Tasks</a></li></ul>
+				</li><li data-type="category" class="category-container nav-header nav-header-sub">
+					<div class="category-link-container" data-id="5f4eaf18ec161cf168820eae"><i class="cat-icon fa fa-chevron-right"></i> <a class="documentation-category" href="javascript:void(0);">Student Clubs<span class="badge badge-new pull-right"></span><span class="badge badge-updated pull-right"></span></a>
+					</div>
+					<ul class="list-unstyled documentation-articles level-1" style="display:none;"><li data-type="article" data-id="5ada80bfed121c7e1e4f595e" class="article-container"><a href="/help/202526198-student-website-and-club-account-information" class="article-link">Club Websites and Club Email Account Information (Students)</a></li><li data-type="article" data-id="5f4eb435ec161c386f820a2f" class="article-container"><a href="/help/submit-event-in-campusgroups" class="article-link"><i class="fa fa-film"></i>&nbsp;Submitting an Event in CampusGroups (Officers Only)</a></li><li data-type="article" data-id="5f4eba78ec161cf271820b48" class="article-container"><a href="/help/campusgroups-calendar" class="article-link"><i class="fa fa-film"></i>&nbsp;Using the CampusGroups Calendar (Undergrads)</a></li><li data-type="article" data-id="601436856e121c8105ec0eb9" class="article-container"><a href="/help/using-the-campusgroups-calendar-for-mbas" class="article-link">Using the CampusGroups Calendar for MBA Co-Curricular Events </a></li></ul>
+				</li></ul>
+							</li><li data-type="category" class="category-container nav-header nav-header-sub level-0">
+						<div class="category-link-container" data-id="5cc071506e121c17180a0a90"><i class="cat-icon fa fa-chevron-right"></i><a class="documentation-category" href="javascript:void(0);">Consultation &amp; Services<span class="badge badge-new pull-right"></span><span class="badge badge-updated pull-right"></span></a>
+						</div>
+						<ul class="list-unstyled documentation-articles level-1" style="display:none;"><li data-type="category" class="category-container nav-header nav-header-sub">
+					<div class="category-link-container" data-id="5a86ee5cec161c3661871a81"><i class="cat-icon fa fa-chevron-right"></i> <a class="documentation-category" href="javascript:void(0);">Research<span class="badge badge-new pull-right"></span><span class="badge badge-updated pull-right"></span></a>
+					</div>
+					<ul class="list-unstyled documentation-articles level-1" style="display:none;"><li data-type="category" class="category-container nav-header nav-header-sub">
+					<div class="category-link-container external" data-id="5b1935c9ad121cc610486ecf"><i class="alt-icon fa fa-chevron-right"></i> <a class="documentation-category" href="https://research-it.wharton.upenn.edu/">Wharton Research IT<span class="badge badge-new pull-right"></span><span class="badge badge-updated pull-right"></span></a>
+					</div>
+					<ul class="list-unstyled documentation-articles level-2" style="display:none;"></ul>
+				</li><li data-type="category" class="category-container nav-header nav-header-sub">
+					<div class="category-link-container" data-id="5b637cbfad121cc15f8755a5"><i class="cat-icon fa fa-chevron-right"></i> <a class="documentation-category" href="javascript:void(0);">Surveys and Analysis<span class="badge badge-new pull-right"></span><span class="badge badge-updated pull-right"></span></a>
+					</div>
+					<ul class="list-unstyled documentation-articles level-2" style="display:none;"><li data-type="article" data-id="5ada807ced121c7e1e4f590b" class="article-container"><a href="/help/202123893-qualtrics-software" class="article-link">Qualtrics Account</a></li><li data-type="article" data-id="655666a223d82179fc3b0abf" class="article-container"><a href="/help/qualtrics-pennkey" class="article-link">Setting Qualtrics Up for PennKey Authentication</a></li></ul>
+				</li><li data-type="category" class="category-container nav-header nav-header-sub">
+					<div class="category-link-container" data-id="5b637d166e121c46393065df"><i class="cat-icon fa fa-chevron-right"></i> <a class="documentation-category" href="javascript:void(0);">Campus Research Resources<span class="badge badge-new pull-right"></span><span class="badge badge-updated pull-right"></span></a>
+					</div>
+					<ul class="list-unstyled documentation-articles level-2" style="display:none;"><li data-type="article" data-id="5ada7fafed121c7e1e4f5864" class="article-container"><a href="/help/115002504226-how-can-i-log-into-wharton-research-data-services-wrds-" class="article-link">Accessing Wharton Research Data Services (WRDS)</a></li></ul>
+				</li></ul>
+				</li><li data-type="category" class="category-container nav-header nav-header-sub">
+					<div class="category-link-container" data-id="5cd4449fec161c1479f29599"><i class="cat-icon fa fa-chevron-right"></i> <a class="documentation-category" href="javascript:void(0);">Wharton Production<span class="badge badge-new pull-right"></span><span class="badge badge-updated pull-right"></span></a>
+					</div>
+					<ul class="list-unstyled documentation-articles level-1" style="display:none;"><li data-type="article" data-id="5cc9ae67ad121cdb653c8bb8" class="article-container"><a href="/help/preparing-for-your-production-project" class="article-link">Preparing for Your Wharton Production Project</a></li><li data-type="article" data-id="5cc9b08aad121cdb653c8bdc" class="article-container" external><a href="/help/wharton-production-services" rel="noopener noreferrer" target="_blank" class="article-link">Wharton Production Services</a></li><li data-type="article" data-id="5cc9a8cfec161c29795e70b3" class="article-container"><a href="/help/submitting-a-production-request" class="article-link">Submitting a Production Request</a></li><li data-type="article" data-id="5d9257a66e121c295ba77351" class="article-container"><a href="/help/video-submission-guidelines-for-the-non-professional" class="article-link">Video Submission Guidelines for the Non-Professional</a></li></ul>
+				</li></ul>
+							</li><li data-type="category" class="category-container nav-header nav-header-sub level-0">
+						<div class="category-link-container" data-id="5a86ee386e121c8569d0f1b1"><i class="cat-icon fa fa-chevron-right"></i><a class="documentation-category" href="javascript:void(0);">Personal Computing &amp; Devices<span class="badge badge-new pull-right"></span><span class="badge badge-updated pull-right"></span></a>
+						</div>
+						<ul class="list-unstyled documentation-articles level-1" style="display:none;"><li data-type="article" data-id="68092a157426024b9c07e9f4" class="article-container"><a href="/help/offboard-to-do-list-faculty" class="article-link">Faculty Offboarding To-Do List</a></li><li data-type="category" class="category-container nav-header nav-header-sub">
+					<div class="category-link-container" data-id="5cc9befbec161cff035e710c"><i class="cat-icon fa fa-chevron-right"></i> <a class="documentation-category" href="javascript:void(0);">Setting Up &amp; Managing Devices<span class="badge badge-new pull-right"></span><span class="badge badge-updated pull-right"></span></a>
+					</div>
+					<ul class="list-unstyled documentation-articles level-1" style="display:none;"><li data-type="article" data-id="5ade0473ec161ca97a40ed43" class="article-container"><a href="/help/whartonization-guide" class="article-link">Whartonization Guide: Start Here</a></li><li data-type="article" data-id="680928c92619d384cc023f14" class="article-container"><a href="/help/whartonization-guide-faculty" class="article-link">Faculty Whartonization Guide</a></li><li data-type="article" data-id="5ada821eed121c7e1e4f5aa1" class="article-container"><a href="/help/203442707-caring-for-your-laptop" class="article-link">Caring For Your Laptop</a></li><li data-type="article" data-id="5ada80dbed121c7e1e4f597b" class="article-container" external><a href="/help/207831623-student-computing-appointments" class="article-link">Virtual Tech Center Appointments (Students)</a></li><li data-type="article" data-id="5ada824ded121c7e1e4f5ac4" class="article-container"><a href="/help/202151646-getting-technology-help-and-support-options" class="article-link">Technology Support Options (Students)</a></li><li data-type="article" data-id="5ada80bbed121c7e1e4f5959" class="article-container"><a href="/help/203165727-buying-guide-for-laptops-" class="article-link">Laptop Buying Guide (Students)</a></li><li data-type="article" data-id="5b5f2668ec161cde30d020c7" class="article-container" external><a href="/help/student-support-quick-start-guide" class="article-link">Student Support Quick Start Guide</a></li><li data-type="article" data-id="5ada8150ed121c7e1e4f59dd" class="article-container"><a href="/help/203165737-buying-guide-can-i-use-my-current-company-computer-" class="article-link">Buying Guide - Can I use my current / company computer? (Students)</a></li><li data-type="article" data-id="5ada814bed121c7e1e4f59d7" class="article-container" external><a href="/help/203434197-penn-computer-connection-campus-computer-store-" class="article-link">Penn Educational Discounts for Technology Purchases</a></li><li data-type="article" data-id="5ada8101ed121c7e1e4f5999" class="article-container"><a href="/help/203166607-buying-guide-for-mobile-devices-" class="article-link">Mobile Device Buying Guide</a></li></ul>
+				</li><li data-type="category" class="category-container nav-header nav-header-sub">
+					<div class="category-link-container external" data-id="65158f1575647f75b75cbebb"><i class="alt-icon fa fa-chevron-right"></i> <a class="documentation-category" href="https://support.wharton.upenn.edu/help/information-security">Virus &amp; Security<span class="badge badge-new pull-right"></span><span class="badge badge-updated pull-right"></span></a>
+					</div>
+					<ul class="list-unstyled documentation-articles level-1" style="display:none;"></ul>
+				</li><li data-type="category" class="category-container nav-header nav-header-sub">
+					<div class="category-link-container" data-id="5cc9bd426e121c18339783ee"><i class="cat-icon fa fa-chevron-right"></i> <a class="documentation-category" href="javascript:void(0);">Two-Step Verification<span class="badge badge-new pull-right"></span><span class="badge badge-updated pull-right"></span></a>
+					</div>
+					<ul class="list-unstyled documentation-articles level-1" style="display:none;"><li data-type="article" data-id="5ae33f536e121c396f881b1c" class="article-container"><a href="/help/2-step-verification-for-google-accounts" class="article-link">Two-Step Verification (Google Accounts)</a></li><li data-type="article" data-id="5ad7affd8e121c9a7b0c99e6" class="article-container"><a href="/help/two-step" class="article-link">Two-Step Verification (PennKey Accounts)</a></li><li data-type="article" data-id="5bbb9e3c6e121c8a4dd15e7f" class="article-container"><a href="/help/two-step-verification-start-here" class="article-link">Two-Step Verification: Start Here</a></li><li data-type="article" data-id="5c112c7ead121c7a02aa99aa" class="article-container"><a href="/help/two-step-methods-of-verification" class="article-link">Two-Step: Methods of Verification</a></li><li data-type="article" data-id="5c38e3816e121c460cdeb7ba" class="article-container"><a href="/help/two-step-account-recovery" class="article-link">Two-Step: Account Recovery</a></li><li data-type="article" data-id="5ca22b3cad121c5c0d0a89bf" class="article-container"><a href="/help/two-step-best-practices-faq-students" class="article-link">Two-Step: Best Practices &amp; FAQ (Students)</a></li><li data-type="article" data-id="5cb5cc4fad121c906c593d1e" class="article-container"><a href="/help/two-step-new-devicephone-students" class="article-link">Two-Step: New Device/Phone (Students)</a></li><li data-type="article" data-id="5db7285d8e121c2a69f239cb" class="article-container" external><a href="/help/two-step-verification-penno365-accounts" rel="noopener noreferrer" target="_blank" class="article-link">Two-Step Verification (PennO365 Email Accounts)</a></li></ul>
+				</li><li data-type="category" class="category-container nav-header nav-header-sub">
+					<div class="category-link-container" data-id="5b637b31ad121c6f658753ba"><i class="cat-icon fa fa-chevron-right"></i> <a class="documentation-category" href="javascript:void(0);">Backing Up<span class="badge badge-new pull-right"></span><span class="badge badge-updated pull-right"></span></a>
+					</div>
+					<ul class="list-unstyled documentation-articles level-1" style="display:none;"><li data-type="article" data-id="5afd8c758e121c0c1959a3ed" class="article-container"><a href="/help/backing-up-and-saving-your-work" class="article-link">Protecting Your Work (Students)</a></li><li data-type="article" data-id="5afc99a7ec161c032b18460e" class="article-container"><a href="/help/backing-up-what-are-the-best-solutions-for-you" class="article-link">Backing Up: What Are the Best Solutions For You? (Students)</a></li><li data-type="article" data-id="62fd2a358ee4e55a36035016" class="article-container"><a href="/help/safe-storage" class="article-link">Safe Storage Options</a></li></ul>
+				</li></ul>
+							</li><li data-type="category" class="category-container nav-header nav-header-sub level-0">
+						<div class="category-link-container" data-id="59552ba06e121c4a78ab1a38"><i class="cat-icon fa fa-chevron-right"></i><a class="documentation-category" href="javascript:void(0);">Printing &amp; Public Technologies<span class="badge badge-new pull-right"></span><span class="badge badge-updated pull-right"></span></a>
+						</div>
+						<ul class="list-unstyled documentation-articles level-1" style="display:none;"><li data-type="category" class="category-container nav-header nav-header-sub">
+					<div class="category-link-container" data-id="5b6379658e121cba4ca7ca6e"><i class="cat-icon fa fa-chevron-right"></i> <a class="documentation-category" href="javascript:void(0);">Public Computers &amp; Technology<span class="badge badge-new pull-right"></span><span class="badge badge-updated pull-right"></span></a>
+					</div>
+					<ul class="list-unstyled documentation-articles level-1" style="display:none;"><li data-type="category" class="category-container nav-header nav-header-sub">
+					<div class="category-link-container" data-id="6219443299a4804c4f7b29db"><i class="cat-icon fa fa-chevron-right"></i> <a class="documentation-category" href="javascript:void(0);">Group Study Rooms<span class="badge badge-new pull-right"></span><span class="badge badge-updated pull-right"></span></a>
+					</div>
+					<ul class="list-unstyled documentation-articles level-2" style="display:none;"><li data-type="article" data-id="5cf950d2ec161c5a6c4cf9f5" class="article-container"><a href="/help/group-study-room-policies" class="article-link">Group Study Room Policies</a></li><li data-type="article" data-id="5a68a2858e121ca7557a799e" class="article-container"><a href="/help/gsr-reservation-overview" class="article-link">Reserving Group Study Rooms (GSRs) </a></li><li data-type="article" data-id="620412c47b09d6b00b7b284a" class="article-container"><a href="/help/reserving-gsrs-wsf" class="article-link">Reserving Group Study Rooms (GSRs) -- Wharton San Francisco</a></li><li data-type="article" data-id="5ada81fbed121c7e1e4f5a7d" class="article-container"><a href="/help/202882513-gsr-guide-forum-level-rooms" class="article-link">Using the Group Study Rooms (GSRs)</a></li><li data-type="article" data-id="5cf8394f6e121cbd24ecf0a3" class="article-container"><a href="/help/troubleshooting-group-study-rooms-gsrs" class="article-link">Troubleshooting Group Study Rooms (GSRs)</a></li></ul>
+				</li><li data-type="article" data-id="5ada7ffded121c7e1e4f589b" class="article-container"><a href="/help/211673223-using-wharton-public-computers" class="article-link">Using Wharton Public Computers</a></li><li data-type="article" data-id="5ada7faeed121c7e1e4f5861" class="article-container"><a href="/help/115005332483-bloomberg-terminals" class="article-link">Bloomberg Terminals</a></li><li data-type="article" data-id="5ada8072ed121c7e1e4f58f8" class="article-container"><a href="/help/203442667-sending-a-fax-at-wharton" class="article-link">Sending a Fax at Wharton</a></li><li data-type="article" data-id="5ada81c4ed121c7e1e4f5a4c" class="article-container"><a href="/help/202113293-charge-your-devices" class="article-link">Charging your Devices</a></li><li data-type="article" data-id="5ada824eed121c7e1e4f5ac6" class="article-container"><a href="/help/202151256-borrowing-computers-or-video-equipment" class="article-link">Borrowing Computers and Video Equipment (Students)</a></li><li data-type="article" data-id="5baa87efad121c0f535be9db" class="article-container"><a href="/help/life-at-wharton" class="article-link">Life@Wharton / LCD Screen Help</a></li><li data-type="article" data-id="5ada820ded121c7e1e4f5a8e" class="article-container"><a href="/help/203174127-penn-library-computing-resources-" class="article-link">Penn Library Computing Resources </a></li></ul>
+				</li><li data-type="category" class="category-container nav-header nav-header-sub">
+					<div class="category-link-container" data-id="5b6378c3ec161c3a41d01f39"><i class="cat-icon fa fa-chevron-right"></i> <a class="documentation-category" href="javascript:void(0);">Public Printing<span class="badge badge-new pull-right"></span><span class="badge badge-updated pull-right"></span></a>
+					</div>
+					<ul class="list-unstyled documentation-articles level-1" style="display:none;"><li data-type="article" data-id="68964f9fd66b9eac350fad8e" class="article-container"><a href="/help/papercut-set-up" class="article-link">Enroll in PaperCut with your PennCard</a></li><li data-type="article" data-id="689ce14ab9c60cce79013a2b" class="article-container"><a href="/help/printing-from-laptop-or-mobile-device" class="article-link">Printing from Laptop or Mobile Device</a></li><li data-type="article" data-id="689ce2b5c63bbb42b60a2a43" class="article-container"><a href="/help/printing-from-public-computers-at-wharton" class="article-link">Printing from Public Computers at Wharton</a></li><li data-type="article" data-id="5ada8076ed121c7e1e4f58ff" class="article-container"><a href="/help/202427266-printing-at-wharton-options-locations-and-cost" class="article-link">Printing at Wharton: Options, Locations, and Cost</a></li><li data-type="article" data-id="5ada7ff0ed121c7e1e4f5891" class="article-container"><a href="/help/210258566-public-resources-for-print-scan-and-copy" class="article-link">Public Resources for Print, Scan, and Copy</a></li><li data-type="article" data-id="5ada80a2ed121c7e1e4f5936" class="article-container"><a href="/help/202113493-printing-tips-and-tricks" class="article-link">Public Printing Tips and Tricks</a></li></ul>
+				</li><li data-type="category" class="category-container nav-header nav-header-sub">
+					<div class="category-link-container" data-id="5b637a678e121c244aa7cb0b"><i class="cat-icon fa fa-chevron-right"></i> <a class="documentation-category" href="javascript:void(0);">Conferencing &amp; Collaborating<span class="badge badge-new pull-right"></span><span class="badge badge-updated pull-right"></span></a>
+					</div>
+					<ul class="list-unstyled documentation-articles level-1" style="display:none;"><li data-type="article" data-id="5a689d27ec161cc54bafb608" class="article-container"><a href="/help/virtual-meetings" class="article-link">Video Conferences</a></li><li data-type="article" data-id="5ada81a4ed121c7e1e4f5a27" class="article-container"><a href="/help/202526148-video-and-audio-conference-calls" class="article-link">Video and Audio Conference Calls</a></li><li data-type="article" data-id="5e67e563ec161c5314d3b06b" class="article-container"><a href="/help/conferencing-collaborating-virtual-meetings-for-instruction" class="article-link">Video Conferences for Instruction</a></li></ul>
+				</li><li data-type="category" class="category-container nav-header nav-header-sub">
+					<div class="category-link-container" data-id="5ee0fcd2ec161c1c3ab5a35c"><i class="cat-icon fa fa-chevron-right"></i> <a class="documentation-category" href="javascript:void(0);">Classroom Technology<span class="badge badge-new pull-right"></span><span class="badge badge-updated pull-right"></span></a>
+					</div>
+					<ul class="list-unstyled documentation-articles level-1" style="display:none;"><li data-type="article" data-id="5ada80c2ed121c7e1e4f5961" class="article-container"><a href="/help/202127966-using-technology-in-the-classrooms" class="article-link">Using Technology in the Classrooms</a></li><li data-type="article" data-id="5ee0e8716e121cc34b134f68" class="article-container"><a href="/help/display-resolutions" class="article-link">Display and Screen Resolutions in Classrooms and Conference Rooms</a></li><li data-type="article" data-id="5efb4697ec161c691379c6b2" class="article-container"><a href="/help/panopto-recording" class="article-link">Panopto Recording in the Classroom</a></li><li data-type="article" data-id="5f2c2e6c8e121cae5909c16d" class="article-container"><a href="/help/hybrid-classroom" class="article-link">Hybrid Instruction in Wharton Classrooms</a></li></ul>
+				</li></ul>
+							</li><li data-type="category" class="category-container nav-header nav-header-sub level-0">
+						<div class="category-link-container" data-id="65d76cf5121af9583f485f96"><i class="cat-icon fa fa-chevron-right"></i><a class="documentation-category" href="javascript:void(0);">Generative AI<span class="badge badge-new pull-right"></span><span class="badge badge-updated pull-right"></span></a>
+						</div>
+						<ul class="list-unstyled documentation-articles level-1" style="display:none;"><li data-type="article" data-id="649c510223c65b046472185d" class="article-container"><a href="/help/gen-ai" class="article-link">Generative AI: Best Practices and Resources</a></li><li data-type="article" data-id="65d76d51690d016e1a6e75cd" class="article-container"><a href="/help/copilot-web" class="article-link">Logging into Copilot for the Web</a></li><li data-type="article" data-id="65df7fd1311146154739d604" class="article-container"><a href="/help/copilot" class="article-link">Microsoft Copilot</a></li><li data-type="article" data-id="65fc49991e076d0d60079195" class="article-container"><a href="/help/grammarly" class="article-link">Grammarly for Education</a></li><li data-type="article" data-id="65df66b623d52462cc1dfdea" class="article-container"><a href="/help/ai-tools" class="article-link">AI Tools at Wharton and Penn</a></li><li data-type="article" data-id="668fe0cf8f59c5157d01ebf4" class="article-container"><a href="/help/chatgpt" class="article-link">ChatGPT Edu</a></li><li data-type="article" data-id="6604229e01811143f761811e" class="article-container"><a href="/help/ai-prompt-generation" class="article-link">AI Prompt Generation </a></li><li data-type="article" data-id="6877def5b1fc8220370f39cf" class="article-container"><a href="/help/lecture-recall-for-students" class="article-link">Lecture Recall for Students</a></li></ul>
+							</li><li data-type="category" class="category-container nav-header nav-header-sub level-0">
+						<div class="category-link-container" data-id="67efe2738294dc52020d9410"><i class="cat-icon fa fa-chevron-right"></i><a class="documentation-category" href="javascript:void(0);">Information Security<span class="badge badge-new pull-right"></span><span class="badge badge-updated pull-right"></span></a>
+						</div>
+						<ul class="list-unstyled documentation-articles level-1" style="display:none;"><li data-type="category" class="category-container nav-header nav-header-sub">
+					<div class="category-link-container" data-id="67efe3fd0d579e41ee0b018c"><i class="cat-icon fa fa-chevron-right"></i> <a class="documentation-category" href="/help/policies-standards-and-guidelines">Policies, Standards, and Guidelines<span class="badge badge-new pull-right"></span><span class="badge badge-updated pull-right"></span></a>
+					</div>
+					<ul class="list-unstyled documentation-articles level-1" style="display:none;"><li data-type="article" data-id="67f078c7f4c08e8a2406b0cb" class="article-container"><a href="/help/information-security-policy" class="article-link">Information Security Policy</a></li><li data-type="article" data-id="67f078f7d4a83c192f0767c7" class="article-container"><a href="/help/risk-review-standard" class="article-link">Risk Review Standard</a></li><li data-type="article" data-id="67f07946c03319292d05efbc" class="article-container"><a href="/help/ai-api-key-requirements" class="article-link">AI API Key Requirements</a></li><li data-type="article" data-id="67f079599f67f7cf4c004bf1" class="article-container"><a href="/help/travel-guidelines" class="article-link">Travel Guidelines</a></li><li data-type="article" data-id="680a5788e81b41d0ab072669" class="article-container"><a href="/help/vulnerability-management-standard" class="article-link">Vulnerability Management Standard</a></li><li data-type="article" data-id="680a5794111b9df914035ca4" class="article-container"><a href="/help/exception-standard" class="article-link">Exception Standard</a></li><li data-type="article" data-id="680a72ec64c4092c550044ee" class="article-container"><a href="/help/slack-guidelines" class="article-link">Slack Guidelines</a></li><li data-type="article" data-id="68408c66852fe4924b0d51e7" class="article-container"><a href="/help/iam-standard" class="article-link">Identity and Access Management Standard</a></li><li data-type="article" data-id="684093e546698f0a17052b53" class="article-container"><a href="/help/data-classification-and-management-standard" class="article-link">Data Classification and Management Standard</a></li><li data-type="article" data-id="68965aa5796d771b6b03dc7d" class="article-container"><a href="/help/email-and-content-access-standard" class="article-link">Email and Content Access Standard</a></li><li data-type="article" data-id="68b8885b4b726a82cf02d245" class="article-container"><a href="/help/zoom-security-guidelines" class="article-link">Zoom Security Guidelines</a></li></ul>
+				</li><li data-type="category" class="category-container nav-header nav-header-sub">
+					<div class="category-link-container" data-id="67efe4048bf53881340b6fe3"><i class="cat-icon fa fa-chevron-right"></i> <a class="documentation-category" href="/help/security-awareness">Security Awareness<span class="badge badge-new pull-right"></span><span class="badge badge-updated pull-right"></span></a>
+					</div>
+					<ul class="list-unstyled documentation-articles level-1" style="display:none;"><li data-type="article" data-id="680144cdbb06ad63b5072322" class="article-container"><a href="/help/phishing-and-spam" class="article-link">Phishing and Spam at Wharton</a></li></ul>
+				</li><li data-type="category" class="category-container nav-header nav-header-sub">
+					<div class="category-link-container" data-id="67efe409d495e6d33c047ad4"><i class="cat-icon fa fa-chevron-right"></i> <a class="documentation-category" href="javascript:void(0);">Technical Security Guides<span class="badge badge-new pull-right"></span><span class="badge badge-updated pull-right"></span></a>
+					</div>
+					<ul class="list-unstyled documentation-articles level-1" style="display:none;"><li data-type="article" data-id="67f7d5ca847339bb8a06f031" class="article-container"><a href="/help/firewalls" class="article-link">Firewalls: What They Are &amp; Why Use Them</a></li><li data-type="article" data-id="67f7d5e068ad89409b031e5f" class="article-container"><a href="/help/browser-security" class="article-link">Web Browser Security</a></li><li data-type="article" data-id="67f7d5f003b1acd0910c62a6" class="article-container"><a href="/help/google-security-privacy-checkups" class="article-link">Google Security &amp; Privacy Checkups</a></li><li data-type="article" data-id="67f7d6cd78afd9a15d0e3277" class="article-container"><a href="/help/zoom-security" class="article-link">Zoom Meeting Security: How-to</a></li><li data-type="article" data-id="6801491a608e7394010c1128" class="article-container"><a href="/help/virus-and-threat-protection" class="article-link">Virus and Threat Protection at Wharton</a></li><li data-type="article" data-id="5ada800fed121c7e1e4f58a8" class="article-container"><a href="/help/managing-passwords-and-more-at-penn" class="article-link">Managing Passwords (and more) at Penn</a></li></ul>
+				</li></ul>
+							</li><li data-type="article" data-id="648ca4fab1b80e127a5a3b55" class="article-container"><a href="/help/creating-accessible-course-materials-faculty" class="article-link">Creating Accessible Course Materials (Faculty)</a></li><li data-type="article" data-id="64b59931a29cce7184093d07" class="article-container"><a href="/help/how-to-login" class="article-link">Logging Into Wharton Computing Knowledge Base</a></li><li data-type="article" data-id="656776e6974b1c3666622dfc" class="article-container"><a href="/help/wharton-technology-onboarding-overview" class="article-link">Wharton Technology Onboarding Overview (Staff)</a></li><li data-type="article" data-id="65ba6a50d5776d6a9d192ae1" class="article-container"><a href="/help/clear-cookies" class="article-link">Clear Your Cache and Cookies</a></li><li data-type="article" data-id="65f1e272688f9018537c0ed6" class="article-container"><a href="/help/graduation-technology-to-do-phd" class="article-link">PhD Graduation Technology To-Do List</a></li><li data-type="article" data-id="660adc1fdfa3332c444f4924" class="article-container"><a href="/help/classroom-updates" class="article-link">Classroom Updates (Faculty)</a></li><li data-type="article" data-id="670fd4388b535a1fd90e5ddc" class="article-container"><a href="/help/campusgroups-checking-in-event-attendees" class="article-link">CampusGroups Events: Checking in Attendees</a></li><li data-type="article" data-id="6843a407b8771448f50e8e88" class="article-container"><a href="/help/new-technology-procurement-guide" class="article-link">New Technology Procurement Guide</a></li><li data-type="article" data-id="684aeb739704751e7c069ba2" class="article-container"><a href="/help/aplus-attendance-accessibility-concerns" class="article-link">aPlus+ Attendance Accessibility Concerns</a></li><li data-type="article" data-id="68642136106321951203a1a7" class="article-container"><a href="/help/tech-updates-2025" class="article-link">2025 Technology Updates (Summer / Fall) - Faculty and Staff</a></li><li data-type="article" data-id="68824467da9a1868a10e70e1" class="article-container"><a href="/help/isc-datacenter-maintenance" class="article-link">ISC Datacenter Maintenance - 2/1</a></li><li data-type="article" data-id="688a547a126149a9120fdaa2" class="article-container"><a href="/help/lecture-recall-for-faculty" class="article-link">Lecture Recall for Faculty</a></li>	</ul>
+	<ul class="list-unstyled bottom-outter-list">
+					<li data-type="category" class="category-container nav-header nav-header-sub level-0">
+				<div class="category-link-container ">
+					<i class="home-icon fa fa-file-pdf-o"></i><a rel="noopener noreferrer" target="_blank" class="documentation-category" href="/help/download-full-pdf/id/595514d68e121c302b0501b2">Full PDF Download</a>
+				</div>
+			</li>
+			</ul>
+	<div class="clear-both"></div>
+</div>
+<script>
+$(function () {
+  //set the active article if there is one
+  var curArtID = $("#object-id").val();
+  $('[data-id="' + curArtID + '"]')
+    .not(".article-favorite")
+    .not(".ko-js-favorites")
+    .addClass("active");
+
+  $(".article-container").on("click", function (e) {
+    e.preventDefault();
+    var href = $(this).find("a");
+    // if redirect or user does a cmnd/cntrl  + click
+    if (e.ctrlKey || e.metaKey || href.attr("target") == "_blank")
+      window.open(href.attr("href"), "_blank");
+    else window.location = href.attr("href");
+  });
+
+  if (
+    $(".article-container.active").length > 0 &&
+    $(".article-container.active").closest("ul").hasClass("hide")
+  ) {
+    $(".article-container.active").length > 0 &&
+      $(".article-container.active")
+        .closest("ul")
+        .siblings(".category-link-container")
+        .addClass("active");
+  }
+
+  if ($(".documentation-categories").find(".active").length > 0) {
+    $(".documentation-categories")
+      .find(".active")
+      .parents(".category-container")
+      .each(function () {
+        $(this)
+          .find(".cat-icon")
+          .first()
+          .not(".fa-chevron-down")
+          .toggleClass("fa-chevron-down")
+          .toggleClass("fa-chevron-right");
+        $(this).find(".documentation-articles").first().show();
+      });
+  }
+
+  if ($(".documentation-category").find(".active").length > 0) {
+    $(".documentation-categories").scrollTop(
+      $(".documentation-categories .active").position().top
+    );
+  }
+
+  $(".documentation-category").on("click", function () {
+    if ($(this).attr("href") == "javascript:void(0);") {
+      $(this).siblings(".cat-icon").click();
+    }
+  });
+
+  $(".article-container .badge-new").each(function () {
+    $(this)
+      .parents(".category-container")
+      .each(function () {
+        $(this)
+          .find(".badge-new")
+          .first()
+          .text($(this).find(".badge-new").first().text() * 1 + 1);
+      });
+  });
+
+  $(".article-container .badge-updated").each(function () {
+    $(this)
+      .parents(".category-container")
+      .each(function () {
+        $(this)
+          .find(".badge-updated")
+          .first()
+          .text($(this).find(".badge-updated").first().text() * 1 + 1);
+      });
+  });
+
+  $(".cat-icon").on("click", function () {
+    var show = $(this).hasClass("fa-chevron-right");
+
+    if (show) {
+      if (
+        $(this)
+          .closest(".nav-header")
+          .find(".article-container")
+          .hasClass("active")
+      ) {
+        $(this).closest(".category-link-container").removeClass("active");
+      }
+
+      //badges
+      $(this)
+        .closest(".category-link-container")
+        .find(".badge-new")
+        .first()
+        .hide();
+      $(this)
+        .closest(".category-link-container")
+        .find(".badge-updated")
+        .first()
+        .hide();
+
+      $(this)
+        .closest(".nav-header")
+        .find("ul")
+        .first()
+        .slideDown(200, function () {
+          $(this).closest(".nav-header").find("ul").first().attr("style", "");
+        });
+    } else {
+      $(this).closest(".nav-header").find("ul").first().slideUp(200);
+
+      //badges
+      if (
+        $(this)
+          .closest(".category-link-container")
+          .find(".badge-new")
+          .first()
+          .text() != ""
+      )
+        $(this)
+          .closest(".category-link-container")
+          .find(".badge-new")
+          .first()
+          .show();
+      if (
+        $(this)
+          .closest(".category-link-container")
+          .find(".badge-updated")
+          .first()
+          .text() != ""
+      )
+        $(this)
+          .closest(".category-link-container")
+          .find(".badge-updated")
+          .first()
+          .show();
+
+      if ($(this).closest(".nav-header").find("li.active").length > 0) {
+        $(this).closest(".category-link-container").addClass("active");
+      }
+    }
+
+    $(this).toggleClass("fa-chevron-down").toggleClass("fa-chevron-right");
+  });
+});
+
+</script>
+<div id="ko-article-cntr" data-vis="restricted" data-groups="" class="hg-2-col documentation-article">
+	<div class="ko-content-cntr">
+				<ul class="hg-breadcrumbs">
+			<li><a href="/help">Home</a></li>
+		</ul>
+		    <input id="object-id" type="hidden" value="65d76cf5121af9583f485f96" />
+  <div class="faq-nav-wrapper">
+					
+				<h1 class="faq-header">Generative AI</h1>
+				<div class="faq-top-description hide">
+									</div>
+				<div class="faq-nav-content">
+									<h2>Articles</h2>
+							<div class="article-block" data-id="649c510223c65b046472185d">
+										<a href="/help/gen-ai">
+						Generative AI: Best Practices and Resources					</a>
+					<div>
+						
+   This article shares what Wharton Computing has learned about key concepts and emerging best practices in the rapidly evolving field of AI. It provides resources and suggests some useful paradigms that may help you think about the use of AI in ou...					</div>
+				</div>
+							<div class="article-block" data-id="65d76d51690d016e1a6e75cd">
+										<a href="/help/copilot-web">
+						Logging into Copilot for the Web					</a>
+					<div>
+						Instructions on logging into Penn's Microsoft CoPilot					</div>
+				</div>
+							<div class="article-block" data-id="65df7fd1311146154739d604">
+										<a href="/help/copilot">
+						Microsoft Copilot					</a>
+					<div>
+						
+ 
+   Copilot  is the branding that Microsoft uses for all of its AI tools. This suite of generative AI (built upon the foundations of ChatGPT) is spread across all of Microsoft&#039;s platforms, which can make things slightly confusing since this means...					</div>
+				</div>
+							<div class="article-block" data-id="65fc49991e076d0d60079195">
+										<a href="/help/grammarly">
+						Grammarly for Education					</a>
+					<div>
+						
+ 
+   Before you start:
+
+ You must have an active student, faculty, or staff affiliation and a valid PennKey in order to use the University&#039;s Grammarly for Education service. Wharton is providing licenses for users who participated in the 2025 Gr...					</div>
+				</div>
+							<div class="article-block" data-id="65df66b623d52462cc1dfdea">
+										<a href="/help/ai-tools">
+						AI Tools at Wharton and Penn					</a>
+					<div>
+						
+    This article provides information on using Generative AI tools available through Wharton. &nbsp;Penn&#039;s ISC also has information on  Generative AI tools at Penn . 
+   Generative AI Tools at Penn and Wharton  Generative AI tools are fast becoming a t...					</div>
+				</div>
+							<div class="article-block" data-id="668fe0cf8f59c5157d01ebf4">
+										<a href="/help/chatgpt">
+						ChatGPT Edu					</a>
+					<div>
+						
+ 
+   ChatGPT Edu adds enterprise-level security, enhanced privacy, and data agreements to ChatGPT, the leading provider of generative AI, ensuring that it can be leveraged responsibly with University data.  No data entered in the Wharton ChatGPT E...					</div>
+				</div>
+							<div class="article-block" data-id="6604229e01811143f761811e">
+										<a href="/help/ai-prompt-generation">
+						AI Prompt Generation 					</a>
+					<div>
+						
+  
+
+  
+
+ This article discusses the limitations and advantages of using a generative AI chatbot, and reviews best practices on interacting with them.&nbsp; 
+ 
+
+  Before You Start &nbsp; 
+
+ You will need the following before you can complete this tas...					</div>
+				</div>
+							<div class="article-block" data-id="6877def5b1fc8220370f39cf">
+										<a href="/help/lecture-recall-for-students">
+						Lecture Recall for Students					</a>
+					<div>
+						Learn how to find and use Lecture Recall as a student. Lecture recall is a course review & study helper available on UPenn's ChatGPT Edu. Currently in pilot phase.					</div>
+				</div>
+				</div>
+</div>
+	</div>
+</div>
+</div>
+<div class="row ko-site-footer text-center xsize">
+  <div>©2026 <a href="http://www.wharton.upenn.edu/">The Wharton School</a>,  <a href="http://www.upenn.edu/">The University of Pennsylvania</a>  |  The Wharton School  |  <a href="https://www.wharton.upenn.edu/privacy-policy/">Privacy Policy</a> |  <a href="https://accessibility.web-resources.upenn.edu/get-help">Report accessibility issues and get help</a>
+  </div>
+</div>
+
+	</div>
+</div>
+
+		
+		<script>var translationsForJs = {"search":{"autocomplete-call-to-action":"Hit enter to search"},"table-of-contents":[],"top-navigation":[],"article-lists":[],"reader-login":[],"article":{"favorite-icon-name":"Favorite Article","unfavorite-icon-name":"Unfavorite Article"},"contact-form":[],"miscellaneous":[],"required-reading":[],"chatbot":[]};</script>
+		<script type="text/javascript" charset="utf-8" src='https://d3s179bfexmwfe.cloudfront.net/min/js/publicFooter-1c62c638a6.js'></script>
+		<script src="https://d3s179bfexmwfe.cloudfront.net/min/js/rainbowJs-1ac19954bd.js" type="text/javascript"></script>
+    
+    
+		<script type="text/javascript" charset="utf-8" src='https://d3s179bfexmwfe.cloudfront.net/min/js/slideoutJs-da6c0563b9.js'></script>
+		<script>
+			$(function(){
+				if($('.slideout-new').length > 0 && $('.hg-minimalist-theme').length > 0)
+{
+  // for css consistency
+  $('#ko-documentation-categories').addClass('slideout-menu').addClass('slideout-menu-left').removeClass('hide');
+  $('.documentation-article').addClass('slideout-panel').addClass('slideout-panel-left');
+
+  $('.ko-slideout-left-toggle').on('click', function(){
+    $("html").toggleClass('slideout-open');
+    $('.ko-slideout-left-toggle i').toggleClass('fa-bars fa-times');
+    $('#ko-documentation-categories').toggleClass('open');
+    $('.documentation-article').toggleClass('open');
+  });
+}
+else
+{
+  //resize content instead of pushing it
+  var slideResize = $('.slideout-resize').length > 0;
+  var slideWidth = $('.slideout-width').length > 0 ? $('.slideout-width').val() : 360;
+  slideout = new Slideout({
+    'panel': document.getElementById("ko-article-cntr"),
+    'menu': document.getElementById('ko-documentation-categories'),
+    'padding': slideWidth,
+    'tolerance': 70,
+    'resize': slideResize,
+    'touch': false
+  });
+  //open on load if specified and not on a small screen
+  if($('.slideout-open-onload').length > 0 && screen.width >= 992) {
+    $('.ko-slideout-left-toggle i').not('fa-times').toggleClass('fa-bars fa-times');
+    $('.slideout-panel').toggleClass('open');
+    slideout.open();
+  }
+  $('.documentation-categories').removeClass('hide');
+  slideout.on('beforeopen', function(){
+    $('.ko-slideout-left-toggle i').not('fa-times').toggleClass('fa-bars fa-times');
+    $('.slideout-panel').toggleClass('open');
+  });
+  slideout.on('open', function(){
+    $('.slideout-menu').toggleClass('open');
+  });
+  slideout.on('beforeclose', function(){
+    $('.ko-slideout-left-toggle i').not('fa-bars').toggleClass('fa-times fa-bars');
+    $('.slideout-panel').toggleClass('open');
+    $('.slideout-menu').toggleClass('open');
+  });
+  $('.ko-slideout-left-toggle').on('click', function(){
+      slideout.toggle();
+  });
+}
+			});
+		</script>
+	</body>
+</html>

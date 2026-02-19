@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<!--[if IE 7]>
+<html class="ie ie7 old-ie" lang="en-US">
+<![endif]-->
+<!--[if IE 8]>
+<html class="ie ie8 old-ie" lang="en-US">
+<![endif]-->
+<!--[if !(IE 7) | !(IE 8)  ]><!-->
+<html lang="en-US">
+<!--<![endif]-->
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Data Central | The University of Tennessee, Knoxville</title>
+    <link rel="profile" href="http://gmpg.org/xfn/11">
+    <link rel="shortcut icon" href="/images/interface/icon-114x114.png">
+    <link rel="shortcut icon" href="/images/interface/favicon.gif">
+    <link rel="shortcut icon" href="/images/interface/favicon.ico">
+
+    <script>
+
+        /*! grunt-grunticon Stylesheet Loader - v2.1.2 | https://github.com/filamentgroup/grunticon | (c) 2015 Scott Jehl, Filament Group, Inc. | MIT license. */
+
+        (function(e){function t(t,n,r,o){"use strict";function a(){for(var e,n=0;u.length>n;n++)u[n].href&&u[n].href.indexOf(t)>-1&&(e=!0);e?i.media=r||"all":setTimeout(a)}var i=e.document.createElement("link"),l=n||e.document.getElementsByTagName("script")[0],u=e.document.styleSheets;return i.rel="stylesheet",i.href=t,i.media="only x",i.onload=o||null,l.parentNode.insertBefore(i,l),a(),i}var n=function(r,o){"use strict";if(r&&3===r.length){var a=e.navigator,i=e.Image,l=!(!document.createElementNS||!document.createElementNS("http://www.w3.org/2000/svg","svg").createSVGRect||!document.implementation.hasFeature("http://www.w3.org/TR/SVG11/feature#Image","1.1")||e.opera&&-1===a.userAgent.indexOf("Chrome")||-1!==a.userAgent.indexOf("Series40")),u=new i;u.onerror=function(){n.method="png",n.href=r[2],t(r[2])},u.onload=function(){var e=1===u.width&&1===u.height,a=r[e&&l?0:e?1:2];n.method=e&&l?"svg":e?"datapng":"png",n.href=a,t(a,null,null,o)},u.src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==",document.documentElement.className+=" grunticon"}};n.loadCSS=t,e.grunticon=n})(this);(function(e,t){"use strict";var n=t.document,r="grunticon:",o=function(e){if(n.attachEvent?"complete"===n.readyState:"loading"!==n.readyState)e();else{var t=!1;n.addEventListener("readystatechange",function(){t||(t=!0,e())},!1)}},a=function(e){return t.document.querySelector('link[href$="'+e+'"]')},c=function(e){var t,n,o,a,c,i,u={};if(t=e.sheet,!t)return u;n=t.cssRules?t.cssRules:t.rules;for(var l=0;n.length>l;l++)o=n[l].cssText,a=r+n[l].selectorText,c=o.split(");")[0].match(/US\-ASCII\,([^"']+)/),c&&c[1]&&(i=decodeURIComponent(c[1]),u[a]=i);return u},i=function(e){var t,o,a;o="data-grunticon-embed";for(var c in e)if(a=c.slice(r.length),t=n.querySelectorAll(a+"["+o+"]"),t.length)for(var i=0;t.length>i;i++)t[i].innerHTML=e[c],t[i].style.backgroundImage="none",t[i].removeAttribute(o);return t},u=function(t){"svg"===e.method&&o(function(){i(c(a(e.href))),"function"==typeof t&&t()})};e.embedIcons=i,e.getCSS=a,e.getIcons=c,e.ready=o,e.svgLoadedCallback=u,e.embedSVG=u})(grunticon,this);
+
+        grunticon(["https://data.utk.edu/library/css/icons.data.svg.css", "https://data.utk.edu/library/css/icons.data.png.css", "https://data.utk.edu/library/css/icons.fallback.css"]);
+    </script>
+    <noscript><link href="https://data.utk.edu/library/css/icons.fallback.css" rel="stylesheet"></noscript>
+
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+    
+    <link rel='stylesheet' id='utthehill-style-css'  href='https://data.utk.edu/css/style.css?ver=2019-05-06' type='text/css' media='all' />
+	
+    <link rel="stylesheet" href="https://data.utk.edu/css/font-awesome.min.css">
+	<link rel="stylesheet" href="https://cdn.datatables.net/1.10.16/css/jquery.dataTables.min.css">
+    <link rel='stylesheet' id='data-custom-style-css'  href='https://data.utk.edu/css/data-custom.css?ver=2019-11-26' type='text/css' media='all' />
+    	
+    <!--[if lt IE 9]>
+    <link rel='stylesheet' id='utthehill-ie-css'  href='/library/css/ie.css?ver=2018-10-22' type='text/css' media='all' />
+    <![endif]-->
+    <script type='text/javascript' src='https://code.jquery.com/jquery-1.11.2.min.js'></script>
+    <!--[if lt IE 9]>
+    <script src="https://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    
+    
+    <!-- Google Analytics -->
+    <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-39634891-10', 'auto');
+        ga('send', 'pageview');
+
+    </script>
+    </head>
+
+<body class="dropnav sans Buckskin">
+<div id="orange-bar"></div>
+<!-- The UT Header begins here. Do not edit in this area -->
+
+<div id="page" class="hfeed site row-offcanvas">
+    <div id="main" class="site-main">
+        <div class="main-content"> <a class="sr-only sr-only-focusable" href="#content" title="Skip to content">Skip to content</a>
+            <div id="sidebar">
+                <header id="masthead" class="site-header" role="banner">
+                    <h3 class="killer-logo"><a href="http://www.utk.edu">The University of Tennessee, Knoxville</a></h3>
+                    <h2 class="sr-only"><a href="https://data.utk.edu/" rel="home">OIT - Data Services</a></h2>
+                    <button type="button" class="toggle close findpage">
+                        <span class="sr-only">Toggle navigation</span> <i class="icon-fa-chevron-right"></i><br>SITE <br> MENU              </button>
+                </header>
+                <!-- #masthead -->
+
+                <div class="sidebar-offcanvas inactive">
+                    <!--
+/////////////////////////////////////////////////////////////////////////////////////////////
+// menu.inc.php
+//   Main menu for Data Central
+//     <description>
+//   
+//   URL Data.utk.edu
+//
+//  NOTE: 
+//
+//	02/18/2020 - kgc - changed menu option "Dashboards" to "Data Self-Service Options." Changed "Request a New Data Request" menu option 
+//						to "Data Requests." Changed the lock icon on the menu options Data Requests and System Access Request Forms to a chevron.
+///////////////////////////////////////////////////////////////////////////////////////////
+-->
+
+
+
+<nav role="navigation">
+  <button type="button" class="toggle close collapseMenu"> <span class="sr-only">Toggle navigation</span> <i class="icon-fa-chevron-left"></i><br>
+  CLOSE</button>
+  <!-- Collect the nav links, forms, and other content for toggling  
+  
+
+
+      <form method="get" action="/search">
+          <div class="form-group">
+             <input title="Find Page" type="text" class="form-control" name="q"  maxlength="256" onfocus="if(this.value == 'Search This Site') { this.value = ''; }" value="Search This Site">
+		  </div>
+      </form>
+  -->
+  <br>
+  <div id="megamenu">
+      
+    <ul class="mainnav" role="menu">
+
+      <li><a style=" width: 100% !important;" class="custom-menu-single" href="https://data.utk.edu/" role="button" title="Home">Data Central Home <div class="data-menu-icon-right" ><i class="fa fa-home text-orange" aria-hidden="true"></i></div></a></li>
+		
+		 <li class="top-menu-item">
+            <button id="drop3" class="list-item-button" aria-haspopup="true" role="button" title="Dashboards">Data Self-Service Options<i class="icon-fa-chevron-right pull-right"></i></button>
+            <div class="megamenu-sub" id="menu-one"  aria-labelledby="drop2" aria-expanded="false">
+              <button class="menu-back btn"  data-toggle="dropdown"  role="button"><i class="icon-fa-chevron-left"></i> <span class="back">Back</span></button>
+              <h3>Dashboards</h3>
+                <div class="inner">
+                  <div class="menu-header">
+                  <ul id="menu-about" class="menu">                 
+                    <li  id="menu-item-2027" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2027"><a href="https://data.utk.edu/executivedashboard">Executive Dashboard</a> </li>
+                    <li  id="menu-item-2027" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2027"><a href="https://data.utk.edu/graduateblueprint">Graduate Blueprint</a> </li>
+                    <li  id="menu-item-2027" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2027"><a href="https://data.utk.edu/enrollmentmanagement">Enrollment Management</a> </li>
+                    <li  id="menu-item-2027" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2027"><a href="https://data.utk.edu/humanresources">Human Resources</a> </li>
+                    <li  id="menu-item-2027" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2027"><a href="https://data.utk.edu/aus">Academic Unit Stats</a></li>
+                    <!--<li  id="menu-item-2027" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2027"><a href="https://data.utk.edu/studentsuccess">Student Success</a></li>-->
+                    <li  id="menu-item-2027" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2027"><a href="https://data.utk.edu/arp">Academic Reporting Portal</i></a></li>
+                    <li  id="menu-item-2027" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2027"><a href="https://elements.utk.edu/" target="_blank">Faculty Reporting Database</i></a></li>
+                    <li  id="menu-item-2027" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2027"><a href="https://data.utk.edu/studentdirinfo">Student Directory Information</i></a></li>
+        				  </ul>
+             		  </div>                
+             		</div>
+            </div>
+     </li>
+
+		 <li class="top-menu-item">
+            <button id="drop2" class="list-item-button" aria-haspopup="true" role="button" title="Data Governance">Data Governance<i class="icon-fa-chevron-right pull-right"></i></button>
+            <div class="megamenu-sub" id="menu-one"  aria-labelledby="drop2" aria-expanded="false">
+              <button class="menu-back btn"  data-toggle="dropdown"  role="button"><i class="icon-fa-chevron-left"></i> <span class="back">Back</span></button>
+              <h3>Data Governance</h3>
+                <div class="inner">
+                  <div class="menu-header">
+                  <ul id="menu-about" class="menu">                 
+                    <li  id="menu-item-2027" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2027"><a href="https://data.utk.edu/governance">Governance Overview</a></li>
+                    <li  id="menu-item-2027" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2027"><a href="https://data.utk.edu/roles">Data Roles and Responsibilities</a></li>
+                    <li  id="menu-item-2027" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2027"><a href="https://data.utk.edu/community">Decision Support Community</a></li>
+                    <li  id="menu-item-2027" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2027"><a href="https://data.utk.edu/policy">Data Policies & Security</a></li>
+                    <li  id="menu-item-2027" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2027"><a href="https://data.utk.edu/definitions">Data Definitions</a></li>
+                    <li  id="menu-item-2027" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2027"><a href="https://data.utk.edu/quality">Data Quality <i class="fa fa-lock" aria-hidden="true"></i></a></li>
+                    <li  id="menu-item-2027" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2027"><a href="https://data.utk.edu/dwoperations">Data Warehouse Operations <i class="fa fa-lock" aria-hidden="true"></i></a></li>
+                  </ul>
+             		  </div>                
+             		</div>
+            </div>
+      </li>
+
+		 <li class="top-menu-item">
+            <button id="drop2" class="list-item-button" aria-haspopup="true" role="button" title="Data Resources and Tools">Data Resources/Tools<i class="icon-fa-chevron-right pull-right"></i></button>
+            <div class="megamenu-sub" id="menu-one"  aria-labelledby="drop2" aria-expanded="false">
+              <button class="menu-back btn"  data-toggle="dropdown"  role="button"><i class="icon-fa-chevron-left"></i> <span class="back">Back</span></button>
+              <h3>Data Resources/Tools</h3>
+                <div class="inner">
+                  <div class="menu-header">
+                  <ul id="menu-about" class="menu">                 
+                    <li  id="menu-item-2027" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2027"><a href="https://data.utk.edu/platform">Reporting Tools and Platforms</a></li>
+                    <li  id="menu-item-2027" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2027"><a href="https://cas.tennessee.edu/cas/login?service=https%3A%2F%2Fargosprod-new.utk.tennessee.edu%2FArgos%2FAWV%2F#explorer" target="_blank">Argos Web Viewer <i class="fa fa-lock" aria-hidden="true"></i></a></li>
+                    <li  id="menu-item-2027" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2027"><a href="https://data.utk.edu/facts">Facts & Figures <i class="fa fa-lock" aria-hidden="true"></i></a></li>
+                  </ul>
+             		  </div>                
+             		</div>
+            </div>
+      </li>
+<!-- updating menu option to include porfolio KCupp 6/21/2019
+
+		<li> <a class="custom-menu-single" href="/definitions" title="Data Definitions">Data Definitions</a> </li>
+ -->
+ 		 <li class="top-menu-item">
+            <button id="drop2" class="list-item-button" aria-haspopup="true" role="button" title="Data Portfolio & Definitions">Data Portfolio & Definitions<i class="icon-fa-chevron-right pull-right"></i></button>
+            <div class="megamenu-sub" id="menu-one"  aria-labelledby="drop2" aria-expanded="false">
+              <button class="menu-back btn"  data-toggle="dropdown"  role="button"><i class="icon-fa-chevron-left"></i> <span class="back">Back</span></button>
+              <h3>Data Portfolio & Definitions</h3>
+                <div class="inner">
+                  <div class="menu-header">
+                  <ul id="menu-about" class="menu">       
+                    <li  id="menu-item-2027" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2027"><a href="https://data.utk.edu/portfolio">Data Portfolio</a></li>          
+                    <li  id="menu-item-2027" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2027"><a href="https://data.utk.edu/definitions">Data Definitions</a></li> 
+                    <li  id="menu-item-2027" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2027"><a href="https://data.utk.edu/livevscensus">Live Data vs. Census Data</a></li>            
+                  </ul>
+             		  </div>                
+             		</div>
+            </div>
+      </li>
+
+		<li> <a class="custom-menu-single" href="/request" title="Request a New Data Report">Data Requests <div class="data-menu-icon-right"><i class="icon-fa-chevron-right" aria-hidden="true"></i></div></a></li>
+		<li> <a class="custom-menu-single" href="/forms" title="System Access Request Forms">System Access Request Forms <div class="data-menu-icon-right"><i class="icon-fa-chevron-right" aria-hidden="true"></i></div></a></li>
+	  
+		<li> <a class="custom-menu-single" href="https://irsa.utk.edu/reporting/fact-book/" title="Official published numbers from IRSA.UTK.EDU" target="_blank">UTK Fact Book <div class="data-menu-icon-right" ><i class="fa fa-external-link" aria-hidden="true"></i></div></a></li>
+
+    </ul>
+   
+  </div>
+</nav>
+<!-- #site-navigation -->
+                </div>
+            </div>
+            <div id="primary" class="content-area">
+                <div id="sitetitle" class="site-header">
+                    <h2 class="department"><a href="https://data.utk.edu/" title="Data Central" rel="home">Data Central</a>
+                    <small><div class="custom-sub-title">Decision Support Resources for the UTK Community</div></small></h2>
+                </div>
+                                <div id="content" class="site-content site-content wide" role="main">
+                                        <article class="hentry">
+                        
+<h1 class="display-4">Data Policies and Procedures</h1>
+         
+
+    <div class="entry-content reg"><br>
+      <ul>
+        <li><a href="http://ferpa.utk.edu/policy/">Family Educational Rights & Privacy Act (FERPA)</a><br>
+        <br>
+        </li>
+        <li><a href="http://policy.tennessee.edu/fiscal_policy/fi0120/">Records Management Policy</a> (UT System)<br>
+          <br>
+        </li>
+        <li><a href="http://policy.tennessee.edu/it_policy/it0110/">Acceptable Use Of Information Technology Resources</a><br>
+          <br>
+        </li>
+        <li><a href="http://research.utk.edu/policies/">Research Data Policy</a> (Campus Policy)</li>
+		<br>
+		<li><a href="Data_Standards_Manual_081122.pdf">UT Knoxville Data Standards Manual</a></li>
+      </ul>
+    </div>
+   	  </article>
+   
+    </div>
+    <!-- #primary --> 
+  </div>
+  <!-- .main-content -->
+
+	</div>
+
+
+<footer id="colophon" class="site-footer" role="contentinfo">
+ <div id="campus-footer">
+   <div id="utk">
+				<div class="row align-items-end">
+						<div class="col-md-12 col-lg-6">
+								<div id="bobi">
+											<h2><a href="http://www.utk.edu" class="logo icon-bobi-main">The University of Tennessee</a></h2>
+								</div>
+								<div id="address">
+											<p><strong>The University of Tennessee, Knoxville</strong><br>Knoxville, Tennessee 37996<br> 865-974-1000</p>
+								</div>
+					</div>
+					<div class="col-md-12 col-lg-6">
+							<div id="datacontact">
+									<nav role="navigation">
+										<ul style="">
+												<li><a href="mailto:data_requests@utk.edu">Contact</a></li>
+												<li><a href="/policy">Data&nbsp;Policies</a></li>
+												<li><a href="https://utk.edu/aboutut/privacy">Privacy</a></li>
+										</ul>
+									</nav>
+							</div>
+					</div>
+				</div>
+   </div>
+
+    <div id="toolkit">
+      <form method="post" action="https://google.tennessee.edu/search">
+          <div class="form-group">
+             <input type="text" class="form-control" name="q"  maxlength="256" onfocus="if(this.value == 'Search utk.edu') { this.value = ''; }" value="Search utk.edu" title="Search UT Knoxville">
+          </div>
+          <input type="submit" name="btnG" class="btn btn-orange"  value="Go">
+      
+          <input type="hidden" name="output" value="xml_no_dtd">
+          <input type="hidden" name="oe" value="UTF-8">
+          <input type="hidden" name="ie" value="UTF-8">
+          <input type="hidden" name="ud" value="1">
+          <input type="hidden" name="site" value="Knoxville">
+          <input type="hidden" name="client" value="utk_translate_frontend">
+          <input type="hidden" name="entqr" value="3">
+          <!--    <input type="hidden" name="sitesearch" value="utk.edu" /> -->
+          <input type="hidden" name="qtype" class="searchtext" value="utk" title="search type">
+          <input type="hidden" name="proxystylesheet" value="utk_translate_frontend">
+      </form>
+      <br>
+      <nav  role="navigation">
+          <ul>
+            <li><a href="http://www.utk.edu/events/">Events</a></li>
+            <li><a href="http://www.utk.edu/maps/">Map</a></li>
+          </ul>  
+          <ul>
+            <li><a href="http://www.utk.edu/alpha/">A-Z </a></li>
+            <li><a href="http://directory.utk.edu">Directory</a></li>
+          </ul>  
+          <ul>
+            <li><a href="http://www.utk.edu/admissions/">Apply</a></li>
+            
+            <li>
+            <a href="http://giveto.utk.edu">Give to UT</a>
+            </li>
+                      </ul>  
+      </nav>
+    </div>
+</div>  
+</footer>
+
+</div>
+<div id="system-indicia">
+    <p>The flagship campus of <a href="http://tennessee.edu">the University of Tennessee System</a> and partner in <a href="http://www.tntransferpathway.org/">the Tennessee Transfer Pathway</a>.</p>
+</div>
+</div></div>
+<script type='text/javascript' src='https://data.utk.edu//library/js/min/utk-min.js?ver=2015-05-20'></script>
+<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<script src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
+
+<script>
+$(function () {
+  $('[data-toggle="popover"]').popover()
+})
+$(function () {
+  $('[data-toggle="tooltip"]').tooltip()
+})
+</script>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-39634891-12"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-39634891-12');
+</script>
+
+</body>
+</html>

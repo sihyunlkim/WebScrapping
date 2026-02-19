@@ -577,7 +577,6 @@ def build_selected_500(
     selected.to_csv(out_csv, index=False)
     return selected
 
-
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--ipeds", type=str, default="hd2024_data_stata 2.csv",
@@ -600,9 +599,16 @@ def main():
     ap.add_argument("--dry-sample", action="store_true",
                     help="Only build selected_500.csv and exit (no Exa, no HTML).")
 
-    # NEW: optional manual override CSV
     ap.add_argument("--manual-overrides", type=str, default="",
                     help="Optional CSV: scimago_institution,unitid to force mappings.")
+
+    # NEW: resume behavior flags
+    ap.add_argument("--force-rebuild-sample", action="store_true",
+                    help="Rebuild selected_500.csv even if it exists (DANGEROUS).")
+    ap.add_argument("--force-rerun-exa", action="store_true",
+                    help="Run Exa again even if raw json exists.")
+    ap.add_argument("--force-redownload-html", action="store_true",
+                    help="Redownload HTML even if manifest/html already exist.")
 
     args = ap.parse_args()
 
@@ -619,32 +625,38 @@ def main():
     reports_dir = outdir / "reports"
     manual_path = Path(args.manual_overrides) if args.manual_overrides.strip() else None
 
-    selected = build_selected_500(
-        ipeds_path=ipeds_path,
-        scimago_path=scimago_path,
-        top_n=args.top_n,
-        random_n=args.random_n,
-        seed=args.seed,
-        out_csv=sample_csv,
-        reports_dir=reports_dir,
-        manual_overrides_path=manual_path,
-    )
+    # --------------------------
+    # 0) Build or reuse sample (NO overwrite unless forced)
+    # --------------------------
+    if sample_csv.exists() and not args.force_rebuild_sample:
+        print(f"[RESUME] Using existing sample: {sample_csv}")
+        selected = pd.read_csv(sample_csv)
+    else:
+        if sample_csv.exists() and args.force_rebuild_sample:
+            print(f"[WARN] Forcing rebuild of sample: {sample_csv} (this can change random 250!)")
+        selected = build_selected_500(
+            ipeds_path=ipeds_path,
+            scimago_path=scimago_path,
+            top_n=args.top_n,
+            random_n=args.random_n,
+            seed=args.seed,
+            out_csv=sample_csv,
+            reports_dir=reports_dir,
+            manual_overrides_path=manual_path,
+        )
 
     if args.dry_sample:
         print("\n[DRY] Sample preview:")
         print(selected.head(5).to_string(index=False))
-
         missing_web = (selected["WEBADDR"].astype(str).str.strip() == "").sum()
         print(f"\n[DRY] Missing WEBADDR: {missing_web}/{len(selected)}")
-
         dup_unitid = selected["UNITID"].duplicated().sum()
         print(f"[DRY] Duplicate UNITID rows: {dup_unitid}")
-
         print(f"\n[DRY] Reports directory: {reports_dir}")
         print("[DRY] Exiting before Exa/HTML.")
         return
 
-    print(f"[OK] Wrote sample: {sample_csv} (n={len(selected)})")
+    print(f"[OK] Sample: {sample_csv} (n={len(selected)})")
     print(f"[OK] Reports: {reports_dir}")
 
     raw_dir = outdir / "exa_raw"
@@ -654,33 +666,82 @@ def main():
 
     sess = requests.Session()
 
+    # --------------------------
+    # Helper: check if HTML already downloaded for a unitid
+    # --------------------------
+    def html_already_done(unitid: int) -> bool:
+        uni_html_dir = html_dir / str(unitid)
+        manifest = uni_html_dir / "manifest.csv"
+        if not manifest.exists():
+            return False
+        # if at least 1 html exists, treat as done
+        html_files = list(uni_html_dir.glob("*.html"))
+        return len(html_files) > 0
+
+    # --------------------------
+    # 1) Main loop
+    # --------------------------
     for i, row in selected.iterrows():
         unitid = int(row["UNITID"])
         instnm = str(row["INSTNM"])
         web = str(row["WEBADDR"]) if pd.notna(row["WEBADDR"]) else ""
-        group = str(row["group"])
+        group = str(row.get("group", ""))
 
         print(f"\n[{i+1}/{len(selected)}] {unitid} | {instnm} | {group}")
 
-        # 1) Exa retrieval (links + text)
-        try:
-            hits = search_policy_pages(
-                university=instnm,
-                website=web,
-                num_results=args.num_results,
-                restrict_domain=args.restrict_domain,
-                search_type=args.search_type,
-            )
-        except Exception as e:
-            print(f"[ERROR] Exa search failed for {instnm}: {type(e).__name__}: {e}")
-            hits = []
-
         raw_path = raw_dir / f"{unitid}.json"
-        raw_path.write_text(json.dumps(hits, ensure_ascii=False, indent=2), encoding="utf-8")
-        print(f"[OK] raw json: {raw_path} (hits={len(hits)})")
 
-        # 2) Download HTMLs
+        # (A) Resume: if raw exists and not forced, skip whole university
+        if raw_path.exists() and not args.force_rerun_exa and (args.skip_html or html_already_done(unitid) or not args.force_redownload_html):
+            print(f"[SKIP] already processed (raw exists): {raw_path}")
+            # If you want: allow HTML download even if raw exists (by loading hits)
+            if not args.skip_html and (args.force_redownload_html or not html_already_done(unitid)):
+                try:
+                    hits = json.loads(raw_path.read_text(encoding="utf-8"))
+                except Exception as e:
+                    print(f"[WARN] Failed to read existing raw json; rerun Exa. {type(e).__name__}: {e}")
+                    hits = None
+                if hits is not None:
+                    # go to HTML step
+                    pass
+                else:
+                    # fall through to Exa
+                    pass
+            else:
+                continue
+
+        # (B) Get hits: either load existing or run Exa
+        hits = None
+        if raw_path.exists() and not args.force_rerun_exa:
+            try:
+                hits = json.loads(raw_path.read_text(encoding="utf-8"))
+                print(f"[RESUME] loaded raw json: {raw_path} (hits={len(hits)})")
+            except Exception as e:
+                print(f"[WARN] Could not parse raw json, rerunning Exa: {type(e).__name__}: {e}")
+                hits = None
+
+        if hits is None:
+            try:
+                hits = search_policy_pages(
+                    university=instnm,
+                    website=web,
+                    num_results=args.num_results,
+                    restrict_domain=args.restrict_domain,
+                    search_type=args.search_type,
+                )
+            except Exception as e:
+                print(f"[ERROR] Exa search failed for {instnm}: {type(e).__name__}: {e}")
+                hits = []
+
+            raw_path.write_text(json.dumps(hits, ensure_ascii=False, indent=2), encoding="utf-8")
+            print(f"[OK] raw json: {raw_path} (hits={len(hits)})")
+
+        # (C) HTML step
         if args.skip_html:
+            continue
+
+        if html_already_done(unitid) and not args.force_redownload_html:
+            print(f"[SKIP] html already present for {unitid} (use --force-redownload-html to redo)")
             continue
 
         urls = []
