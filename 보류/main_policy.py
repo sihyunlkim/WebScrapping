@@ -2,7 +2,7 @@ import json
 from pathlib import Path
 import pandas as pd
 
-from agents.policy_search import search_policy_pages
+from policy_search import search_policy_pages
 from agents.policy_extract_gemini import extract_university_policy_with_gemini
 
 def run_one(university: str):
